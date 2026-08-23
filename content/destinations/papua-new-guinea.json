@@ -1,0 +1,82 @@
+{
+  "id": "papua-new-guinea",
+  "name": "Papua New Guinea",
+  "region": "Melanesia",
+  "emoji": "🪶",
+  "climate": "tropical",
+  "about": "Dry season (May–Sep) is best for trekking the Kokoda Track and touring the Highlands; wet season (Dec–Mar) brings heavier rain and rougher diving conditions.",
+  "overview": "The most linguistically diverse country on Earth — spectacular tribal 'sing-sing' festivals, birds of paradise found nowhere else, world-class diving on WWII wrecks and coral reefs, and the historic Kokoda Track.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Local food and coffee are cheap — domestic flights are close to mandatory given how little of the country connects by road, and that's where most of the real cost sits.",
+  "costItems": [
+    { "label": "Coffee", "price": 3, "unit": "" },
+    { "label": "Local market meal", "price": 4, "unit": "" },
+    { "label": "Flight, regional (domestic)", "price": 150, "unit": "" },
+    { "label": "Kokoda Track guided trek package", "price": 2200, "unit": "per person, 8-12 days" },
+    { "label": "Kimbe Bay dive trip", "price": 150, "unit": "per person, 2-tank" }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 5,
+    "diving": 8,
+    "surfing": 4,
+    "sailing": 5,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 2,
+    "adventure": 8,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 9,
+    "finedining": 2,
+    "streetfood": 3,
+    "nightlife": 1,
+    "winetasting": 0,
+    "spa": 1,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 3,
+    "birding": 10,
+    "wildlife": 6
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "dry": [5, 6, 7, 8, 9],
+  "wet": [12, 1, 2, 3],
+  "peak": [8, 9],
+  "peakIntensity": "mild",
+  "low": [12, 1, 2],
+  "hikingBest": [5, 6, 7, 8, 9],
+  "hikingWorst": [12, 1, 2, 3],
+  "specialSeasons": [
+    { "months": [8, 9], "text": "The Goroka and Mount Hagen shows bring together dozens of Highland tribes in spectacular traditional dress — among the most extraordinary cultural gatherings on Earth." }
+  ],
+  "monthlyWeather": [
+    "hot and wet, deep in the rainy season with rougher diving conditions",
+    "hot and wet, still within the wettest stretch of the year",
+    "hot and rainy, though showers begin easing later in the month",
+    "hot and humid, transitioning toward the dry season",
+    "hot and drying out, with the Kokoda Track season getting underway",
+    "hot and dry, excellent trekking and diving conditions",
+    "hot and dry, still excellent for the Highlands and the coast",
+    "hot and dry, with the Goroka Show approaching",
+    "hot and dry, peak season with the Goroka and Mount Hagen shows",
+    "hot, with humidity building as the dry season winds down",
+    "hot and increasingly wet, as the rains return",
+    "hot and wet, with the rainy season building toward its peak"
+  ],
+  "naSliders": ["snowsports", "winetasting", "nightlife"],
+  "searchAliases": ["Kokoda Track", "Mount Hagen", "Goroka Show", "Kimbe Bay", "Highlands"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "signature",
+      "mountains": "strong"
+    }
+  }
+}

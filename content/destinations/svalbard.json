@@ -1,0 +1,91 @@
+{
+  "id": "svalbard",
+  "name": "Svalbard",
+  "region": "Norway",
+  "emoji": "🐻‍❄️",
+  "climate": "polar",
+  "about": "Midnight sun (Apr–Aug) keeps it light around the clock with zero aurora chances; polar night (Nov–Jan) brings roughly 24-hour darkness and the best northern lights viewing.",
+  "overview": "The world's northernmost year-round settlement — more polar bears than people, glaciers calving into Arctic fjords, and genuine 24-hour daylight or darkness depending on the season.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "There's no budget tier here — Svalbard is one of the most remote, expensive places on Earth to visit, and virtually every real activity requires a guide, mandatory outside Longyearbyen for polar bear safety.",
+  "costItems": [
+    { "label": "Coffee", "price": 6, "unit": "" },
+    { "label": "Reindeer stew", "price": 35, "unit": "" },
+    { "label": "Husky dog sledding excursion", "price": 200, "unit": "per person" },
+    { "label": "Polar bear safari, snowmobile", "price": 350, "unit": "per person" },
+    { "label": "Glacier boat tour", "price": 150, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 4,
+    "scenic": 9,
+    "fishing": 3,
+    "roadtrip": 1,
+    "adventure": 8,
+    "golf": 0,
+    "stargazing": 8,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 1,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 5,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 9
+  },
+  "budgetBands": ["highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "cold": [10, 11, 12, 1, 2, 3],
+  "peak": [3, 4, 6, 7],
+  "peakIntensity": "mild",
+  "low": [10, 11],
+  "sliderEvents": {
+    "stargazing": [
+      {
+        "label": "Polar night darkness",
+        "weight": 7,
+        "months": { "11": 0.85, "12": 1, "1": 1, "2": 0.7, "10": 0.4 }
+      }
+    ]
+  },
+  "specialSeasons": [
+    { "months": [4, 5, 6, 7, 8], "text": "Midnight sun keeps it light around the clock — no real stargazing or aurora viewing possible." },
+    { "months": [11, 12, 1], "text": "Polar night brings roughly 24-hour darkness, the best window for the northern lights." }
+  ],
+  "monthlyWeather": [
+    "bitterly cold and dark, deep in the polar night with strong aurora chances",
+    "bitterly cold, still mostly dark with daylight slowly returning",
+    "very cold but brightening fast, a good month for snowmobile expeditions",
+    "cold, with genuine 24-hour daylight beginning under the midnight sun",
+    "cold but bright around the clock, with wildlife increasingly active",
+    "cool and light all day and night under the midnight sun",
+    "the mildest month, still light around the clock with good boat access to the fjords",
+    "cool, with daylight still nearly constant late in the month",
+    "cold, with darkness beginning to return each night",
+    "cold and increasingly dark, with the first aurora chances of the season",
+    "very cold and mostly dark, quiet before the polar night settles in fully",
+    "bitterly cold, deep in the polar night with the best aurora viewing of the year"
+  ],
+  "naSliders": ["sunbathing", "swimming", "surfing", "golf"],
+  "searchAliases": ["Longyearbyen", "polar bears", "Arctic Circle", "northern lights Svalbard"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "astrophotography": "signature",
+      "deserts": "none",
+      "forests": "none"
+    }
+  }
+}

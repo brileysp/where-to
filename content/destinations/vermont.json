@@ -1,0 +1,92 @@
+{
+  "id": "vermont",
+  "name": "Vermont",
+  "region": "USA",
+  "emoji": "🍁",
+  "climate": "temperate",
+  "about": "Peak fall foliage (early-to-mid Oct) is Vermont's single busiest, most booked-out stretch; winter (Dec–Feb) brings real skiing at Stowe and Killington, and April's 'mud season' is the genuine off-season.",
+  "overview": "Some of America's best fall foliage, real Northeast ski resorts, maple syrup country, and the country's oldest long-distance hiking trail — small-town New England at its most classic.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Small-town Vermont stays reasonable outside peak weekends — foliage season and ski-resort towns like Stowe are where prices climb hardest.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Farm-to-table dinner", "price": 38, "unit": "" },
+    { "label": "Ski day pass, Stowe or Killington", "price": 130, "unit": "per day" },
+    { "label": "Long Trail guided hike", "price": 50, "unit": "per person" },
+    { "label": "Ben & Jerry's factory tour", "price": 6, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 7,
+    "adventure": 3,
+    "golf": 3,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 5,
+    "nightlife": 2,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 8,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["secluded", "easygoing"],
+  "physicalBands": ["easy", "moderate", "active"],
+  "cold": [12, 1, 2],
+  "peak": [10, 12, 1, 2],
+  "peakIntensity": "extreme",
+  "low": [4, 11],
+  "hikingBest": [6, 7, 8, 9],
+  "hikingWorst": [12, 1, 2, 3],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Peak fall foliage",
+        "weight": 3,
+        "months": { "9": 0.3, "10": 1, "11": 0.2 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cold, with skiing in full swing at Stowe and Killington",
+    "cold, still deep in ski season",
+    "cold, with skiing continuing as the snowpack lingers",
+    "cool and muddy, genuinely the off season across the state",
+    "mild and green, quiet before summer starts",
+    "warm and pleasant, good hiking on the Long Trail",
+    "warm, comfortable summer hiking and lake weather",
+    "warm and pleasant, still good for hiking before foliage season",
+    "mild, with early foliage starting in the higher elevations",
+    "cool, with peak foliage and the single busiest, most booked-out stretch of the year",
+    "cold and muddy, with foliage gone and ski season not yet started",
+    "cold, with ski season getting underway again"
+  ],
+  "naSliders": ["surfing"],
+  "searchAliases": ["Stowe", "Killington", "Woodstock", "Long Trail", "Lake Champlain", "Green Mountains"],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "mountains": "strong",
+      "coastlines": "none"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "strong",
+      "mountainBiking": "casual"
+    }
+  }
+}

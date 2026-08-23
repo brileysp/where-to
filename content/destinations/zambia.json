@@ -1,16 +1,16 @@
 {
   "id": "zambia",
-  "name": "South Luangwa & Victoria Falls",
+  "name": "South Luangwa",
   "region": "Zambia",
   "emoji": "🐘",
   "climate": "tropical",
-  "about": "Walking-safari birthplace plus Victoria Falls; dry season (May–Oct) concentrates wildlife, while the Falls themselves are most powerful just after the rains (Mar–May).",
-  "overview": "The birthplace of the walking safari, paired with Victoria Falls on the Zambian side of the Zambezi.",
+  "about": "Dry season (May–Oct) concentrates wildlife along the rivers and is prime walking-safari season; wet season brings migratory birds but muddier trails.",
+  "overview": "The birthplace of the walking safari — one of Africa's best, least-crowded game-viewing experiences, with Victoria Falls reachable via Livingstone as an optional add-on.",
   "costRange": {
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Victoria Falls entry and the sunset cruise are real one-time costs — a plate of nshima stays inexpensive throughout.",
+  "costOverview": "A plate of nshima stays inexpensive throughout — guided walking safaris and bush-camp stays are the real, near-mandatory cost here.",
   "costItems": [
     {
       "label": "Nshima (cornmeal staple) plate",
@@ -23,14 +23,14 @@
       "price": 25
     },
     {
-      "label": "Victoria Falls entry, Zambia side",
-      "unit": "",
-      "price": 30
+      "label": "Guided walking safari, half-day",
+      "unit": "per person",
+      "price": 45
     },
     {
-      "label": "Zambezi sunset cruise",
-      "unit": "",
-      "price": 49
+      "label": "Tented bush camp, full board",
+      "unit": "per person, per night",
+      "price": 180
     },
     {
       "label": "Flight, Lusaka–Mfuwe",
@@ -131,28 +131,18 @@
       }
     ]
   },
-  "specialSeasons": [
-    {
-      "months": [
-        3,
-        4,
-        5
-      ],
-      "text": "Victoria Falls are at their most powerful and dramatic now, just after the rains — though this isn't peak game-viewing season."
-    }
-  ],
   "monthlyWeather": [
-    "hot and wet, deep in the rainy season with frequent downpours",
+    "hot and wet, deep in the rainy season with muddy trails but strong bird activity",
     "hot and wet, still within the wettest stretch of the year",
-    "hot and rainy, with the Falls building toward their most powerful flow",
-    "warm and increasingly dry, with the Falls at their most spectacular and thunderous",
-    "warm and dry, with the Falls still running high as the dry season settles in",
-    "mild and dry, with wildlife beginning to concentrate along the rivers",
-    "mild and dry, excellent wildlife viewing as water sources shrink",
-    "warm and dry, still excellent for wildlife with the Falls' flow diminishing",
-    "hot and dry, one of the driest, hottest months with wildlife concentrated at rivers",
-    "the hottest month, dry with wildlife densely packed around remaining water",
-    "hot, with the first rains returning and building humidity",
+    "hot and rainy, with trails still muddy but birding strong",
+    "warm and drying out, with walking-safari conditions improving fast",
+    "warm and dry, with wildlife beginning to concentrate along the rivers",
+    "mild and dry, excellent walking-safari conditions as trails firm up",
+    "mild and dry, prime wildlife viewing as water sources shrink",
+    "warm and dry, still excellent with wildlife densely concentrated",
+    "hot and dry, one of the best months with wildlife packed around remaining water",
+    "the hottest month, dry with peak wildlife concentration",
+    "hot, with the first rains returning and trails softening",
     "hot and increasingly wet, as the rainy season takes hold"
   ],
   "naSliders": [
@@ -162,9 +152,10 @@
     "winetasting"
   ],
   "searchAliases": [
-    "Victoria Falls",
-    "Zimbabwe",
-    "Livingstone"
+    "Mfuwe",
+    "Livingstone",
+    "South Luangwa National Park",
+    "Zambezi River"
   ],
   "activityStyleTiers": {
     "scenic": {

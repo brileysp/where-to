@@ -34,7 +34,7 @@ const RULES: [string[], string][] = [
   // "tasting flight" is a flight of wines, not an airplane.
   [['charter flight', 'internal flight', 'charter plane', 'winnipeg–churchill'], '✈️'],
   [['train', 'railway', 'shinkansen'], '🚆'],
-  [['songthaew', 'matatu', 'colectivo'], '🚌'],
+  [['songthaew', 'matatu', 'colectivo', 'trotro', 'tro-tro'], '🚌'],
   [['bus'], '🚌'],
   [['métro', 'metro', 'subway', 'skytrain', 'bts', 'mrt', 'mtr', 'underground', 'tube ticket', 'light rail', 'subte'], '🚇'],
   [['tram'], '🚋'],
@@ -125,6 +125,7 @@ const RULES: [string[], string][] = [
   [['braai', 'roast', 'ćevapi', 'cevapi', 'svíčková'], '🍖'],
   [['mofongo', 'matoke'], '🍽️'],
   [['bungy', 'bungee'], '🤸'],
+  [['tee time', 'round of golf', 'golf round'], '⛳'],
   [['breakfast'], '🍳'],
   [['groceries'], '🛒'],
   [['stew', 'tapas', 'cicchetti', 'soup', 'feijoada', 'tagine', 'goulash', 'pepián', 'pepian'], '🍲'],

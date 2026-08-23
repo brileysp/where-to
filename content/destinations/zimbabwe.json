@@ -1,0 +1,88 @@
+{
+  "id": "zimbabwe",
+  "name": "Victoria Falls & Hwange",
+  "region": "Zimbabwe",
+  "emoji": "🌊",
+  "climate": "tropical",
+  "about": "Dry season (May–Oct) concentrates wildlife around Hwange's waterholes and is prime game-viewing season; the Falls themselves are most powerful just after the rains (Mar–May), though that's not peak safari season.",
+  "overview": "Victoria Falls' Zimbabwe side — widely considered the better overall view, with bungee jumping and world-class whitewater rafting below the gorge — paired with Hwange National Park, one of Africa's great elephant strongholds.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Everyday food stays cheap — the Falls entry and adrenaline activities (bungee jumping, whitewater rafting) are real one-time costs, and Hwange's luxury safari lodges anchor the top of the range.",
+  "costItems": [
+    { "label": "Sadza (Zimbabwean staple) meal", "price": 5, "unit": "" },
+    { "label": "Victoria Falls entry, Zimbabwe side", "price": 30, "unit": "" },
+    { "label": "Bungee jump, Victoria Falls Bridge", "price": 160, "unit": "per person" },
+    { "label": "Hwange National Park game drive", "price": 80, "unit": "per person" },
+    { "label": "Zambezi whitewater rafting", "price": 140, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 3,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 4,
+    "adventure": 8,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 4,
+    "streetfood": 3,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 3,
+    "birding": 6,
+    "wildlife": 8
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active"],
+  "dry": [5, 6, 7, 8, 9, 10],
+  "wet": [12, 1, 2, 3],
+  "peak": [7, 8, 9],
+  "low": [1, 2, 11],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season concentration at Hwange's waterholes",
+        "weight": 3.5,
+        "months": { "5": 0.3, "6": 0.7, "7": 1, "8": 1, "9": 1, "10": 0.6 }
+      }
+    ]
+  },
+  "specialSeasons": [
+    { "months": [3, 4, 5], "text": "The Falls are at their most powerful and dramatic just after the rains — though this isn't peak game-viewing season, and heavy spray can obscure the view from some vantage points." }
+  ],
+  "monthlyWeather": [
+    "hot and wet, deep in the rainy season with the Falls building toward peak flow",
+    "hot and wet, still within the wettest stretch of the year",
+    "hot and rainy, with the Falls approaching their most powerful and dramatic flow",
+    "warm and increasingly dry, with the Falls at their most spectacular and thunderous",
+    "warm and dry, with the Falls still running high and wildlife beginning to concentrate",
+    "mild and dry, good whitewater rafting levels and improving wildlife viewing",
+    "mild and dry, excellent wildlife viewing at Hwange's waterholes",
+    "warm and dry, still excellent for wildlife with the Falls' flow diminishing",
+    "hot and dry, one of the best months with wildlife densely concentrated",
+    "the hottest month, dry with peak wildlife concentration around remaining water",
+    "hot, with the first rains returning",
+    "hot and increasingly wet, as the rainy season takes hold"
+  ],
+  "naSliders": ["snowsports", "surfing", "diving", "winetasting"],
+  "searchAliases": ["Victoria Falls", "Hwange National Park", "Mana Pools", "Zambezi River", "Zambia"],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "casual",
+      "mountains": "none",
+      "coastlines": "none"
+    }
+  }
+}

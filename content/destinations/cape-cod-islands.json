@@ -1,0 +1,82 @@
+{
+  "id": "cape-cod-islands",
+  "name": "Cape Cod & the Islands",
+  "region": "Massachusetts, USA",
+  "emoji": "🏖️",
+  "climate": "temperate",
+  "about": "Peak summer (Jul–Aug) is warm, crowded, and expensive, especially on the islands; spring and fall bring quieter beaches and the best whale-watching.",
+  "overview": "Cape Cod's lighthouses and clam shacks, paired with the genteel island resorts of Martha's Vineyard and Nantucket — quintessential New England summer, and some of the region's best sailing and whale watching.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Clam shacks and casual seafood stay reasonable on the mainland Cape — Nantucket and Martha's Vineyard run noticeably more expensive, especially for lodging.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Lobster roll", "price": 28, "unit": "" },
+    { "label": "Ferry, Hyannis–Nantucket", "price": 45, "unit": "" },
+    { "label": "Whale watching tour", "price": 65, "unit": "per person" },
+    { "label": "Bike rental, Cape Cod Rail Trail", "price": 30, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 6,
+    "diving": 2,
+    "surfing": 3,
+    "sailing": 7,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 5,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 6,
+    "nightlife": 4,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["easygoing", "lively", "secluded"],
+  "physicalBands": ["easy", "moderate"],
+  "hot": [7, 8],
+  "cold": [12, 1, 2],
+  "peak": [7, 8],
+  "peakIntensity": "extreme",
+  "low": [1, 2, 3],
+  "wildlifePeak": [4, 5, 6, 9, 10],
+  "monthlyWeather": [
+    "cold and quiet, most seasonal businesses closed",
+    "cold and quiet, still deep in the off season",
+    "cold, with the Cape slowly waking up",
+    "mild and improving, a good early month before the season starts",
+    "mild and pleasant, one of the best months for whale watching",
+    "warm and increasingly busy as summer ramps up",
+    "warm, the height of summer with beaches and islands at their busiest",
+    "warm and humid, still peak season across the Cape and islands",
+    "mild and clear, a favorite quieter month as crowds thin",
+    "mild, with fall color and excellent whale watching",
+    "cold, with most seasonal businesses closing for the year",
+    "cold and quiet, atmospheric through the holidays"
+  ],
+  "naSliders": ["snowsports"],
+  "searchAliases": ["Nantucket", "Martha's Vineyard", "Provincetown", "Chatham", "Hyannis"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "casual",
+      "mountains": "none"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "ghana",
+  "name": "Ghana",
+  "region": "West Africa",
+  "emoji": "🏰",
+  "climate": "tropical",
+  "about": "Dry season Nov–Mar (including the dusty Harmattan winds Dec–Jan) is best for touring; the main rains fall Jun–Jul, with a shorter secondary rainy stretch in Sep–Oct.",
+  "overview": "The UNESCO-listed slave-trade forts of Cape Coast and Elmina, Kakum's rainforest canopy walkway, and one of West Africa's most stable, welcoming countries to visit — a place of deep historical significance for the African diaspora.",
+  "costRange": { "min": "$", "max": "$$$" },
+  "costOverview": "Everyday food and shared taxis are cheap throughout — the historic castle-fort entries and Kakum's canopy walkway are the main sightseeing costs.",
+  "costItems": [
+    { "label": "Jollof rice plate", "price": 3, "unit": "" },
+    { "label": "Coffee or tea", "price": 2, "unit": "" },
+    { "label": "Shared minibus taxi (trotro), 15 min", "price": 1, "unit": "" },
+    { "label": "Cape Coast Castle entry", "price": 12, "unit": "" },
+    { "label": "Kakum National Park entry & canopy walkway", "price": 15, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 5,
+    "diving": 2,
+    "surfing": 4,
+    "sailing": 3,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 4,
+    "streetfood": 7,
+    "nightlife": 6,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 6,
+    "birding": 6,
+    "wildlife": 4
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "lively"],
+  "physicalBands": ["easy", "moderate"],
+  "dry": [11, 12, 1, 2, 3],
+  "wet": [5, 6, 7, 9, 10],
+  "peak": [11, 12, 1],
+  "peakIntensity": "mild",
+  "low": [6, 7],
+  "hikingBest": [11, 12, 1, 2],
+  "hikingWorst": [6, 7],
+  "specialSeasons": [
+    { "months": [12, 1], "text": "The Harmattan brings dry, dusty winds from the Sahara — hazy skies but comfortable, low-humidity heat." }
+  ],
+  "monthlyWeather": [
+    "hot and dry, with hazy Harmattan winds from the Sahara",
+    "hot and dry, still within the Harmattan season",
+    "hot and drying out, one of the best months for touring",
+    "hot, with the first rains of the year approaching",
+    "hot and increasingly wet, as the main rainy season builds",
+    "hot and wet, deep in the main rainy season",
+    "hot and rainy, still within the wettest stretch of the year",
+    "hot, with the rains beginning to ease",
+    "hot and wet again, with the shorter secondary rains arriving",
+    "hot and rainy, still within the secondary wet season",
+    "hot and drying out, a good shoulder month",
+    "hot and dry, with the best touring season getting underway"
+  ],
+  "naSliders": ["snowsports", "winetasting"],
+  "searchAliases": ["Cape Coast Castle", "Elmina Castle", "Accra", "Kakum National Park", "Kumasi", "Ashanti"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "strong",
+      "mountains": "none"
+    }
+  }
+}

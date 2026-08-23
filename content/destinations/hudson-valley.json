@@ -1,0 +1,87 @@
+{
+  "id": "hudson-valley",
+  "name": "Hudson Valley",
+  "region": "New York, USA",
+  "emoji": "🖼️",
+  "climate": "temperate",
+  "about": "Fall foliage (early-to-mid Oct) is the busiest weekend-tripper season from New York City; spring and summer are quieter and good for hiking and farm visits.",
+  "overview": "Historic Hudson River estates, world-class contemporary art at Dia:Beacon and Storm King, and the landscape that inspired America's first great painting movement — an easy escape from New York City.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "An easy day trip or weekend from NYC that stays reasonable outside peak fall weekends — the major art institutions (Dia:Beacon, Storm King) are the main real ticket costs.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Apple picking, farm admission", "price": 15, "unit": "" },
+    { "label": "Metro-North train, NYC–Hudson Valley", "price": 20, "unit": "" },
+    { "label": "Dia:Beacon museum entry", "price": 20, "unit": "" },
+    { "label": "Storm King Art Center entry", "price": 22, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 4,
+    "stargazing": 2,
+    "museums": 8,
+    "architecture": 7,
+    "festivals": 3,
+    "finedining": 6,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 4,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 2,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "secluded"],
+  "physicalBands": ["easy", "moderate"],
+  "cold": [12, 1, 2],
+  "peak": [10],
+  "peakIntensity": "moderate",
+  "low": [1, 2],
+  "hikingBest": [5, 6, 9, 10],
+  "hikingWorst": [12, 1, 2],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Peak fall foliage",
+        "weight": 3,
+        "months": { "9": 0.3, "10": 1, "11": 0.2 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cold, quiet with the fewest weekend visitors from the city",
+    "cold, still quiet through the winter",
+    "cool, with the valley slowly waking up",
+    "mild and pleasant, a good early month for hiking",
+    "mild and green, one of the best months for hiking and farm visits",
+    "warm and pleasant, comfortable for touring the estates and museums",
+    "warm, good weather though not the region's peak draw",
+    "warm and pleasant, still comfortable before the fall rush",
+    "mild, with early foliage starting and apple picking getting underway",
+    "cool, with peak foliage and the busiest weekend-tripper crowds of the year",
+    "cold, with foliage gone and weekend crowds thinning fast",
+    "cold, quiet through the holidays"
+  ],
+  "naSliders": ["surfing"],
+  "searchAliases": ["Beacon", "Cold Spring", "Rhinebeck", "Storm King Art Center", "Dia Beacon", "West Point"],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "strong",
+      "coastlines": "casual",
+      "mountains": "casual"
+    }
+  }
+}
