@@ -1,0 +1,146 @@
+{
+  "id": "london",
+  "name": "London",
+  "region": "United Kingdom",
+  "emoji": "🎡",
+  "climate": "temperate",
+  "about": "Summer has the best weather odds and biggest crowds, winter is grey but has Christmas markets and thinner queues.",
+  "overview": "Centuries of history, world-class museums (many free), and a theater scene to match, connected by the Tube.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "There isn't much of a cheap layer here — a pint and the Tube both run higher than most cities' equivalents.",
+  "costItems": [
+    {
+      "label": "Tube ticket, zone 1",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Pint of beer",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Fish and chips",
+      "unit": "",
+      "price": 16
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "unit": "",
+      "price": 16
+    },
+    {
+      "label": "West End show ticket",
+      "unit": "",
+      "price": 90
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 4,
+    "stargazing": 1,
+    "museums": 10,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 9,
+    "streetfood": 7,
+    "nightlife": 8,
+    "winetasting": 4,
+    "spa": 5,
+    "luxuryLodging": 10,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 8,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    12
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets and festive lights fill the city, from Hyde Park's Winter Wonderland to the Southbank."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and often grey, the coldest month with short days",
+    "cold and grey, still one of the quieter months",
+    "cool and increasingly bright, with spring arriving unevenly",
+    "mild and changeable, sun and showers can both arrive within a day",
+    "mild and increasingly pleasant, one of the best months for sightseeing",
+    "warm and sunny, with the longest days of the year",
+    "warm and mostly sunny, the peak of summer crowds",
+    "warm and humid at times, still busy with summer visitors",
+    "mild and pleasant, one of the best months as crowds thin",
+    "cool and rainy, the wettest month of the year",
+    "cold and grey, with rain frequent and days growing short",
+    "cold and grey, with festive lights and Christmas markets brightening the gloom"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Big Ben",
+    "United Kingdom",
+    "England"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

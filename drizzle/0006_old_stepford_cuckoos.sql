@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "slider_caps" jsonb DEFAULT '{}'::jsonb NOT NULL;

@@ -1,0 +1,218 @@
+{
+  "id": "quebec-city",
+  "name": "Quebec City",
+  "region": "Canada",
+  "emoji": "🍁",
+  "climate": "temperate",
+  "about": "Winters are genuinely harsh, but Carnaval de Québec turns that into one of the world's largest winter festivals; fall foliage and the summer Festival d'été are the other two headline windows.",
+  "overview": "The only fortified city north of Mexico still standing, with a French-Canadian culture and language distinct from the rest of the country.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee, poutine, and local transit all stay reasonable — genuinely one of the better-value historic capitals in North America.",
+  "costItems": [
+    {
+      "label": "Local bus fare",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Poutine",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Intercity bus from Montreal",
+      "price": 50,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 3,
+    "stargazing": 2,
+    "museums": 6,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 6,
+    "cycling": 4,
+    "shopping": 4,
+    "birding": 2,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "cold": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    11,
+    3
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Peak fall foliage",
+        "weight": 3,
+        "months": {
+          "10": 1
+        }
+      },
+      {
+        "label": "Carnaval de Québec & snow-dusted ramparts",
+        "weight": 2,
+        "months": {
+          "12": 1,
+          "1": 1,
+          "2": 1
+        }
+      },
+      {
+        "label": "Summer bloom in the Old Town",
+        "weight": 2,
+        "months": {
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Carnaval de Québec",
+        "weight": 3,
+        "months": {
+          "2": 1
+        }
+      },
+      {
+        "label": "Festival d'été de Québec",
+        "weight": 2,
+        "months": {
+          "7": 1
+        }
+      },
+      {
+        "label": "Christmas markets in Old Québec",
+        "weight": 2,
+        "months": {
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        1,
+        2
+      ],
+      "text": "Carnaval de Québec brings ice sculptures, night parades and an ice palace to the fortified Old Town — one of the world's largest winter carnivals."
+    },
+    {
+      "months": [
+        7
+      ],
+      "text": "Festival d'été de Québec, one of Canada's largest music festivals, fills the city for eleven days."
+    },
+    {
+      "months": [
+        10
+      ],
+      "text": "Fall foliage across the Old Town and nearby Laurentians is some of the most vivid in eastern Canada."
+    }
+  ],
+  "monthlyWeather": [
+    "bitterly cold, with Carnaval de Québec's ice palace and night parades underway",
+    "bitterly cold, Carnaval season continuing with deep snow across the Old Town",
+    "cold, with snow lingering as the carnival winds down",
+    "cool and often slushy, the least photogenic month as the snow melts",
+    "mild and greening up, a pleasant and increasingly popular month",
+    "warm and pleasant, one of the best months to explore on foot",
+    "warm, with Festival d'été filling the city for eleven days",
+    "warm and pleasant, still excellent and busy",
+    "mild and comfortable, with the first hints of fall color",
+    "mild, with vivid fall foliage across the Old Town and Laurentians",
+    "cold and grey, bare trees before the snow returns",
+    "cold, with snow returning and Christmas markets filling the Old Town"
+  ],
+  "naSliders": [
+    "diving",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Old Québec",
+    "Château Frontenac",
+    "Carnaval de Québec",
+    "Winter Carnival",
+    "Plains of Abraham",
+    "Montmorency Falls"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "casual",
+      "mountains": "none",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

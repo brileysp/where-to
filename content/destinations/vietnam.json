@@ -1,0 +1,146 @@
+{
+  "id": "vietnam",
+  "name": "Vietnam",
+  "region": "Southeast Asia",
+  "emoji": "🚣",
+  "climate": "tropical",
+  "about": "Climate varies sharply north-to-south; this is a rough whole-country average. Typhoon risk rises Sep–Nov, especially central/north.",
+  "overview": "Rice terraces, motorbike-choked cities, and a coastline running the length of the country, from Hanoi to the Mekong Delta.",
+  "costRange": { "min": "$", "max": "$$$$$" },
+  "costOverview": "Genuinely one of the cheapest countries to eat and get around in Asia — an overnight Ha Long Bay cruise is the one real splurge most itineraries include.",
+  "costItems": [
+    { "label": "Cà phê sữa đá (iced coffee)", "price": 1, "unit": "" },
+    { "label": "Grab motorbike ride", "price": 1.5, "unit": "" },
+    { "label": "Pho", "price": 2, "unit": "" },
+    { "label": "Ha Long Bay overnight cruise", "price": 110, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 6,
+    "diving": 5,
+    "surfing": 3,
+    "sailing": 5,
+    "hiking": 6,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 4,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 6,
+    "architecture": 7,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 10,
+    "nightlife": 7,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 8,
+    "birding": 6,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10,
+    11
+  ],
+  "birdingPeak": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "swimHazard": [
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "birding": 7
+  },
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Dry-season clarity",
+        "weight": 2.5,
+        "months": {
+          "2": 0.6,
+          "3": 1,
+          "4": 0.85
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cool and dry in the north, warm and dry in the south",
+    "cool and dry in the north, warm and mostly dry farther south",
+    "warming up in the north, hot and dry in the south",
+    "warm and humid in the north, hot with the south's dry season peaking",
+    "hot and increasingly wet nationwide, as the rainy season begins",
+    "hot and humid, with regular rain across most of the country",
+    "hot and rainy, especially in the north and south",
+    "hot and humid, still deep in the rainy season nationwide",
+    "hot and wet, with typhoon risk rising in the central and northern regions",
+    "rain easing in the south, still unsettled with typhoon risk in the center and north",
+    "cooling and drying in the north, still warm and increasingly dry farther south",
+    "cool and dry in the north, warm and dry in the south"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Hanoi",
+    "Hoi An",
+    "Ho Chi Minh City",
+    "Saigon",
+    "Halong Bay"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "casual",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

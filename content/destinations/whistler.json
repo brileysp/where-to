@@ -1,0 +1,188 @@
+{
+  "id": "whistler",
+  "name": "Whistler",
+  "region": "Canada",
+  "emoji": "🏔️",
+  "climate": "polar",
+  "about": "Winter is ski season; summer opens up hiking, mountain biking, and alpine lakes.",
+  "overview": "North America's largest ski resort by lift-served terrain, with a genuine summer mountain-biking and hiking season too.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A coffee or poutine barely registers — the lift ticket is the real daily expense, and it's a substantial one.",
+  "costItems": [
+    {
+      "label": "Bus fare",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Poutine",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Day lift ticket",
+      "price": 150,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 8,
+    "golf": 4,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 4,
+    "nightlife": 6,
+    "winetasting": 3,
+    "spa": 6,
+    "luxuryLodging": 7,
+    "snowsports": 10,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    7,
+    8
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer trail access",
+        "weight": 6,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Alpine-lake summer",
+        "weight": 1.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.5
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "cold and snowy, deep in ski season with the year's best snowpack",
+    "cold and snowy, still prime ski season",
+    "cold and still snowy, one of the snowiest months on the slopes",
+    "cool and still wintry at altitude, with the ski season extending into spring",
+    "mild in the valley, with the village turning green as snow lingers up high",
+    "mild and increasingly dry, one of the best months as summer trails open",
+    "warm and mostly dry, prime season for hiking and mountain biking",
+    "warm and dry, still excellent for outdoor activities",
+    "mild and crisp, with beautiful \"Indian summer\" days and thinning crowds",
+    "cool and increasingly wet, as the rains return",
+    "cold and wet, the wettest month with the first heavy snow at higher elevations",
+    "cold and snowy, with ski season back underway"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture"
+  ],
+  "searchAliases": [
+    "British Columbia",
+    "Canada"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "signature",
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "strong",
+      "forests": "strong",
+      "astrophotography": "none"
+    }
+  }
+}

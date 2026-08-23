@@ -1,0 +1,185 @@
+{
+  "id": "falklands",
+  "name": "Falkland Islands",
+  "region": "South Atlantic",
+  "emoji": "🐧",
+  "climate": "polar",
+  "about": "The austral summer (Oct–Mar) is breeding/chick season and the only practical visiting window.",
+  "overview": "Remote South Atlantic islands with five penguin species and huge albatross colonies — genuinely wild, sparsely populated terrain.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "The Falklands have no cheap option — even a half-day penguin tour from Stanley starts near $230, and the marquee Volunteer Point king-penguin excursion costs considerably more.",
+  "costItems": [
+    {
+      "label": "Coffee, Stanley",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Half-day penguin tour, Gypsy Cove or Bertha's Beach",
+      "unit": "",
+      "price": 229
+    },
+    {
+      "label": "Flight, Punta Arenas–Stanley, round trip",
+      "unit": "",
+      "price": 270
+    },
+    {
+      "label": "Full-day Volunteer Point king penguin tour",
+      "unit": "",
+      "price": 350
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 1,
+    "luxuryLodging": 2,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "cold": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1
+  ],
+  "low": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Penguin & albatross breeding season",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.5,
+          "10": 0.5,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Penguin & albatross breeding season",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.5,
+          "10": 0.5,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Longer southern-winter nights",
+        "weight": 2,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "text": "This is peak breeding season for penguins and albatross, with colonies full of eggs and chicks."
+    }
+  ],
+  "monthlyWeather": [
+    "cool, the mildest month with breeding season in full swing",
+    "cool, still one of the warmest, most active months for penguins and albatross",
+    "cool, with wildlife still abundant as summer winds down",
+    "cool and increasingly windy, with wildlife activity easing",
+    "cold, as the islands head into their coldest stretch",
+    "cold, deep in the sub-polar winter",
+    "cold, still firmly in the coldest part of the year",
+    "cold, with winter beginning to loosen its grip late in the month",
+    "cold and windy, one of the driest but breeziest months",
+    "cool and windy, with penguin colonies beginning to form",
+    "cool and windy, with breeding season underway across the islands",
+    "cool, warming into the mildest, most active wildlife season"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "golf",
+    "cycling",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Falkland Islands",
+    "penguins"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "astrophotography": "strong",
+      "mountains": "casual",
+      "forests": "none",
+      "deserts": "none"
+    }
+  }
+}

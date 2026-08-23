@@ -1,0 +1,1109 @@
+/* Main results app — ported from the legacy app's styles.css (non-dna-*
+   rules). Uses the shared theme tokens from app/globals.css. */
+
+.app-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.app-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.app-header-tagline {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+  }
+}
+
+.sidebar,
+.results {
+  min-width: 0;
+  /* On the stacked mobile layout, the sidebar (all sliders/bands/month
+     grid expanded) can be much taller than this section's actual
+     content, especially the short fetching/month-prompt states —
+     leaving too little page height below the sidebar to ever scroll
+     this section flush to the top of the viewport. Reserving a full
+     screen's worth of space here guarantees there's always room. */
+  min-height: 100vh;
+}
+
+/* ---- Panels ---- */
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.panel-hint {
+  margin: -4px 0 12px;
+  font-size: 12.5px;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+
+.panel-dna {
+  border-color: var(--accent);
+}
+
+.dna-active-badge {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin: -4px 0 10px;
+}
+
+.btn-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.dna-sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dna-reset-btn {
+  margin-top: 10px;
+  color: var(--bad);
+  border-color: var(--bad);
+}
+
+.panel-note {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #1a1108;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.btn-secondary {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+}
+
+/* ---- Persona picker ---- */
+
+/* Deliberately unstyled/low-key — this is the "or pick a preset instead"
+   escape hatch, not a real call to action, so it shouldn't compete
+   visually with the Travel DNA panel above it. */
+.persona-collapsed-link {
+  display: block;
+  background: none;
+  border: none;
+  padding: 2px 2px 4px;
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.persona-collapsed-link:hover {
+  color: var(--text);
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .persona-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.persona-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.persona-card:hover {
+  border-color: var(--accent);
+}
+
+.persona-card.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.persona-icon {
+  font-size: 20px;
+}
+
+.persona-name {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px 0 2px;
+}
+
+.persona-blurb {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+
+/* ---- Saved profiles row ---- */
+
+.profile-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.profile-row select {
+  flex: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12.5px;
+}
+
+/* ---- Slider panel ---- */
+
+.slider-group-header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  margin: 16px 0 8px;
+}
+
+.slider-group-header:first-child {
+  margin-top: 0;
+}
+
+.slider-row {
+  margin-bottom: 14px;
+}
+
+.slider-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-size: 12.5px;
+}
+
+.slider-icon {
+  margin-right: 5px;
+}
+
+.slider-val {
+  color: var(--accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
+}
+
+.slider-row input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+  margin-top: 4px;
+}
+
+.style-pill-group {
+  margin-top: 6px;
+}
+
+.style-pill-group-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-faint);
+  margin-bottom: 3px;
+}
+
+.style-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.style-pill-group + .style-pill-group {
+  margin-top: 8px;
+}
+
+.style-pill {
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-faint);
+  border: 1px solid var(--border);
+}
+
+.style-pill-selected {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.style-pill:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ---- Open To bands ---- */
+
+.band-dim {
+  margin-bottom: 10px;
+}
+
+.band-dim:last-child {
+  margin-bottom: 0;
+}
+
+.band-dim-header {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.band-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.band-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 11.5px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.band-btn:hover {
+  border-color: var(--accent);
+}
+
+.band-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1108;
+  font-weight: 650;
+}
+
+/* ---- Month grid ---- */
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.month-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 4px;
+  font-size: 12px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.month-btn:hover {
+  border-color: var(--accent);
+}
+
+.month-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1108;
+  font-weight: 700;
+}
+
+/* ---- Results area ---- */
+
+.results h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.results-subtitle {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.results-month-prompt {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.results-month-prompt-icon {
+  font-size: 34px;
+}
+
+.results-fetching {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-faint);
+  font-size: 13.5px;
+}
+
+.results-fetching-spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  animation: resultsFetchingSpin 0.8s linear infinite;
+}
+
+@keyframes resultsFetchingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.results-month-prompt .month-grid {
+  max-width: 360px;
+  margin-top: 8px;
+}
+
+/* ---- Search ---- */
+
+.results-search-wrap {
+  position: sticky;
+  top: 24px;
+  z-index: 5;
+  background: var(--bg);
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.results-search-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.results-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text);
+  font-size: 13.5px;
+}
+
+.results-search-clear {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.results-search-dropdown {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top-btn:hover {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.search-dropdown-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.search-dropdown-row:last-child {
+  border-bottom: none;
+}
+
+.search-dropdown-row:hover {
+  background: var(--bg-elevated);
+}
+
+.search-dropdown-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.search-dropdown-region {
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.search-dropdown-rank {
+  margin-left: auto;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.search-dropdown-empty {
+  padding: 16px;
+  font-size: 12.5px;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+/* ---- Results list / cards ---- */
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Lets .card-top react to its own rendered width via @container below —
+     the same squeeze happens for two different reasons (a narrow phone,
+     or the two-column desktop layout at ~901-1000px viewport where the
+     340px sidebar eats into this column), so keying off the card's own
+     width covers both instead of chasing two separate viewport breakpoints. */
+  container-type: inline-size;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  scroll-margin-top: 90px;
+}
+
+@keyframes search-highlight-pulse {
+  0%,
+  100% {
+    box-shadow: none;
+    border-color: var(--border);
+  }
+  30% {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+    border-color: var(--accent);
+  }
+}
+
+.card-search-highlight {
+  animation: search-highlight-pulse 1.6s ease;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-rank {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.card-name-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-name {
+  font-size: 16.5px;
+  font-weight: 650;
+  /* Safety net for future long names, not a primary treatment — the
+     @container rule below is what actually keeps real content from
+     ever hitting this on any width down to a phone. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-region {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 2px 8px 2px 6px;
+  border-radius: 999px;
+  margin-top: 4px;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-region::before {
+  content: '📍';
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.card-score {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.card-score-eyebrow {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 1px;
+}
+
+.card-score-num {
+  font-size: 20px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Below this card width, rank + name can't share a row without truncating
+   the name — drop it to its own row instead. */
+@container (max-width: 540px) {
+  .card-top {
+    flex-wrap: wrap;
+  }
+  .card-name-wrap {
+    flex-basis: 100%;
+    order: 1;
+  }
+  .card-rank {
+    order: 0;
+  }
+  .card-name {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .month-head {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+  .card-score {
+    text-align: left;
+  }
+}
+
+.card-score-text {
+  font-size: 11px;
+  display: block;
+  line-height: 1.25;
+}
+
+.score-excellent {
+  color: var(--good);
+}
+
+.score-good {
+  color: var(--good-soft);
+}
+
+.score-okay {
+  color: var(--okay);
+}
+
+.score-poor {
+  color: var(--poor);
+}
+
+.score-bad {
+  color: var(--bad);
+}
+
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-good {
+  background: var(--good-soft, var(--good));
+  color: var(--good);
+  background: color-mix(in srgb, var(--good) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--good) 30%, transparent);
+}
+
+.badge-warn {
+  color: var(--okay);
+  background: color-mix(in srgb, var(--okay) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--okay) 30%, transparent);
+}
+
+.badge-bad {
+  color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--bad) 30%, transparent);
+}
+
+.card-monthly-blurb {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.card-monthly-blurb .blurb-month {
+  color: var(--text);
+  font-weight: 750;
+}
+
+.card-breakdown-slot {
+  margin-top: 10px;
+}
+
+.match-reasons-empty {
+  font-size: 12px;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.breakdown-row {
+  display: grid;
+  grid-template-columns: 20px 1fr 90px 30px;
+  gap: 8px;
+  align-items: center;
+  font-size: 12.5px;
+  padding: 3px 0;
+}
+
+.breakdown-row-excellent {
+  color: var(--good);
+  font-weight: 700;
+}
+
+.breakdown-row-good {
+  color: var(--good-soft);
+  font-weight: 700;
+}
+
+.breakdown-row-okay {
+  color: var(--okay);
+  font-weight: 700;
+}
+
+.breakdown-row-na {
+  opacity: 0.55;
+  font-style: italic;
+}
+
+.breakdown-track {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.style-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0 0 6px 28px;
+}
+
+.style-chip {
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.breakdown-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.breakdown-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* ---- About/Cost tabs ---- */
+
+.card-tabs {
+  margin-top: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 6px 10px 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-faint);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.tab-btn-cost {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.tab-btn-cost.active {
+  color: var(--accent);
+}
+
+.about-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 10px 0 0;
+}
+
+.cost-overview-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 10px 0 0;
+}
+
+.price-list {
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12.5px;
+}
+
+.price-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+}
+
+.price-icon {
+  font-size: 13px;
+  width: 16px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.price-val {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.season-line {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 10px 0 0;
+}
+
+/* ---- Year strip ---- */
+
+.card-month-label {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 14px;
+}
+
+.year-strip {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  height: 70px;
+  margin-top: 8px;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.year-bar {
+  align-self: end;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.year-bar:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+/* .base marks "your" month (the app's globally chosen month) even while
+   a different month is being previewed; .selected marks whichever month
+   is currently driving the content below — in the common case (no
+   preview active) these are the same bar and .selected simply wins. */
+.year-bar.base {
+  border-color: var(--text-faint);
+}
+
+.year-bar.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.year-bar-fill {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.year-bar-label {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9.5px;
+  color: var(--text-faint);
+  transition: color 0.15s ease, font-weight 0.15s ease;
+}
+
+.year-bar-label.selected {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* ---- Month-specific zone: everything below the chart that reacts to
+   the selected month, visually separated from the always-true content
+   above (About/Cost tabs, season-line) by its own bordered surface. ---- */
+
+.month-zone {
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  margin-top: 14px;
+  padding: 12px 14px 14px;
+}
+
+.month-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.month-head-left {
+  min-width: 0;
+}
+
+.timing-label {
+  font-size: 12px;
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+.month-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.month-name.previewing {
+  color: var(--accent);
+}
+
+.month-name-reset {
+  all: unset;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.85;
+  padding: 6px;
+  margin: -6px;
+}
+
+.month-name-reset:hover {
+  opacity: 1;
+}

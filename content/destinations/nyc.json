@@ -1,0 +1,136 @@
+{
+  "id": "nyc",
+  "name": "New York City",
+  "region": "USA",
+  "emoji": "🗽",
+  "climate": "temperate",
+  "about": "Fall (Sep–Nov) is widely considered ideal — crisp air, foliage in nearby parks. Summer is hot/humid, winter brings holiday magic but bitter cold.",
+  "overview": "Every kind of city experience at once — world-class museums, theater, and food, packed onto one walkable island.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Transit and pizza are cheap; taxis and shows add up fast.",
+  "costItems": [
+    {
+      "label": "Subway ride",
+      "unit": "",
+      "price": 2.9
+    },
+    {
+      "label": "Pizza slice",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "unit": "",
+      "price": 19
+    },
+    {
+      "label": "Empire State Building, 86th floor",
+      "unit": "",
+      "price": 44
+    },
+    {
+      "label": "Broadway show ticket",
+      "unit": "",
+      "price": 120
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 3,
+    "sailing": 3,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 1,
+    "museums": 10,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 10,
+    "streetfood": 9,
+    "nightlife": 9,
+    "winetasting": 4,
+    "spa": 5,
+    "luxuryLodging": 10,
+    "snowsports": 2,
+    "cycling": 5,
+    "shopping": 9,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    12,
+    9,
+    10
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "bitterly cold, with occasional snow and biting wind off the rivers",
+    "cold and still snowy, one of the coldest months",
+    "cold and blustery, with winter slow to loosen its grip",
+    "mild and increasingly pleasant, with spring finally taking hold",
+    "mild and one of the best months, comfortable for walking the city",
+    "warm and increasingly humid, with summer building fast",
+    "hot and humid, with the summer heat in full swing",
+    "hot and humid, still deep in summer's muggiest stretch",
+    "warm and comfortable, one of the best months as humidity eases",
+    "mild and crisp, with fall foliage in nearby parks",
+    "cold and increasingly grey, with winter approaching fast",
+    "cold, with holiday lights and occasional snow bringing festive energy"
+  ],
+  "naSliders": [
+    "swimming",
+    "diving"
+  ],
+  "searchAliases": [
+    "New York",
+    "Manhattan",
+    "Brooklyn"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

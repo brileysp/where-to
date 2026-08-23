@@ -1,0 +1,144 @@
+{
+  "id": "rome",
+  "name": "Rome",
+  "region": "Italy",
+  "emoji": "🏛️",
+  "climate": "mediterranean",
+  "about": "Ancient sites are best explored in the mild shoulder seasons. Summer is scorching and swarmed with queues; many locals (and some restaurants) leave in August.",
+  "overview": "Three thousand years of history stacked on top of itself, best explored on foot between plates of cacio e pepe.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "An Aperol spritz or a pizza slice on the go costs almost nothing; sit down for a real dinner and the math changes fast.",
+  "costItems": [
+    {
+      "label": "Pizza slice",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Aperol spritz",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 13
+    },
+    {
+      "label": "Colosseum, Forum & Palatine entry",
+      "unit": "",
+      "price": 20
+    },
+    {
+      "label": "Cacio e pepe dinner",
+      "unit": "",
+      "price": 22
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 2,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 8,
+    "nightlife": 7,
+    "winetasting": 7,
+    "spa": 4,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 7,
+    "birding": 2,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    1
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "peakIntensity": "extreme",
+  "monthlyWeather": [
+    "cold and rainy, one of the coldest, wettest months",
+    "cold and still rainy, though days are slowly brightening",
+    "mild and fresh, with spring arriving and crowds still light",
+    "mild and increasingly sunny, one of the best months for sightseeing",
+    "warm and pleasant, before the summer heat and crowds arrive",
+    "hot and sunny, with tourist crowds building quickly",
+    "hot, dry, and crowded, with long queues at major sites",
+    "the hottest month, scorching with many locals and some restaurants leaving the city",
+    "warm and sunny, with crowds and heat both starting to ease",
+    "mild and pleasant, one of the best months as rain returns gradually",
+    "cool and rainy, the wettest month of the year",
+    "cool and mild, with a festive atmosphere and lighter crowds"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Vatican",
+    "Colosseum",
+    "Italy"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

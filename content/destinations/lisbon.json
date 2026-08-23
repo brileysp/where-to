@@ -1,0 +1,126 @@
+{
+  "id": "lisbon",
+  "name": "Lisbon",
+  "region": "Portugal",
+  "emoji": "🚋",
+  "climate": "mediterranean",
+  "about": "Summer is warm/dry and busy, spring and fall are mild and quieter, winter is mild but wetter.",
+  "overview": "Hillside pastel-colored streets, vintage trams, and a laid-back Atlantic-coast capital.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Coffee, pastries, and the iconic trams all cost next to nothing — this remains one of Western Europe's most affordable capitals.",
+  "costItems": [
+    {
+      "label": "Bica (espresso)",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Pastel de nata",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Tram 28, onboard ticket",
+      "price": 3.3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 10,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 5,
+    "diving": 4,
+    "surfing": 7,
+    "sailing": 6,
+    "hiking": 3,
+    "scenic": 6,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 2,
+    "museums": 8,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 7,
+    "nightlife": 8,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "mild but wet, with Atlantic storms bringing the year's heaviest rain",
+    "mild and still fairly wet, though sunnier spells become more common",
+    "mild and drying out, with spring warmth building",
+    "mild and increasingly sunny, with the last of the rain easing by mid-month",
+    "warm and mostly dry, one of the best months of the year",
+    "warm and sunny, with long, pleasant days",
+    "warm, dry, and sunny, one of the driest months of the year",
+    "warm and dry, still sunny with reliably clear skies",
+    "warm and sunny, still pleasant as summer eases",
+    "mild, with rain returning gradually as autumn sets in",
+    "mild and wet, the wettest month of the year",
+    "mild but wet, with Atlantic storms rolling through regularly"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Portugal",
+    "Sintra"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

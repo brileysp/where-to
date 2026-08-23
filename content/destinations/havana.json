@@ -1,0 +1,132 @@
+{
+  "id": "havana",
+  "name": "Havana",
+  "region": "Cuba",
+  "emoji": "🚗",
+  "climate": "tropical",
+  "about": "Nov–Apr is dry and comfortable, hurricane season runs Jun–Nov with risk peaking Aug–Oct.",
+  "overview": "1950s American cars, crumbling Spanish-colonial architecture, and a music scene that spills out of every doorway.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$"
+  },
+  "costOverview": "A mojito and a paladar meal are real but modest costs — Cuba's dual-currency, cash-based economy means prices can vary wildly by where you are.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Mojito",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Classic car taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Paladar dinner",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Classic car city tour",
+      "price": 40,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 5,
+    "hiking": 2,
+    "scenic": 5,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 7,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 8,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 2,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "swimHazard": [
+    8,
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "dry and warm, one of the most pleasant months of the year",
+    "dry and warm, still comfortable with low humidity",
+    "dry and warming, comfortable before the heat builds",
+    "warm and mostly dry, one of the best months before the rains return",
+    "warm and increasingly humid, as the wet season begins",
+    "hot and humid, with the wet season in full swing",
+    "hot and humid, with regular afternoon showers",
+    "hot and humid, deep in hurricane season with heavy rain possible",
+    "hot and humid, the peak of hurricane season with the year's heaviest rain",
+    "hot and humid, still within hurricane season with unsettled weather",
+    "warm and drying out, with hurricane risk fading",
+    "dry and warm, one of the most pleasant months as the dry season returns"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Cuba"
+  ]
+}

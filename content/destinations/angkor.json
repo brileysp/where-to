@@ -1,0 +1,142 @@
+{
+  "id": "angkor",
+  "name": "Angkor Wat & Siem Reap",
+  "region": "Cambodia",
+  "emoji": "🛕",
+  "climate": "tropical",
+  "about": "Cool-dry season Nov–Feb is most comfortable for temple-hopping, hot season Mar–May is intense, monsoon Jun–Oct brings dramatic skies but muddy paths.",
+  "overview": "The largest religious monument on Earth, part of a vast temple complex explored by tuk-tuk over several days.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Food, coffee, and shared tuk-tuks all cost very little — the multi-day Angkor temple pass is the one real fixed cost every visitor pays.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Cambodian noodle dish",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Shared tuk-tuk, 15 min",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Private tuk-tuk, temple circuit",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Angkor Pass, 1-day",
+      "price": 37,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 2,
+    "stargazing": 3,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 6,
+    "streetfood": 8,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "monthlyWeather": [
+    "dry and pleasant, one of the most comfortable months of the year",
+    "dry and warming, still comfortable with low humidity",
+    "hot and dry, with temperatures climbing fast",
+    "scorching and dry, the hottest month of the year",
+    "hot and increasingly humid, as the first monsoon rains arrive",
+    "hot and humid, with regular afternoon downpours",
+    "hot and humid, still deep in the wet season",
+    "hot and humid, with rain a near-daily occurrence",
+    "hot and humid, one of the wettest months with muddy temple paths",
+    "hot and humid, still within the rainy season though easing",
+    "warm and drying out, one of the best months as the dry season begins",
+    "warm and dry, comfortable with the cool season settling in"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Cambodia",
+    "Siem Reap"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

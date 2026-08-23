@@ -1,0 +1,189 @@
+{
+  "id": "olympic",
+  "name": "Olympic National Park",
+  "region": "Washington, USA",
+  "emoji": "🌲",
+  "climate": "temperate",
+  "about": "Jul–Sep is the reliably dry window, and Hurricane Ridge's road is weather-dependent and often closed on weekdays in winter.",
+  "overview": "Temperate rainforest, rugged Pacific coastline and alpine peaks all in one park — genuinely three different ecosystems within a day's drive of each other.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels — a lakeside kayak rental at Lake Crescent is about the only real add-on beyond the standard park fees and gateway-town meals.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner meal, gateway town",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Kayak rental, Lake Crescent",
+      "price": 45,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 2,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 5,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 3,
+    "snowsports": 3,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "dry": [
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1
+  ],
+  "noSnow": [
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Reliable dry-season trail conditions",
+        "weight": 3,
+        "months": {
+          "6": 0.4,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "text": "The Hoh Rainforest lives up to its name most of the year — bring rain gear regardless of season."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and wet, with Hurricane Ridge's road open weekends only, weather permitting",
+    "cold and wet, still deep in the rainy season",
+    "cool and wet, rain easing only slightly",
+    "cool, still rainy but drying out gradually",
+    "mild, with drier stretches becoming more common",
+    "mild and increasingly dry, a good early-summer window",
+    "warm and dry, the most reliable month of the year",
+    "warm and dry, still excellent hiking conditions",
+    "mild and mostly dry, a favorite shoulder month with fewer crowds",
+    "cool, with the rains returning by month's end",
+    "cold and wet, back into the rainy season",
+    "cold and wet, Hurricane Ridge access weather-dependent"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Hoh Rainforest",
+    "Hurricane Ridge",
+    "Ruby Beach",
+    "Port Angeles",
+    "Washington"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "coastlines": "signature",
+      "mountains": "strong",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

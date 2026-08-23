@@ -1,0 +1,192 @@
+{
+  "id": "acadia",
+  "name": "Acadia National Park",
+  "region": "Maine, USA",
+  "emoji": "🦞",
+  "climate": "temperate",
+  "about": "Summer (Jun–Aug) is warmest for the coast, fall foliage in Oct is spectacular, and Park Loop Road largely closes to cars Dec–Apr.",
+  "overview": "Rocky Maine coastline and granite peaks, with the Park Loop Road looping past pink-granite shoreline, lobster-boat harbors, and Cadillac Mountain's sunrise views.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$"
+  },
+  "costOverview": "Acadia runs pricier than the average national park — Bar Harbor's lobster-shack economy means even a casual lobster roll costs a real splurge, though coffee and gear stay normal New England prices.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Lobster roll",
+      "price": 32,
+      "unit": ""
+    },
+    {
+      "label": "Full lobster dinner",
+      "price": 58,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 6,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 3,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 6,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 3,
+    "snowsports": 2,
+    "cycling": 6,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Fall foliage",
+        "weight": 2.5,
+        "months": {
+          "9": 0.3,
+          "10": 1,
+          "11": 0.2
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Cadillac Mountain is the first place in the continental US to see sunrise during this stretch of the year — a real, if niche, reason to be up early."
+    },
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Park Loop Road is largely closed to vehicles through this window; the carriage roads stay open for cross-country skiing and snowshoeing instead."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, with the Loop Road closed to cars but open for skiing and snowshoeing",
+    "cold and quiet, still closed to vehicle traffic",
+    "cold, still wintry with the road not yet reopened",
+    "cool and often muddy, with the Loop Road typically reopening",
+    "mild and increasingly green, quieter before the summer rush",
+    "warm and pleasant, the coast at its best for sailing and swimming",
+    "warm, the height of summer with whale watching in full swing",
+    "warm and humid, still peak season on the coast",
+    "mild and clear, with fall color starting and crowds thinning",
+    "cool, with peak foliage and one of the most popular months",
+    "cold, with the Loop Road closing to vehicles again by month's end",
+    "cold, quiet, and atmospheric with the park settling into winter"
+  ],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "museums",
+    "architecture",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Bar Harbor",
+    "Cadillac Mountain",
+    "Mount Desert Island",
+    "Park Loop Road",
+    "Maine"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "strong",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "strong",
+      "mountainBiking": "casual"
+    }
+  }
+}

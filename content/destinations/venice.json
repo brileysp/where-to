@@ -1,0 +1,154 @@
+{
+  "id": "venice",
+  "name": "Venice",
+  "region": "Italy",
+  "emoji": "🚤",
+  "climate": "mediterranean",
+  "about": "Spring and fall are ideal, summer is hot, crowded and can smell in the canals, acqua alta flooding is more common Oct–Jan.",
+  "overview": "A car-free city built on water, where getting lost in the back-canal alleys is as much the point as any single sight.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Standing at the bar for coffee or cicchetti is cheap — sit at a table, or step onto a gondola, and prices multiply.",
+  "costItems": [
+    {
+      "label": "Cicchetti (Venetian tapas)",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Aperol spritz",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Doge's Palace entry",
+      "unit": "",
+      "price": 32
+    },
+    {
+      "label": "Water taxi, 15 min",
+      "unit": "",
+      "price": 40
+    },
+    {
+      "label": "Gondola ride",
+      "unit": "",
+      "price": 90
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 2,
+    "surfing": 1,
+    "sailing": 8,
+    "hiking": 1,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 3,
+    "adventure": 1,
+    "golf": 1,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 10,
+    "festivals": 4,
+    "finedining": 8,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 6,
+    "spa": 4,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 7,
+    "birding": 2,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "peakIntensity": "extreme",
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Carnival",
+        "weight": 4,
+        "months": {
+          "2": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2
+      ],
+      "text": "Carnival season brings elaborate masks and costumed crowds to the city."
+    },
+    {
+      "months": [
+        11,
+        12,
+        1
+      ],
+      "text": "Acqua alta flooding in St. Mark's Square is more common this time of year."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and damp, with the acqua alta season and occasional flooding",
+    "cold and damp, still within acqua alta season though easing",
+    "mild and increasingly pleasant, with spring warmth building",
+    "mild and comfortable, one of the best months before the crowds",
+    "warm and pleasant, still comfortable before peak summer heat",
+    "warm and increasingly humid, with the canals starting to smell in the heat",
+    "hot and humid, crowded with the canal smell at its strongest",
+    "hot and humid, still crowded and muggy in the narrow streets",
+    "warm and pleasant, one of the best months as crowds and heat ease",
+    "mild, with acqua alta flooding becoming more frequent",
+    "cool and damp, the peak month for acqua alta flooding",
+    "cold and damp, with acqua alta risk continuing through the season"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Italy",
+    "canals"
+  ]
+}

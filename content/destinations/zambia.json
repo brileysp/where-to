@@ -1,0 +1,178 @@
+{
+  "id": "zambia",
+  "name": "South Luangwa & Victoria Falls",
+  "region": "Zambia",
+  "emoji": "🐘",
+  "climate": "tropical",
+  "about": "Walking-safari birthplace plus Victoria Falls; dry season (May–Oct) concentrates wildlife, while the Falls themselves are most powerful just after the rains (Mar–May).",
+  "overview": "The birthplace of the walking safari, paired with Victoria Falls on the Zambian side of the Zambezi.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Victoria Falls entry and the sunset cruise are real one-time costs — a plate of nshima stays inexpensive throughout.",
+  "costItems": [
+    {
+      "label": "Nshima (cornmeal staple) plate",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "South Luangwa park entry",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Victoria Falls entry, Zambia side",
+      "unit": "",
+      "price": 30
+    },
+    {
+      "label": "Zambezi sunset cruise",
+      "unit": "",
+      "price": 49
+    },
+    {
+      "label": "Flight, Lusaka–Mfuwe",
+      "unit": "",
+      "price": 210
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 4,
+    "roadtrip": 4,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season concentration",
+        "weight": 3.5,
+        "months": {
+          "5": 0.3,
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 0.6
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Wet-season migratory bird arrivals",
+        "weight": 3.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        3,
+        4,
+        5
+      ],
+      "text": "Victoria Falls are at their most powerful and dramatic now, just after the rains — though this isn't peak game-viewing season."
+    }
+  ],
+  "monthlyWeather": [
+    "hot and wet, deep in the rainy season with frequent downpours",
+    "hot and wet, still within the wettest stretch of the year",
+    "hot and rainy, with the Falls building toward their most powerful flow",
+    "warm and increasingly dry, with the Falls at their most spectacular and thunderous",
+    "warm and dry, with the Falls still running high as the dry season settles in",
+    "mild and dry, with wildlife beginning to concentrate along the rivers",
+    "mild and dry, excellent wildlife viewing as water sources shrink",
+    "warm and dry, still excellent for wildlife with the Falls' flow diminishing",
+    "hot and dry, one of the driest, hottest months with wildlife concentrated at rivers",
+    "the hottest month, dry with wildlife densely packed around remaining water",
+    "hot, with the first rains returning and building humidity",
+    "hot and increasingly wet, as the rainy season takes hold"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Victoria Falls",
+    "Zimbabwe",
+    "Livingstone"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "casual",
+      "mountains": "none",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

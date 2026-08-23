@@ -1,0 +1,169 @@
+{
+  "id": "jordan",
+  "name": "Petra & Wadi Rum",
+  "region": "Jordan",
+  "emoji": "🏜️",
+  "climate": "desert",
+  "about": "Spring and fall are mild and ideal, summer desert heat is intense, winter nights in Wadi Rum can be near-freezing.",
+  "overview": "Petra's rose-red facades carved into canyon walls, paired with Wadi Rum's Mars-red desert a few hours south.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Daily food and transport are inexpensive — the Petra entrance fee alone is one of the most expensive single-site tickets anywhere in the world.",
+  "costItems": [
+    {
+      "label": "Sweet tea",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Falafel or mansaf plate",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Wadi Rum jeep tour",
+      "price": 40,
+      "unit": ""
+    },
+    {
+      "label": "Petra entrance, 1-day",
+      "price": 70,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 2,
+    "diving": 4,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 7,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 7,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 8,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    10,
+    11
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "low": [
+    7,
+    8
+  ],
+  "hikingBest": [
+    3,
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Mild-temperature clarity",
+        "weight": 3,
+        "months": {
+          "3": 0.7,
+          "4": 1,
+          "5": 0.6,
+          "10": 0.85,
+          "11": 0.7
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cold, especially at night, with occasional rain and near-freezing desert nights",
+    "cold, still chilly with nights near freezing in Wadi Rum",
+    "mild by day but still cool at night, one of the best months",
+    "warm and dry, with the desert's rose-red light at its most striking",
+    "warm and dry, still comfortable before the summer heat builds",
+    "hot and dry, with intense midday sun",
+    "scorching and dry, one of the hottest, driest months",
+    "scorching and dry, still intensely hot with clear skies",
+    "hot and dry, with the heat beginning to ease",
+    "warm and dry, one of the best months with comfortable days",
+    "mild by day but cold at night, comfortable for exploring",
+    "cold, especially at night, with near-freezing desert temperatures"
+  ],
+  "naSliders": [
+    "surfing"
+  ],
+  "searchAliases": [
+    "Petra",
+    "Wadi Rum",
+    "Amman"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "mountains": "casual",
+      "coastlines": "none",
+      "forests": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

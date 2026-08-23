@@ -1,0 +1,197 @@
+{
+  "id": "yosemite",
+  "name": "Yosemite National Park",
+  "region": "USA",
+  "emoji": "🌲",
+  "climate": "temperate",
+  "about": "Waterfalls are most powerful during spring snowmelt (Apr–Jun); summer (Jun–Sep) has full trail and road access, Tioga Pass closes with snow roughly Nov–May.",
+  "overview": "Granite monoliths, waterfalls, and giant sequoias packed into one valley, with trails ranging from a paved stroll to a multi-day wilderness trek.",
+  "costRange": { "min": "$$$", "max": "$$$" },
+  "costOverview": "There's no competition once you're past the gate, so in-park food and dining charge accordingly.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Deli sandwich, Yosemite Village", "price": 15, "unit": "" },
+    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
+    { "label": "In-park sit-down dinner", "price": 38, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 5,
+    "roadtrip": 7,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 7,
+    "museums": 2,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 2,
+    "spa": 2,
+    "luxuryLodging": 6,
+    "snowsports": 4,
+    "cycling": 4,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hot": [
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wildlifePeak": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "extreme",
+  "sliderCaps": {
+    "wildlife": 5
+  },
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "High-country trail & road access",
+        "weight": 5,
+        "months": {
+          "6": 0.85,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Peak waterfall snowmelt",
+        "weight": 3.5,
+        "months": {
+          "4": 0.6,
+          "5": 1,
+          "6": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        4,
+        5,
+        6
+      ],
+      "text": "Waterfalls are at their most powerful, fed by spring snowmelt."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, with the valley floor often near freezing overnight",
+    "cold, with lingering snow on the valley floor",
+    "still chilly at night, but daytime highs climb into the 50s",
+    "mild by day, cool at night, and reliably dry",
+    "warm, sunny, and one of the most pleasant stretches of the year",
+    "warm and dry, with rain now a rare event",
+    "hot on the valley floor, often into the 90s",
+    "the hottest, driest month of the year",
+    "still hot by day, but nights cool off noticeably",
+    "mild and dry, with a real chill returning after dark",
+    "cooling fast, with the season's first snow often arriving",
+    "cold and often snowy, with valley floor lows below freezing"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife"
+  ],
+  "searchAliases": [
+    "California",
+    "Half Dome",
+    "El Capitan",
+    "Yosemite Valley"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "signature",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

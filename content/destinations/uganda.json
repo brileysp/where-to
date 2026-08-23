@@ -1,0 +1,183 @@
+{
+  "id": "uganda",
+  "name": "Bwindi & Kibale",
+  "region": "Uganda",
+  "emoji": "🦧",
+  "climate": "highland",
+  "about": "Gorilla and chimp trekking plus outstanding birding; dry seasons (Jun–Aug, Dec–Feb) make for firmer, less strenuous trails.",
+  "overview": "Gorilla trekking in Bwindi and chimpanzee tracking in Kibale, at roughly half Rwanda's permit price for a similar experience.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Gorilla and chimp permits are the two real expenses here — at roughly half Rwanda's price for a similar gorilla trek.",
+  "costItems": [
+    {
+      "label": "Boda-boda, 15 min",
+      "unit": "",
+      "price": 1.5
+    },
+    {
+      "label": "Matoke (steamed plantain) plate",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Chimpanzee tracking permit",
+      "unit": "",
+      "price": 200
+    },
+    {
+      "label": "Gorilla trekking permit",
+      "unit": "",
+      "price": 800
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 7,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    12,
+    1
+  ],
+  "low": [
+    4,
+    5
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Easier, drier trekking trails",
+        "weight": 1.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "6": 1,
+          "7": 1,
+          "8": 0.6,
+          "12": 0.6
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Drier trails",
+        "weight": 1.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "6": 1,
+          "7": 1,
+          "8": 0.6,
+          "12": 0.6
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        12,
+        1,
+        2
+      ],
+      "text": "Drier trails make gorilla and chimpanzee trekking easier and less strenuous."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and relatively dry, good for trekking with cooler mountain air",
+    "mild and dry, still favorable trekking conditions",
+    "mild, with rain becoming more frequent",
+    "mild and wet, one of the rainiest months with muddy, tough trails",
+    "mild and wet, still within the wetter stretch of the year",
+    "mild and dry, with trails firming up",
+    "mild and dry, one of the driest, most popular trekking months",
+    "mild and dry, still excellent for trekking",
+    "mild, with rain returning as the wetter season begins",
+    "mild and wet, with trails softening again",
+    "mild and wet, still within the rainier stretch of the year",
+    "mild and drying out, as the short dry season begins"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Bwindi",
+    "gorilla trekking"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "forests": "signature",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

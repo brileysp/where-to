@@ -1,0 +1,224 @@
+{
+  "id": "iceland",
+  "name": "Iceland",
+  "region": "Nordic",
+  "emoji": "❄️",
+  "climate": "polar",
+  "about": "Midnight sun and full road access Jun–Aug; Nov–Feb trades daylight for aurora chances and dramatically lower prices.",
+  "overview": "Waterfalls, glaciers, and geothermal pools on a ring road built for self-drive exploring, at Nordic prices.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Even the cheap options are expensive — there's no genuinely low-cost meal here.",
+  "costItems": [
+    {
+      "label": "Pylsur (hot dog)",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Lamb soup",
+      "unit": "",
+      "price": 18
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 19
+    },
+    {
+      "label": "Airport transfer, Keflavík–Reykjavík",
+      "unit": "",
+      "price": 29
+    },
+    {
+      "label": "Blue Lagoon entry",
+      "unit": "",
+      "price": 100
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 4,
+    "surfing": 2,
+    "sailing": 3,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 9,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 2,
+    "museums": 4,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 3,
+    "nightlife": 4,
+    "winetasting": 1,
+    "spa": 7,
+    "luxuryLodging": 7,
+    "snowsports": 6,
+    "cycling": 3,
+    "shopping": 5,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8
+  ],
+  "birdingPeak": [
+    5,
+    6,
+    7
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peakIntensity": "extreme",
+  "sliderCaps": {
+    "wildlife": 6,
+    "birding": 7
+  },
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Full road access & long daylight",
+        "weight": 3,
+        "months": {
+          "6": 1,
+          "7": 1,
+          "8": 1
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Peak waterfall/greenery season",
+        "weight": 2,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 0.7
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Long winter darkness",
+        "weight": 7,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.6,
+          "4": 0.3,
+          "5": 0.15,
+          "9": 0.3,
+          "10": 0.6,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "The midnight sun keeps the sky bright nearly around the clock."
+    },
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Long, dark nights make this prime aurora-hunting season, weather permitting."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, dark, and the year's windiest month, with only a few hours of daylight",
+    "still cold and blustery, with heavy snow and short days",
+    "cold with the year's other rain peak, though daylight is lengthening fast",
+    "cool and brightening quickly, with real daylight returning",
+    "mild and increasingly bright, with nearly endless evening light",
+    "cool but genuinely light around the clock under the midnight sun",
+    "the mildest month, still cool by most standards but the best chance of calm, clear days",
+    "still mild, with darkness slowly creeping back into the evenings",
+    "cooling fast, with the first serious storms of the season rolling through",
+    "cold and increasingly stormy, with rain and wind picking up",
+    "cold, dark, and unsettled, with daylight shrinking toward its winter low",
+    "the darkest month, cold with only a handful of daylight hours"
+  ],
+  "naSliders": [
+    "swimming",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Reykjavik",
+    "Blue Lagoon",
+    "Golden Circle"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "astrophotography": "signature",
+      "mountains": "casual",
+      "deserts": "casual",
+      "forests": "none"
+    }
+  }
+}

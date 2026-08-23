@@ -1,0 +1,142 @@
+{
+  "id": "maldives",
+  "name": "Maldives",
+  "region": "Indian Ocean",
+  "emoji": "🐠",
+  "climate": "tropical",
+  "about": "Dry season Dec–Apr has the calmest seas and best visibility (and the highest prices); wet season is windier but still sunny between showers.",
+  "overview": "A scatter of coral atolls where the whole trip happens on, in, or over turquoise water — from ultra-luxury overwater villas to simple, affordable local-island guesthouses.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A local island runs on real, low prices; a resort island runs on an entirely different price scale, transfers included.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Mas huni (tuna breakfast)",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Snorkel gear rental",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Inter-island speedboat transfer",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Seaplane transfer, resort, round trip",
+      "unit": "",
+      "price": 450
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 10,
+    "surfing": 5,
+    "sailing": 6,
+    "hiking": 1,
+    "scenic": 6,
+    "fishing": 6,
+    "roadtrip": 1,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 6,
+    "streetfood": 2,
+    "nightlife": 2,
+    "winetasting": 2,
+    "spa": 9,
+    "luxuryLodging": 10,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    5,
+    6,
+    10,
+    11
+  ],
+  "monthlyWeather": [
+    "dry, sunny, and calm, with the northeast monsoon in full swing",
+    "dry and sunny, among the calmest, most reliable months of the year",
+    "warm, dry, and the sunniest stretch of the year",
+    "hot and dry, with the dry season winding down by month's end",
+    "transitioning to wet, warmer with wind and rain picking up",
+    "breezier and wetter, as the southwest monsoon sets in",
+    "windier with regular squalls, though sunny spells remain common",
+    "still breezy and unsettled, deep in the wet season",
+    "the wettest month, with frequent but usually brief downpours",
+    "rain gradually easing as the monsoon begins to transition",
+    "warming and drying out, with calmer seas returning",
+    "dry, sunny, and calm, as the northeast monsoon sets back in"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "festivals"
+  ],
+  "searchAliases": [
+    "Male",
+    "Malé"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "astrophotography": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none"
+    }
+  }
+}

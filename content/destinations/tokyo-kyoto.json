@@ -1,0 +1,201 @@
+{
+  "id": "tokyo-kyoto",
+  "name": "Tokyo & Kyoto",
+  "region": "Japan",
+  "emoji": "🌸",
+  "climate": "temperate",
+  "about": "Cherry blossoms (Mar–Apr) and fall foliage (Oct–Nov) are the celebrated, crowded peaks; rainy season hits June, typhoons Aug–Sep.",
+  "overview": "The classic first-time Japan pairing — 2.5 hours apart by bullet train.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Ramen stays cheap and filling — easy to eat extremely well without spending much, unless you seek out fine sushi.",
+  "costItems": [
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Ramen bowl",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Tokyo Skytree, Tembo Deck",
+      "unit": "",
+      "price": 13
+    },
+    {
+      "label": "Sushi dinner",
+      "unit": "",
+      "price": 45
+    },
+    {
+      "label": "Shinkansen, Tokyo–Kyoto, one-way",
+      "unit": "",
+      "price": 95
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 3,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 5,
+    "finedining": 10,
+    "streetfood": 10,
+    "nightlife": 8,
+    "winetasting": 3,
+    "spa": 7,
+    "luxuryLodging": 10,
+    "snowsports": 1,
+    "cycling": 5,
+    "shopping": 8,
+    "birding": 2,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "wet": [
+    6,
+    9
+  ],
+  "peak": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Cherry blossoms",
+        "weight": 3,
+        "months": {
+          "3": 0.7,
+          "4": 1
+        }
+      },
+      {
+        "label": "Autumn foliage",
+        "weight": 3,
+        "months": {
+          "10": 0.7,
+          "11": 1
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Summer matsuri season",
+        "weight": 5,
+        "months": {
+          "7": 0.7,
+          "8": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        3,
+        4
+      ],
+      "text": "Cherry blossoms (sakura) are in bloom — one of the most celebrated, and crowded, times to visit."
+    },
+    {
+      "months": [
+        10,
+        11
+      ],
+      "text": "Fall foliage (koyo) is at its peak in both cities."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and dry, with clear skies common",
+    "still cold, though the first plum blossoms hint at spring",
+    "mild and warming fast, with cherry blossoms beginning",
+    "mild and one of the most popular months, as cherry blossoms peak",
+    "warm and comfortable, generally the last easy month before the rains",
+    "the rainy season settles in, humid with frequent overcast days and downpours",
+    "hot and intensely humid, with the mugginess as much a factor as the heat",
+    "the hottest month, oppressively humid with the first typhoon risk building",
+    "still warm and humid, with typhoon season at its peak",
+    "cooling and drying out, with clearer skies and lingering typhoon risk",
+    "crisp and mild, with fall foliage at its best",
+    "cold and dry, with clear winter skies returning"
+  ],
+  "naSliders": [
+    "surfing",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Tokyo",
+    "Kyoto",
+    "Osaka",
+    "Mount Fuji",
+    "Shinkansen"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "casual"
+    },
+    "scenic": {
+      "mountains": "casual",
+      "forests": "strong",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

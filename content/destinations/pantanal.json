@@ -1,0 +1,164 @@
+{
+  "id": "pantanal",
+  "name": "Pantanal",
+  "region": "Brazil",
+  "emoji": "🐆",
+  "climate": "tropical",
+  "about": "Dry season Jul–Oct concentrates wildlife along riverbanks, wet season Nov–Mar floods much of the region.",
+  "overview": "The world's best jaguar-viewing — a vast wetland teeming with wildlife, far easier to spot than in dense Amazon rainforest.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "The Pantanal splits sharply by ambition — a basic ranch stay runs a couple hundred dollars a day, but the specialized jaguar-tracking lodges in Porto Jofre, where sighting odds run 70-90%, cost several times that.",
+  "costItems": [
+    {
+      "label": "Jaguar-spotting boat trip, Porto Jofre",
+      "unit": "per person, half-day",
+      "price": 65
+    },
+    {
+      "label": "Basic fazenda stay with meals",
+      "unit": "per day",
+      "price": 150
+    },
+    {
+      "label": "Jaguar-focused lodge, Porto Jofre",
+      "unit": "per day",
+      "price": 700
+    },
+    {
+      "label": "Multi-day shared jaguar safari package",
+      "unit": "per person",
+      "price": 4500
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 7,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Jaguar season (dry-season riverbank concentration)",
+        "weight": 4,
+        "months": {
+          "7": 0.85,
+          "8": 1,
+          "9": 1,
+          "10": 0.7
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Dry-season riverbank concentration",
+        "weight": 3,
+        "months": {
+          "7": 0.85,
+          "8": 1,
+          "9": 1,
+          "10": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "This is peak jaguar season, as falling water levels concentrate wildlife along the riverbanks."
+    }
+  ],
+  "monthlyWeather": [
+    "hot and wet, deep in the rainy season with much of the region flooded",
+    "hot and wet, still within the wettest stretch of the year",
+    "hot and rainy, with flooding still widespread",
+    "warm and increasingly dry, as floodwaters begin to recede",
+    "warm and drying out, with wildlife beginning to concentrate near remaining water",
+    "mild and dry, with mornings and evenings turning chilly",
+    "mild and dry, with clear skies and comfortable temperatures for full days outdoors",
+    "warm and dry, one of the sunniest, most reliable stretches of the year",
+    "hot and dry, with water sources shrinking fast across the region",
+    "the hottest month, dry with heat building steadily ahead of the first rains",
+    "hot, with the first rains returning as the wet season begins",
+    "hot and increasingly wet, as the rainy season takes hold"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Brazil",
+    "jaguars"
+  ]
+}

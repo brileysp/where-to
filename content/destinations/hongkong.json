@@ -1,0 +1,136 @@
+{
+  "id": "hongkong",
+  "name": "Hong Kong",
+  "region": "China",
+  "emoji": "🌃",
+  "climate": "temperate",
+  "about": "Oct–Dec is comfortable and clear; summer is hot, humid and typhoon-prone; winter is mild and dry.",
+  "overview": "Skyline, harbor, and street food — dense and endlessly walkable.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A ferry ride or a milk tea costs almost nothing; dim sum and taxis add up faster than the skyline suggests.",
+  "costItems": [
+    {
+      "label": "Star Ferry ride",
+      "unit": "",
+      "price": 0.5
+    },
+    {
+      "label": "Milk tea",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Peak Tram, round trip",
+      "unit": "",
+      "price": 11
+    },
+    {
+      "label": "Dim sum",
+      "unit": "",
+      "price": 14
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 4,
+    "diving": 3,
+    "surfing": 2,
+    "sailing": 5,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 4,
+    "stargazing": 2,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 7,
+    "finedining": 9,
+    "streetfood": 10,
+    "nightlife": 9,
+    "winetasting": 3,
+    "spa": 6,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 10,
+    "birding": 6,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    10,
+    11,
+    12
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    10,
+    11,
+    12
+  ],
+  "low": [
+    2,
+    3
+  ],
+  "swimHazard": [
+    7,
+    8,
+    9
+  ],
+  "monthlyWeather": [
+    "cool and dry, one of the most comfortable months",
+    "cool and increasingly humid, with mist common in the harbor",
+    "mild and humid, with visibility often reduced by haze",
+    "warm and humid, with rain becoming more frequent",
+    "hot and humid, as the wet season builds",
+    "hot and humid, with regular downpours and rising typhoon risk",
+    "hot and humid, deep in typhoon season with sudden storms possible",
+    "hot and humid, still within typhoon season with heavy rain likely",
+    "hot and humid, one of the most typhoon-prone months",
+    "warm and drying out, one of the most pleasant months with clearer skies",
+    "mild and dry, comfortable with lower humidity",
+    "cool and dry, one of the most comfortable months of the year"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "China",
+    "Victoria Harbour"
+  ]
+}

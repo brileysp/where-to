@@ -1,0 +1,175 @@
+{
+  "id": "ethiopia",
+  "name": "Simien Mountains",
+  "region": "Ethiopia",
+  "emoji": "🦜",
+  "climate": "highland",
+  "about": "Dry season Oct–Mar is best for trekking, heavy rains Jun–Sep make trails difficult.",
+  "overview": "High-altitude trekking through the Simien Mountains, with endemic wildlife like gelada monkeys and world-class birding.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "The Simien Mountains are far cheaper than an African safari — a full plate of injera and wat costs just a few dollars, though every trekker pays the same mandatory scout fee built into each day on the trail.",
+  "costItems": [
+    {
+      "label": "Ethiopian coffee",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Injera with wat, local meal",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Mandatory scout fee",
+      "price": 18,
+      "unit": "per day"
+    },
+    {
+      "label": "Guided trek package, guide + scout + mules",
+      "price": 90,
+      "unit": "per day"
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 2,
+    "roadtrip": 5,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 8,
+    "architecture": 7,
+    "festivals": 6,
+    "finedining": 5,
+    "streetfood": 5,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    10,
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8
+  ],
+  "wildlifePeak": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "birding": [
+      {
+        "label": "Dry-season trekking access",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "10": 0.4,
+          "11": 0.7,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "dry and clear, with cold nights at altitude dropping below freezing",
+    "dry and clear, still among the coldest, clearest months",
+    "dry and mild by day, with nights still cold at altitude",
+    "dry and mild, one of the last good months before the rains",
+    "increasingly wet, with rain becoming more frequent",
+    "wet, with rain building toward the peak of the season",
+    "the wettest month, with heavy rain making trails difficult",
+    "still very wet, with heavy rain continuing to make trekking difficult",
+    "wet early on, drying out as the month progresses",
+    "dry and clear, with the landscape lush and green after the rains",
+    "dry and clear, one of the best months with vivid green scenery",
+    "dry and clear, mild by day with cold nights at altitude"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "gelada monkeys"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "casual",
+      "deserts": "casual",
+      "coastlines": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

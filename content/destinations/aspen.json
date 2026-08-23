@@ -1,0 +1,173 @@
+{
+  "id": "aspen",
+  "name": "Aspen",
+  "region": "Colorado, USA",
+  "emoji": "⛷️",
+  "climate": "polar",
+  "about": "Winter (Dec–Mar) is the main draw, summer brings hiking and music festivals, shoulder months see many businesses close.",
+  "overview": "One of America's original ski towns, where Victorian-era mining wealth gave way to some of the country's most expensive real estate.",
+  "costRange": {
+    "min": "$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Even a casual coffee or lunch runs well above normal — the lift ticket alone can cost more than a full day elsewhere.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Beer",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Casual lunch",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 19,
+      "unit": ""
+    },
+    {
+      "label": "Day lift ticket",
+      "price": 279,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 6,
+    "golf": 3,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 5,
+    "finedining": 8,
+    "streetfood": 4,
+    "nightlife": 6,
+    "winetasting": 5,
+    "spa": 7,
+    "luxuryLodging": 8,
+    "snowsports": 10,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    7
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Alpine-lake summer",
+        "weight": 1.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.5
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "bitterly cold, deep in ski season with reliable powder",
+    "bitterly cold, still prime ski season with long daylight returning",
+    "cold but brightening, with good snow still on the slopes",
+    "cold and often slushy, with the ski season winding down and many businesses closing",
+    "cool and quiet, deep in the off-season with trails still muddy at higher elevations",
+    "mild and dry, with hiking trails opening up and music festivals beginning",
+    "warm and dry, one of the best months for hiking and outdoor festivals",
+    "warm and dry, still prime hiking season with comfortable days",
+    "mild and dry, with aspen groves turning gold and crowds thinning",
+    "cool and quiet, deep in the off-season before ski season ramps up",
+    "cold, with the first snow arriving as the resort prepares to open",
+    "cold and snowy, with ski season back in full swing"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Colorado"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

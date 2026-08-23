@@ -1,0 +1,161 @@
+{
+  "id": "azores",
+  "name": "Azores",
+  "region": "Portugal",
+  "emoji": "🐋",
+  "climate": "temperate",
+  "about": "Weather can flip from sun to rain within the same day. Whale-watching peaks Apr–Jun as blue and sperm whales migrate through.",
+  "overview": "Nine volcanic islands in the mid-Atlantic — crater lakes, hot springs, and some of the best whale-watching on Earth — greener and far less developed than Madeira.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "The Azores are one of the better values in Europe — coffee and a taxi both cost a fraction of mainland Portugal, and even the marquee whale-watching tours stay reasonable.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Cozido das Furnas (volcanic stew)",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Whale-watching tour",
+      "price": 65,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 5,
+    "surfing": 4,
+    "sailing": 5,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 4,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 4,
+    "nightlife": 2,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Blue and sperm whale migration",
+        "weight": 4,
+        "months": {
+          "3": 0.4,
+          "4": 1,
+          "5": 1,
+          "6": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        4,
+        5,
+        6
+      ],
+      "text": "Peak whale-watching season, with blue whales — the largest animals on Earth — passing through on migration."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and wet, quiet with unpredictable weather",
+    "cool and wet, still one of the rainiest stretches",
+    "mild, with whale migration beginning and weather improving",
+    "mild, peak whale season and good hiking conditions",
+    "mild and pleasant, whale season continuing and comfortable for hiking",
+    "mild, drying out with whales still passing through",
+    "warm and drier, one of the more reliable months",
+    "warm and drier, the busiest month of the year",
+    "mild, still good and slightly quieter",
+    "mild and increasingly unsettled, rain returning",
+    "cool and wet, quiet again",
+    "cool and wet, unpredictable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "São Miguel",
+    "Sete Cidades",
+    "Ponta Delgada",
+    "Terceira",
+    "Pico Island"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "strong",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

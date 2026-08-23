@@ -1,0 +1,1 @@
+ALTER TABLE "cards" ADD COLUMN "niche" boolean DEFAULT false NOT NULL;

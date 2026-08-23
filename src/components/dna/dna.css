@@ -1,0 +1,1067 @@
+/* Travel DNA onboarding — ported from the legacy app's styles.css (dna-*
+   rules), scoped under .dna-root. Theme tokens (--bg, --accent, etc.) are
+   shared globally with the main results app — see app/globals.css. */
+
+.dna-root {
+  min-height: 100vh;
+  /* 100dvh reflects the viewport as it actually is right now, shrinking
+     when the mobile browser's URL bar is showing — plain 100vh uses the
+     browser's max/collapsed-chrome height instead, so vertically
+     centering content against it could push the top of a tall screen
+     (like the swipe screen's progress bar) up above the visible area,
+     hidden behind the URL bar. Falls back to 100vh on browsers without
+     dvh support. */
+  min-height: 100dvh;
+  display: flex;
+  /* flex-start, not center: centering tall content (the swipe screen with
+     its topbar + card + buttons) risked the top half spilling above the
+     fold on shorter phones, hiding the progress bar. Anchoring to the top
+     guarantees it's always the first thing on screen. */
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.dna-root * {
+  box-sizing: border-box;
+}
+
+.dna-screen {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.dna-basics,
+.dna-summary {
+  align-items: stretch;
+  text-align: left;
+}
+
+.dna-basics {
+  max-width: 480px;
+}
+
+.dna-summary {
+  max-width: 520px;
+}
+
+/* ---- Buttons ---- */
+
+.btn-primary {
+  background: var(--accent);
+  color: #1a1108;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dna-btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dna-btn-secondary:hover {
+  border-color: var(--accent);
+}
+
+.dna-btn-danger:hover {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.dna-link-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.dna-link-btn:hover {
+  color: var(--accent);
+}
+
+.dna-back-link {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.dna-back-link:hover {
+  color: var(--accent);
+}
+
+/* ---- Intro ---- */
+
+.dna-intro-icon {
+  font-size: 42px;
+}
+
+.dna-intro h1 {
+  font-size: 26px;
+}
+
+.dna-intro-lead {
+  font-size: 15px;
+  max-width: 440px;
+  color: var(--text-dim);
+}
+
+.dna-intro-sub {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  max-width: 420px;
+}
+
+.dna-intro-footnote {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* ---- Basics ---- */
+
+.dna-step-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.dna-basics-sub {
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+.dna-basics-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.dna-basics-block h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.dna-basics-hint {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+.dna-basics-note {
+  font-size: 12px;
+  color: var(--bad);
+  text-align: center;
+}
+
+.dna-interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .dna-interest-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dna-interest-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 6px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.dna-interest-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.dna-interest-emoji {
+  font-size: 22px;
+}
+
+.dna-interest-label {
+  font-size: 10.5px;
+  text-align: center;
+}
+
+.dna-companion-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dna-companion-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.dna-companion-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1108;
+  font-weight: 600;
+}
+
+.band-dim {
+  margin-bottom: 10px;
+}
+
+.band-dim:last-child {
+  margin-bottom: 0;
+}
+
+.band-dim-header {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.band-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.band-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 11.5px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.band-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1108;
+  font-weight: 600;
+}
+
+/* ---- Calibration meter ---- */
+
+.dna-topbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  /* Pinned to the top of the viewport instead of scrolling away — on a
+     short phone screen the card + 3 swipe buttons below can be taller
+     than the visible area, and without this the progress bar (the whole
+     point of this bar being on-screen while swiping) would scroll out of
+     view the moment the user scrolled down to actually reach the
+     buttons. */
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding: 10px 0 4px;
+}
+
+.dna-meter {
+  width: 100%;
+  max-width: 420px;
+}
+
+.dna-meter-toprow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 4px;
+}
+
+.dna-meter-percent-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dna-meter-percent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.dna-meter-delta {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--good);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dna-meter-delta.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Recalibrating in place — replaces the old full-screen overlay. The glow
+   and shimmer are scoped to this widget alone so the rest of the screen
+   (the card someone just rated, its buttons) stays fully visible while
+   the meter visibly "thinks." */
+.dna-meter.thinking {
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--accent-soft), 0 0 18px 0 var(--accent-soft);
+  transition: box-shadow 0.3s ease;
+}
+
+.dna-meter-track {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  position: relative;
+}
+
+.dna-meter-track::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 5px;
+  background: linear-gradient(100deg, transparent 30%, var(--accent-soft) 48%, transparent 66%);
+  background-size: 220% 100%;
+  background-position: 140% 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dna-meter.thinking .dna-meter-track::after {
+  opacity: 1;
+  animation: dnaMeterShimmer 1.1s ease-in-out infinite;
+}
+
+@keyframes dnaMeterShimmer {
+  0% {
+    background-position: 160% 0;
+  }
+  100% {
+    background-position: -60% 0;
+  }
+}
+
+.dna-meter-microcopy {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  margin-top: 6px;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dna-meter-microcopy.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dna-meter-seg {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dna-meter-seg.lit {
+  background: linear-gradient(90deg, var(--accent), #f2b183);
+  border-color: transparent;
+  box-shadow: 0 0 8px 0 var(--accent-soft);
+}
+
+.dna-meter-seg.pulse {
+  animation: dnaSegPulse 0.7s ease;
+}
+
+@keyframes dnaSegPulse {
+  0% {
+    transform: scaleY(1);
+    box-shadow: 0 0 8px 0 var(--accent-soft);
+  }
+  40% {
+    transform: scaleY(1.6);
+    box-shadow: 0 0 14px 2px var(--accent-soft);
+  }
+  100% {
+    transform: scaleY(1);
+    box-shadow: 0 0 8px 0 var(--accent-soft);
+  }
+}
+
+.dna-status-line {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.dna-domain-badge-row {
+  display: flex;
+  gap: 6px;
+}
+
+.dna-domain-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.dna-microupdate {
+  font-size: 12.5px;
+  color: var(--accent);
+  animation: dnaMicroFade 2.6s ease forwards;
+}
+
+@keyframes dnaMicroFade {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---- Swipe card ---- */
+
+.dna-card-stage {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dna-card {
+  position: absolute;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.35);
+  background: var(--bg-card);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+}
+
+.dna-card:active {
+  cursor: grabbing;
+}
+
+.dna-card-visual {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dna-card-emoji {
+  font-size: 54px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.dna-card-body {
+  padding: 16px 18px 20px;
+  text-align: left;
+}
+
+.dna-card-category {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dna-card-title {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.dna-card-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.dna-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dna-tag {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 10.5px;
+  color: var(--text-dim);
+}
+
+/* All three sit dead-center over the card visual — edges/corners proved
+   too easy to miss, especially on small mobile viewports. Only one is
+   ever visibly opaque at a time (driven by drag x/y), so stacking them
+   at the same point is safe. */
+.dna-card-swipe-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 8px 22px;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.5);
+}
+
+.dna-card-swipe-badge.no {
+  transform: translate(-50%, -50%) rotate(-10deg);
+  border-color: var(--bad);
+  color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 30%, var(--bg-card) 70%);
+}
+
+.dna-card-swipe-badge.yes {
+  transform: translate(-50%, -50%) rotate(10deg);
+  border-color: var(--good);
+  color: var(--good);
+  background: color-mix(in srgb, var(--good) 30%, var(--bg-card) 70%);
+}
+
+.dna-card-swipe-badge.love {
+  transform: translate(-50%, -50%);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 30%, var(--bg-card) 70%);
+}
+
+.dna-swipe-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.dna-swipe-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 8px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.dna-swipe-icon {
+  font-size: 18px;
+}
+
+.dna-swipe-hint {
+  font-size: 9.5px;
+  color: var(--text-faint);
+}
+
+.dna-no:hover {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.dna-yes:hover {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.dna-love:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+@media (max-width: 480px) {
+  .dna-card-visual {
+    height: 180px;
+  }
+}
+
+/* ---- Insight / learning check ---- */
+
+.dna-insight-card {
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  padding: 28px 26px;
+  max-width: 440px;
+  background: var(--bg-card);
+}
+
+.dna-insight-kicker {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.dna-insight-question {
+  font-size: 20px;
+  font-weight: 750;
+  margin-bottom: 10px;
+}
+
+.dna-insight-text {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.dna-insight-why {
+  background: var(--accent-soft);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  margin-bottom: 14px;
+}
+
+.dna-insight-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dna-insight-btn {
+  border-radius: 10px;
+  padding: 11px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13.5px;
+  transition: opacity 0.25s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.dna-insight-yes:hover {
+  border-color: var(--good);
+}
+
+.dna-insight-no:hover {
+  border-color: var(--bad);
+}
+
+.dna-insight-unsure:hover {
+  border-color: var(--okay);
+}
+
+.dna-insight-btn.chosen {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.dna-insight-btn.dimmed {
+  opacity: 0.35;
+}
+
+/* ---- Domain-unlock / deep-dive recap ---- */
+
+.dna-domain-unlock-card,
+.dna-domain-recap-card {
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  padding: 32px 28px;
+  max-width: 440px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.dna-domain-unlock-kicker,
+.dna-domain-recap-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.dna-domain-unlock-title,
+.dna-domain-recap-title {
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.dna-domain-unlock-body {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.dna-domain-recap-emoji {
+  font-size: 34px;
+}
+
+.dna-domain-recap-body {
+  font-size: 14px;
+  color: var(--text-dim);
+  text-align: left;
+}
+
+/* ---- Soft exit ---- */
+
+.dna-softexit-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px 26px;
+  max-width: 440px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.dna-softexit-icon {
+  font-size: 34px;
+}
+
+.dna-softexit-card h2 {
+  font-size: 20px;
+}
+
+.dna-softexit-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ---- Summary ---- */
+
+.dna-summary-intro {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.dna-summary-sub {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dna-summary-empty {
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
+.dna-summary-section {
+  margin-top: 18px;
+}
+
+.dna-summary-section h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+.dna-dim-row {
+  margin-bottom: 16px;
+}
+
+.dna-dim-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.dna-dim-label-lead {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dna-dim-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--bad);
+  opacity: 0.35;
+  position: relative;
+  overflow: hidden;
+}
+
+.dna-dim-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--accent);
+  border-radius: 999px 0 0 999px;
+  opacity: 1;
+}
+
+.dna-dim-summary {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.dna-tension-card {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-soft);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.dna-tension-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dna-tension-confirmed {
+  color: var(--good);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dna-tension-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.dna-tension-why {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.dna-learning-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--accent-soft);
+}
+
+.dna-learning-item:last-child {
+  border-bottom: none;
+}
+
+.dna-learning-text {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.dna-summary-list {
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.dna-summary-list li {
+  margin-bottom: 6px;
+}
+
+.dna-evidence {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.dna-evidence summary {
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dna-evidence-label {
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+
+.dna-evidence-list {
+  padding-left: 16px;
+  color: var(--text-dim);
+}
+
+.dna-evidence-list li {
+  margin: 2px 0;
+}
+
+.dna-evidence-pattern {
+  color: var(--text-dim);
+}
+
+.dna-summary-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* ---- Style shortcut ---- */
+
+.dna-style-shortcut {
+  gap: 16px;
+}
+
+/* ---- Calibration & Confidence Feedback ---- */
+
+.dna-rating {
+  margin-top: 10px;
+  /* Explicit rather than inherited — the summary/learning-check screens
+     that originally hosted this are already left-aligned, but the
+     domain-recap card centers text by default, so without this the
+     rating prompt would center while its flex button row stayed
+     left-aligned, an inconsistent look. */
+  text-align: left;
+}
+
+.dna-rating-prompt {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.dna-rating-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dna-rating-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 11.5px;
+  color: var(--text);
+  cursor: pointer;
+  transition: opacity 0.25s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.dna-rating-btn:hover {
+  border-color: var(--accent);
+}
+
+.dna-rating-btn.chosen {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.dna-rating-btn.dimmed {
+  opacity: 0.35;
+}
+
+.dna-rating-emoji {
+  font-size: 12px;
+}
+
+.dna-rating-thinking {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.dna-rating-status {
+  margin-top: 10px;
+  /* table, not inline-block: still shrinks to content width, but as a
+     block-level box it always starts at its container's left edge
+     instead of following the ancestor's text-align (which centers in
+     the domain-recap card but not in the summary/learning-check
+     screens this originally shipped in). */
+  display: table;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.dna-rating-status-spot_on {
+  color: var(--good);
+  border-color: var(--good);
+}
+
+.dna-rating-status-sort_of {
+  color: var(--okay);
+  border-color: var(--okay);
+}
+
+.dna-rating-status-not_sure {
+  color: var(--text-dim);
+}
+
+.dna-rating-status-not_really {
+  color: var(--bad);
+  border-color: var(--bad);
+}
+

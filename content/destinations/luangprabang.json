@@ -1,0 +1,118 @@
+{
+  "id": "luangprabang",
+  "name": "Luang Prabang",
+  "region": "Laos",
+  "emoji": "🛕",
+  "climate": "tropical",
+  "about": "Cool-dry season Nov–Feb is most pleasant, hot season Mar–May is intense, monsoon Jun–Oct brings frequent rain.",
+  "overview": "A UNESCO-listed royal capital of gilded temples and saffron-robed monks at the confluence of the Mekong and Nam Khan rivers.",
+  "costRange": { "min": "$", "max": "$$$$$" },
+  "costOverview": "Food, coffee, and the night market are extremely cheap — hiring a tuk-tuk out to the waterfalls is the main real expense most visitors budget for.",
+  "costItems": [
+    { "label": "Kuang Si Falls entrance", "price": 1, "unit": "" },
+    { "label": "Coffee", "price": 1.5, "unit": "" },
+    { "label": "Night market food skewer", "price": 1.5, "unit": "" },
+    { "label": "Tuk-tuk to Kuang Si Falls, round trip", "price": 25, "unit": "per vehicle" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 3,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 6,
+    "finedining": 6,
+    "streetfood": 8,
+    "nightlife": 4,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peakIntensity": "mild",
+  "monthlyWeather": [
+    "cool and dry, one of the most pleasant months of the year",
+    "dry and warming, still comfortable with little rain",
+    "hot and dry, with temperatures climbing fast",
+    "scorching and dry, the hottest month of the year",
+    "hot and increasingly humid, as the first rains of the wet season arrive",
+    "hot and humid, with regular afternoon downpours",
+    "hot and humid, still deep in the wet season",
+    "hot and humid, the wettest month with frequent heavy rain",
+    "hot and humid, still within the rainy season though easing",
+    "warm and drying out, one of the best months as the dry season begins",
+    "warm and dry, comfortable with the cool season settling in",
+    "cool and dry, one of the most pleasant months of the year"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Laos"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "cornwall",
+  "name": "Cornwall",
+  "region": "England",
+  "emoji": "🏄",
+  "climate": "temperate",
+  "about": "Stays walkable nearly year-round, just wetter and windier in winter.",
+  "overview": "England's mildest corner, warmed by the Gulf Stream — palm trees grow here despite the latitude, with the country's real surf scene around Newquay and a coastal path linking fishing villages and beaches.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Cornwall runs pricier than much of England outside London — even a Cornish pasty and a cream tea cost more here than the same items inland, reflecting the seaside tourist premium.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Cornish pasty",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Cream tea, scone with jam and clotted cream",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 17,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 5,
+    "diving": 3,
+    "surfing": 7,
+    "sailing": 6,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 2,
+    "spa": 3,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 3,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "mild and wet, the mildest part of England even in deep winter",
+    "mild and wet, still quiet with occasional storms",
+    "mild, drying out and one of the better shoulder months",
+    "mild and pleasant, a favorite quieter month",
+    "warm and pleasant, excellent before the summer crowds",
+    "warm, still comfortable as the season picks up",
+    "warm, the busiest month with school holidays",
+    "warm, still peak season and the busiest month of the year",
+    "warm and pleasant, easing crowds and good surf",
+    "mild and pleasant, one of the best months",
+    "mild and wet, quiet again",
+    "mild and wet, quiet through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Newquay",
+    "St Ives",
+    "Land's End",
+    "Eden Project",
+    "Falmouth"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "none",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

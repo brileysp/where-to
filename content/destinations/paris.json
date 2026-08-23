@@ -1,0 +1,161 @@
+{
+  "id": "paris",
+  "name": "Paris",
+  "region": "France",
+  "emoji": "🗼",
+  "climate": "temperate",
+  "about": "Late spring and early fall are the sweet spot. Summer is hot and packed (some small restaurants close mid-August); winter is grey but atmospheric, with Christmas markets.",
+  "overview": "Museums, architecture, and food worth planning a trip around, all within walking distance or a short métro ride of each other.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A quick baguette sandwich barely registers; taxis and landmark tickets are what actually add up.",
+  "costItems": [
+    {
+      "label": "Ham and butter baguette sandwich",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Wine, glass",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "unit": "",
+      "price": 18
+    },
+    {
+      "label": "Louvre entry",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Eiffel Tower summit",
+      "unit": "",
+      "price": 32
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 1,
+    "roadtrip": 3,
+    "adventure": 1,
+    "golf": 3,
+    "stargazing": 1,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 10,
+    "streetfood": 7,
+    "nightlife": 8,
+    "winetasting": 7,
+    "spa": 5,
+    "luxuryLodging": 10,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 9,
+    "birding": 2,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hot": [
+    8
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Christmas markets",
+        "weight": 3,
+        "months": {
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets and holiday lights fill the city, especially along the Champs-Élysées."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and grey, the coldest month with short days",
+    "cold and still grey, though days are slowly lengthening",
+    "cool and fresh, with spring arriving in fits and starts",
+    "mild and often rainy, with the city turning green",
+    "mild and increasingly pleasant, one of the best months for sightseeing",
+    "warm and sunny, with long, pleasant evenings",
+    "warm and mostly sunny, though can bring occasional heatwaves",
+    "hot, with many small restaurants and shops closing as locals leave the city",
+    "warm and comfortable, one of the best months as the city regains its rhythm",
+    "cool and mild, with autumn color settling in",
+    "cool and grey, with rain becoming more frequent",
+    "cold, with short days and a festive atmosphere around the holidays"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Eiffel Tower",
+    "Louvre",
+    "France"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

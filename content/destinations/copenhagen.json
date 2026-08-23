@@ -1,0 +1,105 @@
+{
+  "id": "copenhagen",
+  "name": "Copenhagen",
+  "region": "Denmark",
+  "emoji": "🚴",
+  "climate": "temperate",
+  "about": "Summer brings long light-filled days, winter is dark and cold but cozy and much less crowded.",
+  "overview": "Colorful harbor-front townhouses, world-class New Nordic dining, and one of the world's most bike-friendly capitals.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "Nordic prices apply across the board — even a casual open-faced sandwich or a coffee costs noticeably more than in the rest of Europe.",
+  "costItems": [
+    { "label": "Coffee", "price": 5, "unit": "" },
+    { "label": "Metro ticket", "price": 5.5, "unit": "" },
+    { "label": "Smørrebrød", "price": 18, "unit": "" },
+    { "label": "Tivoli Gardens entry", "price": 25, "unit": "" },
+    { "label": "Taxi/Uber, 15 min", "price": 35, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 2,
+    "sailing": 5,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 1,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 8,
+    "streetfood": 6,
+    "nightlife": 7,
+    "winetasting": 3,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 9,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "cold, often damp, with short days and the darkest stretch of the year",
+    "cold and grey, still firmly in winter",
+    "cool and breezy, with spring slow to take hold",
+    "mild but changeable, with brighter days becoming common",
+    "mild and increasingly pleasant, one of the sunniest and best months",
+    "warm and sunny, with long, light-filled days",
+    "warm, the warmest month with pleasant, mild heat",
+    "warm and still pleasant, though days begin shortening",
+    "mild and crisp, one of the better months as crowds thin",
+    "cool and increasingly wet, with autumn setting in",
+    "cold and damp, with short days and grey skies",
+    "cold and dark, with the year's shortest days offset by cozy holiday lights"
+  ],
+  "naSliders": [
+    "diving"
+  ],
+  "searchAliases": [
+    "Denmark"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "los-cabos",
+  "name": "Los Cabos",
+  "region": "Mexico",
+  "emoji": "🐳",
+  "climate": "desert",
+  "about": "Gray whales migrate through and calve in nearby lagoons Dec–Apr.",
+  "overview": "Desert meets ocean at the tip of the Baja Peninsula, built around golf, sportfishing, and beach resorts.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street tacos and coffee stay properly cheap — the moment you need a taxi to or from the resort zone, prices jump sharply.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Street taco",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Airport transfer taxi",
+      "price": 80,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 7,
+    "diving": 6,
+    "surfing": 5,
+    "sailing": 5,
+    "hiking": 2,
+    "scenic": 7,
+    "fishing": 8,
+    "roadtrip": 4,
+    "adventure": 5,
+    "golf": 7,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 6,
+    "winetasting": 2,
+    "spa": 7,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 4,
+    "birding": 3,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "hot": [
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    8,
+    9
+  ],
+  "wildlifePeak": [
+    1,
+    2,
+    3
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Gray whale migration & calving",
+        "weight": 4,
+        "months": {
+          "12": 0.5,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Gray whales migrate through and calve in the nearby lagoons — one of the most reliable whale-watching windows anywhere."
+    },
+    {
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "text": "Hurricane season on the Pacific side — real risk of tropical storms, though direct hits are less frequent than the Caribbean coast."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, whale season underway and comfortable",
+    "warm and dry, peak whale season and excellent weather",
+    "warm and dry, still peak whale season",
+    "warm and dry, whale season winding down, still excellent",
+    "warm and dry, comfortable before the summer heat",
+    "hot and dry, still comfortable with low humidity",
+    "very hot, with the first hurricane risk of the season",
+    "very hot and increasingly humid, hurricane season underway",
+    "very hot and humid, peak hurricane season",
+    "hot, hurricane risk easing as the month progresses",
+    "warm and dry, comfortable and increasingly popular",
+    "warm and dry, whale season beginning again"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Cabo San Lucas",
+    "San José del Cabo",
+    "Baja California Sur",
+    "El Arco"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "coastlines": "signature",
+      "mountains": "none",
+      "forests": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "zion-bryce",
+  "name": "Zion & Bryce Canyon",
+  "region": "Utah, USA",
+  "emoji": "🏜️",
+  "climate": "desert",
+  "about": "Spring (Mar–May) and fall (Sep–Oct) are the sweet spot, Zion's canyon floor is scorching by midsummer, and Bryce's high rim gets real winter snow.",
+  "overview": "Two of Utah's most dramatic national parks — Zion's soaring red sandstone canyon and Bryce's otherworldly hoodoos — a scenic drive apart.",
+  "costRange": { "min": "$$", "max": "$$$" },
+  "costOverview": "Each park charges its own entrance fee — and starting in 2026, non-US residents pay a real, separate surcharge on top of the standard pass.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Deli sandwich, gateway town", "price": 12, "unit": "" },
+    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
+    { "label": "Non-US-resident surcharge", "price": 100, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 7,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 6,
+    "snowsports": 1,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 3,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "wet": [
+    7,
+    8
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    12,
+    1
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1
+  ],
+  "swimHazard": [
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Ideal shoulder-season trail conditions",
+        "weight": 2,
+        "months": {
+          "4": 0.7,
+          "5": 0.7,
+          "9": 1,
+          "10": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7,
+        8
+      ],
+      "text": "Summer monsoon storms bring real flash-flood risk in Zion's slot canyons, including the Narrows — check conditions before wading in."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, with snow dusting Bryce's rim and mild days down in Zion canyon",
+    "cold at Bryce, mild and pleasant in Zion, with fewer crowds",
+    "mild and dry, one of the best months as wildflowers begin",
+    "warm and dry, ideal hiking weather at both parks",
+    "warm and dry, still excellent before the summer heat sets in",
+    "hot in Zion's canyon, monsoon storms building, Bryce stays cooler",
+    "very hot in Zion, with afternoon monsoon thunderstorms and flash-flood risk",
+    "still hot and stormy, monsoon season continuing through the month",
+    "cooling nicely, dry and one of the most popular months",
+    "mild and dry, arguably the best month for hiking both parks",
+    "cool, with the first real snow dusting Bryce's hoodoos",
+    "cold, with Bryce under snow and Zion's canyon quiet and mild"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Zion National Park",
+    "Bryce Canyon National Park",
+    "Angels Landing",
+    "The Narrows",
+    "Springdale"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "mountains": "casual",
+      "astrophotography": "strong",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

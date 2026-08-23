@@ -1,0 +1,218 @@
+{
+  "id": "lofoten",
+  "name": "Lofoten Islands",
+  "region": "Norway",
+  "emoji": "🏔️",
+  "climate": "polar",
+  "about": "Summer midnight sun is best for hiking; deep winter brings northern lights and orca season nearby.",
+  "overview": "Dramatic granite peaks rising straight out of the sea, fishing villages on stilts, and some of the most photographed scenery in Norway.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Lofoten runs expensive even by Norwegian standards — a simple bowl of fish soup costs more here than a full meal in most of Europe, and the fish burger at Sakrisøy's famous stand is the one affordable local classic.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 5.5,
+      "unit": ""
+    },
+    {
+      "label": "Fish burger, Sakrisøy",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Fish soup, sit-down restaurant",
+      "price": 26,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 4,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 8,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 2,
+    "museums": 2,
+    "architecture": 3,
+    "festivals": 2,
+    "finedining": 4,
+    "streetfood": 2,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 4,
+    "snowsports": 5,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7
+  ],
+  "low": [
+    11,
+    2
+  ],
+  "wildlifePeak": [
+    5,
+    6,
+    7,
+    8,
+    11,
+    12,
+    1
+  ],
+  "birdingPeak": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "sliderCaps": {
+    "wildlife": 8,
+    "birding": 7
+  },
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Midnight sun trail access",
+        "weight": 4,
+        "months": {
+          "6": 0.8,
+          "7": 1,
+          "8": 0.8
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Midnight sun peak season",
+        "weight": 2,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 0.7
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Long winter darkness",
+        "weight": 7,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.6,
+          "4": 0.3,
+          "5": 0.15,
+          "9": 0.3,
+          "10": 0.6,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "The midnight sun keeps it light around the clock, good for late-night hiking."
+    },
+    {
+      "months": [
+        11,
+        12,
+        1
+      ],
+      "text": "Orcas hunting herring move into nearby fjords, and dark skies bring strong aurora chances."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and often windy, with only a few hours of weak daylight",
+    "the coldest month, still dark with brief daylight slowly returning",
+    "cold but brightening fast, with daylight lengthening quickly",
+    "cool, with real daylight back and the wind starting to ease",
+    "mild and increasingly bright, with the midnight sun beginning late in the month",
+    "cool but genuinely light around the clock under the midnight sun",
+    "the mildest month, calm and the best chance of clear, settled days",
+    "still mild and the calmest month for wind, with darkness slowly returning",
+    "cooling down, with rain becoming more frequent",
+    "cool and wet, the rainiest month of the year",
+    "cold and increasingly dark, with aurora chances building",
+    "cold, dark, and the windiest month, with only a few hours of daylight"
+  ],
+  "naSliders": [
+    "swimming",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Norway",
+    "Reine",
+    "Arctic Circle"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "astrophotography": "signature",
+      "deserts": "none",
+      "forests": "none"
+    }
+  }
+}

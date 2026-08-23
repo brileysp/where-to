@@ -1,0 +1,191 @@
+{
+  "id": "churchill",
+  "name": "Churchill",
+  "region": "Manitoba, Canada",
+  "emoji": "🐻‍❄️",
+  "climate": "polar",
+  "about": "Bears gather near the coast Oct–Nov waiting for sea ice, and beluga whales fill the river Jul–Aug.",
+  "overview": "\"Polar Bear Capital of the World\" — bears gather along Hudson Bay's coast waiting for sea ice, plus beluga whales, aurora, and genuine subarctic tundra.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Churchill has no cheap way to reach it or to see polar bears once you're there — there are no roads in, so you fly to Winnipeg and connect onward (the only realistic option; the alternative is a two-day train), and even a single tundra buggy outing costs hundreds of dollars.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Tundra buggy tour, half-day",
+      "price": 250,
+      "unit": ""
+    },
+    {
+      "label": "Flight, Winnipeg–Churchill",
+      "price": 1000,
+      "unit": ""
+    },
+    {
+      "label": "6-day polar bear photography expedition",
+      "price": 4300,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 2,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 2,
+    "adventure": 3,
+    "golf": 0,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 1,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 1,
+    "luxuryLodging": 5,
+    "snowsports": 3,
+    "cycling": 0,
+    "shopping": 1,
+    "birding": 5,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "cold": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    10,
+    11
+  ],
+  "low": [
+    3,
+    4,
+    5
+  ],
+  "birdingPeak": [
+    6,
+    7
+  ],
+  "peakIntensity": "mild",
+  "sliderCaps": {
+    "birding": 7
+  },
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Polar bears",
+        "weight": 7,
+        "months": {
+          "9": 0.3,
+          "10": 1,
+          "11": 1,
+          "12": 0.15
+        }
+      },
+      {
+        "label": "Beluga whales",
+        "weight": 3.5,
+        "months": {
+          "7": 1,
+          "8": 1
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Long winter nights (aurora season)",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.5,
+          "11": 0.5,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        10,
+        11
+      ],
+      "text": "Polar bears gather along the coast waiting for Hudson Bay to freeze — the peak bear-viewing window."
+    },
+    {
+      "months": [
+        7,
+        8
+      ],
+      "text": "Thousands of beluga whales fill the Churchill River estuary, often approachable by kayak."
+    }
+  ],
+  "monthlyWeather": [
+    "bitterly cold, deep winter with temperatures often well below freezing",
+    "bitterly cold, still deep in the harsh subarctic winter",
+    "cold, with winter still firmly in control",
+    "cold, with the ice beginning to loosen its grip",
+    "cool, as the tundra starts to thaw",
+    "mild, with beluga whales arriving in the river in large numbers",
+    "mild, with long daylight hours and comfortable temperatures for full days outdoors",
+    "mild, with warm afternoons giving way to crisp evenings",
+    "cool, with the tundra turning gold as polar bears begin gathering",
+    "cool and increasingly cold, with the tundra fully bare and days growing short",
+    "cold, with Hudson Bay visibly icing over along the shoreline",
+    "bitterly cold, with winter fully returned and the bay freezing over"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "golf",
+    "cycling",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Manitoba",
+    "polar bears",
+    "Hudson Bay"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "astrophotography": "signature",
+      "mountains": "none",
+      "forests": "casual",
+      "deserts": "none"
+    }
+  }
+}

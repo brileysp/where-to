@@ -1,0 +1,243 @@
+{
+  "id": "hokkaido",
+  "name": "Hokkaido",
+  "region": "Japan",
+  "emoji": "❄️",
+  "climate": "temperate",
+  "about": "Largely skips the mainland's June rainy season, making it a popular cool-summer escape, while winter (Dec–Mar) brings some of the best powder skiing on Earth around Niseko and the Sapporo Snow Festival.",
+  "overview": "Japan's northern island of ski powder, hot springs, and some of the country's best seafood and ramen.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Ramen, coffee, and subway rides all stay reasonable — winter ski passes and top-tier onsen ryokan are where real spending happens.",
+  "costItems": [
+    {
+      "label": "Subway ride",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Day subway pass",
+      "price": 5.5,
+      "unit": ""
+    },
+    {
+      "label": "Sapporo ramen bowl",
+      "price": 7,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 14,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 2,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 5,
+    "nightlife": 4,
+    "winetasting": 2,
+    "spa": 7,
+    "luxuryLodging": 7,
+    "snowsports": 7,
+    "cycling": 4,
+    "shopping": 3,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    1,
+    2,
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    4,
+    5,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Red-crowned crane viewing (Kushiro)",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 0.8
+        }
+      },
+      {
+        "label": "Brown bear salmon season (Shiretoko)",
+        "weight": 2,
+        "months": {
+          "9": 0.6,
+          "10": 1
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Red-crowned crane viewing (Kushiro)",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 0.8
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Furano lavender fields",
+        "weight": 2,
+        "months": {
+          "7": 1,
+          "8": 0.5
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Sapporo Snow Festival",
+        "weight": 4,
+        "months": {
+          "2": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2
+      ],
+      "text": "The Sapporo Snow Festival draws huge crowds for massive ice and snow sculptures across the city."
+    },
+    {
+      "months": [
+        7
+      ],
+      "text": "Furano's lavender fields are in full, fragrant bloom."
+    },
+    {
+      "months": [
+        1,
+        2
+      ],
+      "text": "Red-crowned cranes gather at Kushiro's feeding stations — one of Japan's most striking wildlife spectacles."
+    },
+    {
+      "months": [
+        9,
+        10
+      ],
+      "text": "Brown bears concentrate along salmon-running rivers in Shiretoko National Park."
+    }
+  ],
+  "monthlyWeather": [
+    "the coldest month, deep snow and prime powder-skiing conditions",
+    "bitterly cold, with the Sapporo Snow Festival drawing huge crowds",
+    "cold, with snow lingering but the ski season winding down",
+    "cool and often grey, a quiet shoulder month as snow melts",
+    "mild and pleasant, one of the least crowded months",
+    "mild and increasingly dry, largely skipping mainland Japan's rainy season",
+    "warm and dry, with Furano's lavender fields at their peak by month's end",
+    "warm and pleasant, still dry and comfortable, a popular cool-summer escape",
+    "cooling fast, with brown bears gathering along the salmon runs",
+    "cool and crisp, with fall foliage arriving earlier than the mainland",
+    "cold, with the first heavy snow of the season returning",
+    "cold and snowy, ski season underway again"
+  ],
+  "naSliders": [
+    "surfing",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Sapporo",
+    "Niseko",
+    "Furano",
+    "Kushiro",
+    "Shiretoko",
+    "Hakodate"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    },
+    "cycling": {
+      "gravelRiding": "strong",
+      "scenicRoadCycling": "casual",
+      "mountainBiking": "casual"
+    }
+  }
+}

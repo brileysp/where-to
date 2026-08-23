@@ -1,0 +1,156 @@
+{
+  "id": "rivieramaya",
+  "name": "Riviera Maya",
+  "region": "Mexico",
+  "emoji": "🌊",
+  "climate": "tropical",
+  "about": "Dry season Nov–Apr is warm and comfortable; hurricane risk peaks Aug–Oct. Whale sharks gather near Isla Mujeres Jun–Sep.",
+  "overview": "White-sand Caribbean beaches, cenotes, and Mayan ruins along Mexico's most developed resort coastline.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Local transport, tacos, and cenote entry all stay cheap — inter-town taxis and resort-zone dining are where costs climb.",
+  "costItems": [
+    {
+      "label": "Colectivo, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Street taco",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Cenote entrance",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, Playa del Carmen–Tulum",
+      "price": 34,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 9,
+    "diving": 9,
+    "surfing": 3,
+    "sailing": 6,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 5,
+    "roadtrip": 4,
+    "adventure": 5,
+    "golf": 6,
+    "stargazing": 4,
+    "museums": 5,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 8,
+    "nightlife": 8,
+    "winetasting": 2,
+    "spa": 7,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 6,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    8,
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "Whale sharks gather to feed near Isla Mujeres and Holbox, one of the largest aggregations on Earth."
+    }
+  ],
+  "monthlyWeather": [
+    "dry and warm, with the year's lowest humidity",
+    "dry and warm, one of the most comfortable months",
+    "dry and warm, with heat building toward summer",
+    "warm and mostly dry, one of the best months before the heat and rain set in",
+    "hot and increasingly humid, as the dry season winds down",
+    "hot and humid, with the wet season beginning and whale sharks arriving",
+    "hot and humid, with brief but heavy afternoon showers",
+    "hot and humid, deep in whale shark season with regular afternoon storms",
+    "hot and humid, the peak of hurricane season with the year's heaviest rain",
+    "hot and humid, still within hurricane season with unsettled weather",
+    "warm and drying out, with hurricane risk fading",
+    "dry and warm, one of the most pleasant months of the year"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Cancun",
+    "Tulum",
+    "Playa del Carmen",
+    "Cozumel"
+  ]
+}

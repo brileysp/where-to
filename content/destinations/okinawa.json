@@ -1,0 +1,173 @@
+{
+  "id": "okinawa",
+  "name": "Okinawa",
+  "region": "Japan",
+  "emoji": "🏝️",
+  "climate": "tropical",
+  "about": "Typhoon season runs Jun–Oct, peaking Aug–Sep; winter here is mild by Japanese standards, one of the few places in the country still pleasant Dec–Feb.",
+  "overview": "Japan's subtropical Ryukyu Islands — a different culture, cuisine and history from the mainland, built around coral-reef diving and beaches.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Okinawa runs cheaper than mainland Japan — a bowl of Okinawa soba costs less than equivalent ramen in Tokyo, and even the marquee Churaumi Aquarium stays reasonable.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Okinawa soba, casual",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Churaumi Aquarium entry",
+      "price": 20,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 9,
+    "surfing": 4,
+    "sailing": 5,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 5,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 5,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    5,
+    6
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    5,
+    6
+  ],
+  "swimHazard": [
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Humpback whale season (Kerama Islands)",
+        "weight": 2,
+        "months": {
+          "1": 0.6,
+          "2": 1,
+          "3": 0.6
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "Typhoon season runs through this whole window, peaking Aug–Sep — check forecasts before booking a beach-focused trip."
+    },
+    {
+      "months": [
+        1,
+        2,
+        3
+      ],
+      "text": "Humpback whales migrate through Okinawan waters, with whale-watching tours running out of the Kerama Islands."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and dry, one of the most pleasant months in all of Japan",
+    "mild and dry, with whale-watching season in full swing",
+    "warm and dry, whale season winding down as the water warms",
+    "warm and pleasant, a lovely shoulder month before the rains",
+    "warm and increasingly wet, as the short rainy season begins",
+    "warm and wet, the rainiest month of the year",
+    "hot, with typhoon season starting and seas becoming less predictable",
+    "the hottest month, peak typhoon season and peak beach crowds",
+    "still hot and humid, typhoon risk remaining high",
+    "warm, with typhoon risk easing as the month goes on",
+    "warm and pleasant, a quieter and increasingly comfortable month",
+    "mild and dry, comfortable and relatively quiet"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Naha",
+    "Ishigaki",
+    "Kerama Islands",
+    "Ryukyu Islands",
+    "Miyako"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "none",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

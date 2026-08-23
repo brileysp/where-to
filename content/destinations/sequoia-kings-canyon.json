@@ -1,0 +1,178 @@
+{
+  "id": "sequoia-kings-canyon",
+  "name": "Sequoia & Kings Canyon",
+  "region": "California, USA",
+  "emoji": "🌲",
+  "climate": "temperate",
+  "about": "The groves are reachable most of the year, but the high Sierra backcountry is really only open Jun–Sep.",
+  "overview": "Jointly administered, adjacent parks home to the giant sequoias, including General Sherman, the largest tree by volume on Earth.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels — the one real outlier is the flat non-US-resident surcharge added on top of the standard entrance pass.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner meal, gateway town",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Non-US-resident surcharge",
+      "price": 100,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 3,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 1,
+    "luxuryLodging": 2,
+    "snowsports": 3,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Giant sequoia groves stay striking year-round",
+        "weight": 1,
+        "months": {
+          "6": 0.3,
+          "7": 0.5,
+          "8": 0.5,
+          "9": 0.3
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12,
+        1,
+        2
+      ],
+      "text": "The sequoia groves themselves stay open and are genuinely striking dusted in snow, even though the high country above is closed for the season."
+    }
+  ],
+  "monthlyWeather": [
+    "cold with snow in the giant forest, though the sequoia groves stay open",
+    "cold and often snowy, quiet and atmospheric among the big trees",
+    "cool, with snow lingering at higher elevations",
+    "mild lower down, still snowbound in the high country",
+    "mild and green, with high-country trails starting to open late in the month",
+    "warm, with the high Sierra trails opening up as snow clears",
+    "warm and clear, the best month for high-country hiking",
+    "warm, still excellent hiking conditions throughout",
+    "cooling nicely, a favorite month with thinner crowds",
+    "cool, with the first snow returning to higher elevations",
+    "cold, high-country trails closing for the season",
+    "cold and often snowy, the sequoia groves quiet and beautiful"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Sequoia National Park",
+    "Kings Canyon National Park",
+    "General Sherman Tree",
+    "Giant Forest",
+    "Sierra Nevada"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "signature",
+      "astrophotography": "casual",
+      "deserts": "none",
+      "coastlines": "none"
+    }
+  }
+}

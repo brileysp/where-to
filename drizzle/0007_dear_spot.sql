@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "slider_events" jsonb DEFAULT '{}'::jsonb NOT NULL;

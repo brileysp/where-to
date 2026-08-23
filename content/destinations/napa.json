@@ -1,0 +1,166 @@
+{
+  "id": "napa",
+  "name": "Napa Valley",
+  "region": "California, USA",
+  "emoji": "🍷",
+  "climate": "mediterranean",
+  "about": "Harvest season (Aug–Oct) is the most atmospheric — and busiest, priciest — spring brings mustard-flower blooms between the vines, winter is quiet and rainy.",
+  "overview": "Rolling vineyard hills an hour from San Francisco, built entirely around wine, food, and slow afternoons.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Wine tasting fees alone can rival a full day's food budget elsewhere — a walk-in tasting starts reasonable, but flagship Cabernet houses charge a real premium.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Uber, 15 min",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Casual lunch",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Walk-in wine tasting",
+      "price": 35,
+      "unit": ""
+    },
+    {
+      "label": "Reserve tasting, flagship winery",
+      "price": 100,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 2,
+    "golf": 6,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 4,
+    "finedining": 9,
+    "streetfood": 4,
+    "nightlife": 4,
+    "winetasting": 10,
+    "spa": 6,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 6,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    8,
+    9,
+    10
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Crush season harvest festivals",
+        "weight": 4,
+        "months": {
+          "8": 0.6,
+          "9": 1,
+          "10": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "text": "Grape harvest (crush season) is underway, the most atmospheric and bustling time in wine country."
+    },
+    {
+      "months": [
+        2
+      ],
+      "text": "Wild mustard flowers bloom bright yellow between the vine rows."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and rainy, the wettest month of the year",
+    "cool and still rainy, with the wet season continuing",
+    "mild and still fairly wet, with rain beginning to taper off",
+    "mild and increasingly dry, one of the best months with mustard flowers blooming between the vines",
+    "warm and mostly dry, still comfortable before summer heat builds",
+    "warm and dry, with the dry season settling in",
+    "hot and dry, still comfortable with cool evenings",
+    "hot and dry, still deep in the dry season",
+    "warm and dry, with harvest season beginning",
+    "warm and dry, the heart of harvest season and the most atmospheric month",
+    "cool, with the first rains of the season returning",
+    "cool and rainy, quiet with the wet season back in full swing"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "California",
+    "wine country"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

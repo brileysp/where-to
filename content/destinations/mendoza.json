@@ -1,0 +1,162 @@
+{
+  "id": "mendoza",
+  "name": "Mendoza",
+  "region": "Argentina",
+  "emoji": "🍷",
+  "climate": "mediterranean",
+  "about": "Harvest season (Feb–Apr) is festive and scenic, summer (Dec–Feb) is hot, winter (Jun–Aug) brings snow to the nearby mountains.",
+  "overview": "Malbec country at the foot of the Andes, where vineyard lunches and asado dinners are the main event.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A tasting flight and empanadas cost a fraction of equivalent experiences in Napa or Bordeaux — genuinely one of the best-value major wine regions anywhere.",
+  "costItems": [
+    {
+      "label": "Empanada",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Wine tasting flight, Luján de Cuyo",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Asado experience with wine tasting",
+      "price": 89,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 4,
+    "golf": 3,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 5,
+    "finedining": 9,
+    "streetfood": 5,
+    "nightlife": 4,
+    "winetasting": 10,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 3,
+    "cycling": 5,
+    "shopping": 4,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    2,
+    3,
+    4,
+    9,
+    10,
+    11
+  ],
+  "hot": [
+    12,
+    1
+  ],
+  "cold": [
+    7
+  ],
+  "peak": [
+    2,
+    3,
+    4
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Vendimia (grape harvest festival)",
+        "weight": 4,
+        "months": {
+          "2": 0.6,
+          "3": 1,
+          "4": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "text": "Grape harvest (vendimia) is underway, celebrated with a major wine festival in early March."
+    }
+  ],
+  "monthlyWeather": [
+    "hot and mostly dry, with clear skies and warm evenings",
+    "hot and dry, still deep in summer with harvest season approaching",
+    "warm and pleasant, with the grape harvest getting underway",
+    "mild and pleasant, still within harvest season with vineyards turning gold",
+    "cool and mild, with autumn colors settling over the vineyards",
+    "cool, with the first snow dusting the nearby Andes",
+    "cold, the coolest month with occasional frost though rarely snow in the city",
+    "cold, still within winter with the mountains capped in snow",
+    "mild and increasingly pleasant, as spring begins to warm things up",
+    "mild and pleasant, one of the best months with vineyards in bloom",
+    "warm and pleasant, still comfortable before summer heat builds",
+    "hot and mostly dry, with summer heat settling in"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Argentina",
+    "Malbec",
+    "Andes"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

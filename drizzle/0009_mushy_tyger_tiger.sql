@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "cost_overview" text;

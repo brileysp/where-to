@@ -1,0 +1,231 @@
+{
+  "id": "alaska",
+  "name": "Alaska",
+  "region": "USA",
+  "emoji": "🐻",
+  "climate": "temperate",
+  "about": "Cruises, lodges and bear-viewing operate May–Sep, peaking Jun–Aug. Winter is a completely different trip built around aurora viewing.",
+  "overview": "Glaciers calving into the sea, brown bears fishing for salmon, and the aurora overhead — one of the last truly wild frontiers in the US.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Alaska runs expensive across the board — remoteness inflates even a basic seafood sandwich, and the marquee wildlife-viewing flights are a real splurge most visitors budget specifically for.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Wild salmon sandwich, casual",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "King crab dinner",
+      "price": 75,
+      "unit": ""
+    },
+    {
+      "label": "Bear-viewing flightseeing tour",
+      "price": 650,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 3,
+    "surfing": 1,
+    "sailing": 5,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 9,
+    "roadtrip": 9,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 2,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 4,
+    "streetfood": 3,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 3,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    5,
+    9
+  ],
+  "birdingPeak": [
+    5,
+    6,
+    7
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sliderCaps": {
+    "birding": 7
+  },
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Bear viewing (salmon runs)",
+        "weight": 7,
+        "months": {
+          "5": 0.4,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 0.4
+        }
+      }
+    ],
+    "hiking": [
+      {
+        "label": "Summer trail access",
+        "weight": 6,
+        "months": {
+          "6": 0.85,
+          "7": 1,
+          "8": 0.85
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Peak summer clarity",
+        "weight": 2.5,
+        "months": {
+          "6": 0.6,
+          "7": 0.85,
+          "8": 0.6
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Long winter darkness (aurora season)",
+        "weight": 6,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.6,
+          "4": 0.3,
+          "5": 0.15,
+          "9": 0.3,
+          "10": 0.6,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "This is peak bear-viewing season, timed to the salmon runs."
+    },
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Long, dark nights make this aurora season — a completely different trip from summer's wildlife viewing."
+    }
+  ],
+  "monthlyWeather": [
+    "deep winter, cold and dark with aurora season in full swing",
+    "cold and snowy, still prime for aurora viewing under long, dark nights",
+    "cold but brightening, with daylight lengthening and aurora chances continuing",
+    "cool and transitional, with snow lingering and daylight increasing fast",
+    "cool and the driest month, with wildlife emerging and long daylight returning",
+    "mild with nearly 24-hour daylight, one of the best months for wildlife",
+    "the warmest month, mild with peak bear-viewing along the salmon runs",
+    "still mild, with rain becoming more frequent as the month progresses",
+    "cooling and increasingly wet, with the last of the wildlife season and early aurora returning",
+    "cold with dark nights returning, as aurora season begins",
+    "cold and dark, deep into aurora season with long nights",
+    "the coldest, darkest month, prime for aurora under nearly round-the-clock darkness"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Denali",
+    "Anchorage",
+    "Juneau"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "strong",
+      "deserts": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "bordeaux",
+  "name": "Bordeaux",
+  "region": "France",
+  "emoji": "🍷",
+  "climate": "temperate",
+  "about": "The Atlantic keeps things mild and touring comfortable most of the year, wetter in winter, with the vendange (harvest) in Sep–Oct.",
+  "overview": "The world's most famous wine region, built around grand châteaux — Médoc, Saint-Émilion, and Pomerol — ringing a UNESCO-listed old town.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A casual bistro meal stays reasonable — a proper château tour and tasting is a real, planned expense, not an impulse stop.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Casual bistro lunch",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Château tour with tasting",
+      "price": 40,
+      "unit": ""
+    },
+    {
+      "label": "Half-day vineyard tour",
+      "price": 60,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 2,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 5,
+    "adventure": 1,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 5,
+    "architecture": 7,
+    "festivals": 5,
+    "finedining": 8,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 10,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 5,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Harvest (vendange) season",
+        "weight": 3,
+        "months": {
+          "9": 0.7,
+          "10": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        9,
+        10
+      ],
+      "text": "Grape harvest is underway across the chateaux — some offer grape-picking experiences alongside the usual tastings."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and often rainy, quiet with the vineyards dormant",
+    "cool and damp, still one of the quietest months",
+    "mild and improving, with the first buds appearing on the vines",
+    "mild and increasingly pleasant, a good early shoulder month",
+    "warm and mostly dry, comfortable for chateaux touring",
+    "warm and dry, settling into the best stretch of the year",
+    "warm and dry, still excellent and increasingly busy",
+    "warm and dry, the height of the summer touring season",
+    "mild and dry, with harvest getting underway",
+    "mild, the heart of harvest season and a lively time to visit",
+    "cool, with the vines turning color as the season winds down",
+    "cool and often rainy, quiet heading into winter"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Médoc",
+    "Saint-Émilion",
+    "Pomerol",
+    "Gironde",
+    "France"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "casual",
+      "coastlines": "none",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

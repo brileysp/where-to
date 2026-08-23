@@ -1,0 +1,171 @@
+{
+  "id": "oaxaca",
+  "name": "Oaxaca",
+  "region": "Mexico",
+  "emoji": "💀",
+  "climate": "highland",
+  "about": "The best place in the country to experience Día de los Muertos (Nov 1–2). The Guelaguetza indigenous cultural festival runs two Mondays in late July; rainy season is Jun–Sep, with mild, dry, comfortable weather the rest of the year thanks to the highland elevation.",
+  "overview": "Mexico's food and mezcal capital, built around a colonial center, indigenous markets, and some of the country's best regional cooking.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street tlayudas, coffee, and local rides all stay cheap — a proper mezcal tasting is the one real splurge most food-focused visits include.",
+  "costItems": [
+    {
+      "label": "Tlayuda (Oaxacan tostada), street stall",
+      "unit": "",
+      "price": 2.5
+    },
+    {
+      "label": "Taxi/DiDi, 15 min",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Mezcal tasting flight",
+      "unit": "",
+      "price": 15
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 1,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 10,
+    "nightlife": 6,
+    "winetasting": 4,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    10,
+    11
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Día de los Muertos",
+        "weight": 5,
+        "months": {
+          "11": 1
+        }
+      },
+      {
+        "label": "Guelaguetza festival",
+        "weight": 3,
+        "months": {
+          "7": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        11
+      ],
+      "text": "Día de los Muertos (Nov 1–2) fills the city and cemeteries with marigolds, altars and all-night vigils — Oaxaca's single biggest draw."
+    },
+    {
+      "months": [
+        7
+      ],
+      "text": "The Guelaguetza brings dance and music troupes from across Oaxaca's regions for two Mondays of celebration."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and dry, comfortable days and cool nights",
+    "mild and dry, still one of the most pleasant months",
+    "warm and dry, with clear skies throughout",
+    "warm and dry, still excellent before the rains",
+    "warm, with the first rains of the season arriving",
+    "warm and wet, the rainy season settling in",
+    "warm and wet, though rain often clears by afternoon — Guelaguetza season",
+    "warm and wet, still deep in the rainy season",
+    "warm, with rain beginning to ease by month's end",
+    "mild and drying out, one of the best months",
+    "mild and dry, the busiest month with Día de los Muertos",
+    "mild and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Monte Albán",
+    "Hierve el Agua",
+    "mezcal",
+    "Day of the Dead",
+    "Guelaguetza"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "casual",
+      "deserts": "casual",
+      "forests": "none",
+      "coastlines": "none",
+      "astrophotography": "none"
+    }
+  }
+}

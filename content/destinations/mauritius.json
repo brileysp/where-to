@@ -1,0 +1,130 @@
+{
+  "id": "mauritius",
+  "name": "Mauritius",
+  "region": "Indian Ocean",
+  "emoji": "🌴",
+  "climate": "tropical",
+  "about": "May–Dec is drier and cooler, cyclone risk runs Jan–Mar.",
+  "overview": "Coral lagoons and volcanic peaks in the Indian Ocean, with a Creole, Indian, and French-influenced food scene.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and casual meals stay reasonable — taxis (which aren't metered) and resort-run excursions are where prices climb, and vary by negotiation.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Casual meal",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Catamaran excursion",
+      "price": 45,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 8,
+    "surfing": 4,
+    "sailing": 7,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 7,
+    "stargazing": 4,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 4,
+    "winetasting": 2,
+    "spa": 8,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "wet": [
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    12,
+    1,
+    7,
+    8
+  ],
+  "low": [
+    2,
+    3
+  ],
+  "monthlyWeather": [
+    "hot and humid, with cyclone risk at its highest",
+    "hot and humid, still within the most active cyclone window",
+    "hot and rainy, with cyclone risk continuing though easing",
+    "warm and increasingly dry, as the rains begin to ease",
+    "mild and dry, one of the more comfortable months",
+    "mild and dry, with the season's trade winds building",
+    "cool and windy, one of the coolest, breeziest months",
+    "cool and windy, still within the breeziest stretch of the year",
+    "mild and dry, with the trade winds beginning to ease",
+    "mild and dry, one of the more pleasant months",
+    "warm, with the first summer rains returning",
+    "hot and increasingly humid, with the wet season building"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Port Louis"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "casual",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

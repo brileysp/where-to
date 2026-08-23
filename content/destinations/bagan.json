@@ -1,0 +1,175 @@
+{
+  "id": "bagan",
+  "name": "Bagan",
+  "region": "Myanmar",
+  "emoji": "🎈",
+  "climate": "tropical",
+  "about": "Cool-dry season Nov–Feb is best (and prime for sunrise balloon rides), hot Mar–May, monsoon Jun–Oct.",
+  "overview": "Thousands of ancient Buddhist temples scattered across a dusty plain, best explored slowly by e-bike at sunrise and sunset.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Tea, food, and e-bike rental all cost very little — the archaeological zone pass is the one real fixed cost, valid across your whole stay.",
+  "costItems": [
+    {
+      "label": "Myanmar tea",
+      "price": 0.5,
+      "unit": ""
+    },
+    {
+      "label": "Local meal",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "E-bike rental",
+      "price": 10,
+      "unit": "per day"
+    },
+    {
+      "label": "Archaeological Zone pass, 5-day",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Hot-air balloon ride, sunrise",
+      "price": 230,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 5,
+    "streetfood": 5,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Cool-dry-season clarity",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 0.7,
+          "11": 0.7,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "text": "Calm, dry conditions make this the best window for sunrise hot-air balloon flights over the temple plain."
+    }
+  ],
+  "monthlyWeather": [
+    "dry and pleasant, one of the coolest, most comfortable months",
+    "dry and warming, the driest month with clear skies for sunrise balloon rides",
+    "hot and dry, with temperatures climbing fast",
+    "scorching and dry, one of the hottest months of the year",
+    "the hottest month, dry with intense midday heat",
+    "hot and increasingly wet, as the monsoon rains arrive",
+    "hot and humid, with regular rain showers",
+    "hot and humid, still within the wet season with high humidity",
+    "hot and rainy, the wettest month with frequent downpours",
+    "hot and humid, still within the rainy season though easing",
+    "warm and drying out, one of the best months as the cool season begins",
+    "cool and dry, comfortable with clear skies for temple views"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Myanmar",
+    "Burma"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "deserts": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none",
+      "astrophotography": "none"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "id": "kenya",
+  "name": "Maasai Mara & Coast",
+  "region": "Kenya",
+  "emoji": "🦁",
+  "climate": "tropical",
+  "about": "Long dry season Jun–Oct brings the migration river crossings; Palearctic migrant birds arrive Nov–Mar.",
+  "overview": "The classic East African safari paired with Swahili coast beaches — big-cat plains inland, dhows and coral reefs on the Indian Ocean.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Maasai Mara Reserve fees are among the highest in Africa, climbing further in peak season — coastal Mombasa and Diani stay comparatively affordable.",
+  "costItems": [
+    {
+      "label": "Chai (tea)",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Shared minibus taxi (matatu), 15 min",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Mandazi & chai breakfast",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Coastal fish curry or biryani",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Maasai Mara Reserve entry",
+      "unit": "",
+      "price": 100
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 3,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 7,
+    "museums": 4,
+    "architecture": 3,
+    "festivals": 5,
+    "finedining": 4,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    7,
+    8,
+    9,
+    10,
+    12,
+    1
+  ],
+  "low": [
+    4,
+    5
+  ],
+  "peakIntensity": "extreme",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Great Migration river crossings",
+        "weight": 2,
+        "months": {
+          "6": 0.5,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 0.7
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Palearctic migrant arrivals",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "This is peak Great Migration season, with wildebeest herds making dramatic Mara River crossings."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and mostly dry, with the coast at its hottest",
+    "warm and dry, one of the best stretches before the long rains",
+    "warm with the long rains building, increasingly wet",
+    "the wettest month, warm with frequent, heavy downpours",
+    "still rainy, though showers begin easing as the month goes on",
+    "cooler and dry, with rain now rare",
+    "the coolest month, dry with crisp mornings on the savanna",
+    "dry and mild, with clear skies across the Mara",
+    "dry and warming again, still very little rain",
+    "dry and warm, with the short rains still weeks away",
+    "the short rains arrive, warm with brief afternoon showers",
+    "warm with light, intermittent rain from the short rains tailing off"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Maasai Mara",
+    "Masai Mara",
+    "Mombasa",
+    "Diani Beach"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

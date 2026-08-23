@@ -1,0 +1,201 @@
+{
+  "id": "great-smoky-mountains",
+  "name": "Great Smoky Mountains National Park",
+  "region": "Tennessee & North Carolina, USA",
+  "emoji": "🌫️",
+  "climate": "temperate",
+  "about": "Spring wildflowers, a two-week synchronous firefly show in late May/early June, and Oct fall foliage are its three signature seasons.",
+  "overview": "The most-visited national park in the US, with no entrance fee — the ridge-top Appalachian scenery draws over 12 million visitors a year.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Great Smoky Mountains is the rare national park with no entrance fee at all — just a small daily parking pass — though Gatlinburg's tourist-district coffee and pancake houses charge real markup once you're off the trail.",
+  "costItems": [
+    {
+      "label": "Daily parking pass",
+      "price": 5,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Coffee, Gatlinburg tourist district",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Pancake breakfast, Gatlinburg",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Dollywood day ticket",
+      "price": 80,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 3,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 6,
+    "adventure": 4,
+    "golf": 3,
+    "stargazing": 4,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 2,
+    "snowsports": 1,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    10
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Fall foliage",
+        "weight": 2.5,
+        "months": {
+          "9": 0.3,
+          "10": 1,
+          "11": 0.4
+        }
+      },
+      {
+        "label": "Spring wildflower bloom",
+        "weight": 1.5,
+        "months": {
+          "3": 0.3,
+          "4": 1,
+          "5": 0.6
+        }
+      }
+    ],
+    "wildlife": [
+      {
+        "label": "Synchronous firefly show",
+        "weight": 3,
+        "months": {
+          "5": 0.6,
+          "6": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        5,
+        6
+      ],
+      "text": "This is synchronous firefly season — a roughly two-week window (dates announced each year) when thousands of fireflies flash in unison. Viewing at the main site is by lottery."
+    },
+    {
+      "months": [
+        10
+      ],
+      "text": "Peak fall foliage across the park, though color moves down the mountain through the month as elevation drops."
+    },
+    {
+      "months": [
+        4
+      ],
+      "text": "Peak spring wildflower bloom, among the most diverse displays of any national park."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, with snow at higher elevations but most roads still open",
+    "cold, quiet, and one of the least crowded months",
+    "mild and increasingly green, with early wildflowers appearing",
+    "mild, one of the best months with peak wildflower bloom",
+    "warm and humid, building toward the firefly show at month's end",
+    "warm and humid, with the synchronous fireflies putting on their show",
+    "hot and humid, the classic misty haze thick over the ridges",
+    "hot and humid, still busy with summer travelers",
+    "mild and pleasant, with fall color starting at higher elevations",
+    "mild, with fall foliage at its peak and the busiest month of the year",
+    "cool, with color fading but crowds thinning fast",
+    "cold, quiet, and atmospheric heading into winter"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "surfing",
+    "diving",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Smokies",
+    "Gatlinburg",
+    "Cades Cove",
+    "Clingmans Dome",
+    "Tennessee",
+    "North Carolina"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "mountains": "strong",
+      "astrophotography": "none",
+      "deserts": "none",
+      "coastlines": "none"
+    }
+  }
+}

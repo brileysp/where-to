@@ -1,0 +1,156 @@
+{
+  "id": "edinburgh",
+  "name": "Edinburgh",
+  "region": "Scotland",
+  "emoji": "🏴",
+  "climate": "temperate",
+  "about": "August brings the world-famous Fringe Festival (also the busiest, priciest month), winter is dark, cold and quiet.",
+  "overview": "A medieval Old Town beneath a volcanic castle rock, built for wandering closes and wynds between whisky bars.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and a bus fare barely register — whisky tastings and castle admission are the real one-time costs most visitors budget for.",
+  "costItems": [
+    {
+      "label": "Bus fare",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Edinburgh Castle entry",
+      "price": 27,
+      "unit": ""
+    },
+    {
+      "label": "Whisky tasting",
+      "price": 32,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 2,
+    "museums": 8,
+    "architecture": 9,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 7,
+    "winetasting": 4,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    8,
+    12
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "peakIntensity": "extreme",
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Fringe Festival",
+        "weight": 6,
+        "months": {
+          "8": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        8
+      ],
+      "text": "The Fringe Festival transforms the city with thousands of shows — also the busiest, priciest time to visit."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and damp, with short days and frequent rain",
+    "cold and still damp, one of the year's coldest stretches",
+    "cool and breezy, with spring slow to take hold",
+    "mild but changeable, with brighter days becoming more common",
+    "mild and increasingly pleasant, one of the best months with the most sunshine",
+    "mild and comfortable, with long daylight hours",
+    "mild, the warmest month though rarely hot",
+    "mild, with the Fringe Festival filling the city and crowds at their peak",
+    "cool and pleasant, with festival crowds gone and comfortable weather lingering",
+    "cool and increasingly grey, the wettest month of the year",
+    "cold and damp, with short days setting in fast",
+    "cold, dark, and often wet, with festive lights against the winter gloom"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Scotland",
+    "United Kingdom",
+    "Fringe Festival"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

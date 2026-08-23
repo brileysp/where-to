@@ -1,0 +1,129 @@
+{
+  "id": "singapore",
+  "name": "Singapore",
+  "region": "Southeast Asia",
+  "emoji": "🦁",
+  "climate": "tropical",
+  "about": "Hot and humid year-round with no real weather off-season; Feb–Apr is driest, Nov–Jan brings the heaviest monsoon rain.",
+  "overview": "A hyper-efficient garden city where hawker-center food, world-class dining, and some of Asia's most ambitious architecture all sit a short MRT ride apart.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Hawker food and transit stay cheap; alcohol and Western-style dining are where costs jump.",
+  "costItems": [
+    {
+      "label": "Kopi (local coffee)",
+      "unit": "",
+      "price": 1.5
+    },
+    {
+      "label": "Hainanese chicken rice",
+      "unit": "",
+      "price": 3.5
+    },
+    {
+      "label": "Laksa",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Grab/taxi, 15 min",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Marina Bay Sands SkyPark",
+      "unit": "",
+      "price": 24
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 3,
+    "surfing": 1,
+    "sailing": 4,
+    "hiking": 3,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 2,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 1,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 7,
+    "finedining": 9,
+    "streetfood": 10,
+    "nightlife": 8,
+    "winetasting": 3,
+    "spa": 6,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 9,
+    "birding": 6,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "peak": [
+    12,
+    6,
+    7
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "hot and humid, with occasional showers lingering from the wetter months",
+    "the year's driest stretch, still warm and humid but with the clearest skies",
+    "warm and humid, with showers becoming more frequent again",
+    "the hottest daytime temperatures of the year, humid and still",
+    "steamy and humid, with the warmest nights of the year",
+    "humid with sudden, heavy afternoon thunderstorms as the monsoon shifts",
+    "consistently hot and humid, with thunderstorms a near-daily occurrence",
+    "hot, humid, and thundery, much like the month before",
+    "still humid and thundery, though storms start easing slightly",
+    "humid with rain building again as the wetter half of the year approaches",
+    "the wettest month, humid with frequent, heavy downpours",
+    "humid and rainy, among the wettest and coolest-feeling months of the year"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Marina Bay"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

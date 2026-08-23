@@ -1,0 +1,201 @@
+{
+  "id": "arches-canyonlands",
+  "name": "Arches & Canyonlands",
+  "region": "Utah, USA",
+  "emoji": "🪨",
+  "climate": "desert",
+  "about": "Both run out of Moab as a shared base, minutes apart; spring and fall are the sweet spot, summer regularly tops 100°F, and Arches now requires a timed-entry reservation Apr–Oct due to overcrowding.",
+  "overview": "Utah's red-rock desert at its most surreal — over 2,000 natural stone arches and canyonlands carved by the Colorado and Green Rivers.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels here — the real splurge is a guided 4x4 tour into Canyonlands' backcountry, which most self-drivers skip entirely.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner breakfast, Moab",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Guided 4x4 canyon tour",
+      "price": 150,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 1,
+    "roadtrip": 7,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 8,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 2,
+    "birding": 2,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    12
+  ],
+  "wet": [
+    7,
+    8
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1
+  ],
+  "peak": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    12,
+    1,
+    7
+  ],
+  "hikingBest": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Red-rock formations photograph well year-round",
+        "weight": 1,
+        "months": {
+          "3": 0.3,
+          "4": 0.5,
+          "9": 0.5,
+          "10": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "Arches requires a timed-entry reservation for this window — book ahead, especially for peak spring and fall dates."
+    }
+  ],
+  "monthlyWeather": [
+    "cold but often clear, a quiet and underrated month to visit",
+    "cold, still quiet with dramatically fewer crowds than spring",
+    "mild and dry, popular and increasingly busy",
+    "warm and dry, one of the two peak months — book Arches entry ahead",
+    "warm, still excellent hiking before the real heat sets in",
+    "hot and dry, with afternoon temperatures regularly over 100°F",
+    "scorching, with monsoon thunderstorms building most afternoons",
+    "still very hot, monsoon storms continuing through the month",
+    "cooling off nicely, one of the two peak months",
+    "mild and dry, arguably the best month of the year",
+    "cool and quiet, crowds thinning fast",
+    "cold, quiet, and clear — the least crowded month"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Arches National Park",
+    "Canyonlands National Park",
+    "Moab",
+    "Delicate Arch",
+    "Island in the Sky"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    },
+    "cycling": {
+      "gravelRiding": "strong",
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "casual"
+    }
+  }
+}

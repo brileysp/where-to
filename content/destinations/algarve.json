@@ -1,0 +1,154 @@
+{
+  "id": "algarve",
+  "name": "Algarve",
+  "region": "Portugal",
+  "emoji": "🏖️",
+  "climate": "mediterranean",
+  "about": "Hot dry summer (Jun–Sep) is peak beach season; spring/fall shoulder months offer great weather with far fewer crowds.",
+  "overview": "Golden sea cliffs, sandy coves, and Portugal's most popular beach coastline.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee, pastries, and taxis all stay properly cheap — one of the best-value beach destinations in Western Europe.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Pastel de nata",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Grilled sardines, casual restaurant",
+      "price": 10,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 7,
+    "diving": 4,
+    "surfing": 7,
+    "sailing": 6,
+    "hiking": 6,
+    "scenic": 6,
+    "fishing": 5,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 9,
+    "stargazing": 3,
+    "museums": 4,
+    "architecture": 5,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 6,
+    "winetasting": 5,
+    "spa": 6,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "birdingPeak": [
+    3,
+    4,
+    9,
+    10,
+    11
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "sliderCaps": {
+    "birding": 7
+  },
+  "monthlyWeather": [
+    "mild, with the year's wettest weather from Atlantic storms",
+    "mild and still fairly wet, though rain starts easing",
+    "mild and drying out, with sunnier stretches returning",
+    "warm and increasingly dry, one of the more pleasant months",
+    "warm, sunny, and mostly dry — a favorite shoulder month",
+    "hot and dry, with rain now rare",
+    "hot and dry, calm and clear through most days",
+    "the hottest month, dry with reliable sunshine",
+    "still hot and dry, another favorite shoulder month",
+    "warm and drying, with the first Atlantic rain returning late in the month",
+    "mild and wet, as rainy weather sets back in",
+    "mild, with the year's heaviest rain from Atlantic storms"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Lagos",
+    "Faro",
+    "Portugal"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

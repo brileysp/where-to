@@ -1,0 +1,161 @@
+{
+  "id": "canaries",
+  "name": "Canary Islands",
+  "region": "Spain",
+  "emoji": "🌋",
+  "climate": "mediterranean",
+  "about": "One of the few places that stays genuinely warm and sunny even in January — there's no real off-season.",
+  "overview": "Subtropical volcanic islands off West Africa — black-sand beaches, Tenerife's Mount Teide, and a genuinely mild, sunny climate.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "The Canaries are among the cheapest destinations in Europe — a full three-course lunch with a drink costs well under what you'd pay for just a main course on the mainland.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Menú del día, 3-course lunch with drink",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Grilled fresh fish dinner",
+      "price": 22,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 7,
+    "diving": 6,
+    "surfing": 7,
+    "sailing": 6,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 6,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 5,
+    "nightlife": 6,
+    "winetasting": 5,
+    "spa": 6,
+    "luxuryLodging": 4,
+    "snowsports": 2,
+    "cycling": 6,
+    "shopping": 6,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    7,
+    8
+  ],
+  "low": [
+    5,
+    6,
+    10,
+    11
+  ],
+  "wildlifePeak": [
+    3,
+    4,
+    5
+  ],
+  "birdingPeak": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderCaps": {
+    "wildlife": 4,
+    "birding": 6
+  },
+  "monthlyWeather": [
+    "mild, the coolest month but still comfortably warm by day",
+    "mild and dry on the south coast, with trade-wind cloud drifting over the north",
+    "mild and sunny, warming gradually",
+    "warm and dry, one of the most pleasant months of the year",
+    "warm and dry, with the trade winds keeping things comfortable",
+    "warm, with steady trade winds and little rain",
+    "warm and dry, calm and sunny across the south",
+    "the warmest month, dry with reliable sunshine",
+    "still warm, with the trade winds beginning to ease",
+    "warm and mild, one of the more comfortable months",
+    "mild, with the first real rain of the season returning",
+    "mild, the wettest month though still far drier than most of Europe"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Tenerife",
+    "Gran Canaria",
+    "Lanzarote",
+    "Fuerteventura",
+    "Spain"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "signature",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "deserts": "casual",
+      "forests": "casual",
+      "astrophotography": "strong"
+    }
+  }
+}

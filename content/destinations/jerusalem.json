@@ -1,0 +1,128 @@
+{
+  "id": "jerusalem",
+  "name": "Jerusalem",
+  "region": "Israel",
+  "emoji": "✡️",
+  "climate": "mediterranean",
+  "about": "Spring and fall are mild and ideal for walking the old city, summer is hot and dry, winter can bring rare snow and rain.",
+  "overview": "Three religions' holiest sites within the Old City's walls, and a modern, fast-growing city just outside them.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street food and transit are inexpensive — museum and site admission fees are where the real costs add up.",
+  "costItems": [
+    {
+      "label": "Light rail ride",
+      "price": 1.6,
+      "unit": ""
+    },
+    {
+      "label": "Falafel",
+      "price": 5.5,
+      "unit": ""
+    },
+    {
+      "label": "Hummus plate",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Israel Museum entry",
+      "price": 16,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 2,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 5,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 7,
+    "finedining": 7,
+    "streetfood": 8,
+    "nightlife": 5,
+    "winetasting": 4,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 6,
+    "birding": 5,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    4,
+    9,
+    10
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "mild but rainy, the wettest month of the year",
+    "mild and still fairly wet, though drier stretches become more common",
+    "mild and increasingly dry, with spring warmth building",
+    "mild and pleasant, one of the best months for walking the Old City",
+    "warm and mostly dry, still comfortable before summer heat sets in",
+    "hot and dry, with little to no rain",
+    "hot and dry, one of the driest months of the year",
+    "hot and dry, still intensely warm with clear skies",
+    "warm and dry, with the heat beginning to ease",
+    "mild and pleasant, one of the best months as rain returns gradually",
+    "mild and increasingly wet, with the rainy season beginning",
+    "mild but rainy, with occasional rare snow possible"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Israel",
+    "Old City"
+  ]
+}

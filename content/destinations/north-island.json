@@ -1,0 +1,179 @@
+{
+  "id": "north-island",
+  "name": "North Island",
+  "region": "New Zealand",
+  "emoji": "🌋",
+  "climate": "temperate",
+  "about": "Summer (Dec–Feb) is warmest and driest, and the Crossing gets genuinely hazardous without winter gear Jun–Sep.",
+  "overview": "Milder and busier than the South Island — Auckland's harbors, Rotorua's geothermal fields, Bay of Islands beaches, and the volcanic Tongariro Alpine Crossing.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and buses are reasonable — the geothermal parks that define a Rotorua visit charge real admission, and prices climb fast for the fuller experiences.",
+  "costItems": [
+    {
+      "label": "Flat white",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Auckland–Rotorua bus",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Geothermal park entry, Wai-O-Tapu",
+      "price": 28,
+      "unit": ""
+    },
+    {
+      "label": "Waimangu Valley walk with cruise",
+      "price": 65,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 6,
+    "diving": 5,
+    "surfing": 6,
+    "sailing": 7,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 7,
+    "adventure": 6,
+    "golf": 5,
+    "stargazing": 4,
+    "museums": 5,
+    "architecture": 3,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 5,
+    "nightlife": 5,
+    "winetasting": 5,
+    "spa": 6,
+    "luxuryLodging": 8,
+    "snowsports": 3,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "hot": [
+    1,
+    2
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    7
+  ],
+  "hikingBest": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Clearest summer visibility",
+        "weight": 1.5,
+        "months": {
+          "1": 0.7,
+          "2": 0.7,
+          "12": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "The Tongariro Alpine Crossing turns into a genuine winter mountaineering route this time of year — ice axe, crampons, and real experience required, not a casual day hike."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and one of the sunniest months, peak season for beaches and sailing",
+    "warm and dry, typically the warmest month of the year",
+    "mild and still pleasant, with the first hints of autumn",
+    "cool and settled, a good shoulder month with fewer crowds",
+    "cool and increasingly wet, as winter approaches",
+    "cold by local standards and wet, with the Tongariro Crossing now needing winter gear",
+    "the coolest month, wet with snow on the volcanic plateau",
+    "cool and often wet, still requiring winter gear on the Crossing",
+    "mild and unsettled, spring weather swinging between sun and rain",
+    "mild and improving, with the Crossing becoming safer for regular hikers",
+    "warm and increasingly settled, summer building",
+    "warm and sunny, sliding into the peak summer season"
+  ],
+  "naSliders": [],
+  "searchAliases": [
+    "Auckland",
+    "Wellington",
+    "Rotorua",
+    "Bay of Islands",
+    "Tongariro"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "strong",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "casual"
+    }
+  }
+}

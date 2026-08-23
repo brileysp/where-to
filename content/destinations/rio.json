@@ -1,0 +1,174 @@
+{
+  "id": "rio",
+  "name": "Rio de Janeiro",
+  "region": "Brazil",
+  "emoji": "🏖️",
+  "climate": "tropical",
+  "about": "Dec–Mar is hot, festive and peak (Carnival usually falls in Feb), Jun–Aug is cooler, drier and much quieter.",
+  "overview": "Beaches, samba, and two of the world's most famous viewpoints, all within reach of the city's own subway line.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A coffee and a quick bite barely cost anything; the cable car and other paid sights are a different price bracket.",
+  "costItems": [
+    {
+      "label": "Açaí bowl",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Uber, 15 min",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Feijoada",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Christ the Redeemer, Corcovado train",
+      "unit": "",
+      "price": 27
+    },
+    {
+      "label": "Sugarloaf cable car",
+      "unit": "",
+      "price": 30
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 8,
+    "diving": 4,
+    "surfing": 7,
+    "sailing": 6,
+    "hiking": 6,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 6,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 6,
+    "architecture": 7,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 7,
+    "nightlife": 9,
+    "winetasting": 3,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Dry-season clarity",
+        "weight": 3,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Carnival",
+        "weight": 6,
+        "months": {
+          "2": 1,
+          "3": 0.3
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2
+      ],
+      "text": "Carnival typically falls this month, filling the city with parades, street parties and huge crowds."
+    }
+  ],
+  "monthlyWeather": [
+    "hot, humid, and rainy, with Carnival energy building",
+    "hot and humid, the peak of Carnival season with frequent showers",
+    "hot and humid, still within the wet season with regular rain",
+    "warm and increasingly dry, as the rains begin easing",
+    "warm and drying out, one of the more comfortable months",
+    "mild and dry, with cooler, more comfortable temperatures",
+    "mild and dry, the coolest month of the year",
+    "mild and dry, still comfortable with the driest conditions",
+    "warm and dry, with temperatures beginning to climb again",
+    "warm and increasingly humid, as the wet season approaches",
+    "hot and increasingly wet, with rain becoming more frequent",
+    "hot, humid, and rainy, as the wet season builds toward Carnival"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Copacabana",
+    "Ipanema",
+    "Christ the Redeemer",
+    "Brazil"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "mountains": "strong",
+      "coastlines": "strong",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

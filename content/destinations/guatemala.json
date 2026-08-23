@@ -1,0 +1,170 @@
+{
+  "id": "guatemala",
+  "name": "Guatemala",
+  "region": "Central America",
+  "emoji": "🌋",
+  "climate": "highland",
+  "about": "Dry season (Nov–Apr) is best for both; volcano hikes near Antigua (Acatenango, Pacaya) are a signature draw year-round.",
+  "overview": "Colonial Antigua and Lake Atitlán sit high in the volcanic highlands, cool and spring-like most of the year — a real contrast to Tikal's hot, humid jungle ruins in the low-lying Petén region up north.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Guatemala is one of the cheapest destinations in this list — a real plate of pepián, the national dish, costs just a few dollars, and even a proper coffee plantation tour stays affordable.",
+  "costItems": [
+    {
+      "label": "Coffee, volcanic-grown",
+      "unit": "",
+      "price": 2.5
+    },
+    {
+      "label": "Tuk-tuk/taxi, 15 min",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Pepián (Guatemalan stew), local market",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Coffee plantation tour with tasting",
+      "unit": "",
+      "price": 35
+    },
+    {
+      "label": "Acatenango volcano hike, overnight",
+      "unit": "",
+      "price": 90
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 4,
+    "architecture": 7,
+    "festivals": 4,
+    "finedining": 4,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 0,
+    "spa": 3,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 4,
+    "birding": 6,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    3
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    9
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        3
+      ],
+      "text": "Semana Santa (Holy Week) in Antigua brings elaborate flower-carpet processions — one of the most striking Easter celebrations in the Americas."
+    },
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "Tikal's jungle canopy is greener and wildlife more active, though trails around Antigua's volcanoes get muddier."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and dry in the highlands, hot and dry at Tikal",
+    "cool and dry, excellent volcano-hiking conditions",
+    "mild and dry, Semana Santa preparations underway in Antigua",
+    "mild and dry, Semana Santa's flower carpets fill Antigua's streets",
+    "warming, with the first rains arriving",
+    "warm and wet, the rainy season underway",
+    "warm and wet, though mornings often stay clear",
+    "warm and wet, still deep in the rainy season",
+    "warm and wet, quietest month of the year",
+    "mild and drying out, one of the best months",
+    "cool and dry, comfortable and increasingly popular",
+    "cool and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "diving",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Antigua",
+    "Lake Atitlán",
+    "Tikal",
+    "Acatenango",
+    "Pacaya"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

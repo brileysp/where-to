@@ -1,0 +1,181 @@
+{
+  "id": "marlborough-abel-tasman",
+  "name": "Marlborough & Abel Tasman",
+  "region": "New Zealand",
+  "emoji": "🍷",
+  "climate": "temperate",
+  "about": "New Zealand's driest, sunniest region; the Abel Tasman Coast Track, unlike the alpine Great Walks further south, stays walkable year-round.",
+  "overview": "The top of the South Island, an easy drive apart via Picton and Nelson — home to the world-famous Marlborough Sauvignon Blanc and the golden-beach Abel Tasman Coast Track.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Marlborough runs typical for New Zealand — a plate of local green-lipped mussels costs a reasonable amount, and a full-day wine tour through the region's Sauvignon Blanc vineyards is the one real splurge most visitors build in.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Green-lipped mussels, casual",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Full-day wine tour with tastings",
+      "price": 140,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 5,
+    "diving": 3,
+    "surfing": 2,
+    "sailing": 8,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 7,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 9,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 3,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    6,
+    7
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    7
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    7
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Golden-beach clarity, most of the year",
+        "weight": 1,
+        "months": {
+          "1": 0.5,
+          "2": 0.5,
+          "12": 0.3
+        }
+      }
+    ],
+    "winetasting": [
+      {
+        "label": "Harvest season",
+        "weight": 1,
+        "months": {
+          "3": 0.5,
+          "4": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        3,
+        4
+      ],
+      "text": "Harvest season in the vineyards — a lively time to visit, though also the busiest at the wineries."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, one of the sunniest months of the year",
+    "warm and dry, still peak season for the coast track and the Sounds",
+    "mild and dry, with harvest getting underway in the vineyards",
+    "mild, harvest season in full swing across the wine region",
+    "cool and pleasant, a quiet and underrated month to visit",
+    "cool and the wettest month, though still mild by New Zealand standards",
+    "cool and damp, quiet with the fewest visitors",
+    "mild, drying out again as spring approaches",
+    "mild and increasingly sunny, a lovely shoulder month",
+    "warm and dry, one of the best months with fewer crowds than summer",
+    "warm and dry, building toward the peak summer season",
+    "warm and sunny, sliding into the height of summer"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Blenheim",
+    "Picton",
+    "Nelson",
+    "Abel Tasman National Park",
+    "Queen Charlotte Track",
+    "Marlborough Sounds"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "strong",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "strong",
+      "mountainBiking": "casual"
+    }
+  }
+}

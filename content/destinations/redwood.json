@@ -1,0 +1,147 @@
+{
+  "id": "redwood",
+  "name": "Redwood National and State Parks",
+  "region": "California, USA",
+  "emoji": "🌲",
+  "climate": "temperate",
+  "about": "Mild and visitable year-round, with summer (Jun–Sep) the driest and clearest stretch and winter bringing more rain but a lush, quiet forest.",
+  "overview": "Home to the tallest trees on Earth along the foggy Northern California coast.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Redwood National Park has no entrance fee at all — the only real cost is a small day-use permit for Fern Canyon, plus normal gateway-town prices for food.",
+  "costItems": [
+    {
+      "label": "Coffee, gateway town",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Fern Canyon / Gold Bluffs Beach day-use permit",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Diner meal, gateway town",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Kayak tour, Smith River",
+      "price": 70,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 2,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 2,
+    "spa": 2,
+    "luxuryLodging": 2,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 1,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "mild",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "cool and wet, the forest lush and quiet with few visitors",
+    "cool and rainy, still an atmospheric time to visit",
+    "cool, with rain beginning to ease and ferns bright green",
+    "mild, with drier stretches becoming more common",
+    "mild, coastal fog common but increasingly pleasant",
+    "mild, drying out with the redwood groves at their most accessible",
+    "mild and dry, the clearest and most reliable month of the year",
+    "mild and dry, still excellent hiking weather",
+    "mild, with fog rolling back in as fall approaches",
+    "cool, with the rains returning by month's end",
+    "cool and wet, quiet and lush heading into winter",
+    "cool and wet, back into the rainy season"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Redwood National Park",
+    "Avenue of the Giants",
+    "Humboldt County",
+    "Coast Redwoods",
+    "California"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "coastlines": "strong",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

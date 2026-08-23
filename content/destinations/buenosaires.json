@@ -1,0 +1,135 @@
+{
+  "id": "buenosaires",
+  "name": "Buenos Aires",
+  "region": "Argentina",
+  "emoji": "💃",
+  "climate": "temperate",
+  "about": "Southern Hemisphere seasons; spring (Sep–Nov) and fall (Mar–May) are mild and ideal, summer is hot and humid.",
+  "overview": "European-flavored boulevards, world-class steak, and tango born in the working-class barrios south of downtown.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Genuinely one of the best-value major capitals for food and wine — a proper steak dinner costs a fraction of what it would in North America or Europe.",
+  "costItems": [
+    {
+      "label": "Empanada",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Subway ride",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Steak dinner, parrilla",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Tango show with dinner",
+      "unit": "",
+      "price": 100
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 2,
+    "scenic": 3,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 1,
+    "museums": 8,
+    "architecture": 9,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 7,
+    "nightlife": 9,
+    "winetasting": 7,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 7,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    9,
+    10,
+    11,
+    3,
+    4,
+    5
+  ],
+  "hot": [
+    12,
+    1,
+    2
+  ],
+  "cold": [
+    7
+  ],
+  "peak": [
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "monthlyWeather": [
+    "hot and humid, the peak of summer with intense afternoon heat",
+    "hot and humid, still deep in summer with occasional storms",
+    "warm and pleasant, with summer easing into a comfortable fall",
+    "mild and comfortable, one of the best months of the year",
+    "mild and cooling, still pleasant with autumn colors",
+    "cool, with the year's cloudiest, greyest stretch beginning",
+    "cool, the coldest month though rarely severe",
+    "cool and still cloudy, with winter beginning to loosen its grip",
+    "mild and pleasant, as spring begins to warm things up",
+    "mild and increasingly wet, the wettest month of the year",
+    "warm and pleasant, one of the best months before summer heat arrives",
+    "hot and humid, with summer heat building fast"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Argentina"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

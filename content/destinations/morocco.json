@@ -1,0 +1,155 @@
+{
+  "id": "morocco",
+  "name": "Marrakech & Atlas",
+  "region": "Morocco",
+  "emoji": "🕌",
+  "climate": "desert",
+  "about": "Spring (Mar–May) and fall (Sep–Nov) are ideal for souks and mountain trekking; summer inland heat is brutal for hiking.",
+  "overview": "Red-walled medina alleys, Atlas Mountain day trips, and a design and luxury scene that punches well above the destination's everyday prices.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Tea, taxis, and tagines cost almost nothing in the medina — the price gap to riads and hammams at the luxury end is enormous.",
+  "costItems": [
+    {
+      "label": "Mint tea",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Petit taxi, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Tagine, local restaurant",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Hammam treatment",
+      "price": 30,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 5,
+    "diving": 2,
+    "surfing": 4,
+    "sailing": 2,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 7,
+    "adventure": 5,
+    "golf": 6,
+    "stargazing": 6,
+    "museums": 7,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 9,
+    "nightlife": 5,
+    "winetasting": 2,
+    "spa": 8,
+    "luxuryLodging": 9,
+    "snowsports": 2,
+    "cycling": 3,
+    "shopping": 10,
+    "birding": 6,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "low": [
+    7,
+    8
+  ],
+  "birdingPeak": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "hikingBest": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "sliderCaps": {
+    "birding": 6
+  },
+  "monthlyWeather": [
+    "mild by day but cold at night, with the Atlas peaks capped in snow",
+    "mild and dry, warming gradually with cool evenings",
+    "warming up fast, dry with comfortable days and cool nights",
+    "warm and dry, one of the best months for trekking and the souks",
+    "warm and dry, still comfortable before the summer heat sets in",
+    "hot and dry, with desert camps starting to feel the heat",
+    "scorching and dry, with Sahara daytime highs regularly above 40°C",
+    "the hottest month, brutally dry heat especially in the desert and inland valleys",
+    "still hot but easing, dry with comfortable evenings returning",
+    "warm and dry, one of the best months for the whole country",
+    "mild and dry, cooling fast with pleasant days",
+    "mild by day but cold at night, with snow dusting the High Atlas"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Fes",
+    "Fez",
+    "Sahara",
+    "Chefchaouen"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "mountains": "strong",
+      "coastlines": "casual",
+      "forests": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

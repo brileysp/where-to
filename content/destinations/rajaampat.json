@@ -1,0 +1,169 @@
+{
+  "id": "rajaampat",
+  "name": "Raja Ampat",
+  "region": "Indonesia",
+  "emoji": "🐢",
+  "climate": "tropical",
+  "about": "Oct–Apr has the calmest seas and clearest diving, the southeast monsoon (Jun–Sep) brings rougher water.",
+  "overview": "Peak marine and bird biodiversity on Earth — some of the richest coral reefs anywhere, plus birds-of-paradise found nowhere else.",
+  "costRange": {
+    "min": "$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Raja Ampat has no cheap version — even a budget liveaboard runs several hundred dollars a day before mandatory park fees, and luxury boats charge well over that.",
+  "costItems": [
+    {
+      "label": "Ferry, Sorong–Waisai",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Budget liveaboard",
+      "unit": "per day",
+      "price": 302
+    },
+    {
+      "label": "Mid-range liveaboard, all-inclusive",
+      "unit": "per day",
+      "price": 440
+    },
+    {
+      "label": "Luxury liveaboard",
+      "unit": "per day",
+      "price": 618
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 9,
+    "diving": 10,
+    "surfing": 2,
+    "sailing": 6,
+    "hiking": 4,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 1,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    10,
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Calm seas & clear diving visibility",
+        "weight": 2.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.85,
+          "4": 0.5,
+          "10": 0.5,
+          "11": 0.85,
+          "12": 1
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Calm seas for remote birding sites",
+        "weight": 3.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.7,
+          "4": 0.4,
+          "10": 0.4,
+          "11": 0.7,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "warm and calm, with glassy seas and excellent visibility",
+    "warm and calm, among the clearest, calmest months for diving",
+    "warm and calm, still excellent conditions with manta activity high",
+    "warm, with conditions still good before the wind season builds",
+    "warm, with rain increasing as the wet season approaches",
+    "warm and rainy, with the southeast monsoon bringing rougher water",
+    "warm and stormy, one of the wettest, windiest months",
+    "warm and stormy, still within the roughest stretch of the year",
+    "warm, with rain gradually easing and seas beginning to calm",
+    "warm and calming, with visibility improving as the monsoon fades",
+    "warm and clear, with conditions improving toward the calm season",
+    "warm and calm, with glassy seas and manta activity building"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Indonesia",
+    "Papua"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

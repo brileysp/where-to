@@ -1,0 +1,162 @@
+{
+  "id": "croatia",
+  "name": "Dalmatian Coast",
+  "region": "Croatia",
+  "emoji": "⛵",
+  "climate": "mediterranean",
+  "about": "Peak Jul–Aug for island-hopping and sailing; May–Jun and Sep offer warm water with a fraction of the crowds.",
+  "overview": "Medieval walled cities and a thousand-island coastline along the Adriatic, from Split down to Dubrovnik.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and a casual meal stay reasonable — the coastal ferries connecting the main towns are a real, non-trivial cost.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Ćevapi plate",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Intercity bus fare",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Split–Dubrovnik ferry",
+      "price": 43,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 9,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 4,
+    "museums": 6,
+    "architecture": 8,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 7,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9
+  ],
+  "hikingWorst": [
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Shoulder-season clarity",
+        "weight": 2,
+        "months": {
+          "5": 0.7,
+          "6": 0.85,
+          "9": 0.85
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "cold and quiet, the coldest month with limited services on the islands",
+    "cold and still quiet, with rain the norm along the coast",
+    "mild and brightening, though the sea's still too cool for swimming",
+    "mild and increasingly sunny, with the coast waking up",
+    "warm and sunny, one of the best months before peak crowds",
+    "warm, sunny, and increasingly busy as the sailing season kicks in",
+    "hot, dry, and the peak of the island-hopping season",
+    "the hottest month, packed with crowds and the busiest sailing traffic",
+    "warm and sunny still, with crowds and prices easing",
+    "mild and pleasant, a favorite shoulder month with warm sea",
+    "cool and rainy, the wettest month of the year",
+    "cool and quiet, with most islands settling into their off-season"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Dubrovnik",
+    "Split",
+    "Hvar",
+    "Korcula"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "casual",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "id": "peru",
+  "name": "Cusco & Sacred Valley",
+  "region": "Peru",
+  "emoji": "🏔️",
+  "climate": "highland",
+  "about": "Dry season May–Sep is prime trekking, with Jun–Aug the busiest. The Inca Trail closes entirely every February for maintenance.",
+  "overview": "The Inca capital and its Sacred Valley, built around one of the world's most famous archaeological sites.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Everyday food and coffee stay cheap — the real cost is the Machu Picchu entrance and train, which is essentially a mandatory one-time expense.",
+  "costItems": [
+    {
+      "label": "Coca tea or coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Menú del día (set lunch)",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Machu Picchu entrance",
+      "price": 50,
+      "unit": ""
+    },
+    {
+      "label": "Round-trip train, Ollantaytambo",
+      "price": 150,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 8,
+    "streetfood": 7,
+    "nightlife": 5,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wildlifePeak": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    1,
+    2,
+    12
+  ],
+  "peakIntensity": "mild",
+  "sliderCaps": {
+    "wildlife": 5
+  },
+  "sliderEvents": {
+    "birding": [
+      {
+        "label": "Dry-season trekking visibility",
+        "weight": 3.5,
+        "months": {
+          "5": 0.4,
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.6
+        }
+      }
+    ],
+    "hiking": [
+      {
+        "label": "Dry-season trekking",
+        "weight": 5,
+        "months": {
+          "5": 0.6,
+          "6": 0.85,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Dry-season clarity",
+        "weight": 3,
+        "months": {
+          "5": 0.5,
+          "6": 0.7,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.6
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2
+      ],
+      "text": "The Inca Trail is closed all month for annual maintenance — other treks and Machu Picchu itself stay open."
+    }
+  ],
+  "monthlyWeather": [
+    "rainy and mild by day, with cold nights at altitude",
+    "the wettest month, mild with the Inca Trail closed for maintenance",
+    "still rainy, though showers begin easing as the month progresses",
+    "drying out fast, mild days with clear skies increasingly common",
+    "dry and mild, one of the best months before peak season",
+    "dry and cold at night, with temperatures often dropping to freezing after dark",
+    "the coldest month, dry with freezing nights and crisp, clear days",
+    "dry and cold at night, still deep in the busiest trekking season",
+    "dry and mild, with nights slowly warming",
+    "mild, with the first rains of the season returning",
+    "increasingly wet, mild by day with rain becoming regular",
+    "rainy and mild, with wet-season showers most afternoons"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Machu Picchu",
+    "Cusco",
+    "Sacred Valley"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "deserts": "casual",
+      "coastlines": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

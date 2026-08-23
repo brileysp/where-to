@@ -1,0 +1,146 @@
+{
+  "id": "puerto-rico",
+  "name": "Puerto Rico",
+  "region": "Caribbean",
+  "emoji": "🌧️",
+  "climate": "tropical",
+  "about": "Hurricane season runs Jun–Nov, peaking Aug–Oct.",
+  "overview": "Old San Juan's colonial streets, El Yunque rainforest, and bioluminescent bays — a US territory needing no passport for US travelers.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and rideshares are reasonable — a proper mofongo dinner and the tourist-zone markup push costs up from there.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "El Yunque National Forest, El Portal entry",
+      "unit": "",
+      "price": 8
+    },
+    {
+      "label": "Uber, 15 min",
+      "unit": "",
+      "price": 10
+    },
+    {
+      "label": "Mofongo (mashed plantain) plate",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Bio bay kayak tour, Fajardo",
+      "unit": "",
+      "price": 63
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 5,
+    "surfing": 5,
+    "sailing": 5,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 4,
+    "roadtrip": 4,
+    "adventure": 5,
+    "golf": 4,
+    "stargazing": 4,
+    "museums": 4,
+    "architecture": 6,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 7,
+    "nightlife": 6,
+    "winetasting": 0,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "hot": [
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    9
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "text": "Peak hurricane season — real storm risk, and El Yunque trails can close after heavy rain."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and relatively dry, one of the best months",
+    "warm and dry, still excellent and busy",
+    "warm and dry, comfortable and popular",
+    "warm and dry, drying out further",
+    "warm, with the first rains of the season",
+    "hot, humidity building ahead of hurricane season",
+    "hot and humid, generally manageable afternoon showers",
+    "hot and humid, hurricane risk increasing",
+    "hot and humid, peak hurricane season, quietest month",
+    "hot and humid, hurricane risk continuing",
+    "warm, drying out as the season ends",
+    "warm and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "San Juan",
+    "El Yunque",
+    "Vieques",
+    "bioluminescent bay",
+    "Culebra"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "strong",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

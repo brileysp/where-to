@@ -1,0 +1,186 @@
+{
+  "id": "swissalps",
+  "name": "Zermatt & the Swiss Alps",
+  "region": "Switzerland",
+  "emoji": "🎿",
+  "climate": "polar",
+  "about": "Winter is prime skiing, summer (Jun–Sep) is prime hiking, and the shoulder \"mud season\" sees many lifts and hotels close.",
+  "overview": "A car-free alpine village beneath the Matterhorn's unmistakable pyramid.",
+  "costRange": {
+    "min": "$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "There's no cheap tier here — even a beer or a simple meal costs like a splurge would almost anywhere else.",
+  "costItems": [
+    {
+      "label": "Beer",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Rösti",
+      "unit": "",
+      "price": 22
+    },
+    {
+      "label": "Electric taxi (car-free village)",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Fondue dinner",
+      "unit": "",
+      "price": 75
+    },
+    {
+      "label": "Matterhorn Glacier Paradise cable car",
+      "unit": "",
+      "price": 120
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 9,
+    "fishing": 4,
+    "roadtrip": 6,
+    "adventure": 7,
+    "golf": 2,
+    "stargazing": 7,
+    "museums": 4,
+    "architecture": 5,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 4,
+    "nightlife": 5,
+    "winetasting": 5,
+    "spa": 7,
+    "luxuryLodging": 9,
+    "snowsports": 9,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    12,
+    1,
+    2
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer trail access",
+        "weight": 6,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Green-summer contrast",
+        "weight": 1,
+        "months": {
+          "6": 0.3,
+          "7": 0.5,
+          "8": 0.5,
+          "9": 0.3
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "cold and snowy, deep in ski season with reliable powder",
+    "cold and snowy, still prime ski season with long daylight returning",
+    "cold but brightening, with good snow still on the slopes",
+    "cold at altitude, with lower-elevation snow melting fast as lifts start closing",
+    "cool and often wet, deep in mud season with many lifts and hotels closed",
+    "mild in the valley but still cool at altitude, with trails reopening as snow clears",
+    "mild and increasingly clear, one of the best months for hiking with alpine meadows in bloom",
+    "mild and pleasant, still prime hiking season with the clearest Matterhorn views",
+    "cool and clear, still excellent for hiking as crowds thin",
+    "cool and increasingly wet, deep in mud season again as trails start closing",
+    "cold, with the first snow arriving as the resort prepares to reopen",
+    "cold and snowy, with ski season back in full swing"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Zermatt",
+    "Matterhorn",
+    "Switzerland"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "strong",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "casual",
+      "astrophotography": "casual"
+    }
+  }
+}

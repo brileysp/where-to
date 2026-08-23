@@ -1,0 +1,164 @@
+{
+  "id": "thailand",
+  "name": "Thailand — Phuket & Islands",
+  "region": "Thailand",
+  "emoji": "🏝️",
+  "climate": "tropical",
+  "about": "Cool-dry season Nov–Feb is the sweet spot; monsoon Jun–Oct brings rough seas and closed island services.",
+  "overview": "Limestone karsts, turquoise water, and a beach-resort scene ranging from backpacker bungalows to some of Asia's most iconic luxury hotels.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street food and local transport cost almost nothing — an island-hopping day tour to Phi Phi or Phang Nga is the one real splurge most visitors build a day around.",
+  "costItems": [
+    {
+      "label": "Songthaew, 15 min",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Street food meal",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Basic restaurant meal",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Island-hopping day tour",
+      "price": 50,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 8,
+    "diving": 9,
+    "surfing": 3,
+    "sailing": 6,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 3,
+    "adventure": 4,
+    "golf": 5,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 10,
+    "nightlife": 8,
+    "winetasting": 1,
+    "spa": 8,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 8,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wildlifePeak": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "birdingPeak": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "swimHazard": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "wildlife": 4,
+    "birding": 5
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "dry, sunny, and one of the most pleasant months of the year",
+    "dry and hot, with the year's least rainfall",
+    "hot and mostly dry, with humidity starting to build",
+    "hot and increasingly humid, just before the monsoon arrives",
+    "the monsoon begins, hot and humid with building afternoon rain",
+    "hot and rainy, with regular but often brief downpours",
+    "hot and humid, with rain most days",
+    "hot and humid, still deep in the rainy season",
+    "the wettest month, hot with frequent heavy rain",
+    "rainy and humid, though showers start easing toward month's end",
+    "drying out, warm with rain becoming less frequent",
+    "dry, sunny, and cooling into the most comfortable stretch of the year"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Phuket",
+    "Krabi",
+    "Phi Phi"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "borabora",
+  "name": "Bora Bora",
+  "region": "French Polynesia",
+  "emoji": "🐬",
+  "climate": "tropical",
+  "about": "May–Oct is drier and cooler, Nov–Apr is warmer and wetter with occasional cyclone risk.",
+  "overview": "The overwater-bungalow icon — a single volcanic island ringed by one of the most photographed lagoons on Earth.",
+  "costRange": {
+    "min": "$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Even the modest options here cost like a splurge elsewhere — this is genuinely one of the most expensive places on the planet to eat a casual meal.",
+  "costItems": [
+    {
+      "label": "Motu boat transfer",
+      "unit": "",
+      "price": 15
+    },
+    {
+      "label": "Poisson cru (Tahitian raw fish salad)",
+      "unit": "",
+      "price": 28
+    },
+    {
+      "label": "Lagoon snorkel tour with sharks & rays",
+      "unit": "",
+      "price": 120
+    },
+    {
+      "label": "Flight, Tahiti–Bora Bora, round trip",
+      "unit": "",
+      "price": 390
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 10,
+    "diving": 9,
+    "surfing": 4,
+    "sailing": 8,
+    "hiking": 2,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 1,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 6,
+    "streetfood": 2,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 9,
+    "luxuryLodging": 10,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 3,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    12
+  ],
+  "peakIntensity": "mild",
+  "monthlyWeather": [
+    "warm and humid, deep in the wet season with regular showers",
+    "warm and rainy, still within the wettest stretch of the year",
+    "warm and rainy, with showers continuing regularly",
+    "warm and increasingly dry, as the wet season winds down",
+    "warm and drying out, one of the best months before peak dry season",
+    "warm and dry, comfortable with lower humidity",
+    "warm and dry, still comfortable with steady conditions",
+    "warm, dry, and sunny, the driest month of the year",
+    "warm and dry, still within the sunniest, driest stretch",
+    "warm and dry, the last of the dry season before humidity builds",
+    "warm and increasingly humid, as the wet season begins",
+    "warm and rainy, the wettest month of the year"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "festivals",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Tahiti",
+    "French Polynesia"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "casual",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

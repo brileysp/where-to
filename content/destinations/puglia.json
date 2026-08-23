@@ -1,0 +1,155 @@
+{
+  "id": "puglia",
+  "name": "Puglia",
+  "region": "Italy",
+  "emoji": "🫒",
+  "climate": "mediterranean",
+  "about": "August is scorching and packed with Italian domestic tourism (Ferragosto); spring and fall are far more comfortable.",
+  "overview": "The whitewashed trulli of Alberobello, baroque Lecce, olive groves that produce more oil than anywhere else in Italy, and beaches on two different coasts — an increasingly popular, less-crowded alternative to Tuscany.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Puglia is one of Italy's best values — a full plate of orecchiette at a trattoria costs less than half what you'd pay in Rome or Florence, and even a countryside masseria dinner stays reasonable.",
+  "costItems": [
+    {
+      "label": "Coffee, espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Orecchiette, trattoria",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Masseria dinner with local wine",
+      "price": 35,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 4,
+    "surfing": 2,
+    "sailing": 5,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 4,
+    "museums": 4,
+    "architecture": 7,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 8,
+    "nightlife": 5,
+    "winetasting": 6,
+    "spa": 3,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 4,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "La Notte della Taranta folk music festival",
+        "weight": 3,
+        "months": {
+          "8": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        8
+      ],
+      "text": "August is Ferragosto — Italy's biggest domestic holiday month — and La Notte della Taranta, a huge open-air folk music festival in Salento."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and wet, quiet with few visitors",
+    "mild and wet, still quiet",
+    "mild and drying out, a good early shoulder month",
+    "warm and improving, one of the best months for touring",
+    "warm and dry, excellent conditions before summer",
+    "hot and dry, beach season getting underway",
+    "very hot and dry, with peak Italian summer travel",
+    "very hot and dry, the busiest month of the year with Ferragosto",
+    "warm and dry, still excellent with easing crowds",
+    "mild and pleasant, a favorite quieter month",
+    "mild and increasingly wet, quiet again",
+    "mild and wet, quiet through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Alberobello",
+    "Lecce",
+    "Bari",
+    "Salento",
+    "Ostuni"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "deserts": "none",
+      "mountains": "none",
+      "forests": "none",
+      "astrophotography": "none"
+    }
+  }
+}

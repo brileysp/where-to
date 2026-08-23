@@ -1,0 +1,174 @@
+{
+  "id": "botswana",
+  "name": "Okavango Delta",
+  "region": "Botswana",
+  "emoji": "🛶",
+  "climate": "tropical",
+  "about": "Flood waters peak Jun–Aug and animals concentrate through Oct — the classic dry-season game-viewing window.",
+  "overview": "A vast inland river delta reachable only by small plane or boat, among the most exclusive safari destinations on Earth.",
+  "costRange": {
+    "min": "$$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Virtually everything here is bundled into one all-inclusive nightly rate — flights, meals, drinks, and game drives — so there's no real budget or mid-tier version of this destination.",
+  "costItems": [
+    {
+      "label": "Internal charter flight, Maun–Delta",
+      "unit": "",
+      "price": 400
+    },
+    {
+      "label": "Tented camp",
+      "unit": "per person, per night",
+      "price": 1290
+    },
+    {
+      "label": "Luxury camp",
+      "unit": "per person, per night",
+      "price": 2400
+    },
+    {
+      "label": "Ultra-luxury camp",
+      "unit": "per person, per night",
+      "price": 4350
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 3,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 4,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season concentration",
+        "weight": 3,
+        "months": {
+          "5": 0.4,
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.85,
+          "10": 0.5
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Wet-season migratory bird arrivals",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "Floodwaters arriving from Angola concentrate wildlife along the Delta's remaining channels."
+    }
+  ],
+  "monthlyWeather": [
+    "hot and wet, with regular afternoon thunderstorms",
+    "hot and humid, still in the heart of the rains",
+    "hot with rain easing, as floodwater from Angola begins arriving",
+    "warm and drying out, with the delta's floodwaters still rising",
+    "mild and dry, mornings turning noticeably cool",
+    "cold mornings and mild dry days, with the flood nearing its peak",
+    "the coldest month, chilly mornings but the delta at its fullest",
+    "cool mornings, mild days, and the floodwaters still spread wide",
+    "warming up fast, dry with the delta beginning to recede",
+    "hot and dry, the last stretch before the rains return",
+    "hot, with the first storms of the wet season building",
+    "hot and increasingly wet, with regular afternoon rain"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Okavango",
+    "Chobe",
+    "Moremi"
+  ]
+}

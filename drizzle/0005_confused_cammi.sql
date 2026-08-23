@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "no_snow_months" smallint[] DEFAULT '{}' NOT NULL;

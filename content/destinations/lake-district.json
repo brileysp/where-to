@@ -1,0 +1,147 @@
+{
+  "id": "lake-district",
+  "name": "Lake District",
+  "region": "England",
+  "emoji": "🏞️",
+  "climate": "temperate",
+  "about": "Genuinely one of the wettest parts of England, but the rain rarely stops hiking outright, just makes it muddier; best conditions are Apr–Sep.",
+  "overview": "England's most popular national park — Windermere, Scafell Pike, Wordsworth's Grasmere, all packed into a compact landscape of lakes and fells.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "The Lake District runs typical for rural England — a proper pub lunch of Cumberland sausage costs a real but reasonable amount, and a Windermere lake cruise is the one classic splurge most visitors add.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Cumberland sausage, pub lunch",
+      "price": 17,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Windermere lake cruise",
+      "price": 22,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 8,
+    "scenic": 8,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 4,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 2,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "cold and wet, quiet with the fells often icy",
+    "cold and wet, still one of the quieter months",
+    "cool and improving, trails starting to dry out",
+    "mild and one of the best months for hiking",
+    "mild and pleasant, still excellent conditions",
+    "mild, still good though rain is never far away",
+    "mild, the busiest month with school holidays underway",
+    "mild, still busy and generally the most reliable weather",
+    "cool and pleasant, a favorite quieter month",
+    "cool and increasingly wet, days shortening",
+    "cold and wet, quiet again",
+    "cold and wet, short days through the holidays"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Windermere",
+    "Keswick",
+    "Scafell Pike",
+    "Ambleside",
+    "Grasmere"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "none",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    },
+    "cycling": {
+      "gravelRiding": "strong",
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "casual"
+    }
+  }
+}

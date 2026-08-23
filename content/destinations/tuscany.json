@@ -1,0 +1,189 @@
+{
+  "id": "tuscany",
+  "name": "Tuscany",
+  "region": "Italy",
+  "emoji": "🍇",
+  "climate": "mediterranean",
+  "about": "Spring and fall are classic (harvest in Sep–Oct, wildflowers in spring), summer is hot, dry and busiest.",
+  "overview": "Cypress-lined hills, medieval hill towns, and some of Italy's most celebrated wine country.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A casual trattoria meal and a basic wine tasting stay reasonable — private winery tours and flagship estates are where the real spending happens.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Panino or ribollita",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 11,
+      "unit": ""
+    },
+    {
+      "label": "Chianti wine tasting",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Private winery tour",
+      "price": 60,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 3,
+    "hiking": 7,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 8,
+    "adventure": 3,
+    "golf": 5,
+    "stargazing": 3,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 4,
+    "finedining": 9,
+    "streetfood": 6,
+    "nightlife": 4,
+    "winetasting": 10,
+    "spa": 5,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 7,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Wildflower bloom & harvest color",
+        "weight": 3,
+        "months": {
+          "4": 0.7,
+          "5": 1,
+          "9": 1,
+          "10": 0.85
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Harvest sagre (food & wine festivals)",
+        "weight": 4,
+        "months": {
+          "9": 0.8,
+          "10": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        9,
+        10
+      ],
+      "text": "Grape and olive harvest is underway across the countryside, the most atmospheric time to visit wine country."
+    },
+    {
+      "months": [
+        5
+      ],
+      "text": "Wildflowers and poppies carpet the countryside in spring bloom."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, one of the coolest, quietest months with occasional rain",
+    "cold and still quiet, with winter beginning to loosen its grip",
+    "cool and often rainy, with spring arriving unevenly",
+    "mild and increasingly pleasant, with wildflowers and green hills",
+    "warm and pleasant, one of the best months before summer crowds",
+    "warm and sunny, with long, comfortable days",
+    "hot, dry, and sunny, one of the driest, busiest months",
+    "hot and dry, still intensely sunny with peak summer crowds",
+    "warm and pleasant, one of the best months as harvest season begins",
+    "mild and pleasant, still excellent with harvest season in full swing",
+    "cool and rainy, the wettest month of the year",
+    "cold, with winter settling in and quieter hill towns"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Florence",
+    "Siena",
+    "Chianti",
+    "Italy"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "signature",
+      "gravelRiding": "strong",
+      "mountainBiking": "none"
+    }
+  }
+}

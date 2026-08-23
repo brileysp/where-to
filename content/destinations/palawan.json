@@ -1,0 +1,142 @@
+{
+  "id": "palawan",
+  "name": "Palawan",
+  "region": "Philippines",
+  "emoji": "🛶",
+  "climate": "tropical",
+  "about": "Dry season Nov–May (best Jan–Apr) is calm and clear, monsoon Jun–Oct brings storms and rougher seas.",
+  "overview": "Limestone cliffs, hidden lagoons, and some of the clearest water in the Philippines — regularly ranked among the world's best islands.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Palawan stays affordable even with its world-class scenery — a full day of island-hopping with lunch costs less than a single meal at a nice restaurant back home, and the Underground River tour remains one of the best-value bucket-list activities anywhere.",
+  "costItems": [
+    {
+      "label": "Coffee, local",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Tricycle, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Island-hopping tour with lunch, El Nido",
+      "price": 35,
+      "unit": ""
+    },
+    {
+      "label": "Underground River tour, Puerto Princesa",
+      "price": 45,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 9,
+    "surfing": 3,
+    "sailing": 7,
+    "hiking": 4,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 3,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 7,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    7,
+    8,
+    9
+  ],
+  "monthlyWeather": [
+    "dry and warm, calm seas with clear skies",
+    "dry and warm, among the driest, calmest months of the year",
+    "dry and warm, still excellent conditions for island-hopping",
+    "dry and warm, one of the best months before the heat intensifies",
+    "hot and increasingly humid, as the monsoon approaches",
+    "hot and rainy, with the monsoon bringing rougher seas",
+    "hot and rainy, still within the wet season with regular storms",
+    "hot and rainy, with unsettled seas and frequent downpours",
+    "hot and rainy, still deep in the monsoon season",
+    "hot and rainy, the wettest month with the roughest seas",
+    "warm and drying out, as the dry season begins to return",
+    "dry and warm, calm seas returning for the best season ahead"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "El Nido",
+    "Coron",
+    "Philippines"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

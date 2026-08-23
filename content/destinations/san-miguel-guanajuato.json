@@ -1,0 +1,157 @@
+{
+  "id": "san-miguel-guanajuato",
+  "name": "San Miguel de Allende & Guanajuato",
+  "region": "Mexico",
+  "emoji": "🎨",
+  "climate": "highland",
+  "about": "High elevation (~1,900m) keeps it mild nearly year-round; the Cervantino Festival, Mexico's biggest international arts festival, runs in Guanajuato every October.",
+  "overview": "Colonial Bajío highlands an hour apart — San Miguel's pastel streets and expat-driven art scene, Guanajuato's UNESCO-listed tangle of colorful buildings and underground tunnel roads.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "San Miguel de Allende and Guanajuato stay affordable even as their popularity has grown — a full plate of enchiladas mineras costs just a few dollars, and taxis across town rarely run more than a few dollars either.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Enchiladas mineras, local restaurant",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Regional dinner",
+      "price": 16,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 4,
+    "museums": 6,
+    "architecture": 9,
+    "festivals": 6,
+    "finedining": 8,
+    "streetfood": 8,
+    "nightlife": 5,
+    "winetasting": 4,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    10,
+    12
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Cervantino Festival",
+        "weight": 4,
+        "months": {
+          "10": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        10
+      ],
+      "text": "The Cervantino Festival brings international theater, music and dance to Guanajuato — Mexico's largest arts festival."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and dry, cool nights and comfortable days",
+    "mild and dry, still one of the best months",
+    "warm and dry, with clear skies throughout",
+    "warm and dry, still excellent before the rains",
+    "warm, with the first rains arriving",
+    "warm and wet, the rainy season underway",
+    "warm and wet, though mornings often stay clear",
+    "warm and wet, still deep in the rainy season",
+    "warm and wet, rain beginning to ease",
+    "mild and drying out, with the Cervantino Festival underway",
+    "mild and dry, comfortable and increasingly popular",
+    "mild and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Guanajuato",
+    "Cervantino Festival",
+    "Bajío",
+    "Parroquia"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "casual",
+      "forests": "none",
+      "coastlines": "none",
+      "deserts": "casual",
+      "astrophotography": "none"
+    }
+  }
+}

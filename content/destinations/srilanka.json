@@ -1,0 +1,181 @@
+{
+  "id": "srilanka",
+  "name": "Sri Lanka",
+  "region": "South Asia",
+  "emoji": "🍃",
+  "climate": "tropical",
+  "about": "Two monsoons split the island: this (more-visited) coast is driest Dec–Mar. The east coast runs the opposite calendar — best May–Sep.",
+  "overview": "Ancient temples, tea-covered hill country, and beaches, connected by one of the world's most scenic train rides.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Genuinely one of the cheapest countries to eat, ride, and travel around in South Asia — even the scenic train costs next to nothing.",
+  "costItems": [
+    {
+      "label": "Rice and curry plate",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Tuk-tuk, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Scenic train, 2nd class",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 6,
+    "surfing": 6,
+    "sailing": 4,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 4,
+    "museums": 7,
+    "architecture": 7,
+    "festivals": 7,
+    "finedining": 6,
+    "streetfood": 8,
+    "nightlife": 4,
+    "winetasting": 1,
+    "spa": 7,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    5,
+    6,
+    9
+  ],
+  "wildlifePeak": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    11,
+    12,
+    1
+  ],
+  "hikingBest": [
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    6,
+    7,
+    8
+  ],
+  "sliderCaps": {
+    "wildlife": 9
+  },
+  "sliderEvents": {
+    "birding": [
+      {
+        "label": "Northern-winter migrant arrivals",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "dry and warm, one of the best months on this coast",
+    "dry and warm, calm seas and reliable sunshine",
+    "dry and warming, with humidity starting to build ahead of the monsoon",
+    "hot and increasingly humid, just before the rains arrive",
+    "the southwest monsoon arrives, humid with heavy afternoon downpours",
+    "humid and rainy, with frequent squalls and rough seas",
+    "humid and wet, still deep in the monsoon on this coast",
+    "humid with rain easing slightly, though still unsettled",
+    "rain tapering off, humid with improving conditions late in the month",
+    "transitional and unsettled, with showers from the shifting monsoon",
+    "the second monsoon brushes this coast lightly, mild with scattered showers",
+    "dry and warming, as the best stretch of the season begins"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Colombo",
+    "Galle",
+    "Kandy",
+    "Ella"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

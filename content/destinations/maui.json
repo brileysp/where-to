@@ -1,0 +1,160 @@
+{
+  "id": "maui",
+  "name": "Maui",
+  "region": "Hawaii, USA",
+  "emoji": "🌺",
+  "climate": "tropical",
+  "about": "Apr–May and Sep–Oct are the sweet spots — good weather with fewer crowds than the winter and summer peaks.",
+  "overview": "Black-sand beaches, the Road to Hana, and Haleakalā's volcanic summit, all on one of Hawaii's most popular islands.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Everyday food and coffee run at real US-island prices — a proper snorkel tour to Molokini is the one big-ticket activity most people build a day around.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Plate lunch",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Uber, 15 min",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Molokini snorkel tour",
+      "price": 130,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 7,
+    "surfing": 8,
+    "sailing": 6,
+    "hiking": 7,
+    "scenic": 9,
+    "fishing": 6,
+    "roadtrip": 8,
+    "adventure": 6,
+    "golf": 7,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 2,
+    "spa": 7,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "peak": [
+    12,
+    1,
+    6,
+    7
+  ],
+  "low": [
+    4,
+    5,
+    9
+  ],
+  "wildlifePeak": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Humpback whales gather in the channel between Maui and Lanai to breed and calve, often visible from shore."
+    }
+  ],
+  "monthlyWeather": [
+    "warm, with the wet season's occasional heavier showers",
+    "warm and still within the wetter half of the year",
+    "warm and increasingly dry, as showers begin to ease",
+    "warm and pleasant, one of the best months before summer crowds",
+    "warm and dry, with the dry season settling in",
+    "warm and dry, comfortable with steady trade winds",
+    "warm and dry, still comfortable through the dry season",
+    "warm and dry, still within the sunniest, driest stretch",
+    "warm and pleasant, one of the best months with fewer crowds",
+    "warm and pleasant, still comfortable before winter's return",
+    "warm, with rain becoming more frequent as the wet season begins",
+    "warm, with the wet season's occasional heavier showers returning"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Hawaii",
+    "Lahaina",
+    "Hana"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "mountains": "strong",
+      "forests": "strong",
+      "coastlines": "strong",
+      "astrophotography": "strong",
+      "deserts": "none"
+    }
+  }
+}

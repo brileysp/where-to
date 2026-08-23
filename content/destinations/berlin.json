@@ -1,0 +1,138 @@
+{
+  "id": "berlin",
+  "name": "Berlin",
+  "region": "Germany",
+  "emoji": "🐻",
+  "climate": "temperate",
+  "about": "Summer brings long days and outdoor culture, winter is cold and dark but atmospheric with Christmas markets.",
+  "overview": "A vast, endlessly creative capital of world-class museums, street art, and a nightlife scene that runs till dawn.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Transit, coffee, and street food all stay genuinely cheap — Berlin remains one of Western Europe's better-value capitals.",
+  "costItems": [
+    {
+      "label": "U-Bahn ticket",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Currywurst",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Museum entry",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 17,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 8,
+    "festivals": 7,
+    "finedining": 7,
+    "streetfood": 7,
+    "nightlife": 10,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 6,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets fill squares across the city with mulled wine and crafts."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, often below freezing, with the year's heaviest snowfall",
+    "cold and still deep in winter, with grey skies common",
+    "cool, with winter still lingering into the first half of the month",
+    "mild but changeable, with spring warmth building unevenly",
+    "mild and increasingly pleasant, one of the best months for outdoor culture",
+    "warm and sunny, with long days and outdoor life in full swing",
+    "warm, the sunniest month with occasional summer storms",
+    "warm and still summery, though can bring sudden heat",
+    "mild and pleasant, one of the best months as the city settles into fall",
+    "cool and increasingly grey, with rain becoming more regular",
+    "cold and damp, with short days setting in",
+    "cold, with festive Christmas markets against dark winter skies"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Germany"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

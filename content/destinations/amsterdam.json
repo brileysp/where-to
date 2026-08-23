@@ -1,0 +1,145 @@
+{
+  "id": "amsterdam",
+  "name": "Amsterdam",
+  "region": "Netherlands",
+  "emoji": "🚲",
+  "climate": "temperate",
+  "about": "Tulip season (April) and summer are magical but busy, winter is grey, wet and quiet.",
+  "overview": "Canal-ring architecture, world-class museums, and a bike-first culture packed into one compact, walkable city.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A bike rental and a stroopwafel both stay reasonable — museum tickets, the canal cruise, and dinner out add up faster than the city's laid-back feel suggests.",
+  "costItems": [
+    {
+      "label": "Stroopwafel",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Cannabis coffeeshop, joint",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Bike rental, per day",
+      "unit": "",
+      "price": 14
+    },
+    {
+      "label": "Canal cruise, 1 hour",
+      "unit": "",
+      "price": 17
+    },
+    {
+      "label": "Anne Frank House entry",
+      "unit": "",
+      "price": 18
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 4,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 3,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 8,
+    "festivals": 7,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 8,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 9,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    4,
+    6,
+    7,
+    8
+  ],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        4
+      ],
+      "text": "Tulip season is in full bloom across the countryside and at Keukenhof gardens."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and damp, with grey skies and occasional light snow",
+    "cold and damp, still one of the quieter months",
+    "cool and breezy, with spring slow to take hold",
+    "mild and increasingly colorful, as tulip season peaks",
+    "mild and pleasant, one of the best months for cycling the city",
+    "warm and increasingly sunny, with long, pleasant days",
+    "warm, with occasional heatwaves pushing temperatures higher",
+    "warm and humid, the wettest summer month with sudden thunderstorms",
+    "mild and comfortable, one of the better months as crowds thin",
+    "cool and rainy, with autumn setting in",
+    "cold and grey, with rain frequent and days growing short",
+    "cold and damp, with festive lights against grey winter skies"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Netherlands",
+    "Holland"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

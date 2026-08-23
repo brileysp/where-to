@@ -1,0 +1,163 @@
+{
+  "id": "egypt",
+  "name": "Red Sea & Nile",
+  "region": "Egypt",
+  "emoji": "🐪",
+  "climate": "desert",
+  "about": "Oct–Apr is warm, dry and comfortable for sightseeing and diving; Jun–Aug is punishingly hot, especially inland.",
+  "overview": "Ancient temples and pyramids along the Nile, paired with Red Sea diving and beach resorts.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Food and local transport are some of the cheapest in the region — Nile cruises and guided touring are where real money goes.",
+  "costItems": [
+    {
+      "label": "Koshari (Egyptian rice, lentils & pasta)",
+      "unit": "",
+      "price": 0.5
+    },
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Uber to Giza",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Shisha at an ahwa (café)",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Giza Pyramids entrance",
+      "unit": "",
+      "price": 10
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 10,
+    "surfing": 2,
+    "sailing": 6,
+    "hiking": 3,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 3,
+    "stargazing": 6,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 7,
+    "nightlife": 4,
+    "winetasting": 1,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 7,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    7,
+    8
+  ],
+  "birdingPeak": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderCaps": {
+    "birding": 5
+  },
+  "monthlyWeather": [
+    "mild and dry, the coolest month with comfortable sightseeing weather",
+    "mild and dry, still comfortably cool for Nile touring",
+    "warming up, dry with pleasant days and cool evenings",
+    "warm and dry, with heat building steadily inland",
+    "hot and dry, especially in Luxor and Aswan",
+    "very hot and dry, with the Nile Valley regularly above 40°C",
+    "scorching and dry, among the hottest months in Luxor and Aswan",
+    "the hottest month, punishingly dry heat away from the Red Sea coast",
+    "still hot, dry with heat beginning to ease by month's end",
+    "warm and dry, one of the best months for sightseeing",
+    "mild and dry, with comfortable temperatures returning",
+    "mild and dry, one of the coolest and most pleasant months"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Cairo",
+    "Luxor",
+    "Aswan",
+    "Pyramids",
+    "Giza"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "strong",
+      "coastlines": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

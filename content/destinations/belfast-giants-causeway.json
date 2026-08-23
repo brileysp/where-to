@@ -1,0 +1,132 @@
+{
+  "id": "belfast-giants-causeway",
+  "name": "Belfast & the Giant's Causeway",
+  "region": "Northern Ireland",
+  "emoji": "🪨",
+  "climate": "temperate",
+  "about": "Mild and rainy much of the year, like the rest of the British Isles — no real closed season.",
+  "overview": "Belfast's Titanic Quarter and political murals, paired with the basalt columns of the Giant's Causeway an hour up the Causeway Coastal Route.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Belfast runs cheaper than London or Dublin — a full Ulster fry breakfast and a pint both cost noticeably less than equivalent food and drink elsewhere in the UK and Ireland.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Pint of Guinness",
+      "price": 6.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Ulster fry breakfast",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Giant's Causeway entry",
+      "price": 20,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 2,
+    "sailing": 2,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 2,
+    "museums": 6,
+    "architecture": 5,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 4,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "mild",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "cold and wet, quiet with short days",
+    "cold and wet, still one of the quieter months",
+    "mild, drying out and improving",
+    "mild and pleasant, one of the better months",
+    "mild and pleasant, still comfortable and increasingly popular",
+    "mild, good conditions before peak summer",
+    "mild, the busiest month of the year",
+    "mild, still busy with generally reliable weather",
+    "mild and pleasant, a favorite quieter month",
+    "mild, still good before the rain sets back in",
+    "cold and wet, quiet again",
+    "cold and wet, atmospheric through the holidays"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Titanic Quarter",
+    "Causeway Coastal Route",
+    "Bushmills",
+    "Antrim",
+    "Northern Ireland"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

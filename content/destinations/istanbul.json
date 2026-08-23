@@ -1,0 +1,128 @@
+{
+  "id": "istanbul",
+  "name": "Istanbul",
+  "region": "Turkey",
+  "emoji": "🕌",
+  "climate": "mediterranean",
+  "about": "Spring and fall have the most comfortable weather, summer is hot and packed, winter is cool and quiet.",
+  "overview": "A city split across two continents, where Byzantine and Ottoman landmarks sit a tram ride from some of the best street food anywhere.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Tea and a kebab plate cost little; the big-ticket landmarks are a different price bracket entirely.",
+  "costItems": [
+    {
+      "label": "Turkish tea (çay)",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Kebab plate dinner",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Nargile (hookah), shared",
+      "unit": "",
+      "price": 13
+    },
+    {
+      "label": "Hagia Sophia entry",
+      "unit": "",
+      "price": 28
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 2,
+    "surfing": 1,
+    "sailing": 4,
+    "hiking": 2,
+    "scenic": 5,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 1,
+    "stargazing": 2,
+    "museums": 10,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 10,
+    "nightlife": 7,
+    "winetasting": 3,
+    "spa": 8,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 8,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "monthlyWeather": [
+    "cool and rainy, with occasional light snow",
+    "cool and still one of the coldest, wettest months",
+    "mild and increasingly pleasant, with spring warmth building",
+    "mild and comfortable, one of the best months before the summer crowds",
+    "warm and mostly dry, still comfortable and increasingly popular",
+    "hot and dry, with summer crowds building fast",
+    "hot and dry, one of the driest and busiest months",
+    "hot and dry, still deep in the summer crowds and heat",
+    "warm and increasingly pleasant, one of the best months as crowds ease",
+    "mild, with rain becoming more frequent as autumn sets in",
+    "cool and rainy, with the wet season firmly established",
+    "cool and rainy, the wettest month of the year"
+  ],
+  "naSliders": [
+    "surfing"
+  ],
+  "searchAliases": [
+    "Turkey",
+    "Hagia Sophia",
+    "Bosphorus"
+  ]
+}

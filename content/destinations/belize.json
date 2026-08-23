@@ -1,0 +1,151 @@
+{
+  "id": "belize",
+  "name": "Belize",
+  "region": "Central America",
+  "emoji": "🐠",
+  "climate": "tropical",
+  "about": "Hurricane season runs Jun–Nov, peaking Aug–Oct.",
+  "overview": "The Great Blue Hole and the Belize Barrier Reef — the largest in the Northern Hemisphere — make this the Caribbean's premier diving destination, with English as the official language and jungle ruins (Caracol, Xunantunich) a short trip inland.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Belize stays affordable on land — a real plate of rice and beans runs just a few dollars — but the water taxis connecting the cayes add up fast for island-hopping itineraries.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Rice and beans plate, local spot",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Water taxi, Belize City–Caye Caulker",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Barrier Reef snorkel tour",
+      "price": 75,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 10,
+    "surfing": 1,
+    "sailing": 6,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 7,
+    "roadtrip": 2,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 3,
+    "festivals": 2,
+    "finedining": 4,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 0,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "hot": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    9,
+    10
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        4,
+        5,
+        6
+      ],
+      "text": "Whale sharks gather near Gladden Spit to spawn alongside the snapper aggregation — a reliable, seasonal big-animal dive."
+    },
+    {
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "text": "Peak hurricane season — real storm risk, though the barrier reef offers some shelter compared to open Caribbean coasts."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, excellent visibility for diving",
+    "warm and dry, one of the best months",
+    "warm and dry, still excellent and increasingly busy",
+    "warm and dry, whale sharks beginning to gather",
+    "warm, humidity building, whale shark season peaking",
+    "hot and increasingly wet, hurricane season begins",
+    "hot and wet, generally manageable rain",
+    "hot and wet, hurricane risk increasing",
+    "hot and wet, peak hurricane season",
+    "hot and wet, hurricane risk continuing, quietest month",
+    "warm, drying out as the season ends",
+    "warm and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Great Blue Hole",
+    "Ambergris Caye",
+    "Caye Caulker",
+    "Belize Barrier Reef",
+    "Caracol"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

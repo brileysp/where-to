@@ -1,0 +1,155 @@
+{
+  "id": "aruba",
+  "name": "Aruba",
+  "region": "Caribbean",
+  "emoji": "🌵",
+  "climate": "desert",
+  "about": "Sits just outside the hurricane belt, so there's no real off-season — conditions stay dry and sunny nearly year-round.",
+  "overview": "One of the few Caribbean islands with reliably dry, sunny weather nearly all year — cactus and divi-divi trees instead of jungle, with steady trade winds that make it a real windsurfing and kitesurfing destination.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Aruba runs pricier than most of the Caribbean — taxis charge government-set flat fares since there's no Uber, and even a casual grouper sandwich costs more than a similar plate almost anywhere else in the region.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Grouper sandwich, casual",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Beachfront dinner with wine",
+      "price": 70,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 8,
+    "diving": 6,
+    "surfing": 6,
+    "sailing": 6,
+    "hiking": 3,
+    "scenic": 6,
+    "fishing": 4,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 5,
+    "streetfood": 4,
+    "nightlife": 5,
+    "winetasting": 0,
+    "spa": 5,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 4,
+    "birding": 3,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "peak": [
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    9,
+    10
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "text": "Trade winds are strongest, making this the prime window for windsurfing and kitesurfing at Fisherman's Huts."
+    },
+    {
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "text": "Outside the main hurricane belt, so storm risk stays low even during the wider Caribbean's hurricane season."
+    }
+  ],
+  "monthlyWeather": [
+    "warm, sunny and dry, strong trade winds",
+    "warm, sunny and dry, excellent windsurfing conditions",
+    "warm, sunny and dry, still excellent and busy",
+    "warm, sunny and dry, winds easing slightly",
+    "warm, sunny and dry, comfortable and quieter",
+    "warm, sunny and dry, trade winds still reliable",
+    "warm and dry, winds easing further",
+    "warm and dry, calmer seas, quiet season",
+    "warm and dry, one of the quietest months",
+    "warm and dry, comfortable and low season pricing",
+    "warm and dry, trade winds picking back up",
+    "warm, sunny and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Oranjestad",
+    "Eagle Beach",
+    "Fisherman's Huts",
+    "Arikok National Park"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "deserts": "strong",
+      "forests": "none",
+      "mountains": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

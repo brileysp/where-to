@@ -1,0 +1,127 @@
+{
+  "id": "sydney",
+  "name": "Sydney",
+  "region": "Australia",
+  "emoji": "🏄",
+  "climate": "mediterranean",
+  "about": "Southern Hemisphere summer (Dec–Feb) is beach season and peak crowds/prices; autumn (Mar–May) offers warm days with far fewer people.",
+  "overview": "Harbor beaches, an unmistakable opera house, and an outdoor culture built around ferries, coffee, and the water.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A coffee, a pie, or the ferry won't dent the budget; taxis and paid attractions are where Sydney gets expensive.",
+  "costItems": [
+    {
+      "label": "Flat white",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Meat pie",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Manly ferry ride",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Sydney Opera House guided tour",
+      "price": 32,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 5,
+    "surfing": 8,
+    "sailing": 8,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 5,
+    "stargazing": 3,
+    "museums": 6,
+    "architecture": 7,
+    "festivals": 5,
+    "finedining": 8,
+    "streetfood": 6,
+    "nightlife": 8,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 7,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "cold": [
+    7
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "monthlyWeather": [
+    "hot and sunny, the peak of summer with beaches at their busiest",
+    "hot and humid, still deep in summer with occasional storms",
+    "warm and sunny, with summer easing into a pleasant autumn",
+    "mild and dry, one of the best months with thinning crowds",
+    "mild and increasingly cool, comfortable with fewer visitors",
+    "cool, the start of a mild winter with crisp, sunny days common",
+    "cool, the coldest month though still mild by most standards",
+    "cool and dry, still comfortable with clear skies",
+    "mild and dry, with spring warming things up",
+    "mild and pleasant, one of the best months with low humidity",
+    "warm and increasingly sunny, as summer builds",
+    "hot and sunny, with summer in full swing and the sunniest stretch of the year"
+  ],
+  "searchAliases": [
+    "Opera House",
+    "Australia",
+    "Bondi"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

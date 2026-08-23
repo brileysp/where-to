@@ -1,0 +1,134 @@
+{
+  "id": "scottish-highlands-skye",
+  "name": "Scottish Highlands & Isle of Skye",
+  "region": "Scotland",
+  "emoji": "🏰",
+  "climate": "temperate",
+  "about": "May–Sep has the best weather and long daylight, though midges (biting insects) are a real nuisance Jun–Aug; winter brings short days and closed trails.",
+  "overview": "Lochs, castles, and single-track roads through the Highlands, connected by bridge to Skye's dramatic sea cliffs and peaks.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Coffee and a casual pub meal stay reasonable — a proper whisky distillery tour and tasting is a real, worthwhile splurge most visitors build a day around.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Bus fare", "price": 8, "unit": "" },
+    { "label": "Fish and chips", "price": 14, "unit": "" },
+    { "label": "Distillery tour with tasting", "price": 28, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 3,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 4,
+    "roadtrip": 8,
+    "adventure": 5,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 3,
+    "spa": 3,
+    "luxuryLodging": 6,
+    "snowsports": 2,
+    "cycling": 5,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Midges — tiny biting insects — are out in force, especially at dawn and dusk near still water. Bring repellent."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, short days and often stormy",
+    "cold, with daylight lengthening but weather still raw",
+    "cool and unpredictable, trails starting to dry out",
+    "cool and improving, one of the more pleasant months",
+    "mild, long daylight and good hiking before the midges arrive",
+    "mild, midges out in force but scenery at its greenest",
+    "mild, still midge season but reliably the warmest weather",
+    "mild, midges easing off by month's end, still busy",
+    "cool and increasingly pleasant, a favorite quieter month",
+    "cool, with the weather turning and days shortening fast",
+    "cold and often stormy, short days returning",
+    "cold, dark and often wet, quiet through the holidays"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming"
+  ],
+  "searchAliases": [
+    "Skye",
+    "Loch Ness",
+    "Eilean Donan Castle",
+    "Cairngorms",
+    "Fort William",
+    "Scotland"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "strong",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

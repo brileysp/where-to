@@ -1,0 +1,162 @@
+{
+  "id": "komodo",
+  "name": "Komodo Island",
+  "region": "Indonesia",
+  "emoji": "🐉",
+  "climate": "tropical",
+  "about": "Dry season Apr–Dec has calmer seas and better visibility, wet season Jan–Mar brings rain and rougher crossings.",
+  "overview": "Komodo dragons plus superb diving — prehistoric-looking lizards on land, manta rays and pink-sand beaches in the water.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Komodo has one of the widest price ranges in this list — a shared budget liveaboard runs a couple hundred dollars total, while the luxury liveaboards charge that much per night.",
+  "costItems": [
+    {
+      "label": "Coffee, Labuan Bajo",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Park entrance fee, standard route",
+      "unit": "",
+      "price": 40
+    },
+    {
+      "label": "Flight, Bali–Labuan Bajo",
+      "unit": "",
+      "price": 85
+    },
+    {
+      "label": "Budget shared liveaboard, 3D2N",
+      "unit": "per person",
+      "price": 205
+    },
+    {
+      "label": "Luxury liveaboard",
+      "unit": "per night",
+      "price": 5300
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 9,
+    "diving": 9,
+    "surfing": 3,
+    "sailing": 8,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 2,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 4,
+    "streetfood": 4,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "wet": [
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Calm seas & clear diving conditions",
+        "weight": 2.5,
+        "months": {
+          "4": 0.5,
+          "5": 0.7,
+          "6": 0.85,
+          "7": 1,
+          "8": 1,
+          "9": 0.85,
+          "10": 0.7,
+          "11": 0.5,
+          "12": 0.3
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "hot and wet, the wettest month with rough seas and reduced visibility",
+    "hot and wet, still within the rainiest stretch with manta rays gathering",
+    "hot and rainy, with rain beginning to ease later in the month",
+    "warm and drying out, one of the best months as seas calm and visibility improves",
+    "warm and dry, with excellent conditions and whale sharks passing through",
+    "warm and dry, pleasant with calm seas and low humidity",
+    "warm and dry, excellent diving conditions with clear visibility",
+    "warm and dry, still excellent though the busiest month for crowds",
+    "warm and dry, still excellent diving conditions with fewer crowds",
+    "warm and dry, still good conditions before the rains return",
+    "warm, with rain beginning to return and manta season starting in the south",
+    "warm and increasingly wet, as the rainy season sets back in"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "festivals",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Flores",
+    "Komodo dragons",
+    "Indonesia"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "casual",
+      "deserts": "casual",
+      "forests": "none",
+      "astrophotography": "none"
+    }
+  }
+}

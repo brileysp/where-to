@@ -1,0 +1,162 @@
+{
+  "id": "seychelles",
+  "name": "Seychelles",
+  "region": "Indian Ocean",
+  "emoji": "🏝️",
+  "climate": "tropical",
+  "about": "Near year-round warmth; Apr–May and Oct–Nov are calmest between trade winds, Dec–Feb can be rainy and windy.",
+  "overview": "Granite-boulder beaches and dense jungle spread across 115 islands, with some of the Indian Ocean's clearest water.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Even self-catering and local takeaways run higher than most tropical destinations — there's no genuinely cheap version of the Seychelles.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Creole fish curry, takeaway",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Creole restaurant dinner",
+      "price": 30,
+      "unit": ""
+    },
+    {
+      "label": "Inter-island ferry",
+      "price": 60,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 9,
+    "surfing": 3,
+    "sailing": 7,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 3,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 6,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 8,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "wet": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    12,
+    7,
+    8
+  ],
+  "low": [
+    5,
+    6
+  ],
+  "wildlifePeak": [
+    10,
+    11
+  ],
+  "birdingPeak": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "wildlife": 8,
+    "birding": 8
+  },
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Calm-season clarity",
+        "weight": 2,
+        "months": {
+          "4": 0.7,
+          "5": 0.85,
+          "10": 0.85,
+          "11": 0.7
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "warm and humid, with the year's heaviest rain from the northwest monsoon",
+    "warm and rainy, still within the wettest stretch of the year",
+    "warm and humid, with rain beginning to ease",
+    "warm and calm, one of the best months with light winds",
+    "warm, with the trade winds building as the dry season begins",
+    "warm and breezy, drier with the southeast trade winds picking up",
+    "warm and windy, one of the driest and breeziest months, good for sailing and surfing",
+    "warm and windy, still within the breeziest stretch of the year",
+    "warm and drying out, with the trade winds beginning to ease",
+    "warm and calm, one of the best months with light winds returning",
+    "warm and increasingly humid, as the northwest monsoon returns",
+    "warm and rainy, with the wet season building toward its peak"
+  ],
+  "naSliders": [
+    "snowsports",
+    "museums",
+    "architecture",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Mahe",
+    "Praslin",
+    "La Digue"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "none",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

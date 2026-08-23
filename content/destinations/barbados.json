@@ -1,0 +1,136 @@
+{
+  "id": "barbados",
+  "name": "Barbados",
+  "region": "Eastern Caribbean",
+  "emoji": "🌺",
+  "climate": "tropical",
+  "about": "Dry season Dec–Apr is classic Caribbean winter-sun. Hurricane season runs Jun–Nov, with risk peaking Aug–Oct.",
+  "overview": "Classic Caribbean winter-sun island, with a distinct British-Caribbean culture, world-class rum, and the flying-fish-and-cou-cou national dish.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Barbados sits toward the expensive end of the Caribbean — a plate of the national dish, flying fish and cou-cou, costs more than equivalent local food on nearby islands, and a proper rum tour is the one splurge nearly every visitor builds in.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Flying fish with cou-cou",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Rum tasting and distillery tour",
+      "price": 45,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 6,
+    "surfing": 5,
+    "sailing": 8,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 6,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 3,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 6,
+    "winetasting": 3,
+    "spa": 6,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    8,
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "wildlife": 4
+  },
+  "monthlyWeather": [
+    "dry and warm, one of the most pleasant months of the year",
+    "dry and warm, among the driest months with reliable sunshine",
+    "dry and warm, still one of the best months to visit",
+    "warm and mostly dry, with rain starting to return by month's end",
+    "warm and increasingly humid, as the wet season begins",
+    "warm and breezy, the windiest month with building trade winds",
+    "warm and humid, with hurricane season now underway",
+    "hot and humid, with regular showers and hurricane risk present",
+    "hot and humid, the peak of hurricane season though direct hits are rare",
+    "hot and humid, still within hurricane season with the year's heaviest rain",
+    "warm and humid, with rain easing as hurricane season winds down",
+    "dry and warm, one of the most pleasant months as the dry season returns"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Bridgetown"
+  ]
+}

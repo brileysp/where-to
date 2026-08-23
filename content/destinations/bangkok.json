@@ -1,0 +1,147 @@
+{
+  "id": "bangkok",
+  "name": "Bangkok",
+  "region": "Thailand",
+  "emoji": "🍜",
+  "climate": "tropical",
+  "about": "Cool season (Nov–Feb) is the pleasant window; hot season (Mar–May) is brutal, monsoon (Jun–Oct) brings frequent downpours.",
+  "overview": "Ornate temples, legendary street food, and round-the-clock energy, at some of Asia's most accessible prices.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street food and transit are nearly free; real spending happens at rooftop bars and hotel restaurants.",
+  "costItems": [
+    {
+      "label": "BTS Skytrain ride",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Pad thai from a street stall",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Tuk-tuk, 15 min",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Thai massage, 60 min",
+      "unit": "",
+      "price": 10
+    },
+    {
+      "label": "Rooftop bar cocktail",
+      "unit": "",
+      "price": 13
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 1,
+    "scenic": 3,
+    "fishing": 1,
+    "roadtrip": 3,
+    "adventure": 2,
+    "golf": 5,
+    "stargazing": 1,
+    "museums": 8,
+    "architecture": 9,
+    "festivals": 4,
+    "finedining": 8,
+    "streetfood": 10,
+    "nightlife": 10,
+    "winetasting": 1,
+    "spa": 8,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 10,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Songkran (water festival)",
+        "weight": 5,
+        "months": {
+          "4": 1
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "warm and dry, one of the most comfortable months of the year",
+    "warm and dry, still pleasant before the heat builds",
+    "hot and dry, with the heat intensifying fast",
+    "scorching, the hottest month with temperatures regularly above 35°C",
+    "hot and increasingly humid, as the rains begin",
+    "hot and rainy, with regular but often brief afternoon downpours",
+    "hot and rainy, still early in the monsoon",
+    "hot and rainy, with showers a near-daily occurrence",
+    "hot and rainy, one of the wettest months of the year",
+    "hot and rainy, still within the wettest stretch of the year",
+    "warm and drying out, as the cool season begins",
+    "warm and dry, one of the most pleasant months of the year"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Thailand"
+  ]
+}

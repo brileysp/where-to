@@ -1,0 +1,199 @@
+{
+  "id": "fjords",
+  "name": "Norwegian Fjords",
+  "region": "Norway",
+  "emoji": "🚢",
+  "climate": "polar",
+  "about": "Summer (Jun–Aug) has midnight sun and full-service ports, winter brings snow-capped drama and aurora chances but many cruises pause.",
+  "overview": "Dramatic cruise-ship scenery through Norway's steep-walled fjords — waterfalls, glaciers, and fishing villages clinging to the water's edge.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "The Norwegian Fjords run expensive even by Scandinavian standards — coffee and a cinnamon bun alone cost more than a casual lunch in most of Europe, and the classic fjord cruise is a real splurge most visitors budget specifically for.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 5.5,
+      "unit": ""
+    },
+    {
+      "label": "Cinnamon bun with coffee",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Fjord sightseeing cruise",
+      "price": 95,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 8,
+    "hiking": 4,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 8,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 2,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 4,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7
+  ],
+  "low": [
+    11,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Midnight sun trail access",
+        "weight": 4,
+        "months": {
+          "6": 0.85,
+          "7": 1,
+          "8": 0.85
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Midnight sun full-service season",
+        "weight": 1.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.5
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Winter darkness (limited cruise access)",
+        "weight": 5,
+        "months": {
+          "1": 1,
+          "2": 0.7,
+          "3": 0.3,
+          "10": 0.3,
+          "11": 0.7,
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "The midnight sun keeps the fjords lit around the clock."
+    },
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Long polar nights bring aurora chances, though many cruise lines pause winter sailings."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and dark, with short days and aurora chances on clear nights",
+    "cold and dark, still deep winter with occasional snow-capped drama",
+    "cold, with daylight lengthening fast as winter loosens its grip",
+    "cool, with fruit blossoms beginning in the sheltered fjord valleys",
+    "mild and increasingly bright, with blossoms in full bloom",
+    "mild, with the midnight sun and long, light-filled days beginning",
+    "mild and pleasant, the warmest month with nearly round-the-clock daylight",
+    "mild, still warm with the midnight sun beginning to fade",
+    "cool and crisp, with fewer crowds and good wildlife-watching",
+    "cool and increasingly wet, as autumn storms return",
+    "cold and dark, with many cruise services pausing for the season",
+    "cold and dark, with snow-capped peaks and aurora chances on clear nights"
+  ],
+  "naSliders": [
+    "swimming",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Norway",
+    "Bergen",
+    "Geirangerfjord"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "signature",
+      "astrophotography": "casual",
+      "deserts": "none",
+      "forests": "casual"
+    }
+  }
+}

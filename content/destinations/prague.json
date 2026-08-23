@@ -1,0 +1,141 @@
+{
+  "id": "prague",
+  "name": "Prague",
+  "region": "Czechia",
+  "emoji": "🏰",
+  "climate": "temperate",
+  "about": "Spring and fall are mild and quieter, December brings famous Christmas markets, summer is warm and busiest.",
+  "overview": "Gothic spires and a UNESCO old town on the Vltava River, one of Central Europe's best-preserved capitals.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Beer, coffee, and trams all stay notably cheap for a European capital — prices climb fast right on the Charles Bridge tourist route.",
+  "costItems": [
+    {
+      "label": "Station coffee",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Tram or metro ticket",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Beer, 0.5L",
+      "unit": "",
+      "price": 2.5
+    },
+    {
+      "label": "Taxi/Bolt, 15 min",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Beef in cream sauce (svíčková), local pub",
+      "unit": "",
+      "price": 12
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 10,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 7,
+    "winetasting": 4,
+    "spa": 5,
+    "luxuryLodging": 6,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 2,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    9
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    12
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets fill the Old Town Square with mulled wine, crafts and festive lights."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, often below freezing, with snow common across the city",
+    "cold and dry-ish, still firmly in winter's grip",
+    "cool and unpredictable, with spring arriving unevenly",
+    "mild, though April showers can arrive with little warning",
+    "mild and increasingly pleasant, one of the best months for the fairy-tale streets",
+    "warm and pleasant, with long days and occasional rain",
+    "warm, with the year's wettest stretch bringing frequent showers",
+    "warm and humid at times, still one of the busiest months",
+    "mild and pleasant, one of the best months as crowds thin",
+    "cool and increasingly grey, with rain becoming more frequent",
+    "cold and damp, with winter settling back in",
+    "cold, with snow-dusted spires and the famous Christmas markets in full swing"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Czech Republic",
+    "Czechia"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

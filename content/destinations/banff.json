@@ -1,0 +1,197 @@
+{
+  "id": "banff",
+  "name": "Banff National Park",
+  "region": "Canada",
+  "emoji": "🏞️",
+  "climate": "polar",
+  "about": "Summer (Jun–Sep) is prime for hiking and wildlife, winter draws skiers but most trails close.",
+  "overview": "Turquoise glacial lakes and jagged Rockies peaks in Canada's oldest national park.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and park entry cost little — the gondola and lake-area activities are where a day's budget actually goes.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance",
+      "price": 9,
+      "unit": "per day"
+    },
+    {
+      "label": "Poutine",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Banff Gondola",
+      "price": 40,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 8,
+    "adventure": 7,
+    "golf": 4,
+    "stargazing": 7,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 3,
+    "nightlife": 3,
+    "winetasting": 2,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 9,
+    "cycling": 5,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    12,
+    1
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "wildlifePeak": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peakIntensity": "extreme",
+  "sliderCaps": {
+    "wildlife": 8
+  },
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer trail access",
+        "weight": 6,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Turquoise-lake summer",
+        "weight": 1.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.5
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "bitterly cold, with deep snow and prime conditions for skiing",
+    "bitterly cold, still excellent for skiing and winter scenery",
+    "cold, with good snow still on the slopes as days lengthen",
+    "cool and still wintry, with trails beginning to reopen as snow recedes",
+    "mild and greening up, with wildlife becoming more active",
+    "mild, though the rainiest month of the year with regular showers",
+    "warm, one of the best months for hiking with trails fully open",
+    "warm and pleasant, still prime hiking season",
+    "cool and crisp, a favorite shoulder month with fewer crowds",
+    "cool and quiet, with the first snow returning at higher elevations",
+    "cold, with winter setting back in fast",
+    "bitterly cold, with deep snow and ski season underway"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture"
+  ],
+  "searchAliases": [
+    "Alberta",
+    "Canada",
+    "Lake Louise"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "astrophotography": "casual"
+    }
+  }
+}

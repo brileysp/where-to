@@ -1,0 +1,162 @@
+{
+  "id": "sicily",
+  "name": "Sicily",
+  "region": "Italy",
+  "emoji": "🌋",
+  "climate": "mediterranean",
+  "about": "Peak summer (Jul–Aug) is scorching and packed, spring and fall are the better window for touring.",
+  "overview": "Greek temples, Baroque towns, and an active volcano you can hike (and, oddly, ski on), with a food culture shaped by 3,000 years of Mediterranean crossroads.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Espresso and a casual lunch both stay properly cheap — even the major archaeological sites charge modestly by European standards.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "unit": "",
+      "price": 1.5
+    },
+    {
+      "label": "Arancini lunch",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 14
+    },
+    {
+      "label": "Valley of the Temples entry",
+      "unit": "",
+      "price": 22
+    },
+    {
+      "label": "Mount Etna cable car",
+      "unit": "",
+      "price": 55
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 6,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 6,
+    "adventure": 4,
+    "golf": 2,
+    "stargazing": 5,
+    "museums": 6,
+    "architecture": 8,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 9,
+    "nightlife": 6,
+    "winetasting": 6,
+    "spa": 4,
+    "luxuryLodging": 7,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        4
+      ],
+      "text": "Holy Week (Easter) processions, especially Trapani's multi-day Processione dei Misteri, are among Sicily's most striking traditions — dates shift with the Easter calendar."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and wet, quiet with the fewest visitors",
+    "mild and wet, still quiet outside Easter",
+    "mild and drying out, comfortable and increasingly pleasant",
+    "warm and improving, one of the best months for touring",
+    "warm and dry, excellent conditions before the summer crowds",
+    "hot and dry, with beach season underway",
+    "very hot and dry, peak crowds and peak heat",
+    "very hot and dry, the busiest month of the year",
+    "warm and dry, still excellent with easing crowds",
+    "mild and pleasant, a favorite shoulder month",
+    "mild and increasingly wet, quiet again",
+    "mild and wet, quiet through the holidays"
+  ],
+  "naSliders": [],
+  "searchAliases": [
+    "Palermo",
+    "Taormina",
+    "Mount Etna",
+    "Agrigento",
+    "Syracuse",
+    "Catania"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "deserts": "casual",
+      "forests": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

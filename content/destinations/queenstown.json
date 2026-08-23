@@ -1,0 +1,185 @@
+{
+  "id": "queenstown",
+  "name": "Queenstown",
+  "region": "New Zealand",
+  "emoji": "🚣",
+  "climate": "temperate",
+  "about": "Winter (Jun–Sep) is for skiing, summer (Dec–Feb) is for hiking, bungee, and lake activities.",
+  "overview": "New Zealand's adventure capital, ringed by mountains and a lake, built for bungee jumps by day and lakefront dinners by night.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Daily basics like coffee or a pie cost little; the adventure activities the town is built around are the real expense.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Meat pie",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "unit": "",
+      "price": 13
+    },
+    {
+      "label": "Skyline Gondola",
+      "unit": "",
+      "price": 33
+    },
+    {
+      "label": "Kawarau Bridge Bungy",
+      "unit": "",
+      "price": 125
+    }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 3,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 4,
+    "hiking": 4,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 8,
+    "adventure": 10,
+    "golf": 6,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 4,
+    "nightlife": 6,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 9,
+    "cycling": 6,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1,
+    7,
+    8
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingBest": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "noSnow": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer trail access",
+        "weight": 5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "12": 0.8
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Summer lake & mountain clarity",
+        "weight": 1.5,
+        "months": {
+          "1": 0.85,
+          "2": 0.85,
+          "3": 0.5,
+          "12": 0.5
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "warm and settled, the most reliable stretch of a mild Southern Hemisphere summer",
+    "warm and sunny, still one of the best months with long daylight",
+    "mild and cooling, with the first hints of autumn color",
+    "cool and crisp, with the region's famous golden foliage in full display",
+    "cool and increasingly wet, as autumn gives way to winter",
+    "cold, with ski season beginning on the surrounding mountains",
+    "the coldest month, cold with reliable snow for skiing",
+    "cold, still deep in ski season with crisp, clear days common",
+    "cool and unsettled, with spring arriving unevenly",
+    "cool and wet, the wettest month of the year",
+    "mild and increasingly pleasant, with summer building",
+    "warm and settled, as the summer season gets underway"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "museums",
+    "architecture"
+  ],
+  "searchAliases": [
+    "bungy",
+    "bungee jumping",
+    "Kawarau Bridge",
+    "Lake Wakatipu",
+    "Skyline Gondola",
+    "Shotover Jet",
+    "Arrowtown",
+    "Routeburn Track"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "strong",
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "strong"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "casual",
+      "astrophotography": "strong"
+    }
+  }
+}

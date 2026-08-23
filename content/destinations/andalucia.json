@@ -1,0 +1,183 @@
+{
+  "id": "andalucia",
+  "name": "Andalucía",
+  "region": "Spain",
+  "emoji": "🍊",
+  "climate": "mediterranean",
+  "about": "Spring (Semana Santa and the Feria de Abril, both in April) is the single most vibrant stretch of the year; summer heat here is genuinely extreme, regularly topping 40°C (104°F) in Seville.",
+  "overview": "The Alhambra's Moorish palaces in Granada, Seville's orange-tree-lined streets and flamenco tablaos, Córdoba's Mezquita — the cultural heart of southern Spain.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Andalucía is one of Spain's better values — a full tapas plate with your drink runs just a few euros, and a night of flamenco is the one real splurge most visitors budget for.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Tapas and beer, bar counter",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Flamenco show with drink",
+      "price": 35,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 1,
+    "roadtrip": 6,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 7,
+    "architecture": 10,
+    "festivals": 8,
+    "finedining": 7,
+    "streetfood": 9,
+    "nightlife": 7,
+    "winetasting": 4,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 6,
+    "birding": 2,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    4
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Clear spring & fall light on the Alhambra",
+        "weight": 3,
+        "months": {
+          "4": 1,
+          "5": 1,
+          "9": 1,
+          "10": 1
+        }
+      }
+    ],
+    "festivals": [
+      {
+        "label": "Semana Santa & Feria de Abril",
+        "weight": 3,
+        "months": {
+          "4": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        4
+      ],
+      "text": "Semana Santa and the Feria de Abril fill Seville with elaborate processions, flamenco dresses and all-night fairground celebration — the busiest, most vibrant stretch of the year."
+    },
+    {
+      "months": [
+        8
+      ],
+      "text": "Peak summer heat regularly tops 40°C (104°F) in Seville — many locals leave, and outdoor sightseeing is best done early morning or evening."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and occasionally rainy, cool by Andalusian standards",
+    "mild and drying out, with sunny stretches becoming more common",
+    "mild and increasingly pleasant, with spring warmth building",
+    "warm and dry, with Semana Santa and the Feria de Abril filling the streets",
+    "warm and dry, one of the best months before the real heat arrives",
+    "hot and dry, comfortable in the mornings and evenings",
+    "very hot and dry, with midday heat best avoided outdoors",
+    "extremely hot and dry, the quietest month as locals head to the coast",
+    "hot and dry, cooling gradually as the month goes on",
+    "warm and mostly dry, a favorite shoulder month",
+    "mild and increasingly rainy, with the wet season settling in",
+    "mild and rainy, with the coolest temperatures of the year"
+  ],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Seville",
+    "Sevilla",
+    "Granada",
+    "Alhambra",
+    "Córdoba",
+    "Mezquita",
+    "Flamenco",
+    "Semana Santa",
+    "Feria de Abril"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "casual",
+      "forests": "none",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

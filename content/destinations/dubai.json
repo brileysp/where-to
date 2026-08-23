@@ -1,0 +1,134 @@
+{
+  "id": "dubai",
+  "name": "Dubai",
+  "region": "UAE",
+  "emoji": "🏙️",
+  "climate": "desert",
+  "about": "Nov–Mar is warm and pleasant, summer (Jun–Aug) is extremely hot and humid — best avoided for outdoor time.",
+  "overview": "A hyper-modern desert metropolis of record-breaking towers and five-star excess, with the old souks, dunes, and creek still a short drive from the skyscrapers.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Cheap eats exist here, but the marquee sights don't — a Burj Khalifa ticket alone costs more than a full day of food.",
+  "costItems": [
+    {
+      "label": "Shawarma wrap",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 12
+    },
+    {
+      "label": "Burj Khalifa, At the Top",
+      "unit": "",
+      "price": 42
+    },
+    {
+      "label": "Desert safari tour",
+      "unit": "",
+      "price": 60
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 6,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 5,
+    "golf": 9,
+    "stargazing": 3,
+    "museums": 4,
+    "architecture": 10,
+    "festivals": 4,
+    "finedining": 9,
+    "streetfood": 6,
+    "nightlife": 8,
+    "winetasting": 2,
+    "spa": 8,
+    "luxuryLodging": 10,
+    "snowsports": 2,
+    "cycling": 2,
+    "shopping": 10,
+    "birding": 4,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    7,
+    8
+  ],
+  "monthlyWeather": [
+    "warm and pleasant, the most comfortable month of the year",
+    "still mild and sunny, ideal for being outside",
+    "warming up, though evenings stay comfortable",
+    "hot by day, with summer heat starting to build",
+    "very hot, with daytime highs regularly near 40°C",
+    "scorching and dry, with highs often above 40°C",
+    "extreme heat combined with high humidity that makes it feel even hotter",
+    "the hottest month, often exceeding 41°C with oppressive humidity",
+    "still brutally hot and humid, though marginally easing by month's end",
+    "cooling gradually, though afternoons remain hot",
+    "increasingly comfortable, with pleasant evenings returning",
+    "mild and sunny, back to one of the most pleasant times to visit"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "UAE",
+    "United Arab Emirates",
+    "Burj Khalifa"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "strong",
+      "coastlines": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "bahamas",
+  "name": "Bahamas",
+  "region": "Caribbean",
+  "emoji": "🐚",
+  "climate": "tropical",
+  "about": "Dec–Apr is dry season and peak. Hurricane season runs Jun–Nov, risk peaking Aug–Oct.",
+  "overview": "Turquoise water close to the US East Coast, with hundreds of islands ranging from Nassau's resorts to the untouched Out Islands.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Nassau runs expensive by Caribbean standards — even conch fritters, the islands' signature bite, cost noticeably more than equivalent street food elsewhere in the region.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Conch fritters",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Resort dinner with seafood",
+      "price": 65,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 9,
+    "diving": 8,
+    "surfing": 3,
+    "sailing": 8,
+    "hiking": 1,
+    "scenic": 5,
+    "fishing": 7,
+    "roadtrip": 2,
+    "adventure": 3,
+    "golf": 6,
+    "stargazing": 4,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 6,
+    "streetfood": 5,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 4,
+    "birding": 4,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "swimHazard": [
+    8,
+    9,
+    10
+  ],
+  "monthlyWeather": [
+    "dry and warm, one of the most pleasant months of the year",
+    "dry and warm, still comfortable with low humidity",
+    "dry and warm, still one of the best months to visit",
+    "warm and mostly dry, with rain starting to return by month's end",
+    "warm and increasingly humid, as the wet season begins",
+    "warm and humid, with hurricane season now underway",
+    "hot and humid, with regular afternoon showers",
+    "hot and humid, with hurricane risk building",
+    "hot and humid, the peak of hurricane season",
+    "hot and humid, still within hurricane season with unsettled weather",
+    "warm and drying out, with hurricane risk fading",
+    "dry and warm, one of the most pleasant months as the dry season returns"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Nassau",
+    "Exuma"
+  ]
+}

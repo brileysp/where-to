@@ -1,0 +1,148 @@
+{
+  "id": "gbr",
+  "name": "Great Barrier Reef",
+  "region": "Queensland, Australia",
+  "emoji": "🐡",
+  "climate": "tropical",
+  "about": "Dry season (May–Oct) has the best visibility and — importantly — no dangerous stinger jellyfish in open water. Wet season (Nov–Apr) requires stinger suits to swim.",
+  "overview": "The world's largest coral reef system, explored by day-boat from Cairns or overnight from a handful of private island resorts.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Everyday food and coffee are typical Australian prices — the real cost is the reef trip itself, and quality varies a lot by price tier.",
+  "costItems": [
+    { "label": "Coffee", "price": 4.5, "unit": "" },
+    { "label": "Meat pie", "price": 5, "unit": "" },
+    { "label": "Green Island cruise & snorkel", "price": 78, "unit": "" },
+    { "label": "Full-day outer reef tour", "price": 209, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 8,
+    "diving": 10,
+    "surfing": 5,
+    "sailing": 8,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 6,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 5,
+    "nightlife": 5,
+    "winetasting": 3,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 6,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    3
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Dangerous stinger jellyfish are present in the water — swimming requires a protective stinger suit."
+    }
+  ],
+  "monthlyWeather": [
+    "hot, humid, and wet, with stinger jellyfish present in the water",
+    "hot and humid, the wettest month with stinger suits required for swimming",
+    "hot and humid, still within stinger season with regular rain",
+    "warm and humid, rain easing as the wet season winds down",
+    "warm and drying out, with the trade winds returning and stingers clearing",
+    "mild and dry, with clear skies and the best visibility of the year",
+    "mild and dry, consistent trade winds and excellent diving conditions",
+    "mild and dry, one of the best months for reef visibility",
+    "warm and dry, still ideal conditions with steady trade winds",
+    "warm and dry, the last of the stinger-free season before wet season returns",
+    "hot and humid, with the wet season beginning and stingers returning",
+    "hot, humid, and increasingly wet, with cyclone risk building"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Cairns",
+    "Whitsundays",
+    "Queensland"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

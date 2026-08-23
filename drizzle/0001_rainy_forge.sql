@@ -1,0 +1,1 @@
+ALTER TABLE "domains" ALTER COLUMN "emoji" DROP NOT NULL;

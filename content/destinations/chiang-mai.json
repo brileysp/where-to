@@ -1,0 +1,184 @@
+{
+  "id": "chiang-mai",
+  "name": "Chiang Mai & Northern Thailand",
+  "region": "Thailand",
+  "emoji": "🏮",
+  "climate": "tropical",
+  "about": "Cool-dry season (Nov–Feb) is genuinely comfortable, even cool at night; Mar–Apr brings agricultural-burning haze that seriously degrades air quality and views.",
+  "overview": "Cooler, hillier, and slower than Bangkok or the southern islands — temples, night markets, trekking, and the historic home of Thai massage.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Genuinely one of the cheapest places in Asia to eat well — even a proper specialty coffee costs a fraction of what it would back home.",
+  "costItems": [
+    {
+      "label": "Local iced coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Khao soi, street stall",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Songthaew, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Specialty cafe coffee",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Ethical elephant sanctuary, half-day",
+      "price": 52,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 5,
+    "adventure": 6,
+    "golf": 3,
+    "stargazing": 4,
+    "museums": 4,
+    "architecture": 6,
+    "festivals": 6,
+    "finedining": 6,
+    "streetfood": 9,
+    "nightlife": 6,
+    "winetasting": 1,
+    "spa": 7,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 6,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hot": [
+    3,
+    4,
+    5
+  ],
+  "peak": [
+    11,
+    12,
+    1
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    4,
+    9
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingWorst": [
+    3,
+    4
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Yi Peng lantern festival",
+        "weight": 4,
+        "months": {
+          "11": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "text": "Agricultural burning across the region creates serious air-quality haze, worst in March–April — check air quality indexes before planning outdoor-heavy days."
+    },
+    {
+      "months": [
+        11
+      ],
+      "text": "The Yi Peng lantern festival fills the sky with thousands of floating lanterns — one of the most photographed events in Thailand."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and dry, genuinely cool at night — pack a layer",
+    "cool and dry, still one of the most comfortable months",
+    "warming up fast, with burning-season haze starting to build",
+    "hot and hazy, the worst month for air quality and visibility",
+    "hot, with haze easing as the first pre-monsoon rain arrives",
+    "warm and increasingly wet, as the monsoon sets in",
+    "warm and wet, lush and green with regular rain",
+    "warm and wet, still deep in the rainy season",
+    "warm and wet, one of the rainiest and quietest months",
+    "cooling down, rain easing toward month's end",
+    "cool and dry, with the Yi Peng lantern festival lighting up the sky",
+    "cool and dry, comfortable and increasingly popular toward the holidays"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Chiang Rai",
+    "Pai",
+    "Doi Suthep",
+    "Golden Triangle region",
+    "Mae Hong Son"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "forests": "strong",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

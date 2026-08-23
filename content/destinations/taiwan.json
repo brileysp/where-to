@@ -1,0 +1,192 @@
+{
+  "id": "taiwan",
+  "name": "Taiwan",
+  "region": "East Asia",
+  "emoji": "🏮",
+  "climate": "temperate",
+  "about": "Oct–Nov is the clearest, most comfortable stretch; typhoon season runs Jul–Sep, and Dec–Feb brings persistent grey, drizzly weather to the north.",
+  "overview": "Night markets, hot springs, and a genuinely efficient MRT system, anchored by the once-tallest building on Earth.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street food, bubble tea, and transit all cost next to nothing — Taipei 101's observation deck is the one real splurge ticket.",
+  "costItems": [
+    {
+      "label": "MRT ride",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Bubble tea",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Night market snack",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taipei 101 Observatory",
+      "price": 19,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 3,
+    "diving": 4,
+    "surfing": 3,
+    "sailing": 2,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 3,
+    "stargazing": 4,
+    "museums": 6,
+    "architecture": 5,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 10,
+    "nightlife": 6,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    5,
+    6
+  ],
+  "hot": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    10,
+    11
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    3,
+    4,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    7,
+    8,
+    9
+  ],
+  "swimHazard": [
+    7,
+    8,
+    9
+  ],
+  "shopClosures": true,
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Lunar New Year & Lantern Festival",
+        "weight": 5,
+        "months": {
+          "1": 0.6,
+          "2": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "text": "Typhoon season — mountain roads and trails like Taroko Gorge can close on short notice for landslide risk."
+    },
+    {
+      "months": [
+        1,
+        2
+      ],
+      "text": "Lunar New Year and the Lantern Festival bring major celebrations, though many small businesses also close for several days around the New Year itself."
+    }
+  ],
+  "monthlyWeather": [
+    "cool, grey and often drizzly, especially in Taipei and the north",
+    "cool and damp, with Lunar New Year celebrations and the Lantern Festival",
+    "mild and improving, a good shoulder month as the rain eases",
+    "mild and pleasant, one of the most comfortable months",
+    "warm and increasingly wet, as the plum rain season begins",
+    "hot and humid, with heavy rain from the plum rain season",
+    "hot and humid, with typhoon season now underway",
+    "the hottest month, humid with high typhoon risk",
+    "still hot and humid, typhoon season continuing",
+    "warm and clear, arguably the best month of the year",
+    "mild and dry, still excellent and slightly quieter than October",
+    "cool and drying out, pleasant before the winter drizzle returns"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Taipei",
+    "Taroko Gorge",
+    "Sun Moon Lake",
+    "Alishan",
+    "Jiufen",
+    "Kenting"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "coastlines": "casual",
+      "forests": "strong",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

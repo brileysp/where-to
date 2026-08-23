@@ -1,0 +1,179 @@
+{
+  "id": "uyuni",
+  "name": "Salar de Uyuni",
+  "region": "Bolivia",
+  "emoji": "🏜️",
+  "climate": "desert",
+  "about": "Dry season (May–Oct) gives the cracked white salt crust for classic photos; wet season (Dec–Apr) floods it into a mirror — different look, both stunning.",
+  "overview": "The world's largest salt flat, ringed by volcanoes and flamingo-filled lagoons.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Salteñas, meals, and beer all run a dollar or two, tour costs aside.",
+  "costItems": [
+    {
+      "label": "Salteña (savory pastry)",
+      "unit": "",
+      "price": 1.5
+    },
+    {
+      "label": "Beer",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Quinoa & llama stew dinner",
+      "unit": "",
+      "price": 8
+    },
+    {
+      "label": "Salt flat day tour",
+      "unit": "",
+      "price": 30
+    },
+    {
+      "label": "Overnight bus, La Paz–Uyuni",
+      "unit": "",
+      "price": 30
+    }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 10,
+    "fishing": 1,
+    "roadtrip": 8,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 9,
+    "museums": 2,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 2,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "cold": [
+    6,
+    7
+  ],
+  "peak": [
+    7,
+    8,
+    9
+  ],
+  "low": [
+    2,
+    3
+  ],
+  "birdingPeak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "mild",
+  "sliderCaps": {
+    "birding": 7
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "The salt flat is a dry, cracked white crust — the classic Salar de Uyuni photo."
+    },
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "A thin layer of water turns the salt flat into a vast mirror, reflecting the sky."
+    }
+  ],
+  "monthlyWeather": [
+    "mild by day, with rain creating the mirror effect across the salt flat",
+    "mild by day, still within the wettest stretch with the mirror effect at its best",
+    "mild by day, with rain beginning to ease as the wet season winds down",
+    "mild by day but increasingly cold at night, drying out fast",
+    "dry, with cold nights often dropping well below freezing",
+    "dry, with bitterly cold nights and the classic cracked white salt crust",
+    "dry, among the coldest months with nights regularly below -10°C",
+    "dry, still bitterly cold at night with clear, crisp days",
+    "dry and mild by day, one of the best months with dry, photogenic salt flats",
+    "dry and mild, still excellent conditions before the rains return",
+    "warming up, with the first rains of the wet season arriving",
+    "mild, with rain building toward the mirror-effect season"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Bolivia",
+    "salt flats"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

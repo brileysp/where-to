@@ -1,0 +1,150 @@
+{
+  "id": "mexicocity",
+  "name": "Mexico City",
+  "region": "Mexico",
+  "emoji": "🌮",
+  "climate": "highland",
+  "about": "Nov–Apr is dry season, May–Oct brings brief but heavy afternoon showers.",
+  "overview": "A high-altitude megacity of world-class museums, markets, and some of the best street food on the planet.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Cheap for a capital this size — meals, rooms, and cross-town taxis all cost a fraction of comparable cities.",
+  "costItems": [
+    {
+      "label": "Metro ride",
+      "price": 0.3,
+      "unit": ""
+    },
+    {
+      "label": "Tacos al pastor, 3 tacos",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Uber, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Frida Kahlo Museum entry",
+      "price": 18,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 4,
+    "finedining": 10,
+    "streetfood": 10,
+    "nightlife": 8,
+    "winetasting": 3,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 7,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1
+  ],
+  "low": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Día de los Muertos",
+        "weight": 5,
+        "months": {
+          "11": 1
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "mild by day but cool at night, dry with clear skies",
+    "mild and dry, still comfortable with cool evenings",
+    "warming up, dry with strong midday sun at altitude",
+    "warm and dry, one of the best months before the rains arrive",
+    "warm, with the first afternoon showers of the wet season arriving",
+    "mild by day, with regular but usually brief afternoon downpours",
+    "mild and rainy, with heavy afternoon showers common",
+    "mild and rainy, still deep in the wettest stretch of the year",
+    "mild and rainy, with afternoon storms continuing regularly",
+    "mild, with rain beginning to ease as the dry season approaches",
+    "mild by day but cool at night, dry with clear skies returning",
+    "cool, especially at night, dry with crisp, clear conditions"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Mexico",
+    "CDMX"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

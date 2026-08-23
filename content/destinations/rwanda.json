@@ -1,0 +1,184 @@
+{
+  "id": "rwanda",
+  "name": "Rwanda",
+  "region": "East Africa",
+  "emoji": "🦍",
+  "climate": "highland",
+  "about": "Mountain gorilla trekking; the two dry seasons (Jun–Sep and Dec–Feb) offer easier, less muddy trekking conditions.",
+  "overview": "One trek to see mountain gorillas in Volcanoes National Park, paired with Kigali's genocide memorial and a fast-modernizing capital.",
+  "costRange": {
+    "min": "$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "The gorilla trekking permit alone costs more than most people's entire other safari — everything else here is comparatively minor.",
+  "costItems": [
+    {
+      "label": "Moto-taxi, 15 min",
+      "unit": "",
+      "price": 1.5
+    },
+    {
+      "label": "Local restaurant meal, Kigali",
+      "unit": "",
+      "price": 8
+    },
+    {
+      "label": "Golden monkey trekking permit",
+      "unit": "",
+      "price": 100
+    },
+    {
+      "label": "Gorilla trekking permit",
+      "unit": "",
+      "price": 1500
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 4,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 7,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9,
+    12,
+    1,
+    2
+  ],
+  "wet": [
+    3,
+    4,
+    5,
+    10,
+    11
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    12,
+    1
+  ],
+  "low": [
+    4,
+    5
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Easier, drier trekking trails",
+        "weight": 1.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "6": 0.6,
+          "7": 1,
+          "8": 1,
+          "9": 0.6,
+          "12": 0.6
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Drier trails",
+        "weight": 1.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "6": 0.6,
+          "7": 1,
+          "8": 1,
+          "9": 0.6,
+          "12": 0.6
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        1,
+        2
+      ],
+      "text": "Drier trails make gorilla trekking through Volcanoes National Park easier and less strenuous."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and relatively dry, good trekking conditions with cool mountain air",
+    "mild and dry, still one of the better months for trekking",
+    "mild, with rain increasingly likely on the volcano slopes",
+    "mild and wet, one of the rainiest months with muddy trails",
+    "mild and wet, still within the wetter stretch of the year",
+    "mild and dry, with trails firming up for easier trekking",
+    "mild and dry, one of the best months for gorilla trekking",
+    "mild and dry, still excellent trekking conditions",
+    "mild, with rain returning as the wetter season begins again",
+    "mild and wet, with trails softening again",
+    "mild and wet, still within the rainier stretch of the year",
+    "mild and drying out, as the short dry season begins"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "gorilla trekking"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "forests": "signature",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

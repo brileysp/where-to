@@ -1,0 +1,156 @@
+{
+  "id": "borneo",
+  "name": "Malaysian Borneo",
+  "region": "Malaysia",
+  "emoji": "🐒",
+  "climate": "tropical",
+  "about": "The northeast monsoon (Nov–Feb) brings rougher seas and reduced diving visibility around Sipadan and Mabul; rainforest trekking and wildlife-watching continue largely unaffected year-round.",
+  "overview": "Orangutans at Sepilok, pygmy elephants and proboscis monkeys along the Kinabatangan River, the summit trek up Mount Kinabalu, and Sipadan — regularly ranked among the world's best dive sites.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Borneo is one of Southeast Asia's better values — a full local meal costs just a couple of dollars, and even the marquee orangutan and river wildlife tours stay reasonable next to African safari pricing.",
+  "costItems": [
+    {
+      "label": "Coffee shop meal, kopitiam",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Grab ride, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Local rice or noodle dish, restaurant",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Orangutan sanctuary and river cruise tour",
+      "price": 60,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 5,
+    "diving": 9,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 3,
+    "roadtrip": 2,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 5,
+    "nightlife": 2,
+    "winetasting": 0,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 8,
+    "wildlife": 10
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "swimHazard": [
+    12,
+    1
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    11,
+    12
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        11,
+        12,
+        1
+      ],
+      "text": "The northeast monsoon brings rougher seas and reduced diving visibility around Sipadan and Mabul — rainforest trekking and river wildlife-watching continue largely unaffected."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and wet, with rougher seas making diving trips more marginal",
+    "warm, with the monsoon easing and seas beginning to calm",
+    "warm and drying out, one of the best months for both diving and trekking",
+    "warm and dry, excellent conditions across the board",
+    "warm and dry, calm seas and clear diving visibility",
+    "warm and dry, still excellent and increasingly popular",
+    "warm and dry, peak season with school-holiday crowds",
+    "warm and dry, still peak season and busy",
+    "warm and dry, calm seas continuing",
+    "warm and dry, one of the quieter, best-value months",
+    "warm, with the monsoon building and seas roughening",
+    "warm and wet, peak monsoon with the roughest seas of the year"
+  ],
+  "naSliders": [
+    "surfing",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Sabah",
+    "Kota Kinabalu",
+    "Sepilok",
+    "Sipadan",
+    "Kinabatangan River",
+    "Mount Kinabalu",
+    "Mabul",
+    "Danum Valley",
+    "orangutans"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "coastlines": "strong",
+      "mountains": "strong",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

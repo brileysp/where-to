@@ -1,0 +1,159 @@
+{
+  "id": "jamaica",
+  "name": "Jamaica",
+  "region": "Caribbean",
+  "emoji": "🎶",
+  "climate": "tropical",
+  "about": "Dry season (Dec–Apr) is the classic window; hurricane season runs Jun–Nov, peaking Aug–Oct.",
+  "overview": "Reggae's birthplace and Blue Mountain coffee country, with more genuine local culture behind its music and nightlife than most Caribbean resort islands.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Street-side jerk chicken is a real bargain — tourist-zone taxis and paid attractions like Dunn's River Falls cost noticeably more.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Jerk chicken",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Dunn's River Falls entry",
+      "price": 25,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 7,
+    "diving": 5,
+    "surfing": 2,
+    "sailing": 4,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 4,
+    "roadtrip": 3,
+    "adventure": 4,
+    "golf": 5,
+    "stargazing": 3,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 5,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 7,
+    "winetasting": 0,
+    "spa": 5,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 3,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hot": [
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    9
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Reggae Sumfest",
+        "weight": 3,
+        "months": {
+          "7": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7
+      ],
+      "text": "Reggae Sumfest brings the island's biggest music festival to Montego Bay."
+    },
+    {
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "text": "Peak hurricane season, with real storm risk and the fewest visitors of the year."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, one of the best months",
+    "warm and dry, still excellent and busy",
+    "warm and dry, comfortable and popular",
+    "warm and dry, drying out further",
+    "warm, with the first rains of the season",
+    "hot, humidity building ahead of hurricane season",
+    "hot and humid, Reggae Sumfest month",
+    "hot and humid, hurricane risk increasing",
+    "hot and humid, peak hurricane season, quietest month",
+    "hot and humid, hurricane risk continuing",
+    "warm, drying out as the season ends",
+    "warm and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Montego Bay",
+    "Negril",
+    "Blue Mountains",
+    "Ocho Rios",
+    "Reggae Sumfest"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "casual",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

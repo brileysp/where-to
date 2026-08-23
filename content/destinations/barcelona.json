@@ -1,0 +1,137 @@
+{
+  "id": "barcelona",
+  "name": "Barcelona",
+  "region": "Spain",
+  "emoji": "⛲",
+  "climate": "mediterranean",
+  "about": "Late spring and early fall are ideal. August is hot, crowded, and many locals are away.",
+  "overview": "Gaudí's unfinished cathedral, a beach the city built for itself, and some of Europe's best small-plates eating, all inside one walkable grid.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A glass of vermouth at the bar barely registers; a proper sit-down dinner is a different conversation entirely.",
+  "costItems": [
+    {
+      "label": "Vermouth, glass",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Tomato bread & ham sandwich",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Tapas dinner",
+      "unit": "",
+      "price": 28
+    },
+    {
+      "label": "Sagrada Família entry",
+      "unit": "",
+      "price": 30
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 4,
+    "surfing": 4,
+    "sailing": 6,
+    "hiking": 4,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 5,
+    "adventure": 3,
+    "golf": 4,
+    "stargazing": 2,
+    "museums": 9,
+    "architecture": 10,
+    "festivals": 7,
+    "finedining": 9,
+    "streetfood": 8,
+    "nightlife": 9,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "peakIntensity": "extreme",
+  "monthlyWeather": [
+    "mild and occasionally rainy, the coolest month but still gentle by European standards",
+    "mild and drying out, with sunny stretches becoming more common",
+    "mild and increasingly pleasant, with spring warmth building",
+    "warm and mostly dry, one of the best months for the city and beach alike",
+    "warm and sunny, still comfortable before the summer crowds arrive",
+    "hot and sunny, with the beach season kicking into gear",
+    "hot, dry, and increasingly crowded, the driest month of the year",
+    "hot and humid, with many locals away and the city at its most touristy",
+    "warm and pleasant, one of the best months as the heat and crowds ease",
+    "mild and still comfortable, with rain becoming more frequent",
+    "mild and rainy, with the wet season settling in",
+    "mild, with the coolest temperatures of the year but still gentle"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Sagrada Familia",
+    "Spain",
+    "Catalonia"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "casual"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "faroe-islands",
+  "name": "Faroe Islands",
+  "region": "Denmark",
+  "emoji": "🐑",
+  "climate": "polar",
+  "about": "Weather is famously unpredictable — fog and wind can close ferries and hiking trails on short notice year-round; puffins nest on the cliffs roughly May–Aug.",
+  "overview": "Steep sea cliffs and grass-roof villages between Iceland and Norway, with genuinely more sheep than people.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "The Faroe Islands run expensive even by Nordic standards — coffee alone costs more than a casual meal in most of Europe, and a proper restaurant dinner reaches real Scandinavian prices fast.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 5.5
+    },
+    {
+      "label": "Fish fillet, casual meal with coffee",
+      "unit": "",
+      "price": 13
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 16
+    },
+    {
+      "label": "Restaurant dinner entrée",
+      "unit": "",
+      "price": 25
+    },
+    {
+      "label": "Flight, Copenhagen–Vágar, round trip",
+      "unit": "",
+      "price": 345
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 3,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 5,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 4,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 0,
+    "spa": 2,
+    "luxuryLodging": 2,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 7,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "peakIntensity": "mild",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "birding": [
+      {
+        "label": "Puffin nesting season",
+        "weight": 3,
+        "months": {
+          "5": 0.7,
+          "6": 1,
+          "7": 1,
+          "8": 0.6
+        }
+      }
+    ],
+    "wildlife": [
+      {
+        "label": "Puffin nesting season",
+        "weight": 2,
+        "months": {
+          "5": 0.7,
+          "6": 1,
+          "7": 1,
+          "8": 0.6
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "text": "Puffins nest on the sea cliffs — one of the easiest places in the world to see them up close."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, windy and often stormy, with short daylight",
+    "cold and windy, still deep in the stormy season",
+    "cold, with daylight lengthening but weather still unsettled",
+    "cool and improving, hiking trails becoming more reliable",
+    "cool, with puffins arriving and long, mild days beginning",
+    "mild and one of the calmer months, puffin season in full swing",
+    "mild, the most reliable weather of the year",
+    "mild, still good with puffins present through most of the month",
+    "cool, with weather becoming more unsettled again",
+    "cool and windy, storms becoming more frequent",
+    "cold and stormy, short days returning",
+    "cold, windy and dark, deep in the stormy season"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "golf",
+    "winetasting",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Tórshavn",
+    "Vagar",
+    "Mykines",
+    "Sørvágsvatn",
+    "puffins"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

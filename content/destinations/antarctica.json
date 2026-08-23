@@ -1,0 +1,202 @@
+{
+  "id": "antarctica",
+  "name": "Antarctic Peninsula",
+  "region": "Antarctica",
+  "emoji": "🐧",
+  "climate": "polar",
+  "about": "Cruises run Nov–Mar only. Dec–Jan brings penguin chicks and 24hr daylight; Feb–Mar is best for whales as ice retreats.",
+  "overview": "The seventh continent — vast ice shelves, penguin colonies by the hundreds of thousands, and whales surfacing beside the ship.",
+  "costRange": {
+    "min": "$$$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Antarctica has no budget version — even the cheapest shoulder-season expedition cruise starts near five figures, and most trips run well beyond that once flights and gear are added.",
+  "costItems": [
+    {
+      "label": "Kayaking or camping add-on",
+      "unit": "full voyage",
+      "price": 900
+    },
+    {
+      "label": "Budget expedition cruise, 10-day, shared cabin",
+      "unit": "per person",
+      "price": 9000
+    },
+    {
+      "label": "Standard cabin, peak season",
+      "unit": "per person",
+      "price": 15000
+    },
+    {
+      "label": "Premium ship with kayaking and camping",
+      "unit": "per person",
+      "price": 20000
+    }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 2,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 3,
+    "scenic": 8,
+    "fishing": 1,
+    "roadtrip": 1,
+    "adventure": 3,
+    "golf": 0,
+    "stargazing": 1,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 1,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 8,
+    "snowsports": 1,
+    "cycling": 0,
+    "shopping": 0,
+    "birding": 7,
+    "wildlife": 8
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "peak": [
+    12,
+    1
+  ],
+  "low": [
+    11
+  ],
+  "birdingPeak": [
+    11,
+    12,
+    1
+  ],
+  "inaccessible": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Penguin chicks & retreating ice (whales)",
+        "weight": 2,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.85,
+          "11": 0.5,
+          "12": 1
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Peak season light & wildlife spectacle",
+        "weight": 2,
+        "months": {
+          "1": 1,
+          "2": 0.85,
+          "3": 0.85,
+          "11": 0.5,
+          "12": 1
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Shoulder-season partial darkness",
+        "weight": 3,
+        "months": {
+          "2": 0.7,
+          "3": 0.7,
+          "11": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12,
+        1
+      ],
+      "text": "Penguin chicks are hatching and daylight is nearly round-the-clock."
+    },
+    {
+      "months": [
+        2,
+        3
+      ],
+      "text": "As sea ice retreats, whale sightings become more frequent."
+    }
+  ],
+  "monthlyWeather": [
+    "warm by Antarctic standards, with nearly round-the-clock daylight and mild conditions around 0°C",
+    "mild for the region, around freezing, with ice retreating and whale sightings increasing",
+    "cooling as the season winds down, with dramatic light and quieter seas",
+    "deep into polar winter, with temperatures well below freezing and near-total darkness",
+    "polar winter, dark and frozen with the peninsula locked in sea ice",
+    "the heart of polar winter, extremely cold with 24-hour darkness",
+    "still deep winter, bitterly cold with the sea ice at its most extensive",
+    "polar winter continues, extremely cold with ice beginning to show early cracks",
+    "still frozen and dark, though the sun starts returning toward month's end",
+    "cold and icy, with the sea ice beginning to break up as the season approaches",
+    "cold, around -2 to 0°C, with the most extensive sea ice of the season and dramatic icescapes",
+    "mild for the region, near freezing, with penguin chicks hatching and daylight nearly constant"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "golf",
+    "cycling",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "shopping",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "South Georgia",
+    "penguins"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "signature",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

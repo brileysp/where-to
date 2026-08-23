@@ -1,0 +1,168 @@
+{
+  "id": "milford-sound-fiordland",
+  "name": "Milford Sound & Fiordland",
+  "region": "New Zealand",
+  "emoji": "⛴️",
+  "climate": "temperate",
+  "about": "One of the wettest inhabited places on Earth — but that's what feeds the waterfalls. The Milford Road can close for avalanche control in winter, and the Milford Track's huts are only serviced roughly Nov–Apr.",
+  "overview": "Mitre Peak rising straight out of the water, waterfalls cascading down sheer cliffs — one of the most dramatic fiords on Earth.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Milford Sound has no cheap way to see it — even the most basic coach-and-cruise day tour from Te Anau runs well over a hundred dollars, with fly-cruise-fly options costing several times that.",
+  "costItems": [
+    {
+      "label": "Coffee, Te Anau",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Value coach + cruise day tour from Te Anau",
+      "price": 160,
+      "unit": ""
+    },
+    {
+      "label": "Premium small-group day tour",
+      "price": 230,
+      "unit": ""
+    },
+    {
+      "label": "Fly-cruise-fly",
+      "price": 500,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 2,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 6,
+    "scenic": 9,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 0,
+    "stargazing": 2,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 1,
+    "birding": 5,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    7
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "The Milford Road can close temporarily for avalanche control, and the Milford Track's huts are unserviced, making it a real backcountry trip rather than a guided Great Walk."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and often wet, the waterfalls in full flow after winter rain",
+    "cool and unsettled, still quiet with dramatic, wet scenery",
+    "mild and improving, with the Milford Track season about to begin",
+    "mild, the Great Walk season underway and huts fully serviced",
+    "cooling down, rain increasing as the unserviced season approaches",
+    "cold and wet, with the Milford Road subject to avalanche closures",
+    "the coldest month, wet and quiet, the least-visited time of year",
+    "cold and often wet, still avalanche season on the road",
+    "cool and unsettled, drying out gradually as spring arrives",
+    "mild and improving, one of the more pleasant shoulder months",
+    "mild, the Great Walk season in full swing",
+    "mild and busy, peak cruise season getting underway"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "surfing",
+    "golf",
+    "snowsports",
+    "winetasting",
+    "shopping",
+    "nightlife",
+    "museums",
+    "architecture",
+    "festivals"
+  ],
+  "searchAliases": [
+    "Milford Sound",
+    "Fiordland National Park",
+    "Te Anau",
+    "Doubtful Sound",
+    "Mitre Peak",
+    "Milford Track"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "strong",
+      "forests": "strong",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

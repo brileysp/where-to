@@ -1,0 +1,137 @@
+{
+  "id": "budapest",
+  "name": "Budapest",
+  "region": "Hungary",
+  "emoji": "♨️",
+  "climate": "temperate",
+  "about": "Spring/fall are mild and quiet, summer is warm and busiest, winter is cold with festive Christmas markets.",
+  "overview": "Grand thermal bathhouses and Danube-side architecture, split between hilly Buda and flat, lively Pest.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee, transit, and a real sit-down meal all cost noticeably less than Western Europe — one of the best-value capitals on the continent.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Metro ticket",
+      "price": 1.6,
+      "unit": ""
+    },
+    {
+      "label": "Goulash set menu",
+      "price": 7,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Bolt, 15 min",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Thermal bath entry",
+      "price": 20,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 2,
+    "scenic": 4,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 1,
+    "museums": 8,
+    "architecture": 9,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 8,
+    "winetasting": 5,
+    "spa": 9,
+    "luxuryLodging": 7,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 3,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    9
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets fill Vörösmarty Square with mulled wine, crafts and festive lights."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, often below freezing, with grey skies and occasional snow",
+    "cold, still firmly in winter with limited sunshine",
+    "cool and unpredictable, with spring slow to take hold",
+    "mild but changeable, with warmth building unevenly",
+    "mild and increasingly pleasant, one of the best months for sightseeing",
+    "warm and pleasant, with the year's wettest stretch bringing regular showers",
+    "hot, the warmest month with occasional thunderstorms",
+    "hot and still summery, though slightly less intense than July",
+    "mild and pleasant, one of the best months as the city eases into fall",
+    "cool and comfortable, with autumn color settling in",
+    "cold and grey, with sunshine scarce",
+    "cold, with festive Christmas markets against dark winter skies"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving"
+  ],
+  "searchAliases": [
+    "Hungary"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

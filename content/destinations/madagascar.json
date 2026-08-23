@@ -1,0 +1,181 @@
+{
+  "id": "madagascar",
+  "name": "Madagascar",
+  "region": "East Africa",
+  "emoji": "🦎",
+  "climate": "tropical",
+  "about": "Dry season Apr–Nov is far easier for lemur trekking and road travel; cyclone risk peaks Jan–Mar with some areas cut off.",
+  "overview": "Lemurs found nowhere else on Earth, otherworldly baobab avenues, and rainforest found nowhere else in the world.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Madagascar is one of the most affordable destinations in this list — a zebu skewer from a street stall costs just a few dollars, and even a guided lemur park walk stays cheap by international standards.",
+  "costItems": [
+    {
+      "label": "Coffee, local",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Zebu skewer, street stall",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Guided lemur park walk",
+      "price": 15,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 5,
+    "diving": 5,
+    "surfing": 3,
+    "sailing": 3,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 4,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 6,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "low": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season lemur trekking & road access",
+        "weight": 4,
+        "months": {
+          "4": 0.5,
+          "5": 0.7,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 0.85,
+          "11": 0.5
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Dry-season access",
+        "weight": 3.5,
+        "months": {
+          "4": 0.4,
+          "5": 0.6,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 0.8,
+          "11": 0.4
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "hot and wet, with cyclone risk at its highest",
+    "hot and wet, the peak of cyclone season with the heaviest rain",
+    "hot and rainy, still within cyclone season though risk begins easing",
+    "warm and rainy early on, drying out as the month progresses",
+    "mild and increasingly dry, one of the best months for travel",
+    "the coolest month, dry with pleasant days for lemur trekking",
+    "cool and dry, comfortable conditions across most of the island",
+    "mild and dry, one of the best months for wildlife viewing",
+    "warming up, dry with easy road travel",
+    "warm and dry, still comfortable before the rains return",
+    "hot, with the first rains returning and cyclone risk building",
+    "hot and wet, the warmest month with rains fully underway"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Antananarivo",
+    "lemurs"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "strong",
+      "coastlines": "strong",
+      "mountains": "casual",
+      "deserts": "casual",
+      "astrophotography": "casual"
+    }
+  }
+}

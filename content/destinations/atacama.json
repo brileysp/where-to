@@ -1,0 +1,144 @@
+{
+  "id": "atacama",
+  "name": "Atacama Desert",
+  "region": "Chile",
+  "emoji": "🌌",
+  "climate": "desert",
+  "about": "Days are pleasant most of the year, nights are cold, and the brief \"Bolivian winter\" (Jan–Feb) can bring rare storms.",
+  "overview": "Mars-red salt flats, geysers, and star-clear night skies in one of the driest places on Earth.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Food and coffee in San Pedro town stay reasonable — nearly every real activity here (salt flats, geysers, lagoons) requires a paid guided tour.",
+  "costItems": [
+    {
+      "label": "Empanada",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Private transfer, 15 min",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Half-day tour",
+      "price": 60,
+      "unit": ""
+    },
+    {
+      "label": "Multi-tour package",
+      "price": 100,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 5,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 8,
+    "scenic": 10,
+    "fishing": 2,
+    "roadtrip": 8,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 10,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 5,
+    "streetfood": 4,
+    "nightlife": 2,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 9,
+    "snowsports": 2,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 6,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "wet": [
+    1,
+    2
+  ],
+  "cold": [
+    6,
+    7
+  ],
+  "peak": [
+    7,
+    12,
+    1
+  ],
+  "low": [
+    4,
+    5
+  ],
+  "peakIntensity": "mild",
+  "monthlyWeather": [
+    "warm by day and mild at night, with a small chance of rare summer storms",
+    "warm by day and mild at night, still within the brief \"Bolivian winter\" storm window",
+    "warm and dry, with clear skies returning as the storm risk fades",
+    "mild and dry, one of the best shoulder months with clear skies",
+    "mild by day but cold at night, dry with excellent visibility",
+    "cool by day and cold at night, with some of the clearest stargazing skies of the year",
+    "cool by day and cold at night, among the best months for stargazing",
+    "cool by day and cold at night, still excellent for clear night skies",
+    "mild by day but cold at night, dry with good visibility",
+    "mild and dry, one of the best shoulder months with clear skies",
+    "warm by day and mild at night, dry with excellent conditions",
+    "warm by day and mild at night, dry with clear summer skies"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "San Pedro de Atacama",
+    "Chile"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "signature",
+      "mountains": "casual",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

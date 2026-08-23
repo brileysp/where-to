@@ -1,0 +1,154 @@
+{
+  "id": "madeira",
+  "name": "Madeira",
+  "region": "Portugal",
+  "emoji": "🌺",
+  "climate": "mediterranean",
+  "about": "The levada trails stay good almost any month, with no real off-season.",
+  "overview": "A volcanic Atlantic island with a mild, subtropical 'eternal spring' climate year-round — levada (irrigation-channel) hiking trails, dramatic cliffs, and Funchal's record-breaking New Year's Eve fireworks.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Madeira is one of the better values in Europe — a full espetada with a local beer costs just over ten euros, and even the famous wicker toboggan ride down from Monte stays reasonable.",
+  "costItems": [
+    {
+      "label": "Coffee, espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Espetada (beef skewer) with local beer",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "Monte toboggan ride",
+      "price": 30,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 5,
+    "diving": 4,
+    "surfing": 3,
+    "sailing": 5,
+    "hiking": 9,
+    "scenic": 9,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 5,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 5,
+    "nightlife": 4,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 4,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "peak": [
+    7,
+    8,
+    12
+  ],
+  "peakIntensity": "mild",
+  "low": [
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Madeira Flower Festival",
+        "weight": 3,
+        "months": {
+          "4": 0.5,
+          "5": 1
+        }
+      },
+      {
+        "label": "New Year's Eve fireworks",
+        "weight": 2,
+        "months": {
+          "12": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        4,
+        5
+      ],
+      "text": "The Madeira Flower Festival fills Funchal with elaborate floral parades and displays."
+    },
+    {
+      "months": [
+        12
+      ],
+      "text": "Funchal's New Year's Eve fireworks are a record-holding, genuinely massive display over the harbor."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and pleasant, warm enough to swim with little rain",
+    "mild and pleasant, still comfortable and quiet",
+    "mild, with rain becoming rare and levadas at their greenest",
+    "mild and dry, with the flower festival building toward its peak",
+    "warm and dry, flower festival season and excellent hiking",
+    "warm and dry, one of the most reliable months of the year",
+    "warm and dry, comfortable with little seasonal change",
+    "warm and dry, the busiest month with steady, easy weather",
+    "warm and dry, still excellent and slightly quieter",
+    "mild and pleasant, comfortable with occasional showers",
+    "mild, with rain becoming more frequent",
+    "mild, with the year winding down toward the famous fireworks"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Funchal",
+    "Porto Santo",
+    "levada walks",
+    "Madeira wine"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "coastlines": "strong",
+      "forests": "strong",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

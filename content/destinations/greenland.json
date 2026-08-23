@@ -1,0 +1,197 @@
+{
+  "id": "greenland",
+  "name": "Greenland",
+  "region": "Denmark",
+  "emoji": "🧊",
+  "climate": "polar",
+  "about": "Jun–Aug is when boat tours to the calving Ilulissat Icefjord run and hiking is possible; Nov–Mar is aurora and dog-sledding season, genuinely harsher and far more limited.",
+  "overview": "The world's largest island, mostly ice sheet, with towns reachable only by boat or plane — no roads connect them.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Greenland has no cheap version — even a casual inexpensive meal runs into real money, and a boat tour among the icebergs is the one splurge nearly every visitor to Ilulissat budgets for.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 6.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Casual restaurant meal",
+      "price": 30,
+      "unit": ""
+    },
+    {
+      "label": "Iceberg boat tour, Ilulissat",
+      "price": 150,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 6,
+    "scenic": 10,
+    "fishing": 4,
+    "roadtrip": 1,
+    "adventure": 6,
+    "golf": 0,
+    "stargazing": 2,
+    "museums": 2,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 0,
+    "spa": 1,
+    "luxuryLodging": 5,
+    "snowsports": 4,
+    "cycling": 1,
+    "shopping": 1,
+    "birding": 4,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "mild",
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Ilulissat Icefjord boat tours",
+        "weight": 2,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 0.7
+        }
+      }
+    ],
+    "stargazing": [
+      {
+        "label": "Aurora season (dark enough to see it)",
+        "weight": 6,
+        "months": {
+          "10": 0.5,
+          "11": 0.8,
+          "12": 1,
+          "1": 1,
+          "2": 0.8,
+          "3": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "The only reliable window for boat tours into the Ilulissat Icefjord, plus 24-hour midnight sun in the north."
+    },
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Dog sledding and aurora hunting are the main draw — genuinely harsh conditions, and most settlements are far more isolated."
+    }
+  ],
+  "monthlyWeather": [
+    "the depths of winter, bitterly cold with aurora season in full swing",
+    "bitterly cold, still prime for aurora and dog sledding",
+    "very cold, aurora season continuing as daylight lengthens",
+    "cold, transitional as the ice begins to break up",
+    "cold, with boat access to some fjords becoming possible",
+    "cool, midnight sun beginning and icefjord tours starting",
+    "cool and the most reliable month, full midnight sun in the north",
+    "cool, still good conditions with tours running",
+    "cold, with the season winding down and darkness returning",
+    "cold, aurora chances returning as nights lengthen",
+    "very cold, deep into the dark, aurora-focused season",
+    "bitterly cold, short days and prime aurora viewing"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "surfing",
+    "golf",
+    "winetasting",
+    "shopping"
+  ],
+  "searchAliases": [
+    "Ilulissat",
+    "Nuuk",
+    "Kangerlussuaq",
+    "Disko Bay",
+    "Northern Lights",
+    "Aurora Borealis",
+    "icebergs",
+    "dog sledding"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "coastlines": "signature",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "signature"
+    }
+  }
+}

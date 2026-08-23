@@ -1,0 +1,148 @@
+{
+  "id": "uluru",
+  "name": "Uluru & the Outback",
+  "region": "Australia",
+  "emoji": "🪨",
+  "climate": "desert",
+  "about": "May–Sep (Southern winter) is cool enough to comfortably walk, Nov–Mar summer heat is extreme (regularly 40°C+).",
+  "overview": "The sacred red monolith at Australia's dead center, a remote outback pilgrimage built around sunrise and sunset viewing.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "Everything here is captive-market pricing — there's no nearby town to escape to, so food, tours, and park entry all run above normal Australian rates.",
+  "costItems": [
+    { "label": "Coffee", "price": 4.5, "unit": "" },
+    { "label": "Casual meal, resort area", "price": 22, "unit": "" },
+    { "label": "National park entry, 3-day pass", "price": 25, "unit": "" },
+    { "label": "Sunset tour", "price": 70, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 1,
+    "roadtrip": 9,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 9,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 4,
+    "streetfood": 3,
+    "nightlife": 1,
+    "winetasting": 2,
+    "spa": 3,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hot": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Cool-season clarity",
+        "weight": 2.5,
+        "months": {
+          "5": 0.6,
+          "6": 0.85,
+          "7": 1,
+          "8": 0.85,
+          "9": 0.6
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "scorching, the hottest month with highs regularly near 40°C",
+    "scorching, still intensely hot with occasional summer storms",
+    "hot and dry, with the worst of the heat beginning to ease",
+    "warm and dry, one of the best months with comfortable days and cool nights",
+    "mild and dry, pleasant for walking with cool nights",
+    "cool and dry, comfortable days with cold desert nights",
+    "cool and dry, the coldest month with near-freezing nights",
+    "mild and dry, still comfortable with cold nights",
+    "warm and dry, one of the best months before the heat returns",
+    "hot and dry, with temperatures climbing back up",
+    "hot and dry, with the summer heat building fast",
+    "scorching, with extreme heat setting in for the summer"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "nightlife"
+  ],
+  "searchAliases": [
+    "Ayers Rock",
+    "Northern Territory",
+    "Australia",
+    "Red Centre"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "mountains": "casual",
+      "coastlines": "none",
+      "forests": "none",
+      "astrophotography": "strong"
+    }
+  }
+}

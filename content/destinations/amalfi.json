@@ -1,0 +1,161 @@
+{
+  "id": "amalfi",
+  "name": "Amalfi Coast",
+  "region": "Italy",
+  "emoji": "🍋",
+  "climate": "mediterranean",
+  "about": "Jun–Aug is beautiful but packed and expensive on narrow coastal roads. Apr–May and Sep–Oct are the local favorite.",
+  "overview": "Cliffside towns stacked above the Tyrrhenian Sea, connected by winding coastal roads, ferries, and some of Italy's best seafood.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "An espresso at the bar costs almost nothing; getting around the coast and dining with a view is where real money goes.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "SITA bus",
+      "unit": "",
+      "price": 3.5
+    },
+    {
+      "label": "Limoncello, glass",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Ferry between towns",
+      "unit": "",
+      "price": 15
+    },
+    {
+      "label": "Coastal dinner",
+      "unit": "",
+      "price": 55
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 7,
+    "diving": 4,
+    "surfing": 1,
+    "sailing": 8,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 2,
+    "roadtrip": 8,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 7,
+    "architecture": 9,
+    "festivals": 5,
+    "finedining": 9,
+    "streetfood": 6,
+    "nightlife": 6,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 10,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Shoulder-season clarity",
+        "weight": 1.5,
+        "months": {
+          "4": 0.6,
+          "5": 0.85,
+          "9": 0.85,
+          "10": 0.6
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "cold and quiet, with many hotels and restaurants closed for the season",
+    "the coldest month, still quiet with limited services along the coast",
+    "mild and brightening, though still too cool to swim",
+    "mild and increasingly sunny, with the coast waking back up",
+    "warm and mostly dry, one of the best months before the summer crowds",
+    "warm, sunny, and increasingly busy as the season ramps up",
+    "hot and crowded, with narrow coastal roads jammed at peak season",
+    "the hottest month, packed with Italian holidaymakers and premium prices",
+    "warm and sunny, with crowds thinning noticeably after mid-month",
+    "mild and pleasant, one of the best shoulder months for fewer crowds",
+    "cool and the wettest month, with many businesses starting to close",
+    "cool and quiet, with most coastal towns settling into their off-season lull"
+  ],
+  "naSliders": [
+    "snowsports",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Positano",
+    "Sorrento",
+    "Capri",
+    "Ravello"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "mountains": "casual",
+      "forests": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "id": "chiapas",
+  "name": "Chiapas",
+  "region": "Mexico",
+  "emoji": "🗿",
+  "climate": "highland",
+  "about": "San Cristóbal sits at 2,200m and stays genuinely cool — even cold at night — a sharp contrast to Palenque's hot, humid jungle. Dry season (Nov–Apr) is best for touring both; rainy season (May–Oct) makes Sumidero Canyon and the waterfalls more dramatic but the roads slower.",
+  "overview": "San Cristóbal de las Casas's colonial streets and highland Maya culture, paired with Palenque's jungle-swallowed ruins a few hours away.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Chiapas is one of Mexico's most affordable regions to visit — a real local meal costs just a few dollars, and even the marquee Sumidero Canyon boat tour stays budget-friendly.",
+  "costItems": [
+    {
+      "label": "Coffee, local-grown",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Tamales or pozol, local spot",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Sumidero Canyon boat tour",
+      "price": 25,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 2,
+    "roadtrip": 5,
+    "adventure": 4,
+    "golf": 0,
+    "stargazing": 4,
+    "museums": 4,
+    "architecture": 8,
+    "festivals": 4,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    7
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    5,
+    6,
+    9
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Clear highland skies over San Cristóbal",
+        "weight": 2,
+        "months": {
+          "11": 1,
+          "12": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "label": "Waterfalls & Sumidero Canyon run fuller in the rains",
+        "weight": 1,
+        "months": {
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "Agua Azul's waterfalls and Sumidero Canyon run fuller and more dramatic in the rainy season, though roads can be slower and muddier."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and dry in San Cristóbal, warm and dry at Palenque",
+    "cool and dry, comfortable touring conditions",
+    "mild and dry, still excellent for both highlands and jungle",
+    "mild and dry, warming up before the rains",
+    "warm, with the first rains arriving",
+    "warm and wet, the rainy season underway",
+    "warm and wet, waterfalls at their most dramatic",
+    "warm and wet, still deep in the rainy season",
+    "warm and wet, rain beginning to ease by month's end",
+    "mild and drying out, one of the best months",
+    "cool and dry, comfortable and increasingly popular",
+    "cool and dry, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "San Cristóbal de las Casas",
+    "Palenque",
+    "Sumidero Canyon",
+    "Agua Azul"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "strong",
+      "forests": "signature",
+      "coastlines": "none",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

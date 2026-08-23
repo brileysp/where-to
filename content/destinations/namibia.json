@@ -1,0 +1,173 @@
+{
+  "id": "namibia",
+  "name": "Namibia",
+  "region": "Southern Africa",
+  "emoji": "🏜️",
+  "climate": "desert",
+  "about": "Dry season May–Oct concentrates wildlife at waterholes for classic sightings; wet season Nov–Apr brings dramatic skies and migratory birds.",
+  "overview": "A self-drive road-trip country of desert, dunes, and wildlife-ringed waterholes, built for exploring independently rather than only by guided safari.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Uniquely great as a self-drive trip in a rented camper van — but luxe options abound too.",
+  "costItems": [
+    { "label": "Coffee", "price": 2, "unit": "" },
+    { "label": "Vehicle entry fee", "price": 3, "unit": "" },
+    { "label": "Fast-food combo meal", "price": 5, "unit": "" },
+    { "label": "Etosha park entry", "price": 15, "unit": "per day" },
+    { "label": "4x4 rental", "price": 70, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 2,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 3,
+    "roadtrip": 9,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 9,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    1,
+    2,
+    12
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season concentration",
+        "weight": 3,
+        "months": {
+          "5": 0.4,
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 0.6
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Wet-season migratory bird arrivals",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Dry-season desert light",
+        "weight": 1,
+        "months": {
+          "5": 0.4,
+          "6": 0.6,
+          "7": 0.7,
+          "8": 0.7,
+          "9": 0.6
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "hot and increasingly wet, with unpredictable summer showers",
+    "hot and humid for a desert, with the summer rains at their heaviest",
+    "hot, with rain tapering off as the month progresses",
+    "warm and drying out, one of the best transition months",
+    "mild and dry, with the dry season settling in",
+    "mild by day but cold at night, dry with clear desert skies",
+    "the coldest month, dry with near-freezing nights in the desert",
+    "cool at night but mild by day, dry with wildlife concentrating at waterholes",
+    "warming up, dry with excellent wildlife viewing at waterholes",
+    "hot and dry, still excellent for wildlife before the rains return",
+    "hot, with the first rains beginning in the northeast",
+    "hot and increasingly wet, with the summer rains building"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "diving",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Sossusvlei",
+    "Etosha",
+    "Skeleton Coast"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "strong",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

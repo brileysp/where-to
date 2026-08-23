@@ -1,0 +1,181 @@
+{
+  "id": "bali",
+  "name": "Bali",
+  "region": "Indonesia",
+  "emoji": "🌴",
+  "climate": "tropical",
+  "about": "Dry season is firmly Apr–Oct; Nov–Mar is the wet, humid monsoon.",
+  "overview": "Rice terraces, surf breaks, and temple ceremonies, with everything from simple guesthouses to celebrated luxury resorts.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Meals and short Grab rides cost next to nothing — the real cost swings come entirely from which resort tier you pick.",
+  "costItems": [
+    {
+      "label": "Fried rice",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Grab car, 15 min",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Balinese massage, 60 min",
+      "unit": "",
+      "price": 18
+    },
+    {
+      "label": "Beach club day entry",
+      "unit": "",
+      "price": 20
+    },
+    {
+      "label": "Private driver, full day",
+      "unit": "",
+      "price": 45
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 7,
+    "diving": 8,
+    "surfing": 8,
+    "sailing": 5,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 5,
+    "golf": 3,
+    "stargazing": 4,
+    "museums": 5,
+    "architecture": 6,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 9,
+    "nightlife": 7,
+    "winetasting": 1,
+    "spa": 9,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 7,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    12
+  ],
+  "low": [
+    1,
+    2,
+    3,
+    11
+  ],
+  "wildlifePeak": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "birdingPeak": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sliderCaps": {
+    "wildlife": 4,
+    "birding": 6
+  },
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Nyepi season (Balinese New Year)",
+        "weight": 3,
+        "months": {
+          "3": 1
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "the wettest month, with humid air and short, heavy afternoon downpours",
+    "still deep in the wet season, humid with frequent rain",
+    "rain starts tapering off, though afternoon showers are still common",
+    "transitioning to dry, warm and increasingly sunny",
+    "warm, dry, and one of the most pleasant months of the year",
+    "dry and breezy, with comfortable warmth and little rain",
+    "dry season in full swing, sunny and warm",
+    "the driest month, hot and reliably sunny",
+    "still dry and warm, with rain yet to return",
+    "transitioning back to wet, though still mostly dry and warm",
+    "rain returns and humidity climbs as the wet season begins",
+    "humid and increasingly wet, with rain building toward its January peak"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Ubud",
+    "Seminyak",
+    "Canggu",
+    "Uluwatu"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    },
+    "scenic": {
+      "mountains": "strong",
+      "coastlines": "strong",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

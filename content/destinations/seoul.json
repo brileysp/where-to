@@ -1,0 +1,153 @@
+{
+  "id": "seoul",
+  "name": "Seoul",
+  "region": "South Korea",
+  "emoji": "🇰🇷",
+  "climate": "temperate",
+  "about": "Spring cherry blossoms and fall foliage are the highlights, summer is hot/humid with monsoon rain, winter is cold and dry.",
+  "overview": "A hyper-modern megacity of palaces, K-pop culture, and some of Asia's best street food and shopping.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Subway rides, palace admission, and casual meals all stay notably cheap for a city this size and polish.",
+  "costItems": [
+    {
+      "label": "Subway ride",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Gyeongbokgung Palace entry",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Coffee & pastry",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Casual restaurant meal",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 7,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 5,
+    "stargazing": 1,
+    "museums": 8,
+    "architecture": 8,
+    "festivals": 7,
+    "finedining": 9,
+    "streetfood": 9,
+    "nightlife": 9,
+    "winetasting": 2,
+    "spa": 8,
+    "luxuryLodging": 7,
+    "snowsports": 4,
+    "cycling": 4,
+    "shopping": 9,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    4,
+    10
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        4
+      ],
+      "text": "Cherry blossoms bloom around the city, especially along the Han River and old palaces."
+    },
+    {
+      "months": [
+        10
+      ],
+      "text": "Fall foliage peaks in the mountains and palace gardens around the city."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and dry, the coldest month with crisp, clear skies",
+    "cold and dry, still deep in winter though days are lengthening",
+    "cool and increasingly bright, with early cherry blossoms in the south",
+    "mild and colorful, with cherry blossoms peaking across the city",
+    "mild and pleasant, one of the best months before the humidity builds",
+    "warm and increasingly humid, with the monsoon arriving by month's end",
+    "hot and humid, deep in the monsoon with heavy, sudden downpours",
+    "hot and humid, still sweltering with high humidity lingering",
+    "warm and drying out, one of the best months as humidity eases",
+    "mild and crisp, with fall foliage at its peak",
+    "cool and dry, with foliage fading and winter approaching",
+    "cold and dry, with clear skies and winter settling in"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "South Korea",
+    "Korea"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "douro-valley-porto",
+  "name": "Douro Valley & Porto",
+  "region": "Portugal",
+  "emoji": "🍷",
+  "climate": "mediterranean",
+  "about": "Porto stays mild year-round; the inland valley gets genuinely scorching in summer.",
+  "overview": "The terraced valley where Port wine is grown, and the coastal city where it's aged and shipped from — the wine lodges of Vila Nova de Gaia sit right across the river from Porto's old town, with river cruises linking the two.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Porto itself is one of Western Europe's better values — coffee and a port wine cellar tour both cost a fraction of Lisbon prices — though a proper Douro Valley vineyard estate day trip is a real splurge many visitors build in.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Port wine cellar tour with tasting, Vila Nova de Gaia",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Douro Valley vineyard estate tour with lunch",
+      "price": 85,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 2,
+    "sailing": 3,
+    "hiking": 4,
+    "scenic": 9,
+    "fishing": 3,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 4,
+    "architecture": 7,
+    "festivals": 4,
+    "finedining": 7,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 10,
+    "spa": 3,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    9,
+    10
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "festivals": [
+      {
+        "label": "Vindima (grape harvest)",
+        "weight": 3,
+        "months": {
+          "9": 1,
+          "10": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        9
+      ],
+      "text": "Vindima season in the Douro Valley — some quintas still offer traditional grape-treading by foot."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and wet on the coast, cold in the valley",
+    "mild, with rain easing on the coast",
+    "mild and drying out, a pleasant shoulder month",
+    "mild and increasingly warm, one of the best months",
+    "warm and pleasant on the coast, heating up in the valley",
+    "warm on the coast, hot and dry inland",
+    "warm in Porto, scorching in the Douro Valley",
+    "warm in Porto, still scorching inland",
+    "warm and pleasant, with the Douro harvest underway",
+    "mild and dry, arguably the best month for both city and valley",
+    "mild and increasingly wet, quieter with fewer visitors",
+    "mild and wet on the coast, quiet in the valley"
+  ],
+  "naSliders": [
+    "diving",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Porto",
+    "Oporto",
+    "Vila Nova de Gaia",
+    "Pinhão",
+    "Ribeira"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "casual",
+      "forests": "casual",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

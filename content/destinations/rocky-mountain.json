@@ -1,0 +1,212 @@
+{
+  "id": "rocky-mountain",
+  "name": "Rocky Mountain National Park",
+  "region": "Colorado, USA",
+  "emoji": "🦌",
+  "climate": "highland",
+  "about": "Typically closed by snow from mid-October to Memorial Day; the elk rut in Sep–Oct is the park's signature wildlife event.",
+  "overview": "Trail Ridge Road, the highest continuous paved highway in the US, threading through alpine tundra above 12,000 feet.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels — Estes Park's gateway-town restaurants charge a modest premium, and a guided alpine hike is the main splurge beyond the standard park fees.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner meal, Estes Park",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Guided alpine hike or via ferrata",
+      "price": 65,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 8,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 2,
+    "stargazing": 7,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 3,
+    "snowsports": 4,
+    "cycling": 5,
+    "shopping": 2,
+    "birding": 4,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    11,
+    4
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Alpine wildflowers and clearest high-country views",
+        "weight": 1.5,
+        "months": {
+          "6": 0.4,
+          "7": 0.7,
+          "8": 0.7,
+          "9": 0.4
+        }
+      }
+    ],
+    "wildlife": [
+      {
+        "label": "Elk rut (bugling season)",
+        "weight": 3,
+        "months": {
+          "9": 1,
+          "10": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        9,
+        10
+      ],
+      "text": "This is elk rutting season — bulls bugling and sparring for mates is one of the park's most dramatic wildlife spectacles."
+    },
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "text": "Trail Ridge Road is typically closed by snow through this whole window, usually reopening around Memorial Day."
+    }
+  ],
+  "monthlyWeather": [
+    "cold and snowy, Trail Ridge Road closed, good for snowshoeing lower down",
+    "cold and snowy, still deep winter conditions throughout",
+    "cold, with the thaw beginning at lower elevations",
+    "cool and unpredictable, the road still typically closed",
+    "mild, with Trail Ridge Road usually reopening around Memorial Day",
+    "warm and clear, the road fully open and trails filling in",
+    "warm, the height of the hiking season with wildflowers in bloom",
+    "warm, still prime hiking with afternoon thunderstorms common",
+    "cooling fast, spectacular aspens turning gold and elk bugling",
+    "cold, with the rut winding down and the road often closing by month's end",
+    "cold and snowy, settling into winter",
+    "cold and snowy, quiet with the road closed for the season"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "surfing",
+    "diving",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "RMNP",
+    "Trail Ridge Road",
+    "Estes Park",
+    "Bear Lake",
+    "Colorado"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "astrophotography": "casual",
+      "deserts": "none",
+      "coastlines": "none"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "casual",
+      "gravelRiding": "casual"
+    }
+  }
+}

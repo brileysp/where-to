@@ -1,0 +1,135 @@
+{
+  "id": "cotswolds",
+  "name": "Cotswolds",
+  "region": "England",
+  "emoji": "🏘️",
+  "climate": "temperate",
+  "about": "Comfortable to visit almost any time outside the depths of winter.",
+  "overview": "Honey-stone villages, thatched cottages and gentle rolling hills between Oxford and Bath — a leisurely, pastoral counterpoint to the Lake District or Highlands.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "The Cotswolds run pricier than much of rural England — a proper pub lunch or cream tea costs a real premium in these postcard villages, and taxis between villages add up fast given the distances involved.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Cream tea, scone with jam and clotted cream",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Ploughman's lunch, village pub",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 19,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 1,
+    "golf": 4,
+    "stargazing": 2,
+    "museums": 3,
+    "architecture": 6,
+    "festivals": 3,
+    "finedining": 6,
+    "streetfood": 3,
+    "nightlife": 2,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "cold": [
+    12,
+    1
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    1,
+    2
+  ],
+  "hikingWorst": [
+    12,
+    1
+  ],
+  "monthlyWeather": [
+    "cold and often grey, quiet with bare hedgerows",
+    "cold, still quiet and a good time for cozy pub visits",
+    "mild and improving, with early spring color",
+    "mild and pleasant, a lovely and increasingly popular month",
+    "mild and pleasant, one of the best months to visit",
+    "warm and pleasant, comfortable before peak crowds",
+    "warm, the busiest month with school holidays",
+    "warm, still busy and generally reliable weather",
+    "mild and pleasant, a favorite quieter month",
+    "mild, with autumn color in the hedgerows and woodlands",
+    "cool and often grey, quiet again",
+    "cold, atmospheric with Christmas markets in the villages"
+  ],
+  "naSliders": [
+    "surfing",
+    "diving",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Bourton-on-the-Water",
+    "Bibury",
+    "Stow-on-the-Wold",
+    "Chipping Campden",
+    "Broadway"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "casual",
+      "coastlines": "none",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    },
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

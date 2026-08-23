@@ -1,0 +1,178 @@
+{
+  "id": "tasmania",
+  "name": "Tasmania",
+  "region": "Australia",
+  "emoji": "🌲",
+  "climate": "temperate",
+  "about": "Southern Hemisphere summer (Dec–Feb) is warmest and best for hiking, winter (Jun–Aug) is cold, wet, and often snowy in the highlands.",
+  "overview": "Wild, mountainous, and cool — Cradle Mountain and the Overland Track are the wilderness highlight, Hobart brings food, wine, and MONA.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Local buses are currently free and coffee is reasonable — the real costs are food-focused tours and getting between the island's spread-out regions.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Cappuccino",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Meat pie",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 13,
+      "unit": ""
+    },
+    {
+      "label": "SkyBus airport fare",
+      "price": 15,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 4,
+    "diving": 4,
+    "surfing": 3,
+    "sailing": 5,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 4,
+    "stargazing": 6,
+    "museums": 6,
+    "architecture": 3,
+    "festivals": 5,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 4,
+    "winetasting": 7,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 2,
+    "cycling": 5,
+    "shopping": 4,
+    "birding": 6,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    6,
+    7
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "wildlifePeak": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer highland trail access",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "4": 0.3,
+          "12": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Summer clarity",
+        "weight": 2,
+        "months": {
+          "1": 0.85,
+          "2": 0.85,
+          "3": 0.4,
+          "12": 0.5
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "warm and mostly dry, the hottest month and prime for beaches and hiking",
+    "warm and dry, still one of the best months for outdoor activities",
+    "mild and pleasant, with summer easing into a comfortable autumn",
+    "mild, one of the best months as crowds thin and weather stays settled",
+    "cool and increasingly wet, with winter approaching",
+    "cold and wet, deep in a cool, damp winter",
+    "cold and wet, one of the coldest, wettest months of the year",
+    "cold and wet, still firmly in winter's grip",
+    "cool and unsettled, with spring bringing waterfalls to their fullest",
+    "cool and breezy, with spring color and unpredictable weather",
+    "mild and increasingly pleasant, as summer builds",
+    "warm and drying out, with summer beginning in earnest"
+  ],
+  "searchAliases": [
+    "Australia",
+    "Hobart",
+    "Cradle Mountain",
+    "Launceston"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "gravelRiding": "casual",
+      "mountainBiking": "casual"
+    },
+    "scenic": {
+      "forests": "signature",
+      "coastlines": "strong",
+      "mountains": "strong",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

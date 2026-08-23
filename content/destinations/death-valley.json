@@ -1,0 +1,197 @@
+{
+  "id": "death-valley",
+  "name": "Death Valley National Park",
+  "region": "California & Nevada, USA",
+  "emoji": "🔥",
+  "climate": "desert",
+  "about": "Unlike most desert parks, winter (Nov–Mar) is the real high season here, while Jun–Aug regularly hits 120°F and hiking is genuinely dangerous.",
+  "overview": "The hottest place on Earth on record — vast salt flats, badlands, and sand dunes below sea level.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels — Furnace Creek's isolation pushes food costs up slightly, though nothing here reaches resort-town prices.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Furnace Creek diner meal",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Scenic jeep or flight tour",
+      "price": 180,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 4,
+    "scenic": 8,
+    "fishing": 0,
+    "roadtrip": 6,
+    "adventure": 5,
+    "golf": 2,
+    "stargazing": 9,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 1,
+    "birding": 1,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    12
+  ],
+  "hot": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    6,
+    7,
+    8
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Rare wildflower superbloom (rain-dependent)",
+        "weight": 1,
+        "months": {
+          "2": 0.3,
+          "3": 0.6,
+          "4": 0.3
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Daytime highs regularly exceed 120°F and hiking is genuinely dangerous — stick to short, early-morning walks and never hike after 10am if you visit now."
+    },
+    {
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "text": "In years with enough winter rain, wildflowers carpet the valley floor in a rare superbloom — timing and intensity vary hugely year to year."
+    }
+  ],
+  "monthlyWeather": [
+    "mild and pleasant, one of the best months to visit",
+    "mild and dry, excellent hiking weather and a chance of early bloom",
+    "warm and dry, still comfortable with peak wildflower chances",
+    "warming up fast, still hikeable in the mornings",
+    "hot, with afternoon temperatures becoming dangerous",
+    "extremely hot, among the hottest conditions on Earth",
+    "extremely hot, routinely the hottest month of the year worldwide",
+    "still dangerously hot, quiet with very few visitors",
+    "very hot, though beginning to ease by month's end",
+    "warm and dry, comfortable again and increasingly popular",
+    "mild and dry, excellent conditions and rising visitor numbers",
+    "mild and pleasant, a popular month around the holidays"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "fishing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "snowsports",
+    "winetasting",
+    "birding"
+  ],
+  "searchAliases": [
+    "Badwater Basin",
+    "Furnace Creek",
+    "Zabriskie Point",
+    "Mojave Desert",
+    "California",
+    "Nevada"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "signature",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

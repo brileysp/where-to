@@ -1,0 +1,130 @@
+{
+  "id": "uzbekistan",
+  "name": "Samarkand & Bukhara",
+  "region": "Uzbekistan",
+  "emoji": "🕌",
+  "climate": "desert",
+  "about": "Spring and fall are mild and ideal, summer desert heat is intense, winter is cold.",
+  "overview": "Silk Road architecture at its most extravagant — Samarkand's turquoise-domed Registan, Bukhara's old-town madrasas and minarets.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Uzbekistan is one of the cheapest destinations in this list — a full plate of plov, the national dish, costs just a dollar or two, and even taxis and historic-site entries stay remarkably cheap.",
+  "costItems": [
+    {
+      "label": "Coffee, cappuccino",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Plov, national dish",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Registan or historic site entry",
+      "price": 8,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 5,
+    "fishing": 1,
+    "roadtrip": 5,
+    "adventure": 2,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 7,
+    "birding": 4,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    4,
+    5,
+    9,
+    10
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "peakIntensity": "mild",
+  "monthlyWeather": [
+    "cold, with occasional snow and the year's most precipitation",
+    "cold, still chilly though days are lengthening",
+    "mild and increasingly wet, one of the wetter months before spring settles in",
+    "mild and pleasant, one of the best months for sightseeing",
+    "warm and dry, still comfortable before the summer heat builds",
+    "hot and dry, with little rain and intense midday sun",
+    "scorching and dry, one of the hottest, driest months of the year",
+    "scorching and dry, still intensely hot with clear skies",
+    "warm and dry, with the heat beginning to ease",
+    "mild and dry, one of the best months with pleasant, clear days",
+    "cool and increasingly damp, as autumn gives way to winter",
+    "cold, with winter settling in and occasional snow"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Samarkand",
+    "Bukhara",
+    "Silk Road"
+  ]
+}

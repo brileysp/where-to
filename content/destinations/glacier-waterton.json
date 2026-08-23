@@ -1,0 +1,189 @@
+{
+  "id": "glacier-waterton",
+  "name": "Glacier & Waterton Lakes",
+  "region": "Montana, USA & Alberta, Canada",
+  "emoji": "🏔️",
+  "climate": "highland",
+  "about": "The Going-to-the-Sun Road usually isn't fully open until late June and closes again by mid-October, making summer the only real window for most of the park.",
+  "overview": "Jointly designated as one Peace Park straddling the US-Canada border — glacier-carved peaks, alpine lakes, and the Going-to-the-Sun Road.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels on both sides of the border — the one real outlier is Glacier's non-US-resident surcharge, a flat fee that catches many international visitors off guard.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner meal, gateway town",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Non-US-resident surcharge",
+      "price": 100,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 6,
+    "roadtrip": 8,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 3,
+    "snowsports": 2,
+    "cycling": 5,
+    "shopping": 2,
+    "birding": 5,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingBest": [
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "noSnow": [
+    7,
+    8,
+    9
+  ],
+  "sliderCaps": {
+    "wildlife": 7
+  },
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "High-country lakes and glaciers accessible",
+        "weight": 1.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text": "This is the only reliable window when the Going-to-the-Sun Road is fully open end to end — outside it, snow closes most of the park's high country."
+    }
+  ],
+  "monthlyWeather": [
+    "deep winter, the road closed and the park largely snowbound",
+    "still deep winter, cross-country skiing and snowshoeing the main activities",
+    "cold with the thaw beginning, most high-country trails still snowbound",
+    "cold and muddy at lower elevations, the high country still under snow",
+    "cool, with road plowing underway but the pass typically not open yet",
+    "mild, with the Sun Road usually fully opening by late in the month",
+    "warm and clear, the height of the short hiking season",
+    "warm, still prime hiking with the road fully open",
+    "cooling fast, spectacular larch-gold color, road often closes by month's end",
+    "cold, with the first heavy snow usually closing the pass",
+    "cold and snowy, the park settling into winter",
+    "deep winter, cold and quiet with the road closed"
+  ],
+  "naSliders": [
+    "sunbathing",
+    "surfing",
+    "diving",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Glacier National Park",
+    "Waterton Lakes National Park",
+    "Going-to-the-Sun Road",
+    "Many Glacier",
+    "Montana"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "astrophotography": "casual",
+      "deserts": "none",
+      "coastlines": "none"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "costa-rica",
+  "name": "Costa Rica",
+  "region": "Central America",
+  "emoji": "🐸",
+  "climate": "tropical",
+  "about": "Dry season (Pacific side) Dec–Apr is prime for wildlife and trails; green season is lush, quieter and cheaper.",
+  "overview": "Rainforest, volcanoes, and two coastlines, built around ecotourism and outdoor adventure rather than resort lounging.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Restaurant food runs close to US prices almost anywhere tourists go — this isn't the bargain some of Central America is.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 3
+    },
+    {
+      "label": "Uber, 15 min",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Casado (typical lunch plate)",
+      "unit": "",
+      "price": 7
+    },
+    {
+      "label": "Arenal hot springs day pass",
+      "unit": "",
+      "price": 45
+    },
+    {
+      "label": "Zipline canopy tour",
+      "unit": "",
+      "price": 65
+    }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 6,
+    "surfing": 7,
+    "sailing": 4,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 7,
+    "roadtrip": 6,
+    "adventure": 8,
+    "golf": 3,
+    "stargazing": 5,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 4,
+    "streetfood": 6,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 4,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    9,
+    10
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "low": [
+    9,
+    10
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season trail access & visibility",
+        "weight": 2.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 0.6,
+          "12": 0.7
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Dry-season trail access & birding activity",
+        "weight": 3.5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 0.5,
+          "12": 0.6
+        }
+      }
+    ],
+    "hiking": [
+      {
+        "label": "Dry-season trail access",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 0.5,
+          "12": 0.6
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Dry-season clarity",
+        "weight": 2,
+        "months": {
+          "1": 0.85,
+          "2": 0.85,
+          "3": 0.85,
+          "4": 0.4,
+          "12": 0.5
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "dry and sunny, with cooling trade winds especially noticeable",
+    "dry and warm, one of the sunniest stretches of the year",
+    "hot and dry, with barely any rain",
+    "hot and dry, though the first rains are approaching by month's end",
+    "transitioning to wet, warm with afternoon showers becoming regular",
+    "warm and rainy, with the first peak of the wet season",
+    "a brief dry spell within the rains, warm with breezier trade winds",
+    "still in that drier lull, warm with lighter afternoon showers",
+    "the rainiest stretch of the year, warm with frequent downpours",
+    "warm and very wet, with rain most afternoons",
+    "still rainy, though showers begin tapering off",
+    "drying out fast, warm and increasingly sunny"
+  ],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Manuel Antonio",
+    "Arenal",
+    "Monteverde",
+    "Tamarindo"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "casual",
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "forests": "signature",
+      "coastlines": "strong",
+      "mountains": "casual",
+      "deserts": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

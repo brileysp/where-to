@@ -1,0 +1,202 @@
+{
+  "id": "yellowstone",
+  "name": "Yellowstone National Park",
+  "region": "USA",
+  "emoji": "🐺",
+  "climate": "temperate",
+  "about": "Summer (Jun–Aug) opens all roads and facilities, spring brings newborn wildlife and fall the elk rut, winter access is limited to guided snow tours.",
+  "overview": "Geysers, hot springs, and the original national park, spread across a volcanic plateau larger than some small countries.",
+  "costRange": { "min": "$$", "max": "$$$" },
+  "costOverview": "There's no competing option once you're inside the gate — in-park dining runs well above what a normal small town would charge.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "General store snack", "price": 10, "unit": "" },
+    { "label": "In-park casual meal", "price": 25, "unit": "" },
+    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 2,
+    "hiking": 3,
+    "scenic": 7,
+    "fishing": 7,
+    "roadtrip": 8,
+    "adventure": 5,
+    "golf": 1,
+    "stargazing": 7,
+    "museums": 2,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 4,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "birdingPeak": [
+    5,
+    6
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "peakIntensity": "extreme",
+  "sliderCaps": {
+    "birding": 7
+  },
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Newborn wildlife (spring)",
+        "weight": 3,
+        "months": {
+          "5": 1,
+          "6": 0.5
+        }
+      },
+      {
+        "label": "Elk rut (fall)",
+        "weight": 3,
+        "months": {
+          "9": 1,
+          "10": 0.5
+        }
+      }
+    ],
+    "hiking": [
+      {
+        "label": "Summer trail & road access",
+        "weight": 6,
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Full summer road access",
+        "weight": 2.5,
+        "months": {
+          "6": 0.5,
+          "7": 0.85,
+          "8": 0.85,
+          "9": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        5,
+        6
+      ],
+      "text": "Newborn bison, elk and bear cubs are common sights this time of year."
+    },
+    {
+      "months": [
+        9,
+        10
+      ],
+      "text": "The elk rut is in full swing, with bulls bugling to attract mates."
+    }
+  ],
+  "monthlyWeather": [
+    "bitterly cold, with deep snow and most roads open only to guided snow tours",
+    "bitterly cold, still deep winter with limited road access",
+    "cold, with winter still firmly in control and most interior roads closed",
+    "cold and muddy, as snow begins melting but many roads remain closed",
+    "cool and unsettled, with roads reopening and newborn wildlife appearing",
+    "mild, with all roads open and wildflowers emerging, though nights stay cool",
+    "warm and dry, the warmest month with reliable sunny days",
+    "warm and dry, still excellent conditions though afternoon storms are possible",
+    "cool and crisp, with the elk rut beginning and crowds thinning",
+    "cool, with snow returning at higher elevations and facilities starting to close",
+    "cold, with most roads closing again as winter sets in",
+    "bitterly cold, with deep snow and access limited to guided snow tours"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Wyoming",
+    "Old Faithful",
+    "Grand Teton"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "mountains": "strong",
+      "astrophotography": "casual",
+      "deserts": "none",
+      "coastlines": "none"
+    }
+  }
+}

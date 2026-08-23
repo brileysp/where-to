@@ -1,0 +1,162 @@
+{
+  "id": "santorini",
+  "name": "Santorini & Cyclades",
+  "region": "Greece",
+  "emoji": "🇬🇷",
+  "climate": "mediterranean",
+  "about": "Peak Jul–Aug is hot, crowded and pricey. Many hotels/restaurants close entirely Nov–Mar — check availability, not just weather.",
+  "overview": "Whitewashed villages perched on a volcanic caldera, built for sunset views and slow, expensive dinners.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Step away from the caldera and prices are ordinary; anything with a sunset view carries a steep premium.",
+  "costItems": [
+    {
+      "label": "Gyro wrap",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Greek salad",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Taxi, 15 min (limited availability)",
+      "unit": "",
+      "price": 30
+    },
+    {
+      "label": "Caldera-view dinner",
+      "unit": "",
+      "price": 55
+    },
+    {
+      "label": "Sunset catamaran cruise",
+      "unit": "",
+      "price": 110
+    }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 8,
+    "diving": 4,
+    "surfing": 2,
+    "sailing": 8,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 1,
+    "stargazing": 5,
+    "museums": 6,
+    "architecture": 9,
+    "festivals": 5,
+    "finedining": 8,
+    "streetfood": 5,
+    "nightlife": 7,
+    "winetasting": 7,
+    "spa": 6,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 7,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
+  "peakIntensity": "extreme",
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Shoulder-season light",
+        "weight": 2,
+        "months": {
+          "5": 0.7,
+          "6": 0.85,
+          "9": 0.85,
+          "10": 0.7
+        }
+      }
+    ]
+  },
+  "shopClosures": true,
+  "monthlyWeather": [
+    "cool and rainy, the wettest and coldest month of the year",
+    "cool and still fairly wet, with rain easing gradually",
+    "mild and drying out, with sunnier days returning",
+    "mild and mostly dry, a quiet and pleasant month",
+    "warm and dry, before the wind and crowds arrive",
+    "warm and dry, with the meltemi wind beginning to pick up",
+    "hot, dry, and often windy, as the meltemi blows steadily across the caldera",
+    "the hottest month, dry with the meltemi at its strongest",
+    "warm and dry, with the meltemi easing as the month goes on",
+    "mild and drier than most of the Aegean, with rain returning late",
+    "cool and increasingly wet, as the rainy season sets in",
+    "cool and rainy, mild by day but often overcast"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Oia",
+    "Fira",
+    "Greece",
+    "Mykonos"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "deserts": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "astrophotography": "casual"
+    }
+  }
+}

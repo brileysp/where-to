@@ -1,0 +1,143 @@
+{
+  "id": "grandcanyon",
+  "name": "Grand Canyon",
+  "region": "Arizona, USA",
+  "emoji": "🦅",
+  "climate": "desert",
+  "about": "Year-round but extreme; spring and fall are ideal for hiking with mild rim temps, summer inner-canyon heat is dangerous, the North Rim closes in winter.",
+  "overview": "One of the most recognizable natural landmarks on Earth, a mile-deep gorge carved by the Colorado River.",
+  "costRange": { "min": "$$", "max": "$$$" },
+  "costOverview": "In-park food costs more than a normal small town would charge — a mule ride below the rim is the one real splurge activity most people consider.",
+  "costItems": [
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Deli sandwich", "price": 12, "unit": "" },
+    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
+    { "label": "Day mule ride along rim", "price": 200, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 7,
+    "scenic": 8,
+    "fishing": 2,
+    "roadtrip": 8,
+    "adventure": 6,
+    "golf": 2,
+    "stargazing": 8,
+    "museums": 3,
+    "architecture": 2,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 5,
+    "snowsports": 1,
+    "cycling": 2,
+    "shopping": 2,
+    "birding": 4,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "hot": [
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8,
+    12,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Mild-temperature clarity",
+        "weight": 1.5,
+        "months": {
+          "4": 0.7,
+          "5": 0.85,
+          "10": 0.85,
+          "11": 0.7
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cold at the rim, with snow possible and mild days deep in the canyon",
+    "cold at the rim, still prone to snow though inner-canyon days are pleasant",
+    "cool at the rim and increasingly mild in the canyon, one of the best months",
+    "mild at the rim, warm in the canyon, among the driest and most pleasant months",
+    "mild at the rim and heating up fast in the canyon, still comfortable overall",
+    "warm at the rim but dangerously hot in the inner canyon",
+    "warm at the rim, with inner-canyon temperatures regularly exceeding 100°F",
+    "warm at the rim, still dangerously hot below the rim with monsoon storms possible",
+    "mild and pleasant at the rim, with the inner canyon cooling to safer levels",
+    "cool and crisp at the rim, one of the best months with colorful fall light",
+    "cold at the rim, with the North Rim now closed for the season",
+    "cold and often snowy at the rim, with mild days still possible in the inner canyon"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Arizona"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "strong",
+      "astrophotography": "casual",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "id": "panama",
+  "name": "Panama",
+  "region": "Central America",
+  "emoji": "🚢",
+  "climate": "tropical",
+  "about": "Dry season (mid-Dec–Apr) is best for the Pacific side; Bocas stays wetter and greener year-round.",
+  "overview": "A canal that reshaped world trade, rainforest just outside the capital, and the laid-back Caribbean surf towns of Bocas del Toro.",
+  "costRange": { "min": "$", "max": "$$$$$" },
+  "costOverview": "Everyday food, coffee, and taxis stay affordable — a real canal transit tour is a genuine splurge most visitors consider once.",
+  "costItems": [
+    { "label": "Coffee", "price": 2, "unit": "" },
+    { "label": "Local casual meal", "price": 6, "unit": "" },
+    { "label": "Taxi to Miraflores Locks", "price": 15, "unit": "" },
+    { "label": "Panama Canal partial transit tour", "price": 165, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 7,
+    "swimming": 7,
+    "diving": 5,
+    "surfing": 5,
+    "sailing": 6,
+    "hiking": 4,
+    "scenic": 7,
+    "fishing": 5,
+    "roadtrip": 3,
+    "adventure": 5,
+    "golf": 3,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 5,
+    "nightlife": 5,
+    "winetasting": 0,
+    "spa": 4,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 2,
+    "shopping": 4,
+    "birding": 6,
+    "wildlife": 5
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    1,
+    2,
+    3
+  ],
+  "peakIntensity": "moderate",
+  "low": [
+    9,
+    10
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        10,
+        11
+      ],
+      "text": "Wettest months on the Pacific side — Canal transits and Panama City still work fine, but outdoor plans need flexibility."
+    },
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Best conditions for both the Pacific side and the San Blas islands; Bocas del Toro's Caribbean side stays warm and green nearly year-round."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, one of the best months",
+    "warm and dry, still excellent conditions",
+    "warm and dry, comfortable and increasingly busy",
+    "warm, with the first rains arriving by month's end",
+    "warm and increasingly wet, rainy season beginning",
+    "warm and wet, generally manageable afternoon showers",
+    "warm and wet, with a brief dry spell common mid-month",
+    "warm and wet, still deep in the rainy season",
+    "warm and wet, quiet and green",
+    "warm and wet, the wettest month of the year",
+    "warm and wet, rain beginning to ease",
+    "warm and drying out, comfortable through the holidays"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Panama Canal",
+    "Panama City",
+    "Bocas del Toro",
+    "San Blas Islands",
+    "Guna Yala"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "forests": "casual",
+      "mountains": "none",
+      "deserts": "none",
+      "astrophotography": "none"
+    }
+  }
+}

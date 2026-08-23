@@ -1,0 +1,192 @@
+{
+  "id": "cape-town",
+  "name": "Cape Town",
+  "region": "South Africa",
+  "emoji": "🍷",
+  "climate": "mediterranean",
+  "about": "Mediterranean climate flipped south: warm dry summer Nov–Mar for beaches/hiking, wet winter Jun–Aug (good whale season).",
+  "overview": "Table Mountain, wine country, and penguin-dotted beaches packed into one city, with Africa's most diverse food and lodging scene close behind.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Inexpensive even at the nicer end — a proper restaurant meal or a serious wine tasting still costs a fraction of what it would elsewhere.",
+  "costItems": [
+    {
+      "label": "Minibus taxi",
+      "unit": "",
+      "price": 1
+    },
+    {
+      "label": "Coffee",
+      "unit": "",
+      "price": 2
+    },
+    {
+      "label": "Curry in a bread bowl (bunny chow)",
+      "unit": "",
+      "price": 4
+    },
+    {
+      "label": "Wine tasting",
+      "unit": "",
+      "price": 8
+    },
+    {
+      "label": "Table Mountain cableway",
+      "unit": "",
+      "price": 22
+    }
+  ],
+  "base": {
+    "sunbathing": 8,
+    "swimming": 6,
+    "diving": 5,
+    "surfing": 6,
+    "sailing": 6,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 4,
+    "roadtrip": 7,
+    "adventure": 6,
+    "golf": 6,
+    "stargazing": 5,
+    "museums": 8,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 7,
+    "nightlife": 7,
+    "winetasting": 8,
+    "spa": 6,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 6,
+    "shopping": 8,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7
+  ],
+  "wildlifePeak": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "birdingPeak": [
+    9,
+    10,
+    11
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7
+  ],
+  "sliderCaps": {
+    "wildlife": 6,
+    "birding": 8
+  },
+  "sliderEvents": {
+    "winetasting": [
+      {
+        "label": "Stellenbosch harvest season",
+        "weight": 1,
+        "months": {
+          "2": 0.5,
+          "3": 0.7
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "Southern right whales come close to shore this time of year, often visible from land around Hermanus."
+    }
+  ],
+  "monthlyWeather": [
+    "warm and dry, with the summer's strong \"Cape Doctor\" wind a regular feature",
+    "the hottest month, dry with occasional wind and days that can push past 35°C",
+    "still warm and mostly dry, as the wind starts to ease",
+    "mild and increasingly wet, with the first real rain returning",
+    "cooling down, with rain becoming more regular",
+    "the wettest month, cool with frequent rain and cold fronts",
+    "cold and wet, the heart of the rainy season",
+    "still cool and rainy, though the worst of winter is passing",
+    "mild and drying out, with spring flowers starting to bloom",
+    "warming nicely, mostly dry with pleasant days",
+    "warm and dry, with the summer wind starting to build",
+    "warm and dry, sliding into the windy heart of summer"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Table Mountain",
+    "Cape Peninsula",
+    "Stellenbosch"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "casual",
+      "gravelRiding": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "signature",
+      "forests": "casual",
+      "deserts": "casual",
+      "astrophotography": "casual"
+    }
+  }
+}

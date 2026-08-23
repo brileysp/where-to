@@ -1,0 +1,152 @@
+{
+  "id": "provence",
+  "name": "Provence",
+  "region": "France",
+  "emoji": "💜",
+  "climate": "mediterranean",
+  "about": "Lavender fields (peak bloom roughly late June–early August) and hill villages; late spring and early fall offer mild, fragrant, less crowded touring.",
+  "overview": "Lavender fields, hilltop villages, and Roman ruins across the sun-soaked south of France.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Market picnics and coffee stay reasonable — a private lavender-fields tour or a proper Provençal dinner is where real spending happens.",
+  "costItems": [
+    {
+      "label": "Espresso",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Market picnic, for two",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Private lavender-fields tour",
+      "price": 85,
+      "unit": "per person"
+    }
+  ],
+  "base": {
+    "sunbathing": 6,
+    "swimming": 4,
+    "diving": 2,
+    "surfing": 2,
+    "sailing": 5,
+    "hiking": 7,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 8,
+    "adventure": 3,
+    "golf": 4,
+    "stargazing": 3,
+    "museums": 7,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 9,
+    "streetfood": 6,
+    "nightlife": 4,
+    "winetasting": 9,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 7,
+    "shopping": 6,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "peak": [
+    7,
+    8
+  ],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Lavender bloom",
+        "weight": 3.5,
+        "months": {
+          "6": 0.85,
+          "7": 1,
+          "8": 0.85
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Lavender fields are in peak bloom across the Luberon and Valensole plateau."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, with the mistral wind a frequent feature of winter",
+    "cold and often windy, still one of the quieter, cooler months",
+    "cool and breezy, with spring warmth beginning to build",
+    "mild and increasingly pleasant, one of the best months before crowds arrive",
+    "warm and sunny, still comfortable before peak summer heat",
+    "warm and sunny, with lavender fields beginning to bloom",
+    "hot and dry, with lavender fields at their peak in the first half of the month",
+    "hot and dry, still intensely sunny with peak summer crowds",
+    "warm and pleasant, one of the best months as crowds and heat ease",
+    "mild and pleasant, still comfortable with fewer visitors",
+    "cool and increasingly wet, with the mistral wind returning",
+    "cold, with the mistral wind a frequent winter feature"
+  ],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Aix-en-Provence",
+    "Avignon",
+    "lavender",
+    "France"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "signature",
+      "gravelRiding": "casual",
+      "mountainBiking": "none"
+    }
+  }
+}

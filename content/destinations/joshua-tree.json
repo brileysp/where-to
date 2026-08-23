@@ -1,0 +1,187 @@
+{
+  "id": "joshua-tree",
+  "name": "Joshua Tree National Park",
+  "region": "California, USA",
+  "emoji": "🌵",
+  "climate": "desert",
+  "about": "Oct–Apr is the comfortable window for hiking and climbing, summer regularly tops 100°F.",
+  "overview": "High Mojave desert meets low Colorado desert — otherworldly yucca-tree silhouettes, boulder fields, and some of the darkest skies in Southern California.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
+  "costOverview": "Prices stay close to typical national-park levels — the real splurge here is a guided stargazing tour, since Joshua Tree's dark skies are one of its biggest draws.",
+  "costItems": [
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Diner breakfast, gateway town",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Guided stargazing tour",
+      "price": 60,
+      "unit": ""
+    }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 7,
+    "scenic": 7,
+    "fishing": 0,
+    "roadtrip": 5,
+    "adventure": 7,
+    "golf": 2,
+    "stargazing": 9,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 3,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 4,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 2,
+    "birding": 3,
+    "wildlife": 2
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    11,
+    12
+  ],
+  "hot": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    12,
+    1
+  ],
+  "peak": [
+    2,
+    3,
+    4
+  ],
+  "peakIntensity": "extreme",
+  "low": [
+    7,
+    8
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "sliderEvents": {
+    "scenic": [
+      {
+        "label": "Spring wildflower bloom (rain-dependent)",
+        "weight": 1,
+        "months": {
+          "2": 0.4,
+          "3": 1,
+          "4": 0.5
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "text": "Wildflowers can bloom across the desert floor in good rain years — timing and intensity vary a lot year to year."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and dry, pleasant days with cold desert nights",
+    "mild and dry, one of the best months with a chance of early wildflowers",
+    "warm and dry, often the peak wildflower month if winter rains came",
+    "warm and dry, still excellent for hiking and climbing",
+    "warming up fast, mornings still pleasant but afternoons hot",
+    "very hot, best enjoyed at dawn, dusk, or after dark",
+    "scorching, with daytime highs regularly over 105°F",
+    "still brutally hot, the quietest month of the year",
+    "cooling off, a good time to return as temperatures ease",
+    "mild and dry, arguably the best all-around month",
+    "cool and dry, pleasant and popular around the holidays",
+    "cool and dry, clear skies and cold, crisp nights"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "fishing",
+    "museums",
+    "architecture",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "JTree",
+    "Mojave Desert",
+    "Palm Springs",
+    "Hidden Valley",
+    "California"
+  ],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "astrophotography": "signature",
+      "mountains": "none",
+      "forests": "none",
+      "coastlines": "none"
+    }
+  }
+}

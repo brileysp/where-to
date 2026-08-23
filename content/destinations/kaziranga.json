@@ -1,0 +1,175 @@
+{
+  "id": "kaziranga",
+  "name": "Kaziranga National Park",
+  "region": "Assam, India",
+  "emoji": "🦏",
+  "climate": "tropical",
+  "about": "The park closes entirely during monsoon flooding (roughly May–Oct), reopening for dry-season game drives Nov–Apr.",
+  "overview": "One-horned rhino stronghold — jeep and elephant safaris through Assam's grasslands and wetlands, one of India's great wildlife reserves.",
+  "costRange": {
+    "min": "$",
+    "max": "$$"
+  },
+  "costOverview": "Kaziranga is far cheaper than an African safari — a full thali meal costs just a few dollars, and even the marquee jeep safari to see one-horned rhinos stays affordable split among a group.",
+  "costItems": [
+    {
+      "label": "Chai, roadside",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Local thali meal",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Elephant safari",
+      "price": 22,
+      "unit": "per person"
+    },
+    {
+      "label": "Jeep safari",
+      "price": 60,
+      "unit": "per jeep, up to 6"
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 6,
+    "fishing": 2,
+    "roadtrip": 3,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 3,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 5,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 3,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 2,
+    "birding": 4,
+    "wildlife": 6
+  },
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    11,
+    4
+  ],
+  "wildlifeClosed": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "peakIntensity": "mild",
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season grass-cutting visibility",
+        "weight": 3,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.7,
+          "4": 0.3,
+          "11": 0.4,
+          "12": 1
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Dry-season access",
+        "weight": 5,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.7,
+          "4": 0.3,
+          "11": 0.4,
+          "12": 0.9
+        }
+      }
+    ]
+  },
+  "specialSeasons": [
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Dry-season grass cutting improves visibility for spotting the park's one-horned rhinos."
+    }
+  ],
+  "monthlyWeather": [
+    "cool and dry, one of the best months with mild days and cold nights",
+    "mild and dry, still excellent conditions for game drives",
+    "warming up, dry with increasingly hot days",
+    "hot and humid, with the heat building steadily",
+    "hot and humid, still open though conditions are increasingly uncomfortable",
+    "hot and wet, with the park closing as monsoon flooding begins",
+    "hot and rainy, with the park closed and much of the area flooded",
+    "hot and rainy, still closed with flooding at its worst",
+    "hot and rainy, still closed as the monsoon lingers",
+    "warm and drying out, with the park reopening as floodwaters recede",
+    "mild and dry, one of the best months as the cool season begins",
+    "cool and dry, mild days and cold nights with excellent visibility"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Assam",
+    "rhinos"
+  ]
+}

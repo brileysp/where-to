@@ -1,0 +1,138 @@
+{
+  "id": "vienna",
+  "name": "Vienna",
+  "region": "Austria",
+  "emoji": "🎻",
+  "climate": "temperate",
+  "about": "Spring/fall for mild sightseeing weather, December for the famous Christmas markets.",
+  "overview": "Imperial palaces, classical music, and coffeehouse culture built for lingering over a single pastry for hours.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Vienna's coffeehouse culture is genuinely affordable; a real sit-down dinner is where the bill starts to climb.",
+  "costItems": [
+    {
+      "label": "Wiener Melange (Viennese coffee)",
+      "unit": "",
+      "price": 5
+    },
+    {
+      "label": "Sachertorte, slice",
+      "unit": "",
+      "price": 6
+    },
+    {
+      "label": "Taxi, 15 min",
+      "unit": "",
+      "price": 9
+    },
+    {
+      "label": "Wiener schnitzel dinner",
+      "unit": "",
+      "price": 20
+    },
+    {
+      "label": "Schönbrunn Palace entry",
+      "unit": "",
+      "price": 30
+    }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 3,
+    "scenic": 4,
+    "fishing": 1,
+    "roadtrip": 4,
+    "adventure": 2,
+    "golf": 2,
+    "stargazing": 1,
+    "museums": 9,
+    "architecture": 9,
+    "festivals": 7,
+    "finedining": 7,
+    "streetfood": 5,
+    "nightlife": 5,
+    "winetasting": 6,
+    "spa": 5,
+    "luxuryLodging": 8,
+    "snowsports": 1,
+    "cycling": 4,
+    "shopping": 6,
+    "birding": 3,
+    "wildlife": 1
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    9
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    12
+  ],
+  "low": [
+    1,
+    2
+  ],
+  "specialSeasons": [
+    {
+      "months": [
+        12
+      ],
+      "text": "Christmas markets fill the squares around the imperial palaces, a Viennese tradition."
+    }
+  ],
+  "monthlyWeather": [
+    "cold, often below freezing at night, with grey skies common",
+    "cold, still firmly in winter with occasional snow",
+    "cool and unpredictable, with spring slow to take hold",
+    "mild but changeable, with warmth building unevenly through the month",
+    "mild and increasingly pleasant, one of the best months for the palaces and parks",
+    "warm and pleasant, with long, comfortable days",
+    "hot, the warmest month with occasional thunderstorms",
+    "warm and still summery, though slightly less intense than July",
+    "mild and pleasant, one of the best months as the city eases into fall",
+    "cool and comfortable, with autumn color settling in",
+    "cold and grey, with the sunniest hours of the year at their scarcest",
+    "cold, with snow-dusted imperial architecture and famous Christmas markets"
+  ],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Austria"
+  ],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "casual",
+      "gravelRiding": "none",
+      "mountainBiking": "none"
+    }
+  }
+}

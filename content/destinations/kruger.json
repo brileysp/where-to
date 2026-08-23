@@ -1,0 +1,152 @@
+{
+  "id": "kruger",
+  "name": "Kruger National Park",
+  "region": "South Africa",
+  "emoji": "🐆",
+  "climate": "tropical",
+  "about": "Dry winter (May–Sep) concentrates animals at waterholes — prime game viewing. Wet summer is lush but green and dispersed.",
+  "overview": "Africa's most accessible major safari — a road network genuine enough to explore entirely by rental car, no guide required.",
+  "costRange": { "min": "$", "max": "$$$$$" },
+  "costOverview": "Uniquely set up for a self-drive trip — no mandatory guide or vehicle fees — while private lodges bordering the park rank among the continent's best.",
+  "costItems": [
+    { "label": "Coffee", "price": 3, "unit": "" },
+    { "label": "Self-catering groceries", "price": 15, "unit": "per day" },
+    { "label": "Steakhouse dinner, Skukuza", "price": 18, "unit": "" },
+    { "label": "Boma braai buffet", "price": 28, "unit": "" },
+    { "label": "Conservation fee", "price": 36, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
+    "hiking": 6,
+    "scenic": 7,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 2,
+    "streetfood": 2,
+    "nightlife": 1,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 9,
+    "snowsports": 0,
+    "cycling": 1,
+    "shopping": 3,
+    "birding": 5,
+    "wildlife": 7
+  },
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season waterhole concentration",
+        "weight": 3,
+        "months": {
+          "5": 0.5,
+          "6": 0.85,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
+      }
+    ],
+    "birding": [
+      {
+        "label": "Palearctic migrant arrivals",
+        "weight": 4,
+        "months": {
+          "1": 1,
+          "2": 1,
+          "3": 0.6,
+          "11": 0.4,
+          "12": 0.85
+        }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "hot and humid, with frequent afternoon thunderstorms",
+    "hot and humid, still deep in the rainy season",
+    "warm and humid, with rain beginning to ease",
+    "warm and drying out, with rain now infrequent",
+    "mild and dry, with the bush thinning out fast",
+    "cool and dry, with crisp mornings and almost no rain",
+    "the coolest month, dry with chilly early mornings",
+    "dry and warming, still very little rain",
+    "warm and dry, with the bush at its most bare",
+    "hot and dry, building toward the first summer storms",
+    "hot, with the rains returning and afternoon storms building",
+    "hot and humid, with regular thunderstorms"
+  ],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "museums",
+    "architecture",
+    "festivals",
+    "nightlife",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Sabi Sands"
+  ]
+}
