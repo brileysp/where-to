@@ -1,0 +1,99 @@
+{
+  "id": "quito-volcanoes",
+  "name": "Quito & the Avenue of Volcanoes",
+  "region": "Ecuador",
+  "emoji": "🌋",
+  "climate": "highland",
+  "about": "Dry season Jun–Sep has the clearest volcano views and safest climbing conditions; Mar–Apr is the rainiest stretch, when Cotopaxi is often clouded over.",
+  "overview": "Ecuador's high-altitude capital and the chain of volcanoes stretching south of it — colonial architecture, cloud-forest birding, and some of South America's most accessible volcano trekking.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Quito itself is one of the cheapest capital cities in South America to eat and get around in — day tours to Cotopaxi and Quilotoa are the main real expense.",
+  "costItems": [
+    { "label": "Quito trolley/bus ride", "price": 1, "unit": "" },
+    { "label": "Lunch (almuerzo), Old Town", "price": 4, "unit": "" },
+    { "label": "Teleférico (Quito cable car)", "price": 9, "unit": "" },
+    { "label": "Quilotoa guided day tour", "price": 45, "unit": "per person" },
+    { "label": "Cotopaxi guided day tour", "price": 60, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 7,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 8,
+    "architecture": 9,
+    "festivals": 5,
+    "finedining": 6,
+    "streetfood": 6,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 5,
+    "shopping": 5,
+    "birding": 8,
+    "wildlife": 5
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "dry": [6, 7, 8, 9],
+  "wet": [1, 2, 3, 4, 10, 11],
+  "peak": [6, 7, 8],
+  "low": [3, 4],
+  "peakIntensity": "moderate",
+  "hikingBest": [6, 7, 8, 9],
+  "hikingWorst": [3, 4],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Dry-season volcano-climbing conditions",
+        "weight": 4,
+        "months": { "6": 0.7, "7": 1, "8": 1, "9": 0.6 }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Clear dry-season volcano views",
+        "weight": 3,
+        "months": { "6": 0.6, "7": 0.9, "8": 0.9, "9": 0.5 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "mild with variable rain, cool mornings typical of Quito's highland climate",
+    "mild and rainy, one of the wetter months in the Avenue of Volcanoes",
+    "rainy and mild, with some of the year's cloudiest, wettest conditions",
+    "still rainy and mild, with Cotopaxi often obscured by cloud",
+    "rain easing, mild with clearer spells becoming more common",
+    "the dry season begins, mild days with markedly clearer volcano views",
+    "dry and mild, one of the best months for climbing and hiking",
+    "dry and mild, peak season for the Avenue of Volcanoes",
+    "still dry, mild with reliably clear mornings",
+    "rain returning, mild with increasing cloud cover",
+    "rainy and mild, showers common most afternoons",
+    "mild with variable rain, though mornings often stay clear before afternoon clouds build"
+  ],
+  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting"],
+  "searchAliases": ["Cotopaxi", "Quilotoa", "Otavalo", "Ecuador", "Mindo cloud forest"],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "strong"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none"
+    }
+  }
+}

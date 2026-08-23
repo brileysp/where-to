@@ -1,0 +1,89 @@
+{
+  "id": "colombian-caribbean",
+  "name": "Colombian Caribbean",
+  "region": "Colombia",
+  "emoji": "🏛️",
+  "climate": "tropical",
+  "about": "Dry season Dec–Apr is best for beaches and Cartagena's walled city; this coast sits south of the main Caribbean hurricane belt, so tropical storms are a much smaller risk here than elsewhere in the Caribbean.",
+  "overview": "Cartagena's UNESCO-listed colonial walled city, Tayrona National Park, and the multi-day trek to the Lost City — Colombia's Caribbean coast, warm and historic.",
+  "costRange": { "min": "$", "max": "$$$$$" },
+  "costOverview": "Street food and local transport are cheap even in touristy Cartagena — the walled city's boutique hotels and the multi-day Lost City trek are where the real spending happens.",
+  "costItems": [
+    { "label": "Arepa de huevo, street stall", "price": 2, "unit": "" },
+    { "label": "Fresh fruit juice", "price": 2, "unit": "" },
+    { "label": "Taxi within Cartagena", "price": 4, "unit": "" },
+    { "label": "Rosario Islands boat tour", "price": 45, "unit": "per person" },
+    { "label": "Ciudad Perdida (Lost City) trek package", "price": 350, "unit": "4 days" }
+  ],
+  "base": {
+    "sunbathing": 9,
+    "swimming": 8,
+    "diving": 7,
+    "surfing": 2,
+    "sailing": 7,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 4,
+    "roadtrip": 3,
+    "adventure": 6,
+    "golf": 1,
+    "stargazing": 4,
+    "museums": 7,
+    "architecture": 9,
+    "festivals": 6,
+    "finedining": 7,
+    "streetfood": 8,
+    "nightlife": 7,
+    "winetasting": 1,
+    "spa": 6,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 6,
+    "birding": 6,
+    "wildlife": 5
+  },
+  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
+  "vibeBands": ["easygoing", "lively"],
+  "physicalBands": ["easy", "moderate", "active"],
+  "dry": [12, 1, 2, 3, 4],
+  "wet": [5, 6, 7, 8, 9, 10, 11],
+  "hot": [6, 7, 8, 9],
+  "peak": [12, 1, 2],
+  "low": [9, 10],
+  "peakIntensity": "moderate",
+  "hikingBest": [12, 1, 2, 3, 4],
+  "hikingWorst": [9, 10, 11],
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Dry-season trekking to the Lost City",
+        "weight": 2.5,
+        "months": { "12": 0.6, "1": 1, "2": 1, "3": 1, "4": 0.7 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "dry and hot, with strong trade winds keeping the heat comfortable",
+    "dry and hot, one of the sunniest and breeziest months",
+    "dry and hot, with trade winds starting to ease",
+    "hot and increasingly humid, with the first rains returning",
+    "hot and rainy, with humidity building",
+    "hot with a brief dry spell (veranillo) breaking up the rains",
+    "hot and mostly dry during the veranillo, then rain returns late in the month",
+    "hot and humid, rainy with frequent afternoon storms",
+    "the rainiest month, hot and humid with storms most days",
+    "still rainy and hot, though this coast sits south of the main hurricane belt",
+    "rain tapering off, hot and humid",
+    "drying out fast, hot with the holiday season in full swing"
+  ],
+  "naSliders": ["snowsports"],
+  "searchAliases": ["Cartagena", "Tayrona", "Santa Marta", "Ciudad Perdida", "Lost City trek", "Rosario Islands"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "signature",
+      "forests": "strong",
+      "mountains": "casual"
+    }
+  }
+}

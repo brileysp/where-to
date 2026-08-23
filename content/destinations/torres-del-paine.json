@@ -1,0 +1,81 @@
+{
+  "id": "torres-del-paine",
+  "name": "Torres del Paine",
+  "region": "Chile",
+  "emoji": "🏔️",
+  "climate": "temperate",
+  "about": "Trekking season runs Oct–Mar/Apr, when trails and refugios are open; most infrastructure closes for winter (Jun–Aug), and even in peak season this is one of the windiest places on Earth.",
+  "overview": "Chile's flagship Patagonia park — granite towers, glaciers, and increasingly famous puma tracking, centered on the W and O treks.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "There's no cheap way to do the W or O trek — refugios, park fees, and transport all add up, and the small number of luxury lodges push the top end even higher.",
+  "costItems": [
+    { "label": "Empanada, Puerto Natales", "price": 5, "unit": "" },
+    { "label": "Park entrance fee", "price": 35, "unit": "per day" },
+    { "label": "W Trek refugio bed, half board", "price": 90, "unit": "per night" },
+    { "label": "Puma-tracking guided tour", "price": 180, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 10,
+    "scenic": 10,
+    "fishing": 4,
+    "roadtrip": 5,
+    "adventure": 7,
+    "golf": 0,
+    "stargazing": 7,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 1,
+    "finedining": 3,
+    "streetfood": 2,
+    "nightlife": 0,
+    "winetasting": 0,
+    "spa": 2,
+    "luxuryLodging": 8,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 2,
+    "birding": 6,
+    "wildlife": 9
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "dry": [12, 1, 2],
+  "peak": [12, 1, 2],
+  "low": [6, 7, 8],
+  "peakIntensity": "extreme",
+  "wildlifePeak": [10, 11, 12, 1, 2, 3],
+  "hikingBest": [11, 12, 1, 2, 3],
+  "hikingWorst": [6, 7, 8],
+  "specialSeasons": [
+    { "months": [6, 7, 8], "text": "Most refugios and campsites close for the winter — the park stays open but trekking infrastructure is minimal." }
+  ],
+  "monthlyWeather": [
+    "peak trekking season, mild but the year's windiest month, with gusts that can knock you off balance",
+    "still peak season, mild with slightly less ferocious wind than January",
+    "trekking season winds down, cool with colors starting to turn and fewer crowds",
+    "cool and quiet, with autumn colors and many refugios starting to close",
+    "cold, with most trekking infrastructure now closed for the season",
+    "deep winter, cold and snowy with very limited services",
+    "the coldest month, cold and snowy with short daylight hours",
+    "still deep winter, cold with limited access to trails",
+    "cold and blustery, with refugios beginning to reopen late in the month",
+    "trekking season begins, cool and windy with trails reopening",
+    "cool with building winds, one of the best months before peak-season crowds arrive",
+    "trekking season in full swing, mild but increasingly windy"
+  ],
+  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "nightlife", "golf"],
+  "searchAliases": ["W Trek", "O Circuit", "Puerto Natales", "Paine Towers", "puma tracking Chile"],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "coastlines": "none",
+      "forests": "casual"
+    }
+  }
+}

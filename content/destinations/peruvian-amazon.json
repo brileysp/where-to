@@ -1,0 +1,89 @@
+{
+  "id": "peruvian-amazon",
+  "name": "Peruvian Amazon",
+  "region": "Peru",
+  "emoji": "🦜",
+  "climate": "tropical",
+  "about": "Dry season Jun–Sep has the lowest river levels and best wildlife-trail access, especially for macaw clay licks; wet season Dec–Mar means higher rivers and easier canoe access into flooded forest.",
+  "overview": "Deep Amazon rainforest reached by river or small plane from Puerto Maldonado or Iquitos — some of the best wildlife-watching and birding on Earth.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "There's no real budget tier here — almost everyone visits via an all-inclusive lodge package, and the price mostly tracks how remote and exclusive the lodge is.",
+  "costItems": [
+    { "label": "Piranha fishing trip", "price": 15, "unit": "per person" },
+    { "label": "Flight, Cusco–Puerto Maldonado", "price": 90, "unit": "" },
+    { "label": "Macaw clay-lick guided tour", "price": 40, "unit": "per person" },
+    { "label": "3-night jungle lodge package", "price": 450, "unit": "per person, all-inclusive" }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 2,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 5,
+    "scenic": 7,
+    "fishing": 6,
+    "roadtrip": 1,
+    "adventure": 5,
+    "golf": 0,
+    "stargazing": 5,
+    "museums": 1,
+    "architecture": 1,
+    "festivals": 2,
+    "finedining": 3,
+    "streetfood": 4,
+    "nightlife": 1,
+    "winetasting": 0,
+    "spa": 2,
+    "luxuryLodging": 7,
+    "snowsports": 0,
+    "cycling": 0,
+    "shopping": 2,
+    "birding": 10,
+    "wildlife": 9
+  },
+  "budgetBands": ["highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["easy", "moderate"],
+  "dry": [5, 6, 7, 8, 9],
+  "wet": [12, 1, 2, 3],
+  "peak": [6, 7, 8],
+  "low": [1, 2],
+  "peakIntensity": "mild",
+  "wildlifePeak": [6, 7, 8, 9],
+  "birdingPeak": [6, 7, 8, 9],
+  "hikingBest": [6, 7, 8, 9],
+  "hikingWorst": [12, 1, 2, 3],
+  "sliderEvents": {
+    "wildlife": [
+      {
+        "label": "Dry-season macaw clay-lick activity",
+        "weight": 4,
+        "months": { "6": 0.7, "7": 1, "8": 1, "9": 0.7 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "peak wet season, hot and humid with high river levels and frequent rain",
+    "still wet, hot with rivers running high and trails muddy",
+    "wet and hot, though rainfall begins gradually easing",
+    "transitioning to drier, hot and humid with less frequent rain",
+    "drying out, hot with lower humidity and clearer skies",
+    "dry season begins, hot by day with occasional cool morning mist",
+    "dry and hot, with the best wildlife-trail access of the year",
+    "dry and hot, peak season for macaw clay-lick viewing",
+    "still dry, hot with rivers at their lowest levels",
+    "transitioning back to wet, hot and increasingly humid",
+    "wet season returns, hot with rain becoming regular",
+    "wet and hot, with rivers rising again"
+  ],
+  "naSliders": ["sunbathing", "surfing", "diving", "sailing", "snowsports", "golf", "winetasting", "cycling"],
+  "searchAliases": ["Tambopata", "Puerto Maldonado", "Manu National Park", "Iquitos", "Amazon rainforest Peru"],
+  "activityStyleTiers": {
+    "scenic": {
+      "forests": "signature",
+      "mountains": "none",
+      "coastlines": "none"
+    }
+  }
+}

@@ -23,7 +23,8 @@ const RULES: [string[], string][] = [
   [['gondola ride'], '🛶'],
   [['gondola'], '🚡'],
   [['catamaran', 'boat tour', 'cruise', 'expedition ship', 'cabin, peak season', 'premium ship', 'liveaboard'], '⛵'],
-  [['tented camp', 'luxury camp', 'ultra-luxury camp'], '🏕️'],
+  [['tented camp', 'luxury camp', 'ultra-luxury camp', 'lodge package', 'refugio'], '🏕️'],
+  [['rafting'], '🚣'],
   [['vaporetto', 'water bus'], '⛴️'],
   [['speedboat', 'ferry', 'boat transfer'], '🚤'],
   // "charter flight" / "internal flight" / "Flight, " (capitalized, comma —
@@ -45,8 +46,12 @@ const RULES: [string[], string][] = [
   [['kayak'], '🛶'],
   [['rental', 'driver', 'transfer'], '🚗'],
   [['cocktail', 'spritz', 'mojito'], '🍸'],
+  [['juice', 'smoothie'], '🧃'],
   [['vermouth', 'wine', 'limoncello', 'champagne', 'cuvée', 'cuvee', 'mamajuana'], '🍷'],
-  [['beer', 'guinness', 'pint'], '🍺'],
+  // Not bare "pint" — it's a substring of "pinto" (as in gallo pinto) and
+  // "pintxos", and every real pint-of-beer label already contains "beer" or
+  // "guinness" too, so it's a pure collision risk with nothing to lose.
+  [['beer', 'guinness'], '🍺'],
   // Compound tea terms, not bare "tea" — a bare match risks false hits on
   // unrelated words that happen to contain the substring (e.g. "steak").
   [['turkish tea', 'çay', 'chai', 'milk tea', 'green tea', 'iced tea', 'mint tea', 'sweet tea', 'bubble tea'], '🍵'],
@@ -63,6 +68,7 @@ const RULES: [string[], string][] = [
   [['chimpanzee', 'chimp tracking', 'lemur'], '🐒'],
   [['jaguar'], '🐆'],
   [['reindeer'], '🦌'],
+  [['fishing'], '🎣'],
   [['husky', 'toboggan'], '🛷'],
   [['safari', 'game drive'], '🚙'],
   [['snorkel', 'diving', 'dive'], '🤿'],
@@ -100,6 +106,7 @@ const RULES: [string[], string][] = [
   [['orecchiette'], '🍝'],
   [['jerk chicken'], '🍗'],
   [['skewer'], '🍢'],
+  [['chocolate'], '🍫'],
   [['hot dog', 'pylsur'], '🌭'],
   [['meat pie', 'pie'], '🥧'],
   [['sandwich', 'bocadillo', 'panino', 'smørrebrød'], '🥪'],

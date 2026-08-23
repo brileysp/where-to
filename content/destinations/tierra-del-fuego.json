@@ -1,0 +1,87 @@
+{
+  "id": "tierra-del-fuego",
+  "name": "Tierra del Fuego",
+  "region": "Argentina & Chile",
+  "emoji": "🐧",
+  "climate": "temperate",
+  "about": "Summer (Nov–Mar) is Antarctic cruise season and best for the Beagle Channel and penguin colonies; winter (Jun–Aug) brings real skiing at Cerro Castor, the world's southernmost ski resort.",
+  "overview": "The southern tip of South America — Ushuaia, Argentina's 'End of the World' and the main gateway for Antarctic expedition cruises, plus real skiing and Beagle Channel wildlife.",
+  "costRange": { "min": "$$", "max": "$$$$$" },
+  "costOverview": "Ushuaia itself is reasonably priced for a remote town — the real spending happens if you add an Antarctic cruise, which anchors the top of this range on its own.",
+  "costItems": [
+    { "label": "Centolla (king crab) meal", "price": 35, "unit": "" },
+    { "label": "Beagle Channel boat tour", "price": 60, "unit": "per person" },
+    { "label": "Cerro Castor lift ticket", "price": 60, "unit": "per day" },
+    { "label": "Antarctic Peninsula cruise, from", "price": 6500, "unit": "per person, 10 days" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 7,
+    "hiking": 6,
+    "scenic": 8,
+    "fishing": 5,
+    "roadtrip": 4,
+    "adventure": 6,
+    "golf": 0,
+    "stargazing": 6,
+    "museums": 4,
+    "architecture": 2,
+    "festivals": 2,
+    "finedining": 5,
+    "streetfood": 3,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 2,
+    "luxuryLodging": 6,
+    "snowsports": 5,
+    "cycling": 2,
+    "shopping": 3,
+    "birding": 7,
+    "wildlife": 8
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["easy", "moderate", "active"],
+  "cold": [6, 7, 8],
+  "peak": [12, 1, 2],
+  "low": [5, 9],
+  "peakIntensity": "moderate",
+  "wildlifePeak": [11, 12, 1, 2, 3],
+  "hikingBest": [11, 12, 1, 2, 3],
+  "hikingWorst": [6, 7, 8],
+  "sliderEvents": {
+    "snowsports": [
+      {
+        "label": "Cerro Castor ski season",
+        "weight": 4,
+        "months": { "6": 0.7, "7": 1, "8": 0.8, "9": 0.4 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "peak season, cool and windy with Antarctic cruises in full swing and nearly 17 hours of daylight",
+    "still peak season, cool and windy with long daylight hours continuing",
+    "cooling down, cool and blustery as the Antarctic cruise season winds down",
+    "cold with autumn colors, and the last Antarctic departures of the season",
+    "cold and quiet, with ski season at Cerro Castor approaching",
+    "cold and snowy, with Cerro Castor's ski season opening — the world's southernmost ski resort",
+    "the coldest month, snowy with short daylight hours and good skiing",
+    "still cold and snowy, with skiing continuing at Cerro Castor",
+    "cold and windy, with snow lingering and ski season winding down",
+    "cool and blustery, quiet before the Antarctic cruise season resumes",
+    "cool and windy, with Antarctic cruises beginning and penguin colonies active",
+    "cool and windy, with long daylight hours and the summer season ramping up"
+  ],
+  "naSliders": ["sunbathing", "swimming", "diving", "surfing"],
+  "searchAliases": ["Ushuaia", "End of the World", "Beagle Channel", "Antarctica gateway", "Cerro Castor"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "strong",
+      "mountains": "strong",
+      "forests": "casual"
+    }
+  }
+}

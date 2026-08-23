@@ -1,0 +1,92 @@
+{
+  "id": "argentine-lake-district",
+  "name": "Argentine Lake District",
+  "region": "Argentina",
+  "emoji": "🍫",
+  "climate": "temperate",
+  "about": "Summer (Dec–Feb) is best for lake hiking and the Seven Lakes road trip; winter (Jun–Aug) turns Bariloche into South America's biggest ski destination, centered on Cerro Catedral.",
+  "overview": "Alpine lakes, Swiss-chalet architecture, and chocolate shops around Bariloche and San Martín de los Andes — northern Argentine Patagonia, and the one part of the region with real ski infrastructure.",
+  "costRange": { "min": "$$", "max": "$$$$" },
+  "costOverview": "Ski season (Jul) and peak summer (Jan) both drive prices up — chocolate shops and empanadas stay reasonable, lift tickets and lake-circuit tours are where costs add up.",
+  "costItems": [
+    { "label": "Empanada", "price": 2, "unit": "" },
+    { "label": "Bariloche chocolate bar", "price": 5, "unit": "" },
+    { "label": "Circuito Chico guided tour", "price": 40, "unit": "per person" },
+    { "label": "Cerro Catedral lift ticket", "price": 55, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 3,
+    "swimming": 3,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 4,
+    "hiking": 8,
+    "scenic": 9,
+    "fishing": 7,
+    "roadtrip": 8,
+    "adventure": 6,
+    "golf": 3,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 5,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 3,
+    "nightlife": 4,
+    "winetasting": 3,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 8,
+    "cycling": 6,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 5
+  },
+  "budgetBands": ["comfortable", "highend", "luxury"],
+  "vibeBands": ["easygoing", "secluded"],
+  "physicalBands": ["easy", "moderate", "active"],
+  "dry": [12, 1, 2, 3],
+  "cold": [6, 7, 8],
+  "hot": [1, 2],
+  "peak": [1, 2, 7],
+  "low": [5, 11],
+  "peakIntensity": "moderate",
+  "hikingBest": [12, 1, 2, 3],
+  "hikingWorst": [6, 7, 8],
+  "sliderEvents": {
+    "snowsports": [
+      {
+        "label": "Cerro Catedral ski season",
+        "weight": 5,
+        "months": { "6": 0.6, "7": 1, "8": 0.8, "9": 0.4 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "peak summer, mild and one of the best months for the Seven Lakes road trip",
+    "still peak summer, mild with warm, long days for lake hiking",
+    "cooling down, mild with fewer crowds and good hiking weather",
+    "cool with autumn colors turning gold across the forests",
+    "cold and quiet, with the first snow dusting the peaks",
+    "cold, with Cerro Catedral's ski season getting underway",
+    "the coldest month, snowy and the peak of ski season",
+    "still cold and snowy, with skiing continuing in full swing",
+    "cold with lingering snow, ski season winding down",
+    "cool and quiet, a good shoulder month before summer crowds",
+    "mild and increasingly pleasant, with lakes warming up for the season",
+    "mild summer weather returning, with long days and building crowds"
+  ],
+  "naSliders": ["diving", "surfing"],
+  "searchAliases": ["Bariloche", "San Martin de los Andes", "Nahuel Huapi", "Seven Lakes Route", "Cerro Catedral"],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none"
+    }
+  }
+}
