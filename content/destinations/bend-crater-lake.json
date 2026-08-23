@@ -1,0 +1,83 @@
+{
+  "id": "bend-crater-lake",
+  "name": "Bend & Crater Lake",
+  "region": "Oregon, USA",
+  "emoji": "🌋",
+  "climate": "temperate",
+  "about": "Summer (Jul–Sep) is best for Crater Lake's Rim Drive and Bend's mountain biking; winter brings real skiing at Mount Bachelor, though heavy snow closes much of the Rim Drive.",
+  "overview": "Crater Lake's impossibly deep blue volcanic caldera, paired with Bend — one of America's best mountain-biking and craft-beer towns, with real skiing at Mount Bachelor and renowned fly fishing on the Deschutes River.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Bend's craft beer scene and casual food stay reasonable — Mount Bachelor lift tickets and guided rafting trips are the real splurges.",
+  "costItems": [
+    { "label": "Craft beer flight, Bend Ale Trail", "price": 12, "unit": "" },
+    { "label": "Coffee", "price": 4, "unit": "" },
+    { "label": "Crater Lake National Park entry", "price": 30, "unit": "per vehicle" },
+    { "label": "Mount Bachelor ski day pass", "price": 129, "unit": "per day" },
+    { "label": "Deschutes River whitewater rafting", "price": 75, "unit": "per person" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 3,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 2,
+    "hiking": 7,
+    "scenic": 9,
+    "fishing": 6,
+    "roadtrip": 6,
+    "adventure": 6,
+    "golf": 4,
+    "stargazing": 6,
+    "museums": 2,
+    "architecture": 2,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 6,
+    "nightlife": 6,
+    "winetasting": 2,
+    "spa": 3,
+    "luxuryLodging": 4,
+    "snowsports": 7,
+    "cycling": 8,
+    "shopping": 4,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "lively"],
+  "physicalBands": ["easy", "moderate", "active", "challenging"],
+  "cold": [12, 1, 2],
+  "peak": [7, 8],
+  "peakIntensity": "moderate",
+  "low": [11, 4],
+  "hikingBest": [7, 8, 9],
+  "hikingWorst": [12, 1, 2, 3],
+  "monthlyWeather": [
+    "cold, with Mount Bachelor's ski season in full swing",
+    "cold, still deep in ski season",
+    "cold, skiing continuing as snowpack lingers",
+    "cool and muddy, with the Rim Drive still largely snowed in",
+    "mild, with the Rim Drive beginning to reopen",
+    "mild and improving, one of the best months as trails clear",
+    "warm and dry, prime season for Crater Lake and mountain biking",
+    "warm and dry, still excellent for hiking and rafting",
+    "mild and clear, a favorite month as crowds thin",
+    "cool, with the Rim Drive starting to close at higher elevations",
+    "cold and snowy, with the Rim Drive largely closed again",
+    "cold, with ski season getting underway"
+  ],
+  "naSliders": ["diving", "surfing"],
+  "searchAliases": ["Crater Lake", "Bend Ale Trail", "Mount Bachelor", "Deschutes River", "Newberry Volcanic Monument"],
+  "activityStyleTiers": {
+    "cycling": {
+      "mountainBiking": "signature",
+      "gravelRiding": "strong",
+      "scenicRoadCycling": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none"
+    }
+  }
+}

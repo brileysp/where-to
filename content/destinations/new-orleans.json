@@ -1,0 +1,80 @@
+{
+  "id": "new-orleans",
+  "name": "New Orleans",
+  "region": "Louisiana, USA",
+  "emoji": "🎷",
+  "climate": "temperate",
+  "about": "Mardi Gras (dates shift with the Easter calendar, typically Feb) is the single busiest, most chaotic stretch of the year; summer (Jun–Sep) is brutally hot, humid, and carries real hurricane risk.",
+  "overview": "The birthplace of jazz, Creole and Cajun cooking, French Quarter architecture, and Mardi Gras — one of America's most distinctive food and music cities.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Po'boys and streetcar rides stay cheap even in the touristy French Quarter — fine dining and Bourbon Street nightlife are where the real spending happens.",
+  "costItems": [
+    { "label": "Beignets & coffee, Café du Monde", "price": 8, "unit": "" },
+    { "label": "Po'boy sandwich", "price": 14, "unit": "" },
+    { "label": "Streetcar ride", "price": 1.25, "unit": "" },
+    { "label": "Swamp tour, alligators", "price": 65, "unit": "per person" },
+    { "label": "Jazz club, live music cover charge", "price": 20, "unit": "" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 2,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 3,
+    "hiking": 1,
+    "scenic": 5,
+    "fishing": 5,
+    "roadtrip": 4,
+    "adventure": 3,
+    "golf": 2,
+    "stargazing": 2,
+    "museums": 5,
+    "architecture": 8,
+    "festivals": 9,
+    "finedining": 8,
+    "streetfood": 9,
+    "nightlife": 9,
+    "winetasting": 2,
+    "spa": 4,
+    "luxuryLodging": 6,
+    "snowsports": 0,
+    "cycling": 3,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 4
+  },
+  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
+  "vibeBands": ["lively", "highenergy"],
+  "physicalBands": ["easy", "moderate"],
+  "hot": [6, 7, 8, 9],
+  "cold": [12, 1],
+  "peak": [2, 3],
+  "peakIntensity": "extreme",
+  "low": [7, 8],
+  "specialSeasons": [
+    { "months": [2], "text": "Mardi Gras (dates shift with the Easter calendar, typically February) brings massive parades and crowds — the city's single busiest, most chaotic stretch of the year." }
+  ],
+  "monthlyWeather": [
+    "mild and pleasant, one of the most comfortable months",
+    "mild, with Mardi Gras bringing massive crowds and parades",
+    "warm and pleasant, still comfortable before the heat builds",
+    "warm, one of the best months with comfortable humidity",
+    "warm and increasingly humid, as summer approaches",
+    "hot and humid, with hurricane season now underway",
+    "hot and humid, deep in the summer swelter",
+    "hot and humid, the peak of both heat and hurricane risk",
+    "hot and humid, still within hurricane season",
+    "warm and drying out, with hurricane risk fading",
+    "mild and pleasant, a favorite quieter month",
+    "mild, festive through the holidays"
+  ],
+  "naSliders": ["snowsports", "surfing"],
+  "searchAliases": ["French Quarter", "Bourbon Street", "Mardi Gras", "Garden District", "Louisiana"],
+  "activityStyleTiers": {
+    "scenic": {
+      "coastlines": "casual",
+      "forests": "casual",
+      "mountains": "none"
+    }
+  }
+}

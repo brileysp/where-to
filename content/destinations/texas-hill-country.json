@@ -1,0 +1,79 @@
+{
+  "id": "texas-hill-country",
+  "name": "Texas Hill Country",
+  "region": "Texas, USA",
+  "emoji": "🤠",
+  "climate": "temperate",
+  "about": "Spring (Mar–Apr) brings bluebonnet wildflowers and mild weather, the most popular season; summer (Jun–Sep) is brutally hot, best endured at the region's spring-fed swimming holes.",
+  "overview": "Fredericksburg's German heritage and growing wine trail, legendary Texas BBQ, spring-fed swimming holes, and Austin's live-music energy just up the road — the hill country west of Austin, at its best when the bluebonnets bloom.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Texas BBQ and sweet tea stay properly cheap even at legendary spots — Fredericksburg's wine trail is the real regional splurge.",
+  "costItems": [
+    { "label": "Sweet tea", "price": 2.5, "unit": "" },
+    { "label": "Texas BBQ brisket meal", "price": 18, "unit": "" },
+    { "label": "Wine tasting, Fredericksburg", "price": 25, "unit": "per person" },
+    { "label": "Enchanted Rock day pass", "price": 8, "unit": "per person" },
+    { "label": "Hamilton Pool Preserve entry", "price": 12, "unit": "per vehicle" }
+  ],
+  "base": {
+    "sunbathing": 4,
+    "swimming": 6,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 2,
+    "hiking": 5,
+    "scenic": 6,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 3,
+    "golf": 4,
+    "stargazing": 5,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 5,
+    "finedining": 5,
+    "streetfood": 8,
+    "nightlife": 6,
+    "winetasting": 7,
+    "spa": 4,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 5,
+    "wildlife": 3
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "lively"],
+  "physicalBands": ["easy", "moderate"],
+  "hot": [6, 7, 8, 9],
+  "peak": [3, 4, 10],
+  "peakIntensity": "moderate",
+  "low": [7, 8],
+  "specialSeasons": [
+    { "months": [3, 4], "text": "Texas bluebonnets and other wildflowers carpet the Hill Country roadsides — a beloved, genuinely spectacular seasonal spectacle." }
+  ],
+  "monthlyWeather": [
+    "mild and pleasant, comfortable for touring the wine trail",
+    "mild, with early wildflowers beginning to appear",
+    "mild and blooming, one of the best months as bluebonnets peak",
+    "warm and pleasant, still one of the most popular months",
+    "warm, comfortable before the summer heat sets in",
+    "hot, with the swimming holes coming into their own",
+    "very hot, best enjoyed at the region's spring-fed swimming holes",
+    "very hot, still deep in the brutal summer stretch",
+    "hot, with the heat beginning to ease late in the month",
+    "mild and pleasant, a favorite quieter month",
+    "mild, comfortable and quiet",
+    "mild, festive through the holidays"
+  ],
+  "naSliders": ["snowsports", "surfing", "diving"],
+  "searchAliases": ["Fredericksburg", "Austin", "Enchanted Rock", "Hamilton Pool", "Lockhart", "Texas Wine Trail"],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "casual",
+      "forests": "casual",
+      "coastlines": "none"
+    }
+  }
+}
