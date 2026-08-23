@@ -64,6 +64,7 @@ const RULES: [string[], string][] = [
   [['spa', 'massage', 'treatment'], '💆'],
   [['balloon'], '🎈'],
   [['photography expedition', 'photography tour'], '📷'],
+  [['birding', 'bird-watching', 'birdwatching'], '🦜'],
   [['gorilla'], '🦍'],
   [['chimpanzee', 'chimp tracking', 'lemur'], '🐒'],
   [['jaguar'], '🐆'],

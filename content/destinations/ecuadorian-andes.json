@@ -1,17 +1,18 @@
 {
-  "id": "quito-volcanoes",
-  "name": "Quito & the Avenue of Volcanoes",
+  "id": "ecuadorian-andes",
+  "name": "Ecuadorian Andes",
   "region": "Ecuador",
   "emoji": "🌋",
   "climate": "highland",
-  "about": "Dry season Jun–Sep has the clearest volcano views and safest climbing conditions; Mar–Apr is the rainiest stretch, when Cotopaxi is often clouded over.",
-  "overview": "Ecuador's high-altitude capital and the chain of volcanoes stretching south of it — colonial architecture, cloud-forest birding, and some of South America's most accessible volcano trekking.",
+  "about": "Dry season Jun–Sep has the clearest volcano views and safest climbing conditions; cloud-forest birding on both Andean slopes stays excellent nearly year-round, regardless of season.",
+  "overview": "Ecuador's high-altitude capital and two very different headline draws around it — volcano climbing and trekking south to Cotopaxi and Chimborazo, and some of the best cloud-forest birding on Earth on both Andean slopes.",
   "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Quito itself is one of the cheapest capital cities in South America to eat and get around in — day tours to Cotopaxi and Quilotoa are the main real expense.",
+  "costOverview": "Quito itself is one of the cheapest capital cities in South America to eat and get around in — day tours to Cotopaxi and Quilotoa, and multi-day birding-lodge stays, are the main real expense.",
   "costItems": [
     { "label": "Quito trolley/bus ride", "price": 1, "unit": "" },
     { "label": "Lunch (almuerzo), Old Town", "price": 4, "unit": "" },
     { "label": "Teleférico (Quito cable car)", "price": 9, "unit": "" },
+    { "label": "Guided birding day, Mindo cloud forest", "price": 70, "unit": "per person" },
     { "label": "Quilotoa guided day tour", "price": 45, "unit": "per person" },
     { "label": "Cotopaxi guided day tour", "price": 60, "unit": "per person" }
   ],
@@ -40,7 +41,7 @@
     "snowsports": 0,
     "cycling": 5,
     "shopping": 5,
-    "birding": 8,
+    "birding": 9,
     "wildlife": 5
   },
   "budgetBands": ["basic", "comfortable", "highend"],
@@ -70,21 +71,21 @@
     ]
   },
   "monthlyWeather": [
-    "mild with variable rain, cool mornings typical of Quito's highland climate",
-    "mild and rainy, one of the wetter months in the Avenue of Volcanoes",
-    "rainy and mild, with some of the year's cloudiest, wettest conditions",
-    "still rainy and mild, with Cotopaxi often obscured by cloud",
+    "mild with variable rain, cool mornings typical of Quito's highland climate — cloud-forest birding stays strong regardless",
+    "mild and rainy, one of the wetter months for volcano views, though the birding lodges run year-round",
+    "rainy and mild, with some of the year's cloudiest, wettest conditions for climbing",
+    "still rainy and mild, with Cotopaxi often obscured by cloud — a quieter, still-excellent month for cloud-forest birding",
     "rain easing, mild with clearer spells becoming more common",
     "the dry season begins, mild days with markedly clearer volcano views",
     "dry and mild, one of the best months for climbing and hiking",
-    "dry and mild, peak season for the Avenue of Volcanoes",
+    "dry and mild, peak season for volcano climbing and trekking",
     "still dry, mild with reliably clear mornings",
     "rain returning, mild with increasing cloud cover",
     "rainy and mild, showers common most afternoons",
     "mild with variable rain, though mornings often stay clear before afternoon clouds build"
   ],
   "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting"],
-  "searchAliases": ["Cotopaxi", "Quilotoa", "Otavalo", "Ecuador", "Mindo cloud forest"],
+  "searchAliases": ["Cotopaxi", "Quilotoa", "Otavalo", "Ecuador", "Mindo", "Tandayapa", "Bellavista Cloud Forest", "Guango Lodge", "San Isidro", "Papallacta"],
   "activityStyleTiers": {
     "cycling": {
       "scenicRoadCycling": "strong",
