@@ -111,6 +111,42 @@ export function seedProfileFromInterests(profile: PreferenceProfile, pickedKeys:
 }
 
 /**
+ * What each "who do you usually travel with" pick says about the
+ * traveler, as signed nudges to existing PreferenceProfile attributes.
+ * Unlike bands, this is a "select all that apply" question describing the
+ * user in general (someone can genuinely be both a solo traveler AND a
+ * couples traveler depending on the trip) — picking more options doesn't
+ * dilute any one signal, so each pick contributes independently, the same
+ * shape as seedProfileFromInterests. The magnitude is deliberately smaller
+ * than a direct interest or band pick, though: who you travel with is a
+ * softer, more inferred signal than someone explicitly saying "I want
+ * beach" or "I want luxury," so it should nudge, not dominate.
+ */
+const COMPANION_ATTRIBUTE_CONTRIBUTIONS: Record<string, Record<string, number>> = {
+  solo: { remoteWilderness: 1, authenticity: 0.5 },
+  friends: { nightlife: 1, adrenaline: 0.5 },
+  partner: { luxury: 0.5, wellness: 0.5, fineDining: 0.5 },
+  kids: { physicalChallenge: -1, nightlife: -1, beach: 0.5 },
+};
+
+export function seedProfileFromCompanions(profile: PreferenceProfile, companionKeys: string[]): PreferenceProfile {
+  const updated = { ...profile };
+  const picked = new Set(companionKeys || []);
+  const COMPANION_NUDGE_BASE = 4;
+
+  picked.forEach((key) => {
+    const contribution = COMPANION_ATTRIBUTE_CONTRIBUTIONS[key];
+    if (!contribution) return;
+    Object.entries(contribution).forEach(([attr, weight]) => {
+      if (!(attr in updated)) return;
+      updated[attr] = (updated[attr] || 0) + COMPANION_NUDGE_BASE * weight;
+    });
+  });
+
+  return updated;
+}
+
+/**
  * What each "Open To" band option says about the traveler, expressed as
  * signed nudges to existing PreferenceProfile attributes (never new ones —
  * these ride the same SLIDER_ATTRIBUTE_MAP fan-out that swipes and interest

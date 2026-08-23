@@ -22,7 +22,7 @@ import {
 } from '@/lib/dna/domains';
 import { chooseNextCard } from '@/lib/dna/selection';
 import { generateLearningCheck, type Feedback } from '@/lib/dna/summary';
-import { seedProfileFromBands, seedProfileFromInterests } from '@/lib/dna/interests';
+import { seedProfileFromBands, seedProfileFromCompanions, seedProfileFromInterests } from '@/lib/dna/interests';
 import { attributeLabel } from '@/lib/dna/card-visuals';
 import { TUTORIAL_CARD, TUTORIAL_CARD_ID } from '@/lib/dna/tutorial-card';
 import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
@@ -193,7 +193,10 @@ function OnboardingFlowLoaded({ cards, domains, dimensions, tensions, initialSta
       ...dnaState,
       basicsCompleted: true,
       profile: seedProfileFromBands(
-        seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+        seedProfileFromCompanions(
+          seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+          dnaState.companions,
+        ),
         dnaState.bands,
       ),
     };
@@ -211,7 +214,10 @@ function OnboardingFlowLoaded({ cards, domains, dimensions, tensions, initialSta
     const next: DnaState = {
       ...dnaState,
       profile: seedProfileFromBands(
-        seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+        seedProfileFromCompanions(
+          seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+          dnaState.companions,
+        ),
         dnaState.bands,
       ),
       completedOnboarding: true,
