@@ -1,0 +1,81 @@
+{
+  "id": "pakistan",
+  "name": "Pakistan",
+  "region": "South Asia",
+  "emoji": "⛰️",
+  "climate": "highland",
+  "about": "Summer (May–Sep) is the only real window for the high Karakoram — K2 Base Camp and the northern passes; winter is bitterly cold and many roads become impassable.",
+  "overview": "K2 and the Karakoram range, the stunningly scenic Hunza Valley, and the Karakoram Highway — one of the world's greatest high-altitude trekking destinations, far less crowded than Nepal.",
+  "costRange": { "min": "$", "max": "$$$" },
+  "costOverview": "Genuinely one of the best-value serious trekking destinations on Earth — everyday food and transport are cheap, and even the multi-week K2 Base Camp trek costs far less than comparable trips in Nepal.",
+  "costItems": [
+    { "label": "Coffee or tea", "price": 1.5, "unit": "" },
+    { "label": "Karahi (Pakistani curry) meal", "price": 5, "unit": "" },
+    { "label": "Taxi/jeep, 15 min", "price": 3, "unit": "" },
+    { "label": "K2 Base Camp trek package, guide & permits", "price": 2500, "unit": "per person, 18 days" },
+    { "label": "Karakoram Highway jeep tour, Hunza Valley", "price": 50, "unit": "per person, per day" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 9,
+    "scenic": 10,
+    "fishing": 2,
+    "roadtrip": 6,
+    "adventure": 8,
+    "golf": 0,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 5,
+    "festivals": 3,
+    "finedining": 3,
+    "streetfood": 5,
+    "nightlife": 1,
+    "winetasting": 0,
+    "spa": 1,
+    "luxuryLodging": 3,
+    "snowsports": 1,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 4,
+    "wildlife": 4
+  },
+  "budgetBands": ["basic", "comfortable"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "cold": [12, 1, 2],
+  "peak": [6, 7, 8],
+  "peakIntensity": "mild",
+  "low": [12, 1, 2],
+  "hikingBest": [5, 6, 7, 8, 9],
+  "hikingWorst": [12, 1, 2],
+  "specialSeasons": [
+    { "months": [4], "text": "Hunza Valley's apricot and cherry blossoms bloom in April, one of the most photographed times to visit." }
+  ],
+  "monthlyWeather": [
+    "bitterly cold, with many high-altitude roads impassable",
+    "bitterly cold, still deep winter in the northern areas",
+    "cold, with winter slowly easing at lower elevations",
+    "mild and increasingly pleasant, with Hunza Valley's blossoms in full bloom",
+    "warming up fast, good conditions before the high trekking season",
+    "warm and clear, the high Karakoram trekking season getting underway",
+    "warm and clear, peak season for K2 Base Camp and the northern passes",
+    "warm and clear, still excellent for high-altitude trekking",
+    "cool and clear, a favorite quieter month as the season winds down",
+    "cold, with the high passes becoming difficult to access again",
+    "cold, winter returning to the northern areas",
+    "bitterly cold, deep winter with many roads closed"
+  ],
+  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "nightlife"],
+  "searchAliases": ["K2", "Hunza Valley", "Skardu", "Karakoram Highway", "Fairy Meadows", "Gilgit-Baltistan"],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "casual",
+      "coastlines": "none"
+    }
+  }
+}

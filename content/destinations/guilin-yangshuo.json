@@ -1,0 +1,87 @@
+{
+  "id": "guilin-yangshuo",
+  "name": "Guilin & Yangshuo",
+  "region": "China",
+  "emoji": "🏞️",
+  "climate": "temperate",
+  "about": "Spring and fall (Mar–May, Sep–Nov) bring the clearest views of the karst peaks; summer (Jun–Aug) is hot, humid, and rainier, with October's Golden Week holiday bringing the year's biggest domestic-tourism crowds.",
+  "overview": "The karst limestone peaks that appear on China's 20-yuan banknote, a scenic river cruise from Guilin to Yangshuo, and some of Asia's best rock climbing and countryside cycling.",
+  "costRange": { "min": "$", "max": "$$$" },
+  "costOverview": "Genuinely cheap for the scenery on offer — countryside bike rentals and simple riverside meals cost next to nothing; the Li River cruise is the one real splurge.",
+  "costItems": [
+    { "label": "Green tea", "price": 1.5, "unit": "" },
+    { "label": "Beer fish, riverside restaurant dinner", "price": 12, "unit": "" },
+    { "label": "Li River cruise", "price": 90, "unit": "per person" },
+    { "label": "Rock climbing, guided half-day", "price": 50, "unit": "per person" },
+    { "label": "Bike rental, countryside", "price": 8, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 3,
+    "diving": 1,
+    "surfing": 0,
+    "sailing": 6,
+    "hiking": 5,
+    "scenic": 10,
+    "fishing": 3,
+    "roadtrip": 4,
+    "adventure": 7,
+    "golf": 2,
+    "stargazing": 3,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 3,
+    "finedining": 5,
+    "streetfood": 7,
+    "nightlife": 5,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 8,
+    "shopping": 4,
+    "birding": 4,
+    "wildlife": 3
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["easygoing", "secluded"],
+  "physicalBands": ["easy", "moderate", "active"],
+  "wet": [4, 5, 6],
+  "hot": [6, 7, 8],
+  "peak": [7, 8, 10],
+  "peakIntensity": "moderate",
+  "low": [12, 1, 2],
+  "hikingBest": [3, 4, 5, 10, 11],
+  "hikingWorst": [7, 8],
+  "specialSeasons": [
+    { "months": [10], "text": "China's Golden Week holiday (Oct 1-7) brings a huge spike in domestic tourism and crowds." }
+  ],
+  "monthlyWeather": [
+    "cool and often misty, quiet with the fewest visitors",
+    "cool and misty, still quiet outside Lunar New Year",
+    "mild and improving, one of the best months for clear karst views",
+    "mild, one of the best months as the rainy season approaches",
+    "warm and increasingly wet, with the plum rain season arriving",
+    "hot and humid, deep in the rainy season",
+    "hot and humid, peak summer with frequent afternoon showers",
+    "hot and humid, still peak season despite the heat",
+    "warm and drying out, a favorite month as conditions improve",
+    "mild and clear, excellent conditions but the year's busiest week (Golden Week)",
+    "mild and clear, still excellent with easing crowds",
+    "cool and misty, quiet again through the winter"
+  ],
+  "naSliders": ["surfing", "snowsports", "winetasting"],
+  "searchAliases": ["Li River", "Yangshuo", "West Street", "Longji Rice Terraces", "karst mountains"],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "signature",
+      "gravelRiding": "strong",
+      "mountainBiking": "casual"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none"
+    }
+  }
+}

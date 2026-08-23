@@ -1,0 +1,83 @@
+{
+  "id": "mongolia",
+  "name": "Mongolia",
+  "region": "Central Asia",
+  "emoji": "🐎",
+  "climate": "desert",
+  "about": "Naadam (July 11-13) is Mongolia's busiest week; summer (Jun–Aug) is the only realistic window for most travel, since winters are brutally cold across the whole country.",
+  "overview": "Vast steppe, the Gobi Desert, and one of the world's deepest living nomadic horse cultures — plus some of the best dark-sky stargazing anywhere on Earth.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Ulaanbaatar itself is cheap for food and transport — multi-day ger-camp and horseback expeditions into the steppe or Gobi Desert are the real, near-mandatory expense.",
+  "costItems": [
+    { "label": "Milk tea (suutei tsai)", "price": 1, "unit": "" },
+    { "label": "Buuz (Mongolian dumplings) meal", "price": 4, "unit": "" },
+    { "label": "Taxi, 15 min", "price": 3, "unit": "" },
+    { "label": "Ger camp stay, half board", "price": 60, "unit": "per person, per night" },
+    { "label": "Gobi Desert horseback trek package", "price": 800, "unit": "per person, 5 days" }
+  ],
+  "base": {
+    "sunbathing": 0,
+    "swimming": 0,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 5,
+    "scenic": 8,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 7,
+    "golf": 0,
+    "stargazing": 9,
+    "museums": 4,
+    "architecture": 4,
+    "festivals": 8,
+    "finedining": 3,
+    "streetfood": 4,
+    "nightlife": 3,
+    "winetasting": 0,
+    "spa": 2,
+    "luxuryLodging": 4,
+    "snowsports": 2,
+    "cycling": 3,
+    "shopping": 3,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["secluded"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "hot": [6, 7],
+  "cold": [11, 12, 1, 2, 3],
+  "peak": [7],
+  "peakIntensity": "mild",
+  "low": [11, 12, 1, 2],
+  "hikingBest": [6, 7, 8],
+  "hikingWorst": [12, 1, 2],
+  "specialSeasons": [
+    { "months": [7], "text": "The Naadam Festival (July 11-13) — wrestling, horse racing, and archery — is Mongolia's biggest national celebration and its busiest tourist week." }
+  ],
+  "monthlyWeather": [
+    "brutally cold, deep winter with temperatures often well below freezing",
+    "brutally cold, still deep winter across the whole country",
+    "cold, with winter slowly loosening its grip",
+    "cold and windy, one of the harshest months on the open steppe",
+    "cool and increasingly pleasant, a good early month for the steppe",
+    "warm and dry, a good month before the Naadam crowds",
+    "warm and dry, Naadam Festival month and the busiest week of the year",
+    "warm and dry, still excellent for the Gobi and steppe",
+    "cool and clear, a favorite quieter month with fewer visitors",
+    "cold and windy, with winter setting in fast",
+    "cold, deep winter returning across the country",
+    "brutally cold, deep winter with short daylight hours"
+  ],
+  "naSliders": ["swimming", "diving", "surfing", "sailing", "sunbathing", "winetasting"],
+  "searchAliases": ["Gobi Desert", "Ulaanbaatar", "Naadam Festival", "Golden Eagle Festival", "Mongolian steppe"],
+  "activityStyleTiers": {
+    "scenic": {
+      "deserts": "signature",
+      "mountains": "strong",
+      "forests": "none",
+      "astrophotography": "signature"
+    }
+  }
+}

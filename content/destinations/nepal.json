@@ -1,0 +1,83 @@
+{
+  "id": "nepal",
+  "name": "Nepal",
+  "region": "South Asia",
+  "emoji": "🗻",
+  "climate": "highland",
+  "about": "Two trekking windows bracket the monsoon: autumn (Oct–Nov) has the clearest mountain views and is the busiest, spring (Mar–May) brings blooming rhododendrons; Jun–Sep monsoon brings leeches, landslide risk, and zero visibility.",
+  "overview": "Eight of the world's fourteen highest peaks, the Everest Base Camp and Annapurna Circuit treks, and Kathmandu's ancient pagoda temples — the birthplace of high-altitude trekking tourism.",
+  "costRange": { "min": "$", "max": "$$$$" },
+  "costOverview": "Everyday food, tea, and local transport are extremely cheap — the real cost is the guided multi-day treks, which are essentially mandatory for the high routes.",
+  "costItems": [
+    { "label": "Dal bhat (Nepali set meal)", "price": 3, "unit": "" },
+    { "label": "Coffee or tea", "price": 1.5, "unit": "" },
+    { "label": "Taxi, 15 min", "price": 3, "unit": "" },
+    { "label": "Everest Base Camp trek package, guide & permits", "price": 1500, "unit": "per person, 12 days" },
+    { "label": "Pokhara paragliding", "price": 90, "unit": "per person" },
+    { "label": "Chitwan National Park jungle safari", "price": 120, "unit": "per person, 2 days" }
+  ],
+  "base": {
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 1,
+    "hiking": 10,
+    "scenic": 10,
+    "fishing": 2,
+    "roadtrip": 4,
+    "adventure": 8,
+    "golf": 1,
+    "stargazing": 6,
+    "museums": 6,
+    "architecture": 8,
+    "festivals": 6,
+    "finedining": 4,
+    "streetfood": 7,
+    "nightlife": 3,
+    "winetasting": 1,
+    "spa": 3,
+    "luxuryLodging": 5,
+    "snowsports": 0,
+    "cycling": 4,
+    "shopping": 5,
+    "birding": 6,
+    "wildlife": 6
+  },
+  "budgetBands": ["basic", "comfortable", "highend"],
+  "vibeBands": ["secluded", "easygoing"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "dry": [10, 11, 12, 1, 2, 3, 4],
+  "wet": [6, 7, 8, 9],
+  "peak": [10, 11],
+  "peakIntensity": "moderate",
+  "low": [6, 7, 8],
+  "hikingBest": [3, 4, 5, 10, 11],
+  "hikingWorst": [6, 7, 8, 9],
+  "specialSeasons": [
+    { "months": [6, 7, 8, 9], "text": "Monsoon season brings leeches, landslide risk, and zero mountain visibility — most trekkers avoid this window entirely." }
+  ],
+  "monthlyWeather": [
+    "cold at altitude but clear and dry, a good month for lower treks and Chitwan",
+    "cold at altitude but clear and dry, still good for lower-elevation trekking",
+    "mild and drying out, one of the best months as rhododendrons begin blooming",
+    "mild and clear, prime spring trekking season with rhododendrons in full bloom",
+    "warming up, still good trekking before the monsoon arrives",
+    "the monsoon arrives, hot and humid with heavy rain and zero mountain visibility",
+    "deep in monsoon, hot and wet with landslide risk on mountain roads",
+    "still deep in monsoon, hot and wet with limited trekking",
+    "monsoon tapering off, humid with improving visibility late in the month",
+    "dry and clear, the best month of the year with peak autumn trekking season",
+    "dry and clear, still excellent trekking with the clearest mountain views",
+    "cold and dry, good for lower treks as the high passes start closing"
+  ],
+  "naSliders": ["diving", "surfing", "snowsports", "winetasting"],
+  "searchAliases": ["Kathmandu", "Everest Base Camp", "Annapurna", "Pokhara", "Chitwan National Park"],
+  "activityStyleTiers": {
+    "scenic": {
+      "mountains": "signature",
+      "forests": "strong",
+      "coastlines": "none"
+    }
+  }
+}
