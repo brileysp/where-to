@@ -1,0 +1,99 @@
+{
+  "id": "chamonix",
+  "name": "Chamonix & the French Alps",
+  "region": "France",
+  "emoji": "⛷️",
+  "climate": "polar",
+  "about": "Winter (Dec–Mar) is prime skiing and extreme freeride terrain; summer (Jun–Sep) is prime hiking, including the multi-day Tour du Mont Blanc; the shoulder mud seasons see many lifts and trails close.",
+  "overview": "The birthplace of modern mountaineering, beneath Mont Blanc, western Europe's highest peak — extreme skiing, the world-famous Tour du Mont Blanc trek, and some of the Alps' most serious adventure sports.",
+  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costOverview": "There's no real budget tier in Chamonix — even a casual café meal runs high, and the marquee activities (the Aiguille du Midi, guided glacier hikes, ski passes) push costs further still.",
+  "costItems": [
+    { "label": "Espresso", "price": 3, "unit": "" },
+    { "label": "Baguette & pastry breakfast", "price": 6, "unit": "" },
+    { "label": "Aiguille du Midi cable car", "price": 75, "unit": "" },
+    { "label": "Mont Blanc guided hike", "price": 150, "unit": "per person" },
+    { "label": "Ski day pass, Chamonix Valley", "price": 68, "unit": "per day" }
+  ],
+  "base": {
+    "sunbathing": 2,
+    "swimming": 1,
+    "diving": 0,
+    "surfing": 0,
+    "sailing": 0,
+    "hiking": 8,
+    "scenic": 10,
+    "fishing": 3,
+    "roadtrip": 6,
+    "adventure": 9,
+    "golf": 2,
+    "stargazing": 6,
+    "museums": 3,
+    "architecture": 4,
+    "festivals": 4,
+    "finedining": 6,
+    "streetfood": 4,
+    "nightlife": 5,
+    "winetasting": 3,
+    "spa": 5,
+    "luxuryLodging": 7,
+    "snowsports": 9,
+    "cycling": 6,
+    "shopping": 4,
+    "birding": 3,
+    "wildlife": 4
+  },
+  "budgetBands": ["highend", "luxury"],
+  "vibeBands": ["secluded", "easygoing"],
+  "physicalBands": ["moderate", "active", "challenging"],
+  "cold": [11, 12, 1, 2, 3],
+  "peak": [7, 8, 12, 1, 2],
+  "low": [4, 5, 10, 11],
+  "hikingBest": [6, 7, 8, 9],
+  "hikingWorst": [11, 12, 1, 2, 3, 4],
+  "noSnow": [6, 7, 8, 9],
+  "shopClosures": true,
+  "sliderEvents": {
+    "hiking": [
+      {
+        "label": "Summer trail access, including the Tour du Mont Blanc",
+        "weight": 6,
+        "months": { "6": 0.7, "7": 1, "8": 1, "9": 0.7 }
+      }
+    ],
+    "scenic": [
+      {
+        "label": "Green-summer contrast",
+        "weight": 1,
+        "months": { "6": 0.3, "7": 0.5, "8": 0.5, "9": 0.3 }
+      }
+    ]
+  },
+  "monthlyWeather": [
+    "cold and snowy, deep in ski season with reliable powder",
+    "cold and snowy, still prime ski season with long daylight returning",
+    "cold but brightening, with good snow still on the slopes",
+    "cold at altitude, with lower-elevation snow melting fast as lifts start closing",
+    "cool and often wet, deep in mud season with many lifts and hotels closed",
+    "mild in the valley but still cool at altitude, with the Tour du Mont Blanc season opening",
+    "mild and increasingly clear, one of the best months for hiking with alpine meadows in bloom",
+    "mild and pleasant, still prime hiking season with the clearest Mont Blanc views",
+    "cool and clear, still excellent for hiking as crowds thin",
+    "cool and increasingly wet, deep in mud season again as trails start closing",
+    "cold, with the first snow arriving as resorts prepare to reopen",
+    "cold and snowy, with ski season back in full swing"
+  ],
+  "naSliders": ["swimming", "surfing", "diving", "sailing"],
+  "searchAliases": ["Mont Blanc", "Aiguille du Midi", "Tour du Mont Blanc", "UTMB", "French Alps"],
+  "activityStyleTiers": {
+    "cycling": {
+      "scenicRoadCycling": "strong",
+      "mountainBiking": "strong"
+    },
+    "scenic": {
+      "mountains": "signature",
+      "forests": "casual",
+      "astrophotography": "casual"
+    }
+  }
+}

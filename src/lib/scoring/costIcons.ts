@@ -85,6 +85,7 @@ const RULES: [string[], string][] = [
   [['pizza'], '🍕'],
   [['lobster'], '🦞'],
   [['flamenco'], '💃'],
+  [['pretzel'], '🥨'],
   [['conch'], '🐚'],
   [['flying fish'], '🐟'],
   [['tamale'], '🫔'],
