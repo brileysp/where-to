@@ -24,6 +24,7 @@ export const SLIDER_ATTRIBUTE_MAP: Record<string, Array<[string, number]>> = {
   surfing: [['surfing', 0.6], ['oceanSwimming', 0.15], ['reefBreaks', 0.2], ['warmWater', 0.15], ['adrenaline', 0.1]],
   sailing: [['sailing', 0.6], ['oceanSwimming', 0.15], ['luxury', 0.15], ['relaxation', 0.1]],
   spa: [['wellness', 1], ['luxury', 0.3], ['relaxation', 0.3]],
+  luxuryLodging: [['luxury', 1], ['relaxation', 0.2]],
   museums: [['museums', 0.6], ['culture', 0.3], ['famousLandmarks', 0.2]],
   architecture: [['architecture', 0.6], ['culture', 0.2], ['famousLandmarks', 0.3], ['cities', 0.1]],
   festivals: [['festivals', 0.6], ['culture', 0.3], ['authenticity', 0.2]],

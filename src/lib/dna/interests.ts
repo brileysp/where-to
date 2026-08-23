@@ -1,4 +1,5 @@
-import type { DnaState, PreferenceProfile } from './types';
+import { BAND_DIMENSIONS } from '../scoring/constants';
+import type { DnaBands, DnaState, PreferenceProfile } from './types';
 
 // Ported verbatim from interests.js (legacy app at
 // /Users/brendansalant-pearce/Desktop/Claude Code/where-to/interests.js).
@@ -103,6 +104,83 @@ export function seedProfileFromInterests(profile: PreferenceProfile, pickedKeys:
     (def.attributes || []).forEach((attr) => {
       if (!(attr in updated)) return;
       updated[attr] = (updated[attr] || 0) + PRIMARY_NUDGE;
+    });
+  });
+
+  return updated;
+}
+
+/**
+ * What each "Open To" band option says about the traveler, expressed as
+ * signed nudges to existing PreferenceProfile attributes (never new ones —
+ * these ride the same SLIDER_ATTRIBUTE_MAP fan-out that swipes and interest
+ * picks already use, e.g. 'luxury' already feeds luxuryLodging/spa/
+ * finedining/sailing/golf). Options with no real opinion (e.g. 'comfortable',
+ * 'moderate') are simply omitted — they contribute nothing.
+ */
+const BAND_ATTRIBUTE_CONTRIBUTIONS: Record<string, Record<string, Record<string, number>>> = {
+  budget: {
+    basic: { luxury: -1, lowSeasonDeals: 1 },
+    highend: { luxury: 0.6 },
+    luxury: { luxury: 1 },
+  },
+  weather: {
+    cold: { snowsports: 1, beach: -1, oceanSwimming: -1, snorkeling: -1 },
+    cool: { snowsports: 0.3, beach: -0.3, oceanSwimming: -0.3, snorkeling: -0.3 },
+    warm: { beach: 0.3, oceanSwimming: 0.3, snorkeling: 0.3, snowsports: -0.3 },
+    hot: { beach: 1, oceanSwimming: 1, snorkeling: 1, snowsports: -1 },
+  },
+  vibe: {
+    secluded: { avoidingCrowds: 1, nightlife: -0.6 },
+    easygoing: { avoidingCrowds: 0.3, nightlife: -0.2 },
+    lively: { nightlife: 0.5 },
+    highenergy: { nightlife: 1, avoidingCrowds: -0.3 },
+  },
+  physical: {
+    easy: { physicalChallenge: -1, adrenaline: -0.5 },
+    active: { physicalChallenge: 0.5, adrenaline: 0.3 },
+    challenging: { physicalChallenge: 1, adrenaline: 0.7 },
+  },
+};
+
+/**
+ * Nudges a Travel DNA profile from the onboarding "Open To" band picks
+ * (Budget & Comfort, Weather, Social Vibe, Physical Demand). Only picks
+ * narrow enough to say something real move the profile — selecting every
+ * option in a dimension already means "no preference" everywhere else in
+ * the app (see bandPenalty), so it's treated as zero signal here too.
+ * Specificity scales linearly: picking 1 of 4 options is a strong, full-
+ * strength signal; 3 of 4 is barely a signal; 4 of 4 is none at all.
+ * Contradictory picks within a dimension (e.g. both 'basic' and 'luxury')
+ * average out toward zero rather than double up.
+ */
+export function seedProfileFromBands(profile: PreferenceProfile, bands: DnaBands): PreferenceProfile {
+  const updated = { ...profile };
+  const BAND_NUDGE_BASE = 8;
+
+  BAND_DIMENSIONS.forEach((dim) => {
+    const dimKey = dim.key as keyof DnaBands;
+    const selected = bands?.[dimKey] || [];
+    const totalOptions = dim.bands.length;
+    if (!selected.length || selected.length >= totalOptions) return; // unset or "no preference"
+
+    const contributionsForDim = BAND_ATTRIBUTE_CONTRIBUTIONS[dim.key];
+    if (!contributionsForDim) return;
+
+    const specificity = (totalOptions - selected.length) / (totalOptions - 1);
+    const attrTotals: Record<string, number> = {};
+    selected.forEach((optionKey) => {
+      const contribution = contributionsForDim[optionKey];
+      if (!contribution) return;
+      Object.entries(contribution).forEach(([attr, weight]) => {
+        attrTotals[attr] = (attrTotals[attr] || 0) + weight;
+      });
+    });
+
+    Object.entries(attrTotals).forEach(([attr, total]) => {
+      if (!(attr in updated)) return;
+      const averageContribution = total / selected.length;
+      updated[attr] = (updated[attr] || 0) + BAND_NUDGE_BASE * specificity * averageContribution;
     });
   });
 

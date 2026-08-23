@@ -22,7 +22,7 @@ import {
 } from '@/lib/dna/domains';
 import { chooseNextCard } from '@/lib/dna/selection';
 import { generateLearningCheck, type Feedback } from '@/lib/dna/summary';
-import { seedProfileFromInterests } from '@/lib/dna/interests';
+import { seedProfileFromBands, seedProfileFromInterests } from '@/lib/dna/interests';
 import { attributeLabel } from '@/lib/dna/card-visuals';
 import { TUTORIAL_CARD, TUTORIAL_CARD_ID } from '@/lib/dna/tutorial-card';
 import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
@@ -192,7 +192,10 @@ function OnboardingFlowLoaded({ cards, domains, dimensions, tensions, initialSta
     const next: DnaState = {
       ...dnaState,
       basicsCompleted: true,
-      profile: seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+      profile: seedProfileFromBands(
+        seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+        dnaState.bands,
+      ),
     };
     commit(next);
     // Seed the main results app's "Open To" bands from what was just
@@ -207,7 +210,10 @@ function OnboardingFlowLoaded({ cards, domains, dimensions, tensions, initialSta
   async function handleStyleShortcutContinue() {
     const next: DnaState = {
       ...dnaState,
-      profile: seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+      profile: seedProfileFromBands(
+        seedProfileFromInterests(dnaState.profile, dnaState.pickedInterests),
+        dnaState.bands,
+      ),
       completedOnboarding: true,
     };
     await commitAndGoToResults(next);
