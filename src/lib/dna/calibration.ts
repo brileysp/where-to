@@ -33,23 +33,23 @@ export function calculateCalibrationPercent(dnaState: DnaState, allCards: DnaCar
   const progress = Math.min(swipeCount / MAX_BASE_SWIPES, 1);
   const earlyDamper = Math.min(progress * 2, 1);
 
-  // Base: swipe volume, S-curved — worth up to 69 of the 100 points.
-  const base = sCurve(progress, 0.55, 7) * 69;
+  // Base: swipe volume, S-curved — worth up to 84 of the 100 points. (Was
+  // 69 of 100, with the other 15 reserved for a "confirmed insights" bonus
+  // tied to a feature that was ported but never wired into the swipe loop
+  // — confirmedInsights was always empty, so that bonus was always zero
+  // and calibration could never actually reach 100%. Folded its 15 points
+  // into base rather than redesigning the curve's balance.)
+  const base = sCurve(progress, 0.55, 7) * 84;
 
   // Diversity: worth up to 12 points, damped early.
   const diversityBonus = calculateCategoryDiversity(dnaState, allCards) * 12 * earlyDamper;
-
-  // Confirmed insights: independent validation. Worth up to 15 points (3
-  // each, capped at 5 counted).
-  const confirmedCount = (dnaState.confirmedInsights || []).length;
-  const insightBonus = Math.min(confirmedCount, 5) * 3;
 
   // A stream of decisive Love swipes, capped low and damped early.
   const loveCount = (dnaState.swipes || []).filter((s) => s.type === 'love').length;
   const loveRatio = swipeCount ? loveCount / swipeCount : 0;
   const loveBonus = Math.min(loveRatio * 8, 4) * earlyDamper;
 
-  const total = base + diversityBonus + insightBonus + loveBonus;
+  const total = base + diversityBonus + loveBonus;
   return Math.max(0, Math.min(100, Math.round(total)));
 }
 

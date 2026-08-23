@@ -4,11 +4,20 @@ import { createEmptyPreferenceProfile } from '@/lib/dna/profile';
 import { createStatePair, legacy } from './helpers';
 
 describe('convertTravelDNAToRecommendationWeights', () => {
-  it('matches legacy on the blank-slate (all-zero) profile', () => {
+  // Deliberate divergence from the legacy engine: legacy's own
+  // SLIDER_ATTRIBUTE_MAP never had a luxuryLodging entry either — a real
+  // bug in the original app, not introduced by the port — so luxuryLodging
+  // could never receive a nonzero weight from any signal (interests,
+  // bands, or swipes). Fixed on this side only; the legacy reference used
+  // for this comparison still lacks the key, so it's added back in before
+  // comparing everything else for an exact match.
+  it('matches legacy on the blank-slate (all-zero) profile, plus the fixed luxuryLodging entry', () => {
     const { legacyState, newState } = createStatePair();
-    expect(convertTravelDNAToRecommendationWeights(newState.profile)).toEqual(
-      legacy.convertTravelDNAToRecommendationWeights(legacyState.profile),
-    );
+    const legacyWeights = legacy.convertTravelDNAToRecommendationWeights(legacyState.profile);
+    expect(convertTravelDNAToRecommendationWeights(newState.profile)).toEqual({
+      ...legacyWeights,
+      luxuryLodging: 2,
+    });
   });
 
   // Deliberate divergence from the legacy engine: legacy floors EVERY

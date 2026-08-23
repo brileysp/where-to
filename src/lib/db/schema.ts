@@ -31,7 +31,7 @@ export const swipeTypeEnum = pgEnum('swipe_type', ['no', 'yes', 'love']);
 // ---- Global / shared content -------------------------------------------------
 // Everything below is read-only at runtime (write access reserved for the
 // content-import script). PREFERENCE_ATTRIBUTES, SLIDERS, PERSONAS,
-// BAND_DIMENSIONS, INTEREST_EMOJIS, INSIGHT_TEMPLATES and
+// BAND_DIMENSIONS, INTEREST_EMOJIS and
 // DOMAIN_NUANCE_TEMPLATES stay as TypeScript code (see lib/dna, lib/scoring)
 // rather than tables — they're tightly coupled to the code that reads them.
 

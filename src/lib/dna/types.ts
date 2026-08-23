@@ -118,21 +118,6 @@ export interface FeedbackRecord {
   shownAtSwipeCount: number;
 }
 
-export interface Insight {
-  id: string;
-  templateId: string;
-  text: string;
-  relatedAttributes: string[];
-  evidenceTags: string[];
-  confidence: number;
-  status: 'pending';
-  shownAtSwipeCount: number;
-}
-
-export interface InsightRecord extends Omit<Insight, 'status'> {
-  status: 'confirmed' | 'rejected' | 'unsure';
-}
-
 export interface DnaBands {
   budget: string[];
   weather: string[];
@@ -178,11 +163,6 @@ export interface DnaState {
   /** Domains whose deep dive finished without earning a real nuance line (see hasEarnedDomainNuance) — their remaining unseen deep cards stay eligible, blended into ordinary swiping, until either a real insight is earned or the domain runs out of cards. */
   unresolvedDeepDomains: string[];
   pendingDeepDiveDomains: string[];
-  confirmedInsights: InsightRecord[];
-  rejectedInsights: InsightRecord[];
-  unsureInsights: InsightRecord[];
-  lastInsightCheckSwipeCount: number;
-  pendingInsight: Insight | null;
   calibrationMilestonesShown: number[];
   dimensionState: DimensionState;
   confirmedTensions: FeedbackRecord[];
@@ -265,15 +245,4 @@ export interface Evidence {
   patternSummary: string;
   loved: string[];
   liked: string[];
-}
-
-export interface InsightTemplate {
-  id: string;
-  minEvidence: number;
-  tier: 'broad' | 'narrow';
-  requiresDomain?: string | null;
-  text: string;
-  relatedAttributes: string[];
-  evidenceAttributes: string[];
-  test: (profile: PreferenceProfile) => boolean;
 }
