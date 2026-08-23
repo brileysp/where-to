@@ -13,6 +13,11 @@
   "costOverview": "A plate of nshima stays inexpensive throughout — guided walking safaris and bush-camp stays are the real, near-mandatory cost here.",
   "costItems": [
     {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
       "label": "Nshima (cornmeal staple) plate",
       "unit": "",
       "price": 5
@@ -33,9 +38,9 @@
       "price": 180
     },
     {
-      "label": "Flight, Lusaka–Mfuwe",
-      "unit": "",
-      "price": 210
+      "label": "Chobe day safari from Livingstone",
+      "price": 170,
+      "unit": "per person"
     }
   ],
   "base": {

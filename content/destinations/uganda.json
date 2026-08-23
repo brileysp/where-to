@@ -1,6 +1,6 @@
 {
   "id": "uganda",
-  "name": "Bwindi & Kibale",
+  "name": "Uganda",
   "region": "Uganda",
   "emoji": "🦧",
   "climate": "highland",
@@ -13,7 +13,7 @@
   "costOverview": "Gorilla and chimp permits are the two real expenses here — at roughly half Rwanda's price for a similar gorilla trek.",
   "costItems": [
     {
-      "label": "Boda-boda, 15 min",
+      "label": "Boda-boda (motorcycle taxi), 15 min",
       "unit": "",
       "price": 1.5
     },
@@ -21,6 +21,11 @@
       "label": "Matoke (steamed plantain) plate",
       "unit": "",
       "price": 5
+    },
+    {
+      "label": "Private driver & 4x4 vehicle",
+      "price": 120,
+      "unit": "per day"
     },
     {
       "label": "Chimpanzee tracking permit",

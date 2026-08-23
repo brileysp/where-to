@@ -6,14 +6,47 @@
   "climate": "tropical",
   "about": "Dry winter (May–Sep) concentrates animals at waterholes — prime game viewing. Wet summer is lush but green and dispersed.",
   "overview": "Africa's most accessible major safari — a road network genuine enough to explore entirely by rental car, no guide required.",
-  "costRange": { "min": "$", "max": "$$$$$" },
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
   "costOverview": "Uniquely set up for a self-drive trip — no mandatory guide or vehicle fees — while private lodges bordering the park rank among the continent's best.",
   "costItems": [
-    { "label": "Coffee", "price": 3, "unit": "" },
-    { "label": "Self-catering groceries", "price": 15, "unit": "per day" },
-    { "label": "Steakhouse dinner, Skukuza", "price": 18, "unit": "" },
-    { "label": "Boma braai buffet", "price": 28, "unit": "" },
-    { "label": "Conservation fee", "price": 36, "unit": "per day" }
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Self-catering groceries",
+      "price": 15,
+      "unit": "per day"
+    },
+    {
+      "label": "Steakhouse dinner, Skukuza",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Boma braai buffet",
+      "price": 28,
+      "unit": ""
+    },
+    {
+      "label": "Conservation fee",
+      "price": 36,
+      "unit": "per day"
+    },
+    {
+      "label": "Rest camp bungalow, Skukuza",
+      "price": 110,
+      "unit": "per night, 2-person unit"
+    },
+    {
+      "label": "Sabi Sands lodge, entry-level luxury",
+      "price": 1000,
+      "unit": "per person, per night, all-inclusive"
+    }
   ],
   "base": {
     "sunbathing": 1,

@@ -1,68 +1,73 @@
 {
   "id": "kenya",
-  "name": "Maasai Mara & Coast",
+  "name": "Maasai Mara & Amboseli",
   "region": "Kenya",
   "emoji": "🦁",
   "climate": "tropical",
   "about": "Long dry season Jun–Oct brings the migration river crossings; Palearctic migrant birds arrive Nov–Mar.",
-  "overview": "The classic East African safari paired with Swahili coast beaches — big-cat plains inland, dhows and coral reefs on the Indian Ocean.",
+  "overview": "Kenya's two classic safari circuits — the Maasai Mara's Great Migration river crossings and Amboseli's elephant herds beneath Kilimanjaro.",
   "costRange": {
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Maasai Mara Reserve fees are among the highest in Africa, climbing further in peak season — coastal Mombasa and Diani stay comparatively affordable.",
+  "costOverview": "Kenya's parks charge some of Africa's highest entry fees, and the real cost driver is the camp or lodge tier that bundles guide, vehicle, and game drives — Amboseli runs a notch cheaper than the Mara.",
   "costItems": [
     {
       "label": "Chai (tea)",
-      "unit": "",
-      "price": 1
+      "price": 1,
+      "unit": ""
     },
     {
       "label": "Shared minibus taxi (matatu), 15 min",
-      "unit": "",
-      "price": 1
+      "price": 1,
+      "unit": ""
     },
     {
-      "label": "Mandazi & chai breakfast",
-      "unit": "",
-      "price": 2
+      "label": "Nyama choma (grilled meat), local restaurant",
+      "price": 9,
+      "unit": ""
     },
     {
-      "label": "Coastal fish curry or biryani",
-      "unit": "",
-      "price": 7
+      "label": "Amboseli National Park entry",
+      "price": 90,
+      "unit": "per day"
     },
     {
       "label": "Maasai Mara Reserve entry",
-      "unit": "",
-      "price": 100
+      "price": 100,
+      "unit": "per day"
+    },
+    {
+      "label": "Mid-range safari lodge, full board",
+      "price": 400,
+      "unit": "per person, per night"
     }
   ],
   "base": {
-    "sunbathing": 8,
-    "swimming": 8,
-    "diving": 5,
-    "surfing": 2,
-    "sailing": 3,
+    "sunbathing": 1,
+    "swimming": 1,
+    "diving": 1,
+    "surfing": 1,
+    "sailing": 1,
     "hiking": 5,
     "scenic": 8,
     "fishing": 4,
     "roadtrip": 5,
     "adventure": 4,
-    "golf": 2,
+    "golf": 1,
     "stargazing": 7,
-    "museums": 4,
-    "architecture": 3,
+    "museums": 2,
+    "architecture": 2,
     "festivals": 5,
     "finedining": 4,
     "streetfood": 4,
-    "nightlife": 3,
+    "nightlife": 1,
     "winetasting": 1,
     "spa": 4,
     "luxuryLodging": 9,
     "snowsports": 0,
     "cycling": 2,
-    "shopping": 5,
+    "shopping": 3,
     "birding": 5,
     "wildlife": 8
   },
@@ -146,7 +151,7 @@
     }
   ],
   "monthlyWeather": [
-    "warm and mostly dry, with the coast at its hottest",
+    "warm and mostly dry, with clear morning views of Kilimanjaro over Amboseli",
     "warm and dry, one of the best stretches before the long rains",
     "warm with the long rains building, increasingly wet",
     "the wettest month, warm with frequent, heavy downpours",
@@ -160,22 +165,16 @@
     "warm with light, intermittent rain from the short rains tailing off"
   ],
   "naSliders": [
+    "diving",
+    "sailing",
     "snowsports",
+    "surfing",
+    "swimming",
     "winetasting"
   ],
   "searchAliases": [
+    "Amboseli",
     "Maasai Mara",
-    "Masai Mara",
-    "Mombasa",
-    "Diani Beach"
-  ],
-  "activityStyleTiers": {
-    "scenic": {
-      "coastlines": "strong",
-      "mountains": "none",
-      "forests": "none",
-      "deserts": "none",
-      "astrophotography": "casual"
-    }
-  }
+    "Masai Mara"
+  ]
 }

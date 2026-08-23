@@ -1,16 +1,16 @@
 {
   "id": "ethiopia",
-  "name": "Simien Mountains",
+  "name": "Ethiopia",
   "region": "Ethiopia",
   "emoji": "🦜",
   "climate": "highland",
-  "about": "Dry season Oct–Mar is best for trekking, heavy rains Jun–Sep make trails difficult.",
-  "overview": "High-altitude trekking through the Simien Mountains, with endemic wildlife like gelada monkeys and world-class birding.",
+  "about": "Dry season (Oct–Mar) is best for both trekking and sightseeing across the highlands, including Lalibela; heavy rains Jun–Sep make travel and trail conditions harder.",
+  "overview": "Ethiopia's dramatic range in one country — high-altitude trekking through the Simien Mountains among gelada monkeys, Lalibela's rock-hewn churches, and world-class birding throughout.",
   "costRange": {
     "min": "$",
     "max": "$$$"
   },
-  "costOverview": "The Simien Mountains are far cheaper than an African safari — a full plate of injera and wat costs just a few dollars, though every trekker pays the same mandatory scout fee built into each day on the trail.",
+  "costOverview": "Ethiopia stays remarkably cheap day to day — coffee and injera cost next to nothing — but a Simien trek adds a mandatory daily scout fee, and pairing the mountains with Lalibela's churches usually means a domestic flight.",
   "costItems": [
     {
       "label": "Ethiopian coffee",
@@ -23,7 +23,7 @@
       "unit": ""
     },
     {
-      "label": "Mandatory scout fee",
+      "label": "Mandatory scout fee, Simien trek",
       "price": 18,
       "unit": "per day"
     },
@@ -31,6 +31,16 @@
       "label": "Guided trek package, guide + scout + mules",
       "price": 90,
       "unit": "per day"
+    },
+    {
+      "label": "Lalibela churches, joint entrance ticket",
+      "price": 100,
+      "unit": "valid 5 days"
+    },
+    {
+      "label": "Domestic flight, Addis Ababa–Lalibela",
+      "price": 140,
+      "unit": "one-way"
     }
   ],
   "base": {
@@ -67,9 +77,11 @@
     "highend"
   ],
   "vibeBands": [
-    "secluded"
+    "secluded",
+    "easygoing"
   ],
   "physicalBands": [
+    "easy",
     "moderate",
     "active",
     "challenging"
@@ -139,14 +151,14 @@
     ]
   },
   "monthlyWeather": [
-    "dry and clear, with cold nights at altitude dropping below freezing",
-    "dry and clear, still among the coldest, clearest months",
+    "dry and clear across the highlands, with cold nights at altitude dropping below freezing",
+    "dry and clear, still among the coldest, clearest months for travel throughout the highlands",
     "dry and mild by day, with nights still cold at altitude",
-    "dry and mild, one of the last good months before the rains",
-    "increasingly wet, with rain becoming more frequent",
+    "dry and mild, one of the last good months before the rains set in",
+    "increasingly wet, with rain becoming more frequent across the highlands",
     "wet, with rain building toward the peak of the season",
-    "the wettest month, with heavy rain making trails difficult",
-    "still very wet, with heavy rain continuing to make trekking difficult",
+    "the wettest month, with heavy rain making roads and trails difficult",
+    "still very wet, with heavy rain continuing to complicate travel and trekking alike",
     "wet early on, drying out as the month progresses",
     "dry and clear, with the landscape lush and green after the rains",
     "dry and clear, one of the best months with vivid green scenery",
@@ -161,6 +173,8 @@
     "winetasting"
   ],
   "searchAliases": [
+    "Lalibela",
+    "Simien Mountains",
     "gelada monkeys"
   ],
   "activityStyleTiers": {
