@@ -61,15 +61,86 @@ import { parseSliderCurve } from '../src/lib/scoring/curve';
 
 type Group = 'A' | 'B' | 'C' | 'D' | 'E-colony' | 'E-temperate' | 'F';
 
-/** Trough as a fraction of the destination's own peak. */
-const TROUGH: Record<Group, number> = {
-  A: 0.55,
-  B: 0.45,
-  C: 0.6,
-  D: 0.3,
-  'E-colony': 0.15,
-  'E-temperate': 0.45,
-  F: 0.4,
+/**
+ * FLOORS ARE ABSOLUTE, NOT A FRACTION OF THE PEAK.
+ *
+ * The first version of this script set trough = peak x fraction, which is a
+ * RELATIVE measure on a scale that has to be absolute and cross-comparable.
+ * It failed in both directions, which is what gave the mechanism away:
+ *
+ *   Costa Rica's July read 3.0 while Lofoten's July read 7.0 — the model
+ *   claimed Lofoten was more than twice the birding. Lofoten in July has
+ *   roughly forty breeding species; Costa Rica has six hundred residents
+ *   and you will see a hundred in a day.
+ *
+ *   Panama's worst month (2.4) fell below the Great Smokies' BEST (5.0).
+ *
+ *   And Kaziranga, whose gates are locked for the monsoon, came out at 2.7
+ *   — too generous — because a percentage cannot express "closed".
+ *
+ * A floor is a claim about what the birding is genuinely worth in the worst
+ * month, on the same 0-10 scale as every other destination. It answers two
+ * questions: can you get there and move around, and what fraction of the
+ * avifauna is present year-round.
+ *
+ * On the first question, note that a destination is a REGION, not a gate.
+ * Kaziranga's park shuts for the monsoon but Assam does not — the
+ * Brahmaputra floodplain, the tea estates and Nameri are all still there,
+ * so its floor is 2 rather than the 0.5 "closed" would imply. Antarctica is
+ * the only genuine zero-access case in the catalogue: no ships sail.
+ *
+ * The bands the floors below are drawn from:
+ *    0.5-1   nobody can be there at all
+ *    1-2     the birds are physically absent (seabird colonies)
+ *    2.5-3.5 temperate, resident species only
+ *    3.5-4.5 arid, thin resident base
+ *    5.5-6.5 savanna: migrants gone, residents rich
+ *    6.5-8   resident-rich rainforest and cloud forest, where the marquee
+ *            birds never leave and only comfort changes
+ */
+const FLOOR: Record<string, number> = {
+  // A - boreal-winter migrant arrival
+  kenya: 6.5, tanzania: 6.5, srilanka: 6, 'rajasthan-golden-triangle': 4, egypt: 3,
+  vietnam: 5, thailand: 3.5, 'colombian-andes': 7.5, bhutan: 5.5, canaries: 4, dubai: 3,
+  oaxaca: 3.5, mexicocity: 4, guatemala: 3.5, nicaragua: 5, belize: 5.5, bagan: 3.5,
+  bangkok: 4, angkor: 4, luangprabang: 4, hongkong: 4, singapore: 4, jordan: 3,
+  ladakh: 2, mongolia: 2.5,
+  // thailand, guatemala and oaxaca are floored well under what their
+  // resident avifauna deserves, purely because their PEAKS are 5 — the same
+  // peak as the Great Smoky Mountains, for countries holding a thousand-plus
+  // species. The floor cannot exceed the peak, so the incoherence surfaces
+  // here but does not belong here: their peaks are the thing that is wrong,
+  // and re-ranking peaks is a separate decision from authoring seasons.
+  // B - passage bottleneck
+  morocco: 3.5, algarve: 3.5, 'new-orleans': 3, 'texas-hill-country': 3, gbr: 4,
+  // C - green-season arrival. Kruger's ~500 species are about 350 resident
+  // and 100-150 migrant, so the migrants are a bonus tier and the residents
+  // carry the dry season; 6.5, not the 4.8 a percentage produced.
+  kruger: 6.5, zambia: 5.5, zimbabwe: 5.5, botswana: 6, namibia: 5.5,
+  // D - dry-season concentration and access
+  pantanal: 7, kaziranga: 2, madagascar: 6, 'peruvian-amazon': 7, ethiopia: 5.5,
+  uganda: 7, rwanda: 6.5, peru: 7, 'costa-rica': 7, nepal: 4, kerala: 4, chiapas: 5.5,
+  ghana: 5, panama: 7, 'colombian-caribbean': 6, palawan: 5.5, komodo: 4, rajaampat: 6,
+  atacama: 3.5, uyuni: 3, mauritius: 3.5, fiji: 3.5, barbados: 3, maldives: 3,
+  seychelles: 4.5, borneo: 7, taiwan: 4.5,
+  // E-colony - the birds are genuinely gone. Galapagos is the exception and
+  // was miscategorised: its boobies, finches and frigatebirds are resident
+  // endemics, not a seasonal colony, so only the emphasis changes month to
+  // month and its floor belongs with the rainforest band.
+  iceland: 1.5, 'faroe-islands': 1.5, lofoten: 1.5, svalbard: 1, antarctica: 0.5,
+  falklands: 2, galapagos: 7, azores: 2, madeira: 2.5, 'puerto-rico': 3.5,
+  'monterey-big-sur': 3, 'vancouver-island': 3, 'southeast-alaska': 2.5,
+  // E-temperate - quiet, never impossible
+  yellowstone: 2.5, 'denali-interior': 1.5, churchill: 1.5, banff: 2.5,
+  'glacier-waterton': 2.5, acadia: 2.5, olympic: 3, yosemite: 3,
+  'great-smoky-mountains': 3, 'upper-peninsula': 2.5, 'badlands-black-hills': 2.5,
+  'scottish-highlands-skye': 2.5, 'nova-scotia': 2.5, tasmania: 4, 'north-island': 3.5,
+  'milford-sound-fiordland': 3, queenstown: 3, 'chilean-lake-district': 3,
+  'argentine-lake-district': 3, 'el-chalten': 2.5, 'torres-del-paine': 3,
+  'tierra-del-fuego': 3, 'cape-town': 5, everglades: 4, uluru: 3, sydney: 3.5,
+  mallorca: 3, mendoza: 3, 'ecuadorian-andes': 8,
+  // F - single-species spectacle
+  hokkaido: 3, bali: 4, 'papua-new-guinea': 8,
 };
 
 type Entry = {
@@ -282,7 +353,9 @@ async function main() {
     const row = byId.get(e.id)!;
     const monthly = scored.find((x) => x.id === e.id)!.monthly.birding ?? [];
     const peakValue = Math.max(...monthly);
-    const trough = Math.round(peakValue * TROUGH[e.group] * 10) / 10;
+    const trough = FLOOR[e.id];
+    if (trough === undefined) { console.error(`${e.id}: no floor declared`); process.exit(1); }
+    if (trough >= peakValue) { console.error(`${e.id}: floor ${trough} is not below its peak ${peakValue}`); process.exit(1); }
     const anchors = curveFor(peakValue, trough, e.peak, e.peak2);
     const curve = parseSliderCurve({ anchors });
 

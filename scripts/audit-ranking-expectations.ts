@@ -60,7 +60,27 @@ type Assertion =
   | { kind: 'near'; a: string; b: string; within: number; why: string }
   | { kind: 'band'; id: string; bestRank?: number; worstRank?: number; why: string }
   | { kind: 'persona'; label: string; weights: Record<string, number>; id: string; maxRank: number; why: string }
-  | { kind: 'property'; label: string; why: string };
+  | { kind: 'property'; label: string; why: string }
+  /**
+   * A cross-destination claim about a single interest's WORST month.
+   *
+   * Every other assertion here is about the ranking; these are about the
+   * scale underneath it. They exist because a whole interest's seasonality
+   * was authored as a fraction of each destination's own peak, which is a
+   * relative measure on a scale that has to be absolute: Costa Rica's July
+   * read 3.0 against Lofoten's 7.0, and Panama's worst month fell below the
+   * Great Smokies' best. Each number looked fine alone.
+   *
+   * Two attempts to catch that mechanically both failed, and the failures
+   * were instructive. Deciding whether a deep trough is HONEST needs to know
+   * why the season ends — migrants departing, a colony emptying, a road
+   * closing — and the numbers do not carry that. Hokkaido's skiing trough of
+   * 0 in July is correct; Iceland's birding trough below Charleston's is
+   * correct. So these are named editorial convictions, like everything else
+   * in this file, and like everything else in this file they must never be
+   * regenerated from output.
+   */
+  | { kind: 'trough'; slider: string; a: string; b: string; why: string };
 
 const ASSERTIONS: Assertion[] = [
   // ---- Properties: the structural claims, most valuable of the lot ----
@@ -93,6 +113,23 @@ const ASSERTIONS: Assertion[] = [
   { kind: 'band', id: 'nyc', bestRank: 1, worstRank: 30, why: 'Same as Paris.' },
   { kind: 'band', id: 'tuscany', bestRank: 1, worstRank: 40, why: 'Broad mainstream appeal on many axes at once — beautiful towns, food, scenery, history, culture and high-end hotels, not just wine and cycling. Ranked 134th after the aggregation change, which review traced to under-authored content rather than to the model (scenicLandscapes 6 while the same row tagged landscapePhotography signature; historyArchaeology 5 alongside architecture 9). Corrected in scripts/fix-tuscany-underscored.ts — the fix belonged in the content, not the algorithm.' },
   { kind: 'band', id: 'churchill', bestRank: 140, why: 'Genuinely excellent and genuinely niche. It should be findable by someone who wants polar bears, and should not appear in a general list. Currently 196th, but for the wrong reason (thin content, not niche appeal) — this must stay true once coverage stops being the driver.' },
+  // ---- Trough convictions: the scale under the ranking ----------------
+  {
+    kind: 'trough', slider: 'birding', a: 'costa-rica', b: 'great-smoky-mountains',
+    why: 'Costa Rica in the September rain beats the Smokies in the May warbler wave. ~600 resident species against ~30 breeding warblers; only comfort changes in Costa Rica, while the Smokies genuinely empty out. This is the assertion a percentage-based trough broke — it had Costa Rica at 3.0 in July against Lofoten at 7.0.',
+  },
+  {
+    kind: 'trough', slider: 'birding', a: 'panama', b: 'great-smoky-mountains',
+    why: 'Pipeline Road in June still has 400 species available. Panama\'s worst month previously fell BELOW the Smokies\' best, which is the clearest single symptom of a relative trough on an absolute scale.',
+  },
+  {
+    kind: 'trough', slider: 'birding', a: 'ecuadorian-andes', b: 'iceland',
+    why: 'Andean cloud forest is resident endemics with essentially no bad month; Iceland is a seabird colony that is empty for eight months. The best-case comparison has to favour the cloud forest even at its worst.',
+  },
+  {
+    kind: 'trough', slider: 'birding', a: 'kruger', b: 'yellowstone',
+    why: 'Kruger holds ~500 species of which ~350 are resident, so the dry season loses a bonus tier and keeps the foundation. Its worst month should still beat Yellowstone at peak spring migration.',
+  },
   { kind: 'band', id: 'antarctica', bestRank: 140, why: 'Extreme cost and access put it outside any general recommendation, regardless of how remarkable it is.' },
   {
     kind: 'band', id: 'north-cascades', bestRank: 60, worstRank: 175,
@@ -254,6 +291,14 @@ async function main() {
         const offenders = SPECIALIST_PLACES.filter((id) => (dflt.rankOf.get(id) ?? 999) <= 20);
         report(offenders.length === 0, a.label, offenders.length ? `in top 20: ${offenders.join(', ')}` : 'none in top 20');
       }
+    } else if (a.kind === 'trough') {
+      const da = destinations.find((d) => d.id === a.a);
+      const db_ = destinations.find((d) => d.id === a.b);
+      if (!da || !db_) { report(false, `trough:${a.a}>${a.b}`, 'destination not found'); continue; }
+      const worst = Math.min(...((da.monthly[a.slider] ?? [0]) as number[]));
+      const best = Math.max(...((db_.monthly[a.slider] ?? [0]) as number[]));
+      report(worst >= best, `trough:${a.slider}/${a.a}>${a.b}`,
+        `${a.a} worst month ${worst.toFixed(1)} vs ${a.b} best month ${best.toFixed(1)}`);
     } else if (a.kind === 'band') {
       const rank = dflt.rankOf.get(a.id);
       if (!rank) { report(false, `band:${a.id}`, 'destination not found'); continue; }

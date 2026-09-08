@@ -96,6 +96,22 @@ async function main() {
     }
   }
 
+  // A trough-ordering check lived here briefly and was removed, twice
+  // reformulated and twice wrong. "An anchor's worst month beats a median
+  // destination's best" fired on 24 of 30 interests, because for a genuinely
+  // seasonal resource a deep trough is right — Hokkaido really is a 0 for
+  // skiing in July. Narrowing it to "a stronger destination with a worse bad
+  // month" fired a thousand times per interest, for the same reason: Iceland's
+  // birding troughs below Charleston's because Iceland's puffins leave and
+  // Charleston's cardinals do not.
+  //
+  // Deciding whether a deep trough is honest needs to know WHY the season
+  // ends — migrants departing versus a colony emptying versus a road closing
+  // — which is domain knowledge the numbers do not carry. So the
+  // cross-destination trough convictions live in
+  // audit-ranking-expectations.ts as named editorial assertions, alongside
+  // the ranking ones, rather than as a rule here that cries wolf.
+
   const undefined_ = SLIDERS.filter((s) => !INTEREST_ANCHORS[s.key] && s.key !== 'deals' && s.key !== 'crowds');
   if (undefined_.length) {
     console.log(`\nNo ceiling defined (${undefined_.length}): ${undefined_.map((s) => s.key).join(' ')}`);
