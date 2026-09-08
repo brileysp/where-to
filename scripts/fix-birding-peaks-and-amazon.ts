@@ -38,6 +38,14 @@ type Edit = { id: string; peak: number; why: string };
 const PEAKS: Edit[] = [
   { id: 'faroe-islands', peak: 7, why: '~50 breeding species; a 9 put it above Tanzania' },
   { id: 'seychelles', peak: 6, why: '~50 species; superb endemics, but an 8 put it above Kruger' },
+  // Three raises, argued against catalogue peers at the SAME SCOPE rather
+  // than against country species lists — the mistake that produced a
+  // now-withdrawn proposal to raise `thailand`, whose actual name is
+  // "Thailand — Phuket & Islands" and whose scope is a southern beach
+  // region, not Kaeng Krachan.
+  { id: 'panama', peak: 9, why: 'Canopy Tower and the Darien; peer Costa Rica is 10' },
+  { id: 'guatemala', peak: 7, why: 'was below its own neighbours Belize (7) and Nicaragua (6)' },
+  { id: 'oaxaca', peak: 6, why: 'peer Chiapas is 7 — same country, same endemism band' },
 ];
 
 const AMAZON = { id: 'peruvian-amazon', slider: 'birding', hazard: 'Mosquitoes & biting insects' };
