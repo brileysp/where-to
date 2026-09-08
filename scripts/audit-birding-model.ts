@@ -16,7 +16,33 @@ import { join } from 'path';
  * fifty-species island to the top of the scale. A million puffins is a
  * magnificent thing to witness and it is still ninety species.
  *
- * Components are judgements, scored 0-10 against the best destination on
+ * COUNT IS GRADED ON A CURVE. Scoring species richness linearly against
+ * Ecuador is not a fair test: past a few hundred available species a
+ * two-week trip cannot see them all anyway, so the difference between 60
+ * and 290 species matters enormously to a trip and the difference between
+ * 900 and 1,600 barely matters at all. The count component therefore takes
+ * an approximate species total for the destination's own scope and maps it
+ * logarithmically between 20 and 1,600. A happy side effect is that the
+ * result is insensitive to modest errors in the estimate — doubling a
+ * count moves the score by about 1.6 points, so these numbers need to be
+ * roughly right rather than exact.
+ *
+ * LINEAGE IS A SECOND BONUS, parallel to spectacle, and it exists because
+ * uniqueness at 25% could not express what Madagascar is. To be precise
+ * about the arithmetic, since it is easy to state this wrongly: uniqueness
+ * carries its full 25% weight, contributing up to 2.5 points of the base.
+ * The problem is the SPREAD, not the weight. No serious birding destination
+ * scores below about 4 on uniqueness, so the usable band is 4-10, worth 1.0
+ * to 2.5 points — and the gap between "a good number of endemic species"
+ * (6) and "five endemic FAMILIES found nowhere on earth" (10) is one point
+ * of a ten-point score. To a birder those are not points on one continuum but different
+ * categories of trip: you can add whole branches of the avian family tree
+ * to a life list in only a handful of places, and that is exactly why
+ * people accept Madagascar's short list and go anyway. Grading count on a
+ * curve alone does NOT fix this — the log curve puts Madagascar's 290
+ * species at 6.1, almost exactly the hand estimate it replaced.
+ *
+ * Other components are judgements, scored 0-10 against the best destination on
  * earth for that component, and always AT THE DESTINATION'S OWN SCOPE —
  * `thailand` is "Thailand — Phuket & Islands", a southern beach region, not
  * the country whose list runs past a thousand. Getting that wrong is what
@@ -30,150 +56,162 @@ import { join } from 'path';
  */
 
 type Row = {
-  /** species richness within the destination's actual scope */
-  count: number;
-  /** endemism — birds found here and nowhere else */
+  /** approximate species total for the destination's own scope */
+  n: number;
+  /** endemism at species level — birds found here and nowhere else */
   uniq: number;
   /** how spectacular the birds are to look at */
   char: number;
   /** mass concentration: colonies, migration bottlenecks, roosts */
   spec: number;
+  /** family-level endemism — whole branches of the tree found only here */
+  lineage: number;
 };
+
+// Calibrated, not guessed. At N_MIN = 20 the curve compressed everything
+// above 200 species into a narrow high band and the model flipped to
+// reporting 16 under-scored destinations; 40 puts a 240-species temperate
+// park near 4.9 and a 1,000-species tropical one near 8.7, which is the
+// spread the catalogue's own top and bottom already imply.
+const N_MIN = 40;
+const N_MAX = 1600;
+
+/** Species richness on a log curve between N_MIN and N_MAX. */
+function countScore(n: number): number {
+  const v = (10 * (Math.log(n) - Math.log(N_MIN))) / (Math.log(N_MAX) - Math.log(N_MIN));
+  return Math.max(0, Math.min(10, v));
+}
 
 const M: Record<string, Row> = {
   // ---- Neotropics -------------------------------------------------------
-  'ecuadorian-andes': { count: 10, uniq: 9, char: 10, spec: 3 },
-  'colombian-andes': { count: 10, uniq: 9, char: 10, spec: 3 },
-  peru: { count: 10, uniq: 8, char: 9, spec: 4 },
-  'peruvian-amazon': { count: 9, uniq: 7, char: 10, spec: 6 },
-  'costa-rica': { count: 9, uniq: 6, char: 10, spec: 3 },
-  panama: { count: 9, uniq: 6, char: 9, spec: 6 },
-  pantanal: { count: 7, uniq: 5, char: 10, spec: 9 },
-  'colombian-caribbean': { count: 7, uniq: 8, char: 8, spec: 2 },
-  chiapas: { count: 7, uniq: 6, char: 8, spec: 2 },
-  guatemala: { count: 7, uniq: 6, char: 8, spec: 2 },
-  oaxaca: { count: 7, uniq: 7, char: 7, spec: 2 },
-  belize: { count: 6, uniq: 4, char: 8, spec: 3 },
-  nicaragua: { count: 6, uniq: 4, char: 7, spec: 2 },
-  mexicocity: { count: 5, uniq: 4, char: 6, spec: 3 },
-  galapagos: { count: 3, uniq: 10, char: 9, spec: 8 },
-  'argentine-lake-district': { count: 4, uniq: 4, char: 6, spec: 2 },
-  'chilean-lake-district': { count: 4, uniq: 4, char: 6, spec: 2 },
-  'torres-del-paine': { count: 3, uniq: 4, char: 7, spec: 3 },
-  'tierra-del-fuego': { count: 3, uniq: 4, char: 6, spec: 3 },
-  'el-chalten': { count: 3, uniq: 4, char: 6, spec: 2 },
-  mendoza: { count: 4, uniq: 3, char: 5, spec: 2 },
-  uyuni: { count: 2, uniq: 5, char: 8, spec: 7 },
-  atacama: { count: 3, uniq: 5, char: 7, spec: 5 },
-  // Falkland steamer duck and Cobb's wren are true endemics, alongside
-  // five penguin species and black-browed albatross colonies.
-  falklands: { count: 2, uniq: 6, char: 10, spec: 10 },
-  'puerto-rico': { count: 4, uniq: 6, char: 6, spec: 2 },
-  barbados: { count: 3, uniq: 3, char: 5, spec: 2 },
+  'ecuadorian-andes': { n: 1600, uniq: 9, char: 10, spec: 3, lineage: 3 },
+  'colombian-andes': { n: 1000, uniq: 9, char: 10, spec: 3, lineage: 2 },
+  peru: { n: 1000, uniq: 8, char: 9, spec: 4, lineage: 2 },
+  'peruvian-amazon': { n: 600, uniq: 7, char: 10, spec: 6, lineage: 2 },
+  'costa-rica': { n: 920, uniq: 6, char: 10, spec: 3, lineage: 1 },
+  panama: { n: 1000, uniq: 6, char: 9, spec: 6, lineage: 1 },
+  pantanal: { n: 450, uniq: 5, char: 10, spec: 9, lineage: 1 },
+  'colombian-caribbean': { n: 600, uniq: 8, char: 8, spec: 2, lineage: 1 },
+  chiapas: { n: 660, uniq: 6, char: 8, spec: 2, lineage: 0 },
+  guatemala: { n: 750, uniq: 6, char: 8, spec: 2, lineage: 0 },
+  oaxaca: { n: 700, uniq: 7, char: 7, spec: 2, lineage: 0 },
+  belize: { n: 590, uniq: 4, char: 8, spec: 3, lineage: 0 },
+  nicaragua: { n: 700, uniq: 4, char: 7, spec: 2, lineage: 0 },
+  mexicocity: { n: 350, uniq: 4, char: 6, spec: 3, lineage: 0 },
+  // Darwin's finches are a radiation rather than a family, but the islands
+  // are the textbook case of endemic lineage and hold endemic genera.
+  galapagos: { n: 60, uniq: 10, char: 9, spec: 8, lineage: 8 },
+  'argentine-lake-district': { n: 250, uniq: 4, char: 6, spec: 2, lineage: 1 },
+  'chilean-lake-district': { n: 250, uniq: 4, char: 6, spec: 2, lineage: 1 },
+  'torres-del-paine': { n: 120, uniq: 4, char: 7, spec: 3, lineage: 1 },
+  'tierra-del-fuego': { n: 120, uniq: 4, char: 6, spec: 3, lineage: 1 },
+  'el-chalten': { n: 120, uniq: 4, char: 6, spec: 2, lineage: 1 },
+  mendoza: { n: 250, uniq: 3, char: 5, spec: 2, lineage: 0 },
+  uyuni: { n: 80, uniq: 5, char: 8, spec: 7, lineage: 0 },
+  atacama: { n: 130, uniq: 5, char: 7, spec: 5, lineage: 0 },
+  falklands: { n: 60, uniq: 6, char: 10, spec: 10, lineage: 3 },
+  'puerto-rico': { n: 350, uniq: 6, char: 6, spec: 2, lineage: 1 },
+  barbados: { n: 230, uniq: 3, char: 5, spec: 2, lineage: 0 },
 
   // ---- Africa -----------------------------------------------------------
-  kenya: { count: 9, uniq: 5, char: 9, spec: 9 },
-  tanzania: { count: 9, uniq: 5, char: 9, spec: 8 },
-  uganda: { count: 9, uniq: 6, char: 10, spec: 5 },
-  rwanda: { count: 7, uniq: 6, char: 9, spec: 3 },
-  ethiopia: { count: 7, uniq: 8, char: 7, spec: 4 },
-  ghana: { count: 8, uniq: 7, char: 8, spec: 3 },
-  kruger: { count: 7, uniq: 4, char: 8, spec: 5 },
-  botswana: { count: 7, uniq: 4, char: 9, spec: 8 },
-  namibia: { count: 6, uniq: 5, char: 7, spec: 6 },
-  zambia: { count: 7, uniq: 4, char: 8, spec: 6 },
-  zimbabwe: { count: 7, uniq: 4, char: 8, spec: 5 },
-  madagascar: { count: 6, uniq: 10, char: 8, spec: 2 },
-  'cape-town': { count: 5, uniq: 8, char: 7, spec: 5 },
-  seychelles: { count: 2, uniq: 9, char: 7, spec: 6 },
-  mauritius: { count: 2, uniq: 8, char: 6, spec: 2 },
+  kenya: { n: 1100, uniq: 5, char: 9, spec: 9, lineage: 2 },
+  tanzania: { n: 1100, uniq: 5, char: 9, spec: 8, lineage: 2 },
+  uganda: { n: 1050, uniq: 6, char: 10, spec: 5, lineage: 2 },
+  rwanda: { n: 700, uniq: 6, char: 9, spec: 3, lineage: 2 },
+  ethiopia: { n: 860, uniq: 8, char: 7, spec: 4, lineage: 2 },
+  ghana: { n: 750, uniq: 7, char: 8, spec: 3, lineage: 2 },
+  kruger: { n: 500, uniq: 4, char: 8, spec: 5, lineage: 1 },
+  botswana: { n: 590, uniq: 4, char: 9, spec: 8, lineage: 1 },
+  namibia: { n: 650, uniq: 5, char: 7, spec: 6, lineage: 1 },
+  zambia: { n: 750, uniq: 4, char: 8, spec: 6, lineage: 1 },
+  zimbabwe: { n: 670, uniq: 4, char: 8, spec: 5, lineage: 1 },
+  // Five endemic families — mesites, ground-rollers, cuckoo-roller, asities
+  // and vangas — plus couas. Whole branches of the tree, nowhere else.
+  madagascar: { n: 290, uniq: 10, char: 9, spec: 2, lineage: 10 },
+  // Sugarbirds are an endemic family; the fynbos endemics are a real draw.
+  'cape-town': { n: 400, uniq: 8, char: 7, spec: 5, lineage: 5 },
+  seychelles: { n: 60, uniq: 9, char: 7, spec: 6, lineage: 3 },
+  mauritius: { n: 60, uniq: 8, char: 6, spec: 2, lineage: 3 },
 
   // ---- Asia -------------------------------------------------------------
-  borneo: { count: 8, uniq: 8, char: 9, spec: 3 },
-  srilanka: { count: 6, uniq: 8, char: 8, spec: 3 },
-  bhutan: { count: 7, uniq: 6, char: 8, spec: 6 },
-  nepal: { count: 7, uniq: 4, char: 7, spec: 4 },
-  vietnam: { count: 8, uniq: 6, char: 7, spec: 2 },
-  taiwan: { count: 6, uniq: 7, char: 7, spec: 5 },
-  kaziranga: { count: 6, uniq: 5, char: 8, spec: 5 },
-  kerala: { count: 6, uniq: 6, char: 7, spec: 3 },
-  'rajasthan-golden-triangle': { count: 5, uniq: 4, char: 8, spec: 9 },
-  ladakh: { count: 3, uniq: 5, char: 6, spec: 3 },
-  hokkaido: { count: 4, uniq: 4, char: 10, spec: 9 },
-  palawan: { count: 5, uniq: 8, char: 7, spec: 2 },
-  rajaampat: { count: 5, uniq: 8, char: 9, spec: 3 },
-  komodo: { count: 3, uniq: 5, char: 6, spec: 2 },
-  bali: { count: 4, uniq: 5, char: 6, spec: 2 },
-  thailand: { count: 4, uniq: 3, char: 5, spec: 2 },
-  bangkok: { count: 5, uniq: 2, char: 6, spec: 5 },
-  angkor: { count: 5, uniq: 3, char: 7, spec: 6 },
-  bagan: { count: 4, uniq: 2, char: 5, spec: 3 },
-  luangprabang: { count: 5, uniq: 3, char: 5, spec: 2 },
-  hongkong: { count: 5, uniq: 2, char: 7, spec: 7 },
-  singapore: { count: 4, uniq: 2, char: 6, spec: 5 },
-  'papua-new-guinea': { count: 8, uniq: 10, char: 10, spec: 3 },
-  mongolia: { count: 4, uniq: 4, char: 6, spec: 4 },
-  dubai: { count: 3, uniq: 2, char: 5, spec: 5 },
-  egypt: { count: 4, uniq: 2, char: 6, spec: 6 },
-  jordan: { count: 4, uniq: 3, char: 5, spec: 5 },
-  uluru: { count: 3, uniq: 6, char: 5, spec: 2 },
+  borneo: { n: 530, uniq: 8, char: 9, spec: 3, lineage: 3 },
+  srilanka: { n: 450, uniq: 8, char: 8, spec: 3, lineage: 3 },
+  bhutan: { n: 700, uniq: 6, char: 8, spec: 6, lineage: 1 },
+  nepal: { n: 880, uniq: 4, char: 7, spec: 4, lineage: 1 },
+  vietnam: { n: 900, uniq: 6, char: 7, spec: 2, lineage: 1 },
+  taiwan: { n: 620, uniq: 7, char: 7, spec: 5, lineage: 2 },
+  kaziranga: { n: 480, uniq: 5, char: 8, spec: 5, lineage: 1 },
+  kerala: { n: 500, uniq: 6, char: 7, spec: 3, lineage: 2 },
+  'rajasthan-golden-triangle': { n: 450, uniq: 4, char: 8, spec: 9, lineage: 0 },
+  ladakh: { n: 300, uniq: 5, char: 6, spec: 3, lineage: 0 },
+  hokkaido: { n: 350, uniq: 4, char: 10, spec: 9, lineage: 0 },
+  palawan: { n: 280, uniq: 8, char: 7, spec: 2, lineage: 2 },
+  // Birds-of-paradise, but the family is shared with New Guinea proper.
+  rajaampat: { n: 200, uniq: 8, char: 9, spec: 3, lineage: 6 },
+  komodo: { n: 150, uniq: 5, char: 6, spec: 2, lineage: 1 },
+  bali: { n: 300, uniq: 5, char: 6, spec: 2, lineage: 1 },
+  thailand: { n: 300, uniq: 3, char: 5, spec: 2, lineage: 0 },
+  bangkok: { n: 380, uniq: 2, char: 6, spec: 5, lineage: 0 },
+  angkor: { n: 350, uniq: 3, char: 7, spec: 6, lineage: 0 },
+  bagan: { n: 250, uniq: 2, char: 5, spec: 3, lineage: 0 },
+  luangprabang: { n: 350, uniq: 3, char: 5, spec: 2, lineage: 0 },
+  hongkong: { n: 550, uniq: 2, char: 7, spec: 7, lineage: 0 },
+  singapore: { n: 400, uniq: 2, char: 6, spec: 5, lineage: 0 },
+  // Birds-of-paradise and bowerbirds: two whole families, and the reason
+  // people cross the world for a comparatively modest species list.
+  'papua-new-guinea': { n: 700, uniq: 10, char: 10, spec: 3, lineage: 10 },
+  mongolia: { n: 470, uniq: 4, char: 6, spec: 4, lineage: 0 },
+  dubai: { n: 320, uniq: 2, char: 5, spec: 5, lineage: 0 },
+  egypt: { n: 480, uniq: 2, char: 6, spec: 6, lineage: 0 },
+  jordan: { n: 430, uniq: 3, char: 5, spec: 5, lineage: 0 },
+  uluru: { n: 180, uniq: 6, char: 5, spec: 2, lineage: 3 },
 
   // ---- Europe & the North ----------------------------------------------
-  // No endemic SPECIES — the redpoll and ptarmigan are subspecies — but
-  // uniqueness is not only endemism: Myvatn holds the only breeding
-  // Barrow's goldeneye in Europe, alongside gyrfalcon and harlequin duck.
-  // And charisma at 8 was simply wrong: puffin, gyrfalcon, harlequin,
-  // red-throated diver in breeding plumage. Latrabjarg and Myvatn are a
-  // 10 for spectacle by any reading.
-  iceland: { count: 2, uniq: 4, char: 10, spec: 10 },
-  'faroe-islands': { count: 1, uniq: 2, char: 8, spec: 10 },
-  // Rost's puffin colonies and white-tailed eagle, but genuinely thinner
-  // than Iceland on every axis except the cliffs themselves.
-  lofoten: { count: 2, uniq: 2, char: 8, spec: 9 },
-  // Ivory gull, king eider, Brunnich's guillemot, Svalbard ptarmigan.
-  svalbard: { count: 1, uniq: 4, char: 9, spec: 8 },
-  antarctica: { count: 1, uniq: 6, char: 10, spec: 10 },
-  azores: { count: 2, uniq: 4, char: 6, spec: 6 },
-  madeira: { count: 2, uniq: 6, char: 6, spec: 5 },
-  canaries: { count: 3, uniq: 6, char: 5, spec: 3 },
-  morocco: { count: 5, uniq: 4, char: 7, spec: 9 },
-  algarve: { count: 4, uniq: 3, char: 7, spec: 9 },
-  mallorca: { count: 4, uniq: 3, char: 6, spec: 5 },
-  'scottish-highlands-skye': { count: 3, uniq: 3, char: 7, spec: 6 },
-  'great-smoky-mountains': { count: 4, uniq: 3, char: 5, spec: 4 },
-  // Ross's gull is a pilgrimage bird; Churchill is where people go for it.
-  churchill: { count: 3, uniq: 5, char: 8, spec: 8 },
-  denali: { count: 3, uniq: 2, char: 6, spec: 3 },
-  'denali-interior': { count: 3, uniq: 2, char: 6, spec: 3 },
-  yellowstone: { count: 4, uniq: 2, char: 7, spec: 4 },
-  everglades: { count: 5, uniq: 4, char: 9, spec: 9 },
-  'monterey-big-sur': { count: 4, uniq: 3, char: 8, spec: 8 },
-  'vancouver-island': { count: 4, uniq: 2, char: 7, spec: 7 },
-  'southeast-alaska': { count: 3, uniq: 2, char: 8, spec: 8 },
-  'nova-scotia': { count: 4, uniq: 2, char: 5, spec: 5 },
-  acadia: { count: 4, uniq: 2, char: 5, spec: 4 },
-  banff: { count: 4, uniq: 2, char: 5, spec: 3 },
-  'glacier-waterton': { count: 4, uniq: 2, char: 5, spec: 3 },
-  olympic: { count: 4, uniq: 2, char: 5, spec: 3 },
-  yosemite: { count: 4, uniq: 2, char: 5, spec: 3 },
-  'upper-peninsula': { count: 4, uniq: 2, char: 5, spec: 5 },
-  'badlands-black-hills': { count: 4, uniq: 3, char: 5, spec: 3 },
-  'new-orleans': { count: 5, uniq: 2, char: 6, spec: 8 },
-  'texas-hill-country': { count: 5, uniq: 3, char: 6, spec: 8 },
-  gbr: { count: 4, uniq: 4, char: 7, spec: 6 },
-  tasmania: { count: 4, uniq: 7, char: 6, spec: 4 },
-  'north-island': { count: 3, uniq: 9, char: 7, spec: 3 },
-  'milford-sound-fiordland': { count: 3, uniq: 9, char: 7, spec: 3 },
-  queenstown: { count: 3, uniq: 8, char: 6, spec: 2 },
-  sydney: { count: 5, uniq: 6, char: 7, spec: 3 },
-  fiji: { count: 2, uniq: 7, char: 6, spec: 2 },
-  maldives: { count: 2, uniq: 2, char: 4, spec: 3 },
+  iceland: { n: 85, uniq: 4, char: 10, spec: 10, lineage: 0 },
+  'faroe-islands': { n: 50, uniq: 2, char: 8, spec: 10, lineage: 0 },
+  lofoten: { n: 90, uniq: 2, char: 8, spec: 9, lineage: 0 },
+  svalbard: { n: 30, uniq: 4, char: 9, spec: 8, lineage: 0 },
+  antarctica: { n: 20, uniq: 6, char: 10, spec: 10, lineage: 3 },
+  azores: { n: 40, uniq: 4, char: 6, spec: 6, lineage: 1 },
+  madeira: { n: 40, uniq: 6, char: 6, spec: 5, lineage: 1 },
+  canaries: { n: 100, uniq: 6, char: 5, spec: 3, lineage: 1 },
+  morocco: { n: 500, uniq: 4, char: 7, spec: 9, lineage: 0 },
+  algarve: { n: 320, uniq: 3, char: 7, spec: 9, lineage: 0 },
+  mallorca: { n: 330, uniq: 3, char: 6, spec: 5, lineage: 0 },
+  'scottish-highlands-skye': { n: 250, uniq: 3, char: 7, spec: 6, lineage: 0 },
+  'great-smoky-mountains': { n: 240, uniq: 3, char: 5, spec: 4, lineage: 0 },
+  churchill: { n: 200, uniq: 5, char: 8, spec: 8, lineage: 0 },
+  'denali-interior': { n: 170, uniq: 2, char: 6, spec: 3, lineage: 0 },
+  yellowstone: { n: 300, uniq: 2, char: 7, spec: 4, lineage: 0 },
+  everglades: { n: 360, uniq: 4, char: 9, spec: 9, lineage: 0 },
+  'monterey-big-sur': { n: 350, uniq: 3, char: 7, spec: 8, lineage: 0 },
+  'vancouver-island': { n: 300, uniq: 2, char: 7, spec: 7, lineage: 0 },
+  'southeast-alaska': { n: 250, uniq: 2, char: 8, spec: 8, lineage: 0 },
+  'nova-scotia': { n: 300, uniq: 2, char: 5, spec: 5, lineage: 0 },
+  acadia: { n: 300, uniq: 2, char: 5, spec: 4, lineage: 0 },
+  banff: { n: 260, uniq: 2, char: 5, spec: 3, lineage: 0 },
+  'glacier-waterton': { n: 270, uniq: 2, char: 5, spec: 3, lineage: 0 },
+  olympic: { n: 300, uniq: 2, char: 5, spec: 3, lineage: 0 },
+  yosemite: { n: 260, uniq: 2, char: 5, spec: 3, lineage: 0 },
+  'upper-peninsula': { n: 300, uniq: 2, char: 5, spec: 5, lineage: 0 },
+  'badlands-black-hills': { n: 280, uniq: 3, char: 5, spec: 3, lineage: 0 },
+  'new-orleans': { n: 420, uniq: 2, char: 6, spec: 8, lineage: 0 },
+  'texas-hill-country': { n: 450, uniq: 5, char: 6, spec: 3, lineage: 0 },
+  gbr: { n: 250, uniq: 4, char: 7, spec: 6, lineage: 1 },
+  tasmania: { n: 230, uniq: 7, char: 6, spec: 4, lineage: 6 },
+  // Kiwi and the New Zealand wrens are endemic families; moa-order remnants.
+  'north-island': { n: 200, uniq: 9, char: 7, spec: 3, lineage: 9 },
+  'milford-sound-fiordland': { n: 160, uniq: 9, char: 7, spec: 3, lineage: 9 },
+  queenstown: { n: 150, uniq: 8, char: 6, spec: 2, lineage: 6 },
+  sydney: { n: 400, uniq: 6, char: 7, spec: 3, lineage: 2 },
+  fiji: { n: 110, uniq: 7, char: 6, spec: 2, lineage: 2 },
+  maldives: { n: 120, uniq: 2, char: 4, spec: 3, lineage: 0 },
 };
 
-/** 50% count, 25% uniqueness, 25% charisma, then spectacle as a +25% bonus. */
+/** 50/25/25 on the base, then two independent multiplicative bonuses. */
 function modelScore(r: Row): number {
-  const base = 0.5 * r.count + 0.25 * r.uniq + 0.25 * r.char;
-  return Math.min(10, base * (1 + 0.25 * (r.spec / 10)));
+  const base = 0.5 * countScore(r.n) + 0.25 * r.uniq + 0.25 * r.char;
+  return Math.min(10, base * (1 + 0.25 * (r.spec / 10)) * (1 + 0.25 * (r.lineage / 10)));
 }
 
 function loadDotEnvLocal(): Record<string, string> {
@@ -219,7 +257,7 @@ async function main() {
       const sign = o.gap >= 0 ? '+' : '';
       console.log(
         `  ${(sign + o.gap.toFixed(1)).padStart(5)}  actual ${o.actual.toFixed(0).padStart(2)}  model ${o.model.toFixed(1).padStart(4)}   ` +
-          `c${o.r.count} u${o.r.uniq} ch${o.r.char} sp${o.r.spec}   ${o.name}`,
+          `n${String(o.r.n).padStart(4)}(c${countScore(o.r.n).toFixed(1)}) u${o.r.uniq} ch${o.r.char} sp${o.r.spec} lin${o.r.lineage}   ${o.name}`,
       );
     }
   };
