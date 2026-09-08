@@ -276,6 +276,13 @@ async function main() {
     show(ok.sort((a, b) => b.actual - a.actual));
   }
 
+  const topArg = process.argv.find((a) => a.startsWith('--top='));
+  if (topArg) {
+    const n = Number(topArg.split('=')[1]);
+    console.log(`\n=== Top ${n} candidates, ranked by |gap| regardless of the 1.5 threshold`);
+    show([...rows].sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap)).slice(0, n));
+  }
+
   const mean = rows.reduce((s, o) => s + Math.abs(o.gap), 0) / rows.length;
   const corr = (() => {
     const n = rows.length;
