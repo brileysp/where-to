@@ -65,7 +65,9 @@ const M: Record<string, Row> = {
   mendoza: { count: 4, uniq: 3, char: 5, spec: 2 },
   uyuni: { count: 2, uniq: 5, char: 8, spec: 7 },
   atacama: { count: 3, uniq: 5, char: 7, spec: 5 },
-  falklands: { count: 2, uniq: 5, char: 10, spec: 10 },
+  // Falkland steamer duck and Cobb's wren are true endemics, alongside
+  // five penguin species and black-browed albatross colonies.
+  falklands: { count: 2, uniq: 6, char: 10, spec: 10 },
   'puerto-rico': { count: 4, uniq: 6, char: 6, spec: 2 },
   barbados: { count: 3, uniq: 3, char: 5, spec: 2 },
 
@@ -117,10 +119,19 @@ const M: Record<string, Row> = {
   uluru: { count: 3, uniq: 6, char: 5, spec: 2 },
 
   // ---- Europe & the North ----------------------------------------------
-  iceland: { count: 2, uniq: 2, char: 8, spec: 10 },
+  // No endemic SPECIES — the redpoll and ptarmigan are subspecies — but
+  // uniqueness is not only endemism: Myvatn holds the only breeding
+  // Barrow's goldeneye in Europe, alongside gyrfalcon and harlequin duck.
+  // And charisma at 8 was simply wrong: puffin, gyrfalcon, harlequin,
+  // red-throated diver in breeding plumage. Latrabjarg and Myvatn are a
+  // 10 for spectacle by any reading.
+  iceland: { count: 2, uniq: 4, char: 10, spec: 10 },
   'faroe-islands': { count: 1, uniq: 2, char: 8, spec: 10 },
-  lofoten: { count: 2, uniq: 1, char: 8, spec: 9 },
-  svalbard: { count: 1, uniq: 3, char: 8, spec: 8 },
+  // Rost's puffin colonies and white-tailed eagle, but genuinely thinner
+  // than Iceland on every axis except the cliffs themselves.
+  lofoten: { count: 2, uniq: 2, char: 8, spec: 9 },
+  // Ivory gull, king eider, Brunnich's guillemot, Svalbard ptarmigan.
+  svalbard: { count: 1, uniq: 4, char: 9, spec: 8 },
   antarctica: { count: 1, uniq: 6, char: 10, spec: 10 },
   azores: { count: 2, uniq: 4, char: 6, spec: 6 },
   madeira: { count: 2, uniq: 6, char: 6, spec: 5 },
@@ -130,7 +141,8 @@ const M: Record<string, Row> = {
   mallorca: { count: 4, uniq: 3, char: 6, spec: 5 },
   'scottish-highlands-skye': { count: 3, uniq: 3, char: 7, spec: 6 },
   'great-smoky-mountains': { count: 4, uniq: 3, char: 5, spec: 4 },
-  churchill: { count: 3, uniq: 4, char: 8, spec: 8 },
+  // Ross's gull is a pilgrimage bird; Churchill is where people go for it.
+  churchill: { count: 3, uniq: 5, char: 8, spec: 8 },
   denali: { count: 3, uniq: 2, char: 6, spec: 3 },
   'denali-interior': { count: 3, uniq: 2, char: 6, spec: 3 },
   yellowstone: { count: 4, uniq: 2, char: 7, spec: 4 },
