@@ -27,11 +27,22 @@ import { join } from 'path';
  * Read-only. `--place <id>` prints one destination's full profile instead.
  */
 
+// There were two more rules here, both encoding "sunbathing requires a
+// beach": a dominance rule capping sunbathing near beachesSwimming, and a
+// prerequisite treating a sunbathing score over a beachesSwimming N/A as a
+// contradiction. The premise is false — people sunbathe by hotel pools, on
+// terraces, by lakes and in deserts — and the false premise did real
+// damage before anyone questioned it: it flagged the Atacama, Uluru and
+// Napa, a "fix" then marked all three N/A for sunbathing (the Atacama is
+// among the sunniest places on earth), and it pushed Provence and Tuscany
+// down for sunbathing on Mediterranean summers. Rules here assert
+// something about the world; when one is wrong it manufactures the
+// findings that justify breaking the content.
+
 /** b bounds a: a is a subset or a photograph of b and cannot exceed it by more than `slack`. */
 const DOMINANCE: { a: string; b: string; slack: number; why: string }[] = [
   { a: 'safari', b: 'wildlifeViewing', slack: 0, why: 'safari is a kind of wildlife viewing' },
   { a: 'landscapePhotography', b: 'scenicLandscapes', slack: 0, why: 'a photograph cannot beat its landscape' },
-  { a: 'sunbathing', b: 'beachesSwimming', slack: 2, why: 'you sunbathe on the beach you swim from' },
   { a: 'allInclusive', b: 'beachesSwimming', slack: 2, why: 'the resort format is a beach format' },
   { a: 'yogaRetreats', b: 'spaWellness', slack: 2, why: 'retreats sit inside the wellness scene' },
 ];
@@ -39,7 +50,6 @@ const DOMINANCE: { a: string; b: string; slack: number; why: string }[] = [
 /** If `need` is N/A, `have` scoring at or above `at` is a contradiction. */
 const PREREQUISITES: { have: string; need: string; at: number }[] = [
   { have: 'nationalParks', need: 'hiking', at: 7 },
-  { have: 'sunbathing', need: 'beachesSwimming', at: 7 },
   { have: 'diving', need: 'beachesSwimming', at: 7 },
   { have: 'birding', need: 'wildlifeViewing', at: 7 },
   { have: 'safari', need: 'wildlifeViewing', at: 7 },
@@ -106,6 +116,7 @@ async function main() {
   const { getAllScoredPlaces } = await import('../src/lib/db/queries/places');
   const { isSliderNA } = await import('../src/lib/scoring/destinations');
   const { SLIDERS } = await import('../src/lib/scoring/constants');
+  const { NEVER_NA } = await import('../src/lib/scoring/destinations');
   const { AUDIENCE_WEIGHT, SIGNATURE_WEIGHT, effectiveSignatureTier } = await import('../src/lib/scoring/rank');
 
   const scored = await getAllScoredPlaces();
@@ -151,6 +162,37 @@ async function main() {
   let inferredTopDraws = 0;
 
   for (const d of scored) {
+    // RULE 0 — the central invariant: nothing scores zero in every month.
+    //
+    // A zero row is indistinguishable from an unauthored one, and it drags
+    // a destination in the ranking in exactly the way an N/A does not. A
+    // genuine year-round absence belongs in naSliders. This existed as an
+    // agreed rule for most of a session before anything checked it, and a
+    // NEVER_NA_SLIDERS override in destinations.ts was silently
+    // manufacturing fifteen of them.
+    for (const s of SLIDERS) {
+      if (s.key === 'deals' || s.key === 'crowds') continue;
+      if (isSliderNA(d, s.key)) continue;
+      const m = d.monthly[s.key] ?? [];
+      if (m.length && Math.max(...m) < 0.01) {
+        findings.push({ rule: 'zero-every-month', id: d.id, detail: `${s.key}: 0 in all twelve months — score it or mark it N/A` });
+      }
+    }
+
+    // RULE 0b — an naSliders entry that NEVER_NA_SLIDERS refuses to honour.
+    //
+    // The guard in destinations.ts is right that some interests are never
+    // structurally absent, but it used to drop the author's claim on the
+    // floor: 37 destinations carried a sunbathing N/A that did nothing, and
+    // a content pass wrote three more, reported success, and had none.
+    // A rejected claim has to be visible, or the author never learns the
+    // real answer is "score it low", not "mark it absent".
+    for (const key of (d.naSliders ?? [])) {
+      if (NEVER_NA.has(key)) {
+        findings.push({ rule: 'na-claim-ignored', id: d.id, detail: `${key}: in naSliders, but this interest is never treated as absent — score it instead` });
+      }
+    }
+
     // RULE 1 — an authored tier that disagrees with the destination's own peak.
     for (const s of SLIDERS) {
       const authored = d.signatureTier?.[s.key];
@@ -249,7 +291,7 @@ async function main() {
     }
   }
 
-  const order = ['tier-on-na', 'na-contradiction', 'dominance', 'tier-too-high', 'tier-too-low', 'declared-season-ignored'];
+  const order = ['zero-every-month', 'na-claim-ignored', 'tier-on-na', 'na-contradiction', 'dominance', 'tier-too-high', 'tier-too-low', 'declared-season-ignored'];
   for (const rule of order) {
     const hits = findings.filter((f) => f.rule === rule);
     if (!hits.length) continue;

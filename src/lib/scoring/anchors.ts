@@ -316,7 +316,15 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     definition: 'A wellness destination in its own right, not a hotel amenity.',
     ten: ['borabora', 'maldives', 'sedona', 'thailand', 'budapest', 'kerala', 'bali'],
   },
-  hotSprings: { definition: 'A world bathing culture.', ten: ['iceland', 'budapest'] },
+  hotSprings: {
+    definition: 'A world bathing culture.',
+    // Hokkaido was added after the seasonal-sign fix. Japanese onsen culture
+    // plainly belongs here, and it was missing only because the swim formula
+    // docked -5 for a cold month: Hokkaido's rotenburo in the snow — the
+    // single most iconic image of the whole interest — were being scored as
+    // its worst season, so it never reached a 10 for anyone to notice.
+    ten: ['iceland', 'budapest', 'hokkaido'],
+  },
   yogaRetreats: { definition: 'A world centre of the practice.', ten: ['kerala', 'bali'] },
   themeParks: { definition: 'A world-reference park cluster.', ten: [] },
   nightlife: {

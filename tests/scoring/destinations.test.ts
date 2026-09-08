@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { deriveDestinationScores } from '@/lib/scoring/destinations';
+import { deriveDestinationScores, isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoringDestination } from '@/lib/scoring/types';
 
 function makeDestination(overrides: Partial<ScoringDestination> = {}): ScoringDestination {
@@ -735,5 +735,170 @@ describe('deriveDestinationScores — scoreOverrides (admin per-month exact valu
   it('clamps an out-of-range override into 0-10, same as any other computed value', () => {
     const dest = makeDestination({ base: { golf: 5 }, scoreOverrides: { golf: { 0: 15 } } });
     expect(deriveDestinationScores(dest).monthly.golf[0]).toBe(10);
+  });
+});
+
+describe('isSliderNA — the NEVER_NA guard', () => {
+  // `sunbathing` is never structurally absent: people sunbathe by hotel
+  // pools, on terraces, by lakes and in deserts. The guard exists so no
+  // destination can claim otherwise.
+  //
+  // It was briefly removed, because it appeared to be manufacturing
+  // all-zero sunbathing rows in breach of the "nothing scores zero in every
+  // month" invariant. That read the evidence backwards — the zeros were an
+  // authoring gap, and removing the guard silently marked 37 destinations
+  // N/A for sunbathing, Napa and the Atacama among them. The right fix was
+  // to author the missing scores. This test pins the guard so the same
+  // reasoning cannot undo it twice.
+  it('refuses an N/A claim for an interest that is never structurally absent', () => {
+    const dest = makeDestination({ naSliders: ['sunbathing'] });
+    expect(isSliderNA(dest, 'sunbathing')).toBe(false);
+  });
+
+  it('honours N/A for interests that genuinely can be absent', () => {
+    const dest = makeDestination({ naSliders: ['diving'] });
+    expect(isSliderNA(dest, 'diving')).toBe(true);
+  });
+
+  it('leaves sliders off the N/A list alone', () => {
+    const dest = makeDestination({ naSliders: ['diving'] });
+    expect(isSliderNA(dest, 'beachesSwimming')).toBe(false);
+  });
+});
+
+describe('deriveDestinationScores — deals/crowds in inaccessible months', () => {
+  // Both scores derive from the peak/low flags alone, so a month nobody can
+  // visit read as deep low season and scored 9 for each: Antarctica
+  // advertised its best deals and emptiest months for April through
+  // October, when no ship sails, and Ladakh did the same for January.
+  // Emptiness you cannot enter is not a feature.
+  it('zeroes deals and crowds in an inaccessible month', () => {
+    const dest = makeDestination({ low: [7], inaccessible: [7] });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.deals[6]).toBe(0);
+    expect(monthly.crowds[6]).toBe(0);
+  });
+
+  it('still scores an accessible low-season month as a bargain', () => {
+    const dest = makeDestination({ low: [7], inaccessible: [] });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.deals[6]).toBeGreaterThan(8);
+  });
+
+  it('overrides the crowdBaseline floor, which runs before it', () => {
+    // crowdBaseline 'low' floors an off-peak month at 10; inaccessibility
+    // has to win or the floor silently reinstates the bug.
+    const dest = makeDestination({ crowdBaseline: 'low', inaccessible: [1] });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.crowds[0]).toBe(0);
+  });
+});
+
+describe('deriveDestinationScores — sun formula and heat', () => {
+  // The sun formula applied a flat -2 for a `hot` month, copied from the
+  // formulas where heat is a hazard. On sunbathing that is backwards: Rome
+  // scored 0 in July and August and better in November, and Punta Cana
+  // dropped to 3 in high summer. 45 destinations sagged in exactly the
+  // months people go there to lie in the sun.
+  it('treats a hot month as a bonus for sunbathing, not a penalty', () => {
+    const warm = makeDestination({ base: { sunbathing: 6 }, hot: [7] });
+    const plain = makeDestination({ base: { sunbathing: 6 } });
+    expect(deriveDestinationScores(warm).monthly.sunbathing[6])
+      .toBeGreaterThan(deriveDestinationScores(plain).monthly.sunbathing[6]);
+  });
+
+  it('still penalises genuinely severe heat', () => {
+    const scorching = makeDestination({ base: { sunbathing: 6 }, hot: [7], hotSeverity: 'severe' });
+    const plain = makeDestination({ base: { sunbathing: 6 } });
+    expect(deriveDestinationScores(scorching).monthly.sunbathing[6])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.sunbathing[6]);
+  });
+
+  it('leaves heat a penalty for hiking-family sliders', () => {
+    const warm = makeDestination({ base: { hiking: 6 }, hot: [7] });
+    const plain = makeDestination({ base: { hiking: 6 } });
+    expect(deriveDestinationScores(warm).monthly.hiking[6])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.hiking[6]);
+  });
+});
+
+describe('deriveDestinationScores — sliders whose defining condition is another slider\'s hazard', () => {
+  // The same bug class as the sun formula's flat -2 for heat, found by
+  // scripts/audit-seasonal-signs.ts. Six sliders share the `swim` formula
+  // and two of them want exactly what it penalises.
+  it('rewards a cold month for hot springs', () => {
+    const cold = makeDestination({ base: { hotSprings: 6 }, cold: [1] });
+    const plain = makeDestination({ base: { hotSprings: 6 } });
+    expect(deriveDestinationScores(cold).monthly.hotSprings[0])
+      .toBeGreaterThan(deriveDestinationScores(plain).monthly.hotSprings[0]);
+  });
+
+  it('rewards a swimHazard month for surfing — hazard season is swell season', () => {
+    const stormy = makeDestination({ base: { surfing: 6 }, swimHazard: [1] });
+    const plain = makeDestination({ base: { surfing: 6 } });
+    expect(deriveDestinationScores(stormy).monthly.surfing[0])
+      .toBeGreaterThan(deriveDestinationScores(plain).monthly.surfing[0]);
+  });
+
+  it('still penalises both conditions for actual swimmers', () => {
+    const plain = makeDestination({ base: { beachesSwimming: 8 } });
+    const cold = makeDestination({ base: { beachesSwimming: 8 }, cold: [1] });
+    const stormy = makeDestination({ base: { beachesSwimming: 8 }, swimHazard: [1] });
+    expect(deriveDestinationScores(cold).monthly.beachesSwimming[0])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.beachesSwimming[0]);
+    expect(deriveDestinationScores(stormy).monthly.beachesSwimming[0])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.beachesSwimming[0]);
+  });
+
+  it('does not dock wildflower blooms for a wet month — blooms follow the rain', () => {
+    const wet = makeDestination({ base: { wildflowerBlooms: 6 }, wet: [4] });
+    const plain = makeDestination({ base: { wildflowerBlooms: 6 } });
+    expect(deriveDestinationScores(wet).monthly.wildflowerBlooms[3])
+      .toBe(deriveDestinationScores(plain).monthly.wildflowerBlooms[3]);
+  });
+
+  it('still docks wildlife viewing for a wet month outside its peak', () => {
+    const wet = makeDestination({ base: { wildlifeViewing: 6 }, wet: [4] });
+    const plain = makeDestination({ base: { wildlifeViewing: 6 } });
+    expect(deriveDestinationScores(wet).monthly.wildlifeViewing[3])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.wildlifeViewing[3]);
+  });
+});
+
+describe('deriveDestinationScores — the luxury formula', () => {
+  // luxuryHotels, allInclusive and themeParks had no case at all and fell
+  // through to `v = base`, coming out perfectly flat: 0.0 mean amplitude
+  // across 245 destination-rows. luxuryHotels is a popular-tier interest
+  // scored for all 200 destinations and is often a destination's third
+  // largest contributor, so a seasonless slider propped up rankings in
+  // every month of the year.
+  it('docks a wet month for luxury hotels', () => {
+    const wet = makeDestination({ base: { luxuryHotels: 8 }, wet: [9] });
+    const plain = makeDestination({ base: { luxuryHotels: 8 } });
+    expect(deriveDestinationScores(wet).monthly.luxuryHotels[8])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.luxuryHotels[8]);
+  });
+
+  it('zeroes an inaccessible month — you cannot stay somewhere you cannot reach', () => {
+    const dest = makeDestination({ base: { luxuryHotels: 9 }, inaccessible: [2] });
+    expect(deriveDestinationScores(dest).monthly.luxuryHotels[1]).toBe(0);
+  });
+
+  it('docks a storm-hazard month for all-inclusives but not for luxury hotels generally', () => {
+    const stormy = makeDestination({ base: { allInclusive: 8, luxuryHotels: 8 }, swimHazard: [9] });
+    const plain = makeDestination({ base: { allInclusive: 8, luxuryHotels: 8 } });
+    const s = deriveDestinationScores(stormy).monthly;
+    const p = deriveDestinationScores(plain).monthly;
+    expect(s.allInclusive[8]).toBeLessThan(p.allInclusive[8]);
+    expect(s.luxuryHotels[8]).toBe(p.luxuryHotels[8]);
+  });
+
+  it('docks a cold month for theme parks only', () => {
+    const cold = makeDestination({ base: { themeParks: 7, luxuryHotels: 7 }, cold: [1] });
+    const plain = makeDestination({ base: { themeParks: 7, luxuryHotels: 7 } });
+    expect(deriveDestinationScores(cold).monthly.themeParks[0])
+      .toBeLessThan(deriveDestinationScores(plain).monthly.themeParks[0]);
+    expect(deriveDestinationScores(cold).monthly.luxuryHotels[0])
+      .toBe(deriveDestinationScores(plain).monthly.luxuryHotels[0]);
   });
 });

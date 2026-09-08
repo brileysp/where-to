@@ -25,6 +25,47 @@ export function has(arr: number[] | null | undefined, m: number): boolean {
 const HIKING_WORST_PENALTY: Record<Severity, number> = { mild: -1.5, moderate: -4, severe: -6.5 };
 
 /**
+ * What a `hot` month is worth to the SUN formula (sunbathing).
+ *
+ * It used to be a flat -2, copied from the formulas where heat is a
+ * hazard. On the one interest whose entire point is heat and sun, that was
+ * backwards, and it showed: Rome scored 0 for sunbathing in July and August
+ * and better in November; Punta Cana dropped to 3 in high summer; Barcelona,
+ * Los Cabos, Sedona and 40 more sagged in exactly the months people go
+ * there to lie in the sun.
+ *
+ * A hot month is what a sunbather wants, right up until it isn't — so this
+ * reads the same hotSeverity the badges use. Only 'severe' (Rajasthan in
+ * May, Dubai in August, when going outside at midday is genuinely
+ * unpleasant) is a penalty. Unclassified defaults to 'moderate', as
+ * everywhere else in this file.
+ */
+const SUN_HOT_BONUS: Record<Severity, number> = { mild: 1, moderate: 1, severe: -3 };
+
+/**
+ * Sliders on the SWIM formula whose defining condition that formula treats
+ * as a hazard. Same bug class as the sun formula's old flat -2 for heat,
+ * found by scripts/audit-seasonal-signs.ts:
+ *
+ *   hotSprings scored 0.8 in its cold months against 5.6 the rest of the
+ *   year, across 19 destinations. A hot spring is at its best on a cold
+ *   day — Iceland's Blue Lagoon in February, an onsen in the snow,
+ *   Budapest's outdoor baths with steam coming off them. The formula's
+ *   `cold -5` is right for swimmers and exactly backwards here.
+ *
+ *   surfing scored 0.0 in swimHazard months against 3.6 elsewhere. The
+ *   storms that make water hazardous for a swimmer are what generate the
+ *   swell a surfer travels for. Big-wave season IS hazard season.
+ *
+ * Only these two flip. Diving, sailing, kayaking and beach swimming all
+ * genuinely want calm, warm water, and keep the shared signs.
+ */
+const SWIM_SIGN_FLIPS: Record<string, { cold?: number; hazard?: number }> = {
+  hotSprings: { cold: 3 },
+  surfing: { hazard: 2 },
+};
+
+/**
  * The generic hikingWorst fallback's penalty for month `m` — the worst
  * (most negative) of whichever wet/hot/cold flags apply, each scaled by
  * that category's own severity. A month flagged for more than one reason
@@ -52,7 +93,29 @@ export function sliderEventsBonus(events: SliderEvent[] | undefined, m: number):
 // "sit outside in the sun" is never truly unavailable the way scuba diving
 // is in a landlocked desert. Enforced here rather than trusted to content
 // authoring, so a future destination can't silently reintroduce this.
+//
+// This guard was briefly REMOVED, on the grounds that it was manufacturing
+// all-zero sunbathing rows and thereby violating the catalogue's central
+// invariant. That read the evidence backwards. A zero row means one of two
+// things — unauthored, or genuinely N/A — and for sunbathing at Napa, in
+// the Dolomites or at Uluru the answer was neither: those places have hot
+// dry summers, hotel pools and terraces, and simply had no score written.
+// The zeros were an authoring gap, and removing the guard "fixed" them by
+// silently marking 37 destinations N/A for sunbathing, Napa and the
+// Atacama among them.
+//
+// So the guard stays, and the two real problems are fixed where they
+// belong: the zero rows got authored scores (scripts/author-sunbathing.ts),
+// and audit-content-outliers.ts now reports an naSliders entry this set
+// ignores, so an author's rejected claim is visible instead of silent.
 const NEVER_NA_SLIDERS = new Set(['sunbathing']);
+
+/**
+ * Interests this catalogue refuses to treat as structurally absent. Exposed
+ * so audits can tell an author their N/A was ignored rather than dropping
+ * it on the floor.
+ */
+export const NEVER_NA = NEVER_NA_SLIDERS as ReadonlySet<string>;
 
 /**
  * True if `key` is a structurally-absent interest for this destination —
@@ -247,17 +310,21 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
         case 'sun': {
           const dry = has(d.dry, m) ? 2 : 0;
           const wet = has(d.wet, m) ? -4 : 0;
-          const hot = has(d.hot, m) ? -2 : 0;
+          // Heat helps here and hurts everywhere else — see SUN_HOT_BONUS.
+          const hot = has(d.hot, m) ? SUN_HOT_BONUS[d.hotSeverity || 'moderate'] : 0;
           const cold = has(d.cold, m) ? -4 : 0;
           terms = [['dry', dry], ['wet', wet], ['hot', hot], ['cold', cold]];
           v = base + dry + wet + hot + cold;
           break;
         }
         case 'swim': {
+          // See SWIM_SIGN_FLIPS — two of the six sliders on this formula
+          // want the very condition the other four are penalised for.
+          const flip = SWIM_SIGN_FLIPS[s.key];
           const dry = has(d.dry, m) ? 1 : 0;
           const wet = has(d.wet, m) ? -2 : 0;
-          const hazard = has(d.swimHazard, m) ? -5 : 0;
-          const cold = has(d.cold, m) ? -5 : 0;
+          const hazard = has(d.swimHazard, m) ? (flip?.hazard ?? -5) : 0;
+          const cold = has(d.cold, m) ? (flip?.cold ?? -5) : 0;
           terms = [['dry', dry], ['wet', wet], ['swimHazard', hazard], ['cold', cold]];
           v = base + dry + wet + hazard + cold;
           break;
@@ -410,6 +477,18 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
           if (d.crowdBaseline === 'low') v = Math.max(v, has(d.peak, m) ? 8 : 10);
           if (d.crowdBaseline === 'high') v = Math.min(v, has(d.peak, m) ? 2 : 5);
           if (v !== preOverride) reason += ` → crowdBaseline (${d.crowdBaseline}) floor/ceiling, now ${v}`;
+          // A month nobody can visit is not a bargain and not uncrowded.
+          // Both scores are derived from the peak/low flags alone, so an
+          // inaccessible month read as deep low season and scored 9 for
+          // each: Antarctica advertised its best deals and emptiest months
+          // for April through October, when no ship sails, and Ladakh did
+          // the same for January. Emptiness you cannot enter is not a
+          // feature, and this is the last thing to run so it overrides the
+          // crowdBaseline floor above as well.
+          if (has(d.inaccessible, m)) {
+            v = 0;
+            reason += ' → inaccessible this month, so neither a deal nor a quiet time';
+          }
           customExplanation = reason;
           break;
         }
@@ -429,7 +508,11 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             // Nov-Mar migrant-arrival event, wet months got zero
             // downside at all, keeping the score flatly "excellent" even
             // in months where nothing is actually boosting it.
-            const wetFallback = bonus <= 0 && has(d.wet, m) ? -1 : 0;
+            // wildflowerBlooms is the exception on this formula: a bloom
+            // FOLLOWS the rain (desert superblooms, Cape fynbos, alpine
+            // meadows after snowmelt), so docking its wet months inverted
+            // it — 3.2 wet against 4.3 dry across 12 destinations.
+            const wetFallback = s.key !== 'wildflowerBlooms' && bonus <= 0 && has(d.wet, m) ? -1 : 0;
             if (wetFallback) terms.push(['wet (no active event)', wetFallback]);
             v = Math.round(base + bonus + wetFallback);
           } else {
@@ -460,12 +543,16 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             // penalty a plain (no-events) destination would get, e.g.
             // Kruger's animals genuinely are harder to spot once they
             // disperse from dry-season waterholes.
-            const wetFallback = bonus <= 0 && has(d.wet, m) ? -1 : 0;
+            // wildflowerBlooms is the exception on this formula: a bloom
+            // FOLLOWS the rain (desert superblooms, Cape fynbos, alpine
+            // meadows after snowmelt), so docking its wet months inverted
+            // it — 3.2 wet against 4.3 dry across 12 destinations.
+            const wetFallback = s.key !== 'wildflowerBlooms' && bonus <= 0 && has(d.wet, m) ? -1 : 0;
             if (wetFallback) terms.push(['wet (no active event)', wetFallback]);
             v = Math.round(base + bonus + wetFallback);
           } else {
             const peak = has(d.wildlifePeak, m) ? 7 : 0;
-            const wet = has(d.wet, m) && !has(d.wildlifePeak, m) ? -1 : 0;
+            const wet = s.key !== 'wildflowerBlooms' && has(d.wet, m) && !has(d.wildlifePeak, m) ? -1 : 0;
             terms = [['wildlifePeak', peak], ['wet (no peak)', wet]];
             v = base + peak + wet;
           }
@@ -474,6 +561,32 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             v = Math.min(v, 1);
             if (v !== before) terms.push(['wildlifeClosed floor', v - before]);
           }
+          break;
+        }
+        case 'luxury': {
+          // luxuryHotels, allInclusive and themeParks used to fall through
+          // to `default: v = base` and came out PERFECTLY flat — 0.0 mean
+          // amplitude across all 245 destination-rows, the same number in
+          // every month of the year. That matters more than it looks:
+          // luxuryHotels is a popular-tier interest scored for all 200
+          // destinations and is frequently a destination's third-largest
+          // contributor, so a completely seasonless slider was propping up
+          // rankings twelve months a year.
+          //
+          // The hotel is open in the monsoon; the HOLIDAY is worse, which is
+          // exactly why Caribbean resort prices collapse in September. So
+          // these track the destination's own season, gently — the point is
+          // to stop asserting that a resort month and a washout month are
+          // identical, not to make accommodation as swingy as hiking.
+          const inaccessible = has(d.inaccessible, m) ? -10 : 0;
+          const wet = has(d.wet, m) ? -2 : 0;
+          // The all-inclusive format is a beach format; a storm-hazard month
+          // takes the beach away.
+          const hazard = s.key === 'allInclusive' && has(d.swimHazard, m) ? -3 : 0;
+          // Outdoor parks in winter — several close entirely.
+          const cold = s.key === 'themeParks' && has(d.cold, m) ? -3 : 0;
+          terms = [['inaccessible', inaccessible], ['wet', wet], ['swimHazard', hazard], ['cold', cold]];
+          v = base + inaccessible + wet + hazard + cold;
           break;
         }
         default:

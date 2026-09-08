@@ -1,11 +1,43 @@
-import { db } from '../src/lib/db/client';
-import { places } from '../src/lib/db/schema';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import { eq } from 'drizzle-orm';
+import { drizzle as drizzlePostgres } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
+import { places } from '../src/lib/db/schema';
 import { toScoringPlace } from '../src/lib/db/queries/places';
 import { deriveDestinationScores, isSliderNA } from '../src/lib/scoring/destinations';
 import { timingScoreForMonth, weatherComfortScore, scoreLabel } from '../src/lib/scoring/rank';
 import { SLIDERS } from '../src/lib/scoring/constants';
 import type { ScoringDestination } from '../src/lib/scoring/types';
+
+// This script imported `db` from db/client.ts, which reads
+// process.env.DATABASE_URL at MODULE LOAD and silently falls back to the
+// local PGlite sandbox when it is unset. Run from the CLI that fallback is
+// always taken, so the audit ran against a stale local schema and died on
+// errorMissingColumn the moment the places table gained a column. Every
+// other script in this directory loads .env.local first and connects
+// explicitly; this one had been left behind.
+function loadDotEnvLocal(): Record<string, string> {
+  const out: Record<string, string> = {};
+  let raw: string;
+  try {
+    raw = readFileSync(join(__dirname, '..', '.env.local'), 'utf8');
+  } catch {
+    return out;
+  }
+  for (const line of raw.split('\n')) {
+    const t = line.trim();
+    if (!t || t.startsWith('#')) continue;
+    const i = t.indexOf('=');
+    if (i === -1) continue;
+    let value = t.slice(i + 1).trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    out[t.slice(0, i).trim()] = value;
+  }
+  return out;
+}
 
 /**
  * Scans every destination's computed monthly scores for the SHAPES that
@@ -355,6 +387,12 @@ async function main() {
   // deriveDestinationScores directly (the OLD formula, still the real
   // content-authoring "compile source" for curve-based scoring's fitted
   // curves; auditing it is still the right layer for content-shape checks).
+  const env = loadDotEnvLocal();
+  if (!env.DATABASE_URL) {
+    console.error('No DATABASE_URL in .env.local — refusing to run against the PGlite fallback.');
+    process.exit(1);
+  }
+  const db = drizzlePostgres(postgres(env.DATABASE_URL, { prepare: false }));
   const rows = await db.select().from(places).where(eq(places.isPrimaryDestination, true));
   const findings: Finding[] = [];
 

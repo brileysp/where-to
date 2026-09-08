@@ -19,7 +19,9 @@
     "db:export:destinations": "tsx scripts/export-legacy-destinations.ts",
     "db:studio": "drizzle-kit studio",
     "test": "vitest run",
-    "db:audit:anchors": "tsx scripts/audit-anchors.ts"
+    "db:audit:anchors": "tsx scripts/audit-anchors.ts",
+    "db:audit:signs": "tsx scripts/audit-seasonal-signs.ts",
+    "db:audit:outliers": "tsx scripts/audit-content-outliers.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.5",
