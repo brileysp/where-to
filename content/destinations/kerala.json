@@ -5,15 +5,38 @@
   "emoji": "🛶",
   "climate": "tropical",
   "about": "Dry season Dec–Feb is best for beaches and backwater cruising; monsoon (Jun–Aug) quiets things down for typical sightseeing but is traditionally considered prime season for authentic Ayurvedic treatments.",
-  "overview": "Slow houseboat cruises through palm-lined backwaters, Munnar's tea-covered hills, and the global heartland of authentic Ayurvedic wellness — India's 'God's Own Country.'",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Street food and auto-rickshaws stay extremely cheap — an overnight backwater houseboat and a proper multi-day Ayurvedic treatment package are where the real spending happens.",
+  "overview": "Houseboat cruises through backwaters, Munnar's tea hills, and the heartland of authentic Ayurvedic wellness — India's 'God's Own Country.'",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Kerala is cheap for daily life, but the backwater houseboat and Ayurvedic treatments that define a visit are real, planned expenses.",
   "costItems": [
-    { "label": "Filter coffee", "price": 1, "unit": "" },
-    { "label": "Kerala sadya (traditional meal)", "price": 5, "unit": "" },
-    { "label": "Auto-rickshaw, 15 min", "price": 2, "unit": "" },
-    { "label": "Backwater houseboat, overnight", "price": 150, "unit": "per couple" },
-    { "label": "Ayurvedic massage & treatment package", "price": 80, "unit": "per session" }
+    {
+      "label": "Filter coffee",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Kerala sadya (traditional meal)",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Auto-rickshaw, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Backwater houseboat, overnight",
+      "price": 150,
+      "unit": "per couple"
+    },
+    {
+      "label": "Ayurvedic massage & treatment package",
+      "price": 80,
+      "unit": "per session"
+    }
   ],
   "base": {
     "sunbathing": 6,
@@ -21,7 +44,7 @@
     "diving": 2,
     "surfing": 2,
     "sailing": 8,
-    "hiking": 5,
+    "hiking": 4,
     "scenic": 8,
     "fishing": 4,
     "roadtrip": 5,
@@ -29,7 +52,7 @@
     "golf": 2,
     "stargazing": 3,
     "museums": 3,
-    "architecture": 4,
+    "architecture": 3,
     "festivals": 6,
     "finedining": 6,
     "streetfood": 7,
@@ -41,20 +64,65 @@
     "cycling": 3,
     "shopping": 4,
     "birding": 6,
-    "wildlife": 6
+    "wildlife": 5
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate"],
-  "dry": [12, 1, 2, 3],
-  "wet": [6, 7, 8, 9],
-  "peak": [12, 1, 2],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
   "peakIntensity": "moderate",
-  "low": [6, 7, 8],
-  "hikingBest": [11, 12, 1, 2],
-  "hikingWorst": [6, 7, 8],
+  "low": [
+    6,
+    7,
+    8
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
   "specialSeasons": [
-    { "months": [6, 7, 8], "text": "Monsoon season is quiet for beach travel, but a genuine niche draw for Ayurvedic treatments — traditional practice holds this is the best season for certain therapies." }
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Monsoon season is quiet for beach travel, but a genuine niche draw for Ayurvedic treatments — traditional practice holds this is the best season for certain therapies."
+    }
   ],
   "monthlyWeather": [
     "dry and warm, one of the best months for beaches and backwaters",
@@ -70,8 +138,18 @@
     "warm and drying out, a pleasant shoulder month",
     "dry and warm, as the best stretch of the season begins"
   ],
-  "naSliders": ["snowsports", "winetasting"],
-  "searchAliases": ["Alleppey", "Munnar", "Kovalam", "Kochi", "Periyar Wildlife Sanctuary", "backwaters"],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Alleppey",
+    "Munnar",
+    "Kovalam",
+    "Kochi",
+    "Periyar Wildlife Sanctuary",
+    "backwaters"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

@@ -2,7 +2,7 @@
   "id": "santorini",
   "name": "Santorini & Cyclades",
   "region": "Greece",
-  "emoji": "🇬🇷",
+  "emoji": "⛵",
   "climate": "mediterranean",
   "about": "Peak Jul–Aug is hot, crowded and pricey. Many hotels/restaurants close entirely Nov–Mar — check availability, not just weather.",
   "overview": "Whitewashed villages perched on a volcanic caldera, built for sunset views and slow, expensive dinners.",
@@ -26,6 +26,11 @@
       "label": "Taxi, 15 min (limited availability)",
       "unit": "",
       "price": 30
+    },
+    {
+      "label": "Beach club sunbed & umbrella",
+      "price": 30,
+      "unit": "per day"
     },
     {
       "label": "Caldera-view dinner",
@@ -52,16 +57,16 @@
     "golf": 1,
     "stargazing": 5,
     "museums": 6,
-    "architecture": 9,
+    "architecture": 8,
     "festivals": 5,
-    "finedining": 8,
+    "finedining": 7,
     "streetfood": 5,
     "nightlife": 7,
     "winetasting": 7,
     "spa": 6,
     "luxuryLodging": 9,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 7,
     "birding": 3,
     "wildlife": 2

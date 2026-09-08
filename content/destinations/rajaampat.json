@@ -10,7 +10,7 @@
     "min": "$$$$",
     "max": "$$$$$"
   },
-  "costOverview": "Raja Ampat has no cheap version — even a budget liveaboard runs several hundred dollars a day before mandatory park fees, and luxury boats charge well over that.",
+  "costOverview": "Even a budget liveaboard runs several hundred dollars a day before mandatory park fees, and luxury boats charge well over that — remoteness is the reason.",
   "costItems": [
     {
       "label": "Ferry, Sorong–Waisai",
@@ -39,7 +39,7 @@
     "diving": 10,
     "surfing": 2,
     "sailing": 6,
-    "hiking": 4,
+    "hiking": 2,
     "scenic": 8,
     "fishing": 6,
     "roadtrip": 1,
@@ -165,5 +165,6 @@
       "deserts": "none",
       "astrophotography": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

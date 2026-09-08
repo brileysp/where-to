@@ -5,15 +5,43 @@
   "emoji": "🛥️",
   "climate": "mediterranean",
   "about": "Peak summer (Jul–Aug) is hot, glamorous, and extremely crowded and expensive; the Cannes Film Festival in mid-May brings its own smaller spike.",
-  "overview": "Nice's Promenade des Anglais, Monaco's casino glamour, and Cannes' red carpet — the Mediterranean coastline that defined the word \"glamorous,\" now one of the world's premier yachting and celebrity destinations.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Nice's old town keeps real budget options for food — Monaco and peak-season Cannes/Saint-Tropez are where this region becomes one of the most expensive stretches of coastline on Earth.",
+  "overview": "Nice's Promenade des Anglais, Monaco's casinos, and Cannes' red carpet — the coastline that defined \"glamorous,\" now premier yachting territory.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Nice's old town keeps real budget options for food — Monaco and peak-season Cannes and Saint-Tropez turn this into one of the most expensive stretches of coastline on Earth.",
   "costItems": [
-    { "label": "Espresso", "price": 3, "unit": "" },
-    { "label": "Socca from a street stall", "price": 4, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 15, "unit": "" },
-    { "label": "Matisse Museum entry", "price": 10, "unit": "" },
-    { "label": "Monaco Grand Prix grandstand ticket", "price": 350, "unit": "per person" }
+    {
+      "label": "Espresso",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Socca from a street stall",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Matisse Museum entry",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Beach club sunbed & umbrella",
+      "price": 70,
+      "unit": "per day"
+    },
+    {
+      "label": "Monaco Grand Prix grandstand ticket",
+      "price": 350,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 8,
@@ -22,7 +50,7 @@
     "surfing": 1,
     "sailing": 8,
     "hiking": 3,
-    "scenic": 8,
+    "scenic": 7,
     "fishing": 2,
     "roadtrip": 5,
     "adventure": 2,
@@ -36,24 +64,57 @@
     "nightlife": 7,
     "winetasting": 5,
     "spa": 5,
-    "luxuryLodging": 9,
+    "luxuryLodging": 10,
     "snowsports": 0,
     "cycling": 4,
     "shopping": 7,
     "birding": 3,
     "wildlife": 2
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["lively", "highenergy"],
-  "physicalBands": ["easy", "moderate"],
-  "dry": [6, 7, 8, 9],
-  "wet": [11, 12, 1],
-  "hot": [7, 8],
-  "peak": [7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "low": [1, 2],
+  "low": [
+    1,
+    2
+  ],
   "specialSeasons": [
-    { "months": [5], "text": "The Cannes Film Festival (mid-May) brings global media attention and a huge spike in hotel prices along the whole coast." }
+    {
+      "months": [
+        5
+      ],
+      "text": "The Cannes Film Festival (mid-May) brings global media attention and a huge spike in hotel prices along the whole coast."
+    }
   ],
   "monthlyWeather": [
     "mild and occasionally rainy, quiet with the fewest visitors",
@@ -69,8 +130,19 @@
     "mild and increasingly rainy, quiet again",
     "mild and occasionally rainy, festive through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Nice", "Cannes", "Monaco", "Monte Carlo", "Saint-Tropez", "Antibes", "French Riviera", "Cote d'Azur"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Nice",
+    "Cannes",
+    "Monaco",
+    "Monte Carlo",
+    "Saint-Tropez",
+    "Antibes",
+    "French Riviera",
+    "Cote d'Azur"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

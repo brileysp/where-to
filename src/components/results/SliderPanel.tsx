@@ -146,7 +146,7 @@ export function SliderPanel({
       ))}
 
       <button type="button" className="btn-secondary" onClick={onToggleShowAll}>
-        {showAllSliders ? 'Show fewer sliders' : 'Show all 27 sliders'}
+        {showAllSliders ? 'Show fewer sliders' : `Show all ${SLIDERS.length} sliders`}
       </button>
       <button type="button" className="btn-secondary" style={{ marginTop: 8 }} onClick={onReset}>
         Reset

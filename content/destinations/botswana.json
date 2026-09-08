@@ -10,7 +10,7 @@
     "min": "$$$$$",
     "max": "$$$$$"
   },
-  "costOverview": "Virtually everything here is bundled into one all-inclusive nightly rate — flights, meals, drinks, and game drives — so there's no real budget or mid-tier version of this destination.",
+  "costOverview": "Virtually everything here is bundled into one all-inclusive nightly rate — flights, meals, drinks, and game drives — so there's no separate budget or mid-tier version of this destination.",
   "costItems": [
     {
       "label": "Internal charter flight, Maun–Delta",
@@ -39,7 +39,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 3,
-    "hiking": 4,
+    "hiking": 3,
     "scenic": 7,
     "fishing": 4,
     "roadtrip": 3,
@@ -54,12 +54,12 @@
     "nightlife": 1,
     "winetasting": 1,
     "spa": 3,
-    "luxuryLodging": 9,
+    "luxuryLodging": 10,
     "snowsports": 0,
     "cycling": 1,
     "shopping": 2,
-    "birding": 5,
-    "wildlife": 7
+    "birding": 6,
+    "wildlife": 9
   },
   "budgetBands": [
     "highend",
@@ -170,5 +170,6 @@
     "Okavango",
     "Chobe",
     "Moremi"
-  ]
+  ],
+  "crowdBaseline": "low"
 }

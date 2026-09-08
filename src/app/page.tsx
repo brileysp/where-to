@@ -1,4 +1,4 @@
-import { getAllScoredDestinations } from '@/lib/db/queries/destinations';
+import { getAllScoredPlaces } from '@/lib/db/queries/places';
 import { loadUserPreferences, listSavedProfiles } from '@/app/actions';
 import { loadDnaState } from '@/app/dna/actions';
 import { ResultsApp } from '@/components/results/ResultsApp';
@@ -7,7 +7,7 @@ const DEFAULT_DNA_HINT = 'Swipe through experiences to teach Where To? your trav
 
 export default async function Home() {
   const [destinations, preferences, savedProfiles, dnaState] = await Promise.all([
-    getAllScoredDestinations(),
+    getAllScoredPlaces(),
     loadUserPreferences(),
     listSavedProfiles(),
     loadDnaState(),

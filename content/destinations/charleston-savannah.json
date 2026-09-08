@@ -5,15 +5,43 @@
   "emoji": "🌳",
   "climate": "temperate",
   "about": "Spring (Mar–Apr) brings blooming azaleas and mild weather, the most popular season; summer (Jun–Sep) is brutally hot and humid, best avoided for walking tours.",
-  "overview": "Two of America's best-preserved historic Southern cities — antebellum architecture, Spanish moss-draped squares, and a genuinely excellent Southern food scene, a short drive apart along the coast.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Sweet tea and casual Southern food stay affordable — historic-home tours and the region's top-tier restaurants are where the real spending happens.",
+  "overview": "Two of America's best-preserved historic Southern cities — antebellum architecture, moss-draped squares, and excellent Southern food, a short drive apart.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Sweet tea and casual Southern food are affordable — historic-home tours and the region's top-tier restaurants are where the real spending happens.",
   "costItems": [
-    { "label": "Sweet tea", "price": 3, "unit": "" },
-    { "label": "Shrimp and grits dinner", "price": 22, "unit": "" },
-    { "label": "Horse-drawn carriage tour", "price": 30, "unit": "per person" },
-    { "label": "Historic home & garden entry", "price": 15, "unit": "" },
-    { "label": "Low-country boil dinner", "price": 35, "unit": "per person" }
+    {
+      "label": "Sweet tea",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Historic home & garden entry",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Shrimp and grits dinner",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Horse-drawn carriage tour",
+      "price": 30,
+      "unit": "per person"
+    },
+    {
+      "label": "Low-country boil dinner",
+      "price": 35,
+      "unit": "per person"
+    },
+    {
+      "label": "Tasting menu, acclaimed Charleston restaurant",
+      "price": 150,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 5,
@@ -38,19 +66,45 @@
     "spa": 5,
     "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 5,
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate"],
-  "hot": [6, 7, 8, 9],
-  "cold": [12, 1],
-  "peak": [3, 4, 10],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "hot": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "cold": [
+    12,
+    1
+  ],
+  "peak": [
+    3,
+    4,
+    10
+  ],
   "peakIntensity": "moderate",
-  "low": [7, 8],
+  "low": [
+    7,
+    8
+  ],
   "monthlyWeather": [
     "mild and pleasant, comfortable for walking tours",
     "mild, with azaleas beginning to bloom",
@@ -65,8 +119,16 @@
     "mild, comfortable and quieter than spring",
     "mild, festive through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Charleston", "Savannah", "Historic District", "Kiawah Island", "Tybee Island"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Charleston",
+    "Savannah",
+    "Historic District",
+    "Kiawah Island",
+    "Tybee Island"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "casual",

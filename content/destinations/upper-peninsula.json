@@ -2,23 +2,46 @@
   "id": "upper-peninsula",
   "name": "Upper Peninsula",
   "region": "Michigan, USA",
-  "emoji": "⚓",
+  "emoji": "🛶",
   "climate": "temperate",
   "about": "Summer (Jun–Aug) is the only realistic window for most visitors, with the mildest weather and Mackinac Island in full swing; winters are brutally cold with some of the heaviest lake-effect snowfall in the country.",
-  "overview": "Pictured Rocks' colorful cliffs on Lake Superior, car-free Mackinac Island, and genuine aurora-viewing potential — one of the most remote, least-crowded corners of the American Midwest.",
-  "costRange": { "min": "$", "max": "$$$" },
+  "overview": "Pictured Rocks' cliffs on Lake Superior, car-free Mackinac Island, and real aurora potential — one of the Midwest's most remote, least-crowded corners.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
   "costOverview": "Genuinely one of the more affordable US destinations on this list — pasties, fudge, and boat tours all stay reasonable, and there's no real luxury tier to speak of.",
   "costItems": [
-    { "label": "Coffee", "price": 3.5, "unit": "" },
-    { "label": "Pasty (Cornish meat pie)", "price": 7, "unit": "" },
-    { "label": "Ferry, Mackinac Island", "price": 30, "unit": "round-trip" },
-    { "label": "Mackinac Island fudge (chocolate)", "price": 12, "unit": "per pound" },
-    { "label": "Pictured Rocks boat tour", "price": 45, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Pasty (Cornish meat pie)",
+      "price": 7,
+      "unit": ""
+    },
+    {
+      "label": "Ferry, Mackinac Island",
+      "price": 30,
+      "unit": "round-trip"
+    },
+    {
+      "label": "Mackinac Island fudge (chocolate)",
+      "price": 12,
+      "unit": "per pound"
+    },
+    {
+      "label": "Pictured Rocks boat tour",
+      "price": 45,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
     "swimming": 4,
-    "diving": 5,
+    "diving": 4,
     "surfing": 0,
     "sailing": 4,
     "hiking": 6,
@@ -29,28 +52,52 @@
     "golf": 3,
     "stargazing": 7,
     "museums": 3,
-    "architecture": 3,
+    "architecture": 2,
     "festivals": 3,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 4,
-    "nightlife": 2,
+    "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
-    "luxuryLodging": 3,
+    "luxuryLodging": 2,
     "snowsports": 5,
     "cycling": 3,
-    "shopping": 3,
+    "shopping": 2,
     "birding": 5,
     "wildlife": 5
   },
-  "budgetBands": ["basic", "comfortable"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "hot": [7],
-  "cold": [12, 1, 2, 3],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "hot": [
+    7
+  ],
+  "cold": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [11, 3, 4],
+  "low": [
+    11,
+    3,
+    4
+  ],
   "monthlyWeather": [
     "bitterly cold, with heavy lake-effect snow",
     "bitterly cold, still deep in one of the snowiest stretches in the country",
@@ -65,8 +112,16 @@
     "cold, quiet with limited services",
     "bitterly cold, deep winter setting in with heavy snow"
   ],
-  "naSliders": ["surfing"],
-  "searchAliases": ["Pictured Rocks", "Mackinac Island", "Tahquamenon Falls", "Lake Superior", "Marquette"],
+  "naSliders": [
+    "surfing"
+  ],
+  "searchAliases": [
+    "Pictured Rocks",
+    "Mackinac Island",
+    "Tahquamenon Falls",
+    "Lake Superior",
+    "Marquette"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

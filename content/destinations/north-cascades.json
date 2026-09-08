@@ -2,18 +2,41 @@
   "id": "north-cascades",
   "name": "North Cascades",
   "region": "Washington, USA",
-  "emoji": "🧊",
+  "emoji": "🥾",
   "climate": "temperate",
   "about": "The North Cascades Highway through the park closes completely each winter (roughly Dec–Mar); summer (Jul–Aug) is the only real window for the high alpine trails, though Mount Baker's ski area stays open, reached by a different road.",
-  "overview": "Nicknamed the 'American Alps' — more glaciers than any US park outside Alaska, the turquoise waters of Diablo Lake, and genuinely serious alpine hiking, all remarkably uncrowded even in peak season.",
-  "costRange": { "min": "$", "max": "$$$" },
+  "overview": "Nicknamed the 'American Alps' — more glaciers than any US park outside Alaska, turquoise Diablo Lake, and serious alpine hiking, remarkably uncrowded.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
   "costOverview": "One of the least commercialized national parks in the system — basic supplies and permits are the main costs, aside from a day at Mount Baker's ski area nearby.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Trail snack, general store", "price": 8, "unit": "" },
-    { "label": "Diablo Lake boat tour", "price": 45, "unit": "per person" },
-    { "label": "Mount Baker ski day pass", "price": 80, "unit": "per day" },
-    { "label": "North Cascades backcountry permit", "price": 20, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Trail snack, general store",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Diablo Lake boat tour",
+      "price": 45,
+      "unit": "per person"
+    },
+    {
+      "label": "Mount Baker ski day pass",
+      "price": 80,
+      "unit": "per day"
+    },
+    {
+      "label": "North Cascades backcountry permit",
+      "price": 20,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -31,30 +54,75 @@
     "museums": 1,
     "architecture": 1,
     "festivals": 1,
-    "finedining": 2,
-    "streetfood": 2,
+    "finedining": 1,
+    "streetfood": 1,
     "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
     "luxuryLodging": 3,
     "snowsports": 6,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 1,
     "birding": 5,
     "wildlife": 5
   },
-  "budgetBands": ["basic", "comfortable"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "cold": [11, 12, 1, 2, 3],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "mild",
-  "low": [11, 4],
-  "hikingBest": [7, 8, 9],
-  "hikingWorst": [11, 12, 1, 2, 3, 4],
-  "inaccessible": [12, 1, 2, 3],
+  "low": [
+    11,
+    4
+  ],
+  "hikingBest": [
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "inaccessible": [
+    12,
+    1,
+    2,
+    3
+  ],
   "specialSeasons": [
-    { "months": [12, 1, 2, 3], "text": "The North Cascades Highway (Route 20) through the park closes completely for winter — Mount Baker's ski area, reached from a different road, stays open." }
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "The North Cascades Highway (Route 20) through the park closes completely for winter — Mount Baker's ski area, reached from a different road, stays open."
+    }
   ],
   "monthlyWeather": [
     "bitterly cold, with the highway through the park closed",
@@ -70,8 +138,20 @@
     "cold, closed for the season with only Mount Baker accessible",
     "bitterly cold, deep winter with the park's highway closed"
   ],
-  "naSliders": ["diving", "surfing", "museums", "architecture", "nightlife"],
-  "searchAliases": ["Diablo Lake", "Mount Baker", "North Cascades Highway", "Ross Lake", "Methow Valley"],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "museums",
+    "architecture",
+    "nightlife"
+  ],
+  "searchAliases": [
+    "Diablo Lake",
+    "Mount Baker",
+    "North Cascades Highway",
+    "Ross Lake",
+    "Methow Valley"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",

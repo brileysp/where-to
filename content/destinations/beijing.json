@@ -6,13 +6,32 @@
   "climate": "temperate",
   "about": "Spring and fall are mild and clearest (best Great Wall visibility), summer is hot, humid and hazy, winter is cold and dry.",
   "overview": "Imperial palaces, hutong alleys, and the Great Wall within day-trip range of one of the world's largest cities.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Subway rides and street breakfast cost almost nothing — the major sights charge only modestly more, keeping Beijing surprisingly affordable overall.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Subway rides and street breakfast cost almost nothing, and the major sights charge only modestly more — surprisingly affordable overall.",
   "costItems": [
-    { "label": "Subway ride", "price": 0.5, "unit": "" },
-    { "label": "Jianbing (breakfast crepe)", "price": 1.5, "unit": "" },
-    { "label": "Great Wall entry, Badaling", "price": 6, "unit": "" },
-    { "label": "Forbidden City entry", "price": 8, "unit": "" }
+    {
+      "label": "Subway ride",
+      "price": 0.5,
+      "unit": ""
+    },
+    {
+      "label": "Jianbing (breakfast crepe)",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Great Wall entry, Badaling",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Forbidden City entry",
+      "price": 8,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -20,7 +39,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 7,
     "fishing": 2,
     "roadtrip": 5,
@@ -37,7 +56,7 @@
     "spa": 5,
     "luxuryLodging": 7,
     "snowsports": 3,
-    "cycling": 5,
+    "cycling": 4,
     "shopping": 7,
     "birding": 4,
     "wildlife": 2

@@ -603,12 +603,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* Lets .card-top react to its own rendered width via @container below —
-     the same squeeze happens for two different reasons (a narrow phone,
-     or the two-column desktop layout at ~901-1000px viewport where the
-     340px sidebar eats into this column), so keying off the card's own
-     width covers both instead of chasing two separate viewport breakpoints. */
-  container-type: inline-size;
 }
 
 .card {
@@ -635,37 +629,80 @@
   animation: search-highlight-pulse 1.6s ease;
 }
 
-.card-top {
+.card-row {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: visible;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.card-row:hover {
+  border-color: var(--accent);
+}
+
+/* Rank, name, and score share one line so the name gets the full card
+   width up to wherever the score sits, instead of losing space to a
+   fixed-width meta cluster crammed onto the same row as everything else.
+   Rank is content-sized only (no min-width, no fixed column) and kept
+   small/gray precisely so a 3-digit rank never visually competes with
+   the name or score despite sharing their line. */
+.card-top-row {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 9px;
 }
 
 .card-rank {
-  font-size: 11.5px;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--text-faint);
-  width: 20px;
   flex-shrink: 0;
-}
-
-.card-name-wrap {
-  flex: 1;
-  min-width: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 .card-name {
-  font-size: 16.5px;
-  font-weight: 650;
-  /* Safety net for future long names, not a primary treatment — the
-     @container rule below is what actually keeps real content from
-     ever hitting this on any width down to a phone. */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.28;
+  flex: 1;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.card-score {
+  font-size: 16px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.card-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
+}
+
+.card-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card-row-emoji {
+  font-size: 19px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
 .card-region {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
   color: var(--text-dim);
   display: inline-flex;
@@ -675,7 +712,6 @@
   border: 1px solid var(--border);
   padding: 2px 8px 2px 6px;
   border-radius: 999px;
-  margin-top: 4px;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
@@ -684,61 +720,62 @@
 
 .card-region::before {
   content: '📍';
-  font-size: 11px;
+  font-size: 10.5px;
   flex-shrink: 0;
 }
 
-.card-score {
-  text-align: right;
+.card-bottom-right {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
-.card-score-eyebrow {
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-  margin-bottom: 1px;
+/* The favorite button is the fixed anchor — always last, always the same
+   distance from the card's right edge. The stamp zone sits immediately
+   to its left: a reserved area wider than the stamp itself, so the stamp
+   can land at a different spot from card to card (see stampOffset in
+   DestinationCard.tsx) without ever moving the heart. */
+.card-stamp-zone {
+  width: 52px;
+  height: 28px;
+  position: relative;
+  flex-shrink: 0;
 }
 
-.card-score-num {
-  font-size: 20px;
-  font-weight: 750;
-  font-variant-numeric: tabular-nums;
+.card-stamp-slot {
+  position: absolute;
+  width: 34px;
+  height: 34px;
 }
 
-/* Below this card width, rank + name can't share a row without truncating
-   the name — drop it to its own row instead. */
-@container (max-width: 540px) {
-  .card-top {
-    flex-wrap: wrap;
-  }
-  .card-name-wrap {
-    flex-basis: 100%;
-    order: 1;
-  }
-  .card-rank {
-    order: 0;
-  }
-  .card-name {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-  }
-  .month-head {
-    flex-wrap: wrap;
-    gap: 4px 10px;
-  }
-  .card-score {
-    text-align: left;
-  }
+.card-favorite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.card-score-text {
-  font-size: 11px;
-  display: block;
-  line-height: 1.25;
+.card-favorite-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.heart-outline path {
+  fill: none;
+  stroke: var(--text-faint);
+  stroke-width: 1.8;
+}
+
+.heart-filled path {
+  fill: var(--heart);
+  stroke: var(--heart);
+  stroke-width: 1.8;
 }
 
 .score-excellent {
@@ -759,13 +796,6 @@
 
 .score-bad {
   color: var(--bad);
-}
-
-.card-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 10px;
 }
 
 .badge {
@@ -804,122 +834,6 @@
 .card-monthly-blurb .blurb-month {
   color: var(--text);
   font-weight: 750;
-}
-
-.card-breakdown-slot {
-  margin-top: 10px;
-}
-
-.match-reasons-empty {
-  font-size: 12px;
-  color: var(--text-faint);
-  font-style: italic;
-}
-
-.breakdown-row {
-  display: grid;
-  grid-template-columns: 20px 1fr 90px 30px;
-  gap: 8px;
-  align-items: center;
-  font-size: 12.5px;
-  padding: 3px 0;
-}
-
-.breakdown-row-excellent {
-  color: var(--good);
-  font-weight: 700;
-}
-
-.breakdown-row-good {
-  color: var(--good-soft);
-  font-weight: 700;
-}
-
-.breakdown-row-okay {
-  color: var(--okay);
-  font-weight: 700;
-}
-
-.breakdown-row-na {
-  opacity: 0.55;
-  font-style: italic;
-}
-
-.breakdown-track {
-  height: 5px;
-  border-radius: 999px;
-  background: var(--bg-elevated);
-  overflow: hidden;
-}
-
-.style-chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin: 0 0 6px 28px;
-}
-
-.style-chip {
-  border-radius: 999px;
-  padding: 1px 8px;
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--text-dim);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-}
-
-.breakdown-fill {
-  height: 100%;
-  border-radius: 999px;
-}
-
-.breakdown-toggle-btn {
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 12px;
-  cursor: pointer;
-  padding: 4px 0;
-}
-
-/* ---- About/Cost tabs ---- */
-
-.card-tabs {
-  margin-top: 10px;
-}
-
-.tabs {
-  display: flex;
-  gap: 4px;
-  border-bottom: 1px solid var(--border);
-}
-
-.tab-btn {
-  background: none;
-  border: none;
-  font-family: inherit;
-  cursor: pointer;
-  padding: 6px 10px 8px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-faint);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-}
-
-.tab-btn.active {
-  color: var(--text);
-  border-bottom-color: var(--accent);
-}
-
-.tab-btn-cost {
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-
-.tab-btn-cost.active {
-  color: var(--accent);
 }
 
 .about-text {
@@ -978,132 +892,789 @@
   margin: 10px 0 0;
 }
 
-/* ---- Year strip ---- */
 
-.card-month-label {
-  font-size: 11px;
-  font-weight: 650;
-  color: var(--text-faint);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 14px;
+/* ---- Passport stamps ---- */
+
+.stamp-ink {
+  mix-blend-mode: multiply;
 }
 
-.year-strip {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 4px;
-  height: 70px;
-  margin-top: 8px;
-  margin-bottom: 26px;
-  position: relative;
+@media (prefers-color-scheme: dark) {
+  .stamp-ink {
+    mix-blend-mode: screen;
+  }
 }
 
-.year-bar {
-  align-self: end;
-  height: 100%;
+@keyframes stampPop {
+  0% {
+    transform: scale(0.7) rotate(var(--stamp-rotate, 0deg));
+  }
+  50% {
+    transform: scale(1.15) rotate(var(--stamp-rotate, 0deg));
+  }
+  100% {
+    transform: scale(1) rotate(var(--stamp-rotate, 0deg));
+  }
+}
+
+.stamp-pop {
+  animation: stampPop 0.4s ease;
+}
+
+/* ---- Detail sheet / stamps sheet shell ---- */
+
+@keyframes detailFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes detailSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.detail-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 8, 0.5);
+  z-index: 100;
+  animation: detailFadeIn 0.2s ease;
+}
+
+.detail-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 86vh;
+  background: var(--bg-card);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 101;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  animation: detailSlideUp 0.25s ease;
+  color: var(--text);
+}
+
+@media (min-width: 700px) {
+  .detail-sheet {
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(560px, 90vw);
+    max-height: 80vh;
+    border-radius: 20px;
+    animation: detailFadeIn 0.2s ease;
+  }
+}
+
+.detail-sheet-handle-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 2px;
+}
+
+@media (min-width: 700px) {
+  .detail-sheet-handle-wrap {
+    display: none;
+  }
+}
+
+.detail-sheet-handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+}
+
+.detail-sheet-header {
+  padding: 8px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-sheet-emoji {
+  font-size: 19px;
+  opacity: 0.85;
+}
+
+.detail-sheet-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-sheet-name {
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.detail-sheet-region {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+.visit-btn {
+  padding: 7px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+}
+
+.visit-btn.visited {
+  border-color: var(--good);
+  background: color-mix(in srgb, var(--good) 15%, transparent);
+  color: var(--good);
+}
+
+.detail-close-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  font-size: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.detail-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.detail-tab-btn {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.detail-tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.detail-sheet-body {
+  overflow-y: auto;
+  flex: 1;
+  display: grid;
+}
+
+/* All three tab panels occupy the same grid cell — CSS grid sizes the
+   track to the tallest occupant regardless of which is visible, so the
+   sheet's height is always set by the tallest tab (For You, in practice)
+   and never changes when switching tabs. Shorter tabs just show blank
+   space below their content instead of the whole sheet resizing. */
+.detail-tab-panel {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  pointer-events: none;
+  min-height: 0;
+}
+
+.detail-tab-panel.active {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.detail-tab-content {
+  padding: 16px 16px 28px;
+}
+
+.detail-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 18px 0 2px;
+}
+
+.detail-section-title:first-child {
+  margin-top: 0;
+}
+
+.detail-section-hint {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+/* ---- For You tab ---- */
+
+.match-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.match-card-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.match-card-label {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.match-card-score {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.match-score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Replaces the old "Specialist boost" box — all that shows by default is
+   this small (i), right next to the score itself. */
+.match-info-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  background: none;
+  color: inherit;
+  opacity: 0.55;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.match-info-btn:hover {
+  opacity: 0.9;
+}
+
+/* Expanded panel: short pros/cons chip rows, no numbers, no jargon. */
+.match-explainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.explainer-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.explainer-mark {
+  font-size: 13px;
+  line-height: 1.7;
+  width: 14px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.explainer-row.pros .explainer-mark {
+  color: var(--good);
+}
+
+.explainer-row.cons .explainer-mark {
+  color: var(--bad);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mini-chip {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.explainer-row.pros .mini-chip {
+  color: var(--good);
+  border-color: color-mix(in srgb, var(--good) 35%, var(--border));
+}
+
+.explainer-row.cons .mini-chip {
+  color: var(--bad);
+  border-color: color-mix(in srgb, var(--bad) 35%, var(--border));
+}
+
+.interest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.interest-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  position: relative;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+  padding: 6px;
+  margin: 0 -6px;
+  border-radius: 8px;
 }
 
-.year-bar:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent);
+.interest-row-selected {
+  background: var(--accent-soft);
 }
 
-/* .base marks "your" month (the app's globally chosen month) even while
-   a different month is being previewed; .selected marks whichever month
-   is currently driving the content below — in the common case (no
-   preview active) these are the same bar and .selected simply wins. */
-.year-bar.base {
-  border-color: var(--text-faint);
+.interest-icon {
+  font-size: 15px;
+  width: 20px;
+  flex-shrink: 0;
 }
 
-.year-bar.selected {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px var(--accent-soft);
+.interest-label {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  width: 108px;
+  flex-shrink: 0;
 }
 
-.year-bar-fill {
-  width: 100%;
+.interest-label-selected {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.interest-track {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.interest-fill {
+  height: 100%;
   border-radius: 3px;
 }
 
-.year-bar-label {
-  position: absolute;
-  bottom: -18px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 9.5px;
-  color: var(--text-faint);
-  transition: color 0.15s ease, font-weight 0.15s ease;
+.interest-score {
+  font-size: 12.5px;
+  font-weight: 700;
+  width: 30px;
+  text-align: right;
+  flex-shrink: 0;
 }
 
-.year-bar-label.selected {
+.interest-score-na {
+  opacity: 0.5;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.months-chart {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  height: 64px;
+  margin-bottom: 4px;
+}
+
+.months-chart-compact {
+  height: 44px;
+}
+
+.months-chart-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  cursor: pointer;
+}
+
+.months-chart-bar-wrap-selected .months-chart-bar {
+  box-shadow: 0 0 0 2px var(--text);
+}
+
+.months-chart-bar {
+  width: 100%;
+  border-radius: 3px;
+  min-height: 4px;
+}
+
+.months-chart-labels {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.months-chart-label {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  color: var(--text-faint);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.months-chart-label-active {
   color: var(--accent);
   font-weight: 800;
 }
 
-/* ---- Month-specific zone: everything below the chart that reacts to
-   the selected month, visually separated from the always-true content
-   above (About/Cost tabs, season-line) by its own bordered surface. ---- */
+/* ---- About tab ---- */
 
-.month-zone {
-  background: var(--bg-elevated);
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  margin-top: 14px;
-  padding: 12px 14px 14px;
-}
-
-.month-head {
+.detail-badges {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
-.month-head-left {
+/* Inside the month-detail-card, badges sit tighter — right under the
+   quality label, before the blurb, not a full section of their own. */
+.month-detail-card .detail-badges {
+  margin: 0 0 8px;
+}
+
+.month-detail-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.month-detail-name {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.month-detail-quality {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin: 2px 0 8px;
+}
+
+/* ---- Costs tab ---- */
+
+.cost-range-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cost-range-label {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.cost-range-hint {
+  font-size: 12px;
+  color: var(--text-faint);
+  flex: 1;
+}
+
+.cost-key-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-faint);
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cost-key-toggle.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #1a1108;
+}
+
+.cost-key-text {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  line-height: 1.6;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+/* ---- Stamps sheet ---- */
+
+.stamps-body-content {
+  padding: 16px 16px 28px;
+}
+
+.stamps-map-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  background: repeating-linear-gradient(45deg, var(--bg-elevated), var(--bg-elevated) 10px, var(--bg) 10px, var(--bg) 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 10.5px;
+  color: var(--text-faint);
+  line-height: 1.6;
+}
+
+.stamps-collection-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stamps-collection-title {
+  margin: 0;
+}
+
+.stamps-toggle-link {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stamps-empty {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-faint);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.stamps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 16px;
+}
+
+.stamps-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+}
+
+.stamps-row-name-wrap {
+  flex: 1;
   min-width: 0;
 }
 
-.timing-label {
+.stamps-row-name {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.stamps-row-name-ghost {
+  color: var(--text-faint);
+}
+
+.stamps-row-region {
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.stamps-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: #fff;
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamps-check.checked {
+  border-color: var(--good);
+  background: var(--good);
+}
+
+/* ---- Results heading / quick-rank chips ---- */
+
+.results-heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.results-heading-row h1 {
+  margin-bottom: 4px;
+}
+
+.results-heading-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.visited-stat-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 2px 0;
+}
+
+.visited-stat-label {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+/* Quiet text links directly under the stamp — "Hide visited" sits close
+   to it, "Show wishlist" gets a bit more room below. */
+.filter-links-under-stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
   margin-top: 2px;
 }
 
-.month-name {
-  font-size: 15.5px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+.filter-link {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-}
-
-.month-name.previewing {
-  color: var(--accent);
-}
-
-.month-name-reset {
-  all: unset;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  opacity: 0.7;
+  font-weight: 500;
   cursor: pointer;
-  font-size: 13px;
-  line-height: 1;
-  color: var(--accent);
-  opacity: 0.85;
-  padding: 6px;
-  margin: -6px;
+  white-space: nowrap;
+  padding: 0;
 }
 
-.month-name-reset:hover {
+.filter-link:hover {
   opacity: 1;
 }
+
+/* Nothing to filter yet — light gray signals "not clickable." */
+.filter-link.empty,
+.filter-link:disabled {
+  color: var(--text-faint);
+  opacity: 1;
+  cursor: default;
+}
+
+/* Icon trails the label and carries the "is this on" color — with both
+   links right-aligned, a trailing icon lines up at the same edge
+   regardless of label length, unlike a leading one. */
+.filter-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  font-weight: 700;
+}
+
+.filter-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.filter-link.on .filter-icon {
+  color: var(--accent);
+}
+
+.filter-link.wishlist-on .filter-icon {
+  color: var(--heart);
+}
+
+.quick-chip-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.quick-chip {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.quick-chip.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #1a1108;
+  font-weight: 700;
+}
+

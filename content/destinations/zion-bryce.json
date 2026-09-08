@@ -6,13 +6,32 @@
   "climate": "desert",
   "about": "Spring (Mar–May) and fall (Sep–Oct) are the sweet spot, Zion's canyon floor is scorching by midsummer, and Bryce's high rim gets real winter snow.",
   "overview": "Two of Utah's most dramatic national parks — Zion's soaring red sandstone canyon and Bryce's otherworldly hoodoos — a scenic drive apart.",
-  "costRange": { "min": "$$", "max": "$$$" },
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
   "costOverview": "Each park charges its own entrance fee — and starting in 2026, non-US residents pay a real, separate surcharge on top of the standard pass.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Deli sandwich, gateway town", "price": 12, "unit": "" },
-    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
-    { "label": "Non-US-resident surcharge", "price": 100, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Deli sandwich, gateway town",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Non-US-resident surcharge",
+      "price": 100,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -35,11 +54,11 @@
     "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
-    "luxuryLodging": 6,
+    "luxuryLodging": 5,
     "snowsports": 1,
     "cycling": 3,
     "shopping": 2,
-    "birding": 3,
+    "birding": 4,
     "wildlife": 3
   },
   "budgetBands": [

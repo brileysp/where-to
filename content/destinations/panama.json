@@ -6,13 +6,32 @@
   "climate": "tropical",
   "about": "Dry season (mid-Dec–Apr) is best for the Pacific side; Bocas stays wetter and greener year-round.",
   "overview": "A canal that reshaped world trade, rainforest just outside the capital, and the laid-back Caribbean surf towns of Bocas del Toro.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Everyday food, coffee, and taxis stay affordable — a real canal transit tour is a genuine splurge most visitors consider once.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Everyday food, coffee, and taxis are affordable — a canal transit tour is a genuine splurge most visitors consider once.",
   "costItems": [
-    { "label": "Coffee", "price": 2, "unit": "" },
-    { "label": "Local casual meal", "price": 6, "unit": "" },
-    { "label": "Taxi to Miraflores Locks", "price": 15, "unit": "" },
-    { "label": "Panama Canal partial transit tour", "price": 165, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Local casual meal",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi to Miraflores Locks",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Panama Canal partial transit tour",
+      "price": 165,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 7,
@@ -20,14 +39,14 @@
     "diving": 5,
     "surfing": 5,
     "sailing": 6,
-    "hiking": 4,
-    "scenic": 7,
+    "hiking": 3,
+    "scenic": 6,
     "fishing": 5,
-    "roadtrip": 3,
+    "roadtrip": 4,
     "adventure": 5,
     "golf": 3,
     "stargazing": 3,
-    "museums": 3,
+    "museums": 5,
     "architecture": 4,
     "festivals": 3,
     "finedining": 5,
@@ -39,7 +58,7 @@
     "snowsports": 0,
     "cycling": 2,
     "shopping": 4,
-    "birding": 6,
+    "birding": 8,
     "wildlife": 5
   },
   "budgetBands": [

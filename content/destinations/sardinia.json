@@ -5,20 +5,48 @@
   "emoji": "⛵",
   "climate": "mediterranean",
   "about": "Peak summer (Jul–Aug) is hot, crowded, and expensive, especially around Costa Smeralda; May–Jun and Sep–Oct offer the same beaches with a fraction of the crowds.",
-  "overview": "Some of the Mediterranean's best beaches, ancient Nuragic stone towers found nowhere else on Earth, and the ultra-glamorous yacht scene of Costa Smeralda — one of the world's five Blue Zones, where residents live unusually long lives.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Away from Costa Smeralda, Sardinia is one of Italy's better beach values — the yacht-and-celebrity scene up north is where prices go stratospheric.",
+  "overview": "Some of the Mediterranean's best beaches, Nuragic towers found nowhere else, Costa Smeralda's yacht glamour — one of the world's five Blue Zones.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Away from Costa Smeralda, one of Italy's better beach values — the yacht-and-celebrity scene up north is where prices go stratospheric.",
   "costItems": [
-    { "label": "Espresso", "price": 1.5, "unit": "" },
-    { "label": "Porceddu (roast suckling pig) lunch", "price": 14, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 12, "unit": "" },
-    { "label": "Nuraghe Su Nuraxi entry", "price": 10, "unit": "" },
-    { "label": "Costa Smeralda catamaran charter", "price": 800, "unit": "per boat" }
+    {
+      "label": "Espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Porceddu (roast suckling pig) lunch",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Nuraghe Su Nuraxi entry",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Beach club sunbed & umbrella",
+      "price": 40,
+      "unit": "per day"
+    },
+    {
+      "label": "Costa Smeralda catamaran charter",
+      "price": 800,
+      "unit": "per boat"
+    }
   ],
   "base": {
     "sunbathing": 9,
     "swimming": 8,
-    "diving": 6,
+    "diving": 5,
     "surfing": 4,
     "sailing": 8,
     "hiking": 5,
@@ -38,22 +66,64 @@
     "spa": 5,
     "luxuryLodging": 8,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 5,
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "dry": [6, 7, 8, 9],
-  "wet": [11, 12, 1],
-  "hot": [7, 8],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "low": [11, 12, 1, 2],
-  "hikingBest": [4, 5, 6, 9, 10],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "monthlyWeather": [
     "mild and wet, quiet with the fewest visitors",
     "mild and wet, still quiet",
@@ -68,8 +138,16 @@
     "mild and increasingly wet, quiet again",
     "mild and wet, quiet through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Costa Smeralda", "Cagliari", "Nuraghe", "Alghero", "Porto Cervo"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Costa Smeralda",
+    "Cagliari",
+    "Nuraghe",
+    "Alghero",
+    "Porto Cervo"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

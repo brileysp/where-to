@@ -2,7 +2,7 @@
   "id": "great-smoky-mountains",
   "name": "Great Smoky Mountains National Park",
   "region": "Tennessee & North Carolina, USA",
-  "emoji": "🌫️",
+  "emoji": "🐻",
   "climate": "temperate",
   "about": "Spring wildflowers, a two-week synchronous firefly show in late May/early June, and Oct fall foliage are its three signature seasons.",
   "overview": "The most-visited national park in the US, with no entrance fee — the ridge-top Appalachian scenery draws over 12 million visitors a year.",
@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$"
   },
-  "costOverview": "Great Smoky Mountains is the rare national park with no entrance fee at all — just a small daily parking pass — though Gatlinburg's tourist-district coffee and pancake houses charge real markup once you're off the trail.",
+  "costOverview": "The rare national park with no entrance fee at all, just a small daily parking pass — though Gatlinburg's tourist-district coffee and pancake houses charge real markup once you're off the trail.",
   "costItems": [
     {
       "label": "Daily parking pass",
@@ -39,7 +39,7 @@
     "diving": 0,
     "surfing": 0,
     "sailing": 1,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 7,
     "fishing": 5,
     "roadtrip": 6,
@@ -54,12 +54,12 @@
     "nightlife": 3,
     "winetasting": 1,
     "spa": 3,
-    "luxuryLodging": 2,
+    "luxuryLodging": 4,
     "snowsports": 1,
     "cycling": 3,
     "shopping": 4,
     "birding": 5,
-    "wildlife": 5
+    "wildlife": 4
   },
   "budgetBands": [
     "basic",
@@ -175,7 +175,6 @@
     "cold, quiet, and atmospheric heading into winter"
   ],
   "naSliders": [
-    "sunbathing",
     "surfing",
     "diving",
     "snowsports",

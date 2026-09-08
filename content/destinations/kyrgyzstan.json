@@ -2,18 +2,41 @@
   "id": "kyrgyzstan",
   "name": "Kyrgyzstan",
   "region": "Central Asia",
-  "emoji": "⛺",
+  "emoji": "🛖",
   "climate": "highland",
   "about": "Summer (Jun–Sep) is the only real window for high-altitude trekking and yurt stays at Song-Köl and Issyk-Köl; winter is bitterly cold across the mountains.",
-  "overview": "Nicknamed the 'Switzerland of Central Asia' — the Tian Shan mountains, alpine lakes reached on horseback, and a living nomadic yurt culture, at a fraction of the cost of better-known trekking destinations.",
-  "costRange": { "min": "$", "max": "$$$" },
+  "overview": "Nicknamed 'Switzerland of Central Asia' — Tian Shan mountains, alpine lakes on horseback, nomadic yurt culture at a fraction of the cost.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
   "costOverview": "One of the cheapest genuine adventure-travel destinations anywhere — yurt stays, horseback treks, and everyday food all cost a fraction of neighboring China or Kazakhstan.",
   "costItems": [
-    { "label": "Coffee or tea", "price": 1.5, "unit": "" },
-    { "label": "Plov, national dish", "price": 2, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 2, "unit": "" },
-    { "label": "Yurt stay, half board", "price": 25, "unit": "per person, per night" },
-    { "label": "Song-Köl horseback trek package", "price": 200, "unit": "per person, 3 days" }
+    {
+      "label": "Coffee or tea",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Plov, national dish",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Yurt stay, half board",
+      "price": 25,
+      "unit": "per person, per night"
+    },
+    {
+      "label": "Song-Köl horseback trek package",
+      "price": 200,
+      "unit": "per person, 3 days"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -43,16 +66,47 @@
     "birding": 4,
     "wildlife": 4
   },
-  "budgetBands": ["basic", "comfortable"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "hot": [7],
-  "cold": [12, 1, 2],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "hot": [
+    7
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "mild",
-  "low": [12, 1, 2],
-  "hikingBest": [6, 7, 8, 9],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "monthlyWeather": [
     "cold, deep winter in the mountains with limited access to the high country",
     "cold, still deep winter across the Tian Shan",
@@ -67,13 +121,26 @@
     "cold, deep winter returning to the mountains",
     "cold, deep winter with short daylight hours"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "winetasting"],
-  "searchAliases": ["Bishkek", "Song-Kol", "Issyk-Kul", "Tian Shan", "Karakol"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Bishkek",
+    "Song-Kol",
+    "Issyk-Kul",
+    "Tian Shan",
+    "Karakol"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",
       "forests": "casual",
       "coastlines": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

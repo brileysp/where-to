@@ -2,7 +2,7 @@
   "id": "tasmania",
   "name": "Tasmania",
   "region": "Australia",
-  "emoji": "🌲",
+  "emoji": "🥾",
   "climate": "temperate",
   "about": "Southern Hemisphere summer (Dec–Feb) is warmest and best for hiking, winter (Jun–Aug) is cold, wet, and often snowy in the highlands.",
   "overview": "Wild, mountainous, and cool — Cradle Mountain and the Overland Track are the wilderness highlight, Hobart brings food, wine, and MONA.",
@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Local buses are currently free and coffee is reasonable — the real costs are food-focused tours and getting between the island's spread-out regions.",
+  "costOverview": "Local buses are free and coffee is reasonable — the real cost is getting between the island's spread-out regions, and its handful of luxury eco-lodges rank among the best in the world.",
   "costItems": [
     {
       "label": "Espresso",
@@ -36,6 +36,11 @@
       "label": "SkyBus airport fare",
       "price": 15,
       "unit": ""
+    },
+    {
+      "label": "All-inclusive luxury eco-lodge",
+      "price": 1500,
+      "unit": "per person, per night, all-inclusive"
     }
   ],
   "base": {
@@ -52,9 +57,9 @@
     "golf": 4,
     "stargazing": 6,
     "museums": 6,
-    "architecture": 3,
+    "architecture": 4,
     "festivals": 5,
-    "finedining": 7,
+    "finedining": 6,
     "streetfood": 5,
     "nightlife": 4,
     "winetasting": 7,
@@ -63,8 +68,8 @@
     "snowsports": 2,
     "cycling": 5,
     "shopping": 4,
-    "birding": 6,
-    "wildlife": 5
+    "birding": 7,
+    "wildlife": 7
   },
   "budgetBands": [
     "basic",

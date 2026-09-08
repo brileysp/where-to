@@ -5,15 +5,38 @@
   "emoji": "⛳",
   "climate": "temperate",
   "about": "Summer (Jun–Aug) brings the best weather and the busiest golf season; winter is cold, grey, and quiet, like the rest of eastern Scotland.",
-  "overview": "The Old Course at St Andrews, where golf has been played since the 15th century, paired with Fife's picturesque fishing villages and coastal path — the sport's single most significant pilgrimage site.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Fife's fishing villages stay properly affordable for food — a tee time on the Old Course itself, allocated by ballot rather than just paid for, is the one legendary splurge.",
+  "overview": "The Old Course at St Andrews, where golf has been played since the 15th century, paired with Fife's fishing villages — golf's most significant pilgrimage site.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Fife's fishing villages are affordable for food — a tee time on the Old Course itself, allocated by ballot rather than just paid for, is the one legendary splurge.",
   "costItems": [
-    { "label": "Coffee", "price": 3.5, "unit": "" },
-    { "label": "Fish and chips, Anstruther", "price": 12, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 10, "unit": "" },
-    { "label": "Old Course tee time, advance ballot", "price": 295, "unit": "per round" },
-    { "label": "St Andrews Cathedral & Castle entry", "price": 9, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Fish and chips, Anstruther",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Old Course tee time, advance ballot",
+      "price": 295,
+      "unit": "per round"
+    },
+    {
+      "label": "St Andrews Cathedral & Castle entry",
+      "price": 9,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -36,20 +59,41 @@
     "nightlife": 4,
     "winetasting": 3,
     "spa": 3,
-    "luxuryLodging": 5,
+    "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 4,
     "shopping": 3,
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing"],
-  "physicalBands": ["easy", "moderate"],
-  "wet": [11, 12, 1, 2],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2],
+  "low": [
+    1,
+    2
+  ],
   "monthlyWeather": [
     "cold and damp, with short days and frequent rain",
     "cold and still damp, one of the year's coldest stretches",
@@ -64,8 +108,16 @@
     "cold and damp, with short days setting in fast",
     "cold, dark, and often wet through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["St Andrews", "Old Course", "Anstruther", "Fife Coastal Path", "Crail"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "St Andrews",
+    "Old Course",
+    "Anstruther",
+    "Fife Coastal Path",
+    "Crail"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

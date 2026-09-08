@@ -10,16 +10,16 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Coffee and a bus fare barely register — whisky tastings and castle admission are the real one-time costs most visitors budget for.",
+  "costOverview": "Coffee and a pint barely register — whisky tastings and castle admission are the real one-time costs most visitors budget for.",
   "costItems": [
-    {
-      "label": "Bus fare",
-      "price": 2.5,
-      "unit": ""
-    },
     {
       "label": "Coffee",
       "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Pint of beer",
+      "price": 6.5,
       "unit": ""
     },
     {

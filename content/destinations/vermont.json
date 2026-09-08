@@ -5,15 +5,38 @@
   "emoji": "🍁",
   "climate": "temperate",
   "about": "Peak fall foliage (early-to-mid Oct) is Vermont's single busiest, most booked-out stretch; winter (Dec–Feb) brings real skiing at Stowe and Killington, and April's 'mud season' is the genuine off-season.",
-  "overview": "Some of America's best fall foliage, real Northeast ski resorts, maple syrup country, and the country's oldest long-distance hiking trail — small-town New England at its most classic.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Small-town Vermont stays reasonable outside peak weekends — foliage season and ski-resort towns like Stowe are where prices climb hardest.",
+  "overview": "America's best fall foliage, Northeast ski resorts, maple syrup country, and the country's oldest hiking trail — small-town New England at its most classic.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Small-town Vermont is reasonable outside peak weekends — foliage season and ski-resort towns like Stowe are where prices climb hardest.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Farm-to-table dinner", "price": 38, "unit": "" },
-    { "label": "Ski day pass, Stowe or Killington", "price": 130, "unit": "per day" },
-    { "label": "Long Trail guided hike", "price": 50, "unit": "per person" },
-    { "label": "Ben & Jerry's factory tour", "price": 6, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Farm-to-table dinner",
+      "price": 38,
+      "unit": ""
+    },
+    {
+      "label": "Ski day pass, Stowe or Killington",
+      "price": 130,
+      "unit": "per day"
+    },
+    {
+      "label": "Long Trail guided hike",
+      "price": 50,
+      "unit": "per person"
+    },
+    {
+      "label": "Ben & Jerry's factory tour",
+      "price": 6,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -22,7 +45,7 @@
     "surfing": 0,
     "sailing": 3,
     "hiking": 7,
-    "scenic": 8,
+    "scenic": 7,
     "fishing": 4,
     "roadtrip": 7,
     "adventure": 3,
@@ -43,21 +66,58 @@
     "birding": 4,
     "wildlife": 4
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "cold": [12, 1, 2],
-  "peak": [10, 12, 1, 2],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    10,
+    12,
+    1,
+    2
+  ],
   "peakIntensity": "extreme",
-  "low": [4, 11],
-  "hikingBest": [6, 7, 8, 9],
-  "hikingWorst": [12, 1, 2, 3],
+  "low": [
+    4,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2,
+    3
+  ],
   "sliderEvents": {
     "scenic": [
       {
         "label": "Peak fall foliage",
         "weight": 3,
-        "months": { "9": 0.3, "10": 1, "11": 0.2 }
+        "months": {
+          "9": 0.3,
+          "10": 1,
+          "11": 0.2
+        }
       }
     ]
   },
@@ -75,8 +135,17 @@
     "cold and muddy, with foliage gone and ski season not yet started",
     "cold, with ski season getting underway again"
   ],
-  "naSliders": ["surfing"],
-  "searchAliases": ["Stowe", "Killington", "Woodstock", "Long Trail", "Lake Champlain", "Green Mountains"],
+  "naSliders": [
+    "surfing"
+  ],
+  "searchAliases": [
+    "Stowe",
+    "Killington",
+    "Woodstock",
+    "Long Trail",
+    "Lake Champlain",
+    "Green Mountains"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "forests": "signature",

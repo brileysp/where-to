@@ -5,15 +5,38 @@
   "emoji": "🏜️",
   "climate": "desert",
   "about": "Spring (Mar–Apr) and fall (Oct) bring the best hiking weather and the biggest crowds; summer regularly tops 100°F, best endured at dawn or dusk.",
-  "overview": "Red rock formations, a genuine wellness/spiritual tourism scene built around the area's 'energy vortex' sites, and some of the Southwest's best hiking and mountain biking, all within an International Dark Sky Community.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Basic food and trailhead parking stay reasonable — Jeep tours and the town's wellness/spa scene are where the real spending happens.",
+  "overview": "Red rock formations, a wellness scene built around 'energy vortex' sites, and the Southwest's best hiking and biking under desert skies.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Basic food and trailhead parking are reasonable — Jeep tours and the town's wellness/spa scene are where the real spending happens.",
   "costItems": [
-    { "label": "Coffee", "price": 4.5, "unit": "" },
-    { "label": "Southwestern lunch", "price": 16, "unit": "" },
-    { "label": "Pink Jeep tour", "price": 100, "unit": "per person" },
-    { "label": "Cathedral Rock trailhead parking pass", "price": 5, "unit": "" },
-    { "label": "Vortex/spa wellness session", "price": 90, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Southwestern lunch",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Pink Jeep tour",
+      "price": 100,
+      "unit": "per person"
+    },
+    {
+      "label": "Cathedral Rock trailhead parking pass",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Vortex/spa wellness session",
+      "price": 90,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -29,30 +52,76 @@
     "golf": 4,
     "stargazing": 7,
     "museums": 3,
-    "architecture": 5,
+    "architecture": 4,
     "festivals": 3,
     "finedining": 6,
     "streetfood": 4,
     "nightlife": 3,
     "winetasting": 4,
-    "spa": 8,
+    "spa": 9,
     "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 6,
+    "cycling": 5,
     "shopping": 5,
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active", "challenging"],
-  "dry": [1, 2, 3, 4, 5, 10, 11, 12],
-  "hot": [6, 7, 8, 9],
-  "peak": [3, 4, 10],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    11,
+    12
+  ],
+  "hot": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "peak": [
+    3,
+    4,
+    10
+  ],
   "peakIntensity": "extreme",
-  "low": [7, 8],
-  "hikingBest": [10, 11, 12, 1, 2, 3, 4],
-  "hikingWorst": [6, 7, 8],
+  "low": [
+    7,
+    8
+  ],
+  "hikingBest": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
   "monthlyWeather": [
     "cool and dry, pleasant days with cold desert nights",
     "mild and dry, one of the best months for hiking",
@@ -67,8 +136,18 @@
     "cool and dry, pleasant and popular around the holidays",
     "cool and dry, clear skies and cold, crisp nights"
   ],
-  "naSliders": ["diving", "surfing", "snowsports"],
-  "searchAliases": ["Cathedral Rock", "Bell Rock", "Oak Creek Canyon", "Slide Rock State Park", "Red Rock Country"],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Cathedral Rock",
+    "Bell Rock",
+    "Oak Creek Canyon",
+    "Slide Rock State Park",
+    "Red Rock Country"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "deserts": "signature",

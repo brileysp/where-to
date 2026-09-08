@@ -2,15 +2,15 @@
   "id": "ethiopia",
   "name": "Ethiopia",
   "region": "Ethiopia",
-  "emoji": "🦜",
+  "emoji": "☕",
   "climate": "highland",
   "about": "Dry season (Oct–Mar) is best for both trekking and sightseeing across the highlands, including Lalibela; heavy rains Jun–Sep make travel and trail conditions harder.",
-  "overview": "Ethiopia's dramatic range in one country — high-altitude trekking through the Simien Mountains among gelada monkeys, Lalibela's rock-hewn churches, and world-class birding throughout.",
+  "overview": "Ethiopia's dramatic range in one country — Simien Mountains trekking among gelada monkeys, Lalibela's rock-hewn churches, and world-class birding.",
   "costRange": {
     "min": "$",
     "max": "$$$"
   },
-  "costOverview": "Ethiopia stays remarkably cheap day to day — coffee and injera cost next to nothing — but a Simien trek adds a mandatory daily scout fee, and pairing the mountains with Lalibela's churches usually means a domestic flight.",
+  "costOverview": "Coffee and injera cost next to nothing day to day — but a Simien trek adds a mandatory daily scout fee, and pairing the mountains with Lalibela's churches usually means a domestic flight.",
   "costItems": [
     {
       "label": "Ethiopian coffee",
@@ -56,8 +56,8 @@
     "adventure": 5,
     "golf": 1,
     "stargazing": 6,
-    "museums": 8,
-    "architecture": 7,
+    "museums": 7,
+    "architecture": 6,
     "festivals": 6,
     "finedining": 5,
     "streetfood": 5,
@@ -68,7 +68,7 @@
     "snowsports": 0,
     "cycling": 3,
     "shopping": 4,
-    "birding": 6,
+    "birding": 7,
     "wildlife": 7
   },
   "budgetBands": [
@@ -185,5 +185,6 @@
       "coastlines": "none",
       "astrophotography": "casual"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

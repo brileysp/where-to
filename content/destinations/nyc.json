@@ -58,11 +58,11 @@
     "streetfood": 9,
     "nightlife": 9,
     "winetasting": 4,
-    "spa": 5,
+    "spa": 6,
     "luxuryLodging": 10,
     "snowsports": 2,
     "cycling": 5,
-    "shopping": 9,
+    "shopping": 10,
     "birding": 4,
     "wildlife": 2
   },
@@ -132,5 +132,6 @@
       "gravelRiding": "none",
       "mountainBiking": "none"
     }
-  }
+  },
+  "crowdBaseline": "high"
 }

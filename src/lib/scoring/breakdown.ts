@@ -77,6 +77,65 @@ export interface BreakdownRow {
   isNA: boolean;
 }
 
+// A weight at or below this counts as "doesn't really care" — a generalist
+// with nothing weighted higher has nothing to "specialize" in, so the
+// specialist callout shouldn't show at all.
+const SPECIALIST_MIN_WEIGHT = 6;
+
+export interface SpecialistHighlight {
+  slider: Slider;
+  score: number;
+  // True when more than one slider shares the user's single highest
+  // weight — the UI phrases the callout differently ("Specialist boost: X"
+  // rather than "X is your #1 interest") since it isn't uniquely #1.
+  tied: boolean;
+}
+
+/**
+ * Which interest earns the "Specialist boost" callout for this
+ * destination/month: the user's single highest-weighted slider, or, when
+ * several sliders are tied for that top weight, whichever tied slider
+ * actually scores best here (not just the first one in slider order).
+ * Returns null when nothing is weighted above SPECIALIST_MIN_WEIGHT, or
+ * when every tied top slider is N/A for this destination.
+ */
+export function specialistHighlight(
+  dest: ScoredDestination,
+  weights: Record<string, number>,
+  monthIdx: number,
+  selectedStyles?: SelectedStyles,
+): SpecialistHighlight | null {
+  const maxWeight = Math.max(...SLIDERS.map((s) => weights[s.key] || 0));
+  if (maxWeight <= SPECIALIST_MIN_WEIGHT) return null;
+
+  const tiedSliders = SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight);
+  const candidates = tiedSliders
+    .map((s) => ({ slider: s, score: styleAdjustedScore(dest, s.key, monthIdx, selectedStyles), isNA: isSliderNA(dest, s.key) }))
+    .filter((c) => !c.isNA)
+    .sort((a, b) => b.score - a.score);
+  if (candidates.length === 0) return null;
+
+  return { slider: candidates[0].slider, score: candidates[0].score, tied: tiedSliders.length > 1 };
+}
+
+export interface TopWeightStatus {
+  isTop: boolean;
+  tied: boolean;
+}
+
+/**
+ * Whether a given slider is (one of) the user's single highest-weighted
+ * interest(s) — used to label the "Best months" hint as "your top
+ * interest" vs "a top interest" when more than one slider shares the max
+ * weight. Unlike specialistHighlight, this has no minimum-weight floor: it
+ * always answers relative to whatever the user's own highest weight is.
+ */
+export function topWeightStatus(sliderKey: string, weights: Record<string, number>): TopWeightStatus {
+  const maxWeight = Math.max(...SLIDERS.map((s) => weights[s.key] || 0));
+  const tiedCount = SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight).length;
+  return { isTop: (weights[sliderKey] || 0) === maxWeight, tied: tiedCount > 1 };
+}
+
 /**
  * Interest sliders for this card, in a fixed weight-based order — the same
  * set, same order, for whichever month is being scored, so a card's

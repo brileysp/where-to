@@ -6,14 +6,37 @@
   "climate": "temperate",
   "about": "Mild and rainy much of the year, like the rest of the British Isles — no real closed season, though Jul–Aug brings the best odds of dry weather for the Wild Atlantic Way.",
   "overview": "Dublin's pub culture and literary history, paired with the dramatic Atlantic coastline of the Wild Atlantic Way — Cliffs of Moher, Ring of Kerry, Dingle.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Pub food and a pint stay reasonable outside Dublin's tourist core — Dublin itself runs noticeably pricier than the rest of the country.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Pub food and a pint are reasonable outside Dublin's tourist core — Dublin itself runs noticeably pricier than the rest of the country.",
   "costItems": [
-    { "label": "Coffee", "price": 3.5, "unit": "" },
-    { "label": "Pint of Guinness", "price": 6, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 12, "unit": "" },
-    { "label": "Cliffs of Moher entry", "price": 10, "unit": "" },
-    { "label": "Storehouse tour, Dublin", "price": 30, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Pint of Guinness",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Cliffs of Moher entry",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "Storehouse tour, Dublin",
+      "price": 30,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -21,7 +44,7 @@
     "diving": 2,
     "surfing": 5,
     "sailing": 3,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 8,
     "fishing": 4,
     "roadtrip": 8,
@@ -36,20 +59,43 @@
     "nightlife": 7,
     "winetasting": 1,
     "spa": 3,
-    "luxuryLodging": 5,
+    "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 4,
-    "birding": 5,
-    "wildlife": 4
+    "birding": 4,
+    "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "mild",
-  "low": [1, 2],
-  "hikingBest": [4, 5, 6, 9, 10],
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
   "monthlyWeather": [
     "cold and wet, quiet with short days",
     "cold and wet, still one of the quieter months",
@@ -64,8 +110,17 @@
     "cold and wet, quiet again",
     "cold and wet, atmospheric through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Dublin", "Wild Atlantic Way", "Cliffs of Moher", "Ring of Kerry", "Galway", "Killarney"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Dublin",
+    "Wild Atlantic Way",
+    "Cliffs of Moher",
+    "Ring of Kerry",
+    "Galway",
+    "Killarney"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

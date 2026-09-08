@@ -10,7 +10,7 @@
     "min": "$$$",
     "max": "$$$$$"
   },
-  "costOverview": "The Falklands have no cheap option — even a half-day penguin tour from Stanley starts near $230, and the marquee Volunteer Point king-penguin excursion costs considerably more.",
+  "costOverview": "Even a half-day penguin tour from Stanley starts near $230, and the marquee Volunteer Point excursion costs considerably more — remoteness leaves no cheap version of this trip.",
   "costItems": [
     {
       "label": "Coffee, Stanley",
@@ -42,7 +42,7 @@
     "hiking": 5,
     "scenic": 8,
     "fishing": 4,
-    "roadtrip": 4,
+    "roadtrip": 1,
     "adventure": 3,
     "golf": 1,
     "stargazing": 5,
@@ -181,5 +181,6 @@
       "forests": "none",
       "deserts": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

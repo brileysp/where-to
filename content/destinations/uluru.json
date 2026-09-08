@@ -2,17 +2,36 @@
   "id": "uluru",
   "name": "Uluru & the Outback",
   "region": "Australia",
-  "emoji": "🪨",
+  "emoji": "🦘",
   "climate": "desert",
   "about": "May–Sep (Southern winter) is cool enough to comfortably walk, Nov–Mar summer heat is extreme (regularly 40°C+).",
   "overview": "The sacred red monolith at Australia's dead center, a remote outback pilgrimage built around sunrise and sunset viewing.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
   "costOverview": "Everything here is captive-market pricing — there's no nearby town to escape to, so food, tours, and park entry all run above normal Australian rates.",
   "costItems": [
-    { "label": "Coffee", "price": 4.5, "unit": "" },
-    { "label": "Casual meal, resort area", "price": 22, "unit": "" },
-    { "label": "National park entry, 3-day pass", "price": 25, "unit": "" },
-    { "label": "Sunset tour", "price": 70, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Casual meal, resort area",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "National park entry, 3-day pass",
+      "price": 25,
+      "unit": ""
+    },
+    {
+      "label": "Sunset tour",
+      "price": 70,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 6,
@@ -20,7 +39,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 7,
     "fishing": 1,
     "roadtrip": 9,
@@ -30,15 +49,15 @@
     "museums": 3,
     "architecture": 2,
     "festivals": 3,
-    "finedining": 4,
+    "finedining": 3,
     "streetfood": 3,
     "nightlife": 1,
     "winetasting": 2,
     "spa": 3,
     "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 2,
-    "shopping": 3,
+    "cycling": 1,
+    "shopping": 2,
     "birding": 5,
     "wildlife": 5
   },

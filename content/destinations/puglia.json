@@ -5,12 +5,12 @@
   "emoji": "🫒",
   "climate": "mediterranean",
   "about": "August is scorching and packed with Italian domestic tourism (Ferragosto); spring and fall are far more comfortable.",
-  "overview": "The whitewashed trulli of Alberobello, baroque Lecce, olive groves that produce more oil than anywhere else in Italy, and beaches on two different coasts — an increasingly popular, less-crowded alternative to Tuscany.",
+  "overview": "Whitewashed trulli in Alberobello, baroque Lecce, more olive oil than anywhere in Italy, beaches on two coasts — less crowded than Tuscany.",
   "costRange": {
     "min": "$",
     "max": "$$"
   },
-  "costOverview": "Puglia is one of Italy's best values — a full plate of orecchiette at a trattoria costs less than half what you'd pay in Rome or Florence, and even a countryside masseria dinner stays reasonable.",
+  "costOverview": "One of Italy's best values — a full plate of orecchiette at a trattoria costs less than half what you'd pay in Rome or Florence, and even a countryside masseria dinner stays reasonable.",
   "costItems": [
     {
       "label": "Coffee, espresso",
@@ -26,6 +26,11 @@
       "label": "Taxi, 15 min",
       "price": 11,
       "unit": ""
+    },
+    {
+      "label": "Beach club sunbed & umbrella",
+      "price": 20,
+      "unit": "per day"
     },
     {
       "label": "Masseria dinner with local wine",
@@ -54,7 +59,7 @@
     "nightlife": 5,
     "winetasting": 6,
     "spa": 3,
-    "luxuryLodging": 6,
+    "luxuryLodging": 7,
     "snowsports": 0,
     "cycling": 5,
     "shopping": 4,

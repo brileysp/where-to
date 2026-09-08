@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$$$"
   },
-  "costOverview": "Local transport, tacos, and cenote entry all stay cheap — inter-town taxis and resort-zone dining are where costs climb.",
+  "costOverview": "Local transport, tacos, and cenote entry are all cheap — inter-town taxis and resort-zone dining are where costs climb.",
   "costItems": [
     {
       "label": "Colectivo, 15 min",
@@ -36,6 +36,11 @@
       "label": "Taxi, Playa del Carmen–Tulum",
       "price": 34,
       "unit": ""
+    },
+    {
+      "label": "Beachfront resort dinner, hotel zone",
+      "price": 85,
+      "unit": ""
     }
   ],
   "base": {
@@ -44,7 +49,7 @@
     "diving": 9,
     "surfing": 3,
     "sailing": 6,
-    "hiking": 3,
+    "hiking": 2,
     "scenic": 5,
     "fishing": 5,
     "roadtrip": 4,
@@ -61,9 +66,9 @@
     "spa": 7,
     "luxuryLodging": 8,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 6,
-    "birding": 6,
+    "birding": 7,
     "wildlife": 6
   },
   "budgetBands": [

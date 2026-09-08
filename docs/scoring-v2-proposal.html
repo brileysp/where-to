@@ -1,0 +1,561 @@
+<title>Curve-Based Scoring</title>
+<meta name="description" content="A proposal to replace Where To?'s fifteen-formula scoring engine with one primitive: a baseline plus decaying anchor points.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #f6f5f1; --surface: #ffffff; --surface-sunken: #edece5;
+    --border: #dcdacf; --border-strong: #c7c4b3;
+    --text: #1c2019; --text-dim: #5c6255; --text-faint: #8a8f7d;
+    --accent: #2f6f5e; --accent-strong: #235649; --accent-soft: rgba(47,111,94,0.12);
+    --amber: #a8761f; --amber-soft: rgba(184,134,44,0.14);
+    --rust: #a83a32; --rust-soft: rgba(184,67,58,0.12);
+    --radius: 10px;
+    --font-body: "IBM Plex Sans", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14170f; --surface: #1b1f17; --surface-sunken: #20251b;
+      --border: #333a2b; --border-strong: #444d38;
+      --text: #eaeee3; --text-dim: #a7ae9c; --text-faint: #757c6c;
+      --accent: #62b199; --accent-strong: #82c7b1; --accent-soft: rgba(98,177,153,0.16);
+      --amber: #e0ab52; --amber-soft: rgba(224,171,82,0.16);
+      --rust: #e2766c; --rust-soft: rgba(226,118,108,0.16);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14170f; --surface: #1b1f17; --surface-sunken: #20251b;
+    --border: #333a2b; --border-strong: #444d38;
+    --text: #eaeee3; --text-dim: #a7ae9c; --text-faint: #757c6c;
+    --accent: #62b199; --accent-strong: #82c7b1; --accent-soft: rgba(98,177,153,0.16);
+    --amber: #e0ab52; --amber-soft: rgba(224,171,82,0.16);
+    --rust: #e2766c; --rust-soft: rgba(226,118,108,0.16);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15.5px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); }
+  .page { max-width: 800px; margin: 0 auto; padding: 56px 24px 100px; }
+  .doc-head { margin-bottom: 8px; }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-strong); background: var(--accent-soft); padding: 4px 10px; border-radius: 999px; margin-bottom: 18px; }
+  .status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px; text-wrap: balance; }
+  .subtitle { font-size: 17px; color: var(--text-dim); max-width: 62ch; margin: 0 0 28px; text-wrap: balance; }
+  .meta-row { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-faint); padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .meta-row strong { color: var(--text-dim); font-weight: 600; }
+
+  nav.toc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 44px; }
+  nav.toc h2 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-faint); margin: 0 0 10px; font-weight: 700; }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+  nav.toc li { font-size: 13.5px; margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a { color: var(--text); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent-strong); text-decoration: underline; }
+
+  section { margin-bottom: 52px; }
+  h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 6px; text-wrap: balance; scroll-margin-top: 24px; }
+  .section-num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 4px; }
+  .section-kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-faint); font-weight: 700; margin: 0 0 8px; }
+  h3 { font-size: 16px; font-weight: 700; margin: 28px 0 10px; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  p.lead { font-size: 16.5px; color: var(--text-dim); }
+  ul, ol.prose { margin: 0 0 14px; padding-left: 22px; max-width: 66ch; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-sunken); padding: 1px 5px; border-radius: 4px; }
+  pre { font-family: var(--font-mono); font-size: 13px; line-height: 1.65; background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; overflow-x: auto; margin: 0 0 18px; }
+  pre code { background: none; padding: 0; }
+
+  .callout { border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 0 0 18px; max-width: 66ch; }
+  .callout.warn { border-left-color: var(--amber); background: var(--amber-soft); }
+  .callout p { margin: 0; }
+  .callout p + p { margin-top: 8px; }
+
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+  .compare-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+  .compare-col h4 { margin: 0 0 10px; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+  .compare-col.remove h4 { color: var(--rust); }
+  .compare-col.keep h4 { color: var(--accent-strong); }
+  .compare-col ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
+  .compare-col li { margin-bottom: 7px; }
+  @media (max-width: 640px) { .compare { grid-template-columns: 1fr; } nav.toc ol { columns: 1; } }
+
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0 24px; }
+  .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px 12px; }
+  .chart-card h4 { margin: 0 0 2px; font-size: 14px; font-weight: 700; }
+  .chart-card .chart-sub { font-size: 12px; color: var(--text-faint); margin-bottom: 10px; font-family: var(--font-mono); }
+  .chart-card svg { display: block; width: 100%; height: auto; }
+  .axis-label { font-family: var(--font-mono); font-size: 8.5px; fill: var(--text-faint); }
+  @media (max-width: 640px) { .chart-grid { grid-template-columns: 1fr; } }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 18px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); font-weight: 700; }
+  td.mono, th.mono { font-family: var(--font-mono); font-size: 12.5px; }
+  .table-wrap { overflow-x: auto; margin-bottom: 18px; }
+
+  .phase-list { list-style: none; margin: 0 0 18px; padding: 0; }
+  .phase-list li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .phase-list li:last-child { border-bottom: none; }
+  .phase-num { font-family: var(--font-mono); font-weight: 600; color: var(--accent-strong); background: var(--accent-soft); width: 26px; height: 26px; border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; }
+  .phase-body strong { display: block; margin-bottom: 2px; }
+  .phase-body span { color: var(--text-dim); font-size: 13.5px; }
+
+  footer.doc-footer { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--text-faint); }
+</style>
+
+<div class="page">
+
+  <div class="doc-head">
+    <span class="status">Proposal</span>
+    <h1>Curve-Based Scoring</h1>
+    <p class="subtitle">Replacing fifteen per-slider formulas, three escape hatches, and a "base" number that means nothing for half the interests it's attached to — with one primitive.</p>
+    <div class="meta-row">
+      <span><strong>Scope</strong> — the scoring engine only (deriveDestinationScores)</span>
+      <span><strong>Touches</strong> — 200 destinations × 53 sliders</span>
+      <span><strong>Status</strong> — design review, not yet implemented</span>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#problem">Why "base" doesn't mean anything</a></li>
+      <li><a href="#model">The primitive: baseline + decaying anchors</a></li>
+      <li><a href="#examples">Worked examples</a></li>
+      <li><a href="#removes">What this removes, what stays</a></li>
+      <li><a href="#schema">The data shape</a></li>
+      <li><a href="#admin">Effect on the admin screens</a></li>
+      <li><a href="#migration">Migration</a></li>
+      <li><a href="#open">Open decisions</a></li>
+    </ol>
+  </nav>
+
+  <section id="problem">
+    <p class="section-kicker">01 · Diagnosis</p>
+    <h2>Why "base" doesn't mean anything</h2>
+    <p class="lead">The current engine assigns each of the 53 sliders to one of ten shared formulas by loose theme — <code>wildlife</code> covers wildlifeViewing, safari, whaleWatching, and wildflowerBlooms; <code>culture</code> covers auroraChasing, museumsArt, historyArchaeology, and festivals. The problem: within one theme, the sliders don't share a shape.</p>
+    <p>Ask what "base" means for <strong>museumsArt</strong> and the answer is real — a museum collection's quality doesn't have a season, so base is just the score. Ask the same question for <strong>auroraChasing</strong> and there's no honest answer, because aurora visibility isn't a quality that fluctuates around a typical value — it's <em>on</em> in the dark months and <em>not a real activity at all</em> the rest of the year. Both sliders run through the same <code>culture</code> formula, with the same small ±1/−2/−3 weather deltas, because that formula has to serve both cases at once.</p>
+    <p>The formula's own escape hatches are the evidence this doesn't fit: <code>sliderEvents</code> exists because four different formulas need "the real exception" for a genuine seasonal spike; <code>sliderCaps</code> exists specifically so a flat <code>+7</code> wildlife-peak bonus doesn't overstate a merely-decent destination the way it does Serengeti; <code>noSnow</code>/<code>inaccessible</code>/<code>wildlifeClosed</code> are three separately-invented hard floors for the same underlying need ("this month is just zero"). Each was added to patch a specific destination bug — the code comments name them: <em>reproduces the Kruger case</em>, <em>reproduces the Sydney bug</em>. None of them were part of one design; they accumulated.</p>
+    <div class="callout warn">
+      <p><strong>The empirical symptom:</strong> across all 200 destinations, 91 slider-curves swing 4 or more points above their base in a single month — the largest is <strong>+8</strong> (a base of 2 reaching a monthly value of 10). Some of that is real (Rio's Carnival month should be a 10). Some of it is a wrong base compensated by an oversized bonus — Whistler's mountainBiking base is a 2, when the real story is a bike park that's excellent all summer and closed in winter. The formula can't tell those two cases apart, because it was never given the vocabulary to describe a shape, only a number and a set of universal nudges.</p>
+    </div>
+  </section>
+
+  <section id="model">
+    <p class="section-kicker">02 · The proposal</p>
+    <h2>One primitive: anchors, eased into each other</h2>
+    <p class="lead">Every slider curve — flat, single-peak, double-peak, sharp spike, hard cutoff — is described the same way: a sparse list of <strong>anchors</strong> (specific months with a known value), connected by a smooth, S-shaped transition whose <strong>steepness</strong> is a number you control.</p>
+    <div class="callout warn">
+      <p><strong>Corrections, made before this reached implementation</strong> — this design went through two rounds of independent adversarial review after the first draft below. Round one found a real data-corruption bug and a real gap between what "steepness" claimed to do and what it actually did. Both are described and fixed here, not smoothed over: the earlier draft had each anchor decay independently toward a shared "baseline," picking whichever anchor was nearest for a given month — fine for one anchor, but with two or more close together it produced a discontinuity (one month could jump onto a totally different anchor's curve than its neighbor). That's replaced below by piecewise easing <em>between</em> consecutive anchors. Round one then found two more problems in <em>that</em> version, both fixed in what follows: anchors sharing a month could silently delete a third anchor from the curve, and averaging two anchors' steepness together made independent control of a peak's rise vs. its fall impossible — exactly the asymmetric-curve claim this design is supposed to deliver on.</p>
+      <p>Round two re-ran the math independently rather than trusting round one's fix, and confirmed the duplicate-month and steepness fixes were both real — but everything <em>around</em> them wasn't: no validation code had actually been shown, only promised in prose; a steepness below 1 silently produces a non-monotonic curve (not just "less gradual," as originally described); the interface comment and the admin table disagreed about what "gradual" steepness even means; and the crowds/deals formula wasn't precise enough to implement. All four were "fixed" with real code that round.</p>
+      <p>Round three found that "real code" isn't the same as <em>run</em> code: the defense-in-depth clamp only floored steepness, never capped it, so an out-of-range value could still divide 0/0 into <code>NaN</code> inside <code>ease()</code> — the exact silent-corruption failure it was written to prevent. An empty anchor list returned <code>undefined</code> with no guard at all. And the crowds/deals formula, never once executed against anything, turned out to degenerate into a near step-function for any destination with sparse slider coverage — the normal case, not an edge case. The response wasn't a fourth round of manual patching: the reference implementation was rewritten as real, typed TypeScript with an actual test suite, including four property-based fuzz tests generating thousands of random (and deliberately invariant-violating) anchor sets — see <code>src/lib/scoring/curve.ts</code> and <code>tests/scoring/curve.test.ts</code>.</p>
+      <p>Round four checked whether that fuzz suite actually covered the input space, rather than trusting that "fuzz-tested" meant "safe." It didn't, in two ways that are the same bug class one layer deeper: every fuzz generator randomized <code>Anchor</code> fields but never the query <code>month</code> parameter itself — which isn't part of an anchor, is never validated by the schema, and in real use would come from something like <code>new Date().getMonth()+1</code>. An out-of-range month either crashed on an error message that claimed the case was impossible, or silently returned an arithmetic accident for a negative month. Separately, <code>clamp()</code>'s use of <code>Math.min</code>/<code>Math.max</code> silently returns <code>NaN</code> when given <code>NaN</code> — the one input that footgun actually needed to guard against, and the one value none of the fuzz generators ever produced (they generated large, negative, and extreme numbers, never <code>NaN</code> itself). The response that round: validate the query month too, and make <code>clamp()</code> throw explicitly on <code>NaN</code>.</p>
+      <p>Round five found that "throw explicitly on <code>NaN</code>" was itself too narrow, and — more importantly — named <em>why</em> narrow fixes kept recurring. <code>Number.isNaN(v)</code> only rejects the literal float <code>NaN</code>; it does nothing for <code>undefined</code>, <code>null</code>, a string, a boolean, an array, or an object, every one of which <code>Math.min</code>/<code>Math.max</code> silently coerces into a number anyway — and <code>undefined</code>/<code>null</code> are exactly what a dropped JSON key or a NULL database column actually produce, not an exotic input. Separately, an anchor's own <code>month</code> field had received <em>no</em> repair at all, unlike its sibling fields — <code>month: 0</code> and <code>month: 12</code> ("December" twice, differently spelled) weren't deduplicated, silently reopening round one's original duplicate-month bug through a different door. Four rounds in, the reviewer's diagnosis was structural, not another missing case: <em>"enumerate every malformed JS value and handle it inline is a search that doesn't terminate."</em> Their recommendation — validate once, at the boundary, with the schema that already exists; let the evaluator trust the type completely, with zero runtime repair of its own — is what the rest of this section now describes, replacing the defense-in-depth version rather than patching it again.</p>
+    </div>
+    <pre><code>interface SliderCurve {
+  anchors: Anchor[];      // at least 1, MUST have unique months — see below.
+                            // One anchor = flat, no season.
+}
+
+interface Anchor {
+  month: number;           // 1–12
+  value: number;           // 0–10, the value AT this month, exactly
+  steepness?: number;      // 1–10. Default 2 (moderate). Governs how sharply
+                            // the curve takes hold as it transitions
+                            // TOWARD this anchor — see below.
+}</code></pre>
+    <p><strong>Invariant: anchors must have unique months, and both <code>value</code> and <code>steepness</code> stay in range.</strong> Two anchors both claiming January isn't a curve shape, it's contradictory data — which value is January supposed to be? A zod schema already enumerates a type completely, in one declarative place — <code>z.number()</code> alone rejects <code>NaN</code>, <code>undefined</code>, <code>null</code>, strings, and booleans before <code>.min()</code>/<code>.max()</code>/<code>.int()</code> even run — which is more complete than any of the hand-rolled runtime guards that came before it, verified directly:</p>
+    <pre><code>const anchorSchema = z.object({
+  month: z.number().int().min(1).max(12),
+  value: z.number().min(0).max(10),
+  steepness: z.number().min(1).max(10).optional(),   // k &lt; 1 rejected outright — see below
+});
+
+const sliderCurveSchema = z
+  .object({ anchors: z.array(anchorSchema).min(1) })
+  .refine(
+    (c) => new Set(c.anchors.map((a) => a.month)).size === c.anchors.length,
+    { message: 'Anchors must have unique months.' },
+  );</code></pre>
+    <p>The schema is necessary but not, on its own, sufficient — TypeScript's structural typing means any object shaped like <code>{ anchors: [...] }</code> still satisfies the <code>SliderCurve</code> type whether or not it ever passed through the schema. Closing that gap needs one more thing: a type nothing can satisfy <em>except</em> by going through the parser.</p>
+    <pre><code>declare const VALIDATED: unique symbol;
+type SliderCurve = z.infer&lt;typeof sliderCurveSchema&gt; &amp; { readonly [VALIDATED]: true };
+
+function parseSliderCurve(raw: unknown): SliderCurve {
+  return sliderCurveSchema.parse(raw) as SliderCurve;   // the only place this cast is allowed
+}</code></pre>
+    <p>That brand is what makes "validate once, trust everywhere after" actually true rather than aspirational: a plain object literal can't be passed where a <code>SliderCurve</code> is expected, so the only way to get one is <code>parseSliderCurve</code> — every place curve data enters the process (the admin save path, the migration script's output, and reading the <code>sliderCurves</code> column back out of the database) goes through it once, and <code>curveValue</code>/<code>crowdsScore</code> below do zero runtime repair of their own.</p>
+    <p>The evaluator: sort the anchors by month. For any given month, find the two consecutive anchors that bracket it (wrapping December to January). Compute how far between them this month sits, as a fraction from 0 to 1 — then instead of a straight line, ease that fraction through an S-curve before blending the two anchors' values. <strong>The steepness of that transition belongs to the anchor being transitioned <em>toward</em></strong> — not an average of both. A peak's own steepness controls how sharply the curve rises into it; how sharply it falls away afterward is controlled by whichever anchor comes next. This is what actually makes the two sides of a peak independently tunable.</p>
+    <pre><code>function ease(t: number, k: number): number {
+  if (t <= 0) return 0;
+  if (t >= 1) return 1;
+  const a = t ** k, b = (1 - t) ** k;
+  const sum = a + b;
+  if (sum === 0) return t < 0.5 ? 0 : 1;   // extreme k underflows both branches
+  return a / sum;                          // to 0 in floating point — round to the
+}                                           // nearer side instead of dividing 0/0.
+
+function normalizeMonth(month: number): number {
+  // Real domain logic, not input repair: `month` is a runtime query parameter
+  // (new Date().getMonth()+1), not persisted data the schema covers, so
+  // wrapping it is a legitimate calendar operation, the same way "3 months
+  // from November" legitimately means February.
+  if (!Number.isFinite(month) || !Number.isInteger(month)) {
+    throw new Error('month must be a finite integer');
+  }
+  return ((month - 1) % 12 + 12) % 12 + 1;   // 14 -&gt; Feb, 0 -&gt; Dec, -12 -&gt; Dec: wrap, don't crash or drift
+}
+
+function curveValue(month: number, curve: SliderCurve): number {
+  // curve is trusted completely: anchors.length &gt;= 1, unique months,
+  // value/steepness in range are all guaranteed by parseSliderCurve. No
+  // dedup, no clamp, no NaN guard — that enumeration belongs in the schema.
+  const queryMonth = normalizeMonth(month);
+  const anchors = curve.anchors;
+  if (anchors.length === 1) return anchors[0].value;
+  const sorted = [...anchors].sort((a, b) => a.month - b.month);
+  for (let i = 0; i < sorted.length; i++) {
+    const A = sorted[i], B = sorted[(i + 1) % sorted.length];
+    let spanAB = B.month - A.month; if (spanAB <= 0) spanAB += 12;
+    let spanAm = queryMonth - A.month; if (spanAm < 0) spanAm += 12;
+    if (spanAm <= spanAB) {
+      const t = spanAm / spanAB;
+      const k = B.steepness ?? 2;   // B, not avg(A, B) — see above
+      return A.value + (B.value - A.value) * ease(t, k);
+    }
+  }
+  // Impossible by construction: the spans above partition the full 12-month
+  // circle, so some bracket always matches. An assertion about curveValue's
+  // OWN correctness, not input repair — if it fires, the bug is in this
+  // function, not the caller's data.
+  throw new Error('curveValue: no bracketing anchors found — internal invariant violated');
+}</code></pre>
+    <p>One failure mode now, not two: bad data is rejected at <code>parseSliderCurve</code>, with a structured error naming the exact invalid field, before it can ever reach <code>curveValue</code>. There's nothing left inside the evaluator to "repair," because nothing invalid can get in — which is also why the function got <em>shorter</em> across this round, not longer: no <code>clamp</code>, no dedup <code>Map</code>, no per-field NaN handling. The query month is the one exception, and on purpose — it isn't part of the persisted <code>SliderCurve</code> the schema covers, so <code>normalizeMonth</code> validating and wrapping it is real domain logic, not defensive input repair, and stays. This is the actual implementation, not an illustration of one — <code>src/lib/scoring/curve.ts</code>, covered by <code>tests/scoring/curve.test.ts</code>, including property-based fuzzing of the schema boundary itself against every JS value shape (not just extreme numbers) that a dropped key or a NULL column can actually produce.</p>
+    <p>That's the whole engine — no separate baseline field, no decay radius, no per-anchor reach to tune independently of its neighbors. A flat interest is one anchor. A gradual season is two anchors with low steepness. A sharp spike is two anchors with high steepness. A season with a real plateau is three or four anchors. The <strong>same two knobs</strong> — where an anchor sits, and how steep the transition into it is — produce every shape below, including genuinely asymmetric ones (a fast onset, a slow fade): give the peak a high steepness and the following trough a low one, and the rise and fall are shaped completely independently.</p>
+    <h3>Proof the steepness knob actually works</h3>
+    <p>Same two anchors, same values (a trough of 1 in July, a peak of 9 in January) — only the steepness changes:</p>
+    <div class="chart-grid" id="steepness-grid"></div>
+  </section>
+
+  <section id="examples">
+    <p class="section-kicker">03 · Proof</p>
+    <h2>Worked examples</h2>
+    <p class="lead">Five real shapes, generated by the exact function above, from the anchors shown under each chart.</p>
+    <div class="chart-grid" id="chart-grid"></div>
+    <p>The other cases you asked about all fall out of the same two knobs — <strong>where anchors sit</strong> and <strong>how steep the transitions between them are</strong> — without inventing anything new:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Interest</th><th>Anchors</th><th>Why this shape</th></tr></thead>
+        <tbody>
+          <tr><td>Fishing</td><td class="mono">Apr: 2 → Jun: 8 → Aug: 2, k=3</td><td>A species run has a real arrival/departure ramp — two transitions around one peak, same idea as wildlife migration.</td></tr>
+          <tr><td>Surfing</td><td class="mono">Jul: 4 → Dec: 8, k=2</td><td>Swell season builds and fades smoothly, over months — a moderate-steepness pair, not a switch.</td></tr>
+          <tr><td>Spectator sports</td><td class="mono">Mar:1 → Aug:1 → Oct:7 → Dec:7 → (wraps)</td><td>A league season has a real, sustained plateau and a real off-season, not two isolated spikes — four anchors hold each phase honestly instead of interpolating across the whole gap.</td></tr>
+          <tr><td>Holidays / festivals</td><td class="mono">two anchors, k=8–10</td><td>Genuinely one week. High steepness holds baseline right up until the event, jumps, and drops right back.</td></tr>
+          <tr><td>Museums</td><td class="mono">one anchor</td><td>No season exists. One number, everywhere, is a complete and honest answer.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Avoiding Crowds and Low-Season Deals</strong> (their actual slider labels — see <code>constants.ts</code>) are the one case I'd deliberately <em>not</em> author this way — they aren't an activity with a season, they're a reflection of how busy everything else is. And they're the same reflection twice: the current formula computes both from one identical code path (<code>destinations.ts</code>'s <code>case 'deals': case 'crowds':</code>) — a peak month scores low, a low-season month scores high, for both sliders at once. They're not inverses of each other; "good for avoiding crowds" and "a good deal" move together.</p>
+    <div class="callout warn">
+      <p><strong>This one was wrong until checked against real data.</strong> An earlier draft of this formula computed a literal busyness score — peak season high, low season low — and derived deals as its 10-complement. That's backwards: "Avoiding Crowds" is a positive-framed slider, so a <em>quiet</em> month should score high, not low. Every synthetic worked example in this document still would have looked reasonable with the sign backwards, because they were built to demonstrate the mechanism, not to catch this. What caught it was Phase 3's parallel-diff audit (below) run against the real database: dozens of destinations — Raja Ampat, Bhutan, Madagascar, Ethiopia, Zimbabwe among them — showed the old formula's authored low season scoring 9-10 and this formula's first draft scoring ~2 for the <em>identical</em> months. Not floating-point noise; an inverted sign, found the same way rounds 1-5 found everything else in this document: by computing the real numbers and looking, just this time against production data instead of a hostile reviewer's constructed examples.</p>
+    </div>
+    <pre><code>function seasonalQuietness(curves: Record&lt;string, SliderCurve&gt;, naSliders: string[], month: number): number {
+  const queryMonth = normalizeMonth(month);
+  const deviations: number[] = [];
+  for (const [key, curve] of Object.entries(curves)) {
+    if (naSliders.includes(key)) continue;
+    const monthly = range(1, 13).map((m) => curveValue(m, curve));
+    const min = Math.min(...monthly), max = Math.max(...monthly), spread = max - min;
+    if (spread === 0) continue;              // flat slider carries no signal either way
+    const avg = mean(monthly);
+    deviations.push((monthly[queryMonth - 1] - avg) / spread);  // signed, fraction of THIS slider's own range
+  }
+  const avgDeviation = deviations.length ? mean(deviations) : 0;  // bounded to exactly [-1, +1] given valid inputs
+  // A month running ABOVE its sliders' typical level is objectively busier —
+  // and busier is WORSE for avoiding crowds and WORSE for a deal, hence the
+  // minus sign. The clamp is a floating-point safety net (avgDeviation is
+  // provably in [-1, 1] already), not input repair.
+  return Math.min(10, Math.max(0, 5 - avgDeviation * 5));
+}
+function crowdsScore(curves: Record&lt;string, SliderCurve&gt;, naSliders: string[], month: number): number {
+  return seasonalQuietness(curves, naSliders, month);
+}
+function dealsScore(curves: Record&lt;string, SliderCurve&gt;, naSliders: string[], month: number): number {
+  return seasonalQuietness(curves, naSliders, month); // same signal, not an inverse — see above
+}</code></pre>
+    <p>Normalizing by each slider's own <em>range</em> (max − min), not its average, is what makes this safe to blend across 52 very different-shaped sliders — and it's a correction from an earlier draft of this formula, which divided by average instead. That version was never actually run against anything until round three of review did: dividing by a low average is unbounded on the upside (a sparsely-covered, spiky slider could report a deviation of several hundred percent), while a monthly value can't fall below 0, so the downside was capped at −1. That asymmetry let a single spiky slider on a lightly-tagged destination swing the whole score to its ceiling for months at a time. Dividing by range instead is symmetric by construction — monthly and the average both live inside <code>[min, max]</code>, so the deviation can never exceed ±1 — which is what actually makes it safe for a wide-swinging slider like aurora (1 → 9) and a nearly-flat one like museums (8 → 8) to share one average without either dominating it.</p>
+    <p>Computed by the real implementation, not by hand, for this explicit four-slider set — aurora (Jul:1 → Jan:9, k2), museums (flat, 8), hiking (Jan:2 → Jul:9, k2), and a local festival timed to <em>coincide</em> with hiking's own peak (Jun:2 → Jul:10 → Aug:2, k8), chosen deliberately so the "several things peaking together reads as busy — and therefore worse for both sliders" effect is visible in the numbers below rather than averaged away:</p>
+    <div class="table-wrap">
+      <table id="crowds-table">
+        <thead><tr><th>Month</th><th>Avoiding Crowds</th><th>Low-Season Deals</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Jan</td><td class="mono" data-crowds-month="1">—</td><td class="mono" data-deals-month="1">—</td><td>Aurora's peak is offset by hiking and the festival both being at their off-season low — close to typical, and the two sliders agree exactly, as they always do.</td></tr>
+          <tr><td class="mono">Jul</td><td class="mono" data-crowds-month="7">—</td><td class="mono" data-deals-month="7">—</td><td>Hiking and the festival both peak here, outweighing aurora sitting at its own seasonal low — the worst month for both avoiding crowds and finding a deal.</td></tr>
+          <tr><td class="mono">Apr, Oct</td><td class="mono" data-crowds-month="4">—</td><td class="mono" data-deals-month="4">—</td><td>No slider is near its extreme — an ordinary month for both, correctly.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-faint);margin-top:-10px;">Filled in below by the page's own script running the same <code>seasonalQuietness</code> shown above against the anchors named in the sentence before the table — not typed in by hand, so it can't silently drift from the algorithm. The two columns are identical in every row: that's the point, not a coincidence to explain away.</p>
+    <p>A month where most interests are running well above their own typical level reads as objectively busier — that becomes the crowds score, mapped onto the usual 0–10 scale around a "typical month" of 5, and deals as its direct inverse. One formula, computed from data that's already there, instead of a 53rd curve a human has to separately author and keep in sync with the other 52 by hand.</p>
+  </section>
+
+  <section id="removes">
+    <p class="section-kicker">04 · Consequence</p>
+    <h2>What this removes, what stays</h2>
+    <div class="compare">
+      <div class="compare-col remove">
+        <h4>Removed entirely</h4>
+        <ul>
+          <li>The 10-branch formula switch (sun/swim/hiking/snow/culture/food/shopping/wildlife/birding/deals)</li>
+          <li><code>sliderCaps</code> — nothing left to cap</li>
+          <li><code>sliderEvents</code> as a separate mechanism — a second peak is just another anchor</li>
+          <li><code>dryMonths</code>/<code>wetMonths</code>/<code>hotMonths</code>/<code>coldMonths</code>/<code>peakMonths</code>/<code>lowMonths</code> and 8 more month-flag arrays, as scoring inputs</li>
+          <li><code>peakIntensity</code> / <code>crowdBaseline</code>, as scoring inputs</li>
+          <li><code>shopClosures</code> as a cross-cutting flag — a real low-season dip is just that slider's own curve</li>
+        </ul>
+      </div>
+      <div class="compare-col keep">
+        <h4>Unchanged</h4>
+        <ul>
+          <li><code>seasonalHazards</code> — a real, different concept: one authored risk discounting several unrelated sliders at once, not worth duplicating per-slider</li>
+          <li><code>naSliders</code> — a slider is applicable or it isn't, orthogonal to its curve</li>
+          <li><code>scoreOverrides</code> — still the highest-precedence, "just fix this one month" escape hatch</li>
+          <li><code>signatureTier</code> / <code>activityStyleTiers</code> — identity and sub-style, not scoring math</li>
+        </ul>
+      </div>
+    </div>
+    <p>The month-flag arrays don't necessarily disappear as <em>data</em> — "wet season: Jun–Aug" is genuinely useful as descriptive badge text on the destination page. What they stop being is a scoring input. Today the same flag has to be honest about two different jobs at once (drive the formula, drive the badge); splitting them means the badge text can say whatever's actually true without worrying it'll also nudge some unrelated slider's math.</p>
+  </section>
+
+  <section id="schema">
+    <p class="section-kicker">05 · Storage</p>
+    <h2>The data shape</h2>
+    <p>One jsonb column replaces <code>baseScores</code>, <code>sliderCaps</code>, <code>sliderEvents</code>, and the 14 month-array columns:</p>
+    <pre><code>sliderCurves: jsonb('slider_curves')
+  .notNull().default({})
+  .$type&lt;Record&lt;string, SliderCurve&gt;&gt;()</code></pre>
+    <p>For a flat slider this is <code>{ anchors: [{ month: 1, value: 8 }] }</code> — no bigger than today's bare <code>baseScores.museumsArt = 8</code>, and the month is irrelevant when there's only one. The data only grows where a destination genuinely has seasonal shape to describe, which is the honest place for that complexity to live.</p>
+  </section>
+
+  <section id="admin">
+    <p class="section-kicker">06 · Admin panel impact</p>
+    <h2>Effect on the screens already built this session</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Screen</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>Cost Items, Interests</td><td>None — unrelated to scoring.</td></tr>
+          <tr><td>Places</td><td>Unchanged, except <code>peakIntensity</code>/<code>crowdBaseline</code> lose their scoring role (may keep a smaller badge-only purpose).</td></tr>
+          <tr><td>Matrix</td><td><strong>Cap</strong> and <strong>Events</strong> columns are removed. <strong>Base</strong> stops being a single editable number. Min/Max/Swing/Tier/N/A/Style-tiers are unaffected — still computed off whichever 12 numbers the curve produces.</td></tr>
+          <tr><td>Seasonal Flags</td><td>Loses its reason to exist as a <em>scoring</em> screen. Survives only if the underlying facts are worth keeping for badge text — a separate, smaller decision.</td></tr>
+          <tr><td>Place Profile</td><td><strong>Becomes the primary editor.</strong> It's already a month-by-month grid with click-to-set-a-value — clicking a month sets an anchor there; unset months show the interpolated fill, visually distinguished (e.g. dimmed) from authored ones. Setting an anchor's value and its steepness happen in the same small edit control (value defaults editable immediately; steepness collapsed behind a "gradual/moderate/sharp" preset — 1/2/6 — with a raw number available for the rare case that needs something else). Steepness isn't a second screen or a hidden field; if it were, none of the shapes above would be reachable by whoever's actually authoring content. Because the interpolated fill is already rendered live across all 12 months, the grid also doubles as the guard against the anchor-spacing trap below: two anchors landing a month apart is visible immediately as one abrupt cell next to eleven held-flat ones, not discovered later on a chart.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="migration">
+    <p class="section-kicker">07 · Rollout</p>
+    <h2>Migration</h2>
+    <ol class="phase-list">
+      <li><span class="phase-num">1</span><div class="phase-body"><strong>Add the column, additive only.</strong> <span><code>sliderCurves</code> alongside every existing column — nothing reads it yet.</span></div></li>
+      <li><span class="phase-num">2</span><div class="phase-body"><strong>Auto-derive curves from today's live output.</strong> <span>For each destination × slider, take the current 12 computed monthly values (already correct, already battle-tested) and fit a sparse anchor set that reproduces them. <code>deals</code>/<code>crowds</code> are excluded — they're derived, not fitted (see section 03). Real algorithm, not a placeholder: greedy growth from the curve's global min/max month, fitting each arc's steepness by grid search, adding the single worst-error month as a new anchor until within tolerance — see <code>src/lib/scoring/fitCurve.ts</code> and <code>tests/scoring/fitCurve.test.ts</code>. Run against all 9,497 real non-N/A curves in the current database: every single one fits within half a point of the source (the tolerance that guarantees the same displayed integer), using a mean of 3.6 anchors — and only 18 curves (0.19%) needed every month as its own anchor to get there, all of them the same recognizable shape (a value alternating between three levels roughly twice a year, e.g. Budapest's <code>scenicLandscapes</code>: <code>0,0,4,4,7,7,4,4,7,4,4,0</code>). This preserves every existing number exactly; it only changes the representation.</span></div></li>
+      <li><span class="phase-num">3</span><div class="phase-body"><strong>Parallel-run and diff.</strong> <span>New evaluator runs alongside the old formula; assert its output matches today's for all 200 × 53 — same gate this session already used for the places migration. Built and run: <code>scripts/audit-curve-migration-parity.ts</code> (<code>npm run db:audit:curve-migration</code>). Two genuinely different halves — every fitted slider curve (Part A) should match the old formula almost exactly, a pure correctness check; <code>avoidingCrowds</code>/<code>lowSeasonDeals</code> (Part B) are computed by a completely different formula now, so real disagreement there is expected, useful content-review signal, not a bug list. Part A: PASS across all 9,497 real curves, 0 discrepancies above tolerance. Part B is exactly what caught the sign-inversion bug described above — before the fix, 23.4% of month-level comparisons disagreed by 4+ points on the 0-10 scale; after it, 10.4%, and essentially all of the remainder traces to one further, still-open question: an <code>inaccessible</code> month (Ladakh's winter, Antarctica's off-season) forces every slider to 0 under the old formula, including crowds/deals, but the new derived formula has no equivalent override — a genuinely quiet, unvisitable month currently reads as a <em>great</em> month for avoiding crowds, which is true but probably not the intended framing. Added to Open Decisions below.</span></div></li>
+      <li><span class="phase-num">4</span><div class="phase-body"><strong>Cut the live read path over.</strong> <span>Old formula stays in the codebase, unused, as a same-day rollback.</span></div></li>
+      <li><span class="phase-num">5</span><div class="phase-body"><strong>Editorial pass, separately.</strong> <span>Only now does anyone go smooth out the real flat-plateau artifacts the audit script already flags (211 of them) — easy at this point, since softening a transition is just moving an anchor, not fighting formula internals.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="open">
+    <p class="section-kicker">08 · Still open</p>
+    <h2>Open decisions</h2>
+    <ul>
+      <li>Whether month-flag facts (wet season, shop closures) get rebuilt as standalone badge content, or dropped if nothing currently reads them for that purpose.</li>
+      <li>Whether hazards multiply the curve value (today's behavior) or also get an anchor-shaped authoring option.</li>
+      <li>Whether <code>seasonalQuietness</code> needs an explicit override for a month nobody can actually visit. Found by Phase 3's real-data audit: an <code>inaccessible</code> month forces every slider to 0 under the old formula (including crowds/deals), but the new derived formula has no equivalent concept — it just sees every other slider sitting at its own low, which correctly reads as "quiet," so Ladakh's snowed-in winter and Antarctica's off-season currently score as some of the <em>best</em> months for avoiding crowds and finding a deal. Defensible in one sense (true, if you could get there) and misleading in another (you can't) — needs a product call, not a formula tweak, since the honest fix is probably "hide/gray out crowds and deals for a month the destination is inaccessible," not a math change.</li>
+      <li>Anchors placed close together still don't produce a "short hold" — they produce one short arc plus one long one covering the rest of the year. That's now visible live in the Place Profile grid rather than only discovered later (see the admin table above), which closes the "silent" part of this trap, but the exact threshold for an explicit inline warning (2 months apart? 1?) and its wording are still undecided.</li>
+      <li>Two independently-authored seasonal peaks close together on the calendar (e.g. two <code>sliderEvents</code>-equivalent bumps a month apart) haven't been checked against real data for the same fade/rise interaction the asymmetry fix above addresses — worth testing against actual destinations with double seasons before assuming it composes cleanly.</li>
+    </ul>
+  </section>
+
+  <footer class="doc-footer">
+    Where To? — scoring engine proposal · not yet implemented
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  // Mirrors src/lib/scoring/curve.ts, the actual tested implementation --
+  // this copy exists only to render the charts and tables below, not as its
+  // own proof (the reference implementation's test suite is that proof).
+  // No clamp()/dedupe here, on purpose -- this script's example anchors are
+  // hardcoded literals, so there's nothing to validate at this layer; the
+  // real module's zod schema + parseSliderCurve boundary is what earns the
+  // right to skip that here, not this file's own vigilance.
+  function normalizeMonth(month) {
+    if (!Number.isFinite(month) || !Number.isInteger(month)) throw new Error('month must be a finite integer');
+    return ((month - 1) % 12 + 12) % 12 + 1;
+  }
+  function ease(t, k) {
+    if (t <= 0) return 0;
+    if (t >= 1) return 1;
+    var a = Math.pow(t, k), b = Math.pow(1 - t, k), sum = a + b;
+    if (sum === 0) return t < 0.5 ? 0 : 1; // extreme k underflows both branches to 0
+    return a / sum;
+  }
+  function curveValue(month, curve) {
+    var queryMonth = normalizeMonth(month);
+    var anchors = curve.anchors;
+    if (anchors.length === 1) return anchors[0].value;
+    var sorted = anchors.slice().sort(function (a, b) { return a.month - b.month; });
+    for (var i = 0; i < sorted.length; i++) {
+      var A = sorted[i], B = sorted[(i + 1) % sorted.length];
+      var spanAB = B.month - A.month; if (spanAB <= 0) spanAB += 12;
+      var spanAm = queryMonth - A.month; if (spanAm < 0) spanAm += 12;
+      if (spanAm <= spanAB) {
+        var t = spanAm / spanAB;
+        var k = B.steepness === undefined ? 2 : B.steepness; // destination anchor owns it, not an average
+        return A.value + (B.value - A.value) * ease(t, k);
+      }
+    }
+    throw new Error('curveValue: no bracketing anchors found — internal invariant violated');
+  }
+
+  var MONTHS = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+  var W = 280, H = 130, padL = 22, padR = 10, padT = 12, padB = 18;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+
+  function pointsFor(anchors) {
+    var curve = { anchors: anchors };
+    var pts = [];
+    for (var m = 1; m <= 12; m++) {
+      var v = curveValue(m, curve);
+      pts.push([padL + (plotW * (m - 1)) / 11, padT + plotH - (v / 10) * plotH]);
+    }
+    return pts;
+  }
+  function pathFor(points) {
+    return points.map(function (p, i) { return (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' ');
+  }
+  function gridAndLabels() {
+    var out = '';
+    [0, 5, 10].forEach(function (v) {
+      var y = padT + plotH - (v / 10) * plotH;
+      out += '<line x1="' + padL + '" y1="' + y + '" x2="' + (W - padR) + '" y2="' + y + '" stroke="var(--border)" stroke-width="1" />';
+      out += '<text x="' + (padL - 6) + '" y="' + (y + 3) + '" text-anchor="end" class="axis-label">' + v + '</text>';
+    });
+    MONTHS.forEach(function (name, i) {
+      var x = padL + (plotW * i) / 11;
+      out += '<text x="' + x + '" y="' + (H - 4) + '" text-anchor="middle" class="axis-label">' + name + '</text>';
+    });
+    return out;
+  }
+  function dotsFor(points, color) {
+    return points.map(function (p) { return '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="2" fill="' + color + '" />'; }).join('');
+  }
+
+  // --- Main worked-example grid ---
+  var examples = [
+    { title: 'Museums — NYC', anchorsLabel: 'one anchor, value 8', anchors: [{ month: 1, value: 8 }] },
+    { title: 'Aurora Chasing — Denali', anchorsLabel: 'Jul: 1 → Jan: 9, k=2', anchors: [{ month: 7, value: 1, steepness: 2 }, { month: 1, value: 9, steepness: 2 }] },
+    { title: 'Carnival — Rio (festivals)', anchorsLabel: 'Nov: 3 → Feb: 10 → May: 3, k=8', anchors: [{ month: 11, value: 3, steepness: 8 }, { month: 2, value: 10, steepness: 8 }, { month: 5, value: 3, steepness: 8 }] },
+    { title: 'Hiking — mountain town', anchorsLabel: 'Jan: 2 → Jul: 9, k=2', anchors: [{ month: 1, value: 2, steepness: 2 }, { month: 7, value: 9, steepness: 2 }] },
+    { title: 'Spectator sports — season', anchorsLabel: 'Mar:1 → Aug:1 → Oct:7 → Dec:7 (wraps to Mar), k=2–3', anchors: [{ month: 3, value: 1, steepness: 3 }, { month: 8, value: 1, steepness: 2 }, { month: 10, value: 7, steepness: 2 }, { month: 12, value: 7, steepness: 2 }] }
+  ];
+
+  var grid = document.getElementById('chart-grid');
+  examples.forEach(function (ex) {
+    var points = pointsFor(ex.anchors);
+    var pathD = pathFor(points);
+    var areaD = pathD + ' L' + points[11][0].toFixed(1) + ',' + (padT + plotH) + ' L' + points[0][0].toFixed(1) + ',' + (padT + plotH) + ' Z';
+    var card = document.createElement('div');
+    card.className = 'chart-card';
+    card.innerHTML =
+      '<h4>' + ex.title + '</h4>' +
+      '<div class="chart-sub">' + ex.anchorsLabel + '</div>' +
+      '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet">' +
+        gridAndLabels() +
+        '<path d="' + areaD + '" fill="var(--accent-soft)" stroke="none" />' +
+        '<path d="' + pathD + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />' +
+        dotsFor(points, 'var(--accent)') +
+      '</svg>';
+    grid.appendChild(card);
+  });
+
+  // --- Steepness comparison: identical anchors, different k ---
+  var gentle = [{ month: 7, value: 1, steepness: 2 }, { month: 1, value: 9, steepness: 2 }];
+  var steep = [{ month: 7, value: 1, steepness: 7 }, { month: 1, value: 9, steepness: 7 }];
+  var pGentle = pointsFor(gentle), pSteep = pointsFor(steep);
+  var steepGrid = document.getElementById('steepness-grid');
+  var card2 = document.createElement('div');
+  card2.className = 'chart-card';
+  card2.style.gridColumn = '1 / -1';
+  card2.innerHTML =
+    '<h4>Same anchors (Jul: 1, Jan: 9) — steepness 2 vs. 7</h4>' +
+    '<div class="chart-sub">green = k2, amber = k7 — both pass through the exact same two anchor points</div>' +
+    '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet">' +
+      gridAndLabels() +
+      '<path d="' + pathFor(pGentle) + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />' +
+      '<path d="' + pathFor(pSteep) + '" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />' +
+      dotsFor(pGentle, 'var(--accent)') +
+      dotsFor(pSteep, 'var(--amber)') +
+    '</svg>';
+  steepGrid.appendChild(card2);
+
+  // --- Asymmetry proof: steep rise, gentle fall, same peak ---
+  var asym = [{ month: 1, value: 1, steepness: 9 }, { month: 4, value: 9, steepness: 9 }, { month: 10, value: 1, steepness: 1 }];
+  var pAsym = pointsFor(asym);
+  var card3 = document.createElement('div');
+  card3.className = 'chart-card';
+  card3.style.gridColumn = '1 / -1';
+  card3.innerHTML =
+    '<h4>Steep rise, gentle fall — one curve, independently shaped</h4>' +
+    '<div class="chart-sub">Jan:1 → Apr:9 (k=9, sharp onset) → Oct:1 (k=1, linear fade) — the exact case the design review used to break the earlier averaging rule</div>' +
+    '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet">' +
+      gridAndLabels() +
+      '<path d="' + pathFor(pAsym) + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />' +
+      dotsFor(pAsym, 'var(--accent)') +
+    '</svg>';
+  steepGrid.appendChild(card3);
+
+  // --- Crowds/deals table: filled in by actually running crowdsScore, not
+  // typed in by hand, so this table can't silently drift from the algorithm
+  // above the way an earlier draft's did. ---
+  function seasonalQuietness(curves, naSliders, month) {
+    var queryMonth = normalizeMonth(month);
+    var deviations = [];
+    Object.keys(curves).forEach(function (key) {
+      if (naSliders.indexOf(key) !== -1) return;
+      var monthly = [];
+      for (var m = 1; m <= 12; m++) monthly.push(curveValue(m, curves[key]));
+      var min = Math.min.apply(null, monthly), max = Math.max.apply(null, monthly), spread = max - min;
+      if (spread === 0) return;
+      var avg = monthly.reduce(function (s, v) { return s + v; }, 0) / monthly.length;
+      deviations.push((monthly[queryMonth - 1] - avg) / spread);
+    });
+    var avgDeviation = deviations.length ? deviations.reduce(function (s, v) { return s + v; }, 0) / deviations.length : 0;
+    return Math.min(10, Math.max(0, 5 - avgDeviation * 5)); // busier -> worse for both sliders, hence minus
+  }
+  function crowdsScore(curves, naSliders, month) { return seasonalQuietness(curves, naSliders, month); }
+  function dealsScore(curves, naSliders, month) { return seasonalQuietness(curves, naSliders, month); }
+
+  var crowdsCurves = {
+    aurora: { anchors: [{ month: 7, value: 1, steepness: 2 }, { month: 1, value: 9, steepness: 2 }] },
+    museums: { anchors: [{ month: 1, value: 8 }] },
+    hiking: { anchors: [{ month: 1, value: 2, steepness: 2 }, { month: 7, value: 9, steepness: 2 }] },
+    festival: { anchors: [{ month: 6, value: 2, steepness: 8 }, { month: 7, value: 10, steepness: 8 }, { month: 8, value: 2, steepness: 8 }] },
+  };
+  document.querySelectorAll('#crowds-table [data-crowds-month]').forEach(function (cell) {
+    var m = Number(cell.getAttribute('data-crowds-month'));
+    cell.textContent = crowdsScore(crowdsCurves, [], m).toFixed(2);
+  });
+  document.querySelectorAll('#crowds-table [data-deals-month]').forEach(function (cell) {
+    var m = Number(cell.getAttribute('data-deals-month'));
+    cell.textContent = dealsScore(crowdsCurves, [], m).toFixed(2);
+  });
+})();
+</script>

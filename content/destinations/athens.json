@@ -5,15 +5,38 @@
   "emoji": "🏛️",
   "climate": "mediterranean",
   "about": "Peak summer (Jul–Aug) is scorching, best avoided for serious sightseeing; spring and fall are far more comfortable for walking the ancient sites.",
-  "overview": "The Acropolis and the world's greatest concentration of classical antiquity, paired with a genuinely vibrant modern food and nightlife scene — with the Saronic islands a short ferry away.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Street food and metro fares stay properly cheap — the Acropolis and its surrounding museums are the one real must-pay expense.",
+  "overview": "The Acropolis and the world's greatest classical antiquity, paired with a vibrant food and nightlife scene — the Saronic islands a short ferry away.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Affordable for food and transit — the Acropolis and its surrounding museums are the one real must-pay expense.",
   "costItems": [
-    { "label": "Greek coffee", "price": 3, "unit": "" },
-    { "label": "Souvlaki wrap", "price": 3.5, "unit": "" },
-    { "label": "Metro ticket", "price": 1.2, "unit": "" },
-    { "label": "Acropolis entry", "price": 20, "unit": "" },
-    { "label": "Day-trip ferry to Hydra", "price": 60, "unit": "round-trip" }
+    {
+      "label": "Greek coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Souvlaki wrap",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Metro ticket",
+      "price": 1.2,
+      "unit": ""
+    },
+    {
+      "label": "Acropolis entry",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Day-trip ferry to Hydra",
+      "price": 60,
+      "unit": "round-trip"
+    }
   ],
   "base": {
     "sunbathing": 4,
@@ -38,22 +61,59 @@
     "spa": 3,
     "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 6,
     "birding": 3,
     "wildlife": 2
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate"],
-  "dry": [6, 7, 8, 9],
-  "wet": [11, 12, 1],
-  "hot": [7, 8],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    11,
+    12,
+    1
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2, 12],
-  "hikingBest": [4, 5, 10],
-  "hikingWorst": [7, 8],
+  "low": [
+    1,
+    2,
+    12
+  ],
+  "hikingBest": [
+    4,
+    5,
+    10
+  ],
+  "hikingWorst": [
+    7,
+    8
+  ],
   "monthlyWeather": [
     "mild and occasionally rainy, quiet with the fewest visitors",
     "mild, still quiet and comfortable for touring the ancient sites",
@@ -68,8 +128,16 @@
     "mild and increasingly rainy, quiet again",
     "mild and occasionally rainy, festive through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Acropolis", "Parthenon", "Plaka", "Hydra", "Cape Sounion"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Acropolis",
+    "Parthenon",
+    "Plaka",
+    "Hydra",
+    "Cape Sounion"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "casual",

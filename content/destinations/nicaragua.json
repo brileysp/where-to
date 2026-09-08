@@ -6,13 +6,32 @@
   "climate": "tropical",
   "about": "Dry season Nov–Apr is best for beaches and volcano hikes; wet season (May–Oct) brings mostly afternoon showers rather than all-day rain, with Sep–Oct the wettest stretch.",
   "overview": "Volcanoes, colonial Granada and León, and a growing surf scene on the Pacific coast — Central America's best-value alternative to Costa Rica.",
-  "costRange": { "min": "$", "max": "$$$" },
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
   "costOverview": "Genuinely the best value in Central America — similar volcanoes, beaches, and colonial towns to Costa Rica at a fraction of the price.",
   "costItems": [
-    { "label": "Gallo pinto breakfast", "price": 3, "unit": "" },
-    { "label": "Local bus (chicken bus)", "price": 1, "unit": "" },
-    { "label": "Volcano boarding, Cerro Negro", "price": 30, "unit": "per person" },
-    { "label": "Ometepe day tour", "price": 35, "unit": "per person" }
+    {
+      "label": "Gallo pinto breakfast",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Local bus (chicken bus)",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Volcano boarding, Cerro Negro",
+      "price": 30,
+      "unit": "per person"
+    },
+    {
+      "label": "Ometepe day tour",
+      "price": 35,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 7,
@@ -20,44 +39,93 @@
     "diving": 4,
     "surfing": 8,
     "sailing": 5,
-    "hiking": 7,
-    "scenic": 8,
+    "hiking": 6,
+    "scenic": 7,
     "fishing": 5,
     "roadtrip": 6,
     "adventure": 8,
     "golf": 1,
     "stargazing": 5,
     "museums": 4,
-    "architecture": 8,
+    "architecture": 7,
     "festivals": 5,
     "finedining": 4,
-    "streetfood": 6,
+    "streetfood": 5,
     "nightlife": 5,
     "winetasting": 1,
     "spa": 3,
-    "luxuryLodging": 5,
+    "luxuryLodging": 4,
     "snowsports": 0,
     "cycling": 4,
     "shopping": 4,
     "birding": 6,
-    "wildlife": 5
+    "wildlife": 4
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["easygoing", "lively", "secluded"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "dry": [11, 12, 1, 2, 3, 4],
-  "wet": [6, 7, 8, 9, 10],
-  "peak": [12, 1, 2, 3],
-  "low": [9, 10],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively",
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "low": [
+    9,
+    10
+  ],
   "peakIntensity": "mild",
-  "hikingBest": [11, 12, 1, 2, 3, 4],
-  "hikingWorst": [9, 10],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hikingWorst": [
+    9,
+    10
+  ],
   "sliderEvents": {
     "surfing": [
       {
         "label": "Consistent dry-season Pacific swells",
         "weight": 2,
-        "months": { "11": 0.5, "12": 0.7, "1": 0.8, "2": 0.8, "3": 0.6 }
+        "months": {
+          "11": 0.5,
+          "12": 0.7,
+          "1": 0.8,
+          "2": 0.8,
+          "3": 0.6
+        }
       }
     ]
   },
@@ -75,8 +143,16 @@
     "rain tapering off fast, hot with increasingly sunny days",
     "dry and hot, with the peak season getting underway"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Granada", "San Juan del Sur", "Ometepe", "Leon", "Cerro Negro"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Granada",
+    "San Juan del Sur",
+    "Ometepe",
+    "Leon",
+    "Cerro Negro"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "strong",

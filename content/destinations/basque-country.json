@@ -5,15 +5,38 @@
   "emoji": "🍢",
   "climate": "temperate",
   "about": "This is Green Spain, not sunny Spain — genuinely rainy Nov–Mar, with the best weather for the beaches and surf Jun–Sep.",
-  "overview": "San Sebastián's pintxos bars and world-class fine dining, Bilbao's Guggenheim, and Mundaka's famous left-hand wave — the food capital of Spain, and its wettest, greenest corner.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "A proper pintxos crawl through San Sebastián's old town costs just a few euros a stop — the region's extraordinary concentration of Michelin-starred restaurants is where the real splurging happens.",
+  "overview": "San Sebastián's pintxos bars and dining, Bilbao's Guggenheim, and Mundaka's left-hand wave — Spain's food capital, its wettest, greenest corner.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "A pintxos crawl through San Sebastián's old town costs just a few euros a stop — the region's extraordinary concentration of Michelin-starred restaurants is where the real spending happens.",
   "costItems": [
-    { "label": "Pintxo & glass of wine", "price": 4, "unit": "per pintxo" },
-    { "label": "Coffee", "price": 2, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 12, "unit": "" },
-    { "label": "Guggenheim Bilbao entry", "price": 16, "unit": "" },
-    { "label": "Michelin-starred dinner", "price": 220, "unit": "per person" }
+    {
+      "label": "Pintxo & glass of wine",
+      "price": 4,
+      "unit": "per pintxo"
+    },
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Guggenheim Bilbao entry",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Michelin-starred dinner",
+      "price": 220,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 5,
@@ -36,22 +59,53 @@
     "nightlife": 6,
     "winetasting": 6,
     "spa": 4,
-    "luxuryLodging": 6,
+    "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 4,
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "wet": [11, 12, 1, 2, 3],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2],
-  "hikingBest": [5, 6, 9],
-  "hikingWorst": [12, 1],
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1
+  ],
   "monthlyWeather": [
     "cool and rainy, quiet with the fewest visitors",
     "cool and rainy, still deep in the wet season",
@@ -66,8 +120,17 @@
     "cool and rainy, deep in the wet season",
     "cool and rainy, atmospheric through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["San Sebastian", "Donostia", "Bilbao", "Guggenheim", "Mundaka", "Zarautz"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "San Sebastian",
+    "Donostia",
+    "Bilbao",
+    "Guggenheim",
+    "Mundaka",
+    "Zarautz"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

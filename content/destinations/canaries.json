@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$"
   },
-  "costOverview": "The Canaries are among the cheapest destinations in Europe — a full three-course lunch with a drink costs well under what you'd pay for just a main course on the mainland.",
+  "costOverview": "Among the cheapest destinations in Europe — a full three-course lunch with a drink costs well under what you'd pay for just a main course on the mainland.",
   "costItems": [
     {
       "label": "Coffee",
@@ -28,6 +28,11 @@
       "unit": ""
     },
     {
+      "label": "Beach club sunbed & umbrella",
+      "price": 15,
+      "unit": "per day"
+    },
+    {
       "label": "Grilled fresh fish dinner",
       "price": 22,
       "unit": ""
@@ -36,7 +41,7 @@
   "base": {
     "sunbathing": 8,
     "swimming": 7,
-    "diving": 6,
+    "diving": 5,
     "surfing": 7,
     "sailing": 6,
     "hiking": 7,
@@ -54,12 +59,12 @@
     "nightlife": 6,
     "winetasting": 5,
     "spa": 6,
-    "luxuryLodging": 4,
+    "luxuryLodging": 5,
     "snowsports": 2,
     "cycling": 6,
     "shopping": 6,
     "birding": 5,
-    "wildlife": 4
+    "wildlife": 3
   },
   "budgetBands": [
     "basic",

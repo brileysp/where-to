@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Market picnics and coffee stay reasonable — a private lavender-fields tour or a proper Provençal dinner is where real spending happens.",
+  "costOverview": "Market picnics and coffee are reasonable — a private lavender-fields tour or a proper Provençal dinner is where real spending happens.",
   "costItems": [
     {
       "label": "Espresso",
@@ -31,12 +31,17 @@
       "label": "Private lavender-fields tour",
       "price": 85,
       "unit": "per person"
+    },
+    {
+      "label": "Tasting menu, Michelin-listed countryside restaurant",
+      "price": 280,
+      "unit": ""
     }
   ],
   "base": {
     "sunbathing": 6,
     "swimming": 4,
-    "diving": 2,
+    "diving": 1,
     "surfing": 2,
     "sailing": 5,
     "hiking": 7,

@@ -5,15 +5,43 @@
   "emoji": "🦬",
   "climate": "temperate",
   "about": "Summer (Jun–Aug) is best for both parks, though early August brings the Sturgis Motorcycle Rally and its several-hundred-thousand riders; winter is cold with limited services.",
-  "overview": "The eroded, otherworldly rock formations of Badlands National Park, bison herds at Custer State Park, and the monumental carvings of Mount Rushmore and Crazy Horse — plus, for one week each August, one of the largest motorcycle gatherings on Earth.",
-  "costRange": { "min": "$", "max": "$$$" },
-  "costOverview": "Genuinely affordable by national-park standards — park entries and monument admissions are the main costs, aside from Sturgis Rally week, when lodging prices spike hard across the whole region.",
+  "overview": "Badlands' eroded rock, bison at Custer State Park, Rushmore and Crazy Horse — plus one of the world's largest motorcycle rallies.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "Genuinely affordable by national-park standards — aside from Sturgis Rally week, when lodging prices spike hard across the whole region.",
   "costItems": [
-    { "label": "Coffee", "price": 3.5, "unit": "" },
-    { "label": "Bison burger meal", "price": 14, "unit": "" },
-    { "label": "Badlands National Park entry", "price": 30, "unit": "per vehicle" },
-    { "label": "Mount Rushmore parking pass", "price": 10, "unit": "per vehicle" },
-    { "label": "Crazy Horse Memorial entry", "price": 15, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Mount Rushmore parking pass",
+      "price": 10,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Bison burger meal",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Crazy Horse Memorial entry",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Badlands National Park entry",
+      "price": 30,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Motel room, Sturgis Rally week",
+      "price": 400,
+      "unit": "per night"
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -29,32 +57,70 @@
     "golf": 2,
     "stargazing": 7,
     "museums": 4,
-    "architecture": 6,
+    "architecture": 4,
     "festivals": 5,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 3,
     "nightlife": 3,
     "winetasting": 1,
     "spa": 2,
-    "luxuryLodging": 3,
+    "luxuryLodging": 2,
     "snowsports": 2,
     "cycling": 4,
-    "shopping": 3,
+    "shopping": 2,
     "birding": 5,
     "wildlife": 6
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["secluded", "lively"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "hot": [7, 8],
-  "cold": [12, 1, 2],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "low": [1, 2, 11],
-  "hikingBest": [5, 6, 9],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "specialSeasons": [
-    { "months": [8], "text": "The Sturgis Motorcycle Rally (early August) brings several hundred thousand riders to the Black Hills — the region's single busiest, most transformed week of the year." }
+    {
+      "months": [
+        8
+      ],
+      "text": "The Sturgis Motorcycle Rally (early August) brings several hundred thousand riders to the Black Hills — the region's single busiest, most transformed week of the year."
+    }
   ],
   "monthlyWeather": [
     "cold, with limited services across both parks",
@@ -70,8 +136,18 @@
     "cold, with services beginning to wind down",
     "cold, quiet through the holidays"
   ],
-  "naSliders": ["diving", "surfing", "winetasting"],
-  "searchAliases": ["Mount Rushmore", "Crazy Horse Memorial", "Custer State Park", "Sturgis", "Wind Cave"],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Mount Rushmore",
+    "Crazy Horse Memorial",
+    "Custer State Park",
+    "Sturgis",
+    "Wind Cave"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "deserts": "strong",

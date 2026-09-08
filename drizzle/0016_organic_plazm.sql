@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "place_type" text;

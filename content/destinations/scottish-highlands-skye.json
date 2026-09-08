@@ -6,18 +6,37 @@
   "climate": "temperate",
   "about": "May–Sep has the best weather and long daylight, though midges (biting insects) are a real nuisance Jun–Aug; winter brings short days and closed trails.",
   "overview": "Lochs, castles, and single-track roads through the Highlands, connected by bridge to Skye's dramatic sea cliffs and peaks.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Coffee and a casual pub meal stay reasonable — a proper whisky distillery tour and tasting is a real, worthwhile splurge most visitors build a day around.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Coffee and a casual pub meal are reasonable — a whisky distillery tour and tasting is a real, worthwhile splurge most visitors build a day around.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Bus fare", "price": 8, "unit": "" },
-    { "label": "Fish and chips", "price": 14, "unit": "" },
-    { "label": "Distillery tour with tasting", "price": 28, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Pint of beer",
+      "price": 7,
+      "unit": ""
+    },
+    {
+      "label": "Fish and chips",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Distillery tour with tasting",
+      "price": 28,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
     "swimming": 1,
-    "diving": 2,
+    "diving": 1,
     "surfing": 2,
     "sailing": 3,
     "hiking": 8,
@@ -27,7 +46,7 @@
     "adventure": 5,
     "golf": 4,
     "stargazing": 5,
-    "museums": 3,
+    "museums": 4,
     "architecture": 4,
     "festivals": 4,
     "finedining": 5,
@@ -35,7 +54,7 @@
     "nightlife": 2,
     "winetasting": 3,
     "spa": 3,
-    "luxuryLodging": 6,
+    "luxuryLodging": 7,
     "snowsports": 2,
     "cycling": 5,
     "shopping": 3,
@@ -111,7 +130,6 @@
     "cold, dark and often wet, quiet through the holidays"
   ],
   "naSliders": [
-    "sunbathing",
     "swimming"
   ],
   "searchAliases": [

@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Local cafes and taxis stay affordable — resort-based activities and traditional village tours cost considerably more.",
+  "costOverview": "Local cafes and taxis are affordable — resort-based activities and traditional village tours cost considerably more.",
   "costItems": [
     {
       "label": "Coffee",
@@ -31,6 +31,11 @@
       "label": "Kava ceremony village tour",
       "price": 100,
       "unit": ""
+    },
+    {
+      "label": "Overwater bungalow, flagship resort, peak season",
+      "price": 1800,
+      "unit": "per night"
     }
   ],
   "base": {

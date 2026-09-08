@@ -6,13 +6,37 @@
   "climate": "tropical",
   "about": "Dry season (May–Oct) has the best visibility and — importantly — no dangerous stinger jellyfish in open water. Wet season (Nov–Apr) requires stinger suits to swim.",
   "overview": "The world's largest coral reef system, explored by day-boat from Cairns or overnight from a handful of private island resorts.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Everyday food and coffee are typical Australian prices — the real cost is the reef trip itself, and quality varies a lot by price tier.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Everyday food and coffee run at typical Australian prices — the real cost is the reef trip itself, and quality varies a lot by price tier.",
   "costItems": [
-    { "label": "Coffee", "price": 4.5, "unit": "" },
-    { "label": "Meat pie", "price": 5, "unit": "" },
-    { "label": "Green Island cruise & snorkel", "price": 78, "unit": "" },
-    { "label": "Full-day outer reef tour", "price": 209, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Meat pie",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Green Island cruise & snorkel",
+      "price": 78,
+      "unit": ""
+    },
+    {
+      "label": "Certified dive add-on, 2 tanks",
+      "price": 165,
+      "unit": ""
+    },
+    {
+      "label": "Full-day outer reef tour",
+      "price": 209,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 8,
@@ -20,7 +44,7 @@
     "diving": 10,
     "surfing": 5,
     "sailing": 8,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 8,
     "fishing": 6,
     "roadtrip": 6,
@@ -37,7 +61,7 @@
     "spa": 5,
     "luxuryLodging": 8,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 5,
     "birding": 6,
     "wildlife": 8

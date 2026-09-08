@@ -5,8 +5,14 @@ import { SLIDERS, BAND_DIMENSIONS } from '../../src/lib/scoring/constants';
 // rename/add/remove in constants.ts automatically flows through to what
 // this schema accepts, instead of a second copy of the key list silently
 // drifting out of sync with the one the scoring engine actually reads.
-const SLIDER_KEYS = SLIDERS.map((s) => s.key);
-const sliderKeyEnum = z.enum(SLIDER_KEYS as [string, ...string[]]);
+//
+// The pieces below are exported so src/lib/admin/destination-scoring-schema.ts
+// (the admin slider-score editor's validation) can reuse the exact same
+// rules a JSON-authored destination is held to, rather than a second,
+// hand-copied set of invariants that could quietly drift out of sync with
+// this one.
+export const SLIDER_KEYS = SLIDERS.map((s) => s.key);
+export const sliderKeyEnum = z.enum(SLIDER_KEYS as [string, ...string[]]);
 
 // 'deals'/'crowds' are computed purely from peak/low flags — the
 // base-undefined bail-out in deriveDestinationScores explicitly skips
@@ -16,7 +22,7 @@ const sliderKeyEnum = z.enum(SLIDER_KEYS as [string, ...string[]]);
 // validation didn't block every file until all 150 were backfilled) — now
 // that every destination has a real authored score, it's required like
 // every other slider key.
-const REQUIRED_BASE_KEYS = SLIDERS.filter(
+export const REQUIRED_BASE_KEYS = SLIDERS.filter(
   (s) => s.formula !== 'deals' && s.formula !== 'crowds',
 ).map((s) => s.key);
 
@@ -24,13 +30,15 @@ const bandKeysByDimension: Record<string, string[]> = Object.fromEntries(
   BAND_DIMENSIONS.map((d) => [d.key, d.bands.map((b) => b.key)]),
 );
 
-const month = z.int().min(1).max(12);
-const monthArray = z.array(month).default([]);
+export const month = z.int().min(1).max(12);
+export const monthArray = z.array(month).default([]);
 
 // `base`/`sliderCaps` values: authored scores, not the post-formula
 // clamped output — 0-10 is still the sane authoring range every existing
 // destination uses.
-const score0to10 = z.number().min(0).max(10);
+export const score0to10 = z.number().min(0).max(10);
+
+export const severityEnum = z.enum(['mild', 'moderate', 'severe']);
 
 // SliderEvent.weight is a direct point value (not a 0-1 fraction, see the
 // type comment in scoring/types.ts), so no natural upper bound — but every
@@ -57,9 +65,11 @@ const costItemSchema = z.object({
   // boat / per day) — never an explanatory note. See the methodology
   // doc: real one-time prices, sorted low to high, no annotations.
   unit: z.string().default(''),
+  // Admin-set icon override; falls back to costItemIcon(label) when absent.
+  emoji: z.string().min(1).optional(),
 });
 
-const sliderEventSchema = z.object({
+export const sliderEventSchema = z.object({
   label: z.string().min(1),
   weight: eventWeight,
   months: z.record(z.string(), eventIntensity).superRefine((months, ctx) => {
@@ -75,7 +85,7 @@ const sliderEventSchema = z.object({
 /** A record whose keys must all be real slider keys — used by sliderCaps,
  * sliderEvents, and activityStyleTiers, each sparse by design (an absent
  * slider key is "not authored", not an error). */
-function sliderKeyedRecord<T extends z.ZodTypeAny>(valueSchema: T) {
+export function sliderKeyedRecord<T extends z.ZodTypeAny>(valueSchema: T) {
   return z.record(z.string(), valueSchema).superRefine((rec, ctx) => {
     for (const key of Object.keys(rec)) {
       if (!SLIDER_KEYS.includes(key)) {
@@ -173,6 +183,25 @@ export const destinationSchema = z
     peak: monthArray,
     low: monthArray,
     peakIntensity: z.enum(['mild', 'moderate', 'extreme']).nullable().default(null),
+    crowdBaseline: z.enum(['low', 'high']).nullable().default(null),
+
+    // How severe the hot/cold/wet flags above genuinely are — absent
+    // (null) behaves like 'moderate', today's flat pre-existing behavior.
+    hotSeverity: severityEnum.nullable().default(null),
+    coldSeverity: severityEnum.nullable().default(null),
+    wetSeverity: severityEnum.nullable().default(null),
+
+    seasonalHazards: z
+      .array(
+        z.object({
+          category: z.enum(['storm', 'airQuality', 'insects', 'seaweed', 'other']),
+          label: z.string().min(1),
+          months: z.array(month),
+          severity: severityEnum,
+          affectedSliders: z.array(sliderKeyEnum).min(1),
+        }),
+      )
+      .default([]),
 
     wildlifePeak: monthArray,
     wildlifeClosed: monthArray,
@@ -215,6 +244,12 @@ export const destinationSchema = z
     // mapping into a content schema would block legitimate future axes.
     activityStyleTiers: sliderKeyedRecord(z.record(z.string(), z.enum(['signature', 'strong', 'casual', 'none'])))
       .default({}),
+
+    // Destination-level identity prominence per slider (not per sub-style —
+    // see the schema.ts column comment for how this differs from
+    // activityStyleTiers). Plumbing only for now: not yet read by the
+    // scoring engine.
+    signatureTier: sliderKeyedRecord(z.enum(['signature', 'strong', 'casual', 'none'])).default({}),
   })
   .strict();
 

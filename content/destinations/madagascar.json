@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$"
   },
-  "costOverview": "Madagascar is one of the most affordable destinations in this list — a zebu skewer from a street stall costs just a few dollars, and even a guided lemur park walk stays cheap by international standards.",
+  "costOverview": "One of the most affordable destinations in this list — a zebu skewer from a street stall costs just a few dollars, and even a guided lemur park walk is cheap by international standards.",
   "costItems": [
     {
       "label": "Coffee, local",
@@ -39,7 +39,7 @@
     "diving": 5,
     "surfing": 3,
     "sailing": 3,
-    "hiking": 7,
+    "hiking": 5,
     "scenic": 7,
     "fishing": 3,
     "roadtrip": 5,
@@ -47,19 +47,19 @@
     "golf": 1,
     "stargazing": 6,
     "museums": 2,
-    "architecture": 2,
+    "architecture": 1,
     "festivals": 3,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 4,
     "nightlife": 2,
     "winetasting": 1,
     "spa": 3,
     "luxuryLodging": 4,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 3,
     "birding": 6,
-    "wildlife": 5
+    "wildlife": 7
   },
   "budgetBands": [
     "basic",
@@ -177,5 +177,6 @@
       "deserts": "casual",
       "astrophotography": "casual"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

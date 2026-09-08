@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PERSONAS, SLIDERS, MONTH_NAMES, allBandsSelected } from '@/lib/scoring/constants';
 import { computeRankedDestinations } from '@/lib/scoring/rank';
+import { topInterestSliders } from '@/lib/scoring/breakdown';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import {
   saveUserPreferences,
@@ -28,6 +29,10 @@ import { SearchBox } from './SearchBox';
 import { ResultsList } from './ResultsList';
 import { DnaPanel } from './DnaPanel';
 import { BackToTopButton } from './BackToTopButton';
+import { DestinationDetailSheet } from './DestinationDetailSheet';
+import { StampsSheet } from './StampsSheet';
+import { VisitedCounterStamp } from './VisitedCounterStamp';
+import { HeartIcon } from './HeartIcon';
 import './results.css';
 
 const DEFAULT_HINT = 'Swipe through experiences to teach Where To? your travel style.';
@@ -81,10 +86,26 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   );
 
   const [visibleCount, setVisibleCount] = useState(20);
-  const [breakdownExpanded, setBreakdownExpanded] = useState<Set<string>>(new Set());
-  const [cardPreviewMonth, setCardPreviewMonth] = useState<Record<string, number>>({});
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const [isFetchingResults, setIsFetchingResults] = useState(false);
+
+  // "Visited" is deliberately ephemeral — no user_stamps table exists yet
+  // (see docs/final-architecture-plan.md's Place-migration Phase 1). This
+  // resets every page load; it becomes real persistence once that schema
+  // work happens, without changing anything about this UI.
+  const [visited, setVisited] = useState<Record<string, boolean>>({});
+  // Same ephemeral treatment as `visited` — no favorites table exists yet,
+  // this resets every page load until that becomes real persisted data.
+  const [favorited, setFavorited] = useState<Record<string, boolean>>({});
+  const [openDetailId, setOpenDetailId] = useState<string | null>(null);
+  const [showStamps, setShowStamps] = useState(false);
+  const [hideVisited, setHideVisited] = useState(false);
+  const [showWishlistOnly, setShowWishlistOnly] = useState(false);
+  // null = "Overall" (the sidebar's full weighted ranking, unchanged).
+  // Otherwise a slider key — a quick, display-only re-sort of `ranked` by
+  // that one slider's score for the current month. Never touches `weights`
+  // or triggers a new computeRankedDestinations call.
+  const [pinnedChip, setPinnedChip] = useState<string | null>(null);
 
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map());
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -122,6 +143,38 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     return computeRankedDestinations(destinations, weights, month, bands, selectedStyles);
   }, [destinations, weights, month, bands, monthChosen, selectedStyles]);
 
+  // Overall + the top 3 weighted sliders — reuses topInterestSliders (the
+  // same "what does this user actually care about" logic behind the
+  // detail sheet's own interest breakdown), just capped to 3 for a
+  // compact chip row.
+  const chipSliders = useMemo(() => topInterestSliders(weights).slice(0, 3), [weights]);
+
+  // A pinned chip re-sorts a copy of `ranked` by one slider's score for
+  // the current month — display-only, never feeds back into `weights` or
+  // triggers a new ranking computation.
+  const displayRanked = useMemo(() => {
+    let list = ranked;
+    if (hideVisited) list = list.filter((r) => !visited[r.d.id]);
+    if (showWishlistOnly) list = list.filter((r) => favorited[r.d.id]);
+    if (pinnedChip && month) {
+      const monthIdx = month - 1;
+      list = [...list].sort((a, b) => (b.d.monthly[pinnedChip]?.[monthIdx] ?? 0) - (a.d.monthly[pinnedChip]?.[monthIdx] ?? 0));
+    }
+    return list;
+  }, [ranked, hideVisited, visited, showWishlistOnly, favorited, pinnedChip, month]);
+
+  const openDetailEntry = openDetailId ? ranked.find((r) => r.d.id === openDetailId) : undefined;
+  const visitedCount = Object.values(visited).filter(Boolean).length;
+  const favoritedCount = Object.values(favorited).filter(Boolean).length;
+
+  function toggleVisited(id: string) {
+    setVisited((prev) => ({ ...prev, [id]: !prev[id] }));
+  }
+
+  function toggleFavorited(id: string) {
+    setFavorited((prev) => ({ ...prev, [id]: !prev[id] }));
+  }
+
   // ---- Persona / sliders / bands / month ----
 
   function handleSelectPersona(id: string) {
@@ -158,7 +211,6 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   function handleChooseMonth(m: number) {
     setMonth(m);
     setMonthChosen(true);
-    setCardPreviewMonth({});
     setVisibleCount(20);
     persist({ personaId, weights, bands, month: m, monthChosen: true, showAllSliders });
 
@@ -272,33 +324,6 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
 
   // ---- Results list interactions ----
 
-  // Tapping the month already being shown (whether that's the base month
-  // or a previously-tapped alt month) toggles back to the base month;
-  // tapping any other month just switches the preview to it. There's no
-  // separate "open/closed" state to track — the card always shows exactly
-  // one month's content, so this only ever needs to track which month.
-  function handleToggleYearBar(destId: string, m: number) {
-    const current = cardPreviewMonth[destId] || month;
-    if (current === m) {
-      setCardPreviewMonth((prev) => {
-        const next = { ...prev };
-        delete next[destId];
-        return next;
-      });
-    } else {
-      setCardPreviewMonth((prev) => ({ ...prev, [destId]: m }));
-    }
-  }
-
-  function handleToggleBreakdown(destId: string) {
-    setBreakdownExpanded((prev) => {
-      const next = new Set(prev);
-      if (next.has(destId)) next.delete(destId);
-      else next.add(destId);
-      return next;
-    });
-  }
-
   function handleSelectSearchResult(destId: string) {
     const rankIdx = ranked.findIndex((r) => r.d.id === destId);
     if (rankIdx < 0) return;
@@ -396,16 +421,64 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
         </aside>
 
         <section className="results">
-          <h1 ref={resultsTopRef}>Recommendations</h1>
+          <div className="results-heading-row">
+            <h1 ref={resultsTopRef}>Recommendations</h1>
+            {hasStarted && monthChosen && (
+              <div className="results-heading-side">
+                <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
+                  <VisitedCounterStamp count={visitedCount} size={46} />
+                  <span className="visited-stat-label">places visited</span>
+                </button>
+                <div className="filter-links-under-stamp">
+                  <button
+                    type="button"
+                    className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`}
+                    onClick={() => setHideVisited((v) => !v)}
+                    disabled={visitedCount === 0}
+                  >
+                    Hide visited
+                    <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
+                  </button>
+                  <button
+                    type="button"
+                    className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`}
+                    onClick={() => setShowWishlistOnly((v) => !v)}
+                    disabled={favoritedCount === 0}
+                  >
+                    Show wishlist
+                    <span className="filter-icon">{favoritedCount > 0 && showWishlistOnly && <HeartIcon filled />}</span>
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
           {hasStarted && monthChosen && month && (
             <p className="results-subtitle">
-              Ranked for {MONTH_NAMES[month - 1]}, by your current sliders — showing {Math.min(visibleCount, ranked.length)} of{' '}
-              {ranked.length} destinations
+              Ranked for {MONTH_NAMES[month - 1]}, by your current sliders — showing {Math.min(visibleCount, displayRanked.length)} of{' '}
+              {displayRanked.length} destinations
             </p>
           )}
 
           {hasStarted && monthChosen && (
             <SearchBox destinations={destinations} ranked={ranked} onSelectResult={handleSelectSearchResult} />
+          )}
+
+          {hasStarted && monthChosen && month && (
+            <div className="quick-chip-row">
+              <button type="button" className={`quick-chip${pinnedChip === null ? ' active' : ''}`} onClick={() => setPinnedChip(null)}>
+                Overall
+              </button>
+              {chipSliders.map((s) => (
+                <button
+                  type="button"
+                  key={s.key}
+                  className={`quick-chip${pinnedChip === s.key ? ' active' : ''}`}
+                  onClick={() => setPinnedChip(s.key)}
+                >
+                  {s.icon} {s.label}
+                </button>
+              ))}
+            </div>
           )}
 
           {isFetchingResults ? (
@@ -416,23 +489,38 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
             <MonthPrompt />
           ) : (
             <ResultsList
-              ranked={ranked}
+              ranked={displayRanked}
               visibleCount={visibleCount}
               onShowMore={() => setVisibleCount((v) => v + 20)}
-              weights={weights}
-              month={month}
-              bands={bands}
-              selectedStyles={selectedStyles}
-              breakdownExpanded={breakdownExpanded}
-              cardPreviewMonth={cardPreviewMonth}
-              onToggleYearBar={handleToggleYearBar}
-              onToggleBreakdown={handleToggleBreakdown}
               highlightedId={highlightedId}
               cardRefs={cardRefs}
+              visited={visited}
+              favorited={favorited}
+              onOpenDetail={setOpenDetailId}
+              onToggleFavorited={toggleFavorited}
             />
           )}
         </section>
       </div>
+
+      {openDetailEntry && month && (
+        <DestinationDetailSheet
+          key={openDetailEntry.d.id}
+          dest={openDetailEntry.d}
+          weights={weights}
+          bands={bands}
+          selectedStyles={selectedStyles}
+          month={month}
+          score={openDetailEntry.s}
+          visited={!!visited[openDetailEntry.d.id]}
+          onToggleVisited={() => toggleVisited(openDetailEntry.d.id)}
+          onClose={() => setOpenDetailId(null)}
+        />
+      )}
+
+      {showStamps && (
+        <StampsSheet destinations={destinations} visited={visited} onToggleVisited={toggleVisited} onClose={() => setShowStamps(false)} />
+      )}
 
       {hasStarted && monthChosen && month && !isFetchingResults && <BackToTopButton targetRef={resultsTopRef} />}
     </>

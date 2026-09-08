@@ -6,13 +6,32 @@
   "climate": "temperate",
   "about": "Trekking season runs Oct–Apr; many of the town's restaurants and services close entirely in the deep winter (Jun–Aug). Fitz Roy is notoriously often clouded over, even in good weather.",
   "overview": "Argentina's self-declared trekking capital — free, well-marked trails to Fitz Roy and Cerro Torre, with Perito Moreno Glacier a few hours away near El Calafate.",
-  "costRange": { "min": "$$", "max": "$$$$" },
-  "costOverview": "The trails themselves are free — no permits, no paid campsites required for day hikes — so this is genuinely more affordable than Torres del Paine if you're not paying for guided treks.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$"
+  },
+  "costOverview": "The trails themselves are free — no permits, no paid campsites required for day hikes — genuinely more affordable than Torres del Paine if you're not paying for guided treks.",
   "costItems": [
-    { "label": "Empanada", "price": 4, "unit": "" },
-    { "label": "Craft beer, local microbrewery", "price": 6, "unit": "" },
-    { "label": "Bus, El Calafate–El Chaltén", "price": 25, "unit": "" },
-    { "label": "Laguna de los Tres guided hike", "price": 70, "unit": "per person" }
+    {
+      "label": "Empanada",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Craft beer, local microbrewery",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Bus, El Calafate–El Chaltén",
+      "price": 25,
+      "unit": ""
+    },
+    {
+      "label": "Laguna de los Tres guided hike",
+      "price": 70,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -30,29 +49,66 @@
     "museums": 1,
     "architecture": 2,
     "festivals": 1,
-    "finedining": 4,
+    "finedining": 3,
     "streetfood": 2,
     "nightlife": 2,
     "winetasting": 1,
     "spa": 1,
-    "luxuryLodging": 5,
+    "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 2,
     "birding": 5,
     "wildlife": 5
   },
-  "budgetBands": ["comfortable", "highend"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "dry": [12, 1, 2],
-  "peak": [1, 2],
-  "low": [6, 7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "hikingBest": [11, 12, 1, 2, 3],
-  "hikingWorst": [6, 7, 8],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
   "specialSeasons": [
-    { "months": [6, 7, 8], "text": "Many restaurants and services in the tiny town of El Chaltén close entirely for the winter." }
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Many restaurants and services in the tiny town of El Chaltén close entirely for the winter."
+    }
   ],
   "monthlyWeather": [
     "peak season, mild but windy, with Fitz Roy notoriously shy about showing its peak clearly",
@@ -68,8 +124,22 @@
     "cool with building winds, a good month before the December crowds",
     "trekking season ramping up, mild but increasingly windy"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "golf"],
-  "searchAliases": ["Fitz Roy", "Cerro Torre", "El Calafate", "Perito Moreno Glacier", "Los Glaciares National Park"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting",
+    "golf"
+  ],
+  "searchAliases": [
+    "Fitz Roy",
+    "Cerro Torre",
+    "El Calafate",
+    "Perito Moreno Glacier",
+    "Los Glaciares National Park"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",

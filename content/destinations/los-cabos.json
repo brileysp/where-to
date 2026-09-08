@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Street tacos and coffee stay properly cheap — the moment you need a taxi to or from the resort zone, prices jump sharply.",
+  "costOverview": "The resort zone runs at real luxury-resort prices — step outside it toward San José's old town, and tacos and coffee are cheap.",
   "costItems": [
     {
       "label": "Espresso",
@@ -31,16 +31,21 @@
       "label": "Airport transfer taxi",
       "price": 80,
       "unit": ""
+    },
+    {
+      "label": "Private marlin sportfishing charter, full day",
+      "price": 1200,
+      "unit": ""
     }
   ],
   "base": {
     "sunbathing": 8,
     "swimming": 7,
-    "diving": 6,
+    "diving": 5,
     "surfing": 5,
     "sailing": 5,
     "hiking": 2,
-    "scenic": 7,
+    "scenic": 6,
     "fishing": 8,
     "roadtrip": 4,
     "adventure": 5,
@@ -59,7 +64,7 @@
     "cycling": 2,
     "shopping": 4,
     "birding": 3,
-    "wildlife": 5
+    "wildlife": 4
   },
   "budgetBands": [
     "comfortable",

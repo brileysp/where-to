@@ -5,15 +5,43 @@
   "emoji": "🕌",
   "climate": "desert",
   "about": "Oct–Mar is the comfortable classic touring season for the forts and palaces; the tiger reserve at Ranthambore closes entirely Jul–Sep for monsoon, and counterintuitively the brutally hot Apr–Jun window gives the best tiger sightings as vegetation thins.",
-  "overview": "India's classic first-time circuit — the Taj Mahal, Mughal Delhi, and Rajasthan's pink-walled Jaipur — extended to Ranthambore, one of India's best places to see a wild tiger, and the desert palaces of Udaipur.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Street food, chai, and rickshaws cost almost nothing across the whole circuit — the Taj Mahal's foreign-visitor entrance fee and a few luxury heritage hotels are the real splurges.",
+  "overview": "India's essential circuit — the Taj Mahal, Mughal Delhi, and pink Jaipur — extended to Ranthambore's tigers and Udaipur's desert palaces.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Prices span the full range — a few-dollar thali up to palace hotels that rival anywhere in the world.",
   "costItems": [
-    { "label": "Chai", "price": 0.5, "unit": "" },
-    { "label": "Auto-rickshaw, 15 min", "price": 2, "unit": "" },
-    { "label": "Thali meal", "price": 5, "unit": "" },
-    { "label": "Taj Mahal entry, foreign visitor", "price": 15.5, "unit": "" },
-    { "label": "Gypsy jeep safari, Ranthambore", "price": 22, "unit": "per person" }
+    {
+      "label": "Chai",
+      "price": 0.5,
+      "unit": ""
+    },
+    {
+      "label": "Auto-rickshaw, 15 min",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Thali meal",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Taj Mahal entry, foreign visitor",
+      "price": 15.5,
+      "unit": ""
+    },
+    {
+      "label": "Gypsy jeep safari, Ranthambore",
+      "price": 22,
+      "unit": "per person"
+    },
+    {
+      "label": "Ultra-luxury palace hotel suite, peak season",
+      "price": 2200,
+      "unit": "per night"
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -24,7 +52,7 @@
     "hiking": 2,
     "scenic": 6,
     "fishing": 1,
-    "roadtrip": 6,
+    "roadtrip": 5,
     "adventure": 2,
     "golf": 2,
     "stargazing": 4,
@@ -35,24 +63,68 @@
     "streetfood": 9,
     "nightlife": 4,
     "winetasting": 2,
-    "spa": 6,
-    "luxuryLodging": 8,
+    "spa": 7,
+    "luxuryLodging": 9,
     "snowsports": 0,
     "cycling": 2,
     "shopping": 9,
     "birding": 7,
     "wildlife": 6
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate"],
-  "dry": [10, 11, 12, 1, 2, 3],
-  "wet": [7, 8, 9],
-  "hot": [4, 5, 6],
-  "peak": [11, 12, 1, 2],
-  "low": [7, 8],
-  "wildlifeClosed": [7, 8, 9],
-  "birdingPeak": [10, 11, 12, 1, 2],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    7,
+    8,
+    9
+  ],
+  "hot": [
+    4,
+    5,
+    6
+  ],
+  "peak": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "low": [
+    7,
+    8
+  ],
+  "wildlifeClosed": [
+    7,
+    8,
+    9
+  ],
+  "birdingPeak": [
+    10,
+    11,
+    12,
+    1,
+    2
+  ],
   "sliderCaps": {
     "birding": 7
   },
@@ -61,19 +133,35 @@
       {
         "label": "Diwali season",
         "weight": 4,
-        "months": { "10": 0.6, "11": 0.6 }
+        "months": {
+          "10": 0.6,
+          "11": 0.6
+        }
       }
     ],
     "wildlife": [
       {
         "label": "Tiger sightings (thinning dry-season vegetation)",
         "weight": 4,
-        "months": { "3": 0.5, "4": 0.85, "5": 1, "6": 1 }
+        "months": {
+          "3": 0.5,
+          "4": 0.85,
+          "5": 1,
+          "6": 1
+        }
       }
     ]
   },
   "specialSeasons": [
-    { "months": [3, 4, 5, 6], "text": "Thinning vegetation as the dry season peaks makes this the best window for tiger sightings at Ranthambore, despite the brutal heat." }
+    {
+      "months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "text": "Thinning vegetation as the dry season peaks makes this the best window for tiger sightings at Ranthambore, despite the brutal heat."
+    }
   ],
   "monthlyWeather": [
     "cold, especially at night, with dense morning fog common in Delhi and crisp days for tiger spotting",
@@ -89,8 +177,23 @@
     "mild and dry, comfortable with the classic touring season beginning and good wildlife viewing",
     "cold, especially at night, with dense fog common in the mornings"
   ],
-  "naSliders": ["snowsports", "swimming", "surfing", "diving", "sailing", "winetasting"],
-  "searchAliases": ["Delhi", "Agra", "Jaipur", "Taj Mahal", "Ranthambore", "Rajasthan", "Udaipur"],
+  "naSliders": [
+    "snowsports",
+    "swimming",
+    "surfing",
+    "diving",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Delhi",
+    "Agra",
+    "Jaipur",
+    "Taj Mahal",
+    "Ranthambore",
+    "Rajasthan",
+    "Udaipur"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "deserts": "strong",

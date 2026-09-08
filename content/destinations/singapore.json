@@ -2,7 +2,7 @@
   "id": "singapore",
   "name": "Singapore",
   "region": "Southeast Asia",
-  "emoji": "🦁",
+  "emoji": "🍜",
   "climate": "tropical",
   "about": "Hot and humid year-round with no real weather off-season; Feb–Apr is driest, Nov–Jan brings the heaviest monsoon rain.",
   "overview": "A hyper-efficient garden city where hawker-center food, world-class dining, and some of Asia's most ambitious architecture all sit a short MRT ride apart.",
@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Hawker food and transit stay cheap; alcohol and Western-style dining are where costs jump.",
+  "costOverview": "Hawker food and transit are cheap; alcohol and Western-style dining are where costs jump.",
   "costItems": [
     {
       "label": "Kopi (local coffee)",
@@ -36,6 +36,11 @@
       "label": "Marina Bay Sands SkyPark",
       "unit": "",
       "price": 24
+    },
+    {
+      "label": "Tasting menu, Michelin-starred restaurant",
+      "price": 350,
+      "unit": ""
     }
   ],
   "base": {
@@ -44,10 +49,10 @@
     "diving": 3,
     "surfing": 1,
     "sailing": 4,
-    "hiking": 3,
+    "hiking": 2,
     "scenic": 4,
     "fishing": 2,
-    "roadtrip": 2,
+    "roadtrip": 1,
     "adventure": 3,
     "golf": 6,
     "stargazing": 1,
@@ -61,7 +66,7 @@
     "spa": 6,
     "luxuryLodging": 9,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 9,
     "birding": 6,
     "wildlife": 4
@@ -125,5 +130,6 @@
       "gravelRiding": "none",
       "mountainBiking": "none"
     }
-  }
+  },
+  "crowdBaseline": "high"
 }

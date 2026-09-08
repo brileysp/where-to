@@ -6,14 +6,42 @@
   "climate": "temperate",
   "about": "Oktoberfest (mid-Sep to early Oct) is Munich's busiest, most expensive stretch by far; Dec brings famous Christmas markets, and summer (Jun–Aug) is best for the Bavarian Alps and lake swimming.",
   "overview": "Munich's beer halls and Oktoberfest, Neuschwanstein's fairy-tale silhouette, and the medieval towns of the Romantic Road — Germany's most storybook region.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Munich stays reasonable outside Oktoberfest — during the festival itself, beer-tent prices and hotel rates both spike hard.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Munich stays affordable outside Oktoberfest — during the festival itself, beer-tent prices and hotel rates both spike hard.",
   "costItems": [
-    { "label": "Pretzel", "price": 2.5, "unit": "" },
-    { "label": "Beer, 1L stein", "price": 12, "unit": "" },
-    { "label": "U-Bahn ticket", "price": 3.5, "unit": "" },
-    { "label": "Neuschwanstein Castle entry", "price": 21, "unit": "" },
-    { "label": "Christmas market mulled wine", "price": 4, "unit": "" }
+    {
+      "label": "Pretzel",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "U-Bahn ticket",
+      "price": 3.5,
+      "unit": ""
+    },
+    {
+      "label": "Christmas market mulled wine",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Beer, 1L stein",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Neuschwanstein Castle entry",
+      "price": 21,
+      "unit": ""
+    },
+    {
+      "label": "Hotel room, Oktoberfest week",
+      "price": 450,
+      "unit": "per night"
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -21,7 +49,7 @@
     "diving": 0,
     "surfing": 1,
     "sailing": 3,
-    "hiking": 5,
+    "hiking": 6,
     "scenic": 7,
     "fishing": 3,
     "roadtrip": 7,
@@ -36,24 +64,62 @@
     "nightlife": 7,
     "winetasting": 3,
     "spa": 4,
-    "luxuryLodging": 6,
+    "luxuryLodging": 7,
     "snowsports": 5,
     "cycling": 5,
     "shopping": 5,
     "birding": 3,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["lively", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "cold": [12, 1, 2],
-  "peak": [9, 10, 12],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "lively",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    9,
+    10,
+    12
+  ],
   "peakIntensity": "extreme",
-  "low": [1, 2, 11],
-  "hikingBest": [6, 7, 8, 9],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
   "specialSeasons": [
-    { "months": [9], "text": "Oktoberfest runs from mid-September to the first Sunday in October — Munich's busiest, most crowded, and most expensive stretch of the year." },
-    { "months": [12], "text": "Nuremberg's and Munich's Christmas markets are among the most famous in the world." }
+    {
+      "months": [
+        9
+      ],
+      "text": "Oktoberfest runs from mid-September to the first Sunday in October — Munich's busiest, most crowded, and most expensive stretch of the year."
+    },
+    {
+      "months": [
+        12
+      ],
+      "text": "Nuremberg's and Munich's Christmas markets are among the most famous in the world."
+    }
   ],
   "monthlyWeather": [
     "cold, often below freezing, with the year's heaviest snowfall",
@@ -69,8 +135,17 @@
     "cold and damp, with short days setting in",
     "cold, with festive Christmas markets against dark winter skies"
   ],
-  "naSliders": ["diving"],
-  "searchAliases": ["Munich", "Neuschwanstein", "Oktoberfest", "Romantic Road", "Rothenburg", "Garmisch-Partenkirchen"],
+  "naSliders": [
+    "diving"
+  ],
+  "searchAliases": [
+    "Munich",
+    "Neuschwanstein",
+    "Oktoberfest",
+    "Romantic Road",
+    "Rothenburg",
+    "Garmisch-Partenkirchen"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "strong",

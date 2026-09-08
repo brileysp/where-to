@@ -2,7 +2,7 @@
   "id": "north-island",
   "name": "North Island",
   "region": "New Zealand",
-  "emoji": "🌋",
+  "emoji": "🥝",
   "climate": "temperate",
   "about": "Summer (Dec–Feb) is warmest and driest, and the Crossing gets genuinely hazardous without winter gear Jun–Sep.",
   "overview": "Milder and busier than the South Island — Auckland's harbors, Rotorua's geothermal fields, Bay of Islands beaches, and the volcanic Tongariro Alpine Crossing.",
@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Coffee and buses are reasonable — the geothermal parks that define a Rotorua visit charge real admission, and prices climb fast for the fuller experiences.",
+  "costOverview": "Coffee and rideshares are reasonable — the geothermal parks that define a Rotorua visit charge real admission, and prices climb fast for the fuller experiences.",
   "costItems": [
     {
       "label": "Flat white",
@@ -23,9 +23,9 @@
       "unit": ""
     },
     {
-      "label": "Auckland–Rotorua bus",
-      "price": 11,
-      "unit": ""
+      "label": "Rental car, economy",
+      "price": 50,
+      "unit": "per day"
     },
     {
       "label": "Geothermal park entry, Wai-O-Tapu",
@@ -64,7 +64,7 @@
     "cycling": 5,
     "shopping": 5,
     "birding": 5,
-    "wildlife": 4
+    "wildlife": 3
   },
   "budgetBands": [
     "basic",

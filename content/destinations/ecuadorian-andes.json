@@ -5,16 +5,43 @@
   "emoji": "🌋",
   "climate": "highland",
   "about": "Dry season Jun–Sep has the clearest volcano views and safest climbing conditions; cloud-forest birding on both Andean slopes stays excellent nearly year-round, regardless of season.",
-  "overview": "Ecuador's high-altitude capital and two very different headline draws around it — volcano climbing and trekking south to Cotopaxi and Chimborazo, and some of the best cloud-forest birding on Earth on both Andean slopes.",
-  "costRange": { "min": "$", "max": "$$$$" },
+  "overview": "Ecuador's high-altitude capital and two draws around it — volcano climbing toward Cotopaxi and Chimborazo, and some of the best cloud-forest birding on Earth.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
   "costOverview": "Quito itself is one of the cheapest capital cities in South America to eat and get around in — day tours to Cotopaxi and Quilotoa, and multi-day birding-lodge stays, are the main real expense.",
   "costItems": [
-    { "label": "Quito trolley/bus ride", "price": 1, "unit": "" },
-    { "label": "Lunch (almuerzo), Old Town", "price": 4, "unit": "" },
-    { "label": "Teleférico (Quito cable car)", "price": 9, "unit": "" },
-    { "label": "Guided birding day, Mindo cloud forest", "price": 70, "unit": "per person" },
-    { "label": "Quilotoa guided day tour", "price": 45, "unit": "per person" },
-    { "label": "Cotopaxi guided day tour", "price": 60, "unit": "per person" }
+    {
+      "label": "Taxi, 15 min",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Lunch (almuerzo), Old Town",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Teleférico (Quito cable car)",
+      "price": 9,
+      "unit": ""
+    },
+    {
+      "label": "Guided birding day, Mindo cloud forest",
+      "price": 70,
+      "unit": "per person"
+    },
+    {
+      "label": "Quilotoa guided day tour",
+      "price": 45,
+      "unit": "per person"
+    },
+    {
+      "label": "Cotopaxi guided day tour",
+      "price": 60,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -29,44 +56,92 @@
     "adventure": 7,
     "golf": 1,
     "stargazing": 6,
-    "museums": 8,
-    "architecture": 9,
+    "museums": 7,
+    "architecture": 8,
     "festivals": 5,
-    "finedining": 6,
-    "streetfood": 6,
+    "finedining": 5,
+    "streetfood": 5,
     "nightlife": 5,
     "winetasting": 1,
-    "spa": 3,
-    "luxuryLodging": 5,
+    "spa": 4,
+    "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 5,
+    "cycling": 4,
     "shopping": 5,
-    "birding": 9,
-    "wildlife": 5
+    "birding": 10,
+    "wildlife": 6
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["easygoing", "secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "dry": [6, 7, 8, 9],
-  "wet": [1, 2, 3, 4, 10, 11],
-  "peak": [6, 7, 8],
-  "low": [3, 4],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "wet": [
+    1,
+    2,
+    3,
+    4,
+    10,
+    11
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
+  "low": [
+    3,
+    4
+  ],
   "peakIntensity": "moderate",
-  "hikingBest": [6, 7, 8, 9],
-  "hikingWorst": [3, 4],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    3,
+    4
+  ],
   "sliderEvents": {
     "hiking": [
       {
         "label": "Dry-season volcano-climbing conditions",
         "weight": 4,
-        "months": { "6": 0.7, "7": 1, "8": 1, "9": 0.6 }
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.6
+        }
       }
     ],
     "scenic": [
       {
         "label": "Clear dry-season volcano views",
         "weight": 3,
-        "months": { "6": 0.6, "7": 0.9, "8": 0.9, "9": 0.5 }
+        "months": {
+          "6": 0.6,
+          "7": 0.9,
+          "8": 0.9,
+          "9": 0.5
+        }
       }
     ]
   },
@@ -84,8 +159,26 @@
     "rainy and mild, showers common most afternoons",
     "mild with variable rain, though mornings often stay clear before afternoon clouds build"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting"],
-  "searchAliases": ["Cotopaxi", "Quilotoa", "Otavalo", "Ecuador", "Mindo", "Tandayapa", "Bellavista Cloud Forest", "Guango Lodge", "San Isidro", "Papallacta"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Cotopaxi",
+    "Quilotoa",
+    "Otavalo",
+    "Ecuador",
+    "Mindo",
+    "Tandayapa",
+    "Bellavista Cloud Forest",
+    "Guango Lodge",
+    "San Isidro",
+    "Papallacta"
+  ],
   "activityStyleTiers": {
     "cycling": {
       "scenicRoadCycling": "strong",

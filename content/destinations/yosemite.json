@@ -2,17 +2,36 @@
   "id": "yosemite",
   "name": "Yosemite National Park",
   "region": "USA",
-  "emoji": "🌲",
+  "emoji": "🧗",
   "climate": "temperate",
   "about": "Waterfalls are most powerful during spring snowmelt (Apr–Jun); summer (Jun–Sep) has full trail and road access, Tioga Pass closes with snow roughly Nov–May.",
   "overview": "Granite monoliths, waterfalls, and giant sequoias packed into one valley, with trails ranging from a paved stroll to a multi-day wilderness trek.",
-  "costRange": { "min": "$$$", "max": "$$$" },
-  "costOverview": "There's no competition once you're past the gate, so in-park food and dining charge accordingly.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$"
+  },
+  "costOverview": "There's no competing option once you're past the gate, so in-park food and dining charge accordingly.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Deli sandwich, Yosemite Village", "price": 15, "unit": "" },
-    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
-    { "label": "In-park sit-down dinner", "price": 38, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Deli sandwich, Yosemite Village",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "In-park sit-down dinner",
+      "price": 38,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -31,13 +50,13 @@
     "architecture": 1,
     "festivals": 1,
     "finedining": 3,
-    "streetfood": 2,
+    "streetfood": 1,
     "nightlife": 1,
     "winetasting": 2,
-    "spa": 2,
-    "luxuryLodging": 6,
+    "spa": 3,
+    "luxuryLodging": 5,
     "snowsports": 4,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 2,
     "birding": 5,
     "wildlife": 4

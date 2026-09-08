@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Coffee and a casual meal stay reasonable — the coastal ferries connecting the main towns are a real, non-trivial cost.",
+  "costOverview": "Coffee and a casual meal are reasonable — the coastal ferries connecting the main towns are a real, non-trivial cost.",
   "costItems": [
     {
       "label": "Coffee",
@@ -23,19 +23,24 @@
       "unit": ""
     },
     {
-      "label": "Intercity bus fare",
-      "price": 10,
-      "unit": ""
-    },
-    {
       "label": "Taxi/Uber, 15 min",
       "price": 14,
       "unit": ""
     },
     {
+      "label": "Beach club sunbed & umbrella",
+      "price": 30,
+      "unit": "per day"
+    },
+    {
       "label": "Split–Dubrovnik ferry",
       "price": 43,
       "unit": ""
+    },
+    {
+      "label": "Flotilla sailing week, cabin charter",
+      "price": 3200,
+      "unit": "per person, 7 days"
     }
   ],
   "base": {
@@ -54,16 +59,16 @@
     "museums": 6,
     "architecture": 8,
     "festivals": 5,
-    "finedining": 7,
+    "finedining": 6,
     "streetfood": 5,
     "nightlife": 7,
     "winetasting": 6,
     "spa": 5,
     "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 6,
-    "birding": 4,
+    "birding": 3,
     "wildlife": 3
   },
   "budgetBands": [

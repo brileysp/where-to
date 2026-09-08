@@ -5,20 +5,43 @@
   "emoji": "🐻",
   "climate": "temperate",
   "about": "Cruise season and the best wildlife viewing run May–Sep, peaking Jun–Aug when small towns like Juneau are transformed by ship arrivals; most of the region has no road access at all, and winter sees tourism largely shut down.",
-  "overview": "Glaciers calving straight into the sea, brown bears fishing for salmon, humpback whales, and the Inside Passage cruise route through the Tongass — America's largest national forest — the classic coastal Alaska experience, reachable only by boat or plane.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
+  "overview": "Glaciers calving into the sea, bears fishing for salmon, humpback whales, and the Inside Passage — coastal Alaska, reachable only by boat or plane.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
   "costOverview": "Remoteness inflates everything here — even a casual seafood sandwich costs real money, and the marquee wildlife-viewing flights and glacier cruises are a genuine splurge most visitors budget specifically for.",
   "costItems": [
-    { "label": "Coffee", "price": 6, "unit": "" },
-    { "label": "King crab dinner", "price": 75, "unit": "" },
-    { "label": "Bear-viewing flightseeing tour", "price": 650, "unit": "" },
-    { "label": "Whale watching tour, Juneau", "price": 150, "unit": "per person" },
-    { "label": "Glacier Bay cruise", "price": 200, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "King crab dinner",
+      "price": 75,
+      "unit": ""
+    },
+    {
+      "label": "Guided sea kayak tour, Inside Passage",
+      "price": 130,
+      "unit": "per person, half-day"
+    },
+    {
+      "label": "Whale watching tour, Juneau",
+      "price": 150,
+      "unit": "per person"
+    },
+    {
+      "label": "Bear-viewing flightseeing tour",
+      "price": 650,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
     "swimming": 1,
-    "diving": 4,
+    "diving": 3,
     "surfing": 1,
     "sailing": 8,
     "hiking": 5,
@@ -29,34 +52,103 @@
     "golf": 1,
     "stargazing": 1,
     "museums": 4,
-    "architecture": 3,
+    "architecture": 2,
     "festivals": 3,
-    "finedining": 5,
+    "finedining": 3,
     "streetfood": 4,
     "nightlife": 3,
     "winetasting": 1,
-    "spa": 4,
-    "luxuryLodging": 6,
+    "spa": 3,
+    "luxuryLodging": 5,
     "snowsports": 1,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 4,
     "birding": 6,
-    "wildlife": 8
+    "wildlife": 7
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "wet": [9, 10, 11, 12, 1, 2, 3, 4, 5],
-  "cold": [11, 12, 1, 2, 3],
-  "peak": [6, 7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "wet": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "low": [11, 12, 1, 2, 3],
-  "wildlifePeak": [6, 7, 8],
-  "hikingBest": [6, 7, 8],
-  "hikingWorst": [11, 12, 1, 2, 3],
+  "low": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
   "specialSeasons": [
-    { "months": [6, 7, 8], "text": "Peak cruise season — small towns like Juneau and Ketchikan see their populations multiply with daily ship arrivals." },
-    { "months": [10, 11, 12, 1, 2, 3, 4], "text": "Most cruises and lodges shut down entirely for the winter, and much of the region has no road access at any time of year." }
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Peak cruise season — small towns like Juneau and Ketchikan see their populations multiply with daily ship arrivals."
+    },
+    {
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "text": "Most cruises and lodges shut down entirely for the winter, and much of the region has no road access at any time of year."
+    }
   ],
   "monthlyWeather": [
     "cold and wet, with most tourism infrastructure closed for the season",
@@ -72,8 +164,20 @@
     "cold and wet, deep in the quiet, largely inaccessible off season",
     "cold and wet, the wettest and darkest stretch of the year"
   ],
-  "naSliders": ["swimming", "surfing", "winetasting", "snowsports"],
-  "searchAliases": ["Juneau", "Ketchikan", "Sitka", "Glacier Bay", "Inside Passage", "Tongass National Forest"],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "winetasting",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Juneau",
+    "Ketchikan",
+    "Sitka",
+    "Glacier Bay",
+    "Inside Passage",
+    "Tongass National Forest"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

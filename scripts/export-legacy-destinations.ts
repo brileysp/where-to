@@ -46,6 +46,7 @@ function prune(d: DestinationContent): Record<string, unknown> {
   if (d.naSliders.length > 0) out.naSliders = d.naSliders;
   if (d.searchAliases.length > 0) out.searchAliases = d.searchAliases;
   if (Object.keys(d.activityStyleTiers).length > 0) out.activityStyleTiers = d.activityStyleTiers;
+  if (Object.keys(d.signatureTier).length > 0) out.signatureTier = d.signatureTier;
 
   return out;
 }

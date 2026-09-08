@@ -10,7 +10,7 @@
     "min": "$$$",
     "max": "$$$$$"
   },
-  "costOverview": "Even the cheap options are expensive — there's no genuinely low-cost meal here.",
+  "costOverview": "There's no genuinely cheap meal in Iceland — even the inexpensive options run high by most standards.",
   "costItems": [
     {
       "label": "Pylsur (hot dog)",
@@ -23,14 +23,14 @@
       "price": 18
     },
     {
-      "label": "Taxi, 15 min",
-      "unit": "",
-      "price": 19
-    },
-    {
       "label": "Airport transfer, Keflavík–Reykjavík",
       "unit": "",
       "price": 29
+    },
+    {
+      "label": "Rental car, economy",
+      "price": 75,
+      "unit": "per day"
     },
     {
       "label": "Blue Lagoon entry",
@@ -41,11 +41,11 @@
   "base": {
     "sunbathing": 1,
     "swimming": 1,
-    "diving": 4,
+    "diving": 3,
     "surfing": 2,
     "sailing": 3,
-    "hiking": 5,
-    "scenic": 7,
+    "hiking": 6,
+    "scenic": 8,
     "fishing": 6,
     "roadtrip": 9,
     "adventure": 7,
@@ -58,13 +58,13 @@
     "streetfood": 3,
     "nightlife": 4,
     "winetasting": 1,
-    "spa": 7,
+    "spa": 8,
     "luxuryLodging": 7,
     "snowsports": 6,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 5,
     "birding": 6,
-    "wildlife": 6
+    "wildlife": 5
   },
   "budgetBands": [
     "comfortable",

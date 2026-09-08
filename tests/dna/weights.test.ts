@@ -1,23 +1,27 @@
 import { describe, expect, it } from 'vitest';
-import { convertTravelDNAToRecommendationWeights } from '@/lib/dna/weights';
+import { convertTravelDNAToRecommendationWeights, SLIDER_ATTRIBUTE_MAP } from '@/lib/dna/weights';
 import { createEmptyPreferenceProfile } from '@/lib/dna/profile';
 import { createStatePair, legacy } from './helpers';
 
 describe('convertTravelDNAToRecommendationWeights', () => {
-  // Deliberate divergence from the legacy engine: legacy's own
-  // SLIDER_ATTRIBUTE_MAP never had a luxuryLodging entry either — a real
-  // bug in the original app, not introduced by the port — so luxuryLodging
-  // could never receive a nonzero weight from any signal (interests,
-  // bands, or swipes). Fixed on this side only; the legacy reference used
-  // for this comparison still lacks the key, so it's added back in before
-  // comparing everything else for an exact match.
-  it('matches legacy on the blank-slate (all-zero) profile, plus the fixed luxuryLodging entry', () => {
+  // A blank-slate profile carries zero signal for every slider, so on
+  // BOTH sides of the taxonomy migration every key trivially floors to
+  // the same ~2 baseline (see the "never-tested" test below) regardless
+  // of what SLIDER_ATTRIBUTE_MAP's specific attribute weights are — this
+  // makes the blank-slate case a weak but still real invariant to keep
+  // even after the 28-key legacy taxonomy became the 53-key one: every
+  // new-side key present should still floor to exactly 2. A real
+  // key-by-key value comparison against the legacy engine no longer
+  // applies once the key sets themselves deliberately diverge (renames,
+  // splits, and brand-new interests the legacy engine never had), so this
+  // no longer asserts equality against legacy's own output.
+  it('floors every new-taxonomy slider to the ~2 baseline on a blank-slate (all-zero) profile', () => {
     const { legacyState, newState } = createStatePair();
     const legacyWeights = legacy.convertTravelDNAToRecommendationWeights(legacyState.profile);
-    expect(convertTravelDNAToRecommendationWeights(newState.profile)).toEqual({
-      ...legacyWeights,
-      luxuryLodging: 2,
-    });
+    expect(new Set(Object.values(legacyWeights))).toEqual(new Set([2])); // sanity: legacy itself floors everything to 2 here
+    const weights = convertTravelDNAToRecommendationWeights(newState.profile);
+    expect(Object.keys(weights).sort()).toEqual(Object.keys(SLIDER_ATTRIBUTE_MAP).sort());
+    Object.values(weights).forEach((v) => expect(v).toBe(2));
   });
 
   // Deliberate divergence from the legacy engine: legacy floors EVERY

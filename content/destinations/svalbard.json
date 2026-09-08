@@ -5,15 +5,38 @@
   "emoji": "🐻‍❄️",
   "climate": "polar",
   "about": "Midnight sun (Apr–Aug) keeps it light around the clock with zero aurora chances; polar night (Nov–Jan) brings roughly 24-hour darkness and the best northern lights viewing.",
-  "overview": "The world's northernmost year-round settlement — more polar bears than people, glaciers calving into Arctic fjords, and genuine 24-hour daylight or darkness depending on the season.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
-  "costOverview": "There's no budget tier here — Svalbard is one of the most remote, expensive places on Earth to visit, and virtually every real activity requires a guide, mandatory outside Longyearbyen for polar bear safety.",
+  "overview": "The world's northernmost settlement — more polar bears than people, glaciers calving into Arctic fjords, and 24-hour daylight or darkness by season.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "One of the most remote, expensive places on Earth to visit — virtually every real activity requires a guide, mandatory outside Longyearbyen for polar bear safety.",
   "costItems": [
-    { "label": "Coffee", "price": 6, "unit": "" },
-    { "label": "Reindeer stew", "price": 35, "unit": "" },
-    { "label": "Husky dog sledding excursion", "price": 200, "unit": "per person" },
-    { "label": "Polar bear safari, snowmobile", "price": 350, "unit": "per person" },
-    { "label": "Glacier boat tour", "price": 150, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Reindeer stew",
+      "price": 35,
+      "unit": ""
+    },
+    {
+      "label": "Husky dog sledding excursion",
+      "price": 200,
+      "unit": "per person"
+    },
+    {
+      "label": "Polar bear safari, snowmobile",
+      "price": 350,
+      "unit": "per person"
+    },
+    {
+      "label": "Glacier boat tour",
+      "price": 150,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -21,8 +44,8 @@
     "diving": 1,
     "surfing": 0,
     "sailing": 3,
-    "hiking": 4,
-    "scenic": 9,
+    "hiking": 2,
+    "scenic": 8,
     "fishing": 3,
     "roadtrip": 1,
     "adventure": 8,
@@ -31,9 +54,9 @@
     "museums": 3,
     "architecture": 2,
     "festivals": 2,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 1,
-    "nightlife": 2,
+    "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
     "luxuryLodging": 4,
@@ -41,27 +64,73 @@
     "cycling": 1,
     "shopping": 2,
     "birding": 6,
-    "wildlife": 9
+    "wildlife": 8
   },
-  "budgetBands": ["highend", "luxury"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "cold": [10, 11, 12, 1, 2, 3],
-  "peak": [3, 4, 6, 7],
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    3,
+    4,
+    6,
+    7
+  ],
   "peakIntensity": "mild",
-  "low": [10, 11],
+  "low": [
+    10,
+    11
+  ],
   "sliderEvents": {
     "stargazing": [
       {
         "label": "Polar night darkness",
         "weight": 7,
-        "months": { "11": 0.85, "12": 1, "1": 1, "2": 0.7, "10": 0.4 }
+        "months": {
+          "11": 0.85,
+          "12": 1,
+          "1": 1,
+          "2": 0.7,
+          "10": 0.4
+        }
       }
     ]
   },
   "specialSeasons": [
-    { "months": [4, 5, 6, 7, 8], "text": "Midnight sun keeps it light around the clock — no real stargazing or aurora viewing possible." },
-    { "months": [11, 12, 1], "text": "Polar night brings roughly 24-hour darkness, the best window for the northern lights." }
+    {
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "text": "Midnight sun keeps it light around the clock — no real stargazing or aurora viewing possible."
+    },
+    {
+      "months": [
+        11,
+        12,
+        1
+      ],
+      "text": "Polar night brings roughly 24-hour darkness, the best window for the northern lights."
+    }
   ],
   "monthlyWeather": [
     "bitterly cold and dark, deep in the polar night with strong aurora chances",
@@ -77,8 +146,17 @@
     "very cold and mostly dark, quiet before the polar night settles in fully",
     "bitterly cold, deep in the polar night with the best aurora viewing of the year"
   ],
-  "naSliders": ["sunbathing", "swimming", "surfing", "golf"],
-  "searchAliases": ["Longyearbyen", "polar bears", "Arctic Circle", "northern lights Svalbard"],
+  "naSliders": [
+    "swimming",
+    "surfing",
+    "golf"
+  ],
+  "searchAliases": [
+    "Longyearbyen",
+    "polar bears",
+    "Arctic Circle",
+    "northern lights Svalbard"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",
@@ -87,5 +165,6 @@
       "deserts": "none",
       "forests": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

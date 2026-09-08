@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$$$"
   },
-  "costOverview": "Tea, taxis, and tagines cost almost nothing in the medina — the price gap to riads and hammams at the luxury end is enormous.",
+  "costOverview": "Everyday food and transport cost very little — even a hammam spa treatment, the one real splurge most visitors add, is reasonable by international standards.",
   "costItems": [
     {
       "label": "Mint tea",
@@ -31,6 +31,11 @@
       "label": "Hammam treatment",
       "price": 30,
       "unit": ""
+    },
+    {
+      "label": "Riad suite with rooftop terrace, Marrakech medina",
+      "price": 180,
+      "unit": "per night"
     }
   ],
   "base": {
@@ -39,7 +44,7 @@
     "diving": 2,
     "surfing": 4,
     "sailing": 2,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 7,
     "fishing": 2,
     "roadtrip": 7,

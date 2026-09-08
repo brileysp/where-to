@@ -1,5 +1,18 @@
 # Adding a batch of destinations
 
+> **Superseded for any destination edited in the admin UI.**
+> `/admin/destinations` (see `docs/admin-panel-plan.md`) now edits a
+> destination's core fields, cost items, *and* monthly slider scores
+> directly in the database. The moment a destination is first edited there,
+> the database is its source of truth — re-running Part 4 below for that
+> destination's file will silently overwrite the admin edit. This JSON
+> pipeline stays live for two cases only: destinations never opened in the
+> admin UI, and seeding a brand-new destination's starting content before
+> its first admin edit (creating a destination isn't buildable in the admin
+> UI yet — see docs/admin-panel-plan.md's scope table). Everything below
+> still describes that pipeline accurately; it just isn't the last word for
+> a destination once someone has edited it in the admin UI.
+
 Checklist for adding new rows to the `destinations` table (source: one JSON
 file per destination under `content/destinations/`, imported via
 `npm run db:import:destinations` into Postgres — see Part 4). Distilled from

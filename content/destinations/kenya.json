@@ -18,11 +18,6 @@
       "unit": ""
     },
     {
-      "label": "Shared minibus taxi (matatu), 15 min",
-      "price": 1,
-      "unit": ""
-    },
-    {
       "label": "Nyama choma (grilled meat), local restaurant",
       "price": 9,
       "unit": ""
@@ -38,6 +33,11 @@
       "unit": "per day"
     },
     {
+      "label": "Domestic flight, Nairobi–Mara",
+      "price": 180,
+      "unit": "one-way"
+    },
+    {
       "label": "Mid-range safari lodge, full board",
       "price": 400,
       "unit": "per person, per night"
@@ -49,27 +49,27 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 5,
+    "hiking": 3,
     "scenic": 8,
     "fishing": 4,
-    "roadtrip": 5,
+    "roadtrip": 3,
     "adventure": 4,
     "golf": 1,
     "stargazing": 7,
     "museums": 2,
     "architecture": 2,
     "festivals": 5,
-    "finedining": 4,
+    "finedining": 3,
     "streetfood": 4,
     "nightlife": 1,
     "winetasting": 1,
     "spa": 4,
-    "luxuryLodging": 9,
+    "luxuryLodging": 10,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 3,
-    "birding": 5,
-    "wildlife": 8
+    "birding": 6,
+    "wildlife": 9
   },
   "budgetBands": [
     "comfortable",
