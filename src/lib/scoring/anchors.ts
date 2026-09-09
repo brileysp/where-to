@@ -195,10 +195,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   },
   golf: {
     definition: 'A bucket-list course or cluster golfers plan a trip around.',
-    ten: [
-      'maui', 'monterey-big-sur', 'dubai', 'los-cabos', 'algarve', 'punta-cana',
-      'st-andrews-fife', 'mauritius',
-    ],
+    ten: ['monterey-big-sur', 'dubai', 'los-cabos', 'algarve', 'st-andrews-fife'],
   },
   fishing: {
     definition: 'A named world fishery — the fish is the reason for the trip.',
