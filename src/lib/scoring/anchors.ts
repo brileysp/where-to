@@ -179,7 +179,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'borneo', 'belize', 'fiji',
     ],
   },
-  sailing: { definition: 'A world cruising ground.', ten: ['croatia'] },
+  sailing: { definition: 'A world cruising ground.', ten: ['croatia', 'santorini', 'bahamas'] },
   kayakingRafting: {
     definition: 'A world-reference river or paddling coast.',
     ten: ['zambia', 'zimbabwe', 'grandcanyon', 'marlborough-abel-tasman'],

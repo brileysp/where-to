@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T13:38:07.577Z",
+  "generatedAt": "2026-09-09T13:52:10.602Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -188,10 +188,10 @@
       "id": "thailand",
       "name": "Thailand — Phuket & Islands",
       "region": "Thailand",
-      "avgScore": 5.1336,
+      "avgScore": 5.134,
       "bestMonth": 1,
-      "bestMonthScore": 7.3988,
-      "worstMonthScore": 2.0264
+      "bestMonthScore": 7.3989,
+      "worstMonthScore": 2.0265
     },
     {
       "rank": 20,
@@ -338,10 +338,10 @@
       "id": "turks-caicos",
       "name": "Turks & Caicos",
       "region": "Caribbean",
-      "avgScore": 4.8724,
+      "avgScore": 4.873,
       "bestMonth": 1,
-      "bestMonthScore": 6.8948,
-      "worstMonthScore": 2.3865
+      "bestMonthScore": 6.8956,
+      "worstMonthScore": 2.3864
     },
     {
       "rank": 35,
@@ -428,9 +428,9 @@
       "id": "bahamas",
       "name": "Bahamas",
       "region": "Caribbean",
-      "avgScore": 4.6525,
+      "avgScore": 4.6532,
       "bestMonth": 3,
-      "bestMonthScore": 6.6928,
+      "bestMonthScore": 6.6932,
       "worstMonthScore": 2.1628
     },
     {
@@ -498,9 +498,9 @@
       "id": "santorini",
       "name": "Santorini & Cyclades",
       "region": "Greece",
-      "avgScore": 4.9746,
+      "avgScore": 4.9747,
       "bestMonth": 9,
-      "bestMonthScore": 6.6061,
+      "bestMonthScore": 6.6063,
       "worstMonthScore": 3.5133
     },
     {
@@ -558,9 +558,9 @@
       "id": "seychelles",
       "name": "Seychelles",
       "region": "Indian Ocean",
-      "avgScore": 4.9746,
+      "avgScore": 4.9751,
       "bestMonth": 11,
-      "bestMonthScore": 6.4674,
+      "bestMonthScore": 6.4678,
       "worstMonthScore": 2.8746
     },
     {
@@ -578,10 +578,10 @@
       "id": "fiji",
       "name": "Fiji",
       "region": "South Pacific",
-      "avgScore": 4.6508,
+      "avgScore": 4.6514,
       "bestMonth": 6,
       "bestMonthScore": 6.4139,
-      "worstMonthScore": 1.5077
+      "worstMonthScore": 1.5109
     },
     {
       "rank": 59,
@@ -598,7 +598,7 @@
       "id": "sydney",
       "name": "Sydney",
       "region": "Australia",
-      "avgScore": 5.3262,
+      "avgScore": 5.3258,
       "bestMonth": 1,
       "bestMonthScore": 6.3462,
       "worstMonthScore": 4.777
@@ -968,10 +968,10 @@
       "id": "southeast-alaska",
       "name": "Southeast Alaska & the Inside Passage",
       "region": "Alaska, USA",
-      "avgScore": 3.4539,
+      "avgScore": 3.454,
       "bestMonth": 6,
-      "bestMonthScore": 5.8073,
-      "worstMonthScore": 2.4375
+      "bestMonthScore": 5.8041,
+      "worstMonthScore": 2.4396
     },
     {
       "rank": 98,
@@ -1108,9 +1108,9 @@
       "id": "fjords",
       "name": "Norwegian Fjords",
       "region": "Norway",
-      "avgScore": 3.6045,
+      "avgScore": 3.6002,
       "bestMonth": 7,
-      "bestMonthScore": 5.621,
+      "bestMonthScore": 5.6195,
       "worstMonthScore": 1.8417
     },
     {
@@ -1358,9 +1358,9 @@
       "id": "antarctica",
       "name": "Antarctic Peninsula",
       "region": "Antarctica",
-      "avgScore": 2.2483,
+      "avgScore": 2.2525,
       "bestMonth": 1,
-      "bestMonthScore": 5.0857,
+      "bestMonthScore": 5.0924,
       "worstMonthScore": 0.3207
     },
     {
@@ -1538,10 +1538,10 @@
       "id": "gbr",
       "name": "Great Barrier Reef",
       "region": "Queensland, Australia",
-      "avgScore": 3.349,
+      "avgScore": 3.3503,
       "bestMonth": 9,
       "bestMonthScore": 4.3631,
-      "worstMonthScore": 1.8802
+      "worstMonthScore": 1.881
     },
     {
       "rank": 155,
@@ -1678,10 +1678,10 @@
       "id": "galapagos",
       "name": "Galápagos Islands",
       "region": "Ecuador",
-      "avgScore": 3.8172,
+      "avgScore": 3.8178,
       "bestMonth": 6,
-      "bestMonthScore": 4.1949,
-      "worstMonthScore": 3.2467
+      "bestMonthScore": 4.1948,
+      "worstMonthScore": 3.2482
     },
     {
       "rank": 169,
