@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:03:53.210Z",
+  "generatedAt": "2026-09-09T16:13:23.705Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -438,7 +438,7 @@
       "id": "andalucia",
       "name": "Andalucía",
       "region": "Spain",
-      "avgScore": 5.4705,
+      "avgScore": 5.5154,
       "bestMonth": 4,
       "bestMonthScore": 6.6692,
       "worstMonthScore": 4.0881
@@ -648,10 +648,10 @@
       "id": "taiwan",
       "name": "Taiwan",
       "region": "East Asia",
-      "avgScore": 4.9422,
+      "avgScore": 4.9448,
       "bestMonth": 10,
       "bestMonthScore": 6.2582,
-      "worstMonthScore": 2.2127
+      "worstMonthScore": 2.2267
     },
     {
       "rank": 66,
@@ -978,10 +978,10 @@
       "id": "ethiopia",
       "name": "Ethiopia",
       "region": "Ethiopia",
-      "avgScore": 4.6517,
+      "avgScore": 4.4854,
       "bestMonth": 1,
       "bestMonthScore": 5.8014,
-      "worstMonthScore": 3.1412
+      "worstMonthScore": 2.9312
     },
     {
       "rank": 99,
@@ -1768,9 +1768,9 @@
       "id": "kerala",
       "name": "Kerala",
       "region": "India",
-      "avgScore": 3.0594,
+      "avgScore": 3.0734,
       "bestMonth": 1,
-      "bestMonthScore": 3.9375,
+      "bestMonthScore": 3.9543,
       "worstMonthScore": 2.6125
     },
     {
