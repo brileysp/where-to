@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T14:01:51.991Z",
+  "generatedAt": "2026-09-09T14:08:49.657Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -218,10 +218,10 @@
       "id": "egypt",
       "name": "Red Sea & Nile",
       "region": "Egypt",
-      "avgScore": 7.1147,
+      "avgScore": 7.1008,
       "bestMonth": 1,
-      "bestMonthScore": 7.3665,
-      "worstMonthScore": 6.7809
+      "bestMonthScore": 7.3463,
+      "worstMonthScore": 6.7521
     },
     {
       "rank": 23,
@@ -518,10 +518,10 @@
       "id": "maldives",
       "name": "Maldives",
       "region": "Indian Ocean",
-      "avgScore": 4.7773,
+      "avgScore": 4.7623,
       "bestMonth": 3,
       "bestMonthScore": 6.5424,
-      "worstMonthScore": 3.2687
+      "worstMonthScore": 3.2341
     },
     {
       "rank": 53,
@@ -1198,10 +1198,10 @@
       "id": "belize",
       "name": "Belize",
       "region": "Central America",
-      "avgScore": 4.1048,
+      "avgScore": 4.0843,
       "bestMonth": 3,
       "bestMonthScore": 5.5105,
-      "worstMonthScore": 2.7311
+      "worstMonthScore": 2.7312
     },
     {
       "rank": 121,
@@ -1538,10 +1538,10 @@
       "id": "gbr",
       "name": "Great Barrier Reef",
       "region": "Queensland, Australia",
-      "avgScore": 3.3503,
+      "avgScore": 3.3872,
       "bestMonth": 9,
       "bestMonthScore": 4.3631,
-      "worstMonthScore": 1.881
+      "worstMonthScore": 1.9253
     },
     {
       "rank": 155,
@@ -1648,10 +1648,10 @@
       "id": "rajaampat",
       "name": "Raja Ampat",
       "region": "Indonesia",
-      "avgScore": 3.1707,
+      "avgScore": 3.0612,
       "bestMonth": 1,
       "bestMonthScore": 4.2143,
-      "worstMonthScore": 1.7782
+      "worstMonthScore": 1.6966
     },
     {
       "rank": 166,
@@ -1678,10 +1678,10 @@
       "id": "galapagos",
       "name": "Galápagos Islands",
       "region": "Ecuador",
-      "avgScore": 3.8178,
+      "avgScore": 3.7338,
       "bestMonth": 6,
       "bestMonthScore": 4.1948,
-      "worstMonthScore": 3.2482
+      "worstMonthScore": 3.0801
     },
     {
       "rank": 169,
@@ -1798,10 +1798,10 @@
       "id": "palau",
       "name": "Palau",
       "region": "Micronesia",
-      "avgScore": 2.6523,
+      "avgScore": 2.5209,
       "bestMonth": 1,
       "bestMonthScore": 3.8872,
-      "worstMonthScore": 1.223
+      "worstMonthScore": 1.0789
     },
     {
       "rank": 181,
