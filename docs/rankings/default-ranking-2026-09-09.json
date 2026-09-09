@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T15:55:55.681Z",
+  "generatedAt": "2026-09-09T16:03:53.210Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -151,7 +151,7 @@
       "avgScore": 7.1719,
       "bestMonth": 3,
       "bestMonthScore": 7.6439,
-      "worstMonthScore": 6.8632
+      "worstMonthScore": 6.8633
     },
     {
       "rank": 16,
@@ -580,7 +580,7 @@
       "region": "South Pacific",
       "avgScore": 4.6514,
       "bestMonth": 6,
-      "bestMonthScore": 6.4139,
+      "bestMonthScore": 6.4138,
       "worstMonthScore": 1.5109
     },
     {
@@ -1498,7 +1498,7 @@
       "id": "hokkaido",
       "name": "Hokkaido",
       "region": "Japan",
-      "avgScore": 3.4255,
+      "avgScore": 3.4254,
       "bestMonth": 1,
       "bestMonthScore": 4.477,
       "worstMonthScore": 2.3196
@@ -1701,7 +1701,7 @@
       "avgScore": 3.0729,
       "bestMonth": 1,
       "bestMonthScore": 4.1284,
-      "worstMonthScore": 2.1434
+      "worstMonthScore": 2.1435
     },
     {
       "rank": 171,
