@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:13:23.705Z",
+  "generatedAt": "2026-09-09T16:22:18.889Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -608,10 +608,10 @@
       "id": "budapest",
       "name": "Budapest",
       "region": "Hungary",
-      "avgScore": 6.0145,
+      "avgScore": 5.9972,
       "bestMonth": 6,
-      "bestMonthScore": 6.3269,
-      "worstMonthScore": 5.7989
+      "bestMonthScore": 6.3086,
+      "worstMonthScore": 5.7685
     },
     {
       "rank": 62,
@@ -675,16 +675,6 @@
     },
     {
       "rank": 68,
-      "id": "iceland",
-      "name": "Iceland",
-      "region": "Nordic",
-      "avgScore": 4.6265,
-      "bestMonth": 7,
-      "bestMonthScore": 6.1603,
-      "worstMonthScore": 3.3615
-    },
-    {
-      "rank": 69,
       "id": "amalfi",
       "name": "Amalfi Coast",
       "region": "Italy",
@@ -692,6 +682,16 @@
       "bestMonth": 6,
       "bestMonthScore": 6.1262,
       "worstMonthScore": 4.3192
+    },
+    {
+      "rank": 69,
+      "id": "iceland",
+      "name": "Iceland",
+      "region": "Nordic",
+      "avgScore": 4.5864,
+      "bestMonth": 7,
+      "bestMonthScore": 6.1175,
+      "worstMonthScore": 3.3615
     },
     {
       "rank": 70,
@@ -1498,10 +1498,10 @@
       "id": "hokkaido",
       "name": "Hokkaido",
       "region": "Japan",
-      "avgScore": 3.4254,
+      "avgScore": 3.4014,
       "bestMonth": 1,
       "bestMonthScore": 4.477,
-      "worstMonthScore": 2.3196
+      "worstMonthScore": 2.2491
     },
     {
       "rank": 151,
