@@ -372,7 +372,21 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             // silently exempts every remaining month from ever being
             // flagged good or bad at all (reproduces the same Kruger
             // wildlife/birding bug, here for the shared hiking formula).
-            const fallback = bonus <= 0 ? (has(hikeBestList, m) ? 3 : 0) + worstFallback() : 0;
+            //
+            // `fishing` is the exception, the same shape as
+            // wildflowerBlooms's wet-penalty exception on the wildlife
+            // formula: hikingBest/hikingWorst are TRAIL weather
+            // conditions, not fish behavior, and once a real fishing
+            // event exists this fallback actively introduces a false
+            // second signal rather than a reasonable placeholder. Found
+            // authoring Lofoten's Skrei (Arctic cod) run: the Jan-Apr
+            // event correctly peaked at 9, but Lofoten's hikingBest
+            // months are summer (Jun-Aug, when it's actually pleasant to
+            // hike there) — and this fallback turned that into an EQUAL
+            // second peak of 9, asserting Lofoten's fishing is just as
+            // good in summer as during its one famous winter run, which
+            // nothing about trail conditions actually supports.
+            const fallback = s.key !== 'fishing' && bonus <= 0 ? (has(hikeBestList, m) ? 3 : 0) + worstFallback() : 0;
             if (fallback) terms.push(['no active event', fallback]);
             v = Math.round(base + bonus + fallback);
           } else {

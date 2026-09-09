@@ -904,6 +904,32 @@ describe('deriveDestinationScores — sliders whose defining condition is anothe
     expect(monthly.surfing[5]).toBe(3); // June: 5 - 2, the event contributes nothing here
   });
 
+  // Found authoring Lofoten's Skrei (Arctic cod) run: an authored Jan-Apr
+  // fishing event correctly peaked at 9, but the hikingBest/hikingWorst
+  // fallback (trail weather, not fish behavior) turned Lofoten's summer
+  // hiking months into an EQUAL second peak of 9 for fishing too, since
+  // nothing suppressed it once an event existed for some other months.
+  it('does not let hikingBest/hikingWorst leak into fishing once a real event exists — trail weather is not fish behavior', () => {
+    const dest = makeDestination({
+      base: { fishing: 6 },
+      hikingBest: [7], // a month with no authored fishing event
+      sliderEvents: { fishing: [{ label: 'Winter run', weight: 3, months: { 1: 1 } }] },
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.fishing[6]).toBe(6); // July: base only, no phantom +3 from hikingBest
+    expect(monthly.fishing[0]).toBe(9); // January: the actual authored peak
+  });
+
+  it('still applies the hiking fallback normally for a sibling slider on the same formula', () => {
+    const dest = makeDestination({
+      base: { hiking: 6 },
+      hikingBest: [7],
+      sliderEvents: { fishing: [{ label: 'Winter run', weight: 3, months: { 1: 1 } }] }, // a DIFFERENT slider's event
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.hiking[6]).toBe(9); // July: hiking still gets its normal +3, unaffected by fishing's exception
+  });
+
   it('does not dock wildflower blooms for a wet month — blooms follow the rain', () => {
     const wet = makeDestination({ base: { wildflowerBlooms: 6 }, wet: [4] });
     const plain = makeDestination({ base: { wildflowerBlooms: 6 } });
