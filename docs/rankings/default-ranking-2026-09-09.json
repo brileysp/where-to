@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T14:59:20.378Z",
+  "generatedAt": "2026-09-09T15:02:50.985Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -248,10 +248,10 @@
       "id": "denali-interior",
       "name": "Denali & the Interior",
       "region": "Alaska, USA",
-      "avgScore": 4.2004,
+      "avgScore": 4.2009,
       "bestMonth": 6,
       "bestMonthScore": 7.1827,
-      "worstMonthScore": 2.7992
+      "worstMonthScore": 2.7858
     },
     {
       "rank": 26,
@@ -328,10 +328,10 @@
       "id": "yosemite",
       "name": "Yosemite National Park",
       "region": "California, USA",
-      "avgScore": 5.1363,
+      "avgScore": 5.1361,
       "bestMonth": 7,
       "bestMonthScore": 6.9238,
-      "worstMonthScore": 2.6582
+      "worstMonthScore": 2.6574
     },
     {
       "rank": 34,
@@ -378,10 +378,10 @@
       "id": "swissalps",
       "name": "Zermatt & the Swiss Alps",
       "region": "Switzerland",
-      "avgScore": 5.3765,
+      "avgScore": 5.3763,
       "bestMonth": 7,
       "bestMonthScore": 6.7694,
-      "worstMonthScore": 3.9087
+      "worstMonthScore": 3.9085
     },
     {
       "rank": 39,
@@ -588,10 +588,10 @@
       "id": "nepal",
       "name": "Nepal",
       "region": "South Asia",
-      "avgScore": 5.0034,
+      "avgScore": 5.004,
       "bestMonth": 2,
-      "bestMonthScore": 6.4093,
-      "worstMonthScore": 2.5774
+      "bestMonthScore": 6.4086,
+      "worstMonthScore": 2.5736
     },
     {
       "rank": 60,
@@ -698,10 +698,10 @@
       "id": "dolomites",
       "name": "Dolomites",
       "region": "Italy",
-      "avgScore": 4.6855,
+      "avgScore": 4.6857,
       "bestMonth": 7,
       "bestMonthScore": 6.0924,
-      "worstMonthScore": 3.0226
+      "worstMonthScore": 3.0219
     },
     {
       "rank": 71,
@@ -758,10 +758,10 @@
       "id": "chamonix",
       "name": "Chamonix & the French Alps",
       "region": "France",
-      "avgScore": 4.5338,
+      "avgScore": 4.5325,
       "bestMonth": 7,
       "bestMonthScore": 5.982,
-      "worstMonthScore": 2.834
+      "worstMonthScore": 2.831
     },
     {
       "rank": 77,
@@ -988,10 +988,10 @@
       "id": "el-chalten",
       "name": "El Chaltén & Fitz Roy",
       "region": "Argentina",
-      "avgScore": 4.5646,
+      "avgScore": 4.5619,
       "bestMonth": 1,
       "bestMonthScore": 5.7832,
-      "worstMonthScore": 1.6838
+      "worstMonthScore": 1.6806
     },
     {
       "rank": 100,
@@ -1218,10 +1218,10 @@
       "id": "pakistan",
       "name": "Pakistan",
       "region": "South Asia",
-      "avgScore": 4.2141,
+      "avgScore": 4.2103,
       "bestMonth": 7,
       "bestMonthScore": 5.4656,
-      "worstMonthScore": 1.3317
+      "worstMonthScore": 1.3286
     },
     {
       "rank": 123,
