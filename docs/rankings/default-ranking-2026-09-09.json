@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T13:52:10.602Z",
+  "generatedAt": "2026-09-09T14:01:51.991Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -148,10 +148,10 @@
       "id": "morocco",
       "name": "Marrakech & Atlas",
       "region": "Morocco",
-      "avgScore": 7.1717,
+      "avgScore": 7.1719,
       "bestMonth": 3,
-      "bestMonthScore": 7.6438,
-      "worstMonthScore": 6.8624
+      "bestMonthScore": 7.6439,
+      "worstMonthScore": 6.8632
     },
     {
       "rank": 16,
@@ -171,7 +171,7 @@
       "avgScore": 5.9502,
       "bestMonth": 7,
       "bestMonthScore": 7.4816,
-      "worstMonthScore": 4.9657
+      "worstMonthScore": 4.9658
     },
     {
       "rank": 18,
@@ -238,10 +238,10 @@
       "id": "rajasthan-golden-triangle",
       "name": "Rajasthan & the Golden Triangle",
       "region": "India",
-      "avgScore": 6.3934,
+      "avgScore": 6.3937,
       "bestMonth": 5,
-      "bestMonthScore": 7.188,
-      "worstMonthScore": 5.2554
+      "bestMonthScore": 7.1882,
+      "worstMonthScore": 5.2559
     },
     {
       "rank": 25,
@@ -368,10 +368,10 @@
       "id": "oaxaca",
       "name": "Oaxaca",
       "region": "Mexico",
-      "avgScore": 5.8983,
+      "avgScore": 5.9004,
       "bestMonth": 11,
-      "bestMonthScore": 6.7905,
-      "worstMonthScore": 4.9414
+      "bestMonthScore": 6.7912,
+      "worstMonthScore": 4.9457
     },
     {
       "rank": 38,
@@ -1478,10 +1478,10 @@
       "id": "guatemala",
       "name": "Guatemala",
       "region": "Central America",
-      "avgScore": 3.2513,
+      "avgScore": 3.2515,
       "bestMonth": 1,
       "bestMonthScore": 4.5835,
-      "worstMonthScore": 1.8407
+      "worstMonthScore": 1.8411
     },
     {
       "rank": 149,
@@ -1508,9 +1508,9 @@
       "id": "rwanda",
       "name": "Rwanda",
       "region": "East Africa",
-      "avgScore": 3.245,
+      "avgScore": 3.2452,
       "bestMonth": 1,
-      "bestMonthScore": 4.4591,
+      "bestMonthScore": 4.4592,
       "worstMonthScore": 1.7456
     },
     {

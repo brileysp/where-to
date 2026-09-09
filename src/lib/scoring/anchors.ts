@@ -266,7 +266,10 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'tokyo-kyoto', 'papua-new-guinea',
     ],
   },
-  traditionalCrafts: { definition: 'A living craft tradition worth travelling for.', ten: [] },
+  traditionalCrafts: {
+    definition: 'A living craft tradition worth travelling for.',
+    ten: ['morocco', 'oaxaca'],
+  },
   streetFood: {
     definition: 'Eating on the street is one of the top reasons to go, and among the best anywhere.',
     ten: [
