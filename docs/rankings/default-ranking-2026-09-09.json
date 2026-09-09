@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T15:37:14.786Z",
+  "generatedAt": "2026-09-09T15:55:55.681Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -68,7 +68,7 @@
       "id": "tuscany",
       "name": "Tuscany",
       "region": "Italy",
-      "avgScore": 7.0164,
+      "avgScore": 7.0237,
       "bestMonth": 9,
       "bestMonthScore": 8.1711,
       "worstMonthScore": 5.6225
@@ -378,10 +378,10 @@
       "id": "swissalps",
       "name": "Zermatt & the Swiss Alps",
       "region": "Switzerland",
-      "avgScore": 5.3763,
+      "avgScore": 5.3735,
       "bestMonth": 7,
       "bestMonthScore": 6.7694,
-      "worstMonthScore": 3.9085
+      "worstMonthScore": 3.9025
     },
     {
       "rank": 39,
@@ -438,10 +438,10 @@
       "id": "andalucia",
       "name": "Andalucía",
       "region": "Spain",
-      "avgScore": 5.4085,
+      "avgScore": 5.4705,
       "bestMonth": 4,
       "bestMonthScore": 6.6692,
-      "worstMonthScore": 3.9385
+      "worstMonthScore": 4.0881
     },
     {
       "rank": 45,
@@ -698,10 +698,10 @@
       "id": "dolomites",
       "name": "Dolomites",
       "region": "Italy",
-      "avgScore": 4.6857,
+      "avgScore": 4.6842,
       "bestMonth": 7,
       "bestMonthScore": 6.0924,
-      "worstMonthScore": 3.0219
+      "worstMonthScore": 3.0212
     },
     {
       "rank": 71,
@@ -758,10 +758,10 @@
       "id": "chamonix",
       "name": "Chamonix & the French Alps",
       "region": "France",
-      "avgScore": 4.5325,
+      "avgScore": 4.5228,
       "bestMonth": 7,
       "bestMonthScore": 5.982,
-      "worstMonthScore": 2.831
+      "worstMonthScore": 2.81
     },
     {
       "rank": 77,
@@ -858,20 +858,20 @@
       "id": "rocky-mountain",
       "name": "Rocky Mountain National Park",
       "region": "Colorado, USA",
-      "avgScore": 4.1214,
+      "avgScore": 4.121,
       "bestMonth": 9,
       "bestMonthScore": 5.8901,
-      "worstMonthScore": 2.8277
+      "worstMonthScore": 2.8274
     },
     {
       "rank": 87,
       "id": "provence",
       "name": "Provence",
       "region": "France",
-      "avgScore": 4.6589,
+      "avgScore": 4.6946,
       "bestMonth": 7,
       "bestMonthScore": 5.8875,
-      "worstMonthScore": 3.4238
+      "worstMonthScore": 3.4239
     },
     {
       "rank": 88,
@@ -905,6 +905,16 @@
     },
     {
       "rank": 91,
+      "id": "mallorca",
+      "name": "Mallorca",
+      "region": "Spain",
+      "avgScore": 5.1083,
+      "bestMonth": 9,
+      "bestMonthScore": 5.8625,
+      "worstMonthScore": 3.4067
+    },
+    {
+      "rank": 92,
       "id": "queenstown",
       "name": "Queenstown",
       "region": "New Zealand",
@@ -914,7 +924,7 @@
       "worstMonthScore": 3.7716
     },
     {
-      "rank": 92,
+      "rank": 93,
       "id": "marlborough-abel-tasman",
       "name": "Marlborough & Abel Tasman",
       "region": "New Zealand",
@@ -922,16 +932,6 @@
       "bestMonth": 3,
       "bestMonthScore": 5.8217,
       "worstMonthScore": 2.3808
-    },
-    {
-      "rank": 93,
-      "id": "mallorca",
-      "name": "Mallorca",
-      "region": "Spain",
-      "avgScore": 5.1644,
-      "bestMonth": 9,
-      "bestMonthScore": 5.8214,
-      "worstMonthScore": 3.6889
     },
     {
       "rank": 94,
@@ -988,10 +988,10 @@
       "id": "el-chalten",
       "name": "El Chaltén & Fitz Roy",
       "region": "Argentina",
-      "avgScore": 4.5619,
+      "avgScore": 4.5603,
       "bestMonth": 1,
       "bestMonthScore": 5.7832,
-      "worstMonthScore": 1.6806
+      "worstMonthScore": 1.6793
     },
     {
       "rank": 100,
@@ -1251,7 +1251,7 @@
       "avgScore": 4.1853,
       "bestMonth": 7,
       "bestMonthScore": 5.4416,
-      "worstMonthScore": 2.1618
+      "worstMonthScore": 2.1607
     },
     {
       "rank": 126,
@@ -1458,10 +1458,10 @@
       "id": "colombian-andes",
       "name": "Colombian Andes",
       "region": "Colombia",
-      "avgScore": 3.4895,
+      "avgScore": 3.3771,
       "bestMonth": 1,
       "bestMonthScore": 4.6605,
-      "worstMonthScore": 2.1158
+      "worstMonthScore": 2.1157
     },
     {
       "rank": 147,
