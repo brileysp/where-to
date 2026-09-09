@@ -345,7 +345,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     definition: 'Genuinely built for travelling with children, end to end.',
     ten: ['costa-rica', 'turks-caicos', 'maui'],
   },
-  spectatorSports: { definition: 'A world sporting occasion.', ten: [] },
+  spectatorSports: { definition: 'A world sporting occasion.', ten: ['london'] },
   roadtrip: {
     definition:
       'The drive is the trip. A named touring route where the road itself is ' +

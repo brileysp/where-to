@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T13:19:06.436Z",
+  "generatedAt": "2026-09-09T13:38:07.577Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -61,7 +61,7 @@
       "avgScore": 8.024,
       "bestMonth": 9,
       "bestMonthScore": 8.2133,
-      "worstMonthScore": 7.9315
+      "worstMonthScore": 7.9319
     },
     {
       "rank": 7,
@@ -318,10 +318,10 @@
       "id": "dubai",
       "name": "Dubai",
       "region": "UAE",
-      "avgScore": 6.1764,
+      "avgScore": 6.1654,
       "bestMonth": 1,
-      "bestMonthScore": 6.932,
-      "worstMonthScore": 5.7103
+      "bestMonthScore": 6.9267,
+      "worstMonthScore": 5.6931
     },
     {
       "rank": 33,
@@ -1978,10 +1978,10 @@
       "id": "st-andrews-fife",
       "name": "St Andrews & Fife",
       "region": "Scotland",
-      "avgScore": 1.7877,
+      "avgScore": 1.7848,
       "bestMonth": 7,
-      "bestMonthScore": 2.1668,
-      "worstMonthScore": 1.1342
+      "bestMonthScore": 2.165,
+      "worstMonthScore": 1.1302
     },
     {
       "rank": 199,
