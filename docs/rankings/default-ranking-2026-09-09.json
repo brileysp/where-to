@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T03:23:22.699Z",
+  "generatedAt": "2026-09-09T03:29:23.377Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -358,7 +358,7 @@
       "id": "rio",
       "name": "Rio de Janeiro",
       "region": "Brazil",
-      "avgScore": 5.1251,
+      "avgScore": 5.1331,
       "bestMonth": 7,
       "bestMonthScore": 6.8434,
       "worstMonthScore": 3.8792
@@ -448,10 +448,10 @@
       "id": "maui",
       "name": "Maui",
       "region": "Hawaii, USA",
-      "avgScore": 5.5106,
+      "avgScore": 5.5763,
       "bestMonth": 6,
-      "bestMonthScore": 6.6563,
-      "worstMonthScore": 3.0526
+      "bestMonthScore": 6.6508,
+      "worstMonthScore": 3.352
     },
     {
       "rank": 46,
@@ -485,23 +485,23 @@
     },
     {
       "rank": 49,
-      "id": "lisbon",
-      "name": "Lisbon",
-      "region": "Portugal",
-      "avgScore": 5.3378,
-      "bestMonth": 7,
-      "bestMonthScore": 6.6183,
-      "worstMonthScore": 4.4734
-    },
-    {
-      "rank": 50,
       "id": "maldives",
       "name": "Maldives",
       "region": "Indian Ocean",
-      "avgScore": 4.7828,
-      "bestMonth": 1,
+      "avgScore": 4.7959,
+      "bestMonth": 3,
       "bestMonthScore": 6.6172,
-      "worstMonthScore": 3.2056
+      "worstMonthScore": 3.2426
+    },
+    {
+      "rank": 50,
+      "id": "lisbon",
+      "name": "Lisbon",
+      "region": "Portugal",
+      "avgScore": 5.3719,
+      "bestMonth": 7,
+      "bestMonthScore": 6.6131,
+      "worstMonthScore": 4.5654
     },
     {
       "rank": 51,
@@ -588,30 +588,30 @@
       "id": "fiji",
       "name": "Fiji",
       "region": "South Pacific",
-      "avgScore": 4.6088,
+      "avgScore": 4.5908,
       "bestMonth": 6,
       "bestMonthScore": 6.3683,
-      "worstMonthScore": 1.5052
+      "worstMonthScore": 1.4304
     },
     {
       "rank": 60,
       "id": "sydney",
       "name": "Sydney",
       "region": "Australia",
-      "avgScore": 5.3596,
+      "avgScore": 5.3732,
       "bestMonth": 1,
-      "bestMonthScore": 6.3598,
-      "worstMonthScore": 4.7666
+      "bestMonthScore": 6.3525,
+      "worstMonthScore": 4.8751
     },
     {
       "rank": 61,
       "id": "barbados",
       "name": "Barbados",
       "region": "Eastern Caribbean",
-      "avgScore": 3.9769,
+      "avgScore": 3.98,
       "bestMonth": 1,
       "bestMonthScore": 6.3321,
-      "worstMonthScore": 1.5713
+      "worstMonthScore": 1.5694
     },
     {
       "rank": 62,
@@ -695,16 +695,6 @@
     },
     {
       "rank": 70,
-      "id": "algarve",
-      "name": "Algarve",
-      "region": "Portugal",
-      "avgScore": 5.0063,
-      "bestMonth": 9,
-      "bestMonthScore": 6.1041,
-      "worstMonthScore": 3.6661
-    },
-    {
-      "rank": 71,
       "id": "dolomites",
       "name": "Dolomites",
       "region": "Italy",
@@ -714,17 +704,17 @@
       "worstMonthScore": 3.0226
     },
     {
-      "rank": 72,
-      "id": "costa-rica",
-      "name": "Costa Rica",
-      "region": "Central America",
-      "avgScore": 5.13,
-      "bestMonth": 1,
-      "bestMonthScore": 6.0802,
-      "worstMonthScore": 3.6262
+      "rank": 71,
+      "id": "algarve",
+      "name": "Algarve",
+      "region": "Portugal",
+      "avgScore": 5.0281,
+      "bestMonth": 9,
+      "bestMonthScore": 6.091,
+      "worstMonthScore": 3.7688
     },
     {
-      "rank": 73,
+      "rank": 72,
       "id": "luangprabang",
       "name": "Luang Prabang",
       "region": "Laos",
@@ -732,6 +722,16 @@
       "bestMonth": 1,
       "bestMonthScore": 6.0802,
       "worstMonthScore": 2.7926
+    },
+    {
+      "rank": 73,
+      "id": "costa-rica",
+      "name": "Costa Rica",
+      "region": "Central America",
+      "avgScore": 5.1874,
+      "bestMonth": 1,
+      "bestMonthScore": 6.073,
+      "worstMonthScore": 3.8745
     },
     {
       "rank": 74,
@@ -808,10 +808,10 @@
       "id": "srilanka",
       "name": "Sri Lanka",
       "region": "South Asia",
-      "avgScore": 4.3887,
+      "avgScore": 4.3909,
       "bestMonth": 1,
       "bestMonthScore": 5.9453,
-      "worstMonthScore": 3.1474
+      "worstMonthScore": 3.1533
     },
     {
       "rank": 82,
@@ -838,10 +838,10 @@
       "id": "big-island",
       "name": "Big Island",
       "region": "Hawaii, USA",
-      "avgScore": 4.7717,
+      "avgScore": 4.7768,
       "bestMonth": 6,
-      "bestMonthScore": 5.8983,
-      "worstMonthScore": 3.0326
+      "bestMonthScore": 5.8982,
+      "worstMonthScore": 3.0556
     },
     {
       "rank": 85,
@@ -868,10 +868,10 @@
       "id": "canaries",
       "name": "Canary Islands",
       "region": "Spain",
-      "avgScore": 5.8856,
+      "avgScore": 5.8829,
       "bestMonth": 1,
       "bestMonthScore": 5.8875,
-      "worstMonthScore": 5.8844
+      "worstMonthScore": 5.8783
     },
     {
       "rank": 88,
@@ -888,10 +888,10 @@
       "id": "cape-town",
       "name": "Cape Town",
       "region": "South Africa",
-      "avgScore": 5.1874,
+      "avgScore": 5.1886,
       "bestMonth": 1,
       "bestMonthScore": 5.8825,
-      "worstMonthScore": 4.2871
+      "worstMonthScore": 4.2949
     },
     {
       "rank": 90,
@@ -1108,7 +1108,7 @@
       "id": "puerto-rico",
       "name": "Puerto Rico",
       "region": "Caribbean",
-      "avgScore": 4.0431,
+      "avgScore": 4.0457,
       "bestMonth": 1,
       "bestMonthScore": 5.6637,
       "worstMonthScore": 3.1621
@@ -1318,10 +1318,10 @@
       "id": "los-cabos",
       "name": "Los Cabos",
       "region": "Mexico",
-      "avgScore": 4.5181,
+      "avgScore": 4.5195,
       "bestMonth": 1,
-      "bestMonthScore": 5.2492,
-      "worstMonthScore": 3.3936
+      "bestMonthScore": 5.249,
+      "worstMonthScore": 3.3956
     },
     {
       "rank": 133,
@@ -1378,20 +1378,20 @@
       "id": "north-island",
       "name": "North Island",
       "region": "New Zealand",
-      "avgScore": 3.205,
+      "avgScore": 3.2207,
       "bestMonth": 1,
-      "bestMonthScore": 5.0767,
-      "worstMonthScore": 1.6324
+      "bestMonthScore": 5.0766,
+      "worstMonthScore": 1.6919
     },
     {
       "rank": 139,
       "id": "okinawa",
       "name": "Okinawa",
       "region": "Japan",
-      "avgScore": 3.4791,
+      "avgScore": 3.4827,
       "bestMonth": 2,
       "bestMonthScore": 4.9838,
-      "worstMonthScore": 1.6886
+      "worstMonthScore": 1.6887
     },
     {
       "rank": 140,
@@ -1515,6 +1515,16 @@
     },
     {
       "rank": 152,
+      "id": "gbr",
+      "name": "Great Barrier Reef",
+      "region": "Queensland, Australia",
+      "avgScore": 3.3674,
+      "bestMonth": 6,
+      "bestMonthScore": 4.4029,
+      "worstMonthScore": 1.8166
+    },
+    {
+      "rank": 153,
       "id": "tasmania",
       "name": "Tasmania",
       "region": "Australia",
@@ -1522,16 +1532,6 @@
       "bestMonth": 1,
       "bestMonthScore": 4.3972,
       "worstMonthScore": 1.9713
-    },
-    {
-      "rank": 153,
-      "id": "gbr",
-      "name": "Great Barrier Reef",
-      "region": "Queensland, Australia",
-      "avgScore": 3.3163,
-      "bestMonth": 6,
-      "bestMonthScore": 4.3853,
-      "worstMonthScore": 1.8174
     },
     {
       "rank": 154,
@@ -1678,10 +1678,10 @@
       "id": "panama",
       "name": "Panama",
       "region": "Central America",
-      "avgScore": 2.1332,
+      "avgScore": 2.1962,
       "bestMonth": 2,
-      "bestMonthScore": 4.1953,
-      "worstMonthScore": 1.0161
+      "bestMonthScore": 4.1941,
+      "worstMonthScore": 1.0185
     },
     {
       "rank": 169,

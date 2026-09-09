@@ -878,6 +878,32 @@ describe('deriveDestinationScores — sliders whose defining condition is anothe
       .toBeLessThan(deriveDestinationScores(plain).monthly.beachesSwimming[0]);
   });
 
+  // Found while authoring surfing content: like 'snow', this formula had
+  // no sliderEvents branch at all, so a genuine winter-storm-swell event
+  // would have been silently ignored and the raw dry/wet/hazard/cold
+  // fallback (with its surfing-specific hazard sign flip) would have kept
+  // firing underneath it regardless.
+  it('uses an authored sliderEvent instead of the dry/wet/hazard/cold fallback when one exists', () => {
+    const dest = makeDestination({
+      base: { surfing: 5 },
+      swimHazard: [1], // present, but must be ignored now that an event exists
+      sliderEvents: { surfing: [{ label: 'Winter storm swell', weight: 3, months: { 1: 1 } }] },
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    // 5 + 3*1, not the fallback's flipped +2 hazard bonus (5+2=7)
+    expect(monthly.surfing[0]).toBe(8);
+  });
+
+  it('still applies the plain wet penalty in a month an authored event does not cover', () => {
+    const dest = makeDestination({
+      base: { surfing: 5 },
+      wet: [6],
+      sliderEvents: { surfing: [{ label: 'Winter storm swell', weight: 3, months: { 1: 1 } }] },
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.surfing[5]).toBe(3); // June: 5 - 2, the event contributes nothing here
+  });
+
   it('does not dock wildflower blooms for a wet month — blooms follow the rain', () => {
     const wet = makeDestination({ base: { wildflowerBlooms: 6 }, wet: [4] });
     const plain = makeDestination({ base: { wildflowerBlooms: 6 } });

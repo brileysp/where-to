@@ -318,15 +318,36 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
           break;
         }
         case 'swim': {
+          // Like 'snow', this had no sliderEvents branch at all despite
+          // being shared by six sliders — found while authoring surfing,
+          // whose real driver (winter storm swell) needed its own timing
+          // independent of the shared dry/wet/hazard/cold fallback.
+          const events = d.sliderEvents?.[s.key];
           // See SWIM_SIGN_FLIPS — two of the six sliders on this formula
-          // want the very condition the other four are penalised for.
+          // want the very condition the other four are penalised for. Only
+          // the FALLBACK below reads it: an authored event's weight is
+          // already correctly signed by whoever wrote it (a winter-swell
+          // event is a positive weight in winter, full stop), so there is
+          // nothing for a flip to invert once an event exists.
           const flip = SWIM_SIGN_FLIPS[s.key];
-          const dry = has(d.dry, m) ? 1 : 0;
-          const wet = has(d.wet, m) ? -2 : 0;
-          const hazard = has(d.swimHazard, m) ? (flip?.hazard ?? -5) : 0;
-          const cold = has(d.cold, m) ? (flip?.cold ?? -5) : 0;
-          terms = [['dry', dry], ['wet', wet], ['swimHazard', hazard], ['cold', cold]];
-          v = base + dry + wet + hazard + cold;
+          if (events && events.length > 0) {
+            const bonus = sliderEventsBonus(events, m);
+            terms = events.map((e): [string, number] => [e.label, e.weight * (e.months[m] ?? 0)]);
+            // A month with no active event still deserves the plain
+            // fallback read — the same "don't let an authored event for
+            // SOME months silently exempt every other month" rule as
+            // hiking/culture/food/wildlife.
+            const wetFallback = bonus <= 0 && has(d.wet, m) ? -2 : 0;
+            if (wetFallback) terms.push(['wet (no active event)', wetFallback]);
+            v = Math.round(base + bonus + wetFallback);
+          } else {
+            const dry = has(d.dry, m) ? 1 : 0;
+            const wet = has(d.wet, m) ? -2 : 0;
+            const hazard = has(d.swimHazard, m) ? (flip?.hazard ?? -5) : 0;
+            const cold = has(d.cold, m) ? (flip?.cold ?? -5) : 0;
+            terms = [['dry', dry], ['wet', wet], ['swimHazard', hazard], ['cold', cold]];
+            v = base + dry + wet + hazard + cold;
+          }
           break;
         }
         case 'hiking': {
