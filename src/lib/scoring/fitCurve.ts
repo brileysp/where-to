@@ -51,6 +51,33 @@ export interface CurveFitResult {
 const ERROR_TOLERANCE = 0.5;
 const STEEPNESS_CANDIDATES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+/**
+ * Optional overrides used ONLY by one-off smoothing passes (see
+ * scripts/smooth-curves.ts) — every existing call site (the live
+ * write-time refit in admin/write.ts, backfill-slider-curves.ts) omits
+ * `opts` entirely and gets byte-identical behavior to before this existed.
+ *
+ * The formula's real inputs are almost entirely boolean month-flags
+ * (dry/wet/hot/cold/wildlifePeak/hikingBest/hikingWorst/...), so the 12
+ * monthly values this function is handed are frequently genuinely
+ * piecewise-constant. The default grid search (steepness up to 10, 0.5
+ * tolerance) correctly minimizes error against that — but "correctly fit a
+ * step function" and "look like a smooth, physically plausible season" are
+ * different goals, and the default has always optimized for the first one.
+ *
+ * `maxSteepness` narrows the grid search, so the algorithm can no longer
+ * bridge a real transition with a near-vertical ease — it has to either
+ * represent an intermediate month more honestly or add it as its own
+ * anchor. `errorTolerance` loosens how exactly the fit must reproduce the
+ * source values, since insisting on exact reproduction of a value that
+ * shouldn't have existed as a hard edge in the first place just pushes the
+ * algorithm to add anchors it doesn't need for a curve to look right.
+ */
+export interface FitOptions {
+  maxSteepness?: number;
+  errorTolerance?: number;
+}
+
 interface CandidateAnchor {
   month: number;
   value: number;
@@ -94,14 +121,16 @@ function computeMaxError(anchors: CandidateAnchor[], monthly: number[]): number 
 }
 
 /** Best steepness (by sum-of-squared-error grid search) for the transition
- * arriving at B, given the actual values at every intermediate month. */
-function fitBestSteepnessForArc(A: { month: number; value: number }, B: { month: number; value: number }, monthly: number[]): number {
+ * arriving at B, given the actual values at every intermediate month.
+ * `maxSteepness` narrows the candidate list — see FitOptions. */
+function fitBestSteepnessForArc(A: { month: number; value: number }, B: { month: number; value: number }, monthly: number[], maxSteepness: number): number {
   let spanAB = B.month - A.month;
   if (spanAB <= 0) spanAB += 12;
-  if (spanAB <= 1) return 2; // no intermediate month to fit against — default is fine
-  let bestK = 2;
+  if (spanAB <= 1) return Math.min(2, maxSteepness); // no intermediate month to fit against — default is fine
+  let bestK = Math.min(2, maxSteepness);
   let bestErr = Infinity;
   for (const k of STEEPNESS_CANDIDATES) {
+    if (k > maxSteepness) break; // candidates are ascending — nothing further qualifies
     let err = 0;
     for (let step = 1; step < spanAB; step++) {
       const m = ((A.month - 1 + step) % 12) + 1;
@@ -117,7 +146,7 @@ function fitBestSteepnessForArc(A: { month: number; value: number }, B: { month:
   return bestK;
 }
 
-function fitAnchorsForMonths(months: number[], monthly: number[]): CandidateAnchor[] {
+function fitAnchorsForMonths(months: number[], monthly: number[], maxSteepness: number): CandidateAnchor[] {
   const sortedMonths = [...months].sort((a, b) => a - b);
   const n = sortedMonths.length;
   const values = sortedMonths.map((m) => monthly[m - 1]);
@@ -125,14 +154,16 @@ function fitAnchorsForMonths(months: number[], monthly: number[]): CandidateAnch
     const prevIdx = (i - 1 + n) % n;
     const A = { month: sortedMonths[prevIdx], value: values[prevIdx] };
     const B = { month, value: values[i] };
-    return { month, value: values[i], steepness: fitBestSteepnessForArc(A, B, monthly) };
+    return { month, value: values[i], steepness: fitBestSteepnessForArc(A, B, monthly, maxSteepness) };
   });
 }
 
-export function fitMonthlyToCurve(monthly: number[]): CurveFitResult {
+export function fitMonthlyToCurve(monthly: number[], opts?: FitOptions): CurveFitResult {
   if (monthly.length !== 12) {
     throw new Error(`fitMonthlyToCurve: expected exactly 12 monthly values, got ${monthly.length}`);
   }
+  const maxSteepness = opts?.maxSteepness ?? 10;
+  const errorTolerance = opts?.errorTolerance ?? ERROR_TOLERANCE;
 
   if (monthly.every((v) => Math.abs(v - monthly[0]) < 1e-9)) {
     const curve = parseSliderCurve({ anchors: [{ month: 1, value: monthly[0] }] });
@@ -145,19 +176,62 @@ export function fitMonthlyToCurve(monthly: number[]): CurveFitResult {
     if (monthly[i] > monthly[maxIdx]) maxIdx = i;
     if (monthly[i] < monthly[minIdx]) minIdx = i;
   }
-  const anchorMonths = new Set<number>([maxIdx + 1, minIdx + 1]);
+  // Seed every DISTINCT month or run of months tied with the global max or
+  // min, not just the first occurrence a strict `>`/`<` scan keeps. A
+  // destination with two separate tied peak months (a spring and an autumn
+  // shoulder season both at the true annual max — a genuinely common
+  // shape) had its second occurrence anchored only as an accident of the
+  // growth loop needing to hit tolerance, never guaranteed by construction.
+  // Found via a real regression: Zion's scenicLandscapes was 9.0 in both
+  // April and October; a smoothing pass with a slightly loosened tolerance
+  // judged 8.3 "close enough" for October since only April was ever pinned
+  // as an anchor, and losing 0.7 points at exactly its tied-best month
+  // flipped which month won the default ranking.
+  //
+  // Anchoring is done per contiguous RUN, not per month: a long flat block
+  // at the tied value (a genuine, common shape — six months of identical
+  // "high season") only needs its two boundary months anchored, since
+  // curveValue trivially stays flat between two equal-valued anchors
+  // regardless of steepness. Anchoring every interior month of such a run
+  // is pure waste — an earlier version of this fix did exactly that and
+  // pushed a simple two-block seasonal curve from ~2-4 anchors to a full
+  // 12, for zero accuracy gain.
+  // Not seeded from [maxIdx+1, minIdx+1] directly — maxIdx/minIdx are found
+  // by a strict scan that keeps the FIRST occurrence, which can land on an
+  // INTERIOR month of a longer run tied at that value (e.g. a circular min
+  // run wrapping December into January, found at whichever month the scan
+  // reaches first). seedRunsAt below finds every run's actual boundaries
+  // for both target values, which is a strict superset of the single month
+  // this line would have added — including it too just risked adding a
+  // redundant interior anchor.
+  const anchorMonths = new Set<number>();
+  const EPSILON = 1e-9;
+  const seedRunsAt = (target: number) => {
+    for (let i = 0; i < 12; i++) {
+      if (Math.abs(monthly[i] - target) >= EPSILON) continue;
+      const prev = (i - 1 + 12) % 12;
+      const next = (i + 1) % 12;
+      const prevTied = Math.abs(monthly[prev] - target) < EPSILON;
+      const nextTied = Math.abs(monthly[next] - target) < EPSILON;
+      // Only a run's start or end (or an isolated single month, both at
+      // once) needs its own anchor.
+      if (!prevTied || !nextTied) anchorMonths.add(i + 1);
+    }
+  };
+  seedRunsAt(monthly[maxIdx]);
+  seedRunsAt(monthly[minIdx]);
 
   let finalAnchors: CandidateAnchor[];
 
   for (;;) {
-    const anchors = fitAnchorsForMonths([...anchorMonths], monthly);
+    const anchors = fitAnchorsForMonths([...anchorMonths], monthly, maxSteepness);
     const err = computeMaxError(anchors, monthly);
     // anchorMonths.size === 12 is a guaranteed exit: every month is then its
     // own anchor, so err is trivially 0. There is no separate "give up and
     // go dense" branch — growing all the way to one-anchor-per-month IS the
     // dense case, reached by the same mechanism as every sparser fit, not a
     // special-cased fallback with its own logic to keep in sync.
-    if (err <= ERROR_TOLERANCE || anchorMonths.size === 12) {
+    if (err <= errorTolerance || anchorMonths.size === 12) {
       finalAnchors = anchors;
       break;
     }
