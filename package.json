@@ -22,7 +22,8 @@
     "db:audit:anchors": "tsx scripts/audit-anchors.ts",
     "db:audit:signs": "tsx scripts/audit-seasonal-signs.ts",
     "db:audit:outliers": "tsx scripts/audit-content-outliers.ts",
-    "db:audit:birding-model": "tsx scripts/audit-birding-model.ts"
+    "db:audit:birding-model": "tsx scripts/audit-birding-model.ts",
+    "db:audit:curve-smoothness": "tsx scripts/audit-curve-smoothness.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.5",
