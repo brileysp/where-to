@@ -363,21 +363,44 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
           break;
         }
         case 'snow': {
-          // cold is "this month is cold," not "this place has skiable
-          // snow" — plenty of cold-flagged destinations (Rome in Jan,
-          // Sydney in Jul, Istanbul in Feb...) have zero winter-sports
-          // relevance at all. Gating on base>0 stops those from getting a
-          // phantom +3 snowsports score in their one cold month; a real
-          // ski destination always has a nonzero authored base.
-          const cold = base > 0 && has(d.cold, m) ? 3 : 0;
-          // The +3/-2 swing above assumes every ski destination's summer
-          // gets flagged hot/dry — it doesn't, since a ski town's "summer"
-          // is still mild by its own climate norms. noSnow is an explicit,
-          // hard floor for "there is no snow on the ground this month",
-          // independent of whatever weather flags did or didn't get set.
-          const warmth = has(d.dry, m) || has(d.hot, m) ? -2 : 0;
-          terms = [['cold', cold], ['dry/hot', warmth]];
-          v = base + cold + warmth;
+          // Unlike every other shared formula (hiking/culture/food/
+          // wildlife/birding), this case had NO sliderEvents branch at
+          // all until now — skiingSnowboarding is its only slider, so
+          // nothing ever forced the per-slider-differentiation mechanism
+          // to be added the way sharing one formula across many sliders
+          // did elsewhere. Found while authoring: every event written for
+          // this slider was silently ignored, and destinations already
+          // demoted off a peak of 10 by an earlier anchor-ceiling pass
+          // (Banff, Vermont, Queenstown) would have had that demotion
+          // undone the moment this formula was next re-derived, since the
+          // raw base+cold math doesn't know about the demotion at all.
+          const events = d.sliderEvents?.[s.key];
+          if (events && events.length > 0) {
+            const bonus = sliderEventsBonus(events, m);
+            terms = events.map((e): [string, number] => [e.label, e.weight * (e.months[m] ?? 0)]);
+            v = Math.round(base + bonus);
+          } else {
+            // cold is "this month is cold," not "this place has skiable
+            // snow" — plenty of cold-flagged destinations (Rome in Jan,
+            // Sydney in Jul, Istanbul in Feb...) have zero winter-sports
+            // relevance at all. Gating on base>0 stops those from getting a
+            // phantom +3 snowsports score in their one cold month; a real
+            // ski destination always has a nonzero authored base.
+            const cold = base > 0 && has(d.cold, m) ? 3 : 0;
+            // The +3/-2 swing above assumes every ski destination's summer
+            // gets flagged hot/dry — it doesn't, since a ski town's "summer"
+            // is still mild by its own climate norms. noSnow is an explicit,
+            // hard floor for "there is no snow on the ground this month",
+            // independent of whatever weather flags did or didn't get set.
+            const warmth = has(d.dry, m) || has(d.hot, m) ? -2 : 0;
+            terms = [['cold', cold], ['dry/hot', warmth]];
+            v = base + cold + warmth;
+          }
+          // noSnow is an explicit, hard floor — deliberately checked
+          // AFTER either branch above, the same way wildlifeClosed
+          // overrides both the events and fallback branches of the
+          // wildlife formula. A resort genuinely closed for the season
+          // stays closed regardless of what an authored event claims.
           if (has(d.noSnow, m)) {
             if (v !== 0) terms.push(['noSnow (hard floor)', -v]);
             v = 0;

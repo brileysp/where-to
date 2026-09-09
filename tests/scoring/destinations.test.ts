@@ -107,6 +107,34 @@ describe('deriveDestinationScores — snowsports noSnow override', () => {
     expect(monthly.skiingSnowboarding[0]).toBe(0); // January: no phantom cold bonus
   });
 
+  // Found while authoring skiingSnowboarding content: this was the only
+  // shared formula with no sliderEvents branch at all, so every event ever
+  // written for the slider was silently ignored and the raw base+cold
+  // fallback fired unconditionally — including for destinations an
+  // earlier anchor-ceiling pass had deliberately demoted off a peak of 10
+  // (Banff, Vermont, Queenstown), which would have had that demotion
+  // silently undone the next time this formula ran.
+  it('uses an authored sliderEvent instead of the flat cold/warmth fallback when one exists', () => {
+    const dest = makeDestination({
+      base: { skiingSnowboarding: 5 },
+      cold: [1], // present, but must be ignored now that an event exists
+      sliderEvents: { skiingSnowboarding: [{ label: 'Ski season', weight: 2, months: { 1: 1 } }] },
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    // 5 + 2*1, NOT 5 + 3 (the flat cold bonus the fallback would give)
+    expect(monthly.skiingSnowboarding[0]).toBe(7);
+  });
+
+  it('still forces noSnow to 0 even when an authored event would otherwise score the month highly', () => {
+    const dest = makeDestination({
+      base: { skiingSnowboarding: 5 },
+      noSnow: [7],
+      sliderEvents: { skiingSnowboarding: [{ label: 'Ski season', weight: 5, months: { 7: 1 } }] },
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.skiingSnowboarding[6]).toBe(0); // July, noSnow wins regardless of the event
+  });
+
   it('surfaces a "No snow on the ground" badge in noSnow months', () => {
     const dest = makeDestination({
       base: { skiingSnowboarding: 10 },

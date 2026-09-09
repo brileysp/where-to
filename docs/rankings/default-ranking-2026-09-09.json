@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T02:50:48.393Z",
+  "generatedAt": "2026-09-09T03:23:22.699Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -241,7 +241,7 @@
       "avgScore": 4.1606,
       "bestMonth": 6,
       "bestMonthScore": 7.217,
-      "worstMonthScore": 2.6586
+      "worstMonthScore": 2.6588
     },
     {
       "rank": 25,
@@ -268,10 +268,10 @@
       "id": "yellowstone",
       "name": "Yellowstone National Park",
       "region": "Wyoming, USA",
-      "avgScore": 5.1643,
+      "avgScore": 5.1644,
       "bestMonth": 9,
-      "bestMonthScore": 7.0969,
-      "worstMonthScore": 3.5064
+      "bestMonthScore": 7.0971,
+      "worstMonthScore": 3.5065
     },
     {
       "rank": 28,
@@ -331,7 +331,7 @@
       "avgScore": 5.1246,
       "bestMonth": 7,
       "bestMonthScore": 6.9238,
-      "worstMonthScore": 2.6552
+      "worstMonthScore": 2.6555
     },
     {
       "rank": 34,
@@ -378,10 +378,10 @@
       "id": "swissalps",
       "name": "Zermatt & the Swiss Alps",
       "region": "Switzerland",
-      "avgScore": 5.3598,
+      "avgScore": 5.3773,
       "bestMonth": 7,
       "bestMonthScore": 6.7707,
-      "worstMonthScore": 3.8034
+      "worstMonthScore": 3.9084
     },
     {
       "rank": 39,
@@ -708,10 +708,10 @@
       "id": "dolomites",
       "name": "Dolomites",
       "region": "Italy",
-      "avgScore": 4.6699,
+      "avgScore": 4.6874,
       "bestMonth": 7,
       "bestMonthScore": 6.0954,
-      "worstMonthScore": 2.9176
+      "worstMonthScore": 3.0226
     },
     {
       "rank": 72,
@@ -758,10 +758,10 @@
       "id": "chamonix",
       "name": "Chamonix & the French Alps",
       "region": "France",
-      "avgScore": 4.517,
+      "avgScore": 4.5345,
       "bestMonth": 7,
       "bestMonthScore": 5.9828,
-      "worstMonthScore": 2.729
+      "worstMonthScore": 2.834
     },
     {
       "rank": 77,
@@ -908,10 +908,10 @@
       "id": "queenstown",
       "name": "Queenstown",
       "region": "New Zealand",
-      "avgScore": 4.0976,
+      "avgScore": 4.5155,
       "bestMonth": 1,
       "bestMonthScore": 5.8346,
-      "worstMonthScore": 3.054
+      "worstMonthScore": 3.7631
     },
     {
       "rank": 92,
@@ -1098,10 +1098,10 @@
       "id": "chilean-lake-district",
       "name": "Chilean Lake District",
       "region": "Chile",
-      "avgScore": 3.2018,
+      "avgScore": 3.2367,
       "bestMonth": 1,
       "bestMonthScore": 5.6642,
-      "worstMonthScore": 1.7174
+      "worstMonthScore": 1.9237
     },
     {
       "rank": 111,
@@ -1128,10 +1128,10 @@
       "id": "lofoten",
       "name": "Lofoten Islands",
       "region": "Norway",
-      "avgScore": 3.8915,
+      "avgScore": 3.8916,
       "bestMonth": 7,
-      "bestMonthScore": 5.6353,
-      "worstMonthScore": 3.1385
+      "bestMonthScore": 5.6356,
+      "worstMonthScore": 3.1384
     },
     {
       "rank": 114,
@@ -1748,7 +1748,7 @@
       "id": "mendoza",
       "name": "Mendoza",
       "region": "Argentina",
-      "avgScore": 3.6797,
+      "avgScore": 3.6798,
       "bestMonth": 3,
       "bestMonthScore": 4.0524,
       "worstMonthScore": 3.3403
