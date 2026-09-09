@@ -180,7 +180,10 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     ],
   },
   sailing: { definition: 'A world cruising ground.', ten: ['croatia'] },
-  kayakingRafting: { definition: 'A world-reference river or paddling coast.', ten: [] },
+  kayakingRafting: {
+    definition: 'A world-reference river or paddling coast.',
+    ten: ['zambia', 'zimbabwe', 'grandcanyon', 'marlborough-abel-tasman'],
+  },
   adventureSports: {
     definition:
       'An adventure capital — several world-class adrenaline activities in one ' +
