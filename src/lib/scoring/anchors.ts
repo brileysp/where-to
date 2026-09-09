@@ -200,7 +200,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   fishing: {
     definition: 'A named world fishery — the fish is the reason for the trip.',
     ten: [
-      'costa-rica', 'argentine-lake-district', 'denali-interior', 'belize',
+      'costa-rica', 'argentine-lake-district', 'belize',
       'southeast-alaska', 'yellowstone', 'los-cabos', 'bahamas', 'pantanal',
     ],
   },

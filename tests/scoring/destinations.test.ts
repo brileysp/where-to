@@ -930,6 +930,25 @@ describe('deriveDestinationScores — sliders whose defining condition is anothe
     expect(monthly.hiking[6]).toBe(9); // July: hiking still gets its normal +3, unaffected by fishing's exception
   });
 
+  // Found auditing fishing across the whole catalog: destinations with NO
+  // authored fishing event at all (the vast majority) were still inheriting
+  // the plain hikingBest/hikingWorst read, since only the events-exist
+  // branch had the fishing exception. That silently gave every scenic
+  // destination with decent hiking weather a fake "fishing season" bump —
+  // e.g. Paris and Antarctica showed a nonzero fishing peak despite having
+  // no fishing content authored whatsoever.
+  it('reads fishing as flat base with no hikingBest/hikingWorst bump when no event is authored at all', () => {
+    const dest = makeDestination({
+      base: { fishing: 3, hiking: 3 },
+      hikingBest: [7],
+      hikingWorst: [1],
+    });
+    const { monthly } = deriveDestinationScores(dest);
+    expect(monthly.fishing[6]).toBe(3); // July: flat base, no phantom +3
+    expect(monthly.fishing[0]).toBe(3); // January: flat base, no phantom hikingWorst penalty either
+    expect(monthly.hiking[6]).toBe(6); // sibling slider unaffected: hiking still gets its normal +3
+  });
+
   it('does not dock wildflower blooms for a wet month — blooms follow the rain', () => {
     const wet = makeDestination({ base: { wildflowerBlooms: 6 }, wet: [4] });
     const plain = makeDestination({ base: { wildflowerBlooms: 6 } });

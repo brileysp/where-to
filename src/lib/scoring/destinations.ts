@@ -389,6 +389,16 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             const fallback = s.key !== 'fishing' && bonus <= 0 ? (has(hikeBestList, m) ? 3 : 0) + worstFallback() : 0;
             if (fallback) terms.push(['no active event', fallback]);
             v = Math.round(base + bonus + fallback);
+          } else if (s.key === 'fishing') {
+            // Unlike every other slider sharing this formula, fishing has no
+            // authored event here at all — hikingBest/hikingWorst are TRAIL
+            // weather conditions and say nothing about fish behavior, so an
+            // unauthored destination should read as a flat, unremarkable
+            // base rather than inheriting a generic scenery bonus/penalty it
+            // never earned (this was silently giving every destination with
+            // decent hiking weather a fake "fishing season" bump).
+            terms = [];
+            v = base;
           } else {
             const best = has(hikeBestList, m) ? 3 : 0;
             const worst = worstFallback();
