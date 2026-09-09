@@ -206,7 +206,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   },
   horsebackRiding: {
     definition: 'A riding culture you travel into — multi-day riding across open country.',
-    ten: ['iceland', 'mongolia', 'kyrgyzstan', 'argentine-lake-district', 'provence', 'torres-del-paine'],
+    ten: ['iceland', 'mongolia', 'kyrgyzstan', 'argentine-lake-district', 'provence', 'andalucia'],
   },
   trailRunning: {
     definition: 'A trail-running destination with the races and the terrain to prove it.',

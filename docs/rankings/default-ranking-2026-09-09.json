@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T15:02:50.985Z",
+  "generatedAt": "2026-09-09T15:37:14.786Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -405,16 +405,6 @@
     },
     {
       "rank": 41,
-      "id": "torres-del-paine",
-      "name": "Torres del Paine",
-      "region": "Chile",
-      "avgScore": 5.6126,
-      "bestMonth": 1,
-      "bestMonthScore": 6.7035,
-      "worstMonthScore": 2.8389
-    },
-    {
-      "rank": 42,
       "id": "berlin",
       "name": "Berlin",
       "region": "Germany",
@@ -422,6 +412,16 @@
       "bestMonth": 5,
       "bestMonthScore": 6.7017,
       "worstMonthScore": 5.4089
+    },
+    {
+      "rank": 42,
+      "id": "torres-del-paine",
+      "name": "Torres del Paine",
+      "region": "Chile",
+      "avgScore": 5.6105,
+      "bestMonth": 1,
+      "bestMonthScore": 6.7003,
+      "worstMonthScore": 2.8389
     },
     {
       "rank": 43,
@@ -438,9 +438,9 @@
       "id": "andalucia",
       "name": "Andalucía",
       "region": "Spain",
-      "avgScore": 5.4065,
+      "avgScore": 5.4085,
       "bestMonth": 4,
-      "bestMonthScore": 6.669,
+      "bestMonthScore": 6.6692,
       "worstMonthScore": 3.9385
     },
     {
@@ -868,7 +868,7 @@
       "id": "provence",
       "name": "Provence",
       "region": "France",
-      "avgScore": 4.6586,
+      "avgScore": 4.6589,
       "bestMonth": 7,
       "bestMonthScore": 5.8875,
       "worstMonthScore": 3.4238
@@ -1008,7 +1008,7 @@
       "id": "argentine-lake-district",
       "name": "Argentine Lake District",
       "region": "Argentina",
-      "avgScore": 4.1528,
+      "avgScore": 4.1529,
       "bestMonth": 1,
       "bestMonthScore": 5.7607,
       "worstMonthScore": 3.2117
@@ -1258,10 +1258,10 @@
       "id": "kyrgyzstan",
       "name": "Kyrgyzstan",
       "region": "Central Asia",
-      "avgScore": 2.8973,
+      "avgScore": 2.8909,
       "bestMonth": 7,
       "bestMonthScore": 5.3732,
-      "worstMonthScore": 1.129
+      "worstMonthScore": 1.125
     },
     {
       "rank": 127,
@@ -1888,10 +1888,10 @@
       "id": "mongolia",
       "name": "Mongolia",
       "region": "Central Asia",
-      "avgScore": 2.6404,
+      "avgScore": 2.629,
       "bestMonth": 6,
       "bestMonthScore": 3.6669,
-      "worstMonthScore": 2.2138
+      "worstMonthScore": 2.208
     },
     {
       "rank": 190,
