@@ -168,7 +168,10 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     definition: 'A world-reference ski destination on terrain, snow and scale.',
     ten: ['chamonix', 'swissalps', 'hokkaido', 'dolomites', 'whistler', 'aspen'],
   },
-  surfing: { definition: 'A world-reference wave.', ten: [] },
+  surfing: {
+    definition: 'A world-reference wave.',
+    ten: ['bali', 'maui', 'lisbon'],
+  },
   diving: {
     definition: 'Among the best reefs or marine encounters on the planet.',
     ten: [

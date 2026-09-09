@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T03:53:54.804Z",
+  "generatedAt": "2026-09-09T04:04:18.747Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -358,10 +358,10 @@
       "id": "rio",
       "name": "Rio de Janeiro",
       "region": "Brazil",
-      "avgScore": 5.1331,
+      "avgScore": 5.1167,
       "bestMonth": 7,
-      "bestMonthScore": 6.8434,
-      "worstMonthScore": 3.8792
+      "bestMonthScore": 6.8295,
+      "worstMonthScore": 3.8791
     },
     {
       "rank": 37,
@@ -448,10 +448,10 @@
       "id": "maui",
       "name": "Maui",
       "region": "Hawaii, USA",
-      "avgScore": 5.5765,
+      "avgScore": 5.601,
       "bestMonth": 6,
       "bestMonthScore": 6.6508,
-      "worstMonthScore": 3.3715
+      "worstMonthScore": 3.4303
     },
     {
       "rank": 46,
@@ -498,10 +498,10 @@
       "id": "lisbon",
       "name": "Lisbon",
       "region": "Portugal",
-      "avgScore": 5.3719,
+      "avgScore": 5.4038,
       "bestMonth": 7,
       "bestMonthScore": 6.6131,
-      "worstMonthScore": 4.5654
+      "worstMonthScore": 4.6477
     },
     {
       "rank": 51,
@@ -575,6 +575,16 @@
     },
     {
       "rank": 58,
+      "id": "fiji",
+      "name": "Fiji",
+      "region": "South Pacific",
+      "avgScore": 4.6508,
+      "bestMonth": 6,
+      "bestMonthScore": 6.4139,
+      "worstMonthScore": 1.5077
+    },
+    {
+      "rank": 59,
       "id": "nepal",
       "name": "Nepal",
       "region": "South Asia",
@@ -584,24 +594,14 @@
       "worstMonthScore": 2.5774
     },
     {
-      "rank": 59,
-      "id": "fiji",
-      "name": "Fiji",
-      "region": "South Pacific",
-      "avgScore": 4.6137,
-      "bestMonth": 6,
-      "bestMonthScore": 6.3683,
-      "worstMonthScore": 1.5077
-    },
-    {
       "rank": 60,
       "id": "sydney",
       "name": "Sydney",
       "region": "Australia",
-      "avgScore": 5.3732,
+      "avgScore": 5.3272,
       "bestMonth": 1,
-      "bestMonthScore": 6.3525,
-      "worstMonthScore": 4.8751
+      "bestMonthScore": 6.35,
+      "worstMonthScore": 4.7769
     },
     {
       "rank": 61,
@@ -1028,9 +1028,9 @@
       "id": "bali",
       "name": "Bali",
       "region": "Indonesia",
-      "avgScore": 4.8294,
+      "avgScore": 4.8386,
       "bestMonth": 6,
-      "bestMonthScore": 5.7438,
+      "bestMonthScore": 5.7537,
       "worstMonthScore": 3.5747
     },
     {
@@ -1515,16 +1515,6 @@
     },
     {
       "rank": 152,
-      "id": "gbr",
-      "name": "Great Barrier Reef",
-      "region": "Queensland, Australia",
-      "avgScore": 3.3674,
-      "bestMonth": 6,
-      "bestMonthScore": 4.4029,
-      "worstMonthScore": 1.8166
-    },
-    {
-      "rank": 153,
       "id": "tasmania",
       "name": "Tasmania",
       "region": "Australia",
@@ -1532,6 +1522,16 @@
       "bestMonth": 1,
       "bestMonthScore": 4.3972,
       "worstMonthScore": 2.018
+    },
+    {
+      "rank": 153,
+      "id": "gbr",
+      "name": "Great Barrier Reef",
+      "region": "Queensland, Australia",
+      "avgScore": 3.3052,
+      "bestMonth": 6,
+      "bestMonthScore": 4.385,
+      "worstMonthScore": 1.8166
     },
     {
       "rank": 154,
