@@ -24,7 +24,8 @@
     "db:audit:outliers": "tsx scripts/audit-content-outliers.ts",
     "db:audit:birding-model": "tsx scripts/audit-birding-model.ts",
     "db:audit:curve-smoothness": "tsx scripts/audit-curve-smoothness.ts",
-    "db:smooth:hiking-family": "tsx scripts/smooth-hiking-family-curves.ts"
+    "db:smooth:hiking-family": "tsx scripts/smooth-hiking-family-curves.ts",
+    "db:smooth:curves": "tsx scripts/smooth-curves.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.5",
