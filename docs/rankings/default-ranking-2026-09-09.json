@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T01:49:06.105Z",
+  "generatedAt": "2026-09-09T02:27:11.592Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -715,26 +715,16 @@
     },
     {
       "rank": 72,
-      "id": "srilanka",
-      "name": "Sri Lanka",
-      "region": "South Asia",
-      "avgScore": 4.3845,
-      "bestMonth": 1,
-      "bestMonthScore": 6.0923,
-      "worstMonthScore": 3.1443
-    },
-    {
-      "rank": 73,
       "id": "costa-rica",
       "name": "Costa Rica",
       "region": "Central America",
-      "avgScore": 4.8471,
+      "avgScore": 5.13,
       "bestMonth": 1,
       "bestMonthScore": 6.0802,
-      "worstMonthScore": 2.7943
+      "worstMonthScore": 3.6262
     },
     {
-      "rank": 74,
+      "rank": 73,
       "id": "luangprabang",
       "name": "Luang Prabang",
       "region": "Laos",
@@ -744,7 +734,7 @@
       "worstMonthScore": 2.7926
     },
     {
-      "rank": 75,
+      "rank": 74,
       "id": "havana",
       "name": "Havana",
       "region": "Cuba",
@@ -754,7 +744,7 @@
       "worstMonthScore": 3.0683
     },
     {
-      "rank": 76,
+      "rank": 75,
       "id": "basque-country",
       "name": "Basque Country",
       "region": "Spain",
@@ -764,7 +754,7 @@
       "worstMonthScore": 5.1607
     },
     {
-      "rank": 77,
+      "rank": 76,
       "id": "chamonix",
       "name": "Chamonix & the French Alps",
       "region": "France",
@@ -774,7 +764,7 @@
       "worstMonthScore": 2.729
     },
     {
-      "rank": 78,
+      "rank": 77,
       "id": "glacier-waterton",
       "name": "Glacier & Waterton Lakes",
       "region": "Montana, USA & Alberta, Canada",
@@ -784,17 +774,17 @@
       "worstMonthScore": 1.9697
     },
     {
-      "rank": 79,
+      "rank": 78,
       "id": "tanzania",
       "name": "Serengeti & Zanzibar",
       "region": "Tanzania",
-      "avgScore": 5.2838,
+      "avgScore": 5.2905,
       "bestMonth": 6,
       "bestMonthScore": 5.9626,
-      "worstMonthScore": 3.8113
+      "worstMonthScore": 3.8114
     },
     {
-      "rank": 80,
+      "rank": 79,
       "id": "lofoten",
       "name": "Lofoten Islands",
       "region": "Norway",
@@ -804,7 +794,7 @@
       "worstMonthScore": 3.0693
     },
     {
-      "rank": 81,
+      "rank": 80,
       "id": "copenhagen",
       "name": "Copenhagen",
       "region": "Denmark",
@@ -814,7 +804,7 @@
       "worstMonthScore": 4.3418
     },
     {
-      "rank": 82,
+      "rank": 81,
       "id": "arches-canyonlands",
       "name": "Arches & Canyonlands",
       "region": "Utah, USA",
@@ -822,6 +812,16 @@
       "bestMonth": 4,
       "bestMonthScore": 5.9531,
       "worstMonthScore": 1.8785
+    },
+    {
+      "rank": 82,
+      "id": "srilanka",
+      "name": "Sri Lanka",
+      "region": "South Asia",
+      "avgScore": 4.3887,
+      "bestMonth": 1,
+      "bestMonthScore": 5.9453,
+      "worstMonthScore": 3.1474
     },
     {
       "rank": 83,
@@ -908,10 +908,10 @@
       "id": "kenya",
       "name": "Maasai Mara & Amboseli",
       "region": "Kenya",
-      "avgScore": 5.1779,
+      "avgScore": 5.1797,
       "bestMonth": 10,
       "bestMonthScore": 5.87,
-      "worstMonthScore": 3.6328
+      "worstMonthScore": 3.6329
     },
     {
       "rank": 92,
@@ -1075,6 +1075,16 @@
     },
     {
       "rank": 108,
+      "id": "namibia",
+      "name": "Namibia",
+      "region": "Southern Africa",
+      "avgScore": 3.7419,
+      "bestMonth": 7,
+      "bestMonthScore": 5.6793,
+      "worstMonthScore": 1.3948
+    },
+    {
+      "rank": 109,
       "id": "palawan",
       "name": "Palawan",
       "region": "Philippines",
@@ -1082,16 +1092,6 @@
       "bestMonth": 1,
       "bestMonthScore": 5.6772,
       "worstMonthScore": 1.1828
-    },
-    {
-      "rank": 109,
-      "id": "namibia",
-      "name": "Namibia",
-      "region": "Southern Africa",
-      "avgScore": 3.7427,
-      "bestMonth": 7,
-      "bestMonthScore": 5.6751,
-      "worstMonthScore": 1.3948
     },
     {
       "rank": 110,
@@ -1265,6 +1265,16 @@
     },
     {
       "rank": 127,
+      "id": "madeira",
+      "name": "Madeira",
+      "region": "Portugal",
+      "avgScore": 5.0982,
+      "bestMonth": 5,
+      "bestMonthScore": 5.3226,
+      "worstMonthScore": 4.9876
+    },
+    {
+      "rank": 128,
       "id": "charleston-savannah",
       "name": "Charleston & Savannah",
       "region": "South Carolina & Georgia, USA",
@@ -1274,7 +1284,7 @@
       "worstMonthScore": 4.4814
     },
     {
-      "rank": 128,
+      "rank": 129,
       "id": "snowdonia",
       "name": "Snowdonia",
       "region": "Wales",
@@ -1284,7 +1294,7 @@
       "worstMonthScore": 0.8176
     },
     {
-      "rank": 129,
+      "rank": 130,
       "id": "los-cabos",
       "name": "Los Cabos",
       "region": "Mexico",
@@ -1294,7 +1304,7 @@
       "worstMonthScore": 3.3936
     },
     {
-      "rank": 130,
+      "rank": 131,
       "id": "greenland",
       "name": "Greenland",
       "region": "Denmark",
@@ -1304,7 +1314,7 @@
       "worstMonthScore": 1.067
     },
     {
-      "rank": 131,
+      "rank": 132,
       "id": "svalbard",
       "name": "Svalbard",
       "region": "Norway",
@@ -1314,7 +1324,7 @@
       "worstMonthScore": 1.6481
     },
     {
-      "rank": 132,
+      "rank": 133,
       "id": "faroe-islands",
       "name": "Faroe Islands",
       "region": "Denmark",
@@ -1324,7 +1334,7 @@
       "worstMonthScore": 0.8334
     },
     {
-      "rank": 133,
+      "rank": 134,
       "id": "puglia",
       "name": "Puglia",
       "region": "Italy",
@@ -1334,21 +1344,11 @@
       "worstMonthScore": 2.6064
     },
     {
-      "rank": 134,
-      "id": "madeira",
-      "name": "Madeira",
-      "region": "Portugal",
-      "avgScore": 5.0377,
-      "bestMonth": 12,
-      "bestMonthScore": 5.1845,
-      "worstMonthScore": 4.9876
-    },
-    {
       "rank": 135,
       "id": "botswana",
       "name": "Okavango Delta",
       "region": "Botswana",
-      "avgScore": 4.3383,
+      "avgScore": 4.3261,
       "bestMonth": 10,
       "bestMonthScore": 5.161,
       "worstMonthScore": 3.5122
@@ -1438,9 +1438,9 @@
       "id": "kruger",
       "name": "Kruger National Park",
       "region": "South Africa",
-      "avgScore": 3.5394,
-      "bestMonth": 6,
-      "bestMonthScore": 4.831,
+      "avgScore": 3.3904,
+      "bestMonth": 7,
+      "bestMonthScore": 4.6829,
       "worstMonthScore": 2.1526
     },
     {
@@ -1478,10 +1478,10 @@
       "id": "zimbabwe",
       "name": "Victoria Falls & Hwange",
       "region": "Zimbabwe",
-      "avgScore": 3.2838,
+      "avgScore": 3.2842,
       "bestMonth": 7,
-      "bestMonthScore": 4.5339,
-      "worstMonthScore": 1.8663
+      "bestMonthScore": 4.5392,
+      "worstMonthScore": 1.8662
     },
     {
       "rank": 149,
@@ -1608,10 +1608,10 @@
       "id": "madagascar",
       "name": "Madagascar",
       "region": "East Africa",
-      "avgScore": 3.1953,
+      "avgScore": 3.1963,
       "bestMonth": 9,
-      "bestMonthScore": 4.3174,
-      "worstMonthScore": 1.7384
+      "bestMonthScore": 4.318,
+      "worstMonthScore": 1.7379
     },
     {
       "rank": 162,
@@ -1648,10 +1648,10 @@
       "id": "zambia",
       "name": "South Luangwa",
       "region": "Zambia",
-      "avgScore": 2.8687,
+      "avgScore": 2.8638,
       "bestMonth": 7,
       "bestMonthScore": 4.2628,
-      "worstMonthScore": 1.5921
+      "worstMonthScore": 1.592
     },
     {
       "rank": 166,
@@ -1938,10 +1938,10 @@
       "id": "kaziranga",
       "name": "Kaziranga National Park",
       "region": "Assam, India",
-      "avgScore": 1.6742,
+      "avgScore": 1.6768,
       "bestMonth": 1,
-      "bestMonthScore": 3.0482,
-      "worstMonthScore": 0.5846
+      "bestMonthScore": 3.0549,
+      "worstMonthScore": 0.584
     },
     {
       "rank": 195,
