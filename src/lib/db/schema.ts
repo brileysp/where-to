@@ -130,6 +130,18 @@ export const places = pgTable(
     >(),
     monthlyWeather: text('monthly_weather').array(),
 
+    // Per-interest analogues of overview/monthlyWeather above — "why does
+    // this month score the way it does, for THIS interest" rather than
+    // for the destination overall. Both keyed by slider id; sliderOverview
+    // holds one non-seasonal summary per slider, sliderMonthlyWeather
+    // holds up to 12 entries per slider (null = no authored text yet for
+    // that month, matching monthlyWeather's own null-slot convention).
+    sliderOverview: jsonb('slider_overview').notNull().default({}).$type<Record<string, string>>(),
+    sliderMonthlyWeather: jsonb('slider_monthly_weather')
+      .notNull()
+      .default({})
+      .$type<Record<string, (string | null)[]>>(),
+
     searchAliases: text('search_aliases').array().notNull().default([]),
     naSliders: text('na_sliders').array().notNull().default([]),
     budgetBands: text('budget_bands').array().notNull().default([]),
