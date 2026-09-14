@@ -77,15 +77,23 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // nova-scotia removed — it carried no real authored whale event at all;
     // its old 10 was a stale artifact, not a researched claim (Bay of Fundy
     // humpback watching is real but a genuine event still needs authoring).
-    // sri-lanka (blue whales off Mirissa), churchill (beluga whales, Jul-Aug),
-    // and cape-town (southern right whales at Hermanus) all reach 10 on real
-    // authored events, found fixing the wildlifePeak fallback bug. antarctica
-    // added when its own whaleWatching event was authored (was flat 8, no
-    // within-season gradient) — Feb-Mar humpback/minke/orca sightings there
-    // are genuinely world-class, same tier as the rest of this list.
+    // churchill (beluga whales, Jul-Aug) and cape-town (southern right whales
+    // at Hermanus) reach 10 on real authored events, found fixing the
+    // wildlifePeak fallback bug. antarctica added when its own whaleWatching
+    // event was authored (was flat 8, no within-season gradient) — Feb-Mar
+    // humpback/minke/orca sightings there are genuinely world-class, same
+    // tier as the rest of this list. srilanka and iceland REMOVED after
+    // researching a "would a serious whale-watching enthusiast agree these
+    // are equally world-class" question — srilanka has a well-documented,
+    // ongoing boat-overcrowding/weak-enforcement problem off Mirissa (10-25
+    // boats observed chasing a single blue whale; Kaikoura/Azores cap
+    // simultaneous boats at 3), and iceland's sightings skew heavily toward
+    // minke whales (a NAMMCO study confirms this), which serious enthusiasts
+    // regard as a lesser encounter than blue/humpback. Both still real,
+    // dialed down rather than removed from the catalog.
     ten: [
       'monterey-big-sur', 'vancouver-island', 'southeast-alaska', 'los-cabos',
-      'iceland', 'maui', 'azores', 'srilanka', 'churchill', 'cape-town', 'antarctica',
+      'maui', 'azores', 'churchill', 'cape-town', 'antarctica',
       'sydney',
     ],
   },
