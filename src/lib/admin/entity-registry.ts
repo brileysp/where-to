@@ -139,6 +139,18 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       noSnowMonths: zodField(monthArray),
       shopClosures: zodField(z.boolean()),
       specialSeasons: zodField(z.array(z.object({ months: z.array(month), text: z.string().min(1) }))),
+      // Deliberately not read by any scoring code — see the doc comment on
+      // schema.ts's travelAdvisories column.
+      travelAdvisories: zodField(
+        z.array(
+          z.object({
+            category: z.enum(['security', 'environmental', 'access', 'health', 'other']),
+            severity: z.enum(['moderate', 'serious']),
+            text: z.string().trim().min(1),
+            lastReviewed: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD'),
+          }),
+        ),
+      ),
       // Not locked to a pg enum yet (see the doc comment on schema.ts's
       // `placeType` column) — the 10-value taxonomy from the place
       // migration's Phase 0 is still unconfirmed, so this stays free text

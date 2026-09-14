@@ -32,6 +32,7 @@ export interface PlaceRow {
   audienceBands: string[];
   searchAliases: string[];
   specialSeasons: Array<{ months: number[]; text: string }>;
+  travelAdvisories: Array<{ category: string; severity: string; text: string; lastReviewed: string }>;
   updatedAt: string; // ISO
 }
 
@@ -85,6 +86,15 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
           <Link href={`/admin/destinations/${r.id}/profile`} style={{ fontWeight: 600, color: 'var(--text)', textDecoration: 'none' }} title="Open full month × interest profile">
             {r.name}
           </Link>
+          {r.travelAdvisories.length > 0 && (
+            <Link
+              href="/admin/destinations/advisories"
+              className="adv-flag"
+              title={`${r.travelAdvisories.length} active advisor${r.travelAdvisories.length === 1 ? 'y' : 'ies'} — click to view`}
+            >
+              !
+            </Link>
+          )}
         </div>
       ),
     },

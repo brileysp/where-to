@@ -1,0 +1,1 @@
+ALTER TABLE "places" ADD COLUMN "travel_advisories" jsonb DEFAULT '[]'::jsonb NOT NULL;

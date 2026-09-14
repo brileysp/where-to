@@ -509,3 +509,187 @@ export function MonthMultiSelectCell({ ctx, value, setLocal }: { ctx: FieldConte
     </div>
   );
 }
+
+export interface TravelAdvisory {
+  category: 'security' | 'environmental' | 'access' | 'health' | 'other';
+  severity: 'moderate' | 'serious';
+  text: string;
+  lastReviewed: string; // ISO date, "YYYY-MM-DD"
+}
+
+const ADVISORY_CATEGORY_LABEL: Record<TravelAdvisory['category'], string> = {
+  security: 'Security',
+  environmental: 'Environmental',
+  access: 'Access',
+  health: 'Health',
+  other: 'Other',
+};
+
+function todayISO(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function isStaleAdvisory(lastReviewed: string): boolean {
+  const months = (Date.now() - new Date(`${lastReviewed}T00:00:00`).getTime()) / (1000 * 60 * 60 * 24 * 30);
+  return months > 6;
+}
+
+/**
+ * Structured editor for a destination's travelAdvisories array — deliberately
+ * real form fields (category select, severity toggle, free text, a
+ * last-reviewed date) rather than JsonPanelCell's raw textarea, since this
+ * field is safety-relevant enough to want validated input, not hand-typed
+ * JSON. Commits the whole array in one edit, same shape as JsonPanelCell.
+ */
+export function AdvisoryPanelCell({
+  ctx,
+  value,
+  setLocal,
+}: {
+  ctx: FieldContext;
+  value: TravelAdvisory[];
+  setLocal: (v: TravelAdvisory[]) => void;
+}) {
+  const commit = useFieldEdit();
+  const [open, setOpen] = useState(false);
+  const [draft, setDraft] = useState<TravelAdvisory[]>(value);
+
+  function openPanel() {
+    setDraft(value.map((a) => ({ ...a })));
+    setOpen(true);
+  }
+
+  function updateEntry(idx: number, patch: Partial<TravelAdvisory>) {
+    setDraft((d) => d.map((a, i) => (i === idx ? { ...a, ...patch } : a)));
+  }
+
+  function removeEntry(idx: number) {
+    setDraft((d) => d.filter((_, i) => i !== idx));
+  }
+
+  function addEntry() {
+    setDraft((d) => [...d, { category: 'security', severity: 'moderate', text: '', lastReviewed: todayISO() }]);
+  }
+
+  return (
+    <>
+      <div className={`cell-inner wrap advisory-cell${value.length ? '' : ' empty-hint'}`} onClick={openPanel}>
+        {value.length === 0
+          ? 'Click to add…'
+          : value.map((a, i) => (
+              <span className={`adv-chip adv-chip-${a.category}`} key={i}>
+                {isStaleAdvisory(a.lastReviewed) && <span className="stale-dot" title="Last reviewed over 6 months ago" />}
+                {ADVISORY_CATEGORY_LABEL[a.category]} · {a.severity}
+              </span>
+            ))}
+      </div>
+      {open && (
+        <div className="scrim" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
+          <div className="panel">
+            <div className="panel-head">
+              <div>
+                <h2>⚠️ Advisories</h2>
+                <p>{ctx.entityLabel}</p>
+              </div>
+              <button className="panel-close" onClick={() => setOpen(false)}>
+                ✕
+              </button>
+            </div>
+            <div className="panel-body">
+              {draft.length === 0 && <div className="panel-note">No advisories on file for this destination.</div>}
+              {draft.map((a, idx) => (
+                <div className="adv-entry" key={idx}>
+                  <button className="btn-ghost-bad remove-entry" title="Remove this advisory" onClick={() => removeEntry(idx)}>
+                    ✕
+                  </button>
+                  <div className="adv-entry-top">
+                    <div style={{ flex: 1 }}>
+                      <label className="mini-label">Category</label>
+                      <select
+                        className="field-select"
+                        value={a.category}
+                        onChange={(e) => updateEntry(idx, { category: e.target.value as TravelAdvisory['category'] })}
+                      >
+                        {Object.entries(ADVISORY_CATEGORY_LABEL).map(([k, label]) => (
+                          <option key={k} value={k}>
+                            {label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <label className="mini-label">Severity</label>
+                      <div className="sev-toggle">
+                        <button
+                          type="button"
+                          className={`sev-btn sev-moderate${a.severity === 'moderate' ? ' on' : ''}`}
+                          onClick={() => updateEntry(idx, { severity: 'moderate' })}
+                        >
+                          Moderate
+                        </button>
+                        <button
+                          type="button"
+                          className={`sev-btn sev-serious${a.severity === 'serious' ? ' on' : ''}`}
+                          onClick={() => updateEntry(idx, { severity: 'serious' })}
+                        >
+                          Serious
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="field-group" style={{ marginBottom: 10 }}>
+                    <label className="mini-label">Advisory text</label>
+                    <textarea
+                      className="field-textarea"
+                      rows={4}
+                      value={a.text}
+                      onChange={(e) => updateEntry(idx, { text: e.target.value })}
+                    />
+                  </div>
+                  <div className="field-group">
+                    <label className="mini-label">Last reviewed</label>
+                    <input
+                      className="field-input"
+                      type="date"
+                      style={{ maxWidth: 170 }}
+                      value={a.lastReviewed}
+                      onChange={(e) => updateEntry(idx, { lastReviewed: e.target.value })}
+                    />
+                  </div>
+                </div>
+              ))}
+              <button className="add-advisory-btn" onClick={addEntry}>
+                + Add advisory
+              </button>
+              <div className="panel-note">
+                Shown as a banner on the destination page regardless of which interest is selected — independent of every
+                slider&apos;s content and score, and never read by the scoring engine.
+              </div>
+            </div>
+            <div style={{ padding: '12px 18px 16px', display: 'flex', gap: 8, justifyContent: 'flex-end', borderTop: '1px solid var(--border)' }}>
+              <button className="btn" onClick={() => setOpen(false)}>
+                Close
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  const cleaned = draft.filter((a) => a.text.trim().length > 0).map((a) => ({ ...a, text: a.text.trim() }));
+                  commit({
+                    ...ctx,
+                    oldValue: value,
+                    newValue: cleaned,
+                    setLocal,
+                    toLabel: (v) => (v.length ? `${v.length} advisor${v.length === 1 ? 'y' : 'ies'}` : '(none)'),
+                  });
+                  setOpen(false);
+                }}
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

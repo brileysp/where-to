@@ -30,6 +30,7 @@ export default async function AdminDestinationsPage() {
     audienceBands: d.audienceBands,
     searchAliases: d.searchAliases,
     specialSeasons: d.specialSeasons,
+    travelAdvisories: d.travelAdvisories,
     updatedAt: d.updatedAt.toISOString(),
   }));
 

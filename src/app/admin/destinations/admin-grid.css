@@ -55,6 +55,9 @@
 .toolbar .divider { width: 1px; height: 16px; background: var(--border); }
 .filter-label { font-weight: 700; color: var(--text-faint); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; display: flex; align-items: center; gap: 4px; }
 .filter-select { border: 1px solid var(--border-strong); background: var(--bg-panel); color: var(--text); font-size: 12px; font-weight: 600; padding: 5px 8px; border-radius: 6px; cursor: pointer; font-family: inherit; }
+.chip-toggle { display: flex; gap: 2px; background: var(--bg-sunken); border-radius: 7px; padding: 2px; }
+.chip-toggle button { border: none; background: transparent; padding: 5px 10px; border-radius: 5px; font-size: 11.5px; font-weight: 600; color: var(--text-dim); cursor: pointer; font-family: inherit; }
+.chip-toggle button.active { background: var(--bg-panel); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
 .search { display: flex; align-items: center; gap: 6px; background: var(--bg-sunken); border: 1px solid var(--border); border-radius: 7px; padding: 6px 10px; width: 230px; }
 .search input { border: none; background: none; outline: none; font-size: 12.5px; color: var(--text); width: 100%; font-family: inherit; }
 .search svg { flex-shrink: 0; color: var(--text-faint); }
@@ -133,6 +136,35 @@ table.grid tbody td .cell-inner.band-cell { height: auto; min-height: 34px; flex
 .field-textarea:focus, .field-input:focus { border-color: var(--info); outline: none; }
 .month-input-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .month-input-tag { font-family: var(--font-plex-mono, monospace); font-size: 10.5px; font-weight: 700; color: var(--text-faint); width: 24px; flex-shrink: 0; }
+
+/* ---------- Advisories ---------- */
+.cell-inner.wrap { height: auto; min-height: 34px; padding: 5px 10px; flex-wrap: wrap; gap: 5px; }
+.advisory-cell { cursor: pointer; border-radius: 5px; }
+.advisory-cell:hover { background: var(--bg-sunken); }
+.advisory-cell.empty-hint { color: var(--text-faint); font-style: italic; }
+.adv-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 700; white-space: nowrap; }
+.adv-chip-security, .adv-chip-health { background: var(--bad-soft); color: var(--bad); }
+.adv-chip-environmental { background: var(--warn-soft); color: var(--warn); }
+.adv-chip-access { background: var(--info-soft); color: var(--info); }
+.adv-chip-other { background: var(--bg-sunken); color: var(--text-dim); }
+.stale-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--warn); display: inline-block; flex-shrink: 0; }
+.adv-flag { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 5px; background: var(--bad-soft); color: var(--bad); font-size: 10px; font-weight: 800; cursor: pointer; flex-shrink: 0; border: none; font-family: inherit; padding: 0; }
+.adv-flag:hover { background: var(--bad); color: #fff; }
+.adv-entry { border: 1px solid var(--border); border-radius: 9px; padding: 13px; background: var(--bg); position: relative; }
+.adv-entry-top { display: flex; gap: 8px; margin-bottom: 10px; }
+.mini-label { display: block; font-size: 10px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 5px; }
+select.field-select { width: 100%; font-family: inherit; font-size: 12.5px; padding: 8px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-panel); color: var(--text); }
+select.field-select:focus { border-color: var(--info); outline: none; }
+.sev-toggle { display: flex; gap: 6px; }
+.sev-btn { flex: 1; border: 1px solid var(--border-strong); background: var(--bg-panel); padding: 7px 0; border-radius: 6px; font-size: 11.5px; font-weight: 700; cursor: pointer; color: var(--text-dim); font-family: inherit; }
+.sev-btn.sev-moderate.on { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+.sev-btn.sev-serious.on { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.remove-entry { position: absolute; top: 10px; right: 10px; }
+.btn-ghost-bad { border: none; background: none; color: var(--text-faint); cursor: pointer; padding: 4px; border-radius: 5px; font-family: inherit; font-size: 12px; }
+.btn-ghost-bad:hover { color: var(--bad); background: var(--bad-soft); }
+.add-advisory-btn { border: 1.5px dashed var(--border-strong); background: none; color: var(--text-dim); padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; width: 100%; font-family: inherit; }
+.add-advisory-btn:hover { background: var(--bg-sunken); border-color: var(--accent); color: var(--accent); }
+.panel-note { font-size: 11px; color: var(--text-faint); line-height: 1.55; background: var(--bg-sunken); padding: 10px 11px; border-radius: 8px; }
 
 /* ---------- Modal ---------- */
 .modal-scrim { position: fixed; inset: 0; background: rgba(15,17,12,0.4); z-index: 60; display: flex; align-items: center; justify-content: center; }

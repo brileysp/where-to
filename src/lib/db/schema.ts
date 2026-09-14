@@ -124,6 +124,21 @@ export const places = pgTable(
       }>
     >(),
 
+    // Destination-level "current conditions" advisories (security, active
+    // deforestation/poaching, access disruptions) — deliberately NOT keyed
+    // by slider and NOT read by the scoring engine, unlike seasonalHazards
+    // above. These affect a visitor's experience across every interest at
+    // once, so they're authored and shown once per destination rather than
+    // duplicated into (or orphaned out of) individual sliderOverview text.
+    travelAdvisories: jsonb('travel_advisories').notNull().default([]).$type<
+      Array<{
+        category: 'security' | 'environmental' | 'access' | 'health' | 'other';
+        severity: 'moderate' | 'serious';
+        text: string;
+        lastReviewed: string; // ISO date, e.g. "2026-03-01"
+      }>
+    >(),
+
     shopClosures: boolean('shop_closures').notNull().default(false),
     specialSeasons: jsonb('special_seasons').notNull().default([]).$type<
       Array<{ months: number[]; text: string }>
