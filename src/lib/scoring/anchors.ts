@@ -86,6 +86,7 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     ten: [
       'monterey-big-sur', 'vancouver-island', 'southeast-alaska', 'los-cabos',
       'iceland', 'maui', 'azores', 'srilanka', 'churchill', 'cape-town', 'antarctica',
+      'sydney',
     ],
   },
   scenicLandscapes: {
