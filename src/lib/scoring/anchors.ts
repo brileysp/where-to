@@ -79,10 +79,13 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // humpback watching is real but a genuine event still needs authoring).
     // sri-lanka (blue whales off Mirissa), churchill (beluga whales, Jul-Aug),
     // and cape-town (southern right whales at Hermanus) all reach 10 on real
-    // authored events, found fixing the wildlifePeak fallback bug.
+    // authored events, found fixing the wildlifePeak fallback bug. antarctica
+    // added when its own whaleWatching event was authored (was flat 8, no
+    // within-season gradient) — Feb-Mar humpback/minke/orca sightings there
+    // are genuinely world-class, same tier as the rest of this list.
     ten: [
       'monterey-big-sur', 'vancouver-island', 'southeast-alaska', 'los-cabos',
-      'iceland', 'maui', 'azores', 'srilanka', 'churchill', 'cape-town',
+      'iceland', 'maui', 'azores', 'srilanka', 'churchill', 'cape-town', 'antarctica',
     ],
   },
   scenicLandscapes: {
