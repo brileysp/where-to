@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T05:33:26.959Z",
+  "generatedAt": "2026-09-14T05:38:02.433Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -1708,10 +1708,10 @@
       "id": "panama",
       "name": "Panama",
       "region": "Central America",
-      "avgScore": 2.4117,
+      "avgScore": 2.413,
       "bestMonth": 2,
-      "bestMonthScore": 4.0776,
-      "worstMonthScore": 1.0153
+      "bestMonthScore": 4.0775,
+      "worstMonthScore": 1.0251
     },
     {
       "rank": 172,
