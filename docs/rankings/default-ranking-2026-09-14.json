@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T05:38:02.433Z",
+  "generatedAt": "2026-09-14T06:14:35.136Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -40,8 +40,8 @@
       "region": "Turkey",
       "avgScore": 8.2654,
       "bestMonth": 9,
-      "bestMonthScore": 8.3805,
-      "worstMonthScore": 8.1464
+      "bestMonthScore": 8.3806,
+      "worstMonthScore": 8.1463
     },
     {
       "rank": 5,
@@ -291,7 +291,7 @@
       "avgScore": 5.7282,
       "bestMonth": 6,
       "bestMonthScore": 6.9759,
-      "worstMonthScore": 4.4059
+      "worstMonthScore": 4.4058
     },
     {
       "rank": 30,
@@ -441,7 +441,7 @@
       "avgScore": 5.5154,
       "bestMonth": 4,
       "bestMonthScore": 6.6692,
-      "worstMonthScore": 4.0881
+      "worstMonthScore": 4.088
     },
     {
       "rank": 45,
@@ -871,7 +871,7 @@
       "avgScore": 4.6946,
       "bestMonth": 7,
       "bestMonthScore": 5.8875,
-      "worstMonthScore": 3.4239
+      "worstMonthScore": 3.4238
     },
     {
       "rank": 88,
@@ -1298,9 +1298,9 @@
       "id": "greenland",
       "name": "Greenland",
       "region": "Denmark",
-      "avgScore": 3.2132,
+      "avgScore": 3.2134,
       "bestMonth": 7,
-      "bestMonthScore": 5.2609,
+      "bestMonthScore": 5.2615,
       "worstMonthScore": 1.0676
     },
     {
