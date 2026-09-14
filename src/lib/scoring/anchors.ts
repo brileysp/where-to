@@ -42,9 +42,15 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'Seeing wild animals is the reason the trip exists, and the density or ' +
       'accessibility of them is a global reference. A place where you WILL see ' +
       'remarkable animals, not one where you might.',
+    // Found fixing the wildlifePeak fallback bug (see the 'wildlife' case in
+    // destinations.ts): raja-ampat, denali-interior, zimbabwe, and komodo all
+    // reach 10 on real authored sliderEvents (marine biodiversity, caribou/
+    // bear salmon runs, Hwange dry-season waterholes, and marine life
+    // respectively) — genuinely deserving, just never added here.
     ten: [
       'galapagos', 'kenya', 'tanzania', 'botswana', 'antarctica', 'svalbard',
       'madagascar', 'rwanda', 'uganda', 'pantanal', 'costa-rica', 'peruvian-amazon',
+      'rajaampat', 'denali-interior', 'zimbabwe', 'komodo',
     ],
   },
   birding: {
@@ -68,9 +74,15 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     definition:
       'Reliable, close, world-class cetacean encounters in season — the whales ' +
       'are a headline reason people book the trip.',
+    // nova-scotia removed — it carried no real authored whale event at all;
+    // its old 10 was a stale artifact, not a researched claim (Bay of Fundy
+    // humpback watching is real but a genuine event still needs authoring).
+    // sri-lanka (blue whales off Mirissa), churchill (beluga whales, Jul-Aug),
+    // and cape-town (southern right whales at Hermanus) all reach 10 on real
+    // authored events, found fixing the wildlifePeak fallback bug.
     ten: [
       'monterey-big-sur', 'vancouver-island', 'southeast-alaska', 'los-cabos',
-      'iceland', 'nova-scotia', 'maui', 'azores',
+      'iceland', 'maui', 'azores', 'srilanka', 'churchill', 'cape-town',
     ],
   },
   scenicLandscapes: {
@@ -131,7 +143,10 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   },
   wildflowerBlooms: {
     definition: 'A bloom that draws travellers on its own — a named, dated, mass event.',
-    ten: ['iceland', 'canaries', 'cape-town', 'tokyo-kyoto', 'glacier-waterton'],
+    // iceland removed — no real authored bloom event; its old 10 was a
+    // stale artifact of the wildlifePeak fallback bug, not a researched
+    // claim (Iceland's subarctic flora isn't a classic bloom destination).
+    ten: ['canaries', 'cape-town', 'tokyo-kyoto', 'glacier-waterton'],
   },
 
   // ---- Sports & Recreation ----------------------------------------------

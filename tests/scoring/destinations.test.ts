@@ -222,13 +222,17 @@ describe('deriveDestinationScores — sliderEvents multi-tier seasonality', () =
   });
 
   it('falls back to the legacy single-peak-flag formula when no events are authored', () => {
+    // wildlifePeak's fallback bonus was found this session to be an
+    // unvetted +7 — inconsistent with hiking's/birding's identical
+    // fallback shape, which both use +3 for the same "flag present, no
+    // authored event" signal. Fixed to match.
     const dest = makeDestination({
       base: { wildlifeViewing: 3 },
       wildlifePeak: [6],
       sliderEvents: {},
     });
     const { monthly } = deriveDestinationScores(dest);
-    expect(monthly.wildlifeViewing[5]).toBe(10); // June: 3 + 7 = 10, unchanged legacy behavior
+    expect(monthly.wildlifeViewing[5]).toBe(6); // June: 3 + 3 = 6
     expect(monthly.wildlifeViewing[0]).toBe(3); // January: unchanged legacy behavior
   });
 
@@ -312,7 +316,7 @@ describe('deriveDestinationScores — birding sliderEvents', () => {
     });
     const { monthly } = deriveDestinationScores(dest);
     expect(monthly.birding[5]).toBe(9); // June: 5 + 4*1 = 9, events path
-    expect(monthly.wildlifeViewing[5]).toBe(10); // June: 5 + 7 -> clamped, legacy path, unaffected by birding's events
+    expect(monthly.wildlifeViewing[5]).toBe(8); // June: 5 + 3, legacy path, unaffected by birding's events
   });
 
   // Same fix as wildlife's — an authored event covering some months

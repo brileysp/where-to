@@ -632,7 +632,16 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             if (wetFallback) terms.push(['wet (no active event)', wetFallback]);
             v = Math.round(base + bonus + wetFallback);
           } else {
-            const peak = has(d.wildlifePeak, m) ? 7 : 0;
+            // Found auditing the wildlife content-authoring project, same
+            // shape as the birding fallback bug fixed earlier this session:
+            // wildlifePeak's +7 matched nothing — every other sibling
+            // formula's plain fallback bonus (hiking's hikingBest, birding's
+            // birdingPeak) uses +3. Barbados, Thailand, and Bali all carried
+            // a stale sliderCaps.wildlifeViewing=4 defensively suppressing
+            // this exact overshoot (base 3-4 + 7 would clamp at/near the
+            // ceiling on an unvetted seasonal flag, not a real researched
+            // wildlife claim) — removed alongside this fix.
+            const peak = has(d.wildlifePeak, m) ? 3 : 0;
             const wet = s.key !== 'wildflowerBlooms' && has(d.wet, m) && !has(d.wildlifePeak, m) ? -1 : 0;
             terms = [['wildlifePeak', peak], ['wet (no peak)', wet]];
             v = base + peak + wet;
