@@ -51,9 +51,13 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     definition:
       'A destination birders travel across the world for: top-tier species ' +
       'counts, endemism, or a bird nobody sees anywhere else.',
+    // costa-rica, pantanal, and ethiopia were removed from this list —
+    // audit-birding-model.ts's first-principles model (species count,
+    // endemism, charisma, spectacle) puts all three at a precise 9.1/8.8/
+    // 9.1, genuinely a notch below the true ceiling, not tied for it.
     ten: [
-      'colombian-andes', 'peru', 'ecuadorian-andes', 'costa-rica', 'peruvian-amazon',
-      'papua-new-guinea', 'madagascar', 'kenya', 'pantanal', 'uganda',
+      'colombian-andes', 'peru', 'ecuadorian-andes', 'peruvian-amazon',
+      'papua-new-guinea', 'madagascar', 'kenya', 'uganda', 'tanzania',
     ],
   },
   safari: {

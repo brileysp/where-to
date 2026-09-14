@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T04:56:01.082Z",
+  "generatedAt": "2026-09-14T05:33:26.959Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -148,10 +148,10 @@
       "id": "morocco",
       "name": "Marrakech & Atlas",
       "region": "Morocco",
-      "avgScore": 7.1719,
+      "avgScore": 7.172,
       "bestMonth": 3,
       "bestMonthScore": 7.6439,
-      "worstMonthScore": 6.8633
+      "worstMonthScore": 6.8634
     },
     {
       "rank": 16,
@@ -168,10 +168,10 @@
       "id": "peru",
       "name": "Cusco & Sacred Valley",
       "region": "Peru",
-      "avgScore": 5.9502,
+      "avgScore": 5.9501,
       "bestMonth": 7,
       "bestMonthScore": 7.4816,
-      "worstMonthScore": 4.9658
+      "worstMonthScore": 4.9654
     },
     {
       "rank": 18,
@@ -198,7 +198,7 @@
       "id": "bangkok",
       "name": "Bangkok",
       "region": "Thailand",
-      "avgScore": 7.0009,
+      "avgScore": 7.0008,
       "bestMonth": 1,
       "bestMonthScore": 7.393,
       "worstMonthScore": 6.6652
@@ -208,10 +208,10 @@
       "id": "angkor",
       "name": "Angkor Wat & Siem Reap",
       "region": "Cambodia",
-      "avgScore": 5.8837,
+      "avgScore": 5.8838,
       "bestMonth": 1,
       "bestMonthScore": 7.3704,
-      "worstMonthScore": 4.5341
+      "worstMonthScore": 4.534
     },
     {
       "rank": 22,
@@ -238,7 +238,7 @@
       "id": "rajasthan-golden-triangle",
       "name": "Rajasthan & the Golden Triangle",
       "region": "India",
-      "avgScore": 6.3937,
+      "avgScore": 6.3944,
       "bestMonth": 5,
       "bestMonthScore": 7.1882,
       "worstMonthScore": 5.2559
@@ -251,7 +251,7 @@
       "avgScore": 4.2009,
       "bestMonth": 6,
       "bestMonthScore": 7.1827,
-      "worstMonthScore": 2.7858
+      "worstMonthScore": 2.7862
     },
     {
       "rank": 26,
@@ -308,7 +308,7 @@
       "id": "jordan",
       "name": "Petra & Wadi Rum",
       "region": "Jordan",
-      "avgScore": 5.6011,
+      "avgScore": 5.6012,
       "bestMonth": 10,
       "bestMonthScore": 6.9569,
       "worstMonthScore": 5.0397
@@ -328,7 +328,7 @@
       "id": "yosemite",
       "name": "Yosemite National Park",
       "region": "California, USA",
-      "avgScore": 5.1361,
+      "avgScore": 5.1362,
       "bestMonth": 7,
       "bestMonthScore": 6.9238,
       "worstMonthScore": 2.6574
@@ -368,9 +368,9 @@
       "id": "oaxaca",
       "name": "Oaxaca",
       "region": "Mexico",
-      "avgScore": 5.9004,
+      "avgScore": 5.9008,
       "bestMonth": 11,
-      "bestMonthScore": 6.7912,
+      "bestMonthScore": 6.7924,
       "worstMonthScore": 4.9457
     },
     {
@@ -388,20 +388,20 @@
       "id": "colombian-caribbean",
       "name": "Colombian Caribbean",
       "region": "Colombia",
-      "avgScore": 4.4106,
+      "avgScore": 4.4105,
       "bestMonth": 1,
       "bestMonthScore": 6.7611,
-      "worstMonthScore": 2.8914
+      "worstMonthScore": 2.8911
     },
     {
       "rank": 40,
       "id": "ecuadorian-andes",
       "name": "Ecuadorian Andes",
       "region": "Ecuador",
-      "avgScore": 3.8189,
+      "avgScore": 3.8125,
       "bestMonth": 6,
       "bestMonthScore": 6.7093,
-      "worstMonthScore": 1.234
+      "worstMonthScore": 1.2062
     },
     {
       "rank": 41,
@@ -418,9 +418,9 @@
       "id": "torres-del-paine",
       "name": "Torres del Paine",
       "region": "Chile",
-      "avgScore": 5.6105,
+      "avgScore": 5.6104,
       "bestMonth": 1,
-      "bestMonthScore": 6.7003,
+      "bestMonthScore": 6.7001,
       "worstMonthScore": 2.8389
     },
     {
@@ -508,7 +508,7 @@
       "id": "bhutan",
       "name": "Bhutan",
       "region": "South Asia",
-      "avgScore": 4.9169,
+      "avgScore": 4.9181,
       "bestMonth": 3,
       "bestMonthScore": 6.55,
       "worstMonthScore": 2.3307
@@ -538,30 +538,30 @@
       "id": "bagan",
       "name": "Bagan",
       "region": "Myanmar",
-      "avgScore": 5.3545,
+      "avgScore": 5.3546,
       "bestMonth": 1,
       "bestMonthScore": 6.4758,
-      "worstMonthScore": 4.1232
+      "worstMonthScore": 4.1234
     },
     {
       "rank": 55,
       "id": "seychelles",
       "name": "Seychelles",
       "region": "Indian Ocean",
-      "avgScore": 4.9751,
+      "avgScore": 4.975,
       "bestMonth": 11,
       "bestMonthScore": 6.4678,
-      "worstMonthScore": 2.8746
+      "worstMonthScore": 2.8745
     },
     {
       "rank": 56,
       "id": "vietnam",
       "name": "Vietnam",
       "region": "Southeast Asia",
-      "avgScore": 5.5802,
+      "avgScore": 5.5812,
       "bestMonth": 3,
       "bestMonthScore": 6.4177,
-      "worstMonthScore": 5.1274
+      "worstMonthScore": 5.1275
     },
     {
       "rank": 57,
@@ -588,9 +588,9 @@
       "id": "nepal",
       "name": "Nepal",
       "region": "South Asia",
-      "avgScore": 5.004,
+      "avgScore": 5.0041,
       "bestMonth": 2,
-      "bestMonthScore": 6.4086,
+      "bestMonthScore": 6.4091,
       "worstMonthScore": 2.5736
     },
     {
@@ -598,7 +598,7 @@
       "id": "sydney",
       "name": "Sydney",
       "region": "Australia",
-      "avgScore": 5.3258,
+      "avgScore": 5.3259,
       "bestMonth": 1,
       "bestMonthScore": 6.3462,
       "worstMonthScore": 4.777
@@ -641,17 +641,17 @@
       "avgScore": 3.9712,
       "bestMonth": 1,
       "bestMonthScore": 6.2725,
-      "worstMonthScore": 1.6316
+      "worstMonthScore": 1.6315
     },
     {
       "rank": 65,
       "id": "taiwan",
       "name": "Taiwan",
       "region": "East Asia",
-      "avgScore": 4.9448,
+      "avgScore": 4.9499,
       "bestMonth": 10,
-      "bestMonthScore": 6.2582,
-      "worstMonthScore": 2.2267
+      "bestMonthScore": 6.2585,
+      "worstMonthScore": 2.2515
     },
     {
       "rank": 66,
@@ -728,7 +728,7 @@
       "id": "algarve",
       "name": "Algarve",
       "region": "Portugal",
-      "avgScore": 5.0134,
+      "avgScore": 5.0135,
       "bestMonth": 9,
       "bestMonthScore": 6.0716,
       "worstMonthScore": 3.71
@@ -778,10 +778,10 @@
       "id": "tanzania",
       "name": "Serengeti & Zanzibar",
       "region": "Tanzania",
-      "avgScore": 5.2894,
+      "avgScore": 5.2901,
       "bestMonth": 6,
       "bestMonthScore": 5.9602,
-      "worstMonthScore": 3.8114
+      "worstMonthScore": 3.8112
     },
     {
       "rank": 79,
@@ -811,7 +811,7 @@
       "avgScore": 4.3908,
       "bestMonth": 1,
       "bestMonthScore": 5.9452,
-      "worstMonthScore": 3.1534
+      "worstMonthScore": 3.1533
     },
     {
       "rank": 82,
@@ -850,7 +850,7 @@
       "region": "Chile",
       "avgScore": 5.2954,
       "bestMonth": 11,
-      "bestMonthScore": 5.8909,
+      "bestMonthScore": 5.8908,
       "worstMonthScore": 3.1032
     },
     {
@@ -895,23 +895,23 @@
     },
     {
       "rank": 90,
-      "id": "kenya",
-      "name": "Maasai Mara & Amboseli",
-      "region": "Kenya",
-      "avgScore": 5.1758,
-      "bestMonth": 10,
-      "bestMonthScore": 5.8632,
-      "worstMonthScore": 3.6337
-    },
-    {
-      "rank": 91,
       "id": "mallorca",
       "name": "Mallorca",
       "region": "Spain",
       "avgScore": 5.1083,
-      "bestMonth": 9,
+      "bestMonth": 6,
       "bestMonthScore": 5.8625,
       "worstMonthScore": 3.4067
+    },
+    {
+      "rank": 91,
+      "id": "kenya",
+      "name": "Maasai Mara & Amboseli",
+      "region": "Kenya",
+      "avgScore": 5.1724,
+      "bestMonth": 7,
+      "bestMonthScore": 5.8617,
+      "worstMonthScore": 3.6307
     },
     {
       "rank": 92,
@@ -938,7 +938,7 @@
       "id": "new-orleans",
       "name": "New Orleans",
       "region": "Louisiana, USA",
-      "avgScore": 5.5568,
+      "avgScore": 5.5569,
       "bestMonth": 2,
       "bestMonthScore": 5.8153,
       "worstMonthScore": 5.4894
@@ -978,10 +978,10 @@
       "id": "ethiopia",
       "name": "Ethiopia",
       "region": "Ethiopia",
-      "avgScore": 4.4854,
+      "avgScore": 4.4855,
       "bestMonth": 1,
       "bestMonthScore": 5.8014,
-      "worstMonthScore": 2.9312
+      "worstMonthScore": 2.9316
     },
     {
       "rank": 99,
@@ -991,7 +991,7 @@
       "avgScore": 4.5603,
       "bestMonth": 1,
       "bestMonthScore": 5.7832,
-      "worstMonthScore": 1.6793
+      "worstMonthScore": 1.6792
     },
     {
       "rank": 100,
@@ -1048,9 +1048,9 @@
       "id": "namibia",
       "name": "Namibia",
       "region": "Southern Africa",
-      "avgScore": 3.7284,
+      "avgScore": 3.728,
       "bestMonth": 7,
-      "bestMonthScore": 5.6787,
+      "bestMonthScore": 5.6783,
       "worstMonthScore": 1.3431
     },
     {
@@ -1078,10 +1078,10 @@
       "id": "puerto-rico",
       "name": "Puerto Rico",
       "region": "Caribbean",
-      "avgScore": 4.0854,
+      "avgScore": 4.0855,
       "bestMonth": 1,
       "bestMonthScore": 5.6623,
-      "worstMonthScore": 3.1621
+      "worstMonthScore": 3.1622
     },
     {
       "rank": 109,
@@ -1118,19 +1118,19 @@
       "id": "milford-sound-fiordland",
       "name": "Milford Sound & Fiordland",
       "region": "New Zealand",
-      "avgScore": 3.9496,
+      "avgScore": 3.9515,
       "bestMonth": 1,
-      "bestMonthScore": 5.6036,
-      "worstMonthScore": 0.8797
+      "bestMonthScore": 5.6106,
+      "worstMonthScore": 0.88
     },
     {
       "rank": 113,
       "id": "palawan",
       "name": "Palawan",
       "region": "Philippines",
-      "avgScore": 3.9472,
+      "avgScore": 3.9471,
       "bestMonth": 1,
-      "bestMonthScore": 5.5994,
+      "bestMonthScore": 5.5992,
       "worstMonthScore": 1.2653
     },
     {
@@ -1138,10 +1138,10 @@
       "id": "ladakh",
       "name": "Ladakh",
       "region": "India",
-      "avgScore": 3.5752,
+      "avgScore": 3.575,
       "bestMonth": 7,
       "bestMonthScore": 5.585,
-      "worstMonthScore": 0.6261
+      "worstMonthScore": 0.6253
     },
     {
       "rank": 115,
@@ -1198,10 +1198,10 @@
       "id": "belize",
       "name": "Belize",
       "region": "Central America",
-      "avgScore": 4.0843,
+      "avgScore": 4.0842,
       "bestMonth": 3,
       "bestMonthScore": 5.5105,
-      "worstMonthScore": 2.7312
+      "worstMonthScore": 2.7311
     },
     {
       "rank": 121,
@@ -1281,17 +1281,17 @@
       "avgScore": 5.1069,
       "bestMonth": 5,
       "bestMonthScore": 5.3226,
-      "worstMonthScore": 4.9877
+      "worstMonthScore": 4.9876
     },
     {
       "rank": 129,
       "id": "svalbard",
       "name": "Svalbard",
       "region": "Norway",
-      "avgScore": 3.8539,
+      "avgScore": 3.8533,
       "bestMonth": 7,
-      "bestMonthScore": 5.3077,
-      "worstMonthScore": 1.6471
+      "bestMonthScore": 5.306,
+      "worstMonthScore": 1.6469
     },
     {
       "rank": 130,
@@ -1335,16 +1335,6 @@
     },
     {
       "rank": 134,
-      "id": "uyuni",
-      "name": "Salar de Uyuni",
-      "region": "Bolivia",
-      "avgScore": 3.8049,
-      "bestMonth": 8,
-      "bestMonthScore": 5.154,
-      "worstMonthScore": 2.523
-    },
-    {
-      "rank": 135,
       "id": "botswana",
       "name": "Okavango Delta",
       "region": "Botswana",
@@ -1354,21 +1344,31 @@
       "worstMonthScore": 3.5109
     },
     {
+      "rank": 135,
+      "id": "uyuni",
+      "name": "Salar de Uyuni",
+      "region": "Bolivia",
+      "avgScore": 3.8027,
+      "bestMonth": 8,
+      "bestMonthScore": 5.1518,
+      "worstMonthScore": 2.511
+    },
+    {
       "rank": 136,
       "id": "antarctica",
       "name": "Antarctic Peninsula",
       "region": "Antarctica",
-      "avgScore": 2.2525,
+      "avgScore": 2.2504,
       "bestMonth": 1,
-      "bestMonthScore": 5.0924,
-      "worstMonthScore": 0.3207
+      "bestMonthScore": 5.0865,
+      "worstMonthScore": 0.3216
     },
     {
       "rank": 137,
       "id": "north-island",
       "name": "North Island",
       "region": "New Zealand",
-      "avgScore": 3.3521,
+      "avgScore": 3.3523,
       "bestMonth": 1,
       "bestMonthScore": 5.0615,
       "worstMonthScore": 2.449
@@ -1378,10 +1378,10 @@
       "id": "faroe-islands",
       "name": "Faroe Islands",
       "region": "Denmark",
-      "avgScore": 3.0239,
+      "avgScore": 3.0238,
       "bestMonth": 6,
       "bestMonthScore": 5.0429,
-      "worstMonthScore": 0.8378
+      "worstMonthScore": 0.8376
     },
     {
       "rank": 139,
@@ -1428,10 +1428,10 @@
       "id": "borneo",
       "name": "Malaysian Borneo",
       "region": "Malaysia",
-      "avgScore": 4.0563,
+      "avgScore": 4.0542,
       "bestMonth": 7,
       "bestMonthScore": 4.8468,
-      "worstMonthScore": 2.4131
+      "worstMonthScore": 2.4066
     },
     {
       "rank": 144,
@@ -1448,20 +1448,20 @@
       "id": "kruger",
       "name": "Kruger National Park",
       "region": "South Africa",
-      "avgScore": 3.3853,
+      "avgScore": 3.369,
       "bestMonth": 7,
-      "bestMonthScore": 4.6707,
-      "worstMonthScore": 2.1525
+      "bestMonthScore": 4.671,
+      "worstMonthScore": 2.1111
     },
     {
       "rank": 146,
       "id": "colombian-andes",
       "name": "Colombian Andes",
       "region": "Colombia",
-      "avgScore": 3.3771,
+      "avgScore": 3.3763,
       "bestMonth": 1,
       "bestMonthScore": 4.6605,
-      "worstMonthScore": 2.1157
+      "worstMonthScore": 2.1065
     },
     {
       "rank": 147,
@@ -1478,9 +1478,9 @@
       "id": "guatemala",
       "name": "Guatemala",
       "region": "Central America",
-      "avgScore": 3.2515,
+      "avgScore": 3.252,
       "bestMonth": 1,
-      "bestMonthScore": 4.5835,
+      "bestMonthScore": 4.5847,
       "worstMonthScore": 1.8411
     },
     {
@@ -1498,9 +1498,9 @@
       "id": "hokkaido",
       "name": "Hokkaido",
       "region": "Japan",
-      "avgScore": 3.4014,
+      "avgScore": 3.3981,
       "bestMonth": 1,
-      "bestMonthScore": 4.477,
+      "bestMonthScore": 4.4719,
       "worstMonthScore": 2.2491
     },
     {
@@ -1541,7 +1541,7 @@
       "avgScore": 3.3872,
       "bestMonth": 9,
       "bestMonthScore": 4.3631,
-      "worstMonthScore": 1.9253
+      "worstMonthScore": 1.9254
     },
     {
       "rank": 155,
@@ -1558,10 +1558,10 @@
       "id": "peruvian-amazon",
       "name": "Peruvian Amazon",
       "region": "Peru",
-      "avgScore": 2.4919,
+      "avgScore": 2.4898,
       "bestMonth": 9,
       "bestMonthScore": 4.3576,
-      "worstMonthScore": 0.8342
+      "worstMonthScore": 0.831
     },
     {
       "rank": 157,
@@ -1591,17 +1591,17 @@
       "avgScore": 3.1392,
       "bestMonth": 1,
       "bestMonthScore": 4.3157,
-      "worstMonthScore": 2.1413
+      "worstMonthScore": 2.1412
     },
     {
       "rank": 160,
       "id": "madagascar",
       "name": "Madagascar",
       "region": "East Africa",
-      "avgScore": 3.1934,
-      "bestMonth": 9,
-      "bestMonthScore": 4.3139,
-      "worstMonthScore": 1.7377
+      "avgScore": 3.1906,
+      "bestMonth": 7,
+      "bestMonthScore": 4.3142,
+      "worstMonthScore": 1.7234
     },
     {
       "rank": 161,
@@ -1621,7 +1621,7 @@
       "avgScore": 2.9959,
       "bestMonth": 10,
       "bestMonthScore": 4.296,
-      "worstMonthScore": 1.2981
+      "worstMonthScore": 1.298
     },
     {
       "rank": 163,
@@ -1638,20 +1638,20 @@
       "id": "zambia",
       "name": "South Luangwa",
       "region": "Zambia",
-      "avgScore": 2.9072,
+      "avgScore": 2.908,
       "bestMonth": 8,
-      "bestMonthScore": 4.2731,
-      "worstMonthScore": 1.5862
+      "bestMonthScore": 4.2761,
+      "worstMonthScore": 1.5861
     },
     {
       "rank": 165,
       "id": "rajaampat",
       "name": "Raja Ampat",
       "region": "Indonesia",
-      "avgScore": 3.0612,
+      "avgScore": 3.0566,
       "bestMonth": 1,
-      "bestMonthScore": 4.2143,
-      "worstMonthScore": 1.6966
+      "bestMonthScore": 4.2201,
+      "worstMonthScore": 1.69
     },
     {
       "rank": 166,
@@ -1678,10 +1678,10 @@
       "id": "galapagos",
       "name": "Galápagos Islands",
       "region": "Ecuador",
-      "avgScore": 3.7338,
+      "avgScore": 3.732,
       "bestMonth": 6,
-      "bestMonthScore": 4.1948,
-      "worstMonthScore": 3.0801
+      "bestMonthScore": 4.1936,
+      "worstMonthScore": 3.0803
     },
     {
       "rank": 169,
@@ -1708,19 +1708,19 @@
       "id": "panama",
       "name": "Panama",
       "region": "Central America",
-      "avgScore": 2.4127,
+      "avgScore": 2.4117,
       "bestMonth": 2,
       "bestMonthScore": 4.0776,
-      "worstMonthScore": 1.0194
+      "worstMonthScore": 1.0153
     },
     {
       "rank": 172,
       "id": "ghana",
       "name": "Ghana",
       "region": "West Africa",
-      "avgScore": 3.0371,
+      "avgScore": 3.0378,
       "bestMonth": 1,
-      "bestMonthScore": 4.0699,
+      "bestMonthScore": 4.0712,
       "worstMonthScore": 2.4526
     },
     {
@@ -1738,10 +1738,10 @@
       "id": "mendoza",
       "name": "Mendoza",
       "region": "Argentina",
-      "avgScore": 3.6798,
+      "avgScore": 3.6796,
       "bestMonth": 3,
       "bestMonthScore": 4.0523,
-      "worstMonthScore": 3.3402
+      "worstMonthScore": 3.3404
     },
     {
       "rank": 175,
@@ -1751,7 +1751,7 @@
       "avgScore": 2.3548,
       "bestMonth": 7,
       "bestMonthScore": 3.9873,
-      "worstMonthScore": 1.1292
+      "worstMonthScore": 1.1291
     },
     {
       "rank": 176,
@@ -1768,30 +1768,30 @@
       "id": "kerala",
       "name": "Kerala",
       "region": "India",
-      "avgScore": 3.0734,
+      "avgScore": 3.0736,
       "bestMonth": 1,
-      "bestMonthScore": 3.9543,
+      "bestMonthScore": 3.9545,
       "worstMonthScore": 2.6125
     },
     {
       "rank": 178,
-      "id": "komodo",
-      "name": "Komodo Island",
-      "region": "Indonesia",
-      "avgScore": 3.3508,
-      "bestMonth": 7,
-      "bestMonthScore": 3.9165,
-      "worstMonthScore": 2.2096
-    },
-    {
-      "rank": 179,
       "id": "chiapas",
       "name": "Chiapas",
       "region": "Mexico",
-      "avgScore": 2.8667,
+      "avgScore": 2.868,
       "bestMonth": 1,
-      "bestMonthScore": 3.9143,
-      "worstMonthScore": 1.8071
+      "bestMonthScore": 3.9168,
+      "worstMonthScore": 1.807
+    },
+    {
+      "rank": 179,
+      "id": "komodo",
+      "name": "Komodo Island",
+      "region": "Indonesia",
+      "avgScore": 3.3507,
+      "bestMonth": 7,
+      "bestMonthScore": 3.9164,
+      "worstMonthScore": 2.2095
     },
     {
       "rank": 180,
@@ -1818,10 +1818,10 @@
       "id": "pantanal",
       "name": "Pantanal",
       "region": "Brazil",
-      "avgScore": 2.6754,
+      "avgScore": 2.6548,
       "bestMonth": 7,
-      "bestMonthScore": 3.84,
-      "worstMonthScore": 1.8817
+      "bestMonthScore": 3.8363,
+      "worstMonthScore": 1.8749
     },
     {
       "rank": 183,
@@ -1838,20 +1838,20 @@
       "id": "everglades",
       "name": "Everglades National Park",
       "region": "Florida, USA",
-      "avgScore": 1.9856,
+      "avgScore": 1.9852,
       "bestMonth": 4,
-      "bestMonthScore": 3.7688,
-      "worstMonthScore": 0.5722
+      "bestMonthScore": 3.7635,
+      "worstMonthScore": 0.5719
     },
     {
       "rank": 185,
       "id": "papua-new-guinea",
       "name": "Papua New Guinea",
       "region": "Melanesia",
-      "avgScore": 2.6284,
+      "avgScore": 2.6067,
       "bestMonth": 9,
       "bestMonthScore": 3.7546,
-      "worstMonthScore": 1.2399
+      "worstMonthScore": 1.1803
     },
     {
       "rank": 186,
@@ -1928,20 +1928,20 @@
       "id": "churchill",
       "name": "Churchill",
       "region": "Manitoba, Canada",
-      "avgScore": 1.8065,
+      "avgScore": 1.8069,
       "bestMonth": 11,
-      "bestMonthScore": 3.1259,
-      "worstMonthScore": 0.8906
+      "bestMonthScore": 3.126,
+      "worstMonthScore": 0.8907
     },
     {
       "rank": 194,
       "id": "kaziranga",
       "name": "Kaziranga National Park",
       "region": "Assam, India",
-      "avgScore": 1.6756,
+      "avgScore": 1.6685,
       "bestMonth": 1,
-      "bestMonthScore": 3.0532,
-      "worstMonthScore": 0.584
+      "bestMonthScore": 3.0464,
+      "worstMonthScore": 0.5835
     },
     {
       "rank": 195,
@@ -1958,10 +1958,10 @@
       "id": "falklands",
       "name": "Falkland Islands",
       "region": "South Atlantic",
-      "avgScore": 1.6389,
+      "avgScore": 1.6428,
       "bestMonth": 1,
       "bestMonthScore": 2.762,
-      "worstMonthScore": 0.9299
+      "worstMonthScore": 0.9318
     },
     {
       "rank": 197,
@@ -1988,20 +1988,20 @@
       "id": "texas-hill-country",
       "name": "Texas Hill Country",
       "region": "Texas, USA",
-      "avgScore": 1.7706,
+      "avgScore": 1.7709,
       "bestMonth": 3,
       "bestMonthScore": 2.1419,
-      "worstMonthScore": 1.6261
+      "worstMonthScore": 1.6276
     },
     {
       "rank": 200,
       "id": "upper-peninsula",
       "name": "Upper Peninsula",
       "region": "Michigan, USA",
-      "avgScore": 1.6028,
+      "avgScore": 1.6027,
       "bestMonth": 8,
       "bestMonthScore": 1.8804,
-      "worstMonthScore": 1.1655
+      "worstMonthScore": 1.1654
     }
   ]
 }

@@ -584,7 +584,20 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
             if (wetFallback) terms.push(['wet (no active event)', wetFallback]);
             v = Math.round(base + bonus + wetFallback);
           } else {
-            const peak = has(d.birdingPeak, m) ? 7 : 0;
+            // Found auditing the birding content-authoring project:
+            // birdingPeak is set broadly across the catalog by a generic
+            // "pleasant weather months" heuristic, not per-destination bird
+            // research — Dubai, Uluru, Bangkok, Singapore, Puerto Rico,
+            // Barbados and dozens more all had it flagged despite having no
+            // real birding claim. At +7 (previously — matched to nothing;
+            // every OTHER sibling formula's plain fallback bonus, e.g.
+            // hiking's hikingBest, uses +3), that flag alone put base-5
+            // destinations at the scale's ceiling, tied with Peru and
+            // Kenya. Matched to the same +3 magnitude the rest of this
+            // formula family uses for an unvetted fallback signal — a real
+            // authored sliderEvents entry is still the only way to reach
+            // the true top tier.
+            const peak = has(d.birdingPeak, m) ? 3 : 0;
             const wet = has(d.wet, m) && !has(d.birdingPeak, m) ? -1 : 0;
             terms = [['birdingPeak', peak], ['wet (no peak)', wet]];
             v = base + peak + wet;

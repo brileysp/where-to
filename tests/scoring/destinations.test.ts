@@ -147,11 +147,11 @@ describe('deriveDestinationScores — snowsports noSnow override', () => {
 });
 
 describe('deriveDestinationScores — sliderCaps ceiling', () => {
-  // Reproduces the real Bali/Lofoten bug: birding's peak-month bonus is a
-  // flat +7 regardless of whether the destination is actually a
-  // world-class birding destination. Without a cap, a beach island with
-  // a few visiting birds (base 4) reads as a literal 10/10 for over half
-  // the year, indistinguishable from an actual birding mecca.
+  // birding's peak-month fallback bonus (birdingPeak) is flat regardless of
+  // whether the destination is actually a world-class birding destination
+  // — sliderCaps is the per-destination override for when even the
+  // reduced +3 (see the fallback comment in destinations.ts) still reads
+  // too high for a place with only a few incidental visiting birds.
   it('caps a slider at the authored ceiling even when the formula would score higher', () => {
     const dest = makeDestination({
       base: { birding: 4 },
@@ -159,7 +159,7 @@ describe('deriveDestinationScores — sliderCaps ceiling', () => {
       sliderCaps: { birding: 5 },
     });
     const { monthly } = deriveDestinationScores(dest);
-    // Uncapped this would be 4 + 7 = 11, clamped to 10.
+    // Uncapped this would be 4 + 3 = 7.
     expect(monthly.birding[3]).toBe(5); // April, a birdingPeak month
     expect(monthly.birding[0]).toBe(4); // January, off-peak, unaffected by the cap
   });
@@ -283,6 +283,14 @@ describe('deriveDestinationScores — birding sliderEvents', () => {
     expect(monthly.birding[5]).toBe(9); // June: no event active, pure base
   });
 
+  // birdingPeak is set catalog-wide by a generic "pleasant weather months"
+  // heuristic, not per-destination bird research (Dubai, Uluru, Bangkok,
+  // Singapore and dozens more all had it flagged despite no real birding
+  // claim). At the old +7 bonus, that flag alone put base-5 destinations
+  // at the scale's ceiling, indistinguishable from Peru or Kenya. Matched
+  // to +3, the same magnitude the sibling hiking-family formula's own
+  // unvetted fallback signal (hikingBest) uses — an authored
+  // sliderEvents entry is still the only way to reach the true top tier.
   it('falls back to the legacy single-peak-flag formula when no birding events are authored', () => {
     const dest = makeDestination({
       base: { birding: 4 },
@@ -290,8 +298,8 @@ describe('deriveDestinationScores — birding sliderEvents', () => {
       sliderEvents: {},
     });
     const { monthly } = deriveDestinationScores(dest);
-    expect(monthly.birding[5]).toBe(10); // June: 4 + 7 -> clamped to 10, unchanged legacy behavior
-    expect(monthly.birding[0]).toBe(4); // January: unchanged legacy behavior
+    expect(monthly.birding[5]).toBe(7); // June: 4 + 3
+    expect(monthly.birding[0]).toBe(4); // January: no birdingPeak flag, pure base
   });
 
   it('a destination can use events for birding and the legacy formula for wildlife independently', () => {
@@ -596,7 +604,7 @@ describe('deriveDestinationScores — explanations (the admin "why this number" 
     });
     const { monthly, explanations } = deriveDestinationScores(dest);
     expect(monthly.birding[3]).toBe(5); // April
-    expect(explanations.birding[3]).toBe('base 4 +7 birdingPeak = 11 → capped to 5');
+    expect(explanations.birding[3]).toBe('base 4 +3 birdingPeak = 7 → capped to 5');
   });
 
   it('represents the noSnow hard floor as a term, not a silent override', () => {
