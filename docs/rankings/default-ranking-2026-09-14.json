@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T04:37:06.001Z",
+  "generatedAt": "2026-09-14T04:56:01.082Z",
   "destinationCount": 200,
   "description": "Default (no-persona, no-weights) ranking, scored at each destination's best month. The app never renders an all-months view (ResultsApp returns [] until a month is chosen), so a 12-month average would measure something the product does not do — and would penalise seasonal destinations for their off-season.",
   "entries": [
@@ -1048,10 +1048,10 @@
       "id": "namibia",
       "name": "Namibia",
       "region": "Southern Africa",
-      "avgScore": 3.7412,
+      "avgScore": 3.7284,
       "bestMonth": 7,
-      "bestMonthScore": 5.6771,
-      "worstMonthScore": 1.3953
+      "bestMonthScore": 5.6787,
+      "worstMonthScore": 1.3431
     },
     {
       "rank": 106,
@@ -1348,10 +1348,10 @@
       "id": "botswana",
       "name": "Okavango Delta",
       "region": "Botswana",
-      "avgScore": 4.3197,
+      "avgScore": 4.3171,
       "bestMonth": 6,
-      "bestMonthScore": 5.151,
-      "worstMonthScore": 3.5131
+      "bestMonthScore": 5.1521,
+      "worstMonthScore": 3.5109
     },
     {
       "rank": 136,
@@ -1488,10 +1488,10 @@
       "id": "zimbabwe",
       "name": "Victoria Falls & Hwange",
       "region": "Zimbabwe",
-      "avgScore": 3.311,
+      "avgScore": 3.3113,
       "bestMonth": 8,
-      "bestMonthScore": 4.5465,
-      "worstMonthScore": 1.8667
+      "bestMonthScore": 4.5479,
+      "worstMonthScore": 1.8664
     },
     {
       "rank": 150,
@@ -1508,10 +1508,10 @@
       "id": "rwanda",
       "name": "Rwanda",
       "region": "East Africa",
-      "avgScore": 3.2452,
+      "avgScore": 3.2464,
       "bestMonth": 1,
-      "bestMonthScore": 4.4592,
-      "worstMonthScore": 1.7456
+      "bestMonthScore": 4.4604,
+      "worstMonthScore": 1.7466
     },
     {
       "rank": 152,
@@ -1638,10 +1638,10 @@
       "id": "zambia",
       "name": "South Luangwa",
       "region": "Zambia",
-      "avgScore": 2.9096,
+      "avgScore": 2.9072,
       "bestMonth": 8,
-      "bestMonthScore": 4.2723,
-      "worstMonthScore": 1.5942
+      "bestMonthScore": 4.2731,
+      "worstMonthScore": 1.5862
     },
     {
       "rank": 165,
@@ -1698,10 +1698,10 @@
       "id": "uganda",
       "name": "Uganda",
       "region": "Uganda",
-      "avgScore": 3.0729,
+      "avgScore": 3.076,
       "bestMonth": 1,
       "bestMonthScore": 4.1284,
-      "worstMonthScore": 2.1435
+      "worstMonthScore": 2.1704
     },
     {
       "rank": 171,
