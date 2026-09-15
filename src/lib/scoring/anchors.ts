@@ -211,6 +211,23 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     ],
   },
   sailing: { definition: 'A world cruising ground.', ten: ['croatia', 'santorini', 'bahamas'] },
+  windSports: {
+    definition:
+      'A world-reference wind-sports coastline — the sport\'s own competitive ' +
+      'circuit stops here, or it carries an international "capital of the wind" ' +
+      'reputation in its own right.',
+    // Each of these seven has hard evidence, not just a good local spot: a
+    // multi-decade world-tour venue (canaries' Sotavento PWA World Cup, since
+    // the late 1980s), a marquee annual event (aruba's Hi-Winds since 1986,
+    // cape-town's Red Bull King of the Air), or an internationally-recognized
+    // "capital" branding (andalucia's Tarifa, "Europe's windsurfing/kitesurfing
+    // capital"; morocco's Essaouira, the "Windy City of Africa"). Set during
+    // windSports' initial authoring pass — a stronger evidentiary bar than
+    // surfing's 3-destination anchor set needed, so 7 felt right, but this is
+    // a first draft: worth revisiting once real destinations are compared
+    // side by side in the sample round.
+    ten: ['maui', 'aruba', 'mauritius', 'cape-town', 'morocco', 'canaries', 'andalucia'],
+  },
   kayakingRafting: {
     definition: 'A world-reference river or paddling coast.',
     ten: ['zambia', 'zimbabwe', 'grandcanyon', 'marlborough-abel-tasman'],
