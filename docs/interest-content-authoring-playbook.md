@@ -299,7 +299,8 @@ covered to know what's genuinely missing.
 
 ## 7. What's left (as of this doc)
 
-Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`.
+Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`,
+`wildflowerBlooms`.
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
@@ -313,10 +314,34 @@ the general pattern — and (b) name the actual site/mechanism in the text itsel
 correctly in isolation** (a bare "essentially closed" misreads as the whole country being
 shut, not one specific spot's wind).
 
-44 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
-avoid running two from the same family back-to-back — it reads as repetitive):
+`wildflowerBlooms` (Sep 2026 pass) added another rule, prompted by a real miss: Iceland's
+lupine bloom was dismissed in `anchors.ts` as "not a real bloom destination" — wrong, and only
+caught because the user had personally been there and noticed the gap. **Do a deliberate sweep
+for plausible-but-missed destinations before considering an interest done**, not just the
+obvious/anchor-tier ones — narrow, well-documented named events (a festival, a specific valley)
+are easy to miss if you only work from the existing base-score list. It also reinforced the
+narrow-window rule above: a single-month or even single-week event (Istanbul's tulips: ~Apr
+10-20; Seoul's cherry blossom: first half of April) needs monthly text that says so explicitly
+— "peak in April" alone can send someone on Apr 25 to nothing. And: irregular, non-annual blooms
+(Atacama's Desierto Florido, roughly once every 5-8 years) don't fit the model's assumption of an
+annually-recurring season — give them a small score bump only in the window they *could* occur,
+with text that states the rarity plainly, rather than either a full seasonal score or leaving
+them NA.
 
-- **`wildlife` formula:** `wildflowerBlooms`
+**Interest-count correction:** earlier in this session I told the user "51 interests," then
+later "50," neither backed by actually counting `SLIDERS`. The real number, counted directly
+from `src/lib/scoring/constants.ts`: `SLIDERS.length` = 54, `VISIBLE_SLIDERS.length` = 52
+(hides `familyFun`, `spectatorSports` — still in the array, not deleted), and excluding the 3
+practical/logistical sliders (`deals`, `crowds`, `roadtrip`, scored from peak/low flags only,
+never content-authored) leaves **49 visible domain interests**. Always run an actual count
+against the source array before citing this number — don't echo a remembered figure.
+
+8 of 49 domain interests done (listed above). Natural formula-family groupings below sum to 44
+items — 3 more than the 41 that "49 total − 8 done" implies, because the list below still
+includes `roadtrip` (practical, no content needed) and the 2 hidden interests (`familyFun`,
+`spectatorSports`) for completeness. Shared formula ⇒ shared tooling/research, but avoid running
+two from the same family back-to-back — it reads as repetitive:
+
 - **`swim` formula:** `sailing`, `kayakingRafting`, `hotSprings`,
   `beachesSwimming`
 - **`hiking` formula (large — 15):** `hiking`, `mountaineering`, `cyclingRoad`,
