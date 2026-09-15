@@ -40,27 +40,46 @@ const CANDIDATES: Record<string, Candidate> = {
   egypt: { base: 5, event: { label: 'Red Sea thermal-wind season', weight: 4, months: { 4: 0.5, 5: 0.7, 6: 0.8, 7: 0.9, 8: 0.9, 9: 1, 10: 0.8, 11: 0.5 } } },
   vietnam: { base: 6, event: { label: 'Mui Ne winter wind season', weight: 3, months: { 11: 0.6, 12: 0.8, 1: 1, 2: 1, 3: 0.9, 4: 0.5 } } },
   namibia: { base: 5, event: { label: 'Walvis Bay Lagoon wind season', weight: 4, months: { 11: 0.6, 12: 0.9, 1: 1, 2: 1, 3: 0.9, 4: 0.6 } } },
-  provence: { base: 5, event: { label: 'Camargue Mistral season', weight: 3, months: { 11: 0.6, 12: 0.8, 1: 1, 2: 1, 3: 0.9, 4: 0.6 } } },
+  provence: { base: 5, event: { label: 'Camargue Mistral season', weight: 3, months: { 11: 0.6, 12: 0.8, 1: 1, 2: 1, 3: 0.9, 4: 0.6, 9: 0.3, 10: 0.4 } } },
   'turks-caicos': { base: 7, event: { label: 'Long Bay reliable trade-wind season', weight: 2, months: { 11: 0.4, 12: 0.6, 1: 0.8, 2: 0.9, 3: 1, 4: 1, 5: 0.9 } } },
 
   // ---- Moderate tier ----
-  dubai: { base: 4, event: { label: 'Kite Beach winter wind', weight: 3, months: { 12: 0.7, 1: 1, 2: 1, 3: 0.7, 4: 0.5 } } },
+  // Dubai correction: research shows summer (May-Oct) Shamal winds are
+  // genuinely strong (15-30kt) — winter is "preferred" mainly for comfort
+  // (40C+ heat), not because summer lacks wind. Widened accordingly.
+  dubai: { base: 5, event: { label: 'Kite Beach wind season (comfort peaks Dec-Apr)', weight: 3, months: { 12: 0.7, 1: 1, 2: 1, 3: 0.8, 4: 0.6, 6: 0.3, 7: 0.3, 8: 0.3, 9: 0.4, 10: 0.5 } } },
+  // Croatia confirmed genuinely closed Oct-Apr (not just quieter) —
+  // months unchanged, but content must say so explicitly.
   croatia: { base: 4, event: { label: 'Viganj Maestral season', weight: 3, months: { 5: 0.6, 6: 0.8, 7: 1, 8: 1, 9: 0.7 } } },
-  srilanka: { base: 3, event: { label: 'Kalpitiya wind season', weight: 4, months: { 5: 0.6, 6: 0.9, 7: 1, 8: 1, 9: 0.9, 10: 0.6, 12: 0.4, 1: 0.5, 2: 0.4 } } },
+  // Sri Lanka confirmed a genuine "gap season" (Mar-mid-May, esp. April,
+  // "kitesurfing not possible") between two real seasons — months already
+  // reflect this (Mar/Apr absent); content must name the gap explicitly.
+  srilanka: { base: 3, event: { label: 'Kalpitiya wind seasons (summer main, winter secondary)', weight: 4, months: { 5: 0.6, 6: 0.9, 7: 1, 8: 1, 9: 0.9, 10: 0.6, 12: 0.4, 1: 0.5, 2: 0.4 } } },
   tanzania: { base: 3, event: { label: 'Paje monsoon wind seasons (Kaskazi & Kusi)', weight: 4, months: { 12: 0.5, 1: 0.6, 2: 0.6, 3: 0.5, 5: 0.7, 6: 0.9, 7: 1, 8: 1, 9: 0.9, 10: 0.6 } } },
-  barbados: { base: 4, event: { label: 'Silver Sands trade-wind season', weight: 3, months: { 11: 0.6, 12: 0.8, 1: 1, 2: 1, 3: 0.9, 4: 0.6 } } },
+  // Barbados correction: "reliable year-round except Jul-Sep" — widened
+  // from the too-narrow Nov-Apr-only window.
+  barbados: { base: 4, event: { label: 'Trade winds, reliable year-round except Jul-Sep', weight: 3, months: { 10: 0.5, 11: 0.7, 12: 0.9, 1: 1, 2: 1, 3: 0.9, 4: 0.7, 5: 0.5, 6: 0.4 } } },
   lisbon: { base: 4, event: { label: 'Guincho "nortada" summer wind', weight: 3, months: { 6: 0.6, 7: 0.9, 8: 1, 9: 0.7 } } },
   ireland: { base: 4, event: { label: 'Brandon Bay Atlantic storm season', weight: 3, months: { 9: 0.6, 10: 0.8, 11: 1, 12: 0.9, 1: 0.7, 2: 0.6 } } },
-  cornwall: { base: 4, event: { label: 'Watergate Bay Atlantic storm season', weight: 3, months: { 9: 0.6, 10: 0.8, 11: 1, 12: 0.9, 1: 0.7 } } },
+  cornwall: { base: 4, event: { label: 'Watergate Bay Atlantic storm season (summer notably lighter)', weight: 3, months: { 9: 0.6, 10: 0.8, 11: 1, 12: 0.9, 1: 0.7, 5: 0.4, 6: 0.3 } } },
   gbr: { base: 4, event: { label: 'Whitsundays trade-wind season', weight: 3, months: { 3: 0.6, 4: 0.9, 5: 1, 6: 1, 7: 0.8, 8: 0.6 } } },
-  mallorca: { base: 4, event: { label: 'Pollença Bay "Embat" season', weight: 2, months: { 5: 0.6, 6: 0.8, 7: 1, 8: 1, 9: 0.7 } } },
-  taiwan: { base: 4, event: { label: 'Kenting NE monsoon season', weight: 3, months: { 10: 0.6, 11: 0.9, 12: 1, 1: 1, 2: 0.8, 3: 0.6 } } },
+  mallorca: { base: 4, event: { label: 'Pollença Bay "Embat" thermal-wind season', weight: 2, months: { 5: 0.6, 6: 0.8, 7: 1, 8: 1, 9: 0.7 } } },
+  // Taiwan correction: NE monsoon is the core, but summer isn't fully dead
+  // ("20+ knots not uncommon" off-season) — added light summer presence.
+  taiwan: { base: 4, event: { label: 'Kenting NE monsoon season', weight: 3, months: { 10: 0.6, 11: 0.9, 12: 1, 1: 1, 2: 0.8, 3: 0.6, 7: 0.3, 8: 0.3 } } },
   bordeaux: { base: 4, event: { label: 'Arcachon Bay wind season', weight: 2, months: { 4: 0.6, 5: 0.8, 6: 0.9, 7: 1, 8: 1, 9: 0.8, 10: 0.5 } } },
-  'colombian-caribbean': { base: 4, event: { label: 'Cabo de la Vela trade-wind season', weight: 3, months: { 12: 0.6, 1: 0.8, 2: 0.9, 3: 1, 4: 1, 5: 0.9, 6: 0.7, 7: 0.5 } } },
+  // Colombian Caribbean correction: ~330 windy days/year at Cabo de la
+  // Vela — genuinely near year-round, not narrow. Raised base, widened
+  // months; still capped below the "strong" tier for the real 7hr
+  // remoteness from Cartagena, not for lack of wind.
+  'colombian-caribbean': { base: 5, event: { label: 'Cabo de la Vela near-year-round trade winds (May-Jun the only real dip)', weight: 2, months: { 1: 0.7, 2: 0.8, 3: 0.9, 4: 1, 7: 0.6, 8: 0.6, 9: 0.6, 10: 0.6, 11: 0.6, 12: 0.7 } } },
   madagascar: { base: 3, event: { label: 'Ifaty trade-wind season', weight: 3, months: { 6: 0.7, 7: 0.9, 8: 1, 9: 0.7 } } },
 
   // ---- Modest / niche tier ----
-  jamaica: { base: 2, event: { label: 'North Coast trade-wind season', weight: 3, months: { 12: 0.6, 1: 0.8, 2: 1, 3: 0.7 } } },
+  // Jamaica correction: real trade-wind season runs late Nov through
+  // Jun/mid-Jul (peak Jan-Feb); Jul-Oct is the genuine off-season, not
+  // just Dec-Mar as originally modeled.
+  jamaica: { base: 2, event: { label: 'North Coast trade winds (late Nov-Jun, peak Jan-Feb)', weight: 3, months: { 11: 0.4, 12: 0.6, 1: 1, 2: 1, 3: 0.8, 4: 0.6, 5: 0.5, 6: 0.4 } } },
   rio: { base: 2, event: { label: 'Barra da Tijuca wind season', weight: 2, months: { 8: 0.5, 9: 0.6, 10: 0.8, 11: 1, 12: 0.9, 1: 0.8, 2: 0.7 } } },
   bahamas: { base: 2, event: { label: 'Exuma trade-wind season', weight: 3, months: { 11: 0.6, 12: 0.8, 1: 1, 2: 1, 3: 0.8, 4: 0.6 } } },
   bali: { base: 2, event: { label: 'Sanur dry-season wind', weight: 2, months: { 6: 0.7, 7: 1, 8: 1, 9: 0.6 } } },
