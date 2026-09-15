@@ -103,6 +103,20 @@ one.
   conditions change" is a legitimate, honest answer, not a cop-out.
 - **Never refer to a bundled multi-site catalog entry with singular language** ("the
   park") when it's actually two or more distinct places.
+- **State the practical seasonal reality explicitly, per destination, verified — not
+  assumed from the activity's general pattern.** "Baseline, lighter wind" doesn't tell a
+  reader whether people actually do the activity that month or not. For every month, know
+  and say which of three things is true: year-round (no real dead season, just a peak),
+  long-season-with-a-real-dip (a genuine but short quiet stretch), or a narrow window with
+  a real dead off-season (say so plainly — "outside March-September, this isn't a realistic
+  time to plan a trip around it"). Research this per destination (found while authoring
+  windSports: Barbados and Jamaica were each modeled with too-narrow a season, Dubai's
+  summer wind was wrongly assumed absent when it's actually just too hot to enjoy).
+- **Every monthly blurb must name the actual site or mechanism and stand alone.** A reader
+  jumping straight to one month, with no access to the overview or neighboring months,
+  should understand exactly what's being described. "Essentially closed" reads as the whole
+  destination shutting down; "outside the wind season at Viganj, kitesurfing here is
+  essentially on hold" doesn't have that problem.
 - **A stored score event's label can target a different specific mechanism** than the
   content you're pinning to it, as long as the *timing* stays honestly compatible — flag
   the mismatch (in the commit message is fine) rather than blocking on it.
@@ -285,9 +299,21 @@ covered to know what's genuinely missing.
 
 ## 7. What's left (as of this doc)
 
-Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`.
+Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`.
 
-46 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
+`windSports` was the first interest with zero pre-existing scores (added to the taxonomy
+unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
+determination + baseScores + sliderEvents + a new anchors.ts entry, all from scratch) before
+the standard §1 content workflow could even start. See
+`scripts/set-windsports-foundation.ts` for that pattern if another zero-data interest ever
+comes up. It also produced a hard rule for every interest from now on: **every monthly blurb
+must (a) state plainly whether the destination is year-round, long-season-with-a-real-dip, or
+a genuine narrow window with a dead off-season — verified per destination, not assumed from
+the general pattern — and (b) name the actual site/mechanism in the text itself, so it reads
+correctly in isolation** (a bare "essentially closed" misreads as the whole country being
+shut, not one specific spot's wind).
+
+45 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
 avoid running two from the same family back-to-back — it reads as repetitive):
 
 - **`wildlife` formula:** `safari`, `wildflowerBlooms`
