@@ -285,13 +285,13 @@ covered to know what's genuinely missing.
 
 ## 7. What's left (as of this doc)
 
-Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`.
+Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`.
 
-47 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
+46 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
 avoid running two from the same family back-to-back — it reads as repetitive):
 
 - **`wildlife` formula:** `safari`, `wildflowerBlooms`
-- **`swim` formula:** `surfing`, `sailing`, `kayakingRafting`, `hotSprings`,
+- **`swim` formula:** `sailing`, `kayakingRafting`, `hotSprings`,
   `beachesSwimming`
 - **`hiking` formula (large — 15):** `hiking`, `mountaineering`, `cyclingRoad`,
   `mountainBiking`, `adventureSports`, `golf`, `fishing`, `horsebackRiding`,
