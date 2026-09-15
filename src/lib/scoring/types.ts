@@ -23,6 +23,11 @@ export interface Slider {
   group: string;
   formula: string;
   audienceTier: AudienceTier;
+  // True for an interest still scored/stored like any other (never touches
+  // scoring math — see VISIBLE_SLIDERS in constants.ts), but pulled from
+  // every admin and public-app screen that lists/picks interests. Data
+  // stays intact; this is a display-only retirement, not a delete.
+  hidden?: boolean;
 }
 
 export interface Persona {

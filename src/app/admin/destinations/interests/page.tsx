@@ -1,12 +1,12 @@
 import { listInterestMetaForAdmin } from '@/lib/db/queries/admin-interests';
-import { SLIDERS } from '@/lib/scoring/constants';
+import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { InterestsGrid, type InterestRow } from '@/components/admin/InterestsGrid';
 
 export default async function AdminInterestsPage() {
   const metaRows = await listInterestMetaForAdmin();
   const metaByKey = new Map(metaRows.map((r) => [r.key, r]));
 
-  const rows: InterestRow[] = SLIDERS.map((s) => {
+  const rows: InterestRow[] = VISIBLE_SLIDERS.map((s) => {
     const meta = metaByKey.get(s.key);
     return {
       key: s.key,

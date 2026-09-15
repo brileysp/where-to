@@ -1,4 +1,4 @@
-import { SLIDERS, NEUTRAL_WEIGHT } from './constants';
+import { VISIBLE_SLIDERS, NEUTRAL_WEIGHT } from './constants';
 import { isSliderNA } from './destinations';
 import { styleAdjustedScore } from './rank';
 import type { SelectedStyles } from './rank';
@@ -21,7 +21,7 @@ const MIN_INTEREST_POOL_SIZE = 5;
  * the other.
  */
 export function topInterestSliders(weights: Record<string, number>): Slider[] {
-  const aboveNeutral = SLIDERS.filter((s) => (weights[s.key] || 0) > NEUTRAL_WEIGHT).sort(
+  const aboveNeutral = VISIBLE_SLIDERS.filter((s) => (weights[s.key] || 0) > NEUTRAL_WEIGHT).sort(
     (a, b) => (weights[b.key] || 0) - (weights[a.key] || 0),
   );
   // A sparse profile (few sliders above neutral) would otherwise leave a
@@ -30,7 +30,7 @@ export function topInterestSliders(weights: Record<string, number>): Slider[] {
   // for weights that aren't technically "above neutral."
   if (aboveNeutral.length < MIN_INTEREST_POOL_SIZE) {
     const haveKeys = new Set(aboveNeutral.map((s) => s.key));
-    const backfill = SLIDERS.filter((s) => !haveKeys.has(s.key))
+    const backfill = VISIBLE_SLIDERS.filter((s) => !haveKeys.has(s.key))
       .sort((a, b) => (weights[b.key] || 0) - (weights[a.key] || 0))
       .slice(0, MIN_INTEREST_POOL_SIZE - aboveNeutral.length);
     return [...aboveNeutral, ...backfill].slice(0, TOP_INTEREST_COUNT);
@@ -54,7 +54,7 @@ const SIGNAL_STRENGTH_FRACTION = 0.6;
  * shows up to MAX_HIGHLIGHT_COUNT.
  */
 export function defaultHighlightCount(weights: Record<string, number>): number {
-  const values = SLIDERS.map((s) => weights[s.key] || 0);
+  const values = VISIBLE_SLIDERS.map((s) => weights[s.key] || 0);
   const max = Math.max(...values, 0);
   if (max <= 0) return MIN_HIGHLIGHT_COUNT;
   const strongCount = values.filter((w) => w >= max * SIGNAL_STRENGTH_FRACTION).length;
@@ -105,10 +105,10 @@ export function specialistHighlight(
   monthIdx: number,
   selectedStyles?: SelectedStyles,
 ): SpecialistHighlight | null {
-  const maxWeight = Math.max(...SLIDERS.map((s) => weights[s.key] || 0));
+  const maxWeight = Math.max(...VISIBLE_SLIDERS.map((s) => weights[s.key] || 0));
   if (maxWeight <= SPECIALIST_MIN_WEIGHT) return null;
 
-  const tiedSliders = SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight);
+  const tiedSliders = VISIBLE_SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight);
   const candidates = tiedSliders
     .map((s) => ({ slider: s, score: styleAdjustedScore(dest, s.key, monthIdx, selectedStyles), isNA: isSliderNA(dest, s.key) }))
     .filter((c) => !c.isNA)
@@ -131,8 +131,8 @@ export interface TopWeightStatus {
  * always answers relative to whatever the user's own highest weight is.
  */
 export function topWeightStatus(sliderKey: string, weights: Record<string, number>): TopWeightStatus {
-  const maxWeight = Math.max(...SLIDERS.map((s) => weights[s.key] || 0));
-  const tiedCount = SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight).length;
+  const maxWeight = Math.max(...VISIBLE_SLIDERS.map((s) => weights[s.key] || 0));
+  const tiedCount = VISIBLE_SLIDERS.filter((s) => (weights[s.key] || 0) === maxWeight).length;
   return { isTop: (weights[sliderKey] || 0) === maxWeight, tied: tiedCount > 1 };
 }
 

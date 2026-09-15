@@ -46,6 +46,14 @@ export const SLIDERS: Slider[] = [
   { key: 'skiingSnowboarding', label: 'Skiing & Snowboarding', icon: '⛷️', group: 'Sports & Recreation', formula: 'snow', audienceTier: 'popular' },
   { key: 'surfing', label: 'Surfing', icon: '🏄', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
   { key: 'diving', label: 'Diving, Snorkeling & Freediving', icon: '🤿', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
+  // Deliberately separate from 'surfing' — wind-driven (a good wind day,
+  // not a good swell day) rather than wave-driven, and drew on a distinct
+  // set of destinations when surfing's own base scores/events were
+  // reviewed (Aruba's was corrected for exactly this — see
+  // fix-surfing-windsurfing-conflation.ts). Unauthored for now: no base
+  // scores or content yet, same starting state every other interest had
+  // before its authoring pass.
+  { key: 'windSports', label: 'Windsurfing & Kitesurfing', icon: '🪁', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
   { key: 'sailing', label: 'Sailing & Boating', icon: '⛵', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'specialist' },
   { key: 'kayakingRafting', label: 'Kayaking & Rafting', icon: '🛶', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
   { key: 'adventureSports', label: 'Adventure Sports', icon: '🪂', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'enthusiast' },
@@ -98,13 +106,23 @@ export const SLIDERS: Slider[] = [
   { key: 'themeParks', label: 'Theme Parks & Attractions', icon: '🎢', group: 'Relaxation & Leisure', formula: 'luxury', audienceTier: 'popular' },
   { key: 'nightlife', label: 'Nightlife', icon: '🍸', group: 'Relaxation & Leisure', formula: 'food', audienceTier: 'popular' },
   { key: 'shopping', label: 'Shopping', icon: '🛍️', group: 'Relaxation & Leisure', formula: 'shopping', audienceTier: 'popular' },
-  { key: 'familyFun', label: 'Family Fun', icon: '👨‍👩‍👧', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'popular' },
-  { key: 'spectatorSports', label: 'Spectator Sporting Events', icon: '🏟️', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'specialist' },
+  // Hidden, not deleted: pulled from every admin/app screen that lists or
+  // picks interests (see VISIBLE_SLIDERS below), but scoring, stored data,
+  // and audience-tier weighting are untouched.
+  { key: 'familyFun', label: 'Family Fun', icon: '👨‍👩‍👧', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'popular', hidden: true },
+  { key: 'spectatorSports', label: 'Spectator Sporting Events', icon: '🏟️', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'specialist', hidden: true },
   // Value — practical/logistical, not domain interests (see comment above)
   { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist' },
   { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist' },
   { key: 'roadtrip', label: 'Road-Tripping', icon: '🚗', group: 'Value', formula: 'hiking', audienceTier: 'enthusiast' },
 ];
+
+// The list every admin/app screen that lists or lets someone pick an
+// interest should render from — SLIDERS itself stays the source of truth
+// for scoring (rank.ts, destinations.ts, fitCurve.ts, curveScoring.ts all
+// deliberately keep importing SLIDERS directly, not this, so a hidden
+// interest's stored data and weighting are completely unaffected).
+export const VISIBLE_SLIDERS = SLIDERS.filter((s) => !s.hidden);
 
 export const SLIDER_GROUPS = [
   'Nature & Wildlife',

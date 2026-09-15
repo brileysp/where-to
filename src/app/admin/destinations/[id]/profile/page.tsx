@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getDestinationForAdmin } from '@/lib/db/queries/admin-destinations';
 import { scorePlace } from '@/lib/db/queries/places';
 import { getContinent } from '@/lib/scoring/continents';
-import { SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
+import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import { PlaceProfileGrid, type ProfileCell } from '@/components/admin/PlaceProfileGrid';
 
 export default async function PlaceProfilePage({ params }: { params: Promise<{ id: string }> }) {
@@ -11,7 +11,7 @@ export default async function PlaceProfilePage({ params }: { params: Promise<{ i
   if (!row) notFound();
 
   const scored = scorePlace(row);
-  const cells: ProfileCell[] = SLIDERS.map((s) => ({
+  const cells: ProfileCell[] = VISIBLE_SLIDERS.map((s) => ({
     key: s.key,
     label: s.label,
     icon: s.icon,

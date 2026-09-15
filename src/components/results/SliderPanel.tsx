@@ -1,6 +1,6 @@
 'use client';
 
-import { SLIDERS, SLIDER_GROUPS, PERSONAS } from '@/lib/scoring/constants';
+import { SLIDERS, VISIBLE_SLIDERS, SLIDER_GROUPS, PERSONAS } from '@/lib/scoring/constants';
 import { getStyleLabel, getStyleAxisName } from '@/lib/dna/domains';
 import type { SavedProfileData } from '@/app/actions';
 
@@ -43,8 +43,8 @@ export function SliderPanel({
   const matchedProfile = savedProfiles.find((p) => weightsEqual(p.weights, weights));
 
   const visibleGroups = showAllSliders
-    ? SLIDER_GROUPS.map((g) => ({ group: g, sliders: SLIDERS.filter((s) => s.group === g) }))
-    : [{ group: null, sliders: SLIDERS.filter((s) => (activePersona ? activePersona.primary.includes(s.key) : true)) }];
+    ? SLIDER_GROUPS.map((g) => ({ group: g, sliders: VISIBLE_SLIDERS.filter((s) => s.group === g) }))
+    : [{ group: null, sliders: VISIBLE_SLIDERS.filter((s) => (activePersona ? activePersona.primary.includes(s.key) : true)) }];
 
   return (
     <div className="panel">
@@ -146,7 +146,7 @@ export function SliderPanel({
       ))}
 
       <button type="button" className="btn-secondary" onClick={onToggleShowAll}>
-        {showAllSliders ? 'Show fewer sliders' : `Show all ${SLIDERS.length} sliders`}
+        {showAllSliders ? 'Show fewer sliders' : `Show all ${VISIBLE_SLIDERS.length} sliders`}
       </button>
       <button type="button" className="btn-secondary" style={{ marginTop: 8 }} onClick={onReset}>
         Reset

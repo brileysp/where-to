@@ -1,7 +1,7 @@
 import { getAllScoredPlaces } from '@/lib/db/queries/places';
 import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
 import { getContinent } from '@/lib/scoring/continents';
-import { SLIDERS } from '@/lib/scoring/constants';
+import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { MatrixGrid, type MatrixRow } from '@/components/admin/MatrixGrid';
 
 export default async function AdminDestinationMatrixPage() {
@@ -31,7 +31,7 @@ export default async function AdminDestinationMatrixPage() {
     activityStyleTiersByDest[d.id] = d.activityStyleTiers;
     const continent = getContinent(d.id);
     const updatedAt = updatedAtById.get(d.id) ?? new Date().toISOString();
-    for (const s of SLIDERS) {
+    for (const s of VISIBLE_SLIDERS) {
       const na = d.naSliders.includes(s.key);
       const monthly = d.monthly[s.key] ?? [];
       rows.push({

@@ -6,7 +6,7 @@ import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
 import { JsonPanelCell } from './cells';
 import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
-import { SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
+import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import type { SliderEvent } from '@/lib/scoring/types';
 import { parseSliderCurve, rescaleCurve } from '@/lib/scoring/curve';
 
@@ -439,10 +439,10 @@ export function MatrixGrid({
         <>
           <span className="filter-label">Interest</span>
           <select className="filter-select" value={selectedInterest} onChange={(e) => setSelectedInterest(e.target.value)}>
-            <option value="all">All {SLIDERS.length} interests</option>
+            <option value="all">All {VISIBLE_SLIDERS.length} interests</option>
             {SLIDER_GROUPS.map((group) => (
               <optgroup label={group} key={group}>
-                {SLIDERS.filter((s) => s.group === group).map((s) => (
+                {VISIBLE_SLIDERS.filter((s) => s.group === group).map((s) => (
                   <option key={s.key} value={s.key}>
                     {s.icon} {s.label}
                   </option>

@@ -1,4 +1,4 @@
-import { BAND_DIMENSIONS, MONTH_NAMES, SLIDERS } from './constants';
+import { BAND_DIMENSIONS, MONTH_NAMES, VISIBLE_SLIDERS } from './constants';
 import { isSliderNA } from './destinations';
 import { styleAdjustedScore } from './rank';
 import type { SelectedBands, SelectedStyles } from './rank';
@@ -60,7 +60,7 @@ export function explainMatch(
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
 ): MatchExplanation {
-  const rows = SLIDERS.map((s) => ({
+  const rows = VISIBLE_SLIDERS.map((s) => ({
     key: s.key,
     icon: s.icon,
     label: s.label,
