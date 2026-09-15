@@ -299,7 +299,7 @@ covered to know what's genuinely missing.
 
 ## 7. What's left (as of this doc)
 
-Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`.
+Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`.
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
@@ -313,10 +313,10 @@ the general pattern — and (b) name the actual site/mechanism in the text itsel
 correctly in isolation** (a bare "essentially closed" misreads as the whole country being
 shut, not one specific spot's wind).
 
-45 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
+44 remain. Natural formula-family groupings (shared formula ⇒ shared tooling/research, but
 avoid running two from the same family back-to-back — it reads as repetitive):
 
-- **`wildlife` formula:** `safari`, `wildflowerBlooms`
+- **`wildlife` formula:** `wildflowerBlooms`
 - **`swim` formula:** `sailing`, `kayakingRafting`, `hotSprings`,
   `beachesSwimming`
 - **`hiking` formula (large — 15):** `hiking`, `mountaineering`, `cyclingRoad`,
