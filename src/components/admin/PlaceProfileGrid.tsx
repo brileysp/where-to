@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useMemo, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { scoreColor } from '@/lib/admin/scoreColor';
+import { SliderMonthlyWeatherCell } from './cells';
 
 export interface ProfileCell {
   key: string;
@@ -15,6 +16,7 @@ export interface ProfileCell {
   base: number | null; // the authored value the monthly formula starts from
   monthly: number[]; // 12 entries, already reflects any existing override
   overrides: Record<number, number>; // sparse, which months are admin-overridden
+  monthlyText: (string | null)[]; // sliderMonthlyWeather for this interest — same data the Matrix grid's Monthly column edits
 }
 
 const MONTH_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -29,6 +31,7 @@ export function PlaceProfileGrid({
   groups,
   cells,
   initialBaseScores,
+  initialSliderMonthlyWeather,
 }: {
   destId: string;
   destName: string;
@@ -39,15 +42,24 @@ export function PlaceProfileGrid({
   groups: string[];
   cells: ProfileCell[];
   initialBaseScores: Record<string, number>;
+  initialSliderMonthlyWeather: Record<string, (string | null)[]>;
 }) {
+  const router = useRouter();
   const [rows, setRows] = useState(cells);
   const [allOverrides, setAllOverrides] = useState<Record<string, Record<number, number>>>(
     Object.fromEntries(cells.map((c) => [c.key, { ...c.overrides }])),
   );
   const [baseScores, setBaseScores] = useState(initialBaseScores);
+  const [sliderMonthlyWeather, setSliderMonthlyWeather] = useState(initialSliderMonthlyWeather);
   const [editing, setEditing] = useState<string | null>(null); // `${sliderKey}:${monthIdx}`
+  const [query, setQuery] = useState('');
   const [updatedAt, setUpdatedAt] = useState(initialUpdatedAt);
   const commit = useFieldEdit();
+
+  const visibleRows = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return q ? rows.filter((r) => r.label.toLowerCase().includes(q)) : rows;
+  }, [rows, query]);
 
   useUpdatedAtSync('destination', (entityId, newUpdatedAt) => {
     if (entityId === destId) setUpdatedAt(newUpdatedAt);
@@ -137,6 +149,10 @@ export function PlaceProfileGrid({
     setRows((rs) => rs.map((r) => (r.key === key ? { ...r, base: value } : r)));
   }
 
+  function patchMonthlyText(key: string, value: (string | null)[]) {
+    setRows((rs) => rs.map((r) => (r.key === key ? { ...r, monthlyText: value } : r)));
+  }
+
   function commitBase(key: string, label: string, oldValue: number | null, raw: string) {
     const trimmed = raw.trim();
     const v = trimmed === '' ? 0 : Number(trimmed);
@@ -166,9 +182,9 @@ export function PlaceProfileGrid({
   return (
     <div className="grid-wrap">
       <div className="toolbar">
-        <Link href="/admin/destinations" className="btn">
+        <button type="button" className="btn" onClick={() => router.back()}>
           ← Back
-        </Link>
+        </button>
         <span style={{ fontSize: 18 }}>{destEmoji}</span>
         <div>
           <div style={{ fontWeight: 700, fontSize: 13 }}>{destName}</div>
@@ -176,13 +192,28 @@ export function PlaceProfileGrid({
             {region} · {continent}
           </div>
         </div>
+        <div className="search">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            placeholder="Search interest…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+          />
+        </div>
         <div className="divider" />
         <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>
           0 <span style={{ display: 'inline-block', width: 90, height: 9, borderRadius: 3, border: '1px solid var(--border)', background: 'linear-gradient(90deg,#ffffff,#bfe0c8,#3a7d4f)', verticalAlign: 'middle', margin: '0 4px' }} /> 10
         </span>
         <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>✎ = manually overridden</span>
         <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>Click any cell to set an exact value · empty input clears the override</span>
-        <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>Editing Base changes the formula input — reload the page to see its effect on the months</span>
+        <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>Click an interest name for its monthly blurbs · editing Base changes the formula input — reload the page to see its effect on the months</span>
       </div>
       <div className="grid-scroll">
         <table className="grid profile-grid">
@@ -203,14 +234,42 @@ export function PlaceProfileGrid({
           </thead>
           <tbody>
             {groups.map((group) =>
-              rows
+              visibleRows
                 .filter((r) => r.group === group)
                 .map((r) => (
                   <tr key={r.key}>
                     <td className="sticky-col">
-                      <div className="cell-inner interest-tag">
-                        {r.icon} {r.label}
-                      </div>
+                      <SliderMonthlyWeatherCell
+                        ctx={{
+                          entityType: 'destination',
+                          entityId: destId,
+                          entityLabel: destName,
+                          field: 'sliderMonthlyWeather',
+                          fieldLabel: `${r.label} monthly blurbs`,
+                          loadedUpdatedAt: updatedAt,
+                        }}
+                        value={r.monthlyText}
+                        setLocal={(v) => {
+                          setSliderMonthlyWeather((m) => {
+                            const after = { ...m };
+                            if (v.length === 0) delete after[r.key];
+                            else after[r.key] = v;
+                            return after;
+                          });
+                          patchMonthlyText(r.key, v);
+                        }}
+                        toPatchValue={(v) => {
+                          const after = { ...sliderMonthlyWeather };
+                          if (v.length === 0) delete after[r.key];
+                          else after[r.key] = v;
+                          return after;
+                        }}
+                        renderTrigger={({ onClick }) => (
+                          <div className="cell-inner interest-tag" style={{ cursor: 'pointer' }} onClick={onClick} title="Click to view/edit this interest's monthly blurbs">
+                            {r.icon} {r.label}
+                          </div>
+                        )}
+                      />
                     </td>
                     <td style={{ textAlign: 'center' }}>
                       <div className="cell-inner" style={{ justifyContent: 'center' }}>

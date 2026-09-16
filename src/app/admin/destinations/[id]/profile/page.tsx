@@ -11,6 +11,7 @@ export default async function PlaceProfilePage({ params }: { params: Promise<{ i
   if (!row) notFound();
 
   const scored = scorePlace(row);
+  const sliderMonthlyWeather = (row.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>;
   const cells: ProfileCell[] = VISIBLE_SLIDERS.map((s) => ({
     key: s.key,
     label: s.label,
@@ -20,6 +21,7 @@ export default async function PlaceProfilePage({ params }: { params: Promise<{ i
     base: scored.base[s.key] ?? null,
     monthly: scored.monthly[s.key] ?? new Array(12).fill(0),
     overrides: scored.scoreOverrides[s.key] ?? {},
+    monthlyText: sliderMonthlyWeather[s.key] ?? [],
   }));
 
   return (
@@ -33,6 +35,7 @@ export default async function PlaceProfilePage({ params }: { params: Promise<{ i
       groups={SLIDER_GROUPS}
       cells={cells}
       initialBaseScores={scored.base}
+      initialSliderMonthlyWeather={sliderMonthlyWeather}
     />
   );
 }

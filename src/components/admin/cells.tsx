@@ -503,29 +503,37 @@ export function SliderMonthlyWeatherCell({
   value,
   setLocal,
   toPatchValue,
+  renderTrigger,
 }: {
   ctx: FieldContext;
   value: (string | null)[];
   setLocal: (v: (string | null)[]) => void;
   toPatchValue: (v: (string | null)[]) => unknown;
+  /** Override the default "N of 12 months" pill — e.g. Place Profile makes
+   * the whole interest-name row header the click target instead. Receives
+   * the same onClick the default trigger uses, so the panel still opens
+   * correctly with the current draft. */
+  renderTrigger?: (opts: { filledCount: number; onClick: () => void }) => React.ReactNode;
 }) {
   const commit = useFieldEdit();
   const [open, setOpen] = useState(false);
   const weather = value.length ? value : new Array(12).fill(null);
   const [draft, setDraft] = useState<(string | null)[]>(weather);
   const filledCount = weather.filter(Boolean).length;
+  const openPanel = () => {
+    setDraft(value.length ? value : new Array(12).fill(null));
+    setOpen(true);
+  };
 
   return (
     <>
-      <div
-        className={`cell-inner text-cell${filledCount ? '' : ' empty'}`}
-        onClick={() => {
-          setDraft(value.length ? value : new Array(12).fill(null));
-          setOpen(true);
-        }}
-      >
-        {filledCount ? `${filledCount} of 12 months` : 'Click to add…'}
-      </div>
+      {renderTrigger ? (
+        renderTrigger({ filledCount, onClick: openPanel })
+      ) : (
+        <div className={`cell-inner text-cell${filledCount ? '' : ' empty'}`} onClick={openPanel}>
+          {filledCount ? `${filledCount} of 12 months` : 'Click to add…'}
+        </div>
+      )}
       {open && (
         <div className="scrim" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
           <div className="panel">
