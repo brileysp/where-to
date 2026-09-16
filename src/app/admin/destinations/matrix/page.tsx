@@ -8,10 +8,13 @@ import type { SliderSource } from '@/components/admin/cells';
 export default async function AdminDestinationMatrixPage() {
   const [scored, adminRows] = await Promise.all([getAllScoredPlaces(), listDestinationsForAdmin()]);
   const updatedAtById = new Map(adminRows.map((r) => [r.id, r.updatedAt.toISOString()]));
-  // sliderSources isn't part of the scoring pipeline (ScoringDestination has
-  // no reason to carry it), so it comes from the plain admin rows rather
-  // than `scored`, unlike every other per-slider column on this grid.
+  // sliderSources, sliderOverview and sliderMonthlyWeather aren't part of
+  // the scoring pipeline (ScoringDestination has no reason to carry them),
+  // so they come from the plain admin rows rather than `scored`, unlike
+  // every other per-slider column on this grid.
   const sliderSourcesById = new Map(adminRows.map((r) => [r.id, (r.sliderSources ?? {}) as Record<string, SliderSource[]>]));
+  const sliderOverviewById = new Map(adminRows.map((r) => [r.id, (r.sliderOverview ?? {}) as Record<string, string>]));
+  const sliderMonthlyWeatherById = new Map(adminRows.map((r) => [r.id, (r.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>]));
 
   // Base score, tier, and N/A are each one key inside a whole-object/array
   // column (baseScores jsonb, signatureTier jsonb, naSliders text[]) — the
@@ -25,6 +28,8 @@ export default async function AdminDestinationMatrixPage() {
   const sliderEventsByDest: Record<string, Record<string, (typeof scored)[number]['sliderEvents'][string]>> = {};
   const activityStyleTiersByDest: Record<string, Record<string, Record<string, string>>> = {};
   const sliderSourcesByDest: Record<string, Record<string, SliderSource[]>> = {};
+  const sliderOverviewByDest: Record<string, Record<string, string>> = {};
+  const sliderMonthlyWeatherByDest: Record<string, Record<string, (string | null)[]>> = {};
 
   const rows: MatrixRow[] = [];
   for (const d of scored) {
@@ -36,6 +41,8 @@ export default async function AdminDestinationMatrixPage() {
     sliderEventsByDest[d.id] = d.sliderEvents;
     activityStyleTiersByDest[d.id] = d.activityStyleTiers;
     sliderSourcesByDest[d.id] = sliderSourcesById.get(d.id) ?? {};
+    sliderOverviewByDest[d.id] = sliderOverviewById.get(d.id) ?? {};
+    sliderMonthlyWeatherByDest[d.id] = sliderMonthlyWeatherById.get(d.id) ?? {};
     const continent = getContinent(d.id);
     const updatedAt = updatedAtById.get(d.id) ?? new Date().toISOString();
     for (const s of VISIBLE_SLIDERS) {
@@ -58,6 +65,8 @@ export default async function AdminDestinationMatrixPage() {
         events: d.sliderEvents[s.key] ?? [],
         styleTiers: d.activityStyleTiers[s.key] ?? {},
         sources: sliderSourcesById.get(d.id)?.[s.key] ?? [],
+        overview: sliderOverviewById.get(d.id)?.[s.key] ?? '',
+        monthlyText: sliderMonthlyWeatherById.get(d.id)?.[s.key] ?? [],
         updatedAt,
       });
     }
@@ -74,6 +83,8 @@ export default async function AdminDestinationMatrixPage() {
       initialSliderEventsByDest={sliderEventsByDest}
       initialActivityStyleTiersByDest={activityStyleTiersByDest}
       initialSliderSourcesByDest={sliderSourcesByDest}
+      initialSliderOverviewByDest={sliderOverviewByDest}
+      initialSliderMonthlyWeatherByDest={sliderMonthlyWeatherByDest}
     />
   );
 }

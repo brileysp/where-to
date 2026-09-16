@@ -137,6 +137,14 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
           ),
         ),
       ),
+      // Per-interest analogues of the destination-level overview/monthly
+      // text — see the doc comment on schema.ts's sliderOverview/
+      // sliderMonthlyWeather columns. Not wired into any admin cell until
+      // now (found missing when a full interest-content audit had no way
+      // to review what had actually been written) — added alongside the
+      // Overview/Monthly columns in MatrixGrid.
+      sliderOverview: zodField(sliderKeyedRecord(z.string())),
+      sliderMonthlyWeather: zodField(sliderKeyedRecord(z.array(z.string().nullable()).max(12))),
       // Reusing the exact building blocks destination-scoring-schema.ts
       // already validates these with, rather than hand-rolled duplicates.
       dryMonths: zodField(monthArray),

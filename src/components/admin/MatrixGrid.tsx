@@ -27,6 +27,8 @@ export interface MatrixRow {
   events: SliderEvent[];
   styleTiers: Record<string, string>;
   sources: SliderSource[];
+  overview: string;
+  monthlyText: (string | null)[];
   updatedAt: string;
 }
 
@@ -51,6 +53,8 @@ export function MatrixGrid({
   initialSliderEventsByDest,
   initialActivityStyleTiersByDest,
   initialSliderSourcesByDest,
+  initialSliderOverviewByDest,
+  initialSliderMonthlyWeatherByDest,
 }: {
   initialRows: MatrixRow[];
   initialBaseScoresByDest: Record<string, Record<string, number>>;
@@ -61,6 +65,8 @@ export function MatrixGrid({
   initialSliderEventsByDest: Record<string, Record<string, SliderEvent[]>>;
   initialActivityStyleTiersByDest: Record<string, Record<string, Record<string, string>>>;
   initialSliderSourcesByDest: Record<string, Record<string, SliderSource[]>>;
+  initialSliderOverviewByDest: Record<string, Record<string, string>>;
+  initialSliderMonthlyWeatherByDest: Record<string, Record<string, (string | null)[]>>;
 }) {
   const [rows, setRows] = useState(initialRows);
 
@@ -75,6 +81,8 @@ export function MatrixGrid({
   const [sliderEventsByDest, setSliderEventsByDest] = useState(initialSliderEventsByDest);
   const [activityStyleTiersByDest, setActivityStyleTiersByDest] = useState(initialActivityStyleTiersByDest);
   const [sliderSourcesByDest, setSliderSourcesByDest] = useState(initialSliderSourcesByDest);
+  const [sliderOverviewByDest, setSliderOverviewByDest] = useState(initialSliderOverviewByDest);
+  const [sliderMonthlyWeatherByDest, setSliderMonthlyWeatherByDest] = useState(initialSliderMonthlyWeatherByDest);
   const [selectedInterest, setSelectedInterest] = useState('all');
   const commit = useFieldEdit();
 
@@ -446,6 +454,61 @@ export function MatrixGrid({
               setSliderSourcesByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
               patchRow(r.destId, r.sliderKey, { sources: v });
             }}
+            toPatchValue={mergedAfter}
+          />
+        );
+      },
+    },
+    {
+      key: 'overview',
+      label: 'Overview',
+      render: (r) => {
+        const mergedAfter = (v: string) => {
+          const before = sliderOverviewByDest[r.destId] ?? {};
+          const after = { ...before };
+          if (!v) delete after[r.sliderKey];
+          else after[r.sliderKey] = v;
+          return after;
+        };
+        return (
+          <JsonPanelCell
+            ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderOverview', fieldLabel: `${r.sliderLabel} overview`, loadedUpdatedAt: r.updatedAt }}
+            value={r.overview}
+            setLocal={(v) => {
+              setSliderOverviewByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
+              patchRow(r.destId, r.sliderKey, { overview: v });
+            }}
+            emptyValue={''}
+            summarize={(v) => v}
+            hint={'The non-seasonal, one-paragraph summary shown for this interest at this destination — the "why" behind the scores, not tied to any one month.'}
+            toPatchValue={mergedAfter}
+          />
+        );
+      },
+    },
+    {
+      key: 'monthlyText',
+      label: 'Monthly',
+      render: (r) => {
+        const mergedAfter = (v: (string | null)[]) => {
+          const before = sliderMonthlyWeatherByDest[r.destId] ?? {};
+          const after = { ...before };
+          if (v.length === 0) delete after[r.sliderKey];
+          else after[r.sliderKey] = v;
+          return after;
+        };
+        const filled = (r.monthlyText ?? []).filter((t) => t).length;
+        return (
+          <JsonPanelCell
+            ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderMonthlyWeather', fieldLabel: `${r.sliderLabel} monthly blurbs`, loadedUpdatedAt: r.updatedAt }}
+            value={r.monthlyText}
+            setLocal={(v) => {
+              setSliderMonthlyWeatherByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
+              patchRow(r.destId, r.sliderKey, { monthlyText: v });
+            }}
+            emptyValue={[]}
+            summarize={() => (filled ? `${filled}/12 months` : '')}
+            hint={'One blurb per month (index 0 = January), explaining THAT month’s score for this interest — e.g. "Peak dry season, waterholes concentrate game." null/missing = not yet authored for that month.'}
             toPatchValue={mergedAfter}
           />
         );
