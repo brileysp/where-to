@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
-import { JsonPanelCell, SourcesPanelCell, type SliderSource } from './cells';
+import { JsonPanelCell, SourcesPanelCell, TextFieldPanelCell, SliderMonthlyWeatherCell, type SliderSource } from './cells';
 import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
@@ -105,12 +105,21 @@ export function MatrixGrid({
    * formula never produced a fit for. A flat curve is still editable — it
    * just moves as a block, since it has no shape to preserve.
    */
+  /** Grayed "N/A" placeholder for a per-slider content cell (Events, Style
+   * tiers, Sources, Overview, Monthly) on a row marked N/A — there's
+   * nothing to author for an interest this destination doesn't have, so
+   * these shouldn't invite a click with "Click to add…" the way an
+   * unauthored-but-applicable cell does. */
+  function naCell() {
+    return <div className="cell-inner" style={{ color: 'var(--text-faint)' }}>N/A</div>;
+  }
+
   function renderEnvelopeCell(r: MatrixRow, bound: 'min' | 'max') {
     const current = r[bound];
     const raw = sliderCurvesByDest[r.destId]?.[r.sliderKey];
     const dim = { justifyContent: 'flex-end', fontFamily: 'var(--font-plex-mono, monospace)', color: 'var(--text-dim)' } as const;
     if (r.na || current === null || raw === undefined) {
-      return <div className="cell-inner" style={dim}>{r.na ? 'N/A' : current ?? '—'}</div>;
+      return <div className="cell-inner" style={dim}>{r.na ? 'N/A' : current === null ? '—' : Math.round(current)}</div>;
     }
     return (
       <div className="cell-inner" style={{ justifyContent: 'flex-end' }}>
@@ -121,7 +130,7 @@ export function MatrixGrid({
           step={0.5}
           className="cost-input num"
           style={{ width: 52, textAlign: 'right' }}
-          defaultValue={current}
+          defaultValue={Math.round(current)}
           key={`${r.destId}:${r.sliderKey}:${bound}:${current}`}
           onBlur={(e) => {
             const next = Math.max(0, Math.min(10, Number(e.target.value)));
@@ -253,7 +262,7 @@ export function MatrixGrid({
       sortValue: (r) => (r.min === null || r.max === null ? -1 : r.max - r.min),
       render: (r) => (
         <div className="cell-inner" style={{ justifyContent: 'flex-end', fontFamily: 'var(--font-plex-mono, monospace)', color: 'var(--text-dim)' }}>
-          {r.min === null || r.max === null ? '—' : r.max - r.min}
+          {r.min === null || r.max === null ? '—' : Math.round(r.max) - Math.round(r.min)}
         </div>
       ),
     },
@@ -385,6 +394,7 @@ export function MatrixGrid({
       key: 'events',
       label: 'Events',
       render: (r) => {
+        if (r.na) return naCell();
         const mergedAfter = (v: SliderEvent[]) => {
           const before = sliderEventsByDest[r.destId] ?? {};
           const after = { ...before };
@@ -412,6 +422,7 @@ export function MatrixGrid({
       key: 'styleTiers',
       label: 'Style tiers',
       render: (r) => {
+        if (r.na) return naCell();
         const mergedAfter = (v: Record<string, string>) => {
           const before = activityStyleTiersByDest[r.destId] ?? {};
           const after = { ...before };
@@ -439,6 +450,7 @@ export function MatrixGrid({
       key: 'sources',
       label: 'Sources',
       render: (r) => {
+        if (r.na) return naCell();
         const mergedAfter = (v: SliderSource[]) => {
           const before = sliderSourcesByDest[r.destId] ?? {};
           const after = { ...before };
@@ -463,7 +475,8 @@ export function MatrixGrid({
       key: 'overview',
       label: 'Overview',
       render: (r) => {
-        const mergedAfter = (v: string) => {
+        if (r.na) return naCell();
+        const mergedAfter = (v: string | null) => {
           const before = sliderOverviewByDest[r.destId] ?? {};
           const after = { ...before };
           if (!v) delete after[r.sliderKey];
@@ -471,15 +484,13 @@ export function MatrixGrid({
           return after;
         };
         return (
-          <JsonPanelCell
+          <TextFieldPanelCell
             ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderOverview', fieldLabel: `${r.sliderLabel} overview`, loadedUpdatedAt: r.updatedAt }}
-            value={r.overview}
+            value={r.overview || null}
             setLocal={(v) => {
               setSliderOverviewByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
-              patchRow(r.destId, r.sliderKey, { overview: v });
+              patchRow(r.destId, r.sliderKey, { overview: v ?? '' });
             }}
-            emptyValue={''}
-            summarize={(v) => v}
             hint={'The non-seasonal, one-paragraph summary shown for this interest at this destination — the "why" behind the scores, not tied to any one month.'}
             toPatchValue={mergedAfter}
           />
@@ -490,6 +501,7 @@ export function MatrixGrid({
       key: 'monthlyText',
       label: 'Monthly',
       render: (r) => {
+        if (r.na) return naCell();
         const mergedAfter = (v: (string | null)[]) => {
           const before = sliderMonthlyWeatherByDest[r.destId] ?? {};
           const after = { ...before };
@@ -497,18 +509,14 @@ export function MatrixGrid({
           else after[r.sliderKey] = v;
           return after;
         };
-        const filled = (r.monthlyText ?? []).filter((t) => t).length;
         return (
-          <JsonPanelCell
+          <SliderMonthlyWeatherCell
             ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderMonthlyWeather', fieldLabel: `${r.sliderLabel} monthly blurbs`, loadedUpdatedAt: r.updatedAt }}
-            value={r.monthlyText}
+            value={r.monthlyText ?? []}
             setLocal={(v) => {
               setSliderMonthlyWeatherByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
               patchRow(r.destId, r.sliderKey, { monthlyText: v });
             }}
-            emptyValue={[]}
-            summarize={() => (filled ? `${filled}/12 months` : '')}
-            hint={'One blurb per month (index 0 = January), explaining THAT month’s score for this interest — e.g. "Peak dry season, waterholes concentrate game." null/missing = not yet authored for that month.'}
             toPatchValue={mergedAfter}
           />
         );

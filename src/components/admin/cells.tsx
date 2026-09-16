@@ -465,6 +465,104 @@ export function MonthlyWeatherCell({
   );
 }
 
+/**
+ * Same grid-with-month-names panel as MonthlyWeatherCell, adapted for a
+ * per-slider sliderMonthlyWeather entry (one slice of a whole-object jsonb
+ * column keyed by slider, so it needs toPatchValue's read-modify-write
+ * pattern the same way SourcesPanelCell does, unlike the plain top-level
+ * monthlyWeather column MonthlyWeatherCell edits).
+ */
+export function SliderMonthlyWeatherCell({
+  ctx,
+  value,
+  setLocal,
+  toPatchValue,
+}: {
+  ctx: FieldContext;
+  value: (string | null)[];
+  setLocal: (v: (string | null)[]) => void;
+  toPatchValue: (v: (string | null)[]) => unknown;
+}) {
+  const commit = useFieldEdit();
+  const [open, setOpen] = useState(false);
+  const weather = value.length ? value : new Array(12).fill(null);
+  const [draft, setDraft] = useState<(string | null)[]>(weather);
+  const filledCount = weather.filter(Boolean).length;
+
+  return (
+    <>
+      <div
+        className={`cell-inner text-cell${filledCount ? '' : ' empty'}`}
+        onClick={() => {
+          setDraft(value.length ? value : new Array(12).fill(null));
+          setOpen(true);
+        }}
+      >
+        {filledCount ? `${filledCount} of 12 months` : 'Click to add…'}
+      </div>
+      {open && (
+        <div className="scrim" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
+          <div className="panel">
+            <div className="panel-head">
+              <div>
+                <h2>{ctx.fieldLabel}</h2>
+                <p>{ctx.entityLabel} — one blurb per month, explaining that month&apos;s score</p>
+              </div>
+              <button className="panel-close" onClick={() => setOpen(false)}>
+                ✕
+              </button>
+            </div>
+            <div className="panel-body">
+              <div className="field-group">
+                {MONTH_NAMES.map((m, i) => (
+                  <div className="month-input-row" key={m}>
+                    <span className="month-input-tag">{MONTHS_SHORT[i]}</span>
+                    <input
+                      className="field-input"
+                      title={m}
+                      placeholder="Not yet authored"
+                      value={draft[i] ?? ''}
+                      onChange={(e) => {
+                        const next = [...draft];
+                        next[i] = e.target.value;
+                        setDraft(next);
+                      }}
+                    />
+                  </div>
+                ))}
+                <div className="field-hint">Months left blank just don&apos;t show a blurb — no need to author all 12 before saving.</div>
+              </div>
+            </div>
+            <div style={{ padding: '12px 18px 16px', display: 'flex', gap: 8, justifyContent: 'flex-end', borderTop: '1px solid var(--border)' }}>
+              <button className="btn" onClick={() => setOpen(false)}>
+                Close
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  const cleaned = draft.map((d) => (d && d.trim() ? d.trim() : null));
+                  const newValue = cleaned.some(Boolean) ? cleaned : [];
+                  commit({
+                    ...ctx,
+                    oldValue: value,
+                    newValue,
+                    setLocal,
+                    toLabel: (v) => (v.filter(Boolean).length ? `${v.filter(Boolean).length} of 12 months` : '(empty)'),
+                    toPatchValue,
+                  });
+                  setOpen(false);
+                }}
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 /** Multi-select chip cell for a set of months (1-12) — same chip+popover interaction as BandCell, but a fixed Jan-Dec option set and a number[] value instead of string[]. */
 export function MonthMultiSelectCell({ ctx, value, setLocal }: { ctx: FieldContext; value: number[]; setLocal: (v: number[]) => void }) {
   const commit = useFieldEdit();

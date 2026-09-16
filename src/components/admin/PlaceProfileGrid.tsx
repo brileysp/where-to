@@ -247,13 +247,19 @@ export function PlaceProfileGrid({
                       const cellId = `${r.key}:${idx}`;
                       const isEditing = editing === cellId;
                       const value = r.monthly[idx];
+                      // Curve-interpolated months (anything between two
+                      // authored anchors) can land on a fractional value —
+                      // e.g. 4.3333333333333 — that's real precision the
+                      // formula uses internally, but the screen should
+                      // always show the nearest whole number.
+                      const displayValue = Math.round(value);
                       const overridden = r.overrides[idx] !== undefined;
                       const bg = scoreColor(value);
                       return (
                         <td
                           key={idx}
                           style={{ background: bg ?? undefined, textAlign: 'center', cursor: 'pointer' }}
-                          onClick={() => !isEditing && beginEdit(r.key, idx, value)}
+                          onClick={() => !isEditing && beginEdit(r.key, idx, displayValue)}
                         >
                           {isEditing ? (
                             <input
@@ -261,7 +267,7 @@ export function PlaceProfileGrid({
                               data-profile-input={cellId}
                               style={{ width: 34, textAlign: 'center', fontWeight: 700 }}
                               className="cost-input num"
-                              defaultValue={value}
+                              defaultValue={displayValue}
                               onBlur={(e) => commitEdit(r.key, r.label, idx, e.target.value)}
                               onKeyDown={(e) => {
                                 if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
@@ -270,7 +276,7 @@ export function PlaceProfileGrid({
                             />
                           ) : (
                             <div className="cell-inner" style={{ justifyContent: 'center', fontWeight: 700, color: bg ? '#17190f' : 'var(--text)' }}>
-                              {value}
+                              {displayValue}
                               {overridden && <span style={{ fontSize: 8, marginLeft: 2, opacity: 0.75 }}>✎</span>}
                             </div>
                           )}
