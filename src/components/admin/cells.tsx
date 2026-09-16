@@ -3,6 +3,19 @@
 import { useState } from 'react';
 import { useFieldEdit } from './useFieldEdit';
 
+/**
+ * Grows a textarea to fit its content instead of clipping/scrolling it —
+ * used as both the `ref` (sizes correctly the instant a panel opens with
+ * existing text) and the `onChange` handler (keeps growing as the admin
+ * types) on every free-text field in these panels, so "can I see the whole
+ * blurb" is never a question.
+ */
+function autoResize(el: HTMLTextAreaElement | null) {
+  if (!el) return;
+  el.style.height = 'auto';
+  el.style.height = `${el.scrollHeight}px`;
+}
+
 interface FieldContext {
   entityType: string;
   entityId: string;
@@ -350,7 +363,17 @@ export function TextFieldPanelCell({
             <div className="panel-body">
               <div className="field-group">
                 <label>{ctx.fieldLabel}</label>
-                <textarea className="field-textarea" rows={9} value={draft} onChange={(e) => setDraft(e.target.value)} />
+                <textarea
+                  ref={autoResize}
+                  className="field-textarea"
+                  rows={9}
+                  style={{ minHeight: 160 }}
+                  value={draft}
+                  onChange={(e) => {
+                    setDraft(e.target.value);
+                    autoResize(e.target);
+                  }}
+                />
                 <div className="field-hint">{hint}</div>
               </div>
             </div>
@@ -420,8 +443,10 @@ export function MonthlyWeatherCell({
                 {MONTH_NAMES.map((m, i) => (
                   <div className="month-input-row" key={m}>
                     <span className="month-input-tag">{MONTHS_SHORT[i]}</span>
-                    <input
-                      className="field-input"
+                    <textarea
+                      ref={autoResize}
+                      className="field-textarea month-input-textarea"
+                      rows={1}
                       title={m}
                       placeholder="Not yet authored"
                       value={draft[i] ?? ''}
@@ -429,6 +454,7 @@ export function MonthlyWeatherCell({
                         const next = [...draft];
                         next[i] = e.target.value;
                         setDraft(next);
+                        autoResize(e.target);
                       }}
                     />
                   </div>
@@ -517,8 +543,10 @@ export function SliderMonthlyWeatherCell({
                 {MONTH_NAMES.map((m, i) => (
                   <div className="month-input-row" key={m}>
                     <span className="month-input-tag">{MONTHS_SHORT[i]}</span>
-                    <input
-                      className="field-input"
+                    <textarea
+                      ref={autoResize}
+                      className="field-textarea month-input-textarea"
+                      rows={1}
                       title={m}
                       placeholder="Not yet authored"
                       value={draft[i] ?? ''}
@@ -526,6 +554,7 @@ export function SliderMonthlyWeatherCell({
                         const next = [...draft];
                         next[i] = e.target.value;
                         setDraft(next);
+                        autoResize(e.target);
                       }}
                     />
                   </div>

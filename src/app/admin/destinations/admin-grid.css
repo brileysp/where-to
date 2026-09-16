@@ -134,8 +134,11 @@ table.grid tbody td .cell-inner.band-cell { height: auto; min-height: 34px; flex
 .field-hint { font-size: 11px; color: var(--text-faint); margin-top: 6px; line-height: 1.5; }
 .field-textarea, .field-input { width: 100%; font-family: inherit; font-size: 12.5px; padding: 9px 11px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--text); resize: vertical; line-height: 1.55; }
 .field-textarea:focus, .field-input:focus { border-color: var(--info); outline: none; }
-.month-input-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.month-input-tag { font-family: var(--font-plex-mono, monospace); font-size: 10.5px; font-weight: 700; color: var(--text-faint); width: 24px; flex-shrink: 0; }
+.month-input-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.month-input-tag { font-family: var(--font-plex-mono, monospace); font-size: 10.5px; font-weight: 700; color: var(--text-faint); width: 24px; flex-shrink: 0; padding-top: 9px; }
+/* Grows with content (see autoResize in cells.tsx) instead of clipping or
+   scrolling a multi-sentence blurb inside a single visible line. */
+.month-input-textarea { resize: none; overflow: hidden; min-height: 34px; }
 
 /* ---------- Advisories ---------- */
 .cell-inner.wrap { height: auto; min-height: 34px; padding: 5px 10px; flex-wrap: wrap; gap: 5px; }
