@@ -121,6 +121,22 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       // helper) — sub-style keys within it are an open DNA-attribute
       // vocabulary, not enumerable here, so those stay loosely typed.
       activityStyleTiers: zodField(sliderKeyedRecord(z.record(z.string(), z.enum(['signature', 'strong', 'casual', 'none'])))),
+      // Which external page(s) were consulted to research/verify a
+      // slider's content or score for this destination — see the doc
+      // comment on schema.ts's sliderSources column. An array per slider
+      // on purpose: real research routinely draws on more than one source.
+      sliderSources: zodField(
+        sliderKeyedRecord(
+          z.array(
+            z.object({
+              url: z.string().trim().url(),
+              label: z.string().trim().min(1).optional(),
+              note: z.string().trim().min(1).optional(),
+              addedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD'),
+            }),
+          ),
+        ),
+      ),
       // Reusing the exact building blocks destination-scoring-schema.ts
       // already validates these with, rather than hand-rolled duplicates.
       dryMonths: zodField(monthArray),

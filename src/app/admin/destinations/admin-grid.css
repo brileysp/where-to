@@ -166,6 +166,12 @@ select.field-select:focus { border-color: var(--info); outline: none; }
 .add-advisory-btn:hover { background: var(--bg-sunken); border-color: var(--accent); color: var(--accent); }
 .panel-note { font-size: 11px; color: var(--text-faint); line-height: 1.55; background: var(--bg-sunken); padding: 10px 11px; border-radius: 8px; }
 
+/* ---------- Sources ---------- */
+.source-cell { cursor: pointer; border-radius: 5px; }
+.source-cell:hover { background: var(--bg-sunken); }
+.source-cell.empty-hint { color: var(--text-faint); font-style: italic; }
+.source-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 700; white-space: nowrap; background: var(--info-soft); color: var(--info); }
+
 /* ---------- Modal ---------- */
 .modal-scrim { position: fixed; inset: 0; background: rgba(15,17,12,0.4); z-index: 60; display: flex; align-items: center; justify-content: center; }
 .modal { width: 440px; max-width: calc(100vw - 40px); background: var(--bg-panel); border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }

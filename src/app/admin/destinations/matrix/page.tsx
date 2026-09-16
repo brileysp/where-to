@@ -3,10 +3,15 @@ import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
 import { getContinent } from '@/lib/scoring/continents';
 import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { MatrixGrid, type MatrixRow } from '@/components/admin/MatrixGrid';
+import type { SliderSource } from '@/components/admin/cells';
 
 export default async function AdminDestinationMatrixPage() {
   const [scored, adminRows] = await Promise.all([getAllScoredPlaces(), listDestinationsForAdmin()]);
   const updatedAtById = new Map(adminRows.map((r) => [r.id, r.updatedAt.toISOString()]));
+  // sliderSources isn't part of the scoring pipeline (ScoringDestination has
+  // no reason to carry it), so it comes from the plain admin rows rather
+  // than `scored`, unlike every other per-slider column on this grid.
+  const sliderSourcesById = new Map(adminRows.map((r) => [r.id, (r.sliderSources ?? {}) as Record<string, SliderSource[]>]));
 
   // Base score, tier, and N/A are each one key inside a whole-object/array
   // column (baseScores jsonb, signatureTier jsonb, naSliders text[]) — the
@@ -19,6 +24,7 @@ export default async function AdminDestinationMatrixPage() {
   const sliderCurvesByDest: Record<string, Record<string, unknown>> = {};
   const sliderEventsByDest: Record<string, Record<string, (typeof scored)[number]['sliderEvents'][string]>> = {};
   const activityStyleTiersByDest: Record<string, Record<string, Record<string, string>>> = {};
+  const sliderSourcesByDest: Record<string, Record<string, SliderSource[]>> = {};
 
   const rows: MatrixRow[] = [];
   for (const d of scored) {
@@ -29,6 +35,7 @@ export default async function AdminDestinationMatrixPage() {
     sliderCurvesByDest[d.id] = d.sliderCurves;
     sliderEventsByDest[d.id] = d.sliderEvents;
     activityStyleTiersByDest[d.id] = d.activityStyleTiers;
+    sliderSourcesByDest[d.id] = sliderSourcesById.get(d.id) ?? {};
     const continent = getContinent(d.id);
     const updatedAt = updatedAtById.get(d.id) ?? new Date().toISOString();
     for (const s of VISIBLE_SLIDERS) {
@@ -50,6 +57,7 @@ export default async function AdminDestinationMatrixPage() {
         cap: d.sliderCaps[s.key] ?? null,
         events: d.sliderEvents[s.key] ?? [],
         styleTiers: d.activityStyleTiers[s.key] ?? {},
+        sources: sliderSourcesById.get(d.id)?.[s.key] ?? [],
         updatedAt,
       });
     }
@@ -65,6 +73,7 @@ export default async function AdminDestinationMatrixPage() {
       initialSliderCurvesByDest={sliderCurvesByDest}
       initialSliderEventsByDest={sliderEventsByDest}
       initialActivityStyleTiersByDest={activityStyleTiersByDest}
+      initialSliderSourcesByDest={sliderSourcesByDest}
     />
   );
 }

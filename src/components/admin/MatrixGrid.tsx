@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
-import { JsonPanelCell } from './cells';
+import { JsonPanelCell, SourcesPanelCell, type SliderSource } from './cells';
 import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
@@ -26,6 +26,7 @@ export interface MatrixRow {
   cap: number | null;
   events: SliderEvent[];
   styleTiers: Record<string, string>;
+  sources: SliderSource[];
   updatedAt: string;
 }
 
@@ -49,6 +50,7 @@ export function MatrixGrid({
   initialSliderCurvesByDest,
   initialSliderEventsByDest,
   initialActivityStyleTiersByDest,
+  initialSliderSourcesByDest,
 }: {
   initialRows: MatrixRow[];
   initialBaseScoresByDest: Record<string, Record<string, number>>;
@@ -58,6 +60,7 @@ export function MatrixGrid({
   initialSliderCurvesByDest: Record<string, Record<string, unknown>>;
   initialSliderEventsByDest: Record<string, Record<string, SliderEvent[]>>;
   initialActivityStyleTiersByDest: Record<string, Record<string, Record<string, string>>>;
+  initialSliderSourcesByDest: Record<string, Record<string, SliderSource[]>>;
 }) {
   const [rows, setRows] = useState(initialRows);
 
@@ -71,6 +74,7 @@ export function MatrixGrid({
   const [sliderCurvesByDest, setSliderCurvesByDest] = useState(initialSliderCurvesByDest);
   const [sliderEventsByDest, setSliderEventsByDest] = useState(initialSliderEventsByDest);
   const [activityStyleTiersByDest, setActivityStyleTiersByDest] = useState(initialActivityStyleTiersByDest);
+  const [sliderSourcesByDest, setSliderSourcesByDest] = useState(initialSliderSourcesByDest);
   const [selectedInterest, setSelectedInterest] = useState('all');
   const commit = useFieldEdit();
 
@@ -418,6 +422,30 @@ export function MatrixGrid({
             emptyValue={{}}
             summarize={(v) => (Object.keys(v).length ? Object.keys(v).join(', ') : '')}
             hint={'Sparse sub-style quality within this slider, e.g. {"mountainBiking": "signature"} — tiers: signature/strong/casual/none.'}
+            toPatchValue={mergedAfter}
+          />
+        );
+      },
+    },
+    {
+      key: 'sources',
+      label: 'Sources',
+      render: (r) => {
+        const mergedAfter = (v: SliderSource[]) => {
+          const before = sliderSourcesByDest[r.destId] ?? {};
+          const after = { ...before };
+          if (v.length === 0) delete after[r.sliderKey];
+          else after[r.sliderKey] = v;
+          return after;
+        };
+        return (
+          <SourcesPanelCell
+            ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderSources', fieldLabel: `${r.sliderLabel} sources`, loadedUpdatedAt: r.updatedAt }}
+            value={r.sources}
+            setLocal={(v) => {
+              setSliderSourcesByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
+              patchRow(r.destId, r.sliderKey, { sources: v });
+            }}
             toPatchValue={mergedAfter}
           />
         );

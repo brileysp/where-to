@@ -510,6 +510,183 @@ export function MonthMultiSelectCell({ ctx, value, setLocal }: { ctx: FieldConte
   );
 }
 
+export interface SliderSource {
+  url: string;
+  label?: string;
+  note?: string;
+  addedAt: string; // ISO date, "YYYY-MM-DD"
+}
+
+function hostnameOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+/**
+ * Structured editor for one slider's sliderSources entry — which external
+ * page(s) were consulted to research or verify THIS slider's content/score
+ * for THIS destination. An array on purpose, same reasoning as
+ * AdvisoryPanelCell just above: a real research pass often draws on more
+ * than one source, and a later pass can add a corroborating or superseding
+ * one without discarding the first. Deliberately real form fields (URL,
+ * optional label, optional note, a date) rather than JsonPanelCell's raw
+ * textarea — this is a citation record, worth the same validated-input
+ * treatment advisories get.
+ */
+export function SourcesPanelCell({
+  ctx,
+  value,
+  setLocal,
+  toPatchValue,
+}: {
+  ctx: FieldContext;
+  value: SliderSource[];
+  setLocal: (v: SliderSource[]) => void;
+  /** Override when the DB column shape differs from the edited array (sliderSources is keyed by slider, so this cell only edits one slider's slice of the whole-object column). Defaults to identity. */
+  toPatchValue?: (v: SliderSource[]) => unknown;
+}) {
+  const commit = useFieldEdit();
+  const [open, setOpen] = useState(false);
+  const [draft, setDraft] = useState<SliderSource[]>(value);
+
+  function openPanel() {
+    setDraft(value.map((s) => ({ ...s })));
+    setOpen(true);
+  }
+
+  function updateEntry(idx: number, patch: Partial<SliderSource>) {
+    setDraft((d) => d.map((s, i) => (i === idx ? { ...s, ...patch } : s)));
+  }
+
+  function removeEntry(idx: number) {
+    setDraft((d) => d.filter((_, i) => i !== idx));
+  }
+
+  function addEntry() {
+    setDraft((d) => [...d, { url: '', label: '', note: '', addedAt: todayISO() }]);
+  }
+
+  return (
+    <>
+      <div className={`cell-inner wrap source-cell${value.length ? '' : ' empty-hint'}`} onClick={openPanel}>
+        {value.length === 0
+          ? 'Click to add…'
+          : value.map((s, i) => (
+              <span className="source-chip" key={i} title={s.url}>
+                🔗 {s.label || hostnameOf(s.url)}
+              </span>
+            ))}
+      </div>
+      {open && (
+        <div className="scrim" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
+          <div className="panel">
+            <div className="panel-head">
+              <div>
+                <h2>🔗 Sources</h2>
+                <p>{ctx.entityLabel} — {ctx.fieldLabel}</p>
+              </div>
+              <button className="panel-close" onClick={() => setOpen(false)}>
+                ✕
+              </button>
+            </div>
+            <div className="panel-body">
+              {draft.length === 0 && <div className="panel-note">No sources on file for this interest yet.</div>}
+              {draft.map((s, idx) => (
+                <div className="adv-entry" key={idx}>
+                  <button className="btn-ghost-bad remove-entry" title="Remove this source" onClick={() => removeEntry(idx)}>
+                    ✕
+                  </button>
+                  <div className="field-group" style={{ marginBottom: 10 }}>
+                    <label className="mini-label">URL</label>
+                    <input
+                      className="field-input"
+                      type="url"
+                      placeholder="https://…"
+                      value={s.url}
+                      onChange={(e) => updateEntry(idx, { url: e.target.value })}
+                    />
+                  </div>
+                  <div className="adv-entry-top">
+                    <div style={{ flex: 1 }}>
+                      <label className="mini-label">Label (optional)</label>
+                      <input
+                        className="field-input"
+                        placeholder="e.g. site name"
+                        value={s.label ?? ''}
+                        onChange={(e) => updateEntry(idx, { label: e.target.value })}
+                      />
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <label className="mini-label">Verified on</label>
+                      <input
+                        className="field-input"
+                        type="date"
+                        style={{ maxWidth: 170 }}
+                        value={s.addedAt}
+                        onChange={(e) => updateEntry(idx, { addedAt: e.target.value })}
+                      />
+                    </div>
+                  </div>
+                  <div className="field-group">
+                    <label className="mini-label">Note (optional)</label>
+                    <textarea
+                      className="field-textarea"
+                      rows={2}
+                      placeholder="What this source confirmed or was used for"
+                      value={s.note ?? ''}
+                      onChange={(e) => updateEntry(idx, { note: e.target.value })}
+                    />
+                  </div>
+                </div>
+              ))}
+              <button className="add-advisory-btn" onClick={addEntry}>
+                + Add source
+              </button>
+              <div className="panel-note">
+                Not shown on the public site and never read by the scoring engine — a research record for this interest at
+                this destination, so a later pass (by a person or an AI session) can see what was already checked instead
+                of re-deriving it, and someone reviewing content can click through to what backs it.
+              </div>
+            </div>
+            <div style={{ padding: '12px 18px 16px', display: 'flex', gap: 8, justifyContent: 'flex-end', borderTop: '1px solid var(--border)' }}>
+              <button className="btn" onClick={() => setOpen(false)}>
+                Close
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  const cleaned = draft
+                    .filter((s) => s.url.trim().length > 0)
+                    .map((s) => ({
+                      url: s.url.trim(),
+                      ...(s.label?.trim() ? { label: s.label.trim() } : {}),
+                      ...(s.note?.trim() ? { note: s.note.trim() } : {}),
+                      addedAt: s.addedAt || todayISO(),
+                    }));
+                  commit({
+                    ...ctx,
+                    oldValue: value,
+                    newValue: cleaned,
+                    setLocal,
+                    toLabel: (v) => (v.length ? `${v.length} source${v.length === 1 ? '' : 's'}` : '(none)'),
+                    toPatchValue,
+                  });
+                  setOpen(false);
+                }}
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export interface TravelAdvisory {
   category: 'security' | 'environmental' | 'access' | 'health' | 'other';
   severity: 'moderate' | 'serious';

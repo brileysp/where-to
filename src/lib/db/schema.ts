@@ -157,6 +157,22 @@ export const places = pgTable(
       .default({})
       .$type<Record<string, (string | null)[]>>(),
 
+    // Provenance for sliderOverview/sliderMonthlyWeather/baseScores/
+    // sliderEvents above — which external page(s) were actually consulted
+    // to research or verify this slider's content/score for this
+    // destination. Keyed by slider id, an ARRAY of sources per slider
+    // (not one), since a real research pass routinely draws on more than
+    // one page (a destination-specific article plus a species/phenomenon
+    // reference, say) and a second pass later can add a corroborating or
+    // superseding source without discarding the first. Deliberately NOT
+    // read by the scoring engine — same "record it, never compute from
+    // it" status as travelAdvisories above. Sparse: absence just means no
+    // source has been logged yet for that slider, not that none exists.
+    sliderSources: jsonb('slider_sources')
+      .notNull()
+      .default({})
+      .$type<Record<string, Array<{ url: string; label?: string; note?: string; addedAt: string }>>>(),
+
     searchAliases: text('search_aliases').array().notNull().default([]),
     naSliders: text('na_sliders').array().notNull().default([]),
     budgetBands: text('budget_bands').array().notNull().default([]),
