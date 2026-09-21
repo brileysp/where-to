@@ -1,16 +1,17 @@
 import { getAllScoredPlaces } from '@/lib/db/queries/places';
-import { loadUserPreferences, listSavedProfiles } from '@/app/actions';
+import { loadUserPreferences, listSavedProfiles, loadFirstName } from '@/app/actions';
 import { loadDnaState } from '@/app/dna/actions';
 import { ResultsApp } from '@/components/results/ResultsApp';
 
 const DEFAULT_DNA_HINT = 'Swipe through experiences to teach Where To? your travel style.';
 
 export default async function Home() {
-  const [destinations, preferences, savedProfiles, dnaState] = await Promise.all([
+  const [destinations, preferences, savedProfiles, dnaState, firstName] = await Promise.all([
     getAllScoredPlaces(),
     loadUserPreferences(),
     listSavedProfiles(),
     loadDnaState(),
+    loadFirstName(),
   ]);
 
   const hasDnaSignal = !!dnaState && dnaState.swipeCount > 0;
@@ -29,6 +30,7 @@ export default async function Home() {
       initialSavedProfiles={savedProfiles}
       initialDnaHint={dnaHint}
       initialHasDnaSignal={hasDnaSignal}
+      userFirstName={firstName}
     />
   );
 }

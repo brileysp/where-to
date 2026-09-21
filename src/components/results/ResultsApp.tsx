@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { PERSONAS, SLIDERS, MONTH_NAMES, allBandsSelected } from '@/lib/scoring/constants';
+import { PERSONAS, SLIDERS, allBandsSelected } from '@/lib/scoring/constants';
 import { computeRankedDestinations } from '@/lib/scoring/rank';
 import { topInterestSliders } from '@/lib/scoring/breakdown';
 import type { ScoredDestination } from '@/lib/scoring/types';
@@ -26,6 +26,8 @@ import { MonthPrompt } from './MonthPrompt';
 import { StartPrompt } from './StartPrompt';
 import { FetchingResults } from './FetchingResults';
 import { SearchBox } from './SearchBox';
+import { ResultsHeader } from './ResultsHeader';
+import { useResortDemo } from './useResortDemo';
 import { ResultsList } from './ResultsList';
 import { DnaPanel } from './DnaPanel';
 import { BackToTopButton } from './BackToTopButton';
@@ -54,9 +56,11 @@ interface Props {
   initialSavedProfiles: SavedProfileData[];
   initialDnaHint: string;
   initialHasDnaSignal: boolean;
+  /** First word of the visitor's stored name, or null — the header says "you" for null. */
+  userFirstName: string | null;
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -106,6 +110,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // that one slider's score for the current month. Never touches `weights`
   // or triggers a new computeRankedDestinations call.
   const [pinnedChip, setPinnedChip] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map());
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -120,6 +125,9 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // heading, right above the search box, so tapping it lands you exactly
   // where "search for something else" already lives.
   const resultsTopRef = useRef<HTMLHeadingElement>(null);
+  const resultsRef = useRef<HTMLElement>(null);
+  const chipRowRef = useRef<HTMLDivElement>(null);
+  const chipEls = useRef<Map<string, HTMLElement>>(new Map());
 
   // null = a saved custom profile is active, not Travel DNA specifically.
   const activeSavedProfile = personaId === null ? (savedProfiles.find((p) => weightsEqual(p.weights, weights)) ?? null) : null;
@@ -162,6 +170,20 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     }
     return list;
   }, [ranked, hideVisited, visited, showWishlistOnly, favorited, pinnedChip, month]);
+
+  const resultsShown = hasStarted && monthChosen && !!month;
+
+  // First-visit walkthrough of the chip re-sort — see useResortDemo.
+  const demo = useResortDemo({
+    ready: resultsShown && !isFetchingResults && displayRanked.length > 0 && !openDetailId,
+    chipKeys: chipSliders.map((s) => s.key),
+    pinChip: setPinnedChip,
+    containerRef: resultsRef,
+    chipRowRef,
+    chipEls,
+    cardRefs,
+    rowIds: () => displayRanked.map((r) => r.d.id),
+  });
 
   const openDetailEntry = openDetailId ? ranked.find((r) => r.d.id === openDetailId) : undefined;
   const visitedCount = Object.values(visited).filter(Boolean).length;
@@ -227,6 +249,15 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     setIsFetchingResults(true);
     if (fetchingTimerRef.current) clearTimeout(fetchingTimerRef.current);
     fetchingTimerRef.current = setTimeout(() => setIsFetchingResults(false), FETCHING_RESULTS_MS);
+  }
+
+  // From the results header: the ranking simply re-sorts (and animates) in
+  // place, so unlike the sidebar picker there's no "fetching" beat and no
+  // scroll away from where the user is looking.
+  function handleChangeMonthFromHeader(m: number) {
+    setMonth(m);
+    setVisibleCount(20);
+    persist({ personaId, weights, bands, month: m, monthChosen: true, showAllSliders });
   }
 
   function handleToggleStyle(sliderKey: string, styleKey: string) {
@@ -420,10 +451,31 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           </div>
         </aside>
 
-        <section className="results">
-          <div className="results-heading-row">
-            <h1 ref={resultsTopRef}>Recommendations</h1>
-            {hasStarted && monthChosen && (
+        <section className="results" ref={resultsRef}>
+          <div className={`resort-callout${demo.calloutVisible ? ' show' : ''}`} aria-hidden={!demo.calloutVisible}>
+            <span className="resort-callout-icon">👆</span>Tap any interest to re-sort your results
+          </div>
+
+          {resultsShown && month ? (
+            <ResultsHeader
+              firstName={userFirstName}
+              month={month}
+              onChangeMonth={handleChangeMonthFromHeader}
+              searchOpen={searchOpen}
+              onToggleSearch={() => setSearchOpen((o) => !o)}
+              titleRef={resultsTopRef}
+            />
+          ) : (
+            <div className="results-heading-row">
+              <h1 ref={resultsTopRef}>Recommendations</h1>
+            </div>
+          )}
+
+          {resultsShown && (
+            <div className="results-subrow">
+              <p className="results-subtitle">
+                Ranked by your current sliders — showing {Math.min(visibleCount, displayRanked.length)} of {displayRanked.length} destinations
+              </p>
               <div className="results-heading-side">
                 <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
                   <VisitedCounterStamp count={visitedCount} size={46} />
@@ -450,28 +502,26 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
                   </button>
                 </div>
               </div>
-            )}
-          </div>
-          {hasStarted && monthChosen && month && (
-            <p className="results-subtitle">
-              Ranked for {MONTH_NAMES[month - 1]}, by your current sliders — showing {Math.min(visibleCount, displayRanked.length)} of{' '}
-              {displayRanked.length} destinations
-            </p>
+            </div>
           )}
 
-          {hasStarted && monthChosen && (
-            <SearchBox destinations={destinations} ranked={ranked} onSelectResult={handleSelectSearchResult} />
+          {resultsShown && (
+            <SearchBox destinations={destinations} ranked={ranked} onSelectResult={handleSelectSearchResult} expanded={searchOpen} />
           )}
 
-          {hasStarted && monthChosen && month && (
-            <div className="quick-chip-row">
+          {resultsShown && (
+            <div className="quick-chip-row" ref={chipRowRef}>
               <button type="button" className={`quick-chip${pinnedChip === null ? ' active' : ''}`} onClick={() => setPinnedChip(null)}>
-                Overall
+                🧬 My Interests
               </button>
               {chipSliders.map((s) => (
                 <button
                   type="button"
                   key={s.key}
+                  ref={(el) => {
+                    if (el) chipEls.current.set(s.key, el);
+                    else chipEls.current.delete(s.key);
+                  }}
                   className={`quick-chip${pinnedChip === s.key ? ' active' : ''}`}
                   onClick={() => setPinnedChip(s.key)}
                 >
@@ -480,6 +530,17 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
               ))}
             </div>
           )}
+
+          <div
+            className="resort-cursor"
+            aria-hidden
+            style={{
+              left: demo.cursor.left,
+              top: demo.cursor.top,
+              opacity: demo.cursor.visible ? 1 : 0,
+              transform: `translate(-50%, -50%) scale(${demo.cursor.pressed ? 0.65 : 1})`,
+            }}
+          />
 
           {isFetchingResults ? (
             <FetchingResults />
