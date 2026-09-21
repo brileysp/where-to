@@ -42,3 +42,8 @@ Runners-up:
 - nationalParks: not an interest. Revisit as a tag / type of place.
 - Uncommitted: grouped monthly-blurb slideout, admin load-speed cache
   (`primary-place-rows.ts`), Advisories-tab and Sources-column reorder.
+
+## Cost-item tracking follow-ups (added 2026-09-21)
+- Visually verify the Cost Items screen (new Last updated / By / What changed columns, "Never edited by a human" filter) — needs a signed-in browser session.
+- Build the cost-checking agent: it should save edits with kind `'agent'` (see `src/lib/admin/cost-item-stamp.ts`); the grid already shows a 🤖 for agent edits.
+- Only edits made through the admin panel are tracked; script-authored items show "Never edited".
