@@ -7,6 +7,12 @@
   --warn: #b8862c; --warn-soft: #b8862c18;
   --bad: #b8433a; --bad-soft: #b8433a16;
   --info: #3868a8; --info-soft: #3868a814;
+  /* Categorical (not semantic) — for grouping months by shared blurb text,
+     picked to stay visually distinct from good/warn/bad/info's meanings. */
+  --cat-1: #8a5fc2; --cat-1-soft: #8a5fc218;
+  --cat-2: #c2588a; --cat-2-soft: #c2588a18;
+  --cat-3: #3fa7a0; --cat-3-soft: #3fa7a018;
+  --cat-4: #c47d3f; --cat-4-soft: #c47d3f18;
   --radius: 7px;
   background: var(--bg);
   color: var(--text);
@@ -25,6 +31,10 @@
     --warn: #e0ab52; --warn-soft: #e0ab5222;
     --bad: #e2766c; --bad-soft: #e2766c22;
     --info: #7aa8e0; --info-soft: #7aa8e022;
+    --cat-1: #b28ee0; --cat-1-soft: #b28ee022;
+    --cat-2: #e28ab0; --cat-2-soft: #e28ab022;
+    --cat-3: #6fc9c2; --cat-3-soft: #6fc9c222;
+    --cat-4: #e0a06a; --cat-4-soft: #e0a06a22;
   }
 }
 .admin-grid-shell * { box-sizing: border-box; }
@@ -139,6 +149,48 @@ table.grid tbody td .cell-inner.band-cell { height: auto; min-height: 34px; flex
 /* Grows with content (see autoResize in cells.tsx) instead of clipping or
    scrolling a multi-sentence blurb inside a single visible line. */
 .month-input-textarea { resize: none; overflow: hidden; min-height: 34px; }
+
+/* ---------- Monthly blurb grouping (SliderMonthlyWeatherCell) ---------- */
+.mw-overview { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 18px; background: var(--bg-sunken); border-bottom: 1px solid var(--border); }
+.mw-legend { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.mw-legend-title { font-size: 11px; color: var(--text-dim); text-align: center; }
+.mw-legend-title b { color: var(--text); }
+.mw-legend-row { display: flex; align-items: center; gap: 7px; font-size: 11.5px; }
+.mw-legend-count { margin-left: auto; font-size: 10px; color: var(--text-faint); }
+.mw-legend-empty { font-size: 10.5px; color: var(--text-faint); text-align: center; font-style: italic; }
+.mw-swatch { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; display: inline-block; }
+.mw-range { font-family: var(--font-plex-mono, monospace); font-size: 11px; font-weight: 700; color: var(--text); white-space: nowrap; }
+
+.panel-body.mw-groups { gap: 9px; }
+.mw-group { border: 1px solid var(--border); border-left: 3px solid var(--mw-group-color, var(--border)); border-radius: var(--radius); background: var(--bg-panel); }
+.mw-group-head { display: flex; align-items: center; gap: 7px; padding: 7px 9px; background: var(--mw-group-soft, var(--bg-sunken)); border-radius: var(--radius) var(--radius) 0 0; }
+.mw-count { font-size: 10px; color: var(--text-faint); background: var(--bg-panel); border: 1px solid var(--border); padding: 1px 6px; border-radius: 999px; white-space: nowrap; }
+.mw-menu-btn { font-family: inherit; font-size: 13px; color: var(--text-dim); background: transparent; border: 1px solid var(--border-strong); width: 24px; height: 24px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.mw-menu-btn:hover { background: var(--bg-hover); color: var(--text); }
+.mw-group-body { padding: 9px; }
+
+/* `fixed`, not `absolute` — the trigger sits inside .panel-body, which
+   scrolls. An absolutely-positioned menu is clipped by that ancestor the
+   moment it would render past the visible edge; `fixed` escapes the clip,
+   positioned by JS from the button's real on-screen rect at open-time. */
+.mw-menu-scrim { position: fixed; inset: 0; z-index: 69; }
+.mw-menu { position: fixed; background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,0.18); padding: 4px; z-index: 70; width: 232px; max-height: 260px; overflow-y: auto; }
+.mw-menu-label { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-faint); padding: 6px 7px 3px; }
+.mw-menu-hint { font-size: 9.5px; color: var(--text-faint); padding: 0 7px 6px; line-height: 1.35; }
+.mw-menu-divider { height: 1px; background: var(--border); margin: 3px 2px; }
+.mw-menu-opt, .mw-merge-opt { display: block; width: 100%; text-align: left; font-family: inherit; font-size: 11px; color: var(--text); background: transparent; border: none; padding: 5px 7px; border-radius: 5px; cursor: pointer; }
+.mw-menu-opt:hover, .mw-merge-opt:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.mw-merge-opt { display: flex; align-items: baseline; gap: 6px; }
+.mw-merge-opt .mo-range { font-family: var(--font-plex-mono, monospace); font-weight: 700; flex-shrink: 0; }
+.mw-merge-opt .mo-snippet { flex: 1; min-width: 0; color: var(--text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10.5px; }
+.mw-merge-opt:hover .mo-snippet { color: var(--accent-strong); }
+
+.mw-suggest { display: flex; align-items: center; gap: 6px; margin-top: 7px; padding: 6px 7px; border: 1px dashed var(--border-strong); border-radius: 7px; background: var(--bg-sunken); font-size: 10.5px; color: var(--text-dim); }
+.mw-suggest-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mw-suggest-label b { color: var(--text); font-family: var(--font-plex-mono, monospace); font-weight: 700; }
+.mw-suggest-merge { font-family: inherit; font-size: 10px; font-weight: 700; cursor: pointer; border-radius: 5px; flex-shrink: 0; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-strong); padding: 3px 8px; }
+.mw-suggest-dismiss { font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 5px; flex-shrink: 0; border: none; background: transparent; color: var(--text-faint); padding: 3px 5px; }
+.mw-suggest-dismiss:hover { color: var(--text); }
 
 /* ---------- Advisories ---------- */
 .cell-inner.wrap { height: auto; min-height: 34px; padding: 5px 10px; flex-wrap: wrap; gap: 5px; }

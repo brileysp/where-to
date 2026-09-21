@@ -497,7 +497,111 @@ export function MonthlyWeatherCell({
  * column keyed by slider, so it needs toPatchValue's read-modify-write
  * pattern the same way SourcesPanelCell does, unlike the plain top-level
  * monthlyWeather column MonthlyWeatherCell edits).
+ *
+ * Unlike MonthlyWeatherCell's flat 12-row list, months here collapse into
+ * one shared block wherever their text is byte-identical — a lot of real
+ * content reuses one blurb across a whole season, and 12 separate boxes
+ * make that impossible to see at a glance or edit without drifting out of
+ * sync. A ring + legend surface which months share text (including
+ * non-contiguous reuse, e.g. a "baseline" blurb covering Oct plus Dec–Mar
+ * separately), each block's ⋯ menu can split a month back out or merge it
+ * into any other block, and a word-overlap heuristic flags near-duplicate
+ * blocks that are probably meant to be the same blurb but drifted in
+ * wording — all of this is view-only bookkeeping over the same flat
+ * (string | null)[12] the old list edited; Apply's commit is unchanged.
  */
+const CAT_KEYS = ['1', '2', '3', '4'] as const;
+
+interface WeatherGroup {
+  months: number[];
+  text: string | null;
+  colorKey: (typeof CAT_KEYS)[number] | null;
+}
+
+function buildWeatherGroups(draft: (string | null)[], forcedSplit: Set<number>): WeatherGroup[] {
+  const keyOf = (i: number) => {
+    const t = draft[i];
+    if (!t?.trim()) return `__empty_${i}`; // never coalesce blanks — they're not "the same text", just unwritten
+    if (forcedSplit.has(i)) return `__split_${i}`;
+    return t;
+  };
+  const indexOf = new Map<string, number>();
+  const groups: WeatherGroup[] = [];
+  for (let i = 0; i < 12; i++) {
+    const key = keyOf(i);
+    let gi = indexOf.get(key);
+    if (gi === undefined) {
+      gi = groups.length;
+      indexOf.set(key, gi);
+      groups.push({ months: [], text: draft[i]?.trim() ? draft[i]!.trim() : null, colorKey: null });
+    }
+    groups[gi].months.push(i);
+  }
+  // Only real reuse (2+ months, real text) earns a categorical color — a
+  // singleton is just a month that doesn't (yet) share text with anything,
+  // and cycling the palette onto it would fake a pattern that isn't there.
+  let cursor = 0;
+  groups.forEach((g) => {
+    g.colorKey = g.text && g.months.length > 1 ? CAT_KEYS[cursor++ % CAT_KEYS.length] : null;
+  });
+  return groups;
+}
+
+/** Contiguous calendar runs within a set of month indices, wrapping across the year boundary (so Oct-Mar reads as one run, not two). */
+function monthRanges(months: number[]): number[][] {
+  const set = new Set(months);
+  const runs: number[][] = [];
+  const visited = new Set<number>();
+  for (let i = 0; i < 12; i++) {
+    if (!set.has(i) || visited.has(i)) continue;
+    let start = i;
+    if (set.size < 12) {
+      while (set.has((start - 1 + 12) % 12) && (start - 1 + 12) % 12 !== i) {
+        start = (start - 1 + 12) % 12;
+        if (start === i) break;
+      }
+    }
+    let end = start;
+    const run = [start];
+    visited.add(start);
+    while (set.has((end + 1) % 12) && !visited.has((end + 1) % 12)) {
+      end = (end + 1) % 12;
+      run.push(end);
+      visited.add(end);
+    }
+    runs.push(run);
+  }
+  return runs;
+}
+
+function monthRangeLabel(run: number[]): string {
+  if (run.length === 12) return 'Jan – Dec';
+  if (run.length === 1) return MONTH_NAMES[run[0]].slice(0, 3);
+  return `${MONTH_NAMES[run[0]].slice(0, 3)} – ${MONTH_NAMES[run[run.length - 1]].slice(0, 3)}`;
+}
+
+const BLURB_STOPWORDS = new Set([
+  'the', 'a', 'an', 'and', 'or', 'of', 'in', 'on', 'at', 'to', 'is', 'are', 'with', 'that', 'this',
+  'it', 'its', "it's", 'for', 'as', 'by', 'from', 'into', 'still', 'just', 'ahead', 'begin', 'begins',
+]);
+function blurbWords(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[.,—–'’"()°-]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w && !BLURB_STOPWORDS.has(w));
+}
+/** Jaccard similarity over significant words — good enough to flag "probably the same claim, reworded" without a real NLP dependency. */
+function blurbSimilarity(a: string, b: string): number {
+  const wa = new Set(blurbWords(a));
+  const wb = new Set(blurbWords(b));
+  let shared = 0;
+  wa.forEach((w) => { if (wb.has(w)) shared++; });
+  const union = new Set([...wa, ...wb]).size;
+  return union === 0 ? 0 : shared / union;
+}
+const BLURB_SUGGEST_THRESHOLD = 0.4;
+
 export function SliderMonthlyWeatherCell({
   ctx,
   value,
@@ -519,11 +623,50 @@ export function SliderMonthlyWeatherCell({
   const [open, setOpen] = useState(false);
   const weather = value.length ? value : new Array(12).fill(null);
   const [draft, setDraft] = useState<(string | null)[]>(weather);
+  const [forcedSplit, setForcedSplit] = useState<Set<number>>(new Set());
+  const [dismissed, setDismissed] = useState<Set<number>>(new Set());
+  const [menu, setMenu] = useState<{ anchorMonth: number; top: number; right: number } | null>(null);
   const filledCount = weather.filter(Boolean).length;
   const openPanel = () => {
     setDraft(value.length ? value : new Array(12).fill(null));
+    setForcedSplit(new Set());
+    setDismissed(new Set());
+    setMenu(null);
     setOpen(true);
   };
+
+  function setMonths(months: number[], text: string | null) {
+    setDraft((prev) => {
+      const next = [...prev];
+      months.forEach((m) => { next[m] = text; });
+      return next;
+    });
+  }
+  function clearForcedSplit(months: number[]) {
+    setForcedSplit((prev) => {
+      const next = new Set(prev);
+      months.forEach((m) => next.delete(m));
+      return next;
+    });
+  }
+
+  const groups = open ? buildWeatherGroups(draft, forcedSplit) : [];
+  const draftFilledCount = draft.filter((d) => d?.trim()).length;
+  const authoredGroups = groups.filter((g) => g.text !== null);
+  const reusedGroups = authoredGroups.filter((g) => g.months.length > 1);
+
+  function suggestionFor(g: WeatherGroup): { target: WeatherGroup; score: number } | null {
+    if (!g.text || dismissed.has(g.months[0])) return null;
+    let best: { target: WeatherGroup; score: number } | null = null;
+    for (const other of authoredGroups) {
+      if (other === g) continue;
+      const score = blurbSimilarity(g.text, other.text!);
+      if (score >= BLURB_SUGGEST_THRESHOLD && (!best || score > best.score)) best = { target: other, score };
+    }
+    return best;
+  }
+
+  const activeMenuGroup = menu ? groups.find((g) => g.months[0] === menu.anchorMonth) ?? null : null;
 
   return (
     <>
@@ -546,30 +689,194 @@ export function SliderMonthlyWeatherCell({
                 ✕
               </button>
             </div>
-            <div className="panel-body">
-              <div className="field-group">
-                {MONTH_NAMES.map((m, i) => (
-                  <div className="month-input-row" key={m}>
-                    <span className="month-input-tag">{MONTHS_SHORT[i]}</span>
-                    <textarea
-                      ref={autoResize}
-                      className="field-textarea month-input-textarea"
-                      rows={1}
-                      title={m}
-                      placeholder="Not yet authored"
-                      value={draft[i] ?? ''}
-                      onChange={(e) => {
-                        const next = [...draft];
-                        next[i] = e.target.value;
-                        setDraft(next);
-                        autoResize(e.target);
-                      }}
-                    />
+
+            {draftFilledCount > 0 && (
+              <div className="mw-overview">
+                <svg width="104" height="104" viewBox="0 0 104 104">
+                  {Array.from({ length: 12 }, (_, i) => {
+                    const g = groups.find((gr) => gr.months.includes(i))!;
+                    const fill = g.colorKey ? `var(--cat-${g.colorKey})` : g.text ? 'var(--border-strong)' : 'var(--border)';
+                    const cx = 52, cy = 52, rOuter = 46, rInner = 29;
+                    const a0 = ((i * 30 - 90) * Math.PI) / 180;
+                    const a1 = (((i + 1) * 30 - 90) * Math.PI) / 180;
+                    const x0o = cx + rOuter * Math.cos(a0), y0o = cy + rOuter * Math.sin(a0);
+                    const x1o = cx + rOuter * Math.cos(a1), y1o = cy + rOuter * Math.sin(a1);
+                    const x0i = cx + rInner * Math.cos(a0), y0i = cy + rInner * Math.sin(a0);
+                    const x1i = cx + rInner * Math.cos(a1), y1i = cy + rInner * Math.sin(a1);
+                    const d = `M ${x0i} ${y0i} L ${x0o} ${y0o} A ${rOuter} ${rOuter} 0 0 1 ${x1o} ${y1o} L ${x1i} ${y1i} A ${rInner} ${rInner} 0 0 0 ${x0i} ${y0i} Z`;
+                    return <path key={i} d={d} fill={fill} stroke="var(--bg-sunken)" strokeWidth={2} />;
+                  })}
+                  {Array.from({ length: 12 }, (_, i) => {
+                    const cx = 52, cy = 52, rLabel = 56;
+                    const amid = (((i + 0.5) * 30 - 90) * Math.PI) / 180;
+                    return (
+                      <text
+                        key={i}
+                        x={cx + rLabel * Math.cos(amid)}
+                        y={cy + rLabel * Math.sin(amid)}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        fontFamily="var(--font-plex-mono, monospace)"
+                        fontSize={7.5}
+                        fill="var(--text-faint)"
+                      >
+                        {MONTHS_SHORT[i]}
+                      </text>
+                    );
+                  })}
+                </svg>
+                <div className="mw-legend">
+                  <div className="mw-legend-title">
+                    <b>{authoredGroups.length}</b> distinct blurb{authoredGroups.length === 1 ? '' : 's'} across {draftFilledCount} authored month{draftFilledCount === 1 ? '' : 's'}
+                    {reusedGroups.length > 0 && (
+                      <>
+                        {' '}
+                        — <b>{reusedGroups.length}</b> reused
+                      </>
+                    )}
+                    {draftFilledCount < 12 && <> · {12 - draftFilledCount} not yet authored</>}
                   </div>
-                ))}
-                <div className="field-hint">Months left blank just don&apos;t show a blurb — no need to author all 12 before saving.</div>
+                  {reusedGroups.length > 0 ? (
+                    reusedGroups.map((g) => (
+                      <div className="mw-legend-row" key={g.months.join(',')}>
+                        <span className="mw-swatch" style={{ background: `var(--cat-${g.colorKey})` }} />
+                        <span className="mw-range">{monthRanges(g.months).map(monthRangeLabel).join(', ')}</span>
+                        <span className="mw-legend-count">{g.months.length} mo</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="mw-legend-empty">Every authored month stands on its own — nothing to merge.</div>
+                  )}
+                </div>
               </div>
+            )}
+
+            <div className="panel-body mw-groups">
+              {groups.map((g) => {
+                const anchor = g.months[0];
+                const suggestion = suggestionFor(g);
+                const groupStyle = {
+                  '--mw-group-color': g.colorKey ? `var(--cat-${g.colorKey})` : g.text ? 'var(--border-strong)' : 'var(--border)',
+                  '--mw-group-soft': g.colorKey ? `var(--cat-${g.colorKey}-soft)` : 'var(--bg-sunken)',
+                } as React.CSSProperties;
+                return (
+                  <div className="mw-group" key={g.months.join(',')} style={groupStyle}>
+                    <div className="mw-group-head">
+                      <span className="mw-swatch" style={{ background: 'var(--mw-group-color)' }} />
+                      <span className="mw-range">{monthRanges(g.months).map(monthRangeLabel).join(', ')}</span>
+                      <span className="mw-count">{g.months.length}mo</span>
+                      <button
+                        type="button"
+                        className="mw-menu-btn"
+                        style={{ marginLeft: 'auto' }}
+                        aria-label="More options for this month"
+                        onClick={(e) => {
+                          if (menu?.anchorMonth === anchor) {
+                            setMenu(null);
+                            return;
+                          }
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          setMenu({ anchorMonth: anchor, top: rect.bottom + 4, right: Math.max(8, window.innerWidth - rect.right) });
+                        }}
+                      >
+                        ⋯
+                      </button>
+                    </div>
+                    <div className="mw-group-body">
+                      <textarea
+                        ref={autoResize}
+                        className="field-textarea month-input-textarea"
+                        rows={1}
+                        placeholder="Not yet authored"
+                        title={g.months.map((m) => MONTH_NAMES[m]).join(', ')}
+                        value={g.text ?? ''}
+                        onChange={(e) => {
+                          setMonths(g.months, e.target.value);
+                          autoResize(e.target);
+                        }}
+                      />
+                      {g.months.length > 1 && (
+                        <div className="field-hint">
+                          Shared by <b>{g.months.length} months</b> — editing this updates all of them.
+                        </div>
+                      )}
+                      {suggestion && (
+                        <div className="mw-suggest">
+                          <span className="mw-suggest-label">
+                            Reads a lot like <b>{monthRanges(suggestion.target.months).map(monthRangeLabel).join(', ')}</b>
+                          </span>
+                          <button
+                            type="button"
+                            className="mw-suggest-merge"
+                            onClick={() => {
+                              setMonths(g.months, suggestion.target.text);
+                              clearForcedSplit(g.months);
+                            }}
+                          >
+                            Merge
+                          </button>
+                          <button type="button" className="mw-suggest-dismiss" aria-label="Dismiss suggestion" onClick={() => setDismissed((prev) => new Set(prev).add(anchor))}>
+                            ✕
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+              <div className="field-hint">Editing a shared block updates every month in it. The ⋯ menu splits a month out or merges it into another.</div>
             </div>
+
+            {activeMenuGroup && menu && (
+              <>
+                <div className="mw-menu-scrim" onClick={() => setMenu(null)} />
+                <div className="mw-menu" style={{ top: menu.top, right: menu.right }}>
+                  {activeMenuGroup.months.length > 1 && (
+                    <>
+                      <div className="mw-menu-label">Split out</div>
+                      <div className="mw-menu-hint">Pull one month out to write its own text</div>
+                      {activeMenuGroup.months.map((m) => (
+                        <button
+                          key={m}
+                          type="button"
+                          className="mw-menu-opt"
+                          onClick={() => {
+                            setForcedSplit((prev) => new Set(prev).add(m));
+                            setMenu(null);
+                          }}
+                        >
+                          {MONTH_NAMES[m]} only
+                        </button>
+                      ))}
+                      <div className="mw-menu-divider" />
+                    </>
+                  )}
+                  <div className="mw-menu-label">Merge into…</div>
+                  {groups.filter((g) => g !== activeMenuGroup && g.text !== null).length === 0 && (
+                    <div className="mw-menu-hint">No other authored month to merge into yet.</div>
+                  )}
+                  {groups
+                    .filter((g) => g !== activeMenuGroup && g.text !== null)
+                    .map((g) => (
+                      <button
+                        key={g.months.join(',')}
+                        type="button"
+                        className="mw-merge-opt"
+                        onClick={() => {
+                          const targetGroup = activeMenuGroup;
+                          setMonths(targetGroup.months, g.text);
+                          clearForcedSplit(targetGroup.months);
+                          setMenu(null);
+                        }}
+                      >
+                        <span className="mo-range">{monthRanges(g.months).map(monthRangeLabel).join(',')}</span>
+                        <span className="mo-snippet">{g.text}</span>
+                      </button>
+                    ))}
+                </div>
+              </>
+            )}
+
             <div style={{ padding: '12px 18px 16px', display: 'flex', gap: 8, justifyContent: 'flex-end', borderTop: '1px solid var(--border)' }}>
               <button className="btn" onClick={() => setOpen(false)}>
                 Close

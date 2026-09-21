@@ -447,31 +447,6 @@ export function MatrixGrid({
       },
     },
     {
-      key: 'sources',
-      label: 'Sources',
-      render: (r) => {
-        if (r.na) return naCell();
-        const mergedAfter = (v: SliderSource[]) => {
-          const before = sliderSourcesByDest[r.destId] ?? {};
-          const after = { ...before };
-          if (v.length === 0) delete after[r.sliderKey];
-          else after[r.sliderKey] = v;
-          return after;
-        };
-        return (
-          <SourcesPanelCell
-            ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderSources', fieldLabel: `${r.sliderLabel} sources`, loadedUpdatedAt: r.updatedAt }}
-            value={r.sources}
-            setLocal={(v) => {
-              setSliderSourcesByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
-              patchRow(r.destId, r.sliderKey, { sources: v });
-            }}
-            toPatchValue={mergedAfter}
-          />
-        );
-      },
-    },
-    {
       key: 'overview',
       label: 'Overview',
       render: (r) => {
@@ -516,6 +491,31 @@ export function MatrixGrid({
             setLocal={(v) => {
               setSliderMonthlyWeatherByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
               patchRow(r.destId, r.sliderKey, { monthlyText: v });
+            }}
+            toPatchValue={mergedAfter}
+          />
+        );
+      },
+    },
+    {
+      key: 'sources',
+      label: 'Sources',
+      render: (r) => {
+        if (r.na) return naCell();
+        const mergedAfter = (v: SliderSource[]) => {
+          const before = sliderSourcesByDest[r.destId] ?? {};
+          const after = { ...before };
+          if (v.length === 0) delete after[r.sliderKey];
+          else after[r.sliderKey] = v;
+          return after;
+        };
+        return (
+          <SourcesPanelCell
+            ctx={{ entityType: 'destination', entityId: r.destId, entityLabel: r.destName, field: 'sliderSources', fieldLabel: `${r.sliderLabel} sources`, loadedUpdatedAt: r.updatedAt }}
+            value={r.sources}
+            setLocal={(v) => {
+              setSliderSourcesByDest((m) => ({ ...m, [r.destId]: mergedAfter(v) }));
+              patchRow(r.destId, r.sliderKey, { sources: v });
             }}
             toPatchValue={mergedAfter}
           />
