@@ -2,6 +2,7 @@ import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
 import { adminAuditLog, places } from '@/lib/db/schema';
 import { toScoringPlace } from '@/lib/db/queries/places';
+import { invalidatePrimaryPlaceRows, refreshPrimaryPlaceRow } from '@/lib/db/queries/primary-place-rows';
 import { fitDestinationCurves } from '@/lib/scoring/fitCurve';
 import type { AdminUser } from './auth';
 
@@ -25,7 +26,7 @@ export async function withAdminAudit<T>(params: {
   write: (tx: any) => Promise<T>;
 }): Promise<T> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (db as any).transaction(async (tx: any) => {
+  const committed = await (db as any).transaction(async (tx: any) => {
     const result = await params.write(tx);
     await tx.insert(adminAuditLog).values({
       actorId: params.actor.id,
@@ -78,4 +79,9 @@ export async function withAdminAudit<T>(params: {
 
     return result;
   });
+  // After commit, not inside it — invalidating early would let a concurrent
+  // read re-cache the pre-write rows.
+  if (params.entityType === 'destination') await refreshPrimaryPlaceRow(params.entityId);
+  else invalidatePrimaryPlaceRows();
+  return committed as T;
 }

@@ -1,6 +1,7 @@
 import { and, eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
 import { places } from '@/lib/db/schema';
+import { getPrimaryPlaceRows } from './primary-place-rows';
 
 /**
  * Place migration, Phase 4 completed: admin now reads/writes `places`
@@ -15,7 +16,7 @@ import { places } from '@/lib/db/schema';
  * destinations, not any future Phase 5 related places.
  */
 export async function listDestinationsForAdmin() {
-  return db.select().from(places).where(eq(places.isPrimaryDestination, true)).orderBy(places.id);
+  return getPrimaryPlaceRows();
 }
 
 export async function getDestinationForAdmin(id: string) {

@@ -1,12 +1,6 @@
-import { eq } from 'drizzle-orm';
-import { db } from '../client';
-import { places } from '../schema';
+import { getPrimaryPlaceRows, type PlaceRow } from './primary-place-rows';
 import { deriveDestinationScoresFromCurves } from '@/lib/scoring/curveScoring';
 import type { ScoredDestination, ScoringDestination } from '@/lib/scoring/types';
-import type { places as PlacesTable } from '../schema';
-import type { InferSelectModel } from 'drizzle-orm';
-
-type PlaceRow = InferSelectModel<typeof PlacesTable>;
 
 /**
  * Place migration, Phase 3 (docs/final-architecture-plan.md): reads from the
@@ -47,7 +41,9 @@ export function toScoringPlace(row: PlaceRow): ScoringDestination {
     overview: row.overview,
     costRange: row.costMin && row.costMax ? { min: row.costMin, max: row.costMax } : null,
     costOverview: row.costOverview,
-    costItems: row.costItems,
+    // Strip the admin-only edit-tracking fields (editor email etc.) so they
+    // never reach the public payload.
+    costItems: row.costItems.map(({ label, price, unit, emoji }) => ({ label, price, unit, ...(emoji ? { emoji } : {}) })),
     base: row.baseScores,
     budgetBands: row.budgetBands,
     vibeBands: row.vibeBands,
@@ -93,6 +89,6 @@ export function scorePlace(row: PlaceRow): ScoredDestination {
 }
 
 export async function getAllScoredPlaces(): Promise<ScoredDestination[]> {
-  const rows = await db.select().from(places).where(eq(places.isPrimaryDestination, true));
+  const rows = await getPrimaryPlaceRows();
   return rows.map(scorePlace);
 }
