@@ -11,7 +11,7 @@ export default async function AdminCostItemsPage() {
     emoji: d.emoji,
     region: d.region,
     continent: getContinent(d.id),
-    items: d.costItems.map((c) => ({ label: c.label, price: c.price, unit: c.unit, emoji: c.emoji ?? null })),
+    items: d.costItems.map((c) => ({ ...c, emoji: c.emoji ?? null })),
     updatedAt: d.updatedAt.toISOString(),
   }));
 

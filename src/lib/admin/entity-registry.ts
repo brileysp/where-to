@@ -31,6 +31,13 @@ const costItemSchema = z.object({
   // explicit null, so every edit to one of those items failed validation
   // until `.nullable()` was added here.
   emoji: z.string().min(1).nullable().optional(),
+  // Per-item edit tracking — see cost-item-stamp.ts. Always re-derived
+  // server-side on save; accepted here only so Zod doesn't strip them.
+  id: z.string().optional(),
+  updatedAt: z.string().nullish(),
+  updatedBy: z.string().nullish(),
+  editorKind: z.enum(['human', 'agent']).nullish(),
+  lastChange: z.string().nullish(),
 });
 
 const nullableEnum = <T extends [string, ...string[]]>(values: T) => z.enum(values).nullable();

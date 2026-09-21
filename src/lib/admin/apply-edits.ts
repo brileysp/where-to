@@ -5,6 +5,7 @@ import { db } from '@/lib/db/client';
 import { requireAdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { ENTITY_REGISTRY } from '@/lib/admin/entity-registry';
+import { stampCostItems, type StampedCostItem } from '@/lib/admin/cost-item-stamp';
 
 export interface EditPatch {
   entityType: string;
@@ -125,6 +126,16 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
     }
 
     const newUpdatedAt = new Date();
+    // Per-item who/when/what — derived here from the stored version, never
+    // taken from the client. See cost-item-stamp.ts.
+    if (Array.isArray(patchedFields.costItems)) {
+      patchedFields.costItems = stampCostItems(
+        (before.costItems ?? []) as StampedCostItem[],
+        patchedFields.costItems as StampedCostItem[],
+        { name: admin.email, kind: 'human' },
+        newUpdatedAt,
+      );
+    }
     await withAdminAudit({
       actor: admin,
       entityType,

@@ -5,13 +5,24 @@ import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { CopyForSheetsButton } from './CopyForSheetsButton';
 import { costItemIcon } from '@/lib/scoring/costIcons';
+import { stampCostItems, type EditorKind } from '@/lib/admin/cost-item-stamp';
 
 export interface CostItem {
   label: string;
   price: number;
   unit: string;
   emoji: string | null;
+  // Edit tracking (see cost-item-stamp.ts). Null updatedBy = never edited since tracking began.
+  id?: string;
+  updatedAt?: string | null;
+  updatedBy?: string | null;
+  editorKind?: EditorKind | null;
+  lastChange?: string | null;
 }
+
+const YOU = { name: 'You', kind: 'human' as EditorKind };
+const fmtWhen = (iso: string) => new Date(iso).toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+const faint = { fontSize: 11.5, color: 'var(--text-faint)' } as const;
 
 export interface CostDestination {
   id: string;
@@ -36,6 +47,7 @@ function toTsv(destinations: CostDestination[]): string {
 export function CostItemsGrid({ initialDestinations }: { initialDestinations: CostDestination[] }) {
   const [destinations, setDestinations] = useState(initialDestinations);
   const [query, setQuery] = useState('');
+  const [onlyNotHuman, setOnlyNotHuman] = useState(false);
   const [continentDir, setContinentDir] = useState<1 | -1>(1);
   const commit = useFieldEdit();
 
@@ -49,11 +61,12 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
 
   const q = query.trim().toLowerCase();
   const filtered = useMemo(() => {
-    if (!q) return destinations;
-    return destinations.filter(
+    const base = onlyNotHuman ? destinations.filter((d) => d.items.some((i) => i.editorKind !== 'human')) : destinations;
+    if (!q) return base;
+    return base.filter(
       (d) => d.name.toLowerCase().includes(q) || d.continent.toLowerCase().includes(q) || d.items.some((i) => i.label.toLowerCase().includes(q)),
     );
-  }, [destinations, q]);
+  }, [destinations, q, onlyNotHuman]);
 
   const tsv = useMemo(() => toTsv(filtered), [filtered]);
   const tsvRowCount = useMemo(() => filtered.reduce((n, d) => n + d.items.length, 0), [filtered]);
@@ -67,11 +80,7 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
     }
     const continents = [...groups.keys()].sort((a, b) => a.localeCompare(b) * continentDir);
     for (const c of continents) {
-      groups.get(c)!.sort((a, b) => {
-        const aMin = a.items.length ? Math.min(...a.items.map((i) => i.price)) : Infinity;
-        const bMin = b.items.length ? Math.min(...b.items.map((i) => i.price)) : Infinity;
-        return aMin - bMin || a.name.localeCompare(b.name);
-      });
+      groups.get(c)!.sort((a, b) => a.name.localeCompare(b.name));
     }
     return continents.map((c) => ({ continent: c, destinations: groups.get(c)! }));
   }, [filtered, continentDir]);
@@ -89,7 +98,7 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
     if (String(oldValue ?? '') === String(newValue)) return;
 
     const before = dest.items;
-    const after = before.map((it, i) => (i === idx ? { ...it, [field]: newValue } : it));
+    const after = stampCostItems(before, before.map((it, i) => (i === idx ? { ...it, [field]: newValue } : it)), YOU, new Date());
     commit({
       entityType: 'destination',
       entityId: dest.id,
@@ -107,7 +116,7 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
   function addItem(dest: CostDestination) {
     const before = dest.items;
     const newItem: CostItem = { label: '', price: 0, unit: '', emoji: '🎫' };
-    const after = [...before, newItem];
+    const after = stampCostItems(before, [...before, newItem], YOU, new Date());
     commit({
       entityType: 'destination',
       entityId: dest.id,
@@ -162,6 +171,10 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
             spellCheck={false}
           />
         </div>
+        <label style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, cursor: 'pointer' }}>
+          <input type="checkbox" checked={onlyNotHuman} onChange={(e) => setOnlyNotHuman(e.target.checked)} />
+          Never edited by a human
+        </label>
         <CopyForSheetsButton tsv={tsv} rowCount={tsvRowCount} />
         <span>
           Grouped by continent, then by place · click ➕ next to a place to add its next cost item, sorted low → high automatically ·
@@ -180,6 +193,9 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
                 Price (USD)
               </th>
               <th className="no-sort">Unit</th>
+              <th className="no-sort">Last updated</th>
+              <th className="no-sort">By</th>
+              <th className="no-sort">What changed</th>
               <th onClick={() => setContinentDir((d) => (d === 1 ? -1 : 1))}>
                 Continent <span className={`sort-arrow active`}>{continentDir === 1 ? '↑' : '↓'}</span>
               </th>
@@ -190,14 +206,14 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
             {continentGroups.map(({ continent, destinations: ds }) => (
               <Fragment key={continent}>
                 <tr className="region-row">
-                  <td colSpan={6} className="sticky-col">
+                  <td colSpan={9} className="sticky-col">
                     {continent}
                   </td>
                 </tr>
                 {ds.map((dest) => (
                   <Fragment key={dest.id}>
                     <tr className="dest-subheader-row">
-                      <td colSpan={5} className="sticky-col">
+                      <td colSpan={8} className="sticky-col">
                         {dest.emoji} <b>{dest.name}</b>{' '}
                         <span style={{ color: 'var(--text-faint)', fontWeight: 400 }}>
                           — {dest.items.length} item{dest.items.length === 1 ? '' : 's'}
@@ -224,8 +240,13 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
                         if (aDraft && bDraft) return a.idx - b.idx;
                         return a.item.price - b.item.price;
                       })
+                      .filter(({ item }) => !onlyNotHuman || item.editorKind !== 'human')
                       .map(({ item, idx }) => (
-                        <tr key={`${dest.id}-${idx}`}>
+                        // Inputs are uncontrolled (defaultValue), so a row keyed only by
+                        // index keeps its old text after a delete shifts everything up —
+                        // the screen would show the deleted row and hide the wrong one.
+                        // Including the count remounts the rows whenever one is added or removed.
+                        <tr key={`${dest.id}-${dest.items.length}-${idx}`}>
                           <td className="sticky-col">
                             <div className="cell-inner">
                               <input
@@ -269,6 +290,17 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
                                 onBlur={(e) => editItemField(dest, idx, 'unit', e.target.value)}
                               />
                             </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner" style={{ ...faint, whiteSpace: 'nowrap' }}>{item.updatedAt ? fmtWhen(item.updatedAt) : '—'}</div>
+                          </td>
+                          <td>
+                            <div className="cell-inner" style={item.updatedBy ? { fontSize: 11.5, whiteSpace: 'nowrap' } : { ...faint, fontStyle: 'italic', whiteSpace: 'nowrap' }}>
+                              {item.updatedBy ? `${item.editorKind === 'agent' ? '🤖 ' : ''}${item.updatedBy}` : 'Never edited'}
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner" style={faint}>{item.lastChange ?? ''}</div>
                           </td>
                           <td>
                             <div className="cell-inner" />

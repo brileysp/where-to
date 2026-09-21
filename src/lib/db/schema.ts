@@ -82,7 +82,12 @@ export const places = pgTable(
     costMax: text('cost_max'),
     costOverview: text('cost_overview'),
     costItems: jsonb('cost_items').notNull().default([]).$type<
-      Array<{ label: string; price: number; unit: string; emoji?: string }>
+      Array<{
+        label: string; price: number; unit: string; emoji?: string;
+        // Edit tracking — see src/lib/admin/cost-item-stamp.ts. Admin-only.
+        id?: string; updatedAt?: string | null; updatedBy?: string | null;
+        editorKind?: 'human' | 'agent' | null; lastChange?: string | null;
+      }>
     >(),
 
     baseScores: jsonb('base_scores').notNull().$type<Record<string, number>>(),
