@@ -317,7 +317,19 @@ times a year). The score was wrong too (apex tier; corrected to Faroe/Scottish-H
 in `fix-aurorachasing-fjords-latitude.ts`. **Lesson: when a destination's own name suggests one place
 but its actual scope (check the `about` field and its OTHER sliders' content) is a different, specific
 region, don't substitute in a more convenient real place for content just because it shares the same
-country — verify what the destination's existing content actually already covers first.**).
+country — verify what the destination's existing content actually already covers first.**
+Off-season copy also went through a correction: the shared "outside the dark season" line was applied
+to genuine midnight-sun months (Lofoten in June, etc.) as if they merely had short nights, when there is
+no night at all — factually wrong, not just verbose. Split into two lines (`NORTH_NO_DARK` vs
+`OFF_SEASON`) and cut both down hard — the "even during a strong storm" hedge was pure noise once it's
+obviously daylight out. **Steps 5 and 6, done properly** (not skipped, unlike earlier interests in this
+list): the specialist-lens review caught a second wrong-place error of the same shape as the fjords one
+— `milford-sound-fiordland`'s framing had implicitly borrowed easier viewing odds from Stewart Island
+research (a genuinely different, better-suited island), when Milford Sound's own fjord-and-mountain
+geography actually blocks the southern horizon the aurora needs — plus three "name the real site" gaps
+(Juneau, Waterton-Glacier's actual Dark Sky Park status, Stowe/Green Mountains), fixed in
+`fix-aurorachasing-specialist-review.ts`. The Catalog Wishlist got a 6-place Aurora list, led by Tromsø
+— the direct fix for the fjords gap this interest surfaced.).
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
