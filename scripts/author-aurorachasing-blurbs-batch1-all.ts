@@ -9,10 +9,16 @@ const KEY = 'auroraChasing';
 
 // Shared bucket text, reused verbatim across destinations/months whose real
 // situation is genuinely the same, per the playbook's skeleton convention.
-const OFF_SEASON = 'Outside the real dark season — nights are too short here for a realistic look, even during a strong storm.';
-const SUMMER_LIGHT = "Near-continuous summer light here — there's not enough darkness for the aurora to show, whatever the sun is doing.";
+const OFF_SEASON = 'Nights are too light for a realistic look.';
+// For destinations with genuine midnight sun (no real darkness at all for part of
+// summer) — distinct from OFF_SEASON above, which is for places where nights are
+// merely short but still get properly dark. Getting this distinction right matters:
+// conflating the two (as an earlier draft did for Lofoten) understates places
+// that have literally no night to see the aurora against.
+const NORTH_NO_DARK = 'Midnight sun — no darkness, so no aurora.';
+const SUMMER_LIGHT = 'Not enough darkness for the aurora to show.';
 const REGULAR_SEASON = (site: string) => `Full dark season at ${site} — one of the best windows of the year.`;
-const SOUTH_OFF = 'Outside the southern-hemisphere dark season — days are too long for a realistic look.';
+const SOUTH_OFF = 'Days are too long for a realistic look.';
 
 const OVERVIEWS: Record<string, string> = {
   iceland: "Iceland sits under the auroral oval, so a clear night in the dark season is a real shot — no rare storm required. The main risk is weather, not latitude: a run of cloudy nights can undo an otherwise well-timed week.",
@@ -49,19 +55,22 @@ const MONTHLY: Record<string, string[]> = {
   iceland: [
     REGULAR_SEASON('Iceland'), 'February is statistically the strongest month — long nights and typically the year\'s clearest skies.',
     'Still a real dark-season month, with decent odds on a clear night.',
-    OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON,
+    'Nights are shortening fast, with little real darkness left.', NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
+    'Real darkness is just returning by month\'s end.',
     'The season restarts as nights lengthen again.', 'A real, if lighter, start to the season.',
     'Full dark season returns.', REGULAR_SEASON('Iceland'),
   ],
   lapland: [
     REGULAR_SEASON('Lapland'), REGULAR_SEASON('Lapland'), 'Still deep in the dark season, with strong odds on a clear night.',
-    OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON, 'Nights are just starting to darken again by month\'s end.',
+    'Nights are shortening fast, with little real darkness left.', NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
+    'Nights are just starting to darken again by month\'s end.',
     'Season restarts in earnest — one of the longest anywhere.', REGULAR_SEASON('Lapland'),
     REGULAR_SEASON('Lapland'), REGULAR_SEASON('Lapland'),
   ],
   lofoten: [
     REGULAR_SEASON('Lofoten'), REGULAR_SEASON('Lofoten'), 'Nights are shortening but still genuinely dark enough for a good shot.',
-    OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON,
+    'Nights are shortening fast, with little real darkness left.', NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
+    'Real darkness is just returning by month\'s end.',
     'The season restarts as real darkness returns.', 'A solid start to the season.',
     REGULAR_SEASON('Lofoten'), REGULAR_SEASON('Lofoten'),
   ],
@@ -84,8 +93,9 @@ const MONTHLY: Record<string, string[]> = {
   ],
   'denali-interior': [
     REGULAR_SEASON('the Interior'), 'One of the clearest-sky months of the year here — a strong month for the season.',
-    'Real odds remain, though nights are shortening.', OFF_SEASON, OFF_SEASON, 'The very tail end of true midnight sun; still too light most nights.',
-    'Darkness is returning but is not yet reliable.', 'A real start to the season as nights lengthen.',
+    'Real odds remain, though nights are shortening.', 'Nights are shortening fast, with little real darkness left.',
+    NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
+    'Real darkness is just returning by month\'s end.',
     'A strong month, closer to the season\'s better odds.', REGULAR_SEASON('the Interior'),
     'A strong month heading into peak season.', REGULAR_SEASON('the Interior'),
   ],
@@ -97,7 +107,9 @@ const MONTHLY: Record<string, string[]> = {
   ],
   greenland: [
     REGULAR_SEASON('Greenland'), 'One of the strongest months, combining long nights with typically calmer weather.',
-    'Real odds remain as the season continues.', OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON,
+    'Real odds remain as the season continues.',
+    'Nights are shortening fast, with little real darkness left.', NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
+    'Real darkness is just returning by month\'s end.',
     'The season restarts as darkness returns.', 'A real, building start to the season.',
     'A solid month heading into the strongest stretch.', REGULAR_SEASON('Greenland'),
   ],
@@ -191,7 +203,7 @@ const MONTHLY: Record<string, string[]> = {
   svalbard: [
     REGULAR_SEASON('Svalbard'), REGULAR_SEASON('Svalbard'), REGULAR_SEASON('Svalbard'),
     'The sun starts staying up longer; still real darkness most nights, but the window is closing.',
-    'Midnight sun all month — no darkness, so no aurora.', 'Midnight sun all month — no darkness, so no aurora.', 'Midnight sun all month — no darkness, so no aurora.',
+    NORTH_NO_DARK, NORTH_NO_DARK, NORTH_NO_DARK,
     'The sun starts setting again by month\'s end; still limited darkness.',
     'Full polar night is still weeks off, but nights are dark enough now for the season\'s first real looks.',
     REGULAR_SEASON('Svalbard'), REGULAR_SEASON('Svalbard'), REGULAR_SEASON('Svalbard'),
