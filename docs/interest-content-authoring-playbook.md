@@ -301,7 +301,14 @@ covered to know what's genuinely missing.
 
 Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`,
 `wildflowerBlooms`, `hotSprings` (Sep 2026: 27 places authored across 3 batches; no per-slider sources
-logged yet — the research trail wasn't captured, see the hotSprings note in `docs/todo.md`).
+logged yet — the research trail wasn't captured, see the hotSprings note in `docs/todo.md`),
+`auroraChasing` (Sep 2026: 22 non-NA places, single batch — small enough not to need tiering. Found and
+fixed two real scoring bugs before writing content, per §5: Svalbard was scoring its own midnight-sun
+months, when the aurora is physically unviewable, as high as its actual dark season; Southeast Alaska's
+generic dry/wet fallback was scoring its near-continuous-light summer higher than its real Sep-Mar
+season. Both fixed with a real event, verified via the live pipeline, in
+`fix-aurorachasing-svalbard-alaska-events.ts`. Voice note: keep the obvious mechanic — "the sun doesn't
+set, so there's no dark sky" — to one short clause; don't over-explain it.).
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
