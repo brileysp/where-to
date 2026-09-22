@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useFieldEdit } from './useFieldEdit';
+import { SETTING_TAGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
 
 /**
  * Grows a textarea to fit its content instead of clipping/scrolling it —
@@ -176,6 +177,71 @@ export function BandCell({ ctx, value, options, setLocal }: { ctx: FieldContext;
                 {o.label}
               </label>
             ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Place-type tags: an ORDERED multi-select (first = primary, marked ★), 1–4 tags
+ * from the closed list in src/lib/places/setting-tags.ts. Unlike BandCell, order
+ * matters, so each checked tag has a "make primary" button that moves it first.
+ */
+export function SettingTagsCell({ ctx, value, setLocal }: { ctx: FieldContext; value: string[]; setLocal: (v: string[]) => void }) {
+  const commit = useFieldEdit();
+  const [open, setOpen] = useState(false);
+  const label = (slug: string) => SETTING_TAGS.find((t) => t.slug === slug)?.label ?? slug;
+
+  function change(next: string[], desc: string) {
+    if (next.length < 1 || next.length > MAX_SETTING_TAGS) return;
+    commit({
+      ...ctx,
+      fieldLabel: `${ctx.fieldLabel} — ${desc}`,
+      oldValue: value.map(label).join(', ') || '—',
+      newValue: next.map(label).join(', '),
+      setLocal: (val) => setLocal(val === next.map(label).join(', ') ? next : value),
+      toPatchValue: () => next,
+    });
+  }
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <div className={`cell-inner band-cell${value.length ? '' : ' empty-hint'}`} onClick={() => setOpen((o) => !o)}>
+        {value.length === 0
+          ? 'Click to set…'
+          : value.map((k, i) => (
+              <span className="band-chip" key={k} title={label(k)}>
+                {i === 0 ? '★ ' : ''}{label(k)}
+              </span>
+            ))}
+      </div>
+      {open && (
+        <>
+          <div style={{ position: 'fixed', inset: 0, zIndex: 69 }} onClick={() => setOpen(false)} />
+          <div className="band-popover" style={{ top: '100%', left: 0 }}>
+            {SETTING_TAGS.map((t) => {
+              const on = value.includes(t.slug);
+              return (
+                <label className="band-opt" key={t.slug}>
+                  <input
+                    type="checkbox"
+                    checked={on}
+                    disabled={(on && value.length === 1) || (!on && value.length >= MAX_SETTING_TAGS)}
+                    onChange={() => change(on ? value.filter((k) => k !== t.slug) : [...value, t.slug], `${on ? 'removed' : 'added'} ${t.label}`)}
+                  />
+                  {t.emoji} {t.label}
+                  {on && value[0] !== t.slug && (
+                    <button type="button" style={{ marginLeft: 'auto', fontSize: 10.5, border: 'none', background: 'none', color: 'var(--accent)', cursor: 'pointer' }}
+                      onClick={(e) => { e.preventDefault(); change([t.slug, ...value.filter((k) => k !== t.slug)], `${t.label} made primary`); }}>
+                      make primary
+                    </button>
+                  )}
+                  {on && value[0] === t.slug && <span style={{ marginLeft: 'auto', fontSize: 10.5, color: 'var(--text-faint)' }}>primary</span>}
+                </label>
+              );
+            })}
           </div>
         </>
       )}

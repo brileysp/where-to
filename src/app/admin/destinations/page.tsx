@@ -27,6 +27,7 @@ export default async function AdminDestinationsPage() {
     vibeBands: d.vibeBands,
     physicalBands: d.physicalBands,
     placeType: d.placeType,
+    settingTags: d.settingTags,
     audienceBands: d.audienceBands,
     searchAliases: d.searchAliases,
     specialSeasons: d.specialSeasons,

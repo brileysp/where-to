@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { places, interestMeta, climateEnum, peakIntensityEnum, crowdBaselineEnum, severityEnum } from '@/lib/db/schema';
 import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
+import { SETTING_TAG_SLUGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
 import { sliderCurveSchema } from '@/lib/scoring/curve';
 import { monthArray, month, sliderKeyedRecord } from '../../../scripts/content/destination-schema';
 
@@ -98,6 +99,9 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       wetSeverity: zodField(nullableEnum(severityEnum.enumValues)),
       monthlyWeather: zodField(z.array(z.string().nullable()).length(12).nullable()),
       searchAliases: zodField(z.array(z.string())),
+      settingTags: zodField(
+        z.array(z.enum(SETTING_TAG_SLUGS)).min(1).max(MAX_SETTING_TAGS).refine((a) => new Set(a).size === a.length, { message: 'duplicate tag' }),
+      ),
       budgetBands: zodField(bandArray('budget')),
       vibeBands: zodField(bandArray('vibe')),
       physicalBands: zodField(bandArray('physical')),

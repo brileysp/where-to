@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
-import { InlineTextCell, InlineSelectCell, SeverityCell, BandCell, TextFieldPanelCell, MonthlyWeatherCell, JsonPanelCell, type BandOption } from './cells';
+import { InlineTextCell, InlineSelectCell, SeverityCell, BandCell, SettingTagsCell, TextFieldPanelCell, MonthlyWeatherCell, JsonPanelCell, type BandOption } from './cells';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
 
@@ -29,6 +29,7 @@ export interface PlaceRow {
   vibeBands: string[];
   physicalBands: string[];
   placeType: string | null;
+  settingTags: string[];
   audienceBands: string[];
   searchAliases: string[];
   specialSeasons: Array<{ months: number[]; text: string }>;
@@ -126,8 +127,21 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
     },
     { key: 'continent', label: 'Continent', sortable: true, sortValue: (r) => r.continent, render: (r) => <div className="cell-inner">{r.continent}</div> },
     {
-      key: 'placeType',
+      key: 'settingTags',
       label: 'Place type',
+      sortable: true,
+      sortValue: (r) => r.settingTags[0] ?? '',
+      render: (r) => (
+        <SettingTagsCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'settingTags', fieldLabel: 'Place type', loadedUpdatedAt: r.updatedAt }}
+          value={r.settingTags}
+          setLocal={(v) => patchRow(r.id, { settingTags: v })}
+        />
+      ),
+    },
+    {
+      key: 'placeType',
+      label: 'Hierarchy type',
       sortable: true,
       sortValue: (r) => r.placeType ?? '',
       render: (r) => (

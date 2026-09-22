@@ -184,6 +184,10 @@ export const places = pgTable(
     vibeBands: text('vibe_bands').array().notNull().default([]),
     physicalBands: text('physical_bands').array().notNull().default([]),
     audienceBands: text('audience_bands').array().notNull().default([]),
+    // What the place is LIKE (city, island, desert…), 1–4 slugs from
+    // src/lib/places/setting-tags.ts; first = primary. Distinct from the
+    // single-valued, hierarchy-oriented `placeType` above.
+    settingTags: text('setting_tags').array().notNull().default([]),
 
     activityStyleTiers: jsonb('activity_style_tiers').notNull().default({}).$type<
       Record<string, Record<string, 'signature' | 'strong' | 'casual' | 'none'>>
