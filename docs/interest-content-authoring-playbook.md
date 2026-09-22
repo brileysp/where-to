@@ -315,8 +315,15 @@ the live pipeline before writing content:
   genuinely warm, calm Dec-May season was scored lower than the cold, rough Jun-Nov Garua season. Caught
   by checking real sea-temperature sources before trusting an odd-looking existing shape, not by assuming
   a Southern Hemisphere destination's data was automatically hemisphere-corrected already.
-Steps 5-6 (specialist review, Catalog Wishlist) not yet done given the scale — flag to the user before
-starting either.).
+**Steps 5-6, done.** Step 5 focused on the highest-risk error class rather than re-verifying all 129
+places individually: checked every destination where content named a specific real place for whether that
+place is actually in scope for the catalog entry (the exact fjords/Milford-Sound mistake). Two came back
+clean on inspection — Morocco's Essaouira/Taghazout Atlantic-coast claims and Jordan's Aqaba claim are
+BOTH already established precedent from the already-authored `windSports`/`surfing`/`diving` scripts, not
+an overreach — and cross-checked hazard-season claims (Fiji, Okinawa, Sri Lanka) against those same
+already-authored interests for consistency; none contradicted. Step 6 added a 6-place Beaches list to the
+Catalog Wishlist (Anguilla, Varadero, Grand Cayman — cross-referenced from the existing diving-list entry
+for a different reason — Formentera, Boracay, Phu Quoc).
 `auroraChasing` (Sep 2026: 22 non-NA places, single batch — small enough not to need tiering. Found and
 fixed two real scoring bugs before writing content, per §5: Svalbard was scoring its own midnight-sun
 months, when the aurora is physically unviewable, as high as its actual dark season; Southeast Alaska's
