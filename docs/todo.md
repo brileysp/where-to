@@ -42,9 +42,16 @@ Runners-up:
     URLs), so sources can't be logged retroactively without inventing them. Either re-verify
     with real sources and log those, or leave hotSprings unlogged.
   - Extend the Catalog Wishlist artifact with a hot-springs list (verified candidates only).
-- Remaining swim-formula interests to author: sailing, kayakingRafting, beachesSwimming.
-  (Note: hotSprings, also swim-formula, and auroraChasing, culture-formula, are both now done —
-  don't run two swim-formula interests back to back per the playbook's repetition rule.)
+- beachesSwimming: content done (129 places, 4 batches, Sep 2026). Still open:
+  - Specialist-lens review (playbook §1 Step 5) not done — skipped given the scale (129 places).
+    Real bugs were still found and fixed along the way (10 temperate-water destinations scored flat
+    year-round; Rio/Sydney/Galápagos had their real season inverted), so a review pass may well
+    surface more — worth doing before calling this interest fully closed.
+  - Extend the Catalog Wishlist artifact with a beaches list — not done.
+- Remaining swim-formula interests to author: sailing, kayakingRafting.
+  (Note: beachesSwimming and hotSprings, both swim-formula, and auroraChasing, culture-formula, are
+  all now done — don't run sailing/kayakingRafting immediately back to back with each other either,
+  per the playbook's repetition rule.)
 - nationalParks: not an interest. Revisit as a tag / type of place.
 
 ## Cost-item tracking follow-ups (added 2026-09-21)

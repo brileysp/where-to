@@ -302,6 +302,21 @@ covered to know what's genuinely missing.
 Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`,
 `wildflowerBlooms`, `hotSprings` (Sep 2026: 27 places authored across 3 batches; no per-slider sources
 logged yet — the research trail wasn't captured, see the hotSprings note in `docs/todo.md`),
+`beachesSwimming` (Sep 2026: 129 non-NA places, 4 batches by tier — apex/strong/modest/low. By far the
+largest interest authored to date; found and fixed real scoring bugs at every stage, all verified against
+the live pipeline before writing content:
+- 10 temperate/cold-water destinations (Cornwall, Nova Scotia, Cape Cod & the Islands, Ireland, Scottish
+  Highlands & Skye, Vancouver Island, Snowdonia, Lake District, Belfast & the Giant's Causeway, Basque
+  Country) scored flat across nearly the whole year because they had no sliderEvents. Found a real formula
+  gotcha along the way: once a slider has ANY sliderEvents, every month switches branches and the old
+  cold/hazard/dry fallback checks silently stop applying everywhere, not just for the targeted months —
+  every fix has to cover all 12 months explicitly, not just the "bad" ones.
+- 3 destinations (Rio, Sydney, Galápagos) had their real seasonal pattern **inverted** — e.g. Galápagos's
+  genuinely warm, calm Dec-May season was scored lower than the cold, rough Jun-Nov Garua season. Caught
+  by checking real sea-temperature sources before trusting an odd-looking existing shape, not by assuming
+  a Southern Hemisphere destination's data was automatically hemisphere-corrected already.
+Steps 5-6 (specialist review, Catalog Wishlist) not yet done given the scale — flag to the user before
+starting either.).
 `auroraChasing` (Sep 2026: 22 non-NA places, single batch — small enough not to need tiering. Found and
 fixed two real scoring bugs before writing content, per §5: Svalbard was scoring its own midnight-sun
 months, when the aurora is physically unviewable, as high as its actual dark season; Southeast Alaska's
