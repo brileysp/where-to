@@ -308,7 +308,16 @@ months, when the aurora is physically unviewable, as high as its actual dark sea
 generic dry/wet fallback was scoring its near-continuous-light summer higher than its real Sep-Mar
 season. Both fixed with a real event, verified via the live pipeline, in
 `fix-aurorachasing-svalbard-alaska-events.ts`. Voice note: keep the obvious mechanic — "the sun doesn't
-set, so there's no dark sky" — to one short clause; don't over-explain it.).
+set, so there's no dark sky" — to one short clause; don't over-explain it.
+**Post-commit correction (user-caught):** batch1's `fjords` content was written around Tromsø
+(~70°N, Arctic Norway) — a real place, but not part of this destination. The "Norwegian Fjords" entry
+is Geiranger/Sognefjord/Ålesund/Bergen, ~60-62°N, per its own `about` field and every other slider's
+content — a genuinely different, much less reliable aurora story (needs a real storm, a handful of
+times a year). The score was wrong too (apex tier; corrected to Faroe/Scottish-Highlands tier). Fixed
+in `fix-aurorachasing-fjords-latitude.ts`. **Lesson: when a destination's own name suggests one place
+but its actual scope (check the `about` field and its OTHER sliders' content) is a different, specific
+region, don't substitute in a more convenient real place for content just because it shares the same
+country — verify what the destination's existing content actually already covers first.**).
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA

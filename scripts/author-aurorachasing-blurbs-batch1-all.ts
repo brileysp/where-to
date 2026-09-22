@@ -18,7 +18,13 @@ const OVERVIEWS: Record<string, string> = {
   iceland: "Iceland sits under the auroral oval, so a clear night in the dark season is a real shot — no rare storm required. The main risk is weather, not latitude: a run of cloudy nights can undo an otherwise well-timed week.",
   lapland: "Finnish Lapland has one of the longest aurora seasons anywhere — late August into April — and locals report the lights on well over half of clear dark-season nights. Glass-roofed cabins here exist specifically so you can watch from bed.",
   lofoten: "The Lofoten Islands sit above the Arctic Circle with little light pollution, giving a genuine shot at the aurora across roughly eight months of the year — among the longer windows of any place on this list.",
-  fjords: "Tromsø, in Norway's north, sits directly beneath the auroral oval — one of very few places where even a quiet, low-activity night can still produce a real display. This is a different Norway from the fjord-cruise towns the destination is best known for: it's the Arctic north, several hundred miles further up the coast.",
+  // CORRECTED post-commit — see fix-aurorachasing-fjords-latitude.ts. The
+  // original text here was written around Tromsø (~70°N, Arctic Norway),
+  // which is not part of this destination — the real "Norwegian Fjords"
+  // entry (per its own `about` field and every other slider) is Geiranger/
+  // Sognefjord/Ålesund/Bergen, ~60-62°N. Caught by the user; score was wrong
+  // too (apex tier, should have been Faroe/Scottish-Highlands tier).
+  fjords: "Norway's fjord country sits far enough south that the aurora isn't a given — Bergen and Ålesund need a genuinely strong solar storm, arriving only a handful of times a year, and even then the display tends to be fainter than what Norway's true Arctic north sees routinely.",
   churchill: "Churchill sits right under the auroral oval and reports aurora on close to 300 nights a year — one of the most reliable places on Earth for it, cold and dry air keeping the skies clear on top of the latitude.",
   'denali-interior': "Fairbanks and Denali's interior get one of North America's longest aurora seasons — roughly nine months — and on a clear night in season, the lights are visible on about four nights out of five.",
   banff: "Banff sees the aurora several times a season, though a truly big, sky-filling display is closer to a once-or-twice-a-year event. It's real and worth watching for, just not the near-guarantee that further-north destinations on this list offer.",
@@ -60,10 +66,14 @@ const MONTHLY: Record<string, string[]> = {
     REGULAR_SEASON('Lofoten'), REGULAR_SEASON('Lofoten'),
   ],
   fjords: [
-    REGULAR_SEASON('Tromsø'), REGULAR_SEASON('Tromsø'), 'Still a strong month, though nights are shortening.',
+    'Within the season — a genuinely strong storm is still needed, but nights are long and dark.',
+    'Same odds as January, among the better months for a chance.',
+    'Still within the season; the equinox can add a boost in activity.',
     OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON, OFF_SEASON,
-    'Nights lengthen enough for the season to restart.', 'A real, building start to the season.',
-    REGULAR_SEASON('Tromsø'), REGULAR_SEASON('Tromsø'),
+    'A modest start to the season.',
+    'Nights are dark enough again for a real, if occasional, chance.',
+    'Within the season, same odds as January.',
+    'Within the season, same odds as January.',
   ],
   churchill: [
     REGULAR_SEASON('Churchill'), 'Cold, dry air keeps skies clear — among the most reliable months of the year.',
