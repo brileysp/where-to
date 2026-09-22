@@ -36,12 +36,14 @@ Runners-up:
 
 ## Other open items (already discussed this session)
 
-- hotSprings wrap-up: log sources (`scripts/log-hotsprings-sources.ts`), extend the
-  Catalog Wishlist, mark hotSprings done in the playbook §7.
+- hotSprings wrap-up: playbook §7 marked done (2026-09-21). Still open:
+  - Source logging: 27 places have hotSprings content and none have `sliderSources` entries.
+    The research trail wasn't captured (old session transcripts show only 3 web searches, no
+    URLs), so sources can't be logged retroactively without inventing them. Either re-verify
+    with real sources and log those, or leave hotSprings unlogged.
+  - Extend the Catalog Wishlist artifact with a hot-springs list (verified candidates only).
 - Remaining swim-formula interests to author: sailing, kayakingRafting, beachesSwimming.
 - nationalParks: not an interest. Revisit as a tag / type of place.
-- Uncommitted: grouped monthly-blurb slideout, admin load-speed cache
-  (`primary-place-rows.ts`), Advisories-tab and Sources-column reorder.
 
 ## Cost-item tracking follow-ups (added 2026-09-21)
 - Visually verify the Cost Items screen (new Last updated / By / What changed columns, "Never edited by a human" filter) — needs a signed-in browser session.

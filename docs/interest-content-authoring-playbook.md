@@ -300,7 +300,8 @@ covered to know what's genuinely missing.
 ## 7. What's left (as of this doc)
 
 Done: `wildlifeViewing`, `birding`, `whaleWatching`, `diving`, `surfing`, `windSports`, `safari`,
-`wildflowerBlooms`.
+`wildflowerBlooms`, `hotSprings` (Sep 2026: 27 places authored across 3 batches; no per-slider sources
+logged yet — the research trail wasn't captured, see the hotSprings note in `docs/todo.md`).
 
 `windSports` was the first interest with zero pre-existing scores (added to the taxonomy
 unauthored earlier this session) — it needed a "Phase A" scoring-foundation pass (NA
