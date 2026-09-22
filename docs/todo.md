@@ -43,6 +43,8 @@ Runners-up:
     with real sources and log those, or leave hotSprings unlogged.
   - Extend the Catalog Wishlist artifact with a hot-springs list (verified candidates only).
 - Remaining swim-formula interests to author: sailing, kayakingRafting, beachesSwimming.
+  (Note: hotSprings, also swim-formula, and auroraChasing, culture-formula, are both now done —
+  don't run two swim-formula interests back to back per the playbook's repetition rule.)
 - nationalParks: not an interest. Revisit as a tag / type of place.
 
 ## Cost-item tracking follow-ups (added 2026-09-21)
