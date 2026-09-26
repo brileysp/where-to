@@ -71,7 +71,98 @@ Fix base-score problems with `scripts/fix-<interest>-base-scores.ts` (pattern in
 content problems by rewriting the specific destination's overview/monthly directly. Always
 verify the target peak via the real pipeline before committing — never hand-compute it.
 
-**Step 6 — Extend the Catalog Wishlist artifact.** See §6.
+**Step 6 — Decimal & consistency audit.** A dedicated pass, run once Steps 1-5 are done
+and the interest's numbers and text both already exist — not blended into authoring, and
+not a replacement for keeping scores and text coupled while you write (§2's rule on that
+still applies, and if it's genuinely internalized during authoring this step should find
+less each time — that's a sign it's working, not a reason to skip it). Its job is
+specifically the bug class Step 5's specialist-lens review is *not* scoped to catch: month-
+by-month contradictions between a destination's own score curve and its own words, plus
+catalog-wide over-claiming of the literal maximum. (This is exactly how whaleWatching's
+Svalbard/Southeast Alaska bugs survived an honest Step 5 review earlier — that review
+checks cross-destination tier fairness and discipline attribution, never a single
+destination's own internal month-to-month consistency.) Check for:
+
+- **Same text, different score.** Two or more months sharing verbatim (or near-verbatim)
+  blurb text should carry the same or nearly the same score — the destination's own words
+  are asserting those months are equivalent. A real gap is a bug, not a judgment call.
+- **Distinct text, identical score, one side is honestly lesser.** A month whose own text
+  signals something short of the surrounding peak ("easing," "beginning," "not yet as
+  reliable as August," "winding down") tied to the exact same score as the true peak
+  months is the same bug from the other direction — the text already told you it should
+  be lower.
+- **Wide literal-max plateaus.** Reserve a literal 10 (or whatever the interest's ceiling
+  is) for the narrowest, most genuinely exceptional peak — usually 1-3 months, occasionally
+  4 for a globally elite, well-researched destination. A run of 5+ months at the literal
+  cap needs real-world caliber research (how many *other* destinations in this same
+  interest could defensibly make the same claim?) and, usually, tapering. Do this last and
+  holistically across the whole interest, not destination by destination — the answer only
+  makes sense compared against everyone else making a similar claim.
+- **Isolated cliffs.** A single month differing sharply (2+ points) from both neighbors,
+  when the neighbors are close to each other, with no textual justification. Almost always
+  a curve-fitting artifact, not an authored choice.
+- **Flat-everywhere text with unexplained score wobble.** When a full year (or nearly)
+  shares one line of text that explicitly claims no seasonal difference ("present year-
+  round," "nothing tied to a specific season"), any real score spread is itself the bug —
+  flatten to one honest value rather than inventing texture the text doesn't support.
+- **Content-completeness across overlapping sliders.** Check for headline-level content
+  that exists richly in a related, deeper slider (birding, whaleWatching, diving) but is
+  entirely absent from a general slider a non-specialist would also expect it in. The split
+  between a general and a specialist slider is depth/angle, not exclusive ownership of a
+  species or experience — the fix is additive content on the general slider, not leaving it
+  out because the specialist slider already "has" it. (Costa Rica's wildlifeViewing named
+  only sloths and monkeys while its birding content already had a full quetzal/macaw
+  treatment — a real miss, not appropriate restraint.)
+
+- **Resolution check (added Sep 2026 after a miss).** The checks above find *bugs*; they do
+  not prove the interest's rank list has usable resolution. The eight retrofit interests
+  (wildlife, birding, diving, beaches, surfing, windSports, hotSprings, wildflowers) each
+  passed every check here and still shipped 85-100% whole/half-number monthly scores, so the
+  by-interest list showed a wall of ties (four places at 9.0, five at 8.0). Fixing flagged
+  months does not decimalize an interest. Run `npx tsx scripts/audit-score-resolution.ts` and
+  treat an interest as done only when `coarsePct` is below ~30% and `top20distinct` is 14 or
+  more. A place's month scores must be decimals from its own text groups *and* a caliber
+  ordering against the other places sharing its tier (e.g. rank every 9.x wildlife place
+  against the others before assigning decimals).
+- **How to decimalize an existing interest (wildlife, Sep 2026 — the reference run).** Use
+  `scripts/decimalize-wildlife.ts` (config-driven; `--redo` re-derives from the pre-pass scores
+  instead of compounding). Rules the user set while doing it: (1) *10s are per place, not per
+  catalog* — an anchor may hold the literal 10 for its narrowest best 1-3 months (4 for a
+  two-season place); a peak whose text repeats over 4+ months gets 9.x, or its text is split so the
+  10 sits on 3 months (Okavango, Serengeti). (2) *Caliber, not just shape* — rank places against
+  each other within a tier and give each its own peak decimal; keep shifts to about +/-1 of the
+  old peak so no earlier tier judgement is overturned. (3) *Land beats sea* — marine life (reefs,
+  mantas, whales) earns wildlife credit but below big land animals, because diving, snorkeling and
+  whale watching are separate interests; the same goes for birds. A place already a 10 in another
+  interest for a marine reason (Raja Ampat) doesn't also get one here. (4) *Regional pinnacles are not
+  global ones* — Yellowstone and Denali are the top of North American wildlife but not comparable
+  to a peak African safari, so neither holds a 10. Remove a place from `anchors.ts` when its 10 is
+  no longer defensible.
+- **Anchor ceiling.** `src/lib/scoring/anchors.ts` holds, per interest, the closed list of
+  destinations allowed to hold a 10 plus a one-line definition of what a 10 asserts. Run
+  `npm run db:audit:anchors` after every batch: any `OVER` (a non-anchor peaking at 10) is a
+  blocking error — lower it, or make a deliberate case to add it to the list. `UNDER` (an
+  anchor peaking below 10) is informational but must be a decision, not an accident: an anchor
+  is *permitted* a 10 for its best 1-3 months, so either give it one or tell the user the
+  anchor list looks out of date. Check the anchor list *before* assigning caliber tiers, so the
+  ceiling you author matches the ceiling the catalog already declares.
+
+Execution: for catalogs of ~100+ destinations, don't manually re-read every entry — write
+a throwaway `scripts/_diag-<interest>.ts` that automatically flags same-text-score-spread,
+runs of 4+ months at the literal max, and isolated cliffs, then triage only what it
+surfaces. Pull exact current text/scores for flagged destinations via a targeted query
+before drafting a fix — never guess at what's already there. Ground any caliber/rarity
+judgment in real research (WebSearch a "best in the world" ranking for that activity)
+rather than assumption, and say so when a category's rankings are less stable or
+authoritative than others (specialist consensus like diving or birding tends to be far
+more stable year to year than something like general "best beaches" lists). Dry-run every
+fix, verify against the live pipeline (`scorePlace` / `deriveDestinationScoresFromCurves`)
+before writing, then write via `scoreOverrides` (never hand-edit `sliderCurves` anchors
+directly — see §0) plus `sliderMonthlyWeather` / `sliderOverview` as needed. Typecheck
+after writing. Delete the throwaway `_diag-*.ts` script; keep the `author-<interest>-
+decimals.ts` (or similarly named) fix script permanently, same as any other `author-*.ts`.
+
+**Step 7 — Extend the Catalog Wishlist artifact.** See §6.
 
 ## 2. Voice and content rules
 
@@ -82,6 +173,21 @@ one.
   that a domain expert cares about but a general interested traveler doesn't (birding's
   "common pigeons," wildlife's squirrels, diving's algae-covered rubble). No unexplained
   jargon.
+- **A species belongs in `wildlifeViewing` if it's a headline, general-audience draw —
+  even when `birding` (or `whaleWatching`) also covers it.** The split between these
+  sliders is depth/specialist-level, not category. `birding`'s job is the checklist
+  species a dedicated birder travels for (Costa Rica: trogons, tanagers, bellbirds,
+  antbirds, ground-cuckoos); `wildlifeViewing`'s job is what a general "I want to see
+  cool animals" traveler pictures (Costa Rica: sloths, monkeys, toucans, scarlet macaws,
+  resplendent quetzal). A `wildlifeViewing` blurb that lists only mammals for a
+  destination whose bird life is a major, widely-marketed part of its wildlife draw is a
+  miss, not appropriate restraint — the two sliders describing the same animal from a
+  different angle (general vs. specialist) is expected and fine, not redundant. Don't
+  swing the other way either: a destination's actual "specialist checklist" birds (the
+  ones only `birding` content should carry) still don't belong in `wildlifeViewing`, and
+  a place without a genuine headline-bird draw shouldn't have one invented for it. Same
+  logic applies to `whaleWatching` overlap (e.g. Vancouver Island's orcas are `wildlife
+  Viewing`-worthy too, alongside its black bears, not exclusively `whaleWatching`'s).
 - **Tier multi-feature destinations explicitly, never blend them into one narrative:**
   near-universal (most itineraries) → site-specific (depends where you go) → seasonal
   bonus (depends when). State every presence claim scoped to *where and when together* —
@@ -123,6 +229,50 @@ one.
 - **When you find real seasonality the current score doesn't capture** (a legendary
   single site, a rut/hibernation cycle, a closure), fix the score *before or alongside*
   writing content that describes it. Never let score and content drift apart.
+- **Decimal-precision scores must be derived from the blurb text, not from the old
+  integer score's shape — check both directions before touching a number.** Caught on
+  whaleWatching (Sep 2026): a purely geometric smoothing pass (taper by position within
+  a run of months that shared the same *old integer* value) produced real violations once
+  checked against already-authored monthly text — Vancouver Island's May-October blurb is
+  the literal same sentence six times over ("Peak season — humpback and gray whales..."),
+  yet the geometric pass invented a 9.8-10.0 gradient across those six months anyway.
+  Azores' April/May share one identical "peak" sentence but got different scores; its June
+  blurb explicitly describes the season *declining* ("most blue whales have moved on") yet
+  got tied with the actual peak months. The old integer tier a month happens to share with
+  its neighbors is a coincidence of a coarse legacy formula — it is never the right
+  grouping key.
+  - **Fixing an already-authored interest:** read every month's blurb first. Group months
+    by identical/paraphrased text — each group gets one score, not fine-grained texture
+    invented from curve position, rank, or anything else disconnected from the prose. Give
+    adjacent DISTINCT-text groups a score gap sized to what the text actually describes
+    ("still a strong presence" → a small step; "none present"/"essentially closed" → a
+    cliff). Re-derive the curve from these text-defined groups, discarding whatever
+    grouping the old integer score implied.
+  - **Authoring an interest that has no monthly text yet:** write the monthly blurb and
+    that month's decimal score in the same pass, for the same destination — never score a
+    full 12-month curve ahead of writing the prose that justifies it, and never leave a
+    month with genuinely distinct real content tied to a neighbor's score just because
+    they used to share an old integer tier. Where there's honestly nothing seasonal to
+    say (a real flat season), the flat score is correct — say so in the blurb instead of
+    inventing a distinction, exactly per the "state the practical seasonal reality
+    honestly" rule above.
+  - This check is cheap and mechanical (diff month-groups-by-score against month-groups-
+    by-text) — run it as a step, not a one-off catch, on every destination touched.
+  - **The same "don't invent fake distinction" rule applies to WORDING, not just numbers.**
+    Caught on auroraChasing (Sep 2026), immediately after the rule above was written and
+    applied: a genuinely flat "no signal" block (three consecutive no-aurora summer
+    months) got three different sentences with solstice narration, plus three slightly
+    different scores to avoid literal repetition — the exact mistake the rule above
+    exists to prevent, just committed against prose instead of numbers. The established
+    catalog convention for a real "nothing to say" month is short and flat and REUSED
+    verbatim across the whole block ("Nights are too light for a realistic look.", "Days
+    are too long for a realistic look.", "Midnight sun — no darkness, so no aurora." —
+    all ~7 words, all shared across 3-6 months at a stretch with zero variation). Reusing
+    the same short sentence for a genuinely identical situation is correct, not lazy;
+    manufacturing scene-setting or micro-variation to avoid repeating it is the bug. Only
+    write a distinct sentence for a month that is ACTUALLY different (a transition, a
+    named mechanism, a building/easing edge) — never to make an unremarkable month feel
+    less repetitive.
 - **Keep the cross-cutting "current conditions" boundary.** Security, political
   instability, active environmental crises (reef bleaching, a population collapse), armed
   conflict — none of that belongs woven into per-interest content. That's what the
@@ -296,6 +446,19 @@ covered to know what's genuinely missing.
   count, and the footer. Republish with the **same `url`** so the link doesn't change.
 - The artifact is explicitly a content backlog, not wired into scoring — say so in its own
   intro text.
+
+**`mountaineering` (Sep 2026, first interest authored with the Step 6 workflow) — done for 73 places.**
+Scores were written as text-derived decimals from the start via `scripts/mountaineering-batch-runner.ts`
+(shared runner: mechanical self-check for same-text/different-score and literal-cap plateaus, `clearNA`
+option, dry-run first). Lessons: (1) the NA survey only covered places already flagged applicable, so pure
+rock-climbing destinations (Krabi, Fontainebleau, Squamish, Indian Creek) were missed until a second sweep —
+for an interest that spans disciplines, survey NA flags against *every* discipline, not just the headline
+one. (2) Step 5 found trek-style peaks (Kilimanjaro, Aconcagua, Cotopaxi/Cayambe) topping tiers that real
+alpinists would give to technical ranges — trim non-technical objectives below the Alps/Dolomites tier
+(`fix-mountaineering-step5-tiers.ts`). (3) Never name a specific cliff/route in a closure note unless the
+research names it (Cornwall's "Bishop's Buttress" was an invented detail, since removed). (4) Anchor list is
+deliberately short: only chamonix/nepal/pakistan/yosemite/el-chalten hit 10; Fontainebleau tops the rest at 9.6.
+Step 7 done: 39 climbing places added to the Catalog Wishlist (Sep 2026), which also brought its total to 237 places. While in there, fixed two unclosed `list-block` divs (wildflowers, aurora) that had nested later lists inside them. When the catalog already covers a candidate under another entry (e.g. Mexico's volcanoes inside Mexico City), drop it rather than list it.
 
 ## 7. What's left (as of this doc)
 
