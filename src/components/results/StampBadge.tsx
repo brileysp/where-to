@@ -24,16 +24,14 @@ function ShapeGeometry({
   stroke,
   outerWidth,
   innerWidth,
-  dashed,
 }: {
   shape: StampShape;
   stroke: string;
   outerWidth: number;
   innerWidth: number;
-  dashed?: boolean;
 }) {
-  const outer = { fill: 'none', stroke, strokeWidth: outerWidth, strokeDasharray: dashed ? '6 5' : undefined };
-  const inner = { fill: 'none', stroke, strokeWidth: innerWidth, strokeDasharray: dashed ? '6 5' : undefined };
+  const outer = { fill: 'none', stroke, strokeWidth: outerWidth };
+  const inner = { fill: 'none', stroke, strokeWidth: innerWidth };
   switch (shape) {
     case 'circle':
       return (
@@ -88,25 +86,15 @@ function ShapeGeometry({
 export function StampBadge({
   destinationId,
   size = 30,
-  ghost = false,
   popping = false,
 }: {
   destinationId: string;
   size?: number;
-  ghost?: boolean;
   popping?: boolean;
 }) {
   const rawId = useId();
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
   const { code, shape, color, rotate, opacity, roughness, seed } = stampVisualFor(destinationId);
-
-  if (ghost) {
-    return (
-      <svg width={size} height={size} viewBox="0 0 100 100" style={{ flexShrink: 0, transform: `rotate(${rotate}deg)` }}>
-        <ShapeGeometry shape={shape} stroke="var(--border)" outerWidth={3.4} innerWidth={1.8} dashed />
-      </svg>
-    );
-  }
 
   const roughId = `stamp-rough-${uid}`;
   const inkId = `stamp-ink-${uid}`;

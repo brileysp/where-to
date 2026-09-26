@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { styleAdjustedScore, scoreForMonth, timingScoreForMonth, scoreLabel, smoothedMonthlyDisplay } from '@/lib/scoring/rank';
+import { styleAdjustedScore, scoreForMonth, timingScoreForMonth, scoreLabel, smoothedMonthlyDisplay, effectiveWeights } from '@/lib/scoring/rank';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { SLIDERS, allBandsSelected } from '@/lib/scoring/constants';
 
@@ -46,6 +46,8 @@ function makeDestination(overrides: Partial<ScoredDestination> = {}): ScoredDest
     shopClosures: false,
     specialSeasons: [],
     monthlyWeather: null,
+    sliderOverview: {},
+    sliderMonthlyWeather: {},
     naSliders: [],
     searchAliases: [],
     activityStyleTiers: {},
@@ -789,5 +791,76 @@ describe('smoothedMonthlyDisplay', () => {
     smoothedMonthlyDisplay(dest, 'hiking', 6);
 
     expect(dest.monthly.hiking).toEqual(before);
+  });
+});
+
+describe('effectiveWeights — relative noise floor', () => {
+  it('ignores passing mentions (3 or less) and anything at or below 30% of the top weight', () => {
+    const w = effectiveWeights({ wildlifeViewing: 10, golf: 2, skiingSnowboarding: 3, hiking: 6, fishing: 8 });
+    expect(w.golf).toBe(0);
+    expect(w.skiingSnowboarding).toBe(0); // 30% of the top, and a passing mention
+    expect(w.hiking).toBe(6);
+    expect(w.fishing).toBe(8);
+    expect(w.wildlifeViewing).toBe(10);
+  });
+
+  it('ramps linearly between 30% and 50% so a nudged slider does not flip a ranking', () => {
+    const w = effectiveWeights({ wildlifeViewing: 10, hiking: 4 }); // 40%: halfway up the ramp
+    expect(w.hiking).toBeCloseTo(2, 10);
+  });
+
+  it('leaves a traveller who weights many interests about equally untouched', () => {
+    const stated = { museumsArt: 8, architecture: 8, cityExploration: 7, fineDining: 6 };
+    expect(effectiveWeights(stated)).toEqual(stated);
+  });
+
+  it('is relative to the user\'s own top weight, not an absolute number', () => {
+    // Someone whose top interest is a 5 still keeps a 4 (80% of their top) but not a 3.
+    const w = effectiveWeights({ hiking: 5, golf: 4, skiingSnowboarding: 3 });
+    expect(w.golf).toBe(4);
+    expect(w.skiingSnowboarding).toBe(0);
+  });
+
+  it('ignores weights on hidden sliders, which the user cannot see or change', () => {
+    // nationalParks is hidden: a persona's leftover 7 must not count, nor shrink the ramp for the rest.
+    const w = effectiveWeights({ cyclingRoad: 10, scenicLandscapes: 8, nationalParks: 7 });
+    expect(w.nationalParks).toBe(0);
+    expect(w.cyclingRoad).toBe(10);
+    expect(w.scenicLandscapes).toBe(8);
+    // ... and a hidden 10 is not allowed to be the "top weight" the others are measured against.
+    expect(effectiveWeights({ nationalParks: 10, hiking: 5 }).hiking).toBe(5);
+  });
+
+  it('passes an all-zero weight map through unchanged', () => {
+    expect(effectiveWeights({ hiking: 0, golf: 0 })).toEqual({ hiking: 0, golf: 0 });
+  });
+});
+
+describe('scoreForMonth — neutral interests do not decide a match', () => {
+  const bands = allBandsSelected();
+  // A persona-shaped profile: three real priorities, every other interest at the neutral 2.
+  const persona: Record<string, number> = {};
+  SLIDERS.forEach((s) => (persona[s.key] = 2));
+  Object.assign(persona, { wildlifeViewing: 9, scenicLandscapes: 8, nationalParks: 7 });
+
+  function dest(tops: number, elsewhere: number) {
+    const monthly: Record<string, number[]> = {};
+    SLIDERS.forEach((s) => (monthly[s.key] = new Array(12).fill(elsewhere)));
+    ['wildlifeViewing', 'scenicLandscapes', 'nationalParks'].forEach((k) => (monthly[k] = new Array(12).fill(tops)));
+    return makeDestination({ monthly });
+  }
+
+  it('ranks a strong match on the three priorities above a place that is merely decent at everything else', () => {
+    // The Naturalist-in-May failure: Canary Islands (weak on wildlife, decent on the 38 interests
+    // nobody asked about) beat Malaysian Borneo (strong on all three priorities, blank elsewhere).
+    const focused = dest(9, 1);
+    const padded = dest(5, 8);
+    expect(scoreForMonth(focused, persona, 0, bands)).toBeGreaterThan(scoreForMonth(padded, persona, 0, bands));
+  });
+
+  it('gives interests held at the neutral weight no say at all', () => {
+    const a = dest(9, 0);
+    const b = dest(9, 10);
+    expect(scoreForMonth(a, persona, 0, bands)).toBeCloseTo(scoreForMonth(b, persona, 0, bands), 8);
   });
 });

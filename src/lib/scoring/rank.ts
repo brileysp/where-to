@@ -1,4 +1,4 @@
-import { BAND_DIMENSIONS, SLIDERS } from './constants';
+import { BAND_DIMENSIONS, NEUTRAL_WEIGHT, SLIDERS } from './constants';
 import { deriveWeatherBand, has, isSliderNA } from './destinations';
 import { seasonPosition } from './blurb';
 import type { AudienceTier, ScoredDestination, ScoringDestination, Severity } from './types';
@@ -262,6 +262,54 @@ function defaultAppealScore(
   return weightSum === 0 ? 0 : total / weightSum;
 }
 
+// The noise floor for stated priorities. Every persona names a handful of interests and
+// leaves the rest (38 of 54 for the Naturalist) at NEUTRAL_WEIGHT, and a user who nudges one
+// slider leaves the others wherever they were. Left in, that tail is not harmless: each
+// neutral interest is small but there are dozens, so together they held ~28% of the
+// specialist read and over half of the broad average. Measured on the Naturalist in May, the
+// neutrals rewarded Canary Islands for being decent at everything the traveller never asked
+// about (4.7 average on interests they hold at 2) and punished Malaysian Borneo for the blanks
+// (2.6), so Canary Islands ranked #1 (6.3) on a wildlife-first profile with wildlife at 4,
+// while Borneo, a strong match on all three of the top interests, sat 4th at 6.0.
+//
+// Two rules. (1) Anything at or below PASSING_MENTION_WEIGHT (3) counts for nothing: 2 is the
+// "never asked" baseline, and 3 is a passing mention. (2) Relative to the user's own top weight,
+// an interest at or below FLOOR_LOW of it counts for nothing, one at or above FLOOR_HIGH counts
+// in full, and in between it ramps
+// linearly so a slider nudged across the line does not flip a ranking. The relative rule
+// behaves the same for a persona (top weight 9) and a user who tops out at 6, and anyone who
+// weights many interests about equally (all ratios near 1) is untouched.
+export const WEIGHT_FLOOR_LOW = 0.3;
+export const WEIGHT_FLOOR_HIGH = 0.5;
+// A stated weight this far above the neutral baseline or less is "a passing mention", not a
+// priority, whatever the user's top weight is. Raised from the neutral 2 itself after the first
+// version left 3s counting at half strength against a top weight of 10 (30% of it): fifty-odd
+// interests at 3 held 42% of the specialist read and 76% of the broad average, so a profile of
+// "cycling 10, scenery 8, nothing else above 3" still ranked mostly on the 3s.
+export const PASSING_MENTION_WEIGHT = NEUTRAL_WEIGHT + 1;
+
+// Hidden sliders (nationalParks, familyFun, spectatorSports) are not shown in the picker, so a
+// weight sitting on one can only be persona residue the user can neither see nor change. The
+// Naturalist and Active personas carried nationalParks at 7: a profile of "cycling 10, scenery 8,
+// everything visible else at 2" ranked Nepal (national parks 8) 17th at 7.7 and Andalucia
+// (national parks 0) 25th at 7.3, on an interest the user could not see. Those weights count
+// for nothing here, and are also left out of the "top weight" the ramp is measured against.
+const HIDDEN_SLIDER_KEYS = new Set(SLIDERS.filter((s) => s.hidden).map((s) => s.key));
+
+export function effectiveWeights(weights: Record<string, number>): Record<string, number> {
+  const max = Math.max(0, ...Object.entries(weights).filter(([k]) => !HIDDEN_SLIDER_KEYS.has(k)).map(([, w]) => w));
+  if (max <= 0) return weights;
+  const out: Record<string, number> = {};
+  for (const [key, w] of Object.entries(weights)) {
+    if (HIDDEN_SLIDER_KEYS.has(key)) { out[key] = 0; continue; }
+    if (w <= PASSING_MENTION_WEIGHT) { out[key] = 0; continue; }
+    const ratio = w / max;
+    const factor = Math.min(1, Math.max(0, (ratio - WEIGHT_FLOOR_LOW) / (WEIGHT_FLOOR_HIGH - WEIGHT_FLOOR_LOW)));
+    out[key] = w * factor;
+  }
+  return out;
+}
+
 /**
  * A pure weighted average over ALL weighted sliders rewards being broadly
  * decent proportional to weight, but doesn't specially reward EXCELLING at
@@ -273,11 +321,13 @@ function defaultAppealScore(
  */
 export function scoreForMonth(
   dest: ScoredDestination,
-  weights: Record<string, number>,
+  stated: Record<string, number>,
   monthIdx: number,
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
 ): number {
+  // Everything below reads the floored weights, never the raw ones (see effectiveWeights).
+  const weights = effectiveWeights(stated);
   const scoreFor = (key: string) => styleAdjustedScore(dest, key, monthIdx, selectedStyles);
 
   // N/A sliders (isSliderNA) never count toward the BROAD average, in

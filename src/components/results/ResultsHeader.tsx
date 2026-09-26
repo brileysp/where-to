@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { MONTH_NAMES } from '@/lib/scoring/constants';
+import { MonthChip } from './MonthChip';
 
 interface Props {
   firstName: string | null;
@@ -20,45 +19,11 @@ const SEARCH_ICON = (
 );
 
 export function ResultsHeader({ firstName, month, onChangeMonth, searchOpen, onToggleSearch, titleRef }: Props) {
-  const [monthOpen, setMonthOpen] = useState(false);
-
   return (
     <div className="results-header-row">
       <h1 ref={titleRef} className="results-title">
         <span>Top places for {firstName || 'you'} for</span>
-        <span className="month-chip-wrap">
-          <button
-            type="button"
-            className="month-chip"
-            aria-haspopup="listbox"
-            aria-expanded={monthOpen}
-            onClick={() => setMonthOpen((o) => !o)}
-          >
-            {MONTH_NAMES[month - 1]}
-          </button>
-          {monthOpen && (
-            <>
-              <div className="month-menu-scrim" onClick={() => setMonthOpen(false)} />
-              <div className="month-menu" role="listbox" aria-label="Month">
-                {MONTH_NAMES.map((name, i) => (
-                  <button
-                    key={name}
-                    type="button"
-                    role="option"
-                    aria-selected={i + 1 === month}
-                    className={`month-menu-option${i + 1 === month ? ' active' : ''}`}
-                    onClick={() => {
-                      setMonthOpen(false);
-                      if (i + 1 !== month) onChangeMonth(i + 1);
-                    }}
-                  >
-                    {name}
-                  </button>
-                ))}
-              </div>
-            </>
-          )}
-        </span>
+        <MonthChip month={month} onChangeMonth={onChangeMonth} />
       </h1>
       <button
         type="button"

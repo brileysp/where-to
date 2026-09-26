@@ -15,6 +15,10 @@ interface Props {
   favorited: Record<string, boolean>;
   onOpenDetail: (destId: string) => void;
   onToggleFavorited: (destId: string) => void;
+  onToggleVisited: (destId: string) => void;
+  /** Changes exactly when "Hide visited" or "Show wishlist" is toggled —
+   * see the forceResort comment below for why this exists. */
+  filterKey: string;
 }
 
 export { RESULTS_PAGE_SIZE };
@@ -40,17 +44,28 @@ export function ResultsList({
   favorited,
   onOpenDetail,
   onToggleFavorited,
+  onToggleVisited,
+  filterKey,
 }: Props) {
   const visible = ranked.slice(0, visibleCount);
   const remaining = ranked.length - visibleCount;
 
   // Cards that fall out of the rendered window on a re-sort are kept mounted
   // for a moment as "ghosts" so they can drop down the list. Derived while
-  // rendering (React's sanctioned prop-change pattern) from the id lists alone.
+  // rendering (React's sanctioned prop-change pattern) from the id lists
+  // alone — filterKey rides along in the SAME state object (rather than a
+  // separately-mutated ref) so the "did it just change" check stays correct
+  // even if React invokes this render body more than once for one commit
+  // (StrictMode's dev-only double-render): a raw ref write during render
+  // isn't idempotent under that, and the very first version of this used
+  // one — it flipped back to "unchanged" on the throwaway extra invocation,
+  // which is why "Show wishlist" alone (no organic backfill to fall back
+  // on) silently stopped animating while "Hide visited" still happened to.
   const idsKey = visible.map(({ d }) => d.id).join('|');
-  const [seen, setSeen] = useState({ key: idsKey, entries: visible });
+  const [seen, setSeen] = useState({ key: idsKey, entries: visible, filterKey });
   const [ghosts, setGhosts] = useState<{ entry: RankedDestination; rank: number }[]>([]);
-  if (seen.key !== idsKey) {
+  const filterJustChanged = seen.filterKey !== filterKey;
+  if (seen.key !== idsKey || filterJustChanged) {
     const nowIds = new Set(visible.map(({ d }) => d.id));
     const prevIds = new Set(seen.entries.map(({ d }) => d.id));
     const leaving = seen.entries.filter(({ d }) => !nowIds.has(d.id));
@@ -59,10 +74,11 @@ export function ResultsList({
     const nowShared = visible.filter(({ d }) => prevIds.has(d.id));
     const reordered = prevShared.some(({ d }, i) => d.id !== nowShared[i].d.id);
     // Entering + leaving together is a re-sort; entering alone is "show
-    // more" and leaving alone is a filter — neither should animate.
-    const isResort = reordered || (leaving.length > 0 && entering.length > 0);
+    // more" and leaving alone is a filter — neither should animate, unless
+    // a filter toggle just fired (see filterJustChanged above).
+    const isResort = reordered || (leaving.length > 0 && entering.length > 0) || filterJustChanged;
     setGhosts(isResort ? leaving.map((entry) => ({ entry, rank: seen.entries.findIndex(({ d }) => d.id === entry.d.id) + 1 })) : []);
-    setSeen({ key: idsKey, entries: visible });
+    setSeen({ key: idsKey, entries: visible, filterKey });
   }
 
   const listRef = useRef<HTMLDivElement>(null);
@@ -96,7 +112,7 @@ export function ResultsList({
     const nowShared = ids.filter((id) => prevSet.has(id));
     const entering = ids.filter((id) => !prevSet.has(id));
     const leaving = prev.ids.filter((id) => !nowSet.has(id));
-    if (!prevShared.some((id, i) => id !== nowShared[i]) && !(entering.length > 0 && leaving.length > 0)) return;
+    if (!prevShared.some((id, i) => id !== nowShared[i]) && !(entering.length > 0 && leaving.length > 0) && !filterJustChanged) return;
     const listHeight = list.getBoundingClientRect().height;
 
     const token = String(++flipCounter.current);
@@ -216,6 +232,7 @@ export function ResultsList({
               favorited={!!favorited[entry.d.id]}
               onOpenDetail={() => {}}
               onToggleFavorited={() => {}}
+              onToggleVisited={() => {}}
             />
           </div>
         ))}
@@ -234,6 +251,7 @@ export function ResultsList({
             favorited={!!favorited[d.id]}
             onOpenDetail={() => onOpenDetail(d.id)}
             onToggleFavorited={() => onToggleFavorited(d.id)}
+            onToggleVisited={() => onToggleVisited(d.id)}
           />
         ))}
       </div>

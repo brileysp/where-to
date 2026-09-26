@@ -45,6 +45,8 @@ function makeDestination(overrides: Partial<ScoringDestination> = {}): ScoringDe
     shopClosures: false,
     specialSeasons: [],
     monthlyWeather: null,
+    sliderOverview: {},
+    sliderMonthlyWeather: {},
     naSliders: [],
     searchAliases: [],
     activityStyleTiers: {},

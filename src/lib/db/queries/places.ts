@@ -73,6 +73,8 @@ export function toScoringPlace(row: PlaceRow): ScoringDestination {
     shopClosures: row.shopClosures,
     specialSeasons: row.specialSeasons,
     monthlyWeather: row.monthlyWeather,
+    sliderOverview: row.sliderOverview,
+    sliderMonthlyWeather: row.sliderMonthlyWeather,
     naSliders: row.naSliders,
     searchAliases: row.searchAliases,
     activityStyleTiers: row.activityStyleTiers,

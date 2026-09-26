@@ -20,9 +20,9 @@ export function AboutTab({
   onSelectGeneralMonth: (i: number) => void;
 }) {
   // Badges must track whichever month is actually selected in this tab's
-  // own chart below (generalMonthIdx), not the global personalized month —
-  // otherwise tapping a different month here leaves a stale badge from
-  // wherever the user's real month picker happens to be pointed, showing
+  // own chart below (generalMonthIdx, which is the sheet's preview month), not the app's search
+  // month — otherwise tapping a different month here leaves a stale badge from
+  // wherever the month picker happens to be pointed, showing
   // e.g. a "Rainy season" pill next to a description of a dry month.
   const badges = dest.badges[generalMonthIdx];
   const generalScores = Array.from({ length: 12 }, (_, i) => timingScoreForMonth(dest, i));
@@ -31,47 +31,50 @@ export function AboutTab({
 
   return (
     <div className="detail-tab-content">
-      <p className="about-text">{dest.overview ?? dest.about}</p>
-      {dest.overview && <p className="season-line">{dest.about}</p>}
-
-      <div className="detail-section-title">Best months overall</div>
-      <div className="detail-section-hint">Best months to visit for a typical traveler.</div>
-      <div className="months-chart months-chart-compact">
-        {generalScores.map((v, i) => (
-          <div
-            key={i}
-            className={`months-chart-bar-wrap${i === generalMonthIdx ? ' months-chart-bar-wrap-selected' : ''}`}
-            onClick={() => onSelectGeneralMonth(i)}
-          >
-            <div className="months-chart-bar" style={{ height: `${Math.max(4, v * 10)}%`, background: barColor(v) }} />
-          </div>
-        ))}
-      </div>
-      <div className="months-chart-labels">
-        {MONTH_SHORT.map((m, i) => (
-          <span
-            key={i}
-            className={`months-chart-label${i === generalMonthIdx ? ' months-chart-label-active' : ''}`}
-            onClick={() => onSelectGeneralMonth(i)}
-          >
-            {m[0]}
-          </span>
-        ))}
+      <div className="detail-card">
+        <p className="about-text">{dest.overview ?? dest.about}</p>
+        {dest.overview && <p className="season-line">{dest.about}</p>}
       </div>
 
-      <div className="month-detail-card">
-        <div className="month-detail-name">{MONTH_NAMES[generalMonthIdx]}</div>
-        <div className={`month-detail-quality score-${selectedLabel.cls}`}>{selectedLabel.text}</div>
-        {badges.length > 0 && (
-          <div className="detail-badges">
-            {badges.map((b, i) => (
-              <span key={i} className={`badge badge-${b.tone}`}>
-                {b.label}
-              </span>
-            ))}
-          </div>
-        )}
-        <div className="card-monthly-blurb" dangerouslySetInnerHTML={{ __html: blurb }} />
+      <div className="detail-card">
+        <div className="detail-section-title">Best months overall · Tap to compare</div>
+        <div className="months-chart months-chart-compact">
+          {generalScores.map((v, i) => (
+            <div
+              key={i}
+              className={`months-chart-bar-wrap${i === generalMonthIdx ? ' months-chart-bar-wrap-selected' : ''}`}
+              onClick={() => onSelectGeneralMonth(i)}
+            >
+              <div className="months-chart-bar" style={{ height: `${Math.max(4, v * 10)}%`, background: barColor(v) }} />
+            </div>
+          ))}
+        </div>
+        <div className="months-chart-labels">
+          {MONTH_SHORT.map((m, i) => (
+            <span
+              key={i}
+              className={`months-chart-label${i === generalMonthIdx ? ' months-chart-label-active' : ''}`}
+              onClick={() => onSelectGeneralMonth(i)}
+            >
+              {m[0]}
+            </span>
+          ))}
+        </div>
+
+        <div className="month-detail-card">
+          <div className="month-detail-name">{MONTH_NAMES[generalMonthIdx]}</div>
+          <div className={`month-detail-quality score-${selectedLabel.cls}`}>{selectedLabel.text}</div>
+          {badges.length > 0 && (
+            <div className="detail-badges">
+              {badges.map((b, i) => (
+                <span key={i} className={`badge badge-${b.tone}`}>
+                  {b.label}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="card-monthly-blurb" dangerouslySetInnerHTML={{ __html: blurb }} />
+        </div>
       </div>
     </div>
   );

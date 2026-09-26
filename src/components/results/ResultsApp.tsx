@@ -32,9 +32,10 @@ import { ResultsList } from './ResultsList';
 import { DnaPanel } from './DnaPanel';
 import { BackToTopButton } from './BackToTopButton';
 import { DestinationDetailSheet } from './DestinationDetailSheet';
+import { InterestChip, shortInterestLabel } from './InterestChip';
 import { StampsSheet } from './StampsSheet';
 import { VisitedCounterStamp } from './VisitedCounterStamp';
-import { HeartIcon } from './HeartIcon';
+import { BookmarkIcon } from './BookmarkIcon';
 import './results.css';
 
 const DEFAULT_HINT = 'Swipe through experiences to teach Where To? your travel style.';
@@ -157,16 +158,22 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // compact chip row.
   const chipSliders = useMemo(() => topInterestSliders(weights).slice(0, 3), [weights]);
 
-  // A pinned chip re-sorts a copy of `ranked` by one slider's score for
-  // the current month — display-only, never feeds back into `weights` or
-  // triggers a new ranking computation.
+  // A pinned chip re-sorts a copy of `ranked` by that one slider's own
+  // score for the current month (not the overall weighted score) — display-
+  // only, never feeds back into `weights` or triggers a new ranking
+  // computation. The displayed `s` is swapped to that same interest-specific
+  // score too, so the number on each tile always matches what it's sorted
+  // by; ties fall back to the destination's original overall score/order.
   const displayRanked = useMemo(() => {
     let list = ranked;
     if (hideVisited) list = list.filter((r) => !visited[r.d.id]);
     if (showWishlistOnly) list = list.filter((r) => favorited[r.d.id]);
     if (pinnedChip && month) {
       const monthIdx = month - 1;
-      list = [...list].sort((a, b) => (b.d.monthly[pinnedChip]?.[monthIdx] ?? 0) - (a.d.monthly[pinnedChip]?.[monthIdx] ?? 0));
+      list = list
+        .map((r) => ({ d: r.d, s: r.d.monthly[pinnedChip]?.[monthIdx] ?? 0, overall: r.s }))
+        .sort((a, b) => b.s - a.s || b.overall - a.overall)
+        .map(({ d, s }) => ({ d, s }));
     }
     return list;
   }, [ranked, hideVisited, visited, showWishlistOnly, favorited, pinnedChip, month]);
@@ -472,62 +479,65 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           )}
 
           {resultsShown && (
-            <div className="results-subrow">
-              <p className="results-subtitle">
-                Ranked by your current sliders — showing {Math.min(visibleCount, displayRanked.length)} of {displayRanked.length} destinations
-              </p>
-              <div className="results-heading-side">
-                <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
-                  <VisitedCounterStamp count={visitedCount} size={46} />
-                  <span className="visited-stat-label">places visited</span>
-                </button>
-                <div className="filter-links-under-stamp">
-                  <button
-                    type="button"
-                    className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`}
-                    onClick={() => setHideVisited((v) => !v)}
-                    disabled={visitedCount === 0}
-                  >
-                    Hide visited
-                    <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
-                  </button>
-                  <button
-                    type="button"
-                    className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`}
-                    onClick={() => setShowWishlistOnly((v) => !v)}
-                    disabled={favoritedCount === 0}
-                  >
-                    Show wishlist
-                    <span className="filter-icon">{favoritedCount > 0 && showWishlistOnly && <HeartIcon filled />}</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {resultsShown && (
             <SearchBox destinations={destinations} ranked={ranked} onSelectResult={handleSelectSearchResult} expanded={searchOpen} />
           )}
 
           {resultsShown && (
-            <div className="quick-chip-row" ref={chipRowRef}>
-              <button type="button" className={`quick-chip${pinnedChip === null ? ' active' : ''}`} onClick={() => setPinnedChip(null)}>
-                🧬 My Interests
+            <p className="results-subtitle">
+              Ranked by your current sliders — showing {Math.min(visibleCount, displayRanked.length)} of {displayRanked.length} destinations
+            </p>
+          )}
+
+          {resultsShown && (
+            <div className="quick-chip-row-wrap">
+              <div className="quick-chip-row" ref={chipRowRef}>
+                <InterestChip emoji="🧬" label="My Interests" active={pinnedChip === null} onClick={() => setPinnedChip(null)} />
+                {chipSliders.map((s) => (
+                  <InterestChip
+                    key={s.key}
+                    emoji={s.icon}
+                    label={shortInterestLabel(s.label)}
+                    fullLabel={s.label}
+                    active={pinnedChip === s.key}
+                    onClick={() => setPinnedChip(s.key)}
+                    chipRef={(el) => {
+                      if (el) chipEls.current.set(s.key, el);
+                      else chipEls.current.delete(s.key);
+                    }}
+                  />
+                ))}
+              </div>
+              <div className="quick-chip-row-fade" aria-hidden />
+            </div>
+          )}
+
+          {resultsShown && (
+            <div className="results-stats-row">
+              <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
+                <VisitedCounterStamp count={visitedCount} size={34} />
+                <span className="visited-stat-label">places visited</span>
+                <span className="visited-stat-chevron">›</span>
               </button>
-              {chipSliders.map((s) => (
-                <button
-                  type="button"
-                  key={s.key}
-                  ref={(el) => {
-                    if (el) chipEls.current.set(s.key, el);
-                    else chipEls.current.delete(s.key);
-                  }}
-                  className={`quick-chip${pinnedChip === s.key ? ' active' : ''}`}
-                  onClick={() => setPinnedChip(s.key)}
-                >
-                  {s.icon} {s.label}
-                </button>
-              ))}
+              <button
+                type="button"
+                className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`}
+                onClick={() => setHideVisited((v) => !v)}
+                disabled={visitedCount === 0}
+              >
+                Hide visited
+                <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
+              </button>
+              <button
+                type="button"
+                className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`}
+                onClick={() => setShowWishlistOnly((v) => !v)}
+                disabled={favoritedCount === 0}
+              >
+                Show saved
+                <span className="filter-icon">
+                  <BookmarkIcon filled={showWishlistOnly} />
+                </span>
+              </button>
             </div>
           )}
 
@@ -559,6 +569,8 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
               favorited={favorited}
               onOpenDetail={setOpenDetailId}
               onToggleFavorited={toggleFavorited}
+              onToggleVisited={toggleVisited}
+              filterKey={`${hideVisited}:${showWishlistOnly}`}
             />
           )}
         </section>
@@ -572,9 +584,10 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           bands={bands}
           selectedStyles={selectedStyles}
           month={month}
-          score={openDetailEntry.s}
           visited={!!visited[openDetailEntry.d.id]}
           onToggleVisited={() => toggleVisited(openDetailEntry.d.id)}
+          favorited={!!favorited[openDetailEntry.d.id]}
+          onToggleFavorited={() => toggleFavorited(openDetailEntry.d.id)}
           onClose={() => setOpenDetailId(null)}
         />
       )}

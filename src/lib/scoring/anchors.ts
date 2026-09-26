@@ -43,14 +43,17 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'accessibility of them is a global reference. A place where you WILL see ' +
       'remarkable animals, not one where you might.',
     // Found fixing the wildlifePeak fallback bug (see the 'wildlife' case in
-    // destinations.ts): raja-ampat, denali-interior, zimbabwe, and komodo all
-    // reach 10 on real authored sliderEvents (marine biodiversity, caribou/
-    // bear salmon runs, Hwange dry-season waterholes, and marine life
-    // respectively) — genuinely deserving, just never added here.
+    // destinations.ts): zimbabwe and komodo reach real authored peaks (Hwange
+    // dry-season waterholes; dragons plus manta season). raja-ampat and
+    // denali-interior were on this list and were taken off in Sep 2026: Raja
+    // Ampat's 10 is marine life, which diving already scores as a 10 (land
+    // animals outrank sea life in this interest), and Denali, like Yellowstone,
+    // is the pinnacle of North American wildlife but not comparable to a peak
+    // African safari.
     ten: [
       'galapagos', 'kenya', 'tanzania', 'botswana', 'antarctica', 'svalbard',
       'madagascar', 'rwanda', 'uganda', 'pantanal', 'costa-rica', 'peruvian-amazon',
-      'rajaampat', 'denali-interior', 'zimbabwe', 'komodo',
+      'zimbabwe', 'komodo',
     ],
   },
   birding: {
@@ -158,7 +161,9 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // iceland removed — no real authored bloom event; its old 10 was a
     // stale artifact of the wildlifePeak fallback bug, not a researched
     // claim (Iceland's subarctic flora isn't a classic bloom destination).
-    ten: ['canaries', 'cape-town', 'tokyo-kyoto', 'glacier-waterton'],
+    // amsterdam added Sep 2026: Keukenhof and the Bollenstreek bulb fields are the world's
+    // reference tulip event — a named, dated, mass bloom that draws travellers on its own.
+    ten: ['canaries', 'cape-town', 'tokyo-kyoto', 'glacier-waterton', 'amsterdam'],
   },
 
   // ---- Sports & Recreation ----------------------------------------------

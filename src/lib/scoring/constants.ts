@@ -26,7 +26,11 @@ export const SLIDERS: Slider[] = [
   { key: 'whaleWatching', label: 'Whale Watching', icon: '🐋', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'enthusiast' },
   { key: 'scenicLandscapes', label: 'Scenic Landscapes', icon: '🏞️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic' },
   { key: 'landscapePhotography', label: 'Landscape Photography', icon: '📸', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'specialist' },
-  { key: 'nationalParks', label: 'National Parks', icon: '🌲', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic' },
+  // Not a real interest — a type of place, not something to weight
+  // (see docs/todo.md). Kept scored/stored like any other slider (personas
+  // above still reference it) so nothing needs re-authoring; just hidden
+  // from every user-facing pick/display surface via VISIBLE_SLIDERS.
+  { key: 'nationalParks', label: 'National Parks', icon: '🌲', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic', hidden: true },
   { key: 'campingBackcountry', label: 'Camping & Backcountry', icon: '🏕️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'enthusiast' },
   { key: 'stargazing', label: 'Stargazing', icon: '✨', group: 'Nature & Wildlife', formula: 'culture', audienceTier: 'enthusiast' },
   // Enthusiast, not specialist. Tromso and Icelandic winter tourism are

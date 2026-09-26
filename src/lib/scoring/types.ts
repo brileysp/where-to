@@ -171,6 +171,12 @@ export interface ScoringDestination {
   shopClosures: boolean;
   specialSeasons: SpecialSeason[];
   monthlyWeather: (string | null)[] | null;
+  // Per-interest analogues of overview/monthlyWeather above — see the
+  // schema.ts column comments. Sparse: a slider absent here (or a null
+  // month slot) just means that interest hasn't been authored yet for
+  // this destination, not that there's nothing to say.
+  sliderOverview: Record<string, string>;
+  sliderMonthlyWeather: Record<string, (string | null)[]>;
   naSliders: string[];
   searchAliases: string[];
   // Per-slider sub-style quality — see the schema.ts column comment for

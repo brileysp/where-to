@@ -748,34 +748,102 @@
   height: 34px;
 }
 
-.card-favorite-btn {
+/* A visible circular boundary — not just a bare icon floating in space —
+   so the actual tap target is obvious instead of reading as a much
+   smaller hit area than the button really is (easy to miss and hit the
+   card underneath it instead). */
+.card-bookmark-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
-  border: none;
-  background: none;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
   padding: 0;
   cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.card-favorite-btn svg {
-  width: 22px;
-  height: 22px;
+.card-bookmark-btn svg {
+  width: 15px;
+  height: 15px;
 }
 
-.heart-outline path {
+.bookmark-outline path {
   fill: none;
   stroke: var(--text-faint);
   stroke-width: 1.8;
 }
 
-.heart-filled path {
-  fill: var(--heart);
-  stroke: var(--heart);
+.bookmark-filled path {
+  fill: var(--accent);
+  stroke: var(--accent);
   stroke-width: 1.8;
+}
+
+.check-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.check-icon polyline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Tapping the bookmark trigger swaps it (and the stamp zone) for these two
+   chips — pick one and they close again, same spot the trigger was in.
+   Positioned above the scrim (see .month-menu-scrim reuse in
+   DestinationCard/DestinationDetailSheet) so the chips themselves stay
+   clickable while any other tap on the scrim just dismisses them. */
+.card-action-chips {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.card-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.card-chip svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.card-chip-visited.active {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.card-chip-save.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .score-excellent {
@@ -851,8 +919,8 @@
 }
 
 .price-list {
-  border-top: 1px solid var(--border);
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .price-row {
@@ -860,9 +928,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 7px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 12.5px;
+  font-size: 13px;
+}
+
+.price-row:last-child {
+  border-bottom: none;
 }
 
 .price-item {
@@ -999,8 +1071,7 @@
 }
 
 .detail-sheet-header {
-  padding: 8px 16px 12px;
-  border-bottom: 1px solid var(--border);
+  padding: 8px 16px 4px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1027,23 +1098,19 @@
   margin-top: 2px;
 }
 
-.visit-btn {
-  padding: 7px 12px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  flex-shrink: 0;
-  white-space: nowrap;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  color: var(--text-dim);
+.detail-sheet-subheader {
+  padding: 6px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.visit-btn.visited {
-  border-color: var(--good);
-  background: color-mix(in srgb, var(--good) 15%, transparent);
-  color: var(--good);
+.detail-sheet-action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .detail-close-btn {
@@ -1111,33 +1178,91 @@
   padding: 16px 16px 28px;
 }
 
+.detail-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-card:last-child {
+  margin-bottom: 0;
+}
+
 .detail-section-title {
   font-size: 13px;
   font-weight: 700;
-  margin: 18px 0 2px;
+  margin: 22px 0 12px;
 }
 
 .detail-section-title:first-child {
   margin-top: 0;
 }
 
-.detail-section-hint {
-  font-size: 11.5px;
-  color: var(--text-faint);
-  margin-bottom: 10px;
-}
-
 /* ---- For You tab ---- */
 
 .match-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: var(--accent-soft);
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.match-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.match-card-dna {
+  margin-right: 6px;
+}
+
+/* The note behind the score's (i): what the Open To filters did to it. */
+.match-card-note {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: var(--text-dim);
+}
+
+.match-adjust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 4px 0 2px;
+  padding: 1px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.match-adjust-chip.good {
+  color: var(--good);
+  border-color: color-mix(in srgb, var(--good) 40%, var(--border));
+}
+
+.match-adjust-chip.bad {
+  color: var(--bad);
+  border-color: color-mix(in srgb, var(--bad) 40%, var(--border));
+}
+
+.match-adjust-numbers {
+  margin-left: 4px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.match-adjust-numbers b {
+  color: var(--text);
 }
 
 .match-card-eyebrow {
@@ -1189,161 +1314,75 @@
   opacity: 0.9;
 }
 
-/* Expanded panel: short pros/cons chip rows, no numbers, no jargon. */
-.match-explainer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.explainer-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.explainer-mark {
+.interest-place-blurb {
   font-size: 13px;
-  line-height: 1.7;
-  width: 14px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.explainer-row.pros .explainer-mark {
-  color: var(--good);
-}
-
-.explainer-row.cons .explainer-mark {
-  color: var(--bad);
-}
-
-.chip-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.mini-chip {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  white-space: nowrap;
-}
-
-.explainer-row.pros .mini-chip {
-  color: var(--good);
-  border-color: color-mix(in srgb, var(--good) 35%, var(--border));
-}
-
-.explainer-row.cons .mini-chip {
-  color: var(--bad);
-  border-color: color-mix(in srgb, var(--bad) 35%, var(--border));
-}
-
-.interest-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-bottom: 20px;
-}
-
-.interest-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 6px;
-  margin: 0 -6px;
-  border-radius: 8px;
-}
-
-.interest-row-selected {
-  background: var(--accent-soft);
-}
-
-.interest-icon {
-  font-size: 15px;
-  width: 20px;
-  flex-shrink: 0;
-}
-
-.interest-label {
-  font-size: 12.5px;
-  color: var(--text-dim);
-  width: 108px;
-  flex-shrink: 0;
-}
-
-.interest-label-selected {
-  color: var(--text);
-  font-weight: 700;
-}
-
-.interest-track {
-  flex: 1;
-  height: 6px;
-  background: var(--bg-elevated);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.interest-fill {
-  height: 100%;
-  border-radius: 3px;
-}
-
-.interest-score {
-  font-size: 12.5px;
-  font-weight: 700;
-  width: 30px;
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.interest-score-na {
-  opacity: 0.5;
-  font-style: italic;
   font-weight: 400;
+  line-height: 1.55;
+  color: var(--text-dim);
+  margin: 8px 0 14px;
 }
 
 .months-chart {
   display: flex;
-  gap: 4px;
+  gap: 2px;
   align-items: flex-end;
-  height: 64px;
+  height: 66px;
   margin-bottom: 4px;
 }
 
 .months-chart-compact {
-  height: 44px;
+  height: 46px;
 }
 
+/* A bar's whole column is the tap target. The selected month keeps its full color inside a soft
+   accent-tinted column while the other eleven fade back, so the selection reads without a border. */
 .months-chart-bar-wrap {
   flex: 1;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
   cursor: pointer;
+  font: inherit;
+  transition: background-color 0.12s ease;
 }
 
-.months-chart-bar-wrap-selected .months-chart-bar {
-  box-shadow: 0 0 0 2px var(--text);
+.months-chart-bar-wrap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.months-chart-bar-wrap-selected {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
 }
 
 .months-chart-bar {
-  width: 100%;
-  border-radius: 3px;
+  display: block;
+  width: 76%;
+  border-radius: 4px 4px 3px 3px;
   min-height: 4px;
+  transition: opacity 0.12s ease;
+}
+
+.months-chart-bar-wrap-selected .months-chart-bar {
+  width: 84%;
+}
+
+.months-chart .months-chart-bar-wrap:not(.months-chart-bar-wrap-selected) .months-chart-bar {
+  opacity: 0.58;
+}
+
+.months-chart .months-chart-bar-wrap:not(.months-chart-bar-wrap-selected):hover .months-chart-bar {
+  opacity: 0.85;
 }
 
 .months-chart-labels {
   display: flex;
-  gap: 4px;
+  gap: 2px;
   margin-bottom: 12px;
 }
 
@@ -1354,11 +1393,14 @@
   color: var(--text-faint);
   font-weight: 500;
   cursor: pointer;
+  padding: 2px 0;
+  border-radius: 6px;
 }
 
 .months-chart-label-active {
   color: var(--accent);
   font-weight: 800;
+  background: var(--accent-soft);
 }
 
 /* ---- About tab ---- */
@@ -1377,11 +1419,32 @@
 }
 
 .month-detail-card {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  background: var(--card-bg);
+  border-radius: 10px;
   padding: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 0;
+}
+
+.month-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.month-detail-score {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.month-detail-card-scored .month-detail-quality {
+  margin-bottom: 0;
+}
+
+.month-detail-card-scored .card-monthly-blurb {
+  margin-top: 10px;
 }
 
 .month-detail-name {
@@ -1390,7 +1453,7 @@
 }
 
 .month-detail-quality {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   margin: 2px 0 8px;
 }
@@ -1420,9 +1483,10 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
+  border: 1.5px solid currentColor;
+  background: none;
   color: var(--text-faint);
+  opacity: 0.7;
   font-size: 11px;
   font-weight: 700;
   font-style: italic;
@@ -1432,19 +1496,18 @@
 
 .cost-key-toggle.active {
   border-color: var(--accent);
-  background: var(--accent);
-  color: #1a1108;
+  color: var(--accent);
+  opacity: 1;
 }
 
 .cost-key-text {
   font-size: 10.5px;
   color: var(--text-faint);
   line-height: 1.6;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  background: var(--card-bg);
   border-radius: 10px;
   padding: 10px 12px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 /* ---- Stamps sheet ---- */
@@ -1504,6 +1567,31 @@
   padding-bottom: 16px;
 }
 
+.stamps-continent-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 16px 0 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stamps-continent-header:first-child {
+  margin-top: 0;
+}
+
+.stamps-continent-count {
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .stamps-row {
   display: flex;
   align-items: center;
@@ -1530,25 +1618,173 @@
   color: var(--text-faint);
 }
 
-.stamps-check {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+.stamps-stamp-btn {
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
+  border: none;
+  background: none;
+  padding: 0;
   cursor: pointer;
-  border: 1.5px solid var(--border);
-  background: transparent;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stamps-check.checked {
+/* Unvisited slot — deliberately NOT shaped like the destination's real
+   stamp (that would look like a preview of a specific design instead of
+   an empty slot). Same gray-to-green check treatment as the visited chip. */
+.stamp-ghost-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px dashed var(--border);
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.stamp-ghost-circle.confirmed {
   border-color: var(--good);
-  background: var(--good);
+  color: var(--good);
+}
+
+/* ---- My Stamps: passport paper ----
+   The sheet is one continuous page of cream security paper: a fine grain,
+   the visa page's wave printing running faintly across the whole surface
+   (::before), a slight teal-to-lilac tint at the top, and a hairline inset
+   border (::after). It stays light in both themes, the way a passport page
+   does, so the ink stamps always read as ink on paper. Layout is untouched;
+   only the background, the small mono headings and the row colors change. */
+.stamps-sheet {
+  --paper-ink: #1f2c39;
+  --paper-dim: #5b6c79;
+  --paper-teal: #2b727d;
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .46  0 0 0 0 .40  0 0 0 0 .28  0 0 0 .55 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23p%29'/%3E%3C/svg%3E");
+  --paper-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Cpolyline points='0%2C30.0 4%2C31.6 8%2C33.2 12%2C34.8 16%2C36.3 20%2C37.6 24%2C38.9 28%2C40.0 32%2C41.0 36%2C41.8 40%2C42.4 44%2C42.8 48%2C43.0 52%2C43.0 56%2C42.8 60%2C42.4 64%2C41.8 68%2C41.0 72%2C40.0 76%2C38.9 80%2C37.6 84%2C36.3 88%2C34.8 92%2C33.2 96%2C31.6 100%2C30.0 104%2C28.4 108%2C26.8 112%2C25.2 116%2C23.7 120%2C22.4 124%2C21.1 128%2C20.0 132%2C19.0 136%2C18.2 140%2C17.6 144%2C17.2 148%2C17.0 152%2C17.0 156%2C17.2 160%2C17.6 164%2C18.2 168%2C19.0 172%2C20.0 176%2C21.1 180%2C22.4 184%2C23.7 188%2C25.2 192%2C26.8 196%2C28.4 200%2C30.0' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C37.2 4%2C38.8 8%2C40.2 12%2C41.5 16%2C42.6 20%2C43.6 24%2C44.3 28%2C44.7 32%2C45.0 36%2C45.0 40%2C44.7 44%2C44.3 48%2C43.6 52%2C42.7 56%2C41.6 60%2C40.3 64%2C38.8 68%2C37.3 72%2C35.6 76%2C33.8 80%2C31.9 84%2C30.0 88%2C28.2 92%2C26.3 96%2C24.5 100%2C22.8 104%2C21.2 108%2C19.8 112%2C18.5 116%2C17.4 120%2C16.4 124%2C15.7 128%2C15.3 132%2C15.0 136%2C15.0 140%2C15.3 144%2C15.7 148%2C16.4 152%2C17.3 156%2C18.4 160%2C19.7 164%2C21.2 168%2C22.7 172%2C24.4 176%2C26.2 180%2C28.1 184%2C30.0 188%2C31.8 192%2C33.7 196%2C35.5 200%2C37.2' fill='none' stroke='%238b72b3' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C44.3 4%2C45.3 8%2C46.1 12%2C46.7 16%2C47.0 20%2C47.0 24%2C46.7 28%2C46.2 32%2C45.4 36%2C44.4 40%2C43.2 44%2C41.7 48%2C40.1 52%2C38.3 56%2C36.3 60%2C34.3 64%2C32.2 68%2C30.1 72%2C28.0 76%2C25.9 80%2C23.8 84%2C21.9 88%2C20.1 92%2C18.4 96%2C17.0 100%2C15.7 104%2C14.7 108%2C13.9 112%2C13.3 116%2C13.0 120%2C13.0 124%2C13.3 128%2C13.8 132%2C14.6 136%2C15.6 140%2C16.8 144%2C18.3 148%2C19.9 152%2C21.7 156%2C23.7 160%2C25.7 164%2C27.8 168%2C29.9 172%2C32.0 176%2C34.1 180%2C36.2 184%2C38.1 188%2C39.9 192%2C41.6 196%2C43.0 200%2C44.3' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C43.0 4%2C43.0 8%2C42.8 12%2C42.4 16%2C41.8 20%2C41.0 24%2C40.1 28%2C39.0 32%2C37.7 36%2C36.4 40%2C34.9 44%2C33.3 48%2C31.7 52%2C30.1 56%2C28.5 60%2C26.9 64%2C25.3 68%2C23.8 72%2C22.4 76%2C21.2 80%2C20.0 84%2C19.1 88%2C18.3 92%2C17.7 96%2C17.3 100%2C17.0 104%2C17.0 108%2C17.2 112%2C17.6 116%2C18.2 120%2C19.0 124%2C19.9 128%2C21.0 132%2C22.3 136%2C23.6 140%2C25.1 144%2C26.7 148%2C28.3 152%2C29.9 156%2C31.5 160%2C33.1 164%2C34.7 168%2C36.2 172%2C37.6 176%2C38.8 180%2C40.0 184%2C40.9 188%2C41.7 192%2C42.3 196%2C42.7 200%2C43.0' fill='none' stroke='%235aa07a' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C43.6 4%2C42.7 8%2C41.7 12%2C40.4 16%2C38.9 20%2C37.4 24%2C35.7 28%2C33.9 32%2C32.0 36%2C30.2 40%2C28.3 44%2C26.4 48%2C24.6 52%2C22.9 56%2C21.3 60%2C19.8 64%2C18.5 68%2C17.4 72%2C16.5 76%2C15.8 80%2C15.3 84%2C15.0 88%2C15.0 92%2C15.2 96%2C15.7 100%2C16.4 104%2C17.3 108%2C18.3 112%2C19.6 116%2C21.1 120%2C22.6 124%2C24.3 128%2C26.1 132%2C28.0 136%2C29.8 140%2C31.7 144%2C33.6 148%2C35.4 152%2C37.1 156%2C38.7 160%2C40.2 164%2C41.5 168%2C42.6 172%2C43.5 176%2C44.2 180%2C44.7 184%2C45.0 188%2C45.0 192%2C44.8 196%2C44.3 200%2C43.6' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C40.2 4%2C38.4 8%2C36.5 12%2C34.4 16%2C32.4 20%2C30.2 24%2C28.1 28%2C26.0 32%2C24.0 36%2C22.0 40%2C20.2 44%2C18.5 48%2C17.0 52%2C15.8 56%2C14.7 60%2C13.9 64%2C13.3 68%2C13.0 72%2C13.0 76%2C13.3 80%2C13.8 84%2C14.5 88%2C15.5 92%2C16.8 96%2C18.2 100%2C19.8 104%2C21.6 108%2C23.5 112%2C25.6 116%2C27.6 120%2C29.8 124%2C31.9 128%2C34.0 132%2C36.0 136%2C38.0 140%2C39.8 144%2C41.5 148%2C43.0 152%2C44.2 156%2C45.3 160%2C46.1 164%2C46.7 168%2C47.0 172%2C47.0 176%2C46.7 180%2C46.2 184%2C45.5 188%2C44.5 192%2C43.2 196%2C41.8 200%2C40.2' fill='none' stroke='%238b72b3' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C31.8 4%2C30.2 8%2C28.6 12%2C27.0 16%2C25.4 20%2C23.9 24%2C22.5 28%2C21.3 32%2C20.1 36%2C19.1 40%2C18.3 44%2C17.7 48%2C17.3 52%2C17.0 56%2C17.0 60%2C17.2 64%2C17.6 68%2C18.2 72%2C18.9 76%2C19.9 80%2C21.0 84%2C22.2 88%2C23.6 92%2C25.0 96%2C26.6 100%2C28.2 104%2C29.8 108%2C31.4 112%2C33.0 116%2C34.6 120%2C36.1 124%2C37.5 128%2C38.7 132%2C39.9 136%2C40.9 140%2C41.7 144%2C42.3 148%2C42.7 152%2C43.0 156%2C43.0 160%2C42.8 164%2C42.4 168%2C41.8 172%2C41.1 176%2C40.1 180%2C39.0 184%2C37.8 188%2C36.4 192%2C35.0 196%2C33.4 200%2C31.8' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3C/svg%3E");
+  color: var(--paper-ink);
+  background-color: #f3eedc;
+  background-image:
+    linear-gradient(180deg, rgba(59, 143, 153, 0.09) 0, rgba(139, 114, 179, 0.05) 110px, rgba(59, 143, 153, 0) 220px),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.6), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(140, 112, 60, 0.14), transparent 60%),
+    var(--paper-grain);
+  background-size: auto, auto, auto, 200px 200px;
+  --text: var(--paper-ink);
+  --text-faint: var(--paper-dim);
+  --text-dim: var(--paper-dim);
+  --border: rgba(43, 114, 125, 0.32);
+}
+
+.stamps-sheet::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--paper-waves);
+  background-size: 200px 60px;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stamps-sheet::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(43, 114, 125, 0.28);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.stamps-sheet > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stamps-sheet .detail-sheet-handle {
+  background: rgba(43, 114, 125, 0.32);
+}
+
+.stamps-sheet .detail-sheet-name {
+  font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--paper-teal);
+}
+
+.stamps-sheet .detail-sheet-region {
+  font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--paper-dim);
+}
+
+.stamps-sheet .detail-close-btn {
+  color: var(--paper-dim);
+}
+
+.stamps-sheet .stamps-map-placeholder {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px dashed rgba(43, 114, 125, 0.45);
+  color: var(--paper-teal);
+}
+
+.stamps-sheet .stamps-collection-title {
+  font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+  color: var(--paper-teal);
+  letter-spacing: 0.09em;
+}
+
+.stamps-sheet .stamps-toggle-link {
+  color: var(--paper-teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.stamps-sheet .stamps-continent-header {
+  font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+  color: var(--paper-teal);
+  letter-spacing: 0.12em;
+  border-bottom: 1px dotted rgba(43, 114, 125, 0.5);
+}
+
+.stamps-sheet .stamps-continent-count {
+  color: var(--paper-dim);
+  font-weight: 500;
+}
+
+.stamps-sheet .stamps-row-region {
+  color: var(--paper-dim);
+}
+
+.stamps-sheet .stamps-row-name-ghost {
+  color: #63717d;
+}
+
+.stamps-sheet .stamp-ghost-circle {
+  border-color: rgba(43, 114, 125, 0.42);
+  color: rgba(43, 114, 125, 0.5);
+}
+
+.stamps-sheet .stamp-ghost-circle.confirmed {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.stamps-sheet .stamps-empty {
+  color: var(--paper-dim);
+}
+
+/* Ink on paper: multiply lets the page grain and waves show through the stamp. */
+.stamps-sheet .stamp-ink {
+  mix-blend-mode: multiply;
 }
 
 /* ---- Results heading / quick-rank chips ---- */
@@ -1564,11 +1800,17 @@
   margin-bottom: 4px;
 }
 
-.results-heading-side {
+/* One horizontal row — stamp counter, then the two toggles — separated
+   from the results list below by a hairline, the way a list's controls
+   sit apart from its content rather than living beside the heading. */
+.results-stats-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 
 .visited-stat-btn {
@@ -1579,7 +1821,7 @@
   border: none;
   cursor: pointer;
   flex-shrink: 0;
-  padding: 2px 0;
+  padding: 0;
 }
 
 .visited-stat-label {
@@ -1588,14 +1830,9 @@
   font-weight: 600;
 }
 
-/* Quiet text links directly under the stamp — "Hide visited" sits close
-   to it, "Show wishlist" gets a bit more room below. */
-.filter-links-under-stamp {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-  margin-top: 2px;
+.visited-stat-chevron {
+  font-size: 13px;
+  color: var(--text-faint);
 }
 
 .filter-link {
@@ -1645,37 +1882,28 @@
   color: var(--accent);
 }
 
-.filter-link.wishlist-on .filter-icon {
-  color: var(--heart);
+.quick-chip-row-wrap {
+  position: relative;
+  margin-bottom: 14px;
 }
 
 .quick-chip-row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
-  padding-bottom: 4px;
-  margin-bottom: 14px;
+  padding: 6px 20px 8px 2px;
   align-items: center;
 }
 
-.quick-chip {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-  font-size: 12.5px;
-  font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.quick-chip.active {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #1a1108;
-  font-weight: 700;
+/* Signals there's more to scroll to without a visible scrollbar. */
+.quick-chip-row-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 4px;
+  width: 36px;
+  background: linear-gradient(to right, transparent, var(--bg) 85%);
+  pointer-events: none;
 }
 
 
@@ -1710,8 +1938,21 @@
   flex-shrink: 0;
 }
 
+.month-chip-caret {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.month-chip[aria-expanded='true'] .month-chip-caret {
+  transform: rotate(180deg);
+}
+
 .month-chip {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: inherit;
   font-size: 15px;
   font-weight: 800;
@@ -1801,20 +2042,6 @@
   .month-menu {
     top: 38px;
   }
-}
-
-.results-subrow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.results-subrow .results-subtitle {
-  flex: 1;
-  min-width: 0;
-  margin: 0;
 }
 
 /* Search bar collapses under the header's icon instead of always sitting
@@ -1924,4 +2151,232 @@
   z-index: 4;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* ---- Interest chips: round emoji buttons that open into pills ---- */
+
+.interest-chips-title {
+  margin-bottom: 4px;
+}
+
+.interest-chip-row-wrap {
+  position: relative;
+  margin: 0 -16px 6px;
+}
+
+.interest-chip-row,
+.quick-chip-row {
+  scrollbar-width: none;
+}
+
+.interest-chip-row::-webkit-scrollbar,
+.quick-chip-row::-webkit-scrollbar {
+  display: none;
+}
+
+.interest-chip-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  align-items: center;
+  /* Room above and to the right for the score bubble that hangs off the corner. */
+  padding: 12px 22px 12px 18px;
+}
+
+.interest-chip-row-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  background: linear-gradient(to right, transparent, var(--bg-card) 88%);
+  pointer-events: none;
+}
+
+.ichip {
+  position: relative;
+  height: 48px;
+  min-width: 48px;
+  padding: 0 13px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.2s cubic-bezier(0.34, 1.4, 0.64, 1),
+    box-shadow 0.2s ease;
+}
+
+.ichip:not(.active):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.ichip:not(.active):active {
+  transform: scale(0.94);
+}
+
+.ichip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.ichip-emoji {
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* The label unrolls from nothing: a one-column grid animating 0fr to 1fr, so no measuring needed. */
+.ichip-reveal {
+  display: grid;
+  grid-template-columns: 0fr;
+  opacity: 0;
+  margin-left: 0;
+  transition:
+    grid-template-columns 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.16s ease,
+    margin-left 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ichip-inner {
+  overflow: hidden;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.ichip-label {
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.ichip.active {
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-card));
+  border-color: var(--accent);
+  padding: 0 16px 0 14px;
+}
+
+.ichip.active .ichip-reveal {
+  grid-template-columns: 1fr;
+  opacity: 1;
+  margin-left: 9px;
+  transition-delay: 0s, 0.05s, 0s;
+}
+
+.ichip-bubble {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  border: 2px solid var(--bg-card);
+}
+
+/* A small nudge and a faint ring when a chip opens. */
+.ichip.just .ichip-emoji {
+  animation: ichipNudge 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ichip.just::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1.5px solid var(--accent);
+  pointer-events: none;
+  animation: ichipRing 0.4s ease-out forwards;
+}
+
+@keyframes ichipNudge {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.14);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ichipRing {
+  0% {
+    opacity: 0.35;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05, 1.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ichip,
+  .ichip * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .ichip.just::after {
+    display: none;
+  }
+}
+
+/* The selected interest's detail under the chip row. */
+.interest-detail {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.interest-detail-heading {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.interest-detail-icon {
+  margin-right: 6px;
+}
+
+.interest-detail-months-title {
+  margin-top: 4px;
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* Previewing a month inside a sheet: the chip plus its "Back to May" link. */
+.detail-sheet-month-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-sheet-month-reset {
+  border: none;
+  background: none;
+  padding: 2px 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
 }

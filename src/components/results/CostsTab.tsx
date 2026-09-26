@@ -19,36 +19,40 @@ export function CostsTab({ dest }: { dest: ScoredDestination }) {
 
   return (
     <div className="detail-tab-content">
-      <div className="cost-range-header">
-        <div className="cost-range-label">
-          {dest.costRange.min}
-          {dest.costRange.max !== dest.costRange.min ? ` – ${dest.costRange.max}` : ''}
-        </div>
-        <div className="cost-range-hint">daily cost range</div>
-        <button
-          type="button"
-          className={`cost-key-toggle${showKey ? ' active' : ''}`}
-          onClick={() => setShowKey((v) => !v)}
-          aria-label="What do the $ tiers mean?"
-        >
-          i
-        </button>
-      </div>
-      {showKey && <div className="cost-key-text">{COST_TIER_KEY}</div>}
-
-      {dest.costOverview && <p className="cost-overview-text">{dest.costOverview}</p>}
-
-      <div className="price-list">
-        {dest.costItems.map((item, i) => (
-          <div className="price-row" key={i}>
-            <span className="price-item">
-              <span className="price-icon">{costItemIcon(item.label)}</span>
-              {item.label}
-              {item.unit ? `, ${item.unit}` : ''}
-            </span>
-            <span className="price-val">${formatPrice(item.price)}</span>
+      <div className="detail-card">
+        <div className="cost-range-header">
+          <div className="cost-range-label">
+            {dest.costRange.min}
+            {dest.costRange.max !== dest.costRange.min ? ` – ${dest.costRange.max}` : ''}
           </div>
-        ))}
+          <div className="cost-range-hint">daily cost range</div>
+          <button
+            type="button"
+            className={`cost-key-toggle${showKey ? ' active' : ''}`}
+            onClick={() => setShowKey((v) => !v)}
+            aria-label="What do the $ tiers mean?"
+          >
+            i
+          </button>
+        </div>
+        {showKey && <div className="cost-key-text">{COST_TIER_KEY}</div>}
+
+        {dest.costOverview && <p className="cost-overview-text">{dest.costOverview}</p>}
+      </div>
+
+      <div className="detail-card">
+        <div className="price-list">
+          {dest.costItems.map((item, i) => (
+            <div className="price-row" key={i}>
+              <span className="price-item">
+                <span className="price-icon">{costItemIcon(item.label)}</span>
+                {item.label}
+                {item.unit ? `, ${item.unit}` : ''}
+              </span>
+              <span className="price-val">${formatPrice(item.price)}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

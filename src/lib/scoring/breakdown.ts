@@ -39,7 +39,10 @@ export function topInterestSliders(weights: Record<string, number>): Slider[] {
 }
 
 const MIN_HIGHLIGHT_COUNT = 1;
-const MAX_HIGHLIGHT_COUNT = 8;
+// The For You tab's interest breakdown never shows more than 5 rows —
+// a card-sized list, not a full interest inventory (see explainMatch for
+// the "scan everything" version used for pros/cons).
+const MAX_HIGHLIGHT_COUNT = 5;
 // How close to your single strongest interest a slider's weight has to be
 // to count as "real signal" for you specifically, not just "not literally
 // neutral." 0.6 keeps deliberately-elevated secondary picks (e.g. a 6 next
@@ -47,11 +50,11 @@ const MAX_HIGHLIGHT_COUNT = 8;
 const SIGNAL_STRENGTH_FRACTION = 0.6;
 
 /**
- * How many sliders show by default before "Show more" — dynamic per
- * profile, not a fixed number. Counts sliders whose weight is within
+ * How many sliders the breakdown list shows — dynamic per profile, not a
+ * fixed number. Counts sliders whose weight is within
  * SIGNAL_STRENGTH_FRACTION of the profile's own strongest weight, so a
- * single-minded profile collapses to just that, while a broad profile
- * shows up to MAX_HIGHLIGHT_COUNT.
+ * single-minded profile (one interest set way above the rest) collapses to
+ * just that one row, while a broad profile shows the full MAX_HIGHLIGHT_COUNT.
  */
 export function defaultHighlightCount(weights: Record<string, number>): number {
   const values = VISIBLE_SLIDERS.map((s) => weights[s.key] || 0);
@@ -59,6 +62,20 @@ export function defaultHighlightCount(weights: Record<string, number>): number {
   if (max <= 0) return MIN_HIGHLIGHT_COUNT;
   const strongCount = values.filter((w) => w >= max * SIGNAL_STRENGTH_FRACTION).length;
   return Math.max(MIN_HIGHLIGHT_COUNT, Math.min(MAX_HIGHLIGHT_COUNT, strongCount));
+}
+
+/**
+ * The interests shown as chips on a destination's For You tab: the traveller's own top interests,
+ * in their priority order (highest weight first), as many as defaultHighlightCount says are real
+ * signal for this profile (1 to 5). Depends only on the weights, never on the month or the
+ * destination, so the row never reshuffles while someone previews different months.
+ */
+export function topInterestChips(weights: Record<string, number>): Slider[] {
+  return topInterestSliders(weights)
+    .map((slider, i) => ({ slider, i }))
+    .sort((a, b) => (weights[b.slider.key] || 0) - (weights[a.slider.key] || 0) || a.i - b.i)
+    .map((x) => x.slider)
+    .slice(0, defaultHighlightCount(weights));
 }
 
 /** Same tone bands as scoreLabel, but phrased for a single slider's fit rather than the overall trip score. */
@@ -137,9 +154,16 @@ export function topWeightStatus(sliderKey: string, weights: Record<string, numbe
 }
 
 /**
- * Interest sliders for this card, in a fixed weight-based order — the same
- * set, same order, for whichever month is being scored, so a card's
- * breakdown can be compared month-to-month instead of reshuffling.
+ * Interest sliders for this card — up to defaultHighlightCount(weights) of
+ * them (5 at most, fewer if the user's profile is concentrated on one or
+ * two interests), picked by weight. Unlike topInterestSliders (the shared,
+ * destination-agnostic pool behind the results-list chip row), this is
+ * destination-aware: when two sliders are tied on weight right at the cutoff,
+ * the one that actually scores better HERE wins the spot, so the 5 shown are
+ * both what the user cares about most and what this place is actually good
+ * at — not an arbitrary pick among equally-weighted candidates. Same set,
+ * same order, for whichever month is being scored, so a card's breakdown can
+ * be compared month-to-month instead of reshuffling.
  */
 export function rankedBreakdownSliders(
   dest: ScoredDestination,
@@ -147,14 +171,19 @@ export function rankedBreakdownSliders(
   monthIdx: number,
   selectedStyles?: SelectedStyles,
 ): BreakdownRow[] {
-  return topInterestSliders(weights)
-    .map((s) => ({
-      slider: s,
-      weight: weights[s.key] || 0,
-      score: styleAdjustedScore(dest, s.key, monthIdx, selectedStyles),
-      isNA: isSliderNA(dest, s.key),
-    }))
-    // NA rows sink to the bottom regardless of weight; everything else
-    // keeps topInterestSliders()'s weight order (stable sort).
-    .sort((a, b) => Number(a.isNA) - Number(b.isNA));
+  const rows: BreakdownRow[] = VISIBLE_SLIDERS.map((s) => ({
+    slider: s,
+    weight: weights[s.key] || 0,
+    score: styleAdjustedScore(dest, s.key, monthIdx, selectedStyles),
+    isNA: isSliderNA(dest, s.key),
+  }));
+
+  const count = defaultHighlightCount(weights);
+  const picked = [...rows]
+    .sort((a, b) => b.weight - a.weight || b.score - a.score)
+    .slice(0, count);
+
+  // NA rows sink to the bottom regardless of weight; everything else
+  // keeps the weight (then place-score) order picked above.
+  return picked.sort((a, b) => Number(a.isNA) - Number(b.isNA));
 }

@@ -1,29 +1,30 @@
 import { useState } from 'react';
-import { MONTH_NAMES, MONTH_SHORT } from '@/lib/scoring/constants';
-import { matchLabel, barColor, smoothedMonthlyDisplay } from '@/lib/scoring/rank';
+import { MONTH_NAMES, MONTH_SHORT, allBandsSelected } from '@/lib/scoring/constants';
+import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore, bandPenalty } from '@/lib/scoring/rank';
 import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
-import { rankedBreakdownSliders, specialistHighlight, topWeightStatus } from '@/lib/scoring/breakdown';
-import { explainMatch } from '@/lib/scoring/matchExplainer';
+import { topInterestChips } from '@/lib/scoring/breakdown';
+import { matchAdjustments } from '@/lib/scoring/matchExplainer';
+import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
-import { MatchExplainer } from './MatchExplainer';
+import { InterestChip, shortInterestLabel } from './InterestChip';
 
 /**
- * "For You" tab — reuses rankedBreakdownSliders (the same weighting logic
- * behind every ranking in this app) for the interest list, and
- * dest.monthly (the real per-slider monthly scores) for the personalized
- * best-months chart — displayed through smoothedMonthlyDisplay so a
- * flag-driven flat run (e.g. every "worst" month scoring identically)
- * doesn't plot as an obviously synthetic plateau; the underlying ranking
- * math this tab's own match score comes from is untouched. Nothing here
- * is a new scoring concept.
+ * "For You" tab. The match card leads (with a note behind its (i) explaining what the Open To
+ * filters did to the score), then one chip per top interest, then the selected interest's detail:
+ * its text, a twelve-month chart, and the selected month's score and text.
+ *
+ * Everything here is computed for `previewIdx`, the month being previewed inside this card. That
+ * is separate from the app's search month: changing it moves the match score, every chip score and
+ * the month card, but never re-sorts the results list behind the sheet. Nothing here is a new
+ * scoring concept: scoreForMonth for the match, styleAdjustedScore for each interest.
  */
 export function ForYouTab({
   dest,
   weights,
   bands,
   selectedStyles,
-  monthIdx,
-  score,
+  previewIdx,
+  onChangeMonth,
   selectedCategory,
   onSelectCategory,
 }: {
@@ -31,101 +32,176 @@ export function ForYouTab({
   weights: Record<string, number>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
-  monthIdx: number;
-  score: number;
+  previewIdx: number;
+  onChangeMonth: (monthIdx: number) => void;
   selectedCategory: string | null;
   onSelectCategory: (key: string) => void;
 }) {
-  const [explainerOpen, setExplainerOpen] = useState(false);
-  const ranked = rankedBreakdownSliders(dest, weights, monthIdx, selectedStyles);
+  const [noteOpen, setNoteOpen] = useState(false);
+
+  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles);
   const match = matchLabel(score);
-  const explanation = explainMatch(dest, weights, monthIdx, bands, selectedStyles);
-  const hasExplanation = explanation.pros.length > 0 || explanation.cons.length > 0;
-  // Still used for the default drill-down target and its "top interest"
-  // wording below — a separate concern from the match-explainer box above.
-  const highlight = specialistHighlight(dest, weights, monthIdx, selectedStyles);
-  const defaultKey = highlight?.slider.key ?? ranked[0]?.slider.key ?? null;
-  const effectiveKey = selectedCategory ?? defaultKey;
-  const effective = ranked.find((r) => r.slider.key === effectiveKey) ?? ranked[0];
+
+  // What the Open To filters did: the reasons, and (when a filter took something off) the score without them.
+  const adjustments = matchAdjustments(dest, previewIdx, bands);
+  const filtersCostScore = bandPenalty(dest, previewIdx, bands) < 1;
+  const scoreWithoutFilters = filtersCostScore ? scoreForMonth(dest, weights, previewIdx, allBandsSelected(), selectedStyles) : score;
+
+  const chips = topInterestChips(weights).map((slider) => ({
+    slider,
+    isNA: isSliderNA(dest, slider.key),
+    score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles),
+  }));
+  // Your #1 interest is selected first, wherever it scores this month.
+  const effectiveKey = selectedCategory ?? chips[0]?.slider.key ?? null;
+  const selected = chips.find((c) => c.slider.key === effectiveKey) ?? chips[0];
 
   return (
     <div className="detail-tab-content">
       <div className="match-card">
-        <div>
-          <div className="match-card-eyebrow">Your match for {MONTH_NAMES[monthIdx]}</div>
-          <div className={`match-card-label score-${match.cls}`}>{match.text}</div>
+        <div className="match-card-top">
+          <div>
+            <div className="match-card-eyebrow">
+              <span className="match-card-dna" aria-hidden="true">
+                🧬
+              </span>
+              Your match for {MONTH_NAMES[previewIdx]}
+            </div>
+            <div className={`match-card-label score-${match.cls}`}>{match.text}</div>
+          </div>
+          <div className="match-score-wrap">
+            <div className={`match-card-score score-${match.cls}`}>{score.toFixed(1)}</div>
+            {adjustments.length > 0 && (
+              <button
+                type="button"
+                className="match-info-btn"
+                aria-label="Why this score"
+                aria-expanded={noteOpen}
+                onClick={() => setNoteOpen((v) => !v)}
+              >
+                i
+              </button>
+            )}
+          </div>
         </div>
-        <div className="match-score-wrap">
-          <div className={`match-card-score score-${match.cls}`}>{score.toFixed(1)}</div>
-          {hasExplanation && (
-            <button type="button" className="match-info-btn" aria-label="Why this score" onClick={() => setExplainerOpen((v) => !v)}>
-              i
-            </button>
-          )}
-        </div>
-      </div>
-
-      {explainerOpen && hasExplanation && <MatchExplainer explanation={explanation} />}
-
-      {ranked.length > 0 && (
-        <>
-          <div className="detail-section-title">Your interests, ranked by what matters most to you</div>
-          <div className="detail-section-hint">Tap any interest to see its best months below.</div>
-          <div className="interest-list">
-            {ranked.map((r) => {
-              const isSelected = r.slider.key === effectiveKey;
-              return (
-                <div
-                  key={r.slider.key}
-                  className={`interest-row${isSelected ? ' interest-row-selected' : ''}`}
-                  onClick={() => onSelectCategory(r.slider.key)}
-                >
-                  <span className="interest-icon">{r.slider.icon}</span>
-                  <span className={`interest-label${isSelected ? ' interest-label-selected' : ''}`}>{r.slider.label}</span>
-                  <div className="interest-track">
-                    {!r.isNA && (
-                      <div className="interest-fill" style={{ width: `${r.score * 10}%`, background: barColor(r.score) }} />
-                    )}
-                  </div>
-                  <span className={`interest-score${r.isNA ? ' interest-score-na' : ''}`}>{r.isNA ? 'N/A' : r.score.toFixed(1)}</span>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-
-      {effective && !effective.isNA && (
-        <>
-          <div className="detail-section-title">Best months for {effective.slider.label}</div>
-          <div className="detail-section-hint">
-            {(() => {
-              const topStatus = effective ? topWeightStatus(effective.slider.key, weights) : { isTop: false, tied: false };
-              if (!topStatus.isTop) return 'Personalized timing for this interest. Tap another above to compare.';
-              return topStatus.tied
-                ? 'A top interest — personalized timing, not general weather.'
-                : 'Your top interest — personalized timing, not general weather.';
-            })()}
-          </div>
-          <div className="months-chart">
-            {dest.monthly[effective.slider.key].map((_, i) => {
-              const v = smoothedMonthlyDisplay(dest, effective.slider.key, i);
-              return (
-                <div key={i} className="months-chart-bar-wrap">
-                  <div className="months-chart-bar" style={{ height: `${Math.max(4, v * 10)}%`, background: barColor(v) }} />
-                </div>
-              );
-            })}
-          </div>
-          <div className="months-chart-labels">
-            {MONTH_SHORT.map((m, i) => (
-              <span key={i} className={`months-chart-label${i === monthIdx ? ' months-chart-label-active' : ''}`}>
-                {m[0]}
+        {noteOpen && adjustments.length > 0 && (
+          <div className="match-card-note">
+            Based on your combined interests, then adjusted for being{' '}
+            {adjustments.map((a) => (
+              <span key={a.key} className={`match-adjust-chip ${a.tone}`}>
+                <span aria-hidden="true">{a.icon}</span> {a.label}
               </span>
             ))}
+            {filtersCostScore && (
+              <span className="match-adjust-numbers">
+                <b>{scoreWithoutFilters.toFixed(1)}</b> → <b>{score.toFixed(1)}</b>
+              </span>
+            )}
           </div>
+        )}
+      </div>
+
+      {chips.length > 0 && selected && (
+        <>
+          <div className="detail-section-title interest-chips-title">Your top interests · Tap to compare</div>
+          <div className="interest-chip-row-wrap">
+            <div className="interest-chip-row">
+              {chips.map((c) => (
+                <InterestChip
+                  key={c.slider.key}
+                  emoji={c.slider.icon}
+                  label={shortInterestLabel(c.slider.label)}
+                  fullLabel={c.slider.label}
+                  active={c.slider.key === selected.slider.key}
+                  score={c.isNA ? null : c.score}
+                  onClick={() => onSelectCategory(c.slider.key)}
+                />
+              ))}
+            </div>
+            <div className="interest-chip-row-fade" aria-hidden />
+          </div>
+
+          <InterestDetail dest={dest} row={selected} previewIdx={previewIdx} onChangeMonth={onChangeMonth} />
         </>
       )}
+    </div>
+  );
+}
+
+function InterestDetail({
+  dest,
+  row,
+  previewIdx,
+  onChangeMonth,
+}: {
+  dest: ScoredDestination;
+  row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
+  previewIdx: number;
+  onChangeMonth: (monthIdx: number) => void;
+}) {
+  const { slider, isNA, score } = row;
+  const heading = (
+    <div className="interest-detail-heading">
+      <span className="interest-detail-icon">{slider.icon}</span>
+      {slider.label}
+    </div>
+  );
+  if (isNA) {
+    return (
+      <div className="interest-detail">
+        {heading}
+        <p className="interest-place-blurb">Not available here.</p>
+      </div>
+    );
+  }
+
+  const placeBlurb = dest.sliderOverview[slider.key];
+  const monthBlurb = dest.sliderMonthlyWeather[slider.key]?.[previewIdx];
+  const monthQuality = matchLabel(score);
+
+  return (
+    <div className="interest-detail">
+      {heading}
+      {placeBlurb && <p className="interest-place-blurb">{placeBlurb}</p>}
+      <div className="detail-section-title interest-detail-months-title">{shortInterestLabel(slider.label)} by month · Tap to compare</div>
+      <div className="months-chart">
+        {dest.monthly[slider.key].map((_, i) => {
+          const v = smoothedMonthlyDisplay(dest, slider.key, i);
+          return (
+            <button
+              type="button"
+              key={i}
+              className={`months-chart-bar-wrap${i === previewIdx ? ' months-chart-bar-wrap-selected' : ''}`}
+              aria-label={`${MONTH_NAMES[i]}, ${v.toFixed(1)}`}
+              aria-pressed={i === previewIdx}
+              onClick={() => onChangeMonth(i)}
+            >
+              <span className="months-chart-bar" style={{ height: `${Math.max(4, v * 10)}%`, background: barColor(v) }} />
+            </button>
+          );
+        })}
+      </div>
+      <div className="months-chart-labels">
+        {MONTH_SHORT.map((m, i) => (
+          <span
+            key={i}
+            className={`months-chart-label${i === previewIdx ? ' months-chart-label-active' : ''}`}
+            onClick={() => onChangeMonth(i)}
+          >
+            {m[0]}
+          </span>
+        ))}
+      </div>
+      <div className="month-detail-card month-detail-card-scored">
+        <div className="month-detail-top">
+          <div>
+            <div className="month-detail-name">{MONTH_NAMES[previewIdx]}</div>
+            <div className={`month-detail-quality score-${monthQuality.cls}`}>{monthQuality.text}</div>
+          </div>
+          <div className={`month-detail-score score-${monthQuality.cls}`}>{score.toFixed(1)}</div>
+        </div>
+        {monthBlurb && <p className="card-monthly-blurb">{monthBlurb}</p>}
+      </div>
     </div>
   );
 }
