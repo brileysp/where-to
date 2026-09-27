@@ -6,14 +6,37 @@
   "climate": "desert",
   "about": "Naadam (July 11-13) is Mongolia's busiest week; summer (Jun–Aug) is the only realistic window for most travel, since winters are brutally cold across the whole country.",
   "overview": "Vast steppe, the Gobi Desert, and one of the world's deepest living nomadic horse cultures — plus some of the best dark-sky stargazing anywhere on Earth.",
-  "costRange": { "min": "$", "max": "$$$$" },
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
   "costOverview": "Ulaanbaatar itself is cheap for food and transport — multi-day ger-camp and horseback expeditions into the steppe or Gobi Desert are the real, near-mandatory expense.",
   "costItems": [
-    { "label": "Milk tea (suutei tsai)", "price": 1, "unit": "" },
-    { "label": "Buuz (Mongolian dumplings) meal", "price": 4, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 3, "unit": "" },
-    { "label": "Ger camp stay, half board", "price": 60, "unit": "per person, per night" },
-    { "label": "Gobi Desert horseback trek package", "price": 800, "unit": "per person, 5 days" }
+    {
+      "label": "Milk tea (suutei tsai)",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Buuz (Mongolian dumplings) meal",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Ger camp stay, half board",
+      "price": 60,
+      "unit": "per person, per night"
+    },
+    {
+      "label": "Gobi Desert horseback trek package",
+      "price": 800,
+      "unit": "per person, 5 days"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -38,23 +61,62 @@
     "spa": 2,
     "luxuryLodging": 4,
     "snowsports": 2,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 3,
-    "birding": 6,
-    "wildlife": 6
+    "birding": 5,
+    "wildlife": 4
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "hot": [6, 7],
-  "cold": [11, 12, 1, 2, 3],
-  "peak": [7],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "hot": [
+    6,
+    7
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7
+  ],
   "peakIntensity": "mild",
-  "low": [11, 12, 1, 2],
-  "hikingBest": [6, 7, 8],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "specialSeasons": [
-    { "months": [7], "text": "The Naadam Festival (July 11-13) — wrestling, horse racing, and archery — is Mongolia's biggest national celebration and its busiest tourist week." }
+    {
+      "months": [
+        7
+      ],
+      "text": "The Naadam Festival (July 11-13) — wrestling, horse racing, and archery — is Mongolia's biggest national celebration and its busiest tourist week."
+    }
   ],
   "monthlyWeather": [
     "brutally cold, deep winter with temperatures often well below freezing",
@@ -70,8 +132,20 @@
     "cold, deep winter returning across the country",
     "brutally cold, deep winter with short daylight hours"
   ],
-  "naSliders": ["swimming", "diving", "surfing", "sailing", "sunbathing", "winetasting"],
-  "searchAliases": ["Gobi Desert", "Ulaanbaatar", "Naadam Festival", "Golden Eagle Festival", "Mongolian steppe"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Gobi Desert",
+    "Ulaanbaatar",
+    "Naadam Festival",
+    "Golden Eagle Festival",
+    "Mongolian steppe"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "deserts": "signature",
@@ -79,5 +153,6 @@
       "forests": "none",
       "astrophotography": "signature"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

@@ -6,14 +6,37 @@
   "climate": "temperate",
   "about": "Summer (Jun–Aug) is best for hiking and lake swimming at Titisee; the thermal baths at Baden-Baden and the forest's Christmas-market towns make it genuinely worth visiting in winter too.",
   "overview": "Dense forest, the birthplace of the cuckoo clock and Black Forest cake, and Baden-Baden's historic thermal spas — a quieter, greener corner of southern Germany.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Forest towns and hiking huts stay affordable — Baden-Baden's historic thermal spas and the region's surprising cluster of Michelin-starred restaurants are the real splurges.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Forest towns and hiking huts are affordable — Baden-Baden's historic thermal spas and the region's Michelin-starred restaurants are the real splurges.",
   "costItems": [
-    { "label": "Coffee", "price": 3, "unit": "" },
-    { "label": "Schwarzwälder Kirschtorte slice", "price": 6, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 12, "unit": "" },
-    { "label": "Baden-Baden thermal baths day pass", "price": 30, "unit": "" },
-    { "label": "Triberg waterfalls entry", "price": 6, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Schwarzwälder Kirschtorte slice",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Baden-Baden thermal baths day pass",
+      "price": 30,
+      "unit": ""
+    },
+    {
+      "label": "Triberg waterfalls entry",
+      "price": 6,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -21,7 +44,7 @@
     "diving": 0,
     "surfing": 0,
     "sailing": 2,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 7,
     "fishing": 4,
     "roadtrip": 6,
@@ -31,7 +54,7 @@
     "museums": 4,
     "architecture": 5,
     "festivals": 4,
-    "finedining": 6,
+    "finedining": 7,
     "streetfood": 5,
     "nightlife": 3,
     "winetasting": 5,
@@ -40,18 +63,48 @@
     "snowsports": 3,
     "cycling": 5,
     "shopping": 4,
-    "birding": 5,
-    "wildlife": 4
+    "birding": 4,
+    "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "cold": [12, 1, 2],
-  "peak": [7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "mild",
-  "low": [1, 2, 11],
-  "hikingBest": [5, 6, 9],
-  "hikingWorst": [12, 1],
+  "low": [
+    1,
+    2,
+    11
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1
+  ],
   "monthlyWeather": [
     "cold, with snow on higher trails and quiet forest towns",
     "cold, still quiet with winter lingering",
@@ -66,8 +119,17 @@
     "cold and damp, with short days setting in",
     "cold, with festive Christmas markets in the forest towns"
   ],
-  "naSliders": ["diving", "surfing"],
-  "searchAliases": ["Baden-Baden", "Freiburg", "Titisee", "Triberg", "Schwarzwald"],
+  "naSliders": [
+    "diving",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Baden-Baden",
+    "Freiburg",
+    "Titisee",
+    "Triberg",
+    "Schwarzwald"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "forests": "signature",

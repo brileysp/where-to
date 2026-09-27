@@ -5,15 +5,43 @@
   "emoji": "🏙️",
   "climate": "temperate",
   "about": "Summer (Jun–Aug) is warm and lively, with the lakefront in full use; winters are genuinely brutal, among the coldest of any major US city.",
-  "overview": "The birthplace of the skyscraper — a world-class architecture scene best seen from a river cruise, deep dish pizza, and a Lake Michigan waterfront that fills with beachgoers and sailors every summer.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Deep dish and hot dogs stay properly cheap for a major US city — the Magnificent Mile's shopping and top-tier restaurants are where costs climb.",
+  "overview": "The birthplace of the skyscraper — world-class architecture best seen from a river cruise, deep dish pizza, and a Lake Michigan waterfront packed every summer.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Deep dish and hot dogs are cheap for a major US city — the Magnificent Mile's shopping and top-tier restaurants are where costs climb.",
   "costItems": [
-    { "label": "Deep dish pizza", "price": 20, "unit": "" },
-    { "label": "Chicago-style hot dog", "price": 6, "unit": "" },
-    { "label": "CTA 'L' train ride", "price": 2.5, "unit": "" },
-    { "label": "Architecture river cruise", "price": 50, "unit": "per person" },
-    { "label": "Art Institute of Chicago entry", "price": 32, "unit": "" }
+    {
+      "label": "CTA 'L' train ride",
+      "price": 2.5,
+      "unit": ""
+    },
+    {
+      "label": "Chicago-style hot dog",
+      "price": 6,
+      "unit": ""
+    },
+    {
+      "label": "Deep dish pizza",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Art Institute of Chicago entry",
+      "price": 32,
+      "unit": ""
+    },
+    {
+      "label": "Architecture river cruise",
+      "price": 50,
+      "unit": "per person"
+    },
+    {
+      "label": "Tasting menu, avant-garde Chicago restaurant",
+      "price": 275,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -43,14 +71,39 @@
     "birding": 3,
     "wildlife": 1
   },
-  "budgetBands": ["basic", "comfortable", "highend", "luxury"],
-  "vibeBands": ["lively", "highenergy"],
-  "physicalBands": ["easy", "moderate"],
-  "hot": [7, 8],
-  "cold": [12, 1, 2],
-  "peak": [6, 7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "lively",
+    "highenergy"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2],
+  "low": [
+    1,
+    2
+  ],
   "monthlyWeather": [
     "bitterly cold, with biting wind off the lake",
     "bitterly cold, still one of the coldest months",
@@ -65,8 +118,16 @@
     "cold and increasingly grey, with winter approaching fast",
     "cold, with holiday lights and biting wind off the lake"
   ],
-  "naSliders": ["diving"],
-  "searchAliases": ["The Loop", "Millennium Park", "Magnificent Mile", "Lake Michigan", "Illinois"],
+  "naSliders": [
+    "diving"
+  ],
+  "searchAliases": [
+    "The Loop",
+    "Millennium Park",
+    "Magnificent Mile",
+    "Lake Michigan",
+    "Illinois"
+  ],
   "activityStyleTiers": {
     "cycling": {
       "scenicRoadCycling": "casual",

@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "An espresso at the bar costs almost nothing; getting around the coast and dining with a view is where real money goes.",
+  "costOverview": "An espresso at the bar costs almost nothing, but dining with a view or a day at a beach club runs high.",
   "costItems": [
     {
       "label": "Espresso",
@@ -33,6 +33,11 @@
       "price": 15
     },
     {
+      "label": "Beach club sunbed & umbrella",
+      "price": 45,
+      "unit": "per day"
+    },
+    {
       "label": "Coastal dinner",
       "unit": "",
       "price": 55
@@ -41,10 +46,10 @@
   "base": {
     "sunbathing": 8,
     "swimming": 7,
-    "diving": 4,
+    "diving": 3,
     "surfing": 1,
     "sailing": 8,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 8,
     "fishing": 2,
     "roadtrip": 8,
@@ -61,7 +66,7 @@
     "spa": 5,
     "luxuryLodging": 10,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 7,
     "birding": 3,
     "wildlife": 2

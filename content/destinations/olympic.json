@@ -36,7 +36,7 @@
   "base": {
     "sunbathing": 1,
     "swimming": 1,
-    "diving": 2,
+    "diving": 1,
     "surfing": 2,
     "sailing": 2,
     "hiking": 7,
@@ -56,8 +56,8 @@
     "spa": 3,
     "luxuryLodging": 3,
     "snowsports": 3,
-    "cycling": 3,
-    "shopping": 2,
+    "cycling": 2,
+    "shopping": 1,
     "birding": 5,
     "wildlife": 5
   },
@@ -163,7 +163,6 @@
     "cold and wet, Hurricane Ridge access weather-dependent"
   ],
   "naSliders": [
-    "sunbathing",
     "museums",
     "architecture",
     "festivals",

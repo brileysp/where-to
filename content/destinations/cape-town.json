@@ -13,11 +13,6 @@
   "costOverview": "Inexpensive even at the nicer end — a proper restaurant meal or a serious wine tasting still costs a fraction of what it would elsewhere.",
   "costItems": [
     {
-      "label": "Minibus taxi",
-      "unit": "",
-      "price": 1
-    },
-    {
       "label": "Coffee",
       "unit": "",
       "price": 2
@@ -31,6 +26,11 @@
       "label": "Glass of wine, nice restaurant",
       "unit": "",
       "price": 6
+    },
+    {
+      "label": "Uber, 15 min",
+      "unit": "",
+      "price": 7
     },
     {
       "label": "Table Mountain cableway",
@@ -52,9 +52,9 @@
     "golf": 6,
     "stargazing": 5,
     "museums": 8,
-    "architecture": 8,
+    "architecture": 7,
     "festivals": 6,
-    "finedining": 9,
+    "finedining": 8,
     "streetfood": 7,
     "nightlife": 7,
     "winetasting": 8,
@@ -63,7 +63,7 @@
     "snowsports": 0,
     "cycling": 6,
     "shopping": 8,
-    "birding": 6,
+    "birding": 7,
     "wildlife": 6
   },
   "budgetBands": [

@@ -6,10 +6,16 @@ import {
   jsonb,
   uuid,
   integer,
+  doublePrecision,
   timestamp,
   primaryKey,
   pgEnum,
+  index,
+  uniqueIndex,
+  check,
+  type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
 
 // ---- Enums -----------------------------------------------------------------
 
@@ -24,9 +30,15 @@ export const climateEnum = pgEnum('climate', [
 
 export const peakIntensityEnum = pgEnum('peak_intensity', ['mild', 'moderate', 'extreme']);
 
+export const crowdBaselineEnum = pgEnum('crowd_baseline', ['low', 'high']);
+
+export const severityEnum = pgEnum('severity', ['mild', 'moderate', 'severe']);
+
 export const cardStageEnum = pgEnum('card_stage', ['broad', 'deep']);
 
 export const swipeTypeEnum = pgEnum('swipe_type', ['no', 'yes', 'love']);
+
+export const adminAuditActionEnum = pgEnum('admin_audit_action', ['create', 'update', 'delete']);
 
 // ---- Global / shared content -------------------------------------------------
 // Everything below is read-only at runtime (write access reserved for the
@@ -35,108 +47,305 @@ export const swipeTypeEnum = pgEnum('swipe_type', ['no', 'yes', 'love']);
 // DOMAIN_NUANCE_TEMPLATES stay as TypeScript code (see lib/dna, lib/scoring)
 // rather than tables — they're tightly coupled to the code that reads them.
 
-export const destinations = pgTable('destinations', {
-  id: text('id').primaryKey(), // slug, e.g. 'bali' — ported directly from data.js ids
-  name: text('name').notNull(),
-  region: text('region').notNull(),
-  emoji: text('emoji').notNull(),
-  climate: climateEnum('climate').notNull(),
-  // The seasonal-pattern summary, always shown above the month chart.
-  about: text('about').notNull(),
-  // One-sentence evergreen "why go here" pitch for the About tab. Nullable
-  // — destinations without it yet fall back to `about` in the UI.
-  overview: text('overview'),
 
-  // Regional cost floor/ceiling, $–$$$$$ — two plain columns rather than
-  // one jsonb object since these are the two ends of an ordinal scale, not
-  // a free-form structure. Both null = no cost data authored yet, and the
-  // UI hides the cost pill/tab entirely rather than showing a fake range.
-  costMin: text('cost_min'),
-  costMax: text('cost_max'),
-  // One-sentence texture on what costs are actually like for a traveler
-  // here — shown on the Cost tab above the itemized price list. Distinct
-  // from `overview`: this is "what does spending here feel like", not
-  // "why go here at all".
-  costOverview: text('cost_overview'),
-  // Real one-time (or genuine per-day-rate) prices, author-sorted low to
-  // high — see docs/content/cost-scoring-methodology.md. Sparse jsonb
-  // array like specialSeasons below, not normalized rows: read generically
-  // per destination, never SQL-filtered.
-  costItems: jsonb('cost_items').notNull().default([]).$type<
-    Array<{ label: string; price: number; unit: string }>
-  >(),
+// ---- Place migration (docs/final-architecture-plan.md) --------------------
+// Migration complete as of 2026-09-07: `places` fully superseded the old
+// flat `destinations` table (Phase 4's admin+public cutover, then Phase 6's
+// table drop) — there is no `destinations` table anymore. See
+// place_migration_status memory for the phase-by-phase history. See the doc's
+// "Recommended Data Model" section below for the full
+// rationale behind every column/constraint below.
 
-  // The 27-key interest score object (data.js `base`). JSONB: read
-  // generically by deriveDestinationScores, never SQL-filtered.
-  baseScores: jsonb('base_scores').notNull().$type<Record<string, number>>(),
+export const placeRelationshipTypeEnum = pgEnum('place_relationship_type', [
+  'nearby',
+  'day_trip',
+  'gateway_to',
+  'commonly_combined',
+  'alternative_to',
+]);
 
-  // Month-fact arrays (1-12). Direct port of data.js's month-number arrays.
-  dryMonths: smallint('dry_months').array().notNull().default([]),
-  wetMonths: smallint('wet_months').array().notNull().default([]),
-  hotMonths: smallint('hot_months').array().notNull().default([]),
-  coldMonths: smallint('cold_months').array().notNull().default([]),
-  peakMonths: smallint('peak_months').array().notNull().default([]),
-  lowMonths: smallint('low_months').array().notNull().default([]),
-  wildlifePeakMonths: smallint('wildlife_peak_months').array().notNull().default([]),
-  wildlifeClosedMonths: smallint('wildlife_closed_months').array().notNull().default([]),
-  birdingPeakMonths: smallint('birding_peak_months').array().notNull().default([]),
-  hikingBestMonths: smallint('hiking_best_months').array().notNull().default([]),
-  hikingWorstMonths: smallint('hiking_worst_months').array().notNull().default([]),
-  inaccessibleMonths: smallint('inaccessible_months').array().notNull().default([]),
-  swimHazardMonths: smallint('swim_hazard_months').array().notNull().default([]),
-  // See the `noSnow` comment in scoring/types.ts — a hard floor for "no
-  // snow on the ground this month", independent of the generic hot/dry
-  // weather flags a ski destination's mild summer may never trigger.
-  noSnowMonths: smallint('no_snow_months').array().notNull().default([]),
-  // See the `sliderCaps` comment in scoring/types.ts — sparse per-slider
-  // ceiling, e.g. { wildlife: 4 }, for destinations whose peak-month
-  // score would otherwise overstate how genuinely good they are.
-  sliderCaps: jsonb('slider_caps').notNull().default({}).$type<Record<string, number>>(),
-  // See the `SliderEvent` comment in scoring/types.ts — sparse per-slider
-  // list of named seasonal drivers with their own weight + month intensity,
-  // for destinations whose seasonality is more than a single peak flag can
-  // express (a genuine shoulder season, or two independently-weighted
-  // draws like bears and belugas).
-  sliderEvents: jsonb('slider_events')
-    .notNull()
-    .default({})
-    .$type<Record<string, { label: string; weight: number; months: Record<string, number> }[]>>(),
+export const places = pgTable(
+  'places',
+  {
+    id: text('id').primaryKey(), // slug, same convention as destinations.id
+    name: text('name').notNull(),
+    region: text('region').notNull(),
+    emoji: text('emoji').notNull(),
+    climate: climateEnum('climate').notNull(),
+    // See the destinations.placeType comment above — same field, same
+    // caveats (plain text, taxonomy not yet locked to an enum).
+    placeType: text('place_type'),
+    about: text('about').notNull(),
+    overview: text('overview'),
 
-  peakIntensity: peakIntensityEnum('peak_intensity'),
+    costMin: text('cost_min'),
+    costMax: text('cost_max'),
+    costOverview: text('cost_overview'),
+    costItems: jsonb('cost_items').notNull().default([]).$type<
+      Array<{
+        label: string; price: number; unit: string; emoji?: string;
+        // Edit tracking — see src/lib/admin/cost-item-stamp.ts. Admin-only.
+        id?: string; updatedAt?: string | null; updatedBy?: string | null;
+        editorKind?: 'human' | 'agent' | null; lastChange?: string | null;
+      }>
+    >(),
 
-  // NOTE: this is a boolean flag in the legacy app (data.js:286,371,422,468),
-  // not a month array — combined with `low_months` at read time. Confirmed
-  // via direct code read; a real migration bug to avoid.
-  shopClosures: boolean('shop_closures').notNull().default(false),
+    baseScores: jsonb('base_scores').notNull().$type<Record<string, number>>(),
 
-  // Ragged array of { months: number[], text: string } — correctly JSONB.
-  specialSeasons: jsonb('special_seasons').notNull().default([]).$type<
-    Array<{ months: number[]; text: string }>
-  >(),
+    dryMonths: smallint('dry_months').array().notNull().default([]),
+    wetMonths: smallint('wet_months').array().notNull().default([]),
+    hotMonths: smallint('hot_months').array().notNull().default([]),
+    coldMonths: smallint('cold_months').array().notNull().default([]),
+    peakMonths: smallint('peak_months').array().notNull().default([]),
+    lowMonths: smallint('low_months').array().notNull().default([]),
+    wildlifePeakMonths: smallint('wildlife_peak_months').array().notNull().default([]),
+    wildlifeClosedMonths: smallint('wildlife_closed_months').array().notNull().default([]),
+    birdingPeakMonths: smallint('birding_peak_months').array().notNull().default([]),
+    hikingBestMonths: smallint('hiking_best_months').array().notNull().default([]),
+    hikingWorstMonths: smallint('hiking_worst_months').array().notNull().default([]),
+    inaccessibleMonths: smallint('inaccessible_months').array().notNull().default([]),
+    swimHazardMonths: smallint('swim_hazard_months').array().notNull().default([]),
+    noSnowMonths: smallint('no_snow_months').array().notNull().default([]),
 
-  // Hand-written per-month weather prose, index 0 = January.
-  monthlyWeather: text('monthly_weather').array(),
+    sliderCaps: jsonb('slider_caps').notNull().default({}).$type<Record<string, number>>(),
+    sliderEvents: jsonb('slider_events')
+      .notNull()
+      .default({})
+      .$type<Record<string, { label: string; weight: number; months: Record<string, number> }[]>>(),
 
-  searchAliases: text('search_aliases').array().notNull().default([]),
-  naSliders: text('na_sliders').array().notNull().default([]),
-  budgetBands: text('budget_bands').array().notNull().default([]),
-  vibeBands: text('vibe_bands').array().notNull().default([]),
-  physicalBands: text('physical_bands').array().notNull().default([]),
+    peakIntensity: peakIntensityEnum('peak_intensity'),
+    crowdBaseline: crowdBaselineEnum('crowd_baseline'),
+    hotSeverity: severityEnum('hot_severity'),
+    coldSeverity: severityEnum('cold_severity'),
+    wetSeverity: severityEnum('wet_severity'),
 
-  // Per-slider sub-style quality, e.g. { cycling: { mountainBiking:
-  // 'signature', scenicRoadCycling: 'casual' } } — keyed by the same
-  // slider keys (SLIDERS in scoring/constants.ts) and the same DNA
-  // attribute keys a resolved core-axis branch produces (see
-  // DOMAIN_CORE_AXES in lib/dna/domains.ts), so no separate vocabulary is
-  // needed between the DNA engine and destination content. A slider with
-  // no entry here, or a style tier not tiered for a destination, is
-  // treated as if every relevant style were absent (see TIER_MULTIPLIERS
-  // in scoring/rank.ts) — sparse by design, not required for every
-  // destination/slider pair.
-  activityStyleTiers: jsonb('activity_style_tiers').notNull().default({}).$type<
-    Record<string, Record<string, 'signature' | 'strong' | 'casual' | 'none'>>
-  >(),
-});
+    seasonalHazards: jsonb('seasonal_hazards').notNull().default([]).$type<
+      Array<{
+        category: 'storm' | 'airQuality' | 'insects' | 'seaweed' | 'other';
+        label: string;
+        months: number[];
+        severity: 'mild' | 'moderate' | 'severe';
+        affectedSliders: string[];
+      }>
+    >(),
+
+    // Destination-level "current conditions" advisories (security, active
+    // deforestation/poaching, access disruptions) — deliberately NOT keyed
+    // by slider and NOT read by the scoring engine, unlike seasonalHazards
+    // above. These affect a visitor's experience across every interest at
+    // once, so they're authored and shown once per destination rather than
+    // duplicated into (or orphaned out of) individual sliderOverview text.
+    travelAdvisories: jsonb('travel_advisories').notNull().default([]).$type<
+      Array<{
+        category: 'security' | 'environmental' | 'access' | 'health' | 'other';
+        severity: 'moderate' | 'serious';
+        text: string;
+        lastReviewed: string; // ISO date, e.g. "2026-03-01"
+      }>
+    >(),
+
+    shopClosures: boolean('shop_closures').notNull().default(false),
+    specialSeasons: jsonb('special_seasons').notNull().default([]).$type<
+      Array<{ months: number[]; text: string }>
+    >(),
+    monthlyWeather: text('monthly_weather').array(),
+
+    // Per-interest analogues of overview/monthlyWeather above — "why does
+    // this month score the way it does, for THIS interest" rather than
+    // for the destination overall. Both keyed by slider id; sliderOverview
+    // holds one non-seasonal summary per slider, sliderMonthlyWeather
+    // holds up to 12 entries per slider (null = no authored text yet for
+    // that month, matching monthlyWeather's own null-slot convention).
+    sliderOverview: jsonb('slider_overview').notNull().default({}).$type<Record<string, string>>(),
+    sliderMonthlyWeather: jsonb('slider_monthly_weather')
+      .notNull()
+      .default({})
+      .$type<Record<string, (string | null)[]>>(),
+
+    // Provenance for sliderOverview/sliderMonthlyWeather/baseScores/
+    // sliderEvents above — which external page(s) were actually consulted
+    // to research or verify this slider's content/score for this
+    // destination. Keyed by slider id, an ARRAY of sources per slider
+    // (not one), since a real research pass routinely draws on more than
+    // one page (a destination-specific article plus a species/phenomenon
+    // reference, say) and a second pass later can add a corroborating or
+    // superseding source without discarding the first. Deliberately NOT
+    // read by the scoring engine — same "record it, never compute from
+    // it" status as travelAdvisories above. Sparse: absence just means no
+    // source has been logged yet for that slider, not that none exists.
+    sliderSources: jsonb('slider_sources')
+      .notNull()
+      .default({})
+      .$type<Record<string, Array<{ url: string; label?: string; note?: string; addedAt: string }>>>(),
+
+    searchAliases: text('search_aliases').array().notNull().default([]),
+    naSliders: text('na_sliders').array().notNull().default([]),
+    budgetBands: text('budget_bands').array().notNull().default([]),
+    vibeBands: text('vibe_bands').array().notNull().default([]),
+    physicalBands: text('physical_bands').array().notNull().default([]),
+    audienceBands: text('audience_bands').array().notNull().default([]),
+    // What the place is LIKE (city, island, desert…), 1–4 slugs from
+    // src/lib/places/setting-tags.ts; first = primary. Distinct from the
+    // single-valued, hierarchy-oriented `placeType` above.
+    settingTags: text('setting_tags').array().notNull().default([]),
+
+    activityStyleTiers: jsonb('activity_style_tiers').notNull().default({}).$type<
+      Record<string, Record<string, 'signature' | 'strong' | 'casual' | 'none'>>
+    >(),
+    signatureTier: jsonb('signature_tier').notNull().default({}).$type<
+      Record<string, 'signature' | 'strong' | 'casual' | 'none'>
+    >(),
+    scoreOverrides: jsonb('score_overrides').notNull().default({}).$type<
+      Record<string, Record<number, number>>
+    >(),
+
+    // Curve-based scoring, Phase 1 (docs/scoring-v2-proposal.html) — same
+    // column, same rationale as destinations.sliderCurves above. Fitted
+    // independently from this table's OWN current monthly output, not
+    // copied from destinations — see scripts/backfill-slider-curves.ts's
+    // doc comment for why (this table isn't guaranteed to still mirror
+    // destinations' content exactly; treating each table's own live
+    // formula output as the source of truth for its own fit avoids
+    // silently introducing a new cross-table inconsistency).
+    sliderCurves: jsonb('slider_curves')
+      .notNull()
+      .default({})
+      .$type<Record<string, { anchors: Array<{ month: number; value: number; steepness?: number }> }>>(),
+
+    /**
+     * Slider keys whose `sliderCurves` entry is HAND-AUTHORED and must not
+     * be regenerated from the formula.
+     *
+     * The curve migration (docs/scoring-v2-proposal.html) moved the read
+     * path onto curves but never built the authoring half, so every curve
+     * is still fitted from deriveDestinationScores on every write — which
+     * means the old formula, flat +7 peak bonus and all, is still the
+     * source of truth, and any hand-edited curve is destroyed on the next
+     * save. This column is what lets a curve stop being derived.
+     *
+     * Deliberately a per-slider list rather than a per-destination flag:
+     * migration is gradual, so one destination can have an authored
+     * hiking curve while its other 52 sliders stay derived. When every
+     * curve is authored this column and the refit both retire together.
+     */
+    authoredCurves: text('authored_curves').array().notNull().default([]),
+
+    // ---- New in Phase 1 ----
+    // Strict geographic containment only, one parent, forms a tree (never
+    // a graph) — cycle prevention is an application-level ancestor-walk
+    // check on every parent-assignment write, not a database constraint.
+    parentPlaceId: text('parent_place_id').references((): AnyPgColumn => places.id),
+    // A place with isPrimaryDestination=true is eligible for the main
+    // ranking engine, shown in Recommendations, and expected to carry full
+    // About/Costs content. Independent of isPublished — a place can be
+    // primary-eligible while still being authored.
+    isPrimaryDestination: boolean('is_primary_destination').notNull().default(false),
+    isPublished: boolean('is_published').notNull().default(false),
+    // The short "why" line a related place needs instead of full
+    // About/Costs tabs (which stay properties of the parent destination).
+    summary: text('summary'),
+    // The five-state score model (explicit/inherited/calculated, plus
+    // naSliders for not-applicable and plain absence for missing) — see
+    // "Explicit vs. inherited vs. calculated..." in
+    // docs/final-architecture-plan.md. Sparse: a key present in
+    // baseScores but absent here simply hasn't been classified yet
+    // (true of every one of today's 200 destinations, pre-migration).
+    scoreStatus: jsonb('score_status').notNull().default({}).$type<
+      Record<string, 'explicit' | 'inherited' | 'calculated'>
+    >(),
+    // Only meaningful where scoreStatus[key] === 'inherited' — names the
+    // source placeId a value was copied from, so an inherited score is
+    // always traceable and never presented as independently researched.
+    scoreInheritedFrom: jsonb('score_inherited_from').notNull().default({}).$type<Record<string, string>>(),
+    // ISO 3166-1 alpha-3 (e.g. "CRI") — matches the stamp badge display
+    // and common map-boundary datasets. Nullable until backfilled.
+    countryCode: text('country_code'),
+    // Prefer deriving from countryCode via a static code-level lookup
+    // (see src/lib/scoring/continents.ts) rather than hand-authoring per
+    // row — a deterministic fact about the country, not an editorial call.
+    continent: text('continent'),
+    // A postal/subdivision abbreviation — USPS two-letter for US states,
+    // each country's own convention otherwise.
+    regionLabel: text('region_label'),
+    latitude: doublePrecision('latitude'),
+    longitude: doublePrecision('longitude'),
+    // The canonical shape/color/style for this place's passport stamp.
+    // Nullable — meant to have a deterministic algorithmic default rather
+    // than requiring 200+ hand-curated designs before shipping.
+    stampDesign: jsonb('stamp_design'),
+
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    check('places_parent_not_self', sql`${table.parentPlaceId} IS NULL OR ${table.parentPlaceId} <> ${table.id}`),
+    index('places_parent_place_id_idx').on(table.parentPlaceId),
+    // Partial index — keeps the main ranking query fast once this table
+    // holds thousands of related places alongside a few hundred primary
+    // ones (see docs/final-architecture-plan.md's index notes).
+    index('places_primary_destination_idx').on(table.isPrimaryDestination).where(sql`${table.isPrimaryDestination}`),
+  ],
+);
+
+export const placeRelationships = pgTable(
+  'place_relationships',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    fromPlaceId: text('from_place_id')
+      .notNull()
+      .references(() => places.id, { onDelete: 'restrict' }),
+    toPlaceId: text('to_place_id')
+      .notNull()
+      .references(() => places.id, { onDelete: 'restrict' }),
+    relationshipType: placeRelationshipTypeEnum('relationship_type').notNull(),
+    note: text('note'),
+    weight: integer('weight'),
+  },
+  (table) => [
+    uniqueIndex('place_relationships_unique_idx').on(table.fromPlaceId, table.toPlaceId, table.relationshipType),
+    check('place_relationships_not_self', sql`${table.fromPlaceId} <> ${table.toPlaceId}`),
+    index('place_relationships_from_idx').on(table.fromPlaceId),
+    index('place_relationships_to_idx').on(table.toPlaceId),
+  ],
+);
+
+// Polymorphic across content types that don't all exist yet ('tour'/'stay'
+// reserved) — itemId is validated against the right table in application
+// code, the same boundary-validation pattern already used for naSliders
+// and cardSubdimensions elsewhere in this schema, not a real foreign key.
+export const userHearts = pgTable(
+  'user_hearts',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id').notNull(),
+    itemType: text('item_type').notNull(), // 'place' today; 'tour' | 'stay' reserved
+    itemId: text('item_id').notNull(),
+  },
+  (table) => [
+    uniqueIndex('user_hearts_unique_idx').on(table.userId, table.itemType, table.itemId),
+    index('user_hearts_user_id_idx').on(table.userId),
+    index('user_hearts_item_idx').on(table.itemType, table.itemId),
+  ],
+);
+
+// `id` is a generated primary key, not a composite (userId, placeId) key,
+// specifically so more than one stamp per place is structurally possible
+// later without a breaking migration — even though MVP behavior only ever
+// inserts one row per user per place today.
+export const userStamps = pgTable(
+  'user_stamps',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id').notNull(),
+    placeId: text('place_id')
+      .notNull()
+      .references(() => places.id, { onDelete: 'cascade' }),
+    visitedAt: timestamp('visited_at', { withTimezone: true }).notNull().defaultNow(),
+    // This specific stamp's rotation/opacity/smudge, generated once at row
+    // creation and never regenerated on view.
+    stampRender: jsonb('stamp_render'),
+  },
+  (table) => [index('user_stamps_user_place_idx').on(table.userId, table.placeId)],
+);
 
 export const domains = pgTable('domains', {
   key: text('key').primaryKey(), // e.g. 'Birding' — the whole app addresses domains by this string
@@ -208,6 +417,13 @@ export const cards = pgTable('cards', {
   unlockMinPositive: integer('unlock_min_positive'),
   unlockMinLove: integer('unlock_min_love'),
   diagnosticPurpose: text('diagnostic_purpose'),
+
+  // Admin-authoring concurrency guard (see docs/admin-panel-plan.md) — the
+  // column is added now because it's free, even though the optimistic-lock
+  // check itself (WHERE ... AND updated_at = :loaded) isn't enforced until
+  // more than one admin can write at once. Also just a useful "last edited"
+  // timestamp for the admin UI in the meantime.
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
 export const dimensions = pgTable('dimensions', {
@@ -318,4 +534,42 @@ export const travelDnaSnapshots = pgTable('travel_dna_snapshots', {
   confirmedInsights: jsonb('confirmed_insights').notNull().default([]),
   label: text('label'),
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+// ---- Admin authoring ---------------------------------------------------------
+// See docs/admin-panel-plan.md — the safety net behind every admin write.
+// `entityType`/`entityId` are polymorphic (validated in application code, not
+// a real FK) across every admin-manageable table, the same pattern userHearts
+// (planned) uses for itemType/itemId. Append-only: nothing ever updates or
+// deletes a row here — undo is implemented by writing a new row that replays
+// an old beforeValue, never by editing history.
+export const adminAuditLog = pgTable(
+  'admin_audit_log',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // Plain uuid for now, the real Supabase Auth user id from requireAdminUser()
+    // (src/lib/admin/auth.ts) — not a DB-level FK to auth.users(id), matching
+    // the same "no local auth.users table in PGlite" boundary userSwipes.userId
+    // etc. already live with.
+    actorId: uuid('actor_id').notNull(),
+    entityType: text('entity_type').notNull(), // 'card' | 'destination' | ...
+    entityId: text('entity_id').notNull(),
+    action: adminAuditActionEnum('action').notNull(),
+    beforeValue: jsonb('before_value'), // full row snapshot; null on create
+    afterValue: jsonb('after_value'), // full row snapshot; null on delete
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('admin_audit_log_entity_idx').on(table.entityType, table.entityId, table.createdAt)],
+);
+
+// SLIDERS (key/label/domain/formula) stays TypeScript code — see the
+// comment at the top of this file — it's load-bearing for the scoring
+// engine and shouldn't move to the database piecemeal. This table holds
+// only admin-editable *overrides* on top of that code-defined data,
+// starting with emoji (see getInterestEmoji in lib/scoring/interestMeta.ts).
+// A slider key with no row here just uses SLIDERS[key].icon unchanged.
+export const interestMeta = pgTable('interest_meta', {
+  key: text('key').primaryKey(), // matches a SLIDERS[].key
+  emoji: text('emoji'),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });

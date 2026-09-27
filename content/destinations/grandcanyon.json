@@ -2,17 +2,41 @@
   "id": "grandcanyon",
   "name": "Grand Canyon",
   "region": "Arizona, USA",
-  "emoji": "🦅",
+  "emoji": "🐴",
   "climate": "desert",
   "about": "Year-round but extreme; spring and fall are ideal for hiking with mild rim temps, summer inner-canyon heat is dangerous, the North Rim closes in winter.",
   "overview": "One of the most recognizable natural landmarks on Earth, a mile-deep gorge carved by the Colorado River.",
-  "costRange": { "min": "$$", "max": "$$$" },
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
   "costOverview": "In-park food costs more than a normal small town would charge — a mule ride below the rim is the one real splurge activity most people consider.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Deli sandwich", "price": 12, "unit": "" },
-    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" },
-    { "label": "Day mule ride along rim", "price": 200, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Deli sandwich",
+      "price": 12,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    },
+    {
+      "label": "Day mule ride along rim",
+      "price": 200,
+      "unit": ""
+    },
+    {
+      "label": "Motorized rafting trip, 7 days, full canyon",
+      "price": 3800,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 4,
@@ -20,7 +44,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 7,
+    "hiking": 6,
     "scenic": 8,
     "fishing": 2,
     "roadtrip": 8,
@@ -30,17 +54,17 @@
     "museums": 3,
     "architecture": 2,
     "festivals": 1,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 2,
     "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
-    "luxuryLodging": 5,
+    "luxuryLodging": 4,
     "snowsports": 1,
     "cycling": 2,
     "shopping": 2,
     "birding": 4,
-    "wildlife": 5
+    "wildlife": 4
   },
   "budgetBands": [
     "basic",

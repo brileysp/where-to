@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$$$"
   },
-  "costOverview": "Coffee, pastries, and taxis all stay properly cheap — one of the best-value beach destinations in Western Europe.",
+  "costOverview": "One of the best-value beach destinations in Western Europe — coffee, pastries, and taxis are all cheap.",
   "costItems": [
     {
       "label": "Espresso",
@@ -31,6 +31,11 @@
       "label": "Grilled sardines, casual restaurant",
       "price": 10,
       "unit": ""
+    },
+    {
+      "label": "Beach club sunbed & umbrella",
+      "price": 15,
+      "unit": "per day"
     }
   ],
   "base": {
@@ -39,7 +44,7 @@
     "diving": 4,
     "surfing": 7,
     "sailing": 6,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 6,
     "fishing": 5,
     "roadtrip": 5,
@@ -56,7 +61,7 @@
     "spa": 6,
     "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 5,
+    "cycling": 4,
     "shopping": 6,
     "birding": 4,
     "wildlife": 3

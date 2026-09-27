@@ -5,15 +5,38 @@
   "emoji": "⛰️",
   "climate": "highland",
   "about": "Summer (May–Sep) is the only real window for the high Karakoram — K2 Base Camp and the northern passes; winter is bitterly cold and many roads become impassable.",
-  "overview": "K2 and the Karakoram range, the stunningly scenic Hunza Valley, and the Karakoram Highway — one of the world's greatest high-altitude trekking destinations, far less crowded than Nepal.",
-  "costRange": { "min": "$", "max": "$$$" },
-  "costOverview": "Genuinely one of the best-value serious trekking destinations on Earth — everyday food and transport are cheap, and even the multi-week K2 Base Camp trek costs far less than comparable trips in Nepal.",
+  "overview": "K2, the Karakoram range, the Hunza Valley, and the Karakoram Highway — a great high-altitude trekking destination, less crowded than Nepal.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
+  "costOverview": "One of the best-value serious trekking destinations on Earth — everyday food and transport are cheap, and even the multi-week K2 Base Camp trek costs far less than comparable trips in Nepal.",
   "costItems": [
-    { "label": "Coffee or tea", "price": 1.5, "unit": "" },
-    { "label": "Karahi (Pakistani curry) meal", "price": 5, "unit": "" },
-    { "label": "Taxi/jeep, 15 min", "price": 3, "unit": "" },
-    { "label": "K2 Base Camp trek package, guide & permits", "price": 2500, "unit": "per person, 18 days" },
-    { "label": "Karakoram Highway jeep tour, Hunza Valley", "price": 50, "unit": "per person, per day" }
+    {
+      "label": "Coffee or tea",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Karahi (Pakistani curry) meal",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/jeep, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "K2 Base Camp trek package, guide & permits",
+      "price": 2500,
+      "unit": "per person, 18 days"
+    },
+    {
+      "label": "Karakoram Highway jeep tour, Hunza Valley",
+      "price": 50,
+      "unit": "per person, per day"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -43,17 +66,53 @@
     "birding": 4,
     "wildlife": 4
   },
-  "budgetBands": ["basic", "comfortable"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "cold": [12, 1, 2],
-  "peak": [6, 7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "mild",
-  "low": [12, 1, 2],
-  "hikingBest": [5, 6, 7, 8, 9],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "specialSeasons": [
-    { "months": [4], "text": "Hunza Valley's apricot and cherry blossoms bloom in April, one of the most photographed times to visit." }
+    {
+      "months": [
+        4
+      ],
+      "text": "Hunza Valley's apricot and cherry blossoms bloom in April, one of the most photographed times to visit."
+    }
   ],
   "monthlyWeather": [
     "bitterly cold, with many high-altitude roads impassable",
@@ -69,13 +128,29 @@
     "cold, winter returning to the northern areas",
     "bitterly cold, deep winter with many roads closed"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "nightlife"],
-  "searchAliases": ["K2", "Hunza Valley", "Skardu", "Karakoram Highway", "Fairy Meadows", "Gilgit-Baltistan"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting",
+    "nightlife"
+  ],
+  "searchAliases": [
+    "K2",
+    "Hunza Valley",
+    "Skardu",
+    "Karakoram Highway",
+    "Fairy Meadows",
+    "Gilgit-Baltistan"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",
       "forests": "casual",
       "coastlines": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

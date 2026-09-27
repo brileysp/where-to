@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { searchDestinations } from '@/lib/scoring/search';
 import { scoreLabel } from '@/lib/scoring/rank';
 import type { RankedDestination } from '@/lib/scoring/rank';
@@ -12,14 +12,34 @@ export function SearchBox({
   destinations,
   ranked,
   onSelectResult,
+  expanded,
 }: {
   destinations: ScoredDestination[];
   ranked: RankedDestination[];
   onSelectResult: (destId: string) => void;
+  /** Whether the bar is revealed — toggled by the header's search icon. */
+  expanded: boolean;
 }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+  // Once fully expanded the wrapper stops clipping, so the results dropdown
+  // (in flow, below the input) can show; while animating it must clip.
+  const [settled, setSettled] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Collapsing resets the bar right away (adjusting state during render is
+  // React's sanctioned way to react to a prop change without an effect).
+  const [prevExpanded, setPrevExpanded] = useState(expanded);
+  if (expanded !== prevExpanded) {
+    setPrevExpanded(expanded);
+    setSettled(false);
+    if (!expanded) setOpen(false);
+  }
+
+  useEffect(() => {
+    if (expanded) inputRef.current?.focus();
+    else inputRef.current?.blur();
+  }, [expanded]);
 
   const results = searchDestinations(destinations, query).slice(0, SEARCH_RESULTS_CAP);
   const rankOf = (id: string) => ranked.findIndex((r) => r.d.id === id);
@@ -31,7 +51,11 @@ export function SearchBox({
   }
 
   return (
-    <div className="results-search-wrap">
+    <div className={`results-search-wrap${expanded ? (settled ? ' is-open' : ' is-opening') : ' is-collapsed'}`} aria-hidden={!expanded}
+      onTransitionEnd={(e) => {
+        if (expanded && e.target === e.currentTarget && e.propertyName === 'max-height') setSettled(true);
+      }}
+    >
       <div className="results-search-box">
         <span>🔍</span>
         <input

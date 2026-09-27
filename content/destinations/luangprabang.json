@@ -6,13 +6,32 @@
   "climate": "tropical",
   "about": "Cool-dry season Nov–Feb is most pleasant, hot season Mar–May is intense, monsoon Jun–Oct brings frequent rain.",
   "overview": "A UNESCO-listed royal capital of gilded temples and saffron-robed monks at the confluence of the Mekong and Nam Khan rivers.",
-  "costRange": { "min": "$", "max": "$$$$$" },
-  "costOverview": "Food, coffee, and the night market are extremely cheap — hiring a tuk-tuk out to the waterfalls is the main real expense most visitors budget for.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Luang Prabang is inexpensive across the board, even for its signature Kuang Si Falls day trip.",
   "costItems": [
-    { "label": "Kuang Si Falls entrance", "price": 1, "unit": "" },
-    { "label": "Coffee", "price": 1.5, "unit": "" },
-    { "label": "Night market food skewer", "price": 1.5, "unit": "" },
-    { "label": "Tuk-tuk to Kuang Si Falls, round trip", "price": 25, "unit": "per vehicle" }
+    {
+      "label": "Kuang Si Falls entrance",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Coffee",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Night market food skewer",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Tuk-tuk to Kuang Si Falls, round trip",
+      "price": 25,
+      "unit": "per vehicle"
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -20,24 +39,24 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 3,
-    "hiking": 4,
-    "scenic": 7,
+    "hiking": 3,
+    "scenic": 6,
     "fishing": 3,
     "roadtrip": 5,
     "adventure": 3,
     "golf": 1,
     "stargazing": 4,
     "museums": 9,
-    "architecture": 9,
+    "architecture": 8,
     "festivals": 6,
     "finedining": 6,
     "streetfood": 8,
     "nightlife": 4,
     "winetasting": 1,
-    "spa": 6,
+    "spa": 7,
     "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 4,
     "birding": 5,
     "wildlife": 3

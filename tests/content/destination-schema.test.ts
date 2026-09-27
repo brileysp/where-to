@@ -44,11 +44,11 @@ describe('destinationSchema', () => {
 
   it('rejects a destination missing a required base slider key', () => {
     const base = makeValidBase();
-    delete base.winetasting;
+    delete base.wineSpirits;
     const result = destinationSchema.safeParse(makeValid({ base }));
     expect(result.success).toBe(false);
     if (!result.success) {
-      expect(result.error.issues.some((i) => i.message.includes('winetasting'))).toBe(true);
+      expect(result.error.issues.some((i) => i.message.includes('wineSpirits'))).toBe(true);
     }
   });
 
@@ -77,7 +77,7 @@ describe('destinationSchema', () => {
   });
 
   it('accepts a real slider key in sliderCaps', () => {
-    const result = destinationSchema.safeParse(makeValid({ sliderCaps: { wildlife: 4 } }));
+    const result = destinationSchema.safeParse(makeValid({ sliderCaps: { wildlifeViewing: 4 } }));
     expect(result.success).toBe(true);
   });
 
@@ -151,7 +151,7 @@ describe('destinationSchema', () => {
 
   it('rejects an activityStyleTiers tier value outside the enum', () => {
     const result = destinationSchema.safeParse(
-      makeValid({ activityStyleTiers: { scenic: { mountains: 'amazing' } } }),
+      makeValid({ activityStyleTiers: { scenicLandscapes: { mountains: 'amazing' } } }),
     );
     expect(result.success).toBe(false);
   });

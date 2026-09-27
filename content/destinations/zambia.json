@@ -5,7 +5,7 @@
   "emoji": "🐘",
   "climate": "tropical",
   "about": "Dry season (May–Oct) concentrates wildlife along the rivers and is prime walking-safari season; wet season brings migratory birds but muddier trails.",
-  "overview": "The birthplace of the walking safari — one of Africa's best, least-crowded game-viewing experiences, with Victoria Falls reachable via Livingstone as an optional add-on.",
+  "overview": "The birthplace of the walking safari — Africa's best, least-crowded game viewing, with Victoria Falls reachable via Livingstone.",
   "costRange": {
     "min": "$$",
     "max": "$$$$$"
@@ -49,7 +49,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 2,
-    "hiking": 5,
+    "hiking": 4,
     "scenic": 7,
     "fishing": 4,
     "roadtrip": 4,
@@ -59,14 +59,14 @@
     "museums": 2,
     "architecture": 2,
     "festivals": 2,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 3,
-    "nightlife": 2,
+    "nightlife": 1,
     "winetasting": 1,
     "spa": 3,
     "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 2,
     "birding": 6,
     "wildlife": 6
@@ -170,5 +170,6 @@
       "deserts": "none",
       "astrophotography": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

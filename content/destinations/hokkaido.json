@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Ramen, coffee, and subway rides all stay reasonable — winter ski passes and top-tier onsen ryokan are where real spending happens.",
+  "costOverview": "Ramen, coffee, and subway rides are all reasonable — winter ski passes and top-tier onsen ryokan are where real spending happens.",
   "costItems": [
     {
       "label": "Subway ride",
@@ -36,6 +36,11 @@
       "label": "Niseko lift ticket, day pass",
       "price": 90,
       "unit": ""
+    },
+    {
+      "label": "Kaiseki dinner & private onsen, luxury ryokan",
+      "price": 400,
+      "unit": "per person, per night"
     }
   ],
   "base": {
@@ -58,13 +63,13 @@
     "streetfood": 5,
     "nightlife": 4,
     "winetasting": 2,
-    "spa": 7,
+    "spa": 8,
     "luxuryLodging": 7,
     "snowsports": 7,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 3,
     "birding": 6,
-    "wildlife": 6
+    "wildlife": 5
   },
   "budgetBands": [
     "basic",

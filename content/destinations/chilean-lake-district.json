@@ -5,14 +5,33 @@
   "emoji": "🌋",
   "climate": "temperate",
   "about": "Summer (Dec–Mar) is best for the Villarrica volcano climb, lake swimming, and rafting; winter (May–Aug) is genuinely rainy — this side of the Andes catches far more Pacific moisture than the Argentine Lake District.",
-  "overview": "Volcano country on Chile's side of the Andes — Pucón's adventure scene (volcano climbing, hot springs, rafting) and Puerto Varas' German-influenced lakefront, ringed by temperate rainforest.",
-  "costRange": { "min": "$$", "max": "$$$$" },
-  "costOverview": "Everyday food stays reasonable, but the marquee activities — the guided Villarrica volcano climb, hot-springs day passes, rafting — add up fast and are essentially mandatory for a first visit.",
+  "overview": "Volcano country on Chile's side of the Andes — Pucón's adventure scene and Puerto Varas' German-influenced lakefront, ringed by rainforest.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$"
+  },
+  "costOverview": "Everyday food is reasonable, but the marquee activities — the guided Villarrica volcano climb, hot-springs day passes, rafting — add up fast and are essentially expected on a first visit.",
   "costItems": [
-    { "label": "Empanada", "price": 3, "unit": "" },
-    { "label": "Termas (hot springs) day pass", "price": 30, "unit": "" },
-    { "label": "Whitewater rafting, Trancura River", "price": 45, "unit": "per person" },
-    { "label": "Villarrica volcano hike, guided", "price": 120, "unit": "per person" }
+    {
+      "label": "Empanada",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Termas (hot springs) day pass",
+      "price": 30,
+      "unit": ""
+    },
+    {
+      "label": "Whitewater rafting, Trancura River",
+      "price": 45,
+      "unit": "per person"
+    },
+    {
+      "label": "Villarrica volcano hike, guided",
+      "price": 120,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 4,
@@ -20,7 +39,7 @@
     "diving": 0,
     "surfing": 0,
     "sailing": 4,
-    "hiking": 8,
+    "hiking": 7,
     "scenic": 8,
     "fishing": 6,
     "roadtrip": 6,
@@ -35,30 +54,74 @@
     "nightlife": 4,
     "winetasting": 2,
     "spa": 6,
-    "luxuryLodging": 6,
+    "luxuryLodging": 7,
     "snowsports": 5,
     "cycling": 5,
     "shopping": 3,
     "birding": 5,
-    "wildlife": 4
+    "wildlife": 3
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["easygoing", "secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "dry": [12, 1, 2, 3],
-  "wet": [5, 6, 7, 8],
-  "cold": [6, 7, 8],
-  "peak": [1, 2],
-  "low": [6, 7],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "wet": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "cold": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7
+  ],
   "peakIntensity": "moderate",
-  "hikingBest": [12, 1, 2, 3],
-  "hikingWorst": [6, 7],
+  "hikingBest": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7
+  ],
   "sliderEvents": {
     "adventure": [
       {
         "label": "Summer conditions for the Villarrica volcano climb",
         "weight": 3.5,
-        "months": { "12": 0.7, "1": 1, "2": 1, "3": 0.7 }
+        "months": {
+          "12": 0.7,
+          "1": 1,
+          "2": 1,
+          "3": 0.7
+        }
       }
     ]
   },
@@ -76,8 +139,17 @@
     "mild and increasingly pleasant, a good month before summer crowds",
     "mild summer weather returning, with long days and building crowds"
   ],
-  "naSliders": ["diving", "surfing"],
-  "searchAliases": ["Pucon", "Puerto Varas", "Villarrica volcano", "Osorno volcano", "Chilean Patagonia"],
+  "naSliders": [
+    "diving",
+    "surfing"
+  ],
+  "searchAliases": [
+    "Pucon",
+    "Puerto Varas",
+    "Villarrica volcano",
+    "Osorno volcano",
+    "Chilean Patagonia"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",

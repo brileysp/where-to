@@ -2,7 +2,7 @@
 
 import { and, eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
-import { userPreferences, userSavedProfiles, userDnaState } from '@/lib/db/schema';
+import { profiles, userPreferences, userSavedProfiles, userDnaState } from '@/lib/db/schema';
 import { getCurrentUserId } from '@/lib/supabase/current-user';
 import { convertTravelDNAToRecommendationWeights } from '@/lib/dna/weights';
 import { resolveEarnedStyles } from '@/lib/dna/domains';
@@ -26,6 +26,18 @@ export interface UserPreferencesData {
 export interface LoadedUserPreferences extends UserPreferencesData {
   earnedStyles: Record<string, string[]>;
   selectedStyles: Record<string, string[]>;
+}
+
+/**
+ * First word of profiles.displayName, or null when the visitor has no name
+ * on file (every anonymous visitor today) — the results header falls back
+ * to "you" for null.
+ */
+export async function loadFirstName(): Promise<string | null> {
+  const userId = await getCurrentUserId();
+  if (!userId) return null;
+  const [row] = await db.select({ displayName: profiles.displayName }).from(profiles).where(eq(profiles.id, userId));
+  return row?.displayName?.trim().split(/\s+/)[0] || null;
 }
 
 export async function loadUserPreferences(): Promise<LoadedUserPreferences | null> {

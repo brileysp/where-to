@@ -6,13 +6,32 @@
   "climate": "temperate",
   "about": "Summer (Jun–Aug) opens all roads and facilities, spring brings newborn wildlife and fall the elk rut, winter access is limited to guided snow tours.",
   "overview": "Geysers, hot springs, and the original national park, spread across a volcanic plateau larger than some small countries.",
-  "costRange": { "min": "$$", "max": "$$$" },
+  "costRange": {
+    "min": "$$",
+    "max": "$$$"
+  },
   "costOverview": "There's no competing option once you're inside the gate — in-park dining runs well above what a normal small town would charge.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "General store snack", "price": 10, "unit": "" },
-    { "label": "In-park casual meal", "price": 25, "unit": "" },
-    { "label": "Park entrance, 7-day pass", "price": 35, "unit": "per vehicle" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "General store snack",
+      "price": 10,
+      "unit": ""
+    },
+    {
+      "label": "In-park casual meal",
+      "price": 25,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance, 7-day pass",
+      "price": 35,
+      "unit": "per vehicle"
+    }
   ],
   "base": {
     "sunbathing": 2,
@@ -31,13 +50,13 @@
     "architecture": 1,
     "festivals": 2,
     "finedining": 3,
-    "streetfood": 2,
+    "streetfood": 1,
     "nightlife": 1,
     "winetasting": 1,
     "spa": 2,
     "luxuryLodging": 4,
     "snowsports": 4,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 2,
     "birding": 6,
     "wildlife": 7

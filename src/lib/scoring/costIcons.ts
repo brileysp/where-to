@@ -157,3 +157,10 @@ export function costItemIcon(label: string): string {
   }
   return FALLBACK_ICON;
 }
+
+/** Whole dollars render bare ($75); anything with cents keeps two decimals rather than silently rounding an author's real price. */
+export function formatPrice(price: number): string {
+  return Number.isInteger(price)
+    ? price.toLocaleString('en-US')
+    : price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}

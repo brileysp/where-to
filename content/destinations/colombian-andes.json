@@ -6,14 +6,42 @@
   "climate": "highland",
   "about": "Rain is bimodal — two drier windows (Dec–Feb, Jun–Aug) bracket two wetter ones (Mar–May, Sep–Nov), with October the wettest month of the year.",
   "overview": "Colombia's coffee-growing heartland and its two biggest cities, Bogotá and Medellín — cool mountain air, cloud forests, and a genuine cycling and coffee culture.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Coffee-region towns and Medellín street food stay very cheap — the exceptions are guided treks and the growing crop of boutique finca hotels.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Coffee-region towns and Medellín street food are very cheap — the exceptions are guided treks and the growing crop of boutique finca hotels.",
   "costItems": [
-    { "label": "Tinto (Colombian coffee)", "price": 1, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 3, "unit": "" },
-    { "label": "Bandeja paisa (Medellín set meal)", "price": 7, "unit": "" },
-    { "label": "Coffee farm tour", "price": 25, "unit": "per person" },
-    { "label": "Cocora Valley guided hike", "price": 30, "unit": "per person" }
+    {
+      "label": "Tinto (Colombian coffee)",
+      "price": 1,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Bandeja paisa (Medellín set meal)",
+      "price": 7,
+      "unit": ""
+    },
+    {
+      "label": "Cocora Valley guided hike",
+      "price": 30,
+      "unit": "per person"
+    },
+    {
+      "label": "Guided birding day",
+      "price": 70,
+      "unit": "per person"
+    },
+    {
+      "label": "Boutique coffee-finca hotel, per night",
+      "price": 180,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -28,11 +56,11 @@
     "adventure": 6,
     "golf": 2,
     "stargazing": 5,
-    "museums": 8,
-    "architecture": 7,
+    "museums": 7,
+    "architecture": 6,
     "festivals": 6,
-    "finedining": 7,
-    "streetfood": 8,
+    "finedining": 6,
+    "streetfood": 7,
     "nightlife": 8,
     "winetasting": 1,
     "spa": 4,
@@ -40,33 +68,88 @@
     "snowsports": 0,
     "cycling": 8,
     "shopping": 5,
-    "birding": 8,
-    "wildlife": 5
+    "birding": 9,
+    "wildlife": 6
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["easygoing", "lively"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "dry": [12, 1, 2, 6, 7, 8],
-  "wet": [3, 4, 5, 9, 10, 11],
-  "peak": [12, 1],
-  "low": [4, 10],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "lively"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    6,
+    7,
+    8
+  ],
+  "wet": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "peak": [
+    12,
+    1
+  ],
+  "low": [
+    4,
+    10
+  ],
   "peakIntensity": "moderate",
-  "birdingPeak": [11, 12, 1, 2, 3],
-  "hikingBest": [12, 1, 2, 6, 7, 8],
-  "hikingWorst": [4, 10],
+  "birdingPeak": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    12,
+    1,
+    2,
+    6,
+    7,
+    8
+  ],
+  "hikingWorst": [
+    4,
+    10
+  ],
   "sliderEvents": {
     "birding": [
       {
         "label": "North American migratory birds overwinter",
         "weight": 3,
-        "months": { "11": 0.6, "12": 1, "1": 1, "2": 1, "3": 0.6 }
+        "months": {
+          "11": 0.6,
+          "12": 1,
+          "1": 1,
+          "2": 1,
+          "3": 0.6
+        }
       }
     ],
     "festivals": [
       {
         "label": "Feria de las Flores (Medellín)",
         "weight": 3,
-        "months": { "8": 1 }
+        "months": {
+          "8": 1
+        }
       }
     ]
   },
@@ -84,8 +167,22 @@
     "still rainy, mild with showers gradually tapering off",
     "drying out fast, mild and festive as the holiday dry season begins"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports"],
-  "searchAliases": ["Medellin", "Bogota", "Bogotá", "Coffee Triangle", "Eje Cafetero", "Salento", "Cocora Valley"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Medellin",
+    "Bogota",
+    "Bogotá",
+    "Coffee Triangle",
+    "Eje Cafetero",
+    "Salento",
+    "Cocora Valley"
+  ],
   "activityStyleTiers": {
     "cycling": {
       "scenicRoadCycling": "signature",

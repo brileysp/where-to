@@ -5,15 +5,38 @@
   "emoji": "🏍️",
   "climate": "highland",
   "about": "The only realistic travel window is Jun–Sep, when the Leh-Manali Highway and high mountain passes are open; the region is largely snowbound and cut off by road Dec–Feb.",
-  "overview": "A high-altitude desert in the Indian Himalayas nicknamed 'Little Tibet' — turquoise Pangong Lake, cliffside Buddhist monasteries, and the legendary Leh-Manali motorbike road trip over some of the world's highest motorable passes.",
-  "costRange": { "min": "$", "max": "$$$" },
+  "overview": "A high desert in the Indian Himalayas nicknamed 'Little Tibet' — Pangong Lake, cliffside monasteries, and the Leh-Manali motorbike trip.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$"
+  },
   "costOverview": "Leh itself is cheap for food and basic transport — permits for restricted areas like Nubra and Pangong, and motorbike or jeep rentals for the high passes, are the main real costs.",
   "costItems": [
-    { "label": "Butter tea (Tibetan chai)", "price": 1.5, "unit": "" },
-    { "label": "Thukpa (Tibetan noodle soup)", "price": 4, "unit": "" },
-    { "label": "Taxi/jeep, 15 min", "price": 3, "unit": "" },
-    { "label": "Inner Line Permit, Nubra/Pangong", "price": 15, "unit": "per person" },
-    { "label": "Leh-Manali motorbike rental", "price": 30, "unit": "per day" }
+    {
+      "label": "Butter tea (Tibetan chai)",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Thukpa (Tibetan noodle soup)",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/jeep, 15 min",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Inner Line Permit, Nubra/Pangong",
+      "price": 15,
+      "unit": "per person"
+    },
+    {
+      "label": "Leh-Manali motorbike rental",
+      "price": 30,
+      "unit": "per day"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -38,21 +61,60 @@
     "spa": 2,
     "luxuryLodging": 4,
     "snowsports": 1,
-    "cycling": 5,
+    "cycling": 4,
     "shopping": 3,
-    "birding": 4,
-    "wildlife": 4
+    "birding": 5,
+    "wildlife": 5
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "cold": [11, 12, 1, 2, 3],
-  "peak": [6, 7, 8],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [12, 1, 2],
-  "hikingBest": [6, 7, 8, 9],
-  "hikingWorst": [11, 12, 1, 2, 3],
-  "inaccessible": [12, 1, 2],
+  "low": [
+    12,
+    1,
+    2
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "inaccessible": [
+    12,
+    1,
+    2
+  ],
   "monthlyWeather": [
     "bitterly cold, with the Leh-Manali Highway closed by snow",
     "bitterly cold, still cut off by road from the rest of India",
@@ -67,8 +129,22 @@
     "very cold, cut off by road as winter sets in",
     "bitterly cold, deep winter with the region largely inaccessible"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "nightlife"],
-  "searchAliases": ["Leh", "Pangong Lake", "Nubra Valley", "Khardung La", "Leh-Manali Highway"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting",
+    "nightlife"
+  ],
+  "searchAliases": [
+    "Leh",
+    "Pangong Lake",
+    "Nubra Valley",
+    "Khardung La",
+    "Leh-Manali Highway"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",

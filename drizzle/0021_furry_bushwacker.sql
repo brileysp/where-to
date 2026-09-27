@@ -1,0 +1,1 @@
+ALTER TABLE "places" ADD COLUMN "authored_curves" text[] DEFAULT '{}' NOT NULL;

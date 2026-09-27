@@ -5,15 +5,43 @@
   "emoji": "🦭",
   "climate": "temperate",
   "about": "Summer (Jul–Sep) is best for the Cabot Trail, whale watching, and the Bay of Fundy's famous tides; winter is cold and quiet.",
-  "overview": "The Cabot Trail's dramatic coastal drive, Peggy's Cove's iconic lighthouse, and the Bay of Fundy — home to the highest tides on Earth — anchored by the charming maritime capital of Halifax.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "Lobster rolls and coffee stay reasonable throughout — whale-watching trips and the province's small but growing wine scene are the real splurges.",
+  "overview": "The Cabot Trail's coastal drive, Peggy's Cove's lighthouse, and the Bay of Fundy's record tides, anchored by maritime Halifax.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "Lobster rolls and coffee are reasonable throughout — whale-watching trips and the province's small but growing wine scene are the real splurges.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Lobster roll", "price": 22, "unit": "" },
-    { "label": "Cabot Trail scenic drive, park pass", "price": 8, "unit": "per day" },
-    { "label": "Whale watching tour, Bay of Fundy", "price": 65, "unit": "per person" },
-    { "label": "Lunenburg walking tour", "price": 20, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Cabot Trail scenic drive, park pass",
+      "price": 8,
+      "unit": "per day"
+    },
+    {
+      "label": "Lunenburg walking tour",
+      "price": 20,
+      "unit": "per person"
+    },
+    {
+      "label": "Lobster roll",
+      "price": 22,
+      "unit": ""
+    },
+    {
+      "label": "Whale watching tour, Bay of Fundy",
+      "price": 65,
+      "unit": "per person"
+    },
+    {
+      "label": "Guided winery tour & tasting with lunch",
+      "price": 95,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -29,9 +57,9 @@
     "golf": 4,
     "stargazing": 4,
     "museums": 5,
-    "architecture": 5,
+    "architecture": 4,
     "festivals": 4,
-    "finedining": 6,
+    "finedining": 5,
     "streetfood": 5,
     "nightlife": 3,
     "winetasting": 3,
@@ -41,17 +69,46 @@
     "cycling": 4,
     "shopping": 3,
     "birding": 5,
-    "wildlife": 6
+    "wildlife": 5
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "hot": [7, 8],
-  "cold": [1, 2],
-  "peak": [7, 8, 9],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "hot": [
+    7,
+    8
+  ],
+  "cold": [
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8,
+    9
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2, 3],
-  "wildlifePeak": [7, 8, 9],
+  "low": [
+    1,
+    2,
+    3
+  ],
+  "wildlifePeak": [
+    7,
+    8,
+    9
+  ],
   "monthlyWeather": [
     "cold, quiet with limited services",
     "cold, still deep in the quiet off season",
@@ -67,7 +124,14 @@
     "cold, quiet through the holidays"
   ],
   "naSliders": [],
-  "searchAliases": ["Cabot Trail", "Halifax", "Peggy's Cove", "Bay of Fundy", "Lunenburg", "Cape Breton"],
+  "searchAliases": [
+    "Cabot Trail",
+    "Halifax",
+    "Peggy's Cove",
+    "Bay of Fundy",
+    "Lunenburg",
+    "Cape Breton"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

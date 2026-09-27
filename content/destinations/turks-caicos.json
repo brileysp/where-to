@@ -5,15 +5,38 @@
   "emoji": "🏝️",
   "climate": "tropical",
   "about": "Dec–Apr is dry season and peak, with the calmest, clearest water for the beaches and diving; hurricane season runs Jun–Nov, risk peaking Aug–Oct.",
-  "overview": "Grace Bay, consistently ranked among the world's best beaches, protected by a barrier reef that keeps the water calm and clear — a quieter, more upscale alternative to the Bahamas.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
-  "costOverview": "There's very little budget tier here — Turks & Caicos leans deliberately upscale, and even simple meals run high by Caribbean standards.",
+  "overview": "Grace Bay, ranked among the world's best beaches, protected by a reef that keeps the water calm — a quieter, upscale alternative to the Bahamas.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Turks & Caicos leans deliberately upscale, and even simple meals run high by Caribbean standards.",
   "costItems": [
-    { "label": "Coffee", "price": 5, "unit": "" },
-    { "label": "Conch salad", "price": 16, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 15, "unit": "" },
-    { "label": "Grace Bay resort dinner", "price": 70, "unit": "" },
-    { "label": "Two-tank dive trip", "price": 160, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Conch salad",
+      "price": 16,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Grace Bay resort dinner",
+      "price": 70,
+      "unit": ""
+    },
+    {
+      "label": "Two-tank dive trip",
+      "price": 160,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 9,
@@ -41,17 +64,50 @@
     "cycling": 2,
     "shopping": 3,
     "birding": 3,
-    "wildlife": 4
+    "wildlife": 3
   },
-  "budgetBands": ["highend", "luxury"],
-  "vibeBands": ["easygoing", "secluded"],
-  "physicalBands": ["easy", "moderate"],
-  "dry": [12, 1, 2, 3, 4],
-  "wet": [6, 7, 8, 9, 10],
-  "peak": [12, 1, 2, 3],
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "dry": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "wet": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "peak": [
+    12,
+    1,
+    2,
+    3
+  ],
   "peakIntensity": "extreme",
-  "low": [9, 10],
-  "swimHazard": [8, 9, 10],
+  "low": [
+    9,
+    10
+  ],
+  "swimHazard": [
+    8,
+    9,
+    10
+  ],
   "monthlyWeather": [
     "dry and warm, one of the most pleasant months of the year",
     "dry and warm, still comfortable with low humidity",
@@ -66,8 +122,16 @@
     "warm and drying out, with hurricane risk fading",
     "dry and warm, one of the most pleasant months as the dry season returns"
   ],
-  "naSliders": ["snowsports", "winetasting"],
-  "searchAliases": ["Providenciales", "Provo", "Grace Bay", "Grand Turk"],
+  "naSliders": [
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Providenciales",
+    "Provo",
+    "Grace Bay",
+    "Grand Turk"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

@@ -2,7 +2,7 @@
   "id": "milford-sound-fiordland",
   "name": "Milford Sound & Fiordland",
   "region": "New Zealand",
-  "emoji": "⛴️",
+  "emoji": "🍃",
   "climate": "temperate",
   "about": "One of the wettest inhabited places on Earth — but that's what feeds the waterfalls. The Milford Road can close for avalanche control in winter, and the Milford Track's huts are only serviced roughly Nov–Apr.",
   "overview": "Mitre Peak rising straight out of the water, waterfalls cascading down sheer cliffs — one of the most dramatic fiords on Earth.",
@@ -10,7 +10,7 @@
     "min": "$$$",
     "max": "$$$$$"
   },
-  "costOverview": "Milford Sound has no cheap way to see it — even the most basic coach-and-cruise day tour from Te Anau runs well over a hundred dollars, with fly-cruise-fly options costing several times that.",
+  "costOverview": "Even the most basic coach-and-cruise day tour from Te Anau runs well over a hundred dollars, with fly-cruise-fly options costing several times that.",
   "costItems": [
     {
       "label": "Coffee, Te Anau",
@@ -26,6 +26,11 @@
       "label": "Premium small-group day tour",
       "price": 230,
       "unit": ""
+    },
+    {
+      "label": "Milford Track hut pass, 4-day walk",
+      "price": 456,
+      "unit": "per person"
     },
     {
       "label": "Fly-cruise-fly",
@@ -56,10 +61,10 @@
     "spa": 2,
     "luxuryLodging": 4,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 1,
     "birding": 5,
-    "wildlife": 6
+    "wildlife": 4
   },
   "budgetBands": [
     "basic",
@@ -136,7 +141,6 @@
     "mild and busy, peak cruise season getting underway"
   ],
   "naSliders": [
-    "sunbathing",
     "swimming",
     "surfing",
     "golf",

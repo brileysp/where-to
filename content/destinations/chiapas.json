@@ -2,7 +2,7 @@
   "id": "chiapas",
   "name": "Chiapas",
   "region": "Mexico",
-  "emoji": "🗿",
+  "emoji": "🌿",
   "climate": "highland",
   "about": "San Cristóbal sits at 2,200m and stays genuinely cool — even cold at night — a sharp contrast to Palenque's hot, humid jungle. Dry season (Nov–Apr) is best for touring both; rainy season (May–Oct) makes Sumidero Canyon and the waterfalls more dramatic but the roads slower.",
   "overview": "San Cristóbal de las Casas's colonial streets and highland Maya culture, paired with Palenque's jungle-swallowed ruins a few hours away.",
@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$"
   },
-  "costOverview": "Chiapas is one of Mexico's most affordable regions to visit — a real local meal costs just a few dollars, and even the marquee Sumidero Canyon boat tour stays budget-friendly.",
+  "costOverview": "One of Mexico's most affordable regions — a real local meal costs just a few dollars, and there's little need to spend much more than that.",
   "costItems": [
     {
       "label": "Coffee, local-grown",
@@ -39,15 +39,15 @@
     "diving": 0,
     "surfing": 0,
     "sailing": 1,
-    "hiking": 6,
-    "scenic": 8,
+    "hiking": 5,
+    "scenic": 7,
     "fishing": 2,
     "roadtrip": 5,
     "adventure": 4,
     "golf": 0,
     "stargazing": 4,
-    "museums": 4,
-    "architecture": 8,
+    "museums": 5,
+    "architecture": 7,
     "festivals": 4,
     "finedining": 5,
     "streetfood": 6,
@@ -58,7 +58,7 @@
     "snowsports": 0,
     "cycling": 3,
     "shopping": 5,
-    "birding": 5,
+    "birding": 7,
     "wildlife": 4
   },
   "budgetBands": [
@@ -166,7 +166,6 @@
     "cool and dry, comfortable through the holidays"
   ],
   "naSliders": [
-    "sunbathing",
     "diving",
     "surfing",
     "sailing",
@@ -186,5 +185,6 @@
       "deserts": "none",
       "astrophotography": "casual"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

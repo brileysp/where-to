@@ -2,7 +2,7 @@
   "id": "atacama",
   "name": "Atacama Desert",
   "region": "Chile",
-  "emoji": "🌌",
+  "emoji": "🔭",
   "climate": "desert",
   "about": "Days are pleasant most of the year, nights are cold, and the brief \"Bolivian winter\" (Jan–Feb) can bring rare storms.",
   "overview": "Mars-red salt flats, geysers, and star-clear night skies in one of the driest places on Earth.",
@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Food and coffee in San Pedro town stay reasonable — nearly every real activity here (salt flats, geysers, lagoons) requires a paid guided tour.",
+  "costOverview": "Food and coffee in San Pedro town are reasonable, but nearly every real activity here — salt flats, geysers, lagoons — requires a paid guided tour.",
   "costItems": [
     {
       "label": "Empanada",
@@ -44,7 +44,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 8,
+    "hiking": 7,
     "scenic": 10,
     "fishing": 2,
     "roadtrip": 8,
@@ -59,10 +59,10 @@
     "nightlife": 2,
     "winetasting": 3,
     "spa": 4,
-    "luxuryLodging": 9,
+    "luxuryLodging": 10,
     "snowsports": 2,
-    "cycling": 3,
-    "shopping": 3,
+    "cycling": 2,
+    "shopping": 2,
     "birding": 6,
     "wildlife": 5
   },

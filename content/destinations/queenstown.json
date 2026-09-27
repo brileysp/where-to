@@ -18,11 +18,6 @@
       "price": 4
     },
     {
-      "label": "Meat pie",
-      "unit": "",
-      "price": 5
-    },
-    {
       "label": "Taxi/Uber, 15 min",
       "unit": "",
       "price": 13
@@ -31,6 +26,11 @@
       "label": "Skyline Gondola",
       "unit": "",
       "price": 33
+    },
+    {
+      "label": "Rental car, South Island self-drive",
+      "price": 60,
+      "unit": "per day"
     },
     {
       "label": "Kawarau Bridge Bungy",
@@ -54,7 +54,7 @@
     "museums": 2,
     "architecture": 2,
     "festivals": 4,
-    "finedining": 7,
+    "finedining": 6,
     "streetfood": 4,
     "nightlife": 6,
     "winetasting": 6,
@@ -64,7 +64,7 @@
     "cycling": 6,
     "shopping": 5,
     "birding": 5,
-    "wildlife": 4
+    "wildlife": 3
   },
   "budgetBands": [
     "comfortable",

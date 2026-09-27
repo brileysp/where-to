@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$$$"
   },
-  "costOverview": "Meals and short Grab rides cost next to nothing — the real cost swings come entirely from which resort tier you pick.",
+  "costOverview": "Meals and short rides cost next to nothing — the real cost swings come entirely from which resort tier you pick.",
   "costItems": [
     {
       "label": "Fried rice",
@@ -33,9 +33,9 @@
       "price": 20
     },
     {
-      "label": "Private driver, full day",
-      "unit": "",
-      "price": 45
+      "label": "Private surf lesson, 2 hours",
+      "price": 40,
+      "unit": ""
     }
   ],
   "base": {
@@ -44,7 +44,7 @@
     "diving": 8,
     "surfing": 8,
     "sailing": 5,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 7,
     "fishing": 3,
     "roadtrip": 5,
@@ -52,14 +52,14 @@
     "golf": 3,
     "stargazing": 4,
     "museums": 5,
-    "architecture": 6,
+    "architecture": 7,
     "festivals": 4,
     "finedining": 6,
     "streetfood": 9,
     "nightlife": 7,
     "winetasting": 1,
     "spa": 9,
-    "luxuryLodging": 9,
+    "luxuryLodging": 10,
     "snowsports": 0,
     "cycling": 4,
     "shopping": 7,

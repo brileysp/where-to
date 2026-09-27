@@ -647,7 +647,7 @@ describe('resolveEarnedStyles — DNA-to-destination-scoring bridge', () => {
     state = loveRealCard(state, 'cycle_mountain_descent');
 
     const earned = resolveEarnedStyles(state, cards);
-    expect(earned).toEqual({ cycling: ['mountainBiking'] });
+    expect(earned).toEqual({ cyclingRoad: ['mountainBiking'] });
   });
 
   it('returns an empty map when nothing has resolved yet', () => {
@@ -704,13 +704,13 @@ describe('Landscape Photography — Terrain + Night Sky core axes', () => {
     }
   });
 
-  it('resolveEarnedStyles combines both axes under the shared scenic slider key', () => {
+  it('resolveEarnedStyles combines both axes under the shared landscapePhotography slider key', () => {
     let state = createInitialDNAState(dimensions);
     state = loveRealCard(state, 'landscape_photo_desert_roadtrip');
     state = loveRealCard(state, 'photo_desert_dunes');
     state = loveRealCard(state, 'landscape_photo_dark_sky');
     state = loveRealCard(state, 'photo_night_sky');
     const earned = resolveEarnedStyles(state, cards);
-    expect(earned.scenic?.sort()).toEqual(['astrophotography', 'deserts']);
+    expect(earned.landscapePhotography?.sort()).toEqual(['astrophotography', 'deserts']);
   });
 });

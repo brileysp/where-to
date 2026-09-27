@@ -5,7 +5,7 @@
   "emoji": "🐠",
   "climate": "tropical",
   "about": "Dry season Dec–Apr has the calmest seas and best visibility (and the highest prices); wet season is windier but still sunny between showers.",
-  "overview": "A scatter of coral atolls where the whole trip happens on, in, or over turquoise water — from ultra-luxury overwater villas to simple, affordable local-island guesthouses.",
+  "overview": "A scatter of coral atolls where the trip happens on, in, or over turquoise water — from luxury overwater villas to affordable local guesthouses.",
   "costRange": {
     "min": "$",
     "max": "$$$$$"
@@ -23,14 +23,14 @@
       "price": 5
     },
     {
-      "label": "Snorkel gear rental",
-      "unit": "",
-      "price": 12
-    },
-    {
       "label": "Inter-island speedboat transfer",
       "unit": "",
       "price": 25
+    },
+    {
+      "label": "Liveaboard dive trip",
+      "price": 260,
+      "unit": "per person, per night"
     },
     {
       "label": "Seaplane transfer, resort, round trip",
@@ -54,7 +54,7 @@
     "museums": 1,
     "architecture": 1,
     "festivals": 1,
-    "finedining": 6,
+    "finedining": 5,
     "streetfood": 2,
     "nightlife": 2,
     "winetasting": 2,

@@ -44,10 +44,10 @@
     "diving": 3,
     "surfing": 2,
     "sailing": 5,
-    "hiking": 5,
+    "hiking": 4,
     "scenic": 6,
     "fishing": 3,
-    "roadtrip": 3,
+    "roadtrip": 2,
     "adventure": 3,
     "golf": 4,
     "stargazing": 2,
@@ -61,7 +61,7 @@
     "spa": 6,
     "luxuryLodging": 9,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 10,
     "birding": 6,
     "wildlife": 3
@@ -132,5 +132,6 @@
   "searchAliases": [
     "China",
     "Victoria Harbour"
-  ]
+  ],
+  "crowdBaseline": "high"
 }

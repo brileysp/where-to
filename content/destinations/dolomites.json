@@ -5,15 +5,38 @@
   "emoji": "🏔️",
   "climate": "polar",
   "about": "Winter (Dec–Mar) is prime skiing across the Dolomiti Superski network; summer (Jun–Sep) is prime hiking and via ferrata season; the shoulder mud seasons (Apr–May, Oct–Nov) see many lifts and hotels close.",
-  "overview": "Jagged limestone spires that glow pink at sunset, South Tyrolean mountain villages, and the world's largest interconnected ski network — northern Italy's Alps, distinct from the rest of the country.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Mountain-hut meals and coffee stay reasonable — lift tickets and the famous ski pass covering the whole Dolomiti Superski network are the real expense.",
+  "overview": "Jagged limestone spires glowing pink at sunset, South Tyrolean villages, and the world's largest interconnected ski network — northern Italy's Alps.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Mountain-hut meals and coffee are reasonable — lift tickets and the Dolomiti Superski network pass are the real expense.",
   "costItems": [
-    { "label": "Espresso", "price": 1.5, "unit": "" },
-    { "label": "Mountain hut lunch", "price": 15, "unit": "" },
-    { "label": "Cable car, Seceda", "price": 35, "unit": "" },
-    { "label": "Via ferrata guided climb", "price": 90, "unit": "per person" },
-    { "label": "Ski day pass, Dolomiti Superski", "price": 75, "unit": "per day" }
+    {
+      "label": "Espresso",
+      "price": 1.5,
+      "unit": ""
+    },
+    {
+      "label": "Mountain hut lunch",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Cable car, Seceda",
+      "price": 35,
+      "unit": ""
+    },
+    {
+      "label": "Via ferrata guided climb",
+      "price": 90,
+      "unit": "per person"
+    },
+    {
+      "label": "Ski day pass, Dolomiti Superski",
+      "price": 75,
+      "unit": "per day"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -21,7 +44,7 @@
     "diving": 0,
     "surfing": 0,
     "sailing": 0,
-    "hiking": 9,
+    "hiking": 10,
     "scenic": 10,
     "fishing": 3,
     "roadtrip": 7,
@@ -41,31 +64,86 @@
     "cycling": 7,
     "shopping": 3,
     "birding": 4,
-    "wildlife": 4
+    "wildlife": 3
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "cold": [11, 12, 1, 2, 3],
-  "peak": [7, 8, 12, 1, 2],
-  "low": [4, 5, 10, 11],
-  "hikingBest": [6, 7, 8, 9],
-  "hikingWorst": [11, 12, 1, 2, 3, 4],
-  "noSnow": [6, 7, 8, 9],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "cold": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "peak": [
+    7,
+    8,
+    12,
+    1,
+    2
+  ],
+  "low": [
+    4,
+    5,
+    10,
+    11
+  ],
+  "hikingBest": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "hikingWorst": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "noSnow": [
+    6,
+    7,
+    8,
+    9
+  ],
   "shopClosures": true,
   "sliderEvents": {
     "hiking": [
       {
         "label": "Summer trail and via ferrata access",
         "weight": 6,
-        "months": { "6": 0.7, "7": 1, "8": 1, "9": 0.7 }
+        "months": {
+          "6": 0.7,
+          "7": 1,
+          "8": 1,
+          "9": 0.7
+        }
       }
     ],
     "scenic": [
       {
         "label": "Green-summer contrast",
         "weight": 1,
-        "months": { "6": 0.3, "7": 0.5, "8": 0.5, "9": 0.3 }
+        "months": {
+          "6": 0.3,
+          "7": 0.5,
+          "8": 0.5,
+          "9": 0.3
+        }
       }
     ]
   },
@@ -83,8 +161,20 @@
     "cold, with the first snow arriving as resorts prepare to reopen",
     "cold and snowy, with ski season back in full swing"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing"],
-  "searchAliases": ["Cortina d'Ampezzo", "Val Gardena", "Alta Badia", "South Tyrol", "Tre Cime di Lavaredo", "Seceda"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing"
+  ],
+  "searchAliases": [
+    "Cortina d'Ampezzo",
+    "Val Gardena",
+    "Alta Badia",
+    "South Tyrol",
+    "Tre Cime di Lavaredo",
+    "Seceda"
+  ],
   "activityStyleTiers": {
     "cycling": {
       "scenicRoadCycling": "signature",

@@ -2,7 +2,7 @@
   "id": "greenland",
   "name": "Greenland",
   "region": "Denmark",
-  "emoji": "🧊",
+  "emoji": "🐋",
   "climate": "polar",
   "about": "Jun–Aug is when boat tours to the calving Ilulissat Icefjord run and hiking is possible; Nov–Mar is aurora and dog-sledding season, genuinely harsher and far more limited.",
   "overview": "The world's largest island, mostly ice sheet, with towns reachable only by boat or plane — no roads connect them.",
@@ -10,7 +10,7 @@
     "min": "$$$",
     "max": "$$$$$"
   },
-  "costOverview": "Greenland has no cheap version — even a casual inexpensive meal runs into real money, and a boat tour among the icebergs is the one splurge nearly every visitor to Ilulissat budgets for.",
+  "costOverview": "Even a casual, inexpensive meal runs into real money here, and a boat tour among the icebergs is the one splurge nearly every visitor to Ilulissat budgets for.",
   "costItems": [
     {
       "label": "Coffee",
@@ -39,7 +39,7 @@
     "diving": 1,
     "surfing": 0,
     "sailing": 3,
-    "hiking": 6,
+    "hiking": 5,
     "scenic": 10,
     "fishing": 4,
     "roadtrip": 1,
@@ -47,19 +47,19 @@
     "golf": 0,
     "stargazing": 2,
     "museums": 2,
-    "architecture": 1,
+    "architecture": 2,
     "festivals": 2,
     "finedining": 3,
     "streetfood": 2,
     "nightlife": 1,
     "winetasting": 0,
     "spa": 1,
-    "luxuryLodging": 5,
+    "luxuryLodging": 4,
     "snowsports": 4,
     "cycling": 1,
     "shopping": 1,
     "birding": 4,
-    "wildlife": 6
+    "wildlife": 5
   },
   "budgetBands": [
     "highend",
@@ -168,7 +168,6 @@
     "bitterly cold, short days and prime aurora viewing"
   ],
   "naSliders": [
-    "sunbathing",
     "swimming",
     "surfing",
     "golf",
@@ -193,5 +192,6 @@
       "deserts": "none",
       "astrophotography": "signature"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

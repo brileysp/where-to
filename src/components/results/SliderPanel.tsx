@@ -1,6 +1,6 @@
 'use client';
 
-import { SLIDERS, SLIDER_GROUPS, PERSONAS } from '@/lib/scoring/constants';
+import { SLIDERS, VISIBLE_SLIDERS, SLIDER_GROUPS, PERSONAS } from '@/lib/scoring/constants';
 import { getStyleLabel, getStyleAxisName } from '@/lib/dna/domains';
 import type { SavedProfileData } from '@/app/actions';
 
@@ -10,6 +10,8 @@ function weightsEqual(a: Record<string, number>, b: Record<string, number>): boo
 
 interface Props {
   weights: Record<string, number>;
+  /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
+  emojiOverrides: Record<string, string>;
   onSliderChange: (key: string, value: number) => void;
   showAllSliders: boolean;
   onToggleShowAll: () => void;
@@ -26,6 +28,7 @@ interface Props {
 
 export function SliderPanel({
   weights,
+  emojiOverrides,
   onSliderChange,
   showAllSliders,
   onToggleShowAll,
@@ -43,8 +46,8 @@ export function SliderPanel({
   const matchedProfile = savedProfiles.find((p) => weightsEqual(p.weights, weights));
 
   const visibleGroups = showAllSliders
-    ? SLIDER_GROUPS.map((g) => ({ group: g, sliders: SLIDERS.filter((s) => s.group === g) }))
-    : [{ group: null, sliders: SLIDERS.filter((s) => (activePersona ? activePersona.primary.includes(s.key) : true)) }];
+    ? SLIDER_GROUPS.map((g) => ({ group: g, sliders: VISIBLE_SLIDERS.filter((s) => s.group === g) }))
+    : [{ group: null, sliders: VISIBLE_SLIDERS.filter((s) => (activePersona ? activePersona.primary.includes(s.key) : true)) }];
 
   return (
     <div className="panel">
@@ -85,7 +88,7 @@ export function SliderPanel({
               <div key={s.key} className="slider-row">
                 <div className="slider-top">
                   <span className="slider-label">
-                    <span className="slider-icon">{s.icon}</span>
+                    <span className="slider-icon">{emojiOverrides[s.key] ?? s.icon}</span>
                     {s.label}
                   </span>
                   <span className="slider-val">{weights[s.key] ?? 0}</span>
@@ -146,7 +149,7 @@ export function SliderPanel({
       ))}
 
       <button type="button" className="btn-secondary" onClick={onToggleShowAll}>
-        {showAllSliders ? 'Show fewer sliders' : 'Show all 27 sliders'}
+        {showAllSliders ? 'Show fewer sliders' : `Show all ${VISIBLE_SLIDERS.length} sliders`}
       </button>
       <button type="button" className="btn-secondary" style={{ marginTop: 8 }} onClick={onReset}>
         Reset

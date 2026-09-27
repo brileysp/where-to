@@ -5,15 +5,38 @@
   "emoji": "🌊",
   "climate": "mediterranean",
   "about": "Summer (Jun–Aug) has the most reliable weather but also the worst Highway 1 traffic; winter storms occasionally close sections of the road through Big Sur entirely.",
-  "overview": "One of the most scenic coastal drives on Earth along Highway 1 through Big Sur, world-famous whale watching and a world-class aquarium in Monterey Bay, and Pebble Beach, among the most famous golf courses anywhere.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Cannery Row's casual seafood stays reasonable — golf at Pebble Beach and Big Sur's clifftop resorts anchor the very top of this range.",
+  "overview": "One of the most scenic coastal drives on Earth through Big Sur, whale watching in Monterey Bay, and Pebble Beach, among the most famous golf courses anywhere.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Cannery Row's casual seafood is reasonable — golf at Pebble Beach and Big Sur's clifftop resorts anchor the very top of this range.",
   "costItems": [
-    { "label": "Coffee", "price": 4.5, "unit": "" },
-    { "label": "Clam chowder soup, Cannery Row", "price": 14, "unit": "" },
-    { "label": "Monterey Bay Aquarium entry", "price": 55, "unit": "" },
-    { "label": "Pebble Beach round of golf", "price": 600, "unit": "per round" },
-    { "label": "Whale watching tour", "price": 70, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Clam chowder soup, Cannery Row",
+      "price": 14,
+      "unit": ""
+    },
+    {
+      "label": "Monterey Bay Aquarium entry",
+      "price": 55,
+      "unit": ""
+    },
+    {
+      "label": "Pebble Beach round of golf",
+      "price": 600,
+      "unit": "per round"
+    },
+    {
+      "label": "Whale watching tour",
+      "price": 70,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -32,28 +55,69 @@
     "architecture": 3,
     "festivals": 3,
     "finedining": 7,
-    "streetfood": 5,
+    "streetfood": 4,
     "nightlife": 3,
     "winetasting": 5,
-    "spa": 5,
+    "spa": 7,
     "luxuryLodging": 8,
     "snowsports": 0,
     "cycling": 5,
     "shopping": 4,
     "birding": 5,
-    "wildlife": 7
+    "wildlife": 4
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "peak": [6, 7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "peak": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "low": [1, 2],
-  "hikingBest": [4, 5, 6, 9, 10],
-  "hikingWorst": [12, 1],
-  "wildlifePeak": [12, 1, 2, 3, 4],
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1
+  ],
+  "wildlifePeak": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
   "specialSeasons": [
-    { "months": [12, 1, 2, 3], "text": "Winter storms occasionally trigger landslides that close sections of Highway 1 through Big Sur — check road conditions before a trip." }
+    {
+      "months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "text": "Winter storms occasionally trigger landslides that close sections of Highway 1 through Big Sur — check road conditions before a trip."
+    }
   ],
   "monthlyWeather": [
     "cool and stormy, with occasional Highway 1 closures and peak gray whale migration",
@@ -69,8 +133,17 @@
     "cool, with rain returning and crowds thinning fast",
     "cool and rainy, quiet through the holidays"
   ],
-  "naSliders": ["snowsports"],
-  "searchAliases": ["Big Sur", "Pebble Beach", "17-Mile Drive", "Monterey Bay Aquarium", "Cannery Row", "Highway 1"],
+  "naSliders": [
+    "snowsports"
+  ],
+  "searchAliases": [
+    "Big Sur",
+    "Pebble Beach",
+    "17-Mile Drive",
+    "Monterey Bay Aquarium",
+    "Cannery Row",
+    "Highway 1"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

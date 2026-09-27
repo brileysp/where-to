@@ -5,15 +5,38 @@
   "emoji": "🖼️",
   "climate": "temperate",
   "about": "Fall foliage (early-to-mid Oct) is the busiest weekend-tripper season from New York City; spring and summer are quieter and good for hiking and farm visits.",
-  "overview": "Historic Hudson River estates, world-class contemporary art at Dia:Beacon and Storm King, and the landscape that inspired America's first great painting movement — an easy escape from New York City.",
-  "costRange": { "min": "$", "max": "$$$$" },
-  "costOverview": "An easy day trip or weekend from NYC that stays reasonable outside peak fall weekends — the major art institutions (Dia:Beacon, Storm King) are the main real ticket costs.",
+  "overview": "Historic Hudson River estates, contemporary art at Dia:Beacon and Storm King, and the landscape that inspired America's first great painting movement.",
+  "costRange": {
+    "min": "$",
+    "max": "$$$$"
+  },
+  "costOverview": "An easy day trip or weekend from NYC that stays reasonable outside peak fall weekends — the major art institutions, Dia:Beacon and Storm King, are the main real ticket costs.",
   "costItems": [
-    { "label": "Coffee", "price": 4, "unit": "" },
-    { "label": "Apple picking, farm admission", "price": 15, "unit": "" },
-    { "label": "Metro-North train, NYC–Hudson Valley", "price": 20, "unit": "" },
-    { "label": "Dia:Beacon museum entry", "price": 20, "unit": "" },
-    { "label": "Storm King Art Center entry", "price": 22, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Apple picking, farm admission",
+      "price": 15,
+      "unit": ""
+    },
+    {
+      "label": "Metro-North train, NYC–Hudson Valley",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Dia:Beacon museum entry",
+      "price": 20,
+      "unit": ""
+    },
+    {
+      "label": "Storm King Art Center entry",
+      "price": 22,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 1,
@@ -21,14 +44,14 @@
     "diving": 1,
     "surfing": 0,
     "sailing": 3,
-    "hiking": 5,
+    "hiking": 4,
     "scenic": 7,
     "fishing": 3,
     "roadtrip": 5,
     "adventure": 2,
     "golf": 4,
     "stargazing": 2,
-    "museums": 8,
+    "museums": 7,
     "architecture": 7,
     "festivals": 3,
     "finedining": 6,
@@ -43,21 +66,53 @@
     "birding": 4,
     "wildlife": 3
   },
-  "budgetBands": ["basic", "comfortable", "highend"],
-  "vibeBands": ["easygoing", "secluded"],
-  "physicalBands": ["easy", "moderate"],
-  "cold": [12, 1, 2],
-  "peak": [10],
+  "budgetBands": [
+    "basic",
+    "comfortable",
+    "highend"
+  ],
+  "vibeBands": [
+    "easygoing",
+    "secluded"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate"
+  ],
+  "cold": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    10
+  ],
   "peakIntensity": "moderate",
-  "low": [1, 2],
-  "hikingBest": [5, 6, 9, 10],
-  "hikingWorst": [12, 1, 2],
+  "low": [
+    1,
+    2
+  ],
+  "hikingBest": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "hikingWorst": [
+    12,
+    1,
+    2
+  ],
   "sliderEvents": {
     "scenic": [
       {
         "label": "Peak fall foliage",
         "weight": 3,
-        "months": { "9": 0.3, "10": 1, "11": 0.2 }
+        "months": {
+          "9": 0.3,
+          "10": 1,
+          "11": 0.2
+        }
       }
     ]
   },
@@ -75,8 +130,17 @@
     "cold, with foliage gone and weekend crowds thinning fast",
     "cold, quiet through the holidays"
   ],
-  "naSliders": ["surfing"],
-  "searchAliases": ["Beacon", "Cold Spring", "Rhinebeck", "Storm King Art Center", "Dia Beacon", "West Point"],
+  "naSliders": [
+    "surfing"
+  ],
+  "searchAliases": [
+    "Beacon",
+    "Cold Spring",
+    "Rhinebeck",
+    "Storm King Art Center",
+    "Dia Beacon",
+    "West Point"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "forests": "strong",

@@ -5,13 +5,18 @@
   "emoji": "🌸",
   "climate": "temperate",
   "about": "Cherry blossoms (Mar–Apr) and fall foliage (Oct–Nov) are the celebrated, crowded peaks; rainy season hits June, typhoons Aug–Sep.",
-  "overview": "The classic first-time Japan pairing — 2.5 hours apart by bullet train.",
+  "overview": "Japan's essential two-city pairing — 2.5 hours apart by bullet train.",
   "costRange": {
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Ramen stays cheap and filling — easy to eat extremely well without spending much, unless you seek out fine sushi.",
+  "costOverview": "Ramen is cheap and filling — easy to eat extremely well without spending much, unless you seek out fine sushi.",
   "costItems": [
+    {
+      "label": "Subway ride",
+      "price": 1.5,
+      "unit": ""
+    },
     {
       "label": "Taxi, 15 min",
       "unit": "",
@@ -23,14 +28,14 @@
       "price": 7
     },
     {
-      "label": "Tokyo Skytree, Tembo Deck",
-      "unit": "",
-      "price": 13
-    },
-    {
       "label": "Sushi dinner",
       "unit": "",
       "price": 45
+    },
+    {
+      "label": "Traditional tea ceremony",
+      "price": 45,
+      "unit": ""
     },
     {
       "label": "Shinkansen, Tokyo–Kyoto, one-way",

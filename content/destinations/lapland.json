@@ -2,7 +2,7 @@
   "id": "lapland",
   "name": "Finnish Lapland",
   "region": "Finland",
-  "emoji": "🎅",
+  "emoji": "🦌",
   "climate": "polar",
   "about": "Nov–Dec is peak Christmas-tourism season, while the best Northern Lights viewing runs Sept–Mar. Summer (Jun–Jul) flips to 24-hour midnight sun, and husky/reindeer sledding gives way to hiking.",
   "overview": "Rovaniemi's Santa Claus Village sits right on the Arctic Circle, with husky and reindeer sledding, Northern Lights, and genuine Arctic wilderness.",
@@ -10,7 +10,7 @@
     "min": "$$",
     "max": "$$$$$"
   },
-  "costOverview": "Finnish Lapland runs moderate for everyday costs, but the reindeer and husky experiences that define a trip here are genuine splurges most visitors budget specifically for.",
+  "costOverview": "Everyday costs in Finnish Lapland are moderate, but the reindeer and husky experiences that define a trip here are genuine splurges most visitors budget specifically for.",
   "costItems": [
     {
       "label": "Coffee",
@@ -47,19 +47,19 @@
     "golf": 1,
     "stargazing": 2,
     "museums": 2,
-    "architecture": 1,
+    "architecture": 2,
     "festivals": 5,
-    "finedining": 3,
+    "finedining": 4,
     "streetfood": 3,
     "nightlife": 2,
     "winetasting": 0,
-    "spa": 4,
-    "luxuryLodging": 5,
+    "spa": 5,
+    "luxuryLodging": 6,
     "snowsports": 6,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 3,
     "birding": 4,
-    "wildlife": 5
+    "wildlife": 4
   },
   "budgetBands": [
     "comfortable",
@@ -190,7 +190,6 @@
     "very cold, the peak of Santa Claus Village tourism"
   ],
   "naSliders": [
-    "sunbathing",
     "swimming",
     "surfing",
     "diving",

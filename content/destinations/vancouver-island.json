@@ -5,15 +5,38 @@
   "emoji": "🐋",
   "climate": "temperate",
   "about": "Summer (Jul–Aug) has the driest, sunniest weather and the best orca watching; winter (Nov–Feb) is genuinely the rainiest stretch of the year, though it's also Tofino's famous storm-watching season.",
-  "overview": "Tofino's world-class surfing and winter storm watching, ancient temperate rainforest, and Victoria's British colonial charm and world-famous Butchart Gardens — Canada's Pacific coast at its wildest and most refined at once.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
+  "overview": "Tofino's surfing and storm watching, ancient rainforest, Victoria's colonial charm and Butchart Gardens — Canada's Pacific coast at its wildest.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
   "costOverview": "Victoria and Tofino both stay reasonable for casual food — orca watching tours and Tofino's surf lessons and storm-watching lodges are the real splurges.",
   "costItems": [
-    { "label": "Coffee", "price": 4.5, "unit": "" },
-    { "label": "Fish and chips, Tofino", "price": 18, "unit": "" },
-    { "label": "Butchart Gardens entry", "price": 36, "unit": "" },
-    { "label": "Orca whale watching tour", "price": 145, "unit": "per person" },
-    { "label": "Surf lesson, Tofino", "price": 90, "unit": "per person" }
+    {
+      "label": "Coffee",
+      "price": 4.5,
+      "unit": ""
+    },
+    {
+      "label": "Fish and chips, Tofino",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Butchart Gardens entry",
+      "price": 36,
+      "unit": ""
+    },
+    {
+      "label": "Orca whale watching tour",
+      "price": 145,
+      "unit": "per person"
+    },
+    {
+      "label": "Surf lesson, Tofino",
+      "price": 90,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -38,21 +61,57 @@
     "spa": 5,
     "luxuryLodging": 6,
     "snowsports": 1,
-    "cycling": 4,
+    "cycling": 5,
     "shopping": 4,
     "birding": 6,
-    "wildlife": 8
+    "wildlife": 7
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["easy", "moderate", "active"],
-  "wet": [11, 12, 1, 2],
-  "peak": [7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "easy",
+    "moderate",
+    "active"
+  ],
+  "wet": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    7,
+    8
+  ],
   "peakIntensity": "moderate",
-  "low": [11, 1, 2],
-  "wildlifePeak": [6, 7, 8, 9],
+  "low": [
+    11,
+    1,
+    2
+  ],
+  "wildlifePeak": [
+    6,
+    7,
+    8,
+    9
+  ],
   "specialSeasons": [
-    { "months": [11, 12, 1, 2], "text": "Tofino's 'storm watching' season — cozying up to watch dramatic Pacific storms roll in — is a genuine, if niche, winter draw despite being the rainiest stretch of the year." }
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "text": "Tofino's 'storm watching' season — cozying up to watch dramatic Pacific storms roll in — is a genuine, if niche, winter draw despite being the rainiest stretch of the year."
+    }
   ],
   "monthlyWeather": [
     "cool and rainy, deep in storm-watching season at Tofino",
@@ -69,7 +128,13 @@
     "cool and rainy, deep in the wet season through the holidays"
   ],
   "naSliders": [],
-  "searchAliases": ["Tofino", "Victoria BC", "Butchart Gardens", "Pacific Rim National Park", "Johnstone Strait"],
+  "searchAliases": [
+    "Tofino",
+    "Victoria BC",
+    "Butchart Gardens",
+    "Pacific Rim National Park",
+    "Johnstone Strait"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "coastlines": "signature",

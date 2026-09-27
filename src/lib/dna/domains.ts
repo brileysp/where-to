@@ -453,8 +453,8 @@ export function resolveAxisOptions(dnaState: DnaState, allCards: DnaCard[], axis
  * axis but no entry here just doesn't feed destination scoring yet.
  */
 export const DOMAIN_AXIS_SLIDER_KEY: Record<string, string> = {
-  Cycling: 'cycling',
-  'Landscape Photography': 'scenic',
+  Cycling: 'cyclingRoad',
+  'Landscape Photography': 'landscapePhotography',
 };
 
 /**

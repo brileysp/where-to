@@ -6,14 +6,37 @@
   "climate": "temperate",
   "about": "Summer brings long light-filled days, winter is dark and cold but cozy and much less crowded.",
   "overview": "Colorful harbor-front townhouses, world-class New Nordic dining, and one of the world's most bike-friendly capitals.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
   "costOverview": "Nordic prices apply across the board — even a casual open-faced sandwich or a coffee costs noticeably more than in the rest of Europe.",
   "costItems": [
-    { "label": "Coffee", "price": 5, "unit": "" },
-    { "label": "Metro ticket", "price": 5.5, "unit": "" },
-    { "label": "Smørrebrød", "price": 18, "unit": "" },
-    { "label": "Tivoli Gardens entry", "price": 25, "unit": "" },
-    { "label": "Taxi/Uber, 15 min", "price": 35, "unit": "" }
+    {
+      "label": "Coffee",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Metro ticket",
+      "price": 5.5,
+      "unit": ""
+    },
+    {
+      "label": "Smørrebrød",
+      "price": 18,
+      "unit": ""
+    },
+    {
+      "label": "Tivoli Gardens entry",
+      "price": 25,
+      "unit": ""
+    },
+    {
+      "label": "Taxi/Uber, 15 min",
+      "price": 35,
+      "unit": ""
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -21,7 +44,7 @@
     "diving": 1,
     "surfing": 2,
     "sailing": 5,
-    "hiking": 3,
+    "hiking": 2,
     "scenic": 5,
     "fishing": 3,
     "roadtrip": 4,
@@ -38,9 +61,9 @@
     "spa": 5,
     "luxuryLodging": 7,
     "snowsports": 0,
-    "cycling": 9,
+    "cycling": 8,
     "shopping": 7,
-    "birding": 3,
+    "birding": 2,
     "wildlife": 2
   },
   "budgetBands": [

@@ -1,0 +1,1 @@
+ALTER TABLE "destinations" ADD COLUMN "signature_tier" jsonb DEFAULT '{}'::jsonb NOT NULL;

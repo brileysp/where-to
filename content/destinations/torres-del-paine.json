@@ -6,13 +6,37 @@
   "climate": "temperate",
   "about": "Trekking season runs Oct–Mar/Apr, when trails and refugios are open; most infrastructure closes for winter (Jun–Aug), and even in peak season this is one of the windiest places on Earth.",
   "overview": "Chile's flagship Patagonia park — granite towers, glaciers, and increasingly famous puma tracking, centered on the W and O treks.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
-  "costOverview": "There's no cheap way to do the W or O trek — refugios, park fees, and transport all add up, and the small number of luxury lodges push the top end even higher.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Refugios, park fees, and transport all add up for the W or O trek, and the small number of luxury lodges push the top end even higher.",
   "costItems": [
-    { "label": "Empanada, Puerto Natales", "price": 5, "unit": "" },
-    { "label": "Park entrance fee", "price": 35, "unit": "per day" },
-    { "label": "W Trek refugio bed, half board", "price": 90, "unit": "per night" },
-    { "label": "Puma-tracking guided tour", "price": 180, "unit": "per person" }
+    {
+      "label": "Empanada, Puerto Natales",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Park entrance fee",
+      "price": 35,
+      "unit": "per day"
+    },
+    {
+      "label": "W Trek refugio bed, half board",
+      "price": 90,
+      "unit": "per night"
+    },
+    {
+      "label": "Puma-tracking guided tour",
+      "price": 180,
+      "unit": "per person"
+    },
+    {
+      "label": "All-inclusive design lodge",
+      "price": 1400,
+      "unit": "per person, per night, all-inclusive"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -37,23 +61,69 @@
     "spa": 2,
     "luxuryLodging": 8,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 2,
     "birding": 6,
-    "wildlife": 9
+    "wildlife": 8
   },
-  "budgetBands": ["comfortable", "highend", "luxury"],
-  "vibeBands": ["secluded"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "dry": [12, 1, 2],
-  "peak": [12, 1, 2],
-  "low": [6, 7, 8],
+  "budgetBands": [
+    "comfortable",
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    12,
+    1,
+    2
+  ],
+  "peak": [
+    12,
+    1,
+    2
+  ],
+  "low": [
+    6,
+    7,
+    8
+  ],
   "peakIntensity": "extreme",
-  "wildlifePeak": [10, 11, 12, 1, 2, 3],
-  "hikingBest": [11, 12, 1, 2, 3],
-  "hikingWorst": [6, 7, 8],
+  "wildlifePeak": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingBest": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
   "specialSeasons": [
-    { "months": [6, 7, 8], "text": "Most refugios and campsites close for the winter — the park stays open but trekking infrastructure is minimal." }
+    {
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "text": "Most refugios and campsites close for the winter — the park stays open but trekking infrastructure is minimal."
+    }
   ],
   "monthlyWeather": [
     "peak trekking season, mild but the year's windiest month, with gusts that can knock you off balance",
@@ -69,8 +139,23 @@
     "cool with building winds, one of the best months before peak-season crowds arrive",
     "trekking season in full swing, mild but increasingly windy"
   ],
-  "naSliders": ["sunbathing", "swimming", "diving", "surfing", "sailing", "snowsports", "winetasting", "nightlife", "golf"],
-  "searchAliases": ["W Trek", "O Circuit", "Puerto Natales", "Paine Towers", "puma tracking Chile"],
+  "naSliders": [
+    "swimming",
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting",
+    "nightlife",
+    "golf"
+  ],
+  "searchAliases": [
+    "W Trek",
+    "O Circuit",
+    "Puerto Natales",
+    "Paine Towers",
+    "puma tracking Chile"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",

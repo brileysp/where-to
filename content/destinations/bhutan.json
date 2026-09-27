@@ -5,15 +5,38 @@
   "emoji": "🐉",
   "climate": "highland",
   "about": "Spring (Mar–May) and autumn (Sep–Nov) are best for clear mountain views and trekking; monsoon (Jun–Aug) brings heavy rain, and winter is cold but clear at lower elevations.",
-  "overview": "The last Buddhist kingdom of the Himalayas — cliffside monasteries, masked-dance festivals, and a deliberately low-volume, high-cost tourism model built around the country's Gross National Happiness philosophy.",
-  "costRange": { "min": "$$$", "max": "$$$$$" },
-  "costOverview": "Bhutan deliberately has no real budget tier — a mandatory daily Sustainable Development Fee is layered on top of every visit, part of the country's 'high value, low impact' tourism policy.",
+  "overview": "The last Buddhist kingdom of the Himalayas — cliffside monasteries, masked-dance festivals, and tourism deliberately built around Gross National Happiness.",
+  "costRange": {
+    "min": "$$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Bhutan is expensive from day one — a mandatory $100/day Sustainable Development Fee applies to every visit, before anything else.",
   "costItems": [
-    { "label": "Sustainable Development Fee permit", "price": 100, "unit": "per person, per day" },
-    { "label": "Ema datshi (Bhutanese national dish) meal", "price": 8, "unit": "" },
-    { "label": "Coffee or tea", "price": 3, "unit": "" },
-    { "label": "Taxi, 15 min", "price": 5, "unit": "" },
-    { "label": "Tiger's Nest Monastery guided hike", "price": 60, "unit": "per person" }
+    {
+      "label": "Sustainable Development Fee permit",
+      "price": 100,
+      "unit": "per person, per day"
+    },
+    {
+      "label": "Ema datshi (Bhutanese national dish) meal",
+      "price": 8,
+      "unit": ""
+    },
+    {
+      "label": "Coffee or tea",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Taxi, 15 min",
+      "price": 5,
+      "unit": ""
+    },
+    {
+      "label": "Tiger's Nest Monastery guided hike",
+      "price": 60,
+      "unit": "per person"
+    }
   ],
   "base": {
     "sunbathing": 0,
@@ -31,31 +54,87 @@
     "museums": 6,
     "architecture": 9,
     "festivals": 7,
-    "finedining": 4,
+    "finedining": 3,
     "streetfood": 4,
     "nightlife": 2,
     "winetasting": 1,
     "spa": 4,
-    "luxuryLodging": 8,
+    "luxuryLodging": 9,
     "snowsports": 0,
-    "cycling": 3,
+    "cycling": 2,
     "shopping": 4,
     "birding": 6,
-    "wildlife": 5
+    "wildlife": 4
   },
-  "budgetBands": ["highend", "luxury"],
-  "vibeBands": ["secluded", "easygoing"],
-  "physicalBands": ["moderate", "active", "challenging"],
-  "dry": [3, 4, 5, 9, 10, 11],
-  "wet": [6, 7, 8],
-  "peak": [3, 4, 10, 11],
+  "budgetBands": [
+    "highend",
+    "luxury"
+  ],
+  "vibeBands": [
+    "secluded",
+    "easygoing"
+  ],
+  "physicalBands": [
+    "moderate",
+    "active",
+    "challenging"
+  ],
+  "dry": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "wet": [
+    6,
+    7,
+    8
+  ],
+  "peak": [
+    3,
+    4,
+    10,
+    11
+  ],
   "peakIntensity": "mild",
-  "low": [6, 7, 8, 12, 1],
-  "hikingBest": [3, 4, 5, 9, 10, 11],
-  "hikingWorst": [6, 7, 8],
-  "birdingPeak": [11, 12, 1, 2],
+  "low": [
+    6,
+    7,
+    8,
+    12,
+    1
+  ],
+  "hikingBest": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "hikingWorst": [
+    6,
+    7,
+    8
+  ],
+  "birdingPeak": [
+    11,
+    12,
+    1,
+    2
+  ],
   "specialSeasons": [
-    { "months": [11, 12, 1, 2], "text": "Black-necked cranes winter in the Phobjikha Valley — one of Bhutan's most distinctive wildlife spectacles." }
+    {
+      "months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "text": "Black-necked cranes winter in the Phobjikha Valley — one of Bhutan's most distinctive wildlife spectacles."
+    }
   ],
   "monthlyWeather": [
     "cold and clear at lower elevations, with black-necked cranes wintering in Phobjikha",
@@ -71,13 +150,26 @@
     "mild and clear, still prime season with the clearest mountain views",
     "cold and dry, quiet with black-necked cranes returning to Phobjikha"
   ],
-  "naSliders": ["sunbathing", "diving", "surfing", "sailing", "snowsports", "winetasting"],
-  "searchAliases": ["Thimphu", "Paro", "Tiger's Nest", "Paro Taktsang", "Phobjikha Valley"],
+  "naSliders": [
+    "diving",
+    "surfing",
+    "sailing",
+    "snowsports",
+    "winetasting"
+  ],
+  "searchAliases": [
+    "Thimphu",
+    "Paro",
+    "Tiger's Nest",
+    "Paro Taktsang",
+    "Phobjikha Valley"
+  ],
   "activityStyleTiers": {
     "scenic": {
       "mountains": "signature",
       "forests": "strong",
       "coastlines": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

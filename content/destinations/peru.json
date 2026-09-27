@@ -10,7 +10,7 @@
     "min": "$",
     "max": "$$$$$"
   },
-  "costOverview": "Everyday food and coffee stay cheap — the real cost is the Machu Picchu entrance and train, which is essentially a mandatory one-time expense.",
+  "costOverview": "Everyday food and coffee are cheap — the real cost is the Machu Picchu entrance and train, essentially a mandatory one-time expense.",
   "costItems": [
     {
       "label": "Coca tea or coffee",
@@ -23,11 +23,6 @@
       "unit": ""
     },
     {
-      "label": "Menú del día (set lunch)",
-      "price": 5,
-      "unit": ""
-    },
-    {
       "label": "Machu Picchu entrance",
       "price": 50,
       "unit": ""
@@ -36,6 +31,11 @@
       "label": "Round-trip train, Ollantaytambo",
       "price": 150,
       "unit": ""
+    },
+    {
+      "label": "Inca Trail trek, 4 days, guided & camping, all-inclusive",
+      "price": 780,
+      "unit": "per person"
     }
   ],
   "base": {
@@ -44,10 +44,10 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 4,
+    "hiking": 6,
     "scenic": 6,
     "fishing": 3,
-    "roadtrip": 6,
+    "roadtrip": 4,
     "adventure": 6,
     "golf": 1,
     "stargazing": 6,
@@ -58,10 +58,10 @@
     "streetfood": 7,
     "nightlife": 5,
     "winetasting": 3,
-    "spa": 4,
-    "luxuryLodging": 7,
+    "spa": 5,
+    "luxuryLodging": 8,
     "snowsports": 1,
-    "cycling": 4,
+    "cycling": 3,
     "shopping": 6,
     "birding": 5,
     "wildlife": 4

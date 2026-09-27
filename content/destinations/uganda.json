@@ -2,7 +2,7 @@
   "id": "uganda",
   "name": "Uganda",
   "region": "Uganda",
-  "emoji": "🦧",
+  "emoji": "🦍",
   "climate": "highland",
   "about": "Gorilla and chimp trekking plus outstanding birding; dry seasons (Jun–Aug, Dec–Feb) make for firmer, less strenuous trails.",
   "overview": "Gorilla trekking in Bwindi and chimpanzee tracking in Kibale, at roughly half Rwanda's permit price for a similar experience.",
@@ -44,7 +44,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 7,
+    "hiking": 5,
     "scenic": 7,
     "fishing": 2,
     "roadtrip": 4,
@@ -54,16 +54,16 @@
     "museums": 3,
     "architecture": 2,
     "festivals": 3,
-    "finedining": 3,
+    "finedining": 2,
     "streetfood": 3,
     "nightlife": 2,
     "winetasting": 1,
     "spa": 2,
     "luxuryLodging": 6,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 2,
-    "birding": 7,
+    "birding": 9,
     "wildlife": 8
   },
   "budgetBands": [
@@ -184,5 +184,6 @@
       "deserts": "none",
       "astrophotography": "casual"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

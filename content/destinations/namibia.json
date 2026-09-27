@@ -6,14 +6,37 @@
   "climate": "desert",
   "about": "Dry season May–Oct concentrates wildlife at waterholes for classic sightings; wet season Nov–Apr brings dramatic skies and migratory birds.",
   "overview": "A self-drive road-trip country of desert, dunes, and wildlife-ringed waterholes, built for exploring independently rather than only by guided safari.",
-  "costRange": { "min": "$$", "max": "$$$$$" },
-  "costOverview": "Uniquely great as a self-drive trip in a rented camper van — but luxe options abound too.",
+  "costRange": {
+    "min": "$$",
+    "max": "$$$$$"
+  },
+  "costOverview": "Uniquely great as a self-drive trip in a rented camper van, though luxe lodge options exist too for those who want them.",
   "costItems": [
-    { "label": "Coffee", "price": 2, "unit": "" },
-    { "label": "Vehicle entry fee", "price": 3, "unit": "" },
-    { "label": "Fast-food combo meal", "price": 5, "unit": "" },
-    { "label": "Etosha park entry", "price": 15, "unit": "per day" },
-    { "label": "4x4 rental", "price": 70, "unit": "per day" }
+    {
+      "label": "Coffee",
+      "price": 2,
+      "unit": ""
+    },
+    {
+      "label": "Vehicle entry fee",
+      "price": 3,
+      "unit": ""
+    },
+    {
+      "label": "Biltong (dried meat), 100g",
+      "price": 4,
+      "unit": ""
+    },
+    {
+      "label": "Etosha park entry",
+      "price": 15,
+      "unit": "per day"
+    },
+    {
+      "label": "4x4 rental",
+      "price": 70,
+      "unit": "per day"
+    }
   ],
   "base": {
     "sunbathing": 3,
@@ -21,8 +44,8 @@
     "diving": 1,
     "surfing": 2,
     "sailing": 1,
-    "hiking": 7,
-    "scenic": 8,
+    "hiking": 6,
+    "scenic": 9,
     "fishing": 3,
     "roadtrip": 9,
     "adventure": 5,
@@ -31,9 +54,9 @@
     "museums": 2,
     "architecture": 2,
     "festivals": 2,
-    "finedining": 3,
-    "streetfood": 2,
-    "nightlife": 2,
+    "finedining": 2,
+    "streetfood": 1,
+    "nightlife": 1,
     "winetasting": 1,
     "spa": 3,
     "luxuryLodging": 8,
@@ -169,5 +192,6 @@
       "forests": "none",
       "coastlines": "none"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }

@@ -17,6 +17,7 @@
   --okay: #d8b45c;
   --poor: #d97b4f;
   --bad: #c25a5a;
+  --heart: #e8688a;
   --radius: 12px;
   --card-bg: rgba(255, 255, 255, 0.06);
 }
@@ -32,6 +33,7 @@
     --text-faint: #8b867d;
     --accent: #c76a35;
     --accent-soft: #c76a3522;
+    --heart: #c94569;
     --card-bg: rgba(0, 0, 0, 0.03);
   }
 }

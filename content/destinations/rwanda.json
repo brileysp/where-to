@@ -39,7 +39,7 @@
     "diving": 1,
     "surfing": 1,
     "sailing": 1,
-    "hiking": 7,
+    "hiking": 5,
     "scenic": 7,
     "fishing": 1,
     "roadtrip": 4,
@@ -56,9 +56,9 @@
     "spa": 2,
     "luxuryLodging": 8,
     "snowsports": 0,
-    "cycling": 2,
+    "cycling": 1,
     "shopping": 2,
-    "birding": 7,
+    "birding": 8,
     "wildlife": 8
   },
   "budgetBands": [
@@ -180,5 +180,6 @@
       "deserts": "none",
       "astrophotography": "casual"
     }
-  }
+  },
+  "crowdBaseline": "low"
 }
