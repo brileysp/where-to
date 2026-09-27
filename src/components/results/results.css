@@ -732,6 +732,17 @@
   min-width: 0;
 }
 
+/* While the Visited/Save chips are open, this cluster naturally has less
+   room and shrinks — rather than the region pill hard-clipping mid-word
+   (its own text-overflow:ellipsis, sized down to almost nothing), fade the
+   whole cluster's trailing edge out instead, reading as "covered by the
+   chips" rather than "squeezed." */
+.card-bottom-left-covered {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+  mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+}
+
 .card-row-emoji {
   font-size: 19px;
   flex-shrink: 0;
@@ -776,6 +787,10 @@
   width: 52px;
   height: 28px;
   position: relative;
+  /* Wins the paint order against .card-name explicitly — the stamp
+     deliberately nudges upward into the name's row (see stampOffset in
+     DestinationCard.tsx) and needs to sit on top of that text, not under it. */
+  z-index: 1;
   flex-shrink: 0;
 }
 
@@ -790,6 +805,7 @@
    smaller hit area than the button really is (easy to miss and hit the
    card underneath it instead). */
 .card-bookmark-btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -802,6 +818,17 @@
   padding: 0;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* The visible circle stays small and precise; the actual tap target is
+   quietly bigger (46x46, close to Apple's 44pt minimum) so a slightly
+   off-center tap still lands on the button instead of falling through to
+   the card underneath. Generated content of the button itself, so it's
+   still "the button" for click purposes even though nothing is drawn here. */
+.card-bookmark-btn::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 
 .card-bookmark-btn svg {
