@@ -103,7 +103,7 @@ export const DestinationCard = forwardRef<HTMLElement, Props>(function Destinati
         <div className={`card-score score-${match.cls}`}>{score.toFixed(1)}</div>
       </div>
       <div className="card-bottom-row">
-        <div className="card-bottom-left">
+        <div className={`card-bottom-left${open ? ' card-bottom-left-covered' : ''}`}>
           <span className="card-row-emoji">{dest.emoji}</span>
           <span className="card-region">{dest.region}</span>
         </div>
