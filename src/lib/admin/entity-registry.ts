@@ -69,6 +69,12 @@ export interface EntityConfig {
   table: any;
   idColumn: string;
   fields: Record<string, FieldValidator>;
+  // True when a row for a given id may not exist yet at edit time — the
+  // generic write path (apply-edits.ts) inserts one instead of failing
+  // with "no {entityType} found". Every other entity's rows are seeded
+  // ahead of time (e.g. every place row already exists before an admin
+  // can open it), so this defaults to false/unset there.
+  createIfMissing?: boolean;
 }
 
 export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
@@ -200,6 +206,11 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
   interest: {
     table: interestMeta,
     idColumn: 'key',
+    // interest_meta only ever holds *overrides* (see its doc comment in
+    // schema.ts) — a slider nobody has re-emoji'd yet has no row at all,
+    // so the very first edit to it must create one, not update a row that
+    // isn't there.
+    createIfMissing: true,
     fields: {
       emoji: zodField(z.string().trim().min(1)),
     },

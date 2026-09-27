@@ -7,10 +7,10 @@ describe('topInterestChips', () => {
     expect(keys.slice(0, 3)).toEqual(['wildlifeViewing', 'scenicLandscapes', 'hiking']);
   });
 
-  it('shows fewer chips for a single-minded profile and never more than five', () => {
+  it('shows fewer chips for a single-minded profile and never more than six', () => {
     expect(topInterestChips({ wildlifeViewing: 10, hiking: 3 }).map((s) => s.key)).toEqual(['wildlifeViewing']);
     const broad = Object.fromEntries(['wildlifeViewing', 'birding', 'hiking', 'scenicLandscapes', 'campingBackcountry', 'stargazing', 'fishing'].map((k) => [k, 8]));
-    expect(topInterestChips(broad).length).toBe(5);
+    expect(topInterestChips(broad).length).toBe(6);
   });
 
   it('never includes a hidden slider', () => {

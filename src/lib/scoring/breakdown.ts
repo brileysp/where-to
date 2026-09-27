@@ -39,15 +39,15 @@ export function topInterestSliders(weights: Record<string, number>): Slider[] {
 }
 
 const MIN_HIGHLIGHT_COUNT = 1;
-// The For You tab's interest breakdown never shows more than 5 rows —
+// The For You tab's interest breakdown never shows more than 6 rows —
 // a card-sized list, not a full interest inventory (see explainMatch for
 // the "scan everything" version used for pros/cons).
-const MAX_HIGHLIGHT_COUNT = 5;
+const MAX_HIGHLIGHT_COUNT = 6;
 // How close to your single strongest interest a slider's weight has to be
 // to count as "real signal" for you specifically, not just "not literally
-// neutral." 0.6 keeps deliberately-elevated secondary picks (e.g. a 6 next
+// neutral." 0.5 keeps deliberately-elevated secondary picks (e.g. a 5 next
 // to a 9) while still collapsing a genuinely single-minded profile to 1.
-const SIGNAL_STRENGTH_FRACTION = 0.6;
+const SIGNAL_STRENGTH_FRACTION = 0.5;
 
 /**
  * How many sliders the breakdown list shows — dynamic per profile, not a

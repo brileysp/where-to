@@ -95,15 +95,21 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
 
     const idColumn = config.table[config.idColumn];
     const [before] = await db.select().from(config.table).where(eq(idColumn, entityId));
-    if (!before) {
+    if (!before && !config.createIfMissing) {
       for (const p of group) result.errors.push({ entityType, entityId, field: p.field, message: `no ${entityType} found with id "${entityId}"` });
       continue;
     }
 
-    const currentUpdatedAt: Date = before.updatedAt;
-    if (currentUpdatedAt.getTime() !== Date.parse(loadedUpdatedAt)) {
-      result.conflicts.push({ entityType, entityId, currentUpdatedAt: currentUpdatedAt.toISOString() });
-      continue;
+    // A row that doesn't exist yet can't conflict with anything — the
+    // client's loadedUpdatedAt for it is a placeholder (see e.g. the
+    // Interests screen falling back to `new Date()` when it has no meta
+    // row to read one from), not a real prior save to check against.
+    if (before) {
+      const currentUpdatedAt: Date = before.updatedAt;
+      if (currentUpdatedAt.getTime() !== Date.parse(loadedUpdatedAt)) {
+        result.conflicts.push({ entityType, entityId, currentUpdatedAt: currentUpdatedAt.toISOString() });
+        continue;
+      }
     }
 
     // Editing a curve IS the act of authoring it, so the two are never
@@ -113,13 +119,13 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
     // next save — see the doc comment on places.authoredCurves.
     if (patchedFields.sliderCurves && typeof patchedFields.sliderCurves === 'object') {
       const nextCurves = patchedFields.sliderCurves as Record<string, unknown>;
-      const prevCurves = (before.sliderCurves ?? {}) as Record<string, unknown>;
+      const prevCurves = (before?.sliderCurves ?? {}) as Record<string, unknown>;
       const changed = Object.keys(nextCurves).filter(
         (k) => JSON.stringify(nextCurves[k]) !== JSON.stringify(prevCurves[k]),
       );
       if (changed.length > 0) {
         const alreadyAuthored = (patchedFields.authoredCurves as string[] | undefined)
-          ?? (before.authoredCurves as string[] | undefined)
+          ?? (before?.authoredCurves as string[] | undefined)
           ?? [];
         patchedFields.authoredCurves = Array.from(new Set([...alreadyAuthored, ...changed]));
       }
@@ -130,7 +136,7 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
     // taken from the client. See cost-item-stamp.ts.
     if (Array.isArray(patchedFields.costItems)) {
       patchedFields.costItems = stampCostItems(
-        (before.costItems ?? []) as StampedCostItem[],
+        (before?.costItems ?? []) as StampedCostItem[],
         patchedFields.costItems as StampedCostItem[],
         { name: admin.email, kind: 'human' },
         newUpdatedAt,
@@ -140,10 +146,13 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
       actor: admin,
       entityType,
       entityId,
-      action: 'update',
-      before,
-      after: { ...before, ...patchedFields },
-      write: (tx) => tx.update(config.table).set({ ...patchedFields, updatedAt: newUpdatedAt }).where(eq(idColumn, entityId)),
+      action: before ? 'update' : 'create',
+      before: before ?? null,
+      after: before ? { ...before, ...patchedFields } : { [config.idColumn]: entityId, ...patchedFields, updatedAt: newUpdatedAt },
+      write: (tx) =>
+        before
+          ? tx.update(config.table).set({ ...patchedFields, updatedAt: newUpdatedAt }).where(eq(idColumn, entityId))
+          : tx.insert(config.table).values({ [config.idColumn]: entityId, ...patchedFields, updatedAt: newUpdatedAt }),
     });
     result.saved.push({ entityType, entityId, updatedAt: newUpdatedAt.toISOString() });
   }

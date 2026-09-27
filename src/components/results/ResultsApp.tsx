@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PERSONAS, SLIDERS, allBandsSelected } from '@/lib/scoring/constants';
 import { computeRankedDestinations } from '@/lib/scoring/rank';
-import { topInterestSliders } from '@/lib/scoring/breakdown';
+import { topInterestChips } from '@/lib/scoring/breakdown';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import {
   saveUserPreferences,
@@ -27,7 +27,7 @@ import { StartPrompt } from './StartPrompt';
 import { FetchingResults } from './FetchingResults';
 import { SearchBox } from './SearchBox';
 import { ResultsHeader } from './ResultsHeader';
-import { useResortDemo } from './useResortDemo';
+import { useResortDemo, prefersReducedMotion } from './useResortDemo';
 import { ResultsList } from './ResultsList';
 import { DnaPanel } from './DnaPanel';
 import { BackToTopButton } from './BackToTopButton';
@@ -47,6 +47,13 @@ const RESET_CONFIRM = "Reset sliders and Open To bands to the current persona's 
 // the fetching state is still on screen once that scroll settles.
 const FETCHING_RESULTS_MS = 900;
 
+// The first-appearance entrance, timed from the moment the fetching state
+// resolves (see handleChooseMonth / revealStage above) — mirrors the "Place
+// Card Open" mockup's timing: a beat for "My Interests" to pop open, then
+// the cards rise into place.
+const REVEAL_MY_INTERESTS_MS = 350;
+const REVEAL_CARDS_MS = 550;
+
 function weightsEqual(a: Record<string, number>, b: Record<string, number>): boolean {
   return SLIDERS.every((s) => (a[s.key] || 0) === (b[s.key] || 0));
 }
@@ -59,9 +66,11 @@ interface Props {
   initialHasDnaSignal: boolean;
   /** First word of the visitor's stored name, or null — the header says "you" for null. */
   userFirstName: string | null;
+  /** Admin-set emoji overrides, keyed by slider key — see getInterestEmojiOverrides. Falls back to the slider's own code-defined icon when a key has no override. */
+  emojiOverrides: Record<string, string>;
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -93,6 +102,13 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   const [visibleCount, setVisibleCount] = useState(20);
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const [isFetchingResults, setIsFetchingResults] = useState(false);
+  // The first-appearance entrance (see handleChooseMonth): 0 = chips bare,
+  // cards hidden; 1 = "My Interests" has popped open; 2 = settled, cards
+  // risen into place. Starts at 2 (nothing to play) so a returning visitor
+  // whose month was already chosen in a prior session lands on a normal,
+  // already-settled list instead of replaying this every load.
+  const [revealStage, setRevealStage] = useState<0 | 1 | 2>(2);
+  const revealTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   // "Visited" is deliberately ephemeral — no user_stamps table exists yet
   // (see docs/final-architecture-plan.md's Place-migration Phase 1). This
@@ -152,11 +168,10 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     return computeRankedDestinations(destinations, weights, month, bands, selectedStyles);
   }, [destinations, weights, month, bands, monthChosen, selectedStyles]);
 
-  // Overall + the top 3 weighted sliders — reuses topInterestSliders (the
-  // same "what does this user actually care about" logic behind the
-  // detail sheet's own interest breakdown), just capped to 3 for a
-  // compact chip row.
-  const chipSliders = useMemo(() => topInterestSliders(weights).slice(0, 3), [weights]);
+  // Overall + your top interests — the exact same topInterestChips list the
+  // detail sheet's For You tab shows (same pool, same adaptive 1-5 count),
+  // so a chip that appears on a place card was never hidden up here.
+  const chipSliders = useMemo(() => topInterestChips(weights), [weights]);
 
   // A pinned chip re-sorts a copy of `ranked` by that one slider's own
   // score for the current month (not the overall weighted score) — display-
@@ -215,6 +230,11 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     setShowAllSliders(false);
     setVisibleCount(20);
     setHasStarted(true);
+    // A chip pinned under the old weights may not even exist in the new
+    // persona's top set — left as-is, nothing in the row would match it, so
+    // no chip (not even "My Interests") would show as selected. A fresh
+    // profile always starts back on the unfiltered "My Interests" view.
+    setPinnedChip(null);
     persist({ personaId: id, weights: nextWeights, bands, month, monthChosen, showAllSliders: false });
   }
 
@@ -254,8 +274,21 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     // leaving the page scrolled to an arbitrary spot instead of actually
     // at the results section.
     setIsFetchingResults(true);
+    const reduced = prefersReducedMotion();
+    if (!reduced) setRevealStage(0);
     if (fetchingTimerRef.current) clearTimeout(fetchingTimerRef.current);
-    fetchingTimerRef.current = setTimeout(() => setIsFetchingResults(false), FETCHING_RESULTS_MS);
+    revealTimersRef.current.forEach(clearTimeout);
+    fetchingTimerRef.current = setTimeout(() => {
+      setIsFetchingResults(false);
+      // The entrance itself: "My Interests" pops open first, then the cards
+      // rise into place a beat later — see the "Place Card Open" mockup.
+      if (!reduced) {
+        revealTimersRef.current = [
+          setTimeout(() => setRevealStage(1), REVEAL_MY_INTERESTS_MS),
+          setTimeout(() => setRevealStage(2), REVEAL_CARDS_MS),
+        ];
+      }
+    }, FETCHING_RESULTS_MS);
   }
 
   // From the results header: the ranking simply re-sorts (and animates) in
@@ -292,6 +325,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     setBands(nextBands);
     setShowAllSliders(false);
     setVisibleCount(20);
+    setPinnedChip(null); // see handleSelectPersona's comment — same reset-the-whole-profile case
     persist({ personaId, weights: nextWeights, bands: nextBands, month, monthChosen, showAllSliders: false });
   }
 
@@ -306,6 +340,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     setShowAllSliders(true);
     setVisibleCount(20);
     setHasStarted(true);
+    setPinnedChip(null); // see handleSelectPersona's comment
     persist({ personaId: null, weights: profile.weights, bands: profile.bands, month, monthChosen, showAllSliders: true });
   }
 
@@ -342,6 +377,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     setShowAllSliders(true);
     setVisibleCount(20);
     setHasStarted(true);
+    setPinnedChip(null); // see handleSelectPersona's comment
   }
 
   function handleKeepRefining() {
@@ -404,6 +440,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   useEffect(() => {
     return () => {
       if (fetchingTimerRef.current) clearTimeout(fetchingTimerRef.current);
+      revealTimersRef.current.forEach(clearTimeout);
     };
   }, []);
 
@@ -430,6 +467,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           <PersonaPicker activePersonaId={personaId} collapsed={personaId === null && hasStarted} onSelect={handleSelectPersona} />
           <SliderPanel
             weights={weights}
+            emojiOverrides={emojiOverrides}
             onSliderChange={handleSliderChange}
             showAllSliders={showAllSliders}
             onToggleShowAll={handleToggleShowAll}
@@ -491,14 +529,14 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           {resultsShown && (
             <div className="quick-chip-row-wrap">
               <div className="quick-chip-row" ref={chipRowRef}>
-                <InterestChip emoji="🧬" label="My Interests" active={pinnedChip === null} onClick={() => setPinnedChip(null)} />
+                <InterestChip emoji="🧬" label="My Interests" active={revealStage >= 1 && pinnedChip === null} onClick={() => setPinnedChip(null)} />
                 {chipSliders.map((s) => (
                   <InterestChip
                     key={s.key}
-                    emoji={s.icon}
+                    emoji={emojiOverrides[s.key] ?? s.icon}
                     label={shortInterestLabel(s.label)}
                     fullLabel={s.label}
-                    active={pinnedChip === s.key}
+                    active={revealStage >= 1 && pinnedChip === s.key}
                     onClick={() => setPinnedChip(s.key)}
                     chipRef={(el) => {
                       if (el) chipEls.current.set(s.key, el);
@@ -571,6 +609,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
               onToggleFavorited={toggleFavorited}
               onToggleVisited={toggleVisited}
               filterKey={`${hideVisited}:${showWishlistOnly}`}
+              cardsRevealed={revealStage >= 2}
             />
           )}
         </section>
@@ -581,6 +620,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           key={openDetailEntry.d.id}
           dest={openDetailEntry.d}
           weights={weights}
+          emojiOverrides={emojiOverrides}
           bands={bands}
           selectedStyles={selectedStyles}
           month={month}

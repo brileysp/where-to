@@ -26,6 +26,7 @@ export function InterestChip({
   active,
   onClick,
   score,
+  bubblePop,
   chipRef,
 }: {
   emoji: string;
@@ -35,6 +36,13 @@ export function InterestChip({
   active: boolean;
   onClick: () => void;
   score?: number | null;
+  // True when this bubble should play its mount pop (a CSS `animation`, so
+  // it only ever runs once, right as the element is first inserted) — the
+  // place-card open sequence withholds `score` at first, then supplies it a
+  // beat later, and wants that arrival to feel deliberate rather than the
+  // bubble just silently being there on the next render. Every other caller
+  // passes a score from the chip's very first render and leaves this unset.
+  bubblePop?: boolean;
   chipRef?: (el: HTMLButtonElement | null) => void;
 }) {
   const ref = useRef<HTMLButtonElement | null>(null);
@@ -82,7 +90,10 @@ export function InterestChip({
         </span>
       </span>
       {hasBubble && (
-        <span className="ichip-bubble" style={{ background: bubbleColor, color: bubbleInk }}>
+        <span
+          className={`ichip-bubble${bubblePop ? ' ichip-bubble-pop' : ''}`}
+          style={{ background: bubbleColor, color: bubbleInk }}
+        >
           {bubbleText}
         </span>
       )}

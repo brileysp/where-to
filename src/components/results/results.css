@@ -613,6 +613,43 @@
   scroll-margin-top: 90px;
 }
 
+/* First-appearance entrance (see ResultsApp's revealStage / ResultsList's
+   cardsRevealed) — a plain wrapper around each card rather than styling
+   .card directly, so this never fights the re-sort FLIP logic further down,
+   which writes its own transform/opacity straight onto the card element. */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+.card-reveal.in {
+  animation: cardRise 0.42s cubic-bezier(0.22, 1.28, 0.4, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+@keyframes cardRise {
+  0% {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-reveal,
+  .card-reveal.in {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+  }
+}
+
 @keyframes search-highlight-pulse {
   0%,
   100% {
@@ -1884,6 +1921,15 @@
 
 .quick-chip-row-wrap {
   position: relative;
+  /* Belt-and-suspenders against the classic flex/grid "blowout": a flex
+     child's default min-width is its own content size, not 0, so without
+     this a long expanded chip label can still force this row — and every
+     ancestor up through the results column — wider than the viewport in
+     browsers that resolve that default less aggressively than others.
+     `.results` already sets min-width: 0 for the same reason; this repeats
+     it right at the row so nothing in between can reintroduce the bug. */
+  min-width: 0;
+  width: 100%;
   margin-bottom: 14px;
 }
 
@@ -1893,6 +1939,15 @@
   overflow-x: auto;
   padding: 6px 20px 8px 2px;
   align-items: center;
+  min-width: 0;
+  width: 100%;
+  /* Without this, a trackpad swipe that reaches either end of this row
+     "chains" into the page itself, rubber-banding the whole layout
+     sideways (macOS Safari/Chrome) — which reads exactly like "the results
+     column's width changes while I scroll the chips," because for the
+     length of that bounce it genuinely does. Containing it here keeps the
+     bounce local to the chip row, where it belongs. */
+  overscroll-behavior-x: contain;
 }
 
 /* Signals there's more to scroll to without a visible scrollbar. */
@@ -2161,6 +2216,10 @@
 
 .interest-chip-row-wrap {
   position: relative;
+  /* Same blowout guard as .quick-chip-row-wrap — no width:100% here, though:
+     the negative side margins below are what bleed this row flush to the
+     sheet's edges, and an explicit width would fight that math. */
+  min-width: 0;
   margin: 0 -16px 6px;
 }
 
@@ -2179,6 +2238,10 @@
   gap: 10px;
   overflow-x: auto;
   align-items: center;
+  min-width: 0;
+  width: 100%;
+  /* See .quick-chip-row's comment — same trackpad-bounce containment. */
+  overscroll-behavior-x: contain;
   /* Room above and to the right for the score bubble that hangs off the corner. */
   padding: 12px 22px 12px 18px;
 }
@@ -2288,6 +2351,28 @@
   border: 2px solid var(--bg-card);
 }
 
+/* The bubble's one-time mount pop — see InterestChip's `bubblePop` prop. An
+   `animation` (not a transition) so it plays exactly once, right as the
+   bubble is inserted, and never replays just because the chip re-renders. */
+.ichip-bubble-pop {
+  animation: ichipBubblePop 0.32s cubic-bezier(0.34, 1.6, 0.64, 1);
+}
+
+@keyframes ichipBubblePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* A small nudge and a faint ring when a chip opens. */
 .ichip.just .ichip-emoji {
   animation: ichipNudge 0.34s cubic-bezier(0.22, 1, 0.36, 1);
@@ -2328,7 +2413,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ichip,
-  .ichip * {
+  .ichip *,
+  .interest-detail {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
@@ -2337,10 +2423,26 @@
   }
 }
 
-/* The selected interest's detail under the chip row. */
+/* The selected interest's detail under the chip row. Only ever mounts once
+   the place-card open sequence reaches its last stage (see ForYouTab), so
+   this animation is really a one-time mount pop, same idea as
+   .ichip-bubble-pop above — plain CSS transitions on an already-mounted
+   node can't do this because there's no prior state to transition from. */
 .interest-detail {
+  animation: interestDetailPopIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
   border-top: 1px solid var(--border);
   padding-top: 14px;
+}
+
+@keyframes interestDetailPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .interest-detail-heading {

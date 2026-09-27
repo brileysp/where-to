@@ -10,6 +10,8 @@ function weightsEqual(a: Record<string, number>, b: Record<string, number>): boo
 
 interface Props {
   weights: Record<string, number>;
+  /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
+  emojiOverrides: Record<string, string>;
   onSliderChange: (key: string, value: number) => void;
   showAllSliders: boolean;
   onToggleShowAll: () => void;
@@ -26,6 +28,7 @@ interface Props {
 
 export function SliderPanel({
   weights,
+  emojiOverrides,
   onSliderChange,
   showAllSliders,
   onToggleShowAll,
@@ -85,7 +88,7 @@ export function SliderPanel({
               <div key={s.key} className="slider-row">
                 <div className="slider-top">
                   <span className="slider-label">
-                    <span className="slider-icon">{s.icon}</span>
+                    <span className="slider-icon">{emojiOverrides[s.key] ?? s.icon}</span>
                     {s.label}
                   </span>
                   <span className="slider-val">{weights[s.key] ?? 0}</span>

@@ -19,6 +19,12 @@ interface Props {
   /** Changes exactly when "Hide visited" or "Show wishlist" is toggled —
    * see the forceResort comment below for why this exists. */
   filterKey: string;
+  /** False for the brief window right after a fresh list first appears —
+   * see ResultsApp's revealStage. Cards mount hidden and rise into place
+   * the instant this flips true; a card that mounts after it's already
+   * true (e.g. "Show more", or the FIRST render for a returning visitor)
+   * just plays the same rise immediately, which reads fine either way. */
+  cardsRevealed: boolean;
 }
 
 export { RESULTS_PAGE_SIZE };
@@ -27,6 +33,9 @@ export { RESULTS_PAGE_SIZE };
 // their #N and score instead of a separate badge (see .rank-flash in css).
 const FLASH_MS = 650;
 const TRAVEL_CAP = 600;
+// Caps the entrance stagger so a long list doesn't turn into a slow
+// cascade — everything past the 9th card rises together with the 9th.
+const REVEAL_STAGGER_CAP = 8;
 
 interface Layout {
   ids: string[];
@@ -46,6 +55,7 @@ export function ResultsList({
   onToggleFavorited,
   onToggleVisited,
   filterKey,
+  cardsRevealed,
 }: Props) {
   const visible = ranked.slice(0, visibleCount);
   const remaining = ranked.length - visibleCount;
@@ -237,22 +247,27 @@ export function ResultsList({
           </div>
         ))}
         {visible.map(({ d, s }, i) => (
-          <DestinationCard
+          <div
             key={d.id}
-            ref={(el) => {
-              if (el) cardRefs.current.set(d.id, el);
-              else cardRefs.current.delete(d.id);
-            }}
-            dest={d}
-            rank={i + 1}
-            score={s}
-            highlighted={highlightedId === d.id}
-            visited={!!visited[d.id]}
-            favorited={!!favorited[d.id]}
-            onOpenDetail={() => onOpenDetail(d.id)}
-            onToggleFavorited={() => onToggleFavorited(d.id)}
-            onToggleVisited={() => onToggleVisited(d.id)}
-          />
+            className={`card-reveal${cardsRevealed ? ' in' : ''}`}
+            style={{ '--i': Math.min(i, REVEAL_STAGGER_CAP) } as React.CSSProperties}
+          >
+            <DestinationCard
+              ref={(el) => {
+                if (el) cardRefs.current.set(d.id, el);
+                else cardRefs.current.delete(d.id);
+              }}
+              dest={d}
+              rank={i + 1}
+              score={s}
+              highlighted={highlightedId === d.id}
+              visited={!!visited[d.id]}
+              favorited={!!favorited[d.id]}
+              onOpenDetail={() => onOpenDetail(d.id)}
+              onToggleFavorited={() => onToggleFavorited(d.id)}
+              onToggleVisited={() => onToggleVisited(d.id)}
+            />
+          </div>
         ))}
       </div>
       {remaining > 0 && (

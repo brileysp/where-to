@@ -28,6 +28,7 @@ const CONFIRM_MS = 260;
 export function DestinationDetailSheet({
   dest,
   weights,
+  emojiOverrides,
   bands,
   selectedStyles,
   month,
@@ -39,6 +40,8 @@ export function DestinationDetailSheet({
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
+  /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
+  emojiOverrides: Record<string, string>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   /** The app's search month (1-12). Never changed from in here: the sheet only previews other months. */
@@ -188,6 +191,7 @@ export function DestinationDetailSheet({
             <ForYouTab
               dest={dest}
               weights={weights}
+              emojiOverrides={emojiOverrides}
               bands={bands}
               selectedStyles={selectedStyles}
               previewIdx={previewIdx}

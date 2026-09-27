@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MONTH_NAMES, MONTH_SHORT, allBandsSelected } from '@/lib/scoring/constants';
 import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore, bandPenalty } from '@/lib/scoring/rank';
 import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
@@ -7,6 +7,18 @@ import { matchAdjustments } from '@/lib/scoring/matchExplainer';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { InterestChip, shortInterestLabel } from './InterestChip';
+import { prefersReducedMotion } from './useResortDemo';
+
+// The place-card open sequence (plays every time, on every card — see the
+// "Place Card Open, Two Ways" mockup, version B): interest pills arrive
+// already visible but bare, the traveller's #1 interest pops itself open,
+// then every chip's score lands together right as the detail content below
+// appears. A real tap on any chip before it finishes takes over immediately
+// rather than making the person wait out the rest of the script.
+const REVEAL_TOP_CHIP_MS = 500;
+const REVEAL_SCORES_MS = 760;
+const REVEAL_CONTENT_MS = 810;
+type RevealStage = 0 | 1 | 2 | 3;
 
 /**
  * "For You" tab. The match card leads (with a note behind its (i) explaining what the Open To
@@ -21,6 +33,7 @@ import { InterestChip, shortInterestLabel } from './InterestChip';
 export function ForYouTab({
   dest,
   weights,
+  emojiOverrides,
   bands,
   selectedStyles,
   previewIdx,
@@ -30,6 +43,8 @@ export function ForYouTab({
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
+  /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
+  emojiOverrides: Record<string, string>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   previewIdx: number;
@@ -38,6 +53,32 @@ export function ForYouTab({
   onSelectCategory: (key: string) => void;
 }) {
   const [noteOpen, setNoteOpen] = useState(false);
+
+  // Runs once per place-card open: this component remounts fresh every time
+  // (DestinationDetailSheet keys the whole sheet by destination id), so a
+  // plain mount effect is enough — no dest-id bookkeeping needed here.
+  const [stage, setStage] = useState<RevealStage>(prefersReducedMotion() ? 3 : 0);
+  const revealTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  useEffect(() => {
+    if (prefersReducedMotion()) return;
+    revealTimers.current = [
+      setTimeout(() => setStage(1), REVEAL_TOP_CHIP_MS),
+      setTimeout(() => setStage(2), REVEAL_SCORES_MS),
+      setTimeout(() => setStage(3), REVEAL_CONTENT_MS),
+    ];
+    return () => revealTimers.current.forEach(clearTimeout);
+  }, []);
+
+  function handleSelectCategory(key: string) {
+    // A real tap wins over the script — jump straight to the settled state
+    // instead of leaving the person waiting for chips to catch up to what
+    // they already did.
+    if (stage < 3) {
+      revealTimers.current.forEach(clearTimeout);
+      setStage(3);
+    }
+    onSelectCategory(key);
+  }
 
   const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles);
   const match = matchLabel(score);
@@ -109,19 +150,28 @@ export function ForYouTab({
               {chips.map((c) => (
                 <InterestChip
                   key={c.slider.key}
-                  emoji={c.slider.icon}
+                  emoji={emojiOverrides[c.slider.key] ?? c.slider.icon}
                   label={shortInterestLabel(c.slider.label)}
                   fullLabel={c.slider.label}
-                  active={c.slider.key === selected.slider.key}
-                  score={c.isNA ? null : c.score}
-                  onClick={() => onSelectCategory(c.slider.key)}
+                  active={stage >= 1 && c.slider.key === selected.slider.key}
+                  score={stage >= 2 ? (c.isNA ? null : c.score) : undefined}
+                  bubblePop
+                  onClick={() => handleSelectCategory(c.slider.key)}
                 />
               ))}
             </div>
             <div className="interest-chip-row-fade" aria-hidden />
           </div>
 
-          <InterestDetail dest={dest} row={selected} previewIdx={previewIdx} onChangeMonth={onChangeMonth} />
+          {stage >= 3 && (
+            <InterestDetail
+              dest={dest}
+              row={selected}
+              icon={emojiOverrides[selected.slider.key] ?? selected.slider.icon}
+              previewIdx={previewIdx}
+              onChangeMonth={onChangeMonth}
+            />
+          )}
         </>
       )}
     </div>
@@ -131,18 +181,21 @@ export function ForYouTab({
 function InterestDetail({
   dest,
   row,
+  icon,
   previewIdx,
   onChangeMonth,
 }: {
   dest: ScoredDestination;
   row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
+  /** Resolved icon (admin override already applied) — don't read row.slider.icon directly here. */
+  icon: string;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
   const { slider, isNA, score } = row;
   const heading = (
     <div className="interest-detail-heading">
-      <span className="interest-detail-icon">{slider.icon}</span>
+      <span className="interest-detail-icon">{icon}</span>
       {slider.label}
     </div>
   );
