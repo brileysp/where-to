@@ -1,4 +1,4 @@
-import { BAND_DIMENSIONS, MONTH_NAMES, VISIBLE_SLIDERS } from './constants';
+import { BAND_DIMENSIONS, VISIBLE_SLIDERS } from './constants';
 import { isSliderNA } from './destinations';
 import { effectiveWeights, styleAdjustedScore } from './rank';
 import type { SelectedBands, SelectedStyles } from './rank';
@@ -93,7 +93,16 @@ export function bandMismatchReasons(dest: ScoredDestination, monthIdx: number, s
       if (selected.includes(destBand)) return;
       const destIdx = order.indexOf(destBand);
       const direction = destIdx < minSel ? 'colder' : 'hotter';
-      bandCons.push({ key: 'band-weather', icon: dim.icon, label: `${MONTH_NAMES[monthIdx]} is ${direction} than you want` });
+      // Deliberately no month name baked in here (it used to read "December
+      // is colder than you want") — every other dimension's label below is
+      // a bare predicate ("Pricier than you want", "Quieter than you
+      // want"...) meant to slot into a caller's own sentence (e.g. DnaDetail's
+      // "...because it's {reason}"). Weather's label carrying its own
+      // subject+verb was the one exception, and it broke exactly there:
+      // "because it's December is colder than you want". A caller that
+      // wants the month back (a standalone chip, say) can prepend it itself
+      // from the month it already has in scope.
+      bandCons.push({ key: 'band-weather', icon: dim.icon, label: `${direction === 'colder' ? 'Colder' : 'Hotter'} than you want` });
       return;
     }
 
