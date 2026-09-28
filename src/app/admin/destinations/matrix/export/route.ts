@@ -29,7 +29,17 @@ const MONTH_ABBR = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep
  *
  * `blurb_*` is `sliderMonthlyWeather[interest][month]` — already labeled
  * "monthly blurbs" in this screen's own edit UI — and round-trips as a
- * plain per-month text overwrite, no override layer involved.
+ * plain per-month text overwrite, no override layer involved. `blurb_overall`
+ * is `sliderOverview[interest]`, the one non-seasonal summary per interest
+ * (schema.ts's own distinction: "why does this month score the way it does,
+ * for THIS interest" vs the destination overall), separate from any one
+ * month's blurb.
+ *
+ * `tier` is `signatureTier[interest]` (none/casual/strong/signature) — the
+ * same field and same values as this screen's own "Tier" column — and
+ * `score_max`/`score_min` are the extremes of that row's 12 `score_*`
+ * columns, both included so a reviewer can judge an interest's overall
+ * standing at a place without scanning all twelve month cells first.
  *
  * N/A rows are included, not filtered out — deliberately: an interest
  * wrongly marked N/A for a place is exactly the kind of mistake this export
@@ -57,7 +67,11 @@ export async function GET(req: NextRequest) {
     'interest_label',
     'na',
     'updated_at',
+    'tier',
+    'score_max',
+    'score_min',
     ...MONTH_ABBR.map((m) => `score_${m}`),
+    'blurb_overall',
     ...MONTH_ABBR.map((m) => `blurb_${m}`),
   ];
 
@@ -67,11 +81,15 @@ export async function GET(req: NextRequest) {
     const updatedAt = (admin?.updatedAt ?? new Date()).toISOString();
     const continent = getContinent(d.id);
     const blurbsBySlider = (admin?.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>;
+    const overviewBySlider = (admin?.sliderOverview ?? {}) as Record<string, string>;
 
     for (const s of sliders) {
       const na = d.naSliders.includes(s.key);
       const monthly = d.monthly[s.key] ?? [];
       const blurbs = blurbsBySlider[s.key] ?? [];
+      const tier = d.signatureTier[s.key] ?? 'none';
+      const scoreMax = na || monthly.length === 0 ? null : Math.round(Math.max(...monthly) * 10) / 10;
+      const scoreMin = na || monthly.length === 0 ? null : Math.round(Math.min(...monthly) * 10) / 10;
       rows.push([
         d.id,
         d.name,
@@ -81,7 +99,11 @@ export async function GET(req: NextRequest) {
         s.label,
         na,
         updatedAt,
+        tier,
+        scoreMax,
+        scoreMin,
         ...Array.from({ length: 12 }, (_, i) => (typeof monthly[i] === 'number' ? Math.round(monthly[i] * 10) / 10 : null)),
+        overviewBySlider[s.key] ?? '',
         ...Array.from({ length: 12 }, (_, i) => blurbs[i] ?? ''),
       ]);
     }
