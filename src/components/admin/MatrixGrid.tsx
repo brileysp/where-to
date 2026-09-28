@@ -549,6 +549,13 @@ export function MatrixGrid({
               </optgroup>
             ))}
           </select>
+          <a
+            className="filter-select"
+            style={{ textDecoration: 'none', display: 'inline-block' }}
+            href={`/admin/destinations/matrix/export${selectedInterest === 'all' ? '' : `?interest=${selectedInterest}`}`}
+          >
+            ⬇ Export CSV{selectedInterest === 'all' ? ' (all interests)' : ''}
+          </a>
         </>
       }
     />
