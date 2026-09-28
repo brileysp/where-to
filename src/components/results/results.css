@@ -21,11 +21,20 @@
 }
 
 .app-header-tagline {
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--text-faint);
 }
 
 .layout {
+  /* Without an explicit width, this block-level grid container — sitting
+     inside body's flex column — doesn't reliably fill the available width
+     on its own; it was instead sizing itself to whatever its widest grid
+     child's content needed (a wide-enough chip row from a persona with more
+     top interests than usual), then capping only at max-width. That's the
+     real cause behind "the results section/cards change width depending on
+     how many interest chips there are" — confirmed by forcing width:100%
+     live and watching the drift disappear immediately. */
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
@@ -79,13 +88,13 @@
 
 .panel h2 {
   margin: 0 0 10px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 650;
 }
 
 .panel-hint {
   margin: -4px 0 12px;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-faint);
   line-height: 1.5;
 }
@@ -100,7 +109,7 @@
   color: var(--accent);
   border-radius: 6px;
   padding: 4px 10px;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   margin: -4px 0 10px;
 }
@@ -125,7 +134,7 @@
 }
 
 .panel-note {
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--text-faint);
   line-height: 1.5;
 }
@@ -137,7 +146,7 @@
   border-radius: 10px;
   padding: 11px 20px;
   font-weight: 700;
-  font-size: 13.5px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -173,7 +182,7 @@
   padding: 2px 2px 4px;
   margin: 0;
   color: var(--text-faint);
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
@@ -226,7 +235,7 @@
 }
 
 .persona-blurb {
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--text-faint);
   line-height: 1.4;
 }
@@ -247,7 +256,7 @@
   color: var(--text);
   border-radius: 8px;
   padding: 6px 8px;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 /* ---- Slider panel ---- */
@@ -276,7 +285,7 @@
 }
 
 .slider-label {
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .slider-icon {
@@ -287,7 +296,7 @@
   color: var(--accent);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .slider-row input[type='range'] {
@@ -301,7 +310,7 @@
 }
 
 .style-pill-group-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -352,7 +361,7 @@
 }
 
 .band-dim-header {
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--text-dim);
   margin-bottom: 6px;
 }
@@ -368,7 +377,7 @@
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 5px 11px;
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text);
   cursor: pointer;
 }
@@ -397,7 +406,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 4px;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text);
   cursor: pointer;
 }
@@ -416,7 +425,7 @@
 /* ---- Results area ---- */
 
 .results h1 {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
@@ -452,7 +461,7 @@
   align-items: center;
   gap: 14px;
   color: var(--text-faint);
-  font-size: 13.5px;
+  font-size: 13px;
 }
 
 .results-fetching-spinner {
@@ -502,7 +511,7 @@
   background: transparent;
   outline: none;
   color: var(--text);
-  font-size: 13.5px;
+  font-size: 13px;
 }
 
 .results-search-clear {
@@ -510,7 +519,7 @@
   border: none;
   color: var(--text-faint);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .results-search-dropdown {
@@ -580,7 +589,7 @@
 }
 
 .search-dropdown-region {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-faint);
 }
 
@@ -592,7 +601,7 @@
 
 .search-dropdown-empty {
   padding: 16px;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-faint);
   text-align: center;
 }
@@ -701,7 +710,7 @@
 }
 
 .card-name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.28;
   flex: 1;
@@ -712,7 +721,7 @@
 }
 
 .card-score {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
@@ -750,7 +759,7 @@
 }
 
 .card-region {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-dim);
   display: inline-flex;
@@ -885,7 +894,7 @@
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   color: var(--text-dim);
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
@@ -1099,6 +1108,13 @@
   flex-direction: column;
   animation: detailSlideUp 0.25s ease;
   color: var(--text);
+  /* A hard backstop: this box had no overflow rule at all, so anything
+     inside that ends up wider than intended (a long chip row hitting a
+     browser-specific flex/negative-margin quirk, say) doesn't just scroll
+     internally — it visually bleeds out past the sheet's own rounded
+     corners into the page behind it. This guarantees the sheet's edge is
+     really its edge, whatever misbehaves inside it. */
+  overflow-x: hidden;
 }
 
 @media (min-width: 700px) {
@@ -1152,12 +1168,12 @@
 }
 
 .detail-sheet-name {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 750;
 }
 
 .detail-sheet-region {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-faint);
   margin-top: 2px;
 }
@@ -1201,7 +1217,7 @@
   border: none;
   background: transparent;
   color: var(--text-faint);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1231,6 +1247,13 @@
   visibility: hidden;
   pointer-events: none;
   min-height: 0;
+  /* Same trap as min-height above, other axis: a grid item's default
+     min-width is auto, meaning it won't shrink below its own content's
+     natural width (e.g. a wide chip row needing several hundred px) even
+     though the grid track itself has plenty of visible constraint. That
+     silently widens this panel — and everything measured inside it —
+     past the sheet's real width, worse the more chips there are to fit. */
+  min-width: 0;
 }
 
 .detail-tab-panel.active {
@@ -1255,7 +1278,7 @@
 }
 
 .detail-section-title {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   margin: 22px 0 12px;
 }
@@ -1266,116 +1289,26 @@
 
 /* ---- For You tab ---- */
 
-.match-card {
-  background: var(--accent-soft);
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 20px;
-}
-
-.match-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.match-card-dna {
-  margin-right: 6px;
-}
-
-/* The note behind the score's (i): what the Open To filters did to it. */
-.match-card-note {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-  font-size: 12.5px;
-  line-height: 1.9;
-  color: var(--text-dim);
-}
-
-.match-adjust-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin: 0 4px 0 2px;
-  padding: 1px 9px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.match-adjust-chip.good {
-  color: var(--good);
-  border-color: color-mix(in srgb, var(--good) 40%, var(--border));
-}
-
-.match-adjust-chip.bad {
-  color: var(--bad);
-  border-color: color-mix(in srgb, var(--bad) 40%, var(--border));
-}
-
-.match-adjust-numbers {
-  margin-left: 4px;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-.match-adjust-numbers b {
-  color: var(--text);
-}
-
-.match-card-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--accent);
-  text-transform: uppercase;
-}
-
-.match-card-label {
+/* The computed (not authored) explanation in the "My Interests" view — see
+   DnaDetail in ForYouTab.tsx. Deliberately plainer than a blurb: this is
+   generated from real numbers, not written, so it shouldn't visually read
+   as prose someone crafted. */
+.dna-sentence {
   font-size: 13px;
-  margin-top: 2px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 8px 0 10px;
 }
 
-.match-card-score {
-  font-size: 32px;
-  font-weight: 800;
+.dna-hint {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-faint);
+  margin: 0 0 2px;
 }
 
-.match-score-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Replaces the old "Specialist boost" box — all that shows by default is
-   this small (i), right next to the score itself. */
-.match-info-btn {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1.5px solid currentColor;
-  background: none;
-  color: inherit;
-  opacity: 0.55;
-  font-size: 11px;
-  font-weight: 700;
-  font-style: italic;
-  font-family: Georgia, 'Times New Roman', serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.match-info-btn:hover {
-  opacity: 0.9;
+.dna-hint:last-of-type {
+  margin-bottom: 14px;
 }
 
 .interest-place-blurb {
@@ -1453,7 +1386,7 @@
 .months-chart-label {
   flex: 1;
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-faint);
   font-weight: 500;
   cursor: pointer;
@@ -1489,15 +1422,28 @@
   margin-bottom: 0;
 }
 
+/* Grid, not flex: a "flex: 1; min-width: 0" text column next to an "auto"
+   column is exactly the combination Safari and Chromium have been seen to
+   resolve differently for wrapping purposes — confirmed directly, same
+   content wrapped in one engine and not the other. Grid's 1fr/auto track
+   pair is the more consistently-implemented way to say the same thing. */
 .month-detail-top {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
 }
 
+/* Still needed even under grid: a track's automatic minimum size defaults
+   to its content's own min-content width, which for a long unbroken phrase
+   can still force the column (and the row) wider than intended — the same
+   failure mode as the results-column blowout elsewhere in this file. */
+.month-detail-text {
+  min-width: 0;
+}
+
 .month-detail-score {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -1512,7 +1458,7 @@
 }
 
 .month-detail-name {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -1532,13 +1478,13 @@
 }
 
 .cost-range-label {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.5px;
 }
 
 .cost-range-hint {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-faint);
   flex: 1;
 }
@@ -1565,7 +1511,7 @@
 }
 
 .cost-key-text {
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--text-faint);
   line-height: 1.6;
   background: var(--card-bg);
@@ -1591,7 +1537,7 @@
   margin-bottom: 18px;
   text-align: center;
   font-family: monospace;
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--text-faint);
   line-height: 1.6;
 }
@@ -1610,7 +1556,7 @@
 .stamps-toggle-link {
   background: none;
   border: none;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent);
   font-weight: 600;
   cursor: pointer;
@@ -1669,7 +1615,7 @@
 }
 
 .stamps-row-name {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -1678,7 +1624,7 @@
 }
 
 .stamps-row-region {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-faint);
 }
 
@@ -1777,7 +1723,7 @@
 .stamps-sheet .detail-sheet-name {
   font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--paper-teal);
@@ -1785,7 +1731,7 @@
 
 .stamps-sheet .detail-sheet-region {
   font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
-  font-size: 11.5px;
+  font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--paper-dim);
 }
@@ -1889,7 +1835,7 @@
 }
 
 .visited-stat-label {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-faint);
   font-weight: 600;
 }
@@ -1905,7 +1851,7 @@
   gap: 4px;
   background: none;
   border: none;
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-dim);
   opacity: 0.7;
   font-weight: 500;
@@ -2009,7 +1955,7 @@
   flex-wrap: wrap;
   gap: 5px;
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 1.3;
 }
@@ -2036,7 +1982,7 @@
   align-items: center;
   gap: 6px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
   line-height: 1.3;
   padding: 2px 9px;
@@ -2243,10 +2189,14 @@
 
 .interest-chip-row-wrap {
   position: relative;
-  /* Same blowout guard as .quick-chip-row-wrap — no width:100% here, though:
-     the negative side margins below are what bleed this row flush to the
-     sheet's edges, and an explicit width would fight that math. */
   min-width: 0;
+  /* An explicit width, not width:auto inferred from the negative margins
+     below — auto-width-from-margins is the same "fill available space"
+     math either way, but leaving it implicit is exactly the kind of thing
+     Safari has a history of resolving differently from Chromium once a
+     wide-enough flex child (a long chip row) is involved. Spelling it out
+     removes that ambiguity outright instead of hoping every engine agrees. */
+  width: calc(100% + 32px);
   margin: 0 -16px 6px;
 }
 
@@ -2345,7 +2295,7 @@
 }
 
 .ichip-label {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -2372,7 +2322,7 @@
   border-radius: 11px;
   display: grid;
   place-items: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   border: 2px solid var(--bg-card);
@@ -2473,7 +2423,7 @@
 }
 
 .interest-detail-heading {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
   margin-bottom: 4px;
 }
@@ -2484,7 +2434,7 @@
 
 .interest-detail-months-title {
   margin-top: 4px;
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-faint);
@@ -2502,7 +2452,7 @@
   background: none;
   padding: 2px 0;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--accent);
   text-decoration: underline;

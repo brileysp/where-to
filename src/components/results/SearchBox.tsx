@@ -106,7 +106,7 @@ export function SearchBox({
                   </div>
                   {r && label && (
                     <span className={`search-dropdown-rank score-${label.cls}`}>
-                      #{idx + 1} · {r.s.toFixed(1)} · {label.text}
+                      #{idx + 1} · {r.s.toFixed(1)}
                     </span>
                   )}
                 </div>
