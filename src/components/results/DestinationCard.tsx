@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
 import { matchLabel } from '@/lib/scoring/rank';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { StampBadge } from './StampBadge';
@@ -63,6 +63,36 @@ export const DestinationCard = forwardRef<HTMLElement, Props>(function Destinati
   const [open, setOpen] = useState(false);
   const [justStamped, setJustStamped] = useState(false);
 
+  // The fade only means something when the region pill has actually lost
+  // width — measured directly rather than assumed, so a card with a short
+  // region name (plenty of room to spare) never gets its trailing edge
+  // faded out for no reason. This has to be measured on .card-region
+  // itself, not the .card-bottom-left wrapper around it: .card-region
+  // clips its own overflow (it needs overflow:hidden for its own
+  // now-decorative text-overflow:ellipsis, which never actually fires
+  // since ellipsis is a no-op on a flex container), so whatever it clips
+  // never shows up as its *parent's* scrollWidth — the wrapper always
+  // measures as non-overflowing even when the region text inside it is
+  // being cut off mid-word.
+  //
+  // Watched continuously via ResizeObserver rather than only on `open`
+  // change: a long region name can already be too tight for its space on
+  // a narrow screen even with the chips closed (the bookmark button alone
+  // takes the room), so the fade needs to catch that case too, not just
+  // the extra squeeze from the Visited/Save chips opening.
+  const bottomLeftRef = useRef<HTMLDivElement>(null);
+  const regionRef = useRef<HTMLSpanElement>(null);
+  const [squeezed, setSqueezed] = useState(false);
+  useLayoutEffect(() => {
+    const el = regionRef.current;
+    if (!el) return;
+    const measure = () => setSqueezed(el.scrollWidth > el.clientWidth + 1);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [open]);
+
   function handleMarkVisited(e: React.MouseEvent) {
     e.stopPropagation();
     if (visited) {
@@ -103,9 +133,9 @@ export const DestinationCard = forwardRef<HTMLElement, Props>(function Destinati
         <div className={`card-score score-${match.cls}`}>{score.toFixed(1)}</div>
       </div>
       <div className="card-bottom-row">
-        <div className={`card-bottom-left${open ? ' card-bottom-left-covered' : ''}`}>
+        <div ref={bottomLeftRef} className={`card-bottom-left${squeezed ? ' card-bottom-left-covered' : ''}`}>
           <span className="card-row-emoji">{dest.emoji}</span>
-          <span className="card-region">{dest.region}</span>
+          <span ref={regionRef} className="card-region">{dest.region}</span>
         </div>
         <div className="card-bottom-right">
           {open ? (
