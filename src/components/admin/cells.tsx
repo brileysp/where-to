@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { useFieldEdit } from './useFieldEdit';
 import { SETTING_TAGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
+import { formatStamp, stampIcon } from '@/lib/admin/format-stamp';
+import type { ContentStamp } from '@/lib/db/schema';
 
 /**
  * Grows a textarea to fit its content instead of clipping/scrolling it —
@@ -388,6 +390,7 @@ export function TextFieldPanelCell({
   hint,
   truncateAt = 40,
   toPatchValue,
+  badge,
 }: {
   ctx: FieldContext;
   value: string | null;
@@ -396,6 +399,10 @@ export function TextFieldPanelCell({
   truncateAt?: number;
   /** Override when the DB column shape differs from the edited string (e.g. a comma-separated list stored as a text[]). Defaults to identity. */
   toPatchValue?: (v: string | null) => unknown;
+  /** Optional small element rendered next to the trigger — e.g. a content-
+   * provenance icon (see MatrixGrid's Overview column). Every other caller
+   * omits this and is unaffected. */
+  badge?: React.ReactNode;
 }) {
   const commit = useFieldEdit();
   const [open, setOpen] = useState(false);
@@ -411,8 +418,10 @@ export function TextFieldPanelCell({
           setDraft(value ?? '');
           setOpen(true);
         }}
+        style={badge ? { display: 'flex', alignItems: 'center', gap: 6 } : undefined}
       >
         {display}
+        {badge}
       </div>
       {open && (
         <div className="scrim" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
@@ -674,6 +683,7 @@ export function SliderMonthlyWeatherCell({
   setLocal,
   toPatchValue,
   renderTrigger,
+  meta,
 }: {
   ctx: FieldContext;
   value: (string | null)[];
@@ -684,6 +694,13 @@ export function SliderMonthlyWeatherCell({
    * the same onClick the default trigger uses, so the panel still opens
    * correctly with the current draft. */
   renderTrigger?: (opts: { filledCount: number; onClick: () => void }) => React.ReactNode;
+  /** Content provenance, parallel to `value` (one per month) — see
+   * schema.ts's ContentStamp. Optional and display-only: reflects whatever
+   * was loaded with the page, not updated optimistically after a save (the
+   * server computes the real stamp; a refresh shows a just-made edit's own
+   * stamp). Every caller that omits this (Place Profile, for now) is
+   * unaffected. */
+  meta?: (ContentStamp | null)[];
 }) {
   const commit = useFieldEdit();
   const [open, setOpen] = useState(false);
@@ -734,13 +751,30 @@ export function SliderMonthlyWeatherCell({
 
   const activeMenuGroup = menu ? groups.find((g) => g.months[0] === menu.anchorMonth) ?? null : null;
 
+  // Trigger-pill summary: one icon when every authored month shares the
+  // same last-editor kind, a small mixed indicator when they don't (e.g.
+  // Gemini-authored with one human correction) — full detail is per-group
+  // inside the panel, this is just "does this need a closer look at all".
+  const metaKinds = meta ? Array.from(new Set(meta.filter(Boolean).map((m) => m!.lastEditedBy))) : [];
+  const triggerBadge =
+    metaKinds.length === 1 ? (
+      <span title={formatStamp(meta!.find(Boolean))} style={{ fontSize: 12 }}>
+        {stampIcon(metaKinds[0])}
+      </span>
+    ) : metaKinds.length > 1 ? (
+      <span title={`Mixed sources: ${metaKinds.join(', ')}`} style={{ fontSize: 12 }}>
+        {metaKinds.map(stampIcon).join('')}
+      </span>
+    ) : null;
+
   return (
     <>
       {renderTrigger ? (
         renderTrigger({ filledCount, onClick: openPanel })
       ) : (
-        <div className={`cell-inner text-cell${filledCount ? '' : ' empty'}`} onClick={openPanel}>
+        <div className={`cell-inner text-cell${filledCount ? '' : ' empty'}`} onClick={openPanel} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           {filledCount ? `${filledCount} of 12 months` : 'Click to add…'}
+          {triggerBadge}
         </div>
       )}
       {open && (
@@ -825,12 +859,31 @@ export function SliderMonthlyWeatherCell({
                   '--mw-group-color': g.colorKey ? `var(--cat-${g.colorKey})` : g.text ? 'var(--border-strong)' : 'var(--border)',
                   '--mw-group-soft': g.colorKey ? `var(--cat-${g.colorKey}-soft)` : 'var(--bg-sunken)',
                 } as React.CSSProperties;
+                // Every month in this group shares its text (that's what
+                // makes it one group); show one badge when they also share
+                // the exact same stamp, "mixed" when a partial edit has
+                // left some months in the group with a different history
+                // despite currently-identical text.
+                const groupStamps = meta ? g.months.map((m) => meta[m] ?? null) : [];
+                const distinctStamps = new Set(groupStamps.map((s) => (s ? formatStamp(s) : '')));
+                const groupStamp = distinctStamps.size === 1 ? groupStamps[0] : null;
                 return (
                   <div className="mw-group" key={g.months.join(',')} style={groupStyle}>
                     <div className="mw-group-head">
                       <span className="mw-swatch" style={{ background: 'var(--mw-group-color)' }} />
                       <span className="mw-range">{monthRanges(g.months).map(monthRangeLabel).join(', ')}</span>
                       <span className="mw-count">{g.months.length}mo</span>
+                      {meta && (
+                        groupStamp ? (
+                          <span title={formatStamp(groupStamp)} style={{ fontSize: 12 }}>
+                            {stampIcon(groupStamp.lastEditedBy)}
+                          </span>
+                        ) : distinctStamps.size > 1 ? (
+                          <span title="This merged block's months have different histories" style={{ fontSize: 12 }}>
+                            ⚠️
+                          </span>
+                        ) : null
+                      )}
                       <button
                         type="button"
                         className="mw-menu-btn"

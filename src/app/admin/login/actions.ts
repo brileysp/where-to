@@ -2,14 +2,15 @@
 
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
+import { isAllowedAdminEmail } from '@/lib/admin/allowed-admins';
 
 export async function signInAdmin(formData: FormData): Promise<void> {
   const email = String(formData.get('email') ?? '').trim();
   const password = String(formData.get('password') ?? '');
 
-  // Reject before ever calling Supabase if this isn't even the allowed
+  // Reject before ever calling Supabase if this isn't even an allowed
   // email — avoids an unnecessary auth round-trip for the wrong account.
-  if (!process.env.ADMIN_EMAIL || email !== process.env.ADMIN_EMAIL) {
+  if (!isAllowedAdminEmail(email)) {
     redirect('/admin/login?error=1');
   }
 

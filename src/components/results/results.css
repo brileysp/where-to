@@ -1523,7 +1523,37 @@
 /* ---- Stamps sheet ---- */
 
 .stamps-body-content {
+  position: relative;
   padding: 16px 16px 28px;
+  /* The paper texture lives here, not on .stamps-sheet — this element's
+     own height is the full scrollable content height (it just grows with
+     its children, unlike the fixed-viewport-height .detail-sheet-body
+     wrapping it), so a background painted here scrolls together with the
+     rows exactly like ink on a page, instead of staying pinned to the
+     sheet's own frame while the text slides past it underneath. */
+  background-color: #f3eedc;
+  background-image:
+    linear-gradient(180deg, rgba(59, 143, 153, 0.09) 0, rgba(139, 114, 179, 0.05) 110px, rgba(59, 143, 153, 0) 220px),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.6), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(140, 112, 60, 0.14), transparent 60%),
+    var(--paper-grain);
+  background-size: auto, auto, auto, 200px 200px;
+}
+
+.stamps-body-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--paper-waves);
+  background-size: 200px 60px;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stamps-body-content > * {
+  position: relative;
+  z-index: 1;
 }
 
 .stamps-map-placeholder {
@@ -1663,12 +1693,16 @@
 }
 
 /* ---- My Stamps: passport paper ----
-   The sheet is one continuous page of cream security paper: a fine grain,
-   the visa page's wave printing running faintly across the whole surface
-   (::before), a slight teal-to-lilac tint at the top, and a hairline inset
-   border (::after). It stays light in both themes, the way a passport page
-   does, so the ink stamps always read as ink on paper. Layout is untouched;
-   only the background, the small mono headings and the row colors change. */
+   The scrollable body is one continuous page of cream security paper: a
+   fine grain, the visa page's wave printing running faintly across the
+   whole surface, and a slight teal-to-lilac tint at the top (all on
+   .stamps-body-content below, so they scroll with the rows). The sheet
+   itself keeps a flat match of the same cream (for the header/handle area
+   outside the scrolling body) plus a hairline inset border (::after) that
+   stays put as a fixed frame around the scrolling page, passport-window
+   style. It stays light in both themes, the way a passport page does, so
+   the ink stamps always read as ink on paper. Layout is untouched; only
+   the background, the small mono headings and the row colors change. */
 .stamps-sheet {
   --paper-ink: #1f2c39;
   --paper-dim: #5b6c79;
@@ -1676,29 +1710,18 @@
   --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .46  0 0 0 0 .40  0 0 0 0 .28  0 0 0 .55 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23p%29'/%3E%3C/svg%3E");
   --paper-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Cpolyline points='0%2C30.0 4%2C31.6 8%2C33.2 12%2C34.8 16%2C36.3 20%2C37.6 24%2C38.9 28%2C40.0 32%2C41.0 36%2C41.8 40%2C42.4 44%2C42.8 48%2C43.0 52%2C43.0 56%2C42.8 60%2C42.4 64%2C41.8 68%2C41.0 72%2C40.0 76%2C38.9 80%2C37.6 84%2C36.3 88%2C34.8 92%2C33.2 96%2C31.6 100%2C30.0 104%2C28.4 108%2C26.8 112%2C25.2 116%2C23.7 120%2C22.4 124%2C21.1 128%2C20.0 132%2C19.0 136%2C18.2 140%2C17.6 144%2C17.2 148%2C17.0 152%2C17.0 156%2C17.2 160%2C17.6 164%2C18.2 168%2C19.0 172%2C20.0 176%2C21.1 180%2C22.4 184%2C23.7 188%2C25.2 192%2C26.8 196%2C28.4 200%2C30.0' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C37.2 4%2C38.8 8%2C40.2 12%2C41.5 16%2C42.6 20%2C43.6 24%2C44.3 28%2C44.7 32%2C45.0 36%2C45.0 40%2C44.7 44%2C44.3 48%2C43.6 52%2C42.7 56%2C41.6 60%2C40.3 64%2C38.8 68%2C37.3 72%2C35.6 76%2C33.8 80%2C31.9 84%2C30.0 88%2C28.2 92%2C26.3 96%2C24.5 100%2C22.8 104%2C21.2 108%2C19.8 112%2C18.5 116%2C17.4 120%2C16.4 124%2C15.7 128%2C15.3 132%2C15.0 136%2C15.0 140%2C15.3 144%2C15.7 148%2C16.4 152%2C17.3 156%2C18.4 160%2C19.7 164%2C21.2 168%2C22.7 172%2C24.4 176%2C26.2 180%2C28.1 184%2C30.0 188%2C31.8 192%2C33.7 196%2C35.5 200%2C37.2' fill='none' stroke='%238b72b3' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C44.3 4%2C45.3 8%2C46.1 12%2C46.7 16%2C47.0 20%2C47.0 24%2C46.7 28%2C46.2 32%2C45.4 36%2C44.4 40%2C43.2 44%2C41.7 48%2C40.1 52%2C38.3 56%2C36.3 60%2C34.3 64%2C32.2 68%2C30.1 72%2C28.0 76%2C25.9 80%2C23.8 84%2C21.9 88%2C20.1 92%2C18.4 96%2C17.0 100%2C15.7 104%2C14.7 108%2C13.9 112%2C13.3 116%2C13.0 120%2C13.0 124%2C13.3 128%2C13.8 132%2C14.6 136%2C15.6 140%2C16.8 144%2C18.3 148%2C19.9 152%2C21.7 156%2C23.7 160%2C25.7 164%2C27.8 168%2C29.9 172%2C32.0 176%2C34.1 180%2C36.2 184%2C38.1 188%2C39.9 192%2C41.6 196%2C43.0 200%2C44.3' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C43.0 4%2C43.0 8%2C42.8 12%2C42.4 16%2C41.8 20%2C41.0 24%2C40.1 28%2C39.0 32%2C37.7 36%2C36.4 40%2C34.9 44%2C33.3 48%2C31.7 52%2C30.1 56%2C28.5 60%2C26.9 64%2C25.3 68%2C23.8 72%2C22.4 76%2C21.2 80%2C20.0 84%2C19.1 88%2C18.3 92%2C17.7 96%2C17.3 100%2C17.0 104%2C17.0 108%2C17.2 112%2C17.6 116%2C18.2 120%2C19.0 124%2C19.9 128%2C21.0 132%2C22.3 136%2C23.6 140%2C25.1 144%2C26.7 148%2C28.3 152%2C29.9 156%2C31.5 160%2C33.1 164%2C34.7 168%2C36.2 172%2C37.6 176%2C38.8 180%2C40.0 184%2C40.9 188%2C41.7 192%2C42.3 196%2C42.7 200%2C43.0' fill='none' stroke='%235aa07a' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C43.6 4%2C42.7 8%2C41.7 12%2C40.4 16%2C38.9 20%2C37.4 24%2C35.7 28%2C33.9 32%2C32.0 36%2C30.2 40%2C28.3 44%2C26.4 48%2C24.6 52%2C22.9 56%2C21.3 60%2C19.8 64%2C18.5 68%2C17.4 72%2C16.5 76%2C15.8 80%2C15.3 84%2C15.0 88%2C15.0 92%2C15.2 96%2C15.7 100%2C16.4 104%2C17.3 108%2C18.3 112%2C19.6 116%2C21.1 120%2C22.6 124%2C24.3 128%2C26.1 132%2C28.0 136%2C29.8 140%2C31.7 144%2C33.6 148%2C35.4 152%2C37.1 156%2C38.7 160%2C40.2 164%2C41.5 168%2C42.6 172%2C43.5 176%2C44.2 180%2C44.7 184%2C45.0 188%2C45.0 192%2C44.8 196%2C44.3 200%2C43.6' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C40.2 4%2C38.4 8%2C36.5 12%2C34.4 16%2C32.4 20%2C30.2 24%2C28.1 28%2C26.0 32%2C24.0 36%2C22.0 40%2C20.2 44%2C18.5 48%2C17.0 52%2C15.8 56%2C14.7 60%2C13.9 64%2C13.3 68%2C13.0 72%2C13.0 76%2C13.3 80%2C13.8 84%2C14.5 88%2C15.5 92%2C16.8 96%2C18.2 100%2C19.8 104%2C21.6 108%2C23.5 112%2C25.6 116%2C27.6 120%2C29.8 124%2C31.9 128%2C34.0 132%2C36.0 136%2C38.0 140%2C39.8 144%2C41.5 148%2C43.0 152%2C44.2 156%2C45.3 160%2C46.1 164%2C46.7 168%2C47.0 172%2C47.0 176%2C46.7 180%2C46.2 184%2C45.5 188%2C44.5 192%2C43.2 196%2C41.8 200%2C40.2' fill='none' stroke='%238b72b3' stroke-width='.5' opacity='.6'/%3E%3Cpolyline points='0%2C31.8 4%2C30.2 8%2C28.6 12%2C27.0 16%2C25.4 20%2C23.9 24%2C22.5 28%2C21.3 32%2C20.1 36%2C19.1 40%2C18.3 44%2C17.7 48%2C17.3 52%2C17.0 56%2C17.0 60%2C17.2 64%2C17.6 68%2C18.2 72%2C18.9 76%2C19.9 80%2C21.0 84%2C22.2 88%2C23.6 92%2C25.0 96%2C26.6 100%2C28.2 104%2C29.8 108%2C31.4 112%2C33.0 116%2C34.6 120%2C36.1 124%2C37.5 128%2C38.7 132%2C39.9 136%2C40.9 140%2C41.7 144%2C42.3 148%2C42.7 152%2C43.0 156%2C43.0 160%2C42.8 164%2C42.4 168%2C41.8 172%2C41.1 176%2C40.1 180%2C39.0 184%2C37.8 188%2C36.4 192%2C35.0 196%2C33.4 200%2C31.8' fill='none' stroke='%233b8f99' stroke-width='.5' opacity='.6'/%3E%3C/svg%3E");
   color: var(--paper-ink);
+  /* Solid only here — no grain/wave/gradient layers on the sheet itself.
+     Those live on .stamps-body-content below instead: painted on the
+     outer, non-scrolling sheet frame, the texture stayed put while the
+     row text scrolled past it (looking like text sliding over glass
+     rather than ink printed on a page that moves with it). A flat match
+     for this same cream keeps the header/handle area (which sits outside
+     the scrolling body) visually consistent with the textured page below. */
   background-color: #f3eedc;
-  background-image:
-    linear-gradient(180deg, rgba(59, 143, 153, 0.09) 0, rgba(139, 114, 179, 0.05) 110px, rgba(59, 143, 153, 0) 220px),
-    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.6), transparent 55%),
-    radial-gradient(ellipse at 50% 110%, rgba(140, 112, 60, 0.14), transparent 60%),
-    var(--paper-grain);
-  background-size: auto, auto, auto, 200px 200px;
   --text: var(--paper-ink);
   --text-faint: var(--paper-dim);
   --text-dim: var(--paper-dim);
   --border: rgba(43, 114, 125, 0.32);
-}
-
-.stamps-sheet::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--paper-waves);
-  background-size: 200px 60px;
-  opacity: 0.17;
-  pointer-events: none;
-  z-index: 0;
 }
 
 .stamps-sheet::after {

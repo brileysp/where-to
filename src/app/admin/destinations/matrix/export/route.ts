@@ -5,6 +5,8 @@ import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
 import { getContinent } from '@/lib/scoring/continents';
 import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { toCsv } from '@/lib/admin/csv';
+import { formatStamp } from '@/lib/admin/format-stamp';
+import type { ContentStamp } from '@/lib/db/schema';
 
 const MONTH_ABBR = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
@@ -41,6 +43,16 @@ const MONTH_ABBR = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep
  * columns, both included so a reviewer can judge an interest's overall
  * standing at a place without scanning all twelve month cells first.
  *
+ * `blurb_*_by` columns are read-only provenance context (never re-imported,
+ * same status as the cost-items export's updated_by/editor_kind/
+ * last_change) — who most recently touched that specific blurb, when, and
+ * why, formatted as one compact string (lib/admin/format-stamp.ts, shared
+ * with the admin grid's own badges) rather than
+ * a raw column per ContentStamp field. `[was X]` appears only when the
+ * content actually changed hands (e.g. Gemini-authored, then corrected by
+ * a human or by Claude) — a never-re-edited cell just shows its one source.
+ *
+
  * N/A rows are included, not filtered out — deliberately: an interest
  * wrongly marked N/A for a place is exactly the kind of mistake this export
  * is meant to help surface (a genuinely-N/A row shows as all-zero scores
@@ -73,6 +85,8 @@ export async function GET(req: NextRequest) {
     ...MONTH_ABBR.map((m) => `score_${m}`),
     'blurb_overall',
     ...MONTH_ABBR.map((m) => `blurb_${m}`),
+    'blurb_overall_by',
+    ...MONTH_ABBR.map((m) => `blurb_${m}_by`),
   ];
 
   const rows: Array<Array<string | number | boolean | null>> = [];
@@ -82,6 +96,8 @@ export async function GET(req: NextRequest) {
     const continent = getContinent(d.id);
     const blurbsBySlider = (admin?.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>;
     const overviewBySlider = (admin?.sliderOverview ?? {}) as Record<string, string>;
+    const overviewMetaBySlider = (admin?.sliderOverviewMeta ?? {}) as Record<string, ContentStamp>;
+    const monthlyMetaBySlider = (admin?.sliderMonthlyWeatherMeta ?? {}) as Record<string, (ContentStamp | null)[]>;
 
     for (const s of sliders) {
       const na = d.naSliders.includes(s.key);
@@ -90,6 +106,7 @@ export async function GET(req: NextRequest) {
       const tier = d.signatureTier[s.key] ?? 'none';
       const scoreMax = na || monthly.length === 0 ? null : Math.round(Math.max(...monthly) * 10) / 10;
       const scoreMin = na || monthly.length === 0 ? null : Math.round(Math.min(...monthly) * 10) / 10;
+      const monthlyMeta = monthlyMetaBySlider[s.key] ?? [];
       rows.push([
         d.id,
         d.name,
@@ -105,6 +122,8 @@ export async function GET(req: NextRequest) {
         ...Array.from({ length: 12 }, (_, i) => (typeof monthly[i] === 'number' ? Math.round(monthly[i] * 10) / 10 : null)),
         overviewBySlider[s.key] ?? '',
         ...Array.from({ length: 12 }, (_, i) => blurbs[i] ?? ''),
+        formatStamp(overviewMetaBySlider[s.key]),
+        ...Array.from({ length: 12 }, (_, i) => formatStamp(monthlyMeta[i])),
       ]);
     }
   }

@@ -1,0 +1,2 @@
+ALTER TABLE "places" ADD COLUMN "slider_overview_meta" jsonb DEFAULT '{}'::jsonb NOT NULL;--> statement-breakpoint
+ALTER TABLE "places" ADD COLUMN "slider_monthly_weather_meta" jsonb DEFAULT '{}'::jsonb NOT NULL;

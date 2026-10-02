@@ -49,10 +49,15 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // Ampat's 10 is marine life, which diving already scores as a 10 (land
     // animals outrank sea life in this interest), and Denali, like Yellowstone,
     // is the pinnacle of North American wildlife but not comparable to a peak
-    // African safari.
+    // African safari. pantanal removed 2026-09-29: the Wildlife Viewing
+    // Authoring Directive (v2, see prompts/wildlifeViewing/v2.md) explicitly
+    // places it in the 8.5-9.0 "world-class megafauna hub" tier ("Pantanal
+    // jaguars"), same tier as Denali — a real jaguar-density specialty, not
+    // a global-pinnacle claim on the level of a Serengeti crossing or an
+    // Antarctic hatching season.
     ten: [
       'galapagos', 'kenya', 'tanzania', 'botswana', 'antarctica', 'svalbard',
-      'madagascar', 'rwanda', 'uganda', 'pantanal', 'costa-rica', 'peruvian-amazon',
+      'madagascar', 'rwanda', 'uganda', 'costa-rica', 'peruvian-amazon',
       'zimbabwe', 'komodo',
     ],
   },

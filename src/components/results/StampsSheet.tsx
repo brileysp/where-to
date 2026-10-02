@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { StampBadge } from './StampBadge';
 import { CheckIcon } from './CheckIcon';
-import { getContinent, type Continent } from '@/lib/scoring/continents';
+import { stampsRegionFor, REGION_DISPLAY_ORDER, type StampsRegion } from '@/lib/scoring/continents';
 import type { ScoredDestination } from '@/lib/scoring/types';
 
 // Same beat as the tile/detail-sheet "Visited" chip: let the checkmark
@@ -66,10 +66,15 @@ function StampRow({
 }
 
 /**
- * "My Stamps" — visited-tracking collection, grouped by continent (derived
+ * "My Stamps" — visited-tracking collection, grouped by region (derived
  * from each destination's own country code, not a hand-authored field —
- * see getContinent). Each continent header carries its own "collected of
- * total" count against the FULL catalogue for that continent, independent
+ * see stampsRegionFor; a stamps-specific split of getContinent's own North
+ * America grouping into "Canada", "US" and "Mexico, Central America and
+ * Caribbean", alongside its own separate "South America"). Rendered in
+ * REGION_DISPLAY_ORDER, not alphabetically — alphabetical order would
+ * scatter that deliberate four-region sequence apart from itself. Each
+ * region header carries its own "collected of
+ * total" count against the FULL catalogue for that region, independent
  * of the current visited-only/show-all filter, so it always reads as real
  * progress rather than a count of whatever happens to be on screen. The
  * world map is kept as an inert placeholder, matching the source design's
@@ -95,21 +100,21 @@ export function StampsSheet({
     .slice()
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const continentTotals = new Map<Continent, number>();
-  const continentVisited = new Map<Continent, number>();
+  const continentTotals = new Map<StampsRegion, number>();
+  const continentVisited = new Map<StampsRegion, number>();
   for (const d of destinations) {
-    const c = getContinent(d.id);
+    const c = stampsRegionFor(d.id);
     continentTotals.set(c, (continentTotals.get(c) ?? 0) + 1);
     if (visited[d.id]) continentVisited.set(c, (continentVisited.get(c) ?? 0) + 1);
   }
 
-  const groups = new Map<Continent, ScoredDestination[]>();
+  const groups = new Map<StampsRegion, ScoredDestination[]>();
   for (const d of list) {
-    const c = getContinent(d.id);
+    const c = stampsRegionFor(d.id);
     if (!groups.has(c)) groups.set(c, []);
     groups.get(c)!.push(d);
   }
-  const continentOrder = [...groups.keys()].sort();
+  const continentOrder = [...groups.keys()].sort((a, b) => REGION_DISPLAY_ORDER.indexOf(a) - REGION_DISPLAY_ORDER.indexOf(b));
 
   return (
     <>

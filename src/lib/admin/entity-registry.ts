@@ -5,6 +5,16 @@ import { SETTING_TAG_SLUGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
 import { sliderCurveSchema } from '@/lib/scoring/curve';
 import { monthArray, month, sliderKeyedRecord } from '../../../scripts/content/destination-schema';
 
+/** Mirrors schema.ts's ContentStamp interface exactly. */
+const contentStampSchema = z.object({
+  origin: z.enum(['human', 'claude', 'gemini']),
+  originGenerationId: z.string().optional(),
+  lastEditedBy: z.enum(['human', 'claude', 'gemini']),
+  lastEditorName: z.string().min(1),
+  lastEditedAt: z.string(),
+  lastChange: z.string().optional(),
+});
+
 /**
  * Per-entity-type write registry for applyAdminEdits (see apply-edits.ts).
  * Adding a new grid screen against an existing entity type (or a whole new
@@ -162,6 +172,14 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       // Overview/Monthly columns in MatrixGrid.
       sliderOverview: zodField(sliderKeyedRecord(z.string())),
       sliderMonthlyWeather: zodField(sliderKeyedRecord(z.array(z.string().nullable()).max(12))),
+      // Who wrote sliderOverview/sliderMonthlyWeather, and who last edited
+      // it — see the doc comment on schema.ts's ContentStamp/
+      // sliderOverviewMeta/sliderMonthlyWeatherMeta. `contentStampSchema`
+      // mirrors the ContentStamp interface exactly; keep the two in sync by
+      // hand the same way client.ts's RESPONSE_SCHEMA tracks schema.ts's
+      // generationOutputSchema.
+      sliderOverviewMeta: zodField(sliderKeyedRecord(contentStampSchema)),
+      sliderMonthlyWeatherMeta: zodField(sliderKeyedRecord(z.array(contentStampSchema.nullable()).max(12))),
       // Reusing the exact building blocks destination-scoring-schema.ts
       // already validates these with, rather than hand-rolled duplicates.
       dryMonths: zodField(monthArray),
