@@ -40,6 +40,28 @@ export const swipeTypeEnum = pgEnum('swipe_type', ['no', 'yes', 'love']);
 
 export const adminAuditActionEnum = pgEnum('admin_audit_action', ['create', 'update', 'delete']);
 
+// ---- Content provenance ------------------------------------------------------
+
+/** Who wrote a piece of interest content, and who last touched it — see
+ * places.sliderOverviewMeta/sliderMonthlyWeatherMeta below for where this
+ * lives. `origin` and `lastEditedBy` are deliberately separate fields, not
+ * one "last touched by" value, so a chain like "Gemini-authored, then
+ * corrected in a Claude expert review" stays representable instead of
+ * collapsing into just "claude" and losing that it started as a
+ * generation. */
+export interface ContentStamp {
+  origin: 'human' | 'claude' | 'gemini';
+  /** Only set when origin === 'gemini' — links to the full generation
+   * (prompt, raw response, validation) this stamp is a fast snapshot of. */
+  originGenerationId?: string;
+  lastEditedBy: 'human' | 'claude' | 'gemini';
+  /** e.g. "brileysp@gmail.com" | "claude-sonnet-5" | "gemini-3.1-pro-preview" */
+  lastEditorName: string;
+  lastEditedAt: string;
+  /** Human-readable, e.g. "Gemini reauthor" or "Corrected lynx timing — expert review". */
+  lastChange?: string;
+}
+
 // ---- Global / shared content -------------------------------------------------
 // Everything below is read-only at runtime (write access reserved for the
 // content-import script). PREFERENCE_ATTRIBUTES, SLIDERS, PERSONAS,
@@ -161,6 +183,27 @@ export const places = pgTable(
       .notNull()
       .default({})
       .$type<Record<string, (string | null)[]>>(),
+
+    // Who/what wrote sliderOverview/sliderMonthlyWeather, and who last
+    // touched it — parallel columns, same keying as both (and the same
+    // "record it, never compute from it" status as sliderSources below).
+    // `origin` is who wrote it FIRST; `lastEditedBy` is who touched it MOST
+    // RECENTLY — distinct on purpose so "Gemini-authored, then corrected in
+    // a Claude expert review" is representable (origin: 'gemini',
+    // lastEditedBy: 'claude'), not collapsed into a single "last touched by"
+    // value that would lose the fact that it started as a generation.
+    // `originGenerationId` links a gemini-origin stamp back to its full
+    // content_generations row (prompt, raw response, validation) for
+    // anyone who wants the deep history — this column only ever holds the
+    // fast snapshot a grid renders without that join. Sparse and additive:
+    // absence just means no stamp has been recorded yet (e.g. content
+    // authored before this tracking existed), not that provenance is
+    // unknown by policy.
+    sliderOverviewMeta: jsonb('slider_overview_meta').notNull().default({}).$type<Record<string, ContentStamp>>(),
+    sliderMonthlyWeatherMeta: jsonb('slider_monthly_weather_meta')
+      .notNull()
+      .default({})
+      .$type<Record<string, (ContentStamp | null)[]>>(),
 
     // Provenance for sliderOverview/sliderMonthlyWeather/baseScores/
     // sliderEvents above — which external page(s) were actually consulted
@@ -573,3 +616,66 @@ export const interestMeta = pgTable('interest_meta', {
   emoji: text('emoji'),
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
+
+// ---- Gemini content-generation pipeline ------------------------------------
+// docs/gemini-content-pipeline-plan.md. Every call to Gemini gets a row here,
+// regardless of outcome — a rejected or never-applied generation is not lost,
+// it's a row with validation_status != 'applied'. This is deliberately
+// separate from admin_audit_log: that table only exists once a write actually
+// lands on `places`, and has no room for a prompt, a raw model response, or a
+// cost. This table is the record of every ATTEMPT; admin_audit_log (via the
+// normal applyAdminEdits path) remains the record of every actual CHANGE.
+export const contentGenerationKindEnum = pgEnum('content_generation_kind', ['author', 'correct', 'wishlist']);
+export const contentGenerationStatusEnum = pgEnum('content_generation_status', [
+  'pending',
+  'valid',
+  'invalid',
+  'applied',
+  'superseded',
+]);
+
+export const contentGenerationBatches = pgTable('content_generation_batches', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  interestKey: text('interest_key').notNull(),
+  kind: contentGenerationKindEnum('kind').notNull(),
+  rolloutPhase: smallint('rollout_phase').notNull(), // 0-3, see plan doc §8
+  placeCount: integer('place_count').notNull().default(0),
+  totalCostUsd: doublePrecision('total_cost_usd').notNull().default(0),
+  startedAt: timestamp('started_at', { withTimezone: true }).notNull().defaultNow(),
+  finishedAt: timestamp('finished_at', { withTimezone: true }),
+});
+
+export const contentGenerations = pgTable(
+  'content_generations',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    batchId: uuid('batch_id').references(() => contentGenerationBatches.id),
+    placeId: text('place_id').notNull(), // matches places.id — not a DB FK (places uses text ids issued by content scripts, same polymorphic-by-convention pattern as admin_audit_log above)
+    interestKey: text('interest_key').notNull(),
+    kind: contentGenerationKindEnum('kind').notNull(),
+    // Both together let a past generation be attributed to its exact source
+    // text even if the versioned prompt file is later edited in place by
+    // mistake — the hash catches that; the human-readable version string
+    // alone wouldn't.
+    promptVersion: text('prompt_version').notNull(), // e.g. "kayakingRafting/v1"
+    promptHash: text('prompt_hash').notNull(), // sha256 of the exact prompt file content used
+    inputContextHash: text('input_context_hash').notNull(), // sha256 of the exact context payload sent
+    model: text('model').notNull(), // e.g. "gemini-2.5-pro"
+    temperature: doublePrecision('temperature').notNull(),
+    rawResponse: jsonb('raw_response').notNull(), // the literal API response, untouched
+    parsedOutput: jsonb('parsed_output'), // after Zod parsing, before content validation; null if schema parse itself failed
+    validationStatus: contentGenerationStatusEnum('validation_status').notNull().default('pending'),
+    validationErrors: jsonb('validation_errors').notNull().default([]).$type<
+      Array<{ layer: 'schema' | 'content' | 'plausibility'; severity: 'reject' | 'warning'; message: string }>
+    >(),
+    tokensIn: integer('tokens_in').notNull(),
+    tokensOut: integer('tokens_out').notNull(),
+    costUsd: doublePrecision('cost_usd').notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    appliedAt: timestamp('applied_at', { withTimezone: true }),
+  },
+  (table) => [
+    index('content_generations_place_interest_idx').on(table.placeId, table.interestKey, table.createdAt),
+    index('content_generations_batch_idx').on(table.batchId),
+  ],
+);

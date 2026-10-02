@@ -4,6 +4,7 @@ import { getContinent } from '@/lib/scoring/continents';
 import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { MatrixGrid, type MatrixRow } from '@/components/admin/MatrixGrid';
 import type { SliderSource } from '@/components/admin/cells';
+import type { ContentStamp } from '@/lib/db/schema';
 
 export default async function AdminDestinationMatrixPage() {
   const [scored, adminRows] = await Promise.all([getAllScoredPlaces(), listDestinationsForAdmin()]);
@@ -15,6 +16,13 @@ export default async function AdminDestinationMatrixPage() {
   const sliderSourcesById = new Map(adminRows.map((r) => [r.id, (r.sliderSources ?? {}) as Record<string, SliderSource[]>]));
   const sliderOverviewById = new Map(adminRows.map((r) => [r.id, (r.sliderOverview ?? {}) as Record<string, string>]));
   const sliderMonthlyWeatherById = new Map(adminRows.map((r) => [r.id, (r.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>]));
+  // Content provenance — display-only (see schema.ts's ContentStamp), so
+  // unlike sliderOverview/sliderMonthlyWeather above these don't need a
+  // "ByDest" read-modify-write map: nothing ever patches these fields
+  // directly from this grid, the server computes them as a side effect of
+  // editing the content itself (apply-edits.ts).
+  const sliderOverviewMetaById = new Map(adminRows.map((r) => [r.id, (r.sliderOverviewMeta ?? {}) as Record<string, ContentStamp>]));
+  const sliderMonthlyWeatherMetaById = new Map(adminRows.map((r) => [r.id, (r.sliderMonthlyWeatherMeta ?? {}) as Record<string, (ContentStamp | null)[]>]));
 
   // Base score, tier, and N/A are each one key inside a whole-object/array
   // column (baseScores jsonb, signatureTier jsonb, naSliders text[]) — the
@@ -67,6 +75,8 @@ export default async function AdminDestinationMatrixPage() {
         sources: sliderSourcesById.get(d.id)?.[s.key] ?? [],
         overview: sliderOverviewById.get(d.id)?.[s.key] ?? '',
         monthlyText: sliderMonthlyWeatherById.get(d.id)?.[s.key] ?? [],
+        overviewMeta: sliderOverviewMetaById.get(d.id)?.[s.key] ?? null,
+        monthlyMeta: sliderMonthlyWeatherMetaById.get(d.id)?.[s.key] ?? [],
         updatedAt,
       });
     }

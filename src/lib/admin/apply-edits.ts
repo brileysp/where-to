@@ -2,10 +2,12 @@
 
 import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
-import { requireAdminUser } from '@/lib/admin/auth';
+import { requireAdminUser, CLAUDE_ACTOR, type AdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { ENTITY_REGISTRY } from '@/lib/admin/entity-registry';
 import { stampCostItems, type StampedCostItem } from '@/lib/admin/cost-item-stamp';
+import { MONTH_NAMES } from '@/lib/scoring/constants';
+import type { ContentStamp } from '@/lib/db/schema';
 
 export interface EditPatch {
   entityType: string;
@@ -39,9 +41,17 @@ export interface ApplyEditsResult {
  * successful write still goes through withAdminAudit exactly like the
  * existing whole-form actions do, so the audit log and History panels work
  * identically regardless of which write path produced them.
+ *
+ * `actor`, if provided, is used directly instead of calling
+ * requireAdminUser() — the only way a non-request caller (a CLI script,
+ * e.g. scripts/gemini-author-batch.ts) can reuse this exact validated,
+ * audited, optimistic-locked write path: requireAdminUser() depends on
+ * Next.js request-scoped cookies that don't exist outside an actual HTTP
+ * request, so it would throw (or redirect, nonsensically) if called from a
+ * script. Every existing caller omits this and is unaffected.
  */
-export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsResult> {
-  const admin = await requireAdminUser();
+export async function applyAdminEdits(patches: EditPatch[], actor?: AdminUser): Promise<ApplyEditsResult> {
+  const admin = actor ?? (await requireAdminUser());
 
   const result: ApplyEditsResult = { saved: [], conflicts: [], errors: [] };
   if (patches.length === 0) return result;
@@ -132,6 +142,72 @@ export async function applyAdminEdits(patches: EditPatch[]): Promise<ApplyEditsR
     }
 
     const newUpdatedAt = new Date();
+
+    // Content provenance — see schema.ts's ContentStamp doc comment. Only
+    // auto-computed when the caller didn't already supply an explicit
+    // sliderOverviewMeta/sliderMonthlyWeatherMeta patch of their own: the
+    // Gemini pipeline (src/lib/gemini/apply.ts) always does, precisely so
+    // this block never overwrites its 'gemini' origin with a guessed
+    // stamp. Every OTHER current caller (the admin grids, and Claude's own
+    // direct fixes via CLAUDE_ACTOR) knows nothing about this field yet, so
+    // this is what makes their edits attributable at all — distinguishing
+    // CLAUDE_ACTOR from a real signed-in human by its well-known email is
+    // what lets "claude" show up as its own distinct source rather than
+    // every non-Gemini edit looking like the same generic "human". Diffed
+    // per-key (overview) / per-month (monthly), same principle as
+    // stampCostItems below: only what actually changed gets a fresh stamp —
+    // an unrelated field changing in the same save must never disturb
+    // another slider's or another month's history.
+    const editorKind: 'human' | 'claude' = admin.email === CLAUDE_ACTOR.email ? 'claude' : 'human';
+    // Gemini's stamp shows its model name (see gemini/apply.ts), not a raw
+    // system email — same treatment here rather than showing the
+    // CLAUDE_ACTOR sentinel address in a grid a person will actually read.
+    const editorName = editorKind === 'claude' ? 'claude-sonnet-5' : admin.email;
+    if (patchedFields.sliderOverview && typeof patchedFields.sliderOverview === 'object' && !patchedFields.sliderOverviewMeta) {
+      const nextOverviews = patchedFields.sliderOverview as Record<string, string>;
+      const prevOverviews = (before?.sliderOverview ?? {}) as Record<string, string>;
+      const prevMeta = (before?.sliderOverviewMeta ?? {}) as Record<string, ContentStamp>;
+      const nextMeta: Record<string, ContentStamp> = { ...prevMeta };
+      for (const key of Object.keys(nextOverviews)) {
+        if (nextOverviews[key] === prevOverviews[key]) continue; // unchanged — keep whatever stamp it already had
+        const prevStamp = prevMeta[key];
+        nextMeta[key] = {
+          origin: prevStamp?.origin ?? editorKind,
+          originGenerationId: prevStamp?.originGenerationId,
+          lastEditedBy: editorKind,
+          lastEditorName: editorName,
+          lastEditedAt: newUpdatedAt.toISOString(),
+          lastChange: 'Overview edited',
+        };
+      }
+      patchedFields.sliderOverviewMeta = nextMeta;
+    }
+
+    if (patchedFields.sliderMonthlyWeather && typeof patchedFields.sliderMonthlyWeather === 'object' && !patchedFields.sliderMonthlyWeatherMeta) {
+      const nextMonthly = patchedFields.sliderMonthlyWeather as Record<string, (string | null)[]>;
+      const prevMonthly = (before?.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>;
+      const prevMeta = (before?.sliderMonthlyWeatherMeta ?? {}) as Record<string, (ContentStamp | null)[]>;
+      const nextMeta: Record<string, (ContentStamp | null)[]> = { ...prevMeta };
+      for (const key of Object.keys(nextMonthly)) {
+        const prevArr = prevMonthly[key] ?? new Array(12).fill(null);
+        const prevMetaArr = prevMeta[key] ?? new Array(12).fill(null);
+        nextMeta[key] = nextMonthly[key].map((text, i) => {
+          if (text === prevArr[i]) return prevMetaArr[i] ?? null; // unchanged month — keep its existing stamp
+          const prevStamp = prevMetaArr[i];
+          const stamp: ContentStamp = {
+            origin: prevStamp?.origin ?? editorKind,
+            originGenerationId: prevStamp?.originGenerationId,
+            lastEditedBy: editorKind,
+            lastEditorName: editorName,
+            lastEditedAt: newUpdatedAt.toISOString(),
+            lastChange: `${MONTH_NAMES[i]} blurb edited`,
+          };
+          return stamp;
+        });
+      }
+      patchedFields.sliderMonthlyWeatherMeta = nextMeta;
+    }
+
     // Per-item who/when/what — derived here from the stored version, never
     // taken from the client. See cost-item-stamp.ts.
     if (Array.isArray(patchedFields.costItems)) {

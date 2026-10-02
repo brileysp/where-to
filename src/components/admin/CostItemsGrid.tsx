@@ -176,6 +176,13 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
           Never edited by a human
         </label>
         <CopyForSheetsButton tsv={tsv} rowCount={tsvRowCount} />
+        <a
+          className="filter-select"
+          style={{ textDecoration: 'none', display: 'inline-block' }}
+          href={`/admin/destinations/cost-items/export${onlyNotHuman ? '?onlyNotHuman=1' : ''}`}
+        >
+          ⬇ Export CSV{onlyNotHuman ? ' (needs review)' : ''}
+        </a>
         <span>
           Grouped by continent, then by place · click ➕ next to a place to add its next cost item, sorted low → high automatically ·
           click Continent to reorder

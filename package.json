@@ -25,10 +25,14 @@
     "db:audit:birding-model": "tsx scripts/audit-birding-model.ts",
     "db:audit:curve-smoothness": "tsx scripts/audit-curve-smoothness.ts",
     "db:smooth:hiking-family": "tsx scripts/smooth-hiking-family-curves.ts",
-    "db:smooth:curves": "tsx scripts/smooth-curves.ts"
+    "db:smooth:curves": "tsx scripts/smooth-curves.ts",
+    "gemini:author": "tsx scripts/gemini-author-batch.ts",
+    "pipeline:diff": "tsx scripts/pipeline-diff.ts",
+    "pipeline:apply": "tsx scripts/pipeline-apply.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.5",
+    "@google/genai": "^2.24.0",
     "@supabase/ssr": "^0.12.4",
     "@supabase/supabase-js": "^2.109.0",
     "drizzle-orm": "^0.45.2",

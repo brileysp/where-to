@@ -1,0 +1,16 @@
+{
+  "_comment": "Gemini API pricing, USD per 1M tokens. Version-controlled deliberately — a price change is a traceable diff, not a silent recalculation. VERIFY against ai.google.dev/gemini-api/docs/pricing before relying on this for a real budget decision; it was not fetched live at the time this file was written.",
+  "_lastVerified": "2026-10-01",
+  "models": {
+    "gemini-2.5-pro": {
+      "inputPerMillionUsd": 1.25,
+      "outputPerMillionUsd": 10.0,
+      "note": "Rate for prompts <=200K tokens (the tier every per-destination call in this pipeline should fall well under). A prompt over 200K tokens is billed at a higher tier (1.25->2.50, 10.00->15.00 as of last public pricing) — this pipeline's context-building should never approach that, but costUsd computation should check tokensIn and use the higher tier if it ever does. NOTE (2026-09-28): blocked for newly-created API keys/projects — see gemini-3.1-pro-preview below, which this pipeline now actually calls."
+    },
+    "gemini-3.1-pro-preview": {
+      "inputPerMillionUsd": 2.0,
+      "outputPerMillionUsd": 12.0,
+      "note": "Confirmed 2026-10-01 against ai.google.dev/pricing (standard paid tier, prompts <=200k tokens — every call in this pipeline falls well under that). Over 200k tokens: $4.00 in / $18.00 out. Previously this entry held a borrowed, unverified gemini-2.5-pro proxy rate ($1.25/$10.00) that undercounted real spend on its own; combined with a separate bug in client.ts (usageMetadata.thoughtsTokenCount — Gemini's internal reasoning tokens, billed at the output rate — was never added into tokensOut), tracked cost across this pipeline's lifetime was understated by roughly 3.5x against the user's actual Gemini billing (tracked $3.14 vs. an actual spend of ~$10-11; recomputed with both fixes: ~$11.23, matching). Both bugs are now fixed — see client.ts's tokensOut computation."
+    }
+  }
+}

@@ -60,3 +60,46 @@ export function getContinent(destinationId: string): Continent {
   if (loc.type === 'us-state') return 'North America';
   return COUNTRY_CODE_TO_CONTINENT[loc.code] ?? 'North America';
 }
+
+/**
+ * The stamps collection's own regional grouping — finer than `getContinent`,
+ * and only for that one screen. `getContinent`'s "North America" folds
+ * Canada, the US, Mexico, Central America, and the Caribbean all into one
+ * bucket (see COUNTRY_CODE_TO_CONTINENT's comment above) — a fine
+ * simplification for scoring/admin, but too coarse for a stamps page.
+ * Splits that bucket four ways: Canada and the US each get their own
+ * header, Mexico/Central America/Caribbean share one, and `getContinent`'s
+ * separate 'South America' stays its own. Every other continent passes
+ * through unchanged. REGION_DISPLAY_ORDER controls the order these four
+ * (plus every other continent) render in — plain alphabetical order would
+ * scatter Canada/US/Mexico.../South America apart from each other (C, M, S,
+ * U), which defeats the point of splitting them out as a deliberate
+ * sequence in the first place.
+ */
+export type StampsRegion =
+  | Exclude<Continent, 'North America' | 'South America'>
+  | 'Canada'
+  | 'US'
+  | 'Mexico, Central America and Caribbean'
+  | 'South America';
+
+export const REGION_DISPLAY_ORDER: StampsRegion[] = [
+  'Canada',
+  'US',
+  'Mexico, Central America and Caribbean',
+  'South America',
+  'Africa',
+  'Antarctica',
+  'Asia',
+  'Europe',
+  'Oceania',
+];
+
+export function stampsRegionFor(destinationId: string): StampsRegion {
+  const continent = getContinent(destinationId);
+  if (continent !== 'North America') return continent;
+  const loc = DESTINATION_LOCATIONS[destinationId] ?? locationFor(destinationId);
+  if (loc.code === 'CAN') return 'Canada';
+  if (loc.type === 'us-state') return 'US';
+  return 'Mexico, Central America and Caribbean';
+}

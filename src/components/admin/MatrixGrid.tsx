@@ -8,6 +8,8 @@ import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import type { SliderEvent } from '@/lib/scoring/types';
+import type { ContentStamp } from '@/lib/db/schema';
+import { formatStamp, stampIcon } from '@/lib/admin/format-stamp';
 import { parseSliderCurve, rescaleCurve } from '@/lib/scoring/curve';
 
 export interface MatrixRow {
@@ -29,6 +31,11 @@ export interface MatrixRow {
   sources: SliderSource[];
   overview: string;
   monthlyText: (string | null)[];
+  /** Content provenance — display-only, not part of any edit patch (see
+   * schema.ts's ContentStamp and matrix/page.tsx's doc comment on why
+   * these skip the usual "ByDest" read-modify-write map). */
+  overviewMeta: ContentStamp | null;
+  monthlyMeta: (ContentStamp | null)[];
   updatedAt: string;
 }
 
@@ -468,6 +475,7 @@ export function MatrixGrid({
             }}
             hint={'The non-seasonal, one-paragraph summary shown for this interest at this destination — the "why" behind the scores, not tied to any one month.'}
             toPatchValue={mergedAfter}
+            badge={r.overviewMeta ? <span title={formatStamp(r.overviewMeta)} style={{ fontSize: 12 }}>{stampIcon(r.overviewMeta.lastEditedBy)}</span> : undefined}
           />
         );
       },
@@ -493,6 +501,7 @@ export function MatrixGrid({
               patchRow(r.destId, r.sliderKey, { monthlyText: v });
             }}
             toPatchValue={mergedAfter}
+            meta={r.monthlyMeta}
           />
         );
       },
@@ -549,6 +558,13 @@ export function MatrixGrid({
               </optgroup>
             ))}
           </select>
+          <a
+            className="filter-select"
+            style={{ textDecoration: 'none', display: 'inline-block' }}
+            href={`/admin/destinations/matrix/export${selectedInterest === 'all' ? '' : `?interest=${selectedInterest}`}`}
+          >
+            ⬇ Export CSV{selectedInterest === 'all' ? ' (all interests)' : ''}
+          </a>
         </>
       }
     />
