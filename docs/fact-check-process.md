@@ -17,6 +17,9 @@ Why: the first Sedona hiking overview described "easy 2-mile loops around Bell R
 6. A skeptical read by a person (Claude) of what the code cannot judge: level words against the numbers (a "strenuous" route that is 1 mile must say why), plural against singular, the overview against the months, two blurbs stating different facts about one route, a hike that belongs to another place in the catalog.
 7. The review page leads with what the fact-check found and fixed, lists any claim that could not be verified, and links the sources.
 
+## Averages do not disprove frequency claims
+A monthly average cannot show that "regularly tops 100°F" is wrong: Sedona's June average high is 94°F and it still reaches 100°F about weekly in summer (about 20 days a year, one source). Before calling a "regularly", "often" or "rarely" claim wrong, look for counts (days above a threshold, days of rain). If only averages exist, mark it unverified and ask the owner; use `owner_accepted` with the reasoning when the owner decides.
+
 ## Before Gemini
 Where an interest has a facts sheet (`docs/<interest>-facts.json`, the interest-page columns), fill and source-check it first, so Gemini starts from checked facts.
 

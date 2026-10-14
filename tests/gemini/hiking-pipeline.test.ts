@@ -65,4 +65,13 @@ describe('hiking pipeline', () => {
     m.monthly[1] = { ...m.monthly[1], text: 'There is no trail network and the paths ice over.' };
     expect(msgs(m)).toMatch(/there is no/);
   });
+
+  it('warns on scoring words, loaded crowd words and season words in a months-only place (hiking/v4)', () => {
+    const msgs = (o: GenerationOutput, opts = {}) => validateContent(o, 'hiking', 'cape-town', opts).map((i) => i.message).join(' | ');
+    expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/World-reference/);
+    expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/overrun/);
+    const m = out(); m.monthly[5] = { ...m.monthly[5], text: 'Winter brings regular rain and low cloud that make steep rock routes slippery.' };
+    expect(msgs(m)).not.toMatch(/months, not seasons/);
+    expect(msgs(m, { monthsNotSeasons: true })).toMatch(/name months, not seasons \(found: winter\)/);
+  });
 });

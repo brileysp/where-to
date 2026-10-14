@@ -53,6 +53,7 @@ import { convertTemperaturesToF } from '../src/lib/text/temperature';
 import { convertMetersToFeet } from '../src/lib/text/length';
 import { metricToImperial } from '../src/lib/text/units';
 import { ownNameDistanceIssues } from '../src/lib/gemini/place-name-check';
+import { usesMonthsNotSeasons } from '../src/lib/gemini/hemisphere';
 import { loadSkipList } from '../src/lib/gemini/skip-list';
 import type { GenerationContext } from '../src/lib/gemini/schema';
 
@@ -315,7 +316,9 @@ async function main() {
     }
     // Hiking only: the other places in the catalog, so a city can claim a great hike an hour out unless another listed place already owns it.
     const otherPlaces = interestKey === 'hiking' ? allPlaces.filter((p) => p.isPrimaryDestination && p.id !== place.id).map((p) => p.name).sort() : null;
-    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'>; otherPlacesInCatalog?: string[] } = {
+    // Hiking only: Southern Hemisphere and equatorial places name months, not seasons (owner rule, 14 Oct 2026).
+    const monthsOnly = interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode);
+    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'>; otherPlacesInCatalog?: string[]; seasonWording?: string } = {
       placeId: place.id,
       placeName: place.name,
       region: place.region,
@@ -324,6 +327,7 @@ async function main() {
       interestLabel: interestKey,
       relatedInterestSummaries: renamedNote ? [] : relatedInterestSummaries,
       ...(otherPlaces ? { otherPlacesInCatalog: otherPlaces } : {}),
+      ...(monthsOnly ? { seasonWording: 'Name months, never seasons (summer, winter, spring, autumn), because most readers live in the Northern Hemisphere.' } : {}),
       ...(factSheet ? { verifiedFacts: { scope: factSheet.scope, facts: factSheet.facts, avoid: factSheet.avoid, season: factSheet.season } } : {}),
     };
     const contextHash = hashObject(context);
@@ -389,7 +393,7 @@ async function main() {
         result.parsed.monthly.forEach((m, i) => (m.score = finalScores[i]));
       }
       for (const msg of result.selfCheckIssues) issues.push({ layer: 'schema', severity: 'reject', message: msg });
-      issues.push(...validateContent(result.parsed, interestKey, place.id));
+      issues.push(...validateContent(result.parsed, interestKey, place.id, { monthsNotSeasons: interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode) }));
       if (!isNotApplicable(result.parsed)) for (const msg of ownNameDistanceIssues(place.name, [result.parsed.overview, ...result.parsed.monthly.map((m) => m.text)])) issues.push({ layer: 'content', severity: 'warning', message: msg });
       if (!includeNa) issues.push(...validatePlausibility(place.naSliders ?? [], interestKey));
       const drawEntry = interestKey === 'birding' ? drawEntryFor(place.id) : undefined;

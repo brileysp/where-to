@@ -3,6 +3,7 @@ import { hasMeters } from '../text/length';
 import { SLIDERS } from '../scoring/constants';
 import { oldNameIssues } from './renamed-places';
 import { INTEREST_ANCHORS } from '../scoring/anchors';
+import { seasonWordsIn } from './hemisphere';
 import type { GenerationOutput } from './schema';
 import { emphasisIsBalanced, stripEmphasis } from '../text/emphasis';
 
@@ -240,7 +241,7 @@ function validateHikeRatings(output: GenerationOutput): ValidationIssue[] {
 }
 
 /** Hiking: "world-class" and "legendary" appear at most once in a place's whole text and never in a month blurb (owner rule, 14 Oct 2026). */
-function validateHikingText(output: GenerationOutput): ValidationIssue[] {
+function validateHikingText(output: GenerationOutput, options: ValidateOptions = {}): ValidationIssue[] {
   const big = /\b(world-class|legendary)\b/gi;
   const inMonths = output.monthly.filter((m) => big.test(m.text)).length;
   big.lastIndex = 0;
@@ -254,6 +255,13 @@ function validateHikingText(output: GenerationOutput): ValidationIssue[] {
   if (all.some((t) => /\b(indoors?|treadmills?|gyms?)\b/i.test(t))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb mentions indoors, treadmills or gyms. Out of scope: say what the trails are like and stop.' });
   if (/\bthere (is|are) no\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb says "there is no ...". Do not state what a place lacks.' });
   if (/\d[\d,.]*[- ]mile/i.test(output.overview) && !/\b\d+(?:[-\s](?:to\s+\d+\s+)?)days?\b|\bmulti-day\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview gives a distance but no multi-day route. Day hikes get no mileage unless 15 miles or more; check it.' });
+  // Owner review, 14 Oct 2026 (hiking/v4).
+  if (/\bworld-reference\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"World-reference" is the scoring scale\'s own word. Say "world famous", or one "world-class", or describe it, never "world-reference".' });
+  if (/\b(overrun|swamped|teeming|inundated|invaded|flooded with (tourists|visitors))\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'Crowding is said as "crowded", with the places named. Words like "overrun" or "swamped" are too negative and vague.' });
+  if (options.monthsNotSeasons) {
+    const found = [...new Set(all.flatMap((t) => seasonWordsIn(t)))];
+    if (found.length) issues.push({ layer: 'content', severity: 'warning', message: `This place is in the Southern Hemisphere or near the equator: name months, not seasons (found: ${found.join(', ')}).` });
+  }
   return issues;
 }
 
@@ -275,10 +283,15 @@ function validateFitExtras(output: GenerationOutput): ValidationIssue[] {
   return issues;
 }
 
-export function validateContent(rawOutput: GenerationOutput, interestKey: string, placeId: string): ValidationIssue[] {
+export interface ValidateOptions {
+  /** The place is in the Southern Hemisphere or the equatorial belt: text names months, never seasons (see hemisphere.ts). */
+  monthsNotSeasons?: boolean;
+}
+
+export function validateContent(rawOutput: GenerationOutput, interestKey: string, placeId: string, options: ValidateOptions = {}): ValidationIssue[] {
   if (isNotApplicable(rawOutput)) return validateNotApplicable(rawOutput);
   const oldNameWarnings: ValidationIssue[] = oldNameIssues(placeId, [rawOutput.overview, ...rawOutput.monthly.map((m) => m.text)]).map((message) => ({ layer: 'content' as const, severity: 'warning' as const, message }));
-  const issues: ValidationIssue[] = [...oldNameWarnings, ...validateFitExtras(rawOutput), ...validateSurfRatings(rawOutput), ...validateHikeRatings(rawOutput), ...(interestKey === 'hiking' ? validateHikingText(rawOutput) : []), ...validateManyTens(rawOutput), ...(interestKey === 'diving' ? validateDivingText(rawOutput) : [])];
+  const issues: ValidationIssue[] = [...oldNameWarnings, ...validateFitExtras(rawOutput), ...validateSurfRatings(rawOutput), ...validateHikeRatings(rawOutput), ...(interestKey === 'hiking' ? validateHikingText(rawOutput, options) : []), ...validateManyTens(rawOutput), ...(interestKey === 'diving' ? validateDivingText(rawOutput) : [])];
   // Species-name markers (**Name**) are display formatting: every check below sees the text without them.
   const allText = [rawOutput.overview, ...rawOutput.monthly.map((m) => m.text)];
   if (allText.some((t) => !emphasisIsBalanced(t))) {
