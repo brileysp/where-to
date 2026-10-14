@@ -74,4 +74,18 @@ describe('hiking pipeline', () => {
     expect(msgs(m)).not.toMatch(/months, not seasons/);
     expect(msgs(m, { monthsNotSeasons: true })).toMatch(/name months, not seasons \(found: winter\)/);
   });
+
+  it('checks crowd mentions against the count of documented indicators', () => {
+    const msgs = (o: GenerationOutput, crowding: number) => validateContent(o, 'hiking', 'banff', { crowding }).map((i) => i.message).join(' | ');
+    const crowded = out({ overview: 'The lakeside trails are crowded in July and August, with a shuttle and timed slots, best from late June to September in the high country.' });
+    const plain = out({ overview: 'The lakeside trails are the reason to come, best from late June to September in the high country, with huts along the way.' });
+    expect(msgs(plain, 5)).toMatch(/overview must mention crowds/);
+    expect(msgs(crowded, 5)).not.toMatch(/crowd/);
+    expect(msgs(crowded, 4)).toMatch(/never in the overview/);
+    expect(msgs(plain, 4)).not.toMatch(/crowd/);
+    expect(msgs(crowded, 3)).toMatch(/not mentioned at all/);
+    const m = out(); m.monthly[6] = { ...m.monthly[6], text: 'The busiest month, and the trailheads are crowded by 8am.' };
+    expect(msgs(m, 3)).toMatch(/not mentioned at all/);
+    expect(msgs(m, 4)).not.toMatch(/crowd/);
+  });
 });

@@ -393,7 +393,9 @@ async function main() {
         result.parsed.monthly.forEach((m, i) => (m.score = finalScores[i]));
       }
       for (const msg of result.selfCheckIssues) issues.push({ layer: 'schema', severity: 'reject', message: msg });
-      issues.push(...validateContent(result.parsed, interestKey, place.id, { monthsNotSeasons: interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode) }));
+      // Hiking: the crowding count comes from the notes sent to Gemini; no notes means no documented evidence, so no crowd mention.
+      const crowding = interestKey === 'hiking' ? Number(((factSheet?.facts ?? []).join(' ').match(/Crowding: (\d) of 5/) ?? [])[1] ?? 0) : undefined;
+      issues.push(...validateContent(result.parsed, interestKey, place.id, { monthsNotSeasons: interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode), crowding }));
       if (!isNotApplicable(result.parsed)) for (const msg of ownNameDistanceIssues(place.name, [result.parsed.overview, ...result.parsed.monthly.map((m) => m.text)])) issues.push({ layer: 'content', severity: 'warning', message: msg });
       if (!includeNa) issues.push(...validatePlausibility(place.naSliders ?? [], interestKey));
       const drawEntry = interestKey === 'birding' ? drawEntryFor(place.id) : undefined;

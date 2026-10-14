@@ -258,6 +258,14 @@ function validateHikingText(output: GenerationOutput, options: ValidateOptions =
   // Owner review, 14 Oct 2026 (hiking/v4).
   if (/\bworld-reference\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"World-reference" is the scoring scale\'s own word. Say "world famous", or one "world-class", or describe it, never "world-reference".' });
   if (/\b(overrun|swamped|teeming|inundated|invaded|flooded with (tourists|visitors))\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'Crowding is said as "crowded", with the places named. Words like "overrun" or "swamped" are too negative and vague.' });
+  if (options.crowding !== undefined) {
+    const words = /\b(crowd\w*|congest\w*|queue\w*|busiest)\b/i;
+    const inOverview = words.test(output.overview);
+    const inMonths = output.monthly.filter((m) => words.test(m.text)).length;
+    if (options.crowding === 5 && !inOverview) issues.push({ layer: 'content', severity: 'warning', message: 'The notes show 5 of 5 crowding indicators: the overview must mention crowds.' });
+    if (options.crowding === 4 && inOverview) issues.push({ layer: 'content', severity: 'warning', message: 'The notes show 4 of 5 crowding indicators: crowds may be mentioned in peak-crowd month blurbs, never in the overview.' });
+    if (options.crowding <= 3 && (inOverview || inMonths > 0)) issues.push({ layer: 'content', severity: 'warning', message: `The notes show ${options.crowding} of 5 crowding indicators: crowds are not mentioned at all.` });
+  }
   if (options.monthsNotSeasons) {
     const found = [...new Set(all.flatMap((t) => seasonWordsIn(t)))];
     if (found.length) issues.push({ layer: 'content', severity: 'warning', message: `This place is in the Southern Hemisphere or near the equator: name months, not seasons (found: ${found.join(', ')}).` });
@@ -286,6 +294,8 @@ function validateFitExtras(output: GenerationOutput): ValidationIssue[] {
 export interface ValidateOptions {
   /** The place is in the Southern Hemisphere or the equatorial belt: text names months, never seasons (see hemisphere.ts). */
   monthsNotSeasons?: boolean;
+  /** Count of documented crowding indicators (0-5) from the hiking notes: 5 must mention crowds, 4 only peak months, 3 or fewer never. Undefined = not checked. */
+  crowding?: number;
 }
 
 export function validateContent(rawOutput: GenerationOutput, interestKey: string, placeId: string, options: ValidateOptions = {}): ValidationIssue[] {
