@@ -839,6 +839,35 @@ export const interestTodos = pgTable(
   (table) => [index('interest_todos_interest_idx').on(table.interestKey, table.status)],
 );
 
+export const FACT_CHECK_VERDICTS = ['unchecked', 'verified', 'wrong', 'owner_accepted'] as const;
+export type FactCheckVerdict = (typeof FACT_CHECK_VERDICTS)[number];
+
+/**
+ * One row per risky sentence in generated text (a named place or route, a number with a unit, an access or closure claim,
+ * "several"/"many", "only"/"first"/"longest"), keyed by place, interest and a hash of the sentence. A generation cannot be applied
+ * until every high-risk sentence in it is 'verified' (checked against a source) or 'owner_accepted'. Because the key is the
+ * sentence itself, an unchanged sentence keeps its verdict when text is edited and a changed sentence starts again as 'unchecked'.
+ * See docs/fact-check-process.md.
+ */
+export const contentFactChecks = pgTable(
+  'content_fact_checks',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    placeId: text('place_id').notNull(),
+    interestKey: text('interest_key').notNull(),
+    sentenceHash: text('sentence_hash').notNull(),
+    sentence: text('sentence').notNull(),
+    kinds: text('kinds').array().notNull().default([]),
+    verdict: text('verdict').$type<FactCheckVerdict>().notNull().default('unchecked'),
+    sourceUrl: text('source_url').notNull().default(''),
+    note: text('note').notNull().default(''),
+    checkedBy: text('checked_by').notNull().default(''),
+    checkedAt: timestamp('checked_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [uniqueIndex('content_fact_checks_unique').on(table.placeId, table.interestKey, table.sentenceHash)],
+);
+
 export const INTEREST_IDEA_STAGES = ['idea', 'researched', 'verified', 'added'] as const;
 export type InterestIdeaStage = (typeof INTEREST_IDEA_STAGES)[number];
 

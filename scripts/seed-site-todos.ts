@@ -18,6 +18,12 @@ const ITEMS: Item[] = [
   { title: 'Decide whether to upgrade Supabase to Pro', status: 'idea', priority: 3, source: 'Site To-Do List, 6 Oct 2026; usage rechecked 14 Oct',
     detail: 'Last cycle used 5.7 of 5 GB. Since then the public list, audit log and history pages were slimmed, and the first day of this cycle used 3%. Decide after the 21 Oct check.' },
 
+  // ---- Fact-check gate (14 Oct 2026) ----
+  { title: 'Decide how to fact-check the staged surfing text (1,444 claims)', status: 'needs_you', priority: 1, source: 'Fact-check gate, 14 Oct 2026',
+    detail: 'Applying surfing text is now blocked until every risky sentence (named breaks, numbers, closures, climate figures) is checked against a source. 102 staged places have 1,444 claims, none checked yet. Options: check all of it (about 2 to 3 web searches per place, best run in parallel batches), or check only overviews and named-break and number claims. See docs/fact-check-process.md.' },
+  { title: 'Fact-check the five hiking sample places before applying', status: 'ready_for_claude', priority: 2, source: 'Fact-check gate, 14 Oct 2026',
+    detail: 'Sedona, Cape Town, Dolomites and Chicago are fully checked (and corrected where wrong). Madeira is waiting for the seasonal rewrite: its current monthly text is marked wrong and blocks applying.' },
+
   // ---- Housekeeping from the live push ----
   { title: 'Back up the local-only surfing and hiking files', status: 'ready_for_claude', priority: 2, source: 'Push to live, 14 Oct 2026',
     detail: 'Scope sheets, draft facts, edit files and the local backups (docs/backups) exist only on this computer. Copy them to a backup folder now, and commit the approved ones after the surfing and hiking text is applied.' },

@@ -9,6 +9,7 @@ import { SYSTEM_ACTOR } from './apply-actor';
 import { closeTodosForApplied } from './todo-sync';
 import type { GenerationOutput } from './schema';
 import { isNotApplicable } from './validate';
+import { syncAndGate } from './fact-check';
 import { EMPHASIS_INTERESTS, markSpecies, placeWordsFor } from '../text/species-marker';
 
 // Same well-known "this was a script, not a logged-in human" actor id the
@@ -81,7 +82,12 @@ export interface ApplyResult {
  * the failure mode this pipeline exists to replace, so it has to actively
  * clear it, not just add a new curve alongside it.
  */
-export async function applyGeneration(generationId: string): Promise<ApplyResult> {
+export interface ApplyOptions {
+  /** Owner override only: skips the fact-check gate. Never set by default; the pipeline script needs --skip-fact-check to pass it. */
+  skipFactCheck?: boolean;
+}
+
+export async function applyGeneration(generationId: string, options: ApplyOptions = {}): Promise<ApplyResult> {
   const [gen] = await db.select().from(contentGenerations).where(eq(contentGenerations.id, generationId));
   if (!gen) return { outcome: 'error', detail: `No content_generations row with id ${generationId}` };
   if (gen.validationStatus !== 'valid') {
@@ -97,6 +103,16 @@ export async function applyGeneration(generationId: string): Promise<ApplyResult
   if (!place) return { outcome: 'error', detail: `No place with id ${gen.placeId}` };
 
   const notApplicable = isNotApplicable(output);
+
+  // Fact-check gate (14 Oct 2026, after a Sedona overview went through with invented loops and wrong trail facts): text that makes
+  // checkable claims is not applied until each one has been checked against a source. See docs/fact-check-process.md.
+  if (!notApplicable && !options.skipFactCheck) {
+    const gate = await syncAndGate(gen.placeId, gen.interestKey, output, place.name);
+    if (!gate.ok) {
+      const examples = gate.unresolved.slice(0, 3).map((u) => `"${u.sentence.slice(0, 90)}${u.sentence.length > 90 ? '…' : ''}"`).join('; ');
+      return { outcome: 'error', detail: `Not applied: ${gate.unresolved.length} of ${gate.total} factual claims in ${place.name}'s ${gen.interestKey} text have not been fact-checked (for example ${examples}). Run: npx tsx scripts/fact-check.ts list --generation-id=${gen.id}` };
+    }
+  }
   const { curve } = notApplicable ? { curve: null } : fitMonthlyToCurve(output.monthly.map((m) => m.score));
   const loadedUpdatedAt = place.updatedAt.toISOString();
 
