@@ -2,6 +2,7 @@
   Approved by the owner 13-14 Oct 2026 for the first hiking sample. Shared rules for the on-foot family: Hiking & Trekking, Scenic Landscapes, Camping & Backcountry, Trail Running
   and National Parks (owner approved 13 Oct 2026: National Parks joins the family). Used like prompts/_shared/voice-rules.md: each interest's directive includes it with the placeholder {{ON_FOOT_CORE}},
   so a rule fixed here is fixed for all of them at their next version bump.
+  Changed 14 Oct 2026 after the hiking sample review: one reach rule (an hour or so, up to two hours for an outstanding hike), the difficulty thresholds are not repeated as numbers in text, and day hikes get no length (multi-day routes do).
 -->
 ## On-foot family rules
 
@@ -18,7 +19,7 @@ Hiking & Trekking, Scenic Landscapes, Landscape Photography, National Parks, Cam
 
 **Overlap is expected, and scenery counts.** For the best walks the landscape is the reason to walk, so scenery is a main factor in a Hiking score and part of its text, especially scenery and views that can only be reached on foot (a ridge above the lakes, a glacier valley, a summit panorama). The same goes for scenery earned by running or by sleeping out in Trail Running and Camping & Backcountry. Each interest says it from its own side: Hiking from the walker's side (what the route passes and what the effort earns), Scenic Landscapes from the landscape's side (the place as a whole, and the views anyone can reach by road, boat or a short stroll). Do not repeat the same sentence another lane already wrote; say what is new from your angle.
 
-**What counts as on foot.** A trail or route a visitor can walk within a day trip of the place (about two hours each way; say so when it is more than an hour). Walking tours of a city, beach strolls and scenic drives do not count here.
+**What counts as on foot, and how far.** A trail or route a visitor can walk within a day trip of the place. For a city or small place that means about an hour or so away; an outstanding hike may be up to about two hours each way, and the text says the drive when it is more than an hour. Walking tours of a city, beach strolls and scenic drives do not count here. A hike that clearly belongs to another place in the catalog is left to that place (when you are given the list of other places, it is under `otherPlacesInCatalog`).
 
 **Where hiking stops.** A summit reached on foot with no technical gear counts as hiking (Kilimanjaro, a trekking-peak walk-up). One that needs a rope, crampons and an ice axe on its main route belongs to Mountaineering.
 
@@ -29,13 +30,15 @@ Hiking & Trekking, Scenic Landscapes, Landscape Photography, National Parks, Cam
 - **Trek:** a route of two or more days.
 - **Expedition trek:** a trek that goes above about 14,000 ft or is days from help.
 
+These thresholds are for your own judgment. Do not repeat them as numbers in the text: a day hike is named by its level word, and a length is given only for a multi-day route or a day of 15 miles or more.
+
 **Units.** Distances in miles, elevations and climbing in feet, walking time in hours (or days for a trek), temperatures in Fahrenheit. American spelling.
 
 **Snow.** Groomed winter walking trails and snowshoe routes count as walking; a trail that needs snowshoes here and there still counts, and the month says so. A place that has them is not dead in winter. A month when the only way through is on cross-country skis or ski touring, or when nothing at all is walkable, is not walking: it scores 0.0 for Hiking.
 
 **What drives a walking season.** Snow and the date a pass clears, monsoon or heavy rain, heat (start before dawn), daylight, the dates huts and transport operate, insects, wildfire smoke, permit windows. Name the driver in the month where it matters, and give the elevation where the season depends on it.
 
-**Named things are real.** Name a trail, pass, hut or viewpoint only when you are sure it exists and sure of what it is. A route is named the way hikers say it in English. Give its length or time when you name it.
+**Named things are real.** Name a trail, pass, hut or viewpoint only when you are sure it exists and sure of what it is. A route is named the way hikers say it in English. A multi-day route gets its length and days; a day hike gets its level word and no length, unless the day is 15 miles or more.
 
 **Safety, said plainly.** Altitude sickness, exposure, river crossings, avalanche slopes, heat, bears and other wildlife, and closures are stated where they are real, in a few words, and not elsewhere. Say when a guide or a permit is required. Do not frighten with hazards that are not an issue at that place.
 

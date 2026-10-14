@@ -248,6 +248,12 @@ function validateHikingText(output: GenerationOutput): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   if (inMonths > 0) issues.push({ layer: 'content', severity: 'warning', message: `"World-class" or "legendary" appears in ${inMonths} month blurb(s). The rule is never in a month.` });
   if (total > 1) issues.push({ layer: 'content', severity: 'warning', message: `"World-class" or "legendary" appears ${total} times. The rule is at most once in a place's whole text.` });
+  // Owner review of the 5-place sample, 14 Oct 2026 (hiking/v3). Warnings only: a person decides.
+  const all = [output.overview, ...output.monthly.map((m) => m.text)];
+  if (/\b(suits?|best for|mostly|entirely|best suited to)\b[^.]{0,30}\bday[- ](hikers?|hikes?|trips?)\b|\bday-trip focused\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview says who the place suits or that it is day-hike only. Day hiking is the default; cut it, and mention a trek only if one exists.' });
+  if (all.some((t) => /\b(indoors?|treadmills?|gyms?)\b/i.test(t))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb mentions indoors, treadmills or gyms. Out of scope: say what the trails are like and stop.' });
+  if (/\bthere (is|are) no\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb says "there is no ...". Do not state what a place lacks.' });
+  if (/\d[\d,.]*[- ]mile/i.test(output.overview) && !/\b\d+ (to \d+ )?days?\b|\bmulti-day\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview gives a distance but no multi-day route. Day hikes get no mileage unless 15 miles or more; check it.' });
   return issues;
 }
 
