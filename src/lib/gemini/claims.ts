@@ -74,7 +74,7 @@ export function namedThings(sentence: string, ownName: string): string[] {
 const NUMBER_UNIT = /\b\d[\d,.]*(?:\s?(?:-|–|to)\s?\d[\d,.]*)?[\s-]*(?:miles?|mi|km|kilometers?|kilometres?|ft|feet|foot|meters?|metres?|days?|hours?|hrs?|minutes?|mins?|nights?)\b/i;
 const ACCESS = /\b(shuts?|shut|huts?|refuges?|lifts?|gondolas?|permits?|reservations?|bookings?|fees?|toll|shuttles?|tickets?|closed|closures?|closing|reopen(?:s|ed)?|restricted|restrictions?|cable cars?|funiculars?|(?:huts?|refuges?|lifts?|ferries|ferry|roads?|passes) (?:are |is )?(?:open|shut|closed|running|operat\w+)|opens? (?:from|in|late|early)|guides? (?:are )?(?:required|mandatory))\b/i;
 const PLURAL = /\b(several|many|numerous|multiple|dozens?|hundreds?|countless|network|loops|trails range|routes range|walks range|miles of)\b/i;
-const CLIMATE = /\b(wettest|driest|hottest|coldest|warmest|coolest|windiest|rainiest|snowiest|monsoon|rainy season|dry season)\b|\b(?:highs?|lows?|temperatures?|temps)\b[^.]{0,40}\b\d{1,3}0?s?\b|\b\d{2,3}\s?°\s?F\b|\bin the \d0s\b|\bnear \d{2,3}\b/i;
+const CLIMATE = /\b(wettest|driest|hottest|coldest|warmest|coolest|windiest|rainiest|snowiest|monsoon|rainy season|dry season)\b|\b(?:highs?|lows?|temperatures?|temps)\b[^.]{0,40}\b\d{1,3}0?s?\b|\b\d{2,3}\s?(?:°\s?F|degrees)\b|\bin the \d0s\b|\bnear \d{2,3}\b/i;
 const SUPERLATIVE = /\b(only|first|oldest|highest|tallest|longest|largest|deepest|steepest|the world's|in the world|in europe|in africa|in asia|in north america)\b/i;
 
 export function claimKinds(sentence: string, ownName: string): { kinds: ClaimKind[]; entities: string[] } {
