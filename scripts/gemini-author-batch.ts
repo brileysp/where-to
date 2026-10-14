@@ -313,7 +313,9 @@ async function main() {
       summary.push({ place: place.name, status: 'api_error', cost: 0, rejects: 0, warnings: 0, generationId: '—' });
       continue;
     }
-    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'> } = {
+    // Hiking only: the other places in the catalog, so a city can claim a great hike an hour out unless another listed place already owns it.
+    const otherPlaces = interestKey === 'hiking' ? allPlaces.filter((p) => p.isPrimaryDestination && p.id !== place.id).map((p) => p.name).sort() : null;
+    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'>; otherPlacesInCatalog?: string[] } = {
       placeId: place.id,
       placeName: place.name,
       region: place.region,
@@ -321,6 +323,7 @@ async function main() {
       interestKey,
       interestLabel: interestKey,
       relatedInterestSummaries: renamedNote ? [] : relatedInterestSummaries,
+      ...(otherPlaces ? { otherPlacesInCatalog: otherPlaces } : {}),
       ...(factSheet ? { verifiedFacts: { scope: factSheet.scope, facts: factSheet.facts, avoid: factSheet.avoid, season: factSheet.season } } : {}),
     };
     const contextHash = hashObject(context);
