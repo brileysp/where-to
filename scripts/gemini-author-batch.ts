@@ -332,7 +332,9 @@ async function main() {
     };
     const contextHash = hashObject(context);
 
-    const prompt = promptTemplate.replace('{{VOICE_RULES}}', voiceRules).replace('{{VOICE_RULES_OPEN_TOP}}', voiceRulesOpenTop).replace('{{ON_FOOT_CORE}}', onFootCore).replace('{{CONTEXT_JSON}}', JSON.stringify(context, null, 2));
+    // The directive file's leading HTML comment is the owner's change log (it names scoring words and stock phrases): never send it to Gemini.
+    const stripComments = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
+    const prompt = promptTemplate.replace(/<!--[\s\S]*?-->/g, '').trimStart().replace('{{VOICE_RULES}}', stripComments(voiceRules)).replace('{{VOICE_RULES_OPEN_TOP}}', stripComments(voiceRulesOpenTop)).replace('{{ON_FOOT_CORE}}', onFootCore).replace('{{CONTEXT_JSON}}', JSON.stringify(context, null, 2));
 
     console.log(`\n-- ${place.name} (${place.id}) --`);
     let result;

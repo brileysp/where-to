@@ -258,6 +258,7 @@ function validateHikingText(output: GenerationOutput, options: ValidateOptions =
   // Owner review, 14 Oct 2026 (hiking/v4).
   if (/\bworld-reference\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"World-reference" is the scoring scale\'s own word. Say "world famous", or one "world-class", or describe it, never "world-reference".' });
   if (/\b(overrun|swamped|teeming|inundated|invaded|flooded with (tourists|visitors))\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'Crowding is said as "crowded", with the places named. Words like "overrun" or "swamped" are too negative and vague.' });
+  if (/\bmost (celebrated|legendary) hiking\b/i.test(output.overview) || /^Some of the world's (most )?/i.test(output.overview.trim())) issues.push({ layer: 'content', severity: 'warning', message: 'The overview opens with a stock self-rating phrase ("Some of the world\'s ..."). Open with what is specific to this place.' });
   if (options.crowding !== undefined) {
     const words = /\b(crowd\w*|congest\w*|queue\w*|busiest)\b/i;
     const inOverview = words.test(output.overview);
