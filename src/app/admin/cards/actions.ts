@@ -3,7 +3,7 @@
 import { eq } from 'drizzle-orm';
 import { redirect } from 'next/navigation';
 import { db } from '@/lib/db/client';
-import { cards, adminAuditLog } from '@/lib/db/schema';
+import { cards, domains, adminAuditLog } from '@/lib/db/schema';
 import { requireAdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { cardFormSchema, cardFormRawInput, formatCardFormErrors } from '@/lib/admin/card-schema';
@@ -96,4 +96,61 @@ export async function restoreCardVersion(id: string, auditId: string, _formData:
   });
 
   redirect(`/admin/cards/${id}/history`);
+}
+
+const QUICK_FIELDS = ['short', 'title', 'category', 'stage', 'domainKey', 'niche', 'tags', 'unlockMinPositive', 'unlockMinLove'] as const;
+export type QuickCardField = (typeof QUICK_FIELDS)[number];
+
+/** Change one field of a card straight from the Cards list. Every change is audited like a form save. */
+export async function quickEditCard(id: string, field: QuickCardField, raw: string | boolean): Promise<{ ok: true; updatedAt: string } | { ok: false; message: string }> {
+  const admin = await requireAdminUser();
+  if (!(QUICK_FIELDS as readonly string[]).includes(field)) return { ok: false, message: 'That field cannot be edited here.' };
+  const [before] = await db.select().from(cards).where(eq(cards.id, id));
+  if (!before) return { ok: false, message: 'Card not found.' };
+  let value: unknown;
+  const text = typeof raw === 'string' ? raw.trim() : '';
+  switch (field) {
+    case 'short':
+    case 'title':
+    case 'category':
+      if (!text) return { ok: false, message: 'This cannot be empty.' };
+      value = text;
+      break;
+    case 'stage':
+      if (text !== 'broad' && text !== 'deep') return { ok: false, message: 'Stage is broad or deep.' };
+      value = text;
+      break;
+    case 'domainKey': {
+      if (!text) { value = null; break; }
+      const [d] = await db.select({ key: domains.key }).from(domains).where(eq(domains.key, text));
+      if (!d) return { ok: false, message: `There is no domain "${text}".` };
+      value = text;
+      break;
+    }
+    case 'niche':
+      value = raw === true;
+      break;
+    case 'tags':
+      value = text.split(',').map((t) => t.trim()).filter(Boolean);
+      break;
+    case 'unlockMinPositive':
+    case 'unlockMinLove': {
+      if (!text) { value = null; break; }
+      const n = Number(text);
+      if (!Number.isInteger(n) || n < 0) return { ok: false, message: 'A whole number, 0 or more.' };
+      value = n;
+      break;
+    }
+  }
+  const updatedAt = new Date();
+  await withAdminAudit({
+    actor: admin,
+    entityType: 'card',
+    entityId: id,
+    action: 'update',
+    before,
+    after: { ...before, [field]: value, updatedAt },
+    write: (tx) => tx.update(cards).set({ [field]: value, updatedAt }).where(eq(cards.id, id)),
+  });
+  return { ok: true, updatedAt: updatedAt.toISOString() };
 }

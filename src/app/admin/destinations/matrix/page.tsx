@@ -7,12 +7,13 @@ import type { SliderSource } from '@/components/admin/cells';
 import type { ContentStamp } from '@/lib/db/schema';
 
 export default async function AdminDestinationMatrixPage() {
-  const [scored, adminRows] = await Promise.all([getAllScoredPlaces(), listDestinationsForAdmin()]);
+  const [scored, adminRows] = await Promise.all([getAllScoredPlaces({ includeUnpublished: true }), listDestinationsForAdmin()]);
   const updatedAtById = new Map(adminRows.map((r) => [r.id, r.updatedAt.toISOString()]));
   // sliderSources, sliderOverview and sliderMonthlyWeather aren't part of
   // the scoring pipeline (ScoringDestination has no reason to carry them),
   // so they come from the plain admin rows rather than `scored`, unlike
   // every other per-slider column on this grid.
+  const naReasonsById = new Map(adminRows.map((r) => [r.id, (r.naReasons ?? {}) as Record<string, { reason: string }>]));
   const sliderSourcesById = new Map(adminRows.map((r) => [r.id, (r.sliderSources ?? {}) as Record<string, SliderSource[]>]));
   const sliderOverviewById = new Map(adminRows.map((r) => [r.id, (r.sliderOverview ?? {}) as Record<string, string>]));
   const sliderMonthlyWeatherById = new Map(adminRows.map((r) => [r.id, (r.sliderMonthlyWeather ?? {}) as Record<string, (string | null)[]>]));
@@ -69,12 +70,14 @@ export default async function AdminDestinationMatrixPage() {
         max: na || monthly.length === 0 ? null : Math.max(...monthly),
         tier: d.signatureTier[s.key] ?? null,
         na,
+        naReason: na ? naReasonsById.get(d.id)?.[s.key]?.reason ?? null : null,
         cap: d.sliderCaps[s.key] ?? null,
         events: d.sliderEvents[s.key] ?? [],
         styleTiers: d.activityStyleTiers[s.key] ?? {},
         sources: sliderSourcesById.get(d.id)?.[s.key] ?? [],
         overview: sliderOverviewById.get(d.id)?.[s.key] ?? '',
         monthlyText: sliderMonthlyWeatherById.get(d.id)?.[s.key] ?? [],
+        monthlyScores: na ? [] : monthly,
         overviewMeta: sliderOverviewMetaById.get(d.id)?.[s.key] ?? null,
         monthlyMeta: sliderMonthlyWeatherMetaById.get(d.id)?.[s.key] ?? [],
         updatedAt,

@@ -34,6 +34,9 @@ export const generationOutputSchema = z.object({
   sources: z.array(generationSourceSchema).default([]),
   confidence: z.enum(['high', 'medium', 'low']),
   flags: z.array(z.string()).default([]),
+  // Extra fields some prompt versions ask for (snorkeling & diving: diving_rating, snorkeling_rating, best_for; surfing: beginner_rating, advanced_rating; hiking: day_hike_rating, trek_rating).
+  // Stored with the generation and written to the interest's data columns when the generation is applied.
+  extras: z.record(z.string(), z.union([z.number(), z.string()])).optional(),
 });
 
 export type GenerationOutput = z.infer<typeof generationOutputSchema>;
@@ -93,6 +96,29 @@ export const generationOutputSchemaFlatV2 = z.object({
 
 export type GenerationOutputFlatV2 = z.infer<typeof generationOutputSchemaFlatV2>;
 
+/** Snorkeling & diving also returns how good the place is for each discipline (see prompts/diving/v1.md §2a). */
+export const BEST_FOR_VALUES = ['both', 'diving', 'snorkeling'] as const;
+export const generationOutputSchemaFlatV2Fit = generationOutputSchemaFlatV2.extend({
+  diving_rating: scoreField(),
+  snorkeling_rating: scoreField(),
+  best_for: z.enum(BEST_FOR_VALUES),
+});
+export type GenerationOutputFlatV2Fit = z.infer<typeof generationOutputSchemaFlatV2Fit>;
+
+/** Surfing also returns how good the place is for a learner and for an experienced surfer (see prompts/surfing/v1.md section 3). */
+export const generationOutputSchemaFlatV2Surf = generationOutputSchemaFlatV2.extend({
+  beginner_rating: scoreField(),
+  advanced_rating: scoreField(),
+});
+export type GenerationOutputFlatV2Surf = z.infer<typeof generationOutputSchemaFlatV2Surf>;
+
+/** Hiking & Trekking also returns how good the place is for day hikes and for multi-day treks (see prompts/hiking/v1.md section 3). */
+export const generationOutputSchemaFlatV2Hike = generationOutputSchemaFlatV2.extend({
+  day_hike_rating: scoreField(),
+  trek_rating: scoreField(),
+});
+export type GenerationOutputFlatV2Hike = z.infer<typeof generationOutputSchemaFlatV2Hike>;
+
 const SCORE_KEYS_IN_ORDER = MONTH_KEYS.map((k) => `score_${k}` as const);
 const BLURB_KEYS_IN_ORDER = MONTH_KEYS.map((k) => `blurb_${k}` as const);
 
@@ -105,7 +131,7 @@ const BLURB_KEYS_IN_ORDER = MONTH_KEYS.map((k) => `blurb_${k}` as const);
  * separate from validateContent's own checks since those operate on the
  * normalized shape, which no longer carries the model's own declared
  * max/min once flattened away). */
-export function normalizeFlatOutput(flat: GenerationOutputFlatV2): { output: GenerationOutput; selfCheckIssues: string[] } {
+export function normalizeFlatOutput(flat: GenerationOutputFlatV2 | GenerationOutputFlatV2Fit | GenerationOutputFlatV2Surf | GenerationOutputFlatV2Hike): { output: GenerationOutput; selfCheckIssues: string[] } {
   const monthly = MONTH_KEYS.map((_, i) => ({
     score: flat[SCORE_KEYS_IN_ORDER[i]],
     text: flat[BLURB_KEYS_IN_ORDER[i]],
@@ -120,7 +146,16 @@ export function normalizeFlatOutput(flat: GenerationOutputFlatV2): { output: Gen
     selfCheckIssues.push(`Declared score_min ${flat.score_min} doesn't match the actual min of the 12 monthly scores (${actualMin})`);
   }
   return {
-    output: { overview: flat.blurb_overall, monthly, sources: [], confidence: 'high', flags: [] },
+    output: {
+      overview: flat.blurb_overall,
+      monthly,
+      sources: [],
+      confidence: 'high',
+      flags: [],
+      ...('diving_rating' in flat ? { extras: { diving_rating: flat.diving_rating, snorkeling_rating: flat.snorkeling_rating, best_for: flat.best_for } } : {}),
+      ...('beginner_rating' in flat ? { extras: { beginner_rating: flat.beginner_rating, advanced_rating: flat.advanced_rating } } : {}),
+      ...('day_hike_rating' in flat ? { extras: { day_hike_rating: flat.day_hike_rating, trek_rating: flat.trek_rating } } : {}),
+    },
     selfCheckIssues,
   };
 }

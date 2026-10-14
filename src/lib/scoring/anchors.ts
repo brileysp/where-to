@@ -211,7 +211,8 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   },
   surfing: {
     definition: 'A world-reference wave.',
-    ten: ['bali', 'maui', 'lisbon'],
+    // Six places, set by the owner on 11 Oct 2026 (was Bali, Maui, Lisbon). French Polynesia is Teahupo'o, Fiji is Cloudbreak, Namibia is Skeleton Bay.
+    ten: ['bali', 'maui', 'lisbon', 'borabora', 'fiji', 'namibia'],
   },
   diving: {
     definition: 'Among the best reefs or marine encounters on the planet.',

@@ -1,4 +1,4 @@
-import { and, eq } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
 import { places } from '@/lib/db/schema';
 import { getPrimaryPlaceRows } from './primary-place-rows';
@@ -20,6 +20,12 @@ export async function listDestinationsForAdmin() {
 }
 
 export async function getDestinationForAdmin(id: string) {
-  const [row] = await db.select().from(places).where(and(eq(places.id, id), eq(places.isPrimaryDestination, true)));
+  // Not limited to ranked places, so a retired place can still be opened and brought back.
+  const [row] = await db.select().from(places).where(eq(places.id, id));
   return row ?? null;
+}
+
+/** Places taken out of the rankings (isPrimaryDestination = false). They never appear in the cached primary rows, so they are read straight from the table. */
+export async function listRetiredPlacesForAdmin() {
+  return db.select().from(places).where(eq(places.isPrimaryDestination, false));
 }

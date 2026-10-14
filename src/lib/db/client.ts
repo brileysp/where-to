@@ -19,6 +19,22 @@ import * as schema from './schema';
  */
 const databaseUrl = process.env.DATABASE_URL;
 
+/**
+ * The connection pool is kept on globalThis so it survives hot reloads and is shared by every route bundle.
+ * Without this, each re-evaluation of this module (every code edit in dev, and each separate route bundle) opened
+ * a brand new pool of 10 connections and never closed the old one. A long dev session ended with 60 to 120 open
+ * connections, the pooler refused more, and admin pages hung for minutes. A pool of 5 that closes idle
+ * connections after 20 seconds is plenty: each page runs about 8 short queries in parallel.
+ */
+const g = globalThis as typeof globalThis & { __pgClient?: ReturnType<typeof postgres>; __pgliteClient?: PGlite };
+
+function pgClient() {
+  return (g.__pgClient ??= postgres(databaseUrl as string, { prepare: false, max: 8, idle_timeout: 20, max_lifetime: 60 * 30, connect_timeout: 20, keep_alive: 10 }));
+}
+function pgliteClient() {
+  return (g.__pgliteClient ??= new PGlite('./pgdata'));
+}
+
 export const db = databaseUrl
-  ? drizzlePostgres(postgres(databaseUrl, { prepare: false }), { schema })
-  : drizzlePglite(new PGlite('./pgdata'), { schema });
+  ? drizzlePostgres(pgClient(), { schema })
+  : drizzlePglite(pgliteClient(), { schema });

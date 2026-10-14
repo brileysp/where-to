@@ -9,6 +9,8 @@ import { resolveEarnedStyles } from '@/lib/dna/domains';
 import { getAllDnaCards } from '@/lib/db/queries/dna-content';
 import { allBandsSelected } from '@/lib/scoring/constants';
 import type { DnaBands, DnaState } from '@/lib/dna/types';
+import { getPlaceDetailText } from '@/lib/db/queries/place-detail';
+import type { PlaceDetailText } from '@/lib/scoring/types';
 
 export interface UserPreferencesData {
   personaId: string | null;
@@ -223,4 +225,10 @@ export async function deleteNamedProfile(id: string): Promise<void> {
   if (!userId) return;
 
   await db.delete(userSavedProfiles).where(and(eq(userSavedProfiles.id, id), eq(userSavedProfiles.userId, userId)));
+}
+
+/** The text of one place (overview, monthly blurbs, cost notes), fetched when a visitor opens it: the ranked list is built from scores only. */
+export async function loadPlaceDetail(id: string): Promise<PlaceDetailText | null> {
+  if (typeof id !== 'string' || id.length === 0 || id.length > 80) return null;
+  return getPlaceDetailText(id);
 }

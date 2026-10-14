@@ -13,6 +13,9 @@
   --cat-2: #c2588a; --cat-2-soft: #c2588a18;
   --cat-3: #3fa7a0; --cat-3-soft: #3fa7a018;
   --cat-4: #c47d3f; --cat-4-soft: #c47d3f18;
+  /* Twelve ring colors for the monthly-blurbs panel: every authored blurb gets its own. Gray is kept for zero. */
+  --ring-1: #a33d34; --ring-2: #b462d6; --ring-3: #faa974; --ring-4: #878744; --ring-5: #62dfa9; --ring-6: #c94385;
+  --ring-7: #c9aefe; --ring-8: #5c74ae; --ring-9: #94b131; --ring-10: #fb7cb7; --ring-11: #7f40b0; --ring-12: #1eaf8f;
   --radius: 7px;
   background: var(--bg);
   color: var(--text);
@@ -164,6 +167,11 @@ table.grid tbody td .cell-inner.band-cell { height: auto; min-height: 34px; flex
 .panel-body.mw-groups { gap: 9px; }
 .mw-group { border: 1px solid var(--border); border-left: 3px solid var(--mw-group-color, var(--border)); border-radius: var(--radius); background: var(--bg-panel); }
 .mw-group-head { display: flex; align-items: center; gap: 7px; padding: 7px 9px; background: var(--mw-group-soft, var(--bg-sunken)); border-radius: var(--radius) var(--radius) 0 0; }
+.mw-score { font-size: 11.5px; font-weight: 700; color: var(--text); background: var(--bg-panel); border: 1px solid var(--border-strong); padding: 0 8px; border-radius: 999px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.mw-diff { font-size: 10.5px; color: var(--text-faint); white-space: nowrap; }
+.mw-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
+.mw-pill { font-size: 11px; color: var(--text-dim); background: var(--bg-panel); border: 1px solid var(--border); padding: 0 8px; border-radius: 999px; white-space: nowrap; }
+.mw-pill b { color: var(--text); font-variant-numeric: tabular-nums; }
 .mw-count { font-size: 10px; color: var(--text-faint); background: var(--bg-panel); border: 1px solid var(--border); padding: 1px 6px; border-radius: 999px; white-space: nowrap; }
 .mw-menu-btn { font-family: inherit; font-size: 13px; color: var(--text-dim); background: transparent; border: 1px solid var(--border-strong); width: 24px; height: 24px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .mw-menu-btn:hover { background: var(--bg-hover); color: var(--text); }

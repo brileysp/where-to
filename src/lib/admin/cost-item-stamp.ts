@@ -20,6 +20,12 @@ export interface StampedCostItem {
   updatedBy?: string | null;
   editorKind?: EditorKind | null;
   lastChange?: string | null;
+  category?: 'lodging' | 'food' | 'transport' | 'activity' | 'other' | null;
+  priceMax?: number | null;
+  season?: 'year' | 'peak' | 'offPeak' | null;
+  currency?: string | null;
+  sourceUrl?: string | null;
+  checkedOn?: string | null;
 }
 
 const money = (n: number) => `$${n}`;
@@ -31,6 +37,12 @@ export function describeCostItemChange(prev: StampedCostItem, next: StampedCostI
   if (prev.price !== next.price) out.push(`price ${money(prev.price)} → ${money(next.price)}`);
   if ((prev.unit ?? '') !== (next.unit ?? '')) out.push(`unit ${quoted(prev.unit ?? '')} → ${quoted(next.unit ?? '')}`);
   if ((prev.emoji ?? null) !== (next.emoji ?? null)) out.push(`icon ${prev.emoji ?? '(default)'} → ${next.emoji ?? '(default)'}`);
+  if ((prev.category ?? null) !== (next.category ?? null)) out.push(`category ${prev.category ?? '(none)'} → ${next.category ?? '(none)'}`);
+  if ((prev.priceMax ?? null) !== (next.priceMax ?? null)) out.push(`top of range ${prev.priceMax ?? '(none)'} → ${next.priceMax ?? '(none)'}`);
+  if ((prev.season ?? null) !== (next.season ?? null)) out.push(`season ${prev.season ?? '(none)'} → ${next.season ?? '(none)'}`);
+  if ((prev.currency ?? null) !== (next.currency ?? null)) out.push(`currency ${prev.currency ?? '(USD)'} → ${next.currency ?? '(USD)'}`);
+  if ((prev.sourceUrl ?? null) !== (next.sourceUrl ?? null)) out.push('source link changed');
+  if ((prev.checkedOn ?? null) !== (next.checkedOn ?? null)) out.push(next.checkedOn ? `verified ${next.checkedOn}` : 'verification cleared');
   return out;
 }
 

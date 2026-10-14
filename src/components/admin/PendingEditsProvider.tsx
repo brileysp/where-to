@@ -40,6 +40,8 @@ interface PendingEditsContextValue {
   toasts: ToastMessage[];
   /** Registers a callback fired with each successful save's fresh {entityType,entityId,updatedAt} — grids use this to keep their locally-cached updatedAt in sync, or their SECOND save of the same entity in one page session will false-positive as a conflict against their own first save. Returns an unsubscribe function. */
   subscribeToSaves(cb: SaveSubscriber): () => void;
+  /** For writes that bypass the tray (a server action called straight from a control): tells every grid the row's fresh updatedAt, same as a tray save would. */
+  announceSaved(saved: Array<{ entityType: string; entityId: string; updatedAt: string }>): void;
 }
 
 const PendingEditsContext = createContext<PendingEditsContextValue | null>(null);
@@ -63,6 +65,10 @@ export function PendingEditsProvider({ children }: { children: React.ReactNode }
     return () => {
       saveSubscribers.current.delete(cb);
     };
+  }, []);
+
+  const announceSaved = useCallback((saved: Array<{ entityType: string; entityId: string; updatedAt: string }>) => {
+    for (const cb of saveSubscribers.current) cb(saved);
   }, []);
 
   const toast = useCallback((text: string, kind: 'good' | 'bad' = 'good') => {
@@ -126,8 +132,8 @@ export function PendingEditsProvider({ children }: { children: React.ReactNode }
   }, [pending, toast]);
 
   const value = useMemo(
-    () => ({ pending, queueEdit, undoEdit, discardAll, saveAll, saving, toast, toasts, subscribeToSaves }),
-    [pending, queueEdit, undoEdit, discardAll, saveAll, saving, toast, toasts, subscribeToSaves],
+    () => ({ pending, queueEdit, undoEdit, discardAll, saveAll, saving, toast, toasts, subscribeToSaves, announceSaved }),
+    [pending, queueEdit, undoEdit, discardAll, saveAll, saving, toast, toasts, subscribeToSaves, announceSaved],
   );
 
   return <PendingEditsContext.Provider value={value}>{children}</PendingEditsContext.Provider>;

@@ -18,7 +18,17 @@ export interface CostItem {
   updatedBy?: string | null;
   editorKind?: EditorKind | null;
   lastChange?: string | null;
+  category?: 'lodging' | 'food' | 'transport' | 'activity' | 'other' | null;
+  priceMax?: number | null;
+  season?: 'year' | 'peak' | 'offPeak' | null;
+  currency?: string | null;
+  sourceUrl?: string | null;
+  checkedOn?: string | null;
 }
+
+const CATEGORY_OPTIONS = [['lodging', 'Lodging'], ['food', 'Food'], ['transport', 'Transport'], ['activity', 'Activity'], ['other', 'Other']] as const;
+const SEASON_OPTIONS = [['year', 'All year'], ['peak', 'Peak season'], ['offPeak', 'Off season']] as const;
+const todayISO = () => new Date().toISOString().slice(0, 10);
 
 const YOU = { name: 'You', kind: 'human' as EditorKind };
 const fmtWhen = (iso: string) => new Date(iso).toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
@@ -35,10 +45,10 @@ export interface CostDestination {
 }
 
 function toTsv(destinations: CostDestination[]): string {
-  const header = ['Destination ID', 'Destination Name', 'Region', 'Icon', 'Item', 'Price (USD)', 'Unit / Note'].join('\t');
+  const header = ['Destination ID', 'Destination Name', 'Region', 'Icon', 'Item', 'Price (USD)', 'Unit / Note', 'Category', 'Top of range', 'Season', 'Currency', 'Source link', 'Verified on'].join('\t');
   const lines = destinations.flatMap((d) =>
     d.items.map((item) =>
-      [d.id, d.name, d.region, item.emoji ?? costItemIcon(item.label), item.label, item.price, item.unit].join('\t'),
+      [d.id, d.name, d.region, item.emoji ?? costItemIcon(item.label), item.label, item.price, item.unit, item.category ?? '', item.priceMax ?? '', item.season ?? '', item.currency ?? '', item.sourceUrl ?? '', item.checkedOn ?? ''].join('\t'),
     ),
   );
   return [header, ...lines].join('\n');
@@ -87,15 +97,26 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
 
   function editItemField(dest: CostDestination, idx: number, field: keyof CostItem, rawValue: string) {
     const item = dest.items[idx];
-    let newValue: string | number = rawValue;
+    let newValue: string | number | null = rawValue;
     if (field === 'price') {
       const n = Number(rawValue);
       if (isNaN(n) || n < 0) return;
       newValue = n;
     }
+    if (field === 'priceMax') {
+      if (rawValue.trim() === '') newValue = null;
+      else {
+        const n = Number(rawValue);
+        if (isNaN(n) || n < 0) return;
+        newValue = n;
+      }
+    }
+    if (field === 'category' || field === 'season' || field === 'sourceUrl' || field === 'checkedOn' || field === 'currency') newValue = rawValue.trim() === '' ? null : rawValue.trim();
+    if (field === 'currency' && newValue && !/^[A-Za-z]{3}$/.test(String(newValue))) return;
+    if (field === 'currency' && newValue) newValue = String(newValue).toUpperCase();
     if (field === 'emoji' && !rawValue.trim()) return; // icon can't be blanked out entirely
     const oldValue = item[field];
-    if (String(oldValue ?? '') === String(newValue)) return;
+    if (String(oldValue ?? '') === String(newValue ?? '')) return;
 
     const before = dest.items;
     const after = stampCostItems(before, before.map((it, i) => (i === idx ? { ...it, [field]: newValue } : it)), YOU, new Date());
@@ -104,9 +125,9 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
       entityId: dest.id,
       entityLabel: dest.name,
       field: 'costItems',
-      fieldLabel: `${item.label || '(untitled item)'} — ${field === 'emoji' ? 'icon' : field}`,
+      fieldLabel: `${item.label || '(untitled item)'} — ${field === 'emoji' ? 'icon' : field === 'priceMax' ? 'top of range' : field === 'sourceUrl' ? 'source link' : field === 'checkedOn' ? 'verified on' : field}`,
       loadedUpdatedAt: dest.updatedAt,
-      oldValue,
+      oldValue: oldValue ?? null,
       newValue,
       toPatchValue: () => after,
       setLocal: (val) => setItems(dest.id, val === newValue ? after : before),
@@ -200,6 +221,12 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
                 Price (USD)
               </th>
               <th className="no-sort">Unit</th>
+              <th className="no-sort">Category</th>
+              <th className="no-sort" style={{ textAlign: 'right' }} title="Leave blank unless the price is a range">Top of range</th>
+              <th className="no-sort">Season</th>
+              <th className="no-sort" title="Three-letter code; blank means USD">Currency</th>
+              <th className="no-sort">Source link</th>
+              <th className="no-sort">Verified</th>
               <th className="no-sort">Last updated</th>
               <th className="no-sort">By</th>
               <th className="no-sort">What changed</th>
@@ -213,14 +240,14 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
             {continentGroups.map(({ continent, destinations: ds }) => (
               <Fragment key={continent}>
                 <tr className="region-row">
-                  <td colSpan={9} className="sticky-col">
+                  <td colSpan={15} className="sticky-col">
                     {continent}
                   </td>
                 </tr>
                 {ds.map((dest) => (
                   <Fragment key={dest.id}>
                     <tr className="dest-subheader-row">
-                      <td colSpan={8} className="sticky-col">
+                      <td colSpan={14} className="sticky-col">
                         {dest.emoji} <b>{dest.name}</b>{' '}
                         <span style={{ color: 'var(--text-faint)', fontWeight: 400 }}>
                           — {dest.items.length} item{dest.items.length === 1 ? '' : 's'}
@@ -296,6 +323,45 @@ export function CostItemsGrid({ initialDestinations }: { initialDestinations: Co
                                 defaultValue={item.unit}
                                 onBlur={(e) => editItemField(dest, idx, 'unit', e.target.value)}
                               />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner">
+                              <select className="cell-select" value={item.category ?? ''} onChange={(e) => editItemField(dest, idx, 'category', e.target.value)}>
+                                <option value="">—</option>
+                                {CATEGORY_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                              </select>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner">
+                              <input type="number" min={0} step={1} className="cost-input num" placeholder="—" defaultValue={item.priceMax ?? ''} onBlur={(e) => editItemField(dest, idx, 'priceMax', e.target.value)} />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner">
+                              <select className="cell-select" value={item.season ?? ''} onChange={(e) => editItemField(dest, idx, 'season', e.target.value)}>
+                                <option value="">—</option>
+                                {SEASON_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                              </select>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner">
+                              <input className="cost-input" maxLength={3} placeholder="USD" style={{ width: 52, textTransform: 'uppercase' }} defaultValue={item.currency ?? ''} onBlur={(e) => editItemField(dest, idx, 'currency', e.target.value)} />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner">
+                              <input className="cost-input" placeholder="https://…" defaultValue={item.sourceUrl ?? ''} onBlur={(e) => editItemField(dest, idx, 'sourceUrl', e.target.value)} />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="cell-inner" style={{ gap: 6, whiteSpace: 'nowrap' }}>
+                              {item.checkedOn ? <span style={{ fontSize: 11.5, color: 'var(--good)' }}>✓ {item.checkedOn}</span> : <span style={faint}>Not verified</span>}
+                              <button type="button" className="btn" style={{ padding: '2px 8px', fontSize: 11 }} title="Records today's date as the day you checked this price" onClick={() => editItemField(dest, idx, 'checkedOn', todayISO())}>
+                                {item.checkedOn ? 'Re-verify' : 'Mark verified'}
+                              </button>
                             </div>
                           </td>
                           <td>

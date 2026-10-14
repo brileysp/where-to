@@ -1,3 +1,4 @@
+import { useUnitText } from '@/components/UnitsProvider';
 import { useEffect, useRef, useState } from 'react';
 import { MONTH_NAMES, MONTH_SHORT } from '@/lib/scoring/constants';
 import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore } from '@/lib/scoring/rank';
@@ -9,6 +10,7 @@ import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { InterestChip, shortInterestLabel } from './InterestChip';
 import { prefersReducedMotion } from './useResortDemo';
+import { splitEmphasis } from '@/lib/text/emphasis';
 
 // The place-card open sequence (plays every time, on every card — see the
 // "Place Card Open, Two Ways" mockup, version B): interest pills arrive
@@ -47,6 +49,7 @@ export function ForYouTab({
   dest,
   weights,
   emojiOverrides,
+  shortNames,
   bands,
   selectedStyles,
   previewIdx,
@@ -58,6 +61,8 @@ export function ForYouTab({
   weights: Record<string, number>;
   /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
   emojiOverrides: Record<string, string>;
+  /** Admin-set pill names, keyed by slider key — falls back to the automatic short name. */
+  shortNames: Record<string, string>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   previewIdx: number;
@@ -132,7 +137,7 @@ export function ForYouTab({
                 <InterestChip
                   key={c.slider.key}
                   emoji={emojiOverrides[c.slider.key] ?? c.slider.icon}
-                  label={shortInterestLabel(c.slider.label)}
+                  label={shortInterestLabel(c.slider.label, shortNames[c.slider.key])}
                   fullLabel={c.slider.label}
                   active={stage >= 1 && !comparing && c.slider.key === selectedCategory}
                   score={stage >= 2 ? (c.isNA ? null : c.score) : undefined}
@@ -153,6 +158,7 @@ export function ForYouTab({
                   dest={dest}
                   row={selectedChip}
                   icon={emojiOverrides[selectedChip.slider.key] ?? selectedChip.slider.icon}
+                  shortName={shortInterestLabel(selectedChip.slider.label, shortNames[selectedChip.slider.key])}
                   previewIdx={previewIdx}
                   onChangeMonth={handleChangeMonth}
                 />
@@ -245,6 +251,7 @@ function InterestDetail({
   dest,
   row,
   icon,
+  shortName,
   previewIdx,
   onChangeMonth,
 }: {
@@ -252,6 +259,8 @@ function InterestDetail({
   row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
   /** Resolved icon (admin override already applied) — don't read row.slider.icon directly here. */
   icon: string;
+  /** The pill name for this interest (admin-set or automatic). */
+  shortName: string;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
@@ -278,8 +287,8 @@ function InterestDetail({
   return (
     <div className="interest-detail">
       {heading}
-      {placeBlurb && <p className="interest-place-blurb">{placeBlurb}</p>}
-      <div className="detail-section-title interest-detail-months-title">{shortInterestLabel(slider.label)} by month · Tap to compare</div>
+      {placeBlurb && <p className="interest-place-blurb"><EmphasisText text={placeBlurb} /></p>}
+      <div className="detail-section-title interest-detail-months-title">{shortName} by month · Tap to compare</div>
       <div className="months-chart">
         {dest.monthly[slider.key].map((_, i) => {
           const v = smoothedMonthlyDisplay(dest, slider.key, i);
@@ -318,8 +327,26 @@ function InterestDetail({
           </div>
           <div className={`month-detail-score score-${monthQuality.cls}`}>{score.toFixed(1)}</div>
         </div>
-        {monthBlurb && <p className="card-monthly-blurb">{monthBlurb}</p>}
+        {monthBlurb && <p className="card-monthly-blurb"><EmphasisText text={monthBlurb} /></p>}
       </div>
     </div>
+  );
+}
+
+/** Blurb text with marked species names in a slightly heavier weight. */
+function EmphasisText({ text }: { text: string }) {
+  const u = useUnitText();
+  return (
+    <>
+      {splitEmphasis(u(text)).map((p, i) =>
+        p.emphasis ? (
+          <span key={i} className="species-name">
+            {p.text}
+          </span>
+        ) : (
+          p.text
+        ),
+      )}
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import { BAND_DIMENSIONS, NEUTRAL_WEIGHT, SLIDERS } from './constants';
+import { BAND_DIMENSIONS, NEUTRAL_WEIGHT, SLIDERS, sliderState } from './constants';
 import { deriveWeatherBand, has, isSliderNA } from './destinations';
 import { seasonPosition } from './blurb';
 import type { AudienceTier, ScoredDestination, ScoringDestination, Severity } from './types';
@@ -294,14 +294,19 @@ export const PASSING_MENTION_WEIGHT = NEUTRAL_WEIGHT + 1;
 // everything visible else at 2" ranked Nepal (national parks 8) 17th at 7.7 and Andalucia
 // (national parks 0) 25th at 7.3, on an interest the user could not see. Those weights count
 // for nothing here, and are also left out of the "top weight" the ramp is measured against.
-const HIDDEN_SLIDER_KEYS = new Set(SLIDERS.filter((s) => s.hidden).map((s) => s.key));
+let hiddenCache: { version: number; keys: Set<string> } | null = null;
+/** The hidden interests' keys. Rebuilt when the interest list changes (admin overrides can hide or show an interest). */
+function hiddenSliderKeys(): Set<string> {
+  if (!hiddenCache || hiddenCache.version !== sliderState.version) hiddenCache = { version: sliderState.version, keys: new Set(SLIDERS.filter((s) => s.hidden).map((s) => s.key)) };
+  return hiddenCache.keys;
+}
 
 export function effectiveWeights(weights: Record<string, number>): Record<string, number> {
-  const max = Math.max(0, ...Object.entries(weights).filter(([k]) => !HIDDEN_SLIDER_KEYS.has(k)).map(([, w]) => w));
+  const max = Math.max(0, ...Object.entries(weights).filter(([k]) => !hiddenSliderKeys().has(k)).map(([, w]) => w));
   if (max <= 0) return weights;
   const out: Record<string, number> = {};
   for (const [key, w] of Object.entries(weights)) {
-    if (HIDDEN_SLIDER_KEYS.has(key)) { out[key] = 0; continue; }
+    if (hiddenSliderKeys().has(key)) { out[key] = 0; continue; }
     if (w <= PASSING_MENTION_WEIGHT) { out[key] = 0; continue; }
     const ratio = w / max;
     const factor = Math.min(1, Math.max(0, (ratio - WEIGHT_FLOOR_LOW) / (WEIGHT_FLOOR_HIGH - WEIGHT_FLOOR_LOW)));

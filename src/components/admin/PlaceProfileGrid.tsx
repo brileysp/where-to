@@ -6,6 +6,9 @@ import { useFieldEdit } from './useFieldEdit';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { scoreColor } from '@/lib/admin/scoreColor';
 import { SliderMonthlyWeatherCell } from './cells';
+import { NaToggle } from './NaToggle';
+import { HazardsPanel } from './HazardsPanel';
+import type { SeasonalHazard } from '@/lib/scoring/types';
 
 export interface ProfileCell {
   key: string;
@@ -13,10 +16,13 @@ export interface ProfileCell {
   icon: string;
   group: string;
   na: boolean;
+  /** Why this place is N/A for the interest, when one is recorded. Edited on the interest page. */
+  naReason?: string | null;
   base: number | null; // the authored value the monthly formula starts from
   monthly: number[]; // 12 entries, already reflects any existing override
   overrides: Record<number, number>; // sparse, which months are admin-overridden
   monthlyText: (string | null)[]; // sliderMonthlyWeather for this interest — same data the Matrix grid's Monthly column edits
+  tier: string | null; // signatureTier for this interest, if set
 }
 
 const MONTH_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -32,6 +38,9 @@ export function PlaceProfileGrid({
   cells,
   initialBaseScores,
   initialSliderMonthlyWeather,
+  initialSignatureTier,
+  hazards,
+  hazardSliders,
 }: {
   destId: string;
   destName: string;
@@ -43,6 +52,9 @@ export function PlaceProfileGrid({
   cells: ProfileCell[];
   initialBaseScores: Record<string, number>;
   initialSliderMonthlyWeather: Record<string, (string | null)[]>;
+  initialSignatureTier: Record<string, string>;
+  hazards: SeasonalHazard[];
+  hazardSliders: Array<{ key: string; label: string; icon: string }>;
 }) {
   const router = useRouter();
   const [rows, setRows] = useState(cells);
@@ -51,6 +63,7 @@ export function PlaceProfileGrid({
   );
   const [baseScores, setBaseScores] = useState(initialBaseScores);
   const [sliderMonthlyWeather, setSliderMonthlyWeather] = useState(initialSliderMonthlyWeather);
+  const [signatureTier, setSignatureTier] = useState(initialSignatureTier);
   const [editing, setEditing] = useState<string | null>(null); // `${sliderKey}:${monthIdx}`
   const [query, setQuery] = useState('');
   const [updatedAt, setUpdatedAt] = useState(initialUpdatedAt);
@@ -179,6 +192,29 @@ export function PlaceProfileGrid({
     });
   }
 
+  function commitTier(key: string, label: string, oldTier: string | null, next: string | null) {
+    const before = signatureTier;
+    const after = { ...before };
+    if (next) after[key] = next;
+    else delete after[key];
+    commit<string | null>({
+      entityType: 'destination',
+      entityId: destId,
+      entityLabel: destName,
+      field: 'signatureTier',
+      fieldLabel: `${label} tier`,
+      loadedUpdatedAt: updatedAt,
+      oldValue: oldTier,
+      newValue: next,
+      toLabel: (v) => v ?? '(not set)',
+      toPatchValue: () => after,
+      setLocal: (val) => {
+        setSignatureTier(val === next ? after : before);
+        setRows((rs) => rs.map((r) => (r.key === key ? { ...r, tier: val } : r)));
+      },
+    });
+  }
+
   return (
     <div className="grid-wrap">
       <div className="toolbar">
@@ -215,6 +251,7 @@ export function PlaceProfileGrid({
         <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>Click any cell to set an exact value · empty input clears the override</span>
         <span style={{ fontSize: 11, color: 'var(--text-faint)' }}>Click an interest name for its monthly blurbs · editing Base changes the formula input — reload the page to see its effect on the months</span>
       </div>
+      <HazardsPanel destId={destId} destName={destName} updatedAt={updatedAt} initial={hazards} sliders={hazardSliders} />
       <div className="grid-scroll">
         <table className="grid profile-grid">
           <thead>
@@ -224,6 +261,12 @@ export function PlaceProfileGrid({
               </th>
               <th className="no-sort" style={{ textAlign: 'center', minWidth: 50 }}>
                 Base
+              </th>
+              <th className="no-sort" style={{ textAlign: 'center', minWidth: 96 }} title="How central this interest is to the place's identity">
+                Tier
+              </th>
+              <th className="no-sort" style={{ textAlign: 'center', minWidth: 70 }}>
+                N/A
               </th>
               {MONTH_SHORT.map((m) => (
                 <th key={m} className="no-sort" style={{ textAlign: 'center', minWidth: 40 }}>
@@ -249,6 +292,7 @@ export function PlaceProfileGrid({
                           loadedUpdatedAt: updatedAt,
                         }}
                         value={r.monthlyText}
+                        scores={r.monthly}
                         setLocal={(v) => {
                           setSliderMonthlyWeather((m) => {
                             const after = { ...m };
@@ -270,6 +314,11 @@ export function PlaceProfileGrid({
                           </div>
                         )}
                       />
+                      {r.na && (
+                        <div style={{ fontSize: 11.5, color: 'var(--text-faint)', padding: '0 10px 6px', lineHeight: 1.45 }}>
+                          <b>Not applicable:</b> {r.naReason ?? 'no reason recorded'}
+                        </div>
+                      )}
                     </td>
                     <td style={{ textAlign: 'center' }}>
                       <div className="cell-inner" style={{ justifyContent: 'center' }}>
@@ -291,6 +340,31 @@ export function PlaceProfileGrid({
                             }}
                           />
                         )}
+                      </div>
+                    </td>
+                    <td style={{ textAlign: 'center' }}>
+                      <div className="cell-inner" style={{ justifyContent: 'center' }}>
+                        <select className="cell-select" value={r.tier ?? ''} style={{ width: 92 }} onChange={(e) => commitTier(r.key, r.label, r.tier, e.target.value === '' ? null : e.target.value)}>
+                          <option value="">—</option>
+                          <option value="signature">signature</option>
+                          <option value="strong">strong</option>
+                          <option value="casual">casual</option>
+                          <option value="none">none</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td style={{ textAlign: 'center' }}>
+                      <div className="cell-inner" style={{ justifyContent: 'center' }}>
+                        <NaToggle
+                          compact
+                          interestKey={r.key}
+                          interestLabel={r.label}
+                          placeId={destId}
+                          placeName={destName}
+                          isNa={r.na}
+                          reason={r.naReason ?? null}
+                          onChanged={(isNa, reason) => setRows((rs) => rs.map((x) => (x.key === r.key ? { ...x, na: isNa, naReason: reason } : x)))}
+                        />
                       </div>
                     </td>
                     {MONTH_SHORT.map((_, idx) => {

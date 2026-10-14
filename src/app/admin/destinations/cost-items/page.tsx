@@ -1,5 +1,5 @@
 import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
-import { getContinent } from '@/lib/scoring/continents';
+import { continentOf } from '@/lib/scoring/continents';
 import { CostItemsGrid, type CostDestination } from '@/components/admin/CostItemsGrid';
 
 export default async function AdminCostItemsPage() {
@@ -10,7 +10,7 @@ export default async function AdminCostItemsPage() {
     name: d.name,
     emoji: d.emoji,
     region: d.region,
-    continent: getContinent(d.id),
+    continent: continentOf(d),
     items: d.costItems.map((c) => ({ ...c, emoji: c.emoji ?? null })),
     updatedAt: d.updatedAt.toISOString(),
   }));

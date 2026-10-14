@@ -1,5 +1,5 @@
 import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
-import { getContinent } from '@/lib/scoring/continents';
+import { continentOf } from '@/lib/scoring/continents';
 import { SeasonalFlagsGrid, type SeasonalFlagsRow } from '@/components/admin/SeasonalFlagsGrid';
 
 export default async function AdminSeasonalFlagsPage() {
@@ -9,7 +9,7 @@ export default async function AdminSeasonalFlagsPage() {
     id: d.id,
     name: d.name,
     emoji: d.emoji,
-    continent: getContinent(d.id),
+    continent: continentOf(d),
     dryMonths: d.dryMonths,
     wetMonths: d.wetMonths,
     hotMonths: d.hotMonths,

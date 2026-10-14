@@ -1,8 +1,10 @@
+import { auditDiff } from './audit-diff';
 import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
 import { adminAuditLog, places } from '@/lib/db/schema';
 import { toScoringPlace } from '@/lib/db/queries/places';
 import { invalidatePrimaryPlaceRows, refreshPrimaryPlaceRow } from '@/lib/db/queries/primary-place-rows';
+import { invalidateListPlaceRows, refreshListPlaceRow } from '@/lib/db/queries/list-place-rows';
 import { fitDestinationCurves } from '@/lib/scoring/fitCurve';
 import type { AdminUser } from './auth';
 
@@ -22,19 +24,29 @@ export async function withAdminAudit<T>(params: {
   action: AdminAuditAction;
   before: unknown;
   after: unknown;
+  /**
+   * Set for entity types that never touch the `places` table (the per-interest
+   * page's reviews, to-dos, ideas and facts). Without it, any non-destination
+   * write drops the whole cached copy of the place rows (about 5.8 MB), and the
+   * next page load downloads all of it again from Supabase — which counts
+   * against the egress quota.
+   */
+  skipPlaceCache?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   write: (tx: any) => Promise<T>;
 }): Promise<T> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const committed = await (db as any).transaction(async (tx: any) => {
     const result = await params.write(tx);
+    const logged = params.entityType === 'destination' && params.action === 'update' ? auditDiff(params.before, params.after) : null;
     await tx.insert(adminAuditLog).values({
       actorId: params.actor.id,
       entityType: params.entityType,
       entityId: params.entityId,
       action: params.action,
-      beforeValue: params.before ?? null,
-      afterValue: params.after ?? null,
+      // A place edit is logged as what changed only (see audit-diff.ts); everything else is small and stays whole.
+      beforeValue: logged?.before ?? params.before ?? null,
+      afterValue: logged?.after ?? params.after ?? null,
     });
 
     // Live curve refit. Place migration Phase 4 completed: admin writes now
@@ -81,7 +93,12 @@ export async function withAdminAudit<T>(params: {
   });
   // After commit, not inside it — invalidating early would let a concurrent
   // read re-cache the pre-write rows.
-  if (params.entityType === 'destination') await refreshPrimaryPlaceRow(params.entityId);
-  else invalidatePrimaryPlaceRows();
+  if (params.entityType === 'destination') {
+    await refreshPrimaryPlaceRow(params.entityId);
+    await refreshListPlaceRow(params.entityId);
+  } else if (!params.skipPlaceCache) {
+    invalidatePrimaryPlaceRows();
+    invalidateListPlaceRows();
+  }
   return committed as T;
 }

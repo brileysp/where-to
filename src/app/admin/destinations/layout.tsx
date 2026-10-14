@@ -1,4 +1,5 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { HomeCountryPicker } from '@/components/HomeCountryPicker';
 import Link from 'next/link';
 import { requireAdminUser } from '@/lib/admin/auth';
 import { PendingEditsProvider } from '@/components/admin/PendingEditsProvider';
@@ -26,6 +27,7 @@ export default async function AdminDestinationsLayout({ children }: { children: 
             </Link>
             <AdminDestinationTabs />
             <div className="admin-topbar-spacer" />
+            <HomeCountryPicker />
             <PendingTrayToggle />
           </div>
           <div className="admin-body">

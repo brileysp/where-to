@@ -78,6 +78,12 @@ export async function GET(req: NextRequest) {
     'updated_by',
     'editor_kind',
     'last_change',
+    'category',
+    'top_of_range',
+    'season',
+    'currency',
+    'source_link',
+    'verified_on',
   ];
 
   const rows: Array<Array<string | number | boolean | null>> = [];
@@ -90,7 +96,7 @@ export async function GET(req: NextRequest) {
     if (d.costItems.length === 0) {
       // No items at all — one row so the gap itself shows up in the sheet,
       // every item_* column blank (see doc comment above).
-      rows.push([...placeCols, '', '', '', '', '', '', '', '', '']);
+      rows.push([...placeCols, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
       continue;
     }
     for (const item of items) {
@@ -105,6 +111,12 @@ export async function GET(req: NextRequest) {
         item.updatedBy ?? '',
         item.editorKind ?? '',
         item.lastChange ?? '',
+        item.category ?? '',
+        item.priceMax ?? '',
+        item.season ?? '',
+        item.currency ?? '',
+        item.sourceUrl ?? '',
+        item.checkedOn ?? '',
       ]);
     }
   }

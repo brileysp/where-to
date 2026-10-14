@@ -32,7 +32,7 @@ export default async function DestinationHistoryPage({
       <h1 style={{ fontSize: 22, marginBottom: 4 }}>{destination.name} — history</h1>
       <p style={{ color: '#888', fontSize: 13, marginBottom: 20 }}>
         Every save through the admin UI, newest first — the grid screens (Places, Interests × Places, Cost Items, Place
-        Profile, etc.) all write to the same destination row.
+        Profile, etc.) all write to the same destination row. Entries after 14 Oct 2026, and older script entries, keep only what that save changed; restoring one puts back just those values.
       </p>
       {error && <p style={{ color: '#b00020', fontSize: 14, marginBottom: 16 }}>Couldn&apos;t restore that version — please try again.</p>}
       <AuditHistoryList

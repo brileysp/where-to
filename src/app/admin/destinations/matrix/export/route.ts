@@ -67,7 +67,7 @@ export async function GET(req: NextRequest) {
   const interestFilter = req.nextUrl.searchParams.get('interest');
   const sliders = interestFilter ? VISIBLE_SLIDERS.filter((s) => s.key === interestFilter) : VISIBLE_SLIDERS;
 
-  const [scored, adminRows] = await Promise.all([getAllScoredPlaces(), listDestinationsForAdmin()]);
+  const [scored, adminRows] = await Promise.all([getAllScoredPlaces({ includeUnpublished: true }), listDestinationsForAdmin()]);
   const adminById = new Map(adminRows.map((r) => [r.id, r]));
 
   const header = [
