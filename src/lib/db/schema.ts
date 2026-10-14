@@ -812,7 +812,7 @@ export const interestReviews = pgTable(
 export const INTEREST_TODO_STATUSES = ['needs_you', 'ready_for_claude', 'waiting', 'idea', 'done'] as const;
 export type InterestTodoStatus = (typeof INTEREST_TODO_STATUSES)[number];
 
-/** Things we agreed to do for an interest but have not done yet. */
+/** Things we agreed to do but have not done yet: one list per interest, plus site-wide items under interestKey '_site'. */
 export const interestTodos = pgTable(
   'interest_todos',
   {
@@ -828,6 +828,10 @@ export const interestTodos = pgTable(
     closeOnApply: boolean('close_on_apply').notNull().default(false),
     // 1 = high, 2 = normal, 3 = low. Sorts the to-do list; has no other effect.
     priority: integer('priority').notNull().default(2),
+    // "Check on" date for the To do tab. Open items past it show as overdue. Null = no date.
+    dueOn: date('due_on', { mode: 'string' }),
+    // 'weekly' or 'monthly': marking the item done creates the next one on its next date. Null = one-off.
+    repeatEvery: text('repeat_every').$type<'weekly' | 'monthly'>(),
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
     doneAt: timestamp('done_at', { withTimezone: true }),

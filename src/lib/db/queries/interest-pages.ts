@@ -302,6 +302,8 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     placeId: r.placeId,
     closeOnApply: r.closeOnApply,
     priority: r.priority,
+    dueOn: r.dueOn,
+    repeatEvery: r.repeatEvery,
     createdAt: r.createdAt.toISOString(),
     doneAt: r.doneAt ? r.doneAt.toISOString() : null,
   });

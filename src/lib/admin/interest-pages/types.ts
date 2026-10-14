@@ -72,6 +72,9 @@ export interface TodoRow {
   closeOnApply: boolean;
   /** 1 = high, 2 = normal, 3 = low. */
   priority: number;
+  /** "Check on" date (YYYY-MM-DD), or null. */
+  dueOn: string | null;
+  repeatEvery: 'weekly' | 'monthly' | null;
   createdAt: string;
   doneAt: string | null;
 }

@@ -280,7 +280,7 @@ const todoInput = z.object({
 export type TodoInput = z.input<typeof todoInput>;
 
 function toTodoRow(r: typeof interestTodos.$inferSelect): TodoRow {
-  return { id: r.id, title: r.title, detail: r.detail, status: r.status, source: r.source, placeId: r.placeId, closeOnApply: r.closeOnApply, priority: r.priority, createdAt: r.createdAt.toISOString(), doneAt: r.doneAt ? r.doneAt.toISOString() : null };
+  return { id: r.id, title: r.title, detail: r.detail, status: r.status, source: r.source, placeId: r.placeId, closeOnApply: r.closeOnApply, priority: r.priority, dueOn: r.dueOn, repeatEvery: r.repeatEvery, createdAt: r.createdAt.toISOString(), doneAt: r.doneAt ? r.doneAt.toISOString() : null };
 }
 
 export async function addTodo(interestKey: string, input: TodoInput): Promise<ActionResult<{ todo: TodoRow }>> {
