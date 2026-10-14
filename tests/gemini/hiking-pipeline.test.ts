@@ -54,4 +54,15 @@ describe('hiking pipeline', () => {
     m.monthly[6] = { ...m.monthly[6], text: 'A world-class stretch of high trail is open and strenuous above 8,000 ft.' };
     expect(validateContent(m, 'hiking', 'chamonix').some((i) => /never in a month/.test(i.message))).toBe(true);
   });
+
+  it('warns on the v3 overview and month rules (14 Oct 2026)', () => {
+    const msgs = (o: GenerationOutput) => validateContent(o, 'hiking', 'sedona').map((i) => i.message).join(' | ');
+    expect(msgs(out({ overview: 'The walking suits day hikers best, with easy 2-mile loops and a steep strenuous scramble, best in spring and autumn near town.' }))).toMatch(/suits or that it is day-hike only/);
+    expect(msgs(out({ overview: 'Easy 2-mile loops near the town and a strenuous scramble up a steep rock, best in spring and autumn when it is mild.' }))).toMatch(/distance but no multi-day route/);
+    expect(msgs(out({ overview: 'The 75-mile Alta Via takes 10 to 13 days, a strenuous trek through the high limestone towers, with day hikes beside it too.' }))).not.toMatch(/distance but no multi-day route/);
+    const m = out(); m.monthly[0] = { ...m.monthly[0], text: 'Pushing most walkers indoors to the treadmill when the paths ice over in the cold.' };
+    expect(msgs(m)).toMatch(/indoors, treadmills or gyms/);
+    m.monthly[1] = { ...m.monthly[1], text: 'There is no trail network and the paths ice over.' };
+    expect(msgs(m)).toMatch(/there is no/);
+  });
 });
