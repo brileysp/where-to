@@ -1,0 +1,185 @@
+{
+ "_note": "Whale watching fact sheets (Oct 2026). Pilot only: built from the drafted whale columns (scripts/data/whale-fill.json) and the existing whale text; NOT yet source-checked. Passed to Gemini as ground truth; mustMention is only a post-check.",
+ "azores": {
+  "scope": "The Azores archipelago. Whale-watching boats and shore lookouts are based mainly on Pico and São Miguel.",
+  "facts": [
+   "Sperm whales are present year-round and are the most reliable sighting on boat trips.",
+   "Blue and fin whales pass through on their spring migration, roughly April to June.",
+   "Sei whales are the seasonal headline visitor roughly July to September.",
+   "Common dolphins are seen on nearly every trip all year; bottlenose dolphins are regular, Atlantic spotted dolphins mainly May to October.",
+   "Trips run year-round on small and mid-size boats; trained shore lookouts (vigias) spot whales for the boats."
+  ],
+  "avoid": [
+   "Naming operators or boats.",
+   "Whale sharks, seals and turtles."
+  ],
+  "season": "Sperm whales year-round; blue and fin whales April to June; sei whales July to September; best overall April to October.",
+  "mustMention": [
+   "sperm whale"
+  ]
+ },
+ "angkor": {
+  "scope": "All of Cambodia, including its Gulf of Thailand coast (Kampot, Kep, Sihanoukville and the islands off them). The place is the whole country, not only the Siem Reap and Angkor area.",
+  "facts": [
+   "Dolphins and porpoises are recorded in Cambodia's coastal waters, but there is no established whale or dolphin watching industry on the coast.",
+   "River dolphins in the Mekong do not count for this interest."
+  ],
+  "avoid": [
+   "Judging the place by the inland temples alone.",
+   "Returning NOT_APPLICABLE: the country has a sea coast. If sightings are rare or chance, score it low."
+  ],
+  "season": "Sea conditions on the Gulf of Thailand coast are best in the dry season, roughly November to April.",
+  "mustMention": []
+ },
+ "bagan": {
+  "scope": "All of Myanmar, including its long coast on the Andaman Sea and the Bay of Bengal (Ngapali, Ngwe Saung, the Myeik Archipelago). The place is the whole country, not only the inland Bagan area.",
+  "facts": [
+   "Whales and dolphins are recorded in Myanmar's coastal waters, but there is no established whale-watching industry.",
+   "River dolphins in the Ayeyarwady do not count for this interest."
+  ],
+  "avoid": [
+   "Judging the place by the inland temple plain alone.",
+   "Saying the country is landlocked. Do not return NOT_APPLICABLE: score it low if sightings are rare or chance."
+  ],
+  "season": "Sea conditions on the coast are best in the dry season, roughly November to April; the monsoon runs about May to October.",
+  "mustMention": []
+ },
+ "borabora": {
+  "scope": "All of French Polynesia: Tahiti, Moorea, Bora Bora and the other islands, with the Austral island of Rurutu also known for whales. The place is the whole territory, not only Bora Bora.",
+  "facts": [
+   "Humpback whales come to breed and calve in Polynesian waters from roughly July to October.",
+   "Moorea and Tahiti have the main whale-watching trips, and regulated swimming with humpback whales is offered under national rules.",
+   "Spinner dolphins and other dolphins are seen on general boat trips year-round."
+  ],
+  "avoid": [
+   "Centering the text on Bora Bora alone."
+  ],
+  "season": "Humpback whales roughly July to October, peaking August to September.",
+  "mustMention": [
+   "humpback"
+  ]
+ },
+ "fjords": {
+  "scope": "The western Norwegian fjords around Bergen, Voss, Hardanger and the Sognefjord. Not Tromsø, Skjervøy or northern Norway, which are a different region and out of scope.",
+  "facts": [
+   "Harbor porpoises are the usual sighting on fjord cruises; larger whales are occasional visitors rather than a feature.",
+   "There is no dedicated whale-watching industry in the western fjords."
+  ],
+  "avoid": [
+   "Describing the Tromsø and Skjervøy orca and humpback herring season."
+  ],
+  "season": "Sea conditions on fjord cruises are best in the summer months; porpoises are present year-round.",
+  "mustMention": []
+ },
+ "whistler": {
+  "scope": "Vancouver and Whistler. Whale watching is on the Salish Sea around Vancouver, where boat trips depart. Whistler itself is inland. Do not give a distance from Whistler or describe Vancouver relative to Whistler.",
+  "facts": [
+   "Orcas, humpback whales, minke whales, harbor porpoises and Dall's porpoises are seen in the waters around Vancouver in season, roughly May to October."
+  ],
+  "avoid": [
+   "Judging the place by Whistler alone.",
+   "Returning NOT_APPLICABLE: Vancouver is on the coast.",
+   "Measuring distance from Whistler."
+  ],
+  "season": "Boat trips roughly April to October, peaking in summer.",
+  "mustMention": []
+ },
+ "quebec-city": {
+  "scope": "Quebec City and Montreal. The whales are at Tadoussac and the Saguenay, where the Saguenay meets the St Lawrence, about three hours' drive from Quebec City. Say the distance.",
+  "facts": [
+   "Belugas, minke whales, fin whales and humpback whales are seen on the St Lawrence, with blue whales occasional, roughly May to October; trips leave from Tadoussac and nearby."
+  ],
+  "avoid": [
+   "Judging the place by the two cities alone."
+  ],
+  "season": "May to October, peaking July to September.",
+  "mustMention": [
+   "beluga"
+  ]
+ },
+ "punta-cana": {
+  "scope": "The whole Dominican Republic. The main whale watching is in Samaná Bay on the north-east coast, where humpback whales breed from about mid-January to the end of March. Samaná is roughly a two-hour drive from Santo Domingo on the highway and four to five hours from the Punta Cana resort coast. Give the Santo Domingo distance, and mention Punta Cana only as the longer drive.",
+  "facts": [
+   "Humpback whales breed in Samaná Bay roughly mid-January to March, and boat trips run from Samaná.",
+   "Silver Bank, offshore to the north, is visited by liveaboard boats for regulated swims."
+  ],
+  "avoid": [
+   "Judging the place by the Punta Cana resort coast alone.",
+   "Measuring distances only from Punta Cana."
+  ],
+  "season": "Humpback whales roughly mid-January to March.",
+  "mustMention": [
+   "Samaná"
+  ]
+ },
+ "thailand": {
+  "scope": "Phuket and the Andaman Coast: Phuket, Krabi, Phi Phi, Khao Lak, the Similan Islands and Khao Sok. Not the Gulf of Thailand islands.",
+  "facts": [
+   "Dolphins are sometimes seen on island-hopping trips; whale sightings are rare and there is no established whale-watching industry on this coast."
+  ],
+  "avoid": [
+   "Judging the place by the Gulf islands, which are a different coast."
+  ],
+  "season": "Sea conditions are best in the dry season, roughly November to April; the monsoon runs about May to October.",
+  "mustMention": []
+ },
+ "snowdonia": {
+  "scope": "All of Wales. Cardigan Bay (New Quay and Aberaeron) on the west coast holds one of Britain's best-known bottlenose dolphin populations and boat trips run there; harbor porpoises and Risso's dolphins are also seen, and whales are rare. Describe the trips by their port, not by distance from any mountain or park.",
+  "facts": [
+   "Bottlenose dolphins in Cardigan Bay are regularly seen on boat trips from New Quay, roughly April to October."
+  ],
+  "avoid": [
+   "Judging the place by the mountains alone.",
+   "Returning NOT_APPLICABLE: Wales has a long coast.",
+   "Measuring distance from Snowdonia or Eryri."
+  ],
+  "season": "Dolphin trips roughly April to October.",
+  "mustMention": [
+   "Cardigan Bay"
+  ]
+ },
+ "napa": {
+  "scope": "Napa and Sonoma counties, the whole wine country (not the towns). The whale watching is on the Sonoma County coast at Bodega Bay and Jenner, where gray whales pass from the shore and on boat trips roughly December to April. Do not give a distance from Sonoma or Napa: the coast is part of Sonoma County.",
+  "facts": [
+   "Gray whales migrate along the Sonoma coast roughly December to April."
+  ],
+  "avoid": [
+   "Judging the place by the vineyards alone.",
+   "Measuring distance from Sonoma or Napa."
+  ],
+  "season": "Gray whales roughly December to April.",
+  "mustMention": []
+ },
+ "havana": {
+  "scope": "All of Cuba, not only Havana. Cuba is an island with coasts on the Straits of Florida, the Caribbean Sea and the Atlantic. Bottlenose dolphins are the animal most often met on boat and dive trips; whales are rare passing visitors and there is no whale-watching industry. Say this about the whole island, not just the capital's seafront.",
+  "facts": [
+   "There is no dedicated whale-watching industry in Cuba.",
+   "Bottlenose dolphins are the usual sighting on boat and dive trips along the coasts."
+  ],
+  "avoid": [
+   "Judging the place by Havana's Malecón alone.",
+   "Returning NOT_APPLICABLE: Cuba is an island with a long coast."
+  ],
+  "season": "No whale season. Dolphin sightings are chance encounters all year.",
+  "mustMention": []
+ },
+ "tokyo-kyoto": {
+  "scope": "Tokyo and Kyoto. Kyoto is inland. The whale and dolphin watching is out of Choshi in Chiba Prefecture, roughly two hours east of Tokyo by train or bus, run year-round by the Choshi Ocean Research Institute. You may give the distance from Tokyo.",
+  "facts": [
+   "The Choshi Ocean Research Institute runs year-round dolphin and whale watching trips from Choshi, where the Oyashio and Kuroshio currents meet.",
+   "Seen at different times of year: Pacific white-sided, bottlenose, striped and Risso's dolphins, finless porpoise, short-finned pilot whale and sperm whale.",
+   "Spring can bring dolphin pods of 2,000 to 5,000; autumn can bring groups of around 50 whales.",
+   "A longer whale-watching trip of about five hours runs from November to January.",
+   "Northern fur seals can be seen in February and March."
+  ],
+  "avoid": [
+   "Baird's beaked whales: no whale-watching trips for them were found; they are hunted at Wadaura, not watched.",
+   "Any claim of reliable large whales or a late-summer whale peak.",
+   "Judging the place by the cities alone."
+  ],
+  "season": "Dolphin trips year-round; the whale trip November to January.",
+  "mustMention": [
+   "Choshi"
+  ]
+ }
+}

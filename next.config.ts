@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
   // without this, Next silently blocks them and the page renders but never
   // hydrates (buttons render but do nothing).
   allowedDevOrigins: ["192.168.4.58", "192.168.4.68", "*.trycloudflare.com"],
+  // The admin interest pages look in prompts/ for the newest directive file;
+  // ship the folder with the admin routes so the hosted version finds it too.
+  outputFileTracingIncludes: {
+    "/admin/**": ["./prompts/**/*"],
+  },
 };
 
 export default nextConfig;

@@ -1,0 +1,38 @@
+{
+ "galapagos": {
+  "animalsOverride": "Galapagos sea lion (guaranteed, year-round), Green turtle (likely, year-round), Eagle ray (likely, year-round), Hammerhead shark (likely, year-round), Whale shark (likely, Jun-Nov), Marine iguana (possible, year-round), Galapagos penguin (unlikely, year-round)",
+  "season": "Two seasons. Warm and calm, about Dec-May: water 22-27 C, visibility roughly 18-30 m at its best (clearest Apr-May), flat seas, manta rays more often seen. Cool, Jun-Nov: water 16-22 C (coldest and roughest Aug-Sep), visibility about 9-18 m, plankton-rich, a thin grey mist (garua) hangs over the islands Jul-Dec, and whale sharks (mostly pregnant females) are seen at the far northern islands Jun-Nov, best Jul-Oct. Hammerheads are present all year; sources disagree on which season has the biggest schools, so never state one.",
+  "extraFacts": [
+   "Season facts for monthly text (use only where they change that month, and only what happens in or on the water): sea lion pups are born Aug-Nov (peak Aug-Sep) and are curious and playful around swimmers and snorkelers; manta rays are seen more often Dec-May; Galapagos penguins are present all year. Do NOT mention land events (marine iguana courtship, turtle nesting on beaches).",
+   "Do NOT say which season has the biggest hammerhead schools: they are there all year and sources disagree. Whale sharks are the one clear cool-season animal draw (Jun-Nov, best Jul-Oct).",
+   "For a snorkeler the difference between seasons is comfort and clarity: warm months give warmer, clearer, calmer water; Jun-Nov is cooler (a thicker wetsuit), with lower visibility, and Aug-Sep is the coldest and roughest.",
+   "Practical: a thick wetsuit (5-7 mm) is wise all year and a hood helps Jun-Nov, because the water is cold even on the equator. The two most famous dive sites are Darwin and Wolf, the far northern islands, reached only by liveaboard (a dive boat you sleep on)."
+  ]
+ },
+ "bahamas": {
+  "season": "Tiger sharks are present all year at Tiger Beach off Grand Bahama; the best stretch is about Oct-Mar (sources differ: some say Oct-Jan, some Dec-Mar). Great hammerhead sharks are a Dec-Mar draw. Oceanic whitetip sharks gather at Cat Island, a different island from Tiger Beach, about Mar-Jun (best Apr-May). Atlantic hurricane season Jun-Nov: trips can be cancelled or rerouted, but conditions are not closed all season. Atlantic spotted dolphins are seen more in summer.",
+  "extraFacts": [
+   "Do NOT say tiger sharks leave or return: they are there all year, only more reliably seen in the Oct-Mar peak. Tiger Beach and Cat Island are different places and different seasons, so never put oceanic whitetips in the same sentence as Tiger Beach.",
+   "Blue holes (deep flooded sinkholes, mostly around Andros) are the other signature underwater feature of the Bahamas.",
+   "Say 'guaranteed' at most once for the whole place."
+  ],
+  "animalsOverride": "Caribbean reef shark (guaranteed, year-round, baited), Tiger shark (likely, year-round, most reliable Oct-Mar, baited), Great hammerhead (possible, Dec-Mar), Oceanic whitetip shark at Cat Island, not Tiger Beach (possible, Mar-Jun, best Apr-May), Atlantic spotted dolphin (likely, Jun-Sep)"
+ },
+ "maldives": {
+  "animalsOverride": "Manta ray (likely, year-round at cleaning stations but most numerous Jun-Nov, with Hanifaru Bay feeding aggregations about Jun-Oct), Whale shark (likely, year-round in South Ari Atoll, most reliable Aug-Nov), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+  "season": "Two monsoons. Dry northeast monsoon, about Dec-May: the clearest water (visibility roughly 15-30 m, sometimes more in Male and Ari atolls), calm seas especially on the eastern sides of the atolls. Wet southwest monsoon, about Jun-Nov: plankton blooms bring the most mantas and whale sharks, but visibility drops to roughly 10-15 m in places and seas are rougher and wetter; western atolls are better in this season. Diving runs all year. Water stays 26-30 C all year.",
+  "extraFacts": [
+   "Hanifaru Bay in Baa Atoll, the famous manta feeding gathering (peak about late July to early October, around new and full moons), is snorkel-only: scuba is not allowed there, entry is limited and guided. Never describe it as a dive site.",
+   "Sources agree the dry season is best for clear water and the wet season is best for big animals, so neither season is poor: say what each offers."
+  ]
+ },
+ "cape-town": {
+  "season": "Cold water all year: roughly 10-14 C on the Atlantic side and 12-18 C in False Bay (Simon's Town). Diving depends on wind and swell: the Atlantic side is only dived on calm days, which are few, and is rarely dived in winter (frequent storm fronts and swell). False Bay, around Simon's Town, is the more consistent choice all year; sources say its visibility is often better in winter (roughly Jun-Aug) than in summer, though the water is colder. Visibility is typically about 6-20 m. Sevengill sharks are found all year at Pyramid Rock in False Bay (operators there describe their dive season as about Dec-Apr).",
+  "extraFacts": [
+   "Cage diving is at Gansbaai, roughly a two-hour drive east of Cape Town, not in Cape Town itself, and it is baited. Great whites used to be the draw but have become rare there since 2017; the usual sharks on a cage dive now are bronze whalers and broadnose sevengills. Never promise great whites: say 'sharks such as bronze whalers and sevengills, with great whites now rare'.",
+   "A 7 mm wetsuit or a semi-drysuit is usual; a hood, gloves and boots are needed all year.",
+   "Do not give month-by-month visibility numbers; sources disagree. Say only what the facts above support."
+  ],
+  "animalsOverride": "Broadnose sevengill shark (likely, year-round, best at Pyramid Rock in False Bay), Bronze whaler shark (likely on baited cage dives at Gansbaai, main season about Apr-Sep), African penguin (likely, year-round), Cape fur seal (likely, year-round), Great white shark (rare: sightings at Gansbaai fell sharply from 2017, widely linked to killer whales, and they are now seen only occasionally)"
+ }
+}

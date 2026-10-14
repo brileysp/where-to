@@ -1,0 +1,453 @@
+<!doctype html><meta charset=utf-8><title>Gemini passes mockup</title><meta name=viewport content="width=device-width,initial-scale=1">
+<style>.admin-grid-shell {
+  --bg: #f5f6f3; --bg-panel: #ffffff; --bg-sunken: #ecefe9; --bg-hover: #eef1ea;
+  --border: #d7dbd0; --border-strong: #c1c7b8;
+  --text: #1b201a; --text-dim: #5b6255; --text-faint: #8b9182;
+  --accent: #2f6f5e; --accent-soft: #2f6f5e17; --accent-strong: #235649;
+  --good: #3a7d4f; --good-soft: #3a7d4f16;
+  --warn: #b8862c; --warn-soft: #b8862c18;
+  --bad: #b8433a; --bad-soft: #b8433a16;
+  --info: #3868a8; --info-soft: #3868a814;
+  /* Categorical (not semantic) — for grouping months by shared blurb text,
+     picked to stay visually distinct from good/warn/bad/info's meanings. */
+  --cat-1: #8a5fc2; --cat-1-soft: #8a5fc218;
+  --cat-2: #c2588a; --cat-2-soft: #c2588a18;
+  --cat-3: #3fa7a0; --cat-3-soft: #3fa7a018;
+  --cat-4: #c47d3f; --cat-4-soft: #c47d3f18;
+  --radius: 7px;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media (prefers-color-scheme: dark) {
+  .admin-grid-shell:not([data-theme='light']) {
+    --bg: #14170f; --bg-panel: #1b1f17; --bg-sunken: #20251b; --bg-hover: #262b1f;
+    --border: #333a2b; --border-strong: #444d38;
+    --text: #eaeee3; --text-dim: #a7ae9c; --text-faint: #757c6c;
+    --accent: #62b199; --accent-soft: #62b19922; --accent-strong: #82c7b1;
+    --good: #6cbc86; --good-soft: #6cbc8620;
+    --warn: #e0ab52; --warn-soft: #e0ab5222;
+    --bad: #e2766c; --bad-soft: #e2766c22;
+    --info: #7aa8e0; --info-soft: #7aa8e022;
+    --cat-1: #b28ee0; --cat-1-soft: #b28ee022;
+    --cat-2: #e28ab0; --cat-2-soft: #e28ab022;
+    --cat-3: #6fc9c2; --cat-3-soft: #6fc9c222;
+    --cat-4: #e0a06a; --cat-4-soft: #e0a06a22;
+  }
+}
+.admin-grid-shell * { box-sizing: border-box; }
+.admin-grid-shell button { font-family: inherit; }
+
+/* ---------- Top bar ---------- */
+.admin-topbar { display: flex; align-items: center; gap: 18px; padding: 0 16px; height: 52px; border-bottom: 1px solid var(--border); background: var(--bg-panel); flex-shrink: 0; }
+.admin-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; letter-spacing: -0.01em; white-space: nowrap; color: var(--text); text-decoration: none; }
+.admin-brand .mark { width: 20px; height: 20px; border-radius: 5px; background: var(--accent); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700; }
+.admin-tabs { display: flex; gap: 2px; background: var(--bg-sunken); border-radius: 8px; padding: 3px; }
+.admin-tab { border: none; background: transparent; padding: 6px 13px; border-radius: 6px; font-size: 12.5px; font-weight: 600; color: var(--text-dim); cursor: pointer; white-space: nowrap; text-decoration: none; display: inline-block; }
+.admin-tab.active { background: var(--bg-panel); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.admin-topbar-spacer { flex: 1; }
+
+.btn { border: 1px solid var(--border-strong); background: var(--bg-panel); color: var(--text); padding: 7px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: var(--bg-hover); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-strong); }
+.btn-primary:disabled { background: var(--border-strong); border-color: var(--border-strong); color: var(--text-faint); }
+.pending-btn { position: relative; }
+.pending-count { background: var(--warn); color: #fff; font-size: 10.5px; font-weight: 700; border-radius: 999px; min-width: 17px; height: 17px; display: inline-flex; align-items: center; justify-content: center; padding: 0 4px; }
+
+/* ---------- Body layout ---------- */
+.admin-body { flex: 1; display: flex; min-height: 0; }
+.grid-wrap { flex: 1; overflow: hidden; position: relative; display: flex; flex-direction: column; min-width: 0; }
+.toolbar { display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-bottom: 1px solid var(--border); background: var(--bg); flex-shrink: 0; font-size: 12px; color: var(--text-dim); flex-wrap: wrap; }
+.toolbar .divider { width: 1px; height: 16px; background: var(--border); }
+.filter-label { font-weight: 700; color: var(--text-faint); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; display: flex; align-items: center; gap: 4px; }
+.filter-select { border: 1px solid var(--border-strong); background: var(--bg-panel); color: var(--text); font-size: 12px; font-weight: 600; padding: 5px 8px; border-radius: 6px; cursor: pointer; font-family: inherit; }
+.chip-toggle { display: flex; gap: 2px; background: var(--bg-sunken); border-radius: 7px; padding: 2px; }
+.chip-toggle button { border: none; background: transparent; padding: 5px 10px; border-radius: 5px; font-size: 11.5px; font-weight: 600; color: var(--text-dim); cursor: pointer; font-family: inherit; }
+.chip-toggle button.active { background: var(--bg-panel); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.search { display: flex; align-items: center; gap: 6px; background: var(--bg-sunken); border: 1px solid var(--border); border-radius: 7px; padding: 6px 10px; width: 230px; }
+.search input { border: none; background: none; outline: none; font-size: 12.5px; color: var(--text); width: 100%; font-family: inherit; }
+.search svg { flex-shrink: 0; color: var(--text-faint); }
+
+.grid-scroll { flex: 1; overflow: auto; }
+table.grid { border-collapse: separate; border-spacing: 0; font-size: 12.5px; width: max-content; min-width: 100%; }
+table.grid th, table.grid td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); white-space: nowrap; }
+table.grid thead th { position: sticky; top: 0; background: var(--bg-sunken); z-index: 3; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); font-weight: 700; padding: 8px 10px; text-align: left; cursor: pointer; user-select: none; }
+table.grid thead th:hover { background: var(--bg-hover); }
+table.grid thead th.no-sort { cursor: default; }
+table.grid thead th.no-sort:hover { background: var(--bg-sunken); }
+table.grid thead th .sort-arrow { opacity: 0.35; margin-left: 3px; font-size: 9px; }
+table.grid thead th .sort-arrow.active { opacity: 1; color: var(--accent); }
+table.grid tbody td { padding: 0; height: 34px; }
+table.grid tbody td .cell-inner { padding: 0 10px; height: 34px; display: flex; align-items: center; gap: 6px; }
+table.grid .sticky-col { position: sticky; left: 0; z-index: 2; background: var(--bg-panel); }
+table.grid thead th.sticky-col { z-index: 5; background: var(--bg-sunken); }
+table.grid tbody tr:hover td.sticky-col { background: var(--bg-hover); }
+table.grid tbody tr:hover td:not(.sticky-col) { background: var(--bg-hover); }
+
+.cost-input { border: 1px solid transparent; background: none; font-family: inherit; font-size: 12.5px; color: var(--text); padding: 4px 6px; border-radius: 5px; width: 100%; }
+.cost-input:hover { background: var(--bg-sunken); }
+.cost-input:focus { border-color: var(--info); background: var(--bg-panel); outline: none; }
+.cost-input.invalid { border-color: var(--bad); background: var(--bad-soft); }
+select.cell-select { border: 1px solid transparent; background: none; font-family: inherit; font-size: 12px; color: var(--text); padding: 3px 4px; border-radius: 5px; cursor: pointer; width: 100%; }
+select.cell-select:hover { background: var(--bg-sunken); }
+.text-cell { max-width: 210px; overflow: hidden; text-overflow: ellipsis; color: var(--text-dim); cursor: pointer; border-radius: 5px; }
+.text-cell:hover { background: var(--bg-sunken); text-decoration: underline; text-decoration-color: var(--border-strong); }
+.text-cell.empty { color: var(--text-faint); font-style: italic; }
+.badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 700; }
+.badge-mild { background: var(--good-soft); color: var(--good); }
+.badge-moderate { background: var(--warn-soft); color: var(--warn); }
+.badge-severe { background: var(--bad-soft); color: var(--bad); }
+
+.band-cell { cursor: pointer; border-radius: 5px; min-width: 148px; }
+.band-cell:hover { background: var(--bg-sunken); outline: 1.5px dashed var(--border-strong); }
+.band-cell.empty-hint { color: var(--text-faint); font-style: italic; }
+.band-chip { background: var(--accent-soft); color: var(--accent-strong); font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
+table.grid tbody td .cell-inner.band-cell { height: auto; min-height: 34px; flex-wrap: wrap; padding: 5px 10px; gap: 4px; }
+.band-popover { position: fixed; z-index: 70; background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,0.18); padding: 6px; width: 216px; }
+.band-opt { display: flex; align-items: center; gap: 8px; padding: 7px 8px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; color: var(--text); }
+.band-opt:hover { background: var(--bg-sunken); }
+
+/* ---------- Right tray ---------- */
+.tray { width: 300px; border-left: 1px solid var(--border); background: var(--bg-panel); display: flex; flex-direction: column; flex-shrink: 0; transition: margin-right 0.18s ease; }
+.tray.collapsed { margin-right: -301px; }
+.tray-head { padding: 13px 14px 10px; border-bottom: 1px solid var(--border); }
+.tray-head h3 { margin: 0 0 2px; font-size: 12.5px; font-weight: 700; }
+.tray-head p { margin: 0; font-size: 11px; color: var(--text-faint); }
+.tray-list { flex: 1; overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.tray-empty { padding: 30px 16px; text-align: center; color: var(--text-faint); font-size: 12px; line-height: 1.6; }
+.pending-item { border: 1px solid var(--border); border-left: 3px solid var(--warn); border-radius: 6px; padding: 8px 9px; background: var(--bg); }
+.pending-item .pi-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
+.pending-item .pi-where { font-size: 11px; color: var(--text-dim); font-weight: 600; }
+.pending-item .pi-field { font-size: 10.5px; color: var(--text-faint); margin-top: 1px; }
+.pending-item .pi-diff { margin-top: 6px; font-family: var(--font-plex-mono, monospace); font-size: 11.5px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.pi-old { color: var(--text-faint); text-decoration: line-through; }
+.pi-new { color: var(--good); font-weight: 600; }
+.pi-undo { border: none; background: none; color: var(--text-faint); cursor: pointer; font-size: 10.5px; padding: 2px; border-radius: 4px; }
+.pi-undo:hover { color: var(--bad); background: var(--bad-soft); }
+.tray-foot { padding: 12px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+.tray-foot .btn { flex: 1; justify-content: center; }
+
+/* ---------- Side panel ---------- */
+.scrim { position: fixed; inset: 0; background: rgba(15,17,12,0.35); z-index: 50; display: flex; justify-content: flex-end; }
+.panel { width: 420px; max-width: calc(100vw - 32px); height: 100%; background: var(--bg-panel); box-shadow: -8px 0 24px rgba(0,0,0,0.12); display: flex; flex-direction: column; }
+.panel-head { padding: 16px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.panel-head h2 { margin: 0 0 3px; font-size: 15px; font-weight: 700; }
+.panel-head p { margin: 0; font-size: 11.5px; color: var(--text-faint); }
+.panel-close { border: none; background: var(--bg-sunken); width: 26px; height: 26px; border-radius: 6px; cursor: pointer; color: var(--text-dim); flex-shrink: 0; }
+.panel-close:hover { background: var(--bg-hover); }
+.panel-body { flex: 1; overflow-y: auto; padding: 16px 18px; display: flex; flex-direction: column; gap: 20px; }
+.field-group label { display: block; font-size: 11px; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 7px; }
+.field-hint { font-size: 11px; color: var(--text-faint); margin-top: 6px; line-height: 1.5; }
+.field-textarea, .field-input { width: 100%; font-family: inherit; font-size: 12.5px; padding: 9px 11px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--text); resize: vertical; line-height: 1.55; }
+.field-textarea:focus, .field-input:focus { border-color: var(--info); outline: none; }
+.month-input-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.month-input-tag { font-family: var(--font-plex-mono, monospace); font-size: 10.5px; font-weight: 700; color: var(--text-faint); width: 24px; flex-shrink: 0; padding-top: 9px; }
+/* Grows with content (see autoResize in cells.tsx) instead of clipping or
+   scrolling a multi-sentence blurb inside a single visible line. */
+.month-input-textarea { resize: none; overflow: hidden; min-height: 34px; }
+
+/* ---------- Monthly blurb grouping (SliderMonthlyWeatherCell) ---------- */
+.mw-overview { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 18px; background: var(--bg-sunken); border-bottom: 1px solid var(--border); }
+.mw-legend { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.mw-legend-title { font-size: 11px; color: var(--text-dim); text-align: center; }
+.mw-legend-title b { color: var(--text); }
+.mw-legend-row { display: flex; align-items: center; gap: 7px; font-size: 11.5px; }
+.mw-legend-count { margin-left: auto; font-size: 10px; color: var(--text-faint); }
+.mw-legend-empty { font-size: 10.5px; color: var(--text-faint); text-align: center; font-style: italic; }
+.mw-swatch { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; display: inline-block; }
+.mw-range { font-family: var(--font-plex-mono, monospace); font-size: 11px; font-weight: 700; color: var(--text); white-space: nowrap; }
+
+.panel-body.mw-groups { gap: 9px; }
+.mw-group { border: 1px solid var(--border); border-left: 3px solid var(--mw-group-color, var(--border)); border-radius: var(--radius); background: var(--bg-panel); }
+.mw-group-head { display: flex; align-items: center; gap: 7px; padding: 7px 9px; background: var(--mw-group-soft, var(--bg-sunken)); border-radius: var(--radius) var(--radius) 0 0; }
+.mw-count { font-size: 10px; color: var(--text-faint); background: var(--bg-panel); border: 1px solid var(--border); padding: 1px 6px; border-radius: 999px; white-space: nowrap; }
+.mw-menu-btn { font-family: inherit; font-size: 13px; color: var(--text-dim); background: transparent; border: 1px solid var(--border-strong); width: 24px; height: 24px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.mw-menu-btn:hover { background: var(--bg-hover); color: var(--text); }
+.mw-group-body { padding: 9px; }
+
+/* `fixed`, not `absolute` — the trigger sits inside .panel-body, which
+   scrolls. An absolutely-positioned menu is clipped by that ancestor the
+   moment it would render past the visible edge; `fixed` escapes the clip,
+   positioned by JS from the button's real on-screen rect at open-time. */
+.mw-menu-scrim { position: fixed; inset: 0; z-index: 69; }
+.mw-menu { position: fixed; background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,0.18); padding: 4px; z-index: 70; width: 232px; max-height: 260px; overflow-y: auto; }
+.mw-menu-label { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-faint); padding: 6px 7px 3px; }
+.mw-menu-hint { font-size: 9.5px; color: var(--text-faint); padding: 0 7px 6px; line-height: 1.35; }
+.mw-menu-divider { height: 1px; background: var(--border); margin: 3px 2px; }
+.mw-menu-opt, .mw-merge-opt { display: block; width: 100%; text-align: left; font-family: inherit; font-size: 11px; color: var(--text); background: transparent; border: none; padding: 5px 7px; border-radius: 5px; cursor: pointer; }
+.mw-menu-opt:hover, .mw-merge-opt:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.mw-merge-opt { display: flex; align-items: baseline; gap: 6px; }
+.mw-merge-opt .mo-range { font-family: var(--font-plex-mono, monospace); font-weight: 700; flex-shrink: 0; }
+.mw-merge-opt .mo-snippet { flex: 1; min-width: 0; color: var(--text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10.5px; }
+.mw-merge-opt:hover .mo-snippet { color: var(--accent-strong); }
+
+.mw-suggest { display: flex; align-items: center; gap: 6px; margin-top: 7px; padding: 6px 7px; border: 1px dashed var(--border-strong); border-radius: 7px; background: var(--bg-sunken); font-size: 10.5px; color: var(--text-dim); }
+.mw-suggest-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mw-suggest-label b { color: var(--text); font-family: var(--font-plex-mono, monospace); font-weight: 700; }
+.mw-suggest-merge { font-family: inherit; font-size: 10px; font-weight: 700; cursor: pointer; border-radius: 5px; flex-shrink: 0; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-strong); padding: 3px 8px; }
+.mw-suggest-dismiss { font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 5px; flex-shrink: 0; border: none; background: transparent; color: var(--text-faint); padding: 3px 5px; }
+.mw-suggest-dismiss:hover { color: var(--text); }
+
+/* ---------- Advisories ---------- */
+.cell-inner.wrap { height: auto; min-height: 34px; padding: 5px 10px; flex-wrap: wrap; gap: 5px; }
+.advisory-cell { cursor: pointer; border-radius: 5px; }
+.advisory-cell:hover { background: var(--bg-sunken); }
+.advisory-cell.empty-hint { color: var(--text-faint); font-style: italic; }
+.adv-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 700; white-space: nowrap; }
+.adv-chip-security, .adv-chip-health { background: var(--bad-soft); color: var(--bad); }
+.adv-chip-environmental { background: var(--warn-soft); color: var(--warn); }
+.adv-chip-access { background: var(--info-soft); color: var(--info); }
+.adv-chip-other { background: var(--bg-sunken); color: var(--text-dim); }
+.stale-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--warn); display: inline-block; flex-shrink: 0; }
+.adv-flag { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 5px; background: var(--bad-soft); color: var(--bad); font-size: 10px; font-weight: 800; cursor: pointer; flex-shrink: 0; border: none; font-family: inherit; padding: 0; }
+.adv-flag:hover { background: var(--bad); color: #fff; }
+.adv-entry { border: 1px solid var(--border); border-radius: 9px; padding: 13px; background: var(--bg); position: relative; }
+.adv-entry-top { display: flex; gap: 8px; margin-bottom: 10px; }
+.mini-label { display: block; font-size: 10px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 5px; }
+select.field-select { width: 100%; font-family: inherit; font-size: 12.5px; padding: 8px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-panel); color: var(--text); }
+select.field-select:focus { border-color: var(--info); outline: none; }
+.sev-toggle { display: flex; gap: 6px; }
+.sev-btn { flex: 1; border: 1px solid var(--border-strong); background: var(--bg-panel); padding: 7px 0; border-radius: 6px; font-size: 11.5px; font-weight: 700; cursor: pointer; color: var(--text-dim); font-family: inherit; }
+.sev-btn.sev-moderate.on { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+.sev-btn.sev-serious.on { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.remove-entry { position: absolute; top: 10px; right: 10px; }
+.btn-ghost-bad { border: none; background: none; color: var(--text-faint); cursor: pointer; padding: 4px; border-radius: 5px; font-family: inherit; font-size: 12px; }
+.btn-ghost-bad:hover { color: var(--bad); background: var(--bad-soft); }
+.add-advisory-btn { border: 1.5px dashed var(--border-strong); background: none; color: var(--text-dim); padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; width: 100%; font-family: inherit; }
+.add-advisory-btn:hover { background: var(--bg-sunken); border-color: var(--accent); color: var(--accent); }
+.panel-note { font-size: 11px; color: var(--text-faint); line-height: 1.55; background: var(--bg-sunken); padding: 10px 11px; border-radius: 8px; }
+
+/* ---------- Sources ---------- */
+.source-cell { cursor: pointer; border-radius: 5px; }
+.source-cell:hover { background: var(--bg-sunken); }
+.source-cell.empty-hint { color: var(--text-faint); font-style: italic; }
+.source-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 700; white-space: nowrap; background: var(--info-soft); color: var(--info); }
+
+/* ---------- Modal ---------- */
+.modal-scrim { position: fixed; inset: 0; background: rgba(15,17,12,0.4); z-index: 60; display: flex; align-items: center; justify-content: center; }
+.modal { width: 440px; max-width: calc(100vw - 40px); background: var(--bg-panel); border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+.modal-head { padding: 16px 18px 4px; }
+.modal-head h2 { margin: 0 0 4px; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.modal-head p { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.55; }
+.modal-body { padding: 12px 18px; max-height: 320px; overflow-y: auto; }
+.diff-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; gap: 10px; }
+.diff-row:last-child { border-bottom: none; }
+.diff-loc { color: var(--text-dim); }
+.diff-loc b { color: var(--text); }
+.diff-vals { font-family: var(--font-plex-mono, monospace); display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+.modal-foot { padding: 12px 18px 16px; display: flex; gap: 8px; justify-content: flex-end; }
+
+.toast-wrap { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); z-index: 80; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.toast { background: var(--text); color: var(--bg); font-size: 12.5px; font-weight: 600; padding: 9px 16px; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px; animation: admin-toast-in 0.18s ease; }
+@keyframes admin-toast-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.toast.good::before { content: '✓'; color: var(--good); font-weight: 800; }
+.toast.bad::before { content: '✕'; color: var(--bad); font-weight: 800; }
+
+@media (prefers-reduced-motion: reduce) { .admin-grid-shell * { transition: none !important; animation: none !important; } }
+
+.admin-grid-shell{height:auto!important;overflow:visible!important;padding:16px}
+body{margin:0;font:14px/1.4 system-ui,sans-serif;background:#f5f6f3}
+@media (prefers-color-scheme:dark){body{background:#14170f}}
+.btn{border:1px solid var(--border-strong);background:var(--bg-panel);color:var(--text);border-radius:6px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer}.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+/* Per-interest admin page. Uses the tokens defined on .admin-grid-shell. */
+.ip-wrap { flex: 1; min-width: 0; overflow: auto; padding: 18px 20px 60px; display: flex; flex-direction: column; gap: 14px; }
+.ip-crumbs { font-size: 11.5px; color: var(--text-faint); }
+.ip-crumbs a { color: var(--text-dim); text-decoration: none; }
+.ip-crumbs a:hover { text-decoration: underline; }
+.ip-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.ip-title { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ip-def { margin: 4px 0 0; color: var(--text-dim); max-width: 70ch; font-size: 13px; }
+.ip-tiles { display: flex; gap: 8px; flex-wrap: wrap; }
+.ip-tile { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; min-width: 92px; }
+.ip-tile b { display: block; font-size: 18px; font-family: var(--font-plex-mono, monospace); font-variant-numeric: tabular-nums; }
+.ip-tile span { font-size: 11px; color: var(--text-dim); }
+.ip-sub { display: flex; gap: 2px; background: var(--bg-sunken); border-radius: 8px; padding: 3px; align-self: flex-start; max-width: 100%; overflow-x: auto; }
+.ip-sub button { border: none; background: transparent; padding: 6px 13px; border-radius: 6px; font-size: 12.5px; font-weight: 600; color: var(--text-dim); cursor: pointer; white-space: nowrap; font-family: inherit; }
+.ip-sub button.on { background: var(--bg-panel); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+.ip-sub button em { font-style: normal; font-size: 10.5px; background: var(--bg-sunken); border-radius: 999px; padding: 0 6px; margin-left: 5px; color: var(--text-dim); }
+.ip-sub button.on em { background: var(--accent-soft); color: var(--accent); }
+.ip-section { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ip-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+.ip-card { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 9px; padding: 14px 16px; min-width: 0; }
+.ip-card h3 { margin: 0 0 8px; font-size: 14px; }
+.ip-card h4 { margin: 0 0 6px; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-faint); }
+.ip-card p { margin: 0 0 8px; }
+.ip-note { background: var(--cat-1-soft); border-left: 3px solid var(--cat-1); padding: 8px 12px; border-radius: 0 8px 8px 0; font-size: 12.5px; }
+.ip-muted { color: var(--text-dim); }
+.ip-faint { color: var(--text-faint); }
+.ip-mono { font-family: var(--font-plex-mono, monospace); }
+.ip-eq { font-family: var(--font-plex-mono, monospace); font-size: 12.5px; background: var(--bg-sunken); border-radius: 8px; padding: 10px 12px; line-height: 1.8; overflow-x: auto; }
+.ip-eq b { color: var(--accent); }
+.ip-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.ip-ladder .rung { display: grid; grid-template-columns: 92px 1fr; gap: 10px; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+.ip-ladder .rung:last-child { border-bottom: 0; }
+.ip-ladder .band { font-family: var(--font-plex-mono, monospace); font-weight: 700; color: var(--accent); }
+.ip-ladder small { display: block; color: var(--text-dim); }
+.ip-calc { display: grid; grid-template-columns: 110px 1fr 44px; gap: 6px 10px; align-items: center; font-size: 12.5px; }
+.ip-calc input[type=range] { width: 100%; accent-color: var(--accent); }
+.ip-calc output { font-family: var(--font-plex-mono, monospace); text-align: right; }
+.ip-result { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.ip-result b { font-size: 28px; font-family: var(--font-plex-mono, monospace); color: var(--accent); }
+
+.ip-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.ip-toolbar .grow { flex: 1; }
+.ip-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 9px; background: var(--bg-panel); }
+table.ip-table { border-collapse: collapse; width: 100%; font-size: 12.5px; min-width: 640px; }
+table.ip-table th { text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); padding: 8px 10px; border-bottom: 1px solid var(--border); background: var(--bg-sunken); white-space: nowrap; }
+table.ip-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.ip-table tr:last-child td { border-bottom: 0; }
+.ip-actions { display: flex; gap: 6px; white-space: nowrap; }
+.ip-link-btn { border: none; background: none; color: var(--accent); font: inherit; font-weight: 600; font-size: 12px; cursor: pointer; padding: 2px 4px; }
+.ip-link-btn.danger { color: var(--bad); }
+.ip-link-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.ip-chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 700; white-space: nowrap; }
+.ip-chip.good { background: var(--good-soft); color: var(--good); }
+.ip-chip.warn { background: var(--warn-soft); color: var(--warn); }
+.ip-chip.bad { background: var(--bad-soft); color: var(--bad); }
+.ip-chip.info { background: var(--info-soft); color: var(--info); }
+.ip-chip.dim { background: var(--bg-sunken); color: var(--text-dim); }
+.ip-chip.new { background: var(--cat-1-soft); color: var(--cat-1); }
+
+.ip-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; background: var(--bg-sunken); border: 1px solid var(--border); border-radius: 9px; padding: 12px; }
+.ip-form .full { grid-column: 1 / -1; }
+.ip-form label { display: flex; flex-direction: column; gap: 4px; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); }
+.ip-form input, .ip-form select, .ip-form textarea { font: inherit; font-size: 12.5px; font-weight: 400; text-transform: none; letter-spacing: 0; padding: 7px 9px; border: 1px solid var(--border-strong); border-radius: 7px; background: var(--bg-panel); color: var(--text); }
+.ip-form textarea { min-height: 84px; resize: vertical; line-height: 1.5; }
+.ip-form input:focus, .ip-form select:focus, .ip-form textarea:focus { border-color: var(--info); outline: none; }
+.ip-form .btns { display: flex; gap: 8px; align-items: center; }
+.ip-err { color: var(--bad); font-size: 12px; }
+.ip-saved { color: var(--good); font-size: 12px; }
+.ip-select { border: 1px solid var(--border-strong); background: var(--bg-panel); color: var(--text); font: inherit; font-size: 12px; font-weight: 600; padding: 4px 7px; border-radius: 6px; }
+
+.ip-review { display: flex; flex-direction: column; gap: 6px; }
+.ip-review header { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.ip-review .who { font-weight: 700; font-size: 14px; }
+.ip-review .when { font-family: var(--font-plex-mono, monospace); font-size: 12px; color: var(--text-dim); }
+.ip-review .notes { white-space: pre-wrap; margin: 0; max-width: 80ch; }
+.ip-review footer { font-size: 11px; color: var(--text-faint); }
+.ip-reviews { display: flex; flex-direction: column; gap: 10px; }
+
+/* places & data table */
+.ip-factcell { width: 100%; min-width: 64px; }
+.ip-factcell input[type=text], .ip-factcell input[type=number] { width: 100%; }
+.ip-factcell .cost-input.num { text-align: right; font-family: var(--font-plex-mono, monospace); min-width: 60px; }
+.ip-factcell .cost-input.wide { min-width: 220px; }
+.ip-spark { display: inline-flex; align-items: flex-end; gap: 1px; height: 18px; }
+.ip-spark i { width: 4px; background: var(--accent); border-radius: 1px; opacity: 0.85; }
+table.grid th.ip-new-head { background: var(--cat-1-soft); color: var(--cat-1); }
+table.grid td.ip-new-cell { background-image: repeating-linear-gradient(135deg, transparent 0 6px, var(--cat-1-soft) 6px 7px); }
+table.grid th.ip-data-head { color: var(--good); }
+table.grid th.ip-draw-head { color: var(--warn); }
+table.grid th.ip-info-head { color: var(--accent); }
+.ip-factcell .cost-input.mid { min-width: 160px; }
+select.ip-lk, .ip-lkpill { font-weight: 700; }
+select.ip-lk { border-radius: 6px; }
+select.ip-lk-guaranteed, .ip-lkpill.ip-lk-guaranteed { background: var(--good-soft, #d8efe0); color: var(--good); }
+select.ip-lk-likely, .ip-lkpill.ip-lk-likely { background: var(--good-soft, #e6f2e8); color: var(--good); }
+select.ip-lk-possible, .ip-lkpill.ip-lk-possible { background: var(--warn-soft, #f6ecd0); color: var(--warn); }
+select.ip-lk-unlikely, .ip-lkpill.ip-lk-unlikely { background: var(--bg-sunken); color: var(--text-dim); }
+/* "Not present" reads as nearly blank: no fill, faint text. */
+select.ip-lk-notPresent { background: transparent; color: var(--text-faint); font-weight: 400; opacity: 0.8; }
+.ip-lkpill::first-letter { text-transform: uppercase; }
+.ip-lkpill { display: inline-block; font-size: 10.5px; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
+.ip-animals { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ip-animal { display: inline-flex; align-items: baseline; gap: 5px; line-height: 1.5; }
+.ip-animal-name { font-weight: 600; }
+.ip-animal-note { color: var(--text-dim); font-style: italic; }
+.ip-longcell { cursor: pointer; width: 220px; min-width: 220px; max-width: 220px; }
+.ip-longcell.ip-longwide { width: 300px; min-width: 300px; max-width: 300px; }
+.ip-clip { display: block; min-width: 0; flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); }
+.ip-clip .ip-animals { flex-wrap: nowrap; }
+.ip-pop { position: fixed; z-index: 1000; max-height: min(70vh, 460px); overflow: auto; background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.18); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; white-space: normal; text-align: left; }
+.ip-pop-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.ip-pop-actions { display: inline-flex; gap: 6px; }
+.ip-pop-actions button { border: 1px solid var(--border-strong); background: var(--bg-sunken); color: var(--text); border-radius: 6px; padding: 2px 10px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.ip-pop-hint { color: var(--text-dim); font-size: 11.5px; }
+.ip-longcell:hover { background: var(--bg-hover); border-radius: 6px; }
+.ip-wraptext { white-space: normal; overflow-wrap: anywhere; }
+.ip-longbox { width: 100%; resize: none; overflow: hidden; line-height: 1.4; font: inherit; font-size: 12.5px; }
+.ip-legend { display: inline-flex; gap: 12px; align-items: center; font-size: 11.5px; flex-wrap: wrap; }
+.ip-legend span { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+.ip-legend i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+.ip-seg { display: inline-flex; background: var(--bg-sunken); border-radius: 7px; padding: 2px; }
+.ip-seg button { border: none; background: transparent; padding: 5px 12px; border-radius: 5px; font-weight: 600; font-size: 12px; color: var(--text-dim); cursor: pointer; font-family: inherit; }
+.ip-seg button.on { background: var(--bg-panel); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+
+/* compare */
+.ip-cmp-pick { display: grid; grid-template-columns: minmax(150px, 220px) 1fr 1fr; gap: 10px; align-items: center; }
+.ip-cmp-pick select { width: 100%; border: 1px solid var(--border-strong); background: var(--bg-panel); color: var(--text); border-radius: 7px; padding: 8px 9px; font: inherit; font-weight: 600; }
+table.ip-cmp td:first-child { color: var(--text-dim); width: 200px; }
+table.ip-cmp tr.sec td { background: var(--bg-sunken); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: var(--text-dim); }
+table.ip-cmp td.win { background: var(--good-soft); font-weight: 600; }
+table.ip-cmp td.missing { color: var(--text-faint); font-style: italic; }
+.ip-months { display: flex; gap: 2px; align-items: flex-end; height: 34px; }
+.ip-months i { flex: 1; background: var(--accent); border-radius: 2px 2px 0 0; min-width: 5px; }
+.ip-mlab { display: flex; gap: 2px; font-size: 9.5px; color: var(--text-faint); font-family: var(--font-plex-mono, monospace); }
+.ip-mlab span { flex: 1; text-align: center; }
+@media (max-width: 760px) { .ip-cmp-pick { grid-template-columns: 1fr; } .ip-calc { grid-template-columns: 90px 1fr 38px; } }
+
+/* the page scrolls as a whole; keep every block at its natural height */
+.ip-wrap > * { flex-shrink: 0; }
+.ip-section > * { flex-shrink: 0; }
+.ip-gridcard .grid-wrap { overflow: visible; }
+.ip-gridcard .grid-scroll { max-height: calc(100vh - 300px); min-height: 320px; }
+
+table.ip-table td { overflow-wrap: anywhere; }
+.ip-review .notes { overflow-wrap: anywhere; }
+
+/* completeness strip */
+.ip-score { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; }
+.ip-scorebig { display: flex; align-items: baseline; gap: 6px; padding: 8px 16px; border-radius: 12px; flex-wrap: wrap; }
+.ip-scorebig b { font-family: var(--font-plex-mono, monospace); font-size: 38px; line-height: 1; }
+.ip-scorebig span { font-size: 13px; color: var(--text-dim); }
+.ip-scorebig em { width: 100%; font-style: normal; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); }
+.ip-scorebig.hi { background: var(--good-soft); color: var(--good); }
+.ip-scorebig.mid { background: var(--warn-soft); color: var(--warn); }
+.ip-scorebig.lo { background: #fbe3da; color: #a8452a; }
+.ip-scoremid { flex: 1 1 320px; min-width: 0; }
+.ip-scorehead { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); margin-bottom: 4px; }
+.ip-scoremid ul { list-style: none; margin: 0; padding: 0; }
+.ip-scoremid > ul li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid var(--border); font-size: 13px; }
+.ip-scoremid button { border: none; background: transparent; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; padding: 0; }
+.ip-scoremid details { margin-top: 8px; font-size: 12.5px; color: var(--text-dim); }
+.ip-scoremid summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.ip-scorecalc { margin-top: 6px; max-width: 70ch; }
+.ip-scorecalc ul li { padding: 2px 0; border: none; display: block; font-size: 12.5px; }
+
+.ip-picker { font: inherit; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: var(--text); background: transparent; border: 1px dashed var(--border-strong); border-radius: 8px; padding: 2px 8px; cursor: pointer; max-width: 100%; }
+.ip-picker:hover { background: var(--bg-sunken); }
+.ip-tabhelp { margin: -4px 0 0; font-size: 12.5px; color: var(--text-dim); }
+.ip-toollabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); }
+
+/* Reference sites (Expert reviews tab) */
+.ip-score { display: inline-flex; flex-direction: column; gap: 3px; min-width: 56px; }
+.ip-score b { font-size: 13px; font-variant-numeric: tabular-nums; }
+.ip-score i { display: block; height: 4px; border-radius: 2px; background: var(--info); max-width: 100%; }
+table.ip-table td.nw { white-space: nowrap; }
+.ip-subhead { margin: 6px 0 -2px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); }
+
+.cap{font:600 12px system-ui;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim);margin:22px 0 8px}
+.mini{width:100%;border-collapse:collapse;font-size:12.5px}.mini th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim);padding:8px 10px;border-bottom:1px solid var(--border);background:var(--bg-sunken)}.mini td{padding:8px 10px;border-bottom:1px solid var(--border)}
+</style>
+<div class="admin-grid-shell">
+<div class="cap">1. Diving interest page, new "Gemini passes" tab (real data)</div>
+<div class="ip-wrap"><div class="ip-crumbs"><a href="#">Interests</a> › Nature &amp; Wildlife › Snorkeling &amp; Diving</div>
+<div class="ip-head"><div><h1 class="ip-title"><span>🤿 Snorkeling &amp; Diving</span><span class="ip-chip dim ip-mono">diving</span></h1><p class="ip-faint" style="margin:4px 0 0">Gemini pass in progress: Snorkeling &amp; Diving · v7 (last run 10 Oct 2026).</p></div></div>
+<div class="ip-sub"><button class="">Places &amp; data <em>141</em></button><button class="">To do</button><button class="">Future places</button><button class="">Rules &amp; scoring</button><button class="">Expert reviews</button><button class="on">Gemini passes <em>7</em></button></div>
+<p class="ip-tabhelp">Each Gemini authoring pass for this interest: when it finished, how many places, and what it cost in tokens and dollars.</p>
+<div class="ip-section"><div class="ip-toolbar"><span class="ip-muted">Every Gemini authoring pass for this interest, newest first. Tokens are input and output; output includes Gemini&#x27;s hidden reasoning.</span><span class="grow"></span><span class="ip-faint">All passes: 864,397 tokens, $3.791</span></div><div class="ip-table-wrap"><table class="ip-table" style="width:100%"><thead><tr><th style="text-align:left">Pass</th><th style="text-align:left">Finished</th><th>Places</th><th style="text-align:left">Prompt</th><th style="text-align:right">Tokens in</th><th style="text-align:right">Tokens out</th><th style="text-align:right">Total tokens</th><th style="text-align:right">Cost</th></tr></thead><tbody><tr style="cursor:pointer"><td><b>▾ Snorkeling &amp; Diving · v7</b> <span class="ip-chip info">initial</span></td><td><span class="ip-chip warn">in progress · last run 10 Oct 2026</span></td><td style="text-align:center">141</td><td class="ip-mono">diving/v7</td><td style="text-align:right">521,087</td><td style="text-align:right">179,729</td><td style="text-align:right"><b>700,816</b></td><td style="text-align:right">$3.199</td></tr><tr><td colSpan="8" style="background:var(--bg-sunken);padding:10px 14px"><div class="ip-toolbar" style="margin-bottom:8px"><span class="ip-muted">Created by the 10 Oct 2026 backfill from the existing batches.</span><span class="grow"></span><button class="btn">Edit name, kind, notes</button><input type="date" class="ip-forminput" aria-label="Finished on" value="2026-10-10"/><button class="btn btn-primary">Mark finished</button></div><table class="ip-table" style="width:100%"><thead><tr><th style="text-align:left">Batch run</th><th>Places</th><th>Valid</th><th>Invalid</th><th>Not applicable</th><th>Applied</th><th style="text-align:left">Model · thinking</th><th style="text-align:right">Tokens in</th><th style="text-align:right">Tokens out</th><th style="text-align:right">Total tokens</th><th style="text-align:right">Cost</th></tr></thead><tbody><tr><td>10 Oct, 10:44</td><td style="text-align:center">17</td><td style="text-align:center">14</td><td style="text-align:center">3</td><td style="text-align:center">4</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">62,780</td><td style="text-align:right">18,869</td><td style="text-align:right">81,649</td><td style="text-align:right">$0.352</td></tr><tr><td>10 Oct, 10:40</td><td style="text-align:center">20</td><td style="text-align:center">13</td><td style="text-align:center">7</td><td style="text-align:center">2</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">74,598</td><td style="text-align:right">26,679</td><td style="text-align:right">101,277</td><td style="text-align:right">$0.469</td></tr><tr><td>10 Oct, 10:35</td><td style="text-align:center">20</td><td style="text-align:center">14</td><td style="text-align:center">6</td><td style="text-align:center">3</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">73,512</td><td style="text-align:right">31,232</td><td style="text-align:right">104,744</td><td style="text-align:right">$0.522</td></tr><tr><td>10 Oct, 10:32</td><td style="text-align:center">20</td><td style="text-align:center">18</td><td style="text-align:center">2</td><td style="text-align:center">6</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">75,079</td><td style="text-align:right">20,040</td><td style="text-align:right">95,119</td><td style="text-align:right">$0.391</td></tr><tr><td>10 Oct, 10:27</td><td style="text-align:center">20</td><td style="text-align:center">16</td><td style="text-align:center">4</td><td style="text-align:center">6</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">72,392</td><td style="text-align:right">29,259</td><td style="text-align:right">101,651</td><td style="text-align:right">$0.496</td></tr><tr><td>10 Oct, 10:23</td><td style="text-align:center">20</td><td style="text-align:center">15</td><td style="text-align:center">5</td><td style="text-align:center">8</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">72,723</td><td style="text-align:right">25,489</td><td style="text-align:right">98,212</td><td style="text-align:right">$0.451</td></tr><tr><td>10 Oct, 10:19</td><td style="text-align:center">20</td><td style="text-align:center">18</td><td style="text-align:center">2</td><td style="text-align:center">4</td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">73,388</td><td style="text-align:right">23,795</td><td style="text-align:right">97,183</td><td style="text-align:right">$0.432</td></tr><tr><td>10 Oct, 10:07</td><td style="text-align:center">2</td><td style="text-align:center">2</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">8,441</td><td style="text-align:right">2,464</td><td style="text-align:right">10,905</td><td style="text-align:right">$0.046</td></tr><tr><td>10 Oct, 09:06</td><td style="text-align:center">2</td><td style="text-align:center">1</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">8,174</td><td style="text-align:right">1,902</td><td style="text-align:right">10,076</td><td style="text-align:right">$0.039</td></tr></tbody></table></td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v8</b> <span class="ip-chip dim">pilot</span></td><td>10 Oct 2026</td><td style="text-align:center">3</td><td class="ip-mono">diving/v8</td><td style="text-align:right">23,888</td><td style="text-align:right">3,968</td><td style="text-align:right"><b>27,856</b></td><td style="text-align:right">$0.095</td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v6</b> <span class="ip-chip dim">pilot</span></td><td>9 Oct 2026</td><td style="text-align:center">2</td><td class="ip-mono">diving/v6</td><td style="text-align:right">16,681</td><td style="text-align:right">2,509</td><td style="text-align:right"><b>19,190</b></td><td style="text-align:right">$0.063</td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v5</b> <span class="ip-chip dim">pilot</span></td><td>9 Oct 2026</td><td style="text-align:center">4</td><td class="ip-mono">diving/v5</td><td style="text-align:right">31,406</td><td style="text-align:right">5,880</td><td style="text-align:right"><b>37,286</b></td><td style="text-align:right">$0.133</td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v3</b> <span class="ip-chip dim">pilot</span></td><td>9 Oct 2026</td><td style="text-align:center">4</td><td class="ip-mono">diving/v3</td><td style="text-align:right">36,887</td><td style="text-align:right">8,485</td><td style="text-align:right"><b>45,372</b></td><td style="text-align:right">$0.176</td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v2</b> <span class="ip-chip dim">pilot</span></td><td>9 Oct 2026</td><td style="text-align:center">2</td><td class="ip-mono">diving/v2</td><td style="text-align:right">14,601</td><td style="text-align:right">3,065</td><td style="text-align:right"><b>17,666</b></td><td style="text-align:right">$0.066</td></tr><tr style="cursor:pointer"><td><b>▸ Snorkeling &amp; Diving · v1</b> <span class="ip-chip dim">pilot</span></td><td>9 Oct 2026</td><td style="text-align:center">2</td><td class="ip-mono">diving/v1</td><td style="text-align:right">13,615</td><td style="text-align:right">2,596</td><td style="text-align:right"><b>16,211</b></td><td style="text-align:right">$0.058</td></tr></tbody></table></div></div></div>
+<div class="cap" style="margin-top:34px">2. Birding, header line when no pass is open (real data)</div>
+<div class="ip-wrap"><div class="ip-crumbs"><a href="#">Interests</a> › Nature &amp; Wildlife › Birding</div>
+<div class="ip-head"><div><h1 class="ip-title"><span>🦜 Birding</span><span class="ip-chip dim ip-mono">birding</span></h1><p class="ip-faint" style="margin:4px 0 0">Last Gemini pass finished 5 Oct 2026: Birding · v8.</p></div></div>
+<div class="ip-sub"><button class="">Places &amp; data <em>200</em></button><button class="">To do</button><button class="">Future places</button><button class="">Rules &amp; scoring</button><button class="">Expert reviews</button><button class="on">Gemini passes <em>7</em></button></div>
+<p class="ip-tabhelp">Each Gemini authoring pass for this interest: when it finished, how many places, and what it cost in tokens and dollars.</p>
+<div class="ip-section"><div class="ip-toolbar"><span class="ip-muted">Every Gemini authoring pass for this interest, newest first. Tokens are input and output; output includes Gemini&#x27;s hidden reasoning.</span><span class="grow"></span><span class="ip-faint">All passes: 2,504,494 tokens, $13.10</span></div><div class="ip-table-wrap"><table class="ip-table" style="width:100%"><thead><tr><th style="text-align:left">Pass</th><th style="text-align:left">Finished</th><th>Places</th><th style="text-align:left">Prompt</th><th style="text-align:right">Tokens in</th><th style="text-align:right">Tokens out</th><th style="text-align:right">Total tokens</th><th style="text-align:right">Cost</th></tr></thead><tbody><tr style="cursor:pointer"><td><b>▾ Birding · v8</b> <span class="ip-chip good">redo</span></td><td>4 Oct 2026</td><td style="text-align:center">70</td><td class="ip-mono">birding/v8</td><td style="text-align:right">357,303</td><td style="text-align:right">181,118</td><td style="text-align:right"><b>538,421</b></td><td style="text-align:right">$2.888</td></tr><tr><td colSpan="8" style="background:var(--bg-sunken);padding:10px 14px"><div class="ip-toolbar" style="margin-bottom:8px"><span class="ip-muted">Created by the 10 Oct 2026 backfill from the existing batches.</span><span class="grow"></span><button class="btn">Edit name, kind, notes</button><button class="btn">Reopen</button></div><table class="ip-table" style="width:100%"><thead><tr><th style="text-align:left">Batch run</th><th>Places</th><th>Valid</th><th>Invalid</th><th>Not applicable</th><th>Applied</th><th style="text-align:left">Model · thinking</th><th style="text-align:right">Tokens in</th><th style="text-align:right">Tokens out</th><th style="text-align:right">Total tokens</th><th style="text-align:right">Cost</th></tr></thead><tbody><tr><td>4 Oct, 21:32</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">1</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,850</td><td style="text-align:right">1,785</td><td style="text-align:right">6,635</td><td style="text-align:right">$0.031</td></tr><tr><td>4 Oct, 21:31</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,850</td><td style="text-align:right">2,002</td><td style="text-align:right">6,852</td><td style="text-align:right">$0.034</td></tr><tr><td>4 Oct, 21:31</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">1</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,692</td><td style="text-align:right">2,224</td><td style="text-align:right">6,916</td><td style="text-align:right">$0.036</td></tr><tr><td>4 Oct, 21:31</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">1</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,823</td><td style="text-align:right">2,340</td><td style="text-align:right">7,163</td><td style="text-align:right">$0.038</td></tr><tr><td>4 Oct, 21:31</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">1</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,643</td><td style="text-align:right">2,251</td><td style="text-align:right">6,894</td><td style="text-align:right">$0.036</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">2</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">2</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">9,409</td><td style="text-align:right">5,133</td><td style="text-align:right">14,542</td><td style="text-align:right">$0.080</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">4,692</td><td style="text-align:right">1,968</td><td style="text-align:right">6,660</td><td style="text-align:right">$0.033</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">11</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">11</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">53,510</td><td style="text-align:right">27,326</td><td style="text-align:right">80,836</td><td style="text-align:right">$0.435</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">15</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">15</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">71,234</td><td style="text-align:right">39,280</td><td style="text-align:right">110,514</td><td style="text-align:right">$0.614</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">2</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">2</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">9,292</td><td style="text-align:right">4,740</td><td style="text-align:right">14,032</td><td style="text-align:right">$0.075</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">9</td><td style="text-align:center">0</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center">8</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">42,336</td><td style="text-align:right">21,079</td><td style="text-align:right">63,415</td><td style="text-align:right">$0.338</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">3</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">14,166</td><td style="text-align:right">8,647</td><td style="text-align:right">22,813</td><td style="text-align:right">$0.132</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">17</td><td style="text-align:center">0</td><td style="text-align:center">2</td><td style="text-align:center"></td><td style="text-align:center">15</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">81,791</td><td style="text-align:right">39,042</td><td style="text-align:right">120,833</td><td style="text-align:right">$0.632</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">5</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">5</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">23,766</td><td style="text-align:right">11,854</td><td style="text-align:right">35,620</td><td style="text-align:right">$0.190</td></tr><tr><td>4 Oct, 21:24</td><td style="text-align:center">5</td><td style="text-align:center">0</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">5</td><td class="ip-mono">gemini-3.1-pro-preview</td><td style="text-align:right">23,249</td><td style="text-align:right">11,447</td><td style="text-align:right">34,696</td><td style="text-align:right">$0.184</td></tr></tbody></table></td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v7</b> <span class="ip-chip good">redo</span></td><td>4 Oct 2026</td><td style="text-align:center">49</td><td class="ip-mono">birding/v7</td><td style="text-align:right">225,524</td><td style="text-align:right">111,608</td><td style="text-align:right"><b>337,132</b></td><td style="text-align:right">$1.790</td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v5</b> <span class="ip-chip good">redo</span></td><td>3 Oct 2026</td><td style="text-align:center">15</td><td class="ip-mono">birding/v5</td><td style="text-align:right">70,257</td><td style="text-align:right">171,879</td><td style="text-align:right"><b>242,136</b></td><td style="text-align:right">$0.974</td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v6</b> <span class="ip-chip dim">pilot</span></td><td>3 Oct 2026</td><td style="text-align:center">6</td><td class="ip-mono">birding/v6</td><td style="text-align:right">25,873</td><td style="text-align:right">35,509</td><td style="text-align:right"><b>61,382</b></td><td style="text-align:right">$0.478</td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v4</b> <span class="ip-chip dim">pilot</span></td><td>3 Oct 2026</td><td style="text-align:center">5</td><td class="ip-mono">birding/v4</td><td style="text-align:right">49,565</td><td style="text-align:right">29,475</td><td style="text-align:right"><b>79,040</b></td><td style="text-align:right">$0.453</td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v2</b> <span class="ip-chip good">redo</span></td><td>2 Oct 2026</td><td style="text-align:center">56</td><td class="ip-mono">birding/v2</td><td style="text-align:right">434,911</td><td style="text-align:right">214,039</td><td style="text-align:right"><b>648,950</b></td><td style="text-align:right">$3.438</td></tr><tr style="cursor:pointer"><td><b>▸ Birding · v1</b> <span class="ip-chip info">initial</span></td><td>2 Oct 2026</td><td style="text-align:center">56</td><td class="ip-mono">birding/v1</td><td style="text-align:right">408,591</td><td style="text-align:right">188,842</td><td style="text-align:right"><b>597,433</b></td><td style="text-align:right">$3.083</td></tr></tbody></table></div></div></div>
+<div class="cap" style="margin-top:34px">3. Interests list, new "Last Gemini pass" column (real dates)</div>
+<div class="ip-table-wrap"><table class="mini"><thead><tr><th style="width:50px"></th><th>Interest</th><th>Domain</th><th>Last Gemini pass</th></tr></thead><tbody><tr><td style="font-size:18px;text-align:center">🤿</td><td><b>Snorkeling &amp; Diving</b></td><td>Nature &amp; Wildlife</td><td><span style="color:var(--warn)">in progress</span></td></tr><tr><td style="font-size:18px;text-align:center">🦜</td><td><b>Birding</b></td><td>Nature &amp; Wildlife</td><td>5 Oct 2026</td></tr><tr><td style="font-size:18px;text-align:center">🐋</td><td><b>Whale Watching</b></td><td>Nature &amp; Wildlife</td><td>7 Oct 2026</td></tr><tr><td style="font-size:18px;text-align:center">🦁</td><td><b>Safari</b></td><td>Nature &amp; Wildlife</td><td>5 Oct 2026</td></tr><tr><td style="font-size:18px;text-align:center">🦌</td><td><b>Wildlife Viewing</b></td><td>Nature &amp; Wildlife</td><td>1 Oct 2026</td></tr><tr><td style="font-size:18px;text-align:center">🥾</td><td><b>Hiking</b></td><td>Sports &amp; Recreation</td><td><span style="color:var(--text-faint)">none</span></td></tr></tbody></table></div>
+</div>

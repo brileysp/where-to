@@ -550,8 +550,8 @@ practical/logistical sliders (`deals`, `crowds`, `roadtrip`, scored from peak/lo
 never content-authored) leaves **49 visible domain interests**. Always run an actual count
 against the source array before citing this number — don't echo a remembered figure.
 
-8 of 49 domain interests done (listed above). Natural formula-family groupings below sum to 44
-items — 3 more than the 41 that "49 total − 8 done" implies, because the list below still
+As of 2026-10-09, 12 of 49 domain interests have live written text: wildlifeViewing, birding, whaleWatching, diving, surfing, windSports, safari, wildflowerBlooms, hotSprings, beachesSwimming, auroraChasing and mountaineering (the count when this section was first written was 8). Natural formula-family groupings below sum to 44
+items — 3 more than the remaining domain interests at the time of writing (41 = 49 − 8 done; it is fewer now), because the list below still
 includes `roadtrip` (practical, no content needed) and the 2 hidden interests (`familyFun`,
 `spectatorSports`) for completeness. Shared formula ⇒ shared tooling/research, but avoid running
 two from the same family back-to-back — it reads as repetitive:

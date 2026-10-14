@@ -1,0 +1,1478 @@
+{
+"antarctica": {
+"birds": "Gentoo penguin (guaranteed), Chinstrap penguin (guaranteed), Adélie penguin (guaranteed)",
+"marineLife": "Humpback whale (guaranteed), Minke whale (guaranteed), Killer whale (likely), Weddell seal (guaranteed), Crabeater seal (likely), Leopard seal (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"galapagos": {
+"birds": "Blue-footed booby (guaranteed), Galápagos penguin (likely), Flightless cormorant (likely)",
+"herps": "Giant tortoise (guaranteed), Marine iguana (guaranteed), Land iguana (likely)",
+"marineLife": "Galápagos sea lion (guaranteed)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"kenya": {
+"predators": "Lion (guaranteed), Cheetah (likely), Leopard (likely)",
+"herbivores": "Elephant (guaranteed), Wildebeest migration (guaranteed Jul–Oct), Giraffe (guaranteed), Hippo (guaranteed), Black rhino (unlikely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"tanzania": {
+"predators": "Lion (guaranteed), Cheetah (likely), Leopard (likely)",
+"herbivores": "Wildebeest migration (guaranteed), Plains zebra (guaranteed), Elephant (guaranteed), Giraffe (guaranteed)",
+"marineLife": "Bottlenose dolphin (likely), Spinner dolphin (likely), Humpback whale (possible), Whale shark (possible)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"botswana": {
+"predators": "Lion (likely), Leopard (likely), African wild dog (possible)",
+"herbivores": "Elephant (guaranteed), Hippo (guaranteed)",
+"herps": "Nile crocodile (guaranteed)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"pantanal": {
+"predators": "Jaguar (guaranteed), Giant river otter (likely)",
+"birds": "Hyacinth macaw (likely), Jabiru stork (likely)",
+"herps": "Yacare caiman (guaranteed)",
+"otherMammals": "Capybara (guaranteed), Giant anteater (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"rwanda": {
+"predators": "Lion (possible)",
+"herbivores": "Elephant (likely), Hippo (likely), White rhino (possible), Black rhino (unlikely)",
+"primates": "Mountain gorilla (guaranteed, habituated), Chimpanzee (likely, habituated), Golden monkey (likely, habituated), Rwenzori colobus (likely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"madagascar": {
+"predators": "Fossa (unlikely)",
+"primates": "Ring-tailed lemur (guaranteed), Indri (likely), Mouse lemurs (likely), Aye-aye (unlikely), 100+ lemur species",
+"herps": "Panther chameleon (likely), Parson's chameleon (likely), Leaf-tailed gecko (likely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"uganda": {
+"predators": "Lion (likely)",
+"herbivores": "Elephant (likely), Hippo (likely)",
+"primates": "Mountain gorilla (guaranteed, habituated), Chimpanzee (likely, habituated), 12 monkey species",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"zambia": {
+"predators": "Leopard (likely)",
+"herbivores": "Elephant (likely), Thornicroft's giraffe (likely), Hippo (guaranteed)",
+"herps": "Nile crocodile (guaranteed)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"costa-rica": {
+"predators": "Puma (unlikely)",
+"herbivores": "Baird's tapir (possible)",
+"primates": "Central American squirrel monkey (likely), 4 monkey species",
+"birds": "Scarlet macaw (likely), Toucans (likely)",
+"herps": "Red-eyed tree frog (likely), Eyelash viper (possible)",
+"otherMammals": "Two-toed and three-toed sloths (likely), White-nosed coati (likely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"borneo": {
+"herbivores": "Pygmy elephant (possible)",
+"primates": "Orangutan (possible), Proboscis monkey (guaranteed), Slow loris (possible), Tarsier (possible)",
+"marineLife": "Green turtle (guaranteed), Hawksbill turtle (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"kruger": {
+"predators": "Lion (likely), Leopard (possible), African wild dog (unlikely), Cheetah (unlikely)",
+"herbivores": "Elephant (guaranteed), Buffalo (guaranteed), White rhino (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"denali-interior": {
+"predators": "Grizzly bear (likely), Gray wolf (possible)",
+"herbivores": "Moose (likely), Caribou (likely), Dall sheep (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"falklands": {
+"birds": "King penguin (guaranteed), Rockhopper penguin (guaranteed), Black-browed albatross (guaranteed)",
+"marineLife": "Southern elephant seal (guaranteed), South American sea lion (guaranteed), Orca (possible)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"kaziranga": {
+"predators": "Bengal tiger (unlikely)",
+"herbivores": "Greater one-horned rhino (guaranteed), Asian elephant (likely), Wild water buffalo (likely), Swamp deer (possible)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"namibia": {
+"predators": "Desert-adapted lion (possible)",
+"herbivores": "Black rhino (likely), Desert-adapted elephant (likely)",
+"marineLife": "Cape fur seal (guaranteed), Bottlenose dolphin (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"peruvian-amazon": {
+"predators": "Giant river otter (likely), Jaguar (possible)",
+"primates": "Brown capuchin (likely), Woolly monkey (likely), Emperor tamarin (likely), Saddleback tamarin (likely)",
+"birds": "Macaws at clay licks (guaranteed)",
+"herps": "Frogs and snakes on night walks (likely)",
+"otherMammals": "Capybara (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"rajasthan-golden-triangle": {
+"predators": "Bengal tiger (likely), Leopard (possible), Sloth bear (possible)",
+"birds": "Migratory waterfowl flocks at Keoladeo (guaranteed)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"srilanka": {
+"predators": "Leopard (likely)",
+"herbivores": "Asian elephant (guaranteed)",
+"primates": "Toque macaque (guaranteed), Purple-faced langur (likely)",
+"marineLife": "Blue whale (possible)",
+"otherMammals": "Sloth bear (possible)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"zimbabwe": {
+"predators": "Lion (likely), Leopard (possible), African wild dog (possible)",
+"herbivores": "Elephant (guaranteed), Hippo (likely)",
+"herps": "Nile crocodile (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"svalbard": {
+"predators": "Polar bear (likely), Arctic fox (likely)",
+"herbivores": "Svalbard reindeer (likely)",
+"marineLife": "Walrus (likely), Beluga (possible)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"torres-del-paine": {
+"predators": "Puma (likely)",
+"herbivores": "Guanaco (guaranteed)",
+"birds": "Andean condor (likely), Lesser rhea (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"nepal": {
+"predators": "Bengal tiger (possible), Snow leopard (unlikely)",
+"herbivores": "Greater one-horned rhino (likely)",
+"herps": "Gharial (likely)",
+"otherMammals": "Red panda (unlikely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"rajaampat": {
+"birds": "Wilson's bird-of-paradise (likely), Red bird-of-paradise (likely)",
+"marineLife": "Reef manta ray (likely), Walking shark (likely), Bryde's whale (possible), Sperm whale (possible)",
+"howWatch": "water",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"banff": {
+"predators": "Black bear (likely), Grizzly bear (possible), Wolf (unlikely), Cougar (unlikely)",
+"herbivores": "Elk (guaranteed), Bighorn sheep (guaranteed), Moose (possible)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"southeast-alaska": {
+"predators": "Brown bear (likely), Black bear (likely)",
+"birds": "Bald eagle (likely)",
+"marineLife": "Humpback whale (likely), Orca (likely), Steller sea lion (likely), Sea otter (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"yellowstone": {
+"predators": "Gray wolf (likely), Grizzly bear (likely)",
+"herbivores": "Bison (guaranteed), Elk (guaranteed), Moose (possible)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"tasmania": {
+"birds": "Little penguin (guaranteed)",
+"otherMammals": "Bare-nosed wombat (guaranteed), Tasmanian pademelon (guaranteed), Platypus (likely), Short-beaked echidna (likely), Tasmanian devil (unlikely), Eastern quoll (unlikely)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"gbr": {
+"marineLife": "Green turtle (guaranteed), Loggerhead turtle (guaranteed), Whitetip reef shark (likely), Manta ray (likely), Dugong (unlikely)",
+"howWatch": "water",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"churchill": {
+"predators": "Polar bear (likely Oct–Nov), Arctic fox (possible)",
+"herbivores": "Caribou (possible), Moose (unlikely)",
+"marineLife": "Beluga whale (guaranteed Jul–Aug)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"belize": {
+"predators": "Jaguar (unlikely)",
+"herbivores": "Baird's tapir (unlikely)",
+"primates": "Black howler monkey (likely)",
+"marineLife": "Nurse shark (guaranteed), Southern stingray (guaranteed), West Indian manatee (likely)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"komodo": {
+"herps": "Komodo dragon (guaranteed)",
+"marineLife": "Reef manta ray (likely), Green turtle (likely)",
+"otherMammals": "Flying fox colony (guaranteed)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"panama": {
+"primates": "Mantled howler monkey (likely), White-faced capuchin (likely), Geoffroy's tamarin (likely)",
+"herps": "Strawberry poison dart frog (guaranteed)",
+"marineLife": "Hammerhead shark (likely), Whale shark (possible)",
+"otherMammals": "Two-toed and three-toed sloths (likely), Lesser capybara (likely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"rocky-mountain": {
+"herbivores": "Elk (guaranteed), Mule deer (guaranteed), Moose (likely), Bighorn sheep (likely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"vancouver-island": {
+"predators": "Black bear (likely)",
+"birds": "Bald eagle (likely)",
+"marineLife": "Orca (likely), Sea otter (likely), Steller sea lion (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"everglades": {
+"predators": "Florida panther (unlikely)",
+"birds": "Roseate spoonbill (likely), Wood stork (likely)",
+"herps": "American alligator (guaranteed)",
+"marineLife": "West Indian manatee (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"glacier-waterton": {
+"predators": "Grizzly bear (likely), Black bear (likely)",
+"herbivores": "Mountain goat (guaranteed), Bighorn sheep (guaranteed), Moose (likely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"ladakh": {
+"predators": "Snow leopard (possible)",
+"herbivores": "Blue sheep (likely), Asiatic ibex (likely), Kiang (likely), Tibetan antelope (unlikely)",
+"howWatch": "vehicle",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"ethiopia": {
+"predators": "Ethiopian wolf (likely)",
+"herbivores": "Walia ibex (likely)",
+"primates": "Gelada (guaranteed)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"hokkaido": {
+"predators": "Brown bear (likely)",
+"herbivores": "Ezo sika deer (guaranteed)",
+"birds": "Red-crowned crane (likely), Steller's sea-eagle (likely)",
+"marineLife": "Orca (possible), Sperm whale (possible)",
+"otherMammals": "Ezo red fox (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"seychelles": {
+"birds": "Seychelles black parrot (likely)",
+"herps": "Aldabra giant tortoise (guaranteed)",
+"marineLife": "Hawksbill turtle (likely), Green turtle (likely), Whale shark (possible)",
+"otherMammals": "Seychelles flying fox (likely)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"tierra-del-fuego": {
+"herbivores": "Guanaco (likely)",
+"birds": "Magellanic penguin (guaranteed), Gentoo penguin (guaranteed), King penguin (likely)",
+"marineLife": "South American sea lion (guaranteed), South American fur seal (guaranteed)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"andalucia": {
+"predators": "Iberian lynx (possible)",
+"herbivores": "Spanish ibex (likely)",
+"herps": "Mediterranean chameleon (unlikely)",
+"marineLife": "Dolphins (likely)",
+"howWatch": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"los-cabos": {
+"marineLife": "Humpback whale (likely), Gray whale (likely)",
+"howWatch": "boat",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"palau": {
+"marineLife": "Grey reef shark (guaranteed), Reef manta ray (likely), Golden jellyfish (guaranteed), Dugong (unlikely)",
+"howWatch": "water",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"papua-new-guinea": {
+"birds": "Birds-of-paradise (guaranteed), Southern cassowary (unlikely)",
+"otherMammals": "Spotted cuscus (unlikely), Long-beaked echidna (unlikely), Tree kangaroo (unlikely)",
+"howWatch": "onFoot",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"big-island": {
+"birds": "Nene (possible)",
+"marineLife": "Reef manta ray (guaranteed), Green sea turtle (likely)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"maldives": {
+"marineLife": "Whale shark (likely), Reef manta ray (likely), Grey reef shark (likely), Hawksbill turtle (likely), Green turtle (likely), Sperm whale (unlikely)",
+"otherMammals": "Indian flying fox (likely)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"monterey-big-sur": {
+"marineLife": "Southern sea otter (guaranteed), California sea lion (guaranteed), Harbor seal (guaranteed), Northern elephant seal (guaranteed), Humpback whale (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"badlands-black-hills": {
+"herbivores": "American bison (guaranteed), Pronghorn (likely), Elk (likely), Bighorn sheep (likely)",
+"otherMammals": "Black-tailed prairie dog (guaranteed)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"cape-town": {
+"birds": "African penguin (guaranteed)",
+"marineLife": "Cape fur seal (guaranteed)",
+"primates": "Chacma baboon (guaranteed)",
+"herbivores": "Bontebok (likely), Eland (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"ecuadorian-andes": {
+"predators": "Andean bear (unlikely)",
+"herbivores": "Mountain tapir (unlikely), Vicuña (likely)",
+"birds": "Andean condor (likely), Hummingbirds at feeders (guaranteed)",
+"otherMammals": "Kinkajou (possible), Olingo (possible)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"fjords": {
+"herbivores": "Musk ox (likely)",
+"birds": "Atlantic puffin (likely), White-tailed eagle (likely)",
+"marineLife": "Orca (likely), Humpback whale (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"greenland": {
+"predators": "Polar bear (unlikely), Arctic fox (possible)",
+"herbivores": "Muskox (likely), Reindeer (likely)",
+"marineLife": "Ringed seal (likely), Harp seal (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"kerala": {
+"predators": "Bengal tiger (unlikely), Leopard (unlikely)",
+"herbivores": "Asian elephant (likely), Nilgiri tahr (guaranteed)",
+"primates": "Lion-tailed macaque (possible)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"maui": {
+"birds": "Nene (likely)",
+"marineLife": "Green sea turtle (guaranteed), Spinner dolphin (likely), Hawaiian monk seal (possible)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"mongolia": {
+"predators": "Snow leopard (unlikely)",
+"herbivores": "Przewalski's horse (guaranteed), Mongolian gazelle (likely), Argali sheep (possible), Siberian ibex (possible)",
+"otherMammals": "Tarbagan marmot (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"rivieramaya": {
+"primates": "Spider monkey (likely), Howler monkey (likely)",
+"herps": "Iguanas (likely), Morelet's crocodile (possible)",
+"marineLife": "Whale shark (likely), Green turtle (guaranteed), Loggerhead turtle (guaranteed), Manatee (possible)",
+"otherMammals": "White-nosed coati (likely)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"colombian-andes": {
+"predators": "Spectacled bear (unlikely)",
+"herbivores": "Mountain tapir (unlikely)",
+"primates": "Red howler monkey (likely), Brown spider monkey (likely)",
+"birds": "Andean condor (likely), Hummingbirds (guaranteed), Toucans (likely)",
+"herps": "Poison dart frog (possible), Glass frog (possible)",
+"otherMammals": "Two-toed sloth (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"iceland": {
+"birds": "Atlantic puffin (likely)",
+"marineLife": "Humpback whale (likely), Harbor seal (guaranteed), Grey seal (guaranteed), Minke whale (likely)",
+"otherMammals": "Arctic fox (unlikely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"oaxaca": {
+"herps": "Olive ridley sea turtle (likely at arribadas), American crocodile (likely), Green iguana (likely)",
+"marineLife": "Humpback whale (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"colombian-caribbean": {
+"primates": "Cotton-top tamarin (likely), Mantled howler monkey (likely)",
+"herps": "Green iguana (likely), American crocodile (likely)",
+"birds": "American flamingo (likely)",
+"otherMammals": "Brown-throated sloth (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"borabora": {
+"marineLife": "Blacktip reef shark (guaranteed), Pink whipray (guaranteed), Green turtle (likely), Hawksbill turtle (likely), Humpback whale (likely)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"great-smoky-mountains": {
+"predators": "Black bear (likely)",
+"herbivores": "Elk (guaranteed), White-tailed deer (guaranteed)",
+"herps": "Salamanders, 30+ species (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"pakistan": {
+"predators": "Snow leopard (unlikely), Himalayan brown bear (possible)",
+"herbivores": "Markhor (unlikely), Himalayan ibex (likely)",
+"marineLife": "Indus river dolphin (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"thailand": {
+"herbivores": "Asian elephant (unlikely)",
+"primates": "White-handed gibbon (likely by call), Dusky langur (possible)",
+"predators": "Sun bear (unlikely)",
+"marineLife": "Whale shark (possible), Manta ray (possible)",
+"birds": "Great hornbill (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"azores": {
+"marineLife": "Sperm whale (guaranteed), Common dolphin (guaranteed), Bottlenose dolphin (likely), Blue whale (possible), Blue shark (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"ghana": {
+"herbivores": "African savanna elephant (guaranteed), Roan antelope (likely), Kob (likely)",
+"primates": "Lesser spot-nosed monkey (likely)",
+"otherMammals": "Warthog (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"north-island": {
+"birds": "Little spotted kiwi (likely), Kiwi night walks",
+"herps": "Tuatara (likely)",
+"marineLife": "New Zealand fur seal (likely), Bryde's whale (possible)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"redwood": {
+"predators": "Black bear (possible)",
+"herbivores": "Roosevelt elk (guaranteed)",
+"marineLife": "Harbor seal (likely), Steller sea lion (likely)",
+"herps": "Pacific giant salamander (possible)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"nova-scotia": {
+"herbivores": "Moose (likely)",
+"birds": "Bald eagle (likely)",
+"marineLife": "Harbor seal (likely), Grey seal (likely), Whales on boat tours (possible)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"vietnam": {
+"herbivores": "Gaur (unlikely)",
+"primates": "Red-shanked douc langur (likely), Delacour's langur (likely), Yellow-cheeked gibbon (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"bhutan": {
+"herbivores": "Takin (possible), Blue sheep (likely)",
+"primates": "Golden langur (likely)",
+"birds": "Black-necked crane (likely in winter)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"chiapas": {
+"primates": "Mantled howler monkey (likely), Spider monkey (likely)",
+"herps": "Morelet's crocodile (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"guatemala": {
+"predators": "Jaguar (unlikely)",
+"herbivores": "Baird's tapir (unlikely)",
+"primates": "Yucatan black howler monkey (likely), Geoffroy's spider monkey (likely)",
+"birds": "Ocellated turkey (likely)",
+"otherMammals": "White-nosed coati (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"okinawa": {
+"herps": "Habu pit viper (possible)",
+"otherMammals": "Ryukyu flying fox (possible)",
+"marineLife": "Humpback whale (likely in winter)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"atacama": {
+"herbivores": "Vicuña (guaranteed), Guanaco (likely)",
+"birds": "Flamingos, three species (guaranteed)",
+"otherMammals": "Southern viscacha (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"grandcanyon": {
+"herbivores": "Elk (likely), Mule deer (likely), Desert bighorn sheep (possible)",
+"birds": "California condor (likely)",
+"otherMammals": "Kaibab squirrel (possible)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"milford-sound-fiordland": {
+"birds": "Kea (likely), Weka (likely)",
+"marineLife": "New Zealand fur seal (guaranteed), Bottlenose dolphin (possible)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"nicaragua": {
+"primates": "Mantled howler monkey (likely), White-faced capuchin (likely)",
+"herbivores": "Baird's tapir (unlikely)",
+"herps": "Caiman (possible)",
+"otherMammals": "Brown-throated sloth (possible)",
+"birds": "Great green macaw (unlikely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"quebec-city": {
+"herbivores": "Moose (likely)",
+"predators": "Black bear (unlikely)",
+"marineLife": "Beluga whale (guaranteed), Minke whale (guaranteed)",
+"otherMammals": "Beaver (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"scottish-highlands-skye": {
+"herbivores": "Red deer (likely)",
+"birds": "Golden eagle (possible), White-tailed eagle (possible)",
+"predators": "Eurasian otter (unlikely)",
+"marineLife": "Harbor seal (guaranteed)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"whistler": {
+"predators": "Black bear (likely), Grizzly bear (possible)",
+"otherMammals": "Hoary marmot (guaranteed), Pika (guaranteed)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"mauritius": {
+"birds": "Mauritius kestrel (likely), Pink pigeon (likely), Echo parakeet (likely)",
+"marineLife": "Sperm whale (likely), Spinner dolphin (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"yosemite": {
+"predators": "Black bear (likely), Bobcat (possible)",
+"herbivores": "Mule deer (likely), Sierra Nevada bighorn sheep (unlikely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"cape-cod-islands": {
+"marineLife": "Humpback whale (likely), Fin whale (likely), Minke whale (likely), Gray seal (guaranteed), Harbor seal (guaranteed)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"acadia": {
+"herbivores": "White-tailed deer (likely)",
+"marineLife": "Harbor seal (likely)",
+"otherMammals": "Porcupine (possible), Beaver (possible)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"angkor": {
+"primates": "Long-tailed macaque (guaranteed), Pileated gibbon (possible)",
+"otherMammals": "Lyle's flying fox colony (guaranteed)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"bali": {
+"primates": "Javan langur (likely), Long-tailed macaque (guaranteed)",
+"herbivores": "Javan rusa deer (likely)",
+"marineLife": "Reef manta ray (likely), Green turtle (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"barbados": {
+"primates": "Vervet monkey (likely)",
+"marineLife": "Green turtle (guaranteed), Hawksbill turtle (guaranteed)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"canaries": {
+"marineLife": "Short-finned pilot whale (guaranteed), Bottlenose dolphin (guaranteed), Loggerhead turtle (likely), Green turtle (likely)",
+"herps": "Gallotia lizards (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"charleston-savannah": {
+"herps": "American alligator (likely)",
+"marineLife": "Bottlenose dolphin (guaranteed), Loggerhead turtle (possible), Manatee (possible)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"egypt": {
+"herps": "Nile crocodile (guaranteed)",
+"marineLife": "Spinner dolphin (guaranteed), Dugong (possible), Sea turtles (possible)",
+"herbivores": "Nubian ibex (unlikely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"fiji": {
+"marineLife": "Reef shark (likely), Sea turtles (likely), Manta ray (likely), Spinner dolphin (likely)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"lake-district": {
+"herbivores": "Red deer (likely)",
+"otherMammals": "Red squirrel (guaranteed at feeders)",
+"birds": "Osprey (likely in summer)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"lapland": {
+"herbivores": "Reindeer (guaranteed), Moose (possible)",
+"predators": "Brown bear (possible at hides), Wolverine (possible at hides)",
+"howWatch": "hide",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"lofoten": {
+"birds": "White-tailed eagle (guaranteed)",
+"marineLife": "Harbor seal (likely), Grey seal (likely), Sperm whale (possible)",
+"herbivores": "Moose (possible)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"madeira": {
+"marineLife": "Sperm whale (guaranteed), Bottlenose dolphin (guaranteed), Mediterranean monk seal (unlikely)",
+"herps": "Madeiran wall lizard (guaranteed)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"marlborough-abel-tasman": {
+"marineLife": "New Zealand fur seal (guaranteed), Dusky dolphin (likely), Bottlenose dolphin (likely), Hector's dolphin (possible)",
+"birds": "Little blue penguin (possible)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"olympic": {
+"predators": "Black bear (possible)",
+"herbivores": "Roosevelt elk (likely)",
+"marineLife": "Harbor seal (likely), Sea otter (likely)",
+"otherMammals": "Olympic marmot (possible)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"palawan": {
+"herbivores": "Calamian deer (likely)",
+"birds": "Palawan hornbill (possible)",
+"herps": "Saltwater crocodile (possible)",
+"marineLife": "Sea turtles (likely)",
+"otherMammals": "Palawan binturong (unlikely), Philippine pangolin (unlikely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"piedmont": {
+"predators": "Wolf (unlikely)",
+"herbivores": "Alpine ibex (likely), Chamois (likely)",
+"otherMammals": "Alpine marmot (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"provence": {
+"birds": "Greater flamingo (guaranteed)",
+"herps": "Hermann's tortoise (unlikely)",
+"marineLife": "Fin whale (possible), Sperm whale (possible)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"sequoia-kings-canyon": {
+"predators": "Black bear (likely)",
+"herbivores": "Mule deer (guaranteed)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"st-andrews-fife": {
+"birds": "Atlantic puffin and seabird colonies on the Isle of May (likely)",
+"marineLife": "Grey seal (guaranteed), Minke whale (possible), Bottlenose dolphin (possible)",
+"otherMammals": "Red squirrel (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"sydney": {
+"birds": "Rainbow lorikeet (guaranteed), Sulphur-crested cockatoo (guaranteed)",
+"marineLife": "Humpback whale (likely), Grey nurse shark (possible)",
+"otherMammals": "Grey-headed flying fox (guaranteed), Brushtail possum (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"taiwan": {
+"herbivores": "Formosan sika deer (likely)",
+"primates": "Formosan rock macaque (guaranteed)",
+"marineLife": "Dolphins off Hualien (likely), Green turtle (guaranteed)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"turks-caicos": {
+"birds": "Caribbean flamingo (likely)",
+"herps": "Turks and Caicos rock iguana (guaranteed)",
+"marineLife": "Green turtle (likely), Hawksbill turtle (likely), Southern stingray (likely), Nurse shark (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"upper-peninsula": {
+"predators": "Black bear (likely)",
+"herbivores": "Moose (likely)",
+"otherMammals": "Beaver (likely), River otter (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"uyuni": {
+"herbivores": "Vicuña (likely)",
+"birds": "Andean flamingo (guaranteed), Chilean flamingo (guaranteed), James's flamingo (guaranteed)",
+"otherMammals": "Andean viscacha (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"zion-bryce": {
+"herbivores": "Desert bighorn sheep (likely)",
+"birds": "California condor (possible)",
+"otherMammals": "Utah prairie dog (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"algarve": {
+"birds": "Greater flamingo (guaranteed)",
+"herps": "Mediterranean chameleon (unlikely)",
+"marineLife": "Common dolphin (likely), Bottlenose dolphin (likely)",
+"howWatch": "boat",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"bahamas": {
+"birds": "West Indian flamingo (likely)",
+"herps": "Bahamian rock iguana (likely)",
+"marineLife": "Tiger shark (guaranteed)",
+"howWatch": "water",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"singapore": {
+"predators": "Smooth-coated otter (likely)",
+"primates": "Long-tailed macaque (guaranteed)",
+"herps": "Water monitor (likely), Saltwater crocodile (possible)",
+"otherMammals": "Malayan colugo (possible), Sunda pangolin (unlikely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"faroe-islands": {
+"birds": "Atlantic puffin (guaranteed)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"ireland": {
+"predators": "Pine marten (unlikely)",
+"herbivores": "Red deer (guaranteed)",
+"marineLife": "Grey seal (likely), Harbor seal (likely)",
+"howWatch": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"north-cascades": {
+"predators": "Black bear (possible)",
+"herbivores": "Mountain goat (likely)",
+"otherMammals": "Hoary marmot (likely), Pika (likely)",
+"howWatch": "onFoot",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"vermont": {
+"predators": "Black bear (unlikely)",
+"herbivores": "Moose (unlikely), White-tailed deer (guaranteed)",
+"otherMammals": "Beaver (likely)",
+"howWatch": "vehicle",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"puerto-rico": {
+"birds": "Puerto Rican parrot (unlikely)",
+"herps": "Coquí frog (guaranteed)",
+"marineLife": "West Indian manatee (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"aspen": {
+"herbivores": "Mule deer (guaranteed), Elk (guaranteed), Moose (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bend-crater-lake": {
+"herbivores": "Mule deer (guaranteed), Pronghorn (possible)",
+"otherMammals": "Yellow-bellied marmot (likely), Pika (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"cornwall": {
+"marineLife": "Grey seal (guaranteed), Common dolphin (likely), Harbor porpoise (likely), Basking shark (possible), Minke whale (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"dolomites": {
+"herbivores": "Chamois (likely), Alpine ibex (likely)",
+"otherMammals": "Alpine marmot (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"hongkong": {
+"primates": "Rhesus macaque (guaranteed)",
+"marineLife": "Chinese white dolphin (unlikely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"texas-hill-country": {
+"herbivores": "White-tailed deer (likely)",
+"otherMammals": "Mexican free-tailed bat colonies (guaranteed)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"basque-country": {
+"herbivores": "Red deer (possible)",
+"marineLife": "Fin whale (possible), Sperm whale (possible), Pilot whale (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"swissalps": {
+"herbivores": "Alpine ibex (likely), Chamois (likely)",
+"birds": "Bearded vulture (possible)",
+"otherMammals": "Alpine marmot (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"uluru": {
+"predators": "Dingo (possible)",
+"herbivores": "Red kangaroo (likely)",
+"birds": "Emu (likely)",
+"herps": "Perentie (possible), Thorny devil (unlikely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"lisbon": {
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"luangprabang": {
+"primates": "Long-tailed macaque (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"mendoza": {
+"herbivores": "Guanaco (likely)",
+"birds": "Andean condor (likely)",
+"howWatch": "vehicle",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"new-orleans": {
+"herps": "American alligator (guaranteed)",
+"otherMammals": "Nutria (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"rio": {
+"primates": "Black-tufted marmoset (likely), Brown capuchin (likely)",
+"birds": "Channel-billed toucan (likely)",
+"otherMammals": "Brown-throated sloth (possible), South American coati (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"sardinia": {
+"herbivores": "Sardinian deer (possible)",
+"marineLife": "Fin whale (possible), Sperm whale (possible), Cuvier's beaked whale (possible)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"tbilisi-caucasus": {
+"predators": "Brown bear (unlikely), Gray wolf (unlikely)",
+"herbivores": "Caucasian tur (unlikely), Goitered gazelle (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"chamonix": {
+"herbivores": "Alpine ibex (likely), Chamois (likely)",
+"otherMammals": "Alpine marmot (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"istanbul": {
+"birds": "Migrating raptors and storks (guaranteed in autumn)",
+"marineLife": "Bottlenose dolphin (likely), Common dolphin (likely), Harbor porpoise (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"argentine-lake-district": {
+"herbivores": "Guanaco (likely), Pudú (unlikely), Huemul (unlikely)",
+"birds": "Andean condor (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"dubai": {
+"herbivores": "Arabian oryx (likely), Sand gazelle (likely)",
+"howWatch": "vehicle",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"morocco": {
+"herbivores": "Barbary sheep (unlikely)",
+"primates": "Barbary macaque (likely)",
+"herps": "Mediterranean chameleon (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"peru": {
+"predators": "Andean bear (possible)",
+"herbivores": "Vicuña (possible)",
+"birds": "Andean condor (likely)",
+"otherMammals": "Viscacha (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"uzbekistan": {
+"herbivores": "Goitered gazelle (likely), Kulan (likely), Przewalski's horse (likely)",
+"howWatch": "vehicle",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"kyrgyzstan": {
+"predators": "Snow leopard (unlikely)",
+"herbivores": "Argali (unlikely), Siberian ibex (possible)",
+"otherMammals": "Long-tailed marmot (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"mallorca": {
+"birds": "Black vulture (likely)",
+"herps": "Lilford's wall lizard (guaranteed)",
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"tuscany": {
+"herbivores": "Roe deer (likely), Wild boar (possible)",
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"arches-canyonlands": {
+"herbivores": "Desert bighorn sheep (possible), Mule deer (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"chilean-lake-district": {
+"herbivores": "Southern pudú (unlikely)",
+"otherMammals": "Monito del monte (unlikely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"joshua-tree": {
+"herbivores": "Desert bighorn sheep (possible)",
+"herps": "Desert tortoise (unlikely), Chuckwalla (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"vienna": {
+"herbivores": "Red deer (likely), Mouflon (likely)",
+"otherMammals": "Wild boar (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"punta-cana": {
+"herps": "Rhinoceros iguana (guaranteed)",
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"belfast-giants-causeway": {
+"birds": "Atlantic puffin (likely in summer)",
+"marineLife": "Grey seal (likely), Harbor seal (likely)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"jamaica": {
+"birds": "Red-billed streamertail (likely)",
+"herps": "American crocodile (guaranteed)",
+"marineLife": "West Indian manatee (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"sicily": {
+"birds": "Greater flamingo (guaranteed in winter)",
+"marineLife": "Bottlenose dolphin (likely), Sperm whale (possible)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"aruba": {
+"herps": "Aruban whiptail (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bavaria-munich": {
+"herbivores": "Chamois (likely), Alpine ibex (possible)",
+"otherMammals": "Alpine marmot (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"black-forest": {
+"predators": "Eurasian lynx (unlikely)",
+"herbivores": "Red deer (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"chiang-mai": {
+"primates": "Long-tailed macaque (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"croatia": {
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"death-valley": {
+"herbivores": "Desert bighorn sheep (possible)",
+"otherMammals": "Salt Creek pupfish (guaranteed in spring)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"el-chalten": {
+"herbivores": "Guanaco (likely), Huemul (unlikely)",
+"birds": "Andean condor (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"hudson-valley": {
+"herbivores": "White-tailed deer (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"jordan": {
+"herbivores": "Nubian ibex (unlikely)",
+"otherMammals": "Rock hyrax (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"london": {
+"predators": "Red fox (likely)",
+"herbivores": "Red deer (guaranteed), Fallow deer (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"nice-riviera": {
+"marineLife": "Fin whale (possible), Sperm whale (possible), Pilot whale (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"puglia": {
+"birds": "Greater flamingo (guaranteed)",
+"marineLife": "Bottlenose dolphin (likely), Striped dolphin (likely)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"sedona": {
+"herbivores": "Mule deer (likely)",
+"otherMammals": "Javelina (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"snowdonia": {
+"predators": "Otter (unlikely)",
+"birds": "Red kite (likely)",
+"marineLife": "Grey seal (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"copenhagen": {
+"herbivores": "Red deer (likely), Fallow deer (likely)",
+"marineLife": "Harbor seal (possible)",
+"otherMammals": "Red squirrel (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bangkok": {
+"primates": "Long-tailed macaque (likely)",
+"herps": "Asian water monitor (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"barcelona": {
+"marineLife": "Fin whale (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bordeaux": {
+"herbivores": "Roe deer (possible)",
+"marineLife": "Bottlenose dolphin (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"cotswolds": {
+"predators": "Red fox (likely)",
+"herbivores": "Roe deer (likely), Muntjac deer (likely)",
+"otherMammals": "Badger (possible), Brown hare (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"queenstown": {
+"herbivores": "Himalayan tahr (unlikely)",
+"birds": "Kea (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"rioja": {
+"herbivores": "Roe deer (possible)",
+"birds": "Griffon vulture (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"seoul": {
+"herbivores": "Korean water deer (likely)",
+"birds": "Red-crowned crane (guaranteed in winter)",
+"otherMammals": "Raccoon dog (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"buenosaires": {
+"birds": "Black-necked swan (guaranteed)",
+"otherMammals": "Coypu (guaranteed)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"napa": {
+"herbivores": "Black-tailed deer (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"nyc": {
+"marineLife": "Harbor seal (likely in winter)",
+"otherMammals": "Horseshoe crab spawning (likely in spring)",
+"howWatch": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"tokyo-kyoto": {
+"primates": "Japanese macaque (guaranteed)",
+"otherMammals": "Tanuki (unlikely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"athens": {
+"herbivores": "Red deer (likely)",
+"herps": "Marginated tortoise (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"beijing": {
+"otherMammals": "Siberian chipmunk (likely), Pallas's squirrel (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"berlin": {
+"predators": "Red fox (likely)",
+"otherMammals": "Wild boar (likely), European hare (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"edinburgh": {
+"predators": "Red fox (likely)",
+"marineLife": "Grey seal (likely), Bottlenose dolphin (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"san-miguel-guanajuato": {
+"otherMammals": "Rock squirrel (likely), Ringtail (unlikely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"santorini": {
+"marineLife": "Bottlenose dolphin (possible), Striped dolphin (possible)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bagan": {
+"otherMammals": "Bats roosting in temples (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"amalfi": {
+"marineLife": "Bottlenose dolphin (likely), Striped dolphin (likely)",
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"mexicocity": {
+"otherMammals": "Volcano rabbit (unlikely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"prague": {
+"predators": "Red fox (unlikely)",
+"otherMammals": "Red squirrel (likely), Nutria (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"rome": {
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"venice": {
+"howWatch": "boat",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"chicago": {
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"paris": {
+"predators": "Red fox (unlikely)",
+"otherMammals": "Red squirrel (likely)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"budapest": {
+"otherMammals": "Red squirrel (likely), Wild boar (possible)",
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"havana": {
+"howWatch": "onFoot",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"amsterdam": {
+"draw": "weak",
+"drawSourceChecked": false
+},
+"champagne": {
+"draw": "weak",
+"drawSourceChecked": false
+},
+"douro-valley-porto": {
+"draw": "weak",
+"drawSourceChecked": false
+},
+"guilin-yangshuo": {
+"draw": "weak",
+"drawSourceChecked": false
+}
+}

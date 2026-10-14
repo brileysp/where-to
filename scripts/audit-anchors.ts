@@ -54,6 +54,7 @@ async function main() {
   const { isSliderNA } = await import('../src/lib/scoring/destinations');
   const { SLIDERS } = await import('../src/lib/scoring/constants');
   const { INTEREST_ANCHORS } = await import('../src/lib/scoring/anchors');
+  await (await import('../src/lib/scoring/anchorOverrides')).loadAnchorOverrides(true); // admin-edited anchors
 
   const scored = await getAllScoredPlaces();
   const ids = new Set(scored.map((d) => d.id));

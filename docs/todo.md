@@ -26,14 +26,7 @@ Both batches' proactive fact-checks found only mechanical issues (banned jargon,
 false-positives) — no real factual errors across either batch, an unusually clean finish
 to the series.
 
-**Next interest: birding.** `prompts/birding/v1.md` is written (2026-10-01), adapted from
-wildlifeViewing v5 — see the file's own header comment for the full list of what changed
-(scope inverts to birds-only, scoring model replaced with birding's existing
-first-principles anchor model from `scripts/audit-birding-model.ts`, jargon line
-recalibrated for birding's specialist audience tier, new worked example). Birding already
-has an anchor "ten" list and extensive content from the old pre-Gemini manual authoring
-scripts (`scripts/author-birding-blurbs-batch*.ts`) — this directive is meant to replace
-that content through the same pipeline, not start from nothing. Not yet run.
+**Birding: all 200 places generated and applied (checked against `content_generations` on 2026-10-09).** 266 generation rows across prompt versions v1 to v8 (56 places on v1, 56 on v2, then v4 to v8; 70 places on v8); nothing is staged. Directive: `prompts/birding/v8.md` (v1 was adapted from wildlifeViewing v5: birds-only scope and birding's own anchor scoring model from `scripts/audit-birding-model.ts`). The 12 lessons approved at v4 live in the prompt files: score decimals via `src/lib/gemini/decimalize.ts`, shared blurbs only for stable conditions (the validator rejects transition verbs), "host" only for transient visitors, certainty-word variety, lead with the best birds, seasonal headline birds, subspecies called subspecies, counts only when impressive, no lodge names, sourced rarity and endemic claims, scores matching text severity, ceilings not targets. Process notes that still hold: pilot about 5 varied places before a full run, regenerate only failures, thinking tokens are about 70% of the cost (about $0.06 a place). Open birding items are on the birding interest page: five bird-name calls, six overviews over their length cap, Champagne's Lac du Der cranes, the "access counts" rule is not in v8, and the source checks.
 
 See `docs/gemini-content-pipeline-plan.md`. `npm run gemini:author` stages generations
 (never applies); `npm run pipeline:diff` / `pipeline:apply` review and commit one at a
@@ -60,338 +53,60 @@ to know which wire shape a given generation actually used — a v1 and a v2 gene
 the same place stay directly comparable. `schemaShapeForVersion()` in
 `gemini-author-batch.ts` is the (hand-maintained) map from version string to wire shape.
 
-Current status (updated 2026-09-30): `wildlifeViewing` — v1 batch of 14 (Acadia-Azores)
-produced 12 valid/2 rejected, only Andalucía and Acadia applied (v1). **Superseded by
-v2** (`prompts/wildlifeViewing/v2.md`, the user's own "Wildlife Viewing Authoring
-Directive") — re-ran the same 14 places under v2 on 2026-09-29: 14/14 valid. User
-reviewed all 14 via a published artifact (full old-vs-new content, not a chat summary —
-see the standing content-review preference below), requested hand-edits to 8
-overview/intro blurbs, and asked for Azores' score curve to be rescaled down. **All 14
-are now LIVE** (applied 2026-09-30):
-- 8 with hand-edited overviews (Acadia, Antarctic Peninsula, Arches & Canyonlands,
-  Algarve, Amsterdam, Angkor Wat & Siem Reap, Argentine Lake District, Atacama Desert) —
-  applied via `applyGeneration` (curve/monthly content from Gemini) then a follow-up
-  human-edit patch for just `sliderOverview` (via `applyAdminEdits` with the real admin
-  actor, not `SYSTEM_ACTOR`), so provenance correctly shows "written by Gemini, then
-  edited by [human]" for these 8 overviews.
-- 5 applied exactly as generated, no edits (Amalfi Coast, Andalucía, Aruba, Aspen,
-  Athens).
-- Azores applied with every month's score scaled down (peak 8.2 → 6.5, same shape) per
-  the user: whale-watching-specific destinations shouldn't peak this high on the general
-  `wildlifeViewing` interest — that's what the dedicated whale-watching interest is for.
-  Text unchanged. Built by hand-fitting `fitMonthlyToCurve` on the rescaled array rather
-  than Gemini's raw output — see the (deleted) `scripts/_tmp-apply-remaining-six.ts` for
-  the pattern if this needs repeating for other over-peaked destinations.
+wildlifeViewing history: the batch-by-batch story of the run (14 places on 29 Sep to all ~200 live on 1 Oct, the review rounds, the v3 to v5 directive lessons, the Gemini billing hiccup) is in `docs/archive/todo-wildlife-pipeline-history-2026-09.md`. The durable lessons live in `prompts/wildlifeViewing/v5.md` and the pipeline note in project memory.
 
-Also fixed while building v2 support: `anchors.ts`'s wildlifeViewing `ten` list still
-allowed Pantanal a literal 10, conflicting with v2's explicit placement of it in the
-8.5-9.0 tier — removed. 14 (batch A) + 24 (batch B) = 38 of ~200 places done. ~162 still
-need (re-)generation for this interest before it's "fully generated" and the standing
-review above should happen.
+## Supabase egress (free plan over quota, noticed 2026-10-05)
 
-Third v3 batch — 18 places whose id starts with "c" (`--prefix=c`), batch id
-`78f6ef3d-9839-4cda-bda3-afd39effe0cb`, cost $0.23. Went through three review rounds
-before going live, each via the full-content artifact:
-1. Overview tightening pass across most places, plus rule fixes: Copenhagen's
-   fallow/sika deer marked introduced (red deer stays native), Cotswolds' muntjac
-   flagged introduced (it's a UK invasive, was breaking the native/reintroduced honesty
-   rule), Cornwall's red-billed chough cut entirely (not a marquee bird, doesn't belong
-   outside the birding slider), Chiang Mai's captive-elephant-sanctuary mention removed
-   entirely. Cape Cod's and Cape Town's peaks trimmed (6.5→5.3, 7.5→6.8) for being
-   overscored relative to their tier; Cape Town gained Cape Point's bontebok/eland/
-   ostrich. Costa Rica's peak raised 8.6→9.1 (underscored for a top-tier destination)
-   and gained the Osa's tapir superlative, Corcovado pumas, and a bird mention.
-2. A real fact-check pass caught three errors Claude introduced in round 1: Chiang
-   Mai's "night spotting reveals flying lizards" is wrong (Draco lizards are diurnal
-   baskers, not a night-walk species — fixed to civets/flying squirrels only). Costa
-   Rica's "squirrel monkey... across both coasts" is wrong (it's a Pacific-only
-   near-endemic, restricted to Manuel Antonio/Osa) — reworded to state the total monkey
-   count and name-check only the squirrel monkey. Chiapas' jaguar/tapir mentions were
-   struck entirely, not softened — Montes Azules' population density doesn't support
-   "ask a guide, get a decent shot" the way Osa does; this is a stricter bar than the
-   "naturally elusive" framing used elsewhere (e.g. Belize), worth keeping in mind for
-   future places with genuinely low-density megafauna.
-3. Final round: Costa Rica's monkey count hedged to "four commonly seen" (real count is
-   5, arguably 6) and gained a toucan mention (6 species, Caribbean-slope lodges/photo
-   hides). Colombian Caribbean's peak raised 4.8→6.2 to sit above Chiapas' 5.8, given
-   its critically-endangered cotton-top tamarin is a stronger draw than Chiapas' more
-   generic monkey/crocodile profile.
+Egress was 5.7 GB of the 5 GB allowance for the 14 Sep to 14 Oct cycle, and over in the cycle before; the
+dashboard shows a grace period to 4 Nov 2026, after which an org still over quota gets restricted (requests
+return 402). Most of it came 14-22 Sep (1.8 GB on the 16th); daily use since ~24 Sep is 0.05-0.2 GB. One full
+read of the 200 places is about 5.8 MB over the wire (slider_curves, slider_monthly_weather and
+slider_monthly_weather_meta are ~75% of it).
 
-All 18 now LIVE (applied 2026-09-30). 14 (A) + 24 (B) + 18 (C) = 56 of ~200 places done
-for this interest.
+Done 2026-10-05: (1) interest-page saves no longer drop the in-memory place cache (`skipPlaceCache` on
+`withAdminAudit`; before this, every save forced a 5.8 MB re-download); (2) the cache's full-refresh backstop is
+12 hours, not 30 minutes (up to 48 re-downloads a day on a busy server); (3) scripts can keep a disk copy of the
+place rows: set `PLACE_ROWS_SNAPSHOT=1` (the `db:audit:*` npm scripts already do), the copy lives in `.cache/`
+and is verified with the cheap updatedAt check, so a second run takes ~2 s instead of ~55 s and downloads almost
+nothing. Still to consider: `next build` starts ~15 workers that each download all the rows (avoid repeated
+builds; use `tsc --noEmit` and the tests); the history pages read every audit row for a place with full
+before/after snapshots (~35 KB each); upgrading to Pro if usage stays near the limit.
 
-v4 batch — 5 places whose id starts with "d" (`--prefix=d`), batch id
-`05d57cf9-0623-4661-983e-be521a1fa87a`, cost $0.06. All 5 valid on the first pass. All 5
-now LIVE (applied 2026-09-30) — Denali & the Interior, Dolomites, Douro Valley & Porto,
-Death Valley, Dubai. 61 of ~200 places done.
+## Per-interest admin pages (built 2026-10-05)
 
-**v4 -> v5**: user asked to loosen the length budget after Death Valley's first draft cut
-a real viewing tactic (the dawn/dusk instruction) just to hit the 220-char cap — the
-budget was too tight, not wrong in principle. Loosened ~25-30% across every tier (see
-validate.ts's `LENGTH_TIERS` and `prompts/wildlifeViewing/v5.md` §5) and added an
-explicit rule: never cut a §2 "Viewing Requirement" to save characters. Also fixed a real
-gap in the causality checker found via Falklands: "molt" wasn't a recognized
-seasonal-driver keyword — added to `CAUSALITY_MARKERS`.
+One page per interest at `/admin/destinations/interests/<key>`, linked from an "Open page" column on
+the Interests tab (which also now shows written-overview and N/A counts) and mentioned on the Admin
+home list. Five sections: Rules & scoring (definition, the "ten", formula family, directive file;
+Birding adds the score formula, a "Try it" calculator, ladder and writing rules), Outstanding items,
+Future place ideas, Places & data, and Expert reviews (reviewer, date, whole interest or one place,
+notes on what they did). Places & data has a two-place Compare view.
 
-A full audit of the then-56 live A/B/C places against the new budget is saved as two
-artifact versions (loosen-then-recheck) — **held, not applied**: the user disliked
-several of the draft fixes and asked to hold them for later review rather than lock
-anything in. Revisit when asked; don't retrofit A/B/C on your own initiative.
+- New tables (migration 0028, RLS on): `interest_reviews`, `interest_todos`, `interest_place_ideas`,
+  `place_interest_facts` (per place and interest, free-form jsonb). All edits go through
+  `withAdminAudit`. Seeded for birding by `scripts/seed-interest-pages.ts` (re-runnable, never
+  overwrites typed values).
+- Safari columns added 2026-10-05: eleven-animal likelihood grid, style/rules, experience, malaria, draw,
+  headline animals (config.ts `SAFARI_FACTS`; Rules tab content in `SAFARI_*` constants). Drafted for all 17
+  places by `scripts/seed-safari-facts.ts` (not source-checked). Density, close-up ease and spectacle are
+  blank for the owner to rate. Not yet seen in a browser (admin login); covered by tsc, eslint, vitest.
+- Birding columns: species, endemic species, endemic families, charisma, views/photo, spectacle,
+  draw, headline birds, source-checked, plus the planning columns (days needed, guide, self-drive,
+  spread, accessibility) left empty. Which columns an interest has is set in
+  `src/lib/admin/interest-pages/config.ts`; other interests show only the generic columns for now.
+- Still to do (updated 2026-10-09): birding endemic species (38 cells blank where the definition or a source was unclear), about 100 city and region species counts that need eBird totals, the views/photo review, and source checks (55 of 200 birding places are source-checked; wildlife 0 of 200; safari 0 of 17); add columns for other interests as they get authored; moving rules and definitions from code into the database if wanted. (The Interests x Places grid links to the page from each interest name and from the interest filter.)
+- This replaces the three "no home yet" items below (per-interest definition/anchors, authoring
+  status, Catalog Wishlist tab). The old Catalog Wishlist artifact has not been imported; the
+  birding ideas list is a nine-place seed marked "not yet researched".
 
-v4/v5 batch — 10 places whose id starts with "e" or "f" (run as two separate
-`--prefix` batches, reviewed together in one combined artifact per the user's
-"do 1 or 2 next letters depending on group size" instruction): batch ids
-`8503239e-3321-460d-881a-6b1305672990` (E, 6 places) and
-`88a0a4f3-d16f-471e-a971-c93615b318f2` (F, 4 places), cost $0.14 combined. Went through
-several real review rounds before going live — content is NOT yet applied, still staged:
-- Round 1 (Claude's proactive fact-check, before showing the user anything): all content
-  checked out except Faroe Islands' peak (6.8, later confirmed by the user as too high for
-  a single-marquee-species profile) — no factual errors caught here, a genuinely clean
-  batch.
-- Round 2 (user review): Ecuadorian Andes reordered to lead with Andean bear/mountain
-  tapir over condors (per the user: Ecuador + Colombia are the two best places on Earth
-  for both), "reintroduced" trimmed from every repeated vicuña mention down to once,
-  real wild-avocado/spectacled-bear seasonality added to Aug-Sep (verified via web
-  search: aguacatillo fruits Aug-Sep, sometimes into Dec, and reliably draws bears down
-  from the cloud forest — see Maquipucuna-area sources). Edinburgh's introduced grey
-  squirrels cut entirely ("common squirrel species are boring enough, but reintroduced
-  ones? double boring"). Red Sea & Nile's crocodiles lost an unnecessary "wild" qualifier
-  — species are assumed wild unless flagged otherwise, "wild" only earns its place for
-  something commonly seen domesticated/working (camels, horses, elephants). Ethiopia's
-  "gelada monkey" -> "gelada baboon" (the actual common/tourism name). Falklands' overview
-  trimmed (a seasonality sentence that duplicated what the months already say). Faroe
-  Islands rescaled 6.8 -> 5.0 peak and tightened. Fiji's crested iguana initially struck
-  entirely (Yadua Taba turned out, per web search, to be closed to all but permitted
-  researchers on a ~1-year application process — not tourist-visitable). Norwegian Fjords
-  gained musk oxen at Dovrefjell (verified: a real, ~99%-reliable guided safari, Europe's
-  only population outside the Arctic) alongside/ahead of harbor seals.
-- Round 3 (user pushed back on two of Claude's round-2 calls): striking the Fiji iguana
-  was WRONG — distinguished from Chiapas' jaguar because the iguana is Fiji's own
-  namesake, found nowhere else on Earth, so it must be addressed even though unreachable,
-  with the real access situation stated plainly. Restored with that framing. Also: the
-  Ecuador rewrite was too close to the user's own literal phrasing from their feedback —
-  "I didn't mean for you to just use my words," asked for genuinely fresh synthesis. Redid
-  it, and separately fixed a real clunky-writing bug: the draft implied toucans and
-  hummingbirds (day-active) were found on "night walks" alongside kinkajous and olingos
-  (night-active) — split day/night species into separate clauses. Folded both lessons into
-  **v5** as a new §2 exception (marquee namesake species always addressed, honestly, even
-  if unreachable) and a new §5 rule (never blur day/night species together).
-- Round 4 (more user edits, all applied to the staged drafts, not yet live): the user
-  wrote the Ecuadorian Andes overview by hand and said to use it as the model for future
-  blurbs — added verbatim as a new §8 "Worked Example" in v5.md, with notes on what makes
-  it work (honest odds framing, a concrete viewing mechanism, clean day/night separation,
-  and that running ~30% over its own length budget is fine here since every clause earns
-  its place). Ethiopia reorganized so Walia ibex sits with gelada baboon (both Simien
-  Mountains) and the Ethiopian wolf gets its own sentence (Bale Mountains, a different
-  range) — also fixed a real bug: an earlier find-and-replace ("gelada monkey" ->
-  "gelada baboon") had clobbered the capitalization of a sentence-initial "Gelada".
-  **Lesson: a case-insensitive regex replace on prose needs to preserve the original
-  capitalization, not just substitute a fixed-case string.** Fiji's Yadua Taba and
-  Norway's Runde were both renamed to "Yadua Taba Island" / "Runde Island" — don't assume
-  the reader has heard of an obscure place name; ground it with what it physically is.
+Snorkeling & diving prep (9 Oct 2026, no Gemini calls yet): draft directive in `prompts/_drafts/diving-v1-draft.md` (revised after review: no caps for single-discipline places, whales and dolphins count when you can get in the water, 10s are the best of the best with a pool of 12 candidates). Built: three interest-page columns (`divingRating`, `snorkelingRating`, `bestFor`, in config.ts), a `flat-v2-fit` Gemini response shape chosen automatically when a prompt mentions `diving_rating`, validation (ratings 0-10, `bestFor` must follow the ratings with a 1.5 gap, better rating within 0.5 of the peak), and `writeExtraFacts` in apply.ts, which stores the three values when a generation is applied and clears them for N/A. Also built: format columns (how you do it, certification needed, typical depth, current, water temperature, signature animals, source-checked), and the directive's §2b: a typical day-boat dive gets no format wording, and an unusual format is called out in the overview. Done 9 Oct 2026: interest renamed to "Snorkeling & Diving" (constants.ts); fact sheet drafted for 75 places by `scripts/seed-diving-fill.ts` (data in `scripts/data/diving-fill.json`, 419 cells, NOT source-checked; ratings left for Gemini); skip list of 55 clear-N/A places in `docs/diving-clear-na.json` (test in tests/gemini/skip-list.test.ts), so 145 places would go to Gemini, 48 of them currently N/A. Still to do before a run: owner review of the fact sheet and skip list (published page "Diving Fact Sheet and Skip List"), five-place pilot, move the draft to prompts/diving/v1.md. PILOT run 9 Oct 2026 (batch de9c9175, Seychelles typical and Galápagos unusual, directive installed as prompts/diving/v1.md, fact sheets in docs/diving-facts.json, cost $0.058 total, STAGED ONLY): the typical place got no format wording and the unusual one had it called out. Found: Galápagos held 10.0 for four months (rule is 1-3), its overview was 534 of 550 characters, and Seychelles was rejected for a shared blurb with "arrive" (months 8-9). Proposed v2 changes (not made): check for more than three months at 10.0, warn when an overview is over 85% of its ceiling, hand-edit Seychelles September. Open question: keep the "best experience in the month" scoring (Galápagos warm months 8.4-8.7 vs 6.0 today). PILOT rounds 2-3 (9 Oct 2026, owner feedback: no 10.0 month cap, off-season discipline callout, animals-led places say so, penguins not headlined): prompts/diving/v2.md then v3.md (v3 is the latest and will be used), new `drawType` column ("What the draw is"), `scripts/build-diving-facts.ts` rebuilds docs/diving-facts.json from the interest page columns, validator warnings for 4+ months at 10.0, off-season months with no out-of-season wording at diving-led places, months above both ratings, and banned self-rating words. v3 pilot: Galápagos 450-char overview, off-season blurbs correct, scores 8.4-8.7 Jan-May/Dec, 10.0 Jul-Nov (owner to double-check November), leftover fluff words playful/excellent/ideal are hand fixes. Staged batches de9c9175 (v1), 51184443 (v2), 1ca70e72 (v3); none applied. 10 Oct 2026: the French Polynesia pilot was wrong-scope (described Bora Bora's lagoon) because the place was renamed and had no scope sheet; fixed with `docs/renamed-places.json`, `scripts/data/diving-scopes.json` (13 renamed places going to Gemini), a guard in gemini-author-batch.ts and tests/gemini/renamed-places.test.ts; corrected re-run batch fdac7173 (territory-wide, rejected for a shared "arrive" blurb and "guaranteed" overuse). Pilot spend so far about $0.30 across five runs. Before the full run: tighten "guaranteed" wording, vary the animals named across months, no format sentence for typical places (v4 proposals). 10 Oct 2026 (later): format callout is now CALCULATED from the interest page columns (`divingFormatCallouts` in config.ts, a read-only "Format callout (calculated)" column) and handed to Gemini as a "Format callout: NONE / say these" line (prompts/diving/v4.md, the latest; v3 and earlier stay as they were run). Run-readiness audit of all 145 places: every renamed place has a scope sheet, sheet place names match current names, nothing flagged; 25 typical, 58 with a callout, 62 with no sheet (Gemini judges). New safeguards: fact sheets record `forPlaceName` and a rename afterwards blocks the run; warning when generated text contains an old name (`oldNameIssues`); `--names="French Polynesia,Chicago"` selects places by current name. Open owner decisions: tighten "guaranteed" wording (not asked, not done); whether to renumber internal place ids (recommendation: no). Run command when approved: `npx tsx scripts/gemini-author-batch.ts --interest=diving --reauthor --include-na --skip-clear-na --limit=200`. Thinking is capped at low and a higher level now needs --allow-higher-thinking.
 
-G batch: generation failed twice with a Gemini API billing error ("prepayment credits
-depleted") — the user's key ran out mid-project. User topped up credits but the retry hit
-the identical error again (likely a propagation delay on Google's side, or credits added
-to the wrong project) — **not yet resolved, G has not been generated**. Retry
-`--prefix=g --limit=15 --prompt-version=v5` once the user confirms the balance actually
-shows at ai.studio/projects.
+Reference sites (built 9 Oct 2026): the Expert reviews tab of each interest page now has a "Reference sites" list above the reviewers: the few sites we come back to for quarterly fact checks, each with a 1-100 usefulness score (100 = best), last-used date, places checked, and a "Due for a check" flag after 90 days. Table `interest_reference_sites` (migration 0030, applied to the live database); first 17 entries seeded by `scripts/seed-reference-sites.ts` (whale watching 8, birding 6, safari, wind sports, wildflowers 1 each) with Claude's first-guess scores for the owner to edit. Each site also carries a "Who can check it" tag (AI can read it / AI via search only / Human check needed). Verified 9 Oct 2026: eBird's website and Merlin block automated reads (human only); BirdLife DataZone numbers do not load for AI; the IWC handbook pages return 403 directly but are quotable through search; 2seewhales.com is a single LA tour operator and was removed from the list (its 15 place links need review, see the whale to-do). Fact-check scripts can call `recordSiteUse(interestKey, siteUrl, placesChecked)` from `src/lib/admin/interest-pages/reference-sites.ts` to stamp a use. Not yet seen in a browser (admin login); covered by tsc, eslint and tests/admin. Still empty: diving, wildlife, beaches, surfing and the rest.
 
-Gemini billing resolved same session (credits took a moment to propagate on Google's
-side — first retry after topping up hit the identical error, second retry went
-through). v5 batch — G through M, done as three review rounds since the user reviews
-in batches without necessarily applying each one immediately:
-
-- **G** (9 places, batch `2c40ac42`) + **H/I/J/K** (16 places, batches `01eca358`/
-  `7d1184f5`/`74f17a3a`/`f2a47893`), reviewed together in one combined artifact per the
-  user's "do 1 or 2 next letters depending on group size" instruction. Real catch:
-  Guilin & Yangshuo's draft built its entire profile around domestic water buffalo and
-  captive fishing cormorants — neither is wildlife, a direct violation of §4's own
-  "no domestic/captive distractions" rule that slipped past every mechanical check
-  (nothing currently flags "is this species domestic/captive" automatically). Rebuilt
-  around what's actually wild there (egrets, herons, bats). Two follow-up review rounds
-  fixed word-economy issues (Galápagos overusing "virtually guaranteed", GBR/Great Smoky
-  wordiness, Hokkaido's mammal-bird-whale-bird-mammal ordering), one geography-grounding
-  fix pattern (don't name an obscure island — Yadua Taba, Runde — without saying what it
-  is), a peak rebalance (Iceland 6.2→6.5, Ireland 5.2→5.0, richer destination should
-  score higher), and two Sabi Sands/Kruger-style "here vs. the place next door" honesty
-  additions. **All 25 (G-K) are now LIVE** (applied 2026-09-30, after being staged for
-  a few turns while the user reviewed L+M first — a reminder that "reviewed" and
-  "live" are separate states here and the user tracks them separately per batch).
-- **L + M** (21 places, batches `7d92a8af`/`36b91749`) — combined per the "~20-25 without
-  splitting a letter" instruction. Remarkably clean fact-check pass, only the mechanical
-  causality gap 3 times (Lofoten, Madeira, Maui). One more review round: Los Cabos'
-  peak trimmed 7.4→7.1, Madagascar's overview generalized "vangas" to "five entirely
-  endemic bird families" (real, verifiable fact) and its peak raised 9.0→9.4, Madeira's
-  Trocaz pigeon and Marlborough's king shag both cut (birding-section species, not
-  general wildlife — the user's call, not a directive violation). **All 21 are LIVE**
-  (applied 2026-09-30).
-
-Running total: 156 of ~200 places live (A 14 + B 24 + C 18 + D 5 + E 6 + F 4 + G 9 + H 4
-+ I 3 + J 3 + K 6 + L 8 + M 13 + N 10 + O 3 + P 15 + Q 2 + R 9). Worth remembering for
-future batches: verify any
-specific, checkable claim Gemini makes (a species' actual range, whether an animal is
-genuinely nocturnal, whether a rare species is honestly "occasionally seen" vs.
-oversold) rather than trusting fluent-sounding text — round 1 of this batch alone had
-three real factual errors that read as completely plausible until checked.
-
-**N-R batch (39 places) — all LIVE (applied 2026-09-30).** User asked for N through R
-specifically (an explicit override of the usual ~20-25-place sizing convention, not a new
-default). Five separate `--prefix` generation runs, one combined review artifact: batch
-ids `d3bf6d1e` (N, 10 places), `adf6eca9` (O, 3), `1e94547a` (P, 15), `2d12bf52` (Q, 2),
-`981e4793` (R, 9) — 39 total, cost $0.42 combined. Note the usual id/name mismatch:
-`peru` → "Cusco & Sacred Valley".
-
-Claude's proactive fact-check pass (all 39, before showing the user anything) found two
-real issues and fixed both directly in the staged generation:
-- **Provence**: a mechanical causality-checker false positive (Oct→Nov swing driven by
-  falling temperatures triggering reptile brumation — a real, correct driver, but
-  "temperature" itself was never stated as a word, so the keyword checker couldn't see
-  it). Fixed by adding "As cooling temperatures deepen" to the November text; no content
-  meaning changed.
-- **Punta Cana**: a genuine content bug, the same domestic/captive-species violation
-  caught in Guilin earlier this session. The draft presented rhinoceros iguanas as
-  freely roaming residents of the "Indigenous Eyes Ecological Reserve" — but that
-  reserve's iguanas are actually a captive breeding/reintroduction program (16 enclosed
-  animals, verified via web search), not wild animals visitors encounter on trails.
-  Rewrote around the real wild population at Parque Nacional del Este / Saona Island, a
-  well-known Punta Cana day-trip — verified via web search that a genuine wild
-  rhinoceros iguana population exists there. Also had to adjust the Aug-Oct
-  hurricane-season fallback logic, since Saona (a boat trip) can't serve as the
-  "still-accessible-when-boats-can't-run" backup the way a land-based reserve could —
-  reworded those months to note both dolphin tours and Saona access are disrupted, with
-  coastal birds as the remaining fallback.
-
-User review, round 1 (9 places): Namibia/Nepal/New Orleans — dialed back "virtually
-guaranteed" to reliable/regular/plentiful framing. Okinawa — cut the Okinawa rail
-entirely (birding-slider material, not enough of a general draw). Palau — cut the
-Micronesian megapode, rescaled the whole curve so peak lands at 7.0 not 7.4. Palawan —
-swapped the peacock-pheasant for Palawan hornbill + white-collared/stork-billed
-kingfishers, more recognizable to a general audience (verified the hornbill is real but
-uncommon/vulnerable, worded as "occasionally spotted" rather than oversold). Panama — cut
-the Darién jaguar/tapir line nobody realistically sees, added Geoffroy's tamarin and the
-lesser capybara (verified: Central America's only capybara species, concentrated right
-around Gamboa/the Canal zone, even timed its "more conspicuous" mention to the real rainy
-season when that's actually true). Pantanal — verified current tour-operator data
-supports 95%+ peak-season jaguar encounter rates; raised Jul/Aug/Sep/Oct accordingly and
-sharpened the odds language. Papua New Guinea — rescaled down to a 7.0 peak (it's
-primarily a birding destination, was scored too high).
-
-User review, round 2 (9 more places): Peruvian Amazon — swapped "basic" monkeys
-(howler/spider/squirrel) for brown capuchin/woolly monkey/emperor & saddleback tamarin;
-cut vague tapir/peccary "elusive encounters" line for capybaras (genuinely common);
-fixed the night-walk wording close to the user's own phrasing. Piedmont — user asked
-whether Gran Paradiso is really part of Piedmont; verified yes, the park genuinely
-straddles Piedmont and Aosta Valley roughly 50/50, no change needed. Puerto Rico — peak
-5.2→4.9, dropped the verb "hosts" per user's note it sounds odd. Queenstown — cut the
-longfin eel content entirely (nobody travels to see eels), replaced with an honest
-"quietest stretch of the year" line rather than inventing a replacement species.
-Raja Ampat — reordered overview and 7 identical months to lead marine-first,
-birds-of-paradise last, since it's primarily a marine destination. Rajasthan/Ranthambore
-— named the actual high-density tiger zones (2, 3, and 4, around Padam Talab and Rajbagh
-Lake — verified). Redwood — moved marbled murrelets to birding-slider material; caught a
-real taxonomy error Gemini made and Claude missed on first pass (the draft called a
-banana slug an amphibian — it's a mollusk), fixed with the Pacific giant salamander
-(verified present) plus a river otter mention (verified present). Rocky Mountain NP —
-elevated bighorn sheep to a real headline detail (verified May-Aug Sheep Lakes
-mineral-lick season is a genuine, well-documented spectacle), cut the black
-bear/mountain-lion mention since nobody realistically sees them there. Rwanda — cut the
-birding-endemics sentence (overview was long enough), gave golden monkeys their own
-"shorter, cheaper, less strict permit" framing instead of bundling them with gorillas in
-one breath.
-
-Two patterns flagged to the user as possibly worth a broader sweep later (not acted on
-beyond the specific instances above): the verb "hosts" ("X hosts Y") appears constantly
-across nearly every place in this pipeline, and "virtually guaranteed" is still used a
-lot outside the three places flagged this round. Revisit if asked.
-
-Everything re-validated clean after every edit. **All 39 applied to `places`
-2026-09-30** after the two review rounds above. Next batch after this one: continue
-alphabetically from S.
-
-**v3 directive shipped and already used for a real batch (2026-09-30).** All five fixes
-below are live in `prompts/wildlifeViewing/v3.md`. Two are also hard-enforced by
-`validate.ts`'s `BANNED_JARGON_WORDS` check ("cetacean", "ungulate"), not just requested
-in the prompt text. `scripts/gemini-author-batch.ts` also gained a `--prefix` flag (filter
-candidates by the start of their id) specifically to support "do the next batch
-alphabetically" requests, since the script had no offset/skip option before — only ever
-"the first N places by id".
-
-First v3 batch — 24 places whose id starts with "b" (`--prefix=b`), batch id
-`6c10bf1f-1848-4582-aa69-3fefbd5efa86`, cost $0.31 (unverified pricing). Reviewed via
-artifact (full old-vs-new content), user asked for a general overview-tightening pass
-plus specific fixes (Barbados species name + introduced-status honesty, Belize's
-marine/land/marine structure and "jungles host" phrasing, Bend & Crater Lake's species
-lead order, Bhutan's tiger/snow-leopard mentions with no real sighting chance, Bahamas'
-scores rescaled from a 7.4 peak down to 5.1 to match its actual secondary-destination
-tier) — Claude rewrote all 24 overviews directly (stamped as a Claude edit on top of
-Gemini's draft, not a human hand-edit, since the user gave direction rather than exact
-wording). **All 24 are now LIVE** (applied 2026-09-30), including the 3 that were
-flagged invalid (Basque Country, Bavaria & Munich, Bordeaux) — all three were the
-score-swing-without-a-cited-driver heuristic; Basque Country's curve was genuinely
-smoothed (three separate jumps compressed into one real step-change matching where the
-text actually describes calmer seas), the other two only needed a small wording tweak
-("peak summer", "during the grape harvest") since their curves were already fine and the
-checker's keyword list just didn't recognize the phrasing used. No banned-jargon or
-fluff-phrase rejects across the whole batch — a good sign for the v3 wording changes.
-
-Original patterns behind the v3 fixes, identified from a real word-for-word diff of
-Gemini's draft vs. the user's edit for all 7 hand-edited overviews in batch A:
-1. **Drop self-rating language from overviews.** Gemini keeps grading the destination in
-   its own prose even though the score already does that job: "Arches and Canyonlands
-   *offer modest* desert wildlife viewing", "The Algarve is *a secondary* wildlife
-   destination", "The Antarctic Peninsula is *a globally elite* wildlife destination".
-   Every one of these got cut or softened by the user (to a plain factual opener, or in
-   Antarctica's case "iconic" instead of "globally elite"). v3 should explicitly ban
-   tier-labeling adjectives in the overview ("modest", "secondary", "world-class",
-   "elite", etc.) — state what's there, let the score carry the tier.
-2. **Simplify jargon that slipped past the "zero fluff" rule.** "Cetacean sightings...
-   during the operating window" → user's edit: "Whale sightings... on expedition
-   cruises". "Native ungulates" → "Native deer species". Neither word is wrong, but
-   both read like a field guide instead of a travel app. Add these as named examples of
-   words to avoid, alongside the existing banned-phrase list.
-3. **"Virtually guaranteed" is being used too loosely.** Angkor's long-tailed macaques
-   went from Gemini's "virtually guaranteed year-round" to the user's "common
-   year-round" — macaques being everywhere isn't the same as a can't-miss marquee
-   sighting. v2 §2 needs a tighter line between "virtually guaranteed" (reserve for
-   genuine signature encounters) and "common"/"reliably seen" (present but not the
-   draw).
-4. **Cut throat-clearing topic sentences.** The user deleted the Argentine Lake
-   District's entire opening line — "offers a mix of native Andean-Patagonian fauna and
-   introduced European species across its forests and eastern steppe margins" — before
-   getting to any actual species. Add a rule: open the overview with the first named
-   species, never a scene-setting sentence about the mix of fauna in general.
-5. **No tier example for a single-species specialist.** Azores needed a manual rescale
-   (peak 8.2 → 6.5) because its overview whale-watching draw got scored like a
-   megafauna hub. v2's tier table has examples for generalist hubs (Denali, Pantanal)
-   and clear secondary destinations (Acadia, Algarve) but nothing for "one excellent,
-   narrow draw and not much else" — add "Azores whales" (or similar) as a named
-   6.0-6.9 example.
+Future places status (9 Oct 2026): whale watching 26 (imported from the old Catalog Wishlist artifact, claude.ai/artifact/N8oEcWrwLCevwCK8PANdKA, plus 6 new), birding 57, wildlife viewing 44, safari 22, diving 38 (the 31 from the old artifact minus Jardines de la Reina, now inside Cuba, and Koh Tao, same as Koh Samui & Gulf Islands, plus 7 new; imported 11 Oct 2026). Still only in that old artifact, not yet in the database: surfing 12, windsports 10, wildflowers 7, aurora 6, beaches 6, climbing 39. When a place appears on more than one list it must carry the same name on every list and a note "Also on the X list (same name)" (names harmonized 9 Oct 2026: Península Valdés, Channel Islands & Santa Barbara Channel, Chiloé & the Gulf of Corcovado, Gabon: Loango and Lopé). Known pending cross-references when the old lists are imported: Tromsø & Skjervøy (aurora list calls it "Tromsø").
 
 ## Admin screens: attributes with no home yet
 
-Found by comparing the `places` columns and scoring code against what the admin reads/writes.
-
-1. **Anchors, audience tier and formula on the Interests tab.**
-   Columns: "Audience tier", "Formula", "Anchor destinations" (+ the anchor set's
-   one-line definition). Today these live only in code (`SLIDERS` in
-   `src/lib/scoring/constants.ts`, `INTEREST_ANCHORS` in `src/lib/scoring/anchors.ts`,
-   `SWIM_SIGN_FLIPS` in `destinations.ts`), yet the anchors drive the
-   `db:audit:anchors` gate and the formula family tells you how many interests a fix
-   touches. Read-only display can ship first; editing means moving them into
-   `interest_meta` (needs a migration).
-
-2. **Authoring and audit status on the Interests tab and the Interests × Places grid.**
-   - Interests tab: "Authored N of M places" plus count of N/A places.
-   - Grid: status pill per row (authored / partial / empty / N/A) and a "Needs content" filter.
-   - "Last audited" can be derived from the newest `addedAt` in `sliderSources`.
-   - No new columns needed. Replaces the manual "Done" list in
-     `interest-content-authoring-playbook.md` §7.
-
-3. **Catalog Wishlist as a new tab next to Places.**
-   Columns: candidate destination, interest(s), why it matters, overlap notes against
-   existing catalog entries. Needs one new table. Today it lives only in a Claude
-   artifact ("Catalog Wishlist"), separate from the catalog it feeds.
+Items 1-3 from the first version of this section (anchors, audience tier and formula on the Interests tab; authoring status; the Catalog Wishlist tab) shipped as the per-interest pages and the Interests tab columns (2026-10-05) and were removed on 2026-10-09.
 
 Runners-up:
 - Curve source pill on the matrix curve column (hand-authored via `authoredCurves` vs auto-fitted).
@@ -409,13 +124,134 @@ Runners-up:
   - Extend the Catalog Wishlist artifact with a hot-springs list (verified candidates only).
 - beachesSwimming: fully done (Sep 2026) — content (129 places, 4 batches), specialist review, and a
   6-place Catalog Wishlist beaches list. See playbook §7 for details.
-- Remaining swim-formula interests to author: sailing, kayakingRafting.
-  (Note: beachesSwimming and hotSprings, both swim-formula, and auroraChasing, culture-formula, are
-  all now done — don't run sailing/kayakingRafting immediately back to back with each other either,
-  per the playbook's repetition rule.)
+- Remaining swim-formula interests to author: sailing, kayakingRafting (no generation run for either yet; `prompts/kayakingRafting/v1.md` exists). Each Gemini call is standalone, so the old "do not run same-family interests back to back" rule no longer applies to generated interests.
 - nationalParks: not an interest. Revisit as a tag / type of place.
 
 ## Cost-item tracking follow-ups (added 2026-09-21)
 - Visually verify the Cost Items screen (new Last updated / By / What changed columns, "Never edited by a human" filter) — needs a signed-in browser session.
 - Build the cost-checking agent: it should save edits with kind `'agent'` (see `src/lib/admin/cost-item-stamp.ts`); the grid already shows a 🤖 for agent edits.
 - Only edits made through the admin panel are tracked; script-authored items show "Never edited".
+
+
+## Completeness score (built 2026-10-06)
+
+One 0-100 score per interest, computed in `src/lib/admin/interest-pages/completeness.ts` (pure functions, tested in
+`tests/admin/completeness.test.ts`) and loaded by `getInterestCompleteness` in `src/lib/db/queries/interest-pages.ts`.
+Shown on the Interests tab (sortable "Completeness" column) and in a strip at the top of each interest page (the number,
+the three things that would raise it most, and a collapsed "How this is scored").
+
+Weights: content 50, data columns 20, scoring quality 10, verification 10, scope and rules 10. An interest with no
+special columns scores on the other four. Open to-do items never change the score.
+
+- Content: per place, live overview, 12 blurbs, authored curve, within length caps, nothing staged waiting. A place with no live text earns 0.
+- Scoring quality: at most 4 of 12 scores whole or half numbers; a flat run of 3+ months within 0.3 must be a ceiling or floor (or share a blurb); a jump of 1.5+ needs a cause word in a blurb or an event.
+- Verification: a place review in the last 12 months or the source-checked flag counts fully, a whole-interest review counts half.
+- Scope and rules: definition, "ten" list, directive file, rules tab (`RULES_TAB_KEYS` in config.ts), future-places list.
+
+Not built yet: the ranked "lowest completeness" list on the admin home, the per-place score and "check scores" flag in
+the Places & data table, and a weekly snapshot for a trend line. The score refreshes on page reload, not live as you edit.
+
+## Place grain changes (started 2026-10-07)
+
+Proposal artifact: "Place Fold Proposal" (claude.ai/artifact/GLHW9sNpsqnebzqxL8NxKS). Ids are kept on every rename.
+
+Done 2026-10-07 (name, region where needed, short overview, search aliases only, via `scripts/rename-seven-places.ts`):
+bagan -> Myanmar; kaziranga -> Assam & Northeast India; komodo -> Komodo & Flores; joshua-tree -> Palm Springs & Joshua Tree;
+punta-cana -> Dominican Republic; whistler -> Vancouver & Whistler; el-chalten -> El Chaltén & El Calafate.
+
+Still to do for those seven: the interest texts (overviews and monthly blurbs), monthly scores, costs and climate still describe the
+old, narrower area (they remain true, but do not cover the added places). Rewrite and re-fit per place, one review each.
+Havana -> Cuba is approved but not done. Not yet decided: Champagne into Paris, St Andrews into Edinburgh, Rioja into Basque Country,
+Aspen to Colorado ski country. Also: the safari idea "Sundarbans" still says nearest existing "Kaziranga National Park";
+scoring lists name whistler and komodo (ids unchanged); set travel advisories for Myanmar and Cuba before their broader text goes live.
+
+Update 2026-10-07: Havana renamed to Cuba. Myanmar (id bagan: birding, wildlifeViewing) and Assam & Northeast India (id kaziranga: safari,
+birding, wildlifeViewing) interest texts, monthly text and scores rewritten for the wider scope by Claude (`scripts/rewrite-myanmar-assam.ts`,
+curves refit with errorTolerance 0.06 so decimals land; review page "Myanmar and Assam Rewrite", claude.ai/artifact/Uc8uK5fhjt4EYcTPuARR45).
+Open: Myanmar travel advisory (US Level 4 as of May 2026) not yet entered; user to confirm Myanmar score changes; other interests' curves for
+those two places still describe Bagan/Kaziranga only. Still to rewrite for scope: Komodo & Flores (6 interests), Palm Springs & Joshua Tree (4),
+Dominican Republic (6), Vancouver & Whistler (4), El Chaltén & El Calafate (3), Cuba (6).
+
+Update 2026-10-07 (second batch of broadenings, names only, `scripts/rename-six-places.ts`): angkor -> Cambodia, luangprabang -> Laos,
+belfast-giants-causeway -> Northern Ireland, snowdonia -> Wales, banff -> Banff & Jasper National Parks, quebec-city -> Quebec City & Montreal.
+Only name and search terms changed (old names kept as search terms). 52 to-dos were added across 37 interest pages (source "Place rename,
+7 Oct 2026"): one "Rewrite <place> for its wider scope" per written interest (overview, 12 blurbs, 12 scores) and one "Re-check <interest> scores
+for broadened places" per interest where these places only have scores. Place-level fields still describing the old, narrower scope, for all six
+and for the earlier renames: the one-line overview, the seasons summary (about), costOverview and cost items, the 12 monthly weather lines,
+special-season notes, setting tags / place type, and region wording. Not yet to-do'd on the interest pages: the earlier renames (Komodo & Flores,
+Palm Springs & Joshua Tree, Dominican Republic, Vancouver & Whistler, El Chaltén & El Calafate, Cuba, and the non-rewritten interests of Myanmar and
+Assam & Northeast India).
+
+Whale watching setup (7 Oct 2026, finished): `prompts/whaleWatching/v1.md` (now v3) with the applicability decision first, whale-led scoring with a dolphin cap and the NOT_APPLICABLE output form; pipeline support (`--include-na`, `isNotApplicable` in `validate.ts`, N/A handling in `apply.ts`); interest page columns in `config.ts` (`WHALE_FACTS`); columns drafted by `scripts/seed-whale-fill.ts` and later source-checked for all 124 places (see "Whale source-check pass").
+
+Whale watching skip list (2026-10-07; now 74 ids after Marrakech & Atlas and New Orleans were added): 71 places were first listed as never sent to Gemini (`docs/whaleWatching-clear-na.json`, used by `gemini-author-batch.ts --skip-clear-na`):
+57 with no sea within about a day trip, plus 14 borderline places the owner chose to skip (Atacama, Beijing, Bend & Crater Lake, Berlin, Champagne, Denali & the Interior,
+Dolomites, North Cascades, Palm Springs & Joshua Tree, Paris, Petra & Wadi Rum, Piedmont, Queenstown, Rioja). All are already N/A. Full run command:
+`npx tsx scripts/gemini-author-batch.ts --interest=whaleWatching --reauthor --include-na --skip-clear-na --limit=200` (129 places; thinking capped at low by default).
+
+Place grain decisions (2026-10-07): keep as is: Champagne, Rioja, Arches & Canyonlands, Zion & Bryce Canyon. Napa Valley will become Napa & Sonoma; Bora Bora likely
+becomes French Polynesia; Hawaii keeps Big Island and Maui and gains Kauai and Oahu as separate places; San Francisco is its own place (not merged with Napa & Sonoma).
+Botswana is NOT one place (Delta and Chobe peak May-Oct, Makgadikgadi and Central Kalahari peak Nov-Mar): keep Okavango Delta, add Makgadikgadi & Central Kalahari.
+South Luangwa stays as is (Lower Zambezi and Kafue later as their own places). Name options pending for Kruger (Greater Kruger / Kruger & Sabi Sands / Kruger & the
+Lowveld) and Aspen (Aspen & the Roaring Fork Valley / Aspen Snowmass / Colorado High Country). Proposed grain rule (five tests, three kinds of city) is in the "Place Grain
+Rule" artifact (claude.ai/artifact/7viW7qQ93mesWeQ7ucR4RG); it would reverse Vancouver & Whistler and Quebec City & Montreal. It answers open product decision #1 in
+docs/final-architecture-plan.md (which compound-name places to decompose). Next if approved: run the tests across the 42 compound-name places. Related places and
+place_relationships exist in the schema but the app does not use them yet (only isPrimaryDestination places show), so do not demote places until Explore exists.
+Wishlist additions: San Francisco, Kauai, Oahu, Makgadikgadi & Central Kalahari, Lower Zambezi, Kafue.
+
+Place grain update (2026-10-07, later): renamed Kruger & Sabi Sands, Aspen Snowmass, Napa & Sonoma, French Polynesia (`scripts/rename-batch3.ts`; 16 rewrite to-dos and 26 score
+re-check items logged). Vancouver & Whistler and Quebec City & Montreal stay as they are for now (owner decision; the grain rule's season test should be read per interest,
+"do the two halves contradict on the same interest", so a place with a summer and a winter peak is fine). Splits agreed in principle: Egypt into Cairo & the Nile and Red Sea;
+Tanzania into a northern place (Serengeti, Ngorongoro and probably Kilimanjaro) and Zanzibar (Serengeti, Kilimanjaro and Zanzibar all avoid the March to May rains, so the split rests
+on base and decision, not season). Pending: Thailand (Andaman coast with Khao Sok vs Gulf islands with Surat Thani; Andaman best Nov-Apr, Gulf Jan-Sep), Vietnam (two-way: North vs Central & South,
+then Central vs South). Nothing created yet; each split needs a new place row and per-interest authoring.
+
+Batch 4 (2026-10-07, `scripts/rename-batch4.ts`): thailand renamed "Phuket & the Andaman Coast" (includes Khao Sok); tanzania renamed "Northern Tanzania" (scope: full Arusha safari
+circuit; safari focuses on Serengeti and Ngorongoro; landscape includes Lake Manyara and Tarangire; birding includes Tarangire and Arusha National Park; Zanzibar removed). Future places added to the
+diving and snorkeling list: Koh Samui & Gulf Islands, Zanzibar. 19 to-dos created and 27 re-check items updated. Heads-up: Northern Tanzania still carries Zanzibar-based beach, diving,
+whale, surfing and wind scores until those interests are rewritten or set N/A. Specialist ("gated") places BUILT (12 Oct 2026) as two columns on the admin Places tab (Gated = Y, Gated for = interest chips); results list hides a gated place
+unless the traveller's weight for one of its interests is >= 7 (GATE_MIN_WEIGHT in src/lib/scoring/gating.ts). Search still finds it. Not built from the proposal: teaser line,
+"Unlocked by" badge, interest-page tab, preview-as tool, naming. No place is gated yet.
+
+Whale watching run (7-8 Oct 2026), now complete: directive `prompts/whaleWatching/v3.md`; batch one (64 places, $2.20) and batch two generated, reviewed by the owner and applied; 124 places are live and the rest are N/A (74 ids on the skip list). Details of the individual rounds are in the sections below and in the review artifacts.
+
+
+## Species-name emphasis (added 7 Oct 2026)
+- Done first for safari text (whale watching since added, see the updates below). Names are stored as `**Name**`; the public card shows them semibold and a touch darker (option 1). Rule: bold a specific species name only when it is written with a capital letter (African wild dog, Grant's gazelle, Bengal tigers); not lowercase names (lions, elephants), groups (raptors, dolphins) or place names.
+- Code: `src/lib/text/emphasis.ts`, `EmphasisText` in `ForYouTab.tsx`, `.species-name` in `results.css`; the checker ignores markers and rejects unbalanced ones. Marking is done by a fixed word list, no AI: `src/lib/text/species-marker.ts` (rule: bold a name when a reader would picture one kind of animal, lowercase included: lions, elephants, hippos; not groups like monkeys, antelope, big cats, predators). `scripts/mark-species-names.ts` runs it and prints what it marked and left. Judgement calls currently bold: rhinos, orangutans, crocodiles, caimans, zebra.
+- Update 9 Oct 2026: new text for safari and whale watching is marked automatically on apply (see the evening update below). Live marker counts: safari 17 of 17 places, whale watching 120 of 124, birding, wildlife, diving and beaches 0. Still to do: word lists for birding, wildlife and the other animal interests; the admin screens and exports show the raw `**` (fine for editing, but decide if the admin should render it).
+
+## Whale batch two review follow-ups (7 Oct 2026)
+- Place redo after the primary pass: fold Kaikoura into Marlborough & Abel Tasman (under 2 hours from Blenheim). Rename and rewrite all interests for the wider scope.
+- Marrakech & Atlas is N/A for whale watching (on the skip list).
+- DECIDED and done: the score decimalizer no longer runs when all twelve months share one blurb (flat score instead). Buenos Aires and Colombian Caribbean (whale watching) are now flat too (checked 9 Oct 2026).
+- DECIDED and done (prompts/whaleWatching/v3.md): weather rule for the whale directive: ordinary rain costs nothing; a season where trips run but conditions are clearly poor scores 10 to 30% below a calm month and says so; trips stopped stays at 40% or less.
+- DECIDED and done: Milford Sound flat 3.5, 3.2 in Dec and Jan.
+- Quebec City & Montreal and Tokyo & Kyoto give a distance from a city in the place name to a spot outside it. Left as is; the new joined-name check flags them.
+
+## Species-name emphasis, update (7 Oct 2026, evening)
+- Rule added: each animal is bold once per blurb (first mention only), whatever name it appears under: "Greater one-horned rhinos ... rhinos" bolds only the first. Different kinds stay separate (black rhinos, white rhinos).
+- Whale watching is now marked too (111 places live), including lists like "humpback, minke, and fin whales". Bare "whales", "dolphins", "porpoises" stay plain.
+- New text is marked automatically when a generation is applied, for the interests in `EMPHASIS_INTERESTS` (src/lib/text/species-marker.ts): safari and whaleWatching. Add an interest there once its word list is ready.
+- Still to do: birding, wildlife and the other animal interests (each needs its word list); show the bold in the admin screens.
+
+## Whale columns, second fill (7 Oct 2026, evening)
+- Drafted species, boat style and draw for 41 places that had gaps, and a 0-10 seasickness rating for all 124 whale places that are not N/A (scripts/seed-whale-fill-2.ts, data in scripts/data/whale-fill-2.json and whale-seasick.json). Not source-checked. Completeness 68 to 80.
+- Still blank: Encounter closeness (all 124 places, worth 4 points) and source checks (10 points).
+- Cambodia's species was researched in the whale source check (Kratie on the Mekong, Kampot). Myanmar and Phuket may still say "Dolphin, species not confirmed" (not re-checked 9 Oct 2026).
+- The 52 stale birding and wildlife staged rows were discarded (marked invalid) on the owner's say-so.
+
+## Whale source-check pass (7-8 Oct 2026) - fixes applied, rest pending
+- All 124 places checked online (47 confirmed, 48 partly, 18 corrected, 11 not verified). 95 column cells set, every place ticked source-checked, sources and review entries saved (scripts/apply-whale-check.ts).
+- 8 Oct: owner approved the callout lists. 31 places rewritten or fixed live (scripts/whale-source-edits.ts, edits in the session scratchpad), New Orleans marked N/A and added to docs/whaleWatching-clear-na.json (74 ids). Second look overruled the first pass for Okinawa (Naha tours exist), Hokkaido (Muroran trips exist), Cape Town (Heaviside's real), Sardinia (Alghero trip exists), Puglia (Taranto departure real), NYC; corrections logged as review entries (scripts/whale-source-check-followup.ts). Cambodia now covers Kratie (Mekong) and Kampot. Nicaragua has both seasons (northern Jan-Apr peak, southern Jul-Oct peak Aug). Tierra del Fuego scoped to Ushuaia only.
+- 8 Oct round two: Antarctica, Monterey, Svalbard, Nice, Mauritius, Greenland, Tuscany, Mallorca rewritten after a second search; Skye, Palawan, Bali, Belize left as written because the second look supported them (review entries logged, scripts/whale-source-check-followup2.ts).
+- 8 Oct round three: Azores (sei Apr-May, summer led by sperm whales), French Polynesia (Jul-Nov, Oct peak), GBR wording, Falklands (Stanley boats real; orcas at Sea Lion Island), Komodo, Charleston, Croatia, Maldives, Okinawa edge months fixed; Taiwan left as written (scripts/whale-source-check-followup3.ts). The whale source check is finished. Remaining: Kaikoura fold-in into Marlborough & Abel Tasman; optional Skye winter humpbacks.
+
+## A vs B onboarding questions (7-9 Oct 2026)
+- Done: plan and 51-interest worksheet; 5 pilot questions each for wildlife, birding, whales and safari (artifact "A vs B Pilot Questions"); a branching whale tree; question-tree and admin mockups ("Question Tree Mockup": storage as one row per question plus a frozen publication, a Questions tab on each interest page, a global style-questions page); the onboarding prototype uses the real questions and a pick animation (the sphere versions are separate artifacts).
+- Decisions needed: approve the method and the "no column, no question" rule; the question budget (5) and lean steps; skip routing; who publishes; whether Claude drafts questions; move the five repeating style lines to be asked once; must-haves as tick-boxes; strength of the ranking nudge. Not built in the real app yet.
+
+
+## Admin editing build (13 Oct 2026)
+Made editable (all untested on screen; type-check, lint and 466 tests pass, public page verified in the browser): Places grid (name, primary and published switches, parent, summary, country, continent, region label, lat/long, stamp design; retired places under "Show retired"; /admin/destinations/new for new place and merge), place profile (seasonal hazards, tier, N/A with required reason), Interests x Places and interest page N/A reason box, seasonal flags copy and bulk, cost item columns (category, top of range, season, currency, source, verified), advisories (source link, re-check date, reviewed today), Interests list (name, domain, shown or hidden, audience tier, order), interest page (place link, overview and monthly text, apply or discard staged draft, mark N/A, scope and Gemini notes columns, Rules tab lists, the places allowed a 10), Future places (inline stage, grain, place type; order; promote to place), to-dos (place link, close on apply, priority, bulk actions), pass prompt version, reference-site auto count, Cards list inline, /admin/dna (domains, subdimensions, dimensions, insights), /admin/personas. Migrations 0037 to 0041.
+Not built: cell states (waiting on a choice between the two mockups), a to-do "owner" field (status already says who), moving content when merging places.

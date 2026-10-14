@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local place-row snapshot used by scripts (PLACE_ROWS_SNAPSHOT=1)
+/.cache/
