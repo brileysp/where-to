@@ -1,0 +1,1 @@
+ALTER TABLE "interest_meta" ADD COLUMN "short_name" text;

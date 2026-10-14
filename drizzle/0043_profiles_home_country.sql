@@ -1,0 +1,1 @@
+ALTER TABLE "profiles" ADD COLUMN "home_country" text;
