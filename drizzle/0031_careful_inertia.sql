@@ -1,0 +1,1 @@
+ALTER TABLE "interest_reference_sites" ADD COLUMN "ai_access" text DEFAULT 'ai' NOT NULL;

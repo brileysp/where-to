@@ -1,5 +1,5 @@
-import { GoogleGenAI, Type } from '@google/genai';
-import { generationOutputSchema, generationOutputSchemaFlatV2, normalizeFlatOutput, type GenerationOutput } from './schema';
+import { GoogleGenAI, Type, ThinkingLevel } from '@google/genai';
+import { generationOutputSchema, generationOutputSchemaFlatV2, generationOutputSchemaFlatV2Fit, generationOutputSchemaFlatV2Surf, generationOutputSchemaFlatV2Hike, normalizeFlatOutput, type GenerationOutput } from './schema';
 
 /**
  * The Gemini response schema, hand-written to mirror generationOutputSchema
@@ -92,7 +92,82 @@ const RESPONSE_SCHEMA_FLAT_V2 = {
   ],
 };
 
-export type SchemaShape = 'nested' | 'flat-v2';
+/** The flat v2 schema plus the three snorkeling & diving fit fields (diving_rating, snorkeling_rating, best_for). */
+const RESPONSE_SCHEMA_FLAT_V2_FIT = {
+  type: Type.OBJECT,
+  properties: {
+    ...RESPONSE_SCHEMA_FLAT_V2.properties,
+    diving_rating: { type: Type.NUMBER },
+    snorkeling_rating: { type: Type.NUMBER },
+    best_for: { type: Type.STRING, enum: ['both', 'diving', 'snorkeling'] },
+  },
+  required: [...RESPONSE_SCHEMA_FLAT_V2.required, 'diving_rating', 'snorkeling_rating', 'best_for'],
+};
+
+/** The flat v2 schema plus the two surfing fit fields (beginner_rating, advanced_rating). */
+const RESPONSE_SCHEMA_FLAT_V2_SURF = {
+  type: Type.OBJECT,
+  properties: {
+    ...RESPONSE_SCHEMA_FLAT_V2.properties,
+    beginner_rating: { type: Type.NUMBER },
+    advanced_rating: { type: Type.NUMBER },
+  },
+  required: [...RESPONSE_SCHEMA_FLAT_V2.required, 'beginner_rating', 'advanced_rating'],
+};
+
+/** The flat v2 schema plus the two hiking fit fields (day_hike_rating, trek_rating). */
+const RESPONSE_SCHEMA_FLAT_V2_HIKE = {
+  type: Type.OBJECT,
+  properties: {
+    ...RESPONSE_SCHEMA_FLAT_V2.properties,
+    day_hike_rating: { type: Type.NUMBER },
+    trek_rating: { type: Type.NUMBER },
+  },
+  required: [...RESPONSE_SCHEMA_FLAT_V2.required, 'day_hike_rating', 'trek_rating'],
+};
+
+const MONTH_KEYS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'] as const;
+/** Draft "labels" design: the overview, then for each month a blurb followed at once by a condition level (no numbers). */
+const RESPONSE_SCHEMA_LABELLED = {
+  type: Type.OBJECT,
+  properties: {
+    blurb_overall: { type: Type.STRING },
+    ...Object.fromEntries(MONTH_KEYS.flatMap((m) => [[`blurb_${m}`, { type: Type.STRING }], [`level_${m}`, { type: Type.STRING, enum: ['peak', 'strong', 'reduced', 'poor', 'disrupted', 'closed'] }]])),
+  },
+  required: ['blurb_overall', ...MONTH_KEYS.flatMap((m) => [`blurb_${m}`, `level_${m}`])],
+};
+
+export type SchemaShape = 'nested' | 'flat-v2' | 'flat-v2-fit' | 'flat-v2-surf' | 'flat-v2-hike';
+
+/**
+ * Hidden reasoning ("thinking") is billed at the output rate and was ~70-85% of every call's cost, so EVERY Gemini
+ * call must cap it. This is the one place the cap lives: generate() below always applies it, and the other Gemini
+ * scripts (audit, trim) take their config from thinkingConfigFor() too. A test (tests/gemini/thinking.test.ts)
+ * fails if any file calls generateContent without it, so a new script cannot forget. There is deliberately no way
+ * to turn the cap off; pass a different level instead. Default LOW works on both Pro and Flash models.
+ */
+export type ThinkingLevelName = 'minimal' | 'low' | 'medium' | 'high';
+export const DEFAULT_THINKING_LEVEL: ThinkingLevelName = 'low';
+export function resolveThinkingLevel(level?: string): ThinkingLevelName {
+  if (level === undefined || level === '') return DEFAULT_THINKING_LEVEL;
+  if (level === 'minimal' || level === 'low' || level === 'medium' || level === 'high') return level;
+  throw new Error(`Unknown thinking level "${level}". Use minimal, low, medium or high.`);
+}
+/**
+ * Anything above the default needs an explicit, deliberate opt-in (--allow-higher-thinking in the batch runner), so a
+ * stray --thinking=high cannot quietly multiply a run's cost.
+ */
+export function assertThinkingLevelAllowed(level: ThinkingLevelName, allowHigher: boolean): void {
+  const order: ThinkingLevelName[] = ['minimal', 'low', 'medium', 'high'];
+  if (order.indexOf(level) > order.indexOf(DEFAULT_THINKING_LEVEL) && !allowHigher) {
+    throw new Error(`Thinking level "${level}" is above the default (${DEFAULT_THINKING_LEVEL}) and costs several times more. Add --allow-higher-thinking only if that is intended.`);
+  }
+}
+export function thinkingConfigFor(level?: string) {
+  const resolved = resolveThinkingLevel(level);
+  const map = { minimal: ThinkingLevel.MINIMAL, low: ThinkingLevel.LOW, medium: ThinkingLevel.MEDIUM, high: ThinkingLevel.HIGH } as const;
+  return { thinkingLevel: map[resolved] };
+}
 
 export interface GeminiCallResult {
   raw: unknown; // the literal API response, for content_generations.raw_response
@@ -126,15 +201,17 @@ function getClient(): GoogleGenAI {
 export const MODEL = 'gemini-3.1-pro-preview';
 const TEMPERATURE = 0.2; // per user decision (2026-09-28) — see the plan doc's honest note on "deterministic": not bit-exact at any temperature, this is a deliberate small amount of headroom, not an accident
 
-export async function generate(prompt: string, schemaShape: SchemaShape = 'nested'): Promise<GeminiCallResult> {
+export async function generate(prompt: string, schemaShape: SchemaShape = 'nested', model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<GeminiCallResult> {
   const ai = getClient();
   const response = await ai.models.generateContent({
-    model: MODEL,
+    model,
     contents: prompt,
     config: {
       temperature: TEMPERATURE,
+      // Always capped (see thinkingConfigFor). Uncapped, Gemini 3 Flash ran ~63,000 thinking tokens per place and Pro ~4,000.
+      thinkingConfig: thinkingConfigFor(thinkingLevel),
       responseMimeType: 'application/json',
-      responseSchema: schemaShape === 'flat-v2' ? RESPONSE_SCHEMA_FLAT_V2 : RESPONSE_SCHEMA,
+      responseSchema: schemaShape === 'flat-v2-fit' ? RESPONSE_SCHEMA_FLAT_V2_FIT : schemaShape === 'flat-v2-surf' ? RESPONSE_SCHEMA_FLAT_V2_SURF : schemaShape === 'flat-v2-hike' ? RESPONSE_SCHEMA_FLAT_V2_HIKE : schemaShape === 'flat-v2' ? RESPONSE_SCHEMA_FLAT_V2 : RESPONSE_SCHEMA,
     },
   });
 
@@ -154,7 +231,8 @@ export async function generate(prompt: string, schemaShape: SchemaShape = 'neste
   // insert). This is still "the literal API response" in every way that
   // matters for the audit trail — the generated content and its metadata.
   const rawForStorage = {
-    candidates: response.candidates,
+    // Thought signatures are encrypted reasoning blobs (about 70% of the stored size) that nothing can read or replay, so they are not kept.
+    candidates: response.candidates?.map((c) => ({ ...c, content: c.content ? { ...c.content, parts: c.content.parts?.map(({ thoughtSignature: _sig, ...part }) => part) } : c.content })),
     usageMetadata: response.usageMetadata,
     modelVersion: response.modelVersion,
     promptFeedback: response.promptFeedback,
@@ -165,8 +243,8 @@ export async function generate(prompt: string, schemaShape: SchemaShape = 'neste
   let selfCheckIssues: string[] = [];
   try {
     const json = JSON.parse(text);
-    if (schemaShape === 'flat-v2') {
-      const result = generationOutputSchemaFlatV2.safeParse(json);
+    if (schemaShape === 'flat-v2' || schemaShape === 'flat-v2-fit' || schemaShape === 'flat-v2-surf' || schemaShape === 'flat-v2-hike') {
+      const result = (schemaShape === 'flat-v2-fit' ? generationOutputSchemaFlatV2Fit : schemaShape === 'flat-v2-surf' ? generationOutputSchemaFlatV2Surf : schemaShape === 'flat-v2-hike' ? generationOutputSchemaFlatV2Hike : generationOutputSchemaFlatV2).safeParse(json);
       if (result.success) {
         const normalized = normalizeFlatOutput(result.data);
         parsed = normalized.output;
@@ -186,5 +264,18 @@ export async function generate(prompt: string, schemaShape: SchemaShape = 'neste
     parseError = `JSON.parse failed: ${err instanceof Error ? err.message : String(err)}`;
   }
 
-  return { raw: rawForStorage, parsed, parseError, selfCheckIssues, tokensIn, tokensOut, model: MODEL, temperature: TEMPERATURE };
+  return { raw: rawForStorage, parsed, parseError, selfCheckIssues, tokensIn, tokensOut, model, temperature: TEMPERATURE };
+}
+
+/** Draft labels design (see condition-levels.ts): returns the raw JSON text plus token counts; capped on thinking like every call. */
+export async function generateLabelled(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ json: Record<string, string>; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: TEMPERATURE, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: RESPONSE_SCHEMA_LABELLED },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  return { json: JSON.parse(response.text ?? '{}'), tokensIn, tokensOut, model };
 }

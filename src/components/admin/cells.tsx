@@ -70,6 +70,45 @@ export function InlineTextCell({
   );
 }
 
+/** Like InlineTextCell, but clearing the box saves null (back to the automatic value, shown as the placeholder). */
+export function InlineOptionalTextCell({
+  ctx,
+  value,
+  setLocal,
+  width,
+  maxLength,
+  placeholder,
+}: { ctx: FieldContext; value: string | null; setLocal: (v: string | null) => void; width?: number; maxLength?: number; placeholder?: string }) {
+  const commit = useFieldEdit();
+  const [draft, setDraft] = useState(value ?? '');
+  return (
+    <div className="cell-inner">
+      <input
+        className="cost-input"
+        value={draft}
+        maxLength={maxLength}
+        placeholder={placeholder}
+        style={{ width }}
+        onChange={(e) => setDraft(e.target.value)}
+        onBlur={() => {
+          const trimmed = draft.trim();
+          const next = trimmed || null;
+          setDraft(trimmed);
+          commit<string | null>({
+            ...ctx,
+            oldValue: value,
+            newValue: next,
+            setLocal: (v) => {
+              setDraft(v ?? '');
+              setLocal(v);
+            },
+          });
+        }}
+      />
+    </div>
+  );
+}
+
 /** A <select> bound to a fixed option list, nullable via a leading "—" option. */
 export function InlineSelectCell({
   ctx,
@@ -109,6 +148,105 @@ export function InlineSelectCell({
   );
 }
 
+/** A number input, edited in place, committed on blur. Clearing the box saves null. */
+export function InlineNumberCell({
+  ctx,
+  value,
+  setLocal,
+  width = 90,
+  step = 'any',
+  min,
+  max,
+  placeholder,
+}: { ctx: FieldContext; value: number | null; setLocal: (v: number | null) => void; width?: number; step?: number | 'any'; min?: number; max?: number; placeholder?: string }) {
+  const commit = useFieldEdit();
+  const [draft, setDraft] = useState(value === null ? '' : String(value));
+  return (
+    <div className="cell-inner">
+      <input
+        className="cost-input num"
+        type="number"
+        value={draft}
+        step={step}
+        min={min}
+        max={max}
+        placeholder={placeholder}
+        style={{ width }}
+        onChange={(e) => setDraft(e.target.value)}
+        onBlur={() => {
+          const raw = draft.trim();
+          const n = raw === '' ? null : Number(raw);
+          if (n !== null && !Number.isFinite(n)) { setDraft(value === null ? '' : String(value)); return; }
+          commit<number | null>({ ...ctx, oldValue: value, newValue: n, setLocal: (v) => { setDraft(v === null ? '' : String(v)); setLocal(v); } });
+        }}
+      />
+    </div>
+  );
+}
+
+/** A <select> whose option values differ from their labels (for example a place id and its name). Nullable via a leading "—". */
+export function LabeledSelectCell({
+  ctx,
+  value,
+  options,
+  setLocal,
+  nullable = true,
+  nullLabel = '—',
+  width,
+}: { ctx: FieldContext; value: string | null; options: Array<{ value: string; label: string }>; setLocal: (v: string | null) => void; nullable?: boolean; nullLabel?: string; width?: number }) {
+  const commit = useFieldEdit();
+  const labelOf = (v: string | null) => (v === null ? nullLabel : options.find((o) => o.value === v)?.label ?? v);
+  return (
+    <div className="cell-inner">
+      <select
+        className="cell-select"
+        value={value ?? ''}
+        style={{ width }}
+        onChange={(e) => {
+          const next = e.target.value === '' ? null : e.target.value;
+          commit<string | null>({ ...ctx, oldValue: value, newValue: next, setLocal, toLabel: labelOf });
+        }}
+      >
+        {nullable && <option value="">{nullLabel}</option>}
+        {options.map((o) => (
+          <option key={o.value} value={o.value}>
+            {o.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+/** A yes / no / built-in choice for a boolean override: null means "use the built-in value". */
+export function TriStateCell({
+  ctx,
+  value,
+  trueLabel,
+  falseLabel,
+  nullLabel,
+  setLocal,
+}: { ctx: FieldContext; value: boolean | null; trueLabel: string; falseLabel: string; nullLabel: string; setLocal: (v: boolean | null) => void }) {
+  const commit = useFieldEdit();
+  const labelOf = (v: boolean | null) => (v === null ? nullLabel : v ? trueLabel : falseLabel);
+  return (
+    <div className="cell-inner">
+      <select
+        className="cell-select"
+        value={value === null ? '' : value ? 'y' : 'n'}
+        onChange={(e) => {
+          const next = e.target.value === '' ? null : e.target.value === 'y';
+          commit<boolean | null>({ ...ctx, oldValue: value, newValue: next, setLocal, toLabel: labelOf });
+        }}
+      >
+        <option value="">{nullLabel}</option>
+        <option value="y">{trueLabel}</option>
+        <option value="n">{falseLabel}</option>
+      </select>
+    </div>
+  );
+}
+
 const SEVERITY_BADGE_CLASS: Record<string, string> = { mild: 'badge-mild', moderate: 'badge-moderate', severe: 'badge-severe' };
 
 /** Same as InlineSelectCell, but displays the current value as a colored badge instead of the raw <select>, matching the mockup's Hot/Cold/Wet columns. */
@@ -135,7 +273,7 @@ export interface BandOption {
 }
 
 /** Multi-select chip cell with a checkbox popover, matching the mockup's Social Vibe / Physical Demands columns. */
-export function BandCell({ ctx, value, options, setLocal }: { ctx: FieldContext; value: string[]; options: BandOption[]; setLocal: (v: string[]) => void }) {
+export function BandCell({ ctx, value, options, setLocal, tall }: { ctx: FieldContext; value: string[]; options: BandOption[]; setLocal: (v: string[]) => void; /** A long option list: the popover gets a height limit and scrolls. */ tall?: boolean }) {
   const commit = useFieldEdit();
   const [open, setOpen] = useState(false);
 
@@ -172,7 +310,7 @@ export function BandCell({ ctx, value, options, setLocal }: { ctx: FieldContext;
       {open && (
         <>
           <div style={{ position: 'fixed', inset: 0, zIndex: 69 }} onClick={() => setOpen(false)} />
-          <div className="band-popover" style={{ top: '100%', left: 0 }}>
+          <div className="band-popover" style={{ top: '100%', left: 0, ...(tall ? { maxHeight: 340, overflowY: 'auto', width: 240 } : {}) }}>
             {options.map((o) => (
               <label className="band-opt" key={o.key}>
                 <input type="checkbox" checked={value.includes(o.key)} onChange={() => toggle(o.key)} />
@@ -585,7 +723,9 @@ export function MonthlyWeatherCell({
  * wording — all of this is view-only bookkeeping over the same flat
  * (string | null)[12] the old list edited; Apply's commit is unchanged.
  */
-const CAT_KEYS = ['1', '2', '3', '4'] as const;
+// Twelve ring colors (--ring-1..12 in admin-grid.css), chosen by search so any two are clearly different and neighbors differ most.
+// Every authored blurb gets its own color; gray is kept for a month with no blurb or a score of zero.
+const CAT_KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] as const;
 
 interface WeatherGroup {
   months: number[];
@@ -612,12 +752,10 @@ function buildWeatherGroups(draft: (string | null)[], forcedSplit: Set<number>):
     }
     groups[gi].months.push(i);
   }
-  // Only real reuse (2+ months, real text) earns a categorical color — a
-  // singleton is just a month that doesn't (yet) share text with anything,
-  // and cycling the palette onto it would fake a pattern that isn't there.
+  // Every authored blurb (shared or standalone) gets its own color, in order of appearance; blank months stay uncolored.
   let cursor = 0;
   groups.forEach((g) => {
-    g.colorKey = g.text && g.months.length > 1 ? CAT_KEYS[cursor++ % CAT_KEYS.length] : null;
+    g.colorKey = g.text ? CAT_KEYS[cursor++ % CAT_KEYS.length] : null;
   });
   return groups;
 }
@@ -684,6 +822,7 @@ export function SliderMonthlyWeatherCell({
   toPatchValue,
   renderTrigger,
   meta,
+  scores,
 }: {
   ctx: FieldContext;
   value: (string | null)[];
@@ -701,6 +840,8 @@ export function SliderMonthlyWeatherCell({
    * stamp). Every caller that omits this (Place Profile, for now) is
    * unaffected. */
   meta?: (ContentStamp | null)[];
+  /** The 12 monthly scores visitors see for this interest (curve, storm discount, overrides). Shown beside each blurb; a month at 0.0 is gray on the ring. */
+  scores?: number[];
 }) {
   const commit = useFieldEdit();
   const [open, setOpen] = useState(false);
@@ -795,7 +936,8 @@ export function SliderMonthlyWeatherCell({
                 <svg width="104" height="104" viewBox="0 0 104 104">
                   {Array.from({ length: 12 }, (_, i) => {
                     const g = groups.find((gr) => gr.months.includes(i))!;
-                    const fill = g.colorKey ? `var(--cat-${g.colorKey})` : g.text ? 'var(--border-strong)' : 'var(--border)';
+                    const isZero = !!scores && scores.length === 12 && g.text !== null && Math.abs(scores[i]) < 0.05;
+                    const fill = isZero ? 'var(--border-strong)' : g.colorKey ? `var(--ring-${g.colorKey})` : 'var(--border)';
                     const cx = 52, cy = 52, rOuter = 46, rInner = 29;
                     const a0 = ((i * 30 - 90) * Math.PI) / 180;
                     const a1 = (((i + 1) * 30 - 90) * Math.PI) / 180;
@@ -804,7 +946,18 @@ export function SliderMonthlyWeatherCell({
                     const x0i = cx + rInner * Math.cos(a0), y0i = cy + rInner * Math.sin(a0);
                     const x1i = cx + rInner * Math.cos(a1), y1i = cy + rInner * Math.sin(a1);
                     const d = `M ${x0i} ${y0i} L ${x0o} ${y0o} A ${rOuter} ${rOuter} 0 0 1 ${x1o} ${y1o} L ${x1i} ${y1i} A ${rInner} ${rInner} 0 0 0 ${x0i} ${y0i} Z`;
-                    return <path key={i} d={d} fill={fill} stroke="var(--bg-sunken)" strokeWidth={2} />;
+                    const lx = cx + 37.5 * Math.cos((((i + 0.5) * 30 - 90) * Math.PI) / 180);
+                    const ly = cy + 37.5 * Math.sin((((i + 0.5) * 30 - 90) * Math.PI) / 180);
+                    return (
+                      <g key={i}>
+                        <path d={d} fill={fill} stroke="var(--bg-sunken)" strokeWidth={2}>
+                          <title>{scores && scores.length === 12 ? `${MONTH_NAMES[i]}: ${scores[i].toFixed(1)}` : MONTH_NAMES[i]}</title>
+                        </path>
+                        <text x={lx} y={ly} textAnchor="middle" dominantBaseline="central" fontFamily="var(--font-plex-mono, monospace)" fontSize={8} fontWeight={700} fill="#fff" stroke="rgba(0,0,0,0.4)" strokeWidth={0.6} paintOrder="stroke" pointerEvents="none">
+                          {MONTH_NAMES[i].slice(0, 1)}
+                        </text>
+                      </g>
+                    );
                   })}
                   {Array.from({ length: 12 }, (_, i) => {
                     const cx = 52, cy = 52, rLabel = 56;
@@ -839,7 +992,7 @@ export function SliderMonthlyWeatherCell({
                   {reusedGroups.length > 0 ? (
                     reusedGroups.map((g) => (
                       <div className="mw-legend-row" key={g.months.join(',')}>
-                        <span className="mw-swatch" style={{ background: `var(--cat-${g.colorKey})` }} />
+                        <span className="mw-swatch" style={{ background: `var(--ring-${g.colorKey})` }} />
                         <span className="mw-range">{monthRanges(g.months).map(monthRangeLabel).join(', ')}</span>
                         <span className="mw-legend-count">{g.months.length} mo</span>
                       </div>
@@ -855,9 +1008,15 @@ export function SliderMonthlyWeatherCell({
               {groups.map((g) => {
                 const anchor = g.months[0];
                 const suggestion = suggestionFor(g);
+                const haveScores = !!scores && scores.length === 12;
+                const groupScores = haveScores ? g.months.map((m) => scores![m]) : [];
+                const allZero = haveScores && g.text !== null && groupScores.every((v) => Math.abs(v) < 0.05);
+                const lo = groupScores.length ? Math.min(...groupScores) : 0;
+                const hi = groupScores.length ? Math.max(...groupScores) : 0;
+                const scoreLabel = lo === hi ? lo.toFixed(1) : `${lo.toFixed(1)}–${hi.toFixed(1)}`;
                 const groupStyle = {
-                  '--mw-group-color': g.colorKey ? `var(--cat-${g.colorKey})` : g.text ? 'var(--border-strong)' : 'var(--border)',
-                  '--mw-group-soft': g.colorKey ? `var(--cat-${g.colorKey}-soft)` : 'var(--bg-sunken)',
+                  '--mw-group-color': allZero ? 'var(--border-strong)' : g.colorKey ? `var(--ring-${g.colorKey})` : 'var(--border)',
+                  '--mw-group-soft': allZero || !g.colorKey ? 'var(--bg-sunken)' : `color-mix(in srgb, var(--ring-${g.colorKey}) 14%, var(--bg-panel))`,
                 } as React.CSSProperties;
                 // Every month in this group shares its text (that's what
                 // makes it one group); show one badge when they also share
@@ -873,6 +1032,13 @@ export function SliderMonthlyWeatherCell({
                       <span className="mw-swatch" style={{ background: 'var(--mw-group-color)' }} />
                       <span className="mw-range">{monthRanges(g.months).map(monthRangeLabel).join(', ')}</span>
                       <span className="mw-count">{g.months.length}mo</span>
+                      {haveScores && g.text !== null && (
+                        <>
+                          <span className="mw-score" title="The score visitors see for this month, or the range for these months">{scoreLabel}</span>
+                          {hi - lo >= 0.05 && <span className="mw-diff">scores differ by {(hi - lo).toFixed(1)}</span>}
+                          {lo === hi && g.months.length > 1 && <span className="mw-diff">all {g.months.length} months</span>}
+                        </>
+                      )}
                       {meta && (
                         groupStamp ? (
                           <span title={formatStamp(groupStamp)} style={{ fontSize: 12 }}>
@@ -902,6 +1068,15 @@ export function SliderMonthlyWeatherCell({
                       </button>
                     </div>
                     <div className="mw-group-body">
+                      {haveScores && g.text !== null && g.months.length > 1 && hi - lo >= 0.05 && (
+                        <div className="mw-pills">
+                          {g.months.map((m) => (
+                            <span key={m} className="mw-pill">
+                              {MONTH_NAMES[m].slice(0, 3)} <b>{scores![m].toFixed(1)}</b>
+                            </span>
+                          ))}
+                        </div>
+                      )}
                       <textarea
                         ref={autoResize}
                         className="field-textarea month-input-textarea"
@@ -1253,6 +1428,8 @@ export interface TravelAdvisory {
   severity: 'moderate' | 'serious';
   text: string;
   lastReviewed: string; // ISO date, "YYYY-MM-DD"
+  sourceUrl?: string | null;
+  expiresOn?: string | null;
 }
 
 const ADVISORY_CATEGORY_LABEL: Record<TravelAdvisory['category'], string> = {
@@ -1384,15 +1561,37 @@ export function AdvisoryPanelCell({
                       onChange={(e) => updateEntry(idx, { text: e.target.value })}
                     />
                   </div>
-                  <div className="field-group">
-                    <label className="mini-label">Last reviewed</label>
+                  <div className="field-group" style={{ marginBottom: 10 }}>
+                    <label className="mini-label">Source link</label>
                     <input
                       className="field-input"
-                      type="date"
-                      style={{ maxWidth: 170 }}
-                      value={a.lastReviewed}
-                      onChange={(e) => updateEntry(idx, { lastReviewed: e.target.value })}
+                      placeholder="https://… where this advisory comes from"
+                      value={a.sourceUrl ?? ''}
+                      onChange={(e) => updateEntry(idx, { sourceUrl: e.target.value.trim() === '' ? null : e.target.value })}
                     />
+                  </div>
+                  <div className="field-group" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                    <div>
+                      <label className="mini-label">Last reviewed</label>
+                      <input
+                        className="field-input"
+                        type="date"
+                        style={{ maxWidth: 170 }}
+                        value={a.lastReviewed}
+                        onChange={(e) => updateEntry(idx, { lastReviewed: e.target.value })}
+                      />
+                    </div>
+                    <button type="button" className="btn" onClick={() => updateEntry(idx, { lastReviewed: todayISO() })}>Reviewed today</button>
+                    <div>
+                      <label className="mini-label">Re-check by (optional)</label>
+                      <input
+                        className="field-input"
+                        type="date"
+                        style={{ maxWidth: 170 }}
+                        value={a.expiresOn ?? ''}
+                        onChange={(e) => updateEntry(idx, { expiresOn: e.target.value === '' ? null : e.target.value })}
+                      />
+                    </div>
                   </div>
                 </div>
               ))}

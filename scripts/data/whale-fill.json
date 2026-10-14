@@ -1,0 +1,731 @@
+{
+"acadia": {
+"humpback": "Humpback whale (likely, Jun–Oct)",
+"fin": "Fin whale (likely, Jun–Oct)",
+"minke": "Minke whale (likely, Jun–Oct)",
+"dolphins": "Atlantic white-sided dolphin (possible, Jul–Sep), Harbor porpoise (possible, Jun–Sep)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"algarve": {
+"fin": "Fin whale (possible, Mar–May)",
+"humpback": "Humpback whale (unlikely, Mar–May)",
+"minke": "Minke whale (possible, year-round)",
+"dolphins": "Common dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"amalfi": {
+"fin": "Fin whale (unlikely, Jun–Sep)",
+"dolphins": "Striped dolphin (likely, May–Oct), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"andalucia": {
+"sperm": "Sperm whale (likely, Apr–Oct)",
+"orca": "Orca (possible, Jun–Sep)",
+"fin": "Fin whale (possible, Jun–Sep)",
+"otherWhales": "Long-finned pilot whale (likely, year-round)",
+"dolphins": "Common dolphin (likely, year-round), Striped dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"antarctica": {
+"humpback": "Humpback whale (guaranteed, Jan–Mar)",
+"minke": "Antarctic minke whale (likely, Nov–Mar)",
+"orca": "Orca (possible, Nov–Mar)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"aruba": {
+"humpback": "Humpback whale (unlikely, Dec–Apr)",
+"dolphins": "Bottlenose dolphin (possible, year-round)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"azores": {
+"sperm": "Sperm whale (guaranteed, year-round)",
+"blue": "Blue whale (possible, Apr–Jun)",
+"fin": "Fin whale (likely, Apr–Jun)",
+"otherWhales": "Sei whale (possible, Jul–Sep)",
+"dolphins": "Common dolphin (guaranteed, year-round), Bottlenose dolphin (likely, year-round), Atlantic spotted dolphin (likely, May–Oct), Risso's dolphin (possible, Apr–Jun)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"bahamas": {
+"sperm": "Sperm whale (unlikely, year-round)",
+"dolphins": "Atlantic spotted dolphin (likely, Apr–Sep), Bottlenose dolphin (likely, year-round)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"bali": {
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"barbados": {
+"humpback": "Humpback whale (possible, Jan–Mar)",
+"watchShore": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"barcelona": {
+"fin": "Fin whale (unlikely, Mar–May)",
+"dolphins": "Bottlenose dolphin (possible, year-round), Striped dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"basque-country": {
+"fin": "Fin whale (possible, Jun–Oct)",
+"sperm": "Sperm whale (unlikely, Jun–Oct)",
+"otherWhales": "Long-finned pilot whale (possible, Jun–Oct)",
+"dolphins": "Common dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"belfast-giants-causeway": {
+"minke": "Minke whale (possible, Jun–Sep)",
+"dolphins": "Harbor porpoise (likely, year-round), Common dolphin (possible, Jun–Sep)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"belize": {
+"humpback": "Humpback whale (unlikely, Dec–Mar)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"big-island": {
+"humpback": "Humpback whale (likely, Dec–Apr)",
+"otherWhales": "Short-finned pilot whale (possible, year-round)",
+"dolphins": "Spinner dolphin (guaranteed, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"borabora": {
+"humpback": "Humpback whale (likely, Jul–Oct)",
+"dolphins": "Spinner dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"swimAllowed": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"bordeaux": {
+"fin": "Fin whale (unlikely, Jul–Sep)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"borneo": {
+"dolphins": "Irrawaddy dolphin (possible, year-round), Indo-Pacific humpback dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"canaries": {
+"otherWhales": "Short-finned pilot whale (guaranteed, year-round), Blainville's beaked whale (possible, year-round)",
+"dolphins": "Bottlenose dolphin (guaranteed, year-round), Atlantic spotted dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"cape-cod-islands": {
+"humpback": "Humpback whale (likely, Apr–Oct)",
+"fin": "Fin whale (likely, Apr–Oct)",
+"minke": "Minke whale (likely, Apr–Oct)",
+"right": "North Atlantic right whale (possible, Feb–May)",
+"dolphins": "Atlantic white-sided dolphin (likely, Apr–Oct)",
+"boatStyle": "large",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"cape-town": {
+"right": "Southern right whale (guaranteed, Jul–Nov)",
+"humpback": "Humpback whale (possible, Jun–Nov)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Heaviside's dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"churchill": {
+"otherWhales": "Beluga (guaranteed, Jul–Aug)",
+"boatStyle": "mixed",
+"swimAllowed": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"copenhagen": {
+"dolphins": "Harbor porpoise (possible, year-round)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"cornwall": {
+"minke": "Minke whale (likely, May–Oct)",
+"fin": "Fin whale (unlikely, Jul–Sep)",
+"dolphins": "Common dolphin (likely, year-round), Harbor porpoise (likely, year-round), Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"costa-rica": {
+"humpback": "Humpback whale (likely, Dec–Mar and Jul–Oct)",
+"otherWhales": "Short-finned pilot whale (possible, year-round)",
+"dolphins": "Spotted dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"croatia": {
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"edinburgh": {
+"dolphins": "Harbor porpoise (possible, year-round), Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"egypt": {
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"swimAllowed": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"falklands": {
+"right": "Southern right whale (possible, Oct–Mar)",
+"orca": "Orca (possible, Oct–Mar)",
+"otherWhales": "Sei whale (possible, Dec–Mar)",
+"dolphins": "Commerson's dolphin (likely, Oct–Mar), Peale's dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"faroe-islands": {
+"orca": "Orca (unlikely, Jun–Sep)",
+"otherWhales": "Long-finned pilot whale (possible, Jun–Sep)",
+"dolphins": "White-beaked dolphin (possible, May–Sep), Harbor porpoise (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"fiji": {
+"humpback": "Humpback whale (possible, Jul–Oct)",
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"fjords": {
+"orca": "Orca (possible, Nov–Jan)",
+"humpback": "Humpback whale (possible, Nov–Jan)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"galapagos": {
+"humpback": "Humpback whale (possible, Jun–Sep)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"gbr": {
+"humpback": "Humpback whale (likely, Jul–Sep)",
+"minke": "Dwarf minke whale (likely, Jun–Jul)",
+"boatStyle": "mixed",
+"swimAllowed": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"ghana": {
+"humpback": "Humpback whale (unlikely, Jul–Oct)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"greenland": {
+"humpback": "Humpback whale (likely, Jun–Sep)",
+"minke": "Minke whale (possible, Jun–Sep)",
+"fin": "Fin whale (possible, Jul–Sep)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"havana": {
+"humpback": "Humpback whale (unlikely, Jan–Mar)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"hokkaido": {
+"sperm": "Sperm whale (likely, Jun–Oct)",
+"orca": "Orca (likely, Apr–Jun)",
+"otherWhales": "Baird's beaked whale (possible, Jun–Sep)",
+"boatStyle": "midsize",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"hongkong": {
+"dolphins": "Indo-Pacific humpback dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"iceland": {
+"minke": "Minke whale (likely, Apr–Oct)",
+"humpback": "Humpback whale (likely, Apr–Oct)",
+"blue": "Blue whale (unlikely, Jun–Jul)",
+"orca": "Orca (possible, Mar–Jun)",
+"dolphins": "White-beaked dolphin (likely, Apr–Oct), Harbor porpoise (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"ireland": {
+"fin": "Fin whale (likely, Aug–Dec)",
+"humpback": "Humpback whale (possible, Aug–Jan)",
+"minke": "Minke whale (likely, Jun–Oct)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Common dolphin (likely, year-round), Harbor porpoise (likely, year-round)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"istanbul": {
+"dolphins": "Bottlenose dolphin (likely, year-round), Harbor porpoise (likely, year-round), Common dolphin (possible, year-round)",
+"watchShore": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"jamaica": {
+"humpback": "Humpback whale (unlikely, Jan–Mar)",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"komodo": {
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"lisbon": {
+"fin": "Fin whale (possible, Mar–Jun)",
+"minke": "Minke whale (possible, Mar–Jun)",
+"dolphins": "Common dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"lofoten": {
+"sperm": "Sperm whale (possible, May–Sep)",
+"orca": "Orca (possible, Oct–Jan)",
+"humpback": "Humpback whale (possible, Oct–Jan)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"los-cabos": {
+"humpback": "Humpback whale (guaranteed, Dec–Apr)",
+"gray": "Gray whale (unlikely, Jan–Mar)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Common dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"madagascar": {
+"humpback": "Humpback whale (guaranteed, Jul–Sep)",
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"madeira": {
+"sperm": "Sperm whale (likely, Apr–Oct)",
+"fin": "Fin whale (possible, Mar–Jun)",
+"otherWhales": "Short-finned pilot whale (likely, year-round), Bryde's whale (possible, Jun–Oct), Sei whale (possible, Mar–Jun)",
+"dolphins": "Bottlenose dolphin (guaranteed, year-round), Atlantic spotted dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"maldives": {
+"sperm": "Sperm whale (possible, year-round)",
+"dolphins": "Spinner dolphin (guaranteed, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"mallorca": {
+"dolphins": "Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"marlborough-abel-tasman": {
+"sperm": "Sperm whale at Kaikōura (guaranteed, year-round)",
+"humpback": "Humpback whale (possible, Jun–Jul and Oct–Nov)",
+"dolphins": "Dusky dolphin (likely, year-round), Hector's dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"maui": {
+"humpback": "Humpback whale (guaranteed, Dec–Apr)",
+"otherWhales": "Short-finned pilot whale (possible, year-round)",
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"mauritius": {
+"sperm": "Sperm whale (likely, year-round)",
+"humpback": "Humpback whale (possible, Jul–Oct)",
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"milford-sound-fiordland": {
+"dolphins": "Bottlenose dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"monterey-big-sur": {
+"gray": "Gray whale (likely, Dec–May)",
+"humpback": "Humpback whale (likely, Apr–Dec)",
+"blue": "Blue whale (possible, Jun–Oct)",
+"orca": "Orca (possible, Apr–May)",
+"dolphins": "Risso's dolphin (likely, year-round), Pacific white-sided dolphin (likely, year-round), Common dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"namibia": {
+"humpback": "Humpback whale (possible, Jun–Nov)",
+"right": "Southern right whale (possible, Jun–Nov)",
+"dolphins": "Heaviside's dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"nicaragua": {
+"humpback": "Humpback whale (possible, Dec–Mar)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"nice-riviera": {
+"fin": "Fin whale (possible, Jun–Sep)",
+"sperm": "Sperm whale (possible, Jun–Sep)",
+"dolphins": "Striped dolphin (likely, year-round), Bottlenose dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"north-island": {
+"otherWhales": "Bryde's whale (likely, year-round)",
+"orca": "Orca (possible, year-round)",
+"humpback": "Humpback whale (possible, Jun–Aug and Oct–Nov)",
+"dolphins": "Common dolphin (guaranteed, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"swimAllowed": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"nova-scotia": {
+"humpback": "Humpback whale (likely, Jun–Oct)",
+"minke": "Minke whale (likely, Jun–Oct)",
+"fin": "Fin whale (possible, Jul–Oct)",
+"right": "North Atlantic right whale (unlikely, Jul–Sep)",
+"dolphins": "Harbor porpoise (likely, Jun–Oct), Atlantic white-sided dolphin (possible, Jul–Sep)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"nyc": {
+"humpback": "Humpback whale (likely, Jun–Nov)",
+"minke": "Minke whale (possible, Aug–Oct)",
+"boatStyle": "large",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"oaxaca": {
+"humpback": "Humpback whale (likely, Dec–Mar)",
+"dolphins": "Spotted dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"okinawa": {
+"humpback": "Humpback whale (likely, Jan–Mar)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"olympic": {
+"gray": "Gray whale (possible, Mar–May and Oct–Dec)",
+"watchShore": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"palau": {
+"dolphins": "Spinner dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"panama": {
+"humpback": "Humpback whale (likely, Jul–Oct and Jan–Mar)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"provence": {
+"fin": "Fin whale (possible, Jun–Sep)",
+"sperm": "Sperm whale (unlikely, Jun–Sep)",
+"dolphins": "Striped dolphin (likely, year-round), Bottlenose dolphin (possible, year-round)",
+"boatStyle": "midsize",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"puerto-rico": {
+"humpback": "Humpback whale (likely, Jan–Mar)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"puglia": {
+"dolphins": "Bottlenose dolphin (possible, year-round), Striped dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"punta-cana": {
+"humpback": "Humpback whale (guaranteed, Jan–Mar)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"watchShore": true,
+"swimAllowed": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"quebec-city": {
+"otherWhales": "Beluga (likely, May–Oct)",
+"minke": "Minke whale (likely, May–Oct)",
+"fin": "Fin whale (likely, Jun–Oct)",
+"blue": "Blue whale (possible, Jul–Oct)",
+"humpback": "Humpback whale (likely, Jun–Oct)",
+"dolphins": "Harbor porpoise (likely, Jun–Oct)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"rajaampat": {
+"otherWhales": "Bryde's whale (unlikely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"redwood": {
+"gray": "Gray whale (possible, Dec–Jan and Mar–May)",
+"watchShore": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"rio": {
+"humpback": "Humpback whale (possible, Jul–Oct)",
+"dolphins": "Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"santorini": {
+"dolphins": "Striped dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"sardinia": {
+"fin": "Fin whale (possible, May–Sep)",
+"sperm": "Sperm whale (possible, Jun–Sep)",
+"otherWhales": "Cuvier's beaked whale (possible, Jun–Sep)",
+"dolphins": "Striped dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"scottish-highlands-skye": {
+"minke": "Minke whale (likely, May–Sep)",
+"orca": "Orca (possible, May–Aug)",
+"humpback": "Humpback whale (possible, Jun–Sep)",
+"dolphins": "Common dolphin (likely, May–Sep), Harbor porpoise (likely, year-round), Risso's dolphin (possible, Jun–Sep)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"seychelles": {
+"humpback": "Humpback whale (unlikely, Aug–Oct)",
+"dolphins": "Spinner dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"sicily": {
+"sperm": "Sperm whale (possible, Jun–Sep)",
+"fin": "Fin whale (possible, Jun–Sep)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Striped dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"snowdonia": {
+"minke": "Minke whale (possible, Jun–Sep)",
+"dolphins": "Bottlenose dolphin (likely, Apr–Oct), Harbor porpoise (likely, Apr–Oct), Risso's dolphin (possible, Jun–Oct)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"southeast-alaska": {
+"humpback": "Humpback whale (guaranteed, May–Sep)",
+"orca": "Orca (likely, May–Sep)",
+"dolphins": "Dall's porpoise (likely, May–Sep), Harbor porpoise (likely, May–Sep)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"srilanka": {
+"blue": "Blue whale (likely, Nov–Apr)",
+"sperm": "Sperm whale (likely, Nov–Apr)",
+"otherWhales": "Bryde's whale (possible, year-round)",
+"dolphins": "Spinner dolphin (likely, Nov–Apr), Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "strong",
+"drawSourceChecked": false
+},
+"st-andrews-fife": {
+"minke": "Minke whale (unlikely, Jun–Sep)",
+"dolphins": "Bottlenose dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"svalbard": {
+"blue": "Blue whale (possible, Jun–Aug)",
+"fin": "Fin whale (possible, Jun–Aug)",
+"humpback": "Humpback whale (possible, Jun–Sep)",
+"minke": "Minke whale (possible, Jun–Sep)",
+"otherWhales": "Beluga (possible, Jul–Aug)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"sydney": {
+"humpback": "Humpback whale (guaranteed, Jun–Nov)",
+"right": "Southern right whale (possible, Jul–Sep)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Common dolphin (possible, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"taiwan": {
+"sperm": "Sperm whale (possible, Apr–Oct)",
+"otherWhales": "Short-finned pilot whale (possible, Apr–Oct)",
+"dolphins": "Risso's dolphin (likely, Apr–Oct), Spinner dolphin (likely, Apr–Oct), Pantropical spotted dolphin (likely, Apr–Oct)",
+"boatStyle": "midsize",
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"tanzania": {
+"humpback": "Humpback whale (possible, Jul–Oct)",
+"dolphins": "Bottlenose dolphin (likely, year-round), Spinner dolphin (likely, year-round), Indo-Pacific humpback dolphin (likely, year-round)",
+"boatStyle": "mixed",
+"swimAllowed": true,
+"draw": "weak",
+"drawSourceChecked": false
+},
+"tasmania": {
+"humpback": "Humpback whale (likely, May–Jul and Sep–Nov)",
+"right": "Southern right whale (possible, Jun–Oct)",
+"dolphins": "Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"watchShore": true,
+"draw": "moderate",
+"drawSourceChecked": false
+},
+"tierra-del-fuego": {
+"humpback": "Humpback whale (possible, Dec–Mar)",
+"dolphins": "Commerson's dolphin (likely, Nov–Mar), Peale's dolphin (likely, Nov–Mar)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"turks-caicos": {
+"humpback": "Humpback whale (likely, Jan–Mar)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"tuscany": {
+"fin": "Fin whale (possible, Jun–Sep)",
+"sperm": "Sperm whale (possible, Jun–Sep)",
+"dolphins": "Striped dolphin (likely, year-round), Bottlenose dolphin (likely, year-round)",
+"boatStyle": "midsize",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"vancouver-island": {
+"orca": "Orca (guaranteed, May–Oct)",
+"humpback": "Humpback whale (likely, May–Oct)",
+"gray": "Gray whale (likely, Mar–Oct)",
+"minke": "Minke whale (possible, Jun–Sep)",
+"dolphins": "Pacific white-sided dolphin (likely, May–Oct), Dall's porpoise (likely, year-round), Harbor porpoise (likely, year-round)",
+"boatStyle": "mixed",
+"watchShore": true,
+"draw": "strong",
+"drawSourceChecked": false
+},
+"vietnam": {
+"otherWhales": "Bryde's whale (unlikely, Jun–Aug)",
+"boatStyle": "mixed",
+"draw": "weak",
+"drawSourceChecked": false
+},
+"whistler": {
+"orca": "Orca (possible, May–Oct)",
+"humpback": "Humpback whale (possible, Jun–Oct)",
+"minke": "Minke whale (possible, Jun–Sep)",
+"dolphins": "Harbor porpoise (likely, year-round), Dall's porpoise (likely, year-round)",
+"boatStyle": "mixed",
+"draw": "moderate",
+"drawSourceChecked": false
+}
+}

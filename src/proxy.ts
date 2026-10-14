@@ -51,7 +51,8 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) {
+  // HEAD requests (health checks, link previews, uptime probes) never use an account, so they must not create one.
+  if (!user && request.method !== 'HEAD') {
     await supabase.auth.signInAnonymously();
   }
 

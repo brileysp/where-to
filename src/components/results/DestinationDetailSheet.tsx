@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { usePlaceDetail } from './usePlaceDetail';
 import { StampBadge } from './StampBadge';
 import { BookmarkIcon } from './BookmarkIcon';
 import { CheckIcon } from './CheckIcon';
@@ -29,6 +30,7 @@ export function DestinationDetailSheet({
   dest,
   weights,
   emojiOverrides,
+  shortNames,
   bands,
   selectedStyles,
   month,
@@ -42,6 +44,8 @@ export function DestinationDetailSheet({
   weights: Record<string, number>;
   /** Admin-set emoji overrides, keyed by slider key — falls back to the slider's own code-defined icon. */
   emojiOverrides: Record<string, string>;
+  /** Admin-set pill names, keyed by slider key — falls back to the automatic short name. */
+  shortNames: Record<string, string>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   /** The app's search month (1-12). Never changed from in here: the sheet only previews other months. */
@@ -52,6 +56,9 @@ export function DestinationDetailSheet({
   onToggleFavorited: () => void;
   onClose: () => void;
 }) {
+  // The ranked list carries scores only; this place's text (overview, monthly blurbs, cost notes) is fetched now and merged in.
+  const { detail, loading: detailLoading } = usePlaceDetail(dest.id);
+  const withText = useMemo(() => (detail ? { ...dest, ...detail } : dest), [dest, detail]);
   const [tab, setTab] = useState<DetailTab>('foryou');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   // The month being previewed inside this sheet. It starts at the search month and moves with the
@@ -180,6 +187,7 @@ export function DestinationDetailSheet({
           <button type="button" className={`detail-tab-btn${tab === 'costs' ? ' active' : ''}`} onClick={() => setTab('costs')}>
             Costs
           </button>
+          {detailLoading && <span aria-live="polite" style={{ marginLeft: 'auto', alignSelf: 'center', fontSize: 12, opacity: 0.55 }}>Loading details…</span>}
         </div>
 
         <div className="detail-sheet-body" ref={bodyRef}>
@@ -189,9 +197,10 @@ export function DestinationDetailSheet({
               panel is visible instead of resizing the whole sheet. */}
           <div className={`detail-tab-panel${tab === 'foryou' ? ' active' : ''}`} aria-hidden={tab !== 'foryou'}>
             <ForYouTab
-              dest={dest}
+              dest={withText}
               weights={weights}
               emojiOverrides={emojiOverrides}
+              shortNames={shortNames}
               bands={bands}
               selectedStyles={selectedStyles}
               previewIdx={previewIdx}
@@ -201,10 +210,10 @@ export function DestinationDetailSheet({
             />
           </div>
           <div className={`detail-tab-panel${tab === 'about' ? ' active' : ''}`} aria-hidden={tab !== 'about'}>
-            <AboutTab dest={dest} generalMonthIdx={previewIdx} onSelectGeneralMonth={setPreviewIdx} />
+            <AboutTab dest={withText} generalMonthIdx={previewIdx} onSelectGeneralMonth={setPreviewIdx} />
           </div>
           <div className={`detail-tab-panel${tab === 'costs' ? ' active' : ''}`} aria-hidden={tab !== 'costs'}>
-            <CostsTab dest={dest} />
+            <CostsTab dest={withText} />
           </div>
         </div>
       </div>

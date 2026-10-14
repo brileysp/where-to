@@ -49,7 +49,7 @@ export const SLIDERS: Slider[] = [
   // at 0.4 it was tied with golf and fishing.
   { key: 'skiingSnowboarding', label: 'Skiing & Snowboarding', icon: '⛷️', group: 'Sports & Recreation', formula: 'snow', audienceTier: 'popular' },
   { key: 'surfing', label: 'Surfing', icon: '🏄', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
-  { key: 'diving', label: 'Diving, Snorkeling & Freediving', icon: '🤿', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
+  { key: 'diving', label: 'Snorkeling & Diving', icon: '🤿', group: 'Sports & Recreation', formula: 'swim', audienceTier: 'enthusiast' },
   // Deliberately separate from 'surfing' — wind-driven (a good wind day,
   // not a good swell day) rather than wave-driven, and drew on a distinct
   // set of destinations when surfing's own base scores/events were
@@ -127,6 +127,12 @@ export const SLIDERS: Slider[] = [
 // deliberately keep importing SLIDERS directly, not this, so a hidden
 // interest's stored data and weighting are completely unaffected).
 export const VISIBLE_SLIDERS = SLIDERS.filter((s) => !s.hidden);
+
+/**
+ * Bumped whenever applyOverrides (overrides.ts) changes the interest list, so anything that cached something derived from SLIDERS (the
+ * set of hidden keys, say) knows to rebuild it.
+ */
+export const sliderState = { version: 0 };
 
 export const SLIDER_GROUPS = [
   'Nature & Wildlife',

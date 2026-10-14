@@ -31,7 +31,7 @@ month, max 20; targets: coarsePct under ~30%, top20distinct at least 14).
 | windSports | 42 | 95% / 7.6 | 37% / 15.9 | **done** |
 | surfing | 89 | 91% / 5.4 | | **todo** |
 | hotSprings | 27 | 90% / 7.3 | | **todo** |
-| birding | 200 | 90% / 5.3 | | **todo** (28 places already have full overrides) |
+| birding | 200 | 90% / 5.3 | 13% / 16.3 | **done** (regenerated through the Gemini pipeline, whose decimalizer runs after every generation; checked 2026-10-09) |
 | beachesSwimming | 129 | 87% / 5.9 | | **todo** |
 | diving | 98 | 85% / 7.8 | | **todo** |
 

@@ -1,0 +1,498 @@
+{
+ "santorini": {
+  "rating": 4,
+  "basis": "Aegean sailing and ferries; summer meltemi winds can whip it up"
+ },
+ "london": {
+  "rating": 1,
+  "basis": "River and estuary boats"
+ },
+ "buenosaires": {
+  "rating": 3,
+  "basis": "Wide, windy estuary; ferries and day boats"
+ },
+ "amalfi": {
+  "rating": 3,
+  "basis": "Sheltered gulf, short boat trips"
+ },
+ "athens": {
+  "rating": 3,
+  "basis": "Saronic Gulf ferries, mostly sheltered"
+ },
+ "southeast-alaska": {
+  "rating": 2,
+  "basis": "Inside Passage waters are sheltered"
+ },
+ "vietnam": {
+  "rating": 4,
+  "basis": "Open coast boats; monsoon and typhoon chop"
+ },
+ "andalucia": {
+  "rating": 5,
+  "basis": "Strait of Gibraltar currents and wind; fast small boats"
+ },
+ "lofoten": {
+  "rating": 6,
+  "basis": "Open Norwegian Sea, small and fast boats"
+ },
+ "havana": {
+  "rating": 3,
+  "basis": "Straits of Florida, general trips on calm days"
+ },
+ "douro-valley-porto": {
+  "rating": 5,
+  "basis": "Open Atlantic swell off Porto"
+ },
+ "komodo": {
+  "rating": 5,
+  "basis": "Strong currents and chop between islands"
+ },
+ "falklands": {
+  "rating": 6,
+  "basis": "South Atlantic wind and swell"
+ },
+ "iceland": {
+  "rating": 6,
+  "basis": "Húsavík tours: bay can turn rough, some operators warn against it for people prone to seasickness"
+ },
+ "edinburgh": {
+  "rating": 3,
+  "basis": "Firth of Forth, short trips"
+ },
+ "charleston-savannah": {
+  "rating": 2,
+  "basis": "Harbor and estuary boats"
+ },
+ "lisbon": {
+  "rating": 4,
+  "basis": "Tagus estuary and Atlantic coast, moderate"
+ },
+ "snowdonia": {
+  "rating": 4,
+  "basis": "Cardigan Bay small boats, moderate swell"
+ },
+ "rome": {
+  "rating": 3,
+  "basis": "Short Tyrrhenian trips from Ostia"
+ },
+ "greenland": {
+  "rating": 5,
+  "basis": "Fjords calm, open water between can be lumpy"
+ },
+ "guatemala": {
+  "rating": 6,
+  "basis": "Pacific surf launches and swell"
+ },
+ "rajaampat": {
+  "rating": 3,
+  "basis": "Mostly sheltered island channels"
+ },
+ "antarctica": {
+  "rating": 9,
+  "basis": "Drake Passage crossing: usual swell 3 to 4 metres, up to 7 to 8 in bad weather"
+ },
+ "borneo": {
+  "rating": 2,
+  "basis": "River boats on the Kinabatangan"
+ },
+ "bahamas": {
+  "rating": 3,
+  "basis": "Calm shallow banks, rougher in the Gulf Stream"
+ },
+ "algarve": {
+  "rating": 4,
+  "basis": "Atlantic coast, moderate"
+ },
+ "madagascar": {
+  "rating": 5,
+  "basis": "Open Indian Ocean swell, reef passes"
+ },
+ "fjords": {
+  "rating": 2,
+  "basis": "Fjord cruising is sheltered"
+ },
+ "istanbul": {
+  "rating": 2,
+  "basis": "Bosphorus ferries, steady"
+ },
+ "ghana": {
+  "rating": 5,
+  "basis": "Open Atlantic, small boats"
+ },
+ "everglades": {
+  "rating": 2,
+  "basis": "Shallow bay and mangrove waters"
+ },
+ "tokyo-kyoto": {
+  "rating": 7,
+  "basis": "Choshi trips run about 30 km out in the open Pacific"
+ },
+ "redwood": {
+  "rating": 5,
+  "basis": "Open Pacific off northern California, if you go by boat"
+ },
+ "hokkaido": {
+  "rating": 5,
+  "basis": "Nemuro Strait, cold and often lumpy"
+ },
+ "whistler": {
+  "rating": 3,
+  "basis": "Salish Sea is sheltered"
+ },
+ "mallorca": {
+  "rating": 3,
+  "basis": "Sheltered north-coast bays in summer"
+ },
+ "belize": {
+  "rating": 3,
+  "basis": "Inside the barrier reef is calm; outside can be lumpy"
+ },
+ "angkor": {
+  "rating": 3,
+  "basis": "Gulf of Thailand, shallow and mostly calm in the dry season"
+ },
+ "costa-rica": {
+  "rating": 5,
+  "basis": "Pacific swell, open boats"
+ },
+ "chilean-lake-district": {
+  "rating": 4,
+  "basis": "Reloncaví Sound and Gulf of Ancud, can be windy"
+ },
+ "monterey-big-sur": {
+  "rating": 7,
+  "basis": "Monterey Bay trips are known for chop, and the operators advise motion-sickness medicine"
+ },
+ "aruba": {
+  "rating": 3,
+  "basis": "Leeward side is calm"
+ },
+ "namibia": {
+  "rating": 3,
+  "basis": "Walvis Bay catamarans, mostly calm in the lagoon"
+ },
+ "copenhagen": {
+  "rating": 3,
+  "basis": "Øresund strait, short summer trips"
+ },
+ "new-orleans": {
+  "rating": 2,
+  "basis": "Lake and bayou boats"
+ },
+ "nicaragua": {
+  "rating": 5,
+  "basis": "Pacific swell off San Juan del Sur"
+ },
+ "north-island": {
+  "rating": 4,
+  "basis": "Hauraki Gulf, moderate"
+ },
+ "bagan": {
+  "rating": 3,
+  "basis": "Andaman and Bay of Bengal coast, calm in the dry season"
+ },
+ "nova-scotia": {
+  "rating": 5,
+  "basis": "Bay of Fundy: tides and chop; the tourism board advises precautions"
+ },
+ "taiwan": {
+  "rating": 5,
+  "basis": "Pacific swell off the east coast"
+ },
+ "oaxaca": {
+  "rating": 5,
+  "basis": "Pacific swell and surf launches"
+ },
+ "belfast-giants-causeway": {
+  "rating": 4,
+  "basis": "North Channel and Atlantic coast, moderate"
+ },
+ "okinawa": {
+  "rating": 6,
+  "basis": "Kerama crossing in winter northerlies"
+ },
+ "olympic": {
+  "rating": 4,
+  "basis": "Strait of Juan de Fuca, moderate with some swell"
+ },
+ "pakistan": {
+  "rating": 4,
+  "basis": "Arabian Sea, calm in winter"
+ },
+ "tuscany": {
+  "rating": 3,
+  "basis": "Pelagos day trips from Viareggio, moderate"
+ },
+ "panama": {
+  "rating": 4,
+  "basis": "Pacific side, open boats"
+ },
+ "thailand": {
+  "rating": 3,
+  "basis": "Andaman Sea, calm in the dry season"
+ },
+ "papua-new-guinea": {
+  "rating": 3,
+  "basis": "Bays are mostly sheltered"
+ },
+ "colombian-caribbean": {
+  "rating": 4,
+  "basis": "Caribbean trade-wind chop"
+ },
+ "rio": {
+  "rating": 5,
+  "basis": "Atlantic swell off Cagarras; Sepetiba Bay is calm"
+ },
+ "rivieramaya": {
+  "rating": 3,
+  "basis": "Caribbean reef-side trips, mostly calm mornings"
+ },
+ "sardinia": {
+  "rating": 4,
+  "basis": "Mistral can raise the sea"
+ },
+ "barbados": {
+  "rating": 3,
+  "basis": "West coast catamarans are calm"
+ },
+ "scottish-highlands-skye": {
+  "rating": 4,
+  "basis": "Minch, moderate with fast boats"
+ },
+ "ireland": {
+  "rating": 5,
+  "basis": "Atlantic swell off Kerry and Cork"
+ },
+ "seychelles": {
+  "rating": 3,
+  "basis": "Mostly inside the islands"
+ },
+ "sicily": {
+  "rating": 4,
+  "basis": "Strait of Messina and Aeolian crossings, moderate"
+ },
+ "singapore": {
+  "rating": 2,
+  "basis": "Singapore Strait is crowded and sheltered"
+ },
+ "churchill": {
+  "rating": 2,
+  "basis": "Churchill River estuary, calm for small boats"
+ },
+ "tasmania": {
+  "rating": 6,
+  "basis": "Southern Ocean swell"
+ },
+ "tierra-del-fuego": {
+  "rating": 5,
+  "basis": "Beagle Channel, windy and choppy"
+ },
+ "lake-district": {
+  "rating": 2,
+  "basis": "Watching from the Cumbrian coast, mostly not by boat"
+ },
+ "turks-caicos": {
+  "rating": 4,
+  "basis": "Turks Island Passage can be rough in winter"
+ },
+ "vancouver-island": {
+  "rating": 4,
+  "basis": "Sheltered straits, open ocean off Tofino"
+ },
+ "venice": {
+  "rating": 2,
+  "basis": "Lagoon and northern Adriatic ferries"
+ },
+ "bali": {
+  "rating": 3,
+  "basis": "Lovina small boats in calm morning water"
+ },
+ "nice-riviera": {
+  "rating": 4,
+  "basis": "Pelagos offshore trips"
+ },
+ "napa": {
+  "rating": 6,
+  "basis": "Bodega Bay trips are on the open Pacific"
+ },
+ "hongkong": {
+  "rating": 3,
+  "basis": "Sheltered waters around Lantau"
+ },
+ "seoul": {
+  "rating": 3,
+  "basis": "Yellow Sea ferries, short"
+ },
+ "croatia": {
+  "rating": 3,
+  "basis": "Sheltered island channels"
+ },
+ "cape-town": {
+  "rating": 5,
+  "basis": "False Bay and Hout Bay swell, with a shore option at Hermanus"
+ },
+ "palau": {
+  "rating": 3,
+  "basis": "Lagoon dive boats, calm in the dry season"
+ },
+ "maui": {
+  "rating": 3,
+  "basis": "Au'au Channel is sheltered by Lanai and Molokai; mornings are calmest"
+ },
+ "svalbard": {
+  "rating": 6,
+  "basis": "Open Arctic crossings on expedition ships"
+ },
+ "maldives": {
+  "rating": 3,
+  "basis": "Atoll lagoons are calm, open water can be lumpy"
+ },
+ "basque-country": {
+  "rating": 6,
+  "basis": "Bay of Biscay swell is known to be rough"
+ },
+ "srilanka": {
+  "rating": 8,
+  "basis": "Mirissa boats are single-hulled and the open Indian Ocean leg is rough; operators advise medicine"
+ },
+ "marlborough-abel-tasman": {
+  "rating": 3,
+  "basis": "Sounds are sheltered"
+ },
+ "galapagos": {
+  "rating": 4,
+  "basis": "Moderate swell, small boats between islands"
+ },
+ "egypt": {
+  "rating": 3,
+  "basis": "Red Sea reef trips, calm"
+ },
+ "kerala": {
+  "rating": 3,
+  "basis": "Backwaters and calm coast trips"
+ },
+ "puerto-rico": {
+  "rating": 5,
+  "basis": "Mona Passage can be rough"
+ },
+ "quebec-city": {
+  "rating": 4,
+  "basis": "St Lawrence estuary at Tadoussac, small boats and cold chop"
+ },
+ "dubai": {
+  "rating": 2,
+  "basis": "Persian Gulf, shallow and usually calm"
+ },
+ "canaries": {
+  "rating": 3,
+  "basis": "Tenerife trips off Los Gigantes are sheltered by the cliffs"
+ },
+ "big-island": {
+  "rating": 3,
+  "basis": "Kona side is lee-shore calm"
+ },
+ "nyc": {
+  "rating": 6,
+  "basis": "Open Atlantic off Long Island"
+ },
+ "borabora": {
+  "rating": 3,
+  "basis": "Lagoon and calm leeward side"
+ },
+ "los-cabos": {
+  "rating": 5,
+  "basis": "Pacific swell and Sea of Cortez winds"
+ },
+ "punta-cana": {
+  "rating": 4,
+  "basis": "Samaná Bay is sheltered, with a rougher open-ocean leg to Silver Bank"
+ },
+ "acadia": {
+  "rating": 6,
+  "basis": "Gulf of Maine offshore trips"
+ },
+ "torres-del-paine": {
+  "rating": 3,
+  "basis": "Fjord cruises from Puerto Natales, wind can rise"
+ },
+ "faroe-islands": {
+  "rating": 6,
+  "basis": "Open North Atlantic"
+ },
+ "milford-sound-fiordland": {
+  "rating": 3,
+  "basis": "Fjords are sheltered"
+ },
+ "azores": {
+  "rating": 5,
+  "basis": "Mid-Atlantic swell"
+ },
+ "bangkok": {
+  "rating": 3,
+  "basis": "Shallow, calm upper Gulf of Thailand"
+ },
+ "cornwall": {
+  "rating": 5,
+  "basis": "Atlantic swell off Land's End"
+ },
+ "madeira": {
+  "rating": 4,
+  "basis": "Atlantic, but trips often use catamarans"
+ },
+ "chiapas": {
+  "rating": 5,
+  "basis": "Pacific swell and small boats"
+ },
+ "fiji": {
+  "rating": 4,
+  "basis": "Moderate, small boats between islands"
+ },
+ "cape-cod-islands": {
+  "rating": 5,
+  "basis": "Stellwagen Bank trips, moderate chop"
+ },
+ "palawan": {
+  "rating": 3,
+  "basis": "Sulu Sea calm in the dry season"
+ },
+ "mauritius": {
+  "rating": 4,
+  "basis": "West coast is sheltered, with some swell"
+ },
+ "st-andrews-fife": {
+  "rating": 4,
+  "basis": "North Sea chop on Isle of May trips"
+ },
+ "gbr": {
+  "rating": 5,
+  "basis": "Outer reef crossings can be lumpy"
+ },
+ "provence": {
+  "rating": 4,
+  "basis": "Mistral and offshore trips"
+ },
+ "bordeaux": {
+  "rating": 4,
+  "basis": "Atlantic coast, moderate"
+ },
+ "sydney": {
+  "rating": 6,
+  "basis": "Open ocean swell past Sydney Heads"
+ },
+ "puglia": {
+  "rating": 3,
+  "basis": "Gulf of Taranto, mostly calm"
+ },
+ "jamaica": {
+  "rating": 3,
+  "basis": "Leeward north coast is mostly calm"
+ },
+ "amsterdam": {
+  "rating": 3,
+  "basis": "North Sea piers and short trips"
+ },
+ "barcelona": {
+  "rating": 3,
+  "basis": "Short Mediterranean trips, mostly calm"
+ }
+}

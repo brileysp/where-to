@@ -1,0 +1,25 @@
+{
+ "_note": "Places renamed or re-scoped in Oct 2026. Their old name and narrower scope can survive in other interests' text and in a careless fact sheet, so gemini-author-batch.ts refuses to send one to Gemini unless docs/<interest>-facts.json has a non-empty scope sheet for it (override: --allow-unscoped-renamed), and it drops the other-interest summaries for these places because they still describe the old scope. See memory feedback_renamed_place_old_names.",
+ "ids": {
+  "bagan": "Myanmar (was Bagan)",
+  "kaziranga": "Assam & Northeast India (was Kaziranga National Park)",
+  "komodo": "Komodo & Flores (was Komodo Island)",
+  "joshua-tree": "Palm Springs & Joshua Tree (was Joshua Tree National Park)",
+  "punta-cana": "Dominican Republic (was Punta Cana)",
+  "whistler": "Vancouver & Whistler (was Whistler)",
+  "el-chalten": "El Chaltén & El Calafate (was El Chaltén & Fitz Roy)",
+  "havana": "Cuba (was Havana)",
+  "angkor": "Cambodia (was Angkor Wat & Siem Reap)",
+  "luangprabang": "Laos (was Luang Prabang)",
+  "belfast-giants-causeway": "Northern Ireland (was Belfast & the Giant's Causeway)",
+  "snowdonia": "Wales (was Snowdonia)",
+  "banff": "Banff & Jasper National Parks (was Banff National Park)",
+  "quebec-city": "Quebec City & Montreal (was Quebec City)",
+  "aspen": "Aspen Snowmass (was Aspen)",
+  "kruger": "Kruger & Sabi Sands (was Kruger National Park)",
+  "napa": "Napa & Sonoma (was Napa Valley)",
+  "borabora": "French Polynesia (was Bora Bora)",
+  "thailand": "Phuket & the Andaman Coast (was Thailand - Phuket & Islands)",
+  "tanzania": "Northern Tanzania (was Serengeti & Zanzibar)"
+ }
+}

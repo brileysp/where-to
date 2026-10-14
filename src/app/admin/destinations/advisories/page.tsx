@@ -1,5 +1,5 @@
 import { listDestinationsForAdmin } from '@/lib/db/queries/admin-destinations';
-import { getContinent } from '@/lib/scoring/continents';
+import { continentOf } from '@/lib/scoring/continents';
 import { AdvisoriesGrid, type AdvisoryRow } from '@/components/admin/AdvisoriesGrid';
 
 export default async function AdminAdvisoriesPage() {
@@ -9,7 +9,7 @@ export default async function AdminAdvisoriesPage() {
     id: d.id,
     name: d.name,
     emoji: d.emoji,
-    continent: getContinent(d.id),
+    continent: continentOf(d),
     travelAdvisories: d.travelAdvisories,
     updatedAt: d.updatedAt.toISOString(),
   }));

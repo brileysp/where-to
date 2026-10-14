@@ -120,7 +120,7 @@ export interface ScoringDestination {
   costOverview: string | null;
   // Real one-time/per-day prices, author-sorted low to high. Empty for
   // destinations not yet backfilled.
-  costItems: { label: string; price: number; unit: string }[];
+  costItems: { label: string; price: number; unit: string; emoji?: string }[];
   base: Record<string, number>;
   budgetBands: string[];
   vibeBands: string[];
@@ -178,6 +178,9 @@ export interface ScoringDestination {
   sliderOverview: Record<string, string>;
   sliderMonthlyWeather: Record<string, (string | null)[]>;
   naSliders: string[];
+  // Specialist place: only listed for travellers who weight one of gatedInterests highly (gating.ts).
+  gated?: boolean;
+  gatedInterests?: string[];
   searchAliases: string[];
   // Per-slider sub-style quality — see the schema.ts column comment for
   // the full rationale. Sparse: a slider or style absent here is treated
@@ -226,3 +229,6 @@ export interface DerivedScores {
 /** A destination with its derived per-month scores attached — the
  * TypeScript equivalent of the legacy app's `DESTINATIONS` (vs. `RAW_DESTINATIONS`). */
 export type ScoredDestination = ScoringDestination & DerivedScores;
+
+/** The text of one place, fetched when a visitor opens it. The ranked list carries these fields empty (see list-place-rows.ts). */
+export type PlaceDetailText = Pick<ScoringDestination, 'about' | 'overview' | 'costOverview' | 'costItems' | 'monthlyWeather' | 'specialSeasons' | 'sliderOverview' | 'sliderMonthlyWeather'>;

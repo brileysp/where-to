@@ -1,0 +1,1636 @@
+{
+ "_note": "Source check of the staged Snorkeling & Diving content (Oct 2026): one entry per place. Verdicts: confirmed, partly, corrected, not verified. Nothing here has been applied; edits are proposals for the owner.",
+ "places": {
+  "Algarve": {
+   "verdict": "partly",
+   "notes": "Ocean Revival: four sunk navy ships off Portimão is correct (Oliveira e Carmo, Zambeze, Almeida Carvalho, Hermenegildo Capelo; bridge about 15 m, keel 30-35 m). Water 14-24 C, best May-October, rough winter seas: matches. The \"year's best visibility\" claim is soft: sources give 8 m average, 15-20 m at best. The park's main dive centre closed after Covid and management was being transferred, so access should be checked.",
+   "edits": [
+    {
+     "where": "March and June months",
+     "change": "Use degrees Celsius like the other places instead of degrees F (high 50s F = about 14-15 C; 68-73 F = 20-23 C)"
+    },
+    {
+     "where": "Overview",
+     "change": "Optional: add that visibility is typically 8-15 m (Atlantic), and that the park is a wreck-diving introduction (bridge at 15 m)"
+    }
+   ],
+   "sources": [
+    "https://pros-blog.padi.com/?p=257",
+    "https://www.essential-algarve.com/discover/one-of-a-kind-underwater-museum-navy-ships-create-artificial-reef-and-attract-marine-life-off-the-coast-of-portimao/",
+    "https://divesitedirectory.co.uk/diving_portugal_algarve.html"
+   ]
+  },
+  "Amalfi Coast": {
+   "verdict": "confirmed",
+   "notes": "Sites and seasons match: Punta Campanella marine reserve (walls, caves), Li Galli, Vervece wreck at 40 m. Water about 14-15 C Jan-Apr, above 20 C by June, about 26 C July-Aug, 21-22 C in October; PADI calls April-October the prime season. Months are consistent.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Punta Campanella and Li Galli, the real draws; note the reserve restricts access (permits)."
+    }
+   ],
+   "sources": [
+    "https://travel.padi.com/d/sorrento/",
+    "https://www.seatemperatu.re/europe/italy/amalfi-coast/month/july/"
+   ]
+  },
+  "Andalucía": {
+   "verdict": "partly",
+   "notes": "Tarifa and the Strait of Gibraltar are real diving; temperatures 15 C winter to about 20 C summer match. The claim that sunfish pass through in summer is not supported: one operator says year-round, a nearby Portuguese study found spring and autumn peaks and a summer low.",
+   "edits": [
+    {
+     "where": "June month",
+     "change": "Remove \"the chance to spot sunfish (mola mola) passing through the Strait\" as a June highlight, or say sunfish are possible at several times of year"
+    },
+    {
+     "where": "Overview",
+     "change": "\"sometimes sunfish (mola mola) in the summer\" -> \"sometimes sunfish (mola mola)\""
+    }
+   ],
+   "sources": [
+    "https://www.proscubadiver.net/?p=419338",
+    "https://dive.site/blog/where-to-dive-with-mola-mola-sunfish"
+   ]
+  },
+  "Antarctic Peninsula": {
+   "verdict": "confirmed",
+   "notes": "Liveaboard-only expedition (RIB dives from ships), drysuit needed (DAN: drysuit, dry gloves, 7 mm hood, 40 drysuit dives advised), water -2 to 2 C, season Nov-March with a few voyages from late October; best visibility Oct-Nov and late Feb-Mar (about 9 m), whales strongest in late season: all match. Scoring bug found and fixed (7.5 summer and closed winter had been averaged to 2.7).",
+   "edits": [
+    {
+     "where": "November month",
+     "change": "\"visibility is often pristine\": the sources say about 9 m (30 ft); consider \"good visibility before the plankton blooms\""
+    },
+    {
+     "where": "October/April",
+     "change": "Optional: say a few voyages start in late October and some run into early March"
+    }
+   ],
+   "sources": [
+    "https://world.dan.org/alert-diver/article/destination-antartica/",
+    "https://www.scubadiving.com/expedition-antarctica"
+   ]
+  },
+  "Argentine Lake District": {
+   "verdict": "partly",
+   "notes": "The Submerged Forest at Lago Traful is real (cypress trees slid into the lake in 1960; sources give 15 to 30 m deep, visibility about 15 m) and is visited by boat, guided shore dive, and half-day snorkel trip. Season and operators could not be confirmed (one listing says no operators on the lake). Snorkeling is possible (a 1.5-hour guided snorkel in the forest exists), so snorkeling 1 is too low.",
+   "edits": [
+    {
+     "where": "Ratings",
+     "change": "snorkeling_rating 1 -> about 3 (guided snorkel trips in the forest exist)"
+    },
+    {
+     "where": "Overview",
+     "change": "Note that the forest is at Lake Traful (Villa Traful), about an hour from Bariloche"
+    }
+   ],
+   "sources": [
+    "https://www.tur.com/en/villa-traful-165/buceo-en-bosque-sumergido-de-villa-traful-3026",
+    "https://www.rionegro.com.ar/voy-turismo/la-playa-mas-linda-de-la-cordillera-con-agua-transparente-y-a-una-hora-de-bariloche-3309507/?amp=1"
+   ]
+  },
+  "Aruba": {
+   "verdict": "confirmed",
+   "notes": "Antilla (German freighter scuttled 1940, about 400 ft, 45 ft deep, penetrable) is the main draw; Mangel Halto and Pos Chiquito shore dives; water about 26-29 C all year; Aruba is on the far southern edge of the hurricane belt and rarely hit. A flat year is right (April-June calmest). The overview does not name the Antilla.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Antilla wreck as the headline site"
+    }
+   ],
+   "sources": [
+    "https://travel.padi.com/d/aruba",
+    "https://bluewaterdivetravel.com/aruba-diving"
+   ]
+  },
+  "Athens": {
+   "verdict": "confirmed",
+   "notes": "Saronic Gulf and Athenian Riviera diving are real and close (Vouliagmeni, Vari, Varkiza, Sounion within 30-60 minutes). Water about 20-27 C May-October, visibility 20-30 m in summer, about 15 C in winter: matches. More than 300 wrecks lie in the Gulf but many are deep technical dives.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Vouliagmeni and the Athenian Riviera sites; note most wrecks are deep (technical)."
+    }
+   ],
+   "sources": [
+    "https://www.athenstourism.org/snorkeling-diving-water-sports-athens/",
+    "https://blog.padi.com/technical-deep-wreck-diving-off-the-coast-of-athens/"
+   ]
+  },
+  "Azores": {
+   "verdict": "confirmed",
+   "notes": "Blue sharks and devil rays June/July-October, water 16-24 C, winter storms and 14-16 C, common dolphins year-round: all match. Devil rays gather at Princess Alice Bank and Ambrosio (Santa Maria), blue and mako sharks at Condor Bank and around Pico. These are offshore dives that sources rate Advanced plus experience.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add a short note that the blue shark and devil ray dives are offshore and need Advanced certification (the Format callout would require it)."
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-azores",
+    "https://www.diveworldwide.com/discover/azores"
+   ]
+  },
+  "Bali": {
+   "verdict": "confirmed",
+   "notes": "Mola mola season July-October (some say to November) at Nusa Penida, usually 20-40 m deep and never guaranteed; reef mantas year-round at Manta Point; wet season Dec-Mar: all match. The text does not name Nusa Penida or the USAT Liberty wreck at Tulamben, the island's best-known sites.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name Nusa Penida (mantas and mola mola) and the Tulamben wreck; say mola sightings are never guaranteed and usually deep (20-40 m)."
+    }
+   ],
+   "sources": [
+    "https://nusapenida.org/mola-mola-bali/",
+    "https://nusapenida.org/bali-nusa-penida-diving-guide/"
+   ]
+  },
+  "Banff & Jasper National Parks": {
+   "verdict": "partly",
+   "notes": "The flooded Minnewanka Landing townsite is real (dammed in 1912 and 1941; house foundations, wharves, bridge pilings). But Parks Canada says a boat is needed to reach the townsite area, and every dive needs a self-certification permit (with clean-drain-dry gear rules). Water is 2-8 C year-round per PADI (text says 4-12 C in summer), visibility 3-10 m. Winter ice diving needs a restricted-activity permit.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"This is a shore dive\" -> townsite dives are done from a boat (a boat is needed to reach the townsite); add that a Parks Canada permit is required."
+    },
+    {
+     "where": "Jun-Sep month",
+     "change": "\"4 to 12 C\" -> about 2 to 8 C (PADI)"
+    }
+   ],
+   "sources": [
+    "https://parks.canada.ca/pn-np/ab/banff/activ/nautiques-sports/plonge-diving",
+    "https://www.padi.com/dive-site/canada/lake-minnewanka-bridge-pilings/"
+   ]
+  },
+  "Barbados": {
+   "verdict": "confirmed",
+   "notes": "Carlisle Bay has six shallow wrecks (Berwyn, Eillon, Bajan Queen) with hawksbill and green turtles; the Stavronikita is the advanced wreck (about 120 ft). Water warmest in September (29 C); wetter June-January; hurricane season June-November: consistent with the text. Barbados is rarely hit directly.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Carlisle Bay and the Stavronikita."
+    }
+   ],
+   "sources": [
+    "https://www.divebarbadosblue.com/about-us/dive-sites/",
+    "https://www.scubadiving.com/best-in-class-why-wrecks-barbados-shine"
+   ]
+  },
+  "Barcelona": {
+   "verdict": "confirmed",
+   "notes": "The diving is on the Costa Brava, mainly the Medes Islands marine reserve at L'Estartit, about an hour north; season spring to autumn, 18-25 C May-October, best July-September, many shops close in winter: matches. The text never names the Medes Islands.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Medes Islands (L'Estartit), about an hour north of Barcelona."
+    }
+   ],
+   "sources": [
+    "https://travel.padi.com/d/lestartit/",
+    "https://blog.padi.com/the-best-dive-sites-in-barcelona/"
+   ]
+  },
+  "Basque Country": {
+   "verdict": "corrected",
+   "notes": "The overview says the draw is \"unusual underwater volcanic scenery\". The Basque coast is flysch (layered sedimentary rock, famous at Zumaia), not volcanic, and I found no source for volcanic diving there. I also found no named dive sites or access rules for the flysch coast (a San Sebastián dive centre exists). Temperatures (12 C winter, about 20 C late summer) are plausible for the Bay of Biscay but not sourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Remove \"unusual underwater volcanic scenery\"; describe it as rocky reefs and cliffs on the Bay of Biscay coast (check with Buceo Donosti or another local centre for the real sites)."
+    }
+   ],
+   "sources": [
+    "https://en.yumping.com/diving/buceo-donosti--e6147",
+    "https://www.spain.info/en/region/costa-vasca/"
+   ]
+  },
+  "Bavaria & Munich": {
+   "verdict": "partly",
+   "notes": "Walchensee is real, steep-walled and cold, with sunken vehicles (a car at about 35 m, a VW Beetle at 10 m) and aircraft wrecks; summer water 16-18 C, under 10 C otherwise, visibility 10-15 m. Echinger Weiher and the pike-and-trout claim could not be verified. One source says visibility is best late winter to early spring before the snowmelt (over 25 m), which the text does not say. A hydropower plant causes strong currents on one side of the Urfeld site.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Echinger Weiher: unverified, keep only if you can confirm it"
+    },
+    {
+     "where": "Jan-Mar month",
+     "change": "Add that late-winter visibility can be the best of the year (over 25 m) before the snowmelt"
+    }
+   ],
+   "sources": [
+    "https://www.divebuddy.com/divesite_revisions.aspx?ID=15422",
+    "https://www.divessi.com/en/mydiveguide/divesite/2616"
+   ]
+  },
+  "Belize": {
+   "verdict": "partly",
+   "notes": "Whale sharks at Gladden Spit gather around the full moon in March/April-June and are described as all but guaranteed in season, not \"occasional\". The Great Blue Hole is not named. Advanced certification is required for the Blue Hole and Gladden Spit (about 18-40 m), but much of the reef is Open Water, so \"main dive sites require Advanced\" overstates it.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Great Blue Hole and Gladden Spit; whale sharks are reliable around the full moons from late March to June; Advanced is needed for those two but not for most of the reef."
+    },
+    {
+     "where": "Apr-Jun month",
+     "change": "\"whale sharks become a possible sight\" -> likely/reliable around the full moon"
+    }
+   ],
+   "sources": [
+    "https://www.travelbelize.org/blog/whale-shark-season-upon-us-are-you-ready/",
+    "https://www.islandexpeditions.com/clients/planning-and-packing/essential-information/diving"
+   ]
+  },
+  "Bend & Crater Lake": {
+   "verdict": "corrected",
+   "notes": "Scuba diving and snorkeling are no longer permitted in Crater Lake (closed to protect it from invasive species; the old dive permit and trail access are historical, and the Cleetwood Trail is closed for rehabilitation in 2026-2028). Clear Lake is real and open: a 3,000-year-old submerged forest, water about 40 F year-round, visibility over 100 ft, drysuit needed. The overview and all the seasonal months built around Crater Lake access are wrong.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Remove the Crater Lake dive trail; make Clear Lake and its submerged forest the draw"
+    },
+    {
+     "where": "Months",
+     "change": "Rewrite Jan-Dec: Clear Lake is diveable year-round; no Crater Lake access months"
+    },
+    {
+     "where": "Scores",
+     "change": "Re-score: no summer-only peak from Crater Lake access; consider regenerating this place"
+    }
+   ],
+   "sources": [
+    "https://www.craterlakeinstitute.com/what-to-do/planning-your-visit/diving/",
+    "https://www.kptv.com/2024/09/06/exploring-ancient-sunken-forest-clear-lake-oregon",
+    "https://www.nps.gov/crla/planyourvisit/cleetwood-cove.htm"
+   ]
+  },
+  "Big Island": {
+   "verdict": "confirmed",
+   "notes": "Kona manta ray night dives and snorkels are resident-animal encounters all year (very high odds, some cancellation risk from winter swells Dec-March); visibility about 50-70 ft in winter and 60-80+ in summer; April-October calmest: matches the text.",
+   "edits": [],
+   "sources": [
+    "https://konahonudivers.com/when-to-dive-with-manta-rays-in-kona/",
+    "https://www.dolphindiscoveries.com/blog/big-island-kona-manta-ray-night-snorkel"
+   ]
+  },
+  "Cambodia": {
+   "verdict": "confirmed",
+   "notes": "Koh Rong and Koh Rong Samloem: dry season about December-April/May best, wet season June-October with rougher seas and lower visibility, water 26-30 C all year, easy beginner sites (Two Tone Garden, Rocky Bay): matches. Typical visibility is closer to 6-10 m, up to 25-30 m in the best months, so \"reliable visibility\" is generous.",
+   "edits": [
+    {
+     "where": "Jan-May month",
+     "change": "\"reliable visibility\" -> visibility typically 6-10 m, better in December-March"
+    }
+   ],
+   "sources": [
+    "https://www.holidify.com/places/sihanoukville/sihanoukville-scuba-diving-sightseeing-1256700.html",
+    "https://www.private-scuba.com/destinations/asia/cambodia/sihanoukville/koh-rong-samloem/two-tone-garden.html"
+   ]
+  },
+  "Cape Cod & the Islands": {
+   "verdict": "partly",
+   "notes": "The Port Hunter wreck is real (380 ft, 50-70 ft deep in Vineyard Sound, about 15 minutes by boat from Falmouth, low visibility 10-25 ft, strong tides). Season April-October, but drysuit divers dive all year and local divers value midwinter for the best visibility; the text says dive shops are closed and conditions harsh Dec-March.",
+   "edits": [
+    {
+     "where": "Jan-Mar and Dec months",
+     "change": "\"dive shops largely closed\" -> few charters run, but drysuit divers dive from shore and midwinter visibility can be the year's best"
+    }
+   ],
+   "sources": [
+    "https://www.mass.gov/service-details/port-hunter",
+    "https://www.scubadiving.com/travel/northeast/massachusetts-cape-cod"
+   ]
+  },
+  "Cuba": {
+   "verdict": "partly",
+   "notes": "Jardines de la Reina is real and the shark draw is right (Caribbean reef sharks, silky sharks; crocodiles are snorkel encounters), best December-April. But it is liveaboard-only through one licensed operator (maximum 1,200 divers a year, usually 7-night trips) and silky sharks are reported year-round, not arriving in November-December.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Say Jardines de la Reina is reached only by liveaboard with one licensed operator"
+    },
+    {
+     "where": "Nov-Dec month",
+     "change": "\"Silky sharks arrive\" -> silky sharks are seen year-round"
+    }
+   ],
+   "sources": [
+    "https://www.padi.com/diving-in/jardines-de-la-reina/",
+    "https://divernet.com/scuba-diving/diving-cubas-jardines-de-la-reina-with-avalon-liveaboards/"
+   ]
+  },
+  "Dominican Republic": {
+   "verdict": "partly",
+   "notes": "The Bayahibe/Catalina/Saona reefs and wrecks are real, and the hurricane season (June-November, peak mid-August to October) is right. But the famous St George wreck (73 m cargo ship, deck at about 15 m, bottom at 44 m, advanced) is at Bayahibe, not Boca Chica, and the north coast (Sosúa) is calmest in summer while the south coast is calmest December-May; the text treats the country as one season.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the St George wreck and Catalina wall at Bayahibe; say the south coast is best December-May and the north coast (Sosúa) is calmest in summer"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/best-time-of-year-to-dive-the-dominican-republic/",
+    "https://www.grandbay-puntacana.com/sites/st-george-wreck-bayahibe"
+   ]
+  },
+  "Dubai": {
+   "verdict": "confirmed",
+   "notes": "Wreck diving is the draw: MV Dara (passenger liner sunk 1961, about 21 m, part technical) and the Zainab tanker; winter water 20-25 C, summer 33-34 C with poorer visibility; best October/November-April/May: matches. Depth of the Zainab varies between sources.",
+   "edits": [],
+   "sources": [
+    "https://travel.padi.com/d/dubai/",
+    "https://divesitedirectory.co.uk/dive_site_united_arab_emirates_dubai_wreck_mv_dara.html"
+   ]
+  },
+  "Faroe Islands": {
+   "verdict": "partly",
+   "notes": "Kelp forests, grottos and drop-offs are real; water 4-10 C; strong currents (guides recommended). The source says winter is the clearest season (about 30 m) while summer plankton blooms reduce visibility to 15-20 m, which the text does not say; weather and short days are what limit winter diving. Drysuit is an inference (reasonable).",
+   "edits": [
+    {
+     "where": "Jan-Apr and Sep-Dec months",
+     "change": "Say winter has the clearest water (about 30 m) when weather allows; summer is milder but plankton cuts visibility"
+    }
+   ],
+   "sources": [
+    "https://visitfaroeislands.com/see-do/diving/",
+    "https://travel.padi.com/d/faroe-islands/"
+   ]
+  },
+  "Great Barrier Reef": {
+   "verdict": "partly",
+   "notes": "Dwarf minke whales at the Ribbon Reefs in June-July (permitted operators only, snorkelers held on a line, liveaboards most reliable) and stinger season about November-May are right. But a stinger suit is strongly recommended and supplied by operators, not legally required on every tour (sources disagree), so \"is required\" is too strong.",
+   "edits": [
+    {
+     "where": "Jan-Apr and Nov-Dec months",
+     "change": "\"wearing a full-body stinger suit is required\" -> \"stinger suits are normally supplied and strongly advised\""
+    }
+   ],
+   "sources": [
+    "https://www.seabreeze.com.au/News/Weather/Minke-Season-Opens-GBR-July-Window",
+    "https://www.intrepidtravel.com/australia/cairns/do-i-need-wear-stinger-suit-cairns"
+   ]
+  },
+  "Hong Kong": {
+   "verdict": "partly",
+   "notes": "Sai Kung (Bluff Island, Nine Pins, Hoi Ha wrecks) and Tung Ping Chau (about 60 percent coral cover, 1 hour 40 minutes by ferry) are real; winter water 15-19 C, summer 28-29 C. But visibility is best in winter-spring and after the September monsoon shift, and July-August often brings algae blooms and very poor visibility, the opposite of \"summer brings ... more active reef fish\" as a plus.",
+   "edits": [
+    {
+     "where": "Jun-Sep month",
+     "change": "Add that July-August visibility is often poor (algae blooms) and typhoons disrupt boats"
+    },
+    {
+     "where": "Jan-Mar month",
+     "change": "\"limited coral activity\" is not sourced; winter has the clearest water but cold (15-19 C)"
+    }
+   ],
+   "sources": [
+    "https://www.localiiz.com/post/living-nature-ultimate-guide-scuba-diving-hong-kong",
+    "https://www.divessi.com/en/blog/diving-in-hong-kong-1406"
+   ]
+  },
+  "Hokkaido": {
+   "verdict": "confirmed",
+   "notes": "Drift-ice diving at Rausu/Shiretoko in February-March, water -2 to 2 C, clione (sea angels) the star, entry through chainsaw-cut holes, dives about 20-40 minutes; operators ask for Open Water plus drysuit experience (JAL listing: 20 drysuit dives). Matches the text.",
+   "edits": [],
+   "sources": [
+    "https://www.mlit.go.jp/tagengo-db/en/R2-00535.html",
+    "https://policies.env.go.jp/park/shiretoko/rausu-vc/guidetour/en/activity/014/"
+   ]
+  },
+  "Churchill": {
+   "verdict": "confirmed",
+   "notes": "Beluga snorkeling in the Churchill River: belugas arrive in June, plentiful by mid-July, operators run until about mid-August (text puts September as the end); roughly 3,000 whales; water about 5 C; wetsuits/drysuits normal; the river mouth is clearest and coldest. Matches. Late-August trips are likely thin.",
+   "edits": [
+    {
+     "where": "Aug month",
+     "change": "Optional: say trips usually wind down by mid-August"
+    }
+   ],
+   "sources": [
+    "https://churchillpolarbears.org/?p=363",
+    "https://www.canadianbucketlist.com/?p=4917"
+   ]
+  },
+  "Canary Islands": {
+   "verdict": "partly",
+   "notes": "Angel sharks are a real draw (Fuerteventura El Cañón, Gran Canaria El Cabrón, Tenerife) but a study of dive-centre reports found two peaks (April-July and December-February) and the fewest sightings in September; stingrays are seen at sites like the Los Gigantes ray feed, but \"reliably ... throughout the year\" for both is not supported. Water 20-24 C year-round.",
+   "edits": [
+    {
+     "where": "Overview and all months",
+     "change": "Replace \"reliably encounter angel sharks and stingrays throughout the year\" with \"angel sharks are regularly seen (most often April-July and December-February) and stingrays at sites such as Los Gigantes\""
+    }
+   ],
+   "sources": [
+    "https://scubadiverlife.com/diving-with-angelsharks-in-the-canary-islands/",
+    "https://www.hellocanaryislands.com/dive-points/fuerteventura/el-canon/"
+   ]
+  },
+  "Chiapas": {
+   "verdict": "partly",
+   "notes": "Cenote Chukumaltik near Comitán is real: about 200 m wide and 61-70 m deep, visibility up to 40 m, quartz, petrified trees (reported below 60 m), water 23-24 C all year, best November-April, only for certified divers, about 45 minutes from Comitán. Sulfur chimneys could not be confirmed. The petrified trees are at technical depth.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Say the trees are at 60+ m (technical depth) and the dive is for licensed divers; sulfur chimneys unverified"
+    }
+   ],
+   "sources": [
+    "https://visitmexico.com/en/recomendacion/55/buceo-de-altura-en-el-cenote-chucumaltik",
+    "https://programadestinosmexico.com/en/cenote-chucumaltik-chiapas/"
+   ]
+  },
+  "Colombian Caribbean": {
+   "verdict": "confirmed",
+   "notes": "Best window December-April (calm, visibility 24-30 m at San Andrés and Providencia, upwelling at Tayrona), wet season May-November: matches. The overview is generic and names no site.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name San Andrés, Providencia and Santa Marta/Tayrona"
+    }
+   ],
+   "sources": [
+    "https://www.divein.com/diving/destination/diving-in-colombia",
+    "https://www.padi.com/diving-in/colombia/san-andres-and-providencia-islands/"
+   ]
+  },
+  "Cornwall": {
+   "verdict": "partly",
+   "notes": "Kelp, wrecks and the Manacles near Falmouth are real; basking sharks are mostly May-August (best May-June in calm weather); winter water is about 7 C (text says 10) and summer about 16 C. Seals are occasional sightings on dives rather than a guaranteed draw (\"a common sight year-round\" is generous).",
+   "edits": [
+    {
+     "where": "Jan-Feb months",
+     "change": "\"around 10 degrees\" -> about 7-9 C"
+    },
+    {
+     "where": "Overview",
+     "change": "Say seals are a regular but not guaranteed sight and basking sharks are mainly May-August"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/scuba-diving-in-cornwall-a-guide-to-englands-riviera/",
+    "https://divernet.com/scuba-diving/close-encounter-with-a-basking-shark-off-cornwall/"
+   ]
+  },
+  "Costa Rica": {
+   "verdict": "partly",
+   "notes": "Catalina Islands mantas December-April (best January-March) and Bat Islands bull sharks May-November are right, and Papagayo is diveable all year. But both Catalina and the Bat Islands are advanced dives with challenging currents (the Bat Islands trip is over an hour by boat), which conflicts with \"mild currents\".",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Replace \"mild currents\" with strong currents at Catalina and the Bat Islands; say Advanced is recommended; Papagayo is the easier option"
+    }
+   ],
+   "sources": [
+    "https://capturetheatlas.com/scuba-diving-in-guanacaste-costa-rica/",
+    "https://www.billbeardcostarica.com/?p=45559"
+   ]
+  },
+  "Dalmatian Coast": {
+   "verdict": "confirmed",
+   "notes": "Season May-October (many centres run only June-September; Vis centres April-December), water about 18 C in May to 25-26 C in August, centres closed in winter: matches. The wrecks are the draw on Vis (Teti 10-33 m, Fortunal; a WWII B-17 is technical); Baron Gautsch is in Istria, not Dalmatia.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Vis island and its wrecks"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/how-to-plan-croatia-dive-trip",
+    "https://dan.org/alert-diver/article/vis-island-croatia/"
+   ]
+  },
+  "Edinburgh": {
+   "verdict": "confirmed",
+   "notes": "St Abbs and Eyemouth Voluntary Marine Reserve is about 1-1.5 hours from Edinburgh; season roughly April-October, warmest August-September; wolf fish, large lobsters, soft corals; visibility varies from 4 m to 20 m; spring and summer plankton: matches.",
+   "edits": [],
+   "sources": [
+    "https://www.lonelyplanet.com/points-of-interest/st-abbs-eyemouth-voluntary-marine-reserve/1120201",
+    "https://divernet.com/world-dives/europe/wuddy-rocks-diving-scotland/"
+   ]
+  },
+  "Falkland Islands": {
+   "verdict": "partly",
+   "notes": "Kelp forests (some over 40 m tall) and many wrecks (about 150 located) are real, water 6-11 C, expert cold-rough-water diving. But the claim \"no commercial infrastructure, access requires specialized polar liveaboards\" is not right: a Stanley operator (South Atlantic Marine Services) has run local diving (dated source; confirm it still does) and expedition ships also dive. No official season found, so the \"Apr-Sep impractical\" months are unsourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Replace \"access requires specialized polar liveaboards\" with \"very limited local operators plus expedition cruises; weather-dependent, for experienced cold-water divers\""
+    },
+    {
+     "where": "Months",
+     "change": "Apr-Sep \"impractical\" is unsourced; say conditions are harshest in winter and the water coldest (6-7 C) in early spring"
+    }
+   ],
+   "sources": [
+    "https://sportdiver.com/node/50146",
+    "https://vinsonofantarctica.org/en/blog/falklands-diving-expedition"
+   ]
+  },
+  "Fiji": {
+   "verdict": "confirmed",
+   "notes": "Beqa Lagoon shark dives (bull sharks; tigers only occasional) run year-round; manta rays at the Yasawas May-October (often easier to snorkel than dive); soft corals strongest April-July; wet season November-April with plankton and winds cutting visibility January-March: matches the text.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name Beqa Lagoon for the shark dive and the Yasawas for mantas; note tiger sharks are only occasional"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-fiji",
+    "https://www.fiji.travel/things-to-do/diving/diving-fiji-marine-life-encounters"
+   ]
+  },
+  "Glacier & Waterton Lakes": {
+   "verdict": "partly",
+   "notes": "The Gertrude, a 1907 paddle-wheeler scuttled in Emerald Bay in Upper Waterton Lake (about 20 m), is real and listed by Parks Canada, with a mandatory gear self-inspection. But Parks Canada says visibility is best in early spring and autumn, not July-September, and the park is not shut January-May (it has year-round access to Waterton townsite).",
+   "edits": [
+    {
+     "where": "Jul-Sep month",
+     "change": "\"slightly warmer, clearer water\" -> warmer, but visibility is usually better in early spring and autumn"
+    },
+    {
+     "where": "Jan-May months",
+     "change": "\"roads are closed\": only some roads close; Waterton townsite is open year-round, so say the lake is cold and may be partly iced"
+    }
+   ],
+   "sources": [
+    "https://pc.gc.ca/pn-np/ab/waterton/activ/experiences/nautique-lake/plonge-diving",
+    "https://www.scubadiving.com/scuba-diving-canadas-interior-waterways"
+   ]
+  },
+  "Greenland": {
+   "verdict": "partly",
+   "notes": "Iceberg diving at Disko Bay (from Ilulissat; no diving from mid-October to April) and East Greenland (May-August, a few weeks of drifting ice) with drysuits is real, visibility about 8-27 m, water near freezing. Operators are scarce. Kelp forests are not confirmed, and East Greenland (Tasiilaq) also has winter under-ice diving, so \"no diving January-April\" is not entirely true.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Kelp forests unverified; mention a very limited operator base"
+    },
+    {
+     "where": "Jan-Apr month",
+     "change": "Say winter under-ice diving exists in East Greenland but is highly specialised"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/greenland-divers-guide-eastern-greenland",
+    "https://www.divessi.com/es/blog/ice-diving-at-its-best-in-the-east-of-greenland-968"
+   ]
+  },
+  "Guatemala": {
+   "verdict": "partly",
+   "notes": "Lake Atitlán (1,562 m, every dive is an altitude dive) has sunken docks and a flooded house, and the Agua Caliente volcanic fissure with hot mud; the Samabaj Maya ruins are archaeological and not casual dives; one dive shop (ATI Divers); water about 21 C all year. But visibility is described as generally low (best December-April), not \"reliable around 10 meters\".",
+   "edits": [
+    {
+     "where": "Jan-Apr and Dec months",
+     "change": "\"reliable visibility around 10 meters\" -> visibility is generally modest and best December-April"
+    },
+    {
+     "where": "Overview",
+     "change": "Add that the Maya ruins at Samabaj are research sites, not part of normal dives"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/guatemalas-lake-atitlan-peculiar-dive-spot-sunken-hotels-volcanic-vents-and-more",
+    "https://livinginguatemala.com/activities/scuba-diving-lake-atitlan/"
+   ]
+  },
+  "Kerala": {
+   "verdict": "confirmed",
+   "notes": "Kovalam is a beginner-friendly dive area; Kerala Tourism lists an artificial reef, Poovar Island, Vizhinjam Rock and Puffer Paradise, plus reported plane and boat wrecks; the season is about October-April (PADI says September-February) and diving stops in the June-August monsoon: matches. The artificial reef itself is barely described in any source.",
+   "edits": [],
+   "sources": [
+    "https://www.keralatourism.org/adventure-tourism/scuba-diving/kovalam",
+    "https://blog.padi.com/did-you-know-you-can-dive-indias-south-east-coast/"
+   ]
+  },
+  "Ireland": {
+   "verdict": "partly",
+   "notes": "Wrecks off Malin Head (Laurentic about 40 m, Justicia; WWI liners) and Donegal are real, visibility 15-30 m, water 10-18 C, basking sharks April-August (peak May-June) are right. \"Sunken U-boats off Malin Head\" could not be confirmed as dives (those wrecks are very deep), and the text misses that the basking sharks are mostly seen from the surface.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Replace \"sunken U-boats\" with the WWI liner wrecks (Laurentic, Justicia); say basking sharks are mostly seen from boats"
+    }
+   ],
+   "sources": [
+    "https://www.divessi.com/blog/scuba-diving-in-ireland-1446",
+    "https://dan.org/alert-diver/article/washed-by-the-wild-atlantic/"
+   ]
+  },
+  "Jamaica": {
+   "verdict": "confirmed",
+   "notes": "Negril (calm, caverns, wrecks including two Cessna planes and the Pete tug), Montego Bay (Widowmaker's Cave, The Arches) and Ocho Rios (SS Kathryn wreck) are the sites; water 27-29 C, visibility 10-30 m; hurricane season June-November; a December-April peak at Negril is cited. The overview names no sites.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name Negril, Montego Bay and the SS Kathryn wreck"
+    }
+   ],
+   "sources": [
+    "https://www.bluewaterdivetravel.com/destination/diving-jamaica",
+    "https://blog.padi.com/best-dive-sites-in-jamaica/"
+   ]
+  },
+  "Komodo & Flores": {
+   "verdict": "partly",
+   "notes": "Day boats from Labuan Bajo and liveaboards, strong currents (advanced), and a dry season roughly April-November are right. But the south (Manta Alley) is at its best November-March with cooler water (22-25 C) and some sources report the year's best visibility (30 m+) in January-February, while the north is unreliable in the northwest-wind months; the text calls Jan-Feb simply wet season with reduced visibility.",
+   "edits": [
+    {
+     "where": "Jan-Feb and Dec months",
+     "change": "Say the south (Manta Alley) is at its best for mantas November-March, in cooler water (a 5 mm suit), while the north is less reliable"
+    }
+   ],
+   "sources": [
+    "https://dragondivekomodo.com/best-time-to-dive-komodo/",
+    "https://www.komodoisland.net/best-time-komodo-diving/"
+   ]
+  },
+  "Lisbon": {
+   "verdict": "corrected",
+   "notes": "The text says the draw is \"unusual rocky and volcanic scenery\". The Lisbon-area diving is at Sesimbra, Arrábida and Cape Espichel (rocky reefs, walls, the River Gurara freighter wreck from 1989 at about 24 m), not volcanic. This came from a fact-sheet label that listed \"volcanic scenery\" as an example of an unusual draw; the label is fixed. Water 16-22 C, best April/May-October.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Replace \"unusual rocky and volcanic scenery\" with rocky reefs, walls and wrecks off Sesimbra and Arrábida (about 30-45 minutes from Lisbon); name the River Gurara wreck"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/five-great-places-to-dive-near-lisbon",
+    "https://travel.padi.com/d/lisboa/"
+   ]
+  },
+  "Lofoten Islands": {
+   "verdict": "partly",
+   "notes": "Winter Arctic dives from Ballstad (water 2-5 C, kelp, cod; best visibility in March) are real, but sources conflict on visibility (8-12 m versus claims of 20-40 m) and operators supply 7 mm semi-dry suits, so \"drysuit certification is required\" is too strong. \"Jellyfish\" and summer water figures are unsourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"Drysuit certification is required\" -> a drysuit or operator-supplied 7 mm semi-dry suit; remove \"jellyfish\"; visibility roughly 8-20 m (best around March)"
+    }
+   ],
+   "sources": [
+    "https://www.manawa.com/en-GB/activity/norway/ballstad-lofoten/scuba-diving/winter-arctic-scuba-dive-lofoten-archipelago-ballstad/26056",
+    "https://divesitedirectory.co.uk/norway_lofoten.html"
+   ]
+  },
+  "Los Cabos": {
+   "verdict": "corrected",
+   "notes": "The text puts bull sharks Jan-Apr and November-December, leaving in May, and hammerheads June-October. Sources: bull sharks at Cabo Pulmo (about 1.5-2 hours away) are present all year with August-December usually cited as best; hammerheads at Gordo Banks (advanced, 30-35 m) are mostly September/October-November (one source says December-May). The sea-lion colony diving is at Los Islotes near La Paz; Land's End timing is unsourced.",
+   "edits": [
+    {
+     "where": "All months",
+     "change": "Rewrite the seasons: bull sharks year-round at Cabo Pulmo, best August-December; hammerheads at Gordo Banks about September-November (advanced); remove \"bull sharks depart in May\""
+    },
+    {
+     "where": "Overview",
+     "change": "Say the bull shark dives are at Cabo Pulmo, about 1.5-2 hours from Cabo San Lucas, and the hammerhead dives need Advanced"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-sea-of-cortez",
+    "https://diveoclock.com/destinations/Latin-America/Mexico/San_Jose_del_Cabo_Gordo_Banks",
+    "https://travel.padi.com/d/cabo-pulmo"
+   ]
+  },
+  "Madagascar": {
+   "verdict": "confirmed",
+   "notes": "Whale sharks at Nosy Be about late September-December, cyclone risk January-March, diving good mid-March to mid-December: matches. Humpbacks are at Sainte-Marie July-September (boat watching; swimming with whales is not allowed). The overview names no place.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name Nosy Be"
+    }
+   ],
+   "sources": [
+    "https://cursosdebuceo.com/en/blog/post/354",
+    "https://dansa.org/blog/2022/04/16/scuba-diving-in-nosy-be"
+   ]
+  },
+  "Madeira": {
+   "verdict": "confirmed",
+   "notes": "Garajau Nature Reserve (large, friendly dusky groupers; 15-30 m), Cabo Girão and Reis Magos; water 17-25 C, best June-October (PADI June-November 20-24 C); mobulas are only an occasional late-summer sight. One source warns that ground swell can cancel boats for whole weeks in December-March, so winter is weaker than \"remains accessible\".",
+   "edits": [
+    {
+     "where": "Jan-Mar and Dec months",
+     "change": "Say ground swell can cancel boats for weeks in midwinter"
+    },
+    {
+     "where": "Overview",
+     "change": "Name Garajau and its dusky groupers; mobula rays are only occasional"
+    }
+   ],
+   "sources": [
+    "https://divernet.com/scuba-diving/putting-the-fun-into-funchal/",
+    "https://www.padi.com/diving-in/portugal/madeira/"
+   ]
+  },
+  "Malaysian Borneo": {
+   "verdict": "confirmed",
+   "notes": "Sipadan (barracuda tornado, turtles, reef sharks, walls) with limited daily permits (about 120-250 depending on source; Advanced Open Water minimum; two dives per permit since October 2022; no overnight stays so divers base at Mabul or Kapalai); best about mid-February to mid-December, northeast monsoon November-February: matches. The text does not mention the permit limit or the Advanced requirement.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add that Sipadan is permit-limited and needs Advanced Open Water, with divers based at Mabul or Kapalai"
+    }
+   ],
+   "sources": [
+    "https://www.southeastasiadiving.com/blog/sipadan-diving-guide-permits-best-season-and-what-to-expect",
+    "https://www.xray-mag.com/content/tighter-restrictions-visiting-sipadan"
+   ]
+  },
+  "Mallorca": {
+   "verdict": "confirmed",
+   "notes": "Dive sites (Malgrats Islands, Cala Ratjada and the Llevant marine reserve, Es Faralló caves at about 30 m, Sa Dragonera, wrecks at 25-60 m), season about May-October, winter water 13-15 C with many centres on reduced schedules: matches.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Cala Ratjada, the Malgrats Islands and Sa Dragonera"
+    }
+   ],
+   "sources": [
+    "https://www.palmaweekly.com/?p=10014",
+    "https://divesitedirectory.co.uk/balearics_mallorca.html"
+   ]
+  },
+  "Marlborough & Abel Tasman": {
+   "verdict": "partly",
+   "notes": "Tonga Island Marine Reserve (Abel Tasman) has a year-round fur seal colony (breeding October-January), water about 11-13 C in August and 16-19 C in February, snorkeling best December-April, reefs for divers at about 15 m: matches. But DOC tells visitors to stay at least 20 m from seals, so \"playing in the shallows\" and \"interacting with\" the seals overstates it; no source describes an organised seal swim.",
+   "edits": [
+    {
+     "where": "Overview and months",
+     "change": "Replace \"interacting with the seals\" / \"playing\" with \"seals are often seen around the rocks (keep 20 m away per DOC rules)\""
+    }
+   ],
+   "sources": [
+    "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/tonga-island-marine-reserve/",
+    "https://www.nelsontasman.nz/scenic-attractions/tonga-island-marine-reserve/"
+   ]
+  },
+  "Maui": {
+   "verdict": "partly",
+   "notes": "Molokini Crater (visibility often 30-45 m), Turtle Town (Five Graves) and the Lanai Cathedrals are the real draws; humpback whale song is heard underwater December-April; clearer water late spring-early fall, big winter swells November-February, summer south swells can ruin visibility. The text is one flat sentence all year and names no site.",
+   "edits": [
+    {
+     "where": "Overview and months",
+     "change": "Name Molokini, Turtle Town and Lanai Cathedrals; add the winter whale song (Dec-Apr) and the winter and south-swell variations instead of one flat sentence"
+    }
+   ],
+   "sources": [
+    "https://www.divessi.com/blog/the-ultimate-guide-to-maui-scuba-diving-1576",
+    "https://www.in2scubadivingmaui.com/131-when-is-the-best-time-of-year-to-scuba-dive-in-maui/"
+   ]
+  },
+  "Mauritius": {
+   "verdict": "partly",
+   "notes": "Coin de Mire (walls, wreck, visibility 40-50 m), Flat Island (sharks, only in calm seas), Stella Maru (18-26 m) and Djabeda (24-34 m) wrecks are the real sites; cyclone risk January-March; October-December is the peak for visibility and warm water, March-May also good: matches. But dolphins are described as occasional rather than reliable on dives, and the text calls spinner dolphins \"likely year-round\".",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"Spinner dolphins are likely year-round\" -> dolphins are sometimes seen; name Coin de Mire and the Stella Maru and Djabeda wrecks"
+    }
+   ],
+   "sources": [
+    "https://www.dansa.org/blog/2022/04/15/scuba-diving-in-mauritius",
+    "https://www.bluewaterdivetravel.com/mauritius-diving"
+   ]
+  },
+  "Milford Sound & Fiordland": {
+   "verdict": "confirmed",
+   "notes": "The rain-fed freshwater layer (about 5 m / 15 ft deep) filters light so black coral grows from about 5-10 m; water 12-16 C; Descend Diving runs trips from Queenstown/Te Anau; Doubtful Sound has more marine reserves with red coral and strong currents. Matches. Snorkelers would see little of the black coral (it is below the dark layer), so snorkeling 5 looks high.",
+   "edits": [
+    {
+     "where": "Ratings",
+     "change": "snorkeling_rating 5 -> about 2"
+    }
+   ],
+   "sources": [
+    "https://www.firstlighttravel.com/nz-diving/dive-sites/milford-sound",
+    "https://brookebeyond.com/deep-water-emergence-scuba-diving-milford-sound-with-descend-dive"
+   ]
+  },
+  "Monterey & Big Sur": {
+   "verdict": "partly",
+   "notes": "Kelp forests, harbor seals, sea lions, octopus, water 52-60 F are right and Point Lobos needs a reservation (only 15 dive buddy groups a day). But local divers and shops say the best visibility is late fall through early spring (up to 100 ft) between storms, with spring upwelling the coldest and murkiest, while late summer-fall is warmer and calmer but kelp can be thick: the text rates Jan-Feb as worst and Sep-Oct as best, which is the comfort season, not the visibility season.",
+   "edits": [
+    {
+     "where": "Jan-Feb and Nov-Dec months",
+     "change": "Add that winter can have the clearest water (up to 100 ft) on calm days between storms"
+    },
+    {
+     "where": "Overview",
+     "change": "\"conditions generally best from late summer through early autumn\" -> late summer-fall is warmer and calmer; winter and early spring can have the best visibility"
+    }
+   ],
+   "sources": [
+    "https://dan.org/alert-diver/article/a-tale-of-two-bays-monterey-carmel/",
+    "https://scubaboard.com/community/goto/post?id=3824753"
+   ]
+  },
+  "Myanmar": {
+   "verdict": "confirmed",
+   "notes": "Mergui Archipelago liveaboards run about October/November-May (peak December-April), dry-season water 27-30 C, strong currents, no diving June-September; February-May also brings whale sharks and mantas but plankton can cut visibility to 10-15 m; silvertips are tied to Black Rock rather than clearly to the Burma Banks. Matches, with minor additions.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: add whale sharks (February-May) and that plankton can reduce visibility to 10-15 m"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/myanmar-burma/scuba",
+    "https://scubaverse.com/diving-myanmar/"
+   ]
+  },
+  "Napa & Sonoma": {
+   "verdict": "partly",
+   "notes": "Salt Point (Gerstle Cove), Reef Campground and Fort Ross are real shore dives; water 48-56 F year-round; typical visibility only 5-6 m (16-20 ft). One dive-industry source says the best visibility is in winter and the calmest seas in summer; the text says winter visibility is \"near zero\" and the clearest water is August-October. The long surface swims and cold are real hazards, and abalone diving there is demanding.",
+   "edits": [
+    {
+     "where": "Jan-Feb and Dec months",
+     "change": "\"visibility near zero\" is too absolute: winter storms bring big swell, but between storms winter can be the clearest time"
+    },
+    {
+     "where": "Overview",
+     "change": "Add that typical visibility is about 5-6 m and that abalone diving is a physically demanding freediving activity"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/where-to-scuba-dive-in-northern-california",
+    "https://www.divebuddy.com/divesite/927/gerstle-cove-mendocino-coast"
+   ]
+  },
+  "Nicaragua": {
+   "verdict": "partly",
+   "notes": "The diving is the Corn Islands (Little Corn and Big Corn) on the Caribbean side, dry season December-April/May, strong wind until about mid-February, visibility 6-25 m, water 27-29 C; the Pacific side has very little. The text names no place and calls September-October the roughest stretch, but Undercurrent says those two months usually have the driest weather and flattest seas (other sources call them hurricane-season risk).",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Corn Islands"
+    },
+    {
+     "where": "Sep-Oct month",
+     "change": "Mark as disputed: sources conflict (flat seas versus hurricane season)"
+    }
+   ],
+   "sources": [
+    "https://undercurrent.org/UCnow/diveGuides/Nicaragua.php",
+    "https://championtraveler.com/dates/best-time-to-visit-little-corn-island-ni/"
+   ]
+  },
+  "North Island": {
+   "verdict": "partly",
+   "notes": "The Poor Knights Islands (about an hour from Tutukaka: stingrays, kingfish, moray eels, caves and arches) and the Rainbow Warrior wreck (18-27 m, Matauri Bay) are the real draws; water 20-23 C November-April and 14-16 C May-September. But sources say winter (May-September) has the best visibility (up to 30 m) while summer has warmer water, plankton that can cut visibility, and the stingray aggregation (December-March): the text calls winter just \"chilly\" and scores it lowest.",
+   "edits": [
+    {
+     "where": "Jun-Sep month",
+     "change": "Add that winter has the best visibility of the year (up to 30 m) in 14-16 C water"
+    },
+    {
+     "where": "Overview",
+     "change": "Name the Poor Knights Islands and the Rainbow Warrior wreck; stingrays gather December-March"
+    }
+   ],
+   "sources": [
+    "https://divernet.com/world-dives/the-legendary-poor-knights-islands/",
+    "https://www.firstlighttravel.com/nz-diving/dive-sites/poor-knights-island"
+   ]
+  },
+  "Northern Ireland": {
+   "verdict": "partly",
+   "notes": "Rathlin Island wrecks (Lochgarry about 32 m, HMS Drake about 15 m) from Ballycastle, with very strong tides (over 5 knots, so slack-water timing matters), water about 12 C and visibility 6-15 m, are real. Grey seals as \"a common sight year-round\" and a diving season could not be sourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Lochgarry and HMS Drake and say tides are strong; grey seals are unverified"
+    }
+   ],
+   "sources": [
+    "https://www.undercurrent.org/UCnow/dive_reviews/Other_Locations/Aquaholics_NorthernIreland_report_7959.html",
+    "https://rathlin360.com/shipwrecks-of-rathlin/"
+   ]
+  },
+  "Norwegian Fjords": {
+   "verdict": "partly",
+   "notes": "Drysuit diving among kelp is right (water about 4-6 C in winter, up to 14-15 C in summer; Kristiansund and Gulen are known for kelp and nudibranchs in early spring). But the text names no fjord, Oslofjord visibility is poor (0-10 m), and I found nothing on Bergen or Hardangerfjord. \"Little current\" is not true everywhere (Saltstraumen has up to 26 knots, though that is not a fjord).",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name a real area (for example Gulen or Kristiansund) and drop the blanket \"little current\""
+    },
+    {
+     "where": "Apr month",
+     "change": "Early spring is when visibility is crisp before the plankton bloom (matches the text)"
+    }
+   ],
+   "sources": [
+    "https://norwayexplained.com/best-places-to-scuba-dive-in-norway/",
+    "https://www.visitnorway.com/things-to-do/outdoor-activities/diving/"
+   ]
+  },
+  "Nova Scotia": {
+   "verdict": "corrected",
+   "notes": "HMCS Saguenay is an artificial reef off Lunenburg (South Shore, over an hour from Halifax), a deep cold dive that needs Advanced certification; Halifax-area sites report 3-5 m visibility and water under 10-13 C; one source says late spring-early summer often has the best visibility and late summer-fall visibility drops, which conflicts with the text's August-September peak.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Say the Saguenay is off Lunenburg and is an advanced, deep, cold dive"
+    },
+    {
+     "where": "Jul-Sep months",
+     "change": "Add that late spring-early summer can have better visibility than late summer-fall"
+    }
+   ],
+   "sources": [
+    "https://diveplannerpro.com/spots/ca/nova-scotia/hmcs-saguenay-nova-scotia-ca",
+    "https://scubaboard.com/community/goto/post?id=6117807"
+   ]
+  },
+  "Oaxaca": {
+   "verdict": "partly",
+   "notes": "La Entrega (Huatulco) is the accessible reef (about 12 m, near-guaranteed green and hawksbill turtles, eagle rays, whitetip reef sharks) and Cacaluta Bay has a deeper wall with manta rays June-October; hurricane season August-October; best October/November-April, rainy-season visibility 12-15 m. But Huatulco water is 27-31 C all year, so \"cooler due to Pacific upwelling\" is not supported.",
+   "edits": [
+    {
+     "where": "Jan-May months",
+     "change": "Remove \"The water is cooler due to Pacific upwelling\""
+    },
+    {
+     "where": "Overview",
+     "change": "Name La Entrega and Cacaluta; mantas June-October"
+    }
+   ],
+   "sources": [
+    "https://programadestinosmexico.com/en/buceo-en-huatulco/",
+    "https://www.getmyboat.com/journal/experiences/snorkeling/best-snorkeling-in-huatulco/"
+   ]
+  },
+  "Okinawa": {
+   "verdict": "partly",
+   "notes": "The schooling hammerheads are at Yonaguni (reached by air from Naha), roughly December-May with the peak January-March, with strong currents and winter wind; the main island and Kerama Islands are diveable most of the year, typhoon season June-November (peaking July-September), and the USS Emmons wreck is a popular main-island dive. The text attributes the hammerheads to Okinawa generally.",
+   "edits": [
+    {
+     "where": "Overview and Jan-Mar/Dec months",
+     "change": "Say the hammerheads are at Yonaguni (a separate island, advanced currents); mention the Kerama Islands and the USS Emmons wreck for the main island"
+    }
+   ],
+   "sources": [
+    "https://visitokinawajapan.com/travel-inspiration/okinawa-diving-guide/",
+    "https://en.marinediving.com/topics/type7/11140.html"
+   ]
+  },
+  "Olympic National Park": {
+   "verdict": "confirmed",
+   "notes": "Lake Crescent diving is allowed with rules (a permit and 8-diver limit for the deep wreck, designated areas/months under the park regulation); visibility up to 100-150 ft, a submerged forest at Barnes Point about 60 ft down, best June-October per the NPS: matches. The ocean coast is rough.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add that some dives (the wreck) need a park permit"
+    }
+   ],
+   "sources": [
+    "https://www.nps.gov/submerged/parks/olym.html",
+    "https://www.scubadiving.com/scuba-diving-in-olympic-national-park-washington"
+   ]
+  },
+  "Pakistan": {
+   "verdict": "confirmed",
+   "notes": "Churna Island day trips from Karachi, season October-March (operators run September-May), January visibility about 12-18 m but the water near Karachi is not clean, coral limited, and the island is partly a Navy firing range so access can be restricted: matches the text's \"very limited, modest coral patches\".",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: note access depends on permissions (a naval range)"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Churna_Island",
+    "https://thekarachiwalla.com/2010/12/01/karachi-landmarks-churna/"
+   ]
+  },
+  "Palau": {
+   "verdict": "partly",
+   "notes": "Strong-current advanced dives (Blue Corner, Peleliu Express, Peleliu Wall), the German Channel mantas, and a dry season about November-April are right. But mantas are best December-March (some say November-February), not \"spring\", and are present all year; the German Channel dive itself is shallow (20 m) and suits all divers; exposed sites like Peleliu are often cancelled June-September and it is windiest mid-July to mid-September.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"manta rays make appearances in the spring\" -> best December-March; note the German Channel is easy and Blue Corner/Peleliu need Advanced and good current skills"
+    },
+    {
+     "where": "Jan-Feb months",
+     "change": "Mention mantas here as well as March-April"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-palau",
+    "https://www.liveaboard.com/diving/micronesia/german-channel"
+   ]
+  },
+  "Palawan": {
+   "verdict": "corrected",
+   "notes": "The overview misses the headline: the Japanese WWII wrecks of Coron Bay (about 12 ships sunk in September 1944, at 10-30 m, e.g. Irako Maru and Okikawa Maru), diveable all year though best November-May. Tubbataha Reef (manta rays, whale sharks, sharks) is a separate liveaboard-only trip, permitted only mid-March to mid-June, which the text blends into \"Palawan\". Dugongs at Calauit (October-May) are a snorkel trip, never guaranteed.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name the Coron wrecks first; describe Tubbataha as a separate March-June liveaboard trip; dugongs are a sometimes-seen snorkel trip"
+    },
+    {
+     "where": "Jul-Sep months",
+     "change": "\"Diving is often not recommended or possible\" is too strong for Coron, which is diveable all year with more rain and typhoon risk"
+    }
+   ],
+   "sources": [
+    "https://www.scubaverse.com/dive-into-history-coron-bays-wwii-wrecks/",
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-tubbataha"
+   ]
+  },
+  "Panama": {
+   "verdict": "partly",
+   "notes": "Pacific side: Coiba (Bajo Hannibal hammerhead schools June-November per one source, March-August per another; upwelling mantas and rays from late January; humpbacks July-October). Caribbean side: Bocas del Toro is best September-November (PADI) or mid-December to March, with warm water all year. The text applies a single dry-season/wet-season pattern to both coasts and does not name Coiba or Bocas.",
+   "edits": [
+    {
+     "where": "Overview and months",
+     "change": "Name Coiba (Pacific) and Bocas del Toro (Caribbean) and give each coast its own season: the Caribbean dry spell comes in September-November as well as December-March"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/best-time-to-dive-panama/",
+    "https://www.divein.com/diving/destination/diving-in-panama"
+   ]
+  },
+  "Papua New Guinea": {
+   "verdict": "partly",
+   "notes": "Reefs, wrecks and pygmy seahorses are real, but the best months differ by region: Kimbe Bay and Rabaul about May-June and September-December; Milne Bay about October-March (September for mantas); overall high season May-November. The text gives one May-September dry season for the whole country.",
+   "edits": [
+    {
+     "where": "Overview and months",
+     "change": "Name Kimbe Bay, Milne Bay and the Rabaul WWII wrecks and give the regional seasons"
+    }
+   ],
+   "sources": [
+    "https://scubadiverlife.com/dive-seasons-papua-new-guinea/",
+    "https://travel.padi.com/d/milne-bay/"
+   ]
+  },
+  "Petra & Wadi Rum": {
+   "verdict": "confirmed",
+   "notes": "The diving is at Aqaba on the Red Sea (about 70 km from Wadi Rum, about 2 hours from Petra): shore dives plus the Cedar Pride wreck (25-28 m, 50-180 m from the beach, in the Aqaba Marine Park), water about 21 C in winter to 28-29 C in August: matches. The overview does not name Aqaba.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Name Aqaba and the Cedar Pride wreck; say it is about an hour from Wadi Rum and two hours from Petra"
+    }
+   ],
+   "sources": [
+    "https://divernet.com/world-dives/in-deep-in-aqaba/",
+    "https://divebuddy.com/divesite/4015/cedar-pride-wreck-ship-jordan"
+   ]
+  },
+  "Phuket & the Andaman Coast": {
+   "verdict": "partly",
+   "notes": "Similan and Surin parks are open about mid-October/November to mid-May, leopard sharks about October-May, whale sharks at Richelieu Rock mostly February-May (April best), mantas about February-May: matches the text except that mantas are said to appear from December-January, a bit early.",
+   "edits": [
+    {
+     "where": "Dec and Jan months",
+     "change": "Move \"manta rays start to appear\" to February"
+    }
+   ],
+   "sources": [
+    "https://cursosdebuceo.com/en/blog/thailand-similan-inseln-kurze-saison-und-was-das-bedeutet/263",
+    "https://www.zubludiving.com/destination/thailand/andaman-sea/similan-surin-islands"
+   ]
+  },
+  "Provence": {
+   "verdict": "confirmed",
+   "notes": "The Calanques (Grand Congloué, Riou, Le Cairn aircraft wreck at 35 m, the Junkers Ju 88 at Frioul), water 13-14 C in winter to 24-26 C in late summer, Mistral and east wind cancellations: matches. Groupers are listed but dusky grouper specifically was not sourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name the Calanques and the Frioul wrecks; dusky grouper unverified"
+    }
+   ],
+   "sources": [
+    "https://calanques-parcnational.fr/en/diving",
+    "https://www.marseille-tourisme.com/en/discover-marseille/nature/the-calanques-of-marseille/activities-in-the-calanques/diving-in-the-calanques/"
+   ]
+  },
+  "Puerto Rico": {
+   "verdict": "confirmed",
+   "notes": "La Parguera wall, Culebra (over 50 sites, visibility up to 30 m), Vieques, Desecheo and the remote Mona Island; best December-April; Atlantic hurricane season June-November: matches.",
+   "edits": [],
+   "sources": [
+    "https://www.divessi.com/en/blog/puerto-rico-scuba-diving-1554",
+    "https://blog.padi.com/best-dive-sites-in-puerto-rico/"
+   ]
+  },
+  "Quebec City & Montreal": {
+   "verdict": "partly",
+   "notes": "The Saguenay fjord near Tadoussac is real cold-water diving (a surface freshwater layer up to about 20 C over salt water near 2 C, a halocline that blurs vision, strong currents, experience with night and current diving required, season roughly June-October) and winter ice diving exists, but the practical dive sites for Montreal are quarries (Morrison's Quarry at Wakefield, Kahnawake to about 30 m) and the St Lawrence itself has little dive data. The text does not mention the quarries or the experience requirements.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add that the usual local dives are quarries near Montreal and that the Saguenay needs current/night-diving experience; \"up to 18 C\" applies only to the surface layer"
+    }
+   ],
+   "sources": [
+    "https://www.aventurequebec.ca/en/outdoor-activities/outdoor-activities-quebec/water-activities/scuba-diving/saguenay-lac-saint-jean",
+    "https://divebuddy.com/divesite/3974/morrisons-quarry"
+   ]
+  },
+  "Raja Ampat": {
+   "verdict": "confirmed",
+   "notes": "Best October-April with visibility often over 30 m (10-25 m in the wetter months per one source), manta peak December-April at Manta Sandy and Dampier Strait/Misool, water warm all year: matches. One source says mantas are excellent year-round, so \"less common in June-August\" is a mild overstatement. Wobbegong and pygmy seahorse seasonality is not covered by sources (they are resident).",
+   "edits": [
+    {
+     "where": "Jun-Aug months",
+     "change": "Optional: say mantas are reported year-round, with a winter peak"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-raja-ampat-indonesia",
+    "https://bluewaterdivetravel.com/article/raja-ampat-dive-season-explained"
+   ]
+  },
+  "Red Sea & Nile": {
+   "verdict": "partly",
+   "notes": "Egypt's Red Sea: hammerheads at Daedalus are shallowest May-June and seen in summer, oceanic whitetips at Brothers, Elphinstone and St Johns in the cooler months (September-June by one source, June-November by another), water about 22 C in winter to 29 C in August: matches in broad terms. Dugong timing is inconsistent between sources (\"year-round\" is not supported) and Daedalus and Brothers are liveaboard-only. There is no diving in the Nile.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"dugongs year-round\" -> dugongs are seen in seagrass bays near Marsa Alam, with inconsistent timing; add that Daedalus and Brothers are liveaboard-only"
+    },
+    {
+     "where": "Dec month",
+     "change": "Oceanic whitetips are around from September to June, not only early December"
+    }
+   ],
+   "sources": [
+    "https://www.emperordivers.com/red-sea-best-time",
+    "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-red-sea"
+   ]
+  },
+  "Rio de Janeiro": {
+   "verdict": "corrected",
+   "notes": "The overview says \"unusual volcanic scenery\"; that came from a fact-sheet label (now fixed) and is not supported (a dive-guide listing calls one Cagarras site volcanic rock but it is not a recognised draw). The real options are the protected Cagarras Islands (walls to about 34 m, licensed operators only), Ilha Grande (wrecks including the Pinguino, turtles) and Arraial do Cabo about 3 hours away (cold upwelling 13-18 C, visibility up to 25 m, best September-April).",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Remove \"volcanic\"; name the Cagarras Islands, and say Arraial do Cabo and Ilha Grande are 2-3 hour trips"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/the-best-time-of-year-to-dive-in-brazil/",
+    "https://divessi.com/en/mydiveguide/destination/ilha-grande-9752379"
+   ]
+  },
+  "Riviera Maya": {
+   "verdict": "partly",
+   "notes": "Bull sharks at Playa del Carmen November-March, whale sharks June to mid-September, cenotes year-round (cavern with a guide at Open Water, cave diving needs training), hurricane season June-October: matches. But the whale shark trips go to Isla Mujeres or Holbox (separate boats, Holbox about 3 hours away) and the text omits sargassum (April-October, a record season in 2026), a real nuisance for beach and boat conditions.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add that whale shark trips run from Isla Mujeres and Holbox, and that sargassum (April-October) can affect conditions"
+    }
+   ],
+   "sources": [
+    "https://puertoaventurasliving.com/bull-shark-season-on-the-riviera-maya/",
+    "https://deepmexico.com/post/what-is-the-best-time-to-dive-in-playa-del-carmen-the-definitive-riviera-maya-calendar/ZFlFckNsYm5MTG5TbFE5WlhKVW9MZz09"
+   ]
+  },
+  "Rome": {
+   "verdict": "partly",
+   "notes": "The Secche di Tor Paterno marine reserve is real (4-7 nautical miles off Ostia/Torvaianica, about 20 minutes by boat, summit about 18 m, down to about 60 m, red gorgonians and black coral, access only through accredited centres), but it is deeper than the \"accessible\" suggested and visibility is often poor (Tiber delta turbidity). \"Moray eels and lobsters\", monthly temperatures and \"better visibility in May\" are unsourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add the depth (18-60 m) and that visibility is often poor and access is through accredited centres"
+    },
+    {
+     "where": "May month",
+     "change": "\"better visibility\" is unsourced"
+    }
+   ],
+   "sources": [
+    "https://turismoroma.it/en/places/shoals-tor-paterno",
+    "https://romanatura.roma.it/wp-content/uploads/2024/03/Disciplinare-Integrativo-Secche-di-Tor-PAterno-11-03-2024-allegato-1.pdf"
+   ]
+  },
+  "Santorini & Cyclades": {
+   "verdict": "confirmed",
+   "notes": "Volcanic scenery is genuine here: caldera dives at Nea Kameni and Palea Kameni (hot springs, walls), a WWII wreck (Santa Maria, 18 m), cave dives off Kamari; operators are seasonal (about late April to mid-October); water 16-17 C in winter to 24-26 C in summer: matches.",
+   "edits": [],
+   "sources": [
+    "https://www.greeka.com/cyclades/santorini/sports/scuba-diving",
+    "https://www.greeceindex.com/regions/aegean-islands/scuba-diving-in-santorini/"
+   ]
+  },
+  "Sardinia": {
+   "verdict": "confirmed",
+   "notes": "Capo Caccia (Neptune's Grotto and the Nereo cave at 25-32 m), Tavolara (Papa banks with gorgonians, 15-45 m), Villasimius wrecks; best May-October, 22-26 C in summer and 12-15 C in winter; the west coast is windier: matches. The overview names no site.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Capo Caccia, Tavolara and Villasimius"
+    }
+   ],
+   "sources": [
+    "https://www.discover-sardinia.com/diving/",
+    "https://cursosdebuceo.com/en/blog/30/245"
+   ]
+  },
+  "Scottish Highlands & Isle of Skye": {
+   "verdict": "partly",
+   "notes": "Cold-water reef diving with kelp, grey seals year-round and basking sharks in summer is right; water is about 4 C in January-March to about 14 C in July-September (the text says about 8 C in winter, too warm), visibility 5-20 m. Basking-shark encounters are mostly boat or snorkel based, and the famous wreck diving is at Oban and the Sound of Mull rather than Skye (Skye is reef-led).",
+   "edits": [
+    {
+     "where": "Jan-Feb and Mar months",
+     "change": "\"around 8 C\" -> about 4-6 C"
+    },
+    {
+     "where": "Overview",
+     "change": "Say basking sharks are mostly seen from boats or by snorkel; mention Oban and the Sound of Mull for wrecks"
+    }
+   ],
+   "sources": [
+    "https://divesitedirectory.co.uk/uk_scotland_skye.html",
+    "https://baskingsharkscotland.co.uk/activities"
+   ]
+  },
+  "Sicily": {
+   "verdict": "confirmed",
+   "notes": "Ustica (Italy's first marine reserve, Secca d'Africa pinnacles, visibility up to 40 m), the Egadi Islands, Taormina/Isola Bella caves and Catania wrecks; main island season about April-November, islands May-October; water 15 C in winter to 25-29 C in summer: matches. The overview names none of these.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Ustica, the Egadi Islands and Taormina"
+    }
+   ],
+   "sources": [
+    "https://divernet.com/world-dives/europe/ustica-sicilys-diving-jewel/",
+    "https://travel.padi.com/d/sicily/"
+   ]
+  },
+  "Singapore": {
+   "verdict": "confirmed",
+   "notes": "Diving is at the Southern Islands (Pulau Hantu for nudibranchs, Sisters' Islands Marine Park which needs a permit and NParks-licensed guides), visibility about 1-5 m (average 2-5 m, better March-October), strong currents at some sites, water 27-29 C: matches the text's modest picture.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: give the typical visibility (about 2-5 m) and note the Sisters' Islands permit rule"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/can-you-dive-in-singapore/",
+    "https://gs-diving.com/?p=7382"
+   ]
+  },
+  "Southeast Alaska & the Inside Passage": {
+   "verdict": "partly",
+   "notes": "Ketchikan has year-round cold-water diving (40-55 F), better visibility in winter (summer has plankton and glacial runoff), and nudibranchs and wolf eels near Mountain Point. But a Ketchikan shop says it dives year-round, so \"commercial dive tours completely shut down\" in winter overstates it for divers (the guided snorkel tours are the seasonal cruise-ship product); octopus and wolf-eel sightings for Ketchikan are unsourced.",
+   "edits": [
+    {
+     "where": "Jan-Mar, Oct-Dec months",
+     "change": "\"commercial dive tours are completely shut down\" -> guided snorkel tours stop outside the cruise season; local dive shops dive year-round in drysuits"
+    },
+    {
+     "where": "Overview",
+     "change": "Say wolf eels and octopus are likely but unsourced for Ketchikan"
+    }
+   ],
+   "sources": [
+    "https://app.advcollective.com/travel-guides/Ketchikan/exploring-scuba-diving-adventures-near-ketchikan-alaska",
+    "https://www.scubadiving.com/diving-alaskas-mountain-point"
+   ]
+  },
+  "Sri Lanka": {
+   "verdict": "confirmed",
+   "notes": "West and south coasts (Hikkaduwa, Galle, Unawatuna, mostly shallow shore reefs with turtles) about October/November-April; east coast (Trincomalee, Pigeon Island, HMS Hermes off Batticaloa) about April/May-September; wrecks are often technical: matches the text's two-coast monsoon picture.",
+   "edits": [],
+   "sources": [
+    "https://www.bluewaterdivetravel.com/destination/diving-sri-lanka",
+    "https://www.divevolkdiving.com/blogs/diving-knowledge/trincomalee-sri-lanka-diving-guide"
+   ]
+  },
+  "St Andrews & Fife": {
+   "verdict": "partly",
+   "notes": "The Isle of May (a large grey seal colony; dive boats from Anstruther, North Berwick, St Abbs and Eyemouth) is real, but boats mainly run April-September and seal numbers and pupping peak in October-November with curious pups giving the best dive interactions; shore diving at St Andrews itself often has 0-3 m visibility. The text ends the season in September and calls the seals \"playful\" in summer.",
+   "edits": [
+    {
+     "where": "Overview and Oct-Dec months",
+     "change": "Say seal numbers peak in autumn and pups are curious in October-November, but few charters run then; St Andrews shore diving has poor visibility"
+    }
+   ],
+   "sources": [
+    "https://old.xray-mag.com/content/scotlands-islands-forth",
+    "https://www.bsac.com/news-and-blog/one-scuba-divers-search-for-great-visibility/"
+   ]
+  },
+  "Svalbard": {
+   "verdict": "partly",
+   "notes": "Dive season May-September with a drysuit and an advanced, experienced diver (about 30 drysuit dives asked), water -1 to 8 C, kelp walls, sea butterflies and sea angels: matches. But polar night in Longyearbyen is about 26 October to 15 February, so January is dark but March is not (\"Jan-Mar polar night\", \"Apr daylight returns\" and \"Oct fades\" are off by weeks), and a spring ice-diving window could not be confirmed.",
+   "edits": [
+    {
+     "where": "Jan-Mar and Apr months",
+     "change": "Say polar night runs to mid-February and daylight is back by March; no regular diving until May; spring ice diving unconfirmed"
+    }
+   ],
+   "sources": [
+    "https://www.liveaboard.com/diving/arctic/spitsbergen",
+    "https://www.spitsbergen-svalbard.com/spitsbergen-information/midnight-sun-polar-night.html"
+   ]
+  },
+  "Sydney": {
+   "verdict": "partly",
+   "notes": "Weedy seadragons (Kurnell, Bare Island, Magic Point), Port Jackson sharks, wobbegongs and water 17-23 C are right; grey nurse sharks at Magic Point are described as aggregating in the cooler months, and one guide says they have moved on from Magic Point at times, so \"reliable year-round\" is too strong.",
+   "edits": [
+    {
+     "where": "Overview and all months",
+     "change": "\"grey nurse sharks ... year-round\" -> often seen at Magic Point, especially in the cooler months, but not guaranteed"
+    }
+   ],
+   "sources": [
+    "https://diveagainstdebris.org/update/shark-diving-sydney",
+    "https://www.afar.com/places/magic-point-malabar"
+   ]
+  },
+  "Taiwan": {
+   "verdict": "partly",
+   "notes": "Kenting is diveable most of the year (water about 22-25 C in winter to 28-29 C in summer); one guide gives spring (March-May) as the clearest at 15-30 m and autumn 10-20 m, so \"Oct-Nov visibility peaks\" is not supported. Green Island has its high season in summer with calmer seas (the west side is often diveable only in winter), so the blanket \"Jul-Sep typhoons stop everything\" misses that. Typhoon risk does peak Jul-Sep. Orchid Island is the roughest crossing.",
+   "edits": [
+    {
+     "where": "Oct-Nov months",
+     "change": "Say visibility is good but spring is often clearer; drop \"visibility peaks\""
+    },
+    {
+     "where": "Jul-Sep months",
+     "change": "Typhoon risk is high; Green Island summer seas are usually calm between storms"
+    },
+    {
+     "where": "Jan-Feb months",
+     "change": "Kenting diving continues in winter, 22-25 C, visibility 10-15 m"
+    }
+   ],
+   "sources": [
+    "https://taiwanoutdoors.com/diving/dive-sites/kenting/",
+    "https://divernet.com/world-dives/dive-destination-taiwan/"
+   ]
+  },
+  "Tasmania": {
+   "verdict": "corrected",
+   "notes": "Sources agree winter gives the clearest water: Tourism Tasmania cites more than 40 m of visibility June-September against up to about 12 m in summer (plankton). Water is about 15 C in summer and about 11 C in winter, not 18 C. The text says summer has the best visibility, which is backwards, and the summer score peak is partly built on it. Weedy seadragon year-round and fur seals could not be sourced month by month.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "\"10-18 C\" -> about 11-15 C"
+    },
+    {
+     "where": "Jan-Mar months",
+     "change": "Remove \"warmest (around 18 C) and best visibility\"; summer is warmest but murkier"
+    },
+    {
+     "where": "Jun-Aug months",
+     "change": "Winter is the clearest time (visibility can pass 30-40 m)"
+    },
+    {
+     "where": "Scores",
+     "change": "Winter would rise and summer fall; propose rescoring once the user agrees"
+    }
+   ],
+   "sources": [
+    "https://discovertasmania.com/things-to-do/outdoor-and-adventure/diving-and-snorkelling/",
+    "https://blog.padi.com/scuba-diving-in-tasmania-australia/"
+   ]
+  },
+  "Texas Hill Country": {
+   "verdict": "partly",
+   "notes": "Spring Lake at San Marcos holds about 72 F all year with roughly 30-40 ft visibility; the Comal is also about 72 F but usually 10-15 ft. Spring Lake snorkelling is a guided Meadows Center programme with a wetsuit and scuba needs a protected-species course, so \"free\" snorkelling is mostly the San Marcos and Comal rivers. The text calls both clear and \"excellent\" in winter; the Comal is not.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Say Spring Lake snorkelling is guided and booked ahead; scuba needs a permit course; the Comal is murkier"
+    },
+    {
+     "where": "Winter months",
+     "change": "Keep \"70 F\" but drop \"visibility excellent\" for the Comal"
+    }
+   ],
+   "sources": [
+    "https://hillcountryalliance.org/splash-into-science-snorkel-program-launches-at-spring-lake",
+    "https://www.scubadiving.com/scuba-diving-waterways-central-texas"
+   ]
+  },
+  "Tierra del Fuego": {
+   "verdict": "partly",
+   "notes": "Beagle Channel diving is drysuit-only; PADI says November-April is the prime window with 10-20 m visibility and water about 8-10 C in summer; winter water is about 2-4 C. Turismo Ushuaia argues winter is clearer because there is less plankton, so visibility timing is genuinely uncertain. King crabs, kelp and sea lions are right; the Monte Cervantes wreck is a notable site the text does not name.",
+   "edits": [
+    {
+     "where": "Sep-Oct and winter months",
+     "change": "Water about 2-4 C, not \"near freezing\"; note that some sources rate winter visibility higher"
+    },
+    {
+     "where": "Overview",
+     "change": "Optional: name the Monte Cervantes wreck"
+    }
+   ],
+   "sources": [
+    "https://www.padi.com/diving-in/argentina/ushuaia/",
+    "https://turismoushuaia.com/actividad/buceo/?lang=en_US"
+   ]
+  },
+  "Turks & Caicos": {
+   "verdict": "confirmed",
+   "notes": "November-April is the best window (dive-guide listing), diving is possible year-round, 26-29 C water, eagle rays, reef sharks and turtles are year-round, and hurricane risk runs June-November with a peak August-October: matches. A missed upside: humpback whales pass January-March and some liveaboards run whale itineraries; the text does not mention them.",
+   "edits": [
+    {
+     "where": "Jan-Mar months",
+     "change": "Optional: add that humpback whales pass through (heard underwater, boat trips only)"
+    }
+   ],
+   "sources": [
+    "https://www.bluewaterdivetravel.com/turks-and-caicos-diving",
+    "https://www.padi.com/diving-in/turks-and-caicos-islands/"
+   ]
+  },
+  "Tuscany": {
+   "verdict": "confirmed",
+   "notes": "Elba water is about 13 C in March and about 19-20 C in April-May, rising to 26-27 C in July-August and about 23 C in October, so the text's temperatures are close (it runs about 1 C cool in summer and October). One guide says clarity is best May-June and September-October and drops in July-August in busy bays; the text calls August ideal and September \"one of the best\", which is fair. The text names no site; Giglio, Argentario and Elba are the real dive areas.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Optional: name Elba, Giglio and Argentario"
+    }
+   ],
+   "sources": [
+    "https://www.sea-seek.com/en/Elba-Dive-Center",
+    "https://www.surf-forecast.com/breaks/Capo-Bianco-Elba/seatemp"
+   ]
+  },
+  "Upper Peninsula": {
+   "verdict": "partly",
+   "notes": "Lake Superior wreck diving is real, with Alger Underwater Preserve (Munising) wrecks from about 12 to 105 ft and visibility 25-50+ ft, bottom temperatures in the 40s F and summer surface in the low 60s F (about 16 C, so the 14 C top is slightly low); Whitefish Point is deeper, mostly beyond 130 ft. Sheltered Munising is rarely cancelled for weather. No source gave a firm dive season, so \"strictly summer and early fall\" and the ice dates are plausible but unconfirmed.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Add that Munising has wrecks from 12-105 ft that suit newer divers, and Whitefish Point is deeper"
+    },
+    {
+     "where": "Overview",
+     "change": "Surface water up to about 16 C"
+    }
+   ],
+   "sources": [
+    "https://www.munising.org/activities/dive-shipwrecks-at-the-alger-underwater-preserve/",
+    "https://www.scuba.com/blog/get-wreck-diving-fix-alger-underwater-preserve/"
+   ]
+  },
+  "Vancouver & Whistler": {
+   "verdict": "confirmed",
+   "notes": "Winter (October-March) is the clearest season, up to about 70 ft in Howe Sound, while spring and summer blooms cut visibility to about 10-50 ft or less; giant Pacific octopus and wolf eels are residents with no real season, and stubby squid are a winter extra. The text matches; no month-by-month wolf-eel season exists. Whistler itself has no sea diving.",
+   "edits": [],
+   "sources": [
+    "https://dan.org/alert-diver/article/howe-sound/",
+    "https://www.padi.com/diving-in/british-columbia/"
+   ]
+  },
+  "Nice & the French Riviera": {
+   "verdict": "confirmed",
+   "notes": "Water is never colder than about 13 C, visibility is good even in winter, June-September gives 18-26 C and 20-25 m visibility; wrecks (Le Robuste II at 27 m, deeper WWII wrecks around Cavalaire and Porquerolles) are deep and mostly for advanced divers. The text matches, though it understates winter clarity (it scores winter low mainly for cold).",
+   "edits": [
+    {
+     "where": "Jan-Mar months",
+     "change": "Optional: add that winter visibility is often excellent despite the cold"
+    }
+   ],
+   "sources": [
+    "https://blog.padi.com/5-diving-highlights-of-the-french-riviera/",
+    "https://cotedazurfrance.com/to-do/water-sports/scuba-diving-in-the-french-riviera/"
+   ]
+  },
+  "Puglia": {
+   "verdict": "partly",
+   "notes": "Real draws are the Tremiti Islands (more than 50 dive sites; hydrofoil from Termoli all year), the Porto Cesareo marine area for snorkelling, and the sea caves of the Salento (Zinzulusa at Castro, Otranto to Leuca). The word \"cenotes\" could not be sourced for Puglia and the text names none of these places. Season and operator closures could not be sourced.",
+   "edits": [
+    {
+     "where": "Overview",
+     "change": "Replace \"caves and cenotes\" with \"sea caves\"; name Tremiti, Porto Cesareo and the Salento caves"
+    },
+    {
+     "where": "Nov-Mar months",
+     "change": "Operator closures are unsourced; soften \"most operators close\""
+    }
+   ],
+   "sources": [
+    "https://routes.ect.regione.puglia.it/by-the-sea.html",
+    "https://www.visitvieste.com/dalle-isole-tremiti-a-porto-cesareo-viaggio-tra-le-aree-marine-protette-in-puglia/"
+   ]
+  },
+  "Vancouver Island": {
+   "verdict": "partly",
+   "notes": "Water is cold all year (about 6-14 C). Campbell River guides say winter is the clearest time (20-80 ft) and recommend November-April for Steller sea lion dives at Mitlenatch and Norris Rocks; a Port Hardy source puts the best windows at April to mid-May and mid-August to mid-October. The text makes June-September the peak on weather and calm alone and has no word on winter clarity or the sea lion season. It also disagrees with the Vancouver & Whistler text, which says winter is the clearest.",
+   "edits": [
+    {
+     "where": "Jan-Feb and Nov-Dec months",
+     "change": "Winter has the clearest water and the sea lion season; storms limit access but do not make it poor"
+    },
+    {
+     "where": "Overview",
+     "change": "Say Steller sea lions are mainly a winter dive (November-April)"
+    },
+    {
+     "where": "Scores",
+     "change": "Consider raising winter and lowering summer slightly"
+    }
+   ],
+   "sources": [
+    "https://britishcolumbia.com/things-to-do-and-see/recreation/vancouver-island-bc-islands/diving/",
+    "https://www.scubadiving.com/strait-port-hardy-vancouver-island-and-british-columbias-gulf-islands"
+   ]
+  },
+  "Vermont": {
+   "verdict": "partly",
+   "notes": "Lake Champlain Underwater Historic Preserve wrecks are open from May until the buoys come out in late October (some sources say May-September), registration is free, surface water reaches about 72-75 F, bottom stays in the 40s F, visibility 10-35 ft. Several sources say autumn visibility is best and October diving is as good as August, so the text's \"October: increasingly cold and harsh\" (1.7) and \"September: rapidly dropping\" (2.7) are too low; ice diving could not be confirmed.",
+   "edits": [
+    {
+     "where": "Oct month",
+     "change": "Autumn is often the clearest time and the wrecks stay open until the end of October; raise the score to about 2.7-3"
+    },
+    {
+     "where": "Overview",
+     "change": "Mention the free season registration and the buoys being removed at the end of October"
+    }
+   ],
+   "sources": [
+    "https://www.scubadiving.com/travel/northeast/lake-champlain",
+    "https://travel.padi.com/d/vermont/"
+   ]
+  },
+  "Vietnam": {
+   "verdict": "partly",
+   "notes": "The central coast (Nha Trang, Whale Island) is best March-September with the northeast monsoon (October-February) suspending diving; but the southern islands (Con Dao, Phu Quoc) are best November-May in the dry season, so a winter month is not poor everywhere. Water is 28-31 C year-round, so \"cooler water\" is mild. The text covers only the central coast.",
+   "edits": [
+    {
+     "where": "Overview and Nov-Feb months",
+     "change": "Add that Phu Quoc and Con Dao are in season from November to April"
+    },
+    {
+     "where": "Jan months",
+     "change": "Water is not meaningfully \"cooler\"; the issue is wind and swell on the central coast"
+    }
+   ],
+   "sources": [
+    "https://www.roughguides.com/vietnam/best-diving-spots/",
+    "https://localvietnam.com/travel-inspiration/diving-vietnam/"
+   ]
+  },
+  "Wales": {
+   "verdict": "confirmed",
+   "notes": "Season roughly March-October, drysuit year-round; water about 7-8 C in winter to 15-17 C in August-September; Skomer visibility averages about 8-9 m with good days at 20 m; grey seals are abundant and Ramsey Island pupping runs in autumn: matches. Anglesey (Puffin Island, Porth Dafarch, Trearddur Bay) is real; some sources report poor visibility in the Menai Strait.",
+   "edits": [],
+   "sources": [
+    "https://padi.com/diving-in/wales",
+    "https://pembrokeshirecoast.wales/about-the-national-park/wildlife/seals"
+   ]
+  },
+  "Pantanal (N/A decision)": {
+   "verdict": "corrected",
+   "notes": "Marked N/A for \"murky water, caimans\", but the place was deliberately sent to Gemini because the clear spring-fed rivers around Bonito (Rio da Prata, Rio Sucuri) are a major guided snorkelling destination; the reviewer sources describe them as crystal-clear. Bonito is not in the Pantanal wetlands itself, so scope is the question, not the answer.",
+   "edits": [
+    {
+     "where": "Rating",
+     "change": "Reconsider N/A; if Bonito is in scope, author as snorkel-led (guided river floats, no sunscreen allowed, best April-May and September-October for comfort)"
+    }
+   ],
+   "sources": [
+    "https://snorkeling-report.com/?p=66744",
+    "https://www.foratravel.com/trip-reports/62PC3Y/beyond-brazils-beaches-discovering-bonito-kathleen-martel"
+   ]
+  },
+  "Tokyo & Kyoto (N/A decision)": {
+   "verdict": "partly",
+   "notes": "Marked N/A as needing travel to Izu or Okinawa, but the northern Izu Peninsula is within a day trip of Tokyo: Atami is under an hour by shinkansen, Hayakawa about 90 minutes, Izu Ocean Park about 2h20, with winter nudibranch dives at Osezaki and summer wetsuit season June-September. Many shops require experience; Mikomoto hammerheads are boat-only. N/A is defensible for Kyoto but not for Tokyo.",
+   "edits": [
+    {
+     "where": "Rating",
+     "change": "Consider authoring Tokyo as a modest 4-5 for Izu day trips, or split Tokyo from Kyoto"
+    }
+   ],
+   "sources": [
+    "https://tokyocheapo.com/entertainment/tokyo-diving-day-trips/",
+    "https://www.japan.travel/en/sports/diving/guides/shizuoka/"
+   ]
+  },
+  "Istanbul (N/A decision)": {
+   "verdict": "partly",
+   "notes": "The Bosphorus is shipping-heavy, but the Prince Islands (Büyükada, Burgazada) are an established dive area; PADI calls it one of the best-visibility spots in Istanbul with a reef to 18 m and a wall to 40 m. Visibility is usually modest and Şile on the Black Sea is 3-10 m. Borderline; N/A is a judgment call, not an error.",
+   "edits": [],
+   "sources": [
+    "https://www.padi.com/dive-site/turkey/prince-islands/",
+    "https://www.padi.com/dive-sites/turkey/istanbul/"
+   ]
+  },
+  "Namibia (N/A decision)": {
+   "verdict": "confirmed",
+   "notes": "The seal experiences at Walvis Bay/Pelican Point are kayaking tours and Cape Cross is a land viewing walkway; no snorkel-with-seals offering was found. N/A holds.",
+   "edits": [],
+   "sources": [
+    "https://expertafrica.com/namibia/excursions/kayaking-with-seals",
+    "https://namibian.org/blog/cape-cross-seal-reserve-a-journey-through-time"
+   ]
+  }
+ }
+}

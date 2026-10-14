@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { places, interestMeta, climateEnum, peakIntensityEnum, crowdBaselineEnum, severityEnum } from '@/lib/db/schema';
-import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
+import { BAND_DIMENSIONS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import { SETTING_TAG_SLUGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
 import { sliderCurveSchema } from '@/lib/scoring/curve';
 import { monthArray, month, sliderKeyedRecord } from '../../../scripts/content/destination-schema';
@@ -49,6 +49,13 @@ const costItemSchema = z.object({
   updatedBy: z.string().nullish(),
   editorKind: z.enum(['human', 'agent']).nullish(),
   lastChange: z.string().nullish(),
+  // Admin-only detail (Oct 2026).
+  category: z.enum(['lodging', 'food', 'transport', 'activity', 'other']).nullish(),
+  priceMax: z.number().nonnegative().nullish(),
+  season: z.enum(['year', 'peak', 'offPeak']).nullish(),
+  currency: z.string().trim().toUpperCase().regex(/^[A-Z]{3}$/, 'three-letter currency code').nullish(),
+  sourceUrl: z.string().trim().max(500).nullish(),
+  checkedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD').nullish(),
 });
 
 const nullableEnum = <T extends [string, ...string[]]>(values: T) => z.enum(values).nullable();
@@ -133,6 +140,19 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       sliderEvents: zodField(z.record(z.string(), z.array(z.object({ label: z.string(), weight: z.number(), months: z.record(z.string(), z.number()) })))),
       signatureTier: zodField(z.record(z.string(), z.enum(['signature', 'strong', 'casual', 'none']))),
       naSliders: zodField(z.array(z.string())),
+      naReasons: zodField(
+        z.record(
+          z.string(),
+          z.object({
+            reason: z.string().trim().min(1),
+            source: z.enum(['gemini', 'imported', 'manual']),
+            by: z.string(),
+            at: z.string(),
+            generationId: z.string().optional(),
+            geminiText: z.string().optional(),
+          }),
+        ),
+      ),
       // Validated with the scoring engine's OWN schema rather than a
       // hand-rolled copy — sliderCurveSchema already enforces unique
       // months, the 0-10 value range and the steepness bounds, and it is
@@ -207,6 +227,8 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
             severity: z.enum(['moderate', 'serious']),
             text: z.string().trim().min(1),
             lastReviewed: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD'),
+            sourceUrl: z.string().trim().max(500).nullish(),
+            expiresOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD').nullish(),
           }),
         ),
       ),
@@ -219,6 +241,34 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       // comment on schema.ts's `audienceBands` column) so it can slot into
       // BAND_DIMENSIONS/bandPenalty later without a schema change.
       audienceBands: zodField(z.array(z.enum(['iconic', 'popular', 'enthusiast', 'specialist'])).max(1)),
+      // Specialist places — see schema.ts's `gated` column.
+      gated: zodField(z.boolean()),
+      gatedInterests: zodField(z.array(z.string().trim().min(1))),
+      // Visibility and identity fields that had no editor before (Oct 2026).
+      // isPrimaryDestination = in the rankings and the admin grids (a retired place is found under "Show retired" on the Places grid);
+      // isPublished = shown to travellers at all (getAllScoredPlaces drops unpublished places).
+      isPrimaryDestination: zodField(z.boolean()),
+      isPublished: zodField(z.boolean()),
+      parentPlaceId: zodField(z.string().trim().min(1).nullable()),
+      summary: zodField(z.string().trim().max(600).nullable()),
+      countryCode: zodField(z.string().trim().toUpperCase().regex(/^[A-Z]{3}$/, 'expected a three-letter country code such as FRA').nullable()),
+      continent: zodField(z.enum(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica']).nullable()),
+      regionLabel: zodField(z.string().trim().max(120).nullable()),
+      latitude: zodField(z.number().min(-90).max(90).nullable()),
+      longitude: zodField(z.number().min(-180).max(180).nullable()),
+      stampDesign: zodField(z.record(z.string(), z.unknown()).nullable()),
+      // Month-by-month hazard multipliers (hurricane season, monsoon, smoke and so on). Read by the scoring engine, so a bad value changes scores.
+      seasonalHazards: zodField(
+        z.array(
+          z.object({
+            category: z.enum(['storm', 'airQuality', 'insects', 'seaweed', 'other']),
+            label: z.string().trim().min(1).max(80),
+            months: z.array(z.number().int().min(1).max(12)).min(1),
+            severity: z.enum(['mild', 'moderate', 'severe']),
+            affectedSliders: z.array(z.string().min(1)),
+          }),
+        ),
+      ),
     },
   },
   interest: {
@@ -231,6 +281,14 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
     createIfMissing: true,
     fields: {
       emoji: zodField(z.string().trim().min(1)),
+      // Null clears it back to the automatic name.
+      shortName: zodField(z.string().trim().min(1).max(30).nullable()),
+      // Overrides of the code-defined interest list (null = use the built-in value). Applied by lib/scoring/overrides.ts.
+      label: zodField(z.string().trim().min(1).max(60).nullable()),
+      groupName: zodField(z.string().refine((g) => SLIDER_GROUPS.includes(g), 'not one of the existing domains').nullable()),
+      hidden: zodField(z.boolean().nullable()),
+      audienceTier: zodField(z.enum(['iconic', 'popular', 'enthusiast', 'specialist']).nullable()),
+      sortOrder: zodField(z.number().int().min(1).max(500).nullable()),
     },
   },
 };

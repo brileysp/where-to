@@ -3,10 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { barColor } from '@/lib/scoring/rank';
 
-/** Long interest names read badly inside a pill: "Cycling - Road & Gravel Biking" becomes "Cycling - Road". */
-export function shortInterestLabel(label: string): string {
-  return label.split(' & ')[0];
-}
+export { shortInterestLabel } from '@/lib/scoring/shortName';
 
 /**
  * An interest chip: a round emoji button that opens into a labelled pill when it is the selected

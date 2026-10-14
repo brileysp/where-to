@@ -1,0 +1,757 @@
+{
+ "egypt": {
+  "certification": "openWater",
+  "typicalDepth": "35-130 ft",
+  "current": "moderate",
+  "waterTemp": "72-84 F",
+  "animals": "Green turtle (likely, year-round), Hammerhead shark (possible, May-Aug), Oceanic whitetip shark (possible, Oct-Dec), Dugong (possible, year-round)",
+  "drawType": "reef"
+ },
+ "komodo": {
+  "certification": "advanced",
+  "typicalDepth": "35-100 ft",
+  "current": "strong",
+  "waterTemp": "72-84 F",
+  "animals": "Manta ray (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "rajaampat": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "82-86 F",
+  "animals": "Manta ray (likely, Oct-Apr), Wobbegong shark (likely, year-round), Pygmy seahorse (likely, year-round), Reef shark (likely, year-round)",
+  "drawType": "reef"
+ },
+ "rivieramaya": {
+  "certification": "specialty",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "77-84 F (cenotes about 77 F)",
+  "animals": "Bull shark (likely, Nov-Mar), Whale shark (possible, Jun-Sep), Green turtle (likely, year-round), Eagle ray (possible, year-round)",
+  "drawType": "mixed"
+ },
+ "gbr": {
+  "certification": "openWater",
+  "typicalDepth": "15-80 ft",
+  "current": "mild",
+  "waterTemp": "73-86 F",
+  "animals": "Green turtle (likely, year-round), Reef shark (likely, year-round), Dwarf minke whale (possible, Jun-Jul)",
+  "drawType": "reef"
+ },
+ "belize": {
+  "certification": "advanced",
+  "typicalDepth": "35-130 ft",
+  "current": "mild",
+  "waterTemp": "79-86 F",
+  "animals": "Whale shark (possible, Apr-Jun), Nurse shark (likely, year-round), Caribbean reef shark (likely, year-round), Eagle ray (likely, year-round)",
+  "drawType": "reef"
+ },
+ "borneo": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "moderate",
+  "waterTemp": "81-86 F",
+  "animals": "Green turtle (guaranteed, year-round), Barracuda (likely, year-round), Reef shark (likely, year-round)",
+  "drawType": "reef"
+ },
+ "galapagos": {
+  "certification": "advanced",
+  "typicalDepth": "35-100 ft",
+  "current": "strong",
+  "waterTemp": "61-82 F (cold Jun-Nov)",
+  "animals": "Galapagos sea lion (guaranteed, year-round), Green turtle (likely, year-round), Eagle ray (likely, year-round), Hammerhead shark (likely, Jun-Nov), Whale shark (likely, Jun-Nov), Marine iguana (possible, year-round), Galapagos penguin (unlikely, year-round)",
+  "drawType": "animals"
+ },
+ "maldives": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "81-86 F",
+  "animals": "Manta ray (likely, Jun-Nov), Whale shark (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "palau": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "advanced",
+  "typicalDepth": "35-130 ft",
+  "current": "strong",
+  "waterTemp": "81-86 F",
+  "animals": "Grey reef shark (likely, year-round), Manta ray (possible, Mar-Apr), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "fiji": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "moderate",
+  "waterTemp": "77-84 F",
+  "animals": "Bull shark (likely, year-round, baited), Tiger shark (possible, year-round, baited), Manta ray (likely, May-Oct)",
+  "drawType": "reef"
+ },
+ "papua-new-guinea": {
+  "certification": "openWater",
+  "typicalDepth": "35-130 ft",
+  "current": "mild",
+  "waterTemp": "81-86 F",
+  "animals": "Reef shark (likely, year-round), Pygmy seahorse (likely, year-round)",
+  "drawType": "mixed"
+ },
+ "bahamas": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "mild",
+  "waterTemp": "75-84 F",
+  "animals": "Caribbean reef shark (guaranteed, year-round, baited), Tiger shark (likely, Oct-May, baited), Oceanic whitetip shark (possible, Mar-May), Atlantic spotted dolphin (likely, Jun-Sep)",
+  "drawType": "animals"
+ },
+ "bali": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "72-84 F (cold upwellings Jul-Oct)",
+  "animals": "Manta ray (likely, year-round), Mola mola (possible, Jul-Oct), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "borabora": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "moderate",
+  "waterTemp": "79-84 F",
+  "drawType": "mixed",
+  "animals": "Blacktip reef shark (guaranteed, year-round), Grey reef shark (likely, year-round, Tuamotu passes), Lemon shark (likely, year-round), Manta ray (likely, year-round), Bottlenose dolphin (likely, year-round, Rangiroa), Humpback whale (likely, Aug-Oct, regulated in-water swims)"
+ },
+ "mauritius": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-115 ft",
+  "current": "mild",
+  "waterTemp": "75-84 F",
+  "animals": "Spinner dolphin (likely, year-round), Green turtle (possible, year-round)",
+  "drawType": "reef"
+ },
+ "okinawa": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "72-84 F",
+  "animals": "Green turtle (likely, year-round), Hammerhead shark (possible, Dec-Mar)",
+  "drawType": "reef"
+ },
+ "palawan": {
+  "certification": "advanced",
+  "typicalDepth": "35-130 ft",
+  "current": "moderate",
+  "waterTemp": "79-86 F",
+  "animals": "Manta ray (likely, Mar-Jun), Whale shark (possible, Mar-Jun), Dugong (possible, year-round)",
+  "drawType": "reef"
+ },
+ "seychelles": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "81-86 F",
+  "animals": "Whale shark (likely, Aug-Oct), Green turtle (likely, year-round), Reef shark (likely, year-round)",
+  "drawType": "reef"
+ },
+ "thailand": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "moderate",
+  "waterTemp": "81-86 F",
+  "animals": "Whale shark (possible, Feb-Apr), Leopard shark (likely, Nov-Apr), Manta ray (possible, Dec-Apr), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "turks-caicos": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "mild",
+  "waterTemp": "77-84 F",
+  "animals": "Eagle ray (likely, year-round), Caribbean reef shark (likely, year-round), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "big-island": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "75-81 F",
+  "animals": "Manta ray (guaranteed, year-round), Green turtle (guaranteed, year-round)",
+  "drawType": "mixed"
+ },
+ "maui": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "75-81 F",
+  "animals": "Green turtle (guaranteed, year-round)",
+  "drawType": "reef"
+ },
+ "costa-rica": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "mild",
+  "waterTemp": "72-84 F (cooler Dec-Apr on the Pacific)",
+  "animals": "Bull shark (likely, Jun-Nov), Manta ray (likely, Dec-Apr)",
+  "drawType": "animals"
+ },
+ "north-island": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "35-130 ft",
+  "current": "mild",
+  "waterTemp": "57-72 F (7 mm wetsuit)",
+  "animals": "Stingray (likely, year-round), Moray eel (likely, year-round), Kingfish (likely, year-round)",
+  "drawType": "mixed"
+ },
+ "aruba": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "none",
+  "waterTemp": "79-84 F",
+  "animals": "Green turtle (possible, year-round)",
+  "drawType": "mixed"
+ },
+ "barbados": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "79-84 F",
+  "animals": "Hawksbill turtle (guaranteed, year-round), Green turtle (likely, year-round)",
+  "drawType": "mixed"
+ },
+ "colombian-caribbean": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "81-86 F",
+  "drawType": "reef"
+ },
+ "madagascar": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "77-84 F",
+  "animals": "Whale shark (likely, Oct-Dec), Green turtle (likely, year-round)",
+  "drawType": "reef"
+ },
+ "srilanka": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "81-86 F",
+  "animals": "Green turtle (likely, year-round)",
+  "drawType": "mixed"
+ },
+ "azores": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "61-75 F",
+  "animals": "Blue shark (likely, Jun-Oct), Giant devil ray (possible, Jul-Oct), Common dolphin (likely, year-round)",
+  "drawType": "animals"
+ },
+ "canaries": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "64-75 F",
+  "animals": "Angel shark (likely, year-round), Stingray (likely, year-round)",
+  "drawType": "mixed"
+ },
+ "cape-town": {
+  "certification": "openWater",
+  "typicalDepth": "15-80 ft",
+  "current": "moderate",
+  "waterTemp": "50-64 F (7 mm wetsuit or drysuit)",
+  "animals": "Broadnose sevengill shark (likely, year-round), Great white shark (likely, Apr-Sep, cage dive, baited), African penguin (likely, year-round), Cape fur seal (likely, year-round)",
+  "drawType": "kelp"
+ },
+ "croatia": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "54-79 F",
+  "drawType": "mixed"
+ },
+ "dubai": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "72-93 F",
+  "drawType": "wrecks"
+ },
+ "havana": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "mild",
+  "waterTemp": "79-86 F",
+  "animals": "Caribbean reef shark (likely, year-round), Silky shark (likely, Nov-Mar), American crocodile (possible, year-round)",
+  "drawType": "reef"
+ },
+ "jamaica": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "79-86 F",
+  "drawType": "reef"
+ },
+ "los-cabos": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "moderate",
+  "waterTemp": "68-84 F",
+  "animals": "Bull shark (likely, Nov-Apr), Hammerhead shark (possible, Jun-Oct), California sea lion (likely, year-round)",
+  "drawType": "animals"
+ },
+ "mallorca": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "55-81 F",
+  "drawType": "mixed"
+ },
+ "monterey-big-sur": {
+  "certification": "openWater",
+  "typicalDepth": "15-80 ft",
+  "current": "moderate",
+  "waterTemp": "50-61 F (7 mm wetsuit or drysuit)",
+  "animals": "Harbor seal (likely, year-round), California sea lion (likely, year-round), Giant Pacific octopus (possible, year-round)",
+  "drawType": "kelp"
+ },
+ "panama": {
+  "certification": "openWater",
+  "typicalDepth": "35-100 ft",
+  "current": "moderate",
+  "waterTemp": "75-84 F",
+  "animals": "Hammerhead shark (possible, Jun-Oct)",
+  "drawType": "reef"
+ },
+ "puerto-rico": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "77-84 F",
+  "drawType": "reef"
+ },
+ "sardinia": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "55-79 F",
+  "drawType": "mixed"
+ },
+ "sicily": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "59-81 F",
+  "drawType": "mixed"
+ },
+ "sydney": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "59-75 F",
+  "animals": "Grey nurse shark (likely, year-round), Weedy seadragon (likely, year-round), Port Jackson shark (likely, Jun-Oct)",
+  "drawType": "animals"
+ },
+ "algarve": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "59-70 F",
+  "drawType": "mixed"
+ },
+ "jordan": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "70-82 F",
+  "drawType": "reef"
+ },
+ "lisbon": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "57-66 F",
+  "drawType": "other"
+ },
+ "nicaragua": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "79-86 F",
+  "drawType": "reef"
+ },
+ "nice-riviera": {
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "55-77 F",
+  "drawType": "mixed"
+ },
+ "puglia": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "57-79 F",
+  "drawType": "caves"
+ },
+ "punta-cana": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "79-84 F",
+  "drawType": "reef"
+ },
+ "rio": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-80 ft",
+  "current": "mild",
+  "waterTemp": "68-79 F",
+  "drawType": "other"
+ },
+ "santorini": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "63-79 F",
+  "drawType": "other"
+ },
+ "taiwan": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "72-84 F",
+  "drawType": "reef"
+ },
+ "tasmania": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "50-64 F (7 mm wetsuit or drysuit)",
+  "animals": "Weedy seadragon (likely, year-round), Australian fur seal (possible, year-round)",
+  "drawType": "kelp"
+ },
+ "vancouver-island": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "46-54 F (drysuit usual)",
+  "animals": "Giant Pacific octopus (likely, year-round), Steller sea lion (possible, year-round)",
+  "drawType": "kelp"
+ },
+ "vietnam": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "77-86 F",
+  "drawType": "reef"
+ },
+ "amalfi": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "57-79 F",
+  "drawType": "mixed"
+ },
+ "barcelona": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "55-75 F",
+  "drawType": "mixed"
+ },
+ "hongkong": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-65 ft",
+  "current": "mild",
+  "waterTemp": "63-84 F",
+  "drawType": "reef"
+ },
+ "iceland": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "specialty",
+  "typicalDepth": "15-60 ft",
+  "current": "none",
+  "waterTemp": "36-39 F at Silfra (drysuit)",
+  "drawType": "other"
+ },
+ "madeira": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "64-75 F",
+  "drawType": "mixed"
+ },
+ "marlborough-abel-tasman": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "none",
+  "typicalDepth": "0-35 ft",
+  "current": "mild",
+  "waterTemp": "54-68 F (wetsuit)",
+  "animals": "New Zealand fur seal (likely, year-round)",
+  "drawType": "animals"
+ },
+ "singapore": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-65 ft",
+  "current": "mild",
+  "waterTemp": "82-86 F",
+  "drawType": "reef"
+ },
+ "upper-peninsula": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "advanced",
+  "typicalDepth": "15-130 ft",
+  "current": "none",
+  "waterTemp": "39-57 F (drysuit)",
+  "drawType": "wrecks"
+ },
+ "athens": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "59-79 F",
+  "drawType": "mixed"
+ },
+ "basque-country": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-65 ft",
+  "current": "moderate",
+  "waterTemp": "54-68 F",
+  "drawType": "other"
+ },
+ "cornwall": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "50-63 F (7 mm wetsuit or drysuit)",
+  "animals": "Grey seal (likely, year-round), Basking shark (possible, Jun-Aug)",
+  "drawType": "kelp"
+ },
+ "fjords": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "none",
+  "waterTemp": "39-59 F (drysuit usual)",
+  "drawType": "kelp"
+ },
+ "hokkaido": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "specialty",
+  "typicalDepth": "15-50 ft",
+  "current": "none",
+  "waterTemp": "30 to 36 F in winter (drysuit)",
+  "animals": "Clione sea angel (likely, Feb-Mar)",
+  "drawType": "other"
+ },
+ "milford-sound-fiordland": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "50-61 F (7 mm wetsuit)",
+  "animals": "Black coral (likely, year-round)",
+  "drawType": "other"
+ },
+ "scottish-highlands-skye": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "46-57 F (drysuit usual)",
+  "animals": "Basking shark (possible, Jun-Aug), Grey seal (likely, year-round)",
+  "drawType": "kelp"
+ },
+ "tuscany": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-130 ft",
+  "current": "mild",
+  "waterTemp": "55-79 F",
+  "drawType": "mixed"
+ },
+ "antarctica": {
+  "accessStyle": [
+   "liveaboard"
+  ],
+  "certification": "specialty",
+  "typicalDepth": "15-100 ft",
+  "current": "none",
+  "waterTemp": "28 to 36 F (drysuit)",
+  "drawType": "other"
+ },
+ "bagan": {
+  "accessStyle": [
+   "liveaboard"
+  ],
+  "certification": "advanced",
+  "typicalDepth": "35-130 ft",
+  "current": "moderate",
+  "waterTemp": "81-86 F",
+  "drawType": "animals",
+  "animals": "Silvertip shark (likely, Nov-Apr), Manta ray (possible, Nov-Apr)"
+ },
+ "whistler": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "mild",
+  "waterTemp": "46-54 F (drysuit usual)",
+  "drawType": "kelp",
+  "animals": "Giant Pacific octopus (likely, year-round), Wolf eel (possible, year-round)"
+ },
+ "angkor": {
+  "accessStyle": [
+   "dayBoat"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-80 ft",
+  "current": "mild",
+  "waterTemp": "82-86 F",
+  "drawType": "reef"
+ },
+ "belfast-giants-causeway": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "46-61 F (drysuit usual)",
+  "drawType": "kelp",
+  "animals": "Grey seal (likely, year-round)"
+ },
+ "snowdonia": {
+  "certification": "openWater",
+  "typicalDepth": "15-100 ft",
+  "current": "moderate",
+  "waterTemp": "46-61 F (drysuit usual)",
+  "drawType": "kelp",
+  "animals": "Grey seal (likely, year-round, Pembrokeshire)"
+ },
+ "banff": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "specialty",
+  "typicalDepth": "15-100 ft",
+  "current": "none",
+  "waterTemp": "39-54 F (drysuit)",
+  "drawType": "other"
+ },
+ "quebec-city": {
+  "certification": "specialty",
+  "typicalDepth": "15-100 ft",
+  "current": "strong",
+  "waterTemp": "36-64 F (drysuit)",
+  "drawType": "other"
+ },
+ "napa": {
+  "accessStyle": [
+   "shore"
+  ],
+  "certification": "openWater",
+  "typicalDepth": "15-65 ft",
+  "current": "moderate",
+  "waterTemp": "48-57 F (drysuit usual)",
+  "drawType": "kelp"
+ }
+}

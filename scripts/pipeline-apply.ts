@@ -18,6 +18,7 @@ import { drizzle as drizzlePostgres } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import { contentGenerations } from '../src/lib/db/schema';
 import { parseCliArgs, getString } from '../src/lib/gemini/cli';
+import { authoringPasses, contentGenerationBatches } from '../src/lib/db/schema';
 
 function loadDotEnvLocal(): Record<string, string> {
   const out: Record<string, string> = {};
@@ -56,6 +57,7 @@ async function main() {
 
   const db = drizzlePostgres(postgres(env.DATABASE_URL, { prepare: false }));
   const { applyGeneration } = await import('../src/lib/gemini/apply');
+  const { logPassApplied } = await import('../src/lib/gemini/todo-sync');
 
   const ids: string[] = [];
   if (generationId) {
@@ -76,16 +78,27 @@ async function main() {
   }
 
   const results: Array<{ generationId: string; outcome: string; detail: string }> = [];
+  const closedTodos: string[] = [];
+  let naCount = 0;
   for (const id of ids) {
     const result = await applyGeneration(id);
-    console.log(`${id}: ${result.outcome} — ${result.detail}`);
+    console.log(`${id}: ${result.outcome} — ${result.detail}${result.closedTodos?.length ? ` [closed to-do: ${result.closedTodos.join('; ')}]` : ''}`);
     results.push({ generationId: id, outcome: result.outcome, detail: result.detail });
+    if (result.outcome === 'applied') { closedTodos.push(...(result.closedTodos ?? [])); if (result.notApplicable) naCount++; }
   }
 
   console.log('\n=== Summary ===');
   console.table(results);
   const applied = results.filter((r) => r.outcome === 'applied').length;
   console.log(`${applied} of ${results.length} applied.`);
+  // Put the job in the interest's to-do list as a finished item, and report what it closed.
+  if (applied > 0) {
+    const [first] = await db.select().from(contentGenerations).where(eq(contentGenerations.id, ids[0]));
+    const [batch] = first?.batchId ? await db.select().from(contentGenerationBatches).where(eq(contentGenerationBatches.id, first.batchId)) : [];
+    const [pass] = batch?.passId ? await db.select().from(authoringPasses).where(eq(authoringPasses.id, batch.passId)) : [];
+    await logPassApplied({ interestKey: first.interestKey, passLabel: pass?.label ?? first.promptVersion, applied, notApplicable: naCount, failed: results.length - applied, closedTodos });
+    console.log(`Logged on the ${first.interestKey} to-do list${closedTodos.length ? `; closed ${closedTodos.length} to-do(s): ${closedTodos.join('; ')}` : ''}.`);
+  }
   process.exit(0);
 }
 

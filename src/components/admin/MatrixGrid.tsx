@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
 import { JsonPanelCell, SourcesPanelCell, TextFieldPanelCell, SliderMonthlyWeatherCell, type SliderSource } from './cells';
 import { useFieldEdit } from './useFieldEdit';
+import { NaToggle } from './NaToggle';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import type { SliderEvent } from '@/lib/scoring/types';
@@ -25,12 +26,16 @@ export interface MatrixRow {
   max: number | null;
   tier: string | null;
   na: boolean;
+  /** Why this place is N/A for this interest (hover text), when recorded. */
+  naReason?: string | null;
   cap: number | null;
   events: SliderEvent[];
   styleTiers: Record<string, string>;
   sources: SliderSource[];
   overview: string;
   monthlyText: (string | null)[];
+  /** The 12 monthly scores visitors see for this interest (shown beside the blurbs). */
+  monthlyScores: number[];
   /** Content provenance — display-only, not part of any edit patch (see
    * schema.ts's ContentStamp and matrix/page.tsx's doc comment on why
    * these skip the usual "ByDest" read-modify-write map). */
@@ -97,9 +102,12 @@ export function MatrixGrid({
     setRows((rs) => rs.map((r) => (r.destId === destId && r.sliderKey === sliderKey ? { ...r, ...patch } : r)));
   }
 
+  // 'active' (the default) hides rows scored N/A; 'all' shows everything, including N/A; 'na' shows only N/A.
+  const [statusFilter, setStatusFilter] = useState<'active' | 'all' | 'na'>('active');
   const visibleRows = useMemo(
-    () => (selectedInterest === 'all' ? rows : rows.filter((r) => r.sliderKey === selectedInterest)),
-    [rows, selectedInterest],
+    () =>
+      rows.filter((r) => (selectedInterest === 'all' || r.sliderKey === selectedInterest) && (statusFilter === 'all' || (statusFilter === 'active' ? !r.na : r.na))),
+    [rows, selectedInterest, statusFilter],
   );
 
   /**
@@ -117,8 +125,8 @@ export function MatrixGrid({
    * nothing to author for an interest this destination doesn't have, so
    * these shouldn't invite a click with "Click to add…" the way an
    * unauthored-but-applicable cell does. */
-  function naCell() {
-    return <div className="cell-inner" style={{ color: 'var(--text-faint)' }}>N/A</div>;
+  function naCell(r?: MatrixRow) {
+    return <div className="cell-inner" style={{ color: 'var(--text-faint)' }} title={r?.naReason ?? undefined}>N/A</div>;
   }
 
   function renderEnvelopeCell(r: MatrixRow, bound: 'min' | 'max') {
@@ -126,7 +134,7 @@ export function MatrixGrid({
     const raw = sliderCurvesByDest[r.destId]?.[r.sliderKey];
     const dim = { justifyContent: 'flex-end', fontFamily: 'var(--font-plex-mono, monospace)', color: 'var(--text-dim)' } as const;
     if (r.na || current === null || raw === undefined) {
-      return <div className="cell-inner" style={dim}>{r.na ? 'N/A' : current === null ? '—' : Math.round(current)}</div>;
+      return <div className="cell-inner" style={dim} title={r.na ? r.naReason ?? undefined : undefined}>{r.na ? 'N/A' : current === null ? '—' : Math.round(current)}</div>;
     }
     return (
       <div className="cell-inner" style={{ justifyContent: 'flex-end' }}>
@@ -208,7 +216,10 @@ export function MatrixGrid({
             render: (r: MatrixRow) => (
               <div className="cell-inner interest-tag" style={{ fontWeight: 600 }}>
                 <span style={{ width: 8, height: 8, borderRadius: 3, background: GROUP_COLORS[r.group] ?? 'var(--text-faint)', flexShrink: 0, display: 'inline-block' }} />
-                {r.sliderIcon} {r.sliderLabel}
+                {r.sliderIcon}{' '}
+                <Link href={`/admin/destinations/interests/${r.sliderKey}`} style={{ color: 'inherit', textDecoration: 'none' }} title={`Open the ${r.sliderLabel} page`}>
+                  {r.sliderLabel}
+                </Link>
               </div>
             ),
           } as GridColumn<MatrixRow>,
@@ -221,7 +232,7 @@ export function MatrixGrid({
       sortable: true,
       sortValue: (r) => (r.na ? -1 : r.base ?? 0),
       render: (r) => {
-        if (r.na) return <div className="cell-inner" style={{ justifyContent: 'flex-end', color: 'var(--text-faint)' }}>N/A</div>;
+        if (r.na) return <div className="cell-inner" style={{ justifyContent: 'flex-end', color: 'var(--text-faint)' }} title={r.naReason ?? undefined}>N/A</div>;
         return (
           <div className="cell-inner" style={{ justifyContent: 'flex-end' }}>
             <input
@@ -318,34 +329,20 @@ export function MatrixGrid({
       label: 'N/A',
       render: (r) => (
         <div className="cell-inner">
-          <label style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 10.5, color: 'var(--text-faint)', cursor: 'pointer' }}>
-            <input
-              type="checkbox"
-              checked={r.na}
-              onChange={(e) => {
-                const newNa = e.target.checked;
-                const before = naSlidersByDest[r.destId] ?? [];
-                const after = newNa ? [...before.filter((k) => k !== r.sliderKey), r.sliderKey] : before.filter((k) => k !== r.sliderKey);
-                commit({
-                  entityType: 'destination',
-                  entityId: r.destId,
-                  entityLabel: r.destName,
-                  field: 'naSliders',
-                  fieldLabel: `${r.sliderLabel} — marked N/A`,
-                  loadedUpdatedAt: r.updatedAt,
-                  oldValue: r.na,
-                  newValue: newNa,
-                  toLabel: (v) => (v ? 'N/A' : 'scored'),
-                  toPatchValue: () => after,
-                  setLocal: (val) => {
-                    setNaSlidersByDest((m) => ({ ...m, [r.destId]: val === newNa ? after : before }));
-                    patchRow(r.destId, r.sliderKey, { na: val === newNa ? newNa : r.na });
-                  },
-                });
-              }}
-            />
-            N/A
-          </label>
+          <NaToggle
+            compact
+            interestKey={r.sliderKey}
+            interestLabel={r.sliderLabel}
+            placeId={r.destId}
+            placeName={r.destName}
+            isNa={r.na}
+            reason={r.naReason ?? null}
+            onChanged={(isNa, reason) => {
+              const before = naSlidersByDest[r.destId] ?? [];
+              setNaSlidersByDest((m) => ({ ...m, [r.destId]: isNa ? [...before.filter((k) => k !== r.sliderKey), r.sliderKey] : before.filter((k) => k !== r.sliderKey) }));
+              patchRow(r.destId, r.sliderKey, { na: isNa, naReason: reason });
+            }}
+          />
         </div>
       ),
     },
@@ -401,7 +398,7 @@ export function MatrixGrid({
       key: 'events',
       label: 'Events',
       render: (r) => {
-        if (r.na) return naCell();
+        if (r.na) return naCell(r);
         const mergedAfter = (v: SliderEvent[]) => {
           const before = sliderEventsByDest[r.destId] ?? {};
           const after = { ...before };
@@ -429,7 +426,7 @@ export function MatrixGrid({
       key: 'styleTiers',
       label: 'Style tiers',
       render: (r) => {
-        if (r.na) return naCell();
+        if (r.na) return naCell(r);
         const mergedAfter = (v: Record<string, string>) => {
           const before = activityStyleTiersByDest[r.destId] ?? {};
           const after = { ...before };
@@ -457,7 +454,7 @@ export function MatrixGrid({
       key: 'overview',
       label: 'Overview',
       render: (r) => {
-        if (r.na) return naCell();
+        if (r.na) return naCell(r);
         const mergedAfter = (v: string | null) => {
           const before = sliderOverviewByDest[r.destId] ?? {};
           const after = { ...before };
@@ -484,7 +481,7 @@ export function MatrixGrid({
       key: 'monthlyText',
       label: 'Monthly',
       render: (r) => {
-        if (r.na) return naCell();
+        if (r.na) return naCell(r);
         const mergedAfter = (v: (string | null)[]) => {
           const before = sliderMonthlyWeatherByDest[r.destId] ?? {};
           const after = { ...before };
@@ -502,6 +499,7 @@ export function MatrixGrid({
             }}
             toPatchValue={mergedAfter}
             meta={r.monthlyMeta}
+            scores={r.monthlyScores}
           />
         );
       },
@@ -510,7 +508,7 @@ export function MatrixGrid({
       key: 'sources',
       label: 'Sources',
       render: (r) => {
-        if (r.na) return naCell();
+        if (r.na) return naCell(r);
         const mergedAfter = (v: SliderSource[]) => {
           const before = sliderSourcesByDest[r.destId] ?? {};
           const after = { ...before };
@@ -558,6 +556,17 @@ export function MatrixGrid({
               </optgroup>
             ))}
           </select>
+          <span className="filter-label">Status</span>
+          <select className="filter-select" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as 'active' | 'all' | 'na')}>
+            <option value="active">Active (not N/A)</option>
+            <option value="all">All (includes N/A)</option>
+            <option value="na">N/A only</option>
+          </select>
+          {selectedInterest !== 'all' && (
+            <Link className="filter-select" style={{ textDecoration: 'none', display: 'inline-block' }} href={`/admin/destinations/interests/${selectedInterest}`}>
+              Open interest page →
+            </Link>
+          )}
           <a
             className="filter-select"
             style={{ textDecoration: 'none', display: 'inline-block' }}

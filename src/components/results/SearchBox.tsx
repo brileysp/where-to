@@ -11,11 +11,15 @@ const SEARCH_RESULTS_CAP = 6;
 export function SearchBox({
   destinations,
   ranked,
+  rankedAll,
   onSelectResult,
   expanded,
 }: {
   destinations: ScoredDestination[];
+  /** The list the traveller sees (specialist places they have not unlocked are left out). */
   ranked: RankedDestination[];
+  /** Every place, scored — search finds a specialist place even when the list leaves it out. */
+  rankedAll: RankedDestination[];
   onSelectResult: (destId: string) => void;
   /** Whether the bar is revealed — toggled by the header's search icon. */
   expanded: boolean;
@@ -90,6 +94,8 @@ export function SearchBox({
               const idx = rankOf(d.id);
               const r = idx >= 0 ? ranked[idx] : null;
               const label = r ? scoreLabel(r.s) : null;
+              // Not in the list: a specialist place this traveller has not unlocked. Still shown, with its score.
+              const hidden = !r ? rankedAll.find((x) => x.d.id === d.id) ?? null : null;
               return (
                 <div
                   key={d.id}
@@ -107,6 +113,11 @@ export function SearchBox({
                   {r && label && (
                     <span className={`search-dropdown-rank score-${label.cls}`}>
                       #{idx + 1} · {r.s.toFixed(1)}
+                    </span>
+                  )}
+                  {hidden && (
+                    <span className={`search-dropdown-rank score-${scoreLabel(hidden.s).cls}`} title="A specialist place: it appears in your list when you raise one of its interests">
+                      Specialist · {hidden.s.toFixed(1)}
                     </span>
                   )}
                 </div>

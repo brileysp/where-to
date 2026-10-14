@@ -8,6 +8,7 @@ import {
   integer,
   doublePrecision,
   timestamp,
+  date,
   primaryKey,
   pgEnum,
   index,
@@ -109,6 +110,9 @@ export const places = pgTable(
         // Edit tracking — see src/lib/admin/cost-item-stamp.ts. Admin-only.
         id?: string; updatedAt?: string | null; updatedBy?: string | null;
         editorKind?: 'human' | 'agent' | null; lastChange?: string | null;
+        // Admin-only detail added Oct 2026; never sent to travellers.
+        category?: 'lodging' | 'food' | 'transport' | 'activity' | 'other' | null; priceMax?: number | null;
+        season?: 'year' | 'peak' | 'offPeak' | null; currency?: string | null; sourceUrl?: string | null; checkedOn?: string | null;
       }>
     >(),
 
@@ -163,6 +167,8 @@ export const places = pgTable(
         severity: 'moderate' | 'serious';
         text: string;
         lastReviewed: string; // ISO date, e.g. "2026-03-01"
+        sourceUrl?: string | null; // where the advisory comes from (added Oct 2026)
+        expiresOn?: string | null; // date after which it should be re-checked or dropped
       }>
     >(),
 
@@ -223,10 +229,22 @@ export const places = pgTable(
 
     searchAliases: text('search_aliases').array().notNull().default([]),
     naSliders: text('na_sliders').array().notNull().default([]),
+    // Why a place is not applicable for an interest, keyed by interest key (only for keys that are in naSliders). The
+    // sentence Gemini gave, an imported one-line note, or the owner's own wording; `geminiText` keeps Gemini's original
+    // when the owner has edited it. Never read by the scoring engine.
+    naReasons: jsonb('na_reasons')
+      .notNull()
+      .default({})
+      .$type<Record<string, { reason: string; source: 'gemini' | 'imported' | 'manual'; by: string; at: string; generationId?: string; geminiText?: string }>>(),
     budgetBands: text('budget_bands').array().notNull().default([]),
     vibeBands: text('vibe_bands').array().notNull().default([]),
     physicalBands: text('physical_bands').array().notNull().default([]),
     audienceBands: text('audience_bands').array().notNull().default([]),
+    // Specialist ("gated") places: a gated place is left out of the traveller's results list unless their own weight for
+    // one of `gatedInterests` reaches GATE_MIN_WEIGHT (src/lib/scoring/gating.ts). Searching for it always works.
+    // Blank (false) by default; set from the admin Places tab.
+    gated: boolean('gated').notNull().default(false),
+    gatedInterests: text('gated_interests').array().notNull().default([]),
     // What the place is LIKE (city, island, desert…), 1–4 slugs from
     // src/lib/places/setting-tags.ts; first = primary. Distinct from the
     // single-valued, hierarchy-oriented `placeType` above.
@@ -511,6 +529,8 @@ export const tensions = pgTable('tensions', {
 export const profiles = pgTable('profiles', {
   id: uuid('id').primaryKey(), // will reference auth.users(id) on Supabase
   displayName: text('display_name'),
+  // Home country (ISO code), which decides the units text is shown in: see src/lib/text/units.ts. Null = not chosen.
+  homeCountry: text('home_country'),
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
@@ -614,6 +634,61 @@ export const adminAuditLog = pgTable(
 export const interestMeta = pgTable('interest_meta', {
   key: text('key').primaryKey(), // matches a SLIDERS[].key
   emoji: text('emoji'),
+  // The short name on the filter pills. Null = automatic (the text before " & ", see shortInterestLabel).
+  shortName: text('short_name'),
+  // Admin overrides of the code-defined interest list (src/lib/scoring/constants.ts). Null = use the code value. Applied everywhere by
+  // src/lib/scoring/overrides.ts, so a change here reaches the traveller app, the scoring engine and the admin screens.
+  label: text('label'),
+  groupName: text('group_name'),
+  hidden: boolean('hidden'),
+  audienceTier: text('audience_tier'),
+  /** Position in the picker; lower first. Null = the code's own order. */
+  sortOrder: integer('sort_order'),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+/**
+ * Admin edits to a persona (a starting set of interest weights): its name, icon and blurb, which interests it highlights, and
+ * individual weights. Only what is saved here replaces the code values in constants.ts; everything else is untouched.
+ */
+export const personaOverrides = pgTable('persona_overrides', {
+  personaId: text('persona_id').primaryKey(),
+  name: text('name'),
+  icon: text('icon'),
+  blurb: text('blurb'),
+  primary: text('primary_keys').array(),
+  /** Only the weights the admin changed, keyed by interest key (1-10). */
+  weights: jsonb('weights').notNull().default({}).$type<Record<string, number>>(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+/**
+ * Admin-edited versions of the lists on an interest page's "Rules & scoring" tab (the writing rules, calibration ladder, tests and edge
+ * cases). A section with no row here shows the built-in list from config.ts. This is the admin reference text only; the Gemini
+ * directive files under prompts/ are separate and are not changed by these edits.
+ */
+export const interestRuleSections = pgTable(
+  'interest_rule_sections',
+  {
+    interestKey: text('interest_key').notNull(),
+    sectionKey: text('section_key').notNull(), // e.g. "birding.ladder"
+    items: jsonb('items').notNull().$type<unknown[]>(),
+    updatedBy: text('updated_by').notNull().default(''),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.interestKey, table.sectionKey] })],
+);
+
+/**
+ * Admin-edited "what a 10 means" for an interest: the definition and the short list of places allowed a peak of 10. A row here
+ * replaces the built-in entry in src/lib/scoring/anchors.ts for the Gemini validator and the interest pages (see
+ * src/lib/scoring/anchorOverrides.ts). Null columns fall back to the built-in value.
+ */
+export const interestAnchorOverrides = pgTable('interest_anchor_overrides', {
+  interestKey: text('interest_key').primaryKey(),
+  definition: text('definition'),
+  ten: text('ten').array(),
+  updatedBy: text('updated_by').notNull().default(''),
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
@@ -634,6 +709,29 @@ export const contentGenerationStatusEnum = pgEnum('content_generation_status', [
   'superseded',
 ]);
 
+/**
+ * A named round of Gemini authoring for one interest (normally one prompt version over the catalog), made of one or more
+ * batches. `finishedAt` is set deliberately (admin button or --finish-pass); while it is empty the pass is "in progress".
+ * See docs/authoring-passes-spec.md.
+ */
+export const AUTHORING_PASS_KINDS = ['initial', 'redo', 'targeted', 'pilot'] as const;
+export type AuthoringPassKind = (typeof AUTHORING_PASS_KINDS)[number];
+
+export const authoringPasses = pgTable(
+  'authoring_passes',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    label: text('label').notNull(),
+    kind: text('kind').notNull().default('redo').$type<AuthoringPassKind>(),
+    promptVersion: text('prompt_version'), // e.g. "birding/v8"
+    notes: text('notes').notNull().default(''),
+    finishedAt: timestamp('finished_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('authoring_passes_interest_idx').on(table.interestKey, table.createdAt)],
+);
+
 export const contentGenerationBatches = pgTable('content_generation_batches', {
   id: uuid('id').primaryKey().defaultRandom(),
   interestKey: text('interest_key').notNull(),
@@ -643,6 +741,13 @@ export const contentGenerationBatches = pgTable('content_generation_batches', {
   totalCostUsd: doublePrecision('total_cost_usd').notNull().default(0),
   startedAt: timestamp('started_at', { withTimezone: true }).notNull().defaultNow(),
   finishedAt: timestamp('finished_at', { withTimezone: true }),
+  // Added with authoring passes: which pass this batch belongs to, and what it used and cost in tokens.
+  passId: uuid('pass_id').references(() => authoringPasses.id),
+  promptVersion: text('prompt_version'),
+  model: text('model'),
+  thinkingLevel: text('thinking_level'),
+  tokensIn: integer('tokens_in').notNull().default(0),
+  tokensOut: integer('tokens_out').notNull().default(0), // includes Gemini's hidden reasoning tokens (billed as output)
 });
 
 export const contentGenerations = pgTable(
@@ -679,3 +784,145 @@ export const contentGenerations = pgTable(
     index('content_generations_batch_idx').on(table.batchId),
   ],
 );
+
+// ---- Per-interest admin pages ----------------------------------------------
+// One admin page per interest (src/app/admin/destinations/interests/[key]).
+// Interest definitions/anchors/formulas stay in code (see SLIDERS above); these
+// tables hold only what people add through that page.
+
+/** An expert's review of an interest (or of one place within it): who, when,
+ * and a note on what they did. `placeId` null means the whole interest. */
+export const interestReviews = pgTable(
+  'interest_reviews',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(), // matches a SLIDERS[].key
+    placeId: text('place_id'), // matches places.id; null = whole interest
+    reviewerName: text('reviewer_name').notNull(),
+    reviewerRole: text('reviewer_role'), // e.g. "Field guide author", "AI: Claude"
+    reviewedOn: date('reviewed_on', { mode: 'string' }).notNull(),
+    notes: text('notes').notNull().default(''),
+    createdBy: text('created_by').notNull(), // admin email who typed the entry
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('interest_reviews_interest_idx').on(table.interestKey, table.reviewedOn)],
+);
+
+export const INTEREST_TODO_STATUSES = ['needs_you', 'ready_for_claude', 'waiting', 'idea', 'done'] as const;
+export type InterestTodoStatus = (typeof INTEREST_TODO_STATUSES)[number];
+
+/** Things we agreed to do for an interest but have not done yet. */
+export const interestTodos = pgTable(
+  'interest_todos',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    title: text('title').notNull(),
+    detail: text('detail').notNull().default(''),
+    status: text('status').$type<InterestTodoStatus>().notNull().default('idea'),
+    source: text('source').notNull().default(''), // where it came from (a review, a chat date…)
+    // A to-do about one place's text (for example "Rewrite X for its wider scope"). With closeOnApply set, applying a Gemini
+    // generation for this place and interest closes it automatically (see src/lib/gemini/todo-sync.ts).
+    placeId: text('place_id'),
+    closeOnApply: boolean('close_on_apply').notNull().default(false),
+    // 1 = high, 2 = normal, 3 = low. Sorts the to-do list; has no other effect.
+    priority: integer('priority').notNull().default(2),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+    doneAt: timestamp('done_at', { withTimezone: true }),
+  },
+  (table) => [index('interest_todos_interest_idx').on(table.interestKey, table.status)],
+);
+
+export const INTEREST_IDEA_STAGES = ['idea', 'researched', 'verified', 'added'] as const;
+export type InterestIdeaStage = (typeof INTEREST_IDEA_STAGES)[number];
+
+/** Candidate places not in the catalog yet that would suit an interest. */
+export const interestPlaceIdeas = pgTable(
+  'interest_place_ideas',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    name: text('name').notNull(),
+    region: text('region').notNull().default(''),
+    why: text('why').notNull().default(''),
+    nearestExisting: text('nearest_existing').notNull().default(''),
+    /** One of the ten place types (src/lib/admin/interest-pages/place-types.ts), or empty. */
+    placeType: text('place_type').notNull().default(''),
+    stage: text('stage').$type<InterestIdeaStage>().notNull().default('idea'),
+    // Place grain, the same scale as the 12 Oct 2026 Place Grain Review: -2 or lower too specific, -1 slightly specific, 0 just right,
+    // 1 slightly broad, 2 or higher too broad. Null = not rated. grainNote is the one-line reason.
+    grain: integer('grain'),
+    grainNote: text('grain_note').notNull().default(''),
+    // Manual order within the list (lower first); null = after every ordered idea, then by name.
+    sortOrder: integer('sort_order'),
+    // Set when an idea has been turned into a real place with the Promote button.
+    promotedPlaceId: text('promoted_place_id'),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('interest_place_ideas_interest_idx').on(table.interestKey)],
+);
+
+/**
+ * The handful of websites we come back to again and again to fact-check an
+ * interest (a field-guide site, an official park list, a society's handbook).
+ * Deliberately short: about ten per interest, not every page ever cited (the
+ * per-place links live in places.sliderSources). `usefulness` is a 1-100
+ * judgement (100 = best) set by a person and edited as we learn which sites
+ * hold up. `lastUsedOn` and `placesChecked` say when and how widely the site
+ * was last used to check this interest. Not read by scoring or the public app.
+ */
+export const REFERENCE_SITE_ACCESS = ['ai', 'partial', 'human'] as const;
+export type ReferenceSiteAccess = (typeof REFERENCE_SITE_ACCESS)[number];
+
+export const interestReferenceSites = pgTable(
+  'interest_reference_sites',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    /** Home page or the main page we use, e.g. https://www.10000birds.com */
+    siteUrl: text('site_url').notNull(),
+    label: text('label').notNull(),
+    /** What it is good for, and any catch (blocked to automated reads, commercial, etc.). */
+    goodFor: text('good_for').notNull().default(''),
+    usefulness: integer('usefulness').notNull().default(50),
+    /**
+     * Who can check against it: 'ai' = Claude can read the pages directly; 'partial' = only through web
+     * search results (direct reads fail or the data does not load); 'human' = blocks automated reads, a
+     * person has to look it up.
+     */
+    aiAccess: text('ai_access').$type<ReferenceSiteAccess>().notNull().default('ai'),
+    lastUsedOn: date('last_used_on', { mode: 'string' }),
+    placesChecked: integer('places_checked').notNull().default(0),
+    createdBy: text('created_by').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    index('interest_reference_sites_interest_idx').on(table.interestKey, table.usefulness),
+    uniqueIndex('interest_reference_sites_unique').on(table.interestKey, table.siteUrl),
+  ],
+);
+
+export type InterestFactValue = string | number | boolean | string[] | null;
+
+/**
+ * Per-place, per-interest facts that sit behind the written blurbs (for
+ * birding: species counts, endemics, photo ease, draw birds…). Free-form jsonb
+ * keyed by fact name; src/lib/admin/interest-pages/config.ts says which keys
+ * each interest uses and how they are validated. Not read by the scoring
+ * engine or the public app.
+ */
+export const placeInterestFacts = pgTable(
+  'place_interest_facts',
+  {
+    placeId: text('place_id').notNull(),
+    interestKey: text('interest_key').notNull(),
+    facts: jsonb('facts').notNull().default({}).$type<Record<string, InterestFactValue>>(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.placeId, table.interestKey] })],
+);
+// t

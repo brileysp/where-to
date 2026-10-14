@@ -154,6 +154,7 @@ async function main() {
   const { getAllScoredPlaces } = await import('../src/lib/db/queries/places');
   const { isSliderNA } = await import('../src/lib/scoring/destinations');
   const { INTEREST_ANCHORS } = await import('../src/lib/scoring/anchors');
+  await (await import('../src/lib/scoring/anchorOverrides')).loadAnchorOverrides(true); // admin-edited anchors
   const dryRun = process.argv.includes('--dry-run');
   const db = drizzlePostgres(postgres(env.DATABASE_URL, { prepare: false }));
 

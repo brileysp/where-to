@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PERSONAS, SLIDERS, allBandsSelected } from '@/lib/scoring/constants';
 import { computeRankedDestinations } from '@/lib/scoring/rank';
+import { isVisibleForWeights } from '@/lib/scoring/gating';
 import { topInterestChips } from '@/lib/scoring/breakdown';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import {
@@ -68,9 +69,11 @@ interface Props {
   userFirstName: string | null;
   /** Admin-set emoji overrides, keyed by slider key — see getInterestEmojiOverrides. Falls back to the slider's own code-defined icon when a key has no override. */
   emojiOverrides: Record<string, string>;
+  /** Admin-set pill names, keyed by slider key. A key with no entry uses the automatic short name. */
+  shortNames: Record<string, string>;
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -163,10 +166,14 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     debounceRef.current = setTimeout(() => persist(next), 400);
   }
 
-  const ranked = useMemo(() => {
+  // Every place, scored. Search and the detail sheet read this, so a specialist place is always findable by name.
+  const rankedAll = useMemo(() => {
     if (!monthChosen || !month) return [];
     return computeRankedDestinations(destinations, weights, month, bands, selectedStyles);
   }, [destinations, weights, month, bands, monthChosen, selectedStyles]);
+
+  // The list itself leaves out specialist places the traveller has not unlocked (see lib/scoring/gating.ts).
+  const ranked = useMemo(() => rankedAll.filter((r) => isVisibleForWeights(r.d, weights)), [rankedAll, weights]);
 
   // Overall + your top interests — the exact same topInterestChips list the
   // detail sheet's For You tab shows (same pool, same adaptive 1-5 count),
@@ -207,7 +214,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     rowIds: () => displayRanked.map((r) => r.d.id),
   });
 
-  const openDetailEntry = openDetailId ? ranked.find((r) => r.d.id === openDetailId) : undefined;
+  const openDetailEntry = openDetailId ? rankedAll.find((r) => r.d.id === openDetailId) : undefined;
   const visitedCount = Object.values(visited).filter(Boolean).length;
   const favoritedCount = Object.values(favorited).filter(Boolean).length;
 
@@ -400,7 +407,11 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
 
   function handleSelectSearchResult(destId: string) {
     const rankIdx = ranked.findIndex((r) => r.d.id === destId);
-    if (rankIdx < 0) return;
+    // A specialist place that is not in this traveller's list: open it directly instead of scrolling to a card.
+    if (rankIdx < 0) {
+      if (rankedAll.some((r) => r.d.id === destId)) setOpenDetailId(destId);
+      return;
+    }
     setVisibleCount((prev) => Math.max(prev, rankIdx + 1));
     setHighlightedId(destId);
   }
@@ -517,7 +528,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           )}
 
           {resultsShown && (
-            <SearchBox destinations={destinations} ranked={ranked} onSelectResult={handleSelectSearchResult} expanded={searchOpen} />
+            <SearchBox destinations={destinations} ranked={ranked} rankedAll={rankedAll} onSelectResult={handleSelectSearchResult} expanded={searchOpen} />
           )}
 
           {resultsShown && (
@@ -534,7 +545,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
                   <InterestChip
                     key={s.key}
                     emoji={emojiOverrides[s.key] ?? s.icon}
-                    label={shortInterestLabel(s.label)}
+                    label={shortInterestLabel(s.label, shortNames[s.key])}
                     fullLabel={s.label}
                     active={revealStage >= 1 && pinnedChip === s.key}
                     onClick={() => setPinnedChip(s.key)}
@@ -621,6 +632,7 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           dest={openDetailEntry.d}
           weights={weights}
           emojiOverrides={emojiOverrides}
+          shortNames={shortNames}
           bands={bands}
           selectedStyles={selectedStyles}
           month={month}

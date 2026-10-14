@@ -103,3 +103,8 @@ export function stampsRegionFor(destinationId: string): StampsRegion {
   if (loc.type === 'us-state') return 'US';
   return 'Mexico, Central America and Caribbean';
 }
+
+/** The continent saved on the place when there is one (it is editable on the Places grid), otherwise the one derived from its country code. */
+export function continentOf(row: { id: string; continent?: string | null }): string {
+  return row.continent || getContinent(row.id);
+}

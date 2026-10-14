@@ -1,6 +1,7 @@
 'use client';
 
 import { MonthChip } from './MonthChip';
+import { HomeCountryPicker } from '@/components/HomeCountryPicker';
 
 interface Props {
   firstName: string | null;
@@ -25,6 +26,7 @@ export function ResultsHeader({ firstName, month, onChangeMonth, searchOpen, onT
         <span>Top places for {firstName || 'you'} for</span>
         <MonthChip month={month} onChangeMonth={onChangeMonth} />
       </h1>
+      <HomeCountryPicker className="results-country" />
       <button
         type="button"
         className={`results-icon-btn${searchOpen ? ' on' : ''}`}

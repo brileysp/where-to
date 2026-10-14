@@ -1,0 +1,1516 @@
+{
+ "_note": "Snorkeling & diving fact sheets (Oct 2026), built by scripts/build-diving-facts.ts from the diving columns on the interest page; NOT yet source-checked. Passed to Gemini as ground truth. 'Typical' means a coral-reef place done by day boat, Open Water, 10-30 m, little or mild current and warm water: it needs no format wording.",
+ "punta-cana": {
+  "forPlaceName": "Dominican Republic",
+  "scope": "The whole Dominican Republic: Punta Cana and Bávaro on the east coast, Bayahibe (Catalina and Saona islands), La Romana, Sosúa and Cabarete on the north coast, Samaná, and the Santo Domingo coast (Boca Chica and its wrecks). Describe by area. Do not treat Punta Cana as the whole country.",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 79-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "taiwan": {
+  "forPlaceName": "Taiwan",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 72-84 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rio": {
+  "forPlaceName": "Rio de Janeiro",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-80 ft. Water temperature: 68-79 F, with mild current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "belize": {
+  "forPlaceName": "Belize",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 79-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Whale shark (possible, Apr-Jun), Nurse shark (likely, year-round), Caribbean reef shark (likely, year-round), Eagle ray (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rivieramaya": {
+  "forPlaceName": "Riviera Maya",
+  "scope": "",
+  "facts": [
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 77-84 F (cenotes about 77 F), with moderate current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Bull shark (likely, Nov-Mar), Whale shark (possible, Jun-Sep), Green turtle (likely, year-round), Eagle ray (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: specialty training needed (cave, wreck, technical, drysuit or ice)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "gbr": {
+  "forPlaceName": "Great Barrier Reef",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-80 ft. Water temperature: 73-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (likely, year-round), Reef shark (likely, year-round), Dwarf minke whale (possible, Jun-Jul).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "komodo": {
+  "forPlaceName": "Komodo & Flores",
+  "scope": "Komodo National Park and the wider island of Flores: day boats and liveaboards from Labuan Bajo to the Komodo and Rinca island sites, plus other Flores dive areas (Riung, Maumere). The place is the island chain, not only the islands of the national park.",
+  "facts": [
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 72-84 F, with strong current (drift diving).",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; strong current (drift diving)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "fiji": {
+  "forPlaceName": "Fiji",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 77-84 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Bull shark (likely, year-round, baited), Tiger shark (possible, year-round, baited), Manta ray (likely, May-Oct).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: some animal encounters are baited or in a cage."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "okinawa": {
+  "forPlaceName": "Okinawa",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 72-84 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (likely, year-round), Hammerhead shark (possible, Dec-Mar).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "maldives": {
+  "forPlaceName": "Maldives",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 81-86 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (likely, year-round at cleaning stations but most numerous Jun-Nov, with Hanifaru Bay feeding aggregations about Jun-Oct), Whale shark (likely, year-round in South Ari Atoll, most reliable Aug-Nov), Reef shark (likely, year-round), Green turtle (likely, year-round).",
+   "Hanifaru Bay in Baa Atoll, the famous manta feeding gathering (peak about late July to early October, around new and full moons), is snorkel-only: scuba is not allowed there, entry is limited and guided. Never describe it as a dive site.",
+   "Sources agree the dry season is best for clear water and the wet season is best for big animals, so neither season is poor: say what each offers.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "Two monsoons. Dry northeast monsoon, about Dec-May: the clearest water (visibility roughly 15-30 m, sometimes more in Male and Ari atolls), calm seas especially on the eastern sides of the atolls. Wet southwest monsoon, about Jun-Nov: plankton blooms bring the most mantas and whale sharks, but visibility drops to roughly 10-15 m in places and seas are rougher and wetter; western atolls are better in this season. Diving runs all year. Water stays 26-30 C all year.",
+  "mustMention": []
+ },
+ "bali": {
+  "forPlaceName": "Bali",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 72-84 F (cold upwellings Jul-Oct), with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (likely, year-round), Mola mola (possible, Jul-Oct), Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mauritius": {
+  "forPlaceName": "Mauritius",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-115 ft. Water temperature: 75-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Spinner dolphin (likely, year-round), Green turtle (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 115 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rajaampat": {
+  "forPlaceName": "Raja Ampat",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 82-86 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (likely, Oct-Apr), Wobbegong shark (likely, year-round), Pygmy seahorse (likely, year-round), Reef shark (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "borneo": {
+  "forPlaceName": "Malaysian Borneo",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 81-86 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (guaranteed, year-round), Barracuda (likely, year-round), Reef shark (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "palawan": {
+  "forPlaceName": "Palawan",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 79-86 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (likely, Mar-Jun), Whale shark (possible, Mar-Jun), Dugong (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "seychelles": {
+  "forPlaceName": "Seychelles",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 81-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Whale shark (likely, Aug-Oct), Green turtle (likely, year-round), Reef shark (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "galapagos": {
+  "forPlaceName": "Galápagos Islands",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 61-82 F (cold Jun-Nov), with strong current (drift diving).",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Galapagos sea lion (guaranteed, year-round), Green turtle (likely, year-round), Eagle ray (likely, year-round), Hammerhead shark (likely, year-round), Whale shark (likely, Jun-Nov), Marine iguana (possible, year-round), Galapagos penguin (unlikely, year-round).",
+   "Season facts for monthly text (use only where they change that month, and only what happens in or on the water): sea lion pups are born Aug-Nov (peak Aug-Sep) and are curious and playful around swimmers and snorkelers; manta rays are seen more often Dec-May; Galapagos penguins are present all year. Do NOT mention land events (marine iguana courtship, turtle nesting on beaches).",
+   "Do NOT say which season has the biggest hammerhead schools: they are there all year and sources disagree. Whale sharks are the one clear cool-season animal draw (Jun-Nov, best Jul-Oct).",
+   "For a snorkeler the difference between seasons is comfort and clarity: warm months give warmer, clearer, calmer water; Jun-Nov is cooler (a thicker wetsuit), with lower visibility, and Aug-Sep is the coldest and roughest.",
+   "Practical: a thick wetsuit (5-7 mm) is wise all year and a hood helps Jun-Nov, because the water is cold even on the equator. The two most famous dive sites are Darwin and Wolf, the far northern islands, reached only by liveaboard (a dive boat you sleep on).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; strong current (drift diving); the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "Two seasons. Warm and calm, about Dec-May: water 22-27 C, visibility roughly 18-30 m at its best (clearest Apr-May), flat seas, manta rays more often seen. Cool, Jun-Nov: water 16-22 C (coldest and roughest Aug-Sep), visibility about 9-18 m, plankton-rich, a thin grey mist (garua) hangs over the islands Jul-Dec, and whale sharks (mostly pregnant females) are seen at the far northern islands Jun-Nov, best Jul-Oct. Hammerheads are present all year; sources disagree on which season has the biggest schools, so never state one.",
+  "mustMention": []
+ },
+ "aruba": {
+  "forPlaceName": "Aruba",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 79-84 F, with little or no current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (possible, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "puerto-rico": {
+  "forPlaceName": "Puerto Rico",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 77-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mallorca": {
+  "forPlaceName": "Mallorca",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 55-81 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "croatia": {
+  "forPlaceName": "Dalmatian Coast",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 54-79 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "barbados": {
+  "forPlaceName": "Barbados",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 79-84 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Hawksbill turtle (guaranteed, year-round), Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "lisbon": {
+  "forPlaceName": "Lisbon",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 57-66 F, with mild current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (57-66 F); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "maui": {
+  "forPlaceName": "Maui",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 75-81 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (guaranteed, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "algarve": {
+  "forPlaceName": "Algarve",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 59-70 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sydney": {
+  "forPlaceName": "Sydney",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 59-75 F, with moderate current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Grey nurse shark (likely, year-round), Weedy seadragon (likely, year-round), Port Jackson shark (likely, Jun-Oct).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "dubai": {
+  "forPlaceName": "Dubai",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 72-93 F, with mild current.",
+   "What visitors mostly go underwater for: wrecks.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is wrecks."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cape-town": {
+  "forPlaceName": "Cape Town",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-80 ft. Water temperature: 50-64 F (7 mm wetsuit or drysuit), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Broadnose sevengill shark (likely, year-round, best at Pyramid Rock in False Bay), Bronze whaler shark (likely on baited cage dives at Gansbaai, main season about Apr-Sep), African penguin (likely, year-round), Cape fur seal (likely, year-round), Great white shark (rare: sightings at Gansbaai fell sharply from 2017, widely linked to killer whales, and they are now seen only occasionally).",
+   "Cage diving is at Gansbaai, roughly a two-hour drive east of Cape Town, not in Cape Town itself, and it is baited. Great whites used to be the draw but have become rare there since 2017; the usual sharks on a cage dive now are bronze whalers and broadnose sevengills. Never promise great whites: say 'sharks such as bronze whalers and sevengills, with great whites now rare'.",
+   "A 7 mm wetsuit or a semi-drysuit is usual; a hood, gloves and boots are needed all year.",
+   "Do not give month-by-month visibility numbers; sources disagree. Say only what the facts above support.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (50-64 F); the draw is kelp forest and cold-water reef; some animal encounters are baited or in a cage."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "Cold water all year: roughly 10-14 C on the Atlantic side and 12-18 C in False Bay (Simon's Town). Diving depends on wind and swell: the Atlantic side is only dived on calm days, which are few, and is rarely dived in winter (frequent storm fronts and swell). False Bay, around Simon's Town, is the more consistent choice all year; sources say its visibility is often better in winter (roughly Jun-Aug) than in summer, though the water is colder. Visibility is typically about 6-20 m. Sevengill sharks are found all year at Pyramid Rock in False Bay (operators there describe their dive season as about Dec-Apr).",
+  "mustMention": []
+ },
+ "costa-rica": {
+  "forPlaceName": "Costa Rica",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 72-84 F (cooler Dec-Apr on the Pacific), with mild current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Bull shark (likely, Jun-Nov), Manta ray (likely, Dec-Apr).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nice-riviera": {
+  "forPlaceName": "Nice & the French Riviera",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 55-77 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "jamaica": {
+  "forPlaceName": "Jamaica",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 79-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nicaragua": {
+  "forPlaceName": "Nicaragua",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 79-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "puglia": {
+  "forPlaceName": "Puglia",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 57-79 F, with mild current.",
+   "What visitors mostly go underwater for: caves and cenotes.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is caves and cenotes."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "jordan": {
+  "forPlaceName": "Petra & Wadi Rum",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 70-82 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sardinia": {
+  "forPlaceName": "Sardinia",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 55-79 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "turks-caicos": {
+  "forPlaceName": "Turks & Caicos",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 77-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Eagle ray (likely, year-round), Caribbean reef shark (likely, year-round), Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "canaries": {
+  "forPlaceName": "Canary Islands",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 64-75 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Angel shark (likely, year-round), Stingray (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "srilanka": {
+  "forPlaceName": "Sri Lanka",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 81-86 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "colombian-caribbean": {
+  "forPlaceName": "Colombian Caribbean",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 81-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sicily": {
+  "forPlaceName": "Sicily",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 59-81 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "hokkaido": {
+  "forPlaceName": "Hokkaido",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-50 ft. Water temperature: 30 to 36 F in winter (drysuit), with little or no current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Clione sea angel (likely, Feb-Mar).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; specialty training needed (cave, wreck, technical, drysuit or ice); cold water (30 to 36 F in winter); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "basque-country": {
+  "forPlaceName": "Basque Country",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-65 ft. Water temperature: 54-68 F, with moderate current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "fjords": {
+  "forPlaceName": "Norwegian Fjords",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 39-59 F (drysuit usual), with little or no current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; cold water (39-59 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "marlborough-abel-tasman": {
+  "forPlaceName": "Marlborough & Abel Tasman",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need no certification (snorkeling or introductory dives).",
+   "Typical depth of the main sites: 0-35 ft. Water temperature: 54-68 F (wetsuit), with mild current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): New Zealand fur seal (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: no certification needed (snorkeling or introductory dives only); the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "iceland": {
+  "forPlaceName": "Iceland",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-60 ft. Water temperature: 36-39 F at Silfra (drysuit), with little or no current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; specialty training needed (cave, wreck, technical, drysuit or ice); cold water (36-39 F at Silfra); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "singapore": {
+  "forPlaceName": "Singapore",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-65 ft. Water temperature: 82-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "monterey-big-sur": {
+  "forPlaceName": "Monterey & Big Sur",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-80 ft. Water temperature: 50-61 F (7 mm wetsuit or drysuit), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Harbor seal (likely, year-round), California sea lion (likely, year-round), Giant Pacific octopus (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (50-61 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "angkor": {
+  "forPlaceName": "Cambodia",
+  "scope": "All of Cambodia, not the inland Angkor area: Koh Rong and Koh Rong Samloem off Sihanoukville, Koh Ta Kiev, and Kep and Kampot on the Gulf of Thailand coast. Short boat trips from the coast; the sea is calmest roughly November to May.",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-80 ft. Water temperature: 82-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "scottish-highlands-skye": {
+  "forPlaceName": "Scottish Highlands & Isle of Skye",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 46-57 F (drysuit usual), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Basking shark (possible, Jun-Aug), Grey seal (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (46-57 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "hongkong": {
+  "forPlaceName": "Hong Kong",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-65 ft. Water temperature: 63-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "antarctica": {
+  "forPlaceName": "Antarctic Peninsula",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: by liveaboard (a multi-day dive boat to remote sites) only.",
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 28 to 36 F (drysuit), with little or no current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: liveaboard only (a multi-day dive boat to remote sites); specialty training needed (cave, wreck, technical, drysuit or ice); cold water (28 to 36 F); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bagan": {
+  "forPlaceName": "Myanmar",
+  "scope": "All of Myanmar, not the inland Bagan area: the Mergui (Myeik) Archipelago in the south (Burma Banks, Black Rock), reached mostly by liveaboard in a limited season of roughly October to May, and the Bay of Bengal beach coast (Ngapali, Ngwe Saung) with little diving.",
+  "facts": [
+   "The usual way to dive and snorkel here is: by liveaboard (a multi-day dive boat to remote sites) only.",
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 81-86 F, with moderate current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Silvertip shark (likely, Nov-Apr), Manta ray (possible, Nov-Apr).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: liveaboard only (a multi-day dive boat to remote sites); the main sites need Advanced certification; deep main sites (to 130 ft); the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "madeira": {
+  "forPlaceName": "Madeira",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 64-75 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tasmania": {
+  "forPlaceName": "Tasmania",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 50-64 F (7 mm wetsuit or drysuit), with mild current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Weedy seadragon (likely, year-round), Australian fur seal (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (50-64 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "amalfi": {
+  "forPlaceName": "Amalfi Coast",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 57-79 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "upper-peninsula": {
+  "forPlaceName": "Upper Peninsula",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 39-57 F (drysuit), with little or no current.",
+   "What visitors mostly go underwater for: wrecks.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; deep main sites (to 130 ft); cold water (39-57 F); the draw is wrecks."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "madagascar": {
+  "forPlaceName": "Madagascar",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 77-84 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Whale shark (likely, Oct-Dec), Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bahamas": {
+  "forPlaceName": "Bahamas",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 75-84 F, with mild current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Caribbean reef shark (guaranteed, year-round, baited), Tiger shark (likely, year-round, most reliable Oct-Mar, baited), Great hammerhead (possible, Dec-Mar), Oceanic whitetip shark at Cat Island, not Tiger Beach (possible, Mar-Jun, best Apr-May), Atlantic spotted dolphin (likely, Jun-Sep).",
+   "Do NOT say tiger sharks leave or return: they are there all year, only more reliably seen in the Oct-Mar peak. Tiger Beach and Cat Island are different places and different seasons, so never put oceanic whitetips in the same sentence as Tiger Beach.",
+   "Blue holes (deep flooded sinkholes, mostly around Andros) are the other signature underwater feature of the Bahamas.",
+   "Say 'guaranteed' at most once for the whole place.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is animals over rock or open water, not coral reef; some animal encounters are baited or in a cage."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "Tiger sharks are present all year at Tiger Beach off Grand Bahama; the best stretch is about Oct-Mar (sources differ: some say Oct-Jan, some Dec-Mar). Great hammerhead sharks are a Dec-Mar draw. Oceanic whitetip sharks gather at Cat Island, a different island from Tiger Beach, about Mar-Jun (best Apr-May). Atlantic hurricane season Jun-Nov: trips can be cancelled or rerouted, but conditions are not closed all season. Atlantic spotted dolphins are seen more in summer.",
+  "mustMention": []
+ },
+ "barcelona": {
+  "forPlaceName": "Barcelona",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 55-75 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "athens": {
+  "forPlaceName": "Athens",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 59-79 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "milford-sound-fiordland": {
+  "forPlaceName": "Milford Sound & Fiordland",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 50-61 F (7 mm wetsuit), with mild current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Black coral (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (50-61 F); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tuscany": {
+  "forPlaceName": "Tuscany",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-130 ft. Water temperature: 55-79 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "north-island": {
+  "forPlaceName": "North Island",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 57-72 F (7 mm wetsuit), with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Stingray (likely, year-round), Moray eel (likely, year-round), Kingfish (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft); cold water (57-72 F)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "thailand": {
+  "forPlaceName": "Phuket & the Andaman Coast",
+  "scope": "Phuket and the Andaman Coast: Phuket, Krabi, Phi Phi, Khao Lak, the Similan and Surin Islands and Richelieu Rock. Not the Gulf of Thailand islands (Koh Tao, Koh Samui), which are a different region.",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 81-86 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Whale shark (possible, Feb-Apr), Leopard shark (likely, Nov-Apr), Manta ray (possible, Dec-Apr), Green turtle (likely, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vietnam": {
+  "forPlaceName": "Vietnam",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 77-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "belfast-giants-causeway": {
+  "forPlaceName": "Northern Ireland",
+  "scope": "All of Northern Ireland: the Causeway Coast and North Antrim, Rathlin Island (wrecks, seals, kelp), Strangford Lough and the Belfast Lough area. Cold-water diving.",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 46-61 F (drysuit usual), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Grey seal (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (46-61 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "panama": {
+  "forPlaceName": "Panama",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 75-84 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Hammerhead shark (possible, Jun-Oct).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "banff": {
+  "forPlaceName": "Banff & Jasper National Parks",
+  "scope": "Banff and Jasper National Parks: very cold glacial lakes, chiefly Lake Minnewanka near Banff (a flooded former townsite, shore diving in drysuits). Nothing else is dived.",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 39-54 F (drysuit), with little or no current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; specialty training needed (cave, wreck, technical, drysuit or ice); cold water (39-54 F); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cornwall": {
+  "forPlaceName": "Cornwall",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 50-63 F (7 mm wetsuit or drysuit), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Grey seal (likely, year-round), Basking shark (possible, Jun-Aug).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (50-63 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "havana": {
+  "forPlaceName": "Cuba",
+  "scope": "All of Cuba, not only Havana: Jardines de la Reina on the south coast (reached by liveaboard or floating hotel, known for sharks), María la Gorda and Cayo Levisa in the west, Playa Girón and Playa Larga (the Bay of Pigs, shore diving), Cayo Largo, Varadero and Guardalavaca. Describe the island, not the capital's seafront.",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 79-86 F, with mild current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Caribbean reef shark (likely, year-round), Silky shark (likely, Nov-Mar), American crocodile (possible, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "napa": {
+  "forPlaceName": "Napa & Sonoma",
+  "scope": "Napa and Sonoma counties, the whole wine country (not the towns). The inland wine country has nothing to dive. The Sonoma County coast (Salt Point and Fort Ross) is a well-known cold-water kelp and abalone shore-diving area.",
+  "facts": [
+   "The usual way to dive and snorkel here is: from the shore or a house reef (no boat needed).",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-65 ft. Water temperature: 48-57 F (drysuit usual), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: shore or house-reef diving, no boat needed; cold water (48-57 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "papua-new-guinea": {
+  "forPlaceName": "Papua New Guinea",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 81-86 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Reef shark (likely, year-round), Pygmy seahorse (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "snowdonia": {
+  "forPlaceName": "Wales",
+  "scope": "All of Wales: Pembrokeshire (Skomer and Ramsey Island, grey seals), Anglesey and the Llŷn Peninsula, and Gower. Cold-water diving. Describe the sites by area, not by distance from any mountain or park.",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 46-61 F (drysuit usual), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Grey seal (likely, year-round, Pembrokeshire).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (46-61 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "quebec-city": {
+  "forPlaceName": "Quebec City & Montreal",
+  "scope": "Quebec City and Montreal: cold, tidal St Lawrence River and Saguenay fjord diving (Tadoussac and the Saguenay, about three hours' drive from Quebec City), plus a few river sites near Montreal.",
+  "facts": [
+   "The main dive sites need specialty training (cave, wreck, technical, drysuit or ice).",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 36-64 F (drysuit), with strong current (drift diving).",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: specialty training needed (cave, wreck, technical, drysuit or ice); strong current (drift diving); cold water (36-64 F); the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vancouver-island": {
+  "forPlaceName": "Vancouver Island",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 46-54 F (drysuit usual), with moderate current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Giant Pacific octopus (likely, year-round), Steller sea lion (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (46-54 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "azores": {
+  "forPlaceName": "Azores",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 61-75 F, with moderate current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Blue shark (likely, Jun-Oct), Giant devil ray (possible, Jul-Oct), Common dolphin (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "palau": {
+  "forPlaceName": "Palau",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 81-86 F, with strong current (drift diving).",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Grey reef shark (likely, year-round), Manta ray (possible, Mar-Apr), Green turtle (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; strong current (drift diving); deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "big-island": {
+  "forPlaceName": "Big Island",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 75-81 F, with mild current.",
+   "What visitors mostly go underwater for: several kinds of site about equally (reef, wrecks, walls, caves).",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Manta ray (guaranteed, year-round), Green turtle (guaranteed, year-round).",
+   "Format callout: NONE. This place is typical, so do not mention the format (boats, certification, depth, current, water temperature) anywhere in the text. Spend the words on what a visitor sees."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "los-cabos": {
+  "forPlaceName": "Los Cabos",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 68-84 F, with moderate current.",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Bull shark (likely, Nov-Apr), Hammerhead shark (possible, Jun-Oct), California sea lion (likely, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is animals over rock or open water, not coral reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "borabora": {
+  "forPlaceName": "French Polynesia",
+  "scope": "All of French Polynesia, not only Bora Bora: the Society Islands (Tahiti, Moorea, Bora Bora, Raiatea, Huahine) and the Tuamotu atolls (Rangiroa, Fakarava, Tikehau), which are the main dive destinations. The place is the whole territory. Society Islands diving is day boats and lagoon snorkeling; the Tuamotu atolls are known for pass diving (strong currents through the channels into the lagoon, with grey reef sharks, dolphins and large schools). Regulated in-water swims with humpback whales are offered from Moorea and Tahiti, and at Rurutu in the Austral Islands, roughly August to October. Do not describe one lagoon as if it were the whole place.",
+  "facts": [
+   "The main dive sites need Advanced certification (deeper sites or stronger current).",
+   "Typical depth of the main sites: 35-100 ft. Water temperature: 79-84 F, with strong current (drift diving).",
+   "What visitors mostly go underwater for: being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Blacktip reef shark (guaranteed, year-round), Grey reef shark (likely, year-round, Tuamotu passes), Lemon shark (likely, year-round), Manta ray (likely, year-round), Bottlenose dolphin (likely, year-round, Rangiroa), Humpback whale (likely, Aug-Oct, regulated in-water swims).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the main sites need Advanced certification; strong current (drift diving); the draw is animals over rock or open water, not coral reef; regulated in-water swims with whales or dolphins."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "santorini": {
+  "forPlaceName": "Santorini & Cyclades",
+  "scope": "",
+  "facts": [
+   "The usual way to dive and snorkel here is: a day boat from a nearby harbor.",
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 63-79 F, with mild current.",
+   "What visitors mostly go underwater for: something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "whistler": {
+  "forPlaceName": "Vancouver & Whistler",
+  "scope": "Vancouver and Whistler. Diving is cold-water Pacific diving around Vancouver (Howe Sound and the Sunshine Coast approaches, with giant Pacific octopus, wolf eels and artificial-reef wrecks). Whistler itself is inland. Do not give a distance from Whistler or describe Vancouver relative to Whistler.",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 15-100 ft. Water temperature: 46-54 F (drysuit usual), with mild current.",
+   "What visitors mostly go underwater for: kelp forests and cold-water reef.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Giant Pacific octopus (likely, year-round), Wolf eel (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: cold water (46-54 F); the draw is kelp forest and cold-water reef."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "egypt": {
+  "forPlaceName": "Red Sea & Nile",
+  "scope": "",
+  "facts": [
+   "The main dive sites need Open Water certification.",
+   "Typical depth of the main sites: 35-130 ft. Water temperature: 72-84 F, with moderate current.",
+   "What visitors mostly go underwater for: coral reef scenery and its fish.",
+   "Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): Green turtle (likely, year-round), Hammerhead shark (possible, May-Aug), Oceanic whitetip shark (possible, Oct-Dec), Dugong (possible, year-round).",
+   "Format callout: say these in ONE short clause in the overview, nothing more, and mention them in a month only if it matters that month: deep main sites (to 130 ft)."
+  ],
+  "avoid": [
+   "Naming dive shops, resorts, liveaboards or operators.",
+   "Counting animals that can only be watched from a boat or the shore.",
+   "Headlining an in-water encounter that is rare (list it only as an occasional extra, or leave it out)."
+  ],
+  "season": "",
+  "mustMention": []
+ }
+}

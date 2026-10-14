@@ -1,3 +1,5 @@
+import { mkdirSync, readFileSync, statSync, writeFileSync } from 'fs';
+import { dirname, resolve } from 'path';
 import { eq, inArray } from 'drizzle-orm';
 import type { InferSelectModel } from 'drizzle-orm';
 import { db } from '../client';
@@ -22,7 +24,54 @@ export type PlaceRow = InferSelectModel<typeof places>;
  * write that didn't bump updatedAt.
  */
 const CHECK_AFTER_MS = 60_000;
-const MAX_AGE_MS = 30 * 60_000;
+// A full re-download is 5.8 MB. At 30 minutes, a server that is used all day
+// re-downloaded it up to 48 times a day for no reason: every real change bumps
+// updatedAt and is caught by the cheap check above. 12 hours is only the
+// backstop for a write that somehow did not bump it.
+const MAX_AGE_MS = 12 * 60 * 60_000;
+// The disk snapshot is always re-checked against the database's updatedAt stamps before use, and only rows that
+// changed are downloaded, so it stays useful for a week. A full download is slow on this connection (about a minute).
+const SNAPSHOT_MAX_AGE_MS = 7 * 24 * 60 * 60_000;
+
+/**
+ * Optional disk copy of the place rows, for one-off scripts (audits, dumps,
+ * review passes) that each start a fresh process and would otherwise download
+ * all 5.8 MB again on every run. Off unless PLACE_ROWS_SNAPSHOT is set
+ * ("1" means .cache/place-rows.json, anything else is a path), so the running
+ * app never uses it. The copy is never trusted blindly: it is loaded as a stale
+ * cache, so the first read runs the same cheap updatedAt check as above and
+ * re-downloads only rows that changed. A snapshot older than a week is ignored.
+ */
+function snapshotPath(): string | null {
+  const v = process.env.PLACE_ROWS_SNAPSHOT;
+  if (!v) return null;
+  return resolve(process.cwd(), v === '1' ? '.cache/place-rows.json' : v);
+}
+
+function readSnapshot(): PlaceRow[] | null {
+  const path = snapshotPath();
+  if (!path) return null;
+  try {
+    if (Date.now() - statSync(path).mtimeMs > SNAPSHOT_MAX_AGE_MS) return null;
+    const rows = JSON.parse(readFileSync(path, 'utf8')) as Array<Record<string, unknown>>;
+    // Columns added after the snapshot was written come back undefined; give them their database defaults so a stale
+    // snapshot never hands the app a row missing a field (re-downloading 5.8 MB just for a new column is not worth it).
+    return rows.map((r) => ({ gated: false, gatedInterests: [], ...r, updatedAt: new Date(r.updatedAt as string) })) as unknown as PlaceRow[];
+  } catch {
+    return null;
+  }
+}
+
+function writeSnapshot(rows: PlaceRow[]): void {
+  const path = snapshotPath();
+  if (!path) return;
+  try {
+    mkdirSync(dirname(path), { recursive: true });
+    writeFileSync(path, JSON.stringify(rows));
+  } catch {
+    // A snapshot is only an optimisation.
+  }
+}
 
 interface Cache {
   rows: PlaceRow[] | null;
@@ -58,12 +107,21 @@ async function syncChangedRows(): Promise<void> {
     const freshIds = new Set(fresh.map((r) => r.id));
     cache.rows = [...cache.rows.filter((r) => live.has(r.id) && !freshIds.has(r.id)), ...fresh].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
     cache.fetchedAt = Date.now();
+    writeSnapshot(cache.rows);
   } catch {
     // Can't reach the database for the check — keep serving what we have rather than failing the page.
   }
 }
 
 export async function getPrimaryPlaceRows(): Promise<PlaceRow[]> {
+  if (!cache.rows && !cache.inflight) {
+    const snap = readSnapshot();
+    if (snap) {
+      // Loaded as already due for the cheap check, so it is verified before use.
+      cache.rows = snap;
+      cache.fetchedAt = Date.now() - CHECK_AFTER_MS - 1;
+    }
+  }
   if (cache.rows) {
     const age = Date.now() - cache.fetchedAt;
     if (age < CHECK_AFTER_MS) return cache.rows;
@@ -89,6 +147,7 @@ export async function getPrimaryPlaceRows(): Promise<PlaceRow[]> {
       if (generation === cache.generation) {
         cache.rows = rows;
         cache.fetchedAt = Date.now();
+        writeSnapshot(rows);
       }
       return rows;
     })

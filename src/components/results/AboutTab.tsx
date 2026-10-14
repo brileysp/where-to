@@ -1,3 +1,4 @@
+import { useUnitText } from '@/components/UnitsProvider';
 import { MONTH_SHORT, MONTH_NAMES } from '@/lib/scoring/constants';
 import { scoreLabel, timingScoreForMonth, barColor } from '@/lib/scoring/rank';
 import { generateMonthlyBlurb } from '@/lib/scoring/blurb';
@@ -28,12 +29,13 @@ export function AboutTab({
   const generalScores = Array.from({ length: 12 }, (_, i) => timingScoreForMonth(dest, i));
   const selectedLabel = scoreLabel(generalScores[generalMonthIdx]);
   const blurb = generateMonthlyBlurb(dest, generalMonthIdx + 1);
+  const u = useUnitText();
 
   return (
     <div className="detail-tab-content">
       <div className="detail-card">
-        <p className="about-text">{dest.overview ?? dest.about}</p>
-        {dest.overview && <p className="season-line">{dest.about}</p>}
+        <p className="about-text">{u(dest.overview ?? dest.about)}</p>
+        {dest.overview && <p className="season-line">{u(dest.about)}</p>}
       </div>
 
       <div className="detail-card">

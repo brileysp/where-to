@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
-import { InlineTextCell, InlineSelectCell, SeverityCell, BandCell, SettingTagsCell, TextFieldPanelCell, MonthlyWeatherCell, JsonPanelCell, type BandOption } from './cells';
+import { InlineTextCell, InlineOptionalTextCell, InlineNumberCell, LabeledSelectCell, CheckboxCell, InlineSelectCell, SeverityCell, BandCell, SettingTagsCell, TextFieldPanelCell, MonthlyWeatherCell, JsonPanelCell, type BandOption } from './cells';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
-import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
+import { BAND_DIMENSIONS, SLIDERS } from '@/lib/scoring/constants';
+import { GATE_MIN_WEIGHT } from '@/lib/scoring/gating';
 
 export interface PlaceRow {
   id: string;
@@ -31,6 +32,18 @@ export interface PlaceRow {
   placeType: string | null;
   settingTags: string[];
   audienceBands: string[];
+  gated: boolean;
+  gatedInterests: string[];
+  isPrimaryDestination: boolean;
+  isPublished: boolean;
+  parentPlaceId: string | null;
+  summary: string | null;
+  countryCode: string | null;
+  continentSaved: string | null;
+  regionLabel: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  stampDesign: Record<string, unknown> | null;
   searchAliases: string[];
   specialSeasons: Array<{ months: number[]; text: string }>;
   travelAdvisories: Array<{ category: string; severity: string; text: string; lastReviewed: string }>;
@@ -52,6 +65,9 @@ const PLACE_TYPES = [
 // per destination, describing how broad an audience it appeals to.
 const AUDIENCE_TIERS = ['iconic', 'popular', 'enthusiast', 'specialist'];
 
+// The interests a specialist place can be gated for: every interest a traveller can see and weight.
+const GATE_INTEREST_OPTIONS: BandOption[] = SLIDERS.filter((s) => !s.hidden).map((s) => ({ key: s.key, label: `${s.icon} ${s.label}`, short: s.label }));
+
 const SHORT_LABELS: Record<string, string> = {
   secluded: 'Secluded', easygoing: 'Easygoing', lively: 'Lively', highenergy: 'High-Energy',
   easy: 'Easy', moderate: 'Moderate', active: 'Active', challenging: 'Challenging',
@@ -64,7 +80,9 @@ const BUDGET_OPTIONS: BandOption[] = budgetDim.bands.map((b) => ({ key: b.key, l
 const VIBE_OPTIONS: BandOption[] = vibeDim.bands.map((b) => ({ key: b.key, label: b.label, short: SHORT_LABELS[b.key] ?? b.label }));
 const PHYSICAL_OPTIONS: BandOption[] = physicalDim.bands.map((b) => ({ key: b.key, label: b.label, short: SHORT_LABELS[b.key] ?? b.label }));
 
-export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
+const CONTINENTS = ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica'];
+
+export function PlacesGrid({ initialRows, showRetired }: { initialRows: PlaceRow[]; showRetired: boolean }) {
   const [rows, setRows] = useState(initialRows);
 
   useUpdatedAtSync('destination', (entityId, updatedAt) => {
@@ -74,6 +92,8 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
   function patchRow(id: string, patch: Partial<PlaceRow>) {
     setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...patch } : r)));
   }
+
+  const parentOptions = [...rows].sort((a, b) => a.name.localeCompare(b.name)).map((r) => ({ value: r.id, label: r.name }));
 
   const columns: GridColumn<PlaceRow>[] = [
     {
@@ -87,6 +107,7 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
           <Link href={`/admin/destinations/${r.id}/profile`} style={{ fontWeight: 600, color: 'var(--text)', textDecoration: 'none' }} title="Open full month × interest profile">
             {r.name}
           </Link>
+          {!r.isPrimaryDestination && <span className="badge badge-moderate" title="Taken out of the rankings. Turn Primary back on to restore it.">Retired</span>}
           {r.travelAdvisories.length > 0 && (
             <Link
               href="/admin/destinations/advisories"
@@ -97,6 +118,19 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
             </Link>
           )}
         </div>
+      ),
+    },
+    {
+      key: 'nameEdit',
+      label: 'Name (edit)',
+      render: (r) => (
+        <InlineTextCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'name', fieldLabel: 'Place name', loadedUpdatedAt: r.updatedAt }}
+          value={r.name}
+          setLocal={(v) => patchRow(r.id, { name: v })}
+          width={190}
+          maxLength={120}
+        />
       ),
     },
     {
@@ -358,6 +392,171 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
       ),
     },
     {
+      key: 'gated',
+      label: 'Gated',
+      sortable: true,
+      sortValue: (r) => (r.gated ? 'Y' : ''),
+      render: (r) => (
+        <InlineSelectCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'gated', fieldLabel: 'Gated', loadedUpdatedAt: r.updatedAt }}
+          value={r.gated ? 'Y' : null}
+          options={['Y']}
+          setLocal={(v) => patchRow(r.id, { gated: v === 'Y' })}
+          toPatchValue={(v) => v === 'Y'}
+        />
+      ),
+    },
+    {
+      key: 'gatedInterests',
+      label: 'Gated for',
+      sortable: true,
+      sortValue: (r) => r.gatedInterests.join(','),
+      render: (r) => (
+        <BandCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'gatedInterests', fieldLabel: `Gated for (shows once a traveller weights one of these ${GATE_MIN_WEIGHT}+)`, loadedUpdatedAt: r.updatedAt }}
+          value={r.gatedInterests}
+          options={GATE_INTEREST_OPTIONS}
+          tall
+          setLocal={(v) => patchRow(r.id, { gatedInterests: v })}
+        />
+      ),
+    },
+    {
+      key: 'isPrimaryDestination',
+      label: 'Primary (ranked)',
+      sortable: true,
+      sortValue: (r) => (r.isPrimaryDestination ? 'Y' : ''),
+      render: (r) => (
+        <CheckboxCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'isPrimaryDestination', fieldLabel: 'Primary destination (ranked, shown in the admin grids)', loadedUpdatedAt: r.updatedAt }}
+          value={r.isPrimaryDestination}
+          setLocal={(v) => patchRow(r.id, { isPrimaryDestination: v })}
+        />
+      ),
+    },
+    {
+      key: 'isPublished',
+      label: 'Published',
+      sortable: true,
+      sortValue: (r) => (r.isPublished ? 'Y' : ''),
+      render: (r) => (
+        <CheckboxCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'isPublished', fieldLabel: 'Published (shown to travellers)', loadedUpdatedAt: r.updatedAt }}
+          value={r.isPublished}
+          setLocal={(v) => patchRow(r.id, { isPublished: v })}
+        />
+      ),
+    },
+    {
+      key: 'parentPlaceId',
+      label: 'Parent place',
+      render: (r) => (
+        <LabeledSelectCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'parentPlaceId', fieldLabel: 'Parent place', loadedUpdatedAt: r.updatedAt }}
+          value={r.parentPlaceId}
+          options={parentOptions.filter((o) => o.value !== r.id)}
+          setLocal={(v) => patchRow(r.id, { parentPlaceId: v })}
+          width={150}
+        />
+      ),
+    },
+    {
+      key: 'summary',
+      label: 'Summary line',
+      render: (r) => (
+        <TextFieldPanelCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'summary', fieldLabel: 'Summary line', loadedUpdatedAt: r.updatedAt }}
+          value={r.summary}
+          setLocal={(v) => patchRow(r.id, { summary: v })}
+          hint="One or two sentences that sum the place up (up to 600 characters). Blank clears it."
+        />
+      ),
+    },
+    {
+      key: 'countryCode',
+      label: 'Country code',
+      render: (r) => (
+        <InlineOptionalTextCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'countryCode', fieldLabel: 'Country code', loadedUpdatedAt: r.updatedAt }}
+          value={r.countryCode}
+          setLocal={(v) => patchRow(r.id, { countryCode: v })}
+          width={70}
+          maxLength={3}
+          placeholder="FRA"
+        />
+      ),
+    },
+    {
+      key: 'continentSaved',
+      label: 'Continent (edit)',
+      render: (r) => (
+        <LabeledSelectCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'continent', fieldLabel: 'Continent', loadedUpdatedAt: r.updatedAt }}
+          value={r.continentSaved}
+          options={CONTINENTS.map((c) => ({ value: c, label: c }))}
+          setLocal={(v) => patchRow(r.id, { continentSaved: v, continent: v ?? r.continent })}
+          width={130}
+        />
+      ),
+    },
+    {
+      key: 'regionLabel',
+      label: 'Region label',
+      render: (r) => (
+        <InlineOptionalTextCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'regionLabel', fieldLabel: 'Region label', loadedUpdatedAt: r.updatedAt }}
+          value={r.regionLabel}
+          setLocal={(v) => patchRow(r.id, { regionLabel: v })}
+          width={150}
+          maxLength={120}
+        />
+      ),
+    },
+    {
+      key: 'latitude',
+      label: 'Latitude',
+      render: (r) => (
+        <InlineNumberCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'latitude', fieldLabel: 'Latitude', loadedUpdatedAt: r.updatedAt }}
+          value={r.latitude}
+          setLocal={(v) => patchRow(r.id, { latitude: v })}
+          min={-90}
+          max={90}
+          step={0.0001}
+          placeholder="-90 to 90"
+        />
+      ),
+    },
+    {
+      key: 'longitude',
+      label: 'Longitude',
+      render: (r) => (
+        <InlineNumberCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'longitude', fieldLabel: 'Longitude', loadedUpdatedAt: r.updatedAt }}
+          value={r.longitude}
+          setLocal={(v) => patchRow(r.id, { longitude: v })}
+          min={-180}
+          max={180}
+          step={0.0001}
+          placeholder="-180 to 180"
+        />
+      ),
+    },
+    {
+      key: 'stampDesign',
+      label: 'Stamp design',
+      render: (r) => (
+        <JsonPanelCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'stampDesign', fieldLabel: 'Stamp design', loadedUpdatedAt: r.updatedAt }}
+          value={r.stampDesign}
+          setLocal={(v) => patchRow(r.id, { stampDesign: v })}
+          emptyValue={null}
+          summarize={(v) => (v && Object.keys(v).length ? `${Object.keys(v).length} setting${Object.keys(v).length === 1 ? '' : 's'}` : '')}
+          hint="The passport stamp's shape, color and style as a JSON object. Leave empty to use the automatic design."
+        />
+      ),
+    },
+    {
       key: 'searchAliases',
       label: 'Search aliases',
       render: (r) => (
@@ -400,7 +599,13 @@ export function PlacesGrid({ initialRows }: { initialRows: PlaceRow[] }) {
       rowId={(r) => r.id}
       searchText={(r) => `${r.name} ${r.region} ${r.continent} ${r.id}`}
       searchPlaceholder="Search place, region, continent…"
-      footerNote={`${initialRows.length} places · id/climate/severity/bands editable inline`}
+      footerNote={`${initialRows.length} places${showRetired ? ' (including retired)' : ''} · almost every column is editable inline`}
+      toolbarExtra={
+        <span style={{ display: 'inline-flex', gap: 14, alignItems: 'center', fontSize: 12 }}>
+          <Link href={showRetired ? '/admin/destinations' : '/admin/destinations?retired=1'}>{showRetired ? 'Hide retired places' : 'Show retired places'}</Link>
+          <Link href="/admin/destinations/new">+ New place, retire or merge</Link>
+        </span>
+      }
     />
   );
 }

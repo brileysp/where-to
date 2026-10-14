@@ -24,3 +24,11 @@ export async function getInterestEmojiOverrides(): Promise<Record<string, string
   for (const r of rows) if (r.emoji) overrides[r.key] = r.emoji;
   return overrides;
 }
+
+/** Admin-set pill names, keyed by slider key. A key with no entry uses the automatic name (shortInterestLabel). */
+export async function getInterestShortNames(): Promise<Record<string, string>> {
+  const rows = await db.select().from(interestMeta);
+  const names: Record<string, string> = {};
+  for (const r of rows) if (r.shortName) names[r.key] = r.shortName;
+  return names;
+}

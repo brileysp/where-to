@@ -7,6 +7,7 @@ import { withAdminAudit } from '@/lib/admin/write';
 import { ENTITY_REGISTRY } from '@/lib/admin/entity-registry';
 import { stampCostItems, type StampedCostItem } from '@/lib/admin/cost-item-stamp';
 import { MONTH_NAMES } from '@/lib/scoring/constants';
+import { invalidateOverrides } from '@/lib/scoring/overridesServer';
 import type { ContentStamp } from '@/lib/db/schema';
 
 export interface EditPatch {
@@ -232,6 +233,9 @@ export async function applyAdminEdits(patches: EditPatch[], actor?: AdminUser): 
     });
     result.saved.push({ entityType, entityId, updatedAt: newUpdatedAt.toISOString() });
   }
+
+  // An edited interest name, domain, visibility, tier or order changes what every page shows; make the next page load re-read it.
+  if (result.saved.some((s) => s.entityType === 'interest')) invalidateOverrides();
 
   return result;
 }

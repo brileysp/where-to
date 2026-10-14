@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
 import { AdvisoryPanelCell, type TravelAdvisory } from './cells';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
+import { useFieldEdit } from './useFieldEdit';
 
 export type { TravelAdvisory } from './cells';
 
@@ -32,6 +33,19 @@ export function AdvisoriesGrid({ initialRows }: { initialRows: AdvisoryRow[] }) 
   useUpdatedAtSync('destination', (entityId, updatedAt) => {
     setRows((rs) => rs.map((r) => (r.id === entityId ? { ...r, updatedAt } : r)));
   });
+
+  const commit = useFieldEdit();
+
+  /** One click: every advisory on the place is marked reviewed today. */
+  function reviewedToday(r: AdvisoryRow) {
+    const today = new Date().toISOString().slice(0, 10);
+    const next = r.travelAdvisories.map((a) => ({ ...a, lastReviewed: today }));
+    commit({
+      entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'travelAdvisories', fieldLabel: 'Advisories: reviewed today', loadedUpdatedAt: r.updatedAt,
+      oldValue: r.travelAdvisories, newValue: next, setLocal: (v) => patchRow(r.id, { travelAdvisories: v }),
+      toLabel: (v) => `${v.length} advisor${v.length === 1 ? 'y' : 'ies'}, last reviewed ${v[0]?.lastReviewed ?? '-'}`,
+    });
+  }
 
   function patchRow(id: string, patch: Partial<AdvisoryRow>) {
     setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...patch } : r)));
@@ -88,8 +102,10 @@ export function AdvisoriesGrid({ initialRows }: { initialRows: AdvisoryRow[] }) 
               <span key={i} style={{ fontSize: 11.5, color: isStale(a.lastReviewed) ? 'var(--warn)' : 'var(--text-dim)', fontWeight: isStale(a.lastReviewed) ? 700 : 400 }}>
                 {new Date(`${a.lastReviewed}T00:00:00`).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
                 {isStale(a.lastReviewed) ? ' · re-check' : ''}
+                {a.expiresOn ? ` · re-check by ${a.expiresOn}` : ''}
               </span>
             ))}
+            <button type="button" className="btn" style={{ padding: '2px 8px', fontSize: 11 }} onClick={() => reviewedToday(r)} title="Marks every advisory on this place as reviewed today">Reviewed today</button>
           </div>
         ),
     },

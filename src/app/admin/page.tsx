@@ -29,7 +29,7 @@ export default async function AdminHomePage() {
           &quot;Copy for Sheets&quot; export.
         </li>
         <li>
-          <Link href="/admin/destinations/interests">Interests</Link> — per-slider emoji overrides.
+          <Link href="/admin/destinations/interests">Interests</Link> — per-slider emoji overrides, plus a page for each interest with its rules, outstanding items, future places, per-place data and expert reviews.
         </li>
         <li>
           <Link href="/admin/destinations/seasonal-flags">Seasonal Flags</Link> — which months are dry/wet/hot/cold/
@@ -37,6 +37,12 @@ export default async function AdminHomePage() {
         </li>
         <li>
           <Link href="/admin/cards">Cards</Link> — Travel DNA experience cards.
+        </li>
+        <li>
+          <Link href="/admin/dna">Domains &amp; insights</Link> — the Travel DNA domains, subdimensions, dimensions and insights.
+        </li>
+        <li>
+          <Link href="/admin/personas">Personas</Link> — the starting interest weights travellers can pick, and each persona&apos;s name, icon and blurb.
         </li>
       </ul>
     </main>

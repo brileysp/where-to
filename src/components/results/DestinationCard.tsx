@@ -1,3 +1,4 @@
+import { prefetchPlaceDetail } from './usePlaceDetail';
 import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
 import { matchLabel } from '@/lib/scoring/rank';
 import type { ScoredDestination } from '@/lib/scoring/types';
@@ -124,6 +125,7 @@ export const DestinationCard = forwardRef<HTMLElement, Props>(function Destinati
       className={`card card-row${highlighted ? ' card-search-highlight' : ''}`}
       data-dest-id={dest.id}
       onClick={onOpenDetail}
+      onPointerDown={() => prefetchPlaceDetail(dest.id)}
       role="button"
       tabIndex={0}
     >

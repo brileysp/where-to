@@ -1,0 +1,1 @@
+ALTER TABLE "places" ADD COLUMN "na_reasons" jsonb DEFAULT '{}'::jsonb NOT NULL;

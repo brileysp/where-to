@@ -1,0 +1,315 @@
+{
+ "_note": "Verified fact sheets for the safari re-author (Oct 2026). Built from the Gemini Flash audit plus Claude web research; every season window below was checked against at least one operator or park source. Passed to Gemini as ground truth; mustMention is only a post-check.",
+ "kruger": {
+  "scope": "Kruger National Park (self-drive on public roads plus guided drives) and the unfenced private reserves along its western edge, above all Sabi Sands, where off-road tracking gives the best leopard sightings.",
+  "facts": [
+   "Dry season runs roughly May to October; vegetation thins and animals concentrate at the rivers and dams (Sabie, Olifants).",
+   "June to August is the sweet spot: cool, open bush. September and October are the peak of concentration at remaining water but the days get hot.",
+   "Rains run about November to April: hot, humid, thick bush that hides animals, but impala lambing and baby animals from November to December and the best birding with migrants.",
+   "The Big Five are all resident year-round, but seeing all five in one trip is not guaranteed.",
+   "Kruger is a malaria area, most risk in the wet summer months."
+  ],
+  "avoid": [
+   "Saying September or October is when sightings ease or vegetation thickens: October is still dry and productive; thick bush returns with the November rains."
+  ],
+  "season": "Peak June to October (September and October best for concentration); lowest January to March.",
+  "mustMention": [
+   "Sabi Sands",
+   "self-drive",
+   "Big Five"
+  ]
+ },
+ "kenya": {
+  "scope": "Maasai Mara (Mara River crossings, big cats) and Amboseli (elephants with Kilimanjaro behind them).",
+  "facts": [
+   "The Great Migration herds arrive in the Mara from the Serengeti around July and leave by late October; river crossings are most likely August and September, with the first from about mid-July and again as herds return in October.",
+   "The long rains (April and May) are the low season: heavy rain damages roads, many camps and lodges close, grass is tall, vehicles are few.",
+   "The short rains (October and November) do not seriously disrupt game viewing.",
+   "January and February are the short dry season with excellent visibility and resident big cats and elephants.",
+   "Amboseli's elephant herds against Kilimanjaro are a draw independent of the migration; best in the dry months."
+  ],
+  "avoid": [
+   "Scoring or describing March to May as 'excellent, just muddier': April and May are the weakest months of the year."
+  ],
+  "season": "Peak July to October (August and September highest); strong January and February and December; weakest April and May.",
+  "mustMention": [
+   "Mara River",
+   "Amboseli",
+   "long rains"
+  ]
+ },
+ "tanzania": {
+  "scope": "Serengeti ecosystem only (the southern plains around Ndutu and the Ngorongoro Conservation Area, the western corridor, and the northern Serengeti around Kogatende); Zanzibar is a beach extension, not a safari.",
+  "facts": [
+   "Calving on the short-grass plains around Ndutu runs from late January through March, peaking in February, with more than half a million calves and heavy predator activity.",
+   "The herds drift north and west through the western corridor from April to June, with Grumeti River crossings around June.",
+   "Mara River crossings in the northern Serengeti (Kogatende) run roughly July to October, peaking August and September; herds head back south from late October.",
+   "The long rains (April and May) are the low season: green, cheaper, few vehicles, some heavy rain, herds mid-migration.",
+   "The short rains in November bring fresh grass as herds return south."
+  ],
+  "avoid": [
+   "Saying crossings are past their peak in September: August and September are the peak.",
+   "Scoring every month except April and May at 10."
+  ],
+  "season": "Peak January to March (calving) and July to October (crossings, August and September highest); lower April, May and November; early June and December in between.",
+  "mustMention": [
+   "Ndutu",
+   "Kogatende",
+   "calving"
+  ]
+ },
+ "botswana": {
+  "scope": "Okavango Delta and Moremi Game Reserve for land and water safaris (mokoro canoe, boat, game drive), with the Chobe riverfront for elephant herds.",
+  "facts": [
+   "Floodwater from Angola's summer rains takes about four months to arrive, entering the Delta between March and May, peaking around June and July in Moremi (about mid-August around Maun), then receding.",
+   "Best game viewing is roughly July to October: flooded channels (water safaris) alongside a dry landscape, with animals concentrated on the remaining dry ground.",
+   "October is the hottest month, often above 40 C, with excellent waterhole and channel-edge viewing.",
+   "The green season (November to March) brings rain, thick bush, newborn animals, predators working them, and strong birding; some camps are closed and mokoro trips are limited in seasonal areas.",
+   "Wild dogs den around June to August and are easier to find then."
+  ],
+  "avoid": [
+   "Saying the Delta's water is at its lowest in October: it recedes from about September; the lowest levels come around December to March before the next flood.",
+   "Scoring January to March at 9."
+  ],
+  "season": "Peak July to October; strong May, June, November; lowest January to March.",
+  "mustMention": [
+   "Moremi",
+   "Chobe",
+   "mokoro"
+  ]
+ },
+ "zambia": {
+  "scope": "South Luangwa National Park and the Luangwa River.",
+  "facts": [
+   "Birthplace of the walking safari (Norman Carr, 1950s); known as the Valley of the Leopard for one of Africa's highest leopard densities, with night drives allowed.",
+   "Dry season June to October is the peak; game packs along the river and shrinking lagoons, and predator action intensifies in September and October.",
+   "Many remote walking camps are open only from about April or May to November; the wet season (December to March) brings thick green bush, flooded tracks and most camps closed, with a few offering boat safaris and birding.",
+   "Southern Carmine Bee-eaters nest in colonies in the riverbanks in the late dry season (about August to November).",
+   "Thornicroft's giraffe is found only in the Luangwa Valley."
+  ],
+  "avoid": [
+   "Scoring October below July: October is among the best months."
+  ],
+  "season": "Peak July to October; strong May and June and November shoulder; lowest January to March.",
+  "mustMention": [
+   "walking safari",
+   "leopard",
+   "Luangwa River"
+  ]
+ },
+ "zimbabwe": {
+  "scope": "Hwange National Park, with Victoria Falls as the gateway.",
+  "facts": [
+   "Hwange has almost no natural surface water; its 45,000 or more elephants depend on pumped waterholes, which draw very large herds in the dry season, with lions and other predators close behind.",
+   "August to early November is the best game viewing; September is often the strongest and October is hot with excellent elephant sightings.",
+   "Hwange holds one of the largest African wild dog populations, with wild dogs and cheetah hunting the open vleis.",
+   "The park begins roughly an hour south of Victoria Falls; main camps are one to three hours farther depending on the camp.",
+   "The wet season (about November to March) disperses game away from the pumped waterholes."
+  ],
+  "avoid": [
+   "Treating the Victoria Falls themselves as safari content."
+  ],
+  "season": "Peak August to October; strong June, July and November; lowest January to March.",
+  "mustMention": [
+   "Hwange",
+   "waterholes",
+   "elephants"
+  ]
+ },
+ "namibia": {
+  "scope": "Etosha National Park (the main safari), with a mention of the Zambezi Region's riverside elephant safaris and Damaraland's desert-adapted elephant tracking only if space allows.",
+  "facts": [
+   "Dry season June to October is the best; animals gather at waterholes along the southern edge of the Etosha Pan.",
+   "Okaukuejo's floodlit waterhole draws black rhino and elephant at night; Halali's draws leopard; Namutoni has fewer big game but strong birding.",
+   "September and October are the hottest months and the best for waterhole concentration; October is still peak, not easing.",
+   "Rains begin about November and run to April: game disperses, the park is green, birding is at its best with migrants."
+  ],
+  "avoid": [
+   "Saying October is when waterhole concentration eases: that begins with the November rains."
+  ],
+  "season": "Peak July to October (September and October highest); lowest January to March.",
+  "mustMention": [
+   "Etosha",
+   "Okaukuejo",
+   "floodlit"
+  ]
+ },
+ "uganda": {
+  "scope": "Murchison Falls National Park (Nile boat trip, savanna game drives) and Queen Elizabeth National Park (Kazinga Channel boat cruise, Ishasha tree-climbing lions). Gorilla trekking is NOT safari and stays out.",
+  "facts": [
+   "Murchison Falls: elephants, giraffes, lions, buffalo and hippos on game drives north of the Nile, plus the boat trip to the base of the falls; best months December to February and June to September.",
+   "Queen Elizabeth: elephants, lions, buffalo and abundant hippos; the Kazinga Channel boat cruise brings hippos, crocodiles and buffalo close; the Ishasha sector is famous for lions that climb fig trees.",
+   "Dry seasons are roughly December to February and June to September; the rains (about March to May and October to November) make some tracks muddy.",
+   "Rhinos are not in these parks (they are in a separate sanctuary), so Uganda is not a Big Five destination."
+  ],
+  "avoid": [
+   "Any gorilla or chimpanzee trekking content."
+  ],
+  "season": "Peak December to February and June to August; lowest April, May and November.",
+  "mustMention": [
+   "Murchison Falls",
+   "Queen Elizabeth",
+   "Kazinga"
+  ]
+ },
+ "rwanda": {
+  "scope": "Akagera National Park only (Rwanda's only savanna park). Gorilla trekking at Volcanoes is NOT safari and stays out.",
+  "facts": [
+   "Seven lions were reintroduced in 2015 after about twenty years without them, and the population has grown strongly since; eastern black rhinos returned in 2017 and white rhinos were added in 2021, so all Big Five are present again.",
+   "Boat trips on Lake Ihema show hippos, crocodiles and waterbirds.",
+   "June to September is the long dry season and best for game viewing; the shorter dry spell is about December to February; heavier rain falls about March to May and October to November."
+  ],
+  "avoid": [
+   "Any gorilla trekking content."
+  ],
+  "season": "Peak June to September; moderate December to February; lowest April and May.",
+  "mustMention": [
+   "Akagera",
+   "lions",
+   "rhino"
+  ]
+ },
+ "ethiopia": {
+  "scope": "Real but modest game viewing in Awash National Park, Nechisar National Park, and the remote Omo and Mago parks; game numbers are far lower and access harder than East Africa. Simien and Bale trekking is NOT safari and stays out.",
+  "facts": [
+   "Awash National Park, about 225 km east of Addis Ababa: beisa oryx, greater and lesser kudu, Soemmerring's gazelle, Swayne's hartebeest, hot springs and volcanic terrain; open year-round, best roughly September to November.",
+   "Nechisar National Park (near Arba Minch): zebra, Grant's gazelle and Swayne's hartebeest on the plains, and boat trips on Lake Chamo to see large crocodiles; best roughly November to March.",
+   "Omo and Mago National Parks in the far south are the last places in Ethiopia with elephant, buffalo, giraffe, eland and big cats, but they are remote; best January and February, and roads become nearly impassable after rain (April, May and October).",
+   "Gambella in the far west sits on the northern edge of the white-eared kob migration and is very remote."
+  ],
+  "avoid": [
+   "Gelada, Walia ibex or Ethiopian wolf content (wildlife section)."
+  ],
+  "season": "Low overall; best roughly November to March, with Awash good from September; lowest during the rains (about April to May and June to August).",
+  "mustMention": [
+   "Awash",
+   "Omo",
+   "Nechisar"
+  ]
+ },
+ "ghana": {
+  "scope": "Mole National Park in the northwest.",
+  "facts": [
+   "Mole offers both walking safaris with armed rangers and vehicle game drives (including night drives); it is not either-or.",
+   "Elephants are the highlight and are seen most easily December to March, when the dry season concentrates them at waterholes and the dam near the park lodging.",
+   "The park is about three hours by road from Tamale, which has flights from Accra; the dry season is roughly November to April.",
+   "Game numbers are modest compared with East or southern Africa."
+  ],
+  "avoid": [
+   "Saying Mole is walking-only."
+  ],
+  "season": "Peak December to March; the rains (about May to October) are the low season.",
+  "mustMention": [
+   "Mole",
+   "elephants",
+   "walking"
+  ]
+ },
+ "nepal": {
+  "scope": "Chitwan National Park (with Bardia National Park in the far west as the quieter alternative).",
+  "facts": [
+   "Greater one-horned rhinos are seen on most safaris; the park holds about 700 of them. Tigers are present but a sighting is a lucky event, not routine.",
+   "Jeep safaris inside the park are suspended for the monsoon from about the end of June to mid-September; walking and canoe trips in the buffer zone and along the river continue in some form, so the park is not entirely closed.",
+   "October to March is the main dry season with the best visibility; March to May is hot, the grass is short, and animals are drawn to water; some operators call October to December the best window for tigers.",
+   "Gharial crocodiles are seen on river trips."
+  ],
+  "avoid": [
+   "Saying the park closes entirely for the monsoon.",
+   "Quoting a precise daily tiger percentage."
+  ],
+  "season": "Peak October to March; reasonable April and May despite heat; lowest July to September.",
+  "mustMention": [
+   "Chitwan",
+   "rhino",
+   "jeep"
+  ]
+ },
+ "kaziranga": {
+  "scope": "Kaziranga National Park, Assam.",
+  "facts": [
+   "The park holds about two-thirds of the world's greater one-horned rhinos, plus wild elephants, wild water buffalo, swamp deer and a growing tiger population (136 tigers in the 2022 count).",
+   "It is closed each year from about May to October because the Brahmaputra floods most of the park; the reopening date varies year to year, announced anywhere from about October 1 to late October, so the main season is November to April.",
+   "Jeep safaris run in the Kohora (central), Bagori (western), Burapahar and Agoratoli ranges; elephant-back rides at dawn run from Kohora and Bagori.",
+   "Tall elephant grass dries in December and January and is then burned by park staff, opening up sightlines through about March."
+  ],
+  "avoid": [
+   "Saying grass burning is mainly February to April."
+  ],
+  "season": "Peak December to March; good November and April; closed May to September (score near zero); October depends on the reopening date.",
+  "mustMention": [
+   "Kohora",
+   "rhino",
+   "elephant"
+  ]
+ },
+ "rajasthan-golden-triangle": {
+  "scope": "Ranthambore National Park for tigers (the standard safari add-on to the Golden Triangle).",
+  "facts": [
+   "The park is open roughly October 1 to June 30; core zones 1 to 5 close from July to September for the monsoon, while buffer zones 6 to 10 stay open with much lower tiger odds.",
+   "The best tiger sightings come in the dry run-up to the monsoon, April to June, when tigers visit lakes and waterholes in the heat; sightings are never guaranteed.",
+   "Leopards and sloth bears are occasional; winter mornings are cold in open jeeps.",
+   "Ranthambore is about 165 to 200 km from Jaipur, roughly three and a half hours by road."
+  ],
+  "avoid": [],
+  "season": "Peak April to June; good October to March; core zones closed July to September (score near zero).",
+  "mustMention": [
+   "Ranthambore",
+   "tiger",
+   "zones"
+  ]
+ },
+ "srilanka": {
+  "scope": "Minneriya and Kaudulla (the elephant Gathering), Yala (leopards), Udawalawe (elephants year-round), with Wilpattu as the quieter option.",
+  "facts": [
+   "The Gathering of up to 200 to 300 wild Asian elephants at Minneriya Tank runs roughly July to October, peaking August and September; Kaudulla takes over or shares the herds at different times.",
+   "Yala holds one of the highest leopard densities in the world; February to June or July is the best window for leopards and sloth bears.",
+   "Udawalawe has more than 500 resident elephants and good sightings through the year.",
+   "Wilpattu is best roughly February to October for leopards and sloth bears.",
+   "Minneriya is about 30 to 60 minutes from the Sigiriya and Dambulla hub."
+  ],
+  "avoid": [
+   "Calling May and June the driest, quietest stretch at Minneriya."
+  ],
+  "season": "Peak August and September (Gathering); strong February to July for Yala; lowest during the northeast monsoon rains of about November to January.",
+  "mustMention": [
+   "Minneriya",
+   "Yala",
+   "Udawalawe"
+  ]
+ },
+ "pantanal": {
+  "scope": "The northern Pantanal around Porto Jofre at the end of the Transpantaneira road (boat-based jaguar safaris).",
+  "facts": [
+   "June to October is the dry season and jaguar season; July to early October has the most sightings, August and September are ideal, and multi-day boat safaris report success rates above 90 percent.",
+   "The Transpantaneira is a dirt road of more than 100 bridges running about 147 km from Poconé to Porto Jofre; the gateway city is Cuiabá.",
+   "The rainy season (about November to March) floods the plains: roads can be impassable, some lodges become boat-access only, and wildlife disperses.",
+   "Giant river otters, caimans and capybaras are seen on the same boat trips; giant anteaters and hyacinth macaws are better in the southern Pantanal."
+  ],
+  "avoid": [
+   "Saying jaguar odds are already improving in April: water is still high until about June."
+  ],
+  "season": "Peak July to October (August and September highest); transitional May and June and November; lowest January to March.",
+  "mustMention": [
+   "Porto Jofre",
+   "jaguar",
+   "Transpantaneira"
+  ]
+ },
+ "borneo": {
+  "scope": "The Kinabatangan River (small-boat river safaris), with Danum Valley and Tabin Wildlife Reserve as land-based alternatives in Sabah.",
+  "facts": [
+   "River cruises at dawn and dusk show orangutans, proboscis monkeys, hornbills and macaques; pygmy elephants are less predictable, appearing on a fraction of trips.",
+   "The dry season is roughly March to September (peak May to September), when animals gather at the river; October to February is wetter and the river runs higher, though wildlife still concentrates along the corridor.",
+   "Tabin Wildlife Reserve is known for pygmy elephants and banteng; Danum Valley for orangutans and, rarely, clouded leopard."
+  ],
+  "avoid": [
+   "Calling the whole year equally low-scoring."
+  ],
+  "season": "Peak May to September; good March, April and October; lowest December and January.",
+  "mustMention": [
+   "Kinabatangan",
+   "pygmy elephants",
+   "proboscis"
+  ]
+ }
+}

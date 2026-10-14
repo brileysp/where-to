@@ -61,7 +61,7 @@ export function AuditHistoryList({
               {changed.length ? `changed: ${changed.join(', ')}` : 'no field changes recorded'}
             </p>
             <details style={{ marginTop: 6 }}>
-              <summary style={{ fontSize: 12, color: '#888', cursor: 'pointer' }}>show full snapshot</summary>
+              <summary style={{ fontSize: 12, color: '#888', cursor: 'pointer' }}>show what this save stored</summary>
               <pre style={{ fontSize: 11, background: '#f7f7f7', padding: 8, borderRadius: 4, overflowX: 'auto' }}>
                 {JSON.stringify(entry.after, null, 2)}
               </pre>

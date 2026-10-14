@@ -1,0 +1,1 @@
+ALTER TABLE "interest_place_ideas" ADD COLUMN "place_type" text DEFAULT '' NOT NULL;

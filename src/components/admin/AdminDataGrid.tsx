@@ -9,6 +9,10 @@ export interface GridColumn<T> {
   /** Required when sortable. Return a comparable primitive for this row. */
   sortValue?: (row: T) => string | number;
   align?: 'left' | 'right' | 'center';
+  /** Extra class on this column's header cell (e.g. to tint a column group). */
+  headClass?: string;
+  /** Extra class on this column's body cells. */
+  cellClass?: string;
   render: (row: T) => React.ReactNode;
 }
 
@@ -137,7 +141,7 @@ export function AdminDataGrid<T>({
               {columns.map((col, i) => (
                 <th
                   key={col.key}
-                  className={`${col.sortable ? '' : 'no-sort'} ${i === 0 && stickyFirstColumn ? 'sticky-col' : ''}`.trim()}
+                  className={`${col.sortable ? '' : 'no-sort'} ${i === 0 && stickyFirstColumn ? 'sticky-col' : ''} ${col.headClass ?? ''}`.trim()}
                   onClick={col.sortable ? () => toggleSort(col.key) : undefined}
                   style={col.align ? { textAlign: col.align } : undefined}
                 >
@@ -155,7 +159,7 @@ export function AdminDataGrid<T>({
             {visibleRows.map((row) => (
               <tr key={rowId(row)}>
                 {columns.map((col, i) => (
-                  <td key={col.key} className={i === 0 && stickyFirstColumn ? 'sticky-col' : ''}>
+                  <td key={col.key} className={`${i === 0 && stickyFirstColumn ? 'sticky-col' : ''} ${col.cellClass ?? ''}`.trim()}>
                     {col.render(row)}
                   </td>
                 ))}
