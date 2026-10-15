@@ -23,7 +23,7 @@ Hiking & Trekking, Scenic Landscapes, Landscape Photography, National Parks, Cam
 
 **Where hiking stops.** A summit reached on foot with no technical gear counts as hiking (Kilimanjaro, a trekking-peak walk-up). One that needs a rope, crampons and an ice axe on its main route belongs to Mountaineering.
 
-**One scale for difficulty, so the family uses the same words.** These bands are for your own judgment; the text never uses the band names, and tells what makes a route hard in the approved words the directive lists.
+**One scale for difficulty, so the family uses the same words.** These bands are for your own judgment; the text does not use the band names as labels; it says in plain words what a route is like and what makes it hard.
 - **Easy:** under 3 miles, graded or paved, little climbing.
 - **Middle band:** a day hike of 3 to 10 miles, up to about 2,000 ft of climbing.
 - **Strenuous:** a day hike of more than 10 miles or more than 3,000 ft of climbing, or rough ground.
