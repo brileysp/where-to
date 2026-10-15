@@ -660,10 +660,10 @@ export const WHALE_WRITING_RULES: string[] = [
 // ---- Hiking rules (from prompts/hiking/ and the shared prompts/_shared/on-foot-core.md; owner decisions 13-14 Oct 2026) ----
 
 export const HIKING_TESTS: Array<{ title: string; body: string }> = [
-  { title: 'A trail within a day trip', body: 'A trail or route a visitor can walk within a day trip of the place (about two hours each way; the text says so when it is more than an hour). Walking tours of a city, beach strolls and scenic drives do not count.' },
+  { title: 'A trail within a day trip', body: 'A trail or route a visitor can walk within a day trip of the place (about two hours each way; the text says so when it is more than an hour). Walking tours of a city and scenic drives do not count. A city park, a promenade or a short nature walk is the lowest rung of hiking, not nothing.' },
   { title: 'Real', body: 'People travel to walk here, or there are named trails, a trail network or treks that a visitor could use.' },
   { title: 'Low', body: 'A real walkable trail is documented within a day trip, even if it is short, seasonal or modest, or there is no hiking industry (a city with a hill park, a coast path, a ridge above the town). The text says plainly what it is.' },
-  { title: 'Not applicable', body: 'No walkable trail is documented within a day trip, so a visitor could not hike here at all. The reason is stored and shown on the N/A chip.' },
+  { title: 'Just a walk', body: 'Only a park, a promenade, a short nature walk or a guided landing is within reach. Hiking has no N/A: the place peaks below 2.0, and below 1.0 when it is nothing more than a stroll in a city park. The text says plainly what it is.' },
 ];
 
 export const HIKING_EDGE_CASES: Array<{ case: string; ruling: string }> = [
@@ -680,7 +680,7 @@ export const HIKING_EDGE_CASES: Array<{ case: string; ruling: string }> = [
   { case: 'City walking tours and beach strolls', ruling: 'Out. They belong to Local Culture & City Exploration and Beaches & Swimming.' },
   { case: 'A city with a real mountain or coast trail within reach (Cape Town, Hong Kong, Rio)', ruling: 'In, as real or low depending on what is there.' },
   { case: 'A remote trailhead, a required guide or a required permit', ruling: 'In. The text says how to get there, or that a guide or permit is required.' },
-  { case: 'An old N/A flag', ruling: 'Ignored. Applicability is decided from geography and what is documented (Myanmar was marked N/A in error).' },
+  { case: 'An old N/A flag', ruling: 'Ignored. Hiking has no N/A: every place has some walking, and a place with only a park or promenade peaks below 2.0.' },
 ];
 
 export const HIKING_SCORING_WEIGHTS: Array<{ label: string; pct: number; note: string }> = [

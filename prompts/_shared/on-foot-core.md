@@ -19,14 +19,14 @@ Hiking & Trekking, Scenic Landscapes, Landscape Photography, National Parks, Cam
 
 **Overlap is expected, and scenery counts.** For the best walks the landscape is the reason to walk, so scenery is a main factor in a Hiking score and part of its text, especially scenery and views that can only be reached on foot (a ridge above the lakes, a glacier valley, a summit panorama). The same goes for scenery earned by running or by sleeping out in Trail Running and Camping & Backcountry. Each interest says it from its own side: Hiking from the walker's side (what the route passes and what the effort earns), Scenic Landscapes from the landscape's side (the place as a whole, and the views anyone can reach by road, boat or a short stroll). Do not repeat the same sentence another lane already wrote; say what is new from your angle.
 
-**What counts as on foot, and how far.** A trail or route a visitor can walk within a day trip of the place. For a city or small place that means about an hour or so away; an outstanding hike may be up to about two hours each way, and the text says the drive when it is more than an hour. Walking tours of a city, beach strolls and scenic drives do not count here. A hike that clearly belongs to another place in the catalog is left to that place (when you are given the list of other places, it is under `otherPlacesInCatalog`).
+**What counts as on foot, and how far.** A trail or route a visitor can walk within a day trip of the place. For a city or small place that means about an hour or so away; an outstanding hike may be up to about two hours each way, and the text says the drive when it is more than an hour. Walking tours of a city and scenic drives do not count here. A city park, a promenade or a short nature walk is the lowest rung of hiking, not nothing. A hike that clearly belongs to another place in the catalog is left to that place (when you are given the list of other places, it is under `otherPlacesInCatalog`).
 
 **Where hiking stops.** A summit reached on foot with no technical gear counts as hiking (Kilimanjaro, a trekking-peak walk-up). One that needs a rope, crampons and an ice axe on its main route belongs to Mountaineering.
 
 **One scale for difficulty, so the family uses the same words.** These bands are for your own judgment; the text does not use the band names as labels; it says in plain words what a route is like and what makes it hard.
 - **Easy:** under 3 miles, graded or paved, little climbing.
 - **Middle band:** a day hike of 3 to 10 miles, up to about 2,000 ft of climbing.
-- **Strenuous:** a day hike of more than 10 miles or more than 3,000 ft of climbing, or rough ground.
+- **Strenuous:** reserved for a day that would test even a serious hiker: more than 12 miles with real climbing, more than about 3,500 ft of climbing, high altitude, or serious scrambling and exposure. Short steep descents and ordinary rough ground are not strenuous.
 - **Trek:** a route of two or more days.
 - **Expedition trek:** a trek that goes above about 14,000 ft or is days from help.
 
