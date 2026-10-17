@@ -35,7 +35,7 @@ async function main() {
   for (const p of all.filter((x) => names.includes(x.name.toLowerCase()))) {
     const sheet = facts[p.id];
     if (sheet && sheet.forPlaceName !== p.name) { console.error(`SKIPPED ${p.name}: its fact sheet is for "${sheet.forPlaceName}"`); continue; }
-    const context = { placeId: p.id, placeName: p.name, region: p.region, about: p.about ?? null, interestKey: 'diving', interestLabel: 'diving', relatedInterestSummaries: [], ...(sheet ? { verifiedFacts: { scope: sheet.scope, facts: sheet.facts, avoid: sheet.avoid, season: sheet.season } } : {}) };
+    const context = { placeId: p.id, placeName: p.name, region: p.region, about: p.about ?? null, interestKey: 'diving', interestLabel: 'diving', ...(sheet ? { verifiedFacts: { scope: sheet.scope, facts: sheet.facts, avoid: sheet.avoid, season: sheet.season } } : {}) };
     const prompt = template.replace('{{VOICE_RULES}}', voice).replace('{{CONTEXT_JSON}}', JSON.stringify(context, null, 2));
     const r = await generateLabelled(prompt);
     const { costUsd } = computeCost(r.model, r.tokensIn, r.tokensOut);

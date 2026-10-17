@@ -1,0 +1,1195 @@
+[
+ {
+  "placeId": "santorini",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "other",
+   "waterTemp": "17-26 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "punta-cana",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "26-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "taiwan",
+  "before": {
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "22-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "rio",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "other",
+   "waterTemp": "20-26 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-25 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "bali",
+  "before": {
+   "animals": "Manta ray (likely, year-round), Mola mola (possible, Jul-Oct), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "22-29 C (cold upwellings Jul-Oct)",
+   "accessStyle": "mixed",
+   "divingRating": 8,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "belize",
+  "before": {
+   "animals": "Whale shark (possible, Apr-Jun), Nurse shark (likely, year-round), Caribbean reef shark (likely, year-round), Eagle ray (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "26-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "10-40 m",
+   "certification": "advanced",
+   "snorkelingRating": 9
+  }
+ },
+ {
+  "placeId": "rivieramaya",
+  "before": {
+   "animals": "Bull shark (likely, Nov-Mar), Whale shark (possible, Jun-Sep), Green turtle (likely, year-round), Eagle ray (possible, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "mixed",
+   "waterTemp": "25-29 C (cenotes about 25 C)",
+   "accessStyle": "mixed",
+   "divingRating": 9.5,
+   "typicalDepth": "5-30 m",
+   "certification": "specialty",
+   "snorkelingRating": 9
+  }
+ },
+ {
+  "placeId": "gbr",
+  "before": {
+   "animals": "Green turtle (likely, year-round), Reef shark (likely, year-round), Dwarf minke whale (possible, Jun-Jul)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "23-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "5-25 m",
+   "certification": "openWater",
+   "snorkelingRating": 10
+  }
+ },
+ {
+  "placeId": "komodo",
+  "before": {
+   "animals": "Manta ray (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+   "bestFor": "diving",
+   "current": "strong",
+   "drawType": "reef",
+   "waterTemp": "22-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "10-30 m",
+   "certification": "advanced",
+   "snorkelingRating": 8.5
+  }
+ },
+ {
+  "placeId": "fiji",
+  "before": {
+   "animals": "Bull shark (likely, year-round, baited), Tiger shark (possible, year-round, baited), Manta ray (likely, May-Oct)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "25-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 9
+  }
+ },
+ {
+  "placeId": "okinawa",
+  "before": {
+   "animals": "Green turtle (likely, year-round), Hammerhead shark (possible, Dec-Mar)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "22-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 7.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "maldives",
+  "before": {
+   "animals": "Manta ray (likely, Jun-Nov), Whale shark (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "mixed",
+   "typicalDepth": "5-30 m",
+   "certification": "openWater"
+  }
+ },
+ {
+  "placeId": "mauritius",
+  "before": {
+   "animals": "Spinner dolphin (likely, year-round), Green turtle (possible, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "24-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-35 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "rajaampat",
+  "before": {
+   "animals": "Manta ray (likely, Oct-Apr), Wobbegong shark (likely, year-round), Pygmy seahorse (likely, year-round), Reef shark (likely, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "28-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 10
+  }
+ },
+ {
+  "placeId": "borneo",
+  "before": {
+   "animals": "Green turtle (guaranteed, year-round), Barracuda (likely, year-round), Reef shark (likely, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 8
+  }
+ },
+ {
+  "placeId": "palawan",
+  "before": {
+   "animals": "Manta ray (likely, Mar-Jun), Whale shark (possible, Mar-Jun), Dugong (possible, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "26-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 8,
+   "typicalDepth": "10-40 m",
+   "certification": "advanced",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "seychelles",
+  "before": {
+   "animals": "Whale shark (likely, Aug-Oct), Green turtle (likely, year-round), Reef shark (likely, year-round)",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "dayBoat",
+   "typicalDepth": "5-30 m",
+   "certification": "openWater"
+  }
+ },
+ {
+  "placeId": "galapagos",
+  "before": {
+   "animals": "Galapagos sea lion (guaranteed, year-round), Green turtle (likely, year-round), Eagle ray (likely, year-round), Hammerhead shark (likely, Jun-Nov), Whale shark (likely, Jun-Nov), Marine iguana (possible, year-round), Galapagos penguin (unlikely, year-round)",
+   "current": "strong",
+   "drawType": "animals",
+   "waterTemp": "16-28 C (cold Jun-Nov)",
+   "accessStyle": "mixed",
+   "typicalDepth": "10-30 m",
+   "certification": "advanced"
+  }
+ },
+ {
+  "placeId": "aruba",
+  "before": {
+   "animals": "Green turtle (possible, year-round)",
+   "bestFor": "both",
+   "current": "none",
+   "drawType": "mixed",
+   "waterTemp": "26-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "puerto-rico",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "25-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6.5
+  }
+ },
+ {
+  "placeId": "mallorca",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "13-27 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "croatia",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "12-26 C",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "barbados",
+  "before": {
+   "animals": "Hawksbill turtle (guaranteed, year-round), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "26-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6.5
+  }
+ },
+ {
+  "placeId": "lisbon",
+  "before": {
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "other",
+   "waterTemp": "14-19 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 2
+  }
+ },
+ {
+  "placeId": "maui",
+  "before": {
+   "animals": "Green turtle (guaranteed, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "24-27 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 7.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 8
+  }
+ },
+ {
+  "placeId": "algarve",
+  "before": {
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "15-21 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "sydney",
+  "before": {
+   "animals": "Grey nurse shark (likely, year-round), Weedy seadragon (likely, year-round), Port Jackson shark (likely, Jun-Oct)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "animals",
+   "waterTemp": "15-24 C",
+   "accessStyle": "mixed",
+   "divingRating": 6.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "dubai",
+  "before": {
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "wrecks",
+   "waterTemp": "22-34 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 2
+  }
+ },
+ {
+  "placeId": "cape-town",
+  "before": {
+   "animals": "Broadnose sevengill shark (likely, year-round), Great white shark (likely, Apr-Sep, cage dive, baited), African penguin (likely, year-round), Cape fur seal (likely, year-round)",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "10-18 C (7 mm wetsuit or drysuit)",
+   "accessStyle": "mixed",
+   "typicalDepth": "5-25 m",
+   "certification": "openWater"
+  }
+ },
+ {
+  "placeId": "costa-rica",
+  "before": {
+   "animals": "Bull shark (likely, Jun-Nov), Manta ray (likely, Dec-Apr)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "animals",
+   "waterTemp": "22-29 C (cooler Dec-Apr on the Pacific)",
+   "accessStyle": "dayBoat",
+   "divingRating": 7.5,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "nice-riviera",
+  "before": {
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "13-25 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "jamaica",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "26-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "nicaragua",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "26-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "puglia",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "caves",
+   "waterTemp": "14-26 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "jordan",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "21-28 C",
+   "accessStyle": "shore",
+   "divingRating": 7,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "sardinia",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "13-26 C",
+   "accessStyle": "mixed",
+   "divingRating": 7.5,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 6.5
+  }
+ },
+ {
+  "placeId": "turks-caicos",
+  "before": {
+   "animals": "Eagle ray (likely, year-round), Caribbean reef shark (likely, year-round), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "25-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 8,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "canaries",
+  "before": {
+   "animals": "Angel shark (likely, year-round), Stingray (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "18-24 C",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "srilanka",
+  "before": {
+   "animals": "Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "27-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "colombian-caribbean",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "sicily",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "15-27 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "whistler",
+  "before": {
+   "animals": "Giant Pacific octopus (likely, year-round), Wolf eel (possible, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "kelp",
+   "waterTemp": "8-12 C (drysuit usual)",
+   "accessStyle": "mixed",
+   "divingRating": 6.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 3
+  }
+ },
+ {
+  "placeId": "hokkaido",
+  "before": {
+   "animals": "Clione sea angel (likely, Feb-Mar)",
+   "bestFor": "diving",
+   "current": "none",
+   "drawType": "other",
+   "waterTemp": "-1 to 2 C in winter (drysuit)",
+   "accessStyle": "shore",
+   "divingRating": 6,
+   "typicalDepth": "5-15 m",
+   "certification": "specialty",
+   "snorkelingRating": 0
+  }
+ },
+ {
+  "placeId": "basque-country",
+  "before": {
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "other",
+   "waterTemp": "12-20 C",
+   "accessStyle": "shore",
+   "divingRating": 4,
+   "typicalDepth": "5-20 m",
+   "certification": "openWater",
+   "snorkelingRating": 3
+  }
+ },
+ {
+  "placeId": "fjords",
+  "before": {
+   "bestFor": "both",
+   "current": "none",
+   "drawType": "kelp",
+   "waterTemp": "4-15 C (drysuit usual)",
+   "accessStyle": "shore",
+   "divingRating": 4,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 3
+  }
+ },
+ {
+  "placeId": "marlborough-abel-tasman",
+  "before": {
+   "animals": "New Zealand fur seal (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "animals",
+   "waterTemp": "12-20 C (wetsuit)",
+   "accessStyle": "dayBoat",
+   "divingRating": 4,
+   "typicalDepth": "0-10 m",
+   "certification": "none",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "iceland",
+  "before": {
+   "current": "none",
+   "drawType": "other",
+   "waterTemp": "2-4 C at Silfra (drysuit)",
+   "accessStyle": "shore",
+   "typicalDepth": "5-18 m",
+   "certification": "specialty"
+  }
+ },
+ {
+  "placeId": "singapore",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "28-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 3,
+   "typicalDepth": "5-20 m",
+   "certification": "openWater",
+   "snorkelingRating": 2
+  }
+ },
+ {
+  "placeId": "monterey-big-sur",
+  "before": {
+   "animals": "Harbor seal (likely, year-round), California sea lion (likely, year-round), Giant Pacific octopus (possible, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "10-16 C (7 mm wetsuit or drysuit)",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "5-25 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "angkor",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "28-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-25 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "scottish-highlands-skye",
+  "before": {
+   "animals": "Basking shark (possible, Jun-Aug), Grey seal (likely, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "8-14 C (drysuit usual)",
+   "accessStyle": "mixed",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "hongkong",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "17-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 4,
+   "typicalDepth": "5-20 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "antarctica",
+  "before": {
+   "bestFor": "diving",
+   "current": "none",
+   "drawType": "other",
+   "waterTemp": "-2 to 2 C (drysuit)",
+   "accessStyle": "liveaboard",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "specialty",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "bagan",
+  "before": {
+   "animals": "Silvertip shark (likely, Nov-Apr), Manta ray (possible, Nov-Apr)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "animals",
+   "waterTemp": "27-30 C",
+   "accessStyle": "liveaboard",
+   "divingRating": 7,
+   "typicalDepth": "10-40 m",
+   "certification": "advanced",
+   "snorkelingRating": 2
+  }
+ },
+ {
+  "placeId": "madeira",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "18-24 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "tasmania",
+  "before": {
+   "animals": "Weedy seadragon (likely, year-round), Australian fur seal (possible, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "kelp",
+   "waterTemp": "10-18 C (7 mm wetsuit or drysuit)",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "amalfi",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "14-26 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "upper-peninsula",
+  "before": {
+   "bestFor": "diving",
+   "current": "none",
+   "drawType": "wrecks",
+   "waterTemp": "4-14 C (drysuit)",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "advanced",
+   "snorkelingRating": 1
+  }
+ },
+ {
+  "placeId": "madagascar",
+  "before": {
+   "animals": "Whale shark (likely, Oct-Dec), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "25-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "bahamas",
+  "before": {
+   "animals": "Caribbean reef shark (guaranteed, year-round, baited), Tiger shark (likely, Oct-May, baited), Oceanic whitetip shark (possible, Mar-May), Atlantic spotted dolphin (likely, Jun-Sep)",
+   "current": "mild",
+   "drawType": "animals",
+   "waterTemp": "24-29 C",
+   "accessStyle": "mixed",
+   "typicalDepth": "10-30 m",
+   "certification": "openWater"
+  }
+ },
+ {
+  "placeId": "barcelona",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "13-24 C",
+   "accessStyle": "mixed",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "athens",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "15-26 C",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "milford-sound-fiordland",
+  "before": {
+   "animals": "Black coral (likely, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "other",
+   "waterTemp": "10-16 C (7 mm wetsuit)",
+   "accessStyle": "dayBoat",
+   "divingRating": 6.5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 2
+  }
+ },
+ {
+  "placeId": "tuscany",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "13-26 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 6,
+   "typicalDepth": "5-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "panama",
+  "before": {
+   "animals": "Hammerhead shark (possible, Jun-Oct)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "24-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "banff",
+  "before": {
+   "bestFor": "diving",
+   "current": "none",
+   "drawType": "other",
+   "waterTemp": "4-12 C (drysuit)",
+   "accessStyle": "shore",
+   "divingRating": 3,
+   "typicalDepth": "5-30 m",
+   "certification": "specialty",
+   "snorkelingRating": 0
+  }
+ },
+ {
+  "placeId": "egypt",
+  "before": {
+   "animals": "Green turtle (likely, year-round), Hammerhead shark (possible, May-Aug), Oceanic whitetip shark (possible, Oct-Dec), Dugong (possible, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "22-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 10,
+   "typicalDepth": "10-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 9
+  }
+ },
+ {
+  "placeId": "north-island",
+  "before": {
+   "animals": "Stingray (likely, year-round), Moray eel (likely, year-round), Kingfish (likely, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "14-22 C (7 mm wetsuit)",
+   "accessStyle": "dayBoat",
+   "divingRating": 7.5,
+   "typicalDepth": "10-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "cornwall",
+  "before": {
+   "animals": "Grey seal (likely, year-round), Basking shark (possible, Jun-Aug)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "10-17 C (7 mm wetsuit or drysuit)",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "havana",
+  "before": {
+   "animals": "Caribbean reef shark (likely, year-round), Silky shark (likely, Nov-Mar), American crocodile (possible, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "26-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 9,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 7
+  }
+ },
+ {
+  "placeId": "napa",
+  "before": {
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "9-14 C (drysuit usual)",
+   "accessStyle": "shore",
+   "divingRating": 5,
+   "typicalDepth": "5-20 m",
+   "certification": "openWater",
+   "snorkelingRating": 3
+  }
+ },
+ {
+  "placeId": "thailand",
+  "before": {
+   "animals": "Whale shark (possible, Feb-Apr), Leopard shark (likely, Nov-Apr), Manta ray (possible, Dec-Apr), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 8.5,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 8
+  }
+ },
+ {
+  "placeId": "papua-new-guinea",
+  "before": {
+   "animals": "Reef shark (likely, year-round), Pygmy seahorse (likely, year-round)",
+   "bestFor": "diving",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "27-30 C",
+   "accessStyle": "mixed",
+   "divingRating": 9.5,
+   "typicalDepth": "10-40 m",
+   "certification": "openWater",
+   "snorkelingRating": 8
+  }
+ },
+ {
+  "placeId": "snowdonia",
+  "before": {
+   "animals": "Grey seal (likely, year-round, Pembrokeshire)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "8-16 C (drysuit usual)",
+   "accessStyle": "mixed",
+   "divingRating": 6,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "vietnam",
+  "before": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "reef",
+   "waterTemp": "25-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  }
+ },
+ {
+  "placeId": "quebec-city",
+  "before": {
+   "bestFor": "diving",
+   "current": "strong",
+   "drawType": "other",
+   "waterTemp": "2-18 C (drysuit)",
+   "accessStyle": "mixed",
+   "divingRating": 4,
+   "typicalDepth": "5-30 m",
+   "certification": "specialty",
+   "snorkelingRating": 1
+  }
+ },
+ {
+  "placeId": "belfast-giants-causeway",
+  "before": {
+   "animals": "Grey seal (likely, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "8-16 C (drysuit usual)",
+   "accessStyle": "mixed",
+   "divingRating": 5,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 3
+  }
+ },
+ {
+  "placeId": "vancouver-island",
+  "before": {
+   "animals": "Giant Pacific octopus (likely, year-round), Steller sea lion (possible, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "kelp",
+   "waterTemp": "8-12 C (drysuit usual)",
+   "accessStyle": "mixed",
+   "divingRating": 7,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 4
+  }
+ },
+ {
+  "placeId": "azores",
+  "before": {
+   "animals": "Blue shark (likely, Jun-Oct), Giant devil ray (possible, Jul-Oct), Common dolphin (likely, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "animals",
+   "waterTemp": "16-24 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 8,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "palau",
+  "before": {
+   "animals": "Grey reef shark (likely, year-round), Manta ray (possible, Mar-Apr), Green turtle (likely, year-round)",
+   "bestFor": "diving",
+   "current": "strong",
+   "drawType": "reef",
+   "waterTemp": "27-30 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 10,
+   "typicalDepth": "10-40 m",
+   "certification": "advanced",
+   "snorkelingRating": 8
+  }
+ },
+ {
+  "placeId": "big-island",
+  "before": {
+   "animals": "Manta ray (guaranteed, year-round), Green turtle (guaranteed, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": "mixed",
+   "waterTemp": "24-27 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 8,
+   "typicalDepth": "5-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 8.5
+  }
+ },
+ {
+  "placeId": "los-cabos",
+  "before": {
+   "animals": "Bull shark (likely, Nov-Apr), Hammerhead shark (possible, Jun-Oct), California sea lion (likely, year-round)",
+   "bestFor": "diving",
+   "current": "moderate",
+   "drawType": "animals",
+   "waterTemp": "20-29 C",
+   "accessStyle": "dayBoat",
+   "divingRating": 7.5,
+   "typicalDepth": "10-30 m",
+   "certification": "openWater",
+   "snorkelingRating": 6
+  }
+ },
+ {
+  "placeId": "borabora",
+  "before": {
+   "animals": "Blacktip reef shark (guaranteed, year-round), Grey reef shark (likely, year-round, Tuamotu passes), Lemon shark (likely, year-round), Manta ray (likely, year-round), Bottlenose dolphin (likely, year-round, Rangiroa), Humpback whale (likely, Aug-Oct, regulated in-water swims)",
+   "bestFor": "both",
+   "current": "strong",
+   "drawType": "animals",
+   "waterTemp": "26-29 C",
+   "accessStyle": "mixed",
+   "divingRating": 9,
+   "typicalDepth": "10-30 m",
+   "certification": "advanced",
+   "snorkelingRating": 8,
+   "drawSourceChecked": false
+  }
+ }
+]

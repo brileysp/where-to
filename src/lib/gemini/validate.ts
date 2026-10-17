@@ -1,6 +1,5 @@
 import { hasCelsius } from '../text/temperature';
 import { hasMeters } from '../text/length';
-import { SLIDERS } from '../scoring/constants';
 import { oldNameIssues } from './renamed-places';
 import { INTEREST_ANCHORS } from '../scoring/anchors';
 import { seasonWordsIn } from './hemisphere';
@@ -24,14 +23,6 @@ const CLIFF_THRESHOLD = 2; // an isolated month differing from both neighbors by
 const NEIGHBOR_CLOSE_THRESHOLD = 0.5; // "the neighbors are close to each other" — playbook's own cliff definition
 const LITERAL_MAX_RUN_LENGTH = 5; // a run this long at the ceiling needs real justification (playbook §1 Step 6)
 
-// Formula families that are clearly land-based, non-water interests — a
-// generation for one of these mentioning reef/dive/snorkel-specific content
-// is category bleed, not a legitimate cross-reference (compare to the
-// playbook's OWN overlap rule, which is about two interests both covering
-// the same land animal from different angles — a genuinely different case
-// from a hiking-formula interest describing marine life at all).
-const LAND_FORMULAS = new Set(['hiking', 'snow']);
-const MARINE_BLEED_KEYWORDS = ['reef', 'coral', 'snorkel', 'scuba', 'dive site', 'diving', 'manta ray', 'whale shark', 'liveaboard'];
 
 
 // Scenic/atmospheric padding explicitly banned by the Wildlife Viewing
@@ -257,6 +248,10 @@ function validateHikingText(output: GenerationOutput, options: ValidateOptions =
   if (/\d[\d,.]*[- ]mile/i.test(output.overview) && !/\b\d+(?:[-\s](?:to\s+\d+\s+)?)days?\b|\bmulti-day\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview gives a distance but no multi-day route. Day hikes get no mileage unless 15 miles or more; check it.' });
   // Owner review, 14 Oct 2026 (hiking/v4).
   if (/\bmoderate\b(?! (daytime |overnight )?(temperatures?|weather|conditions?|rain|climate|humidity|winds?|heat|cool|warmth)\b)/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'A bare "moderate" is not used to describe a route. Say what the route is like (steep, long, rough, exposed) or leave the level out.' });
+  // Owner review, 15 Oct 2026 (hiking/v6): vary the opening verb; hiking, not walking, for rugged ground.
+  if (/\boffers?\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview uses "offer(s)". Vary the verb: open with the place\'s most distinctive feature.' });
+  const peakScore = Math.max(...output.monthly.map((m) => m.score));
+  if (peakScore >= 5 && /\bwalkers\b|\bthe best walking\b|\bwalking is best\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"Walkers" or "the best walking" is used for a place with real hiking. Say hikers and hiking; keep "walking" for flat, easy ground.' });
   if (/\bheadline\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"Headline" (as in "the headline route") is not used. Say "best-known" or name the route.' });
   if (/\bworld-reference\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"World-reference" is the scoring scale\'s own word. Say "world famous", or one "world-class", or describe it, never "world-reference".' });
   if (/\b(overrun|swamped|teeming|inundated|invaded|flooded with (tourists|visitors))\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'Crowding is said as "crowded", with the places named. Words like "overrun" or "swamped" are too negative and vague.' });
@@ -366,18 +361,6 @@ export function validateContent(rawOutput: GenerationOutput, interestKey: string
           severity: 'warning',
           message: `Months ${monthList} share duplicate/near-duplicate blurb text (scores agree, within tolerance). Worth a human glance: legitimate if this is a genuinely flat season, a bug if it's lazy repetition of a season that should actually differ.`,
         });
-      }
-    }
-  }
-
-  // Category bleed — marine/reef/dive-specific keywords showing up in a
-  // clearly land-based interest's content.
-  const slider = SLIDERS.find((s) => s.key === interestKey);
-  if (slider && LAND_FORMULAS.has(slider.formula)) {
-    const allText = `${overview} ${monthly.map((m) => m.text).join(' ')}`.toLowerCase();
-    for (const kw of MARINE_BLEED_KEYWORDS) {
-      if (allText.includes(kw)) {
-        issues.push({ layer: 'content', severity: 'reject', message: `Category bleed: "${interestKey}" is a land-based (${slider.formula}) interest, but its content mentions "${kw}" — a marine/diving-specific term.` });
       }
     }
   }

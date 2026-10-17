@@ -103,7 +103,17 @@ describe('parseFact', () => {
     expect(bestOdds('Humpback whale (likely, Jun–Sep)')).toBe(3);
     expect(bestOdds("Bryde's whale (possible, Nov–Mar), pilot whale (likely, year-round)")).toBe(3);
     expect(parseFact(wh.find((d) => d.key === 'humpback')!, 'Humpback whale (likely, Jun–Sep)')).toEqual({ ok: true, value: 'Humpback whale (likely, Jun–Sep)' });
-    expect(parseFact(wh.find((d) => d.key === 'boatStyle')!, 'inflatable')).toEqual({ ok: true, value: 'inflatable' });
+    // Boat style takes several styles at once, stored in option order; "mixed" no longer exists.
+    const boat = wh.find((d) => d.key === 'boatStyle')!;
+    expect(parseFact(boat, ['sailing', 'inflatable'])).toEqual({ ok: true, value: ['inflatable', 'sailing'] });
+    expect(parseFact(boat, 'inflatable')).toEqual({ ok: true, value: ['inflatable'] });
+    expect(parseFact(boat, 'mixed').ok).toBe(false);
+    const draw = factDefsFor('diving').find((d) => d.key === 'drawType')!;
+    expect(parseFact(draw, ['wrecks', 'reef'])).toEqual({ ok: true, value: ['reef', 'wrecks'] });
+    expect(parseFact(draw, 'mixed').ok).toBe(false);
+    const wave = factDefsFor('surfing').find((d) => d.key === 'waveType')!;
+    expect(parseFact(wave, ['reef', 'beach'])).toEqual({ ok: true, value: ['beach', 'reef'] });
+    expect(parseFact(wave, 'mixed').ok).toBe(false);
   });
 });
 

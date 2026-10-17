@@ -204,10 +204,9 @@ read it if anything below is ambiguous. The essentials:
 - **Keep security/political/environmental-crisis content out of interest text
   entirely** — that belongs in the separate destination-level `travelAdvisories` field,
   not woven into a slider's blurb.
-- **Check for overlap with already-authored interests before claiming an animal/site/
-  fact** (e.g. `wildlifeViewing` vs. `birding` vs. `whaleWatching` — the split is
-  depth/specialist-level, not exclusive ownership of the same animal; both can legitimately
-  cover it from a different angle, but don't just restate the other's exact claim).
+- **Overlap between interests is normal and good** (e.g. `wildlifeViewing` vs. `birding` vs.
+  `whaleWatching`). The same animal, site or fact, even the same sentence, can appear in
+  more than one interest. No need to check the others first. (Owner, 17 Oct 2026.)
 
 ## 6. Decimal-precision rules (once basic content exists for an interest)
 

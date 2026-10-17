@@ -1,0 +1,64 @@
+{
+ "lapland": {
+  "generationId": "7e1fcec6-559f-4bb4-87bb-a0baef1b16b4",
+  "overview": "Finnish Lapland offers vast forests and rolling fells for walkers seeking remote wilderness. The region is famous for multi-day hut-to-hut routes like the 31-mile Hetta-Pallas trail and the 50-mile Karhunkierros trek, alongside shorter day hikes to open summits. The walking season is short, peaking in early autumn when the fells turn red and gold."
+ },
+ "mauritius": {
+  "generationId": "2d080933-e787-4dac-86af-3d64ff801b7e",
+  "overview": "Mauritius offers solid day hiking anchored by Black River Gorges National Park and the dramatic Le Morne Brabant peninsula. Walkers can explore the forested trails to Black River Peak or tackle the steep, rocky scramble up Le Morne for sweeping views of the Indian Ocean. The best conditions run from May to October, avoiding the heavy rains that make the steep rock routes dangerous."
+ },
+ "marlborough-abel-tasman": {
+  "generationId": "3bb2ce99-d8ec-4c24-b985-a2b4dff81c17",
+  "overview": "This region is famous for coastal walking, anchored by the Abel Tasman Coast Track, a 37-mile, multi-day Great Walk through native forest and along golden-sand bays. The 44-mile Queen Charlotte Track offers a similar mix of bush and coastal views in the Marlborough Sounds. Both routes are often accessed by water taxi, allowing walkers to hike a single section as a day trip. Because this is one of New Zealand's sunniest regions and the trails stay near sea level, the walking remains open year-round."
+ },
+ "kruger": {
+  "generationId": "a82fd563-5b97-46ed-8b50-3df6fe16a688",
+  "overview": "Walking in Kruger and the Sabi Sands is strictly guided by armed rangers, offering a rare chance to experience the bush on foot. Visitors can join short morning bush walks to track wildlife and learn about the ecosystem, or book three-night wilderness trails for groups of up to eight. In the hot, wet months, heat and heavy rain make walking hard going and can close the trails.",
+  "months": {
+   "1": "Intense heat and heavy rain make walking hard going, and wilderness trails can close after storms. Short guided bush walks go out at first light, before the day warms up.",
+   "2": "Heat and humidity stay high, and heavy rain can close the wilderness trails. Guided walks stay short and start at dawn.",
+   "3": "Temperatures begin to drop, easing conditions on the three-night wilderness trails and the shorter morning bush walks.",
+   "10": "Heat builds throughout the month, so early starts are essential on the multi-day wilderness trails and morning bush walks.",
+   "11": "Heat builds again, and early storms can close the wilderness trails. Early-morning guided walks remain the main way to go on foot.",
+   "12": "Hot, humid days and heavy rain make the wilderness trails unreliable. Short guided walks at dawn are still available, with green bush closing in the views."
+  }
+ },
+ "namibia": {
+  "generationId": "58c128a3-6dbe-497a-9a42-995640521f1b",
+  "overview": "Namibia's hiking is defined by the immense Fish River Canyon, a demanding 53-mile, multi-day trek through one of the world's largest canyons. Day hikers can tackle the towering red sands of Sossusvlei, walking up the spine of the 280-foot Dune 45 for panoramic desert views. The canyon trek requires a permit and a doctor's certificate, and is strictly limited to the cooler months to avoid extreme heat."
+ },
+ "okinawa": {
+  "generationId": "59e1f259-22af-492c-a38e-2adf8b33b2b2",
+  "overview": "Okinawa offers modest but rewarding day hikes, mostly focused on the subtropical Yanbaru forest in the north and coastal paths. The trails are generally short and range from easy boardwalks to the muddy old logging road up Yonaha-dake, the island's highest peak, where hikers turn back at the ninth station marker. The walking is best in the mild winter, avoiding the intense heat and typhoons of summer.",
+  "months": {
+   "1": "Winter is the best time to hike in Okinawa, with mild temperatures and lower humidity making the Yanbaru forest trails comfortable.",
+   "2": "Mild temperatures and lower humidity continue to make this an excellent month for the old logging road up Yonaha-dake or the coastal paths.",
+   "11": "Walking conditions improve significantly as the heat and humidity break. The trail up Yonaha-dake becomes comfortable again."
+  }
+ },
+ "new-orleans": {
+  "generationId": "7f830b59-8e3f-4494-a1b8-42d6cd7f80e4",
+  "overview": "Walking here means short, flat nature trails and urban parks. Couturie Forest in City Park offers a mile-long path under the canopy. Barataria Preserve in Jean Lafitte National Historical Park has swamp boardwalks, but most of its trails closed in 2026 for rebuilding after Hurricane Ida.",
+  "months": {
+   "1": "Mild temperatures make this a comfortable time for the Couturie Forest paths and the swamp trails.",
+   "2": "Cool, mild days are comfortable for the nature trails, though some paths can be damp after rain.",
+   "3": "Spring warmth arrives, and the Couturie Forest trails and swamp paths are pleasant before the heat builds.",
+   "4": "Warm, comfortable days suit a short nature walk, though humidity begins to rise.",
+   "10": "Cooling temperatures bring better conditions to the nature trails."
+  }
+ },
+ "queenstown": {
+  "generationId": "6a5fcefb-309e-49de-a002-3eee4ee240eb",
+  "months": {
+   "11": "The Great Walk season officially opens, with huts staffed and the major treks accessible again. Some snow may still linger on the highest passes of the Routeburn, but the Ben Lomond day hike is typically clear, and Roys Peak reopens on 10 November after its annual lambing closure."
+  }
+ },
+ "rajaampat": {
+  "generationId": "2c8728ba-8195-459f-80c4-ecce64904e54",
+  "overview": "Raja Ampat is famous for its water, but visitors can find short walks on the islands. The best-known routes are the wooden stairs to the karst viewpoint at Piaynemo and the steeper rock scramble to the view at Wayag. Short jungle trails on Waigeo lead to bird viewing areas. Access requires a boat.",
+  "months": {
+   "2": "Seas stay calm, so boat trips to the viewpoints at Wayag and Piaynemo run smoothly. Piaynemo's wooden stairs are a short, steady climb.",
+   "4": "Boat access is still mostly dependable for the short climbs to the Piaynemo and Wayag viewpoints."
+  }
+ }
+}

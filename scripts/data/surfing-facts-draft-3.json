@@ -1,0 +1,773 @@
+{
+ "sicily": {
+  "br": "Kamikaze near Cefalù (point, intermediate-expert, Oct-Mar); Caos near Agrigento (beach, intermediate, Oct-Mar); Palermo beaches (beach, beginner, Oct-Mar)",
+  "wt": "mixed",
+  "b": 5,
+  "a": 4.5,
+  "hz": "Submerged rocks at Kamikaze, strong winds, long drives to isolated breaks",
+  "sz": "1-3 ft; 5-10 ft in strong winter storms",
+  "tp": "57-82 F, 4/3 mm wetsuit in winter, rash vest in summer",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "few",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-italy/surfing-in-sicily/",
+   "https://www.surf-forecast.com/breaks/Kamikaze/seatemp"
+  ]
+ },
+ "havana": {
+  "br": "La Setenta in Havana (reef, intermediate-expert, Nov-Apr); Playas del Este and El Bajo (beach, beginner, Nov-Apr); Yumuri near Baracoa (river mouth, intermediate, Dec-Mar)",
+  "wt": "mixed",
+  "b": 4.5,
+  "a": 4.5,
+  "hz": "Shallow reef at La Setenta, hurricane swells, jellyfish, shifty currents, no rescue or repair services",
+  "sz": "1-3 ft; up to 8 ft in strong northeast swells",
+  "tp": "79-84 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "lc": "welcoming",
+  "ls": "few",
+  "pm": "Surfing is not recognised as a sport by the government, but visitors are unlikely to be stopped; bring your own board because rentals are scarce",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-the-caribbean/cuba-surfing/",
+   "https://www.pilotplans.com/blog/surfing-in-cuba",
+   "https://www.worldnomads.com/explore/caribbean/cuba/top-beaches-to-go-surfing-in-cuba"
+  ]
+ },
+ "komodo": {
+  "tp": "79-84 F, boardshorts",
+  "cr": "quiet",
+  "ac": "boat",
+  "ls": "few",
+  "src": []
+ },
+ "marlborough-abel-tasman": {
+  "br": "Kekerengu north of Kaikoura (point, intermediate, Jun-Aug); Rarangi (beach, beginner-intermediate, year-round)",
+  "wt": "mixed",
+  "b": 4,
+  "a": 4.5,
+  "hz": "Rips, dumpy shorebreak and driftwood at Rarangi, rocky entries, long rough access roads",
+  "sz": "2-4 ft; bigger on strong southeast swells",
+  "tp": "51-65 F, 4/3 mm wetsuit in summer, 5/4 mm hooded in winter",
+  "cr": "quiet",
+  "cn": "fickle",
+  "ac": "drive",
+  "ls": "few",
+  "src": [
+   "https://www.surf-forecast.com/breaks/Kekerengu",
+   "https://www.surfnerd.com/surf-reports/new-zealand/marlborough-region"
+  ]
+ },
+ "iceland": {
+  "br": "Thorlákshöfn (point, expert, year-round); Sandvík (beach, beginner-intermediate, Sep-Apr); Grindavík (reef, intermediate-expert, Sep-Mar)",
+  "wt": "mixed",
+  "b": 3.5,
+  "a": 6,
+  "hz": "Boulders and slippery rocks, strong rips and winds, extreme cold, short winter daylight",
+  "sz": "3-6 ft; bigger in winter storms",
+  "tp": "43-50 F, 5/4 mm hooded wetsuit with gloves and boots (6/5 mm in the coldest months)",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "rights",
+  "bd": [
+   "shortboard"
+  ],
+  "ac": "drive",
+  "src": [
+   "https://www.perfectwavetravel.com/iceland-surf-guide/",
+   "https://www.surf-forecast.com/breaks/Porlackshofn",
+   "https://guidetoiceland.is/travel-info/surfing-in-iceland"
+  ]
+ },
+ "rajaampat": {
+  "wt": "mixed",
+  "b": 2,
+  "a": 5,
+  "hz": "Reef, remote with no rescue services, sudden squalls, strong currents",
+  "tp": "80-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "fickle",
+  "ac": "boat",
+  "ls": "few",
+  "pm": "Everyone entering Raja Ampat Marine Park pays an environmental fee (about 700,000 rupiah); surf is by charter boat only",
+  "src": [
+   "https://www.perfectwavetravel.com/surf-trips/west-papua/"
+  ]
+ },
+ "vietnam": {
+  "br": "My Khe at Da Nang (beach, beginner-intermediate, Sep-Mar); Back Beach at Vung Tau (beach, beginner, Nov-Mar); Bai Dai at Nha Trang (beach, beginner, Oct-Apr)",
+  "wt": "beach",
+  "b": 6.5,
+  "a": 4.5,
+  "hz": "Strong rips, heavy shorebreak on big days, typhoon swells",
+  "sz": "2-5 ft; 8 ft on big days",
+  "tp": "77-86 F, boardshorts",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://it.surf-forecast.com/breaks/My-Khe",
+   "https://thesurfatlas.com/vietnam-surf/"
+  ]
+ },
+ "seychelles": {
+  "br": "Anse Intendance (beach, beginner-intermediate, May-Oct); Anse Bougainville (reef, expert, year-round)",
+  "wt": "mixed",
+  "b": 5.5,
+  "a": 5,
+  "hz": "Strong rips and undertow, rocks in the lineup, long paddle out at Bougainville",
+  "tp": "79-86 F, boardshorts",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "few",
+  "src": [
+   "https://www.surf-forecast.com/breaks/Intendance",
+   "https://www.surf-forecast.com/breaks/Anse-Bougainville",
+   "https://www.seyvillas.com/en/guide/beaches/mahe/surfing"
+  ]
+ },
+ "fjords": {
+  "br": "Hoddevik on the Stad Peninsula (beach, beginner-intermediate, May-Nov); Jæren beaches (beach, beginner-intermediate, year-round)",
+  "wt": "beach",
+  "b": 6,
+  "a": 5,
+  "hz": "Very cold water, shipwreck debris exposed at some tides at Hoddevik, strong currents, remote with no rescue",
+  "sz": "2-5 ft; closes out above 5-6 ft at Hoddevik",
+  "tp": "41-63 F, 4/3 mm in summer, 5/4 mm hooded with boots and gloves in winter (6/5 mm in the coldest months)",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "rights",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-norway/hoddevik-surf/",
+   "https://www.visitnorway.com/things-to-do/outdoor-activities/surfing/"
+  ]
+ },
+ "lofoten": {
+  "br": "Unstad (beach, intermediate-expert, Sep-Apr); Flakstad (beach, intermediate-expert, Sep-Apr)",
+  "wt": "beach",
+  "b": 4,
+  "a": 7,
+  "hz": "Extreme cold, no rescue services at remote breaks, strong rips, long flat spells in summer, short winter daylight",
+  "tp": "39-57 F, 4/3 mm in summer, 5/4 mm hooded with boots and gloves in winter (6/5 mm in the coldest months)",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-norway/surfing-in-lofoten/",
+   "https://www.tripbase.com/destinations/lofoten-surf-norway/surf/"
+  ]
+ },
+ "scottish-highlands-skye": {
+  "br": "Thurso East (reef, expert, Oct-Mar); Thurso beach break (beach, beginner-intermediate, Oct-Mar)",
+  "wt": "mixed",
+  "b": 3,
+  "a": 8,
+  "hz": "Sharp slate reef, strong Pentland Firth currents, hard exits in heavy swell, extreme cold, short winter days",
+  "sz": "3-6 ft; 10+ ft on big days",
+  "tp": "43-57 F, 5/4 mm or 6/5 mm hooded wetsuit with gloves and boots from October to April",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "rights",
+  "bd": [
+   "shortboard",
+   "stepUp"
+  ],
+  "ac": "drive",
+  "lc": "protective",
+  "ls": "few",
+  "src": [
+   "https://thesurfatlas.com/scotland-surfing/surfing-in-thurso/",
+   "https://www.tripbase.com/destinations/thurso-uk/surf/"
+  ]
+ },
+ "charleston-savannah": {
+  "br": "Folly Beach and The Washout (beach, beginner-intermediate, Sep-Dec); Tybee Island piers (beach, beginner-intermediate, Sep-Dec)",
+  "wt": "beach",
+  "b": 6,
+  "a": 3.5,
+  "hz": "Pier pilings and rock groins, rips, local beach restrictions",
+  "sz": "1-3 ft; 4-5 ft in tropical storms",
+  "tp": "52-84 F, 4/3 mm wetsuit in winter, boardshorts in summer",
+  "cr": "moderate",
+  "cn": "fickle",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "walkUp",
+  "ls": "some",
+  "pm": "At Folly Beach a leash is required, no surfing within 200 ft of the pier, and from May 15 to Sept 15 surfing is banned 10 am-5 pm between 2nd St East and 3rd St West",
+  "src": [
+   "https://visitfolly.com/follys-favorite-surf-spots-the-washout-10th-street-east-and-more/",
+   "https://thesurfatlas.com/surfing-in-the-usa/tybee-island-surf/"
+  ]
+ },
+ "aruba": {
+  "b": 2,
+  "a": 3.5,
+  "hz": "Strong currents and high waves at Boca Grandi and Andicuri, rugged rocky coast",
+  "tp": "80-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "ac": "drive",
+  "ls": "few",
+  "src": [
+   "https://www.aruba.com/us/blog/arubas-best-surf-and-paddle-boarding"
+  ]
+ },
+ "palau": {
+  "br": "Santa Maria at Angaur (reef, intermediate-expert, Dec-Mar); West Passage near Babeldaob (reef, intermediate-expert, Nov-Mar)",
+  "wt": "reef",
+  "b": 2,
+  "a": 5,
+  "hz": "Shallow reef, rocks, sharks, rips, long boat trips in rough seas",
+  "tp": "82-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "rights",
+  "ac": "boat",
+  "ls": "few",
+  "src": [
+   "https://www.surf-forecast.com/breaks/Santa-Maria-Anguar",
+   "https://www.surf-forecast.com/breaks/West-Passage-Palau"
+  ]
+ },
+ "turks-caicos": {
+  "br": "Barrier reef breaks off the north and west coasts of Providenciales (reef, intermediate-expert, Nov-Mar)",
+  "wt": "reef",
+  "b": 1.5,
+  "a": 3.5,
+  "hz": "Shallow reef, hard paddles out, messy in big swell, unlicensed water-sports operators",
+  "tp": "76-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "fickle",
+  "ac": "boat",
+  "ls": "few",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-the-caribbean/surfing-in-turks-and-caicos/",
+   "https://visittci.com/providenciales/things-to-do/surfing"
+  ]
+ },
+ "colombian-caribbean": {
+  "br": "Costeño Beach (beach, beginner, Dec-Mar); Palomino (beach, beginner-intermediate, Dec-Mar); El Muelle at Puerto Colombia (beach, expert, Dec-Mar)",
+  "wt": "beach",
+  "b": 5.5,
+  "a": 4,
+  "hz": "Strong currents at Palomino, powerful waves at El Muelle",
+  "sz": "2-4 ft; up to 6 ft at the San Bernardo Islands",
+  "tp": "79-84 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "ac": "drive",
+  "src": [
+   "https://pelecanus.com.co/en/surfing-destinations-in-colombia/",
+   "https://www.worldpackers.com/fr/articles/surf-in-colombia"
+  ]
+ },
+ "barbados": {
+  "br": "Soup Bowl at Bathsheba (reef, expert, Oct-Mar); Freights Bay (reef, beginner-intermediate, Oct-Mar); South Point (reef, intermediate, Oct-Mar)",
+  "wt": "reef",
+  "b": 6,
+  "a": 7.5,
+  "hz": "Shallow dead-coral reef at Soup Bowl, sea urchins, heavy hollow water, barracuda, fast-changing conditions",
+  "sz": "2-5 ft; 7+ ft at Soup Bowl in winter swell",
+  "tp": "79-84 F, boardshorts",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-the-caribbean/barbados-surfing/",
+   "https://isleblue.co/magazine/surf-spots-barbados/",
+   "https://visitbarbados.org/dread-or-dead-surf"
+  ]
+ },
+ "sardinia": {
+  "br": "Capo Mannu (point, expert, Oct-Mar); Porto Ferro (beach, beginner-intermediate, Oct-Mar); Buggerru (beach, intermediate, Oct-Mar)",
+  "wt": "mixed",
+  "b": 5,
+  "a": 6.5,
+  "hz": "Sharp rocks, rips and a narrow entry and exit at Capo Mannu, sea urchins, strong currents near the cliffs at Porto Ferro",
+  "sz": "2-5 ft; up to 13 ft in exceptional mistral storms",
+  "tp": "55-79 F, 3/2 mm wetsuit in summer, 4/3 mm in winter (5/4 mm in January-February)",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "lc": "welcoming",
+  "ls": "some",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-italy/surfing-in-sardinia/",
+   "https://strictlysardinia.com/surfing-in-sardinia/"
+  ]
+ },
+ "kerala": {
+  "br": "Varkala (point, beginner-intermediate, Oct-Apr); Kovalam (point, intermediate, Oct-Apr); Kappil (beach, beginner, Oct-Apr)",
+  "wt": "mixed",
+  "b": 6.5,
+  "a": 5,
+  "hz": "Fickle beach breaks, rough seas and currents in the monsoon, boulder seawalls at Kappil, some water pollution at Varkala",
+  "tp": "80-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "fickle",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-india/varkala-surfing/",
+   "https://www.keralatourism.org/adventure-tourism/surfing"
+  ]
+ },
+ "guatemala": {
+  "br": "Sipacate (beach, beginner-intermediate, year-round); El Paredón (beach, beginner-expert depending on swell, year-round); Champerico (point, expert, May-Oct)",
+  "wt": "beach",
+  "b": 6.5,
+  "a": 6.5,
+  "hz": "Strong rips, powerful waves in the big season, slow rough roads between breaks",
+  "sz": "3-6 ft; bigger in the wet season (June-October)",
+  "tp": "82-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "yearRound",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://www.perfectwavetravel.com/guatemala-surf-guide/"
+  ]
+ },
+ "madagascar": {
+  "br": "Anakao's Flameballs and Jelly Baby (reef, intermediate-expert, Apr-Oct); Lavanono (point, intermediate, Apr-Oct); Fort Dauphin (beach, intermediate, May-Sep)",
+  "wt": "mixed",
+  "b": 3.5,
+  "a": 7,
+  "hz": "Shallow coral at low tide, long boat or road trips to the breaks, wrecks at Fort Dauphin, cyclone storms from November to March",
+  "tp": "73-84 F, boardshorts to a 3/2 mm wetsuit in the southern winter",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "lefts",
+  "bd": [
+   "shortboard"
+  ],
+  "ac": "boat",
+  "ls": "few",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-madagascar/",
+   "https://www.surf-forecast.com/breaks/Fort-Dauphin"
+  ]
+ },
+ "galapagos": {
+  "br": "Punta Carola (reef, intermediate, Nov-Apr); El Cañón (point, intermediate-expert, Nov-Apr); La Lobería (reef, expert, Nov-Apr); Tongo Reef (reef, expert, Nov-Apr)",
+  "wt": "reef",
+  "b": 2.5,
+  "a": 7.5,
+  "hz": "Shallow reef and rocks, sea lions in the lineup, fast hollow waves, boat-only breaks",
+  "sz": "3-6 ft; up to 9 ft on strong north swells",
+  "tp": "68-80 F, boardshorts or a springsuit in summer, 3/2 mm wetsuit in the cooler months",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "shortboard"
+  ],
+  "ac": "boat",
+  "ls": "few",
+  "pm": "Breaks inside protected areas need permits; the San Cristóbal surf association can arrange permits and transport, and Punta Carola needs none",
+  "src": [
+   "https://www.visitgalapagos.travel/tours/san-cristobal/surf.html",
+   "https://www.surf-forecast.com/breaks/Tongo-Reef",
+   "https://www.frommers.com/destinations/san-cristobal-island/active-pursuits/"
+  ]
+ },
+ "douro-valley-porto": {
+  "br": "Matosinhos (beach, beginner, year-round); Leça da Palmeira (beach, intermediate, Oct-Mar); Espinho (beach, beginner-intermediate, year-round)",
+  "wt": "beach",
+  "b": 7.5,
+  "a": 5.5,
+  "hz": "Water pollution at Matosinhos and Leça, strong rips, breakwater rocks, cold water",
+  "sz": "2-5 ft; bigger in winter storms",
+  "tp": "59-68 F, 4/3 mm wetsuit (3/2 mm in summer)",
+  "cr": "moderate",
+  "cn": "yearRound",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "lc": "mixed",
+  "ls": "plentiful",
+  "src": [
+   "https://thesurfatlas.com/surfing-portugal/matosinhos-surf/",
+   "https://www.siestacampers.com/blog/surfing-in-porto"
+  ]
+ },
+ "copenhagen": {
+  "br": "Klitmøller, the Cold Hawaii coast on the west of Jutland, a long drive from the city (beach, beginner-intermediate, year-round)",
+  "wt": "mixed",
+  "b": 4,
+  "a": 4.5,
+  "hz": "Very cold water, constant wind, a long trip from the city",
+  "tp": "35-68 F, 5/4 mm hooded wetsuit with boots and gloves in winter, 4/3 mm in summer",
+  "cr": "moderate",
+  "cn": "yearRound",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "lc": "welcoming",
+  "ls": "plentiful",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-denmark/cold-hawaii-denmark/",
+   "https://www.surf-forecast.com/breaks/Klitmoller/seatemp"
+  ]
+ },
+ "hongkong": {
+  "br": "Big Wave Bay (beach, beginner-intermediate, Nov-Mar); Shek O (beach, beginner-intermediate, Nov-Mar); Tai Long Wan (beach, intermediate, Nov-Mar)",
+  "wt": "beach",
+  "b": 4,
+  "a": 3.5,
+  "hz": "Typhoon swells and rips, no lifeguards at remote Tai Long Wan, crowded weekends",
+  "sz": "1-3 ft; bigger in typhoon swell",
+  "tp": "64-86 F, boardshorts in summer, 3/2 mm wetsuit in winter",
+  "cr": "crowded",
+  "cn": "fickle",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-hong-kong/",
+   "https://www.cathaypacific.com/cx/en_IE/inspiration/hong-kong/meet-hong-kongs-surfers.html"
+  ]
+ },
+ "mallorca": {
+  "br": "Playa de Muro (beach, beginner, Oct-Mar); Son Serra de Marina (reef, intermediate, Oct-Mar); Cala Ratjada (beach, intermediate-expert, Oct-Mar)",
+  "wt": "mixed",
+  "b": 5,
+  "a": 3.5,
+  "hz": "Rocks at the reef breaks, rips at Cala Ratjada, wind-driven chop, flat summers",
+  "sz": "1-3 ft; bigger in strong storms",
+  "tp": "59-82 F, rash vest and boardshorts in summer, 4/3 mm wetsuit in winter",
+  "cr": "moderate",
+  "cn": "fickle",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://www.mallorca.com/en/guide/activities/sports/watersports/surfing-mallorca",
+   "https://www.surf-forecast.com/breaks/Son-Serra-de-Marina"
+  ]
+ },
+ "belfast-giants-causeway": {
+  "br": "Portrush East and West Strand (beach, beginner-intermediate, Sep-Mar); Portstewart Strand (beach, intermediate, Sep-Mar); Portballintrae (reef, intermediate-expert, Sep-Mar)",
+  "wt": "mixed",
+  "b": 6,
+  "a": 5.5,
+  "hz": "Strong rips at Portstewart whatever the swell, very cold water, shifting banks, cars caught by the high tide on the beach",
+  "sz": "2-5 ft; bigger in winter storms",
+  "tp": "43-59 F, 4/3 mm in summer, 5/4 mm hooded with boots and gloves from November to March",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://www.causewaycoast.holiday/locations/surfing-beaches",
+   "https://www.tripbase.com/destinations/northern-ireland-giants/surf/"
+  ]
+ },
+ "punta-cana": {
+  "br": "Encuentro (reef, beginner-intermediate, Nov-Mar); Destroyers (reef, expert, Nov-Mar); Coco Pipe (reef, expert, Nov-Mar); Playa Grande (beach, intermediate-expert, Nov-Mar)",
+  "wt": "reef",
+  "b": 6,
+  "a": 6,
+  "hz": "Urchins and shallow rocky reef, polluted water near Puerto Plata, strong currents at Playa Grande",
+  "tp": "77-84 F, boardshorts, a shorty wetsuit on cool winter days",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-the-caribbean/dominican-republic-surf/",
+   "https://vvanat.fr/blog/surf-republique-dominicaine/"
+  ]
+ },
+ "faroe-islands": {
+  "br": "Tjørnuvík (beach, intermediate-expert, Aug-Oct); Sandoy beaches (beach, intermediate, Aug-Oct)",
+  "wt": "beach",
+  "b": 2,
+  "a": 6,
+  "hz": "Powerful inconsistent waves, strong rips, hard landings on the open coast, freezing water, unpredictable weather",
+  "tp": "43-52 F, 5/4 mm or 6/5 mm hooded wetsuit with gloves and boots",
+  "cr": "quiet",
+  "cn": "fickle",
+  "d": "both",
+  "ac": "drive",
+  "lc": "welcoming",
+  "ls": "few",
+  "pm": "The one local operator rents gear only with a guided session, for safety",
+  "src": [
+   "https://visitfaroeislands.com/en/see-do/activities/at-sea/surfing",
+   "https://www.tripbase.com/destinations/faroe-islands/surf/"
+  ]
+ },
+ "thailand": {
+  "br": "Kata (beach, beginner, May-Oct); Kalim (reef, intermediate-expert, May-Oct); Surin (beach, expert, May-Oct); Memories Beach at Khao Lak (beach, beginner, May-Oct)",
+  "wt": "mixed",
+  "b": 6.5,
+  "a": 5,
+  "hz": "Shifting sandbars and drop-offs at Bang Tao, rips, shallow reef at Kalim, monsoon storms",
+  "sz": "2-4 ft; 6-10 ft on big monsoon days",
+  "tp": "82-86 F, boardshorts",
+  "cr": "moderate",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://www.timeout.com/phuket/travel/a-surfers-guide-to-phuket",
+   "https://www.saltwater-dreaming.com/surfing-thailand/khao-lak.htm"
+  ]
+ },
+ "madeira": {
+  "br": "Jardim do Mar (point, expert, Oct-Mar); Paul do Mar (reef, expert, Oct-Mar); Ponta Pequena (point, intermediate-expert, Oct-Mar); Fajã da Areia (beach, intermediate, Oct-Mar)",
+  "wt": "mixed",
+  "b": 3,
+  "a": 8,
+  "hz": "Seawall backwash at Jardim do Mar, boulders and rocks, steep cliff-path access, broken boards on big days",
+  "sz": "6-15 ft when swells arrive; 20+ ft at Jardim do Mar on the biggest days",
+  "tp": "63-73 F, 3/2 mm wetsuit in summer, 4/3 mm in winter",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "rights",
+  "bd": [
+   "shortboard",
+   "stepUp"
+  ],
+  "ac": "drive",
+  "lc": "protective",
+  "ls": "few",
+  "src": [
+   "https://thesurfatlas.com/surfing-portugal/jardim-do-mar-surf/",
+   "https://www.easyjet.com/en/traveller/portugal/madeira/best-surf-spots-madeira"
+  ]
+ },
+ "olympic": {
+  "br": "La Push First Beach (beach, intermediate, Sep-Mar); Rialto Beach (beach, expert, Sep-Mar); Kalaloch (beach, expert, Sep-Mar)",
+  "wt": "beach",
+  "b": 2,
+  "a": 5,
+  "hz": "Sneaker waves, strong rips, driftwood and logs, sharp rocks, rising tides that cut off beach walks, sharks, very cold water",
+  "tp": "43-63 F, 4/3 mm in summer, 5/4 or 6/5 mm hooded with gloves and boots in winter",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "lc": "welcoming",
+  "ls": "few",
+  "pm": "An Olympic National Park pass is needed for the park beaches, and reports differ on whether a Quileute permit is needed at La Push First Beach, so confirm with the Quileute Nation",
+  "src": [
+   "https://www.surf-forecast.com/breaks/La-Push/seatemp",
+   "https://www.tripbase.com/destinations/washington-coast-surf-usa/surf/",
+   "https://www.nps.gov/places/000/first-beach-la-push.htm"
+  ]
+ },
+ "redwood": {
+  "br": "Crescent Beach near Crescent City (beach, intermediate-expert, Oct-Apr); Humboldt beach breaks (beach, intermediate-expert, Oct-Apr)",
+  "wt": "beach",
+  "b": 1.5,
+  "a": 4.5,
+  "hz": "Great white sharks, very cold water, strong rips and heavy shorebreak, fog, logs after storms, crab-pot lines, no lifeguards",
+  "tp": "48-57 F, 5/4 to 6/5 mm hooded wetsuit with gloves and boots all year",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "ac": "drive",
+  "src": [
+   "https://www.tripbase.com/destinations/humboldt-coast-surf-usa/surf/",
+   "https://www.surfertoday.com/surfing/the-best-surf-spots-in-northern-california"
+  ]
+ },
+ "rivieramaya": {
+  "wt": "reef",
+  "b": 1.5,
+  "a": 2.5,
+  "hz": "Shallow reef, flat or choppy most days, narrow beaches, strong winds and rough seas in the rainy season",
+  "tp": "78-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "fickle",
+  "src": [
+   "https://www.mexicotravelandleisure.com/blog/surfing-in-mexico/"
+  ]
+ },
+ "santorini": {
+  "b": 1,
+  "a": 2,
+  "hz": "Strong meltemi wind, onshore wind chop rather than swell, kite and windsurf traffic",
+  "tp": "59-79 F, boardshorts in summer, a shorty wetsuit for long sessions",
+  "cr": "quiet",
+  "cn": "fickle",
+  "ac": "drive",
+  "ls": "few",
+  "src": [
+   "https://www.surf-magazin.de/en/spots-and-areas/international/greece/these-are-the-best-windsurfing-spots-on-naxos-in-greece"
+  ]
+ },
+ "palawan": {
+  "br": "Duli Beach at El Nido (beach, beginner-intermediate, Nov-Mar); Nagtabon Beach near Puerto Princesa (beach, intermediate, Nov-Mar)",
+  "wt": "beach",
+  "b": 4.5,
+  "a": 4.5,
+  "hz": "Big strong waves at Nagtabon, rough access roads",
+  "tp": "80-86 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://www.moneymax.ph/lifestyle/articles/best-picks-surfing-destinations-philippines",
+   "https://wanderlog.com/place/details/5768441/northswell-el-nido-surfing"
+  ]
+ },
+ "puglia": {
+  "wt": "reef",
+  "b": 2.5,
+  "a": 3.5,
+  "hz": "Rock and reef bottoms, wind that swings between the Adriatic and Ionian sides",
+  "sz": "2-6 ft on good days",
+  "tp": "54-79 F, rash vest and boardshorts in summer, 4/3 to 5/4 mm wetsuit in winter",
+  "cr": "quiet",
+  "cn": "fickle",
+  "ac": "drive",
+  "src": [
+   "https://www.surfnerd.com/surf-reports/italy/lecce"
+  ]
+ },
+ "jamaica": {
+  "br": "Copa at Bull Bay (reef, beginner-intermediate, year-round); Boston Bay (reef, beginner, Nov-Mar); Makka (reef, expert, Nov-Mar)",
+  "wt": "reef",
+  "b": 5.5,
+  "a": 5.5,
+  "hz": "Shallow coral heads and urchins, rocks, hurricane swells from July to September, rough access roads",
+  "sz": "2-4 ft; 3-8 ft at Boston Bay",
+  "tp": "79-84 F, boardshorts",
+  "cr": "quiet",
+  "cn": "seasonal",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "some",
+  "src": [
+   "https://thesurfatlas.com/surfing-in-the-caribbean/jamaica-surfing/",
+   "https://www.divergenttravelers.com/surfing-in-jamaica/",
+   "https://www.surf-forecast.com/breaks/Boston-Bay"
+  ]
+ },
+ "barcelona": {
+  "br": "Masnou (beach, intermediate, Oct-Mar); Sitges El Cementerio (reef, intermediate-expert, Oct-Mar); Barceloneta (beach, beginner, Oct-Mar)",
+  "wt": "beach",
+  "b": 4,
+  "a": 3.5,
+  "hz": "Crowded lineups when it works, flat most of the summer, theft from beach bags",
+  "sz": "1-3 ft; up to 5 ft in winter storms",
+  "tp": "55-79 F, rash vest and boardshorts in summer, 4/3 to 5/4 mm wetsuit in winter",
+  "cr": "crowded",
+  "cn": "fickle",
+  "d": "both",
+  "bd": [
+   "longboard",
+   "shortboard"
+  ],
+  "ac": "drive",
+  "ls": "plentiful",
+  "src": [
+   "https://blog.apartmentbarcelona.com/top-surfing-spots-barcelona/",
+   "https://theculturetrip.com/articles/the-7-best-surf-spots-in-spain"
+  ]
+ }
+}

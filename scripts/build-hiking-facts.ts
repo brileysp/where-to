@@ -30,9 +30,9 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   for (const id of new Set([...stored.keys(), ...Object.keys(scopes)])) {
     const r = stored.get(id) ?? {};
     const facts: string[] = ['These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.'];
-    if (r.topTrails) facts.push(`Signature trails, as Route (type, length, difficulty, months): ${r.topTrails}.`);
+    if (r.signatureDayHikes) facts.push(`Signature day hikes, as Route (type, length, difficulty, months): ${r.signatureDayHikes}.`);
+    if (r.multiDayHikes) facts.push(`Multi-day hikes, as Route (days, length, lodging, difficulty, months): ${r.multiDayHikes}.`);
     if (Array.isArray(r.ways) && r.ways.length) facts.push(`What a visitor can do: ${r.ways.map((w) => label('ways', w)).join(', ')}.`);
-    if (r.season) facts.push(`Walking season: ${r.season}.`);
     if (r.altitude) facts.push(`Altitude of the walking most visitors do: ${label('altitude', r.altitude)}.`);
     if (r.permits) facts.push(`Permits, fees or guide rules: ${r.permits}.`);
     if (Array.isArray(r.howReach) && r.howReach.length) facts.push(`How visitors reach the best walking: ${r.howReach.map((w) => label('howReach', w)).join(', ')}.`);
@@ -43,7 +43,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
       const rule = n === 5 ? 'You must mention crowds, in the overview and in the months where crowds peak.' : n === 4 ? 'You may mention crowds in the month blurbs for peak-crowd months, never in the overview.' : 'Do not mention crowds anywhere.';
       facts.push(`Crowding: ${n} of 5 documented indicators (${level}). ${rule}${n >= 4 && r.crowdEvidence ? ` Evidence: ${r.crowdEvidence}` : ''}`);
     }
-    if (r.hazards) facts.push(`Main hazards: ${r.hazards}.`);
+    if (r.statusNotes) facts.push(`Status or closure notes: ${r.statusNotes}.`);
     // Notes typed on the interest page (scope, must-mention, extra avoid) win over the scope file.
     const notes = r as { scopeNote?: string; mustMention?: string[]; extraAvoid?: string[] };
     out[id] = { forPlaceName: nameOf.get(id) ?? '', scope: notes.scopeNote || scopes[id] || '', facts: facts.length > 1 ? facts : [], avoid: [...AVOID, ...(notes.extraAvoid ?? [])], season: '', mustMention: notes.mustMention ?? [] };

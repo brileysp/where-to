@@ -290,18 +290,9 @@ async function main() {
       break;
     }
 
-    // Related-interest summaries: already-authored content for OTHER
-    // interests at this place, so Gemini doesn't restate a claim another
-    // slider already owns (playbook §2's overlap rule) — first sentence
-    // only, kept short.
-    const overviews = (place.sliderOverview as Record<string, string>) ?? {};
-    const relatedInterestSummaries = Object.entries(overviews)
-      .filter(([key]) => key !== interestKey)
-      .map(([key, text]) => ({ interestKey: key, label: key, firstSentence: text.split(/(?<=[.!?])\s/)[0] ?? text }));
-
     const factSheet = factSheetFor(interestKey, place.id);
     // Renamed or broadened places (docs/renamed-places.json): their old name and narrower scope survive in other interests' text
-    // and in a careless fact sheet, so they need a scope sheet, and the other-interest summaries are not sent for them.
+    // and in a careless fact sheet, so they need a scope sheet, 
     // A fact sheet records the place name it was written for. If the place has been renamed or re-scoped since, the sheet is stale.
     if (factSheet?.forPlaceName && factSheet.forPlaceName !== place.name) {
       console.error(`\n-- ${place.name} (${place.id}) -- SKIPPED: its fact sheet was written for "${factSheet.forPlaceName}" but the place is now "${place.name}". Rebuild the sheet.`);
@@ -325,7 +316,6 @@ async function main() {
       about: place.about ?? null,
       interestKey,
       interestLabel: interestKey,
-      relatedInterestSummaries: renamedNote ? [] : relatedInterestSummaries,
       ...(otherPlaces ? { otherPlacesInCatalog: otherPlaces } : {}),
       ...(monthsOnly ? { seasonWording: 'Name months, never seasons (summer, winter, spring, autumn), because most readers live in the Northern Hemisphere.' } : {}),
       ...(factSheet ? { verifiedFacts: { scope: factSheet.scope, facts: factSheet.facts, avoid: factSheet.avoid, season: factSheet.season } } : {}),

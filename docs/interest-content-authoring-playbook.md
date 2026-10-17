@@ -182,10 +182,8 @@ one.
   resplendent quetzal). A `wildlifeViewing` blurb that lists only mammals for a
   destination whose bird life is a major, widely-marketed part of its wildlife draw is a
   miss, not appropriate restraint — the two sliders describing the same animal from a
-  different angle (general vs. specialist) is expected and fine, not redundant. Don't
-  swing the other way either: a destination's actual "specialist checklist" birds (the
-  ones only `birding` content should carry) still don't belong in `wildlifeViewing`, and
-  a place without a genuine headline-bird draw shouldn't have one invented for it. Same
+  different angle (general vs. specialist) is expected and fine, not redundant. Just
+  don't invent a headline bird for a place without a genuine draw. Same
   logic applies to `whaleWatching` overlap (e.g. Vancouver Island's orcas are `wildlife
   Viewing`-worthy too, alongside its black bears, not exclusively `whaleWatching`'s).
 - **Tier multi-feature destinations explicitly, never blend them into one narrative:**
@@ -283,10 +281,9 @@ one.
   jellyfish experience given its currently depleted population) — hedge honestly or omit
   it, and consider flagging it as a candidate advisory entry instead of writing around it
   in the slider text.
-- **Check for overlap with already-authored interests before claiming an animal/site/
-  fact.** If another interest already owns a specific claim for a destination (grep
-  `scripts/author-<other-interest>-blurbs-*.ts`), don't restate it — find the genuinely
-  distinct complementary angle, or skip it.
+- **Overlap between interests is normal and good.** The same animal, site, fact or even
+  the same blurb can appear in two interests when it fits both; no need to check other
+  interests first or to find a different angle. (Owner, 17 Oct 2026.)
 
 ## 3. NA sliders — check before you write anything
 

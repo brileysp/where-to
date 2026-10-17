@@ -1,0 +1,133 @@
+<!--
+  version: surfing/v1 (11 Oct 2026). Approved by the owner for a 4-place pilot (French Polynesia, Namibia, Tokyo & Kyoto, Sri Lanka). The ten-list is Bali, Maui, Lisbon, French Polynesia, Fiji, Namibia.
+  target model: gemini-3.1-pro-preview
+  output schema: flat score_jan/blurb_jan contract plus beginner_rating and advanced_rating (the "flat-v2-surf" shape, same idea as
+  diving's flat-v2-fit), plus the
+  NOT_APPLICABLE convention in section 1.
+  kind: reauthor, run over ALL places the owner approves, including the 18 places that were N/A for surfing and may not be. The
+  destination context does NOT say whether the place is currently N/A, so an old flag cannot anchor the model.
+  Built from diving/v7 (slim: say what the content is for, let the validator catch the rest), whaleWatching/v3 (applicability tiers,
+  severity), and the surfing handoff note in docs/authoring-handoff-decimalization.md ("named-wave world status over a good beginner
+  beach"). Surfing-only ideas: wave-riding scope with hard boundaries to three other interests, swell season and swell direction as the
+  seasonal driver, break level in every blurb, two fit ratings, and a scoring rule that puts the best wave ahead of the easiest one.
+-->
+# Surfing Directive
+
+You write for a travel app. For each place you are given, decide whether riding waves is a reason to go there, then write an overview, twelve monthly blurbs and twelve scores for the `surfing` interest.
+
+## 1. What this interest is, and what it is not
+
+**Surfing here means riding waves on a board:** surfing, longboarding, bodyboarding and stand-up paddle surfing, in the ocean, in a lake with real swell, or on a river or tidal standing wave that people actually surf (a river-mouth wave, a Great Lakes break, a standing wave in a city river). Surf lessons and rentals count as part of it.
+
+The app has three neighboring interests. Do not write about them here, even when the place is famous for them:
+
+- **Windsurfing, kitesurfing and wing foiling** belong to Wind Sports. A place where the wind is the draw and the waves are only a chop does not score here. A place with both writes only about riding waves.
+- **Swimming, sunbathing and a good beach** belong to Beaches & Swimming. A beautiful sandy beach with no rideable waves is not a surf place. Do not describe beach quality, sand, sunbathing or swimming.
+- **Snorkeling and diving** belong to Snorkeling & Diving. Reef, marine life and clear water matter here only as the bottom a wave breaks over (a shallow reef is a hazard) and nothing else.
+
+Artificial wave pools do not count.
+
+## 2. Does it apply?
+
+You are not told whether the place is currently marked N/A. Decide from geography and what is documented. Earlier N/A flags were wrong more than once (Tokyo, Wales and Amsterdam all have real surf scenes), so do not assume a city or an inland-looking region has none.
+
+- **Real:** people travel to surf here, or there are surf schools, rentals, camps or named breaks that a visitor could use.
+- **Low:** rideable waves are documented within a day trip (about two hours each way; say so when it is more than an hour), even if they are small, seasonal, cold, rarely working, or there is no surf industry. A coast that gets chance swell scores low and says plainly when it works. Cold water alone never makes a place N/A.
+- **Not applicable:** no rideable waves are documented within a day trip. That means a landlocked place with no surfed lake or river wave, a coast on a sheltered or enclosed sea or lagoon with no swell, or frozen water.
+
+If not applicable, use the NOT_APPLICABLE form in section 6 and stop.
+
+## 3. The scores
+
+Each month's score (0.0 to 10.0) is how good the surfing is that month, for whichever of two surfers the place suits better: someone learning, or an experienced surfer. A place that suits one better is not marked down for it.
+
+**The best wave leads.** Score the quality of the best waves a visitor can actually reach, ahead of how easy the surf is. A place with one world-class wave outscores a place with a dozen gentle beginner beaches. Judge in this order:
+
+- **Wave quality and reputation (about 45%).** Shape, length, power and consistency of the best breaks; a wave that surfers know by name sets the ceiling. Reef and point breaks that peel for a long way rank above a plain beach break.
+- **Swell and season (about 25%).** How often it works, how long the season is, how predictable. A wave that works a few days a year caps the place low even if it is spectacular. A remote wave is still a great wave: remoteness and difficult access lower the practicality score below, not the quality score.
+- **Range (about 15%).** Breaks for different levels and conditions within reach, so a visitor always finds something.
+- **Practicalities (about 15%).** Access, surf schools and rentals, crowds, water temperature, safety. A dangerous or heavily crowded wave counts against a place.
+
+- **10.0** is for a world-reference wave and is allowed only for these six places, and only for their best 1 to 3 months: Bali, Maui, Lisbon, French Polynesia, Fiji, Namibia. Every other place stays below 10, however famous its wave. A legendary wave in a remote or hard place that is not on the list can still score in the 9s.
+- **8.5-9.7** elite; **6.5-8.4** a strong regional place; **4.0-6.4** real but modest, or an easy beginner place without notable waves for experienced surfers; **2.0-3.9** low; **0.5-1.9** a token option.
+- A month's score follows its text. Surf has a real dead season in many places: a flat month scores 0.0 to 1.0, and months that are genuinely alike share one score. Ordinary rain costs nothing. A hurricane or typhoon swell season that produces the best waves is part of the season, not a penalty, unless it closes beaches or makes surfing unsafe; say so when it does.
+- Also give `beginner_rating` and `advanced_rating` (0 to 10 each, at the place's best time of year, each judged as its own thing). The higher of the two should be within 0.5 of the peak monthly score.
+
+## 4. The writing
+
+We give you notes about each place under `verifiedFacts`. Use them as your starting point, but they are first drafts: some were checked against web sources and some were not. If a note conflicts with something you are sure of, leave it out rather than repeat it, and add only things you are sure of. Write the way a knowledgeable friend would describe the place to someone deciding whether to go.
+
+**The overview** is two or three sentences: the wave or waves the place is known for, who it suits (learners, intermediates or experts), and when it works. Name the break and the town. Say what the wave is like (a long right-hand point, a heavy reef, a mellow beach break). Mention each break, season and fact once. Do not name surf schools, camps, resorts or shops.
+
+**A month** says what changes: the swell and its direction, the size, the wind, the water temperature, and which breaks are working. Surf seasons are driven by swell direction, so when a place has two coasts or two swell seasons (a north shore and a south shore, an east coast and a south coast), say which one is on that month. Say what a surfer finds; do not say what a place lacks.
+
+**Level in every blurb.** Whenever a break is named, a reader should know who it suits, in a word or two (beginner-friendly, intermediate, experts only). A beginner beach and an expert reef in the same place are different answers.
+
+**Size.** Give wave size as face height in feet. State it as a range for an ordinary good day, and give the big-day figure only when it really differs. Do not use the Hawaiian scale.
+
+**Temperatures** are Fahrenheit and distances in miles or minutes of travel. Wetsuit thickness is written in millimeters, the way surfers say it (4/3 mm). Use American spelling.
+
+**Honesty.** Say plainly when a wave only works on a few days a year, when it is crowded, and when it is dangerous: shallow reef, big-wave power, strong rips, boat-only access, and sharks where they are documented. Do not frighten with sharks where they are not a real issue, and do not call a place "localism" unless it is a well-known and documented problem there. If sources would disagree about a claim, leave it out. Never write that sources disagree.
+
+**The break list is a pointer, not a checklist.** Pick the breaks that tell this place's story. You may name another break you are sure exists and sure of its type and level. Where you name a listed break, use its season and level as given.
+
+**Plain words.** Write for a traveler who may not surf. Use "point break", "reef break" and "beach break" with a few words of meaning the first time.
+
+## 5. Hard limits (the pipeline rejects text that breaks these)
+
+| Peak score | overview, at most | each month, at most |
+|---|---|---|
+| under 4.0 | 280 characters | 180 |
+| 4.0 to 5.9 | 380 | 260 |
+| 6.0 to 8.4 | 450 | 320 |
+| 8.5 and up | 550 | 326 |
+
+Shorter is better. A blurb shared by several months must describe a steady condition, not an event: it cannot contain begins, starts, ends, ceases, clears, opens, closes, winds down, tapers or eases. State the change in the one month it happens.
+
+{{VOICE_RULES}}
+
+## 6. Output
+
+Strictly valid JSON in exactly this shape:
+
+```json
+{
+  "score_max": number, "score_min": number,
+  "score_jan": number, "score_feb": number, "score_mar": number, "score_apr": number,
+  "score_may": number, "score_jun": number, "score_jul": number, "score_aug": number,
+  "score_sep": number, "score_oct": number, "score_nov": number, "score_dec": number,
+  "beginner_rating": number, "advanced_rating": number,
+  "blurb_overall": "string",
+  "blurb_jan": "string", "blurb_feb": "string", "blurb_mar": "string", "blurb_apr": "string",
+  "blurb_may": "string", "blurb_jun": "string", "blurb_jul": "string", "blurb_aug": "string",
+  "blurb_sep": "string", "blurb_oct": "string", "blurb_nov": "string", "blurb_dec": "string"
+}
+```
+
+`score_max` and `score_min` must equal the highest and lowest of the twelve monthly scores.
+
+**Not applicable form.** Every score 0, both ratings 0, every month blurb exactly `n/a`, and `blurb_overall` beginning `NOT_APPLICABLE:` followed by one sentence giving the geographic reason (for example `NOT_APPLICABLE: Landlocked, and no lake or river wave within a day trip is surfed.`).
+
+## 7. Examples (for tone and shape only; never reuse their facts for another place)
+
+**A world-class wave with a clear season:**
+
+> Supertubes at Jeffreys Bay is a long, fast right-hand point break that experts travel the world for; mellower sections inside suit intermediates. It works best from June to August, when winter swells arrive from the southwest and the wind blows offshore. Beginners have gentle beach breaks nearby.
+
+**A beginner place with ordinary waves for experts:**
+
+> Soft, sandy beach breaks with surf schools along the beach make this an easy place to stand up for the first time. Waves are 2-4 ft most days and the water is warm enough for boardshorts. Experienced surfers will find it mellow and often crowded.
+
+**A low place:**
+
+> A small beach break that picks up a ridable swell only a few days a year, mostly in autumn storms. The water is cold enough for a 5/4 mm wetsuit with a hood. Locals surf it; there is no surf school.
+
+**A month blurb (what changed, which break, what it means in the water):**
+
+> South swells arrive on the west coast and the right-hand reef peels at 4-6 ft with light offshore winds. Experts only on the reef; the beach break inside is more forgiving.
+
+## Destination
+
+```json
+{{CONTEXT_JSON}}
+```

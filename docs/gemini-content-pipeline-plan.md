@@ -118,9 +118,7 @@ phase (see §8), rather than being silently trusted at the same rate as everythi
      rejection, matching `db:audit:anchors`'s existing "OVER" gate
 3. **Plausibility.** Cross-check against `naSliders` (an interest generated for a place
    that's flagged N/A for it is an immediate reject — context-building in step 1 should
-   prevent this being sent at all, but validate anyway) and against already-authored
-   sibling interests for the same place (e.g. a `wildlifeViewing` claim that exactly
-   duplicates a `birding`-only species is flagged, per the playbook's overlap rule).
+   prevent this being sent at all, but validate anyway). Overlap with sibling interests is allowed and never flagged.
 
 A pricing table (`prompts/_shared/pricing.json` — model → $/1M input tokens, $/1M output
 tokens) is itself version-controlled, so a Gemini price change is a traceable diff, not a

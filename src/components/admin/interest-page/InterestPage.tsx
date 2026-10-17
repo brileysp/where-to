@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import './interest-page.css';
-import type { AuthoringPassRow, InterestPageData, InterestPlaceRow, IdeaRow, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
+import type { AuthoringPassRow, ChipOverrideRow, ChipRow, InterestPageData, InterestPlaceRow, IdeaRow, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
 import type { InterestFactValue } from '@/lib/db/schema';
 import { RulesSection } from './RulesSection';
 import { TodoSection } from './TodoSection';
@@ -14,9 +14,10 @@ import type { NaChange } from './NaReasonChip';
 import { ReviewsSection } from './ReviewsSection';
 import { ReferenceSitesSection } from './ReferenceSitesSection';
 import { AuthoringSection } from './AuthoringSection';
+import { ChipsSection } from './ChipsSection';
 
-type Tab = 'rules' | 'todo' | 'ideas' | 'data' | 'reviews' | 'authoring';
-const TABS: Tab[] = ['data', 'todo', 'ideas', 'rules', 'reviews', 'authoring'];
+type Tab = 'rules' | 'todo' | 'ideas' | 'data' | 'reviews' | 'authoring' | 'chips';
+const TABS: Tab[] = ['data', 'todo', 'ideas', 'rules', 'reviews', 'authoring', 'chips'];
 const TAB_HELP: Record<Tab, string> = {
   data: 'Every place with its text status and this interest\'s data columns. Click a cell to edit it.',
   todo: 'Open jobs for this interest. Finished items stay listed for the record.',
@@ -24,6 +25,7 @@ const TAB_HELP: Record<Tab, string> = {
   rules: 'How places are scored and written for this interest. Read-only.',
   reviews: 'The reference sites we fact-check against, and who reviewed what, and when, including notes on what they did.',
   authoring: 'Each Gemini authoring pass for this interest: when it finished, how many places, and what it cost in tokens and dollars.',
+  chips: 'The sub-interest chips travelers pick under this interest (up to five live). Each one is driven by columns on Places & data, so a place\'s fit is worked out from the data.',
 };
 
 export function InterestPage({ data }: { data: InterestPageData }) {
@@ -35,6 +37,8 @@ export function InterestPage({ data }: { data: InterestPageData }) {
   const [reviews, setReviews] = useState<ReviewRow[]>(data.reviews);
   const [sites, setSites] = useState<ReferenceSiteRow[]>(data.referenceSites);
   const [passes, setPasses] = useState<AuthoringPassRow[]>(data.passes);
+  const [chips, setChips] = useState<ChipRow[]>(data.chips);
+  const [chipOverrides, setChipOverrides] = useState<ChipOverrideRow[]>(data.chipOverrides);
 
   // Deep-link to a section with #todo, #ideas, #data or #reviews.
   useEffect(() => {
@@ -132,10 +136,12 @@ export function InterestPage({ data }: { data: InterestPageData }) {
         <button className={tab === 'rules' ? 'on' : ''} onClick={() => go('rules')}>Rules &amp; scoring</button>
         <button className={tab === 'reviews' ? 'on' : ''} onClick={() => go('reviews')}>Expert reviews <em>{reviews.length}</em></button>
         <button className={tab === 'authoring' ? 'on' : ''} onClick={() => go('authoring')}>Gemini passes <em>{passes.length}</em></button>
+        <button className={tab === 'chips' ? 'on' : ''} onClick={() => go('chips')}>Chips <em>{chips.filter((c) => c.status === 'live').length}</em></button>
       </div>
       <p className="ip-tabhelp">{TAB_HELP[tab]}</p>
 
       {tab === 'rules' && <RulesSection data={data} />}
+      {tab === 'chips' && <ChipsSection interestKey={data.key} factDefs={data.factDefs} places={places} chips={chips} setChips={setChips} overrides={chipOverrides} setOverrides={setChipOverrides} />}
       {tab === 'authoring' && <AuthoringSection interestKey={data.key} passes={passes} setPasses={setPasses} />}
       {tab === 'todo' && <TodoSection interestKey={data.key} todos={todos} setTodos={setTodos} placeOptions={data.placeOptions} />}
       {tab === 'ideas' && <IdeasSection interestKey={data.key} ideas={ideas} setIdeas={setIdeas} />}

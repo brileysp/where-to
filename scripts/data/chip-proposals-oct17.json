@@ -1,0 +1,800 @@
+{
+ "scenicLandscapes": [
+  {
+   "label": "Mountains and glaciers",
+   "how": "A \"landscape types\" tick list per place, with a strength 0 to 10 for each"
+  },
+  {
+   "label": "Coasts and fjords",
+   "how": "Same column"
+  },
+  {
+   "label": "Deserts and canyons",
+   "how": "Same column"
+  },
+  {
+   "label": "Lakes and waterfalls",
+   "how": "Same column"
+  },
+  {
+   "label": "Volcanic and otherworldly",
+   "how": "Same column"
+  }
+ ],
+ "landscapePhotography": [
+  {
+   "label": "Iconic wide vistas",
+   "how": "Rating of how many world-class viewpoints a place has"
+  },
+  {
+   "label": "Mountains and alpenglow",
+   "how": "Rating, or a \"subjects\" tick list"
+  },
+  {
+   "label": "Water and reflections",
+   "how": "\"Subjects\" tick list"
+  },
+  {
+   "label": "Night sky",
+   "how": "Dark-sky rating (shared with Stargazing)"
+  },
+  {
+   "label": "Moody weather",
+   "how": "Rating from the climate data we already keep"
+  }
+ ],
+ "campingBackcountry": [
+  {
+   "label": "Car camping",
+   "how": "Tick: places with real campgrounds"
+  },
+  {
+   "label": "Backpacking",
+   "how": "Tick: places with multi-night routes with camping"
+  },
+  {
+   "label": "Remote wilderness",
+   "how": "Rating of true wilderness camping"
+  },
+  {
+   "label": "Glamping",
+   "how": "Tick: glamping widely available"
+  },
+  {
+   "label": "Free wild camping allowed",
+   "how": "Choice: allowed / limited / not allowed"
+  }
+ ],
+ "stargazing": [
+  {
+   "label": "Certified dark-sky places",
+   "how": "Tick: officially certified, plus a darkness score"
+  },
+  {
+   "label": "Observatories and telescope nights",
+   "how": "Tick: visitable observatory or guided night"
+  },
+  {
+   "label": "Southern sky",
+   "how": "Choice: southern hemisphere"
+  }
+ ],
+ "auroraChasing": [
+  {
+   "label": "Most reliable viewing",
+   "how": "Rating from latitude and clear-sky nights"
+  },
+  {
+   "label": "Easy from a town",
+   "how": "Tick"
+  },
+  {
+   "label": "Cosy lodges and glass igloos",
+   "how": "Tick: aurora lodges"
+  },
+  {
+   "label": "Aurora plus winter activities",
+   "how": "Tick list of activities"
+  }
+ ],
+ "geologyVolcanoes": [
+  {
+   "label": "Active volcanoes",
+   "how": "Tick: active, and visible from a safe place"
+  },
+  {
+   "label": "Volcano hikes",
+   "how": "Tick: guided or independent crater hikes"
+  },
+  {
+   "label": "Geysers and geothermal fields",
+   "how": "Tick"
+  },
+  {
+   "label": "Caves and lava tubes",
+   "how": "Tick: show caves or guided caves"
+  },
+  {
+   "label": "Canyons and layered rock",
+   "how": "Tick"
+  }
+ ],
+ "wildflowerBlooms": [
+  {
+   "label": "Cherry and spring blossoms",
+   "how": "Tick: blossom event; plus the months"
+  },
+  {
+   "label": "Alpine meadows",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Desert superblooms",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Flower fields",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Rare and endemic flora",
+   "how": "Rating"
+  }
+ ],
+ "mountaineering": [
+  {
+   "label": "Rock climbing",
+   "how": "Tick plus a route-count rating"
+  },
+  {
+   "label": "Alpine climbing",
+   "how": "Tick plus rating"
+  },
+  {
+   "label": "Via ferrata",
+   "how": "Tick"
+  },
+  {
+   "label": "Bouldering",
+   "how": "Tick plus rating"
+  },
+  {
+   "label": "Learn to climb",
+   "how": "Tick"
+  }
+ ],
+ "cyclingRoad": [
+  {
+   "label": "Quiet scenic road riding",
+   "how": "Rating"
+  },
+  {
+   "label": "Gravel and dirt roads",
+   "how": "Rating"
+  },
+  {
+   "label": "Big mountain climbs",
+   "how": "Tick plus a climbs count"
+  },
+  {
+   "label": "Easy flat rides",
+   "how": "Tick"
+  },
+  {
+   "label": "Multi-day touring",
+   "how": "Tick"
+  }
+ ],
+ "mountainBiking": [
+  {
+   "label": "Cross-country trails",
+   "how": "Rating"
+  },
+  {
+   "label": "Lift-served downhill parks",
+   "how": "Tick plus park count"
+  },
+  {
+   "label": "Bikepacking",
+   "how": "Tick"
+  },
+  {
+   "label": "Easy flow trails",
+   "how": "Rating"
+  }
+ ],
+ "skiingSnowboarding": [
+  {
+   "label": "Downhill resort skiing",
+   "how": "Rating from lift and run data"
+  },
+  {
+   "label": "Off-piste and backcountry",
+   "how": "Rating"
+  },
+  {
+   "label": "Cross-country skiing",
+   "how": "Tick plus trail km"
+  },
+  {
+   "label": "Learn to ski",
+   "how": "Rating"
+  },
+  {
+   "label": "Ski villages and après-ski",
+   "how": "Rating"
+  }
+ ],
+ "windSports": [
+  {
+   "label": "Kitesurfing",
+   "how": "Tick plus rating"
+  },
+  {
+   "label": "Windsurfing",
+   "how": "Tick plus rating"
+  },
+  {
+   "label": "Wing foiling",
+   "how": "Tick"
+  },
+  {
+   "label": "Flat-water lagoons",
+   "how": "Tick"
+  }
+ ],
+ "sailing": [
+  {
+   "label": "Day sails",
+   "how": "Tick"
+  },
+  {
+   "label": "Bareboat charter",
+   "how": "Tick: charter bases, plus a conditions rating"
+  },
+  {
+   "label": "Crewed yacht",
+   "how": "Tick"
+  },
+  {
+   "label": "Sheltered island hopping",
+   "how": "Rating"
+  },
+  {
+   "label": "Learn to sail",
+   "how": "Tick"
+  }
+ ],
+ "kayakingRafting": [
+  {
+   "label": "Whitewater rafting",
+   "how": "Rating plus grade range"
+  },
+  {
+   "label": "Sea kayaking",
+   "how": "Tick"
+  },
+  {
+   "label": "Calm-water paddling",
+   "how": "Tick"
+  },
+  {
+   "label": "Multi-day river trips",
+   "how": "Tick"
+  }
+ ],
+ "adventureSports": [
+  {
+   "label": "Paragliding",
+   "how": "Tick"
+  },
+  {
+   "label": "Canyoning",
+   "how": "Tick"
+  },
+  {
+   "label": "Ziplining and aerial parks",
+   "how": "Tick"
+  },
+  {
+   "label": "Skydiving and bungee",
+   "how": "Tick"
+  },
+  {
+   "label": "Caving",
+   "how": "Tick"
+  }
+ ],
+ "golf": [
+  {
+   "label": "Links golf",
+   "how": "Tick plus a courses count"
+  },
+  {
+   "label": "Resort courses",
+   "how": "Tick"
+  },
+  {
+   "label": "Bucket-list courses",
+   "how": "Tick"
+  },
+  {
+   "label": "Many courses close together",
+   "how": "Count of courses within an hour"
+  }
+ ],
+ "fishing": [
+  {
+   "label": "Offshore big game",
+   "how": "Tick"
+  },
+  {
+   "label": "Fly fishing",
+   "how": "Tick"
+  },
+  {
+   "label": "Inshore and flats",
+   "how": "Tick"
+  },
+  {
+   "label": "Salmon and river runs",
+   "how": "Tick plus months"
+  }
+ ],
+ "horsebackRiding": [
+  {
+   "label": "Day trail rides",
+   "how": "Tick"
+  },
+  {
+   "label": "Beach rides",
+   "how": "Tick"
+  },
+  {
+   "label": "Multi-day treks",
+   "how": "Tick"
+  },
+  {
+   "label": "Ranch stays and cattle drives",
+   "how": "Tick"
+  }
+ ],
+ "trailRunning": [
+  {
+   "label": "Mountain trail running",
+   "how": "Rating"
+  },
+  {
+   "label": "Ultra distances and races",
+   "how": "Tick"
+  },
+  {
+   "label": "Easy rolling trails",
+   "how": "Rating"
+  },
+  {
+   "label": "Hut-to-hut running",
+   "how": "Tick"
+  }
+ ],
+ "historyArchaeology": [
+  {
+   "label": "Ancient ruins",
+   "how": "Tick plus a rating"
+  },
+  {
+   "label": "Medieval castles and old towns",
+   "how": "Tick plus a rating"
+  },
+  {
+   "label": "War and battlefield history",
+   "how": "Tick plus a rating"
+  },
+  {
+   "label": "Prehistoric sites",
+   "how": "Tick"
+  },
+  {
+   "label": "Modern history",
+   "how": "Tick"
+  }
+ ],
+ "museumsArt": [
+  {
+   "label": "Fine art masterworks",
+   "how": "Rating"
+  },
+  {
+   "label": "Modern and contemporary art",
+   "how": "Rating"
+  },
+  {
+   "label": "Street art and murals",
+   "how": "Rating"
+  },
+  {
+   "label": "History and natural history museums",
+   "how": "Rating"
+  }
+ ],
+ "architecture": [
+  {
+   "label": "Modern and contemporary",
+   "how": "Rating"
+  },
+  {
+   "label": "Castles and palaces",
+   "how": "Rating"
+  },
+  {
+   "label": "Cathedrals and grand religious buildings",
+   "how": "Rating"
+  },
+  {
+   "label": "Art Nouveau and Art Deco",
+   "how": "Rating"
+  },
+  {
+   "label": "Traditional and vernacular",
+   "how": "Rating"
+  }
+ ],
+ "cityExploration": [
+  {
+   "label": "Historic old towns",
+   "how": "Rating"
+  },
+  {
+   "label": "Walkable centre",
+   "how": "Rating"
+  },
+  {
+   "label": "Markets and street life",
+   "how": "Rating"
+  },
+  {
+   "label": "Neighborhoods off the tourist trail",
+   "how": "Rating"
+  }
+ ],
+ "indigenousCultures": [
+  {
+   "label": "Living traditions and ceremonies",
+   "how": "Rating"
+  },
+  {
+   "label": "Indigenous-led tours",
+   "how": "Tick"
+  },
+  {
+   "label": "Homestays",
+   "how": "Tick"
+  },
+  {
+   "label": "Cultural centres and museums",
+   "how": "Tick"
+  }
+ ],
+ "religiousSites": [
+  {
+   "label": "Cathedrals and churches",
+   "how": "Rating"
+  },
+  {
+   "label": "Temples and shrines",
+   "how": "Rating"
+  },
+  {
+   "label": "Mosques and Islamic heritage",
+   "how": "Rating"
+  },
+  {
+   "label": "Pilgrimage routes",
+   "how": "Tick"
+  },
+  {
+   "label": "Monasteries",
+   "how": "Tick"
+  }
+ ],
+ "festivals": [
+  {
+   "label": "Music festivals",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Cultural celebrations and Carnival",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Food and drink festivals",
+   "how": "Tick plus months"
+  },
+  {
+   "label": "Sporting events",
+   "how": "Tick plus months"
+  }
+ ],
+ "traditionalCrafts": [
+  {
+   "label": "Textiles and weaving",
+   "how": "Tick"
+  },
+  {
+   "label": "Pottery and ceramics",
+   "how": "Tick"
+  },
+  {
+   "label": "Hands-on workshops",
+   "how": "Tick"
+  },
+  {
+   "label": "Carving and metalwork",
+   "how": "Tick"
+  }
+ ],
+ "streetFood": [
+  {
+   "label": "Night markets",
+   "how": "Rating"
+  },
+  {
+   "label": "Street stalls and hawker centres",
+   "how": "Rating"
+  },
+  {
+   "label": "Food tours",
+   "how": "Tick"
+  },
+  {
+   "label": "Cooking classes",
+   "how": "Tick"
+  },
+  {
+   "label": "Fresh produce markets",
+   "how": "Rating"
+  }
+ ],
+ "fineDining": [
+  {
+   "label": "Michelin-starred restaurants",
+   "how": "Count of starred restaurants"
+  },
+  {
+   "label": "Tasting menus and chef's tables",
+   "how": "Tick"
+  },
+  {
+   "label": "Farm-to-table",
+   "how": "Tick"
+  },
+  {
+   "label": "Dining with a view",
+   "how": "Tick"
+  }
+ ],
+ "wineSpirits": [
+  {
+   "label": "Vineyards and wine regions",
+   "how": "Rating"
+  },
+  {
+   "label": "Whisky and spirits distilleries",
+   "how": "Tick"
+  },
+  {
+   "label": "Craft beer and breweries",
+   "how": "Tick"
+  },
+  {
+   "label": "Vineyard stays",
+   "how": "Tick"
+  }
+ ],
+ "coffeeTea": [
+  {
+   "label": "Coffee farms",
+   "how": "Tick"
+  },
+  {
+   "label": "Specialty cafés and roasteries",
+   "how": "Rating"
+  },
+  {
+   "label": "Tea plantations",
+   "how": "Tick"
+  },
+  {
+   "label": "Tea ceremonies and tea houses",
+   "how": "Tick"
+  }
+ ],
+ "beachesSwimming": [
+  {
+   "label": "Calm swimming water",
+   "how": "Rating"
+  },
+  {
+   "label": "White sand",
+   "how": "Rating"
+  },
+  {
+   "label": "Remote and empty beaches",
+   "how": "Rating"
+  },
+  {
+   "label": "Resort beaches",
+   "how": "Rating"
+  },
+  {
+   "label": "Wild, dramatic coastlines",
+   "how": "Rating"
+  }
+ ],
+ "sunbathing": [
+  {
+   "label": "Quiet shores",
+   "how": "Rating"
+  },
+  {
+   "label": "Beach clubs and loungers",
+   "how": "Tick"
+  },
+  {
+   "label": "Resort pool days",
+   "how": "Tick"
+  }
+ ],
+ "luxuryHotels": [
+  {
+   "label": "Grand and historic hotels",
+   "how": "Tick"
+  },
+  {
+   "label": "Boutique hotels",
+   "how": "Tick"
+  },
+  {
+   "label": "Private villas",
+   "how": "Tick"
+  },
+  {
+   "label": "Overwater bungalows",
+   "how": "Tick"
+  },
+  {
+   "label": "Remote luxury lodges",
+   "how": "Tick"
+  }
+ ],
+ "allInclusive": [
+  {
+   "label": "Family resorts",
+   "how": "Tick"
+  },
+  {
+   "label": "Adults-only",
+   "how": "Tick"
+  },
+  {
+   "label": "Luxury all-inclusive",
+   "how": "Tick"
+  },
+  {
+   "label": "Active resorts",
+   "how": "Tick"
+  }
+ ],
+ "spaWellness": [
+  {
+   "label": "Day spas and massage",
+   "how": "Rating"
+  },
+  {
+   "label": "Thermal baths and hammams",
+   "how": "Tick"
+  },
+  {
+   "label": "Wellness resort stays",
+   "how": "Tick"
+  },
+  {
+   "label": "Nordic sauna and cold plunge",
+   "how": "Tick"
+  }
+ ],
+ "hotSprings": [
+  {
+   "label": "Natural outdoor pools",
+   "how": "Rating"
+  },
+  {
+   "label": "Onsen and ryokan",
+   "how": "Tick"
+  },
+  {
+   "label": "Geothermal spas",
+   "how": "Tick"
+  },
+  {
+   "label": "Hike-in wilderness springs",
+   "how": "Tick"
+  }
+ ],
+ "yogaRetreats": [
+  {
+   "label": "Yoga retreats",
+   "how": "Tick"
+  },
+  {
+   "label": "Meditation and silent retreats",
+   "how": "Tick"
+  },
+  {
+   "label": "Detox retreats",
+   "how": "Tick"
+  },
+  {
+   "label": "Surf and yoga",
+   "how": "Tick"
+  }
+ ],
+ "themeParks": [
+  {
+   "label": "Big theme parks",
+   "how": "Tick"
+  },
+  {
+   "label": "Thrill rides and coasters",
+   "how": "Rating"
+  },
+  {
+   "label": "Water parks",
+   "how": "Tick"
+  },
+  {
+   "label": "Zoos and aquariums",
+   "how": "Tick"
+  }
+ ],
+ "nightlife": [
+  {
+   "label": "Clubs and dancing",
+   "how": "Rating"
+  },
+  {
+   "label": "Live music venues",
+   "how": "Rating"
+  },
+  {
+   "label": "Cocktail and rooftop bars",
+   "how": "Rating"
+  },
+  {
+   "label": "LGBTQ+ scene",
+   "how": "Tick"
+  },
+  {
+   "label": "Beach and island parties",
+   "how": "Tick"
+  }
+ ],
+ "shopping": [
+  {
+   "label": "Markets and bazaars",
+   "how": "Rating"
+  },
+  {
+   "label": "Luxury and designer",
+   "how": "Rating"
+  },
+  {
+   "label": "Local crafts and souvenirs",
+   "how": "Rating"
+  },
+  {
+   "label": "Outlets and bargains",
+   "how": "Tick"
+  }
+ ]
+}
