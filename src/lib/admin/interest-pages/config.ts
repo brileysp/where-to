@@ -318,6 +318,58 @@ const GEMINI_NOTE_FACTS: FactDef[] = [
   { key: 'extraAvoid', label: 'Also avoid', type: 'list', group: 'planning', optional: true, hint: 'Things Gemini must leave out for this place, on top of the standing rules, comma-separated.' },
 ];
 
+
+/**
+ * The pilot interests for the sub-interest chips (17 Oct 2026). One column per chip. A rating is 0-10 for how strong the place is at it; a tick is
+ * yes or no. These carry no Gemini notes or draw yet: the columns exist so each chip has data behind it.
+ */
+const rate = (key: string, label: string, hint: string): FactDef => ({ key, label, type: 'rating', group: 'experience', hint: `0-10. ${hint}` });
+const tick = (key: string, label: string, hint: string): FactDef => ({ key, label, type: 'bool', group: 'experience', hint });
+
+const FINE_DINING_FACTS: FactDef[] = [
+  { key: 'michelinRestaurants', label: 'Michelin-starred restaurants', type: 'int', group: 'experience', hint: 'How many restaurants in the place hold one or more Michelin stars, from the current Michelin Guide. A place the guide does not cover is 0.' },
+  rate('tastingMenus', 'Tasting menus and chef\'s tables', 'How strong the scene for multi-course tasting menus and chef\'s-table counters is. 0-1 almost none, 5 a few good ones, 8-10 a destination for them.'),
+  rate('farmToTable', 'Farm-to-table dining', 'How strong the scene is for restaurants built on local farms, producers and the season. 0-1 almost none, 8-10 a defining part of the dining.'),
+  rate('diningWithView', 'Dining with a view', 'How easy it is to dine somewhere with a memorable view (rooftop, vineyard, sea, mountains) at fine-dining level. 0-1 almost none, 8-10 many.'),
+];
+
+const COFFEE_TEA_FACTS: FactDef[] = [
+  tick('coffeeFarms', 'Coffee farm visits', 'Tick when visitors can tour a working coffee farm or estate within a day trip.'),
+  rate('specialtyCafes', 'Specialty cafés and roasteries', 'How strong the specialty coffee scene is: independent roasters and cafés worth a trip. 0-1 almost none, 5 a few good ones, 8-10 a coffee destination.'),
+  tick('teaPlantations', 'Tea plantation visits', 'Tick when visitors can tour a working tea plantation or estate within a day trip.'),
+  rate('teaCeremonies', 'Tea ceremonies and tea houses', 'How strong the tea-house and tea-ceremony culture is for visitors (a ceremony you can attend, tea houses worth a visit). 0-1 almost none, 8-10 central to the place.'),
+];
+
+const STREET_FOOD_FACTS: FactDef[] = [
+  rate('nightMarkets', 'Night markets', 'How strong the night-market scene is: evening markets with food stalls that visitors go to. 0-1 none, 8-10 famous ones.'),
+  rate('streetStalls', 'Street stalls and hawker centres', 'How strong the street-stall and hawker-centre eating is, day or night. 0-1 almost none, 8-10 a main way to eat.'),
+  tick('foodTours', 'Guided food tours', 'Tick when guided street-food or market tastings are readily available.'),
+  tick('cookingClasses', 'Cooking classes', 'Tick when visitor cooking classes (market visit plus cooking) are readily available.'),
+  rate('produceMarkets', 'Fresh produce markets', 'How strong the fresh-produce and food-market scene is for visitors. 0-1 almost none, 8-10 famous markets.'),
+];
+
+const SHOPPING_FACTS: FactDef[] = [
+  rate('marketsBazaars', 'Markets and bazaars', 'How strong the market and bazaar shopping is (souks, flea markets, craft and street markets). 0-1 almost none, 8-10 a main reason to go.'),
+  rate('luxuryShopping', 'Luxury and designer', 'How strong the luxury and designer shopping is (flagship stores, luxury districts). 0-1 almost none, 8-10 a global luxury destination.'),
+  rate('localCrafts', 'Local crafts and souvenirs', 'How good the shopping is for local crafts and distinctive, locally made souvenirs. 0-1 mostly imported goods, 8-10 rich and easy to find.'),
+  tick('outletsBargains', 'Outlets and bargains', 'Tick when outlet malls or well-known bargain shopping are a real draw.'),
+];
+
+const NIGHTLIFE_FACTS: FactDef[] = [
+  rate('clubs', 'Clubs and dancing', 'How strong the club and dance scene is. 0-1 almost none, 5 a few good clubs, 8-10 a global clubbing destination.'),
+  rate('liveMusic', 'Live music venues', 'How strong the live music scene is for visitors (jazz, rock, local music, any genre). 0-1 almost none, 8-10 a music city.'),
+  rate('cocktailBars', 'Cocktail and rooftop bars', 'How strong the cocktail-bar and rooftop-bar scene is. 0-1 almost none, 8-10 world-class.'),
+  tick('lgbtqScene', 'LGBTQ+ scene', 'Tick when the place has an established LGBTQ+ nightlife scene (several venues or a recognized district).'),
+  tick('beachParties', 'Beach and island parties', 'Tick when beach clubs, boat parties or island party scenes are a real part of the nightlife.'),
+];
+
+const TRADITIONAL_CRAFTS_FACTS: FactDef[] = [
+  tick('textilesWeaving', 'Textiles and weaving', 'Tick when textiles, weaving or dyeing are a living local craft that visitors can see or buy.'),
+  tick('potteryCeramics', 'Pottery and ceramics', 'Tick when pottery or ceramics are a living local craft that visitors can see or buy.'),
+  tick('craftWorkshops', 'Hands-on workshops', 'Tick when visitors can take a hands-on workshop or class to make a traditional craft.'),
+  tick('carvingMetalwork', 'Carving and metalwork', 'Tick when wood or stone carving, silver, copper or other metalwork are a living local craft that visitors can see or buy.'),
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -326,6 +378,12 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   diving: [...DIVING_FACTS, ...GEMINI_NOTE_FACTS],
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
+  fineDining: FINE_DINING_FACTS,
+  coffeeTea: COFFEE_TEA_FACTS,
+  streetFood: STREET_FOOD_FACTS,
+  shopping: SHOPPING_FACTS,
+  nightlife: NIGHTLIFE_FACTS,
+  traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {
