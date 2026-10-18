@@ -74,8 +74,6 @@ export const CARE_ITEMS: CareItem[] = [
   { key: 'lang', icon: '🗣️', name: 'Language', detail: 'How easy it is to get by', question: 'I need', options: [['en', 'English to work'], ['es', 'Spanish'], ['pt', 'Portuguese'], ['it', 'Italian'], ['ja', 'Japanese']], multi: true, firm: 'Rule out places where English is hard', lasting: true },
   { key: 'how', icon: '🧭', name: 'How you travel', detail: 'Road trip, tour, cruise', question: 'I like', options: [['road', 'Road trip'], ['tour', 'Guided tour'], ['cruise', 'Cruise'], ['base', 'One base, day trips']], multi: true, lasting: true },
   { key: 'deals', icon: '💸', name: 'Deals', detail: 'Cheaper off-peak travel', options: [['off', 'Show me the low-season value']], multi: false, trip: true },
-  { key: 'crowds', icon: '🧘', name: 'Avoiding crowds', detail: 'Quieter places and seasons', options: [['quiet', 'Favor quieter places']], multi: false, trip: true },
-  { key: 'access', icon: '♿', name: 'Step-free access', detail: 'Little walking, no stairs', options: [['easy', 'Step-free and little walking']], multi: false, firm: 'Rule out places that are hard', lasting: true },
 ];
 
 export type CareState = Record<string, { o: string[]; firm: boolean }>;
@@ -161,5 +159,11 @@ export function removePick(care: CareState, bands: Bands, pick: CarePick): { car
   return { care: toggleCareOption(care, pick.item, pick.option), bands };
 }
 
-/** The lasting "what matters" items not set yet, for the Travel DNA page's "+ item" chips. */
-export const unsetLastingCareItems = (care: CareState): CareItem[] => careItemsFor('dna').filter((c) => !care[c.key]);
+
+/** The one chip a "What else matters" row shows: what is picked, or "No preference" when nothing is. Every item reads the same way. */
+export function careRowSummary(c: CareItem, care: CareState, bands: Bands): string {
+  if (c.band) return isNarrowed(bands, c.key) ? bands[c.key].map((b) => bandLabel(c.key, b)).join(', ') : 'No preference';
+  const v = care[c.key];
+  if (!v || !v.o.length) return 'No preference';
+  return `${v.o.map((o) => optLabel(c, o)).join(', ')}${v.firm ? ' · must' : ''}`;
+}

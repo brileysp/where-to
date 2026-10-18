@@ -1,7 +1,7 @@
 import { useMemo, useRef, type ReactNode } from 'react';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
 import { dnaStateFor, type ProfileInput } from '@/lib/onboarding/bridge';
-import { CARE_ITEMS, COMPANIONS, bandDims, unsetLastingCareItems, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
+import { CARE_ITEMS, COMPANIONS, bandDims, isNarrowed, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
 import { dnaRows, keepOn, rowHasChoices, type DnaRow, type RowContext } from '@/lib/onboarding/dna-rows';
 import { interestByKey, pickerGroups, pickerInterests } from '@/lib/onboarding/interests';
 import { LEVEL_LABELS, LEVEL_ORDER, topCount, type Levels } from '@/lib/onboarding/levels';
@@ -40,9 +40,10 @@ export interface DnaPageProps {
   onShowAll: () => void;
   onKeep: (key: string, def: boolean) => void;
   onBandPill: (dim: string, band: string) => void;
+  /** The "What matters" bands (social vibe, physical demand): pick none for no preference. */
+  onBandChoice: (dim: string, band: string) => void;
   onCareOption: (item: CareItem, option: string) => void;
   onCareFirm: (key: string, firm: boolean) => void;
-  onAddCare: (key: string) => void;
   onWho: (key: string) => void;
   onPickHome: (code: string) => void;
   onClearHome: () => void;
@@ -125,6 +126,22 @@ export function DnaPage(p: DnaPageProps) {
     const k = r.key;
     if (k.startsWith('b_')) {
       const d = bandDims().find((x) => x.key === k.slice(2))!;
+      // Social vibe and physical demand are "What matters" items: nothing picked is no preference. Budget and weather keep everything selected.
+      if (d.key === 'vibe' || d.key === 'physical') {
+        const set = isNarrowed(p.bands, d.key) ? p.bands[d.key] : [];
+        return (
+          <>
+            <div className="ob2-chips">
+              {d.bands.map((b) => (
+                <button key={b.key} type="button" className={`ob2-chip ${set.includes(b.key) ? 'on' : ''}`} aria-pressed={set.includes(b.key)} onClick={() => p.onBandChoice(d.key, b.key)}>
+                  {b.label}
+                </button>
+              ))}
+            </div>
+            <div className="ob2-fine" style={{ margin: 0 }}>Pick any that sound good. Pick none for no preference.</div>
+          </>
+        );
+      }
       return (
         <>
           <div className="ob2-otp">
@@ -264,7 +281,6 @@ export function DnaPage(p: DnaPageProps) {
       renderBlock(id, title, list.length, sub, list.map((r) => renderRow(r)))
     ) : null;
   const tripOnly = rows.filter((r) => !r.def);
-  const addable = unsetLastingCareItems(p.care);
 
   return (
     <>
@@ -299,16 +315,7 @@ export function DnaPage(p: DnaPageProps) {
           </button>
         </>))}
         {rowsBlock('open', 'Open to', 'Your defaults. Tap a card header to edit it.', bySec('open'))}
-        {renderBlock('care', 'What matters when you choose', bySec('care').length, 'Tap a card header to edit it. Add more below.', (<>
-          {bySec('care').map((r) => renderRow(r))}
-          <div className="ob2-chips">
-            {addable.map((c) => (
-              <button key={c.key} type="button" className="ob2-chip" onClick={() => p.onAddCare(c.key)}>
-                + {c.name}
-              </button>
-            ))}
-          </div>
-        </>))}
+        {rowsBlock('care', 'What matters when you choose', 'Tap a card header to edit it. Nothing picked means no preference.', bySec('care'))}
         {rowsBlock('who', 'Who and where from', '', bySec('who'))}
         {rowsBlock('taste', 'Tastes we learned', '', bySec('taste'))}
         {rowsBlock('trip', 'This trip only', 'Switch on to keep any of these in your Travel DNA.', tripOnly)}

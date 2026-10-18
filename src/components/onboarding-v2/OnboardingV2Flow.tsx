@@ -19,7 +19,7 @@ import { orderedByLevel, setLevel, togglePick, toggleSpecific, toggleTop, type L
 import { dnaRows, dnaTags, keepOn } from '@/lib/onboarding/dna-rows';
 import { interestByKey } from '@/lib/onboarding/interests';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
-import { allBands, clearCare, carePicks, removePick, setCareFirm, toggleBandChoice, toggleBandPill, toggleCareOption, toggleInList, resetBand, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
+import { allBands, clearCare, setCareFirm, toggleBandChoice, toggleBandPill, toggleCareOption, toggleInList, resetBand, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
 import { TopBar } from './TopBar';
 import { Toast } from './Toast';
 import { TopLimitModal } from './TopLimitModal';
@@ -166,13 +166,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       onOption: (item: CareItem, option) => setCare((c) => toggleCareOption(c, item, option)),
       onFirm: (k, firm) => setCare((c) => setCareFirm(c, k, firm)),
       onClear: (k) => setCare((c) => clearCare(c, k)),
-      onRemovePick: (i) => {
-        const pick = carePicks(care, bands, scope)[i];
-        if (!pick) return;
-        const r = removePick(care, bands, pick);
-        setCare(r.care);
-        setBands(r.bands);
-      },
       onAddKids: () => {
         setCareOpen(true);
         setCareTiles((t) => (t.includes('kids') ? t : [...t, 'kids']));
@@ -405,12 +398,9 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onShowAll={() => setDall((a) => !a)}
             onKeep={(k, def) => setKeep((m) => ({ ...m, [k]: !keepOn(m, k, def) }))}
             onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
+            onBandChoice={(d, b) => setBands((x) => toggleBandChoice(x, d, b))}
             onCareOption={(item, o) => setCare((c) => toggleCareOption(c, item, o, true))}
             onCareFirm={(k, f) => setCare((c) => setCareFirm(c, k, f))}
-            onAddCare={(k) => {
-              setCare((c) => ({ ...c, [k]: { o: [], firm: false } }));
-              setDxo((o) => ({ ...o, [`c_${k}`]: true }));
-            }}
             onWho={(k) => setWho((w) => toggleInList(w, k))}
             onPickHome={setHome}
             onClearHome={() => {

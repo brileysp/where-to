@@ -1,5 +1,5 @@
 import { airportByCode } from './airports';
-import { CARE_ITEMS, COMPANIONS, careItemsFor, isNarrowed, bandDims, type Bands, type CareState } from './care';
+import { CARE_ITEMS, COMPANIONS, careRowSummary, isNarrowed, bandDims, type Bands, type CareState } from './care';
 import { VIBES } from './vibes';
 
 /**
@@ -44,10 +44,12 @@ export const homeLabel = (code: string | null): string => {
 
 export function dnaRows(c: RowContext): DnaRow[] {
   const rows: DnaRow[] = [];
+  // Budget and weather stay under "Open to". Social vibe and physical demand are "What matters" items, so they read and edit like the rest.
   for (const d of bandDims()) {
+    const care = d.key === 'vibe' || d.key === 'physical';
     rows.push({
       key: `b_${d.key}`,
-      sec: 'open',
+      sec: care ? 'care' : 'open',
       // Weather is a Travel DNA default only in the Travel DNA path; in a trip it stays with the trip.
       def: d.key === 'weather' ? c.dnaMode : true,
       icon: d.icon,
@@ -55,17 +57,17 @@ export function dnaRows(c: RowContext): DnaRow[] {
       summary: isNarrowed(c.bands, d.key) ? c.bands[d.key].map((b) => bandLabel(d.key, b)).join(', ') : 'No preference',
     });
   }
+  // Every "What else matters" item is always listed, "No preference" until something is picked. Lasting ones are kept by default; the rest
+  // sit under "This trip only".
   for (const item of CARE_ITEMS) {
     if (item.band) continue;
-    const v = c.care[item.key];
-    if (!v) continue;
     rows.push({
       key: `c_${item.key}`,
-      sec: 'care',
+      sec: item.lasting ? 'care' : 'trip',
       def: !!item.lasting,
       icon: item.icon,
       title: item.name,
-      summary: v.o.length ? `${v.o.map((o) => item.options?.find((x) => x[0] === o)?.[1] ?? o).join(', ')}${v.firm ? ' · must' : ''}` : 'Nothing picked yet',
+      summary: careRowSummary(item, c.care, c.bands),
     });
   }
   rows.push({
@@ -86,9 +88,6 @@ export function dnaRows(c: RowContext): DnaRow[] {
 
 /** Whether a switch is on: the person's choice if they made one, else the row's default. */
 export const keepOn = (keep: Record<string, boolean>, key: string, def: boolean): boolean => (keep[key] === undefined ? def : keep[key]);
-
-/** The lasting "what matters" items the person has not set yet, offered as "+ <item>" chips. */
-export const unsetLastingCare = (care: CareState) => careItemsFor('dna').filter((c) => !care[c.key]);
 
 /** Whether a card has choices in it already, which is what makes it open when the page is first shown. */
 export function rowHasChoices(key: string, c: RowContext & { subs: Record<string, string[]> }): boolean {
@@ -126,9 +125,9 @@ export function dnaTags(c: {
     out.push(`${i.icon} ${i.label}${picked.length ? ` · ${picked.join(', ')}` : ''}${c.levels[k] === 'top' ? ' · top interest' : ''}`);
   });
   if (c.interestOrder.length > 7) out.push(`+${c.interestOrder.length - 7} more interests`);
-  for (const item of careItemsFor('dna')) {
+  for (const item of CARE_ITEMS.filter((x) => x.lasting)) {
     const v = c.care[item.key];
-    if (!v) continue;
+    if (!v || !v.o.length) continue;
     out.push(`${item.icon} ${item.name}${v.o.length ? `: ${v.o.map((o) => item.options?.find((x) => x[0] === o)?.[1] ?? o).join(', ')}` : ''}${v.firm ? ' · must' : ''}`);
   }
   return out.length ? out : ['Open to anything so far'];

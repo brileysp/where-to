@@ -365,3 +365,10 @@ Decided: every number and list below lives in one settings file with its default
 
 - **"See all N places" now opens the real results page with the traveler's Travel DNA active.** It used to save only the interests and month, so the results page, which stays hidden until it sees Travel DNA or a persona, showed an empty start screen. It now saves the whole profile first (profile, DNA state, preferences), then the exact weights and month the shortlist used. The results page also treats a traveler with a saved onboarding profile as started, even if they answered no questions.
 - **Screen order changed: interests lead.** With "something I love to do", the interests and top-interests screens come first, then the timing screens (When, and Getting there for a specific window), then the basics. The month picker comes first only for "a great trip" with a specific window. A great trip with flexible timing now asks the basics and photo picks first, then the month last (my assumption; the owner did not specify this case).
+
+**Changes after the owner's second try, 18 Oct 2026**
+
+- **Top interests says "Choose up to 5"** (the number comes from the setting).
+- **The sixth-top-interest popup is gentler:** a small card in the middle, no dimming of the screen, dismissed by the button or a tap anywhere.
+- **"What else matters" is a list of rows, not a two-column grid.** Each row shows one chip: "No preference" until something is picked, then the picks. Tapping a row opens its choices right under it. Every item reads the same way, including on the Travel DNA page, where "Nothing picked yet" is now "No preference" and the "+ item" chips are gone because every item is always listed.
+- **Removed "Step-free access" and "Avoiding crowds"** (they repeat physical demand and social vibe). Social vibe and physical demand now sit with the other "What matters" items on the Travel DNA page; budget and weather stay under "Open to".

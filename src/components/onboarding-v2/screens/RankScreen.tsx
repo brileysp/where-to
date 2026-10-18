@@ -1,3 +1,4 @@
+import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import { useRef } from 'react';
 import { interestByKey } from '@/lib/onboarding/interests';
 import { orderedByLevel, type Levels } from '@/lib/onboarding/levels';
@@ -29,7 +30,7 @@ export function RankScreen({
     <>
       <div className="ob2-scr" ref={root}>
         <h2>Top interests</h2>
-        <p className="ob2-sub">Which are most important for picking where you go?</p>
+        <p className="ob2-sub">Which are most important for picking where you go? Choose up to {getOnboardingSettings().maxTopInterests}.</p>
         <div className="ob2-rows">
           {rows.map((k) => {
             const i = interestByKey(k)!;

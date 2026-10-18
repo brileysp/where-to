@@ -53,9 +53,11 @@ describe('the other "what else matters" items', () => {
     expect(clearCare(c, 'kids')).toEqual({});
   });
   it('the Travel DNA path asks only the lasting items', () => {
-    expect(careItemsFor('dna').map((c) => c.key)).toEqual(['food', 'lang', 'how', 'access']);
-    expect(careItemsFor('trip').length).toBe(9);
-    expect(careItemsFor('trip').map((c) => c.name)).toContain('Avoiding crowds');
+    expect(careItemsFor('dna').map((c) => c.key)).toEqual(['food', 'lang', 'how']);
+    expect(careItemsFor('trip').length).toBe(7);
+    // Step-free access and avoiding crowds were dropped: they repeat physical demand and social vibe.
+    expect(careItemsFor('trip').map((c) => c.name)).not.toContain('Avoiding crowds');
+    expect(careItemsFor('trip').map((c) => c.name)).not.toContain('Step-free access');
   });
 });
 

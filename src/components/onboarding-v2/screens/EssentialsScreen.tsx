@@ -18,7 +18,6 @@ export interface CareHandlers {
   onOption: (item: CareItem, option: string) => void;
   onFirm: (key: string, firm: boolean) => void;
   onClear: (key: string) => void;
-  onRemovePick: (index: number) => void;
   onAddKids: () => void;
 }
 

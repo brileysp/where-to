@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest';
-import { dnaRows, keepOn, rowHasChoices, unsetLastingCare, type RowContext } from '@/lib/onboarding/dna-rows';
+import { dnaRows, keepOn, rowHasChoices, type RowContext } from '@/lib/onboarding/dna-rows';
 import { LEVEL_ORDER, setLevel } from '@/lib/onboarding/levels';
 import { allBands, toggleBandChoice } from '@/lib/onboarding/care';
 
 const base: RowContext = { dnaMode: false, bands: allBands(), care: {}, who: [], home: null, vibes: [], answerCount: 0, month: null, week: 0, maxHours: 0 };
 
 describe('Travel DNA page rows', () => {
-  it('lists the four bands, who and the home airport; weather stays with the trip unless it is the Travel DNA path', () => {
+  it('lists the four bands, every "what else matters" item, who and the home airport; weather stays with the trip unless it is the Travel DNA path', () => {
     const trip = dnaRows(base);
-    expect(trip.map((r) => r.key)).toEqual(['b_budget', 'b_weather', 'b_vibe', 'b_physical', 'who', 'origin']);
+    expect(trip.map((r) => r.key)).toEqual(['b_budget', 'b_weather', 'b_vibe', 'b_physical', 'c_kids', 'c_food', 'c_lang', 'c_how', 'c_deals', 'who', 'origin']);
     expect(trip.find((r) => r.key === 'b_weather')!.def).toBe(false);
     expect(trip.find((r) => r.key === 'who')!.def).toBe(false);
     expect(trip.find((r) => r.key === 'who')!.title).toBe('Who is going this time');
@@ -22,7 +22,7 @@ describe('Travel DNA page rows', () => {
     expect(rows.find((r) => r.key === 'b_budget')!.summary).toBe('Luxury');
     expect(rows.find((r) => r.key === 'b_vibe')!.summary).toBe('No preference');
   });
-  it('shows care items only once set, kept by default only for the lasting ones, and dates and flight limits under "this trip only"', () => {
+  it('lists every care item, kept by default only for the lasting ones, and dates and flight limits under "this trip only"', () => {
     const rows = dnaRows({ ...base, care: { food: { o: ['vegan'], firm: true }, kids: { o: ['k'], firm: false } }, month: 9, week: 2, home: 'SFO', maxHours: 8, vibes: ['beach'], answerCount: 6 });
     expect(rows.find((r) => r.key === 'c_food')).toMatchObject({ def: true, summary: 'Vegan · must' });
     expect(rows.find((r) => r.key === 'c_kids')!.def).toBe(false);
@@ -36,8 +36,17 @@ describe('Travel DNA page rows', () => {
     expect(keepOn({}, 'x', true)).toBe(true);
     expect(keepOn({ x: false }, 'x', true)).toBe(false);
   });
-  it('offers the lasting items that have not been set', () => {
-    expect(unsetLastingCare({ food: { o: [], firm: false } }).map((c) => c.key)).toEqual(['lang', 'how', 'access']);
+  it('every "what else matters" row says "No preference" until something is picked, whatever the item', () => {
+    const rows = dnaRows(base).filter((r) => r.key.startsWith('c_') || r.key === 'b_vibe' || r.key === 'b_physical');
+    expect(rows.length).toBe(7);
+    expect(rows.every((r) => r.summary === 'No preference')).toBe(true);
+    expect(dnaRows({ ...base, care: { food: { o: [], firm: false } } }).find((r) => r.key === 'c_food')!.summary).toBe('No preference');
+  });
+  it('social vibe and physical demand are listed with the other "what matters" items; budget and weather stay under Open to', () => {
+    const rows = dnaRows(base);
+    expect(rows.filter((r) => r.sec === 'care').map((r) => r.key)).toEqual(['b_vibe', 'b_physical', 'c_food', 'c_lang', 'c_how']);
+    expect(rows.filter((r) => r.sec === 'open').map((r) => r.key)).toEqual(['b_budget', 'b_weather']);
+    expect(rows.filter((r) => r.sec === 'trip').map((r) => r.key)).toEqual(['c_kids', 'c_deals']);
   });
   it('opens a card by default only when it already holds choices', () => {
     const ctx = { ...base, subs: { hiking: ['day-hikes'], golf: [] }, bands: toggleBandChoice(allBands(), 'vibe', 'lively'), home: 'JFK' };
