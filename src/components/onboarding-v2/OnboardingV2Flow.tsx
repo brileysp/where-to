@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { saveUserPreferences } from '@/app/actions';
+import { allBandsSelected } from '@/lib/scoring/constants';
 import { saveTravelProfile } from '@/app/onboarding-v2/actions';
 import { fromTravelProfile, toTravelProfile, type FlowChoices, type TravelProfile } from '@/lib/onboarding/profile';
 import { chooseNextCard } from '@/lib/dna/selection';
@@ -264,8 +265,10 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   const rowCtx = { dnaMode: mode === 'dna', bands, care, who, home, vibes, answerCount: input.answers.length, month, week, maxHours };
   async function onSeeAll(weights: Record<string, number>) {
-    // The full results page reads the saved preferences, so the choices made here are saved for it first.
-    await saveUserPreferences({ personaId: null, weights, bands, month: rankingMonth(month), monthChosen: true, showAllSliders: false });
+    // The full results page reads what is saved, so the whole profile goes first (it also records the Travel DNA the page shows), then the
+    // exact weights and month this shortlist was ranked with, so the list there opens the same way.
+    if (!(await persist())) return;
+    await saveUserPreferences({ personaId: null, weights, bands: { ...allBandsSelected(), ...bands }, month: rankingMonth(month), monthChosen: true, showAllSliders: true });
     router.push('/');
   }
   function openGroup(g: string, scrollTop?: boolean) {

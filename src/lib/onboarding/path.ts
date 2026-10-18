@@ -46,18 +46,18 @@ export const canContinueFromDoor = (d: Doors): boolean => (d.love || d.open) && 
 /**
  * The person's own screens, in order.
  *  - Travel DNA path (the small link on the first screen): interests, top interests, basics, cards, the DNA page.
- *  - A specific time window adds When then Getting there; flexible timing adds When alone (a month, no week row).
- *  - Something I love to do adds Love then Top interests; anyone else gets the photo picks (Vibes) at the end instead.
+ *  - Something I love to do: interests and top interests come first, then the timing screens (When, and Getting there for a specific
+ *    window), then the basics. Whatever the timing, interests lead.
+ *  - A great trip with a specific time window: the timing screens first, because the window decides what can be ranked, then the basics and
+ *    the photo picks.
+ *  - A great trip with flexible timing: the basics and the photo picks first, then the month last.
  */
 export function buildPath(mode: FlowMode, doors: Doors): ScreenId[] {
   if (mode === 'dna') return ['love', 'rank', 'dnabasics', 'cards', 'dnasum'];
-  const p: ScreenId[] = ['door'];
-  if (doors.window) p.push('when', 'logistics');
-  else if (doors.flex) p.push('when');
-  if (doors.love) p.push('love', 'rank');
-  p.push('essentials');
-  if (!doors.love) p.push('vibes');
-  return p;
+  const timing: ScreenId[] = doors.window ? ['when', 'logistics'] : doors.flex ? ['when'] : [];
+  if (doors.love) return ['door', 'love', 'rank', ...timing, 'essentials'];
+  if (doors.window) return ['door', ...timing, 'essentials', 'vibes'];
+  return ['door', 'essentials', 'vibes', ...timing];
 }
 
 /** Where Continue goes. At the end of a trip path it is the shortlist; the Travel DNA path ends on its own last screen. */

@@ -25,14 +25,15 @@ describe('first screen choices', () => {
 });
 
 describe('the screens a person sees', () => {
-  it('flexible timing and a great trip: the month, then the basics, then the photo picks', () => {
-    expect(buildPath('trip', doors({ open: true, flex: true }))).toEqual(['door', 'when', 'essentials', 'vibes']);
+  it('interests lead: with something I love to do, interests and top interests come before any timing screen', () => {
+    expect(buildPath('trip', doors({ love: true, flex: true }))).toEqual(['door', 'love', 'rank', 'when', 'essentials']);
+    expect(buildPath('trip', doors({ love: true, window: true }))).toEqual(['door', 'love', 'rank', 'when', 'logistics', 'essentials']);
   });
-  it('a specific window adds the week row and getting there, before interests', () => {
-    expect(buildPath('trip', doors({ love: true, window: true }))).toEqual(['door', 'when', 'logistics', 'love', 'rank', 'essentials']);
+  it('the month picker comes first only for a great trip with a specific window', () => {
+    expect(buildPath('trip', doors({ open: true, window: true }))).toEqual(['door', 'when', 'logistics', 'essentials', 'vibes']);
   });
-  it('something I love to do skips the photo picks', () => {
-    expect(buildPath('trip', doors({ love: true, flex: true }))).toEqual(['door', 'when', 'love', 'rank', 'essentials']);
+  it('a great trip with flexible timing asks the basics and photo picks first, the month last', () => {
+    expect(buildPath('trip', doors({ open: true, flex: true }))).toEqual(['door', 'essentials', 'vibes', 'when']);
   });
   it('the Travel DNA path has no trip screens', () => {
     expect(buildPath('dna', emptyDoors())).toEqual(['love', 'rank', 'dnabasics', 'cards', 'dnasum']);
@@ -43,7 +44,8 @@ describe('the screens a person sees', () => {
 describe('moving through the path', () => {
   const d = doors({ love: true, window: true });
   it('Continue goes to the next screen and, from the last, to the shortlist', () => {
-    expect(nextScreen('trip', d, 'door')).toBe('when');
+    expect(nextScreen('trip', d, 'door')).toBe('love');
+    expect(nextScreen('trip', d, 'rank')).toBe('when');
     expect(nextScreen('trip', d, 'when')).toBe('logistics');
     expect(nextScreen('trip', d, 'essentials')).toBe('results');
   });
@@ -53,6 +55,7 @@ describe('moving through the path', () => {
   });
   it('Back goes to the previous screen; from the first Travel DNA screen it starts over', () => {
     expect(backTarget('trip', d, 'logistics')).toEqual({ kind: 'screen', screen: 'when' });
+    expect(backTarget('trip', d, 'when')).toEqual({ kind: 'screen', screen: 'rank' });
     expect(backTarget('trip', d, 'door')).toEqual({ kind: 'none' });
     expect(backTarget('dna', d, 'love')).toEqual({ kind: 'restart' });
     expect(backTarget('dna', d, 'cards')).toEqual({ kind: 'screen', screen: 'dnabasics' });
@@ -60,8 +63,8 @@ describe('moving through the path', () => {
   it("the first screen shows a fixed quarter; later screens show their place in the person's own path", () => {
     expect(progressPercent('trip', emptyDoors(), 'door')).toBe(25);
     const flex = doors({ open: true, flex: true });
-    expect(progressPercent('trip', flex, 'when')).toBe(50);
-    expect(progressPercent('trip', flex, 'vibes')).toBe(100);
+    expect(progressPercent('trip', flex, 'essentials')).toBe(50);
+    expect(progressPercent('trip', flex, 'when')).toBe(100);
     expect(progressPercent('dna', emptyDoors(), 'love')).toBe(20);
   });
 });
