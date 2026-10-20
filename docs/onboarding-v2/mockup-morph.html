@@ -1,0 +1,137 @@
+<title>Travel DNA Morph</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f6f2ec;--panel:#efe9e0;--card:#fff;--fg:#2b2622;--dim:#6f665e;--faint:#a39a90;--line:#e3dcd1;--accent:#bb6a3f;--accent-soft:#f7e6db;--good:#2f7d4f;--shadow:0 10px 30px #3a28181f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1416;--panel:#161d20;--card:#1b2428;--fg:#eef1f2;--dim:#9aa6ab;--faint:#6b777c;--line:#2a353a;--accent:#e08a5c;--accent-soft:#33261e;--good:#6ec08f;--shadow:0 10px 30px #00000066;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1416;--panel:#161d20;--card:#1b2428;--fg:#eef1f2;--dim:#9aa6ab;--faint:#6b777c;--line:#2a353a;--accent:#e08a5c;--accent-soft:#33261e;--good:#6ec08f;--shadow:0 10px 30px #00000066;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--panel);color:var(--fg);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:24px 40px}
+button{font:inherit;color:inherit;cursor:pointer;border:none;background:none;padding:0}
+.stage{display:flex;gap:28px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.notes{flex:1 1 280px;max-width:340px;min-width:0}
+.notes h1{font:600 24px/1.15 Georgia,serif;margin:6px 0 8px;text-wrap:balance}.notes p{color:var(--dim);margin:6px 0}
+.notes .tool{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:14px 0}
+.notes label{display:flex;gap:8px;align-items:center;font-size:14px}.notes .btns{display:flex;gap:8px;flex-wrap:wrap}
+.notes .btns button{border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:6px 12px;font-size:13.5px}
+.notes ul{padding-left:18px;margin:8px 0;color:var(--dim);font-size:14px}.notes li{margin:5px 0}
+.phone{position:relative;width:min(100%,380px);height:min(780px,calc(100dvh - 48px));min-height:600px;background:var(--bg);border:1px solid var(--line);border-radius:32px;overflow:hidden;box-shadow:var(--shadow);flex:0 0 auto}
+.top{position:absolute;inset:0 0 auto 0;height:60px;display:flex;align-items:center;padding:0 18px;z-index:7;pointer-events:none}
+.brand{font-weight:700;font-size:17px}
+.scr{position:absolute;inset:60px 0 0 0;overflow-y:auto;padding:0 14px 28px;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin}
+.scr>*{flex-shrink:0}
+.spacer{height:0;margin-bottom:-12px}
+/* THE ONE ELEMENT: a 44px circle that grows into the question box and shrinks back. Its top-right corner never moves. */
+.dna{position:absolute;top:8px;right:14px;width:44px;height:44px;border-radius:22px;background:var(--card);border:1.5px solid var(--line);z-index:6;overflow:hidden;
+  transition:width var(--t) var(--e),height var(--t) var(--e),border-radius var(--t) var(--e),border-color var(--t),box-shadow var(--t),background var(--t)}
+.dna.open{width:calc(100% - 28px);border-radius:18px;border-color:var(--accent);box-shadow:var(--shadow)}
+.dna .ico{position:absolute;top:0;right:0;width:41px;height:41px;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
+.dna .ico span{font-size:16px;line-height:1}.dna .ico small{font-size:9px;color:var(--accent);font-weight:700;line-height:1;margin-top:2px;transition:opacity calc(var(--t)*.5)}
+.dna.open .ico small{opacity:0}
+.dna .ico.ask::after{content:'';position:absolute;top:3px;right:3px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--card);transition:opacity .2s}
+.dna.open .ico.ask::after{opacity:0}
+.dna .body{position:absolute;left:0;top:44px;padding:0 14px 14px;display:flex;flex-direction:column;gap:10px;opacity:0;pointer-events:none;transition:opacity calc(var(--t)*.45) ease 0s}
+.dna.open .body{opacity:1;pointer-events:auto;transition:opacity calc(var(--t)*.55) ease calc(var(--t)*.35)}
+.meter{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:var(--dim)}.meter b{color:var(--accent);font-size:13.5px}
+.meter .m{height:7px;background:var(--line);border-radius:99px;overflow:hidden}.meter .m i{display:block;height:100%;background:linear-gradient(90deg,#d99a3a,var(--accent),var(--good));border-radius:99px;transition:width .4s}
+.q{display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line);padding-top:10px;transition:opacity .18s}
+.q.swap{opacity:0}
+.tag{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.q .row{display:flex;justify-content:space-between;align-items:center}.q .skip{font-size:13px;text-decoration:underline;color:var(--dim)}
+.q h3{margin:0;font-size:16.5px;line-height:1.25}
+.opts{display:flex;flex-direction:column;gap:7px}.opts button{text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-size:14.5px}.opts button:hover{border-color:var(--accent)}
+.hint{font-size:12.5px;color:var(--dim)}
+.full{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 12px;font-size:13.5px;font-weight:600}.full i{font-style:normal;font-size:18px;color:var(--faint)}
+.bar{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none}.bar::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;font-size:13px;padding:6px 11px;flex:none;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.rc .h{display:flex;align-items:center;gap:10px}.rk{font-size:12px;color:var(--faint);font-weight:700}.em{font-size:24px}.nm{flex:1;min-width:0}.nm b{display:block;font-size:16px}.nm span{font-size:12.5px;color:var(--dim)}
+.sc{font-size:20px;font-weight:700;color:var(--good)}
+.why{display:flex;flex-wrap:wrap;gap:6px}.why span{font-size:12px;background:var(--accent-soft);color:var(--accent);border-radius:99px;padding:2px 9px}
+.ms{display:flex;gap:3px;align-items:flex-end;height:28px}.ms i{flex:1;background:var(--line);border-radius:2px}.ms i.cur{background:var(--accent)}
+.seeall{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;text-align:left;width:100%}
+.seeall b{display:block;font-size:14.5px}.seeall span{display:block;color:var(--dim);font-size:12.5px}.seeall.off{opacity:.55;cursor:not-allowed}
+.toast{position:absolute;left:50%;bottom:14px;transform:translate(-50%,20px);background:var(--fg);color:var(--bg);border-radius:99px;padding:8px 14px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:9;white-space:nowrap}.toast.on{opacity:.92;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.dna,.dna *{transition-duration:.01s!important}}
+</style>
+<div class="stage">
+ <div class="notes">
+  <h1>The icon is the question box</h1>
+  <p>One round Travel DNA icon sits at the top right. Tap it and that same element grows, its top-right corner staying put, until it is the question box. Tap the icon inside the box, or scroll down the list, and it shrinks back into the icon. There are never two things on screen.</p>
+  <div class="tool">
+   <label><input type="checkbox" id="slow"> Slow motion (about 4x), to watch the morph</label>
+   <div class="btns"><button id="reset">Start over</button><button id="top">Scroll to top</button><button id="dn">Scroll down</button></div>
+  </div>
+  <ul>
+   <li><b>At the top:</b> opening pushes the list down smoothly, so nothing is covered.</li>
+   <li><b>Scrolled down:</b> opening floats the box over the list instead, so you do not lose your place. Scroll a little and it folds away again.</li>
+   <li><b>Scrolling down from the top</b> folds it into the icon on its own, and the list slides up to fill the space.</li>
+   <li>The small dot on the icon means a question is waiting.</li>
+   <li>Answer questions to watch the percent climb. At 10% the full list unlocks.</li>
+  </ul>
+ </div>
+ <div class="phone" id="phone">
+  <div class="top"><div class="brand">Your top 5</div></div>
+  <div class="dna open" id="dna">
+   <button class="ico ask" id="ico" aria-label="Travel DNA questions" aria-expanded="true"><span>🧬</span><small id="pctSmall">0%</small></button>
+   <div class="body" id="body"></div>
+  </div>
+  <div class="scr" id="scr">
+   <div class="spacer" id="spacer"></div>
+   <div class="bar"><span class="chip">Jun</span><span class="chip">With a spouse or partner</span><span class="chip">Any budget</span><span class="chip">Any weather</span><span class="chip">+ Flying from…</span><span class="chip">+ What matters</span></div>
+   <div id="cards"></div>
+   <button class="seeall off" id="seeall" disabled></button>
+  </div>
+  <div class="toast" id="toast"></div>
+ </div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const QS=[
+ {tag:'🥾 Hiking & Trekking · expert lane',t:'How big a day on the trail suits you?',o:['Short and gentle, 2 to 3 hours','A solid half day','A full day with real hills','A big day, 8 hours or more']},
+ {tag:'🏄 Surfing · expert lane',t:'Where are you in your surfing?',o:['Never surfed','Learning, small green waves','Comfortable on small clean waves','Confident in overhead surf']},
+ {tag:'🤿 Snorkeling & Diving · expert lane',t:'How do you feel about current?',o:['Calm water only','Some current is fine','Drift diving is a thrill']},
+ {tag:'🦜 Birding · expert lane',t:'What does a great birding trip look like?',o:['Adding as many new species as possible','Finding one special bird','Beautiful, showy birds and photos','Relaxed mornings, whatever turns up']},
+ {tag:'⛳ Golf · expert lane',t:'Links or resort courses?',o:['Firm, windy links by the sea','Resort courses with everything close','A bit of both']},
+ {tag:'Quick one',t:'Pace of a good day?',o:['Slow and unplanned','A couple of anchors','Full and packed']}
+];
+const PL=[['Bali','Southeast Asia','🛕',8.3,['Strong for hiking','Great in Jun']],['Maui','Hawaii','🌺',8.1,['Strong for surfing','Great in Jun']],['Kona Coast','Hawaii','🎣',8.1,['Diving: big animals','Great in Jun']],['Lisbon and the Algarve','Portugal','🏖️',7.9,['Easy walks','Great in Jun']],['Cape Town and Winelands','Southern Africa','🍷',7.8,['Day hikes','About 11h from home']]];
+const MS=[[5,5,6,7,8,9,9,9,8,7,6,5],[7,7,8,8,8,9,9,9,8,8,7,7],[6,6,7,8,9,9,8,8,8,8,7,6],[5,6,7,8,9,9,9,9,8,7,6,5],[9,9,8,7,6,5,5,5,6,7,8,9]];
+let qi=0,pct=0,open=true,mode='pushed',H=0,busy=false;
+const dna=$('#dna'),body=$('#body'),sc=$('#scr'),sp=$('#spacer'),ico=$('#ico');
+function setSpeed(){const s=$('#slow').checked?4:1;const r=document.documentElement.style;r.setProperty('--t',(.42*s)+'s');r.setProperty('--e','cubic-bezier(.22,.8,.24,1)');window.SPD=s}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function bodyHTML(){const q=QS[qi%QS.length];const lk=pct<10;
+ const meter=lk?`<div class="meter"><span>Travel DNA <b>${pct}%</b></span><div class="m"><i style="width:${Math.max(3,pct/10*100)}%"></i></div><span>10% unlocks your full list</span></div>`:`<div class="meter"><span>Travel DNA <b>${pct}%</b></span><div class="m"><i style="width:${Math.max(3,pct)}%"></i></div><span>Full list unlocked. Keep going to sharpen it.</span></div>`;
+ return `${meter}<div class="q" id="qq"><div class="row"><span class="tag">${esc(q.tag)}</span><button class="skip" data-skip>Skip</button></div><h3>${esc(q.t)}</h3><div class="opts">${q.o.map((o,i)=>`<button data-ans="${i}">${esc(o)}</button>`).join('')}</div><div class="hint">Goes into your Travel DNA. Sharpens future trips.</div></div><button class="full" data-full><span>Open my full Travel DNA</span><i>›</i></button>`}
+/* the body keeps the open width at all times, so its text never re-wraps while the box grows or shrinks, and it can be measured any time */
+function sizeBody(){body.style.width=($('#phone').clientWidth-28)+'px'}
+window.addEventListener('resize',()=>{sizeBody();if(open){const h=measure();dna.style.height=h+'px'}});
+function measure(){sizeBody();return 44+body.scrollHeight+4}
+function paint(){body.innerHTML=bodyHTML();$('#pctSmall').textContent=pct+'%';ico.classList.toggle('ask',true);
+ const sa=$('#seeall');const lk=pct<10;sa.disabled=lk;sa.className='seeall'+(lk?' off':'');
+ sa.innerHTML=lk?`<span style="flex:1"><b>🔒 See all 15 places</b><span>Build your Travel DNA up to 10% to unlock the full list. You are at ${pct}%.</span></span>`:`<span style="flex:1"><b>See all 15 places that fit your criteria</b><span>the full results page</span></span><i style="font-style:normal;font-size:22px;color:var(--faint)">›</i>`}
+function cards(){$('#cards').innerHTML=PL.map((p,i)=>`<div class="rc" style="margin-bottom:12px"><div class="h"><span class="rk">#${i+1}</span><span class="em">${p[2]}</span><span class="nm"><b>${esc(p[0])}</b><span>📍 ${esc(p[1])}</span></span><span class="sc">${p[3]}</span></div><div class="why">${p[4].map(w=>`<span>${esc(w)}</span>`).join('')}</div><div class="ms">${MS[i].map((v,j)=>`<i class="${j===5?'cur':''}" style="height:${v*10}%"></i>`).join('')}</div></div>`).join('')}
+/* animate the spacer height, keeping the visible list in place while the content above it changes size */
+function animSpacer(to,keep){const from=parseFloat(sp.style.height||'0');const t0=performance.now(),dur=420*window.SPD,top0=sc.scrollTop;busy=true;
+ const step=()=>{const p=Math.min(1,(performance.now()-t0)/dur);const e=1-Math.pow(1-p,3);const h=from+(to-from)*e;sp.style.height=h+'px';if(keep&&top0>0)sc.scrollTop=Math.max(0,top0+(h-from));if(p<1)setTimeout(step,16);else{busy=false}};step()}
+function openBox(){if(open)return;open=true;H=measure();dna.style.height=H+'px';dna.classList.add('open');ico.setAttribute('aria-expanded','true');
+ if(sc.scrollTop<=4){mode='pushed';animSpacer(H-40,false)}else{mode='floating';floatAt=sc.scrollTop}}
+function closeBox(){if(!open)return;open=false;dna.style.height='44px';dna.classList.remove('open');ico.setAttribute('aria-expanded','false');
+ if(mode==='pushed'){animSpacer(0,true)}mode='pushed'}
+let floatAt=0;
+function remeasure(){if(!open)return;const h=measure();dna.style.height=h+'px';if(mode==='pushed')animSpacer(h-40,false)}
+ico.addEventListener('click',()=>open?closeBox():openBox());
+sc.addEventListener('scroll',()=>{if(busy)return;const y=sc.scrollTop;if(open&&mode==='pushed'&&y>90)closeBox();else if(open&&mode==='floating'&&Math.abs(y-floatAt)>60)closeBox()},{passive:true});
+body.addEventListener('click',e=>{const a=e.target.closest('[data-ans]'),s=e.target.closest('[data-skip]'),f=e.target.closest('[data-full]');
+ if(f){toast('Opens the full Travel DNA page');return}
+ if(a||s){const qq=$('#qq');if(qq)qq.classList.add('swap');setTimeout(()=>{if(a){pct+=2;toast(pct<10?'Saved. Travel DNA is at '+pct+'%':(pct===10?'Your full list is unlocked':'Saved. Travel DNA is at '+pct+'%'))}else pct+=0;qi++;paint();remeasure()},180)}});
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2000)}
+$('#slow').addEventListener('change',()=>{setSpeed()});
+$('#reset').addEventListener('click',()=>{qi=0;pct=0;open=false;mode='pushed';sp.style.height='0px';sc.scrollTop=0;dna.classList.remove('open');dna.style.height='44px';paint();setTimeout(openBox,60)});
+$('#top').addEventListener('click',()=>{const y0=sc.scrollTop,t0=performance.now();const s=()=>{const p=Math.min(1,(performance.now()-t0)/350);sc.scrollTop=y0*Math.pow(1-p,3);if(p<1)setTimeout(s,16)};s()});
+$('#dn').addEventListener('click',()=>{const y0=sc.scrollTop,t0=performance.now(),to=y0+260;const s=()=>{const p=Math.min(1,(performance.now()-t0)/350);sc.scrollTop=y0+(to-y0)*(1-Math.pow(1-p,3));if(p<1)setTimeout(s,16)};s()});
+setSpeed();cards();paint();
+/* start open, with the list already pushed down */
+requestAnimationFrame(()=>{H=measure();dna.style.height=H+'px';sp.style.height=(H-40)+'px'});
+setTimeout(()=>{H=measure();dna.style.height=H+'px';sp.style.height=(H-40)+'px'},60);
+</script>
