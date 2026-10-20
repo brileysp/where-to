@@ -6,7 +6,8 @@ Where the other lists live: the admin **To do** tab (site-wide items, due dates,
 
 ## Needs you (decisions and checks)
 
-- **Chip picks.** Approve, reject or add chips on the proposals page (claude.ai/artifact/BTqfgeWzrZj6AnFb7iraqT), then tell Claude "apply my chip picks". Still undecided: four proposed changes to live chips (Wildlife: swap Reptiles for Easy close-up; Safari: swap Boat for Private reserves; Hiking: High-altitude trekking instead of Walk-up summits; Birding: delete the Seabirds draft). 30 of 48 interests have nothing approved yet.
+- **Onboarding questions.** Approve, reject or add on the questions page (claude.ai/artifact/TUAV7kbknYJXHVUiLrzKAw), then tell Claude "apply my question picks".
+- **Chips:** your 20 Oct picks are applied (59 approved, 15 rejected drafts deleted, 10 of your own added). 11 interests still have nothing approved; one proposed change is undecided (Safari: Private reserves instead of Boat and canoe safaris).
 - **Turn on the new onboarding flow in production** (`ONBOARDING_V2=1` in the hosting environment).
 - **Push and deploy** the latest local commits (capitalization fixes, chip approvals, onboarding questions tab; their database changes are already applied).
 - **Open onboarding decisions:** should chips affect ranking; when to ask for sign-in; questions still unwritten for Surfing, Diving, Wildlife Viewing and the ten DNA dials; Hiking question 5 needs a column.
@@ -22,8 +23,8 @@ Where the other lists live: the admin **To do** tab (site-wide items, due dates,
 
 ## Ready for Claude
 
-- **Re-author the stale text for the 14 broadened places** (Cuba, Northern Tanzania, Banff & Jasper, Vancouver & Whistler, Laos, Komodo & Flores, Quebec City & Montreal, Palm Springs & Joshua Tree, Cambodia, French Polynesia, Northern Ireland, Wales, Napa & Sonoma, Dominican Republic). Birding and wildlife drafts are staged (19 Oct 2026, nothing live). Next: mechanical check, source-check risky claims, review page, apply on approval. Wording-only fixes ready in `scripts/scope-name-fixes-oct19.ts`. Also re-check scores for broadened places that only have scores (Myanmar, Assam & Northeast India, Hiking and others, as to-dos on each interest page).
-- **Columns and data for the 18 chips approved 19 Oct** (camping, geology, skiing, wind sports, kayaking).
+- **Broadened places:** the new Birding and Wildlife text for the 14 places went live 20 Oct 2026 (source-checked). Still to do: refresh their birding data columns; re-check scores for broadened places that only have scores (Myanmar, Assam & Northeast India, Hiking and others, as to-dos on each interest page); Northern Tanzania's Zanzibar-based texts (N/A decision above); Jamaica wildlife score looks low next to Cuba, the Dominican Republic and Puerto Rico.
+- **Columns and data for the approved draft chips** (18 from 19 Oct plus 59 from 20 Oct, and 10 you added).
 - **Birding:** write the "access counts" rule into the v8 directive; re-run the audit for the 9 places that returned nothing; re-run the eBird-name sweep on the 200 live texts (~300 plain renames) then ask for approval; check the drafted columns; source-check draw birds (55 of 200 done); add odds chips to headline species; Champagne's Lac du Der cranes (waiting).
 - **Diving:** check the drafted columns; N/A reason for the 1 place without one.
 - **Safari:** N/A reasons for the 183 N/A places; re-run the Rwanda audit; re-check scores for Assam & Northeast India.
