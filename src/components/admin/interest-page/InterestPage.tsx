@@ -145,8 +145,8 @@ export function InterestPage({ data }: { data: InterestPageData }) {
       {tab === 'rules' && <RulesSection data={data} />}
       {tab === 'chips' && (
         <>
-          <ChipsSection interestKey={data.key} factDefs={data.factDefs} places={places} chips={chips} setChips={setChips} overrides={chipOverrides} setOverrides={setChipOverrides} />
-          <QuestionsSection interestKey={data.key} factDefs={data.factDefs} questions={questions} setQuestions={setQuestions} />
+          <ChipsSection interestKey={data.key} factDefs={data.factDefs} places={places} chips={chips} setChips={setChips} questions={questions} setQuestions={setQuestions} overrides={chipOverrides} setOverrides={setChipOverrides} />
+          <QuestionsSection interestKey={data.key} factDefs={data.factDefs} chips={chips} questions={questions} setQuestions={setQuestions} />
         </>
       )}
       {tab === 'authoring' && <AuthoringSection interestKey={data.key} passes={passes} setPasses={setPasses} />}

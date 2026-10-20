@@ -178,4 +178,40 @@ describe('chip actions', () => {
     const left = await (h.db as ReturnType<typeof drizzle<typeof schema>>).select().from(schema.placeChipOverrides).where(eq(schema.placeChipOverrides.chipKey, c.chip.key));
     expect(left.length).toBe(0);
   });
+
+  it('refuses to delete a chip that still opens a question, and unties it on request', async () => {
+    const q = await import('@/app/admin/destinations/interests/[key]/question-actions');
+    const chip = await actions.createChip('safari', 'Walking safaris');
+    const other = await actions.createChip('safari', 'Boat safaris');
+    if (!chip.ok || !other.ok) throw new Error('create failed');
+    const one = await q.createQuestion('safari');
+    const two = await q.createQuestion('safari');
+    if (!one.ok || !two.ok) throw new Error('create failed');
+    await q.setQuestionChips('safari', one.question.key, [chip.chip.key]);
+    await q.setQuestionChips('safari', two.question.key, [chip.chip.key, other.chip.key]);
+    await q.setQuestionApproval('safari', one.question.key, true);
+    await q.setQuestionApproval('safari', two.question.key, true);
+    const refused = await actions.deleteChip('safari', chip.chip.key);
+    expect(refused.ok).toBe(false);
+    expect(!refused.ok && refused.message).toContain('2 onboarding questions are opened by this chip');
+    const done = await actions.deleteChip('safari', chip.chip.key, { untie: true });
+    expect(done.ok && done.untied).toBe(2);
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    const rows = await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'safari'));
+    expect(rows.map((r) => `${r.questionKey}:${r.chipKey}`)).toEqual([`${two.question.key}:${other.chip.key}`]);
+    const qs = await dbx.select().from(schema.interestQuestions).where(eq(schema.interestQuestions.interestKey, 'safari'));
+    expect(qs.every((r) => r.approvedAt === null)).toBe(true); // who they are asked of changed, so the approval is gone
+  });
+
+  it('the database itself refuses to delete a chip that opens a question', async () => {
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    const chip = await actions.createChip('hiking', 'Hut-to-hut');
+    if (!chip.ok) throw new Error('create failed');
+    await dbx.insert(schema.interestQuestions).values({ interestKey: 'hiking', questionKey: 'q1', text: 'Booking?', options: ['a', 'b'] });
+    await dbx.insert(schema.interestQuestionChips).values({ interestKey: 'hiking', questionKey: 'q1', chipKey: chip.chip.key });
+    await expect(dbx.delete(schema.interestChips).where(eq(schema.interestChips.chipKey, chip.chip.key))).rejects.toThrow();
+    // deleting the question removes its rows, and then the chip can go
+    await dbx.delete(schema.interestQuestions).where(eq(schema.interestQuestions.questionKey, 'q1'));
+    expect((await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'hiking'))).length).toBe(0);
+  });
 });

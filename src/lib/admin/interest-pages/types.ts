@@ -168,6 +168,8 @@ export interface QuestionRow {
   /** Keys of the interest's data columns the answer is matched against. */
   columns: string[];
   note: string;
+  /** Keys of the interest's chips that open this question: it is asked only when at least one is ticked. Empty = asked of everyone who picks the interest. */
+  whenChips: string[];
   approvedBy: string;
   approvedAt: string | null;
 }

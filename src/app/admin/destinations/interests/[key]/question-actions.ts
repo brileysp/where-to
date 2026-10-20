@@ -3,7 +3,7 @@
 import { z } from 'zod';
 import { and, eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
-import { interestQuestions, INTEREST_QUESTION_KINDS } from '@/lib/db/schema';
+import { interestChips, interestQuestionChips, interestQuestions, INTEREST_QUESTION_KINDS } from '@/lib/db/schema';
 import { requireAdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { SLIDERS } from '@/lib/scoring/constants';
@@ -20,7 +20,7 @@ const fail = (message: string): { ok: false; message: string } => ({ ok: false, 
 const validInterest = (key: string) => SLIDERS.some((s) => s.key === key);
 
 type Row = typeof interestQuestions.$inferSelect;
-const toRow = (r: Row): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
+const toRow = (r: Row, whenChips: string[] = []): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, whenChips, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
 const byOrder = (a: Row, b: Row) => a.sortOrder - b.sortOrder;
 
 const patchSchema = z.object({
@@ -34,6 +34,8 @@ const patchSchema = z.object({
 export type QuestionPatch = z.input<typeof patchSchema>;
 
 const loadAll = (interestKey: string) => db.select().from(interestQuestions).where(eq(interestQuestions.interestKey, interestKey));
+const chipsOf = async (interestKey: string, questionKey: string): Promise<string[]> =>
+  (await db.select({ k: interestQuestionChips.chipKey }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey)))).map((x) => x.k).sort();
 
 export async function createQuestion(interestKey: string): Promise<Result<{ question: QuestionRow }>> {
   const admin = await requireAdminUser();
@@ -67,7 +69,7 @@ export async function updateQuestion(interestKey: string, questionKey: string, p
     actor: admin, skipPlaceCache: true, entityType: 'interest_question', entityId: `${interestKey}:${questionKey}`, action: 'update', before: cur, after: { ...cur, ...set },
     write: (tx) => tx.update(interestQuestions).set(set).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning(),
   });
-  return { ok: true, question: toRow(row), approvalCleared };
+  return { ok: true, question: toRow(row, await chipsOf(interestKey, questionKey)), approvalCleared };
 }
 
 export async function setQuestionApproval(interestKey: string, questionKey: string, approved: boolean): Promise<Result<{ question: QuestionRow }>> {
@@ -80,7 +82,36 @@ export async function setQuestionApproval(interestKey: string, questionKey: stri
     actor: admin, skipPlaceCache: true, entityType: 'interest_question', entityId: `${interestKey}:${questionKey}`, action: 'update', before: cur, after: { ...cur, ...set },
     write: (tx) => tx.update(interestQuestions).set({ ...set, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning(),
   });
-  return { ok: true, question: toRow(row) };
+  return { ok: true, question: toRow(row, await chipsOf(interestKey, questionKey)) };
+}
+
+/**
+ * Sets which chips open a question (see interest_question_chips in the schema). An empty list means the question is asked of everyone who
+ * picks the interest. Every chip must belong to the same interest. Changing who the question is asked of takes its approval back, the same
+ * as changing its wording, because the owner approved it for a different audience.
+ */
+export async function setQuestionChips(interestKey: string, questionKey: string, chipKeys: string[]): Promise<Result<{ question: QuestionRow; approvalCleared: boolean }>> {
+  const admin = await requireAdminUser();
+  if (!validInterest(interestKey)) return fail('Unknown interest');
+  const cur = (await loadAll(interestKey)).find((r) => r.questionKey === questionKey);
+  if (!cur) return fail('Question not found');
+  const wanted = [...new Set(chipKeys)].sort();
+  if (wanted.length > 20) return fail('Too many chips');
+  const known = new Set((await db.select({ k: interestChips.chipKey }).from(interestChips).where(eq(interestChips.interestKey, interestKey))).map((c) => c.k));
+  if (wanted.some((k) => !known.has(k))) return fail('That chip does not belong to this interest');
+  const before = await chipsOf(interestKey, questionKey);
+  if (JSON.stringify(before) === JSON.stringify(wanted)) return { ok: true, question: toRow(cur, before), approvalCleared: false };
+  const approvalCleared = !!cur.approvedAt;
+  const clear = approvalCleared ? { approvedBy: '', approvedAt: null } : {};
+  const [row] = await withAdminAudit<Row[]>({
+    actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey}`, action: 'update', before: { chips: before }, after: { chips: wanted },
+    write: async (tx) => {
+      await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey)));
+      if (wanted.length) await tx.insert(interestQuestionChips).values(wanted.map((chipKey) => ({ interestKey, questionKey, chipKey, createdBy: admin.email })));
+      return tx.update(interestQuestions).set({ ...clear, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning();
+    },
+  });
+  return { ok: true, question: toRow(row, wanted), approvalCleared };
 }
 
 export async function moveQuestion(interestKey: string, questionKey: string, direction: 'up' | 'down'): Promise<Result<{ order: Array<{ key: string; order: number }> }>> {

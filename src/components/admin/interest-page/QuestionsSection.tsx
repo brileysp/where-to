@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import type { QuestionRow } from '@/lib/admin/interest-pages/types';
+import type { ChipRow, QuestionRow } from '@/lib/admin/interest-pages/types';
+import { questionsWaitingOnDrafts } from '@/lib/onboarding/question-rules';
 import type { FactDef } from '@/lib/admin/interest-pages/config';
-import { createQuestion, updateQuestion, moveQuestion, deleteQuestion, setQuestionApproval, type QuestionPatch } from '@/app/admin/destinations/interests/[key]/question-actions';
+import { createQuestion, updateQuestion, moveQuestion, deleteQuestion, setQuestionApproval, setQuestionChips, type QuestionPatch } from '@/app/admin/destinations/interests/[key]/question-actions';
 
 const when = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '');
 
@@ -18,11 +19,13 @@ function dataState(q: QuestionRow, defs: FactDef[]): { label: string; tone: 'goo
 export function QuestionsSection({
   interestKey,
   factDefs,
+  chips,
   questions,
   setQuestions,
 }: {
   interestKey: string;
   factDefs: FactDef[];
+  chips: ChipRow[];
   questions: QuestionRow[];
   setQuestions: (f: (q: QuestionRow[]) => QuestionRow[]) => void;
 }) {
@@ -31,6 +34,8 @@ export function QuestionsSection({
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
   const [open, setOpen] = useState<string | null>(null);
+  const chipLabel = (k: string) => chips.find((c) => c.key === k)?.label ?? k;
+  const waiting = questionsWaitingOnDrafts(sorted, chips.map((c) => ({ key: c.key, live: c.status === 'live' })));
   const columnsToPick = factDefs.filter((d) => !d.hidden && d.key !== 'drawSourceChecked' && d.key !== 'scopeNote' && d.type !== 'list');
 
   async function run<T extends { ok: boolean }>(job: () => Promise<T>): Promise<T | null> {
@@ -53,6 +58,12 @@ export function QuestionsSection({
     replace(r.question);
     if (r.approvalCleared) setInfo('You changed the wording, so the approval was taken back. Approve it again when you are happy.');
     return true;
+  }
+  async function setWhen(q: QuestionRow, whenChips: string[]) {
+    const r = await run(() => setQuestionChips(interestKey, q.key, whenChips));
+    if (!r || !r.ok) return;
+    replace(r.question);
+    if (r.approvalCleared) setInfo('You changed who this question is asked of, so the approval was taken back. Approve it again when you are happy.');
   }
   async function approve(q: QuestionRow, approved: boolean) {
     const r = await run(() => setQuestionApproval(interestKey, q.key, approved));
@@ -87,6 +98,11 @@ export function QuestionsSection({
         {info && <span className="ip-faint">{info}</span>}
       </div>
 
+      {waiting.length > 0 && (
+        <div className="ip-card" style={{ borderColor: 'var(--warn)', background: 'var(--warn-soft)' }}>
+          <b>Waiting on draft chips.</b> {waiting.map((q) => `“${q.text}”`).join(', ')} {waiting.length === 1 ? 'is' : 'are'} opened only by chips that are not live yet, so nobody is asked {waiting.length === 1 ? 'it' : 'them'} until one goes live.
+        </div>
+      )}
       {sorted.length === 0 && <div className="ip-card"><p className="ip-muted" style={{ margin: 0 }}>No questions yet for this interest. Add the first one below.</p></div>}
 
       {sorted.map((q, i) => {
@@ -102,12 +118,14 @@ export function QuestionsSection({
               <b className="ip-q-text" onClick={() => setOpen(isOpen ? null : q.key)}>{i + 1}. {q.text}{q.maxPicks > 1 ? ` (pick up to ${q.maxPicks})` : ''}</b>
               <span className={`ip-chip ${q.kind === 'limit' ? 'warn' : 'dim'}`} title={q.kind === 'limit' ? 'The answer can rule a place out' : 'The answer nudges places up or down'}>{q.kind === 'limit' ? 'Limit' : 'Lean'}</span>
               <span className={`ip-chip ${st.tone}`}>{st.label}</span>
+              <span className={`ip-chip ${q.whenChips.length ? 'new' : 'dim'}`} title={q.whenChips.length ? 'Only asked when one of these chips is ticked' : 'Asked of everyone who picks this interest'}>{q.whenChips.length ? 'Only when a chip is ticked' : 'Always asked'}</span>
               {q.approvedAt
                 ? <span className="ip-chip good" title={`Approved by ${q.approvedBy} on ${when(q.approvedAt)}`}>✓ {when(q.approvedAt)}</span>
                 : <button className="ip-link-btn" disabled={busy} onClick={() => approve(q, true)}>Approve</button>}
             </div>
+            {q.whenChips.length > 0 && <div className="ip-faint ip-q-opts" style={{ color: 'var(--cat-1)' }}>Asked when any of these is ticked: {q.whenChips.map(chipLabel).join(', ')}</div>}
             {!isOpen && <div className="ip-faint ip-q-opts">{q.options.join(' · ')}{q.columns.length > 0 && <> — reads: {q.columns.map((k) => factDefs.find((d) => d.key === k)?.label ?? k).join(', ')}</>}</div>}
-            {isOpen && <QuestionEditor q={q} busy={busy} columnsToPick={columnsToPick} onSave={(p) => save(q, p)} onApprove={(a) => approve(q, a)} onDelete={() => remove(q)} />}
+            {isOpen && <QuestionEditor q={q} busy={busy} chips={chips} columnsToPick={columnsToPick} onSetWhen={(c) => setWhen(q, c)} onSave={(p) => save(q, p)} onApprove={(a) => approve(q, a)} onDelete={() => remove(q)} />}
           </div>
         );
       })}
@@ -116,7 +134,7 @@ export function QuestionsSection({
   );
 }
 
-function QuestionEditor({ q, busy, columnsToPick, onSave, onApprove, onDelete }: { q: QuestionRow; busy: boolean; columnsToPick: FactDef[]; onSave: (p: QuestionPatch) => Promise<boolean>; onApprove: (a: boolean) => void; onDelete: () => void }) {
+function QuestionEditor({ q, busy, chips, columnsToPick, onSetWhen, onSave, onApprove, onDelete }: { q: QuestionRow; busy: boolean; chips: ChipRow[]; columnsToPick: FactDef[]; onSetWhen: (chipKeys: string[]) => void; onSave: (p: QuestionPatch) => Promise<boolean>; onApprove: (a: boolean) => void; onDelete: () => void }) {
   const [text, setText] = useState(q.text);
   const [options, setOptions] = useState(q.options.join('\n'));
   const [note, setNote] = useState(q.note);
@@ -143,6 +161,24 @@ function QuestionEditor({ q, busy, columnsToPick, onSave, onApprove, onDelete }:
           {columnsToPick.filter((d) => !q.columns.includes(d.key)).map((d) => <option key={d.key} value={d.key}>{d.label}</option>)}
         </select>
       )}
+      <div className="ip-faint">When should this question be asked?</div>
+      <div className="ip-toolbar">
+        <label className="ip-ch-lab"><input type="radio" name={`when-${q.key}`} checked={q.whenChips.length === 0} disabled={busy} onChange={() => onSetWhen([])} /> Always</label>
+        <label className="ip-ch-lab"><input type="radio" name={`when-${q.key}`} checked={q.whenChips.length > 0} disabled={busy || chips.length === 0} onChange={() => { if (q.whenChips.length === 0 && chips[0]) onSetWhen([chips[0].key]); }} /> Only when the traveler ticks one of these chips</label>
+      </div>
+      {q.whenChips.length > 0 && (
+        <div className="ip-ch-pills">
+          {chips.map((c) => {
+            const on = q.whenChips.includes(c.key);
+            return (
+              <label key={c.key} className="ip-ch-lab" style={{ border: '1px solid var(--border-strong)', borderRadius: 999, padding: '3px 10px', ...(on ? { borderColor: 'var(--cat-1)', background: 'var(--cat-1-soft)' } : {}) }}>
+                <input type="checkbox" checked={on} disabled={busy || (on && q.whenChips.length === 1)} onChange={() => onSetWhen(on ? q.whenChips.filter((k) => k !== c.key) : [...q.whenChips, c.key])} /> {c.label}{c.status !== 'live' ? ' (draft)' : ''}
+              </label>
+            );
+          })}
+        </div>
+      )}
+      <div className="ip-faint">Changing this takes back the approval, the same as changing the wording. The last chip cannot be unticked here; choose Always instead.</div>
       <label className="ip-faint">How the answer is used (a note)</label>
       <input className="ip-ch-name" style={{ width: '100%' }} value={note} maxLength={300} onChange={(e) => setNote(e.target.value)} />
       <div className="ip-toolbar">

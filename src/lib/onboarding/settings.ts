@@ -15,6 +15,11 @@ export interface OnboardingSettings {
   maxTopInterests: number;
   /** Sharpen questions that must be answered before the shortlist unlocks. */
   unlockQuestions: number;
+  /**
+   * How many interest questions each top interest is asked, by how many top interests there are (index 0 = one interest ... index 4 = five).
+   * The first interests get the larger share. A share is cut down to the questions that apply (see question-rules.ts).
+   */
+  questionShares: number[][];
   /** Interests shown in a category before "Show more". */
   interestsPerCategory: number;
   /** "People who pick these often add" suggestions shown. */
@@ -37,6 +42,7 @@ export const DEFAULT_ONBOARDING_SETTINGS: OnboardingSettings = {
   specialistUnlockWeight: 7,
   maxTopInterests: 5,
   unlockQuestions: 10,
+  questionShares: [[10], [4, 4], [3, 3, 3], [3, 3, 2, 2], [2, 2, 2, 2, 2]],
   interestsPerCategory: 8,
   relatedSuggestions: 4,
   shortlistPlaces: 5,

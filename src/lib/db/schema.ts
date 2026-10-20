@@ -14,6 +14,7 @@ import {
   index,
   uniqueIndex,
   check,
+  foreignKey,
   type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
@@ -1012,6 +1013,30 @@ export const interestQuestions = pgTable(
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [primaryKey({ columns: [table.interestKey, table.questionKey] })],
+);
+
+/**
+ * Which chips open which onboarding question. A question with no rows here is asked of everyone who picks the interest; a question with
+ * rows is asked only when the traveler has ticked at least one of those chips (any of them). Chips never depend on chips and questions
+ * never depend on questions. The chip is always in the same interest as the question.
+ * Deleting a question removes its rows. A chip that still opens a question cannot be deleted (the database refuses), so a question can
+ * never quietly turn into "asked of everyone". Renaming a chip changes nothing here, because rows point at the chip's permanent key.
+ */
+export const interestQuestionChips = pgTable(
+  'interest_question_chips',
+  {
+    interestKey: text('interest_key').notNull(),
+    questionKey: text('question_key').notNull(),
+    chipKey: text('chip_key').notNull(),
+    createdBy: text('created_by').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.interestKey, table.questionKey, table.chipKey] }),
+    foreignKey({ name: 'interest_question_chips_question_fk', columns: [table.interestKey, table.questionKey], foreignColumns: [interestQuestions.interestKey, interestQuestions.questionKey] }).onDelete('cascade').onUpdate('cascade'),
+    foreignKey({ name: 'interest_question_chips_chip_fk', columns: [table.interestKey, table.chipKey], foreignColumns: [interestChips.interestKey, interestChips.chipKey] }).onDelete('restrict').onUpdate('cascade'),
+    index('interest_question_chips_chip_idx').on(table.interestKey, table.chipKey),
+  ],
 );
 
 /** A fit typed by hand for one place and chip, with the reason. Wins over the worked-out number, and survives a re-fill of the columns. */

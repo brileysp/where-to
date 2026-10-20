@@ -3,7 +3,7 @@
 import { z } from 'zod';
 import { and, eq } from 'drizzle-orm';
 import { db } from '@/lib/db/client';
-import { interestChips, placeChipOverrides, places, INTEREST_CHIP_STATUSES, type InterestChipDriver } from '@/lib/db/schema';
+import { interestChips, interestQuestionChips, interestQuestions, placeChipOverrides, places, INTEREST_CHIP_STATUSES, type InterestChipDriver } from '@/lib/db/schema';
 import { requireAdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { SLIDERS } from '@/lib/scoring/constants';
@@ -131,19 +131,30 @@ export async function setChipApproval(interestKey: string, chipKey: string, appr
   return { ok: true, chip: toRow(row) };
 }
 
-export async function deleteChip(interestKey: string, chipKey: string): Promise<Result<object>> {
+/**
+ * Deletes a chip. A chip that still opens onboarding questions is not deleted unless `untie` is set: those questions would otherwise
+ * quietly become "asked of everyone". Untying removes the chip from each question's list (a question left with no chips is then asked of
+ * everyone) and takes back those questions' approval, because who they are asked of has changed.
+ */
+export async function deleteChip(interestKey: string, chipKey: string, opts: { untie?: boolean } = {}): Promise<Result<{ untied: number }>> {
   const admin = await requireAdminUser();
   if (!validInterest(interestKey)) return fail('Unknown interest');
   const cur = (await loadAll(interestKey)).find((c) => c.chipKey === chipKey);
   if (!cur) return fail('Chip not found');
+  const opens = await db.select({ q: interestQuestionChips.questionKey }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.chipKey, chipKey)));
+  if (opens.length && !opts.untie) return fail(`${opens.length} onboarding question${opens.length === 1 ? ' is' : 's are'} opened by this chip. Untie ${opens.length === 1 ? 'it' : 'them'} first, or delete the chip and untie ${opens.length === 1 ? 'it' : 'them'} in one go.`);
   await withAdminAudit({
-    actor: admin, skipPlaceCache: true, entityType: 'interest_chip', entityId: `${interestKey}:${chipKey}`, action: 'delete', before: cur, after: null,
+    actor: admin, skipPlaceCache: true, entityType: 'interest_chip', entityId: `${interestKey}:${chipKey}`, action: 'delete', before: { ...cur, opensQuestions: opens.map((o) => o.q) }, after: null,
     write: async (tx) => {
+      for (const { q } of opens) {
+        await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, q), eq(interestQuestionChips.chipKey, chipKey)));
+        await tx.update(interestQuestions).set({ approvedBy: '', approvedAt: null, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, q)));
+      }
       await tx.delete(placeChipOverrides).where(and(eq(placeChipOverrides.interestKey, interestKey), eq(placeChipOverrides.chipKey, chipKey)));
       await tx.delete(interestChips).where(and(eq(interestChips.interestKey, interestKey), eq(interestChips.chipKey, chipKey)));
     },
   });
-  return { ok: true };
+  return { ok: true, untied: opens.length };
 }
 
 const overrideSchema = z.object({

@@ -57,4 +57,32 @@ describe('question actions', () => {
     expect((await a.deleteQuestion('hiking', 'q2')).ok).toBe(true);
     expect((await a.deleteQuestion('hiking', 'q2')).ok).toBe(false);
   });
+
+  it('sets which chips open a question, checks they belong to the interest, and takes the approval back when they change', async () => {
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    await dbx.insert(schema.interestChips).values([{ interestKey: 'scenicLandscapes', chipKey: 'photo', label: 'Landscape photography' }, { interestKey: 'scenicLandscapes', chipKey: 'coasts', label: 'Coasts' }, { interestKey: 'hiking', chipKey: 'hut', label: 'Hut-to-hut' }]);
+    const q = await a.createQuestion('scenicLandscapes');
+    if (!q.ok) throw new Error('create failed');
+    expect(q.question.whenChips).toEqual([]);
+    expect((await a.setQuestionChips('scenicLandscapes', q.question.key, ['hut'])).ok).toBe(false); // a hiking chip
+    expect((await a.setQuestionChips('scenicLandscapes', q.question.key, ['nope'])).ok).toBe(false);
+    await a.setQuestionApproval('scenicLandscapes', q.question.key, true);
+    const set = await a.setQuestionChips('scenicLandscapes', q.question.key, ['photo', 'coasts', 'photo']);
+    expect(set.ok && set.question.whenChips).toEqual(['coasts', 'photo']);
+    expect(set.ok && set.approvalCleared).toBe(true);
+    const same = await a.setQuestionChips('scenicLandscapes', q.question.key, ['coasts', 'photo']);
+    expect(same.ok && same.approvalCleared).toBe(false);
+    const back = await a.setQuestionChips('scenicLandscapes', q.question.key, []);
+    expect(back.ok && back.question.whenChips).toEqual([]);
+  });
+
+  it('keeps the chips when the wording is edited or the question is approved', async () => {
+    const q = await a.createQuestion('scenicLandscapes');
+    if (!q.ok) throw new Error('create failed');
+    await a.setQuestionChips('scenicLandscapes', q.question.key, ['photo']);
+    const edited = await a.updateQuestion('scenicLandscapes', q.question.key, { text: 'How far for the shot?' });
+    expect(edited.ok && edited.question.whenChips).toEqual(['photo']);
+    const approved = await a.setQuestionApproval('scenicLandscapes', q.question.key, true);
+    expect(approved.ok && approved.question.whenChips).toEqual(['photo']);
+  });
 });

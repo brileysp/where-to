@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { InterestChipDriver } from '@/lib/db/schema';
-import type { ChipOverrideRow, ChipRow, InterestPlaceRow } from '@/lib/admin/interest-pages/types';
+import type { ChipOverrideRow, ChipRow, InterestPlaceRow, QuestionRow } from '@/lib/admin/interest-pages/types';
 import type { FactDef } from '@/lib/admin/interest-pages/config';
 import { canDrive, chipFit, driverLabel, driverProblem, fitBasis, MAX_DRIVERS, MAX_LIVE_CHIPS, needsOption, roundFit } from '@/lib/admin/interest-pages/chips';
 import { createChip, updateChip, moveChip, deleteChip, setChipApproval, saveChipOverride, clearChipOverride, type ChipPatch } from '@/app/admin/destinations/interests/[key]/chip-actions';
@@ -16,6 +16,8 @@ export function ChipsSection({
   places,
   chips,
   setChips,
+  questions,
+  setQuestions,
   overrides,
   setOverrides,
 }: {
@@ -24,6 +26,8 @@ export function ChipsSection({
   places: InterestPlaceRow[];
   chips: ChipRow[];
   setChips: (f: (c: ChipRow[]) => ChipRow[]) => void;
+  questions: QuestionRow[];
+  setQuestions: (f: (q: QuestionRow[]) => QuestionRow[]) => void;
   overrides: ChipOverrideRow[];
   setOverrides: (f: (o: ChipOverrideRow[]) => ChipOverrideRow[]) => void;
 }) {
@@ -78,9 +82,12 @@ export function ChipsSection({
     if (r && r.ok) setChips((all) => all.map((x) => (x.key === c.key ? r.chip : x)));
   }
   async function remove(c: ChipRow) {
-    if (!window.confirm(`Delete the chip "${c.label}" and any numbers you set by hand for it?`)) return;
-    const r = await run(() => deleteChip(interestKey, c.key));
+    const opens = questions.filter((q) => q.whenChips.includes(c.key));
+    const warn = opens.length ? ` ${opens.length} onboarding question${opens.length === 1 ? ' is' : 's are'} opened by it (${opens.map((q) => `"${q.text}"`).join(', ')}). They will lose this chip, and any left with no chip will be asked of everyone, and their approval is taken back.` : '';
+    if (!window.confirm(`Delete the chip "${c.label}" and any numbers you set by hand for it?${warn}`)) return;
+    const r = await run(() => deleteChip(interestKey, c.key, { untie: opens.length > 0 }));
     if (!r) return;
+    if (opens.length) setQuestions((all) => all.map((q) => (q.whenChips.includes(c.key) ? { ...q, whenChips: q.whenChips.filter((k) => k !== c.key), approvedBy: '', approvedAt: null } : q)));
     setChips((all) => all.filter((x) => x.key !== c.key));
     setOverrides((all) => all.filter((o) => o.chipKey !== c.key));
     setSelected(null);
@@ -123,7 +130,7 @@ export function ChipsSection({
       {sorted.length > 0 && (
         <div className="ip-table-wrap">
           <table className="ip-table ip-ch-table">
-            <thead><tr><th style={{ width: 64 }}>Order</th><th>Chip</th><th>Status</th><th>Approved</th><th>Driven by</th><th title={`Places whose fit is ${FIT_WELL} or more, out of the places scored for this interest.`}>Fits well ({FIT_WELL}+)</th></tr></thead>
+            <thead><tr><th style={{ width: 64 }}>Order</th><th>Chip</th><th>Status</th><th>Approved</th><th>Driven by</th><th title="The onboarding questions that are only asked when this chip is ticked">Opens questions</th><th title={`Places whose fit is ${FIT_WELL} or more, out of the places scored for this interest.`}>Fits well ({FIT_WELL}+)</th></tr></thead>
             <tbody>
               {sorted.map((c, i) => {
                 const fits = scored.map((p) => shownFit(c, p));
@@ -167,6 +174,7 @@ export function ChipsSection({
                         {c.drivers.length === 0 && !c.needsColumn && <i>Nothing yet</i>}
                       </div>
                     </td>
+                    <td style={{ whiteSpace: 'nowrap' }}>{(() => { const n = questions.filter((q) => q.whenChips.includes(c.key)).length; return n ? <span className="ip-chip new" title={questions.filter((q) => q.whenChips.includes(c.key)).map((q) => q.text).join('\n')}>{n} question{n === 1 ? '' : 's'}</span> : <span className="ip-faint">none</span>; })()}</td>
                     <td className="ip-mono" style={{ whiteSpace: 'nowrap' }}>{c.drivers.length === 0 ? <span className="ip-faint">needs data</span> : <>{strong} of {scored.length}{blank > 0 && <span className="ip-faint"> ({blank} blank)</span>}</>}</td>
                   </tr>
                 );

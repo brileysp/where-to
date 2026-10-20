@@ -2,7 +2,7 @@ import { eq, desc, inArray, sql } from 'drizzle-orm';
 import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { db } from '../client';
-import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions } from '../schema';
+import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
 import { SLIDERS, VISIBLE_SLIDERS } from '@/lib/scoring/constants';
@@ -213,7 +213,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
   const slider = SLIDERS.find((s) => s.key === interestKey);
   if (!slider) return null;
 
-  const [scored, primaryRows, genRows, factRows, reviewRows, todoRows, ideaRows, siteRows, passRows, ruleRows, chipRows, overrideRows, questionRows] = await Promise.all([
+  const [scored, primaryRows, genRows, factRows, reviewRows, todoRows, ideaRows, siteRows, passRows, ruleRows, chipRows, overrideRows, questionRows, questionChipRows] = await Promise.all([
     getAllScoredPlaces({ includeUnpublished: true }),
     getPrimaryPlaceRows(),
     db
@@ -230,6 +230,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     db.select().from(interestChips).where(eq(interestChips.interestKey, interestKey)).orderBy(interestChips.sortOrder),
     db.select().from(placeChipOverrides).where(eq(placeChipOverrides.interestKey, interestKey)),
     db.select().from(interestQuestions).where(eq(interestQuestions.interestKey, interestKey)).orderBy(interestQuestions.sortOrder),
+    db.select().from(interestQuestionChips).where(eq(interestQuestionChips.interestKey, interestKey)),
   ]);
   const completenessMap = await getInterestCompleteness([interestKey], new Map(scored.map((d) => [d.id, d])));
 
@@ -343,7 +344,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     ideas: ideaRows.map(toIdea),
     completeness: completenessMap[interestKey],
     passes: passRows,
-    questions: questionRows.map((r): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null })),
+    questions: questionRows.map((r): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, whenChips: questionChipRows.filter((x) => x.questionKey === r.questionKey).map((x) => x.chipKey).sort(), approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null })),
     chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn, approvedBy: c.approvedBy, approvedAt: c.approvedAt ? c.approvedAt.toISOString() : null })),
     chipOverrides: overrideRows.map((o): ChipOverrideRow => ({ chipKey: o.chipKey, placeId: o.placeId, fit: o.fit, reason: o.reason, setBy: o.setBy, setAt: o.setAt.toISOString() })),
     ruleOverrides: Object.fromEntries(ruleRows.map((r) => [r.sectionKey, r.items])),
