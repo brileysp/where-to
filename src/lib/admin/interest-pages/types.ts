@@ -156,6 +156,22 @@ export interface ChipOverrideRow {
   setAt: string;
 }
 
+/** An onboarding question about this interest (see interest_questions in the schema). */
+export interface QuestionRow {
+  key: string;
+  order: number;
+  text: string;
+  options: string[];
+  /** 1 = pick one answer; 2 = "pick up to two". */
+  maxPicks: number;
+  kind: 'lean' | 'limit';
+  /** Keys of the interest's data columns the answer is matched against. */
+  columns: string[];
+  note: string;
+  approvedBy: string;
+  approvedAt: string | null;
+}
+
 export interface InterestPageData {
   key: string;
   label: string;
@@ -175,6 +191,7 @@ export interface InterestPageData {
   completeness: Completeness;
   passes: AuthoringPassRow[];
   chips: ChipRow[];
+  questions: QuestionRow[];
   chipOverrides: ChipOverrideRow[];
   /** Admin-edited versions of Rules & scoring lists, keyed by section (e.g. "birding.ladder"). A missing key uses the built-in list. */
   ruleOverrides: Record<string, unknown[]>;

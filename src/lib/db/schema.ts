@@ -986,6 +986,34 @@ export const interestChips = pgTable(
   (table) => [primaryKey({ columns: [table.interestKey, table.chipKey] })],
 );
 
+export const INTEREST_QUESTION_KINDS = ['lean', 'limit'] as const;
+export type InterestQuestionKind = (typeof INTEREST_QUESTION_KINDS)[number];
+
+/**
+ * The onboarding questions asked about one interest (Which animal would make the trip? How do you handle the sea?). Each reads one or more
+ * of the interest's data columns. lean = nudges places up or down; limit = can rule a place out. Not wired to the app's ranking yet.
+ * Approval records the owner's agreement with this wording; editing the wording or options takes the approval away.
+ */
+export const interestQuestions = pgTable(
+  'interest_questions',
+  {
+    interestKey: text('interest_key').notNull(),
+    questionKey: text('question_key').notNull(),
+    sortOrder: integer('sort_order').notNull().default(0),
+    text: text('text').notNull(),
+    options: jsonb('options').notNull().default([]).$type<string[]>(),
+    maxPicks: integer('max_picks').notNull().default(1),
+    kind: text('kind').$type<InterestQuestionKind>().notNull().default('lean'),
+    columns: jsonb('columns').notNull().default([]).$type<string[]>(),
+    note: text('note').notNull().default(''),
+    approvedBy: text('approved_by').notNull().default(''),
+    approvedAt: timestamp('approved_at', { withTimezone: true }),
+    updatedBy: text('updated_by').notNull().default(''),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.interestKey, table.questionKey] })],
+);
+
 /** A fit typed by hand for one place and chip, with the reason. Wins over the worked-out number, and survives a re-fill of the columns. */
 export const placeChipOverrides = pgTable(
   'place_chip_overrides',
