@@ -1,5 +1,6 @@
 import { CATEGORY_VISUALS, DEFAULT_CATEGORY_VISUAL } from '@/lib/dna/card-visuals';
 import type { SwipeType } from '@/lib/dna/types';
+import { interestByKey } from '@/lib/onboarding/interests';
 import { questionHint, type Question } from '@/lib/onboarding/questions';
 
 /** The one question under the shortlist's header (spec 4.8): a tag, Skip, the card, three answers and a hint. */
@@ -14,10 +15,12 @@ export function SharpenCard({ question, onAnswer, onSkip }: { question: Question
     );
   }
   const visual = CATEGORY_VISUALS[question.card.category] ?? DEFAULT_CATEGORY_VISUAL;
+  const interest = question.interest ? interestByKey(question.interest) : undefined;
+  const tag = interest && question.position ? `${interest.icon} ${interest.label} · ${question.position.n} of ${question.position.of}` : question.lane ? `${visual.emoji} ${question.card.category} · expert lane` : 'Quick one';
   return (
     <div className="ob2-sq">
       <div className="row">
-        <span className="tag">{question.lane ? `${visual.emoji} ${question.card.category} · expert lane` : 'Quick one'}</span>
+        <span className="tag">{tag}</span>
         <button type="button" className="ob2-link" onClick={onSkip}>
           Skip
         </button>

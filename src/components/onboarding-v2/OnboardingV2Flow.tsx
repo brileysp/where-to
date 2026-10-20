@@ -344,6 +344,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             input={input}
             sharpenAnswered={sharpen.length}
             seenCardIds={skipped}
+            sharpenCardIds={sharpen.map((a) => a.card.id)}
             month={month}
             week={week}
             who={who}

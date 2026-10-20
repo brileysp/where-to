@@ -36,7 +36,7 @@ export const DEFAULT_ONBOARDING_SETTINGS: OnboardingSettings = {
   levelWeights: { off: 0, cur: 3, like: 5, love: 7, top: 9.5 },
   specialistUnlockWeight: 7,
   maxTopInterests: 5,
-  unlockQuestions: 5,
+  unlockQuestions: 10,
   interestsPerCategory: 8,
   relatedSuggestions: 4,
   shortlistPlaces: 5,

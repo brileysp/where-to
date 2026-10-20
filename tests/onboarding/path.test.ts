@@ -72,20 +72,20 @@ describe('moving through the path', () => {
 import { answerMessage, isShortlistLocked, questionsToUnlock } from '@/lib/onboarding/lock';
 
 describe('the shortlist teaser lock', () => {
-  it('is locked until five answers, unless nothing is left to ask or the traveler is returning', () => {
+  it('is locked until ten answers, unless nothing is left to ask or the traveler is returning', () => {
     expect(isShortlistLocked({ answered: 0, hasQuestion: true, returning: false })).toBe(true);
-    expect(isShortlistLocked({ answered: 4, hasQuestion: true, returning: false })).toBe(true);
-    expect(isShortlistLocked({ answered: 5, hasQuestion: true, returning: false })).toBe(false);
+    expect(isShortlistLocked({ answered: 9, hasQuestion: true, returning: false })).toBe(true);
+    expect(isShortlistLocked({ answered: 10, hasQuestion: true, returning: false })).toBe(false);
     expect(isShortlistLocked({ answered: 1, hasQuestion: false, returning: false })).toBe(false);
     expect(isShortlistLocked({ answered: 0, hasQuestion: true, returning: true })).toBe(false);
-    expect(questionsToUnlock(2)).toBe(3);
-    expect(questionsToUnlock(9)).toBe(0);
+    expect(questionsToUnlock(2)).toBe(8);
+    expect(questionsToUnlock(12)).toBe(0);
   });
   it('names no place while locked, and says when the list opens', () => {
-    expect(answerMessage({ answered: 2, locked: true, mover: { name: 'Maui', by: 2 } })).toBe('Saved. 3 more to unlock your list');
-    expect(answerMessage({ answered: 5, locked: false, mover: { name: 'Maui', by: 2 } })).toBe('Your full list is unlocked');
-    expect(answerMessage({ answered: 7, locked: false, mover: { name: 'Maui', by: 2 } })).toBe('Maui moved up 2');
-    expect(answerMessage({ answered: 7, locked: false, mover: { name: 'Maui', by: -1 } })).toBe('Maui moved down 1');
-    expect(answerMessage({ answered: 7, locked: false, mover: null })).toBe('Saved. The order held.');
+    expect(answerMessage({ answered: 2, locked: true, mover: { name: 'Maui', by: 2 } })).toBe('Saved. 8 more to unlock your list');
+    expect(answerMessage({ answered: 10, locked: false, mover: { name: 'Maui', by: 2 } })).toBe('Your full list is unlocked');
+    expect(answerMessage({ answered: 12, locked: false, mover: { name: 'Maui', by: 2 } })).toBe('Maui moved up 2');
+    expect(answerMessage({ answered: 12, locked: false, mover: { name: 'Maui', by: -1 } })).toBe('Maui moved down 1');
+    expect(answerMessage({ answered: 12, locked: false, mover: null })).toBe('Saved. The order held.');
   });
 });

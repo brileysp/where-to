@@ -33,6 +33,8 @@ export interface ShortlistProps {
   /** Taste-card swipes and sharpen answers kept apart: only sharpen answers count toward the unlock. */
   sharpenAnswered: number;
   seenCardIds: string[];
+  /** The cards answered in the question step so far, with the skipped ones in seenCardIds: what the grouped questions count. */
+  sharpenCardIds: string[];
   month: number | null;
   week: number;
   who: string[];
@@ -75,8 +77,8 @@ export function ShortlistScreen(p: ShortlistProps) {
   const limited = useMemo(() => applyFlightLimit(rankedAll, p.home, p.maxHours, data.coords), [rankedAll, p.home, p.maxHours, data.coords]);
   const shown = limited.kept.slice(0, settings.shortlistPlaces);
   const question = useMemo(
-    () => pickQuestion({ input, cards: data.cards, seenCardIds: p.seenCardIds, destinations: data.destinations, month: p.month }),
-    [input, data.cards, p.seenCardIds, data.destinations, p.month],
+    () => pickQuestion({ input, cards: data.cards, seenCardIds: p.seenCardIds, askedCardIds: [...p.sharpenCardIds, ...p.seenCardIds], destinations: data.destinations, month: p.month }),
+    [input, data.cards, p.seenCardIds, p.sharpenCardIds, data.destinations, p.month],
   );
   const locked = isShortlistLocked({ answered: p.sharpenAnswered, hasQuestion: !!question, returning: p.returning });
   const dnaState = useMemo(() => dnaStateFor(input, data.dimensions), [input, data.dimensions]);
