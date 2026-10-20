@@ -191,3 +191,33 @@ table.ip-table td.nw { white-space: nowrap; }
 .ip-reason { width: 100%; font: inherit; font-size: 12.5px; border: 1px solid var(--accent); border-radius: 6px; padding: 6px 8px; background: var(--bg-panel); color: var(--text); min-height: 72px; resize: vertical; }
 .ip-nasmall { font-size: 11.5px; }
 .ip-nareason-cell { white-space: normal; line-height: 1.45; color: var(--text-dim); font-size: 12.5px; }
+
+/* Chips tab */
+.ip-ch-table tbody tr { cursor: pointer; }
+.ip-ch-table tbody tr:hover td { background: var(--bg-hover); }
+.ip-ch-table tbody tr.sel td { background: var(--accent-soft); }
+.ip-ch-name { font: inherit; font-size: 13px; font-weight: 700; background: transparent; border: 1px solid transparent; border-radius: 6px; padding: 3px 6px; color: var(--text); width: 100%; min-width: 140px; }
+.ip-ch-name:hover, .ip-ch-name:focus { border-color: var(--border-strong); background: var(--bg-panel); outline: none; }
+.ip-ch-newname { width: 260px; border-color: var(--border-strong); background: var(--bg-panel); font-weight: 400; }
+.ip-ch-status { border: 1.5px solid var(--border-strong); background: var(--bg-panel); color: var(--text-dim); border-radius: 999px; padding: 2px 12px; font: inherit; font-size: 12px; font-weight: 700; min-width: 62px; cursor: pointer; }
+.ip-ch-status.live { border-color: var(--good); color: var(--good); background: var(--good-soft); }
+.ip-ch-status:disabled { opacity: 0.5; cursor: not-allowed; }
+.ip-ch-pills { display: flex; gap: 4px; flex-wrap: wrap; }
+.ip-ch-pills i { font-style: normal; font-size: 11px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-sunken); color: var(--text-dim); }
+.ip-ch-pills i.new { border-style: dashed; border-color: var(--warn); color: var(--warn); }
+.ip-ch-editor { display: flex; flex-direction: column; gap: 10px; }
+.ip-ch-edithead { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ip-ch-driver { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: var(--bg-sunken); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; font-size: 12.5px; }
+.ip-ch-driver.add { border-style: dashed; }
+.ip-ch-full { width: 76px; font: inherit; font-size: 12.5px; padding: 3px 6px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg-panel); color: var(--text); }
+.ip-ch-fit { display: inline-flex; align-items: center; gap: 8px; min-width: 120px; }
+.ip-ch-bar { flex: 1; min-width: 50px; height: 7px; background: var(--bg-sunken); border-radius: 4px; overflow: hidden; }
+.ip-ch-bar b { display: block; height: 100%; background: var(--good); }
+.ip-ch-num { border: 1px dashed transparent; background: none; border-radius: 6px; padding: 1px 7px; min-width: 34px; font: inherit; font-weight: 700; font-size: 13px; font-variant-numeric: tabular-nums; cursor: pointer; color: var(--text); }
+.ip-ch-num:hover { border-color: var(--border-strong); }
+.ip-ch-num.ov { color: var(--accent); border-color: var(--accent); }
+.ip-ch-places td { vertical-align: middle; }
+.ip-ch-override { border: 1px solid var(--border-strong); border-radius: 9px; background: var(--bg-sunken); padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+.ip-ch-lab { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
+.ip-ch-needs { display: block; }
+.ip-ch-unused summary { cursor: pointer; font-size: 12.5px; color: var(--text-dim); }

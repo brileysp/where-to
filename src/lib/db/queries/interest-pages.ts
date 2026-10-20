@@ -2,7 +2,7 @@ import { eq, desc, inArray, sql } from 'drizzle-orm';
 import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { db } from '../client';
-import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts } from '../schema';
+import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
 import { SLIDERS, VISIBLE_SLIDERS } from '@/lib/scoring/constants';
@@ -12,7 +12,7 @@ import { isSliderNA } from '@/lib/scoring/destinations';
 import { factDefsFor, RULES_TAB_KEYS } from '@/lib/admin/interest-pages/config';
 import { PLACE_TYPE_BY_ID } from '@/lib/admin/interest-pages/place-types';
 import { computeCompleteness, type Completeness, type PlaceInput } from '@/lib/admin/interest-pages/completeness';
-import type { AuthoringBatchRow, AuthoringPassRow, IdeaRow, InterestPageData, InterestPlaceRow, NaReasonInfo, PlaceStatus, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
+import type { AuthoringBatchRow, AuthoringPassRow, ChipOverrideRow, ChipRow, IdeaRow, InterestPageData, InterestPlaceRow, NaReasonInfo, PlaceStatus, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
 
 /**
  * Authoring passes for one interest, newest first, each with its batches: when it finished (or "in progress"), places, tokens and cost.
@@ -213,7 +213,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
   const slider = SLIDERS.find((s) => s.key === interestKey);
   if (!slider) return null;
 
-  const [scored, primaryRows, genRows, factRows, reviewRows, todoRows, ideaRows, siteRows, passRows, ruleRows] = await Promise.all([
+  const [scored, primaryRows, genRows, factRows, reviewRows, todoRows, ideaRows, siteRows, passRows, ruleRows, chipRows, overrideRows] = await Promise.all([
     getAllScoredPlaces({ includeUnpublished: true }),
     getPrimaryPlaceRows(),
     db
@@ -227,6 +227,8 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     db.select().from(interestReferenceSites).where(eq(interestReferenceSites.interestKey, interestKey)).orderBy(desc(interestReferenceSites.usefulness), interestReferenceSites.label),
     getAuthoringPasses(interestKey),
     db.select().from(interestRuleSections).where(eq(interestRuleSections.interestKey, interestKey)),
+    db.select().from(interestChips).where(eq(interestChips.interestKey, interestKey)).orderBy(interestChips.sortOrder),
+    db.select().from(placeChipOverrides).where(eq(placeChipOverrides.interestKey, interestKey)),
   ]);
   const completenessMap = await getInterestCompleteness([interestKey], new Map(scored.map((d) => [d.id, d])));
 
@@ -340,6 +342,8 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     ideas: ideaRows.map(toIdea),
     completeness: completenessMap[interestKey],
     passes: passRows,
+    chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn })),
+    chipOverrides: overrideRows.map((o): ChipOverrideRow => ({ chipKey: o.chipKey, placeId: o.placeId, fit: o.fit, reason: o.reason, setBy: o.setBy, setAt: o.setAt.toISOString() })),
     ruleOverrides: Object.fromEntries(ruleRows.map((r) => [r.sectionKey, r.items])),
     interestOptions: VISIBLE_SLIDERS.map((s) => ({ key: s.key, label: s.label, icon: s.icon, group: s.group })),
   };

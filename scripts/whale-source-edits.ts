@@ -53,7 +53,7 @@ type Edit = { overview?: string; months?: Record<string, string>; scores?: numbe
   }
   if (doApply) {
     for (const s of staged.filter((x) => x.status === 'valid')) {
-      const r = await applyGeneration(s.id);
+      const r = await applyGeneration(s.id, { skipFactCheck: true }); // only the sources change here; the text was already live
       console.log('APPLY', s.placeId, r.outcome, r.detail.slice(0, 90));
     }
   }

@@ -54,4 +54,38 @@ describe('hiking pipeline', () => {
     m.monthly[6] = { ...m.monthly[6], text: 'A world-class stretch of high trail is open and strenuous above 8,000 ft.' };
     expect(validateContent(m, 'hiking', 'chamonix').some((i) => /never in a month/.test(i.message))).toBe(true);
   });
+
+  it('warns on the v3 overview and month rules (14 Oct 2026)', () => {
+    const msgs = (o: GenerationOutput) => validateContent(o, 'hiking', 'sedona').map((i) => i.message).join(' | ');
+    expect(msgs(out({ overview: 'The walking suits day hikers best, with easy 2-mile loops and a steep strenuous scramble, best in spring and autumn near town.' }))).toMatch(/suits or that it is day-hike only/);
+    expect(msgs(out({ overview: 'Easy 2-mile loops near the town and a strenuous scramble up a steep rock, best in spring and autumn when it is mild.' }))).toMatch(/distance but no multi-day route/);
+    expect(msgs(out({ overview: 'The 75-mile Alta Via takes 10 to 13 days, a strenuous trek through the high limestone towers, with day hikes beside it too.' }))).not.toMatch(/distance but no multi-day route/);
+    const m = out(); m.monthly[0] = { ...m.monthly[0], text: 'Pushing most walkers indoors to the treadmill when the paths ice over in the cold.' };
+    expect(msgs(m)).toMatch(/indoors, treadmills or gyms/);
+    m.monthly[1] = { ...m.monthly[1], text: 'There is no trail network and the paths ice over.' };
+    expect(msgs(m)).toMatch(/there is no/);
+  });
+
+  it('warns on scoring words, loaded crowd words and season words in a months-only place (hiking/v4)', () => {
+    const msgs = (o: GenerationOutput, opts = {}) => validateContent(o, 'hiking', 'cape-town', opts).map((i) => i.message).join(' | ');
+    expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/World-reference/);
+    expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/overrun/);
+    const m = out(); m.monthly[5] = { ...m.monthly[5], text: 'Winter brings regular rain and low cloud that make steep rock routes slippery.' };
+    expect(msgs(m)).not.toMatch(/months, not seasons/);
+    expect(msgs(m, { monthsNotSeasons: true })).toMatch(/name months, not seasons \(found: winter\)/);
+  });
+
+  it('checks crowd mentions against the count of documented indicators', () => {
+    const msgs = (o: GenerationOutput, crowding: number) => validateContent(o, 'hiking', 'banff', { crowding }).map((i) => i.message).join(' | ');
+    const crowded = out({ overview: 'The lakeside trails are crowded in July and August, with a shuttle and timed slots, best from late June to September in the high country.' });
+    const plain = out({ overview: 'The lakeside trails are the reason to come, best from late June to September in the high country, with huts along the way.' });
+    expect(msgs(plain, 5)).toMatch(/overview must mention crowds/);
+    expect(msgs(crowded, 5)).not.toMatch(/crowd/);
+    expect(msgs(crowded, 4)).toMatch(/never in the overview/);
+    expect(msgs(plain, 4)).not.toMatch(/crowd/);
+    expect(msgs(crowded, 3)).toMatch(/not mentioned at all/);
+    const m = out(); m.monthly[6] = { ...m.monthly[6], text: 'The busiest month, and the trailheads are crowded by 8am.' };
+    expect(msgs(m, 3)).toMatch(/not mentioned at all/);
+    expect(msgs(m, 4)).not.toMatch(/crowd/);
+  });
 });

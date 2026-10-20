@@ -1,8 +1,8 @@
 import { hasCelsius } from '../text/temperature';
 import { hasMeters } from '../text/length';
-import { SLIDERS } from '../scoring/constants';
 import { oldNameIssues } from './renamed-places';
 import { INTEREST_ANCHORS } from '../scoring/anchors';
+import { seasonWordsIn } from './hemisphere';
 import type { GenerationOutput } from './schema';
 import { emphasisIsBalanced, stripEmphasis } from '../text/emphasis';
 
@@ -23,14 +23,6 @@ const CLIFF_THRESHOLD = 2; // an isolated month differing from both neighbors by
 const NEIGHBOR_CLOSE_THRESHOLD = 0.5; // "the neighbors are close to each other" — playbook's own cliff definition
 const LITERAL_MAX_RUN_LENGTH = 5; // a run this long at the ceiling needs real justification (playbook §1 Step 6)
 
-// Formula families that are clearly land-based, non-water interests — a
-// generation for one of these mentioning reef/dive/snorkel-specific content
-// is category bleed, not a legitimate cross-reference (compare to the
-// playbook's OWN overlap rule, which is about two interests both covering
-// the same land animal from different angles — a genuinely different case
-// from a hiking-formula interest describing marine life at all).
-const LAND_FORMULAS = new Set(['hiking', 'snow']);
-const MARINE_BLEED_KEYWORDS = ['reef', 'coral', 'snorkel', 'scuba', 'dive site', 'diving', 'manta ray', 'whale shark', 'liveaboard'];
 
 
 // Scenic/atmospheric padding explicitly banned by the Wildlife Viewing
@@ -240,7 +232,7 @@ function validateHikeRatings(output: GenerationOutput): ValidationIssue[] {
 }
 
 /** Hiking: "world-class" and "legendary" appear at most once in a place's whole text and never in a month blurb (owner rule, 14 Oct 2026). */
-function validateHikingText(output: GenerationOutput): ValidationIssue[] {
+function validateHikingText(output: GenerationOutput, options: ValidateOptions = {}): ValidationIssue[] {
   const big = /\b(world-class|legendary)\b/gi;
   const inMonths = output.monthly.filter((m) => big.test(m.text)).length;
   big.lastIndex = 0;
@@ -248,6 +240,34 @@ function validateHikingText(output: GenerationOutput): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   if (inMonths > 0) issues.push({ layer: 'content', severity: 'warning', message: `"World-class" or "legendary" appears in ${inMonths} month blurb(s). The rule is never in a month.` });
   if (total > 1) issues.push({ layer: 'content', severity: 'warning', message: `"World-class" or "legendary" appears ${total} times. The rule is at most once in a place's whole text.` });
+  // Owner review of the 5-place sample, 14 Oct 2026 (hiking/v3). Warnings only: a person decides.
+  const all = [output.overview, ...output.monthly.map((m) => m.text)];
+  if (/\b(suits?|best for|mostly|entirely|best suited to)\b[^.]{0,30}\bday[- ](hikers?|hikes?|trips?)\b|\bday-trip focused\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview says who the place suits or that it is day-hike only. Day hiking is the default; cut it, and mention a trek only if one exists.' });
+  if (all.some((t) => /\b(indoors?|treadmills?|gyms?)\b/i.test(t))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb mentions indoors, treadmills or gyms. Out of scope: say what the trails are like and stop.' });
+  if (/\bthere (is|are) no\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'A blurb says "there is no ...". Do not state what a place lacks.' });
+  if (/\d[\d,.]*[- ]mile/i.test(output.overview) && !/\b\d+(?:[-\s](?:to\s+\d+\s+)?)days?\b|\bmulti-day\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview gives a distance but no multi-day route. Day hikes get no mileage unless 15 miles or more; check it.' });
+  // Owner review, 14 Oct 2026 (hiking/v4).
+  if (/\bmoderate\b(?! (daytime |overnight )?(temperatures?|weather|conditions?|rain|climate|humidity|winds?|heat|cool|warmth)\b)/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'A bare "moderate" is not used to describe a route. Say what the route is like (steep, long, rough, exposed) or leave the level out.' });
+  // Owner review, 15 Oct 2026 (hiking/v6): vary the opening verb; hiking, not walking, for rugged ground.
+  if (/\boffers?\b/i.test(output.overview)) issues.push({ layer: 'content', severity: 'warning', message: 'The overview uses "offer(s)". Vary the verb: open with the place\'s most distinctive feature.' });
+  const peakScore = Math.max(...output.monthly.map((m) => m.score));
+  if (peakScore >= 5 && /\bwalkers\b|\bthe best walking\b|\bwalking is best\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"Walkers" or "the best walking" is used for a place with real hiking. Say hikers and hiking; keep "walking" for flat, easy ground.' });
+  if (/\bheadline\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"Headline" (as in "the headline route") is not used. Say "best-known" or name the route.' });
+  if (/\bworld-reference\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: '"World-reference" is the scoring scale\'s own word. Say "world famous", or one "world-class", or describe it, never "world-reference".' });
+  if (/\b(overrun|swamped|teeming|inundated|invaded|flooded with (tourists|visitors))\b/i.test(all.join(' '))) issues.push({ layer: 'content', severity: 'warning', message: 'Crowding is said as "crowded", with the places named. Words like "overrun" or "swamped" are too negative and vague.' });
+  if (/\bmost (celebrated|legendary) hiking\b/i.test(output.overview) || /^Some of the world's (most )?/i.test(output.overview.trim())) issues.push({ layer: 'content', severity: 'warning', message: 'The overview opens with a stock self-rating phrase ("Some of the world\'s ..."). Open with what is specific to this place.' });
+  if (options.crowding !== undefined) {
+    const words = /\b(crowd\w*|congest\w*|queue\w*|busiest)\b/i;
+    const inOverview = words.test(output.overview);
+    const inMonths = output.monthly.filter((m) => words.test(m.text)).length;
+    if (options.crowding === 5 && !inOverview) issues.push({ layer: 'content', severity: 'warning', message: 'The notes show 5 of 5 crowding indicators: the overview must mention crowds.' });
+    if (options.crowding === 4 && inOverview) issues.push({ layer: 'content', severity: 'warning', message: 'The notes show 4 of 5 crowding indicators: crowds may be mentioned in peak-crowd month blurbs, never in the overview.' });
+    if (options.crowding <= 3 && (inOverview || inMonths > 0)) issues.push({ layer: 'content', severity: 'warning', message: `The notes show ${options.crowding} of 5 crowding indicators: crowds are not mentioned at all.` });
+  }
+  if (options.monthsNotSeasons) {
+    const found = [...new Set(all.flatMap((t) => seasonWordsIn(t)))];
+    if (found.length) issues.push({ layer: 'content', severity: 'warning', message: `This place is in the Southern Hemisphere or near the equator: name months, not seasons (found: ${found.join(', ')}).` });
+  }
   return issues;
 }
 
@@ -269,10 +289,17 @@ function validateFitExtras(output: GenerationOutput): ValidationIssue[] {
   return issues;
 }
 
-export function validateContent(rawOutput: GenerationOutput, interestKey: string, placeId: string): ValidationIssue[] {
+export interface ValidateOptions {
+  /** The place is in the Southern Hemisphere or the equatorial belt: text names months, never seasons (see hemisphere.ts). */
+  monthsNotSeasons?: boolean;
+  /** Count of documented crowding indicators (0-5) from the hiking notes: 5 must mention crowds, 4 only peak months, 3 or fewer never. Undefined = not checked. */
+  crowding?: number;
+}
+
+export function validateContent(rawOutput: GenerationOutput, interestKey: string, placeId: string, options: ValidateOptions = {}): ValidationIssue[] {
   if (isNotApplicable(rawOutput)) return validateNotApplicable(rawOutput);
   const oldNameWarnings: ValidationIssue[] = oldNameIssues(placeId, [rawOutput.overview, ...rawOutput.monthly.map((m) => m.text)]).map((message) => ({ layer: 'content' as const, severity: 'warning' as const, message }));
-  const issues: ValidationIssue[] = [...oldNameWarnings, ...validateFitExtras(rawOutput), ...validateSurfRatings(rawOutput), ...validateHikeRatings(rawOutput), ...(interestKey === 'hiking' ? validateHikingText(rawOutput) : []), ...validateManyTens(rawOutput), ...(interestKey === 'diving' ? validateDivingText(rawOutput) : [])];
+  const issues: ValidationIssue[] = [...oldNameWarnings, ...validateFitExtras(rawOutput), ...validateSurfRatings(rawOutput), ...validateHikeRatings(rawOutput), ...(interestKey === 'hiking' ? validateHikingText(rawOutput, options) : []), ...validateManyTens(rawOutput), ...(interestKey === 'diving' ? validateDivingText(rawOutput) : [])];
   // Species-name markers (**Name**) are display formatting: every check below sees the text without them.
   const allText = [rawOutput.overview, ...rawOutput.monthly.map((m) => m.text)];
   if (allText.some((t) => !emphasisIsBalanced(t))) {
@@ -334,18 +361,6 @@ export function validateContent(rawOutput: GenerationOutput, interestKey: string
           severity: 'warning',
           message: `Months ${monthList} share duplicate/near-duplicate blurb text (scores agree, within tolerance). Worth a human glance: legitimate if this is a genuinely flat season, a bug if it's lazy repetition of a season that should actually differ.`,
         });
-      }
-    }
-  }
-
-  // Category bleed — marine/reef/dive-specific keywords showing up in a
-  // clearly land-based interest's content.
-  const slider = SLIDERS.find((s) => s.key === interestKey);
-  if (slider && LAND_FORMULAS.has(slider.formula)) {
-    const allText = `${overview} ${monthly.map((m) => m.text).join(' ')}`.toLowerCase();
-    for (const kw of MARINE_BLEED_KEYWORDS) {
-      if (allText.includes(kw)) {
-        issues.push({ layer: 'content', severity: 'reject', message: `Category bleed: "${interestKey}" is a land-based (${slider.formula}) interest, but its content mentions "${kw}" — a marine/diving-specific term.` });
       }
     }
   }

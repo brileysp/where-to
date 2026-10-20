@@ -1,4 +1,4 @@
-import type { InterestFactValue, InterestIdeaStage, InterestTodoStatus, ReferenceSiteAccess } from '@/lib/db/schema';
+import type { InterestChipDriver, InterestChipStatus, InterestFactValue, InterestIdeaStage, InterestTodoStatus, ReferenceSiteAccess } from '@/lib/db/schema';
 import type { FactDef } from './config';
 import type { Completeness } from './completeness';
 import type { PlaceType } from './place-types';
@@ -132,6 +132,27 @@ export interface AuthoringPassRow {
   batches: AuthoringBatchRow[];
 }
 
+/** A sub-interest chip for this interest (see chips.ts). */
+export interface ChipRow {
+  key: string;
+  label: string;
+  order: number;
+  status: InterestChipStatus;
+  drivers: InterestChipDriver[];
+  /** Filled in while the chip waits on a column that has not been added yet. */
+  needsColumn: string;
+}
+
+/** A fit typed by hand for one place and chip. */
+export interface ChipOverrideRow {
+  chipKey: string;
+  placeId: string;
+  fit: number;
+  reason: string;
+  setBy: string;
+  setAt: string;
+}
+
 export interface InterestPageData {
   key: string;
   label: string;
@@ -150,6 +171,8 @@ export interface InterestPageData {
   ideas: IdeaRow[];
   completeness: Completeness;
   passes: AuthoringPassRow[];
+  chips: ChipRow[];
+  chipOverrides: ChipOverrideRow[];
   /** Admin-edited versions of Rules & scoring lists, keyed by section (e.g. "birding.ladder"). A missing key uses the built-in list. */
   ruleOverrides: Record<string, unknown[]>;
   /** Every interest, for the picker at the top of the page. */

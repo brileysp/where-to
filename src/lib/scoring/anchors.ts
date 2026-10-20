@@ -211,8 +211,10 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
   },
   surfing: {
     definition: 'A world-reference wave.',
-    // Six places, set by the owner on 11 Oct 2026 (was Bali, Maui, Lisbon). French Polynesia is Teahupo'o, Fiji is Cloudbreak, Namibia is Skeleton Bay.
-    ten: ['bali', 'maui', 'lisbon', 'borabora', 'fiji', 'namibia'],
+    // Set by the owner on 11 Oct 2026 (was Bali, Maui, Lisbon). French Polynesia is Teahupo'o, Fiji is Cloudbreak, Namibia is Skeleton Bay.
+    // 17 Oct 2026: Lisbon dropped (Gemini scores it 9.0, a wave for every level but no single world-reference wave). Namibia stays on the list
+    // with no 10, a recorded decision: Skeleton Bay breaks only a few days a year, so it peaks at 9.4.
+    ten: ['bali', 'maui', 'borabora', 'fiji', 'namibia'],
   },
   diving: {
     definition: 'Among the best reefs or marine encounters on the planet.',

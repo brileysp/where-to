@@ -406,7 +406,7 @@ function HikingRules() {
         </div>
       </div>
       <div className="ip-note">
-        <b>About the data columns.</b> The trail, rating, season, altitude, permit, crowd and hazard columns are recorded facts. They are built but empty: they are filled from web sources before any Gemini run, and then sent to Gemini with each place as first-draft notes. Rules here are edited for this page only. The Hiking instructions are prompts/hiking/v1.md, with the shared on-foot rules in prompts/_shared/on-foot-core.md, so a change that should reach the writing has to be made there too.
+        <b>About the data columns.</b> The trail, rating, season, altitude, permit, crowd and hazard columns are recorded facts. They are built but empty: they are filled from web sources before any Gemini run, and then sent to Gemini with each place as first-draft notes. Rules here are edited for this page only. The Hiking instructions are the newest file in prompts/hiking (v6 at the time of writing), with the shared on-foot rules in prompts/_shared/on-foot-core.md, so a change that should reach the writing has to be made there too.
       </div>
     </>
   );

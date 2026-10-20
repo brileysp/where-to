@@ -19,7 +19,7 @@ function loadEnv() {
 const ACCESS: Record<string, string> = { dayBoat: 'a day boat from a nearby harbor', shore: 'from the shore or a house reef (no boat needed)', liveaboard: 'by liveaboard (a multi-day dive boat to remote sites)', mixed: 'in several styles (day boats, shore and liveaboards)' };
 const CERT: Record<string, string> = { none: 'no certification (snorkeling or introductory dives)', openWater: 'Open Water certification', advanced: 'Advanced certification (deeper sites or stronger current)', specialty: 'specialty training (cave, wreck, technical, drysuit or ice)' };
 const CUR: Record<string, string> = { none: 'little or no current', mild: 'mild current', moderate: 'moderate current', strong: 'strong current (drift diving)' };
-const DRAW: Record<string, string> = { reef: 'coral reef scenery and its fish', animals: 'being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery', wrecks: 'wrecks', caves: 'caves and cenotes', kelp: 'kelp forests and cold-water reef', mixed: 'several kinds of site about equally (reef, wrecks, walls, caves)', other: 'something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)' };
+const DRAW: Record<string, string> = { reef: 'coral reef scenery and its fish', animals: 'being in the water with animals (sharks, rays, turtles, sea lions and similar) over rock or open water, not coral reef scenery', wrecks: 'wrecks', caves: 'caves and cenotes', kelp: 'kelp forests and cold-water reef', other: 'something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)' };
 
 async function main() {
   loadEnv();
@@ -51,7 +51,8 @@ async function main() {
       `The main dive sites need ${CERT[r.certification] ?? r.certification}.`,
       `Typical depth of the main sites: ${r.typicalDepth}. Water temperature: ${r.waterTemp}, with ${CUR[r.current] ?? r.current}.`,
     ];
-    if (r.drawType) facts.push(`What visitors mostly go underwater for: ${DRAW[r.drawType] ?? r.drawType}.`);
+    const draws = (Array.isArray(r.drawType) ? r.drawType : r.drawType && r.drawType !== 'mixed' ? [r.drawType] : []) as string[];
+    if (draws.length) facts.push(`What visitors mostly go underwater for: ${draws.map((d) => DRAW[d] ?? d).join('; ')}.`);
     const animals = seasons[id]?.animalsOverride ?? r.animals;
     if (animals) facts.push(`Animals to know about, with how likely they are and when (a helpful pointer, not a complete list): ${animals}.`);
     facts.push(...(seasons[id]?.extraFacts ?? []));

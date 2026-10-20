@@ -182,8 +182,4 @@ export interface GenerationContext {
   /** Existing curve-derived monthly scores, if this interest already has any
    * (a 'correct' pass) — omitted entirely for first-time 'author' calls. */
   existingMonthly?: number[];
-  /** Already-authored content for OTHER interests at this place, so Gemini
-   * doesn't restate a claim another slider already owns (playbook §2's
-   * overlap rule) — kept short (label + first sentence of overview only). */
-  relatedInterestSummaries: Array<{ interestKey: string; label: string; firstSentence: string }>;
 }

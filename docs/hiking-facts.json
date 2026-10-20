@@ -1,0 +1,3086 @@
+{
+ "_note": "Hiking notes (Oct 2026), built by scripts/build-hiking-facts.ts from the hiking columns on the interest page; first drafts, only partly checked against web sources. Passed to Gemini as ground truth.",
+ "falklands": {
+  "forPlaceName": "Falkland Islands",
+  "scope": "Walking is on the islands' open land: the nature trail to Gypsy Cove near Stanley (Magellanic penguins), the Maritime History Trail from Stanley to Cape Pembroke, and Sea Lion Island (reached by a 40-minute flight from Stanley or by cruise-ship landings), where you can walk anywhere without disturbing the wildlife.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "faroe-islands": {
+  "forPlaceName": "Faroe Islands",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Several popular routes charge a mandatory hiking fee (the Sørvágsvatn trail and Kallur lighthouse about 200 DKK, Mykines about 100 DKK plus the ferry); closures can apply during sheep gathering and lambing; the rules were changing in 2026..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "fiji": {
+  "forPlaceName": "Fiji",
+  "scope": "Walking in Fiji: the Lavena Coastal Walk on Taveuni (about 10 km round trip with a rope-assisted creek crossing to Wainibau waterfall, slippery in the November to March wet season) and Mount Batilamu in the Koroyanitu range on Viti Levu (1,110 m, from Abaca village).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Lavena Coastal Walk on Taveuni charges a village fee of about FJ$35 a person..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "fjords": {
+  "forPlaceName": "Norwegian Fjords",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Parking at the Trolltunga trailhead (Mågelitopp) must be pre-booked..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Volume: about 80,000 hikers a year on Trolltunga, more than 300,000 on Preikestolen, more than 60,000 on Besseggen in the short season. Recognized: CNBC (2019) on social-media crowding at Trolltunga, Preikestolen and Kjeragbolten. Controls: pre-booked parking at Trolltunga (30 spaces at the closest lot). Parking: the Besseggen car park fills before 7 a.m."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "okinawa": {
+  "forPlaceName": "Okinawa",
+  "scope": "Okinawa as a whole: the Yanbaru forest in the north (Yonaha-dake, the island's highest peak; rugged, narrow trails; guided tours are optional) plus coastal walks and island castles.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "olympic": {
+  "forPlaceName": "Olympic National Park",
+  "scope": "Olympic Peninsula as a whole: the high ridge trails near Hurricane Ridge, the Hoh Rain Forest (the Upper Hoh road washed out in December 2024), Sol Duc and the wilderness coast.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Overnight trips need a Wilderness Camping Permit (reserve on Recreation.gov; popular areas hold back only half their quota for walk-ups, scarce in summer); bear canisters are required in places such as Enchanted Valley and the Wilderness Coast. The Hoh road and Hurricane Ridge access have been disrupted by a washout and the 2023 fire at the visitor center, so check current status..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "barcelona": {
+  "forPlaceName": "Barcelona",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Cable car, gondola or chairlift, Walk from town.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "beijing": {
+  "forPlaceName": "Beijing & Great Wall",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Popular Great Wall sections (Mutianyu, Badaling, Jinshanling) require advance real-name booking; wild sections such as Jiankou may need a guide or permit..",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "seoul": {
+  "forPlaceName": "Seoul",
+  "scope": "Seoul as a whole: Bukhansan National Park (the Baegundae route, about 10 km and 4 hours), Bugaksan and the Seoul City Wall, all reached by metro.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sequoia-kings-canyon": {
+  "forPlaceName": "Sequoia & Kings Canyon",
+  "scope": "Sequoia and Kings Canyon as a whole: big-tree groves and High Sierra trails, with wilderness permits for overnight trips.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Overnight trips need a wilderness permit from Recreation.gov (released six months ahead, with a quota season in summer)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "seychelles": {
+  "forPlaceName": "Seychelles",
+  "scope": "Seychelles as a whole: short forest and granite-slab trails on Mahe such as Anse Major (about 2.4 km, 70 m of climbing, around an hour) and Morne Seychellois National Park.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "belfast-giants-causeway": {
+  "forPlaceName": "Northern Ireland",
+  "scope": "Northern Ireland as a whole, not only Belfast & the Giant's Causeway.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bend-crater-lake": {
+  "forPlaceName": "Bend & Crater Lake",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Central Cascades wilderness permits (some by reservation) are required from June 15 to October 15..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bhutan": {
+  "forPlaceName": "Bhutan",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Visitors pay a Sustainable Development Fee ($100 a night until August 2027) and must travel with a licensed operator or guide..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "black-forest": {
+  "forPlaceName": "Black Forest",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "borneo": {
+  "forPlaceName": "Malaysian Borneo",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Climbing Mount Kinabalu needs a Sabah Parks permit through a licensed operator, a mandatory guide and a booked night at Panalaban; daily climber numbers are capped..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "borabora": {
+  "forPlaceName": "French Polynesia",
+  "scope": "French Polynesia as a whole, not only Bora Bora.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Tahiti Tourisme says a guide is needed for Mount Pahia; Mount Otemanu's summit cannot be climbed, only its shoulder..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "botswana": {
+  "forPlaceName": "Okavango Delta",
+  "scope": "Walking in the Okavango is guided bush walks on the delta's islands from safari camps, for wildlife; there are no trails to hike independently.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter).",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "aruba": {
+  "forPlaceName": "Aruba",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "athens": {
+  "forPlaceName": "Athens",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bahamas": {
+  "forPlaceName": "Bahamas",
+  "scope": "Walking within reach: boardwalk and cave trails in Lucayan National Park on Grand Bahama; boardwalk trails to blue holes in Blue Holes National Park on Andros; the short path up Mount Alvernia (203 ft, the highest point in the Bahamas) on Cat Island; the Bimini nature trail.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "barbados": {
+  "forPlaceName": "Barbados",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "dolomites": {
+  "forPlaceName": "Dolomites",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Cable car, gondola or chairlift, Shuttle or bus to the trailhead.",
+   "Crowding: 5 of 5 documented indicators (crowded). You must mention crowds, in the overview and in the months where crowds peak. Evidence: Volume: Seceda about 4,000 to 6,000 visitors a day in summer, Lago di Sorapis up to 3,000 a day. Recognized: South Tyrol ranked with Venice for overcrowding exposure (Demoskopika), rangers at busy sites, accommodation capped at 2019 levels. Controls: Lago di Braies car access restricted 1 Jul to 15 Sep, 9am to 4pm; Tre Cime toll road with timed booking; Seceda lift timed slots and a ridge turnstile; Santa Maddalena bus limits. Parking: pass pull-outs controlled, Alpe di Siusi car parks booked online. Congestion: Braies boat pier described as extremely crowded. A few hotspots, but pressure is region-wide. Sources: moonhoneytravel.com, euronews.com, wildconnectionsphotography.com, throneandvine.com (14 Oct 2026)."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sedona": {
+  "forPlaceName": "Sedona",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Volume: about 2.8 to 3 million visitors a year for a town of about 10,000 (ADOT, Sedona Chamber). Recognized: Outside magazine essay on overtourism; Sedona sustainable tourism plan. Controls: Cathedral Rock trailhead lot closed Thursday to Sunday, free Sedona Shuttle instead (Forest Service). Parking: Devil's Bridge overflow along Boynton Pass Road from about 7:15am. No documented queues."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "madeira": {
+  "forPlaceName": "Madeira",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Recognized: regional secretary says pressure points remain; carrying capacity of all classified trails updated with the University of Madeira. Controls: since 2026 every classified (PR) trail needs a paid time-slot booking with a visitor cap per slot (visitmadeira.com, timesofmadeira.com). Parking: at Caldeirão Verde after 10am you park about 2 km down the road. Congestion: Caldeirão Verde packed 10am to 2pm. No trail-specific volume figure found."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cape-town": {
+  "forPlaceName": "Cape Town",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "banff": {
+  "forPlaceName": "Banff & Jasper National Parks",
+  "scope": "Banff & Jasper National Parks as a whole, not only Banff National Park.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Moraine Lake Road is closed to private vehicles from about 1 June to mid-October: visitors use the Parks Canada shuttle (reservation recommended), Roam Transit, a commercial bus or a taxi..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 5 of 5 documented indicators (crowded). You must mention crowds, in the overview and in the months where crowds peak. Evidence: Volume: the town of Banff alone receives more than 4 million visitors a year; Banff National Park had about 694,000 visitors in July. Recognized: press coverage of Banff confronting overtourism (the-iceberg.org); Parks Canada acted on it. Controls: private vehicles banned on the Moraine Lake road since 2023, shuttle with reservations (cbc.ca). Parking: Moraine Lake lot full nearly 24 hours a day in summer, about 900 cars parked and more than 5,000 turned away a day; Johnston Canyon lot full with cars along the Bow Valley Parkway. Congestion: Johnston Canyon described as heavily crowded, July to September."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "torres-del-paine": {
+  "forPlaceName": "Torres del Paine",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Park tickets are bought online in advance (at least 24 hours ahead if arriving by bus, tour or boat). The W and O treks need booked campsites or refugios, which sell out months ahead for December to February..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "swissalps": {
+  "forPlaceName": "Zermatt & the Swiss Alps",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Cable car, gondola or chairlift, Train or cog railway, Walk from town.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "chicago": {
+  "forPlaceName": "Chicago",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "belize": {
+  "forPlaceName": "Belize",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "budapest": {
+  "forPlaceName": "Budapest",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "angkor": {
+  "forPlaceName": "Cambodia",
+  "scope": "Cambodia as a whole, not only Angkor Wat & Siem Reap.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bagan": {
+  "forPlaceName": "Myanmar",
+  "scope": "Myanmar as a whole, not only Bagan.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "amsterdam": {
+  "forPlaceName": "Amsterdam",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "berlin": {
+  "forPlaceName": "Berlin",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bangkok": {
+  "forPlaceName": "Bangkok",
+  "scope": "Walking within reach is city parks: Lumphini Park in the city, and the green riverside paths of Bang Krachao across the river.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bordeaux": {
+  "forPlaceName": "Bordeaux",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "buenosaires": {
+  "forPlaceName": "Buenos Aires",
+  "scope": "Walking within reach is city parks and nature paths: the Costanera Sur ecological reserve, the Palermo parks, and the delta waterways around Tigre.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "big-island": {
+  "forPlaceName": "Big Island",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nepal": {
+  "forPlaceName": "Nepal",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Trekking permits and park or conservation fees are required (the Annapurna Conservation Area is about NPR 3,000, US$25 to 30, in 2026); permits are arranged through a licensed trekking agency..",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tokyo-kyoto": {
+  "forPlaceName": "Tokyo & Kyoto",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Cable car, gondola or chairlift, Walk from town.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "acadia": {
+  "forPlaceName": "Acadia National Park",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Cadillac Summit Road needs a vehicle reservation in the main season (hikers and cyclists are exempt)..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 5 of 5 documented indicators (crowded). You must mention crowds, in the overview and in the months where crowds peak. Evidence: Volume: about 4 million visits a year (recreation.gov). Recognized: the park says growth has caused severe traffic and parking congestion; the superintendent says Jordan Pond is overparked regularly. Controls: Cadillac Summit Road vehicle reservations, May to October. Parking: summit lot holds about 150 vehicles, up to 350 converge. Queues: Jordan Pond House lines (45 minutes reported), crowded summit walkway."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "aspen": {
+  "forPlaceName": "Aspen Snowmass",
+  "scope": "Aspen Snowmass as a whole, not only Aspen.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Maroon Bells Scenic Area is reservation-only for vehicles and the shuttle in summer; overnight permits are required for Conundrum Hot Springs, the Four Pass Loop and Capitol Lake..",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead, Drive to a trailhead.",
+   "Crowding: 5 of 5 documented indicators (crowded). You must mention crowds, in the overview and in the months where crowds peak. Evidence: Volume: more than 300,000 visitors a year at Maroon Bells, double a few years earlier. Recognized: the Forest Service says the reservation system reduces overcrowding. Controls: reservation-only vehicles and shuttle since 2020, with daily caps. Parking: about 95% of day-parking gone two to four weeks out. Queues: cars queue on Maroon Creek Road at peak."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bavaria-munich": {
+  "forPlaceName": "Bavaria & Munich",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Cable car, gondola or chairlift, Shuttle or bus to the trailhead.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Volume: up to 4,000 cars a day at Walchensee (2020 report). Recognized: summer 2025 overtourism fears around the Eibsee; a deputy mayor compared the crowds to Oktoberfest. Parking: bumper-to-bumper traffic on the last kilometres of the only road to the Eibsee and Zugspitze cable cars. Queues: crowds waiting for Eibsee shuttle buses, which were sometimes too full. No access controls."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "basque-country": {
+  "forPlaceName": "Basque Country",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: A free ticket is mandatory at San Juan de Gaztelugatxe on busy days (daily from mid-June to mid-September, weekends from spring to autumn)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "algarve": {
+  "forPlaceName": "Algarve",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "amalfi": {
+  "forPlaceName": "Amalfi Coast",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead, Walk from town.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "andalucia": {
+  "forPlaceName": "Andalucía",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Caminito del Rey needs a timed online ticket, limited to about 100 people per half hour; a shuttle bus runs from the visitors centre..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "antarctica": {
+  "forPlaceName": "Antarctic Peninsula",
+  "scope": "The only walking is short shore landings from expedition cruise ships on the Antarctic Peninsula, on snow and ice, in the cruise season only.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Landings are capped at 100 people ashore at a time, one ship per site (Antarctic Treaty and IAATO rules)..",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "arches-canyonlands": {
+  "forPlaceName": "Arches & Canyonlands",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Fiery Furnace hikes need their own permit or reservation..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "argentine-lake-district": {
+  "forPlaceName": "Argentine Lake District",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: A free trekking registration with Nahuel Huapi National Park is mandatory for Refugio Frey and other hikes; refugios and camping need advance reservations..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "atacama": {
+  "forPlaceName": "Atacama Desert",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Valle de la Luna admits visitors in groups of up to 12 with tickets bought in advance..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "azores": {
+  "forPlaceName": "Azores",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The interior of Faial's Caldeira is guided only and capped at 40 visitors a day; the rim trail is open..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "badlands-black-hills": {
+  "forPlaceName": "Badlands & Black Hills",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "bali": {
+  "forPlaceName": "Bali",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: A local guide is effectively required for the Mount Batur sunrise trek, arranged at the trailhead..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "canaries": {
+  "forPlaceName": "Canary Islands",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Teide summit path needs a permit booked in advance (one operator says 200 a day); the cable car runs to just below the summit..",
+   "How visitors reach the best walking: Drive to a trailhead, Cable car, gondola or chairlift.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cape-cod-islands": {
+  "forPlaceName": "Cape Cod & the Islands",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "chamonix": {
+  "forPlaceName": "Chamonix & the French Alps",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Cable car, gondola or chairlift, Train or cog railway.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Volume: about 80,000 people walk the Tour du Mont Blanc a year. Recognized: Euronews (August 2026) reports that crowds on Mont Blanc may bring hut reservations and access limits. Controls: reservations on the Aiguille du Midi cable car in July and August. Queues: waits of 20 minutes to an hour and a half on peak days at the Aiguille du Midi. No documented parking figures."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "champagne": {
+  "forPlaceName": "Champagne",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "charleston-savannah": {
+  "forPlaceName": "Charleston & Savannah",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "chiang-mai": {
+  "forPlaceName": "Chiang Mai & Northern Thailand",
+  "scope": "Northern Thailand as a whole, not only the city: Doi Inthanon (Kew Mae Pan trail, Thailand's highest peak) and Doi Suthep. Field-burning smoke runs about February to April, worst in March, and it hazes the views and the air.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Kew Mae Pan nature trail in Doi Inthanon National Park needs a local guide (about 200 baht a group) and is closed about June to October..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "chiapas": {
+  "forPlaceName": "Chiapas",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "chilean-lake-district": {
+  "forPlaceName": "Chilean Lake District",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Villarrica volcano climbs go with an authorized guide (CONAF expects it; enforcement varies); Huerquehue National Park needs no guide..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "churchill": {
+  "forPlaceName": "Churchill",
+  "scope": "Walking is limited to short paths near town and guided outings. Polar bears frequent the town and local trails from about May to December, so Parks Canada advises against walking out of town in September to November and says never to walk alone. Wapusk National Park is only visited with a licensed guide.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "colombian-andes": {
+  "forPlaceName": "Colombian Andes",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "colombian-caribbean": {
+  "forPlaceName": "Colombian Caribbean",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Ciudad Perdida can only be trekked with an authorized guide, 4 to 6 days; Tayrona National Park closes for about a month a year (often February) at the request of the Kogi people..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "copenhagen": {
+  "forPlaceName": "Copenhagen",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cornwall": {
+  "forPlaceName": "Cornwall",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "costa-rica": {
+  "forPlaceName": "Costa Rica",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Cerro Chirripo needs a permit booked in advance (daily cap, sells out in the dry season); Corcovado requires a certified guide..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "cotswolds": {
+  "forPlaceName": "Cotswolds",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "croatia": {
+  "forPlaceName": "Dalmatian Coast",
+  "scope": "The Dalmatian Coast and its hinterland: Paklenica National Park, Biokovo, Marjan hill at Split, Krka. Plitvice Lakes lies inland, about two hours from Zadar and Split.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Plitvice Lakes needs a timed-entry ticket in the high season (it lies inland, about two hours from Zadar and Split)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "death-valley": {
+  "forPlaceName": "Death Valley National Park",
+  "scope": "Best from November to March. Summer hiking is dangerous heat (hikers have died on the Golden Canyon trail in August). Telescope Peak (11,049 ft, 14 miles round trip) is the high-country escape, snowy until about June.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "denali-interior": {
+  "forPlaceName": "Denali & the Interior",
+  "scope": "Denali & the Interior as a whole, not only the national park; the Denali Park Road (private vehicles to mile 15 only) and its trails.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Private vehicles may drive only the first 15 miles of the Denali Park Road (to Savage River); beyond that travel is by park bus, except for a September lottery for driving the road..",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead, Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "douro-valley-porto": {
+  "forPlaceName": "Douro Valley & Porto",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "dubai": {
+  "forPlaceName": "Dubai",
+  "scope": "Hiking in the UAE: Hatta (Dubai emirate, the Hatta Wadi Hub has 32.6 km of trails) and Jebel Jais in Ras Al Khaimah (1,934 m, the UAE's highest point, about 10 degrees cooler). Best from November to March; summer heat is dangerous even at altitude.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "ecuadorian-andes": {
+  "forPlaceName": "Ecuadorian Andes",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "edinburgh": {
+  "forPlaceName": "Edinburgh",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "egypt": {
+  "forPlaceName": "Red Sea & Nile",
+  "scope": "Red Sea & Nile as a whole, including the Sinai (Mount Sinai, Jebel Musa) and the desert and coastal mountains near the Red Sea.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Climbing Mount Sinai requires a local Bedouin guide, hired at the monastery car park..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "el-chalten": {
+  "forPlaceName": "El Chaltén & El Calafate",
+  "scope": "El Chaltén & El Calafate as a whole, not only El Chaltén & Fitz Roy.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "ethiopia": {
+  "forPlaceName": "Ethiopia",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Simien Mountains National Park needs an entrance permit and a compulsory armed scout, arranged in Debark; operators say a guide is also required..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "everglades": {
+  "forPlaceName": "Everglades National Park",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "galapagos": {
+  "forPlaceName": "Galápagos Islands",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Visitors must pay a US$200 national park fee on arrival, and most park sites are visited only with a licensed guide..",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "gbr": {
+  "forPlaceName": "Great Barrier Reef",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Ngaro Track in the Whitsundays is reached by boat; independent walkers must book through the track website..",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "ghana": {
+  "forPlaceName": "Ghana",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The upper Wli Falls hike needs a local guide and is usually closed in the wet season (about July to December); Mount Afadjato ascents are guided through the Liati Wote community office; the Kakum canopy walk is guided..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "glacier-waterton": {
+  "forPlaceName": "Glacier & Waterton Lakes",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Glacier ran a timed vehicle-reservation pilot through September 2025; check the park for the 2026 rules..",
+   "How visitors reach the best walking: Shuttle or bus to the trailhead, Drive to a trailhead, Boat or ferry.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "grandcanyon": {
+  "forPlaceName": "Grand Canyon",
+  "scope": "Grand Canyon: the corridor trails (Bright Angel, South Kaibab) and rim walks. Summer heat in the inner canyon is dangerous: the NPS says temperatures on exposed trail can pass 120 F and advises against hiking the inner canyon between 10 a.m. and 4 p.m.; water is available on Bright Angel and North Kaibab but not on South Kaibab; day hiking the corridor trails needs no permit.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "great-smoky-mountains": {
+  "forPlaceName": "Great Smoky Mountains National Park",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: A parking tag is required to park in the park for more than 15 minutes..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 4 of 5 documented indicators (very busy). You may mention crowds in the month blurbs for peak-crowd months, never in the overview. Evidence: Volume: about 12 to 13 million visits a year (hiking blog; the most visited national park). Recognized: the NPS describes Alum Cave as extreme crowding and limited parking and suggests a shuttle. Controls: the parking tag. Parking: popular lots including Alum Cave fill early."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "greenland": {
+  "forPlaceName": "Greenland",
+  "scope": "The Arctic Circle Trail runs 165 km from Kangerlussuaq to Sisimiut, usually 7 to 10 days, snow-free in summer, with no permits, no phone signal and nothing to buy on the way; hikers must be self-sufficient.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "guatemala": {
+  "forPlaceName": "Guatemala",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "guilin-yangshuo": {
+  "forPlaceName": "Guilin & Yangshuo",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "havana": {
+  "forPlaceName": "Cuba",
+  "scope": "Cuba as a whole, not only Havana.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Pico Turquino can only be climbed with a local guide (a military area with limited permits) and the park office is sometimes closed for days..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "hokkaido": {
+  "forPlaceName": "Hokkaido",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: On the ground trail at the Shiretoko Five Lakes a permit and a short bear briefing are needed in bear season; brown bears are seen on it about every other day in August and September..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "hongkong": {
+  "forPlaceName": "Hong Kong",
+  "scope": "Hong Kong: Dragon's Back (about 8 to 9 km, much of it without shade) and the 100 km MacLehose Trail in ten sections. Summer heat and humidity are the main hazard; start early.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "hudson-valley": {
+  "forPlaceName": "Hudson Valley",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Minnewaska State Park Preserve requires parking reservations at the Sam's Point area on weekends and holidays (about April to mid-November)..",
+   "How visitors reach the best walking: Train or cog railway, Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "iceland": {
+  "forPlaceName": "Iceland",
+  "scope": "Iceland as a whole, including the Laugavegur trail through the highlands (hut season late June to early September).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Laugavegur huts (run by the Icelandic Touring Association) must be booked and fill months ahead; paid parking at Landmannalaugar is new for 2026..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "ireland": {
+  "forPlaceName": "Ireland",
+  "scope": "Ireland as a whole: the Kerry Way (about 214 to 232 km, about nine days), the Wicklow Way (132 km, about a week), the Dingle Way (about 179 km), Carrauntoohil (1,038 m, Ireland's highest) and Croagh Patrick (a pilgrimage climb on the last Sunday of July).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "istanbul": {
+  "forPlaceName": "Istanbul",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "jamaica": {
+  "forPlaceName": "Jamaica",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "jordan": {
+  "forPlaceName": "Petra & Wadi Rum",
+  "scope": "Petra & Wadi Rum: the Monastery climb at Petra (about 800 rock-cut steps), the back-door trail from Little Petra (part of the Jordan Trail), and Wadi Rum, usually visited on tours with a guide.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "joshua-tree": {
+  "forPlaceName": "Palm Springs & Joshua Tree",
+  "scope": "Palm Springs & Joshua Tree as a whole, not only Joshua Tree National Park. Joshua Tree has no entry reservation; summer heat can reach 120 F with no water or shade, rangers advise against hiking from about 10 a.m. to 5 p.m., and the 49 Palms Oasis Trail is closed June to September. Near Palm Springs, the Mount San Jacinto wilderness (tram, free wilderness permit) and the Indian Canyons are the main walks; winter is prime hiking season.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "kaziranga": {
+  "forPlaceName": "Assam & Northeast India",
+  "scope": "Assam & Northeast India as a whole, not only Kaziranga: the Meghalaya living root bridges (the Double Decker root bridge at Nongriat is about 3,500 stone steps from the trailhead, best October to March), Nagaland's Dzukou Valley (from Viswema, an Inner Line Permit needed for Indians) and Arunachal's Tawang.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Arunachal Pradesh and Nagaland need an Inner Line Permit for Indians and a Protected Area Permit for foreigners; a registered guide is reportedly required for treks in Meghalaya's East Khasi Hills (unconfirmed)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "kenya": {
+  "forPlaceName": "Maasai Mara & Amboseli",
+  "scope": "Maasai Mara & Amboseli as a whole: Hell's Gate National Park (walking and cycling allowed, no large predators), guided walks in private Maasai Mara conservancies, and Mount Kenya (the Sirimon and Naro Moru routes, usually with guides and porters).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Walking is not allowed inside most Kenyan national parks (Hell's Gate is the exception); the Maasai Mara allows guided walks only in the private conservancies around the reserve..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "kerala": {
+  "forPlaceName": "Kerala",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Meesapulimala trek near Munnar is a permitted route run by the Kerala Forest Development Corporation, with authorized guides only; the permit is booked online and collected in Munnar..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "komodo": {
+  "forPlaceName": "Komodo & Flores",
+  "scope": "Komodo & Flores as a whole: Padar Island (a short, steep climb of roughly 1 to 1.5 km and 200 to 250 m for the famous view, best at sunrise) and ranger-guided walks on Komodo and Rinca.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Komodo National Park charges an entry fee and walks go with park rangers; sources conflict on whether a guide is required on Padar Island..",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "kruger": {
+  "forPlaceName": "Kruger & Sabi Sands",
+  "scope": "Kruger & Sabi Sands as a whole. In Kruger walking is only on guided walks or multi-day wilderness trails with armed guides; Sabi Sands lodges run guided bush walks of two to three hours.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Walking inside Kruger is only on guided walks with armed field guides; multi-day wilderness trails (three nights, 15 to 20 km a day) must be booked far ahead and do not run from November to February because of the heat..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "kyrgyzstan": {
+  "forPlaceName": "Kyrgyzstan",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: A small park fee is paid at the Ala-Kul trailhead; border-zone areas (such as Kel-Suu and Khan Tengri) need a State Border Service permit..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "ladakh": {
+  "forPlaceName": "Ladakh",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Foreigners need an Inner Line Permit obtained in Leh, and the Markha Valley lies inside Hemis National Park, which has an entry fee..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "lake-district": {
+  "forPlaceName": "Lake District",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "lapland": {
+  "forPlaceName": "Finnish Lapland",
+  "scope": "Finnish Lapland as a whole: Pallas-Yllastunturi National Park (the 50 km Hetta-Pallas trail with wilderness huts), the Karhunkierros (Bear's Ring) trail (about 50 miles, 3 to 7 days). Summer mosquitoes are heavy; ruska autumn colors run from mid-September for a few weeks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "lisbon": {
+  "forPlaceName": "Lisbon",
+  "scope": "Lisbon as a whole: the Sintra hills (Pena Palace and Castle of the Moors, a roughly 11 km loop), Arrabida Natural Park above Sesimbra (the Serra do Risco), the Monsanto forest park.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "lofoten": {
+  "forPlaceName": "Lofoten Islands",
+  "scope": "Lofoten Islands: Reinebringen above Reine (a stone staircase, about 1,500 steps, steep and very popular) and Kvalvika Beach (harder to follow, steep and slippery descent).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "london": {
+  "forPlaceName": "London",
+  "scope": "London as a whole: the Thames Path, Epping Forest (the Oak Trail, just under 7 miles), Box Hill (272 steps) and the North Downs, reached by train.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "los-cabos": {
+  "forPlaceName": "Los Cabos",
+  "scope": "Los Cabos as a whole: Sierra de la Laguna (about 2,100 m, reached from Todos Santos or the East Cape; November to early spring, a guide recommended for hard routes) and short coastal walks. Hurricane season runs roughly August to November.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "luangprabang": {
+  "forPlaceName": "Laos",
+  "scope": "Laos as a whole, not only Luang Prabang: Nong Khiaw viewpoints (Pha Noy about 2 hours, Pha Daeng about 3 hours; October to February), about 150 km north of Luang Prabang.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "madagascar": {
+  "forPlaceName": "Madagascar",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Guides are mandatory in Isalo National Park (self-guided walking is not allowed) and parks charge entry fees..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "maldives": {
+  "forPlaceName": "Maldives",
+  "scope": "The Maldives have no hiking trails; walking is short island loops and sandbank walks (for example Dhigurah), with the monsoon making some unsafe.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mallorca": {
+  "forPlaceName": "Mallorca",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "marlborough-abel-tasman": {
+  "forPlaceName": "Marlborough & Abel Tasman",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Abel Tasman Coast Track huts and campsites must be booked year-round (Great Walk); the Queen Charlotte Track needs a land cooperative pass across private land and campsite bookings..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "maui": {
+  "forPlaceName": "Maui",
+  "scope": "Maui as a whole: Haleakala crater (the Sliding Sands trail, a hard climb back out at altitude) and the Pipiwai Trail near Hana (about 4 miles round trip, 975 ft of climbing, bamboo forest and Waimoku Falls).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Vehicles entering Haleakala National Park's summit area between 3 and 7 a.m. need a reservation on Recreation.gov..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mauritius": {
+  "forPlaceName": "Mauritius",
+  "scope": "Mauritius: Le Morne Brabant (about 4.2 miles round trip, 1,505 ft of climbing, rock scrambling, a guide recommended; do not go after rain) and Black River Gorges National Park (60 km of trails, Black River Peak 828 m).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mendoza": {
+  "forPlaceName": "Mendoza",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Aconcagua Provincial Park needs an entry permit (three-day trekking permit for walkers), bought in Mendoza or at the Horcones ranger shelter..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mexicocity": {
+  "forPlaceName": "Mexico City",
+  "scope": "Mexico City as a whole: Iztaccihuatl (about 9 miles and a little over 3,000 ft of climbing from La Joya, 6 to 12 hours, October to November most stable), Desierto de los Leones and the surrounding volcanoes.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Izta-Popo National Park asks for visitor registration; Iztaccihuatl is a non-technical but high-altitude climb..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "milford-sound-fiordland": {
+  "forPlaceName": "Milford Sound & Fiordland",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Milford, Routeburn and Kepler tracks (Great Walks) must be booked in peak season and can sell out within hours of opening..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "mongolia": {
+  "forPlaceName": "Mongolia",
+  "scope": "Mongolia as a whole: Gorkhi-Terelj National Park, about 70 km from Ulaanbaatar, mostly visited on guided horse treks or day trips (May to September).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "monterey-big-sur": {
+  "forPlaceName": "Monterey & Big Sur",
+  "scope": "Monterey & Big Sur: coastal and redwood trails; Highway 1 closes repeatedly after winter storms and slides.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "morocco": {
+  "forPlaceName": "Marrakech & Atlas",
+  "scope": "Marrakech & Atlas: Mount Toubkal from Imlil (about 90 minutes from Marrakech; usually two days, a guide recommended, especially in winter when crampons are essential). Best in spring and autumn; September and October are clearest.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "namibia": {
+  "forPlaceName": "Namibia",
+  "scope": "Namibia as a whole: the Fish River Canyon hike (about 85 km over 4 to 5 days, permit season 1 May to 15 September) and the Sossusvlei dunes (Dune 45 is over 170 m; go at sunrise or late afternoon to avoid the crowds and midday heat).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Fish River Canyon hike is only open about 1 May to 15 September (flood risk and extreme heat); permits come from Namibia Wildlife Resorts for groups of 3 to 30, with a doctor's fitness certificate checked at Hobas..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "napa": {
+  "forPlaceName": "Napa & Sonoma",
+  "scope": "Napa & Sonoma as a whole, not only Napa Valley.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "new-orleans": {
+  "forPlaceName": "New Orleans",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nicaragua": {
+  "forPlaceName": "Nicaragua",
+  "scope": "Nicaragua as a whole: Volcan Maderas on Ometepe (about 4 to 8 hours round trip, muddy year-round, a guide required or advised, cloud on the summit in the morning), plus other volcanoes and cloud-forest walks. Dry season December to April.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Most sources say a local guide is required (or strongly advised) to climb Volcan Maderas on Ometepe, about US$15 to 30 a person; the descent into the crater uses ropes..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nice-riviera": {
+  "forPlaceName": "Nice & the French Riviera",
+  "scope": "Nice and the Riviera as a whole: the Nietzsche Path from Eze-sur-Mer up to Eze village (about an hour, train to the foot), coastal paths around Cap d'Antibes and the Cap Ferrat peninsula.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "north-cascades": {
+  "forPlaceName": "North Cascades",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Day hikes (including Cascade Pass) need no permit; overnight trips need a backcountry permit, with reservations through Recreation.gov and the most popular areas filling quickly in summer..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "north-island": {
+  "forPlaceName": "North Island",
+  "scope": "New Zealand's North Island as a whole: the Tongariro Alpine Crossing (about 19 km, booking system) and Northern Circuit, plus Mount Taranaki's Pouakai Circuit (25 km, 2 to 3 days, a hard route in Egmont National Park).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Tongariro Alpine Crossing has a free booking system (a daily cap was proposed); Tongariro Northern Circuit huts and campsites must be booked in the Great Walk season, and the Mangatepopo section was closed after fires in late 2025..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nova-scotia": {
+  "forPlaceName": "Nova Scotia",
+  "scope": "Nova Scotia as a whole, mainly Cape Breton Highlands National Park: the Skyline Trail (reservation-only parking in 2026 summer peak) and other Cabot Trail walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: From 26 June to 25 October 2026, Skyline Trail parking in Cape Breton Highlands National Park needs a timed reservation (four-hour blocks, 50 vehicles each, about 100 spaces)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 3 of 5 documented indicators (busy). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "nyc": {
+  "forPlaceName": "New York City",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "oaxaca": {
+  "forPlaceName": "Oaxaca",
+  "scope": "Oaxaca as a whole: the Pueblos Mancomunados (more than 100 km of trails between villages at 2,200 to 3,200 m, with community cabins) and day walks around the city.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Pueblos Mancomunados village cabins are booked through the community agency Expediciones Sierra Norte; weekends and holidays fill up..",
+   "How visitors reach the best walking: Drive to a trailhead, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "pakistan": {
+  "forPlaceName": "Pakistan",
+  "scope": "Pakistan's Karakoram as a whole: Fairy Meadows and Nanga Parbat base camp (a jeep to Tato, then 2 to 3 hours to the meadows), the Baltoro Glacier and K2 base camp (guided only), and the Hunza valley.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Independent trekking is not allowed on the K2 route: foreigners need an approved guide and agency, a special trekking visa, and a Central Karakoram National Park fee (about US$300 as of 2024) paid by the agency. The rules for Fairy Meadows and Nanga Parbat for foreigners conflict between sources..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "palau": {
+  "forPlaceName": "Palau",
+  "scope": "Palau has only short walks (such as the Ngardmau waterfall on Babeldaob); the islands are mostly a boat and water destination.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Ngardmau Waterfall walk (20 to 30 minutes, many steps, muddy) charges an entrance fee, reported at about US$10..",
+   "How visitors reach the best walking: Boat or ferry, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "palawan": {
+  "forPlaceName": "Palawan",
+  "scope": "Palawan as a whole: Mount Tapyas in Coron (about 720 steps, best at dawn or dusk for the heat), the Taraw Cliff trail at El Nido (about 30 minutes, steep), and short jungle walks; island hopping is the main activity.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Boat or ferry, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "panama": {
+  "forPlaceName": "Panama",
+  "scope": "Panama as a whole: Boquete and Volcan Baru (the Sendero Los Quetzales, 6 to 8 hours, whose status has been uncertain since 2021 storms), rainforest walks near the canal.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Sources conflict on whether the Sendero Los Quetzales trail near Boquete is open after storm damage in 2021; check locally..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "pantanal": {
+  "forPlaceName": "Pantanal",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "papua-new-guinea": {
+  "forPlaceName": "Papua New Guinea",
+  "scope": "Papua New Guinea as a whole: the Kokoda Track (about 96 km over roughly 8 days, permit required, wet and extremely steep) and highland valleys.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Kokoda Track requires a trek permit from the Kokoda Track Authority (K200 for international adults under the 2005 schedule; operators usually include it in the package) and campsite fees to landowners..",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "paris": {
+  "forPlaceName": "Paris",
+  "scope": "Paris as a whole: day walks by train in the Fontainebleau forest and along the Île-de-France GR11 loop; the city itself offers only urban walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "peru": {
+  "forPlaceName": "Cusco & Sacred Valley",
+  "scope": "Peru as a whole: the classic Inca Trail (500 permits a day), the Salkantay and Choquequirao routes, and Rainbow Mountain, which is a high-altitude day trip from Cusco.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The classic Inca Trail is capped at 500 people a day (guides and porters included) and permits sell out 3 to 6 months ahead for May to August; the trail closes each February. Machu Picchu itself needs timed tickets..",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "peruvian-amazon": {
+  "forPlaceName": "Peruvian Amazon",
+  "scope": "Peru's Amazon as a whole: guided walks from lodges around Tambopata, Manu and Iquitos; there are no independent trails, and walking is slow, hot and wet.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Entering the Tambopata National Reserve requires an authorized jungle guide through licensed operators..",
+   "How visitors reach the best walking: Boat or ferry, Flight to the trailhead (small plane, floatplane or helicopter).",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "piedmont": {
+  "forPlaceName": "Piedmont",
+  "scope": "Piedmont as a whole: the Langhe vineyard hills (loops of about 13 km around Barolo, with the Alps visible on clear days) and alpine valleys farther north.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "prague": {
+  "forPlaceName": "Prague",
+  "scope": "Prague as a whole: urban walks, plus day trips to Bohemian Switzerland (Pravcicka Gate, Europe's largest natural sandstone arch, open daily April to October).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Pravcicka Gate (Bohemian Switzerland) charges a small entry fee and is open daily April to October..",
+   "How visitors reach the best walking: Train or cog railway, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "provence": {
+  "forPlaceName": "Provence",
+  "scope": "Provence as a whole: the Calanques coast between Marseille and Cassis (summer booking at Sugiton and fire closures), the Luberon villages, and hill walks near Mont Ventoux.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In summer the Calanques National Park has capped daily numbers at Sugiton cove (about 400 a day, free booking), and fire-risk days close the massifs entirely..",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "puerto-rico": {
+  "forPlaceName": "Puerto Rico",
+  "scope": "Puerto Rico as a whole, mainly El Yunque National Forest (La Mina trail closed for construction; Juan Diego falls as an easy alternative) and the Cordillera Central.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In El Yunque the La Mina trail and falls were closed for construction; the recreation corridor shuts at 5 p.m., and weekend reservations are reported for some northern trails..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "puglia": {
+  "forPlaceName": "Puglia",
+  "scope": "Puglia as a whole: the Gargano coast and Foresta Umbra (ancient beech forest, loops of about 15 km), plus coastal walks in the Salento.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "punta-cana": {
+  "forPlaceName": "Dominican Republic",
+  "scope": "Dominican Republic as a whole, not only Punta Cana.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "quebec-city": {
+  "forPlaceName": "Quebec City & Montreal",
+  "scope": "Quebec City & Montreal as a whole, not only Quebec City.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "queenstown": {
+  "forPlaceName": "Queenstown",
+  "scope": "Queenstown as a whole: Ben Lomond (the gondola saves about 400 m of climbing), the Routeburn Track (33 km one way; Great Walk bookings from 1 November), the Kepler Track and Roys Peak above Wanaka.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Routeburn and Kepler Great Walks need hut or campsite bookings from 1 November to 30 April (the 2026/27 booking window opened in May and popular dates sell out within days); outside that season huts are first come, first served..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rajaampat": {
+  "forPlaceName": "Raja Ampat",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Boat or ferry.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rajasthan-golden-triangle": {
+  "forPlaceName": "Rajasthan & the Golden Triangle",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "redwood": {
+  "forPlaceName": "Redwood National and State Parks",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In summer (about mid-May to mid-September) a day-use reservation is needed for the Gold Bluffs Beach parking area and Fern Canyon trailhead; walking in from the Prairie Creek visitor center on the 10-mile round-trip James Irvine Trail needs no permit..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rio": {
+  "forPlaceName": "Rio de Janeiro",
+  "scope": "Rio de Janeiro as a whole: Dois Irmaos from Vidigal, Pedra da Gavea (about 5 km round trip but with a steep rock section best done with a guide), Pico da Tijuca and the Sugarloaf. Trails turn slippery in rain.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rioja": {
+  "forPlaceName": "Rioja",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rivieramaya": {
+  "forPlaceName": "Riviera Maya",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rocky-mountain": {
+  "forPlaceName": "Rocky Mountain National Park",
+  "scope": "Rocky Mountain National Park as a whole, including timed-entry rules in summer and the high alpine trails above Bear Lake.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In 2026 a timed-entry reservation was required to enter between 9 a.m. and 2 p.m. from late May to mid-October (with a separate Bear Lake Road corridor reservation); outside those hours no reservation was needed..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rome": {
+  "forPlaceName": "Rome",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "rwanda": {
+  "forPlaceName": "Rwanda",
+  "scope": "Rwanda as a whole: Volcanoes National Park (the Dian Fossey grave hike and volcano climbs on Bisoke and Karisimbi, all with park guides) and Nyungwe forest trails.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Walks in Volcanoes National Park (the Dian Fossey grave hike, about 3 to 7 hours depending on the source, around US$75) go with park guides; gorilla trekking permits cost up to US$1,500 and are not hiking..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "san-miguel-guanajuato": {
+  "forPlaceName": "San Miguel de Allende & Guanajuato",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "santorini": {
+  "forPlaceName": "Santorini & Cyclades",
+  "scope": "Santorini as a whole: the caldera-rim path from Fira to Oia (just over 10 km, 3 to 5 hours, hilly with little shade; start early) plus small coastal walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sardinia": {
+  "forPlaceName": "Sardinia",
+  "scope": "Sardinia as a whole: the Supramonte and the Gennargentu uplands, and the Selvaggio Blu along the Baunei coast (technical, scrambling and abseiling, guide strongly advised; best in spring and autumn).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Selvaggio Blu is a technical coast trek with scrambling and abseiling, and operators strongly recommend a guide..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "scottish-highlands-skye": {
+  "forPlaceName": "Scottish Highlands & Isle of Skye",
+  "scope": "Scottish Highlands and the Isle of Skye as a whole: the Quiraing, Old Man of Storr, Fairy Pools and the Cuillin ridge, plus mainland glens.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sicily": {
+  "forPlaceName": "Sicily",
+  "scope": "Sicily as a whole: Mount Etna (guide required near the summit craters), coastal reserves such as Zingaro, and the Madonie mountains.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: On Mount Etna an authorized volcano guide is required above roughly 2,500 to 2,900 m (the limit moves with volcanic activity), and the summit craters open only when the volcano allows; lower trails near Rifugio Sapienza are open to independent walkers..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "singapore": {
+  "forPlaceName": "Singapore",
+  "scope": "Singapore as a whole: the 10 km Southern Ridges trail from Mount Faber past Henderson Waves to Kent Ridge Park, partly urban and easy to leave at many points, plus short rainforest walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "snowdonia": {
+  "forPlaceName": "Wales",
+  "scope": "Snowdonia as a whole: Snowdon by the Pyg Track, Miners' Track and the quieter Watkin Path (1,025 m of climbing from the Nantgwynant valley), plus the Glyderau and Carneddau ranges.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "southeast-alaska": {
+  "forPlaceName": "Southeast Alaska & the Inside Passage",
+  "scope": "Southeast Alaska as a whole: Juneau's Mendenhall Glacier trails and the West Glacier Trail (3.4 miles one way, unmaintained), and the Chilkoot Trail from Dyea near Skagway.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Overnight use of the Chilkoot Trail from about 1 June to 12 September needs a permit (Recreation.gov for the US side, plus a mandatory orientation in Skagway); the Mendenhall West Glacier Trail is an unmaintained backcountry route with a history of lost hikers..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "srilanka": {
+  "forPlaceName": "Sri Lanka",
+  "scope": "Sri Lanka as a whole: Adam's Peak (a night climb on stairs from Nallathanniya, season December to May; huge queues on full-moon Poya nights), Pidurangala Rock, Ella Rock and the Knuckles range.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Adam's Peak (Sri Pada) is climbed from December to May (the season opens on the December Poya full moon day); out of season you need permission from the Ratnapura District Secretariat..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "st-andrews-fife": {
+  "forPlaceName": "St Andrews & Fife",
+  "scope": "",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "svalbard": {
+  "forPlaceName": "Svalbard",
+  "scope": "Svalbard as a whole: Longyearbyen, where walks beyond the settlement require polar bear precautions, and guided hikes onto glaciers and peaks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Everyone leaving the settlements must carry a means of scaring off polar bears (a rifle is the common practice, but sources disagree on whether the law names one); guided trips are the usual way..",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Boat or ferry.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "sydney": {
+  "forPlaceName": "Sydney",
+  "scope": "Sydney as a whole: the Royal National Park Coast Track (about 26 km, graded 5), the Blue Mountains' Three Sisters and Grand Canyon tracks, and harbor and Manly walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "taiwan": {
+  "forPlaceName": "Taiwan",
+  "scope": "Taiwan as a whole: Yushan (Jade Mountain, Taiwan's highest, lottery permits), Taroko Gorge and Zhuilu Old Road, Alishan and the Central Cross-Island walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Yushan (Jade Mountain) permits are allocated by lottery through the Hike Smart Taiwan site (a few places are set aside for foreign passport holders); Zhuilu Old Road in Taroko needs a permit applied for 1 to 30 days ahead. Rules change often..",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tanzania": {
+  "forPlaceName": "Northern Tanzania",
+  "scope": "Tanzania as a whole, mainly Kilimanjaro (Machame, Lemosho, Marangu; Marangu has huts, the others tents) plus Mount Meru and Ngorongoro rim walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Kilimanjaro charges park fees of about US$70 a day plus camping or hut fees and a rescue fee, and operators say a registered guide is mandatory..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tasmania": {
+  "forPlaceName": "Tasmania",
+  "scope": "Tasmania as a whole: the Overland Track (65 km, 6 days, booked from 1 October to 31 May), Cradle Mountain day walks, Freycinet and Wineglass Bay.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: From 1 October to 31 May the Overland Track needs a booking (about 34 places a day for independent walkers, a fee of A$312 in 2026, one direction only from Cradle Mountain to Lake St Clair); more than 3,000 places sold in six hours when bookings opened one year..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tbilisi-caucasus": {
+  "forPlaceName": "Tbilisi & the Caucasus",
+  "scope": "Tbilisi and the Georgian Caucasus as a whole: Kazbegi's Gergeti Trinity Church hike (about 6 km round trip, 60 to 75 minutes up), the Gergeti Glacier (about 20 km), the Mestia to Ushguli trek (4 days, about 55 km, guesthouses in each village).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead, Train or cog railway.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "texas-hill-country": {
+  "forPlaceName": "Texas Hill Country",
+  "scope": "Texas Hill Country as a whole: Enchanted Rock (day pass reservation on weekends), plus short state park and river walks. Summer is very hot.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Enchanted Rock State Natural Area needs a day-pass reservation on weekends, holidays and school breaks (up to 30 days ahead, about US$8 for adults)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "thailand": {
+  "forPlaceName": "Phuket & the Andaman Coast",
+  "scope": "Thailand as a whole: northern forest trails and national park walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tierra-del-fuego": {
+  "forPlaceName": "Tierra del Fuego",
+  "scope": "Tierra del Fuego as a whole, including Dientes de Navarino on Isla Navarino in Chile (the southernmost trek in the world, 4 to 5 days, December to March) and Tierra del Fuego National Park in Argentina.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The Dientes de Navarino circuit on Isla Navarino (Chile) is reached by flying Punta Arenas to Puerto Williams, and walkers are asked to register their trek with the Carabineros there; season roughly December to March..",
+   "How visitors reach the best walking: Flight to the trailhead (small plane, floatplane or helicopter), Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "turks-caicos": {
+  "forPlaceName": "Turks & Caicos",
+  "scope": "Turks and Caicos have very few established trails: the Crossing Place Trail on Middle Caicos, the Bird Rock Trail on Providenciales (about 1.7 miles) and the Northwest Point coastline. Sharp ironshore limestone and poisonous coral sumac line some routes.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Boat or ferry, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "tuscany": {
+  "forPlaceName": "Tuscany",
+  "scope": "Tuscany as a whole: the Via Francigena from Lucca to Siena and other hill-town walks, plus the nearby Cinque Terre coastal paths.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "uganda": {
+  "forPlaceName": "Uganda",
+  "scope": "Uganda as a whole: the Rwenzori Mountains (the 'Mountains of the Moon', Margherita Peak about 5,109 m, guided only), Mount Elgon and forest walks near Kibale and Bwindi.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Rwenzori Mountains National Park needs a Uganda Wildlife Authority permit and a mandatory local guide (operators quote about US$1,500 for a 7-day circuit); best seasons January to mid-March and June to August..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "uluru": {
+  "forPlaceName": "Uluru & the Outback",
+  "scope": "Uluru-Kata Tjuta as a whole: the Uluru base walk, Valley of the Winds at Kata Tjuta and the Kings Canyon rim; heat closures apply on hot days.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In hot weather the Valley of the Winds walk closes at the first lookout from 11 a.m. when the temperature reaches 36 C; the Uluru base walk is advised only in the cool morning, and parts of it were closed for repairs in 2026..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "upper-peninsula": {
+  "forPlaceName": "Upper Peninsula",
+  "scope": "Michigan's Upper Peninsula as a whole: Pictured Rocks National Lakeshore, the Porcupine Mountains, and Isle Royale National Park by ferry.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Overnight backcountry camping at Pictured Rocks National Lakeshore needs a permit booked through Recreation.gov; Isle Royale is reached only by ferry, seaplane or private boat and is open mid-April to the end of October..",
+   "How visitors reach the best walking: Drive to a trailhead, Boat or ferry.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "uyuni": {
+  "forPlaceName": "Salar de Uyuni",
+  "scope": "Uyuni as a whole: short walks only, such as the 15-minute climb of Isla Incahuasi in the salt flat and the Tunupa volcano trek; the salt flat floods roughly November to April.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The walk up Isla Incahuasi is short (about 15 minutes) and charges an entry fee; the island is cut off when the salt flat floods (roughly November to April)..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "uzbekistan": {
+  "forPlaceName": "Samarkand & Bukhara",
+  "scope": "Uzbekistan as a whole: Chimgan in the Western Tian Shan near Tashkent (Little Chimgan 2,097 m, loop about 11.6 km; Greater Chimgan 3,309 m steep and rocky) and the Nuratau mountains.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vancouver-island": {
+  "forPlaceName": "Vancouver Island",
+  "scope": "Vancouver Island as a whole: the West Coast Trail (75 km, 6 to 8 days, reservations from January) and shorter coastal and rainforest trails in Pacific Rim National Park.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: The West Coast Trail is open 1 May to 30 September and is fully reservable (booking opens in January and popular dates sell out in minutes); there is no standby list at the trailheads..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "venice": {
+  "forPlaceName": "Venice",
+  "scope": "Venice as a whole, for walkers mainly the Dolomites on day trips (Lago di Braies loop of about 4 km, high trails open mid-June to late September).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Walk from town, Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vermont": {
+  "forPlaceName": "Vermont",
+  "scope": "Vermont as a whole: the Long Trail, Mount Mansfield and Camel's Hump (both busy and sensitive alpine summits), and lower Green Mountain walks.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vienna": {
+  "forPlaceName": "Vienna",
+  "scope": "Vienna as a whole: the Vienna Woods (Wienerwald) by train or tram, such as Kahlenberg and the Hagenbachklamm gorge; the best months are April to October.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Train or cog railway, Walk from town.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "vietnam": {
+  "forPlaceName": "Vietnam",
+  "scope": "Vietnam as a whole: Sapa and Fansipan (guide and permit), Ha Giang (guide and permit for overnight treks) and Pu Luong rice terraces (best May to June and September to October).",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Fansipan (above Sapa) needs a permit and, per most sources, a licensed guide; Ha Giang requires a guide and a permit for overnight treks..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "whistler": {
+  "forPlaceName": "Vancouver & Whistler",
+  "scope": "Whistler as a whole: Garibaldi Provincial Park (the Rubble Creek, Diamond Head and Cheakamus trailheads need day passes in summer 2026) and the nearby Joffre Lakes.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: In summer 2026 Garibaldi Provincial Park trailheads needed a free vehicle day pass (Rubble Creek and Diamond Head on Friday to Monday, Cheakamus daily; June 12 to October 12), released two days ahead; Joffre Lakes needs a separate trail pass per person..",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "yellowstone": {
+  "forPlaceName": "Yellowstone National Park",
+  "scope": "Yellowstone as a whole: the Grand Prismatic overlook via Fairy Falls (over a mile one way), geyser basin boardwalks and backcountry trails; bear spray is strongly advised.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 2 of 5 documented indicators (middling). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "yosemite": {
+  "forPlaceName": "Yosemite National Park",
+  "scope": "Yosemite as a whole: the Mist Trail to Vernal and Nevada Falls (no permit), the Half Dome cables (permit by lottery) and high-country trails.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Only the cables section of Half Dome needs a permit (preseason lottery in March; a daily lottery two days before), so the Mist Trail to Vernal and Nevada Falls needs none; the cables are up from late May to mid-October..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "zambia": {
+  "forPlaceName": "South Luangwa",
+  "scope": "Zambia as a whole: guided walking safaris in South Luangwa National Park and short trails around Victoria Falls.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "zimbabwe": {
+  "forPlaceName": "Victoria Falls & Hwange",
+  "scope": "Zimbabwe as a whole: guided walking safaris in Mana Pools and short walks around Victoria Falls.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "How visitors reach the best walking: Drive to a trailhead.",
+   "Crowding: 0 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ },
+ "zion-bryce": {
+  "forPlaceName": "Zion & Bryce Canyon",
+  "scope": "Zion and Bryce as a whole: Angels Landing (lottery permit), the Narrows, the Navajo Loop (1.3 miles, 550 ft) and Bryce's Rim trails.",
+  "facts": [
+   "These notes are first drafts: some were checked against web sources and some were not. Use what you are sure of and leave out anything you doubt.",
+   "Permits, fees or guide rules: Angels Landing needs a permit by lottery (seasonal and day-before lotteries on Recreation.gov); the West Rim Trail up to Scout Lookout needs none..",
+   "How visitors reach the best walking: Drive to a trailhead, Shuttle or bus to the trailhead.",
+   "Crowding: 1 of 5 documented indicators (quiet). Do not mention crowds anywhere."
+  ],
+  "avoid": [
+   "Naming tour companies, guides, outfitters or hotels.",
+   "Describing climbing with ropes, running, mountain biking, horseback riding, city walking tours or beach strolls."
+  ],
+  "season": "",
+  "mustMention": []
+ }
+}

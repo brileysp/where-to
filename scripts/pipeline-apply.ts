@@ -39,6 +39,9 @@ async function main() {
   const args = parseCliArgs(process.argv.slice(2));
   const generationId = getString(args, 'generation-id');
   const batchId = getString(args, 'batch-id');
+  // Owner override for the fact-check gate (see docs/fact-check-process.md). Say so in the log; do not use it to save time.
+  const skipFactCheck = process.argv.includes('--skip-fact-check');
+  if (skipFactCheck) console.warn('WARNING: --skip-fact-check: applying without the fact-check gate.');
 
   if (!generationId && !batchId) {
     console.error('Pass --generation-id=<uuid> or --batch-id=<uuid>.');
@@ -81,7 +84,7 @@ async function main() {
   const closedTodos: string[] = [];
   let naCount = 0;
   for (const id of ids) {
-    const result = await applyGeneration(id);
+    const result = await applyGeneration(id, { skipFactCheck });
     console.log(`${id}: ${result.outcome} — ${result.detail}${result.closedTodos?.length ? ` [closed to-do: ${result.closedTodos.join('; ')}]` : ''}`);
     results.push({ generationId: id, outcome: result.outcome, detail: result.detail });
     if (result.outcome === 'applied') { closedTodos.push(...(result.closedTodos ?? [])); if (result.notApplicable) naCount++; }

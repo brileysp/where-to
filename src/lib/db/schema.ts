@@ -580,6 +580,17 @@ export const userPreferences = pgTable('user_preferences', {
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * What a traveler saved from the new onboarding flow (docs/onboarding-v2/SPEC.md 6): interest levels and specifics, the Open-to bands, the
+ * lasting "what matters" choices, who they travel with, home airport, photo picks and answers. One versioned document per user; only the
+ * rows the traveler chose to keep are in it. The shape is src/lib/onboarding/profile.ts's TravelProfile.
+ */
+export const userTravelProfiles = pgTable('user_travel_profiles', {
+  userId: uuid('user_id').primaryKey(),
+  profile: jsonb('profile').notNull(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
 export const userSavedProfiles = pgTable('user_saved_profiles', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull(),
@@ -839,6 +850,35 @@ export const interestTodos = pgTable(
   (table) => [index('interest_todos_interest_idx').on(table.interestKey, table.status)],
 );
 
+export const FACT_CHECK_VERDICTS = ['unchecked', 'verified', 'wrong', 'owner_accepted'] as const;
+export type FactCheckVerdict = (typeof FACT_CHECK_VERDICTS)[number];
+
+/**
+ * One row per risky sentence in generated text (a named place or route, a number with a unit, an access or closure claim,
+ * "several"/"many", "only"/"first"/"longest"), keyed by place, interest and a hash of the sentence. A generation cannot be applied
+ * until every high-risk sentence in it is 'verified' (checked against a source) or 'owner_accepted'. Because the key is the
+ * sentence itself, an unchanged sentence keeps its verdict when text is edited and a changed sentence starts again as 'unchecked'.
+ * See docs/fact-check-process.md.
+ */
+export const contentFactChecks = pgTable(
+  'content_fact_checks',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    placeId: text('place_id').notNull(),
+    interestKey: text('interest_key').notNull(),
+    sentenceHash: text('sentence_hash').notNull(),
+    sentence: text('sentence').notNull(),
+    kinds: text('kinds').array().notNull().default([]),
+    verdict: text('verdict').$type<FactCheckVerdict>().notNull().default('unchecked'),
+    sourceUrl: text('source_url').notNull().default(''),
+    note: text('note').notNull().default(''),
+    checkedBy: text('checked_by').notNull().default(''),
+    checkedAt: timestamp('checked_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [uniqueIndex('content_fact_checks_unique').on(table.placeId, table.interestKey, table.sentenceHash)],
+);
+
 export const INTEREST_IDEA_STAGES = ['idea', 'researched', 'verified', 'added'] as const;
 export type InterestIdeaStage = (typeof INTEREST_IDEA_STAGES)[number];
 
@@ -908,6 +948,54 @@ export const interestReferenceSites = pgTable(
     index('interest_reference_sites_interest_idx').on(table.interestKey, table.usefulness),
     uniqueIndex('interest_reference_sites_unique').on(table.interestKey, table.siteUrl),
   ],
+);
+
+/** One column that feeds a chip's fit: a rating, a count, a sighting grid or a ticked option. See src/lib/admin/interest-pages/chips.ts. */
+export interface InterestChipDriver {
+  column: string;
+  /** The option that counts, for choice and multi columns. */
+  option?: string;
+  /** For count columns: the number that counts as a full 10. */
+  fullAt?: number;
+}
+
+export const INTEREST_CHIP_STATUSES = ['live', 'draft'] as const;
+export type InterestChipStatus = (typeof INTEREST_CHIP_STATUSES)[number];
+
+/**
+ * The sub-interest chips a traveler can tick under an interest (Day hikes, Wrecks, Orcas...), kept apart from the research columns.
+ * A place's fit for a chip is worked out from the driver columns when needed, never stored. At most five are live per interest.
+ * needsColumn is a note: while it is filled in, the chip waits on a column that has not been added yet and cannot go live.
+ */
+export const interestChips = pgTable(
+  'interest_chips',
+  {
+    interestKey: text('interest_key').notNull(),
+    chipKey: text('chip_key').notNull(),
+    label: text('label').notNull(),
+    sortOrder: integer('sort_order').notNull().default(0),
+    status: text('status').$type<InterestChipStatus>().notNull().default('draft'),
+    drivers: jsonb('drivers').notNull().default([]).$type<InterestChipDriver[]>(),
+    needsColumn: text('needs_column').notNull().default(''),
+    updatedBy: text('updated_by').notNull().default(''),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.interestKey, table.chipKey] })],
+);
+
+/** A fit typed by hand for one place and chip, with the reason. Wins over the worked-out number, and survives a re-fill of the columns. */
+export const placeChipOverrides = pgTable(
+  'place_chip_overrides',
+  {
+    interestKey: text('interest_key').notNull(),
+    chipKey: text('chip_key').notNull(),
+    placeId: text('place_id').notNull(),
+    fit: doublePrecision('fit').notNull(),
+    reason: text('reason').notNull(),
+    setBy: text('set_by').notNull().default(''),
+    setAt: timestamp('set_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.interestKey, table.chipKey, table.placeId] })],
 );
 
 export type InterestFactValue = string | number | boolean | string[] | null;

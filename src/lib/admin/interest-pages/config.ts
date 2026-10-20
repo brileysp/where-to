@@ -39,7 +39,7 @@ export interface FactDef {
   animals?: boolean;
   /** Stored and validated, but no column is drawn for it. */
   hidden?: boolean;
-  /** A column that may legitimately stay blank for every place (notes for Gemini, say): never counted in completeness. */
+  /** A column that may legitimately stay blank (notes for Gemini; hiking's multi-day routes and altitude): never counted in completeness. */
   optional?: boolean;
   /** Overrides the default length limit for a text column. */
   maxLength?: number;
@@ -181,7 +181,7 @@ const WHALE_FACTS: FactDef[] = [
   whaleCol('otherWhales', 'Other whales', "Bryde's, sei, pilot, beluga, narwhal, bowhead, beaked whales and any other whale not in its own column."),
   whaleCol('dolphins', 'Dolphins & porpoises', 'Wild sea dolphins and porpoises. River dolphins are not counted here; they belong to Wildlife Viewing. Kept separate so a traveler who only likes whales is not matched on these.'),
   { key: 'watchShore', label: 'Watch from shore', type: 'bool', group: 'style', hint: 'Whales or dolphins can be watched from a lookout or the shore, not only from a boat.' },
-  { key: 'boatStyle', label: 'Boat style', type: 'choice', group: 'style', options: [{ value: 'inflatable', label: 'Small inflatable' }, { value: 'midsize', label: 'Mid-size boat' }, { value: 'large', label: 'Large vessel' }, { value: 'sailing', label: 'Sailing' }, { value: 'mixed', label: 'Several styles' }], hint: 'The usual kind of boat for the trips.' },
+  { key: 'boatStyle', label: 'Boat style', type: 'multi', group: 'style', options: [{ value: 'inflatable', label: 'Small boat or inflatable' }, { value: 'midsize', label: 'Mid-size boat' }, { value: 'large', label: 'Large vessel' }, { value: 'sailing', label: 'Sailing' }], hint: 'Every kind of boat a visitor commonly goes out on. Small boat or inflatable: Zodiac, RIB, panga, outrigger, skiff (about a dozen people or fewer). Mid-size: day-trip and whale-watching boats, catamarans and dhows (up to about 100). Large vessel: expedition ships, ferries and big catamarans (100 or more). Pick all that apply; leave blank where there are no organized trips.' },
   { key: 'swimAllowed', label: 'Swim with whales', type: 'bool', group: 'style', hint: 'Regulated swimming with wild whales or dolphins is offered. Leave unticked if it is banned or only captive.' },
   { key: 'closeness', label: 'Encounter closeness', type: 'rating', group: 'experience', hint: '0-10. How close and long the encounters are: breaching, calves, whales approaching the boat.' },
   { key: 'seasick', label: 'Seasickness risk', type: 'rating', group: 'experience', hint: '0-10. 10 means the usual sea is very rough for a boat trip.' },
@@ -197,7 +197,7 @@ const DIVING_FACTS: FactDef[] = [
   { key: 'divingRating', label: 'Diving rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for scuba at its best time of year, on its own (a place with no diving worth doing is 0-1).' },
   { key: 'snorkelingRating', label: 'Snorkeling rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for snorkeling at its best time of year, on its own (a place with nothing worth snorkeling is 0-1).' },
   { key: 'bestFor', label: 'Best for', type: 'choice', group: 'experience', options: [{ value: 'both', label: 'Both about equally' }, { value: 'diving', label: 'Diving-led' }, { value: 'snorkeling', label: 'Snorkeling-led' }], hint: 'Diving-led or snorkeling-led when one rating is 1.5 or more above the other, otherwise both.' },
-  { key: 'drawType', label: 'What the draw is', type: 'choice', group: 'style', options: [{ value: 'reef', label: 'Coral reef (typical)' }, { value: 'animals', label: 'Animals over rock or open water' }, { value: 'wrecks', label: 'Wrecks' }, { value: 'caves', label: 'Caves and cenotes' }, { value: 'kelp', label: 'Kelp and cold-water reef' }, { value: 'mixed', label: 'Several equally' }, { value: 'other', label: 'Something else (a spring, a rift, ice)' }], hint: 'What the visitor mostly goes underwater for. Coral reef is the norm and needs no mention; a place that is about being in the water with animals, not coral scenery, is called out in the text.' },
+  { key: 'drawType', label: 'What the draw is', type: 'multi', group: 'style', options: [{ value: 'reef', label: 'Coral reef (typical)' }, { value: 'animals', label: 'Animals over rock or open water' }, { value: 'wrecks', label: 'Wrecks' }, { value: 'caves', label: 'Caves and cenotes' }, { value: 'kelp', label: 'Kelp and cold-water reef' }, { value: 'other', label: 'Something else (a spring, a rift, ice)' }], hint: 'Everything visitors mostly go underwater for: pick all that apply; there is no "several". Coral reef is the norm and needs no mention; a place that is about animals, wrecks or caves, not coral scenery, is called out in the text.' },
   { key: 'accessStyle', label: 'How you do it', type: 'multi', group: 'style', options: [{ value: 'dayBoat', label: 'Day boat (typical)' }, { value: 'shore', label: 'Shore or house reef' }, { value: 'liveaboard', label: 'Liveaboard' }], hint: 'Every way a visitor usually reaches the best sites: pick all that apply. Day boat is the norm and needs no mention; shore and liveaboard are the variants.' },
   { key: 'certification', label: 'Certification needed', type: 'choice', group: 'style', options: [{ value: 'none', label: 'None (snorkeling or intro dives)' }, { value: 'openWater', label: 'Open Water (typical)' }, { value: 'advanced', label: 'Advanced (deeper sites)' }, { value: 'specialty', label: 'Specialty training (cave, wreck, technical)' }], hint: 'What the headline sites need. Open Water is the norm; anything else is called out in the text.' },
   { key: 'typicalDepth', label: 'Typical depth', type: 'text', group: 'style', hint: 'Depth range of the main sites in feet, e.g. 30-80 ft. Over 100 ft, or shallower than 30 ft, is unusual.' },
@@ -240,12 +240,20 @@ export function divingFormatCallouts(facts: Record<string, InterestFactValue>): 
   const temps = [...temp.matchAll(/(?<!\d)(-?\d+(?:\.\d+)?)/g)].map((m) => Number(m[1]));
   const hi = temps.length ? Math.max(...temps.slice(0, 2)) : null;
   if (/drysuit|7 mm/i.test(temp) || (hi !== null && hi < 68)) r.push(`cold water (${temp.replace(/\s*\(.*\)/, '')})`);
-  const draw = str('drawType');
-  if (draw === 'animals') r.push('the draw is animals over rock or open water, not coral reef');
-  else if (draw === 'wrecks') r.push('the draw is wrecks');
-  else if (draw === 'caves') r.push('the draw is caves and cenotes');
-  else if (draw === 'kelp') r.push('the draw is kelp forest and cold-water reef');
-  else if (draw === 'other') r.push('the draw is unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)');
+  // "What the draw is" is a multi-select (17 Oct 2026); an older single word is read as a one-item list. A coral reef among the draws makes the place typical.
+  const rawDraw = facts.drawType;
+  const draws = Array.isArray(rawDraw) ? rawDraw.map(String) : typeof rawDraw === 'string' && rawDraw && rawDraw !== 'mixed' ? [rawDraw] : [];
+  if (!draws.includes('reef')) {
+    const DRAW_CALLOUT: Record<string, string> = {
+      animals: 'animals over rock or open water, not coral reef',
+      wrecks: 'wrecks',
+      caves: 'caves and cenotes',
+      kelp: 'kelp forest and cold-water reef',
+      other: 'something unusual rather than a reef (for example a spring, a rift, ice, a lake or interesting rock formations)',
+    };
+    const named = draws.map((d) => DRAW_CALLOUT[d]).filter(Boolean);
+    if (named.length) r.push(`the draw is ${named.join('; ')}`);
+  }
   const animals = str('animals');
   if (/baited|cage/i.test(animals)) r.push('some animal encounters are baited or in a cage');
   if (/in-water swim/i.test(animals)) r.push('regulated in-water swims with whales or dolphins');
@@ -264,7 +272,7 @@ export function bestOdds(text: unknown): number {
 // columns (they duplicate the monthly text), so the only months here are the per-break ones inside the breaks cell.
 const SURFING_FACTS: FactDef[] = [
   { key: 'breaks', label: 'Signature breaks', type: 'text', group: 'waves', wide: true, hint: 'The real waves a trip is built around, 3 to 5 of them, as "Break (type, level, months)", e.g. "Pipeline (reef, expert, Nov-Feb); Waikiki (beach, beginner, Apr-Sep)". Type is beach, point, reef or river mouth. Level is beginner, intermediate or expert. Months are when it works, or year-round.' },
-  { key: 'waveType', label: 'Wave type', type: 'choice', group: 'style', options: [{ value: 'beach', label: 'Beach break' }, { value: 'point', label: 'Point break' }, { value: 'reef', label: 'Reef break' }, { value: 'rivermouth', label: 'River mouth' }, { value: 'mixed', label: 'Several types' }], hint: 'The type of wave the place is known for. If two or more types matter equally, pick Several types.' },
+  { key: 'waveType', label: 'Wave type', type: 'multi', group: 'style', options: [{ value: 'beach', label: 'Beach break' }, { value: 'point', label: 'Point break' }, { value: 'reef', label: 'Reef break' }, { value: 'rivermouth', label: 'River mouth' }], hint: 'Every type of wave among the place\'s signature breaks. Pick all that apply; there is no "several".' },
   { key: 'beginnerRating', label: 'Beginner rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for someone learning to surf, at its best time of year, on its own (soft waves, sandy bottom, schools and rentals nearby). A place with no beginner waves is 0-1.' },
   { key: 'advancedRating', label: 'Advanced rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for experienced surfers, at its best time of year, on its own (wave quality, power, variety). A place with nothing to challenge them is 0-1.' },
   { key: 'hazards', label: 'Main hazards', type: 'text', group: 'style', wide: true, hint: 'The one to three things that most often hurt or surprise a visitor, e.g. "Shallow reef, strong rips, localism, sharks". Plain words, no sentences.' },
@@ -286,15 +294,17 @@ const SURFING_FACTS: FactDef[] = [
  * Drafted in docs/hiking-columns-draft.md. Three more are held back for later: longest trek in days, guide needed, how you reach the trails.
  */
 const HIKING_FACTS: FactDef[] = [
-  { key: 'topTrails', label: 'Signature trails', type: 'text', group: 'trails', wide: true, maxLength: 700, hint: 'The routes a trip is built around, 3 to 5 of them, as "Route (type, length, difficulty, months)", e.g. "Alta Via 1 (hut-to-hut trek, about 75 miles, 10 days, trek, Jul-Sep); Tre Cime loop (day hike, about 6 miles, moderate, Jun-Oct)". Type is day hike, loop, point-to-point, multi-day trek, hut-to-hut or walk-up summit. Difficulty is easy, moderate, strenuous, trek or expedition trek (see the rules tab). Miles and feet.' },
+  { key: 'signatureDayHikes', label: 'Signature day hikes', type: 'text', group: 'trails', wide: true, maxLength: 700, hint: 'The day hikes a trip is built around, 2 to 4 of them, as "Route (type, length, difficulty, months)", e.g. "Tre Cime loop (loop, about 6 miles, steady, Jun-Oct); Seceda ridge (out and back, about 5 miles, steady, Jun-Oct)". Type is loop, out and back, point-to-point or walk-up summit. Difficulty is easy, steady, steep or strenuous (steady is the middle band; strenuous only for a route that would test a serious hiker; see the rules tab). Miles and feet.' },
+  { key: 'multiDayHikes', label: 'Multi-day hikes', type: 'text', group: 'trails', wide: true, maxLength: 700, optional: true, hint: 'The multi-day routes, 1 to 3 of them, as "Route (days, length, hut-to-hut or camping, difficulty, months)", e.g. "Alta Via 1 (10 days, about 75 miles, hut-to-hut, trek, Jul-Sep)". Difficulty is trek or expedition trek (see the rules tab). Blank when the place has no multi-day route. Miles and feet.' },
   { key: 'ways', label: 'What you can do', type: 'multi', group: 'trails', options: [{ value: 'easyWalks', label: 'Easy walks' }, { value: 'dayHikes', label: 'Day hikes' }, { value: 'hutTreks', label: 'Hut-to-hut or lodge treks' }, { value: 'campTreks', label: 'Camping treks' }, { value: 'summits', label: 'Walk-up summits' }], hint: 'Every kind of walking a visitor can do here: pick all that apply. A walk-up summit needs no rope, crampons or ice axe; one that does belongs to Mountaineering.' },
+  { key: 'howReach', label: 'How you reach the trails', type: 'multi', group: 'trails', options: [{ value: 'trailhead', label: 'Drive to a trailhead' }, { value: 'lifts', label: 'Cable car, gondola or chairlift' }, { value: 'shuttle', label: 'Shuttle or bus to the trailhead' }, { value: 'boat', label: 'Boat or ferry' }, { value: 'train', label: 'Train or cog railway' }, { value: 'flight', label: 'Flight to the trailhead (small plane, floatplane or helicopter)' }, { value: 'fromTown', label: 'Walk from town' }], hint: 'Every way visitors reach the best walking. "Drive to a trailhead" is the ordinary case (park, then a loop or out and back); tick the others when they are a real part of how it works, such as lifts that put hikers on high ridges. Gemini mentions it when it is not just a trailhead.' },
   { key: 'dayHikeRating', label: 'Day-hike rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for easy walks and day hikes, at its best time of year, on its own (the scenery the walks reach, trails, variety, signage, getting to trailheads). A place with no day hikes worth doing is 0-1.' },
   { key: 'trekRating', label: 'Trek rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for multi-day trekking, at its best time of year, on its own (the scenery the trek crosses, routes, huts or lodging, season, permits). A place with no multi-day route is 0-1.' },
-  { key: 'season', label: 'Walking season', type: 'text', group: 'style', hint: 'When the trails are walkable, with the reason, e.g. "Jun-Sep; high passes hold snow until early July" or "Nov-Mar; too hot the rest of the year". A trail that needs snowshoes here and there still counts; a month only usable on skis does not.' },
-  { key: 'altitude', label: 'Altitude', type: 'choice', group: 'style', options: [{ value: 'low', label: 'Low (under 5,000 ft)' }, { value: 'moderate', label: 'Moderate (5,000 to 9,000 ft)' }, { value: 'high', label: 'High (9,000 to 14,000 ft, altitude sickness possible)' }, { value: 'veryHigh', label: 'Very high (over 14,000 ft, acclimatize)' }], hint: 'The elevation of the walking that most visitors do. Pick the level of the headline routes, not the highest point in the region.' },
+  { key: 'altitude', label: 'Altitude', type: 'choice', group: 'style', optional: true, options: [{ value: 'low', label: 'Low (under 5,000 ft)' }, { value: 'moderate', label: 'Moderate (5,000 to 9,000 ft)' }, { value: 'high', label: 'High (9,000 to 14,000 ft, altitude sickness possible)' }, { value: 'veryHigh', label: 'Very high (over 14,000 ft, acclimatize)' }], hint: 'The elevation of the walking that most visitors do. Pick the level of the headline routes, not the highest point in the region.' },
   { key: 'permits', label: 'Permits, fees or guide rules', type: 'text', group: 'style', wide: true, hint: 'Anything that restricts or charges for walking: timed permits, reservations, park fees, routes where a guide is required by rule. Blank when there is nothing.' },
-  { key: 'crowds', label: 'Crowds on the headline trails', type: 'choice', group: 'style', options: [{ value: 'quiet', label: 'Quiet' }, { value: 'moderate', label: 'Moderate' }, { value: 'crowded', label: 'Crowded at the headline trails' }], hint: 'How busy the best-known trails usually are in the walking season.' },
-  { key: 'hazards', label: 'Main hazards', type: 'text', group: 'style', wide: true, hint: 'The one to three things that most often hurt or surprise a walker, e.g. "Altitude sickness, river crossings, sudden storms". Plain words, no sentences. Leave out hazards that are not a real issue there.' },
+  { key: 'statusNotes', label: 'Status or closure notes', type: 'text', group: 'style', wide: true, maxLength: 700, hint: 'Closures, storm or fire damage, reopening dates, road or bridge outages and seasonal access limits that affect the main trails now or regularly, with the date you checked, e.g. "Sendero Los Quetzales: storm damage 2021, reopening unconfirmed (checked Oct 2026)". Blank when nothing is closed or restricted. These go stale, so recheck them.' },
+  { key: 'crowdIndicators', label: 'Crowding evidence', type: 'multi', group: 'style', options: [{ value: 'volume', label: 'High volume' }, { value: 'recognized', label: 'Recognized problem' }, { value: 'controls', label: 'Access controls' }, { value: 'parking', label: 'Parking overflow' }, { value: 'queues', label: 'Queues or congestion' }], hint: 'An impartial count, not a feeling. Tick each one that is documented for the main hiking areas in season: HIGH VOLUME (about 2 million visits a year, or thousands a day at one site); RECOGNIZED PROBLEM (authorities or the press call it overtourism or a surge); ACCESS CONTROLS (reservations, timed entry, mandatory shuttle, toll, turnstile, road closure, introduced because of crowding); PARKING OVERFLOW (lots full early, cars along the road); QUEUES OR CONGESTION (lift lines, trail bottlenecks). 0-1 quiet, 2 moderate, 3 busy, 4 very busy, 5 crowded. Gemini must mention crowds at 5, may mention them in peak-crowd months at 4, and not at all at 3 or fewer. Put the sources in the next column.' },
+  { key: 'crowdEvidence', label: 'Crowding sources', type: 'text', group: 'style', wide: true, maxLength: 900, hint: 'For each ticked indicator, the figure or fact and where it comes from, e.g. "Seceda 4,000-6,000 visitors a day (travel press); Lago di Braies car access restricted 1 Jul-15 Sep (park notice)". Blank when nothing is ticked.' },
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
@@ -308,6 +318,58 @@ const GEMINI_NOTE_FACTS: FactDef[] = [
   { key: 'extraAvoid', label: 'Also avoid', type: 'list', group: 'planning', optional: true, hint: 'Things Gemini must leave out for this place, on top of the standing rules, comma-separated.' },
 ];
 
+
+/**
+ * The pilot interests for the sub-interest chips (17 Oct 2026). One column per chip. A rating is 0-10 for how strong the place is at it; a tick is
+ * yes or no. These carry no Gemini notes or draw yet: the columns exist so each chip has data behind it.
+ */
+const rate = (key: string, label: string, hint: string): FactDef => ({ key, label, type: 'rating', group: 'experience', hint: `0-10. ${hint}` });
+const tick = (key: string, label: string, hint: string): FactDef => ({ key, label, type: 'bool', group: 'experience', hint });
+
+const FINE_DINING_FACTS: FactDef[] = [
+  { key: 'michelinRestaurants', label: 'Michelin-starred restaurants', type: 'int', group: 'experience', hint: 'How many restaurants in the place hold one or more Michelin stars, from the current Michelin Guide. A place the guide does not cover is 0.' },
+  rate('tastingMenus', 'Tasting menus and chef\'s tables', 'How strong the scene for multi-course tasting menus and chef\'s-table counters is. 0-1 almost none, 5 a few good ones, 8-10 a destination for them.'),
+  rate('farmToTable', 'Farm-to-table dining', 'How strong the scene is for restaurants built on local farms, producers and the season. 0-1 almost none, 8-10 a defining part of the dining.'),
+  rate('diningWithView', 'Dining with a view', 'How easy it is to dine somewhere with a memorable view (rooftop, vineyard, sea, mountains) at fine-dining level. 0-1 almost none, 8-10 many.'),
+];
+
+const COFFEE_TEA_FACTS: FactDef[] = [
+  tick('coffeeFarms', 'Coffee farm visits', 'Tick when visitors can tour a working coffee farm or estate within a day trip.'),
+  rate('specialtyCafes', 'Specialty cafés and roasteries', 'How strong the specialty coffee scene is: independent roasters and cafés worth a trip. 0-1 almost none, 5 a few good ones, 8-10 a coffee destination.'),
+  tick('teaPlantations', 'Tea plantation visits', 'Tick when visitors can tour a working tea plantation or estate within a day trip.'),
+  rate('teaCeremonies', 'Tea ceremonies and tea houses', 'How strong the tea-house and tea-ceremony culture is for visitors (a ceremony you can attend, tea houses worth a visit). 0-1 almost none, 8-10 central to the place.'),
+];
+
+const STREET_FOOD_FACTS: FactDef[] = [
+  rate('nightMarkets', 'Night markets', 'How strong the night-market scene is: evening markets with food stalls that visitors go to. 0-1 none, 8-10 famous ones.'),
+  rate('streetStalls', 'Street stalls and hawker centres', 'How strong the street-stall and hawker-centre eating is, day or night. 0-1 almost none, 8-10 a main way to eat.'),
+  tick('foodTours', 'Guided food tours', 'Tick when guided street-food or market tastings are readily available.'),
+  tick('cookingClasses', 'Cooking classes', 'Tick when visitor cooking classes (market visit plus cooking) are readily available.'),
+  rate('produceMarkets', 'Fresh produce markets', 'How strong the fresh-produce and food-market scene is for visitors. 0-1 almost none, 8-10 famous markets.'),
+];
+
+const SHOPPING_FACTS: FactDef[] = [
+  rate('marketsBazaars', 'Markets and bazaars', 'How strong the market and bazaar shopping is (souks, flea markets, craft and street markets). 0-1 almost none, 8-10 a main reason to go.'),
+  rate('luxuryShopping', 'Luxury and designer', 'How strong the luxury and designer shopping is (flagship stores, luxury districts). 0-1 almost none, 8-10 a global luxury destination.'),
+  rate('localCrafts', 'Local crafts and souvenirs', 'How good the shopping is for local crafts and distinctive, locally made souvenirs. 0-1 mostly imported goods, 8-10 rich and easy to find.'),
+  tick('outletsBargains', 'Outlets and bargains', 'Tick when outlet malls or well-known bargain shopping are a real draw.'),
+];
+
+const NIGHTLIFE_FACTS: FactDef[] = [
+  rate('clubs', 'Clubs and dancing', 'How strong the club and dance scene is. 0-1 almost none, 5 a few good clubs, 8-10 a global clubbing destination.'),
+  rate('liveMusic', 'Live music venues', 'How strong the live music scene is for visitors (jazz, rock, local music, any genre). 0-1 almost none, 8-10 a music city.'),
+  rate('cocktailBars', 'Cocktail and rooftop bars', 'How strong the cocktail-bar and rooftop-bar scene is. 0-1 almost none, 8-10 world-class.'),
+  tick('lgbtqScene', 'LGBTQ+ scene', 'Tick when the place has an established LGBTQ+ nightlife scene (several venues or a recognized district).'),
+  tick('beachParties', 'Beach and island parties', 'Tick when beach clubs, boat parties or island party scenes are a real part of the nightlife.'),
+];
+
+const TRADITIONAL_CRAFTS_FACTS: FactDef[] = [
+  tick('textilesWeaving', 'Textiles and weaving', 'Tick when textiles, weaving or dyeing are a living local craft that visitors can see or buy.'),
+  tick('potteryCeramics', 'Pottery and ceramics', 'Tick when pottery or ceramics are a living local craft that visitors can see or buy.'),
+  tick('craftWorkshops', 'Hands-on workshops', 'Tick when visitors can take a hands-on workshop or class to make a traditional craft.'),
+  tick('carvingMetalwork', 'Carving and metalwork', 'Tick when wood or stone carving, silver, copper or other metalwork are a living local craft that visitors can see or buy.'),
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -316,6 +378,12 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   diving: [...DIVING_FACTS, ...GEMINI_NOTE_FACTS],
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
+  fineDining: FINE_DINING_FACTS,
+  coffeeTea: COFFEE_TEA_FACTS,
+  streetFood: STREET_FOOD_FACTS,
+  shopping: SHOPPING_FACTS,
+  nightlife: NIGHTLIFE_FACTS,
+  traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {
@@ -658,10 +726,10 @@ export const WHALE_WRITING_RULES: string[] = [
 // ---- Hiking rules (from prompts/hiking/ and the shared prompts/_shared/on-foot-core.md; owner decisions 13-14 Oct 2026) ----
 
 export const HIKING_TESTS: Array<{ title: string; body: string }> = [
-  { title: 'A trail within a day trip', body: 'A trail or route a visitor can walk within a day trip of the place (about two hours each way; the text says so when it is more than an hour). Walking tours of a city, beach strolls and scenic drives do not count.' },
+  { title: 'A trail within a day trip', body: 'A trail or route a visitor can walk within a day trip of the place (about two hours each way; the text says so when it is more than an hour). Walking tours of a city and scenic drives do not count. A city park, a promenade or a short nature walk is the lowest rung of hiking, not nothing.' },
   { title: 'Real', body: 'People travel to walk here, or there are named trails, a trail network or treks that a visitor could use.' },
   { title: 'Low', body: 'A real walkable trail is documented within a day trip, even if it is short, seasonal or modest, or there is no hiking industry (a city with a hill park, a coast path, a ridge above the town). The text says plainly what it is.' },
-  { title: 'Not applicable', body: 'No walkable trail is documented within a day trip, so a visitor could not hike here at all. The reason is stored and shown on the N/A chip.' },
+  { title: 'Just a walk', body: 'Only a park, a promenade, a short nature walk or a guided landing is within reach. Hiking has no N/A: the place peaks below 2.0, and below 1.0 when it is nothing more than a stroll in a city park. The text says plainly what it is.' },
 ];
 
 export const HIKING_EDGE_CASES: Array<{ case: string; ruling: string }> = [
@@ -672,13 +740,13 @@ export const HIKING_EDGE_CASES: Array<{ case: string; ruling: string }> = [
   { case: 'A trail that needs snowshoes here and there, groomed winter walking trails, snowshoe routes', ruling: 'In. They count as walking, so a snowbound month at a place that has them scores low (0.1 to 1.5), not 0.0, and the text says what a walker can do.' },
   { case: 'Hut-to-hut, lodge-to-lodge and tea-house treks', ruling: 'In. Sleeping outside as a skill (permits, bears, gear) belongs to Camping & Backcountry.' },
   { case: 'Scenery and views that can only be reached on foot', ruling: 'In, and a main reason to score high: for the best walks the landscape is why people go. Hiking writes it from the walker\'s side, in a clause with a named feature.' },
-  { case: 'Views anyone can reach by road, boat or a short stroll, and the landscape as a whole', ruling: 'Out. They belong to Scenic Landscapes, which says them from the landscape\'s side. Overlap is expected; the same sentence is not repeated.' },
-  { case: 'The park as the destination', ruling: 'Out. It belongs to National Parks; the trails inside it are hiking.' },
+  { case: 'Views anyone can reach by road, boat or a short stroll, and the landscape as a whole', ruling: 'They do not raise the Hiking score on their own: only walking counts. They can be mentioned in the text when they matter to the walk. Scenic Landscapes covers them too, and the same wording may appear in both.' },
+  { case: 'The park as the destination', ruling: 'A national park is a place-type tag, not an interest. The trails inside it are hiking.' },
   { case: 'Mountain biking, horseback riding', ruling: 'Out. They are their own interests.' },
   { case: 'City walking tours and beach strolls', ruling: 'Out. They belong to Local Culture & City Exploration and Beaches & Swimming.' },
   { case: 'A city with a real mountain or coast trail within reach (Cape Town, Hong Kong, Rio)', ruling: 'In, as real or low depending on what is there.' },
   { case: 'A remote trailhead, a required guide or a required permit', ruling: 'In. The text says how to get there, or that a guide or permit is required.' },
-  { case: 'An old N/A flag', ruling: 'Ignored. Applicability is decided from geography and what is documented (Myanmar was marked N/A in error).' },
+  { case: 'An old N/A flag', ruling: 'Ignored. Hiking has no N/A: every place has some walking, and a place with only a park or promenade peaks below 2.0.' },
 ];
 
 export const HIKING_SCORING_WEIGHTS: Array<{ label: string; pct: number; note: string }> = [
@@ -699,24 +767,36 @@ export const HIKING_LADDER: Array<{ band: string; title: string; examples: strin
 ];
 
 export const HIKING_WRITING_RULES: string[] = [
-  'Each month\'s score is how good the hiking is that month, for whichever of two walkers the place suits better: someone on easy walks and day hikes, or a trekker on multi-day routes. A place that suits one better is not marked down for it.',
+  'Each month\'s score is how good the hiking is that month for the walkers the place serves: day walkers, which is nearly everywhere, or, where multi-day routes exist, trekkers. A place that suits one kind better is not marked down for it.',
   'The best walking leads. Score the best walking a visitor can actually reach, and the scenery it delivers, together. Scenery and views that can only be reached on foot count most.',
-  'A season has a plateau and a slope. A multi-month peak or trough may share a score and a blurb. On the slopes between them every month gets its own score and its own blurb, stepping gradually, with no pairs or triples of equal scores, and never clustering on whole or half numbers. A month between a good season and a bad one is scored between the two and says what changed.',
-  'A dead month scores 0.0, and only a truly dead month: nothing walkable at all (flooding, a full closure, deep snow with no walking route), or only skis will do. Groomed winter walking trails and snowshoe routes count as walking, so a snowbound month at a place that has them scores 0.1 to 1.5 and says what a walker can do. A month when only a few low trails are walkable scores 0.1 to 0.9. A dead stretch may share one blurb.',
-  'A place that is the same all year (a low coastal path, a steady mild climate) uses one short sentence for all twelve months and one score, repeated.',
+  'Reach: a place is judged by the walking within about an hour or so of it (up to about two hours for an outstanding hike, with the drive said). A city\'s best hike an hour out is in scope and named in the overview, unless another place in the catalog already owns it (Gemini is given the list of the other places).',
+  'A season has a plateau and a slope. A multi-month peak or trough may share a score and a blurb. On the slopes between them every month gets its own score and its own blurb, stepping gradually, with no pairs or triples of equal scores, and never clustering on whole or half numbers. A month between a good season and a bad one is a transition month and says what changed.',
+  'A dead month scores 0.0, and only a truly dead month: nothing walkable at all (flooding, a full closure, deep snow with no walking route), or only skis will do. Groomed winter walking trails and snowshoe routes count as walking, so a snowbound month at a place that has them scores 0.1 to 1.5 and says what a walker can do.',
+  'Score the headline walk as the walker will find it. Ordinary rain costs nothing on a rain-hardy walk, but a walk whose reward is the view loses real points when the heights are in cloud, and every walk loses points to storm closures, snow or ice, heat, smoke, fire risk or mud, even where the gentler walks nearby do not change.',
+  'A mild climate has no bad month. Where walking continues in every month, the lowest month stays within about 3 points of the peak; rain and cloud alone cost a point or two. A deeper dip needs a real cause (snow or ice closing trails, flooding, dangerous heat, a closure).',
+  'Months, not seasons: for Southern Hemisphere and equatorial places the text names months ("from March to May") and never says spring, summer, autumn, fall or winter, because most readers live in the Northern Hemisphere.',
+  'A place is the same all year only if its best walks really are (a low coastal path, a steady mild climate, nothing weather-dependent): one short sentence and one score, repeated. If its headline walk depends on weather, or it has any real season, the months differ.',
   'Day-hike rating and trek rating (0 to 10 each) are given at the place\'s best time of year, each judged as its own thing. The higher of the two is within 0.5 of the peak monthly score.',
   'There is no list of places that may score 10 and no limit on months. Gemini says what it judges to be world-reference walking. Afterwards a check flags any 10 outside the eight places we expected, and four or more months at 10.',
+  'The overview is two to four sentences, written in one pass: each subject is handled once and finished before the next (never levadas, then a ridge hike, then levadas again). Roughly: what the hiking is known for (the network or area, then headline routes, with the town or trailhead), how you hike it when that is not the ordinary drive to a trailhead, a multi-day trek if one exists, crowds only if earned, and when it works. The limits are maximums, not targets: a top-tier place comes close to its maximum because it has more to say; a modest place stays short. Never pad.',
+  'Day hiking is the default. The overview never says a place "suits day hikers" or says who a place suits. A multi-day trek is mentioned only where one exists, with its length and days.',
+  'Hike or walk: it is hiking when the route needs hiking footwear (rough ground, climbing, a mountain trail, a scramble) and walking only when it is flat, paved, a boardwalk or other easy ground. A mountain or canyon route is never "walking".',
+  'How you hike: most day hikes are a drive to a trailhead and a loop or out-and-back. When it works differently (cable cars, gondolas or chairlifts onto high ridges, a shuttle-only trailhead, a boat, a train, a floatplane), the overview says so in a clause, because it changes what the hike is.',
+  'Naming a route: say how demanding it is in plain words, and when it is hard say what makes it hard; avoid vague level labels; trek means two or more days. A strenuous route says why in a few words (steep, long, rough ground, a scramble, exposure, altitude). No distance for a day hike unless the day is 15 miles or more; a multi-day route gets length and days. Never a length for one route and not its neighbor. One name is never turned into several routes.',
+  'Which routes to name: a place famous for one main hike or circuit focuses on that hike; a place equally famous for two or three different routes names those two or three; a place generally well known for hiking, with many equally great hikes, names no specific hikes and describes what the hiking is like.',
   'The scenery is part of the story. Say what the walker sees, from the trail: the peaks, glacier, lakes, canyon or coast, and the views only walking reaches, in a clause with a named feature, not a list of adjectives. No photography tips and no drive-up viewpoints.',
-  'The overview is two to four sentences: the trail or trails the place is known for, what the walking shows, who it suits (easy walkers, day hikers or trekkers), and when it works. It names the route and the town or trailhead. A remote trailhead is explained: how a visitor gets there. For a peak of 8.5 and up it uses more room (about 350 to 480 characters) for a second named route or a real caution.',
-  'A month says what changes: the snow line and which trails are open, monsoon or heat, daylight, whether huts and transport run, insects or smoke, and which routes are working. It says what a walker finds, never what a place lacks.',
-  'Every blurb that names a route says who it suits, in a word or two, using the shared difficulty words: easy (under 3 miles), moderate (a 3 to 10 mile day hike, up to about 2,000 ft of climbing), strenuous (more than 10 miles or 3,000 ft of climbing, or rough ground), trek (two or more days), expedition trek (above about 14,000 ft, or days from help).',
+  'A month says what changes: the snow line and which trails are open, monsoon or heat, daylight, whether huts and transport run, insects or smoke, and which routes are working. For a weather-dependent headline walk it says what the walker finds on it (clear mornings and afternoon cloud, storm closures, ice). It says what a walker finds, never what a place lacks.',
+  'Air quality: if the air is predictably poor at a certain time of year (wildfire smoke, haze or other particulate) and that is notable and predictable for the place, the months say so. Not mentioned where it is only occasional or unusual.',
+  'Crowds follow the count of documented indicators (high volume, a recognized problem, access controls, parking overflow, queues). 5 of 5: crowds must be mentioned, in the overview and the peak-crowd months. 4 of 5: may be mentioned in peak-crowd month blurbs only, never in the overview. 3 or fewer: no mention anywhere. Said as "crowded", never "overrun" or "swamped", with the specific hotspots named and the practical consequence (timed lift slots, car restrictions, a toll) when the notes name one. No quieter alternative by habit.',
   'Distances are in miles, elevations and climbing in feet, walking time in hours (days for a trek), temperatures in Fahrenheit. American spelling.',
-  'Name a trail, pass, hut or viewpoint only when sure it exists. Give a route\'s length or time when naming it. Name a hut or refuge only when the route is built around it. No tour companies, guides, outfitters or hotels.',
+  'Name a trail, pass, hut or viewpoint only when sure it exists and what it is. Name a hut or refuge only when the route is built around it. No tour companies, guides, outfitters or hotels.',
   'Say plainly when a route needs a permit or a guide, when it is crowded, and when it is dangerous (altitude, exposure, river crossings, avalanche slopes, bears). Do not frighten with hazards that are not a real issue there.',
-  '"World-class" and "legendary" appear at most once in a place\'s whole text, only where earned, never in a month blurb and never as filler.',
-  'When sources would disagree on a fact, leave it out. Never write that sources disagree. Never state what a place lacks.',
+  'A self-rating phrase ("world famous", "world-class") appears at most once in a place\'s whole text, only where earned, never in a month blurb and never as filler. Most places need none: the named routes and the scenery carry it. No stock opening phrase; the overview starts with what is specific to the place. The scale\'s own words ("world-reference", "elite") never appear.',
+  'When sources would disagree on a fact, leave it out. Never write that sources disagree. Never state what a place lacks ("there is no ..." included).',
+  'This is a travel app: never suggest staying indoors, treadmills or gyms. In a bad month, say what the trails are like (icy, flooded, closed, too hot to walk) and stop there.',
+  'The levels, for Gemini\'s own judgment and never repeated as numbers or used as labels in the text: easy (under 3 miles), a middle band (a 3 to 10 mile day hike, up to about 2,000 ft of climbing), strenuous (more than 10 miles or 3,000 ft of climbing, or rough ground), trek (two or more days), expedition trek (above about 14,000 ft, or days from help).',
   'The route list and the notes sent with each place are first drafts, a pointer rather than a checklist.',
-  'Overview and monthly length limits by peak score: under 4, 280 and 180 characters; 4 to 5.9, 380 and 260; 6 to 8.4, 450 and 320; 8.5 and up, 550 and 326. Aim for 55 to 70% of each ceiling.',
+  'Overview and monthly length limits by peak score: under 4, 280 and 180 characters; 4 to 5.9, 380 and 260; 6 to 8.4, 450 and 320; 8.5 and up, 550 and 326. These are maximums, not targets: a rich place uses most of its room, a modest place does not need to, and nothing is padded.',
   'A blurb shared by several months describes a steady condition and cannot contain begins, starts, ends, ceases, clears, opens, closes, winds down, tapers, eases, arrives, returns or their other forms. State the change in the one month it happens.',
-  'Overlap with the other on-foot interests is expected, and scenery counts. Nights outside are Camping & Backcountry, running is Trail Running, the park itself is National Parks, rope climbing is Mountaineering, and views anyone can reach without walking are Scenic Landscapes. Say it from the walker\'s side, and do not repeat a sentence another on-foot interest already wrote about the place.',
+  'Scope: Hiking is walking trails. Nights outside are Camping & Backcountry, running is Trail Running, rope climbing is Mountaineering, and views anyone can reach without walking are Scenic Landscapes; those do not raise a Hiking score. Overlap between interests is normal and good: scenery counts, any of these may be mentioned in the text when it matters to the walk, and a sentence or a whole blurb may be the same in two interests.',
 ];

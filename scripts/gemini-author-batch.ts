@@ -53,6 +53,7 @@ import { convertTemperaturesToF } from '../src/lib/text/temperature';
 import { convertMetersToFeet } from '../src/lib/text/length';
 import { metricToImperial } from '../src/lib/text/units';
 import { ownNameDistanceIssues } from '../src/lib/gemini/place-name-check';
+import { usesMonthsNotSeasons } from '../src/lib/gemini/hemisphere';
 import { loadSkipList } from '../src/lib/gemini/skip-list';
 import type { GenerationContext } from '../src/lib/gemini/schema';
 
@@ -289,18 +290,9 @@ async function main() {
       break;
     }
 
-    // Related-interest summaries: already-authored content for OTHER
-    // interests at this place, so Gemini doesn't restate a claim another
-    // slider already owns (playbook §2's overlap rule) — first sentence
-    // only, kept short.
-    const overviews = (place.sliderOverview as Record<string, string>) ?? {};
-    const relatedInterestSummaries = Object.entries(overviews)
-      .filter(([key]) => key !== interestKey)
-      .map(([key, text]) => ({ interestKey: key, label: key, firstSentence: text.split(/(?<=[.!?])\s/)[0] ?? text }));
-
     const factSheet = factSheetFor(interestKey, place.id);
     // Renamed or broadened places (docs/renamed-places.json): their old name and narrower scope survive in other interests' text
-    // and in a careless fact sheet, so they need a scope sheet, and the other-interest summaries are not sent for them.
+    // and in a careless fact sheet, so they need a scope sheet, 
     // A fact sheet records the place name it was written for. If the place has been renamed or re-scoped since, the sheet is stale.
     if (factSheet?.forPlaceName && factSheet.forPlaceName !== place.name) {
       console.error(`\n-- ${place.name} (${place.id}) -- SKIPPED: its fact sheet was written for "${factSheet.forPlaceName}" but the place is now "${place.name}". Rebuild the sheet.`);
@@ -313,19 +305,26 @@ async function main() {
       summary.push({ place: place.name, status: 'api_error', cost: 0, rejects: 0, warnings: 0, generationId: '—' });
       continue;
     }
-    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'> } = {
+    // Hiking only: the other places in the catalog, so a city can claim a great hike an hour out unless another listed place already owns it.
+    const otherPlaces = interestKey === 'hiking' ? allPlaces.filter((p) => p.isPrimaryDestination && p.id !== place.id).map((p) => p.name).sort() : null;
+    // Hiking only: Southern Hemisphere and equatorial places name months, not seasons (owner rule, 14 Oct 2026).
+    const monthsOnly = interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode);
+    const context: GenerationContext & { verifiedFacts?: Omit<FactSheet, 'mustMention'>; otherPlacesInCatalog?: string[]; seasonWording?: string } = {
       placeId: place.id,
       placeName: place.name,
       region: place.region,
       about: place.about ?? null,
       interestKey,
       interestLabel: interestKey,
-      relatedInterestSummaries: renamedNote ? [] : relatedInterestSummaries,
+      ...(otherPlaces ? { otherPlacesInCatalog: otherPlaces } : {}),
+      ...(monthsOnly ? { seasonWording: 'Name months, never seasons (summer, winter, spring, autumn), because most readers live in the Northern Hemisphere.' } : {}),
       ...(factSheet ? { verifiedFacts: { scope: factSheet.scope, facts: factSheet.facts, avoid: factSheet.avoid, season: factSheet.season } } : {}),
     };
     const contextHash = hashObject(context);
 
-    const prompt = promptTemplate.replace('{{VOICE_RULES}}', voiceRules).replace('{{VOICE_RULES_OPEN_TOP}}', voiceRulesOpenTop).replace('{{ON_FOOT_CORE}}', onFootCore).replace('{{CONTEXT_JSON}}', JSON.stringify(context, null, 2));
+    // The directive file's leading HTML comment is the owner's change log (it names scoring words and stock phrases): never send it to Gemini.
+    const stripComments = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
+    const prompt = promptTemplate.replace(/<!--[\s\S]*?-->/g, '').trimStart().replace('{{VOICE_RULES}}', stripComments(voiceRules)).replace('{{VOICE_RULES_OPEN_TOP}}', stripComments(voiceRulesOpenTop)).replace('{{ON_FOOT_CORE}}', onFootCore).replace('{{CONTEXT_JSON}}', JSON.stringify(context, null, 2));
 
     console.log(`\n-- ${place.name} (${place.id}) --`);
     let result;
@@ -386,7 +385,9 @@ async function main() {
         result.parsed.monthly.forEach((m, i) => (m.score = finalScores[i]));
       }
       for (const msg of result.selfCheckIssues) issues.push({ layer: 'schema', severity: 'reject', message: msg });
-      issues.push(...validateContent(result.parsed, interestKey, place.id));
+      // Hiking: the crowding count comes from the notes sent to Gemini; no notes means no documented evidence, so no crowd mention.
+      const crowding = interestKey === 'hiking' ? Number(((factSheet?.facts ?? []).join(' ').match(/Crowding: (\d) of 5/) ?? [])[1] ?? 0) : undefined;
+      issues.push(...validateContent(result.parsed, interestKey, place.id, { monthsNotSeasons: interestKey === 'hiking' && usesMonthsNotSeasons(place.countryCode), crowding }));
       if (!isNotApplicable(result.parsed)) for (const msg of ownNameDistanceIssues(place.name, [result.parsed.overview, ...result.parsed.monthly.map((m) => m.text)])) issues.push({ layer: 'content', severity: 'warning', message: msg });
       if (!includeNa) issues.push(...validatePlausibility(place.naSliders ?? [], interestKey));
       const drawEntry = interestKey === 'birding' ? drawEntryFor(place.id) : undefined;

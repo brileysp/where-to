@@ -3,6 +3,7 @@ import { PGlite } from '@electric-sql/pglite';
 import { drizzle as drizzlePostgres } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import * as schema from './schema';
+import { throttleClient } from './throttle';
 
 /**
  * When DATABASE_URL is set (Supabase), use real Postgres. Otherwise fall
@@ -26,15 +27,20 @@ const databaseUrl = process.env.DATABASE_URL;
  * connections, the pooler refused more, and admin pages hung for minutes. A pool of 5 that closes idle
  * connections after 20 seconds is plenty: each page runs about 8 short queries in parallel.
  */
-const g = globalThis as typeof globalThis & { __pgClient?: ReturnType<typeof postgres>; __pgliteClient?: PGlite };
+const POOL_SIZE = 8;
+const g = globalThis as typeof globalThis & { __pgClient?: ReturnType<typeof postgres>; __pgThrottled?: ReturnType<typeof postgres>; __pgliteClient?: PGlite };
 
 function pgClient() {
-  return (g.__pgClient ??= postgres(databaseUrl as string, { prepare: false, max: 8, idle_timeout: 20, max_lifetime: 60 * 30, connect_timeout: 20, keep_alive: 10 }));
+  return (g.__pgClient ??= postgres(databaseUrl as string, { prepare: false, max: POOL_SIZE, idle_timeout: 20, max_lifetime: 60 * 30, connect_timeout: 20, keep_alive: 10 }));
+}
+/** One throttle per pool, kept with it, so a hot reload cannot stack a second throttle on the same connections. */
+function pgThrottled() {
+  return (g.__pgThrottled ??= throttleClient(pgClient(), POOL_SIZE));
 }
 function pgliteClient() {
   return (g.__pgliteClient ??= new PGlite('./pgdata'));
 }
 
 export const db = databaseUrl
-  ? drizzlePostgres(pgClient(), { schema })
+  ? drizzlePostgres(pgThrottled(), { schema }) // throttled: see throttle.ts (the pooler hangs on bursts)
   : drizzlePglite(pgliteClient(), { schema });
