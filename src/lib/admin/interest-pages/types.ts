@@ -141,6 +141,9 @@ export interface ChipRow {
   drivers: InterestChipDriver[];
   /** Filled in while the chip waits on a column that has not been added yet. */
   needsColumn: string;
+  /** Who agreed the chip and when (ISO date). Null/empty = not approved yet. A draft needs this before it can go live. */
+  approvedBy: string;
+  approvedAt: string | null;
 }
 
 /** A fit typed by hand for one place and chip. */

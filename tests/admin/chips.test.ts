@@ -102,6 +102,11 @@ describe('chip actions', () => {
     const noDriver = await actions.updateChip('hiking', made[0].key, { status: 'live' });
     expect(noDriver.ok).toBe(false);
     for (const c of made) await actions.updateChip('hiking', c.key, { drivers: [{ column: 'dayHikeRating' }] });
+    // Not approved yet: cannot go live.
+    const unapproved = await actions.updateChip('hiking', made[0].key, { status: 'live' });
+    expect(unapproved.ok).toBe(false);
+    if (!unapproved.ok) expect(unapproved.message).toMatch(/not been approved/);
+    for (const c of made) expect((await actions.setChipApproval('hiking', c.key, true)).ok).toBe(true);
     for (const c of made.slice(0, 5)) expect((await actions.updateChip('hiking', c.key, { status: 'live' })).ok).toBe(true);
     const sixth = await actions.updateChip('hiking', made[5].key, { status: 'live' });
     expect(sixth.ok).toBe(false);
@@ -116,6 +121,7 @@ describe('chip actions', () => {
     expect(live.ok).toBe(false);
     const cleared = await actions.updateChip('birding', r.chip.key, { needsColumn: '' });
     expect(cleared.ok).toBe(true);
+    await actions.setChipApproval('birding', r.chip.key, true);
     expect((await actions.updateChip('birding', r.chip.key, { status: 'live' })).ok).toBe(true);
   });
 
@@ -125,6 +131,21 @@ describe('chip actions', () => {
     expect((await actions.updateChip('safari', r.chip.key, { drivers: [{ column: 'nope' }] })).ok).toBe(false);
     await actions.updateChip('safari', r.chip.key, { drivers: [{ column: 'walking', option: 'sometimes' }] });
     expect((await actions.updateChip('safari', r.chip.key, { status: 'live' })).ok).toBe(false);
+  });
+
+  it('records who approved a chip, takes the approval back, and will not un-approve a live chip', async () => {
+    const r = await actions.createChip('surfing', 'Approvable');
+    if (!r.ok) throw new Error('create failed');
+    expect(r.chip.approvedAt).toBeNull();
+    const a = await actions.setChipApproval('surfing', r.chip.key, true);
+    expect(a.ok && a.chip.approvedAt).toBeTruthy();
+    expect(a.ok && a.chip.approvedBy).not.toBe('');
+    const back = await actions.setChipApproval('surfing', r.chip.key, false);
+    expect(back.ok && back.chip.approvedAt).toBeNull();
+    await actions.updateChip('surfing', r.chip.key, { drivers: [{ column: 'beginnerRating' }] });
+    await actions.setChipApproval('surfing', r.chip.key, true);
+    expect((await actions.updateChip('surfing', r.chip.key, { status: 'live' })).ok).toBe(true);
+    expect((await actions.setChipApproval('surfing', r.chip.key, false)).ok).toBe(false);
   });
 
   it('moves a chip, and keeps the order numbered 1 to n', async () => {

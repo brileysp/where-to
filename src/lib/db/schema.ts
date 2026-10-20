@@ -977,6 +977,9 @@ export const interestChips = pgTable(
     status: text('status').$type<InterestChipStatus>().notNull().default('draft'),
     drivers: jsonb('drivers').notNull().default([]).$type<InterestChipDriver[]>(),
     needsColumn: text('needs_column').notNull().default(''),
+    /** Who agreed the chip, and when. Empty/null = not approved. A draft chip needs this before it can go live. */
+    approvedBy: text('approved_by').notNull().default(''),
+    approvedAt: timestamp('approved_at', { withTimezone: true }),
     updatedBy: text('updated_by').notNull().default(''),
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
   },

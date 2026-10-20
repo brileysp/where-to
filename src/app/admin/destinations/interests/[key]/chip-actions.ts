@@ -22,7 +22,7 @@ const fail = (message: string): { ok: false; message: string } => ({ ok: false, 
 const validInterest = (key: string) => SLIDERS.some((s) => s.key === key);
 
 type ChipDbRow = typeof interestChips.$inferSelect;
-const toRow = (c: ChipDbRow): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn });
+const toRow = (c: ChipDbRow): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn, approvedBy: c.approvedBy, approvedAt: c.approvedAt ? c.approvedAt.toISOString() : null });
 const byOrder = (a: ChipDbRow, b: ChipDbRow) => a.sortOrder - b.sortOrder || a.label.localeCompare(b.label);
 
 const driverSchema = z.object({
@@ -87,6 +87,7 @@ export async function updateChip(interestKey: string, chipKey: string, patch: Ch
   if (next.status === 'live') {
     const problem = liveProblem(next, interestKey);
     if (problem) return fail(problem);
+    if (cur.status !== 'live' && !cur.approvedAt) return fail('This chip has not been approved yet. Approve it first, then it can go live.');
     if (cur.status !== 'live' && all.filter((c) => c.status === 'live').length >= MAX_LIVE_CHIPS) return fail(`Five chips are already live. Make one a draft first.`);
   }
   const set = { label: next.label, status: next.status, drivers: next.drivers, needsColumn: next.needsColumn, updatedBy: admin.email, updatedAt: new Date() };
@@ -113,6 +114,21 @@ export async function moveChip(interestKey: string, chipKey: string, direction: 
     write: async (tx) => { for (const o of order) await tx.update(interestChips).set({ sortOrder: o.order }).where(and(eq(interestChips.interestKey, interestKey), eq(interestChips.chipKey, o.key))); },
   });
   return { ok: true, order };
+}
+
+/** Record (or take back) the owner's approval of a chip. Approval is the gate for going live; it does not switch anything on. */
+export async function setChipApproval(interestKey: string, chipKey: string, approved: boolean): Promise<Result<{ chip: ChipRow }>> {
+  const admin = await requireAdminUser();
+  if (!validInterest(interestKey)) return fail('Unknown interest');
+  const cur = (await loadAll(interestKey)).find((c) => c.chipKey === chipKey);
+  if (!cur) return fail('Chip not found');
+  if (!approved && cur.status === 'live') return fail('A live chip cannot lose its approval. Make it a draft first.');
+  const set = approved ? { approvedBy: admin.email, approvedAt: new Date() } : { approvedBy: '', approvedAt: null };
+  const [row] = await withAdminAudit<ChipDbRow[]>({
+    actor: admin, skipPlaceCache: true, entityType: 'interest_chip', entityId: `${interestKey}:${chipKey}`, action: 'update', before: cur, after: { ...cur, ...set },
+    write: (tx) => tx.update(interestChips).set({ ...set, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestChips.interestKey, interestKey), eq(interestChips.chipKey, chipKey))).returning(),
+  });
+  return { ok: true, chip: toRow(row) };
 }
 
 export async function deleteChip(interestKey: string, chipKey: string): Promise<Result<object>> {

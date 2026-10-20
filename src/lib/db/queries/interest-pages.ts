@@ -342,7 +342,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     ideas: ideaRows.map(toIdea),
     completeness: completenessMap[interestKey],
     passes: passRows,
-    chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn })),
+    chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn, approvedBy: c.approvedBy, approvedAt: c.approvedAt ? c.approvedAt.toISOString() : null })),
     chipOverrides: overrideRows.map((o): ChipOverrideRow => ({ chipKey: o.chipKey, placeId: o.placeId, fit: o.fit, reason: o.reason, setBy: o.setBy, setAt: o.setAt.toISOString() })),
     ruleOverrides: Object.fromEntries(ruleRows.map((r) => [r.sectionKey, r.items])),
     interestOptions: VISIBLE_SLIDERS.map((s) => ({ key: s.key, label: s.label, icon: s.icon, group: s.group })),

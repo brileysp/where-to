@@ -5,9 +5,10 @@ import type { InterestChipDriver } from '@/lib/db/schema';
 import type { ChipOverrideRow, ChipRow, InterestPlaceRow } from '@/lib/admin/interest-pages/types';
 import type { FactDef } from '@/lib/admin/interest-pages/config';
 import { canDrive, chipFit, driverLabel, driverProblem, fitBasis, MAX_DRIVERS, MAX_LIVE_CHIPS, needsOption, roundFit } from '@/lib/admin/interest-pages/chips';
-import { createChip, updateChip, moveChip, deleteChip, saveChipOverride, clearChipOverride, type ChipPatch } from '@/app/admin/destinations/interests/[key]/chip-actions';
+import { createChip, updateChip, moveChip, deleteChip, setChipApproval, saveChipOverride, clearChipOverride, type ChipPatch } from '@/app/admin/destinations/interests/[key]/chip-actions';
 
 const FIT_WELL = 7;
+const when = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '');
 
 export function ChipsSection({
   interestKey,
@@ -72,6 +73,10 @@ export function ChipsSection({
     const order = new Map(r.order.map((o) => [o.key, o.order]));
     setChips((all) => all.map((x) => ({ ...x, order: order.get(x.key) ?? x.order })));
   }
+  async function approve(c: ChipRow, approved: boolean) {
+    const r = await run(() => setChipApproval(interestKey, c.key, approved));
+    if (r && r.ok) setChips((all) => all.map((x) => (x.key === c.key ? r.chip : x)));
+  }
   async function remove(c: ChipRow) {
     if (!window.confirm(`Delete the chip "${c.label}" and any numbers you set by hand for it?`)) return;
     const r = await run(() => deleteChip(interestKey, c.key));
@@ -109,6 +114,7 @@ export function ChipsSection({
       <div className="ip-toolbar">
         <span className={`ip-chip ${liveCount >= MAX_LIVE_CHIPS ? 'warn' : 'good'}`}>{liveCount} of {MAX_LIVE_CHIPS} chips live</span>
         <span className="ip-chip dim">{sorted.length - liveCount} draft</span>
+        <span className={`ip-chip ${sorted.some((c) => c.approvedAt) ? "info" : "dim"}`}>{sorted.filter((c) => c.approvedAt).length} of {sorted.length} approved</span>
         <span className="ip-faint">Live chips are the ones travelers will be offered, in this order.</span>
         <span className="grow" />
         {error && <span className="ip-err">{error}</span>}
@@ -117,13 +123,13 @@ export function ChipsSection({
       {sorted.length > 0 && (
         <div className="ip-table-wrap">
           <table className="ip-table ip-ch-table">
-            <thead><tr><th style={{ width: 64 }}>Order</th><th>Chip</th><th>Status</th><th>Driven by</th><th title={`Places whose fit is ${FIT_WELL} or more, out of the places scored for this interest.`}>Fits well ({FIT_WELL}+)</th></tr></thead>
+            <thead><tr><th style={{ width: 64 }}>Order</th><th>Chip</th><th>Status</th><th>Approved</th><th>Driven by</th><th title={`Places whose fit is ${FIT_WELL} or more, out of the places scored for this interest.`}>Fits well ({FIT_WELL}+)</th></tr></thead>
             <tbody>
               {sorted.map((c, i) => {
                 const fits = scored.map((p) => shownFit(c, p));
                 const strong = fits.filter((f) => f !== null && f >= FIT_WELL).length;
                 const blank = fits.filter((f) => f === null).length;
-                const blocked = c.status !== 'live' && (liveCount >= MAX_LIVE_CHIPS || !!c.needsColumn || c.drivers.length === 0);
+                const blocked = c.status !== 'live' && (liveCount >= MAX_LIVE_CHIPS || !!c.needsColumn || c.drivers.length === 0 || !c.approvedAt);
                 return (
                   <tr key={c.key} className={c.key === current?.key ? 'sel' : ''} onClick={() => { setSelected(c.key); setEditing(null); }}>
                     <td style={{ whiteSpace: 'nowrap' }} onClick={(e) => e.stopPropagation()}>
@@ -145,9 +151,14 @@ export function ChipsSection({
                       <button
                         className={`ip-ch-status ${c.status}`}
                         disabled={busy || blocked}
-                        title={c.needsColumn ? 'Waiting on a new column' : c.drivers.length === 0 && c.status !== 'live' ? 'Add a column first' : liveCount >= MAX_LIVE_CHIPS && c.status !== 'live' ? 'Five chips are already live' : 'Switch between live and draft'}
+                        title={!c.approvedAt && c.status !== 'live' ? 'Approve the chip first' : c.needsColumn ? 'Waiting on a new column' : c.drivers.length === 0 && c.status !== 'live' ? 'Add a column first' : liveCount >= MAX_LIVE_CHIPS && c.status !== 'live' ? 'Five chips are already live' : 'Switch between live and draft'}
                         onClick={() => patch(c, { status: c.status === 'live' ? 'draft' : 'live' })}
                       >{c.status === 'live' ? 'Live' : 'Draft'}</button>
+                    </td>
+                    <td onClick={(e) => e.stopPropagation()}>
+                      {c.approvedAt
+                        ? <span className="ip-chip good" title={`Approved by ${c.approvedBy} on ${when(c.approvedAt)}`}>✓ {when(c.approvedAt)}</span>
+                        : <button className="ip-link-btn" disabled={busy} title="Record that you agree this chip should exist" onClick={() => approve(c, true)}>Approve</button>}
                     </td>
                     <td>
                       <div className="ip-ch-pills">
@@ -183,6 +194,11 @@ export function ChipsSection({
           <div className="ip-ch-edithead">
             <h3 style={{ margin: 0 }}>{current.label} <span className={`ip-chip ${current.status === 'live' ? 'good' : 'dim'}`}>{current.status === 'live' ? 'live' : 'draft'}</span></h3>
             <button className="ip-link-btn danger" disabled={busy} onClick={() => remove(current)}>Delete chip</button>
+          </div>
+          <div className="ip-faint">
+            {current.approvedAt
+              ? <>Approved by {current.approvedBy} on {when(current.approvedAt)}. {current.status !== 'live' && <button className="ip-link-btn" disabled={busy} onClick={() => approve(current, false)}>Take back approval</button>}</>
+              : <>Not approved yet. A chip must be approved before it can go live. <button className="ip-link-btn" disabled={busy} onClick={() => approve(current, true)}>Approve this chip</button></>}
           </div>
           <div className="ip-faint">Driven by. A place&apos;s fit is the highest score among these columns.</div>
           {current.drivers.length === 0 && <div className="ip-faint">No columns yet. Add one.</div>}
