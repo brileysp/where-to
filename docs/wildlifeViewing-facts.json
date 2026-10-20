@@ -1,0 +1,140 @@
+{
+ "_note": "Scope sheets for the places broadened in Oct 2026 (see docs/renamed-places.json), written 19 Oct 2026 for the stale-blurb re-author. Candidate species are Claude's starting point, NOT verified: the fact-check pass must source every claim.",
+ "havana": {
+  "forPlaceName": "Cuba",
+  "scope": "All of Cuba, not Havana alone. Havana is only the arrival point. The nature is elsewhere: the Zapata Peninsula and Zapata Swamp (Cuba's largest wetland, a few hours southeast of Havana, home to the Cuban crocodile and the best birding), Viñales and the western Pinar del Río province, Guanahacabibes in the far west, the northern cays such as Cayo Coco (flamingos and coastal birds), Topes de Collantes and Trinidad in the Escambray mountains, and the eastern mountains around Santiago de Cuba, Alejandro de Humboldt National Park and Baracoa. Say plainly that most of the wildlife is a day or more from Havana, and that trips are usually road or flight links between regions. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Cuban crocodile (Zapata), American crocodile, manatees, Cuban hutia, rare solenodon (do not promise), flamingos, sea turtles, the many endemic lizards and frogs, bats in the Viñales caves.",
+  "facts": [],
+  "avoid": [
+   "Describing Cuba as a city or saying the endemics are 'absent' or 'far from here'. They are part of this place.",
+   "Naming hotels or lodges."
+  ],
+  "season": "Dry season roughly November to April (best for trails and the swamp); winter migrant birds October to April; hurricane season June to November.",
+  "mustMention": []
+ },
+ "tanzania": {
+  "forPlaceName": "Northern Tanzania",
+  "scope": "Northern Tanzania only: the Arusha safari circuit, meaning the Serengeti ecosystem, Ngorongoro Crater and Conservation Area, Lake Manyara, Tarangire National Park and Arusha National Park, with Mount Kilimanjaro's lower forests. Zanzibar and the coast are NOT part of this place. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Great wildebeest migration and plains zebra, lions, cheetahs, leopards, spotted hyenas, elephants (Tarangire is known for big herds), black rhino in Ngorongoro Crater, hippos, giraffes, colobus and blue monkeys at Arusha National Park, flamingos at the soda lakes when water is right.",
+  "facts": [],
+  "avoid": [
+   "Mentioning Zanzibar, the coast or marine life as part of this place.",
+   "Naming lodges."
+  ],
+  "season": "Dry season June to October (best for most parks); the Serengeti migration moves through the year; long rains March to May.",
+  "mustMention": []
+ },
+ "banff": {
+  "forPlaceName": "Banff & Jasper National Parks",
+  "scope": "Both Banff National Park (Bow Valley, Lake Louise, Sunshine, Vermilion Lakes) and Jasper National Park (Jasper townsite, Maligne Valley, Athabasca River), and the Icefields Parkway that links them. The Canadian Rockies' montane, subalpine and alpine zones. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Elk, bighorn sheep, mountain goats, moose, black bears, grizzly bears, wolves (shy), coyotes, pikas and marmots in alpine rock piles.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Banff alone.",
+   "Naming hotels or lodges."
+  ],
+  "season": "Wildlife viewing is good year-round on roadsides and valleys; bears active roughly April to October; summer is the main visitor season; winter has fewer visitors and elk concentrated in the valleys.",
+  "mustMention": []
+ },
+ "whistler": {
+  "forPlaceName": "Vancouver & Whistler",
+  "scope": "Metro Vancouver and the Sea-to-Sky corridor to Whistler: Stanley Park, the Fraser River delta and Boundary Bay, Howe Sound and Squamish, Garibaldi Provincial Park and Whistler's mountains. Coastal rainforest, estuary and alpine habitat. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Black bears around Whistler, hoary marmots and pikas in the alpine, harbor seals and sea lions in Howe Sound and the Strait of Georgia, bald eagles, coastal black-tailed deer.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Whistler alone or a ski village only.",
+   "Naming hotels."
+  ],
+  "season": "Coast and estuary birding is best October to April for waterfowl and raptors, May for spring migration; alpine wildlife needs the snow-free months, roughly July to September; bears active April to October.",
+  "mustMention": []
+ },
+ "luangprabang": {
+  "forPlaceName": "Laos",
+  "scope": "All of Laos: the north around Luang Prabang, Nong Khiaw and the Nam Ou river, the northwest around Huay Xai and the Bokeo Nature Reserve (gibbon treks), the centre with Phou Khao Khouay and Khammouane limestone karst, and the south with the Bolaven Plateau and the Mekong at Si Phan Don. Wild animals are scarce and hard to see, so say plainly that the dependable encounters are rescue centres, gibbon treks and river birds. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Black-cheeked crested gibbons at Bokeo, the bear rescue centre near Kuang Si Falls, elephant sanctuaries in Sayaboury, macaques, civets and the ordinary forest species, Irrawaddy dolphins only as a vanishing remnant (do not promise).",
+  "facts": [],
+  "avoid": [
+   "Promising tigers, bears or elephants in the wild.",
+   "Describing it as Luang Prabang alone."
+  ],
+  "season": "Dry season November to April is the best time; the cool, driest months are November to February; wet season roughly May to October.",
+  "mustMention": []
+ },
+ "quebec-city": {
+  "forPlaceName": "Quebec City & Montreal",
+  "scope": "The St Lawrence corridor from Montreal to Quebec City and east: Mount Royal and Montreal's islands and wetlands, Lac Saint-Pierre, Cap Tourmente National Wildlife Area, Jacques-Cartier National Park, and the Saguenay-St Lawrence confluence at Tadoussac for belugas and whales. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Moose, black bears, beavers, white-tailed deer, belugas and other whales at Tadoussac in summer, snow geese in spring and fall.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Quebec City alone."
+  ],
+  "season": "Spring and fall migration (snow geese at Cap Tourmente peak in April-May and October); summer for the whale boats; winter for owls and a quieter, snowbound landscape.",
+  "mustMention": []
+ },
+ "joshua-tree": {
+  "forPlaceName": "Palm Springs & Joshua Tree",
+  "scope": "The Coachella Valley around Palm Springs (Indian Canyons, the aerial tramway into Mount San Jacinto State Park, desert oases and preserves) together with Joshua Tree National Park, where the Mojave and Colorado deserts meet. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Peninsular bighorn sheep in the mountains, desert tortoise, chuckwalla, coyotes, jackrabbits, roadrunners, fringe-toed lizards on dunes.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Joshua Tree National Park alone."
+  ],
+  "season": "Cooler months October to April for desert walks; spring wildflowers and migrants March to April; summer heat tops 100F in the desert, so wildlife is dawn and dusk only, while the tramway's high country stays cool.",
+  "mustMention": []
+ },
+ "angkor": {
+  "forPlaceName": "Cambodia",
+  "scope": "All of Cambodia: Siem Reap and Angkor with the Tonle Sap lake (Prek Toal), the northern plains at Tmatboey, Kratie on the Mekong, Mondulkiri and the eastern forests, the Cardamom Mountains and Koh Kong coast, and the Kampot-Kep coast. Cambodia's wildlife is shy and recovering, so say plainly where sightings are reliable and where they depend on effort and local guides. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Irrawaddy dolphins at Kratie, long-tailed macaques at the temples, flying foxes in Siem Reap, yellow-cheeked crested gibbons in the eastern forests, banteng and other deer in the east, sea life of the Kampot-Kep coast.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Angkor or Siem Reap alone.",
+   "Promising tigers, wild elephants or bears."
+  ],
+  "season": "Dry season November to April; Tonle Sap waterbirds at their best in the dry months, with the lake's flooded forest accessible by boat in the wetter months; migrants November to March.",
+  "mustMention": []
+ },
+ "borabora": {
+  "forPlaceName": "French Polynesia",
+  "scope": "All of French Polynesia: the Society Islands (Tahiti, Moorea, Huahine, Raiatea, Bora Bora), the Tuamotu atolls (Rangiroa, Fakarava), and the Marquesas and Austral islands. Land wildlife is scant on oceanic islands, so the life is mostly marine and seabirds, with a few island-endemic land birds. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Blacktip reef sharks, lemon sharks and rays in lagoons, spinner dolphins, humpback whales July to November, green and hawksbill turtles, grey reef sharks in the Tuamotu passes.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Bora Bora's lagoon alone.",
+   "Inventing land mammals."
+  ],
+  "season": "Dry season May to October (also humpback whales from July to November); wet season roughly November to April with a cyclone risk.",
+  "mustMention": []
+ },
+ "belfast-giants-causeway": {
+  "forPlaceName": "Northern Ireland",
+  "scope": "All of Northern Ireland: the Causeway Coast and Rathlin Island, the Glens of Antrim, the Mourne Mountains, Strangford Lough, Lough Neagh and the Fermanagh lakelands, and Belfast Lough. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Grey and harbor seals on the Causeway Coast, Strangford Lough and Rathlin, puffins in summer, harbor porpoise, Irish hare, red squirrels in the western woods.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Belfast or the Giant's Causeway alone."
+  ],
+  "season": "Seabird colonies on Rathlin and the coast April to July; wintering geese and waders at Strangford Lough October to March; seals year-round.",
+  "mustMention": []
+ },
+ "snowdonia": {
+  "forPlaceName": "Wales",
+  "scope": "All of Wales: Snowdonia, the Pembrokeshire coast and its islands (Skomer, Skokholm, Ramsey), Cardigan Bay, the Elan Valley and mid-Wales kite country, the Dyfi estuary, and Anglesey's coast. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Red kites, grey seals, bottlenose dolphins in Cardigan Bay, Atlantic puffins and Manx shearwaters on the islands, otters (shy), wild goats and ponies in the uplands.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Snowdonia alone."
+  ],
+  "season": "Seabird colonies and Atlantic puffins April to July; grey seal pups September to November; red kites year-round; summer for the mountains.",
+  "mustMention": []
+ },
+ "napa": {
+  "forPlaceName": "Napa & Sonoma",
+  "scope": "The Napa and Sonoma wine valleys together with the Sonoma County coast: Bodega Head, Bodega Bay, Jenner and Goat Rock, Salt Point and Fort Ross State Parks, and the Napa-Sonoma marshes on San Pablo Bay. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Harbor seals at Goat Rock and Jenner, black-tailed deer, coyotes, wild turkeys, coastal sea life, gray whales from shore.",
+  "facts": [],
+  "avoid": [
+   "Describing it as an inland valley only."
+  ],
+  "season": "Gray whales on migration December to January and March to April; harbor seals pup on the coast roughly March to June; winter waterfowl at the marshes; spring wildflowers March to May.",
+  "mustMention": []
+ },
+ "punta-cana": {
+  "forPlaceName": "Dominican Republic",
+  "scope": "The whole Dominican Republic: Punta Cana and the east (Ojos Indigenas reserve, Parque Nacional del Este and Saona Island), Samana peninsula and Los Haitises National Park in the northeast, the Cordillera Central and Valle Nuevo highlands, and the dry southwest around Lago Enriquillo and Sierra de Bahoruco. One of the Caribbean's best countries for endemic birds. Candidates to consider for wildlife viewing (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Rhinoceros iguanas and American crocodiles around Lago Enriquillo, Ricord's iguana, Hispaniolan solenodon (nocturnal, do not promise), manatees (rare), marine turtles, flamingos at the southwest lagoons, resident dolphins offshore.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Punta Cana resorts alone."
+  ],
+  "season": "Dry season roughly December to April; hurricane season June to November; humpback whales at Samana January to March; winter migrants October to April.",
+  "mustMention": []
+ }
+}

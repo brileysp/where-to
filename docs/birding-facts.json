@@ -1,0 +1,150 @@
+{
+ "_note": "Scope sheets for the places broadened in Oct 2026 (see docs/renamed-places.json), written 19 Oct 2026 for the stale-blurb re-author. Candidate species are Claude's starting point, NOT verified: the fact-check pass must source every claim.",
+ "havana": {
+  "forPlaceName": "Cuba",
+  "scope": "All of Cuba, not Havana alone. Havana is only the arrival point. The nature is elsewhere: the Zapata Peninsula and Zapata Swamp (Cuba's largest wetland, a few hours southeast of Havana, home to the Cuban crocodile and the best birding), Viñales and the western Pinar del Río province, Guanahacabibes in the far west, the northern cays such as Cayo Coco (flamingos and coastal birds), Topes de Collantes and Trinidad in the Escambray mountains, and the eastern mountains around Santiago de Cuba, Alejandro de Humboldt National Park and Baracoa. Say plainly that most of the wildlife is a day or more from Havana, and that trips are usually road or flight links between regions. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): About two dozen endemic birds; bee hummingbird (world's smallest bird), Cuban trogon (national bird), Cuban tody, Zapata wren, Zapata rail, Zapata sparrow, Cuban green woodpecker, Cuban parakeet, Cuban pygmy owl, Cuban black hawk, Cuban emerald, Cuban blackbird. West Indian wintering warblers.",
+  "facts": [],
+  "avoid": [
+   "Describing Cuba as a city or saying the endemics are 'absent' or 'far from here'. They are part of this place.",
+   "Naming hotels or lodges."
+  ],
+  "season": "Dry season roughly November to April (best for trails and the swamp); winter migrant birds October to April; hurricane season June to November.",
+  "mustMention": []
+ },
+ "tanzania": {
+  "forPlaceName": "Northern Tanzania",
+  "scope": "Northern Tanzania only: the Arusha safari circuit, meaning the Serengeti ecosystem, Ngorongoro Crater and Conservation Area, Lake Manyara, Tarangire National Park and Arusha National Park, with Mount Kilimanjaro's lower forests. Zanzibar and the coast are NOT part of this place. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Over 1,000 species nationally; the northern circuit has East African specialties and endemics such as Fischer's lovebird, Grey-breasted spurfowl, Rufous-tailed weaver, Ashy starling and Kori bustard on the plains; Lake Manyara and the soda lakes for waterbirds; Arusha National Park for forest birds.",
+  "facts": [],
+  "avoid": [
+   "Mentioning Zanzibar, the coast or marine life as part of this place.",
+   "Naming lodges."
+  ],
+  "season": "Dry season June to October (best for most parks); the Serengeti migration moves through the year; long rains March to May.",
+  "mustMention": []
+ },
+ "banff": {
+  "forPlaceName": "Banff & Jasper National Parks",
+  "scope": "Both Banff National Park (Bow Valley, Lake Louise, Sunshine, Vermilion Lakes) and Jasper National Park (Jasper townsite, Maligne Valley, Athabasca River), and the Icefields Parkway that links them. The Canadian Rockies' montane, subalpine and alpine zones. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Clark's nutcracker, Canada jay, American dipper, harlequin duck on fast streams in summer, white-tailed ptarmigan above the treeline, boreal species around Jasper.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Banff alone.",
+   "Naming hotels or lodges."
+  ],
+  "season": "Wildlife viewing is good year-round on roadsides and valleys; bears active roughly April to October; summer is the main visitor season; winter has fewer visitors and elk concentrated in the valleys.",
+  "mustMention": []
+ },
+ "whistler": {
+  "forPlaceName": "Vancouver & Whistler",
+  "scope": "Metro Vancouver and the Sea-to-Sky corridor to Whistler: Stanley Park, the Fraser River delta and Boundary Bay, Howe Sound and Squamish, Garibaldi Provincial Park and Whistler's mountains. Coastal rainforest, estuary and alpine habitat. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): The Pacific Flyway stopovers on the Fraser delta (waterfowl, shorebirds, snow geese and owls in winter at Boundary Bay), bald eagle gatherings in winter at Squamish, Steller's jay, Rufous hummingbird, Sooty grouse, white-tailed ptarmigan in the alpine.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Whistler alone or a ski village only.",
+   "Naming hotels."
+  ],
+  "season": "Coast and estuary birding is best October to April for waterfowl and raptors, May for spring migration; alpine wildlife needs the snow-free months, roughly July to September; bears active April to October.",
+  "mustMention": []
+ },
+ "luangprabang": {
+  "forPlaceName": "Laos",
+  "scope": "All of Laos: the north around Luang Prabang, Nong Khiaw and the Nam Ou river, the northwest around Huay Xai and the Bokeo Nature Reserve (gibbon treks), the centre with Phou Khao Khouay and Khammouane limestone karst, and the south with the Bolaven Plateau and the Mekong at Si Phan Don. Wild animals are scarce and hard to see, so say plainly that the dependable encounters are rescue centres, gibbon treks and river birds. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): River birds on Mekong sandbanks (River lapwing, Small pratincole), forest birds at Kuang Si, hornbills in the north, winter migrants November to March, and the specialist sites of the south and Khammouane for serious birders.",
+  "facts": [],
+  "avoid": [
+   "Promising tigers, bears or elephants in the wild.",
+   "Describing it as Luang Prabang alone."
+  ],
+  "season": "Dry season November to April is the best time; the cool, driest months are November to February; wet season roughly May to October.",
+  "mustMention": []
+ },
+ "komodo": {
+  "forPlaceName": "Komodo & Flores",
+  "scope": "Komodo National Park (Komodo, Rinca, Padar and surrounding islands) and the island of Flores: Labuan Bajo, the Ruteng highlands, Kelimutu and the Ende region. The Wallacean transition zone, with species found nowhere else. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Yellow-crested cockatoo on Komodo, Orange-footed scrubfowl, Green junglefowl, and Flores's montane forest around Ruteng for Wallacean endemics.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Komodo Island alone."
+  ],
+  "season": "Dry season April to December; the wet season January to March is rougher on the sea and trails.",
+  "mustMention": []
+ },
+ "quebec-city": {
+  "forPlaceName": "Quebec City & Montreal",
+  "scope": "The St Lawrence corridor from Montreal to Quebec City and east: Mount Royal and Montreal's islands and wetlands, Lac Saint-Pierre, Cap Tourmente National Wildlife Area, Jacques-Cartier National Park, and the Saguenay-St Lawrence confluence at Tadoussac for belugas and whales. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Greater snow geese at Cap Tourmente, boreal birds in Jacques-Cartier, urban and island birds around Montreal's Mount Royal and the river, snowy owls in winter.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Quebec City alone."
+  ],
+  "season": "Spring and fall migration (snow geese at Cap Tourmente peak in April-May and October); summer for the whale boats; winter for owls and a quieter, snowbound landscape.",
+  "mustMention": []
+ },
+ "joshua-tree": {
+  "forPlaceName": "Palm Springs & Joshua Tree",
+  "scope": "The Coachella Valley around Palm Springs (Indian Canyons, the aerial tramway into Mount San Jacinto State Park, desert oases and preserves) together with Joshua Tree National Park, where the Mojave and Colorado deserts meet. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Greater roadrunner, Gambel's quail, Phainopepla, Cactus wren, LeConte's thrasher, Scott's oriole, Costa's hummingbird, oases that concentrate migrants, and the high pine forest species on Mount San Jacinto.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Joshua Tree National Park alone."
+  ],
+  "season": "Cooler months October to April for desert walks; spring wildflowers and migrants March to April; summer heat tops 100F in the desert, so wildlife is dawn and dusk only, while the tramway's high country stays cool.",
+  "mustMention": []
+ },
+ "angkor": {
+  "forPlaceName": "Cambodia",
+  "scope": "All of Cambodia: Siem Reap and Angkor with the Tonle Sap lake (Prek Toal), the northern plains at Tmatboey, Kratie on the Mekong, Mondulkiri and the eastern forests, the Cardamom Mountains and Koh Kong coast, and the Kampot-Kep coast. Cambodia's wildlife is shy and recovering, so say plainly where sightings are reliable and where they depend on effort and local guides. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Giant ibis and White-shouldered ibis in the northern plains, Bengal florican on the Tonle Sap grasslands in the dry season, Spot-billed pelican, painted stork and greater adjutant at Prek Toal, Sarus crane, and the forest birds around Angkor.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Angkor or Siem Reap alone.",
+   "Promising tigers, wild elephants or bears."
+  ],
+  "season": "Dry season November to April; Tonle Sap waterbirds at their best in the dry months, with the lake's flooded forest accessible by boat in the wetter months; migrants November to March.",
+  "mustMention": []
+ },
+ "borabora": {
+  "forPlaceName": "French Polynesia",
+  "scope": "All of French Polynesia: the Society Islands (Tahiti, Moorea, Huahine, Raiatea, Bora Bora), the Tuamotu atolls (Rangiroa, Fakarava), and the Marquesas and Austral islands. Land wildlife is scant on oceanic islands, so the life is mostly marine and seabirds, with a few island-endemic land birds. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Few species but island endemics: Tahiti monarch (critically endangered), Marquesan lorikeets and pigeons, Tuamotu sandpiper; seabirds including great frigatebirds, white terns, red-footed boobies and noddies.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Bora Bora's lagoon alone.",
+   "Inventing land mammals."
+  ],
+  "season": "Dry season May to October (also humpback whales from July to November); wet season roughly November to April with a cyclone risk.",
+  "mustMention": []
+ },
+ "belfast-giants-causeway": {
+  "forPlaceName": "Northern Ireland",
+  "scope": "All of Northern Ireland: the Causeway Coast and Rathlin Island, the Glens of Antrim, the Mourne Mountains, Strangford Lough, Lough Neagh and the Fermanagh lakelands, and Belfast Lough. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Atlantic puffin, razorbill and guillemot at Rathlin, corncrake on Rathlin in summer, light-bellied Brent geese and waders at Strangford Lough in winter, and waterbirds on Lough Neagh and the Fermanagh lakes.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Belfast or the Giant's Causeway alone."
+  ],
+  "season": "Seabird colonies on Rathlin and the coast April to July; wintering geese and waders at Strangford Lough October to March; seals year-round.",
+  "mustMention": []
+ },
+ "snowdonia": {
+  "forPlaceName": "Wales",
+  "scope": "All of Wales: Snowdonia, the Pembrokeshire coast and its islands (Skomer, Skokholm, Ramsey), Cardigan Bay, the Elan Valley and mid-Wales kite country, the Dyfi estuary, and Anglesey's coast. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Red kites (including the daily feeding at Rhayader in mid-Wales), peregrine falcons, red-billed choughs on the western cliffs, ring ouzel in the uplands, ospreys at the Dyfi estuary in summer, seabirds on Skomer.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Snowdonia alone."
+  ],
+  "season": "Seabird colonies and Atlantic puffins April to July; grey seal pups September to November; red kites year-round; summer for the mountains.",
+  "mustMention": []
+ },
+ "napa": {
+  "forPlaceName": "Napa & Sonoma",
+  "scope": "The Napa and Sonoma wine valleys together with the Sonoma County coast: Bodega Head, Bodega Bay, Jenner and Goat Rock, Salt Point and Fort Ross State Parks, and the Napa-Sonoma marshes on San Pablo Bay. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): Acorn woodpecker, California quail, Western bluebird in the oak woodlands; coastal birds such as brown pelican, pigeon guillemot and black oystercatcher; wintering waterfowl at the Napa-Sonoma marshes.",
+  "facts": [],
+  "avoid": [
+   "Describing it as an inland valley only."
+  ],
+  "season": "Gray whales on migration December to January and March to April; harbor seals pup on the coast roughly March to June; winter waterfowl at the marshes; spring wildflowers March to May.",
+  "mustMention": []
+ },
+ "punta-cana": {
+  "forPlaceName": "Dominican Republic",
+  "scope": "The whole Dominican Republic: Punta Cana and the east (Ojos Indigenas reserve, Parque Nacional del Este and Saona Island), Samana peninsula and Los Haitises National Park in the northeast, the Cordillera Central and Valle Nuevo highlands, and the dry southwest around Lago Enriquillo and Sierra de Bahoruco. One of the Caribbean's best countries for endemic birds. Candidates to consider for birding (only name one if a visitor can realistically see it, and check the rest of the text does not contradict it): About thirty endemic birds shared with Haiti, including Palmchat (national bird), Hispaniolan trogon, Hispaniolan woodpecker, Broad-billed tody, Narrow-billed tody, Hispaniolan parrot, Ridgway's hawk (critically endangered), and the highland and cloud forest specialties of the Sierra de Bahoruco and Valle Nuevo.",
+  "facts": [],
+  "avoid": [
+   "Describing it as Punta Cana resorts alone."
+  ],
+  "season": "Dry season roughly December to April; hurricane season June to November; humpback whales at Samana January to March; winter migrants October to April.",
+  "mustMention": []
+ }
+}
