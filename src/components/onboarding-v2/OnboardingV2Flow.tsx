@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { saveUserPreferences } from '@/app/actions';
 import { allBandsSelected } from '@/lib/scoring/constants';
 import { saveTravelProfile } from '@/app/onboarding-v2/actions';
-import { fromTravelProfile, toTravelProfile, type FlowChoices, type TravelProfile } from '@/lib/onboarding/profile';
+import { fromTravelProfile, toTravelProfile, type FlowChoices, type InterestAnswers, type TravelProfile } from '@/lib/onboarding/profile';
+import { gateItems } from '@/lib/onboarding/live-questions';
 import { chooseNextCard } from '@/lib/dna/selection';
 import type { DnaCard, SwipeType } from '@/lib/dna/types';
 import { dnaStateFor, type Answer, type ProfileInput } from '@/lib/onboarding/bridge';
@@ -63,6 +64,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const firstGroup = pickerGroups()[0].name;
   const [levels, setLevels] = useState<Levels>(start?.levels ?? {});
   const [subs, setSubs] = useState<Record<string, string[]>>(start?.subs ?? {});
+  /** Answers to the interests' own questions (docs/matching-model.md), saved with the profile. */
+  const [qa, setQa] = useState<InterestAnswers>(start?.qa ?? {});
   const [group, setGroup] = useState(firstGroup);
   const [seen, setSeen] = useState<Record<string, boolean>>({ [firstGroup]: true });
   const [more, setMore] = useState<Record<string, boolean>>({});
@@ -124,6 +127,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setScreen('door');
     setLevels({});
     setSubs({});
+    setQa({});
     setGroup(firstGroup);
     setSeen({ [firstGroup]: true });
     setMore({});
@@ -201,7 +205,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   /** What would be saved right now, and the save itself. */
   function choices(): FlowChoices {
-    return { levels, subs, bands, care, who, home, vibes, answers: [...swipes, ...sharpen], month, week, maxHours };
+    return { levels, subs, qa, bands, care, who, home, vibes, answers: [...swipes, ...sharpen], month, week, maxHours };
   }
   async function persist(): Promise<boolean> {
     const r = await saveTravelProfile(toTravelProfile(choices(), keep, mode === 'dna'));
@@ -224,6 +228,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   /** The saved screen's "See it as a returning traveler": only what was kept carries over, then the two questions. */
   function seeAsReturning() {
     const kept = fromTravelProfile(toTravelProfile(choices(), keep, mode === 'dna'), data.cards);
+    setQa(kept.qa ?? {});
     setWho(kept.who);
     setBands(kept.bands);
     setCare(kept.care);
@@ -275,6 +280,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setTopPopup(r.blocked);
   }
 
+  // When the top interests have questions to ask on the results screen, the chips are ticked there too (after the first questions), not here.
+  const liveQuestionsApply = useMemo(() => gateItems(orderedByLevel(levels).filter((k) => levels[k] === 'top'), data.setups).length > 0, [levels, data.setups]);
   const hasBack = backTarget(mode, doors, screen).kind !== 'none';
 
   return (
@@ -301,7 +308,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onContinue={onContinue}
           />
         ) : screen === 'rank' ? (
-          <RankScreen levels={levels} chips={chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
+          <RankScreen levels={levels} chips={liveQuestionsApply ? {} : chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
         ) : screen === 'when' ? (
           <WhenScreen month={month} week={week} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onContinue={onContinue} />
         ) : screen === 'logistics' ? (
@@ -353,6 +360,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             maxHours={maxHours}
             careProps={careProps('trip')}
             returning={returning}
+            levels={levels}
+            subs={subs}
+            qa={qa}
+            onAnswer={(interest, qkey, picks) => setQa((a) => ({ ...a, [interest]: { ...(a[interest] ?? {}), [qkey]: picks } }))}
+            onTick={(interest, chip) => setSubs((x) => toggleSpecific(x, interest, chip))}
+            onAddInterest={(k) => setLevels((l) => (l[k] ? l : { ...l, [k]: 'like' }))}
+            onRemoveInterest={(k) => setLevels((l) => { const n = { ...l }; delete n[k]; return n; })}
             onSharpenAnswer={(card, type) => setSharpen((a) => [...a, { card, type }])}
             onSharpenSkip={(card) => setSkipped((s) => [...s, card.id])}
             onSwipe={(card, type) => setSwipes((a) => [...a, { card, type }])}

@@ -10,7 +10,8 @@ import { MONTH_NAMES } from '@/lib/scoring/constants';
 import { ForYouTab } from './ForYouTab';
 import { AboutTab } from './AboutTab';
 import { CostsTab } from './CostsTab';
-import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import type { ScoredDestination } from '@/lib/scoring/types';
 
 type DetailTab = 'foryou' | 'about' | 'costs';
@@ -39,6 +40,8 @@ export function DestinationDetailSheet({
   favorited,
   onToggleFavorited,
   onClose,
+  factors,
+  notes,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -55,6 +58,9 @@ export function DestinationDetailSheet({
   favorited: boolean;
   onToggleFavorited: () => void;
   onClose: () => void;
+  /** What the traveler's chips and answers keep of each place's score (onboarding's live questions), and this place's reasons. */
+  factors?: InterestFactors;
+  notes?: Record<string, PlaceNote>;
 }) {
   // The ranked list carries scores only; this place's text (overview, monthly blurbs, cost notes) is fetched now and merged in.
   const { detail, loading: detailLoading } = usePlaceDetail(dest.id);
@@ -207,6 +213,8 @@ export function DestinationDetailSheet({
               onChangeMonth={setPreviewIdx}
               selectedCategory={selectedCategory}
               onSelectCategory={setSelectedCategory}
+              factors={factors}
+              notes={notes}
             />
           </div>
           <div className={`detail-tab-panel${tab === 'about' ? ' active' : ''}`} aria-hidden={tab !== 'about'}>

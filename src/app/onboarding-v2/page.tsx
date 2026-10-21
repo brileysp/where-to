@@ -7,6 +7,8 @@ import { getInterestEmojiOverrides, getInterestShortNames } from '@/lib/scoring/
 import { loadFirstName } from '@/app/actions';
 import { loadTravelProfile } from './actions';
 import { loadFeatures } from '@/lib/featuresServer';
+import { getMatchSetups } from '@/lib/db/queries/match-data';
+import { loadMatchSettings } from '@/lib/scoring/matchSettingsServer';
 import { onboardingV2Allowed } from '@/lib/features';
 
 export const dynamic = 'force-dynamic';
@@ -22,7 +24,7 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
   const params = await searchParams;
   if (!onboardingV2Allowed(await loadFeatures(), params.preview)) notFound();
   const fresh = params.fresh === '1';
-  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name] = await Promise.all([
+  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name, setups, matchSettings] = await Promise.all([
     getLiveInterestChips(),
     getListScoredPlaces(),
     getAllDnaCards(),
@@ -33,6 +35,8 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
     getPlaceCoords(),
     fresh ? Promise.resolve(null) : loadTravelProfile(),
     loadFirstName(),
+    getMatchSetups(),
+    loadMatchSettings().then((m) => m.settings),
   ]);
-  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords }} entry={{ saved, name, review: params.review === '1' && !!saved }} />;
+  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings }} entry={{ saved, name, review: params.review === '1' && !!saved }} />;
 }

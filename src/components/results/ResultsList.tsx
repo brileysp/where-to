@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { Fragment, useLayoutEffect, useRef, useState } from 'react';
 import type { RankedDestination } from '@/lib/scoring/rank';
 import { DestinationCard } from './DestinationCard';
 import { prefersReducedMotion } from './useResortDemo';
@@ -25,6 +25,8 @@ interface Props {
    * true (e.g. "Show more", or the FIRST render for a returning visitor)
    * just plays the same rise immediately, which reads fine either way. */
   cardsRevealed: boolean;
+  /** Something to show between two cards (the onboarding's practice card): rendered after the card at this 1-based position, when that many are shown. */
+  inserted?: { after: number; node: React.ReactNode };
 }
 
 export { RESULTS_PAGE_SIZE };
@@ -56,6 +58,7 @@ export function ResultsList({
   onToggleVisited,
   filterKey,
   cardsRevealed,
+  inserted,
 }: Props) {
   const visible = ranked.slice(0, visibleCount);
   const remaining = ranked.length - visibleCount;
@@ -247,8 +250,8 @@ export function ResultsList({
           </div>
         ))}
         {visible.map(({ d, s }, i) => (
+          <Fragment key={d.id}>
           <div
-            key={d.id}
             className={`card-reveal${cardsRevealed ? ' in' : ''}`}
             style={{ '--i': Math.min(i, REVEAL_STAGGER_CAP) } as React.CSSProperties}
           >
@@ -268,6 +271,8 @@ export function ResultsList({
               onToggleVisited={() => onToggleVisited(d.id)}
             />
           </div>
+          {inserted && inserted.after === i + 1 ? inserted.node : null}
+          </Fragment>
         ))}
       </div>
       {remaining > 0 && (

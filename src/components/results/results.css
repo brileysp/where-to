@@ -2488,3 +2488,10 @@
   font-weight: 600;
   color: var(--text);
 }
+
+/* Why a place moved after the traveler's chips and answers (onboarding's live questions) */
+.match-notes { margin-bottom: 10px; }
+.match-note-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.match-reason, .match-ok { font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
+.match-reason { color: var(--poor); background: color-mix(in srgb, var(--poor) 14%, transparent); }
+.match-ok { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }

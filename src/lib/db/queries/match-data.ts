@@ -2,7 +2,7 @@ import { eq } from 'drizzle-orm';
 import { db } from '../client';
 import { interestChips, interestQuestionChips, interestQuestions, placeInterestFacts } from '../schema';
 import { factDefsFor } from '@/lib/admin/interest-pages/config';
-import { buildPlaceFits, type MatchContent, type PlaceMatchFits } from '@/lib/scoring/matchTable';
+import { buildPlaceFits, type PlaceMatchFits } from '@/lib/scoring/matchTable';
 import type { MatchChipDef, MatchQuestionDef } from '@/lib/scoring/interestMatch';
 import type { MatchSetups } from '@/lib/onboarding/live-types';
 

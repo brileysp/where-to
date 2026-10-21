@@ -1,8 +1,9 @@
 import { useUnitText } from '@/components/UnitsProvider';
 import { useEffect, useRef, useState } from 'react';
-import { MONTH_NAMES, MONTH_SHORT } from '@/lib/scoring/constants';
+import { MONTH_NAMES, MONTH_SHORT, SLIDERS } from '@/lib/scoring/constants';
 import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore } from '@/lib/scoring/rank';
-import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import { topInterestChips } from '@/lib/scoring/breakdown';
 import { matchAdjustments } from '@/lib/scoring/matchExplainer';
 import type { MatchAdjustment } from '@/lib/scoring/matchExplainer';
@@ -56,6 +57,8 @@ export function ForYouTab({
   onChangeMonth,
   selectedCategory,
   onSelectCategory,
+  factors,
+  notes,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -70,6 +73,10 @@ export function ForYouTab({
   /** null selects "My Interests" — the combined view, not "nothing chosen yet". */
   selectedCategory: string | null;
   onSelectCategory: (key: string | null) => void;
+  /** What the traveler's chips and answers keep of this place's score, by interest (onboarding's live questions). Missing = nothing changes. */
+  factors?: InterestFactors;
+  /** This place's reasons and matches by interest, for the notes under the chips. */
+  notes?: Record<string, PlaceNote>;
 }) {
   // Runs once per place-card open: this component remounts fresh every time
   // (DestinationDetailSheet keys the whole sheet by destination id), so a
@@ -108,18 +115,20 @@ export function ForYouTab({
     onChangeMonth(idx);
   }
 
-  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles);
+  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles, factors);
+  const placeFactor = (key: string) => factors?.[dest.id]?.[key] ?? 1;
 
   const chips = topInterestChips(weights).map((slider) => ({
     slider,
     isNA: isSliderNA(dest, slider.key),
-    score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles),
+    score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles) * placeFactor(slider.key),
   }));
   const isDnaSelected = selectedCategory === null;
   const selectedChip = isDnaSelected ? null : (chips.find((c) => c.slider.key === selectedCategory) ?? null);
 
   return (
     <div className="detail-tab-content">
+      {notes && Object.keys(notes).length > 0 && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
       {chips.length > 0 && (
         <>
           <div className="detail-section-title interest-chips-title">Your top interests · Tap to compare</div>
@@ -151,7 +160,7 @@ export function ForYouTab({
 
           {stage >= 3 &&
             (isDnaSelected ? (
-              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
+              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
             ) : (
               selectedChip && (
                 <InterestDetail
@@ -182,6 +191,7 @@ function DnaDetail({
   weights,
   bands,
   selectedStyles,
+  factors,
   previewIdx,
   onChangeMonth,
 }: {
@@ -189,10 +199,11 @@ function DnaDetail({
   weights: Record<string, number>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
+  factors?: InterestFactors;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
-  const months = Array.from({ length: 12 }, (_, i) => scoreForMonth(dest, weights, i, bands, selectedStyles));
+  const months = Array.from({ length: 12 }, (_, i) => scoreForMonth(dest, weights, i, bands, selectedStyles, factors));
   const score = months[previewIdx];
   const quality = matchLabel(score);
   const badReasons = matchAdjustments(dest, previewIdx, bands).filter((a) => a.tone === 'bad');
@@ -348,5 +359,26 @@ function EmphasisText({ text }: { text: string }) {
         ),
       )}
     </>
+  );
+}
+
+/** Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. */
+function MatchNotes({ notes, emojiOverrides }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string> }) {
+  const slider = (key: string) => SLIDERS.find((x) => x.key === key);
+  const rows = Object.entries(notes).filter(([, n]) => n.reasons.length > 0 || n.matches.length > 0);
+  if (!rows.length) return null;
+  return (
+    <div className="match-notes">
+      <div className="detail-section-title">From your picks and answers</div>
+      <div className="match-note-row">
+        {rows.flatMap(([key, n]) => {
+          const icon = emojiOverrides[key] ?? slider(key)?.icon ?? '';
+          return [
+            ...n.reasons.map((r) => <span key={`${key}-${r.message}`} className="match-reason">{icon} {r.message}</span>),
+            ...n.matches.map((m) => <span key={`${key}-m-${m}`} className="match-ok">{icon} Matches: {m}</span>),
+          ];
+        })}
+      </div>
+    </div>
   );
 }
