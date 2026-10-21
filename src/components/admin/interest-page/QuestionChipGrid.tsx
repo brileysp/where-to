@@ -27,7 +27,7 @@ export function QuestionChipGrid({
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
   const [onlyProposed, setOnlyProposed] = useState(false);
-  const sortedChips = [...chips].sort((a, b) => a.order - b.order);
+  const sortedChips = [...chips].filter((c) => c.approvedAt).sort((a, b) => a.order - b.order);
   const sorted = [...questions].sort((a, b) => a.order - b.order).filter((q) => !onlyProposed || q.suggestedChips.length > 0);
   const suggestedTotal = questions.reduce((n, q) => n + q.suggestedChips.length, 0);
   const confirmedTotal = questions.reduce((n, q) => n + q.whenChips.length, 0);
@@ -78,6 +78,7 @@ export function QuestionChipGrid({
           <span><span className="ip-gdot on" aria-hidden="true">✓</span> asked only when this chip is ticked</span>
           <span><span className="ip-gdot sug" aria-hidden="true">?</span> suggested, does nothing until you accept</span>
           <span>A row with no dots is asked of everyone who picks the interest.</span>
+          <span>Chips you have not approved are not shown.</span>
         </div>
       )}
       <div className="ip-table-wrap">

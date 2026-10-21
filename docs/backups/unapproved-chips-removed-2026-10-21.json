@@ -1,0 +1,124 @@
+[
+ {
+  "interestKey": "hiking",
+  "chipKey": "walk-up-summits",
+  "label": "Walk-up summits",
+  "sortOrder": 5,
+  "status": "draft",
+  "drivers": [
+   {
+    "column": "ways",
+    "option": "summits"
+   }
+  ],
+  "needsColumn": "",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (first set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T18:29:20.725Z"
+ },
+ {
+  "interestKey": "auroraChasing",
+  "chipKey": "cosy-lodges-and-glass-igloos",
+  "label": "Cosy lodges and glass igloos",
+  "sortOrder": 3,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick: aurora lodges",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:29:00.678Z"
+ },
+ {
+  "interestKey": "wildflowerBlooms",
+  "chipKey": "rare-and-endemic-flora",
+  "label": "Rare and endemic flora",
+  "sortOrder": 5,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Rating",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:29:01.330Z"
+ },
+ {
+  "interestKey": "indigenousCultures",
+  "chipKey": "cultural-centres-and-museums",
+  "label": "Cultural centres and museums",
+  "sortOrder": 4,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:29:06.903Z"
+ },
+ {
+  "interestKey": "wineSpirits",
+  "chipKey": "vineyard-stays",
+  "label": "Vineyard stays",
+  "sortOrder": 4,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:30:12.556Z"
+ },
+ {
+  "interestKey": "spaWellness",
+  "chipKey": "nordic-sauna-and-cold-plunge",
+  "label": "Nordic sauna and cold plunge",
+  "sortOrder": 4,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:30:14.523Z"
+ },
+ {
+  "interestKey": "hotSprings",
+  "chipKey": "hike-in-wilderness-springs",
+  "label": "Hike-in wilderness springs",
+  "sortOrder": 4,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:30:14.851Z"
+ },
+ {
+  "interestKey": "yogaRetreats",
+  "chipKey": "surf-and-yoga",
+  "label": "Surf and yoga",
+  "sortOrder": 4,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:30:15.177Z"
+ },
+ {
+  "interestKey": "themeParks",
+  "chipKey": "big-theme-parks",
+  "label": "Big theme parks",
+  "sortOrder": 1,
+  "status": "draft",
+  "drivers": [],
+  "needsColumn": "New column: Tick",
+  "approvedBy": "",
+  "approvedAt": null,
+  "updatedBy": "Claude (proposed set, 17 Oct 2026)",
+  "updatedAt": "2026-10-17T21:30:15.503Z"
+ }
+]

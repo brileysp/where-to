@@ -24,6 +24,10 @@ const LINKS: Array<[string, string, string[]]> = [
   ['wineSpirits', 'Who drives between tastings', ['Vineyards and wine regions', 'Whisky and spirits distilleries']],
   ['wineSpirits', 'How do you like to taste', ['Vineyards and wine regions']],
   ['yogaRetreats', 'Which style', ['Yoga retreats']],
+  // Diving: a snorkeler is not asked about certification, current or how to dive. Wrecks are always scuba.
+  ['diving', 'What is your certification', ['Diving', 'Wrecks']],
+  ['diving', 'How do you feel about current', ['Diving', 'Wrecks']],
+  ['diving', 'How do you like to dive', ['Diving', 'Wrecks']],
 ];
 
 (async () => {
