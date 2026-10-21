@@ -4,32 +4,14 @@ import { interestChips, interestQuestionChips, interestQuestions, placeInterestF
 import { factDefsFor } from '@/lib/admin/interest-pages/config';
 import { buildPlaceFits, type MatchContent, type PlaceMatchFits } from '@/lib/scoring/matchTable';
 import type { MatchChipDef, MatchQuestionDef } from '@/lib/scoring/interestMatch';
+import type { MatchSetups } from '@/lib/onboarding/live-types';
 
 /**
  * What the new onboarding asks and how places answer it (docs/matching-model.md). Only what the owner approved is ever read: live chips, and
  * questions that are approved AND mapped to columns (a question that changes nothing is never asked). Proposed links are ignored.
  */
 
-export interface OnboardingQuestion {
-  key: string;
-  text: string;
-  options: string[];
-  /** How many answers can be picked. */
-  maxPicks: number;
-  kind: 'lean' | 'limit';
-  /** Chips (same interest) that open the question; empty = asked of everyone who picks the interest. */
-  whenChips: string[];
-  order: number;
-}
-
-export interface InterestMatchSetup {
-  /** Chips and questions as the browser combines them with the per-place tables. */
-  content: MatchContent;
-  /** The questions to show, in the admin's order. */
-  questions: OnboardingQuestion[];
-}
-
-export type MatchSetups = Record<string, InterestMatchSetup>;
+export type { OnboardingQuestion, InterestMatchSetup, MatchSetups } from '@/lib/onboarding/live-types';
 
 async function loadRows() {
   const [chipRows, questionRows, linkRows] = await Promise.all([
