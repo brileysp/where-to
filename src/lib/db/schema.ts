@@ -1041,6 +1041,8 @@ export const interestQuestionChips = pgTable(
     interestKey: text('interest_key').notNull(),
     questionKey: text('question_key').notNull(),
     chipKey: text('chip_key').notNull(),
+    /** True = proposed (by Claude) and waiting for the owner to accept it. A suggested link changes nothing: the app ignores it until it is accepted. */
+    suggested: boolean('suggested').notNull().default(false),
     createdBy: text('created_by').notNull().default(''),
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   },

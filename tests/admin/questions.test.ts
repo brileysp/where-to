@@ -3,6 +3,7 @@ import { PGlite } from '@electric-sql/pglite';
 import { drizzle } from 'drizzle-orm/pglite';
 import { migrate } from 'drizzle-orm/pglite/migrator';
 import path from 'path';
+import { eq } from 'drizzle-orm';
 import * as schema from '@/lib/db/schema';
 
 const h = vi.hoisted(() => ({ db: null as unknown }));
@@ -94,5 +95,51 @@ describe('question actions', () => {
     expect(r.ok && r.question.missMessage).toBe('Water colder than your limit');
     expect(r.ok && r.approvalCleared).toBe(false);
     expect((await a.updateQuestion('surfing', q.question.key, { missMessage: 'x'.repeat(61) })).ok).toBe(false);
+  });
+
+  it('keeps proposed links apart until accepted: accepting leaves the approval alone, other changes take it back', async () => {
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    await dbx.insert(schema.interestChips).values([{ interestKey: 'cyclingRoad', chipKey: 'touring', label: 'Multi-day touring' }, { interestKey: 'cyclingRoad', chipKey: 'gravel', label: 'Gravel' }]);
+    const q = await a.createQuestion('cyclingRoad');
+    if (!q.ok) throw new Error('create failed');
+    await a.setQuestionApproval('cyclingRoad', q.question.key, true);
+    await dbx.insert(schema.interestQuestionChips).values([{ interestKey: 'cyclingRoad', questionKey: q.question.key, chipKey: 'touring', suggested: true }, { interestKey: 'cyclingRoad', questionKey: q.question.key, chipKey: 'gravel', suggested: true }]);
+    // a proposal is not a link
+    const rules = await import('@/lib/onboarding/question-rules');
+    expect(rules.isQuestionAsked({ key: q.question.key, whenChips: [] }, [], [])).toBe(true);
+    // accepting one keeps the approval
+    const acc = await a.setQuestionChipLink('cyclingRoad', q.question.key, 'touring', true);
+    expect(acc.ok && acc.question.whenChips).toEqual(['touring']);
+    expect(acc.ok && acc.question.suggestedChips).toEqual(['gravel']);
+    expect(acc.ok && acc.approvalCleared).toBe(false);
+    expect(acc.ok && acc.question.approvedAt).toBeTruthy();
+    // dismissing the other proposal keeps it too
+    const dis = await a.setQuestionChipLink('cyclingRoad', q.question.key, 'gravel', false);
+    expect(dis.ok && dis.question.suggestedChips).toEqual([]);
+    expect(dis.ok && dis.approvalCleared).toBe(false);
+    // adding a link by hand changes who is asked: approval goes
+    const added = await a.setQuestionChipLink('cyclingRoad', q.question.key, 'gravel', true);
+    expect(added.ok && added.question.whenChips).toEqual(['gravel', 'touring']);
+    expect(added.ok && added.approvalCleared).toBe(true);
+  });
+
+  it('accepts or dismisses all proposals for a question or an interest', async () => {
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    const q1 = await a.createQuestion('hiking');
+    const q2 = await a.createQuestion('hiking');
+    if (!q1.ok || !q2.ok) throw new Error('create failed');
+    await dbx.insert(schema.interestChips).values([{ interestKey: 'hiking', chipKey: 'sugg-hut', label: 'Hut-to-hut' }, { interestKey: 'hiking', chipKey: 'sugg-multi', label: 'Multi-day treks' }]);
+    await dbx.insert(schema.interestQuestionChips).values([
+      { interestKey: 'hiking', questionKey: q1.question.key, chipKey: 'sugg-hut', suggested: true },
+      { interestKey: 'hiking', questionKey: q2.question.key, chipKey: 'sugg-multi', suggested: true },
+    ]);
+    expect((await a.dismissSuggestedLinks('hiking', q1.question.key)).ok).toBe(true);
+    const left = await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'hiking'));
+    expect(left.map((r) => r.questionKey)).toEqual([q2.question.key]);
+    const acc = await a.acceptSuggestedLinks('hiking', null);
+    expect(acc.ok && acc.changed).toBe(1);
+    const after = await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'hiking'));
+    expect(after.every((r) => r.suggested === false)).toBe(true);
+    expect((await a.acceptSuggestedLinks('hiking', null)).ok && 0).toBe(0);
   });
 });

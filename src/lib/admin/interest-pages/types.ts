@@ -172,6 +172,8 @@ export interface QuestionRow {
   missMessage: string;
   /** Keys of the interest's chips that open this question: it is asked only when at least one is ticked. Empty = asked of everyone who picks the interest. */
   whenChips: string[];
+  /** Chips Claude proposed to open this question that the owner has not accepted yet. They change nothing until accepted. */
+  suggestedChips: string[];
   approvedBy: string;
   approvedAt: string | null;
 }

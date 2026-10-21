@@ -141,14 +141,14 @@ export async function deleteChip(interestKey: string, chipKey: string, opts: { u
   if (!validInterest(interestKey)) return fail('Unknown interest');
   const cur = (await loadAll(interestKey)).find((c) => c.chipKey === chipKey);
   if (!cur) return fail('Chip not found');
-  const opens = await db.select({ q: interestQuestionChips.questionKey }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.chipKey, chipKey)));
+  const opens = await db.select({ q: interestQuestionChips.questionKey, s: interestQuestionChips.suggested }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.chipKey, chipKey)));
   if (opens.length && !opts.untie) return fail(`${opens.length} onboarding question${opens.length === 1 ? ' is' : 's are'} opened by this chip. Untie ${opens.length === 1 ? 'it' : 'them'} first, or delete the chip and untie ${opens.length === 1 ? 'it' : 'them'} in one go.`);
   await withAdminAudit({
     actor: admin, skipPlaceCache: true, entityType: 'interest_chip', entityId: `${interestKey}:${chipKey}`, action: 'delete', before: { ...cur, opensQuestions: opens.map((o) => o.q) }, after: null,
     write: async (tx) => {
-      for (const { q } of opens) {
+      for (const { q, s: wasSuggested } of opens) {
         await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, q), eq(interestQuestionChips.chipKey, chipKey)));
-        await tx.update(interestQuestions).set({ approvedBy: '', approvedAt: null, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, q)));
+        if (!wasSuggested) await tx.update(interestQuestions).set({ approvedBy: '', approvedAt: null, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, q)));
       }
       await tx.delete(placeChipOverrides).where(and(eq(placeChipOverrides.interestKey, interestKey), eq(placeChipOverrides.chipKey, chipKey)));
       await tx.delete(interestChips).where(and(eq(interestChips.interestKey, interestKey), eq(interestChips.chipKey, chipKey)));

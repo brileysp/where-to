@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { ChipRow, QuestionRow } from '@/lib/admin/interest-pages/types';
 import { questionsWaitingOnDrafts } from '@/lib/onboarding/question-rules';
+import { QuestionChipGrid } from './QuestionChipGrid';
 import type { FactDef } from '@/lib/admin/interest-pages/config';
 import { createQuestion, updateQuestion, moveQuestion, deleteQuestion, setQuestionApproval, setQuestionChips, type QuestionPatch } from '@/app/admin/destinations/interests/[key]/question-actions';
 
@@ -34,6 +35,7 @@ export function QuestionsSection({
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
   const [open, setOpen] = useState<string | null>(null);
+  const [view, setView] = useState<'list' | 'grid'>('list');
   const chipLabel = (k: string) => chips.find((c) => c.key === k)?.label ?? k;
   const waiting = questionsWaitingOnDrafts(sorted, chips.map((c) => ({ key: c.key, live: c.status === 'live' })));
   const columnsToPick = factDefs.filter((d) => !d.hidden && d.key !== 'drawSourceChecked' && d.key !== 'scopeNote' && d.type !== 'list');
@@ -96,6 +98,10 @@ export function QuestionsSection({
         <span className="grow" />
         {error && <span className="ip-err">{error}</span>}
         {info && <span className="ip-faint">{info}</span>}
+        <span className="ip-seg" role="group" aria-label="View" style={{ display: 'inline-flex', gap: 2, background: 'var(--bg-sunken)', borderRadius: 7, padding: 2 }}>
+          <button className={`btn ${view === 'list' ? 'btn-primary' : ''}`} style={{ padding: '3px 10px' }} onClick={() => setView('list')}>List</button>
+          <button className={`btn ${view === 'grid' ? 'btn-primary' : ''}`} style={{ padding: '3px 10px' }} onClick={() => setView('grid')}>Grid{questions.some((q) => q.suggestedChips.length > 0) ? ` (${questions.reduce((n, q) => n + q.suggestedChips.length, 0)} suggested)` : ''}</button>
+        </span>
       </div>
 
       {waiting.length > 0 && (
@@ -104,8 +110,9 @@ export function QuestionsSection({
         </div>
       )}
       {sorted.length === 0 && <div className="ip-card"><p className="ip-muted" style={{ margin: 0 }}>No questions yet for this interest. Add the first one below.</p></div>}
+      {view === 'grid' && <QuestionChipGrid interestKey={interestKey} chips={chips} questions={questions} setQuestions={setQuestions} />}
 
-      {sorted.map((q, i) => {
+      {view === 'list' && sorted.map((q, i) => {
         const st = dataState(q, factDefs);
         const isOpen = open === q.key;
         return (
@@ -124,6 +131,7 @@ export function QuestionsSection({
                 : <button className="ip-link-btn" disabled={busy} onClick={() => approve(q, true)}>Approve</button>}
             </div>
             {q.whenChips.length > 0 && <div className="ip-faint ip-q-opts" style={{ color: 'var(--cat-1)' }}>Asked when any of these is ticked: {q.whenChips.map(chipLabel).join(', ')}</div>}
+            {q.suggestedChips.length > 0 && <div className="ip-faint ip-q-opts" style={{ color: 'var(--warn)' }}>Suggested, not active yet: opens with {q.suggestedChips.map(chipLabel).join(', ')}. Review it in the Grid view.</div>}
             {!isOpen && <div className="ip-faint ip-q-opts">{q.options.join(' · ')}{q.columns.length > 0 && <> — reads: {q.columns.map((k) => factDefs.find((d) => d.key === k)?.label ?? k).join(', ')}</>}</div>}
             {isOpen && <QuestionEditor q={q} busy={busy} chips={chips} columnsToPick={columnsToPick} onSetWhen={(c) => setWhen(q, c)} onSave={(p) => save(q, p)} onApprove={(a) => approve(q, a)} onDelete={() => remove(q)} />}
           </div>

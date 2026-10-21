@@ -20,7 +20,7 @@ const fail = (message: string): { ok: false; message: string } => ({ ok: false, 
 const validInterest = (key: string) => SLIDERS.some((s) => s.key === key);
 
 type Row = typeof interestQuestions.$inferSelect;
-const toRow = (r: Row, whenChips: string[] = []): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, whenChips, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
+const toRow = (r: Row, whenChips: string[] = [], suggestedChips: string[] = []): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, whenChips, suggestedChips, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
 const byOrder = (a: Row, b: Row) => a.sortOrder - b.sortOrder;
 
 const patchSchema = z.object({
@@ -35,8 +35,11 @@ const patchSchema = z.object({
 export type QuestionPatch = z.input<typeof patchSchema>;
 
 const loadAll = (interestKey: string) => db.select().from(interestQuestions).where(eq(interestQuestions.interestKey, interestKey));
-const chipsOf = async (interestKey: string, questionKey: string): Promise<string[]> =>
-  (await db.select({ k: interestQuestionChips.chipKey }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey)))).map((x) => x.k).sort();
+/** The chips that open a question: the accepted ones, and the ones Claude proposed that have not been accepted yet. */
+const linksOf = async (interestKey: string, questionKey: string): Promise<{ confirmed: string[]; suggested: string[] }> => {
+  const rows = await db.select({ k: interestQuestionChips.chipKey, s: interestQuestionChips.suggested }).from(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey)));
+  return { confirmed: rows.filter((r) => !r.s).map((r) => r.k).sort(), suggested: rows.filter((r) => r.s).map((r) => r.k).sort() };
+};
 
 export async function createQuestion(interestKey: string): Promise<Result<{ question: QuestionRow }>> {
   const admin = await requireAdminUser();
@@ -70,7 +73,8 @@ export async function updateQuestion(interestKey: string, questionKey: string, p
     actor: admin, skipPlaceCache: true, entityType: 'interest_question', entityId: `${interestKey}:${questionKey}`, action: 'update', before: cur, after: { ...cur, ...set },
     write: (tx) => tx.update(interestQuestions).set(set).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning(),
   });
-  return { ok: true, question: toRow(row, await chipsOf(interestKey, questionKey)), approvalCleared };
+  const l1 = await linksOf(interestKey, questionKey);
+  return { ok: true, question: toRow(row, l1.confirmed, l1.suggested), approvalCleared };
 }
 
 export async function setQuestionApproval(interestKey: string, questionKey: string, approved: boolean): Promise<Result<{ question: QuestionRow }>> {
@@ -83,7 +87,8 @@ export async function setQuestionApproval(interestKey: string, questionKey: stri
     actor: admin, skipPlaceCache: true, entityType: 'interest_question', entityId: `${interestKey}:${questionKey}`, action: 'update', before: cur, after: { ...cur, ...set },
     write: (tx) => tx.update(interestQuestions).set({ ...set, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning(),
   });
-  return { ok: true, question: toRow(row, await chipsOf(interestKey, questionKey)) };
+  const l2 = await linksOf(interestKey, questionKey);
+  return { ok: true, question: toRow(row, l2.confirmed, l2.suggested) };
 }
 
 /**
@@ -100,19 +105,82 @@ export async function setQuestionChips(interestKey: string, questionKey: string,
   if (wanted.length > 20) return fail('Too many chips');
   const known = new Set((await db.select({ k: interestChips.chipKey }).from(interestChips).where(eq(interestChips.interestKey, interestKey))).map((c) => c.k));
   if (wanted.some((k) => !known.has(k))) return fail('That chip does not belong to this interest');
-  const before = await chipsOf(interestKey, questionKey);
-  if (JSON.stringify(before) === JSON.stringify(wanted)) return { ok: true, question: toRow(cur, before), approvalCleared: false };
+  const before = await linksOf(interestKey, questionKey);
+  if (JSON.stringify(before.confirmed) === JSON.stringify(wanted)) return { ok: true, question: toRow(cur, before.confirmed, before.suggested), approvalCleared: false };
   const approvalCleared = !!cur.approvedAt;
   const clear = approvalCleared ? { approvedBy: '', approvedAt: null } : {};
   const [row] = await withAdminAudit<Row[]>({
-    actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey}`, action: 'update', before: { chips: before }, after: { chips: wanted },
+    actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey}`, action: 'update', before: { chips: before.confirmed }, after: { chips: wanted },
     write: async (tx) => {
-      await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey)));
-      if (wanted.length) await tx.insert(interestQuestionChips).values(wanted.map((chipKey) => ({ interestKey, questionKey, chipKey, createdBy: admin.email })));
+      // Replace the accepted chips. A proposal for a chip that is now accepted is absorbed; proposals for other chips stay.
+      await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.suggested, false)));
+      for (const chipKey of wanted) await tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.chipKey, chipKey)));
+      if (wanted.length) await tx.insert(interestQuestionChips).values(wanted.map((chipKey) => ({ interestKey, questionKey, chipKey, suggested: false, createdBy: admin.email })));
       return tx.update(interestQuestions).set({ ...clear, updatedBy: admin.email, updatedAt: new Date() }).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning();
     },
   });
-  return { ok: true, question: toRow(row, wanted), approvalCleared };
+  const after = await linksOf(interestKey, questionKey);
+  return { ok: true, question: toRow(row, after.confirmed, after.suggested), approvalCleared };
+}
+
+/**
+ * Switches one chip on or off for one question (the grid). Turning on a chip Claude proposed just accepts it and leaves the approval alone;
+ * any other change to who the question is asked of takes the approval back, as setQuestionChips does.
+ */
+export async function setQuestionChipLink(interestKey: string, questionKey: string, chipKey: string, on: boolean): Promise<Result<{ question: QuestionRow; approvalCleared: boolean }>> {
+  const admin = await requireAdminUser();
+  if (!validInterest(interestKey)) return fail('Unknown interest');
+  const cur = (await loadAll(interestKey)).find((r) => r.questionKey === questionKey);
+  if (!cur) return fail('Question not found');
+  const links = await linksOf(interestKey, questionKey);
+  if (on && links.suggested.includes(chipKey)) {
+    await withAdminAudit({
+      actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey}:${chipKey}`, action: 'update', before: { suggested: true }, after: { suggested: false },
+      write: (tx) => tx.update(interestQuestionChips).set({ suggested: false }).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.chipKey, chipKey))),
+    });
+    const l = await linksOf(interestKey, questionKey);
+    return { ok: true, question: toRow(cur, l.confirmed, l.suggested), approvalCleared: false };
+  }
+  if (!on && links.suggested.includes(chipKey) && !links.confirmed.includes(chipKey)) return dismissOne(admin, interestKey, questionKey, chipKey, cur);
+  const next = on ? [...links.confirmed, chipKey] : links.confirmed.filter((k) => k !== chipKey);
+  return setQuestionChips(interestKey, questionKey, next);
+}
+
+async function dismissOne(admin: { id: string; email: string }, interestKey: string, questionKey: string, chipKey: string, cur: Row): Promise<Result<{ question: QuestionRow; approvalCleared: boolean }>> {
+  await withAdminAudit({
+    actor: admin as never, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey}:${chipKey}`, action: 'delete', before: { suggested: true }, after: null,
+    write: (tx) => tx.delete(interestQuestionChips).where(and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.chipKey, chipKey))),
+  });
+  const l = await linksOf(interestKey, questionKey);
+  return { ok: true, question: toRow(cur, l.confirmed, l.suggested), approvalCleared: false };
+}
+
+/** Accepts every proposed link for one question, or for the whole interest when no question is given. Approvals are left alone. */
+export async function acceptSuggestedLinks(interestKey: string, questionKey: string | null): Promise<Result<{ changed: number }>> {
+  const admin = await requireAdminUser();
+  if (!validInterest(interestKey)) return fail('Unknown interest');
+  const where = questionKey ? and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.suggested, true)) : and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.suggested, true));
+  const rows = await db.select().from(interestQuestionChips).where(where);
+  if (rows.length === 0) return { ok: true, changed: 0 };
+  await withAdminAudit({
+    actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey ?? 'all'}`, action: 'update', before: { suggested: rows.map((r) => `${r.questionKey}:${r.chipKey}`) }, after: { suggested: [] },
+    write: (tx) => tx.update(interestQuestionChips).set({ suggested: false }).where(where),
+  });
+  return { ok: true, changed: rows.length };
+}
+
+/** Removes every proposed link for one question, or for the whole interest when no question is given. */
+export async function dismissSuggestedLinks(interestKey: string, questionKey: string | null): Promise<Result<{ changed: number }>> {
+  const admin = await requireAdminUser();
+  if (!validInterest(interestKey)) return fail('Unknown interest');
+  const where = questionKey ? and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.questionKey, questionKey), eq(interestQuestionChips.suggested, true)) : and(eq(interestQuestionChips.interestKey, interestKey), eq(interestQuestionChips.suggested, true));
+  const rows = await db.select().from(interestQuestionChips).where(where);
+  if (rows.length === 0) return { ok: true, changed: 0 };
+  await withAdminAudit({
+    actor: admin, skipPlaceCache: true, entityType: 'interest_question_chips', entityId: `${interestKey}:${questionKey ?? 'all'}`, action: 'delete', before: { suggested: rows.map((r) => `${r.questionKey}:${r.chipKey}`) }, after: null,
+    write: (tx) => tx.delete(interestQuestionChips).where(where),
+  });
+  return { ok: true, changed: rows.length };
 }
 
 export async function moveQuestion(interestKey: string, questionKey: string, direction: 'up' | 'down'): Promise<Result<{ order: Array<{ key: string; order: number }> }>> {

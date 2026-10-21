@@ -174,7 +174,7 @@ export function ChipsSection({
                         {c.drivers.length === 0 && !c.needsColumn && <i>Nothing yet</i>}
                       </div>
                     </td>
-                    <td style={{ whiteSpace: 'nowrap' }}>{(() => { const n = questions.filter((q) => q.whenChips.includes(c.key)).length; return n ? <span className="ip-chip new" title={questions.filter((q) => q.whenChips.includes(c.key)).map((q) => q.text).join('\n')}>{n} question{n === 1 ? '' : 's'}</span> : <span className="ip-faint">none</span>; })()}</td>
+                    <td style={{ whiteSpace: 'nowrap' }}>{(() => { const n = questions.filter((q) => q.whenChips.includes(c.key)).length; const m = questions.filter((q) => q.suggestedChips.includes(c.key)).length; return n || m ? <span className="ip-chip new" title={questions.filter((q) => q.whenChips.includes(c.key)).map((q) => q.text).join('\n')}>{n} question{n === 1 ? '' : 's'}{m > 0 && ` (+${m} suggested)`}</span> : <span className="ip-faint">none</span>; })()}</td>
                     <td className="ip-mono" style={{ whiteSpace: 'nowrap' }}>{c.drivers.length === 0 ? <span className="ip-faint">needs data</span> : <>{strong} of {scored.length}{blank > 0 && <span className="ip-faint"> ({blank} blank)</span>}</>}</td>
                   </tr>
                 );
