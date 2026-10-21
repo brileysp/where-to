@@ -381,3 +381,26 @@
 .lq-listhead .results-search-wrap { margin: 0; }
 .lq-listhead .quick-chip-row-wrap { margin-bottom: 4px; }
 .lq-listhead .results-stats-row { margin-bottom: 0; padding-bottom: 10px; }
+
+/* ---- Trip button and "Your trip" sheet ---- */
+.lq-tripbtn { position: relative; display: flex; align-items: center; gap: 6px; border: 1.5px solid var(--border); background: var(--bg-card); color: var(--text); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 700; }
+.lq-tripbtn.open { border-color: var(--accent); background: var(--accent-soft); }
+.lq-tripbtn .badge { min-width: 18px; height: 18px; border-radius: 9px; background: var(--accent); color: var(--ob-on-accent); font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+.ob2-top.shortlist.lq-sticky .lq-topbtns { display: flex; align-items: center; gap: 8px; }
+.lq-trip { gap: 0; padding-bottom: 0; }
+.lq-triphd { display: flex; align-items: center; justify-content: space-between; padding: 2px 0 6px; }
+.lq-tripbody { overflow-y: auto; }
+.lq-srow { border-bottom: 1px solid var(--border); }
+.lq-srow > button { display: flex; align-items: center; width: 100%; background: none; border: 0; padding: 13px 0; text-align: left; gap: 10px; }
+.lq-srow .k { font-weight: 700; font-size: 15px; }
+.lq-srow .v { margin-left: auto; color: var(--text-dim); font-size: 14px; text-align: right; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lq-srow .v.set { color: var(--accent); font-weight: 700; }
+.lq-srow .ch { color: var(--text-faint); transition: transform 0.2s; flex: none; }
+.lq-srow.open .ch { transform: rotate(90deg); }
+.lq-spn { padding: 0 0 14px; }
+.lq-seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.lq-tp { border: 1px solid var(--border); background: var(--bg-card); color: var(--text); border-radius: 999px; padding: 6px 12px; font-size: 13.5px; line-height: 1.2; }
+.lq-tp.sm { padding: 5px 9px; font-size: 13px; min-width: 46px; text-align: center; }
+.lq-tp.on { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+.lq-lbl { font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin: 12px 0 6px; }
+.lq-tripft { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0 calc(16px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--border); }

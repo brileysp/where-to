@@ -31,6 +31,7 @@ import { loadMatchFits } from '@/app/onboarding-v2/actions';
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
+import { TripSheet, monthShort, tripSetCount } from '../live/TripSheet';
 import { Sheet } from '../Sheet';
 import { SharpenCard } from '../SharpenCard';
 import { TasteCard } from '../TasteCard';
@@ -92,6 +93,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   const settings = getOnboardingSettings();
   const [sheet, setSheet] = useState<SheetId>(null);
   const [showAside, setShowAside] = useState(false);
+  const [tripOpen, setTripOpen] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
   const [visited, setVisited] = useState<Record<string, boolean>>({});
   const [favorited, setFavorited] = useState<Record<string, boolean>>({});
@@ -354,6 +356,8 @@ export function ShortlistScreen(p: ShortlistProps) {
   const home = airportByCode(p.home);
   const nCare = careCount(p.careProps.care, p.bands);
 
+  const tripValues = { month: p.month, week: p.week, who: p.who, bands: p.bands, home: p.home, maxHours: p.maxHours, careProps: p.careProps };
+  const tripCount = tripSetCount(tripValues);
   const lockedNow = liveOn ? !live.unlocked : locked;
   const barChips = (
     <div className="ob2-bar">
@@ -379,11 +383,18 @@ export function ShortlistScreen(p: ShortlistProps) {
       {liveOn ? (
         <div className="ob2-top shortlist lq-sticky">
           <div className="ob2-brand">Your shortlist</div>
-          <button type="button" className={`lq-prof${live.open ? ' open' : ''}${live.pulse ? ' pulse' : ''}${live.moreToDo ? ' ask' : ''}`} onClick={live.toggleBox} aria-expanded={live.open} aria-label={`${live.open ? 'Collapse' : 'Open'} your Travel DNA questions`}>
-            <span aria-hidden="true">🧬</span>
-            <span>{live.percent}%</span>
-            <i className="dot" />
-          </button>
+          <div className="lq-topbtns">
+            <button type="button" className={`lq-tripbtn${tripOpen ? ' open' : ''}`} onClick={() => setTripOpen(true)} aria-haspopup="dialog" aria-label={`Your trip settings${tripCount ? `, ${tripCount} set` : ''}`}>
+              <span aria-hidden="true">🧳</span>
+              <span>Trip</span>
+              {tripCount > 0 && <span className="badge">{tripCount}</span>}
+            </button>
+            <button type="button" className={`lq-prof${live.open ? ' open' : ''}${live.pulse ? ' pulse' : ''}${live.moreToDo ? ' ask' : ''}`} onClick={live.toggleBox} aria-expanded={live.open} aria-label={`${live.open ? 'Collapse' : 'Open'} your Travel DNA questions`}>
+              <span aria-hidden="true">🧬</span>
+              <span>{live.percent}%</span>
+              <i className="dot" />
+            </button>
+          </div>
         </div>
       ) : (
         <div className="ob2-top shortlist">
@@ -398,11 +409,10 @@ export function ShortlistScreen(p: ShortlistProps) {
         {liveOn ? (
           <>
             <QuestionBox ctx={boxCtx} />
-            {barChips}
             <div className="lq-listhead res-scope">
             <div className="lq-lh">
               <b>{live.listShown ? 'Your places' : 'Your top 5'}</b>
-              <span>{live.listShown ? `ranked for you · ${limited.kept.length} places` : 'ranked for you'}</span>
+              <span>{monthShort(p.month)} · {live.listShown ? `${limited.kept.length} places` : 'ranked for you'}</span>
               {toolsOn && (
                 <button type="button" className={`results-icon-btn${searchOpen ? ' on' : ''}`} aria-label={searchOpen ? 'Close search' : 'Search destinations'} aria-expanded={searchOpen} onClick={() => setSearchOpen((o) => !o)}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.3" y2="16.3" /></svg>
@@ -540,6 +550,14 @@ export function ShortlistScreen(p: ShortlistProps) {
         </button>
       </div>
 
+      {tripOpen && (
+        <TripSheet
+          v={tripValues}
+          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onWho: p.onWho, onBandPill: p.onBandPill, onPickHome: p.onPickHome, onClearHome: p.onClearHome, onMaxHours: p.onMaxHours, onNeedHome: p.onNeedHome }}
+          placeCount={limited.kept.length}
+          onClose={() => setTripOpen(false)}
+        />
+      )}
       {sheet === 'who' && (
         <Sheet onClose={() => setSheet(null)}>
           <h3>Who is going?</h3>
