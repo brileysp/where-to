@@ -230,12 +230,17 @@ table.ip-table td.nw { white-space: nowrap; }
 .ip-q-edit { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
 
 /* Question and chip grid */
-.ip-grid th { vertical-align: bottom; white-space: normal; min-width: 92px; max-width: 120px; text-align: center; }
-.ip-grid th:first-child { text-align: left; min-width: 280px; max-width: none; }
-.ip-gq { min-width: 280px; }
+.ip-gridcard { font-size: 13px; }
+.ip-gridcard .ip-legend { font-size: 12px; color: var(--text-dim); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin: 6px 0 10px; }
+table.ip-table.ip-grid { min-width: 0; table-layout: auto; }
+table.ip-table.ip-grid th { vertical-align: bottom; white-space: normal; width: 104px; min-width: 96px; max-width: 120px; text-align: center; text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 700; color: var(--text); line-height: 1.25; }
+table.ip-table.ip-grid th:first-child { text-align: left; width: auto; min-width: 280px; max-width: none; }
+table.ip-table.ip-grid th:last-child { width: 110px; text-align: left; }
+.ip-gq { min-width: 280px; font-size: 13px; }
+.ip-gq .ip-gopts { display: block; margin-top: 2px; font-size: 11.5px; color: var(--text-faint); font-weight: 400; }
 .ip-gdot { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: var(--bg-panel); color: transparent; font-weight: 700; font-size: 13px; line-height: 1; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
 .ip-gdot:hover { border-color: var(--cat-1); }
 .ip-gdot.on { background: var(--cat-1); border-color: var(--cat-1); color: #fff; }
 .ip-gdot.sug { border-style: dashed; border-color: var(--cat-1); color: var(--cat-1); background: var(--cat-1-soft); }
 .ip-gdot:disabled { opacity: 0.6; cursor: wait; }
-span.ip-gdot { cursor: default; width: 20px; height: 20px; font-size: 11px; vertical-align: middle; }
+span.ip-gdot { cursor: default; width: 18px; height: 18px; font-size: 10px; vertical-align: middle; }

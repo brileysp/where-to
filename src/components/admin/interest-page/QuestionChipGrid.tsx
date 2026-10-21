@@ -14,11 +14,14 @@ export function QuestionChipGrid({
   chips,
   questions,
   setQuestions,
+  compact = false,
 }: {
   interestKey: string;
   chips: ChipRow[];
   questions: QuestionRow[];
   setQuestions: (f: (q: QuestionRow[]) => QuestionRow[]) => void;
+  /** The review page: one tidy block per interest, no repeated legend or bulk buttons, and each question's answers shown under it. */
+  compact?: boolean;
 }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -54,15 +57,15 @@ export function QuestionChipGrid({
   }
 
   return (
-    <div className="ip-card" style={{ marginTop: 8 }}>
+    <div className="ip-card ip-gridcard" style={{ marginTop: 8 }}>
       <div className="ip-toolbar">
-        <b>Which chips open which question</b>
+        {!compact && <b>Which chips open which question</b>}
         <span className="ip-chip new">{confirmedTotal} link{confirmedTotal === 1 ? '' : 's'}</span>
         {suggestedTotal > 0 && <span className="ip-chip warn">{suggestedTotal} suggested</span>}
         <span className="grow" />
         {error && <span className="ip-err">{error}</span>}
         {info && <span className="ip-faint">{info}</span>}
-        {suggestedTotal > 0 && (
+        {suggestedTotal > 0 && !compact && (
           <>
             <label className="ip-ch-lab"><input type="checkbox" checked={onlyProposed} onChange={(e) => setOnlyProposed(e.target.checked)} /> Only questions with a suggestion</label>
             <button className="btn" disabled={busy} onClick={() => accept(null)}>Accept all suggested</button>
@@ -70,24 +73,26 @@ export function QuestionChipGrid({
           </>
         )}
       </div>
-      <div className="ip-faint" style={{ margin: '6px 0 10px' }}>
-        <span className="ip-gdot on" aria-hidden="true">✓</span> asked only when this chip is ticked &nbsp;
-        <span className="ip-gdot sug" aria-hidden="true">?</span> suggested, does nothing until you accept &nbsp;
-        A row with no dots is asked of everyone who picks the interest.
-      </div>
+      {!compact && (
+        <div className="ip-legend">
+          <span><span className="ip-gdot on" aria-hidden="true">✓</span> asked only when this chip is ticked</span>
+          <span><span className="ip-gdot sug" aria-hidden="true">?</span> suggested, does nothing until you accept</span>
+          <span>A row with no dots is asked of everyone who picks the interest.</span>
+        </div>
+      )}
       <div className="ip-table-wrap">
         <table className="ip-table ip-grid">
           <thead>
             <tr>
               <th>Question</th>
-              {sortedChips.map((c) => <th key={c.key} title={c.status === 'live' ? 'Live' : 'Draft'}>{c.label}<div className="ip-faint" style={{ fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>{c.status === 'live' ? 'live' : 'draft'}</div></th>)}
+              {sortedChips.map((c) => <th key={c.key} title={c.status === 'live' ? 'Live' : 'Draft'}>{c.label}<div className="ip-faint" style={{ fontWeight: 400 }}>{c.status === 'live' ? 'live' : 'draft'}</div></th>)}
               <th>Asked</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map((q, i) => (
               <tr key={q.key}>
-                <td className="ip-gq"><b>{i + 1}.</b> {q.text}{q.maxPicks > 1 ? ` (pick up to ${q.maxPicks})` : ''} <span className={`ip-chip ${q.kind === 'limit' ? 'warn' : 'dim'}`}>{q.kind === 'limit' ? 'Limit' : 'Lean'}</span></td>
+                <td className="ip-gq"><b>{i + 1}.</b> {q.text}{q.maxPicks > 1 ? ` (pick up to ${q.maxPicks})` : ''} <span className={`ip-chip ${q.kind === 'limit' ? 'warn' : 'dim'}`}>{q.kind === 'limit' ? 'Limit' : 'Lean'}</span>{compact && <span className="ip-gopts">{q.options.join(' · ')}</span>}</td>
                 {sortedChips.map((c) => {
                   const on = q.whenChips.includes(c.key);
                   const sug = q.suggestedChips.includes(c.key);

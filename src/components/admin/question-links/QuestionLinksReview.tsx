@@ -38,6 +38,11 @@ export function QuestionLinksReview({ initial }: { initial: LinkReviewInterest[]
           Only the {questionCount} question{questionCount === 1 ? '' : 's'} where a chip is proposed to open the question, across every interest. A proposed link changes nothing until you
           accept it. Accepting leaves a question&rsquo;s approval alone. A dashed &ldquo;?&rdquo; is a proposal; click it to accept. A solid dot is already a link; click it to remove it.
         </p>
+        <div className="ip-legend" style={{ fontSize: 12, color: 'var(--text-dim)', display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center', margin: '4px 0 10px' }}>
+          <span><span className="ip-gdot sug" aria-hidden="true">?</span> proposed: click to accept</span>
+          <span><span className="ip-gdot on" aria-hidden="true">✓</span> already a link: click to remove</span>
+          <span>Empty circle: no link. Click to add one.</span>
+        </div>
         <div className="mt-toolbar" style={{ marginTop: 0 }}>
           <span className="ip-chip warn">{remaining} still to review</span>
           <button className="btn" disabled={busy || remaining === 0} onClick={acceptEverything}>Accept all {remaining} suggested</button>
@@ -56,6 +61,7 @@ export function QuestionLinksReview({ initial }: { initial: LinkReviewInterest[]
             chips={i.chips}
             questions={byInterest[i.key]}
             setQuestions={(f) => setByInterest((all) => ({ ...all, [i.key]: f(all[i.key]) }))}
+            compact
           />
         </section>
       ))}
