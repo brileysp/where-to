@@ -1,0 +1,5056 @@
+{
+ "generatedAt": "2026-10-21",
+ "interests": {
+  "wildlifeViewing": {
+   "label": "Wildlife Viewing",
+   "chips": [
+    {
+     "key": "big-predators",
+     "label": "Big predators",
+     "origLabel": "Big predators",
+     "was": null,
+     "needs": false,
+     "desc": "lions, tigers, bears, wolves, big cats of any kind",
+     "at": null
+    },
+    {
+     "key": "primates",
+     "label": "Primates",
+     "origLabel": "Primates",
+     "was": null,
+     "needs": false,
+     "desc": "gorillas, chimps, orangutans, lemurs, monkeys",
+     "at": null
+    },
+    {
+     "key": "marine-life",
+     "label": "Marine life",
+     "origLabel": "Marine life",
+     "was": null,
+     "needs": false,
+     "desc": "seals, penguins, turtles, sea otters, manta rays seen from shore or boat",
+     "at": null
+    },
+    {
+     "key": "reptiles-and-amphibians",
+     "label": "Reptiles and amphibians",
+     "origLabel": "Reptiles and amphibians",
+     "was": null,
+     "needs": false,
+     "desc": "giant tortoises, komodo dragons, iguanas, frogs",
+     "at": null
+    },
+    {
+     "key": "birds",
+     "label": "Birds",
+     "origLabel": "Birds",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": "2026-10-20T15:30:00.000Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "large-herbivores",
+     "label": "Large herbivores"
+    },
+    {
+     "key": "easy-close-up-viewing",
+     "label": "Easy, close-up viewing"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "wildlifeViewing__p1",
+     "text": "Favorite ways to watch animals?",
+     "options": [
+      "From a vehicle",
+      "On foot with a guide",
+      "From a boat",
+      "From a hide",
+      "In the water"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "Ready",
+     "reads": "How you watch",
+     "when": [],
+     "at": "2026-10-20T13:26:03.838Z",
+     "selected": false
+    },
+    {
+     "pageId": "wildlifeViewing__p2",
+     "text": "How much will you trade abundance for a shot at a rare animal?",
+     "options": [
+      "I love watching all wildlife and I’m not picky about rare species",
+      "A balance, some waiting ok",
+      "Ok with waiting or hiking for hours for one special animal"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Density against the odds of the rarer animals (columns: density, draw)",
+     "when": [],
+     "at": "2026-10-20T13:26:14.903Z",
+     "selected": false
+    },
+    {
+     "pageId": "wildlifeViewing__p6",
+     "text": "Big gatherings or quiet one-on-ones?",
+     "options": [
+      "Spectacle: migrations, colonies",
+      "A mix",
+      "Intimate, close encounters"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Spectacle against close-up ease",
+     "when": [],
+     "at": "2026-10-20T13:26:29.552Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "birding": {
+   "label": "Birding",
+   "chips": [
+    {
+     "key": "rare-birds-and-endemics",
+     "label": "Rare birds and endemics",
+     "origLabel": "Rare birds and endemics",
+     "was": null,
+     "needs": false,
+     "desc": "a place where a serious birder can add lifers",
+     "at": null
+    },
+    {
+     "key": "as-many-species-as-possible",
+     "label": "As many species as possible",
+     "origLabel": "As many species as possible",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "bird-photography",
+     "label": "Bird photography",
+     "origLabel": "Bird photography",
+     "was": null,
+     "needs": false,
+     "desc": "good photos without a long trek or a hide",
+     "at": null
+    },
+    {
+     "key": "colonies-and-migrations",
+     "label": "Colonies and migrations",
+     "origLabel": "Colonies and migrations",
+     "was": null,
+     "needs": false,
+     "desc": "penguin colonies, seabird cliffs, huge flocks, flyways",
+     "at": null
+    },
+    {
+     "key": "seabirds-and-pelagic-trips",
+     "label": "Seabirds and pelagic trips",
+     "origLabel": "Seabirds and pelagic trips",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": "2026-10-20T13:29:18.279Z"
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "birding__q2",
+     "text": "Would you hire a local guide?",
+     "options": [
+      "No, I go on my own",
+      "A half day here and there",
+      "A guide every day is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Guide needed?",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "birding__q3",
+     "text": "How much walking will you do to find the birds?",
+     "options": [
+      "Mostly from the car or the lodge",
+      "Easy trails",
+      "Real hiking to reach them"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Accessibility.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "birding__q4",
+     "text": "How much does a sure thing matter?",
+     "options": [
+      "A reliable spot where the birds are almost always there",
+      "A bit of a gamble is fine",
+      "I would gamble for a rarity"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Draw confidence.",
+     "when": [],
+     "at": null,
+     "selected": true
+    }
+   ],
+   "warnings": []
+  },
+  "safari": {
+   "label": "Safari",
+   "chips": [
+    {
+     "key": "great-migration",
+     "label": "Great migration",
+     "origLabel": "Great migration",
+     "was": null,
+     "needs": false,
+     "desc": "wildebeest river crossings, huge herds",
+     "at": null
+    },
+    {
+     "key": "walking-safaris",
+     "label": "Walking safaris",
+     "origLabel": "Walking safaris",
+     "was": null,
+     "needs": false,
+     "desc": "on foot with a guide",
+     "at": null
+    },
+    {
+     "key": "self-drive",
+     "label": "Self-drive",
+     "origLabel": "Self-drive",
+     "was": null,
+     "needs": false,
+     "desc": "your own vehicle, your own pace",
+     "at": null
+    },
+    {
+     "key": "boat-and-canoe-safaris",
+     "label": "Boat and canoe safaris",
+     "origLabel": "Boat and canoe safaris",
+     "was": null,
+     "needs": false,
+     "desc": "river and delta safaris",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "big-cats",
+     "label": "Big cats"
+    },
+    {
+     "key": "wild-dogs",
+     "label": "Wild dogs"
+    },
+    {
+     "key": "private-reserves-fewer-vehicles",
+     "label": "Private reserves, fewer vehicles"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "safari__q1",
+     "text": "Which animal would make the trip for you?",
+     "options": [
+      "Leopard",
+      "Lion",
+      "Cheetah",
+      "Elephant",
+      "Rhino",
+      "Wild dog",
+      "Hippo and giraffe",
+      "Tiger"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "Ready",
+     "reads": "The odds grid, one column per animal.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "safari__q2",
+     "text": "Are you willing to pay more to stay on private reserves with fewer vehicles around?",
+     "options": [
+      "Yes! Prefer just my vehicle",
+      "A few vehicles is fine",
+      "Lots of vehicles around is ok if the sighting is great"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Crowding.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "safari__q3",
+     "text": "How do you feel about malaria precautions?",
+     "options": [
+      "I want to avoid malaria areas",
+      "Fine with precautions and the right season",
+      "No concern"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Malaria.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "safari__q4",
+     "text": "How do you want to reach camp?",
+     "options": [
+      "By road the whole way",
+      "Short flights in small bush planes are fine",
+      "Remote fly-in camps are the dream"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Access.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "safari__q5",
+     "text": "How much do night drives and going off-road matter?",
+     "options": [
+      "Not at all",
+      "Nice to have",
+      "Must have"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Night drives, off-road driving.",
+     "when": [],
+     "at": null,
+     "selected": true
+    }
+   ],
+   "warnings": []
+  },
+  "whaleWatching": {
+   "label": "Whale Watching",
+   "chips": [
+    {
+     "key": "humpbacks",
+     "label": "Humpbacks",
+     "origLabel": "Humpbacks",
+     "was": null,
+     "needs": false,
+     "desc": "breaching, tail slaps, singing",
+     "at": null
+    },
+    {
+     "key": "orcas",
+     "label": "Orcas",
+     "origLabel": "Orcas",
+     "was": null,
+     "needs": false,
+     "desc": "killer whales",
+     "at": null
+    },
+    {
+     "key": "blue-and-fin-whales",
+     "label": "Blue and fin whales",
+     "origLabel": "Blue and fin whales",
+     "was": null,
+     "needs": false,
+     "desc": "the giants",
+     "at": null
+    },
+    {
+     "key": "dolphins-and-porpoises",
+     "label": "Dolphins and porpoises",
+     "origLabel": "Dolphins and porpoises",
+     "was": null,
+     "needs": false,
+     "desc": "the guaranteed sighting",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "swim-with-whales",
+     "label": "Swim with whales"
+    },
+    {
+     "key": "from-shore",
+     "label": "From shore"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "whaleWatching__q1",
+     "text": "How do you handle the sea?",
+     "options": [
+      "I am a good sailor",
+      "Fine in calm water",
+      "I get queasy"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Seasickness risk.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "whaleWatching__q2",
+     "text": "What kind of boat feels right?",
+     "options": [
+      "Small fast boat, close to the water",
+      "Mid-size, comfortable",
+      "Large ship with a deck and a cafe",
+      "Sailing boat, quiet"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "Ready",
+     "reads": "Boat style.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "whaleWatching__q3",
+     "text": "How sure must the sighting be?",
+     "options": [
+      "Nearly guaranteed",
+      "Likely is fine",
+      "I would gamble for a rare animal"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "The odds written into each whale entry.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "whaleWatching__m1",
+     "text": "Would you plan a trip around being in the water with whales?",
+     "options": [
+      "Yes, that’s a dream",
+      "Maybe",
+      "No thanks, happy to stay in the boat!"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Needs a new column (new question from you)",
+     "when": [],
+     "at": "2026-10-20T15:30:00.000Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "scenicLandscapes": {
+   "label": "Scenic Landscapes",
+   "chips": [
+    {
+     "key": "deserts-and-canyons",
+     "label": "Deserts",
+     "origLabel": "Deserts and canyons",
+     "was": null,
+     "needs": true,
+     "desc": "red rock, dunes, big skies",
+     "at": "2026-10-20T13:44:17.699Z"
+    },
+    {
+     "key": "mountains",
+     "label": "Mountains",
+     "origLabel": "Mountains",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "coasts",
+     "label": "Coasts",
+     "origLabel": "Coasts",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "tropical-rainforests",
+     "label": "Forests",
+     "origLabel": "Tropical Rainforests",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "cities",
+     "label": "Cities & villages",
+     "origLabel": "Cities",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "landscape-photography",
+     "label": "Landscape photography",
+     "origLabel": "Landscape photography",
+     "was": null,
+     "needs": true,
+     "desc": "photographers: famous viewpoints, golden hour, alpenglow",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "villages-and-countryside",
+     "label": "Villages and countryside"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "scenicLandscapes__n1",
+     "text": "How do you like to take in a view?",
+     "options": [
+      "From the car or a viewpoint",
+      "Short walks to lookouts",
+      "Long walks into the landscape",
+      "From the air or a boat"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ways to see it (viewpoints, short walks, long walks, scenic flights and boats)",
+     "when": [],
+     "at": "2026-10-20T13:46:47.768Z",
+     "selected": false
+    },
+    {
+     "pageId": "scenicLandscapes__m1",
+     "text": "Iconic views or undiscovered gems?",
+     "options": [
+      "I want to go to THE spot I’ve been drooling over",
+      "Prefer to discover lesser known spots on my own",
+      "A bit of both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Needs a new column (new question from you)",
+     "when": [],
+     "at": "2026-10-20T15:30:00.000Z",
+     "selected": false
+    },
+    {
+     "pageId": "scenicLandscapes__lp1",
+     "text": "How far will you go for the shot?",
+     "options": [
+      "Roadside and short walks",
+      "Half-day walks",
+      "Early starts and long hikes",
+      "Backcountry, camping out for it"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how far the best shots are from the road",
+     "when": [
+      "landscape-photography"
+     ],
+     "at": "2026-10-20T18:30:00.000Z",
+     "selected": false
+    },
+    {
+     "pageId": "scenicLandscapes__lp2",
+     "text": "What gear will you carry?",
+     "options": [
+      "Phone only",
+      "One camera and lens",
+      "Tripod and multiple lenses",
+      "Multiple cameras and lenses"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: drone and tripod rules (parks and sites that ban them)",
+     "when": [
+      "landscape-photography"
+     ],
+     "at": "2026-10-21T01:56:08.896Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "campingBackcountry": {
+   "label": "Camping & Backcountry",
+   "chips": [
+    {
+     "key": "car-camping",
+     "label": "Car camping",
+     "origLabel": "Car camping",
+     "was": null,
+     "needs": true,
+     "desc": "drive-up campgrounds, sleep next to the car",
+     "at": null
+    },
+    {
+     "key": "backpacking",
+     "label": "Backpacking",
+     "origLabel": "Backpacking",
+     "was": null,
+     "needs": true,
+     "desc": "carrying everything for several nights",
+     "at": null
+    },
+    {
+     "key": "glamping",
+     "label": "Glamping",
+     "origLabel": "Glamping",
+     "was": null,
+     "needs": true,
+     "desc": "a bed in a tent, yurt or dome",
+     "at": null
+    },
+    {
+     "key": "free-wild-camping-allowed",
+     "label": "Free wild camping allowed",
+     "origLabel": "Free wild camping allowed",
+     "was": null,
+     "needs": true,
+     "desc": "you can pitch almost anywhere, legally",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "campingBackcountry__n1",
+     "text": "How remote do you want to camp?",
+     "options": [
+      "A campground with facilities",
+      "Quiet but reachable by car",
+      "A walk in from the road",
+      "Days from anyone"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: remoteness",
+     "when": [],
+     "at": "2026-10-20T13:53:35.647Z",
+     "selected": false
+    },
+    {
+     "pageId": "campingBackcountry__n2",
+     "text": "Bring gear, or rent it?",
+     "options": [
+      "Bring everything",
+      "Rent locally",
+      "A guided trip with the kit included"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: gear rental and outfitters",
+     "when": [],
+     "at": "2026-10-20T13:53:42.143Z",
+     "selected": false
+    },
+    {
+     "pageId": "campingBackcountry__n3",
+     "text": "How do you feel about bears and other wild animals?",
+     "options": [
+      "Prefer places with none",
+      "Fine with bear rules",
+      "Part of the appeal"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: dangerous wildlife",
+     "when": [],
+     "at": "2026-10-20T13:53:48.094Z",
+     "selected": false
+    },
+    {
+     "pageId": "campingBackcountry__n4",
+     "text": "How cold will you sleep?",
+     "options": [
+      "Warm nights only",
+      "Cool is fine",
+      "Cold nights are fine",
+      "Snow camping"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses climate data (night temperatures) for the camping season",
+     "when": [],
+     "at": "2026-10-20T13:53:54.579Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "stargazing": {
+   "label": "Stargazing",
+   "chips": [
+    {
+     "key": "certified-dark-sky-places",
+     "label": "Certified dark-sky places",
+     "origLabel": "Certified dark-sky places",
+     "was": null,
+     "needs": true,
+     "desc": "International Dark-Sky parks and reserves",
+     "at": "2026-10-21T01:56:51.717Z"
+    },
+    {
+     "key": "remote-and-high-altitude-clear-skies",
+     "label": "Remote and high-altitude clear skies",
+     "origLabel": "Remote and high-altitude clear skies",
+     "was": null,
+     "needs": true,
+     "desc": "Atacama, Mauna Kea, Namibia: thin air and no light",
+     "at": "2026-10-21T01:56:53.083Z"
+    },
+    {
+     "key": "southern-sky",
+     "label": "Southern sky",
+     "origLabel": "Southern sky",
+     "was": null,
+     "needs": true,
+     "desc": "the Magellanic Clouds and the Southern Cross",
+     "at": "2026-10-21T01:57:05.563Z"
+    },
+    {
+     "key": "night-sky-photography",
+     "label": "Night sky photography",
+     "origLabel": "Night sky photography",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": "2026-10-21T04:00:00.000Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "observatories-and-telescope-nights",
+     "label": "Observatories and star parties"
+    },
+    {
+     "key": "eclipses-and-meteor-showers",
+     "label": "Eclipses and meteor showers"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "stargazing__n1",
+     "text": "How dark does the sky need to be?",
+     "options": [
+      "Better than my city",
+      "A dark country sky",
+      "The darkest available"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: darkness rating (Bortle scale)",
+     "when": [],
+     "at": "2026-10-21T01:57:40.104Z",
+     "selected": false
+    },
+    {
+     "pageId": "stargazing__n3",
+     "text": "How cold and high will you go?",
+     "options": [
+      "Warm nights only",
+      "Cool is fine",
+      "A cold mountaintop is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Uses altitude and night temperatures",
+     "when": [],
+     "at": "2026-10-20T13:54:29.002Z",
+     "selected": false
+    },
+    {
+     "pageId": "stargazing__r2_1",
+     "text": "How much will you plan around the moon?",
+     "options": [
+      "Not at all",
+      "Avoid the full moon",
+      "New-moon week only, for the darkest skies"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Uses the best months and moon dates",
+     "when": [
+      "remote-and-high-altitude-clear-skies"
+     ],
+     "at": "2026-10-21T01:57:33.237Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "auroraChasing": {
+   "label": "Northern Lights / Aurora",
+   "chips": [
+    {
+     "key": "easy-from-a-town",
+     "label": "Easy from a town",
+     "origLabel": "Easy from a town",
+     "was": null,
+     "needs": true,
+     "desc": "tours leave from the town you sleep in: Tromsø, Fairbanks, Rovaniemi",
+     "at": "2026-10-21T01:58:09.051Z"
+    },
+    {
+     "key": "aurora-plus-winter-activities",
+     "label": "Aurora plus winter activities",
+     "origLabel": "Aurora plus winter activities",
+     "was": null,
+     "needs": true,
+     "desc": "huskies, snowmobiles, ice hotels by day",
+     "at": "2026-10-21T01:58:31.662Z"
+    },
+    {
+     "key": "southern-lights",
+     "label": "Southern lights",
+     "origLabel": "Southern lights",
+     "was": null,
+     "needs": false,
+     "desc": "aurora australis: Tasmania, New Zealand, Patagonia",
+     "at": "2026-10-21T01:58:34.705Z"
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "cosy-lodges-and-glass-igloos",
+     "label": "Cosy lodges and glass igloos"
+    },
+    {
+     "key": "dark-wilderness-viewing",
+     "label": "Dark wilderness viewing"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "auroraChasing__n1",
+     "text": "How much cold and darkness will you take?",
+     "options": [
+      "Mild winter only",
+      "Properly cold is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses climate data (temperatures in aurora months)",
+     "when": [],
+     "at": "2026-10-21T01:59:41.449Z",
+     "selected": false
+    },
+    {
+     "pageId": "auroraChasing__n3",
+     "text": "Chase it by tour or on your own?",
+     "options": [
+      "A guided tour with transport",
+      "Rent a car and chase",
+      "Stay put and watch from the lodge"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ways to chase (tours, driving, lodge viewing)",
+     "when": [],
+     "at": "2026-10-21T01:59:06.327Z",
+     "selected": false
+    },
+    {
+     "pageId": "auroraChasing__n4",
+     "text": "How many nights can you give it?",
+     "options": [
+      "2 to 3",
+      "4 to 5",
+      "A week",
+      "Two weeks"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: nights needed for good odds",
+     "when": [],
+     "at": "2026-10-21T01:59:12.389Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "geologyVolcanoes": {
+   "label": "Geology & Volcanoes",
+   "chips": [
+    {
+     "key": "active-volcanoes",
+     "label": "Active volcanoes",
+     "origLabel": "Active volcanoes",
+     "was": null,
+     "needs": true,
+     "desc": "erupting or regularly erupting, visible lava or glow",
+     "at": null
+    },
+    {
+     "key": "geysers-and-geothermal-fields",
+     "label": "Geysers and geothermal fields",
+     "origLabel": "Geysers and geothermal fields",
+     "was": null,
+     "needs": true,
+     "desc": "Yellowstone, Iceland, Rotorua",
+     "at": null
+    },
+    {
+     "key": "caves-and-lava-tubes",
+     "label": "Caves and lava tubes",
+     "origLabel": "Caves and lava tubes",
+     "was": null,
+     "needs": true,
+     "desc": "walk underground in lava tubes or limestone caves",
+     "at": null
+    },
+    {
+     "key": "glaciers-and-ice-caves",
+     "label": "Glaciers and ice",
+     "origLabel": "Glaciers and ice caves",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": "2026-10-20T13:55:37.765Z"
+    },
+    {
+     "key": "fossils-and-dinosaur-sites",
+     "label": "Fossils",
+     "origLabel": "Fossils and dinosaur sites",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": "2026-10-20T13:55:27.460Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "canyons-and-layered-rock",
+     "label": "Canyons and layered rock"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "geologyVolcanoes__n1",
+     "text": "Look at a volcano, or climb one?",
+     "options": [
+      "View it from a safe distance",
+      "Easy walk to a crater rim",
+      "Strenuous summit hike",
+      "Guided hike to active lava"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how close you can get",
+     "when": [],
+     "at": "2026-10-20T13:57:10.948Z",
+     "selected": false
+    },
+    {
+     "pageId": "geologyVolcanoes__n2",
+     "text": "How do you feel about hazards (gas, eruptions, closures)?",
+     "options": [
+      "Only safe, open sites",
+      "Occasional closures are fine",
+      "Active hazard is part of the thrill"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: current activity and closures",
+     "when": [],
+     "at": "2026-10-20T13:57:16.448Z",
+     "selected": false
+    },
+    {
+     "pageId": "geologyVolcanoes__n3",
+     "text": "Do you want an expert to explain it?",
+     "options": [
+      "No, signs are enough",
+      "Sometimes",
+      "Yes, expert-led"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: guided geology (geologist guides, geoparks)",
+     "when": [],
+     "at": "2026-10-20T13:57:22.399Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "wildflowerBlooms": {
+   "label": "Blooms and Fall Colors",
+   "chips": [
+    {
+     "key": "cherry-and-spring-blossoms",
+     "label": "Cherry and spring blossoms",
+     "origLabel": "Cherry and spring blossoms",
+     "was": null,
+     "needs": true,
+     "desc": "hanami, orchards, almond groves",
+     "at": null
+    },
+    {
+     "key": "desert-superblooms",
+     "label": "Desert superblooms",
+     "origLabel": "Desert superblooms",
+     "was": null,
+     "needs": true,
+     "desc": "rare blooms after rain",
+     "at": null
+    },
+    {
+     "key": "flower-fields",
+     "label": "Flower fields & farms",
+     "origLabel": "Flower fields",
+     "was": null,
+     "needs": true,
+     "desc": "tulips, lavender, sunflowers, poppies",
+     "at": null
+    },
+    {
+     "key": "fall-foliage",
+     "label": "Fall foliage",
+     "origLabel": "Fall foliage",
+     "was": null,
+     "needs": true,
+     "desc": "peak autumn color: New England, Japan, larch valleys",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "alpine-meadows",
+     "label": "Alpine meadows"
+    }
+   ],
+   "undecidedChips": [
+    {
+     "key": "rare-and-endemic-flora",
+     "label": "Rare and endemic flora"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "wildflowerBlooms__n1",
+     "text": "How much timing risk will you take?",
+     "options": [
+      "Only near-certain peak time",
+      "A good chance is fine",
+      "I will gamble on a rare event"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how reliable the bloom is",
+     "when": [],
+     "at": "2026-10-21T02:01:25.578Z",
+     "selected": false
+    },
+    {
+     "pageId": "wildflowerBlooms__n2",
+     "text": "How do you want to see the blooms and colors?",
+     "options": [
+      "From the car or a train",
+      "Easy paths and gardens",
+      "Hikes to reach the blooms"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: access to blooms",
+     "when": [],
+     "at": "2026-10-21T02:01:22.673Z",
+     "selected": false
+    },
+    {
+     "pageId": "wildflowerBlooms__r2_1",
+     "text": "How do you feel about crowds at famous blooms?",
+     "options": [
+      "The crowd is part of the fun",
+      "Early mornings to beat them",
+      "Quiet places only"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: crowds at peak bloom",
+     "when": [
+      "cherry-and-spring-blossoms"
+     ],
+     "at": "2026-10-21T02:01:44.473Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "hiking": {
+   "label": "Hiking & Trekking",
+   "chips": [
+    {
+     "key": "easy-walks",
+     "label": "Easy walks",
+     "origLabel": "Easy walks",
+     "was": null,
+     "needs": false,
+     "desc": "short, flat, for anyone",
+     "at": null
+    },
+    {
+     "key": "day-hikes",
+     "label": "Day hikes",
+     "origLabel": "Day hikes",
+     "was": null,
+     "needs": false,
+     "desc": "a good loop or out-and-back in a day",
+     "at": null
+    },
+    {
+     "key": "multi-day-treks",
+     "label": "Multi-day treks",
+     "origLabel": "Multi-day treks",
+     "was": null,
+     "needs": false,
+     "desc": "several days on the trail",
+     "at": null
+    },
+    {
+     "key": "hut-to-hut",
+     "label": "Hut-to-hut",
+     "origLabel": "Hut-to-hut",
+     "was": null,
+     "needs": false,
+     "desc": "sleep in huts, carry less",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "walk-up-summits",
+     "label": "Walk-up summits"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "hiking__q2",
+     "text": "How much company do you want on the trail?",
+     "options": [
+      "Just us, solitude matters",
+      "A few others is fine",
+      "Does not matter",
+      "I like a lively, busy trail"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Crowding evidence (five yes/no signs of crowding).",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "hiking__q3",
+     "text": "How high are you comfortable going?",
+     "options": [
+      "Stay low",
+      "Up to 8,000 ft",
+      "Up to 13,000 ft",
+      "The thin air is part of the appeal"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Altitude.",
+     "when": [],
+     "at": null,
+     "selected": true
+    },
+    {
+     "pageId": "hiking__q4",
+     "text": "How do you feel about booking ahead?",
+     "options": [
+      "I decide on the day",
+      "A few weeks ahead is fine",
+      "Happy to plan months ahead for a famous route"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Permits, fees or guide rules.",
+     "when": [],
+     "at": null,
+     "selected": true
+    }
+   ],
+   "warnings": []
+  },
+  "mountaineering": {
+   "label": "Mountaineering & Rock Climbing",
+   "chips": [
+    {
+     "key": "rock-climbing",
+     "label": "Rock climbing",
+     "origLabel": "Rock climbing",
+     "was": null,
+     "needs": true,
+     "desc": "sport and trad routes on crags",
+     "at": null
+    },
+    {
+     "key": "alpine-climbing",
+     "label": "Alpine climbing",
+     "origLabel": "Alpine climbing",
+     "was": null,
+     "needs": true,
+     "desc": "glaciers, snow and rock peaks",
+     "at": "2026-10-20T14:07:45.026Z"
+    },
+    {
+     "key": "via-ferrata",
+     "label": "Via ferrata",
+     "origLabel": "Via ferrata",
+     "was": null,
+     "needs": true,
+     "desc": "fixed cables and ladders, no experience needed",
+     "at": null
+    },
+    {
+     "key": "bouldering",
+     "label": "Bouldering",
+     "origLabel": "Bouldering",
+     "was": null,
+     "needs": true,
+     "desc": "short, hard problems without ropes",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "learn-to-climb",
+     "label": "Learn to climb"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "mountaineering__n1",
+     "text": "What is your climbing level?",
+     "options": [
+      "Never climbed",
+      "Beginner, with a guide",
+      "Intermediate, I can lead outdoors",
+      "Advanced, trad and alpine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: range of grades",
+     "when": [],
+     "at": "2026-10-20T14:08:06.451Z",
+     "selected": false
+    },
+    {
+     "pageId": "mountaineering__n2",
+     "text": "Guided or independent?",
+     "options": [
+      "Always guided",
+      "Guided for the hard parts",
+      "Independent"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: guide requirements",
+     "when": [],
+     "at": "2026-10-20T14:08:09.199Z",
+     "selected": false
+    },
+    {
+     "pageId": "mountaineering__n3",
+     "text": "How committing a day do you want?",
+     "options": [
+      "Short single-pitch routes",
+      "Half-day multi-pitch",
+      "Full-day alpine routes",
+      "Multi-day expeditions"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: route commitment",
+     "when": [],
+     "at": "2026-10-20T14:08:15.667Z",
+     "selected": false
+    },
+    {
+     "pageId": "mountaineering__n5",
+     "text": "Bring gear or rent it?",
+     "options": [
+      "Rent locally",
+      "Bring my own",
+      "No preference"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: gear rental",
+     "when": [],
+     "at": "2026-10-20T14:08:17.668Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "cyclingRoad": {
+   "label": "Cycling - Road & Gravel Biking",
+   "chips": [
+    {
+     "key": "quiet-scenic-road-riding",
+     "label": "Quiet scenic road riding",
+     "origLabel": "Quiet scenic road riding",
+     "was": null,
+     "needs": true,
+     "desc": "low-traffic roads, good surface",
+     "at": "2026-10-20T14:44:56.580Z"
+    },
+    {
+     "key": "gravel-and-dirt-roads",
+     "label": "Gravel and dirt roads",
+     "origLabel": "Gravel and dirt roads",
+     "was": null,
+     "needs": true,
+     "desc": "gravel bike routes",
+     "at": "2026-10-20T14:44:57.442Z"
+    },
+    {
+     "key": "big-mountain-climbs",
+     "label": "Big mountain climbs",
+     "origLabel": "Big mountain climbs",
+     "was": null,
+     "needs": true,
+     "desc": "Alpine, Dolomite and Pyrenean passes",
+     "at": "2026-10-20T14:44:58.842Z"
+    },
+    {
+     "key": "multi-day-touring",
+     "label": "Multi-day touring",
+     "origLabel": "Multi-day touring",
+     "was": null,
+     "needs": true,
+     "desc": "a route you ride for days with places to stay",
+     "at": "2026-10-20T14:45:07.494Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "easy-flat-rides",
+     "label": "Easy flat rides"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "cyclingRoad__n1",
+     "text": "How challenging do you want your rides?",
+     "options": [
+      "Easy, a couple of hours",
+      "Moderate, half a day",
+      "Strong, 60 miles with hills",
+      "Racer, big climbs"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ride difficulty range",
+     "when": [],
+     "at": "2026-10-20T14:08:43.821Z",
+     "selected": false
+    },
+    {
+     "pageId": "cyclingRoad__n2",
+     "text": "Bring your bike or rent?",
+     "options": [
+      "Rent a good road bike",
+      "Bring my own",
+      "Rent an e-bike"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: bike rental and e-bike availability",
+     "when": [],
+     "at": "2026-10-20T14:08:44.557Z",
+     "selected": false
+    },
+    {
+     "pageId": "cyclingRoad__n3",
+     "text": "How do you feel about traffic?",
+     "options": [
+      "Dedicated paths and quiet roads only",
+      "Shared roads with some traffic",
+      "Anything goes"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: road safety for cyclists",
+     "when": [],
+     "at": "2026-10-20T14:08:49.209Z",
+     "selected": false
+    },
+    {
+     "pageId": "cyclingRoad__n4",
+     "text": "Supported or self-supported?",
+     "options": [
+      "Guided with a support van",
+      "Self-guided with luggage transfer",
+      "Fully self-supported"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: tours and luggage transfer",
+     "when": [],
+     "at": "2026-10-20T14:08:55.158Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "mountainBiking": {
+   "label": "Mountain Biking",
+   "chips": [
+    {
+     "key": "lift-served-downhill-parks",
+     "label": "Lift-served downhill parks",
+     "origLabel": "Lift-served downhill parks",
+     "was": null,
+     "needs": true,
+     "desc": "bike parks with lifts",
+     "at": "2026-10-20T14:47:20.040Z"
+    },
+    {
+     "key": "bikepacking",
+     "label": "Bikepacking",
+     "origLabel": "Bikepacking",
+     "was": null,
+     "needs": true,
+     "desc": "multi-day routes with camping or lodging",
+     "at": "2026-10-20T14:47:25.758Z"
+    },
+    {
+     "key": "easy-flow-trails",
+     "label": "Easy flow trails",
+     "origLabel": "Easy flow trails",
+     "was": null,
+     "needs": true,
+     "desc": "beginner and family trails",
+     "at": "2026-10-20T14:47:27.492Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "cross-country-trails",
+     "label": "Cross-country trails"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "mountainBiking__n1",
+     "text": "What is your riding level?",
+     "options": [
+      "Beginner on green trails",
+      "Intermediate on blue and red",
+      "Advanced on black",
+      "Expert, big features"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: trail grades available",
+     "when": [],
+     "at": "2026-10-20T14:48:00.507Z",
+     "selected": false
+    },
+    {
+     "pageId": "mountainBiking__n2",
+     "text": "Rent a bike, bring one, or e-bike?",
+     "options": [
+      "Rent a good bike",
+      "Bring my own",
+      "E-bike"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: bike rental and e-bikes",
+     "when": [],
+     "at": "2026-10-20T14:47:58.890Z",
+     "selected": false
+    },
+    {
+     "pageId": "mountainBiking__n4",
+     "text": "How long are your days?",
+     "options": [
+      "A couple of hours",
+      "Half a day",
+      "Full days",
+      "Multi-day"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: trail length range",
+     "when": [],
+     "at": "2026-10-20T14:48:07.125Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "skiingSnowboarding": {
+   "label": "Skiing & Snowboarding",
+   "chips": [
+    {
+     "key": "downhill-resort-skiing",
+     "label": "Downhill resort skiing",
+     "origLabel": "Downhill resort skiing",
+     "was": null,
+     "needs": true,
+     "desc": "groomed runs and lifts",
+     "at": null
+    },
+    {
+     "key": "off-piste-and-backcountry",
+     "label": "Off-piste and backcountry",
+     "origLabel": "Off-piste and backcountry",
+     "was": null,
+     "needs": true,
+     "desc": "powder, touring, guided",
+     "at": null
+    },
+    {
+     "key": "cross-country-skiing",
+     "label": "Cross-country skiing",
+     "origLabel": "Cross-country skiing",
+     "was": null,
+     "needs": true,
+     "desc": "Nordic trails",
+     "at": null
+    },
+    {
+     "key": "heli-skiing-and-cat-skiing",
+     "label": "Heli-skiing and cat-skiing",
+     "origLabel": "Heli-skiing and cat-skiing",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": "2026-10-20T14:48:36.052Z"
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "skiingSnowboarding__n1",
+     "text": "What is your level?",
+     "options": [
+      "Beginner (green)",
+      "Intermediate (blue, some back)",
+      "Advanced or expert (black, off-piste)"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: terrain by level",
+     "when": [],
+     "at": "2026-10-20T14:52:14.606Z",
+     "selected": false
+    },
+    {
+     "pageId": "skiingSnowboarding__n2",
+     "text": "How much does après-ski and a charming ski village matter?",
+     "options": [
+      "Not at all",
+      "A nice bonus",
+      "A big part of the trip"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: village and après-ski scene",
+     "when": [],
+     "at": "2026-10-20T14:50:54.481Z",
+     "selected": false
+    },
+    {
+     "pageId": "skiingSnowboarding__n3",
+     "text": "Skis or snowboard?",
+     "options": [
+      "Skis",
+      "Snowboard",
+      "Both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: snowboard friendliness (flats, terrain parks)",
+     "when": [],
+     "at": "2026-10-20T14:52:42.071Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "surfing": {
+   "label": "Surfing",
+   "chips": [
+    {
+     "key": "big-powerful-waves",
+     "label": "Big, powerful waves",
+     "origLabel": "Big, powerful waves",
+     "was": null,
+     "needs": false,
+     "desc": "serious surf for experts",
+     "at": null
+    },
+    {
+     "key": "point-breaks",
+     "label": "Point breaks",
+     "origLabel": "Point breaks",
+     "was": null,
+     "needs": false,
+     "desc": "long, peeling rides",
+     "at": null
+    },
+    {
+     "key": "uncrowded-waves",
+     "label": "Uncrowded waves",
+     "origLabel": "Uncrowded waves",
+     "was": null,
+     "needs": false,
+     "desc": "space in the water",
+     "at": null
+    },
+    {
+     "key": "longboard-friendly",
+     "label": "Longboard-friendly",
+     "origLabel": "Longboard-friendly",
+     "was": null,
+     "needs": false,
+     "desc": "mellow, rolling waves",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "learn-to-surf",
+     "label": "Learn to surf"
+    },
+    {
+     "key": "remote-surf-trips",
+     "label": "Remote surf trips"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "surfing__p1",
+     "text": "Where are you in your surfing?",
+     "options": [
+      "Never surfed",
+      "Learning",
+      "Comfortable on small clean waves",
+      "Confident in overhead surf",
+      "Expert, chasing the big days"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Beginner rating and advanced rating",
+     "when": [],
+     "at": "2026-10-20T14:54:20.648Z",
+     "selected": false
+    },
+    {
+     "pageId": "surfing__p2",
+     "text": "Which way do you go?",
+     "options": [
+      "Left",
+      "Right",
+      "Either"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Wave direction",
+     "when": [],
+     "at": "2026-10-20T14:54:51.016Z",
+     "selected": false
+    },
+    {
+     "pageId": "surfing__p3",
+     "text": "How do you feel about the local crowd and attitude?",
+     "options": [
+      "I want a friendly, welcoming line-up",
+      "Mixed is fine, I know how to behave",
+      "I can handle a heavy local scene"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Localism",
+     "when": [],
+     "at": "2026-10-20T14:55:07.271Z",
+     "selected": false
+    },
+    {
+     "pageId": "surfing__p4",
+     "text": "How cold will you go?",
+     "options": [
+      "I don’t want you wear a wetsuit",
+      "Spring suit only",
+      "A 3 mm wetsuit ok",
+      "Thick wetsuit, boots and hood ok"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Structure",
+     "reads": "Water temperature and wetsuit",
+     "when": [],
+     "at": "2026-10-20T14:55:45.454Z",
+     "selected": false
+    },
+    {
+     "pageId": "surfing__p8",
+     "text": "How do you feel about shallow reef and rocks?",
+     "options": [
+      "I want sand-bottom waves",
+      "Reef is fine with care",
+      "Shallow barrels are the point"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Structure",
+     "reads": "Main hazards",
+     "when": [],
+     "at": "2026-10-20T14:55:56.185Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "diving": {
+   "label": "Snorkeling & Diving",
+   "chips": [
+    {
+     "key": "colorful-reefs",
+     "label": "Colorful reefs",
+     "origLabel": "Colorful reefs",
+     "was": null,
+     "needs": false,
+     "desc": "coral, fish, easy shallow dives",
+     "at": null
+    },
+    {
+     "key": "wrecks",
+     "label": "Wrecks",
+     "origLabel": "Wrecks",
+     "was": null,
+     "needs": false,
+     "desc": "sunken ships and planes",
+     "at": null
+    },
+    {
+     "key": "snorkeling-friendly",
+     "label": "Snorkeling",
+     "origLabel": "Snorkeling-friendly",
+     "was": null,
+     "needs": false,
+     "desc": "great from the surface",
+     "at": null
+    },
+    {
+     "key": "diving",
+     "label": "Diving",
+     "origLabel": "Diving",
+     "was": null,
+     "needs": true,
+     "desc": "Scuba",
+     "at": "2026-10-20T15:30:00.000Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "caves-and-cenotes",
+     "label": "Caves and cenotes"
+    },
+    {
+     "key": "big-animals",
+     "label": "Big animals"
+    },
+    {
+     "key": "liveaboards",
+     "label": "Liveaboards"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "diving__p1",
+     "text": "What is your certification?",
+     "options": [
+      "Snorkel only",
+      "Open Water",
+      "Advanced",
+      "Technical or cave"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Certification needed",
+     "when": [],
+     "at": "2026-10-20T14:57:52.496Z",
+     "selected": false
+    },
+    {
+     "pageId": "diving__p2",
+     "text": "How do you feel about current?",
+     "options": [
+      "Calm water only",
+      "Some current is fine",
+      "Drift diving is a thrill"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Current",
+     "when": [],
+     "at": "2026-10-20T14:57:57.381Z",
+     "selected": false
+    },
+    {
+     "pageId": "diving__p3",
+     "text": "How cold will you go?",
+     "options": [
+      "Warm water, no wetsuit needed",
+      "Cooler, a 3 mm wetsuit",
+      "Cold, a thick wetsuit",
+      "Drysuit cold ok"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Structure",
+     "reads": "Water temperature",
+     "when": [],
+     "at": "2026-10-20T14:58:30.075Z",
+     "selected": false
+    },
+    {
+     "pageId": "diving__p4",
+     "text": "How do you like to dive?",
+     "options": [
+      "Shore diving",
+      "Day boat",
+      "Liveaboard for a week"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "Ready",
+     "reads": "How you do it",
+     "when": [],
+     "at": "2026-10-20T14:58:37.061Z",
+     "selected": false
+    },
+    {
+     "pageId": "diving__p6",
+     "text": "Which animal would make your trip?",
+     "options": [
+      "Manta rays",
+      "Whale sharks",
+      "Hammerheads",
+      "Turtles",
+      "Seahorses and tiny creatures",
+      "Reef sharks"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "Ready",
+     "reads": "Signature animals",
+     "when": [],
+     "at": "2026-10-20T14:58:50.555Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "windSports": {
+   "label": "Windsurfing & Kitesurfing",
+   "chips": [
+    {
+     "key": "kitesurfing",
+     "label": "Kitesurfing",
+     "origLabel": "Kitesurfing",
+     "was": null,
+     "needs": true,
+     "desc": "kite spots, schools",
+     "at": null
+    },
+    {
+     "key": "windsurfing",
+     "label": "Windsurfing",
+     "origLabel": "Windsurfing",
+     "was": null,
+     "needs": true,
+     "desc": "windsurf spots, schools",
+     "at": null
+    },
+    {
+     "key": "wing-foiling",
+     "label": "Wing foiling",
+     "origLabel": "Wing foiling",
+     "was": null,
+     "needs": true,
+     "desc": "foil spots, light-wind spots",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "windSports__n1",
+     "text": "Flat water or waves?",
+     "options": [
+      "Flat-water lagoon",
+      "A little chop",
+      "Waves and swell",
+      "Everything"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: water type (flat, chop, waves)",
+     "when": [],
+     "at": "2026-10-20T14:59:34.454Z",
+     "selected": false
+    },
+    {
+     "pageId": "windSports__n2",
+     "text": "What is your level?",
+     "options": [
+      "Beginner, need lessons",
+      "Intermediate, riding both ways",
+      "Advanced, jumps and waves"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: lessons and levels served",
+     "when": [],
+     "at": "2026-10-20T14:59:40.193Z",
+     "selected": false
+    },
+    {
+     "pageId": "windSports__n3",
+     "text": "How strong a wind do you want?",
+     "options": [
+      "Light and easy",
+      "Steady medium",
+      "Strong and gusty"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: wind strength",
+     "when": [],
+     "at": "2026-10-20T14:59:43.427Z",
+     "selected": false
+    },
+    {
+     "pageId": "windSports__n4",
+     "text": "Rent or bring gear?",
+     "options": [
+      "Rent locally",
+      "Bring my own",
+      "No preference"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: gear rental and storage",
+     "when": [],
+     "at": "2026-10-20T14:59:46.069Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "sailing": {
+   "label": "Sailing & Boating",
+   "chips": [
+    {
+     "key": "sheltered-island-hopping",
+     "label": "Sheltered island hopping",
+     "origLabel": "Sheltered island hopping",
+     "was": null,
+     "needs": true,
+     "desc": "calm water, short hops, many anchorages",
+     "at": "2026-10-21T02:05:05.596Z"
+    },
+    {
+     "key": "racing-and-regattas",
+     "label": "Racing and regattas",
+     "origLabel": "Racing and regattas",
+     "was": null,
+     "needs": true,
+     "desc": "sail in or watch a race week: Antigua, Cowes, the Med",
+     "at": "2026-10-21T02:05:00.085Z"
+    },
+    {
+     "key": "expedition-sailing",
+     "label": "Expedition sailing",
+     "origLabel": "Expedition sailing",
+     "was": null,
+     "needs": true,
+     "desc": "fjords, polar waters and remote coasts by sail",
+     "at": "2026-10-21T02:04:54.937Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "day-sails",
+     "label": "Day sails"
+    },
+    {
+     "key": "bareboat-charter",
+     "label": "Bareboat charter"
+    },
+    {
+     "key": "crewed-yacht",
+     "label": "Crewed yacht"
+    },
+    {
+     "key": "learn-to-sail",
+     "label": "Learn to sail"
+    },
+    {
+     "key": "open-water-and-passage-sailing",
+     "label": "Open-water and passage sailing"
+    }
+   ],
+   "undecidedChips": [
+    {
+     "key": "classic-and-tall-ships",
+     "label": "Classic and tall ships"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "sailing__n1",
+     "text": "Who sails the boat?",
+     "options": [
+      "A skipper does it all",
+      "A crew, and I help",
+      "I skipper (bareboat)"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: charter types available",
+     "when": [],
+     "at": "2026-10-21T01:12:22.511Z",
+     "selected": false
+    },
+    {
+     "pageId": "sailing__n2",
+     "text": "How long on the water?",
+     "options": [
+      "A few hours",
+      "A day",
+      "A few nights",
+      "A week or more"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: trip lengths on offer",
+     "when": [],
+     "at": "2026-10-21T01:12:29.069Z",
+     "selected": false
+    },
+    {
+     "pageId": "sailing__n3",
+     "text": "How rough a sea can you take?",
+     "options": [
+      "Flat and sheltered",
+      "Some swell",
+      "Open water is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: sea conditions",
+     "when": [],
+     "at": "2026-10-21T01:12:33.192Z",
+     "selected": false
+    },
+    {
+     "pageId": "sailing__n5",
+     "text": "What is your sailing experience?",
+     "options": [
+      "None",
+      "Some lessons",
+      "Competent crew",
+      "Licensed skipper"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: license and experience rules",
+     "when": [],
+     "at": "2026-10-21T01:12:44.934Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "kayakingRafting": {
+   "label": "Kayaking & Rafting",
+   "chips": [
+    {
+     "key": "whitewater-rafting",
+     "label": "Whitewater rafting",
+     "origLabel": "Whitewater rafting",
+     "was": null,
+     "needs": true,
+     "desc": "guided rapids",
+     "at": null
+    },
+    {
+     "key": "sea-kayaking",
+     "label": "Sea kayaking",
+     "origLabel": "Sea kayaking",
+     "was": null,
+     "needs": true,
+     "desc": "coastlines, islands, sea caves",
+     "at": null
+    },
+    {
+     "key": "calm-water-paddling",
+     "label": "Calm-water paddling",
+     "origLabel": "Calm-water paddling",
+     "was": null,
+     "needs": true,
+     "desc": "lakes, lagoons and gentle rivers",
+     "at": null
+    },
+    {
+     "key": "multi-day-river-trips",
+     "label": "Multi-day river trips",
+     "origLabel": "Multi-day river trips",
+     "was": null,
+     "needs": true,
+     "desc": "camping or lodge-to-lodge",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "kayakingRafting__n1",
+     "text": "How wild a ride?",
+     "options": [
+      "A gentle float",
+      "Fun rapids (class II to III)",
+      "Big rapids (class IV)",
+      "Experts only"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: rapids classes",
+     "when": [],
+     "at": "2026-10-21T01:13:24.707Z",
+     "selected": false
+    },
+    {
+     "pageId": "kayakingRafting__n2",
+     "text": "Guided or self-guided?",
+     "options": [
+      "Guided",
+      "Guided first, then on my own",
+      "Self-guided"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: guide requirements",
+     "when": [],
+     "at": "2026-10-21T01:13:45.774Z",
+     "selected": false
+    },
+    {
+     "pageId": "kayakingRafting__n3",
+     "text": "How cold will you get wet?",
+     "options": [
+      "Warm water only",
+      "Cool is fine",
+      "Glacial water is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Uses water temperature in the paddling months",
+     "when": [],
+     "at": "2026-10-21T01:13:33.247Z",
+     "selected": false
+    },
+    {
+     "pageId": "kayakingRafting__n4",
+     "text": "How experienced a paddler are you?",
+     "options": [
+      "Never paddled",
+      "A little",
+      "Experienced"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: skill levels served",
+     "when": [],
+     "at": "2026-10-21T01:13:42.200Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "adventureSports": {
+   "label": "Adventure Sports",
+   "chips": [
+    {
+     "key": "paragliding",
+     "label": "Paragliding",
+     "origLabel": "Paragliding",
+     "was": null,
+     "needs": true,
+     "desc": "launch sites, tandem flights",
+     "at": null
+    },
+    {
+     "key": "ziplining-and-aerial-parks",
+     "label": "Ziplining and aerial parks",
+     "origLabel": "Ziplining and aerial parks",
+     "was": null,
+     "needs": true,
+     "desc": "long lines over forest or canyon",
+     "at": null
+    },
+    {
+     "key": "skydiving-and-bungee",
+     "label": "Skydiving and bungee",
+     "origLabel": "Skydiving and bungee",
+     "was": null,
+     "needs": true,
+     "desc": "jumps",
+     "at": null
+    },
+    {
+     "key": "canyoneering",
+     "label": "Canyoneering",
+     "origLabel": "Canyoneering",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "canyoning",
+     "label": "Canyoning"
+    },
+    {
+     "key": "caving",
+     "label": "Caving"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "adventureSports__n3",
+     "text": "How strict on safety standards?",
+     "options": [
+      "Certified operators only",
+      "Reputable operators",
+      "Local and basic is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: operator safety record",
+     "when": [],
+     "at": "2026-10-21T01:15:16.434Z",
+     "selected": false
+    },
+    {
+     "pageId": "adventureSports__r3_2",
+     "text": "How physically demanding can it be?",
+     "options": [
+      "Easy, no fitness needed",
+      "Some stamina (a hike in, a steep scramble)",
+      "Strong and fit (a full day of canyoneering)"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: fitness needed",
+     "when": [
+      "canyoneering"
+     ],
+     "at": "2026-10-21T02:58:15.470Z",
+     "selected": false
+    },
+    {
+     "pageId": "adventureSports__r4_3",
+     "text": "How big a group do you want?",
+     "options": [
+      "Just my group",
+      "A small group with a few strangers",
+      "A big group is fine"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: usual group sizes",
+     "when": [
+      "ziplining-and-aerial-parks"
+     ],
+     "at": "2026-10-21T03:14:12.953Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "golf": {
+   "label": "Golf",
+   "chips": [
+    {
+     "key": "links-golf",
+     "label": "Links golf",
+     "origLabel": "Links golf",
+     "was": null,
+     "needs": true,
+     "desc": "seaside courses on sandy ground, wind and no trees: Scotland, Ireland",
+     "at": "2026-10-21T02:06:16.064Z"
+    },
+    {
+     "key": "scenic-coastal-and-mountain-courses",
+     "label": "Scenic coastal and mountain courses",
+     "origLabel": "Scenic coastal and mountain courses",
+     "was": null,
+     "needs": true,
+     "desc": "ocean or mountain views from the fairway: Pebble Beach, Banff, the Algarve",
+     "at": "2026-10-21T02:06:18.435Z"
+    },
+    {
+     "key": "resort-courses",
+     "label": "Resort and stay-and-play",
+     "origLabel": "Resort and stay-and-play",
+     "was": "Resort courses",
+     "needs": true,
+     "desc": "play and stay in one place, with the food and spa to match",
+     "at": "2026-10-21T02:06:40.588Z"
+    },
+    {
+     "key": "bucket-list-courses",
+     "label": "Bucket-list courses",
+     "origLabel": "Bucket-list courses",
+     "was": null,
+     "needs": true,
+     "desc": "the famous names you want to say you have played",
+     "at": "2026-10-21T02:06:44.279Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "many-courses-close-together",
+     "label": "Many courses close together"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "golf__n1",
+     "text": "How good a golfer are you?",
+     "options": [
+      "Casual",
+      "Mid-handicap",
+      "Low handicap, I play to score"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: course difficulty range",
+     "when": [],
+     "at": "2026-10-21T01:15:53.087Z",
+     "selected": false
+    },
+    {
+     "pageId": "golf__n3",
+     "text": "Walk or ride?",
+     "options": [
+      "Walk with a caddie",
+      "Walk and pull a cart",
+      "Ride a cart",
+      "No preference"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: walking and caddie culture",
+     "when": [],
+     "at": "2026-10-21T01:15:57.343Z",
+     "selected": false
+    },
+    {
+     "pageId": "golf__n4",
+     "text": "How far ahead can you book a tee time?",
+     "options": [
+      "Walk-on access",
+      "A few weeks",
+      "Months ahead for famous courses"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: tee-time access",
+     "when": [],
+     "at": "2026-10-21T01:16:00.677Z",
+     "selected": false
+    },
+    {
+     "pageId": "golf__r2_1",
+     "text": "How much of the trip is golf?",
+     "options": [
+      "Golf all day, every day",
+      "A round a day, the rest of the day free",
+      "Golf is half the trip, with other things to do"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: things to do near the courses",
+     "when": [
+      "resort-courses"
+     ],
+     "at": "2026-10-21T02:07:04.979Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "fishing": {
+   "label": "Fishing",
+   "chips": [
+    {
+     "key": "big-ocean-game-fish",
+     "label": "Big ocean game fish",
+     "origLabel": "Big ocean game fish",
+     "was": null,
+     "needs": true,
+     "desc": "marlin, sailfish, tuna, wahoo: Kona, Costa Rica, Baja",
+     "at": "2026-10-21T02:58:38.792Z"
+    },
+    {
+     "key": "flats-fish",
+     "label": "Flats fish",
+     "origLabel": "Flats fish",
+     "was": null,
+     "needs": true,
+     "desc": "bonefish, tarpon, permit, redfish and snook",
+     "at": "2026-10-21T02:58:41.803Z"
+    },
+    {
+     "key": "trout-and-char",
+     "label": "Trout and char",
+     "origLabel": "Trout and char",
+     "was": null,
+     "needs": true,
+     "desc": "rivers and streams, with a fly or a lure",
+     "at": "2026-10-21T02:58:42.600Z"
+    },
+    {
+     "key": "salmon-and-steelhead",
+     "label": "Salmon and steelhead",
+     "origLabel": "Salmon and steelhead",
+     "was": null,
+     "needs": true,
+     "desc": "the timed runs: Alaska, British Columbia, the Pacific Northwest",
+     "at": "2026-10-21T02:58:43.673Z"
+    },
+    {
+     "key": "freshwater-predators",
+     "label": "Freshwater predators",
+     "origLabel": "Freshwater predators",
+     "was": null,
+     "needs": true,
+     "desc": "bass, pike, walleye, muskie, peacock bass, dorado, taimen",
+     "at": "2026-10-21T02:58:44.742Z"
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "fishing__n1",
+     "text": "Catch and release, or keep what you catch?",
+     "options": [
+      "Catch and release",
+      "Either",
+      "Keep what I catch"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: catch rules",
+     "when": [],
+     "at": "2026-10-21T01:16:35.053Z",
+     "selected": false
+    },
+    {
+     "pageId": "fishing__n2",
+     "text": "How experienced are you?",
+     "options": [
+      "Never fished",
+      "Some",
+      "Confident",
+      "Expert"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: skill levels served",
+     "when": [],
+     "at": "2026-10-21T01:16:33.529Z",
+     "selected": false
+    },
+    {
+     "pageId": "fishing__n3",
+     "text": "Guided or on your own?",
+     "options": [
+      "Always guided",
+      "A guide for day one",
+      "On my own with a license"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: licenses and guide-only waters",
+     "when": [],
+     "at": "2026-10-21T01:16:40.192Z",
+     "selected": false
+    },
+    {
+     "pageId": "fishing__n4",
+     "text": "How long a day on the water?",
+     "options": [
+      "Half a day",
+      "A full day",
+      "Several days",
+      "A lodge week"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: trip lengths",
+     "when": [],
+     "at": "2026-10-21T01:16:43.260Z",
+     "selected": false
+    },
+    {
+     "pageId": "fishing__r3_1",
+     "text": "How do you like to fish?",
+     "options": [
+      "Fly rod",
+      "Lures and spinning",
+      "Bait",
+      "Trolling from a boat"
+     ],
+     "kind": "lean",
+     "maxPicks": 2,
+     "status": "New",
+     "reads": "New column: methods that work at each place",
+     "when": [],
+     "at": "2026-10-21T02:59:05.303Z",
+     "selected": false
+    },
+    {
+     "pageId": "fishing__r3_2",
+     "text": "Boat, wading, or from shore?",
+     "options": [
+      "From a boat",
+      "Wading in rivers or on the flats",
+      "From the shore or a pier"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how the fishing is done",
+     "when": [],
+     "at": "2026-10-21T02:59:10.038Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "horsebackRiding": {
+   "label": "Horseback Riding",
+   "chips": [
+    {
+     "key": "beach-rides",
+     "label": "Beach rides",
+     "origLabel": "Beach rides",
+     "was": null,
+     "needs": true,
+     "desc": "a canter through the surf: Morocco, Mexico, Ireland, Hawaii",
+     "at": "2026-10-21T02:08:57.062Z"
+    },
+    {
+     "key": "ranch-stays-and-cattle-drives",
+     "label": "Ranch stays and cattle drives",
+     "origLabel": "Ranch stays and cattle drives",
+     "was": null,
+     "needs": true,
+     "desc": "live the ranch week: Montana, Argentina, Australia",
+     "at": "2026-10-21T02:09:02.906Z"
+    },
+    {
+     "key": "multi-day-treks",
+     "label": "Wilderness pack trips",
+     "origLabel": "Wilderness pack trips",
+     "was": "Multi-day treks",
+     "needs": true,
+     "desc": "days into the backcountry with gear on pack horses",
+     "at": "2026-10-21T02:09:07.397Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "inn-to-inn-rides",
+     "label": "Inn-to-inn rides"
+    },
+    {
+     "key": "riding-holidays-with-lessons",
+     "label": "Riding with lessons and camps"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "horsebackRiding__n1",
+     "text": "How experienced a rider are you?",
+     "options": [
+      "Never ridden",
+      "Beginner (walk and trot)",
+      "Confident (canter)",
+      "Experienced, any terrain"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: rider levels served",
+     "when": [],
+     "at": "2026-10-21T01:16:59.389Z",
+     "selected": false
+    },
+    {
+     "pageId": "horsebackRiding__n4",
+     "text": "Riding with local horsemen: how much does it matter?",
+     "options": [
+      "The culture is half the trip",
+      "A bonus",
+      "Just the ride"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: local horse culture",
+     "when": [],
+     "at": "2026-10-21T01:17:11.180Z",
+     "selected": false
+    },
+    {
+     "pageId": "horsebackRiding__r2_1",
+     "text": "How long a trip do you want?",
+     "options": [
+      "A few hours",
+      "A day",
+      "A few days",
+      "A week or more"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ride lengths on offer",
+     "when": [],
+     "at": "2026-10-21T02:09:19.980Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "trailRunning": {
+   "label": "Trail Running",
+   "chips": [
+    {
+     "key": "mountain-trail-running",
+     "label": "Mountain trail running",
+     "origLabel": "Mountain trail running",
+     "was": null,
+     "needs": true,
+     "desc": "high alpine trails, big climbs: Chamonix, the Dolomites",
+     "at": "2026-10-21T02:59:41.296Z"
+    },
+    {
+     "key": "ultra-distances-and-races",
+     "label": "Races and ultras",
+     "origLabel": "Races and ultras",
+     "was": "Ultra distances and races",
+     "needs": true,
+     "desc": "travel for a race: UTMB, Madeira, Lakeland, the Azores",
+     "at": "2026-10-21T02:59:42.687Z"
+    },
+    {
+     "key": "hut-to-hut-running",
+     "label": "Hut-to-hut and multi-day runs",
+     "origLabel": "Hut-to-hut and multi-day runs",
+     "was": "Hut-to-hut running",
+     "needs": true,
+     "desc": "run a route over several days, sleeping in huts or inns",
+     "at": "2026-10-21T02:59:44.691Z"
+    },
+    {
+     "key": "coastal-and-island-trails",
+     "label": "Coastal and island trails",
+     "origLabel": "Coastal and island trails",
+     "was": null,
+     "needs": true,
+     "desc": "cliff paths, volcanic islands, sea views",
+     "at": "2026-10-21T02:59:53.552Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "running-camps-and-retreats",
+     "label": "Running camps and retreats"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "trailRunning__n1",
+     "text": "How far a day?",
+     "options": [
+      "3 to 6 miles",
+      "6 to 12 miles",
+      "12 to 25 miles",
+      "30 miles and beyond"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: distances on offer",
+     "when": [],
+     "at": "2026-10-21T01:17:35.434Z",
+     "selected": false
+    },
+    {
+     "pageId": "trailRunning__n3",
+     "text": "How much climbing a day?",
+     "options": [
+      "Flat to rolling",
+      "Up to 3,000 ft",
+      "Big days, 6,500 ft or more"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: elevation gain",
+     "when": [],
+     "at": "2026-10-21T01:17:34.747Z",
+     "selected": false
+    },
+    {
+     "pageId": "trailRunning__n4",
+     "text": "Run alone, or with others?",
+     "options": [
+      "Mostly alone",
+      "Guided or group runs",
+      "A race or event"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: running groups and events",
+     "when": [],
+     "at": "2026-10-21T01:17:33.914Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "historyArchaeology": {
+   "label": "History & Archaeology",
+   "chips": [
+    {
+     "key": "ancient-ruins",
+     "label": "Ancient ruins",
+     "origLabel": "Ancient ruins",
+     "was": null,
+     "needs": true,
+     "desc": "Roman, Greek, Egyptian, Maya",
+     "at": null
+    },
+    {
+     "key": "war-and-battlefield-history",
+     "label": "War and battlefield history",
+     "origLabel": "War and battlefield history",
+     "was": null,
+     "needs": true,
+     "desc": "WWI, WWII, battlefields, memorials",
+     "at": null
+    },
+    {
+     "key": "prehistoric-sites",
+     "label": "Prehistoric sites",
+     "origLabel": "Prehistoric sites",
+     "was": null,
+     "needs": true,
+     "desc": "stone circles, cave art",
+     "at": null
+    },
+    {
+     "key": "castles",
+     "label": "Castles",
+     "origLabel": "Castles",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "historyArchaeology__n1",
+     "text": "How much do you want explained?",
+     "options": [
+      "Just let me look",
+      "Signs and an audio guide",
+      "A local guide",
+      "An expert archaeologist"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: interpretation and guides",
+     "when": [],
+     "at": "2026-10-21T01:17:55.159Z",
+     "selected": false
+    },
+    {
+     "pageId": "historyArchaeology__n2",
+     "text": "Ruins in place, or objects in a museum?",
+     "options": [
+      "Sites in place",
+      "Museums with the objects",
+      "Both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: sites versus museums",
+     "when": [],
+     "at": "2026-10-21T01:17:59.408Z",
+     "selected": false
+    },
+    {
+     "pageId": "historyArchaeology__n3",
+     "text": "How rough a site can you walk?",
+     "options": [
+      "Flat, paved sites",
+      "Some climbing",
+      "Rough ground and steps are fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: site accessibility",
+     "when": [],
+     "at": "2026-10-21T01:18:03.636Z",
+     "selected": false
+    },
+    {
+     "pageId": "historyArchaeology__n4",
+     "text": "How much history in a day?",
+     "options": [
+      "One site",
+      "Two or three",
+      "As many as I can fit"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how close the sites are",
+     "when": [],
+     "at": "2026-10-21T01:18:05.976Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "museumsArt": {
+   "label": "Museums & Art",
+   "chips": [
+    {
+     "key": "fine-art-masterworks",
+     "label": "Fine art masterworks",
+     "origLabel": "Fine art masterworks",
+     "was": null,
+     "needs": true,
+     "desc": "Old Masters and the great collections",
+     "at": null
+    },
+    {
+     "key": "street-art-and-murals",
+     "label": "Street art and murals",
+     "origLabel": "Street art and murals",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "history-and-natural-history-museums",
+     "label": "History and natural history museums",
+     "origLabel": "History and natural history museums",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "modern-art",
+     "label": "Modern Art",
+     "origLabel": "Modern Art",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "museumsArt__n1",
+     "text": "How long in a museum?",
+     "options": [
+      "An hour or two",
+      "Half a day",
+      "A full day",
+      "Several days in one city"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: size and depth of collections",
+     "when": [],
+     "at": "2026-10-21T01:18:47.791Z",
+     "selected": false
+    },
+    {
+     "pageId": "museumsArt__n2",
+     "text": "Big famous museums, or small and quirky?",
+     "options": [
+      "The famous ones",
+      "Small and quirky",
+      "A mix"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: famous versus small",
+     "when": [],
+     "at": "2026-10-21T01:18:46.830Z",
+     "selected": false
+    },
+    {
+     "pageId": "museumsArt__n3",
+     "text": "How much does skipping the queue matter?",
+     "options": [
+      "Not at all",
+      "Some",
+      "I need timed entry"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: queues and timed entry",
+     "when": [],
+     "at": "2026-10-21T01:18:45.933Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "architecture": {
+   "label": "Architecture",
+   "chips": [
+    {
+     "key": "modern-and-contemporary",
+     "label": "Modern and contemporary",
+     "origLabel": "Modern and contemporary",
+     "was": null,
+     "needs": true,
+     "desc": "skyscrapers and starchitects",
+     "at": null
+    },
+    {
+     "key": "castles-and-palaces",
+     "label": "Castles and palaces",
+     "origLabel": "Castles and palaces",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "art-nouveau-and-art-deco",
+     "label": "Art Nouveau and Art Deco",
+     "origLabel": "Art Nouveau and Art Deco",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "architecture__n1",
+     "text": "Old or new?",
+     "options": [
+      "Mostly old",
+      "A mix",
+      "Mostly modern"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: era mix",
+     "when": [],
+     "at": "2026-10-21T01:19:13.458Z",
+     "selected": false
+    },
+    {
+     "pageId": "architecture__n2",
+     "text": "Grand monuments, or everyday streets?",
+     "options": [
+      "Grand monuments",
+      "Everyday streets and vernacular buildings",
+      "Both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: monumental versus vernacular",
+     "when": [],
+     "at": "2026-10-21T01:19:16.765Z",
+     "selected": false
+    },
+    {
+     "pageId": "architecture__n3",
+     "text": "Outside only, or inside too?",
+     "options": [
+      "Facades and streets are enough",
+      "I want to go inside",
+      "Tours of private buildings"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: interior access",
+     "when": [],
+     "at": "2026-10-21T01:19:19.873Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "cityExploration": {
+   "label": "Local Culture & City Exploration",
+   "chips": [
+    {
+     "key": "historic-old-towns",
+     "label": "Historic old towns",
+     "origLabel": "Historic old towns",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "markets-and-street-life",
+     "label": "Markets and street life",
+     "origLabel": "Markets and street life",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "neighborhoods-off-the-tourist-trail",
+     "label": "Neighborhoods off the tourist trail",
+     "origLabel": "Neighborhoods off the tourist trail",
+     "was": null,
+     "needs": true,
+     "desc": "lived-in districts",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "cityExploration__n1",
+     "text": "How walkable must the city be?",
+     "options": [
+      "Everything on foot",
+      "Walk plus metro or tram",
+      "A taxi or bus is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: walkability",
+     "when": [],
+     "at": "2026-10-21T01:19:38.336Z",
+     "selected": false
+    },
+    {
+     "pageId": "cityExploration__n2",
+     "text": "How do you like to explore?",
+     "options": [
+      "With a plan",
+      "Mostly wandering",
+      "Guided walks and tours"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: guided walking tours",
+     "when": [],
+     "at": "2026-10-21T01:19:45.146Z",
+     "selected": false
+    },
+    {
+     "pageId": "cityExploration__n3",
+     "text": "Big city or small?",
+     "options": [
+      "Megacity energy",
+      "Mid-size",
+      "Small and charming"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: city size",
+     "when": [],
+     "at": "2026-10-21T01:19:50.193Z",
+     "selected": false
+    },
+    {
+     "pageId": "cityExploration__n4",
+     "text": "How many days could you give one city?",
+     "options": [
+      "A weekend",
+      "4 to 5 days",
+      "A week",
+      "Longer, slow travel"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: days needed to get under the skin of it",
+     "when": [],
+     "at": "2026-10-21T01:19:56.518Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "indigenousCultures": {
+   "label": "Indigenous Cultures",
+   "chips": [
+    {
+     "key": "living-traditions-and-ceremonies",
+     "label": "Living traditions and ceremonies",
+     "origLabel": "Living traditions and ceremonies",
+     "was": null,
+     "needs": true,
+     "desc": "dance, ritual, daily life",
+     "at": null
+    },
+    {
+     "key": "indigenous-led-tours",
+     "label": "Indigenous-led tours",
+     "origLabel": "Indigenous-led tours",
+     "was": null,
+     "needs": true,
+     "desc": "run by the community",
+     "at": null
+    },
+    {
+     "key": "homestays",
+     "label": "Homestays",
+     "origLabel": "Homestays",
+     "was": null,
+     "needs": true,
+     "desc": "stay with a family",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "cultural-centres-and-museums",
+     "label": "Cultural centers and museums"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "indigenousCultures__n1",
+     "text": "How deep an exchange do you want?",
+     "options": [
+      "Watch a performance",
+      "A visit and conversation",
+      "A day living alongside"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: depth of exchange available",
+     "when": [],
+     "at": "2026-10-21T01:20:09.795Z",
+     "selected": false
+    },
+    {
+     "pageId": "indigenousCultures__n2",
+     "text": "How basic a stay is fine?",
+     "options": [
+      "A comfortable hotel",
+      "A simple guesthouse",
+      "Rustic and shared"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: community lodging standards",
+     "when": [],
+     "at": "2026-10-21T01:20:16.204Z",
+     "selected": false
+    },
+    {
+     "pageId": "indigenousCultures__n4",
+     "text": "How far will you travel to reach it?",
+     "options": [
+      "Near a city",
+      "A day of travel",
+      "Remote, a few days"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: remoteness",
+     "when": [],
+     "at": "2026-10-21T01:20:33.480Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "religiousSites": {
+   "label": "Religious & Spiritual Sites",
+   "chips": [
+    {
+     "key": "cathedrals-and-churches",
+     "label": "Cathedrals and churches",
+     "origLabel": "Cathedrals and churches",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "temples-and-shrines",
+     "label": "Temples and shrines",
+     "origLabel": "Temples and shrines",
+     "was": null,
+     "needs": true,
+     "desc": "Buddhist, Hindu, Shinto, Sikh",
+     "at": null
+    },
+    {
+     "key": "mosques-and-islamic-heritage",
+     "label": "Mosques and Islamic heritage",
+     "origLabel": "Mosques and Islamic heritage",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "pilgrimage-routes",
+     "label": "Pilgrimage routes",
+     "origLabel": "Pilgrimage routes",
+     "was": null,
+     "needs": true,
+     "desc": "Camino, Shikoku, Kailash",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "religiousSites__n2",
+     "text": "How do you feel about dress codes and rules?",
+     "options": [
+      "Fine with any rules",
+      "Prefer relaxed sites",
+      "No restrictions please"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: dress and entry rules",
+     "when": [],
+     "at": "2026-10-21T01:20:44.298Z",
+     "selected": false
+    },
+    {
+     "pageId": "religiousSites__n3",
+     "text": "Would you stay at a monastery?",
+     "options": [
+      "No",
+      "Visit for a few hours",
+      "Stay a night"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: monastery guesthouses",
+     "when": [],
+     "at": "2026-10-21T01:20:49.106Z",
+     "selected": false
+    },
+    {
+     "pageId": "religiousSites__n4",
+     "text": "How many in one trip?",
+     "options": [
+      "One or two highlights",
+      "Several",
+      "A circuit built around them"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: number of significant sites nearby",
+     "when": [],
+     "at": "2026-10-21T01:20:53.014Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "festivals": {
+   "label": "Festivals & Live Events",
+   "chips": [
+    {
+     "key": "music-festivals",
+     "label": "Music festivals",
+     "origLabel": "Music festivals",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "food-and-drink-festivals",
+     "label": "Food and drink festivals",
+     "origLabel": "Food and drink festivals",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "sporting-events",
+     "label": "Sporting events",
+     "origLabel": "Sporting events",
+     "was": null,
+     "needs": true,
+     "desc": "Grand Prix, tennis, marathons",
+     "at": null
+    },
+    {
+     "key": "cultural-celebrations",
+     "label": "Cultural celebrations",
+     "origLabel": "Cultural celebrations",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "festivals__n1",
+     "text": "How big a festival?",
+     "options": [
+      "Small and local",
+      "Mid-size",
+      "Huge, tens of thousands"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: festival scale",
+     "when": [],
+     "at": "2026-10-21T01:21:05.620Z",
+     "selected": false
+    },
+    {
+     "pageId": "festivals__n4",
+     "text": "How far ahead will you book tickets?",
+     "options": [
+      "Walk-up",
+      "A few weeks",
+      "Months ahead (sells out)"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ticket availability",
+     "when": [],
+     "at": "2026-10-21T01:21:21.296Z",
+     "selected": false
+    },
+    {
+     "pageId": "festivals__r3_2",
+     "text": "How much weather will you put up with?",
+     "options": [
+      "Dry and mild only",
+      "Some rain is fine",
+      "Mud and heat are part of it"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Uses the weather in the festival months",
+     "when": [
+      "music-festivals"
+     ],
+     "at": "2026-10-21T03:00:30.475Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "traditionalCrafts": {
+   "label": "Traditional Arts & Crafts",
+   "chips": [
+    {
+     "key": "textiles-and-weaving",
+     "label": "Textiles and weaving",
+     "origLabel": "Textiles and weaving",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "pottery-and-ceramics",
+     "label": "Pottery and ceramics",
+     "origLabel": "Pottery and ceramics",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "carving-and-metalwork",
+     "label": "Carving and metalwork",
+     "origLabel": "Carving and metalwork",
+     "was": null,
+     "needs": false,
+     "desc": "wood, stone, silver, copper",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "hands-on-workshops",
+     "label": "Hands-on workshops"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "traditionalCrafts__n1",
+     "text": "Watch, or make?",
+     "options": [
+      "Watch artisans",
+      "A short workshop (1 to 2 hours)",
+      "A multi-day course",
+      "An apprenticeship"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "craftWorkshops column",
+     "when": [],
+     "at": "2026-10-21T01:21:52.700Z",
+     "selected": false
+    },
+    {
+     "pageId": "traditionalCrafts__n2",
+     "text": "Where do you want to find the craft?",
+     "options": [
+      "Village workshops",
+      "City studios",
+      "Markets and shops",
+      "Museums"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: where the craft is found",
+     "when": [],
+     "at": "2026-10-21T01:21:58.409Z",
+     "selected": false
+    },
+    {
+     "pageId": "traditionalCrafts__n4",
+     "text": "Will you buy to take home?",
+     "options": [
+      "No",
+      "Small souvenirs",
+      "Serious pieces, shipping is fine"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: shipping and export ease",
+     "when": [],
+     "at": "2026-10-21T01:22:13.527Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "streetFood": {
+   "label": "Street Food & Markets",
+   "chips": [
+    {
+     "key": "night-markets",
+     "label": "Night markets",
+     "origLabel": "Night markets",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "street-stalls-and-hawker-centres",
+     "label": "Street stalls and hawker centers",
+     "origLabel": "Street stalls and hawker centers",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "food-tours",
+     "label": "Food tours",
+     "origLabel": "Food tours",
+     "was": null,
+     "needs": false,
+     "desc": "guided tastings",
+     "at": null
+    },
+    {
+     "key": "cooking-classes",
+     "label": "Cooking classes",
+     "origLabel": "Cooking classes",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "fresh-produce-markets",
+     "label": "Fresh produce markets",
+     "origLabel": "Fresh produce markets",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "streetFood__n1",
+     "text": "How adventurous an eater?",
+     "options": [
+      "Safe favorites",
+      "I try most things",
+      "Anything goes"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: adventurousness of the street food",
+     "when": [],
+     "at": "2026-10-21T01:22:24.955Z",
+     "selected": false
+    },
+    {
+     "pageId": "streetFood__n4",
+     "text": "How careful about hygiene?",
+     "options": [
+      "Very careful",
+      "Normal care",
+      "Not worried"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: street-food hygiene rating",
+     "when": [],
+     "at": "2026-10-21T01:23:16.564Z",
+     "selected": false
+    },
+    {
+     "pageId": "streetFood__r1",
+     "text": "How do you like to eat street food?",
+     "options": [
+      "Standing and walking",
+      "Plastic stools are fine",
+      "A proper table"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: street-food seating culture",
+     "when": [],
+     "at": "2026-10-21T01:22:46.776Z",
+     "selected": false
+    },
+    {
+     "pageId": "streetFood__r2",
+     "text": "How much of your eating will be street food?",
+     "options": [
+      "Snacks between meals",
+      "One street meal a day",
+      "Street food is my main food"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "streetStalls and nightMarkets columns",
+     "when": [],
+     "at": "2026-10-21T01:22:57.786Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "fineDining": {
+   "label": "Fine Dining",
+   "chips": [
+    {
+     "key": "michelin-starred-restaurants",
+     "label": "Michelin-starred restaurants",
+     "origLabel": "Michelin-starred restaurants",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "tasting-menus-and-chef-s-tables",
+     "label": "Tasting menus and chef's tables",
+     "origLabel": "Tasting menus and chef's tables",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "farm-to-table",
+     "label": "Farm-to-table",
+     "origLabel": "Farm-to-table",
+     "was": null,
+     "needs": false,
+     "desc": "local produce, short supply chain",
+     "at": null
+    },
+    {
+     "key": "dining-with-a-view",
+     "label": "Dining with a view",
+     "origLabel": "Dining with a view",
+     "was": null,
+     "needs": false,
+     "desc": "rooftops, vineyards, the sea",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "fineDining__n1",
+     "text": "How many splurge meals?",
+     "options": [
+      "One special night",
+      "A few",
+      "A meal like that most days"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "michelinRestaurants and tastingMenus columns",
+     "when": [],
+     "at": "2026-10-21T01:23:38.035Z",
+     "selected": false
+    },
+    {
+     "pageId": "fineDining__n3",
+     "text": "How far ahead will you book?",
+     "options": [
+      "Walk-in",
+      "A week or two",
+      "Months ahead for hard tables"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: booking difficulty",
+     "when": [],
+     "at": "2026-10-21T01:23:52.746Z",
+     "selected": false
+    },
+    {
+     "pageId": "fineDining__m1",
+     "text": "How much are you willing to spend on a memorable tasting menu dinner?",
+     "options": [
+      "Up to $100 per person",
+      "Up to $200 per person",
+      "$300 a person or more"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Needs a new column (new question from you)",
+     "when": [],
+     "at": "2026-10-21T04:00:00.000Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "wineSpirits": {
+   "label": "Wine & Spirits Tasting",
+   "chips": [
+    {
+     "key": "vineyards-and-wine-regions",
+     "label": "Vineyards and wine regions",
+     "origLabel": "Vineyards and wine regions",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "whisky-and-spirits-distilleries",
+     "label": "Whisky and spirits distilleries",
+     "origLabel": "Whisky and spirits distilleries",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "craft-beer-and-breweries",
+     "label": "Craft beer and breweries",
+     "origLabel": "Craft beer and breweries",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "vineyard-stays",
+     "label": "Vineyard stays"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "wineSpirits__n1",
+     "text": "Who drives between tastings?",
+     "options": [
+      "I drive",
+      "A driver or tour",
+      "I walk or cycle"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: tasting without driving",
+     "when": [],
+     "at": "2026-10-21T01:24:22.459Z",
+     "selected": false
+    },
+    {
+     "pageId": "wineSpirits__n2",
+     "text": "How do you like to taste?",
+     "options": [
+      "Casual tasting rooms",
+      "Winery tours with the winemaker",
+      "Serious cellar and barrel tastings"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: tasting style",
+     "when": [],
+     "at": "2026-10-21T01:24:25.145Z",
+     "selected": false
+    },
+    {
+     "pageId": "wineSpirits__n3",
+     "text": "Visit producers, or drink in town?",
+     "options": [
+      "Visit producers",
+      "Bars and cellars in town",
+      "Both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: producers versus city venues",
+     "when": [],
+     "at": "2026-10-21T01:24:28.208Z",
+     "selected": false
+    },
+    {
+     "pageId": "wineSpirits__n4",
+     "text": "How much do you know?",
+     "options": [
+      "A beginner",
+      "An enthusiast",
+      "An expert, I want rare bottles"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: classes and depth",
+     "when": [],
+     "at": "2026-10-21T01:24:31.596Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "coffeeTea": {
+   "label": "Specialty Coffee & Tea",
+   "chips": [
+    {
+     "key": "coffee-farms",
+     "label": "Coffee farms",
+     "origLabel": "Coffee farms",
+     "was": null,
+     "needs": false,
+     "desc": "origin tours",
+     "at": null
+    },
+    {
+     "key": "specialty-caf-s-and-roasteries",
+     "label": "Specialty cafés and roasteries",
+     "origLabel": "Specialty cafés and roasteries",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "tea-plantations",
+     "label": "Tea plantations",
+     "origLabel": "Tea plantations",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "tea-ceremonies-and-tea-houses",
+     "label": "Tea ceremonies and tea houses",
+     "origLabel": "Tea ceremonies and tea houses",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "coffeeTea__n1",
+     "text": "Drink it, or learn it?",
+     "options": [
+      "Just drink it",
+      "A tasting (cupping)",
+      "Pick, roast or brew it myself"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "coffeeFarms and teaPlantations columns",
+     "when": [],
+     "at": "2026-10-21T01:24:45.442Z",
+     "selected": false
+    },
+    {
+     "pageId": "coffeeTea__n3",
+     "text": "Linger or quick stop?",
+     "options": [
+      "Linger for hours",
+      "Quick stops",
+      "Both"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: café culture",
+     "when": [],
+     "at": "2026-10-21T01:24:49.395Z",
+     "selected": false
+    },
+    {
+     "pageId": "coffeeTea__r3_2",
+     "text": "How do you feel about a formal tea ceremony?",
+     "options": [
+      "Fine with the strict etiquette",
+      "Relaxed, please",
+      "A short demonstration is enough"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: how formal ceremonies are",
+     "when": [
+      "tea-ceremonies-and-tea-houses"
+     ],
+     "at": "2026-10-21T03:02:54.110Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "beachesSwimming": {
+   "label": "Beaches & Swimming",
+   "chips": [
+    {
+     "key": "calm-swimming-water",
+     "label": "Calm swimming water",
+     "origLabel": "Calm swimming water",
+     "was": null,
+     "needs": true,
+     "desc": "sheltered, easy to swim",
+     "at": null
+    },
+    {
+     "key": "white-sand",
+     "label": "White sand",
+     "origLabel": "White sand",
+     "was": null,
+     "needs": true,
+     "desc": "soft, pale sand",
+     "at": null
+    },
+    {
+     "key": "remote-and-empty-beaches",
+     "label": "Remote and empty beaches",
+     "origLabel": "Remote and empty beaches",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "resort-beaches",
+     "label": "Resort beaches",
+     "origLabel": "Resort beaches",
+     "was": null,
+     "needs": true,
+     "desc": "facilities, loungers, restaurants",
+     "at": null
+    },
+    {
+     "key": "wild-dramatic-coastlines",
+     "label": "Wild, dramatic coastlines",
+     "origLabel": "Wild, dramatic coastlines",
+     "was": null,
+     "needs": true,
+     "desc": "cliffs and rocky coves",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "beachesSwimming__n1",
+     "text": "How warm must the water be?",
+     "options": [
+      "Bath warm (82°F and up)",
+      "Warm (75 to 81°F)",
+      "Refreshing is fine",
+      "Cold-water swimmers welcome"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses sea temperature by month",
+     "when": [],
+     "at": "2026-10-21T01:29:59.135Z",
+     "selected": false
+    },
+    {
+     "pageId": "beachesSwimming__n3",
+     "text": "How close to where you stay?",
+     "options": [
+      "Steps away",
+      "A short walk or drive",
+      "A day trip to the best beach is fine"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: beach access",
+     "when": [],
+     "at": "2026-10-21T01:30:24.436Z",
+     "selected": false
+    },
+    {
+     "pageId": "beachesSwimming__r2_1",
+     "text": "How calm must the water be?",
+     "options": [
+      "Flat and still, like a lake",
+      "Gentle small waves",
+      "Some surf is fun",
+      "Strong swimmer, any water"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: wave and current strength",
+     "when": [
+      "calm-swimming-water"
+     ],
+     "at": "2026-10-21T02:37:41.358Z",
+     "selected": false
+    },
+    {
+     "pageId": "beachesSwimming__m1",
+     "text": "Do you like your beaches easily accessible?",
+     "options": [
+      "Yes, prefer to stroll or drive to the beach",
+      "I prefer a secluded beach that requires a hike to get there",
+      "Either is fine"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Needs a new column (new question from you)",
+     "when": [],
+     "at": "2026-10-21T03:00:00.000Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "sunbathing": {
+   "label": "Sunbathing",
+   "chips": [
+    {
+     "key": "quiet-shores",
+     "label": "Quiet shores",
+     "origLabel": "Quiet shores",
+     "was": null,
+     "needs": true,
+     "desc": "a spot to yourself",
+     "at": null
+    },
+    {
+     "key": "beach-clubs-and-loungers",
+     "label": "Beach clubs and loungers",
+     "origLabel": "Beach clubs and loungers",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "resort-pool-days",
+     "label": "Resort pool days",
+     "origLabel": "Resort pool days",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "sunbathing__n1",
+     "text": "How hot do you like to lie out?",
+     "options": [
+      "Gentle sun (about 77°F)",
+      "Properly hot (86°F)",
+      "Scorching is great"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses temperature by month",
+     "when": [],
+     "at": "2026-10-21T01:36:54.867Z",
+     "selected": false
+    },
+    {
+     "pageId": "sunbathing__n2",
+     "text": "How much sun must you be sure of?",
+     "options": [
+      "Dry season only",
+      "Mostly sunny is fine",
+      "Showers do not bother me"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses sunshine and rain by month",
+     "when": [],
+     "at": "2026-10-21T01:36:58.722Z",
+     "selected": false
+    },
+    {
+     "pageId": "sunbathing__r3_1",
+     "text": "How do you feel about wind?",
+     "options": [
+      "Calm only",
+      "A light breeze is fine",
+      "Breezy is fine"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Uses wind by month",
+     "when": [],
+     "at": "2026-10-21T03:04:32.647Z",
+     "selected": false
+    },
+    {
+     "pageId": "sunbathing__r3_2",
+     "text": "Food and drinks: how close?",
+     "options": [
+      "I bring my own",
+      "A snack bar nearby",
+      "Table service at my lounger"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: food and drink service",
+     "when": [
+      "beach-clubs-and-loungers",
+      "resort-pool-days"
+     ],
+     "at": "2026-10-21T03:04:20.857Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "luxuryHotels": {
+   "label": "Luxury Hotels",
+   "chips": [
+    {
+     "key": "grand-and-historic-hotels",
+     "label": "Grand and historic hotels",
+     "origLabel": "Grand and historic hotels",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "boutique-hotels",
+     "label": "Boutique hotels",
+     "origLabel": "Boutique hotels",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "remote-luxury-lodges",
+     "label": "Remote luxury lodges",
+     "origLabel": "Remote luxury lodges",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "ultra-luxury-lodges",
+     "label": "Ultra-luxury lodges"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "luxuryHotels__n1",
+     "text": "A hotel, or a private villa?",
+     "options": [
+      "A hotel with service",
+      "A private villa",
+      "Either"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: villas versus hotels",
+     "when": [],
+     "at": "2026-10-21T01:39:05.960Z",
+     "selected": false
+    },
+    {
+     "pageId": "luxuryHotels__n4",
+     "text": "Is the hotel the destination?",
+     "options": [
+      "Yes, the hotel is the trip",
+      "Half and half",
+      "A comfortable base for exploring"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: stay-in versus go-out",
+     "when": [],
+     "at": "2026-10-21T01:39:22.072Z",
+     "selected": false
+    },
+    {
+     "pageId": "luxuryHotels__m1",
+     "text": "What does your dream hotel stay look like?",
+     "options": [
+      "Penthouse suite with views over the city",
+      "Villa with a private pool and a view",
+      "Royal suite in a castle",
+      "Overwater bungalow"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "Needs a new column (new question from you)",
+     "when": [],
+     "at": "2026-10-21T03:00:00.000Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "allInclusive": {
+   "label": "All-inclusive Resorts",
+   "chips": [
+    {
+     "key": "family-resorts",
+     "label": "Family resorts",
+     "origLabel": "Family resorts",
+     "was": null,
+     "needs": true,
+     "desc": "kids' clubs, family rooms",
+     "at": null
+    },
+    {
+     "key": "adults-only",
+     "label": "Adults-only",
+     "origLabel": "Adults-only",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "luxury-all-inclusive",
+     "label": "Luxury all-inclusive",
+     "origLabel": "Luxury all-inclusive",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "allInclusive__n1",
+     "text": "How active should it be?",
+     "options": [
+      "Pure relaxation",
+      "Pool and daily activities",
+      "Sports and excursions all week"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: activity level",
+     "when": [],
+     "at": "2026-10-21T01:39:50.603Z",
+     "selected": false
+    },
+    {
+     "pageId": "allInclusive__n2",
+     "text": "How much food variety?",
+     "options": [
+      "Buffets are fine",
+      "Several restaurants to rotate",
+      "Gourmet à la carte"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: dining options",
+     "when": [],
+     "at": "2026-10-21T01:39:49.392Z",
+     "selected": false
+    },
+    {
+     "pageId": "allInclusive__n3",
+     "text": "What are the evenings like?",
+     "options": [
+      "Quiet",
+      "Shows and a bar",
+      "Late-night party"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: evening entertainment",
+     "when": [],
+     "at": "2026-10-21T01:39:54.382Z",
+     "selected": false
+    },
+    {
+     "pageId": "allInclusive__n4",
+     "text": "How big a resort?",
+     "options": [
+      "Small and intimate",
+      "Mid-size",
+      "Big, lots going on"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: resort scale",
+     "when": [],
+     "at": "2026-10-21T01:39:57.739Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "spaWellness": {
+   "label": "Spa & Wellness",
+   "chips": [
+    {
+     "key": "day-spas-and-massage",
+     "label": "Day spas and massage",
+     "origLabel": "Day spas and massage",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "thermal-baths-and-hammams",
+     "label": "Thermal baths and hammams",
+     "origLabel": "Thermal baths and hammams",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "wellness-resort-stays",
+     "label": "Wellness resort stays",
+     "origLabel": "Wellness resort stays",
+     "was": null,
+     "needs": true,
+     "desc": "a full programme",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "nordic-sauna-and-cold-plunge",
+     "label": "Nordic sauna and cold plunge"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "spaWellness__n1",
+     "text": "Indulgence or treatment?",
+     "options": [
+      "Pure indulgence",
+      "Gentle therapy",
+      "Clinical (physio, medical)"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: spa style",
+     "when": [],
+     "at": "2026-10-21T01:40:12.025Z",
+     "selected": false
+    },
+    {
+     "pageId": "spaWellness__n2",
+     "text": "How do you feel about nude or mixed baths?",
+     "options": [
+      "Swimwear only",
+      "Fine with it (as in Germany or the Nordics)",
+      "Private rooms only"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: bathing customs",
+     "when": [],
+     "at": "2026-10-21T01:40:24.211Z",
+     "selected": false
+    },
+    {
+     "pageId": "spaWellness__n3",
+     "text": "How long per visit?",
+     "options": [
+      "An hour or two",
+      "Half a day",
+      "A multi-day retreat"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: visit length",
+     "when": [],
+     "at": "2026-10-21T01:40:25.584Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "hotSprings": {
+   "label": "Hot Springs",
+   "chips": [
+    {
+     "key": "natural-outdoor-pools",
+     "label": "Natural outdoor pools",
+     "origLabel": "Natural outdoor pools",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": "2026-10-21T01:41:00.517Z"
+    },
+    {
+     "key": "onsen-and-ryokan",
+     "label": "Onsen and ryokan",
+     "origLabel": "Onsen and ryokan",
+     "was": null,
+     "needs": true,
+     "desc": "Japanese baths",
+     "at": "2026-10-21T01:41:01.342Z"
+    },
+    {
+     "key": "geothermal-spas",
+     "label": "Geothermal spas",
+     "origLabel": "Geothermal spas",
+     "was": null,
+     "needs": true,
+     "desc": "the Blue Lagoon style",
+     "at": "2026-10-21T01:41:02.397Z"
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "hike-in-wilderness-springs",
+     "label": "Hike-in wilderness springs"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "hotSprings__n1",
+     "text": "How do you feel about bathing customs?",
+     "options": [
+      "Swimsuit only",
+      "Fine with nude gendered baths (onsen)",
+      "A private bath only"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: bathing customs and tattoo rules",
+     "when": [],
+     "at": "2026-10-21T01:40:45.831Z",
+     "selected": false
+    },
+    {
+     "pageId": "hotSprings__n2",
+     "text": "When do you want to soak?",
+     "options": [
+      "Winter, in the snow",
+      "Year-round",
+      "Cool weather only"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "Ready",
+     "reads": "Uses temperature by month",
+     "when": [],
+     "at": "2026-10-21T01:40:46.892Z",
+     "selected": false
+    },
+    {
+     "pageId": "hotSprings__r2_1",
+     "text": "How hot do you like the water?",
+     "options": [
+      "Gentle, about 100°F",
+      "Hot, about 104°F",
+      "As hot as it gets, 108°F and up"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: pool temperatures",
+     "when": [],
+     "at": "2026-10-21T02:46:04.540Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "yogaRetreats": {
+   "label": "Yoga & Wellness Retreats",
+   "chips": [
+    {
+     "key": "yoga-retreats",
+     "label": "Yoga retreats",
+     "origLabel": "Yoga retreats",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "meditation-and-silent-retreats",
+     "label": "Meditation and silent retreats",
+     "origLabel": "Meditation and silent retreats",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "detox-retreats",
+     "label": "Detox retreats",
+     "origLabel": "Detox retreats",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "surf-and-yoga",
+     "label": "Surf and yoga"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "yogaRetreats__n1",
+     "text": "What level of practice?",
+     "options": [
+      "Beginner",
+      "Regular practitioner",
+      "Teacher level"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: levels served",
+     "when": [],
+     "at": "2026-10-21T01:41:20.347Z",
+     "selected": false
+    },
+    {
+     "pageId": "yogaRetreats__n2",
+     "text": "How structured?",
+     "options": [
+      "Classes all day",
+      "Morning and evening, free time between",
+      "Mostly free time"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: schedule structure",
+     "when": [],
+     "at": "2026-10-21T01:41:22.353Z",
+     "selected": false
+    },
+    {
+     "pageId": "yogaRetreats__n3",
+     "text": "Which style?",
+     "options": [
+      "Gentle and restorative",
+      "Vinyasa",
+      "Ashtanga and Hatha",
+      "Anything"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: styles taught",
+     "when": [],
+     "at": "2026-10-21T01:41:29.695Z",
+     "selected": false
+    },
+    {
+     "pageId": "yogaRetreats__n4",
+     "text": "How long a retreat?",
+     "options": [
+      "A weekend",
+      "A week",
+      "Two weeks or more"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: retreat lengths",
+     "when": [],
+     "at": "2026-10-21T01:41:30.870Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "themeParks": {
+   "label": "Theme Parks & Attractions",
+   "chips": [
+    {
+     "key": "thrill-rides-and-coasters",
+     "label": "Thrill rides and coasters",
+     "origLabel": "Thrill rides and coasters",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "water-parks",
+     "label": "Water parks",
+     "origLabel": "Water parks",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "zoos-and-aquariums",
+     "label": "Zoos and aquariums",
+     "origLabel": "Zoos and aquariums",
+     "was": null,
+     "needs": true,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [
+    {
+     "key": "big-theme-parks",
+     "label": "Big theme parks"
+    }
+   ],
+   "questions": [
+    {
+     "pageId": "themeParks__n1",
+     "text": "How many days?",
+     "options": [
+      "One day",
+      "Two days",
+      "Three or more (multi-park resort)"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: park scale",
+     "when": [],
+     "at": "2026-10-21T01:41:42.231Z",
+     "selected": false
+    },
+    {
+     "pageId": "themeParks__n4",
+     "text": "Stay at the park?",
+     "options": [
+      "On-site hotel",
+      "Nearby",
+      "Anywhere"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: on-site lodging",
+     "when": [],
+     "at": "2026-10-21T01:41:48.172Z",
+     "selected": false
+    },
+    {
+     "pageId": "themeParks__r2_1",
+     "text": "How thrilling do you want the rides?",
+     "options": [
+      "Gentle rides only",
+      "A few big ones",
+      "The biggest coasters and drops"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: ride intensity",
+     "when": [
+      "thrill-rides-and-coasters"
+     ],
+     "at": "2026-10-21T02:46:38.331Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "nightlife": {
+   "label": "Nightlife",
+   "chips": [
+    {
+     "key": "clubs-and-dancing",
+     "label": "Clubs and dancing",
+     "origLabel": "Clubs and dancing",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "live-music-venues",
+     "label": "Live music venues",
+     "origLabel": "Live music venues",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "cocktail-and-rooftop-bars",
+     "label": "Cocktail and rooftop bars",
+     "origLabel": "Cocktail and rooftop bars",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "lgbtq-scene",
+     "label": "LGBTQ+ scene",
+     "origLabel": "LGBTQ+ scene",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "beach-and-island-parties",
+     "label": "Beach and island parties",
+     "origLabel": "Beach and island parties",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    }
+   ],
+   "rejectedChips": [],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "nightlife__n1",
+     "text": "How late do you prefer?",
+     "options": [
+      "Dinner and a drink",
+      "Until midnight",
+      "Until 2am",
+      "Until sunrise"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: closing hours",
+     "when": [],
+     "at": "2026-10-21T01:42:22.633Z",
+     "selected": false
+    },
+    {
+     "pageId": "nightlife__n3",
+     "text": "How dressed up?",
+     "options": [
+      "Casual",
+      "Smart casual",
+      "Dress to impress"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: dress codes",
+     "when": [],
+     "at": "2026-10-21T01:42:24.181Z",
+     "selected": false
+    },
+    {
+     "pageId": "nightlife__r2_1",
+     "text": "How loud and crowded do you like it?",
+     "options": [
+      "Quiet bars where I can talk",
+      "A lively room",
+      "Packed and loud"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: crowd and noise level",
+     "when": [],
+     "at": "2026-10-21T02:46:50.497Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  },
+  "shopping": {
+   "label": "Shopping",
+   "chips": [
+    {
+     "key": "markets-and-bazaars",
+     "label": "Markets and bazaars",
+     "origLabel": "Markets and bazaars",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "luxury-and-designer",
+     "label": "Luxury and designer",
+     "origLabel": "Luxury and designer",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "local-crafts-and-souvenirs",
+     "label": "Local crafts and souvenirs",
+     "origLabel": "Local crafts and souvenirs",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": null
+    },
+    {
+     "key": "vintage-and-antiques",
+     "label": "Vintage and antiques",
+     "origLabel": "Vintage and antiques",
+     "was": null,
+     "needs": false,
+     "desc": "",
+     "at": "2026-10-21T03:06:00.324Z"
+    }
+   ],
+   "rejectedChips": [
+    {
+     "key": "outlets-and-bargains",
+     "label": "Outlets and bargains"
+    }
+   ],
+   "undecidedChips": [],
+   "questions": [
+    {
+     "pageId": "shopping__n2",
+     "text": "How do you feel about haggling?",
+     "options": [
+      "Love it",
+      "Fine",
+      "Fixed prices please"
+     ],
+     "kind": "limit",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: haggling culture",
+     "when": [],
+     "at": "2026-10-21T01:42:51.658Z",
+     "selected": false
+    },
+    {
+     "pageId": "shopping__r2_1",
+     "text": "How do you feel about crowded bazaars?",
+     "options": [
+      "I love the crush",
+      "Fine if it is lively",
+      "I prefer calm shops"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: bazaar crowds",
+     "when": [
+      "markets-and-bazaars"
+     ],
+     "at": "2026-10-21T02:47:05.790Z",
+     "selected": false
+    },
+    {
+     "pageId": "shopping__r3_1",
+     "text": "How important is handmade and local?",
+     "options": [
+      "Authentic and handmade only",
+      "Local-looking is fine",
+      "I want brands I know"
+     ],
+     "kind": "lean",
+     "maxPicks": 1,
+     "status": "New",
+     "reads": "New column: authenticity of local goods",
+     "when": [
+      "local-crafts-and-souvenirs"
+     ],
+     "at": "2026-10-21T03:05:03.821Z",
+     "selected": false
+    }
+   ],
+   "warnings": []
+  }
+ }
+}
