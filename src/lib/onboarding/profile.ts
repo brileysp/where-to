@@ -12,10 +12,18 @@ import type { Answer } from './bridge';
  * switch is on are saved. Pure functions; `parseTravelProfile` makes anything read from storage or received from a browser safe.
  */
 
+/** The answers a traveler gave to an interest's own questions: interest key, then question key, then the positions of the answers picked. */
+export type InterestAnswers = Record<string, Record<string, number[]>>;
+
 export interface TravelProfile {
   v: 1;
   levels: Levels;
   subs: Record<string, string[]>;
+  /**
+   * Answers to the interests' own questions (docs/matching-model.md). Kept even while the chip that opens a question is unticked
+   * (dormant); only the questions that are currently asked count toward the match.
+   */
+  qa: InterestAnswers;
   bands: Bands;
   care: CareState;
   who: string[];
@@ -32,6 +40,7 @@ export interface TravelProfile {
 export interface FlowChoices {
   levels: Levels;
   subs: Record<string, string[]>;
+  qa?: InterestAnswers;
   bands: Bands;
   care: CareState;
   who: string[];
@@ -41,6 +50,28 @@ export interface FlowChoices {
   month: number | null;
   week: number;
   maxHours: number;
+}
+
+/** Answers only for interests the traveler still has. */
+function keptAnswers(qa: InterestAnswers, levels: Levels): InterestAnswers {
+  return Object.fromEntries(Object.entries(qa).filter(([k, v]) => levels[k] && Object.keys(v).length));
+}
+
+/** Cleans saved answers: known interests only, short keys, at most three picks, each a small whole number. */
+function parseAnswers(raw: unknown, levels: Levels): InterestAnswers {
+  const out: InterestAnswers = {};
+  if (!isRecord(raw)) return out;
+  for (const [interest, qs] of Object.entries(raw)) {
+    if (!levels[interest] || !isRecord(qs)) continue;
+    const kept: Record<string, number[]> = {};
+    for (const [q, picks] of Object.entries(qs).slice(0, 24)) {
+      if (q.length > 40 || !Array.isArray(picks)) continue;
+      const ok = [...new Set(picks.filter((n): n is number => typeof n === 'number' && Number.isInteger(n) && n >= 0 && n < 12))].slice(0, 3);
+      if (ok.length) kept[q] = ok;
+    }
+    if (Object.keys(kept).length) out[interest] = kept;
+  }
+  return out;
 }
 
 /** The profile to save: everything the traveler keeps. Interests, levels and specifics are always kept; the rest follow the keep switches. */
@@ -60,6 +91,7 @@ export function toTravelProfile(c: FlowChoices, keep: Record<string, boolean>, d
     v: 1,
     levels: c.levels,
     subs,
+    qa: keptAnswers(c.qa ?? {}, c.levels),
     bands,
     care,
     who: kept('who') ? c.who : [],
@@ -78,6 +110,7 @@ export function fromTravelProfile(p: TravelProfile, cards: DnaCard[]): FlowChoic
   return {
     levels: p.levels,
     subs: p.subs,
+    qa: p.qa ?? {},
     bands: p.bands,
     care: p.care,
     who: p.who,
@@ -130,6 +163,7 @@ export function parseTravelProfile(raw: unknown): TravelProfile | null {
     v: 1,
     levels,
     subs,
+    qa: parseAnswers(raw.qa, levels),
     bands,
     care,
     who: strings(raw.who, new Set(COMPANIONS.map((c) => c.key))),
