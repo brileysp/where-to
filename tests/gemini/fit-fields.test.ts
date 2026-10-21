@@ -196,8 +196,8 @@ describe('old names surviving in generated text', () => {
 });
 
 describe('hiking columns (built empty, 13 Oct 2026)', () => {
-  it('has the core columns in order (day hikes and multi-day split, status notes added 16 Oct 2026), then the source-checked flag and the notes', () => {
-    expect(factDefsFor('hiking').map((d) => d.key)).toEqual(['signatureDayHikes', 'multiDayHikes', 'ways', 'howReach', 'dayHikeRating', 'trekRating', 'altitude', 'permits', 'statusNotes', 'crowdIndicators', 'crowdEvidence', 'drawSourceChecked', 'scopeNote', 'mustMention', 'extraAvoid']);
+  it('has the core columns in order (day hikes and multi-day split, status notes added 16 Oct 2026, day-hike effort and booking ahead added 19 Oct 2026), then the source-checked flag and the notes', () => {
+    expect(factDefsFor('hiking').map((d) => d.key)).toEqual(['signatureDayHikes', 'multiDayHikes', 'ways', 'howReach', 'dayHikeRating', 'dayHikeEffort', 'trekRating', 'altitude', 'bookingAhead', 'permits', 'statusNotes', 'crowdIndicators', 'crowdEvidence', 'drawSourceChecked', 'scopeNote', 'mustMention', 'extraAvoid']);
   });
   it('every column has a hint and a known group', () => {
     for (const d of factDefsFor('hiking')) { expect((d.hint ?? '').length).toBeGreaterThan(10); expect(FACT_GROUP_LABELS[d.group]).toBeDefined(); }

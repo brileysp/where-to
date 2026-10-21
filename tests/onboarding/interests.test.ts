@@ -5,9 +5,9 @@ import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import { RELATED_INTERESTS } from '@/lib/onboarding/related-interests';
 
 describe('the interest picker data', () => {
-  it('has the four categories and the 48 real interests, none from the Value group', () => {
+  it('has the four categories and the 47 real interests, none from the Value group', () => {
     expect(pickerGroups().map((g) => g.name)).toEqual(['Nature & Wildlife', 'Sports & Recreation', 'Culture & Discovery', 'Relaxation & Leisure']);
-    expect(pickerInterests().length).toBe(48);
+    expect(pickerInterests().length).toBe(47);
     expect(pickerInterests().some((i) => ['deals', 'crowds', 'roadtrip'].includes(i.key))).toBe(false);
   });
   it('every fixed first-eight interest exists in its own category', () => {
@@ -28,7 +28,7 @@ describe('the interest picker data', () => {
   it('uses the three shorter labels', () => {
     const label = (k: string) => pickerInterests().find((i) => i.key === k)?.label;
     expect(label('yogaRetreats')).toBe('Yoga & Wellness');
-    expect(label('wildflowerBlooms')).toBe('Seasonal Blooms');
+    expect(label('wildflowerBlooms')).toBe('Blooms & Colors');
     expect(label('mountaineering')).toBe('Climbing & Mountaineering');
   });
 });

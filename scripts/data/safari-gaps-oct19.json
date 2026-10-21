@@ -1,0 +1,70 @@
+{
+"kaziranga": {
+"crowding": "medium",
+"malaria": "seasonal"
+},
+"ethiopia": {
+"selfDrive": "no",
+"walking": "yes",
+"nightDrives": "yes",
+"offRoad": "no"
+},
+"ghana": {
+"selfDrive": "partly",
+"nightDrives": "no",
+"offRoad": "no",
+"boat": "no"
+},
+"kruger": {
+"offRoad": "yes"
+},
+"kenya": {
+"nightDrives": "yes",
+"offRoad": "yes"
+},
+"borneo": {
+"walking": "yes",
+"offRoad": "no",
+"landModel": "nationalPark",
+"crowding": "low"
+},
+"namibia": {
+"crowding": "low"
+},
+"nepal": {
+"crowding": "medium"
+},
+"tanzania": {
+"walking": "limited",
+"nightDrives": "yes",
+"offRoad": "no"
+},
+"pantanal": {
+"walking": "yes",
+"nightDrives": "yes",
+"offRoad": "yes",
+"landModel": "privateConcessions",
+"crowding": "high",
+"malaria": "low"
+},
+"rwanda": {
+"walking": "limited",
+"nightDrives": "yes",
+"offRoad": "no"
+},
+"zambia": {
+"selfDrive": "partly",
+"offRoad": "yes",
+"boat": "no"
+},
+"srilanka": {
+"boat": "no"
+},
+"uganda": {
+"nightDrives": "yes",
+"offRoad": "no"
+},
+"zimbabwe": {
+"offRoad": "no"
+}
+}

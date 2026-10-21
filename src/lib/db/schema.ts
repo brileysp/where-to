@@ -14,6 +14,7 @@ import {
   index,
   uniqueIndex,
   check,
+  foreignKey,
   type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
@@ -659,6 +660,17 @@ export const interestMeta = pgTable('interest_meta', {
 });
 
 /**
+ * Site-wide settings the owner can change in the admin without a deploy, one row per group (key 'matching' holds the personalization numbers,
+ * see src/lib/scoring/matchSettings.ts). The value holds only what was changed; anything missing uses the built-in default.
+ */
+export const appSettings = pgTable('app_settings', {
+  key: text('key').primaryKey(),
+  value: jsonb('value').notNull().default({}).$type<Record<string, number>>(),
+  updatedBy: text('updated_by').notNull().default(''),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+/**
  * Admin edits to a persona (a starting set of interest weights): its name, icon and blurb, which interests it highlights, and
  * individual weights. Only what is saved here replaces the code values in constants.ts; everything else is untouched.
  */
@@ -977,10 +989,69 @@ export const interestChips = pgTable(
     status: text('status').$type<InterestChipStatus>().notNull().default('draft'),
     drivers: jsonb('drivers').notNull().default([]).$type<InterestChipDriver[]>(),
     needsColumn: text('needs_column').notNull().default(''),
+    /** Who agreed the chip, and when. Empty/null = not approved. A draft chip needs this before it can go live. */
+    approvedBy: text('approved_by').notNull().default(''),
+    approvedAt: timestamp('approved_at', { withTimezone: true }),
     updatedBy: text('updated_by').notNull().default(''),
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [primaryKey({ columns: [table.interestKey, table.chipKey] })],
+);
+
+export const INTEREST_QUESTION_KINDS = ['lean', 'limit'] as const;
+export type InterestQuestionKind = (typeof INTEREST_QUESTION_KINDS)[number];
+
+/**
+ * The onboarding questions asked about one interest (Which animal would make the trip? How do you handle the sea?). Each reads one or more
+ * of the interest's data columns. lean = nudges places up or down; limit = can rule a place out. Not wired to the app's ranking yet.
+ * Approval records the owner's agreement with this wording; editing the wording or options takes the approval away.
+ */
+export const interestQuestions = pgTable(
+  'interest_questions',
+  {
+    interestKey: text('interest_key').notNull(),
+    questionKey: text('question_key').notNull(),
+    sortOrder: integer('sort_order').notNull().default(0),
+    text: text('text').notNull(),
+    options: jsonb('options').notNull().default([]).$type<string[]>(),
+    maxPicks: integer('max_picks').notNull().default(1),
+    kind: text('kind').$type<InterestQuestionKind>().notNull().default('lean'),
+    columns: jsonb('columns').notNull().default([]).$type<string[]>(),
+    note: text('note').notNull().default(''),
+    /** Short text for the reason chip when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
+    missMessage: text('miss_message').notNull().default(''),
+    approvedBy: text('approved_by').notNull().default(''),
+    approvedAt: timestamp('approved_at', { withTimezone: true }),
+    updatedBy: text('updated_by').notNull().default(''),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.interestKey, table.questionKey] })],
+);
+
+/**
+ * Which chips open which onboarding question. A question with no rows here is asked of everyone who picks the interest; a question with
+ * rows is asked only when the traveler has ticked at least one of those chips (any of them). Chips never depend on chips and questions
+ * never depend on questions. The chip is always in the same interest as the question.
+ * Deleting a question removes its rows. A chip that still opens a question cannot be deleted (the database refuses), so a question can
+ * never quietly turn into "asked of everyone". Renaming a chip changes nothing here, because rows point at the chip's permanent key.
+ */
+export const interestQuestionChips = pgTable(
+  'interest_question_chips',
+  {
+    interestKey: text('interest_key').notNull(),
+    questionKey: text('question_key').notNull(),
+    chipKey: text('chip_key').notNull(),
+    /** True = proposed (by Claude) and waiting for the owner to accept it. A suggested link changes nothing: the app ignores it until it is accepted. */
+    suggested: boolean('suggested').notNull().default(false),
+    createdBy: text('created_by').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.interestKey, table.questionKey, table.chipKey] }),
+    foreignKey({ name: 'interest_question_chips_question_fk', columns: [table.interestKey, table.questionKey], foreignColumns: [interestQuestions.interestKey, interestQuestions.questionKey] }).onDelete('cascade').onUpdate('cascade'),
+    foreignKey({ name: 'interest_question_chips_chip_fk', columns: [table.interestKey, table.chipKey], foreignColumns: [interestChips.interestKey, interestChips.chipKey] }).onDelete('restrict').onUpdate('cascade'),
+    index('interest_question_chips_chip_idx').on(table.interestKey, table.chipKey),
+  ],
 );
 
 /** A fit typed by hand for one place and chip, with the reason. Wins over the worked-out number, and survives a re-fill of the columns. */

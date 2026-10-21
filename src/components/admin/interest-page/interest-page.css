@@ -221,3 +221,21 @@ table.ip-table td.nw { white-space: nowrap; }
 .ip-ch-lab { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
 .ip-ch-needs { display: block; }
 .ip-ch-unused summary { cursor: pointer; font-size: 12.5px; color: var(--text-dim); }
+
+/* Onboarding questions, under the chips */
+.ip-q { padding: 10px 14px; margin-top: 8px; }
+.ip-q-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ip-q-text { flex: 1; min-width: 220px; cursor: pointer; }
+.ip-q-opts { margin: 4px 0 0 52px; font-size: 12px; }
+.ip-q-edit { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+
+/* Question and chip grid */
+.ip-grid th { vertical-align: bottom; white-space: normal; min-width: 92px; max-width: 120px; text-align: center; }
+.ip-grid th:first-child { text-align: left; min-width: 280px; max-width: none; }
+.ip-gq { min-width: 280px; }
+.ip-gdot { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--border-strong); background: var(--bg-panel); color: transparent; font-weight: 700; font-size: 13px; line-height: 1; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
+.ip-gdot:hover { border-color: var(--cat-1); }
+.ip-gdot.on { background: var(--cat-1); border-color: var(--cat-1); color: #fff; }
+.ip-gdot.sug { border-style: dashed; border-color: var(--cat-1); color: var(--cat-1); background: var(--cat-1-soft); }
+.ip-gdot:disabled { opacity: 0.6; cursor: wait; }
+span.ip-gdot { cursor: default; width: 20px; height: 20px; font-size: 11px; vertical-align: middle; }

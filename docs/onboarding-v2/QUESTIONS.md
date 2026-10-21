@@ -1,5 +1,7 @@
 # Onboarding questions: selected by the owner, 17 Oct 2026
 
+> Since 19 Oct 2026 these live in the admin (interest page, "Chips & questions" tab, table `interest_questions`) and are edited there. This file is the original selection and is no longer kept up to date.
+
 These replace the No / Yes / Love cards in the sharpen and taste steps (see SPEC.md). Chosen from the proposal at https://claude.ai/artifact/LuXE9mc7S3z5NZ8BJnCwwK. Surfing, Diving and Wildlife Viewing: no decision yet. The ten Travel DNA dials: no decision yet. Not built; nothing is wired to the ranking yet.
 
 Kind: Limit = can rule a place out; Lean = nudges places up or down. Data: Ready = column exists and is structured; Structure = free-text column that needs options first; New = needs a new column.

@@ -233,7 +233,7 @@ Off, Curious, Like, Love, Top. The app stores a 0 to 10 weight for each interest
 - Sports & Recreation: Hiking & Trekking, Skiing & Snowboarding, Road & Gravel Cycling, Surfing, Snorkeling & Diving, Golf, Fishing, Sailing & Boating.
 - Culture & Discovery: History & Archaeology, Architecture, Local Culture & City Exploration, Street Food & Markets, Museums & Art, Fine Dining, Festivals & Live Events, Wine & Spirits.
 - Relaxation & Leisure: Beaches & Swimming, Sunbathing, Luxury Hotels, Nightlife, Shopping, Spa & Wellness, Hot Springs, Yoga & Wellness Retreats.
-The rest of each category follow by the app's audience tier (iconic, popular, enthusiast, specialist), then the app's order. Display names: Yoga & Wellness, Seasonal Blooms and Climbing & Mountaineering use the shorter labels.
+The rest of each category follow by the app's audience tier (iconic, popular, enthusiast, specialist), then the app's order. Display names: Yoga & Wellness, Blooms & Colors and Climbing & Mountaineering use the shorter labels.
 
 ### 8.3 "People who pick these often add"
 For each picked interest, up to five neighbours ranked by the similarity of the app's own Travel DNA attribute weights (`SLIDER_ATTRIBUTE_MAP`). The suggestions are the four highest-scoring neighbours not yet picked. A few hand fixes exist where the weights give no signal (birding, wind sports, golf, spa).

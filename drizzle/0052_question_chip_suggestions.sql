@@ -1,0 +1,1 @@
+ALTER TABLE "interest_question_chips" ADD COLUMN "suggested" boolean DEFAULT false NOT NULL;

@@ -1,0 +1,1148 @@
+{
+ "note": "Removed on 20 Oct 2026 when Spectator Sports was folded into Festivals. Restore by writing each value back under the spectatorSports key.",
+ "places": [
+  {
+   "id": "ireland",
+   "name": "Ireland",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 5
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "rome",
+   "name": "Rome",
+   "score": 6,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 4,
+      "steepness": 2
+     },
+     {
+      "month": 2,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 4,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 5,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 12,
+      "value": 4,
+      "steepness": 1
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "istanbul",
+   "name": "Istanbul",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 3,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 5,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "copenhagen",
+   "name": "Copenhagen",
+   "score": 3,
+   "curve": {
+    "anchors": [
+     {
+      "month": 4,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 5,
+      "value": 4,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 3,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "bavaria-munich",
+   "name": "Bavaria & Munich",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 5
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "london",
+   "name": "London",
+   "score": 8,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 9,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 10,
+      "steepness": 2
+     },
+     {
+      "month": 7,
+      "value": 10,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 9,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 6,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": "strong",
+   "events": [
+    {
+     "label": "Wimbledon Fortnight",
+     "months": {
+      "6": 1,
+      "7": 1
+     },
+     "weight": 2
+    }
+   ],
+   "fest_events": null
+  },
+  {
+   "id": "buenosaires",
+   "name": "Buenos Aires",
+   "score": 6,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 12,
+      "value": 6,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "tokyo-kyoto",
+   "name": "Tokyo & Kyoto",
+   "score": 7,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 7,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 9,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 8,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": [
+    {
+     "label": "Summer matsuri season",
+     "months": {
+      "7": 0.7,
+      "8": 1
+     },
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "id": "seoul",
+   "name": "Seoul",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 3,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 5,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "chicago",
+   "name": "Chicago",
+   "score": 7,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 7
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": "strong",
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "rio",
+   "name": "Rio de Janeiro",
+   "score": 6,
+   "curve": {
+    "anchors": [
+     {
+      "month": 3,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 12,
+      "value": 4,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": null,
+   "events": null,
+   "fest_events": [
+    {
+     "label": "Carnival",
+     "months": {
+      "2": 1,
+      "3": 0.3
+     },
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "id": "beijing",
+   "name": "Beijing & Great Wall",
+   "score": 4,
+   "curve": {
+    "anchors": [
+     {
+      "month": 3,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 4,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 4,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "edinburgh",
+   "name": "Edinburgh",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 8,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 10,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 3,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": [
+    {
+     "label": "Fringe Festival",
+     "months": {
+      "8": 1
+     },
+     "weight": 6
+    }
+   ]
+  },
+  {
+   "id": "paris",
+   "name": "Paris",
+   "score": 7,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 7,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 9,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 10,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 5,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": [
+    {
+     "label": "Christmas markets",
+     "months": {
+      "12": 1
+     },
+     "weight": 3
+    }
+   ]
+  },
+  {
+   "id": "mexicocity",
+   "name": "Mexico City",
+   "score": 6,
+   "curve": {
+    "anchors": [
+     {
+      "month": 4,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 9,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 7,
+      "steepness": 1
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": [
+    {
+     "label": "Día de los Muertos",
+     "months": {
+      "11": 1
+     },
+     "weight": 5
+    }
+   ]
+  },
+  {
+   "id": "lisbon",
+   "name": "Lisbon",
+   "score": 4,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 2,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 4,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 9,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 2,
+      "steepness": 1
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "nyc",
+   "name": "New York City",
+   "score": 8,
+   "curve": {
+    "anchors": [
+     {
+      "month": 3,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 9,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 9,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 7,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 8,
+      "value": 9,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 9,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 8,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": "strong",
+   "events": [
+    {
+     "label": "US Open Tennis",
+     "months": {
+      "8": 1,
+      "9": 1
+     },
+     "weight": 1
+    }
+   ],
+   "fest_events": null
+  },
+  {
+   "id": "singapore",
+   "name": "Singapore",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 2,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 5,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 3,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "nice-riviera",
+   "name": "Nice & the French Riviera",
+   "score": 4,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 2,
+      "steepness": 1
+     },
+     {
+      "month": 2,
+      "value": 4,
+      "steepness": 2
+     },
+     {
+      "month": 5,
+      "value": 4,
+      "steepness": 1
+     },
+     {
+      "month": 6,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 9,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 2,
+      "steepness": 1
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "st-andrews-fife",
+   "name": "St Andrews & Fife",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 3,
+      "value": 5,
+      "steepness": 2
+     },
+     {
+      "month": 10,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 3,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": "strong",
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "sydney",
+   "name": "Sydney",
+   "score": 6,
+   "curve": {
+    "anchors": [
+     {
+      "month": 3,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 12,
+      "value": 7,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "amsterdam",
+   "name": "Amsterdam",
+   "score": 5,
+   "curve": {
+    "anchors": [
+     {
+      "month": 2,
+      "value": 3,
+      "steepness": 1
+     },
+     {
+      "month": 4,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 8,
+      "value": 6,
+      "steepness": 1
+     },
+     {
+      "month": 10,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 11,
+      "value": 3,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": null,
+   "tier": null,
+   "events": null,
+   "fest_events": null
+  },
+  {
+   "id": "barcelona",
+   "name": "Barcelona",
+   "score": 7,
+   "curve": {
+    "anchors": [
+     {
+      "month": 1,
+      "value": 5,
+      "steepness": 1
+     },
+     {
+      "month": 2,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 4,
+      "value": 7,
+      "steepness": 1
+     },
+     {
+      "month": 5,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 6,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 7,
+      "value": 7,
+      "steepness": 2
+     },
+     {
+      "month": 9,
+      "value": 8,
+      "steepness": 1
+     },
+     {
+      "month": 10,
+      "value": 8,
+      "steepness": 2
+     },
+     {
+      "month": 11,
+      "value": 5,
+      "steepness": 2
+     }
+    ]
+   },
+   "status": "explicit",
+   "tier": "strong",
+   "events": null,
+   "fest_events": null
+  }
+ ],
+ "prefs": [
+  {
+   "user_id": "98724127-e2e8-41a9-ab82-0980aebac39a",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "4e41822b-ad19-482b-a0f2-5ede267b1e5a",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "4b02dbda-1155-4799-b7e7-e6bb0dfe2c3d",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "3923c028-e792-4d24-b169-92729c64213a",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "1804e0ae-8dd4-41ac-9d0b-34b10f7c535a",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "692b7a0f-0271-4149-a5d4-fd772b4dc65e",
+   "sw": 2,
+   "fw": 5
+  },
+  {
+   "user_id": "72c0c02b-a4a9-41d1-aeaa-32b10c3cfaad",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "76a20a77-e753-404e-8a04-4dee478ead16",
+   "sw": 0,
+   "fw": 2
+  },
+  {
+   "user_id": "6ec4c4bb-9a7e-4411-a45b-cc5e7eb59fb7",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "cc47d30e-daf6-43a0-a955-c64e85678c87",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "c3669d1c-ad87-41c2-a9d2-0eecb443db86",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "29cfc574-65e9-4d22-9b31-7d8a035d0fb1",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "e4c25569-3487-4f12-b7e8-276f606b1c1e",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "311c515c-e38b-4762-8450-a6ffa4de43f5",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "441fc951-d397-41ba-baa5-183d25478d7d",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "3e8f80f3-f79a-40b3-abf7-914dadf53323",
+   "sw": 2,
+   "fw": 5
+  },
+  {
+   "user_id": "1da1f6d3-58cf-4e41-82ca-34b888cf30f9",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "13b8ee98-32d3-493b-8d9e-9ac8000f1009",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "5ed5bb41-ef73-4e4e-96a4-62f3c996cd15",
+   "sw": 2,
+   "fw": 2
+  },
+  {
+   "user_id": "abfaab35-25fb-40d4-bc56-631b2b2d4595",
+   "sw": 3,
+   "fw": 2
+  }
+ ]
+}

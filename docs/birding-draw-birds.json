@@ -70,7 +70,7 @@
  },
  {
   "id": "angkor",
-  "name": "Angkor Wat & Siem Reap",
+  "name": "Cambodia",
   "region": "Cambodia",
   "birdingDraw": "moderate",
   "confidence": "high",
@@ -249,7 +249,7 @@
  },
  {
   "id": "banff",
-  "name": "Banff National Park",
+  "name": "Banff & Jasper National Parks",
   "region": "Canada",
   "birdingDraw": "weak",
   "confidence": "medium",
@@ -346,7 +346,7 @@
  },
  {
   "id": "belfast-giants-causeway",
-  "name": "Belfast & the Giant's Causeway",
+  "name": "Northern Ireland",
   "region": "Northern Ireland",
   "birdingDraw": "moderate",
   "confidence": "medium",
@@ -444,15 +444,16 @@
  },
  {
   "id": "borabora",
-  "name": "Bora Bora",
+  "name": "French Polynesia",
   "region": "French Polynesia",
   "birdingDraw": "weak",
   "confidence": "low",
   "sourceChecked": false,
   "drawBirds": [
+   "Tahiti monarch",
    "Great frigatebird"
   ],
-  "note": ""
+  "note": "Island endemics are few; needs source check"
  },
  {
   "id": "bordeaux",
@@ -1106,7 +1107,7 @@
  },
  {
   "id": "havana",
-  "name": "Havana",
+  "name": "Cuba",
   "region": "Cuba",
   "birdingDraw": "moderate",
   "confidence": "medium",
@@ -1116,7 +1117,7 @@
    "Cuban trogon",
    "Zapata wren"
   ],
-  "note": "Zapata is a long day trip"
+  "note": "Zapata is a long day trip from Havana; Cuba-wide scope since 19 Oct 2026"
  },
  {
   "id": "hokkaido",
@@ -1228,7 +1229,7 @@
  },
  {
   "id": "joshua-tree",
-  "name": "Joshua Tree National Park",
+  "name": "Palm Springs & Joshua Tree",
   "region": "California, USA",
   "birdingDraw": "moderate",
   "confidence": "medium",
@@ -1284,11 +1285,11 @@
  },
  {
   "id": "komodo",
-  "name": "Komodo Island",
+  "name": "Komodo & Flores",
   "region": "Indonesia",
   "birdingDraw": "weak",
   "confidence": "high",
-  "sourceChecked": true,
+  "sourceChecked": false,
   "drawBirds": [
    "Yellow-crested cockatoo (Critically Endangered)",
    "Orange-footed scrubfowl"
@@ -1420,13 +1421,17 @@
  },
  {
   "id": "luangprabang",
-  "name": "Luang Prabang",
+  "name": "Laos",
   "region": "Laos",
   "birdingDraw": "weak",
   "confidence": "medium",
-  "sourceChecked": true,
-  "drawBirds": [],
-  "note": "Nothing notable close to town; Nam Et-Phou Louey (province) has white-rumped vulture but is remote"
+  "sourceChecked": false,
+  "drawBirds": [
+   "River lapwing",
+   "Great hornbill",
+   "White-rumped vulture (Nam Et-Phou Louey)"
+  ],
+  "note": "Laos-wide scope since 19 Oct 2026; needs source check"
  },
  {
   "id": "madagascar",
@@ -1622,13 +1627,17 @@
  },
  {
   "id": "napa",
-  "name": "Napa Valley",
+  "name": "Napa & Sonoma",
   "region": "California, USA",
   "birdingDraw": "weak",
   "confidence": "low",
   "sourceChecked": false,
-  "drawBirds": [],
-  "note": ""
+  "drawBirds": [
+   "Acorn woodpecker",
+   "Brown pelican",
+   "Pigeon guillemot"
+  ],
+  "note": "includes the Sonoma coast"
  },
  {
   "id": "nepal",
@@ -1977,21 +1986,21 @@
  },
  {
   "id": "punta-cana",
-  "name": "Punta Cana",
+  "name": "Dominican Republic",
   "region": "Caribbean",
   "birdingDraw": "moderate",
   "confidence": "high",
-  "sourceChecked": true,
+  "sourceChecked": false,
   "drawBirds": [
-   "Ridgway's hawk (Critically Endangered; Ojos Indígenas)",
-   "Hispaniolan amazon",
+   "Palmchat",
+   "Hispaniolan trogon",
    "Narrow-billed tody"
   ],
-  "note": ""
+  "note": "Ridgway's hawk is in Los Haitises (not near Punta Cana); needs source check"
  },
  {
   "id": "quebec-city",
-  "name": "Quebec City",
+  "name": "Quebec City & Montreal",
   "region": "Canada",
   "birdingDraw": "moderate",
   "confidence": "high",
@@ -2275,17 +2284,17 @@
  },
  {
   "id": "snowdonia",
-  "name": "Snowdonia",
+  "name": "Wales",
   "region": "Wales",
   "birdingDraw": "weak",
   "confidence": "medium",
   "sourceChecked": false,
   "drawBirds": [
-   "Peregrine falcon",
-   "Ring ouzel",
-   "Red-billed chough"
+   "Red kite",
+   "Red-billed chough",
+   "Atlantic puffin (Skomer)"
   ],
-  "note": ""
+  "note": "Wales-wide scope since 19 Oct 2026"
  },
  {
   "id": "southeast-alaska",
@@ -2387,7 +2396,7 @@
  },
  {
   "id": "tanzania",
-  "name": "Serengeti & Zanzibar",
+  "name": "Northern Tanzania",
   "region": "Tanzania",
   "birdingDraw": "moderate",
   "confidence": "medium",
@@ -2665,14 +2674,15 @@
  },
  {
   "id": "whistler",
-  "name": "Whistler",
+  "name": "Vancouver & Whistler",
   "region": "Canada",
   "birdingDraw": "weak",
   "confidence": "medium",
   "sourceChecked": false,
   "drawBirds": [
    "Harlequin duck",
-   "White-tailed ptarmigan"
+   "White-tailed ptarmigan",
+   "Snow goose (Fraser delta, winter)"
   ],
   "note": ""
  },

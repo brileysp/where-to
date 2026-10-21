@@ -542,15 +542,14 @@ them NA.
 **Interest-count correction:** earlier in this session I told the user "51 interests," then
 later "50," neither backed by actually counting `SLIDERS`. The real number, counted directly
 from `src/lib/scoring/constants.ts`: `SLIDERS.length` = 54, `VISIBLE_SLIDERS.length` = 52
-(hides `familyFun`, `spectatorSports` — still in the array, not deleted), and excluding the 3
+(hides `familyFun` and `spectatorSports`; on 20 Oct 2026 `spectatorSports` was removed entirely, folded into Festivals as its "Sporting events" chip, and `landscapePhotography` was hidden, folded into Scenic Landscapes — so these counts are now 2 lower), and excluding the 3
 practical/logistical sliders (`deals`, `crowds`, `roadtrip`, scored from peak/low flags only,
 never content-authored) leaves **49 visible domain interests**. Always run an actual count
 against the source array before citing this number — don't echo a remembered figure.
 
 As of 2026-10-09, 12 of 49 domain interests have live written text: wildlifeViewing, birding, whaleWatching, diving, surfing, windSports, safari, wildflowerBlooms, hotSprings, beachesSwimming, auroraChasing and mountaineering (the count when this section was first written was 8). Natural formula-family groupings below sum to 44
 items — 3 more than the remaining domain interests at the time of writing (41 = 49 − 8 done; it is fewer now), because the list below still
-includes `roadtrip` (practical, no content needed) and the 2 hidden interests (`familyFun`,
-`spectatorSports`) for completeness. Shared formula ⇒ shared tooling/research, but avoid running
+includes `roadtrip` (practical, no content needed) and the hidden interest `familyFun` (and, when this was written, `spectatorSports`, since removed) for completeness. Shared formula ⇒ shared tooling/research, but avoid running
 two from the same family back-to-back — it reads as repetitive:
 
 - **`swim` formula:** `sailing`, `kayakingRafting`, `hotSprings`,
@@ -561,7 +560,7 @@ two from the same family back-to-back — it reads as repetitive:
   `campingBackcountry`, `geologyVolcanoes`, `roadtrip`
 - **`culture` formula (large — 12):** `historyArchaeology`, `museumsArt`, `architecture`,
   `cityExploration`, `indigenousCultures`, `religiousSites`, `festivals`,
-  `traditionalCrafts`, `stargazing`, `auroraChasing`, `familyFun`, `spectatorSports`
+  `traditionalCrafts`, `stargazing`, `auroraChasing`, `familyFun` (`spectatorSports` removed 20 Oct 2026)
 - **`food` formula:** `streetFood`, `fineDining`, `wineSpirits`, `coffeeTea`,
   `spaWellness`, `yogaRetreats`, `nightlife`
 - **Singletons:** `skiingSnowboarding` (`snow`), `sunbathing` (`sun`), `shopping`

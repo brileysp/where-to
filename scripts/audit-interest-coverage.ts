@@ -25,7 +25,7 @@ import { eq } from 'drizzle-orm';
 
 const SPLIT_SECONDARIES = ['auroraChasing', 'mountainBiking', 'historyArchaeology', 'landscapePhotography', 'allInclusive'] as const;
 const NEW_INTERESTS = [
-  'safari', 'whaleWatching', 'hotSprings', 'themeParks', 'spectatorSports',
+  'safari', 'whaleWatching', 'hotSprings', 'themeParks',
   'cityExploration', 'familyFun', 'campingBackcountry',
   'nationalParks', 'geologyVolcanoes', 'wildflowerBlooms', 'mountaineering',
   'kayakingRafting', 'horsebackRiding', 'trailRunning',

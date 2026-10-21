@@ -141,6 +141,9 @@ export interface ChipRow {
   drivers: InterestChipDriver[];
   /** Filled in while the chip waits on a column that has not been added yet. */
   needsColumn: string;
+  /** Who agreed the chip and when (ISO date). Null/empty = not approved yet. A draft needs this before it can go live. */
+  approvedBy: string;
+  approvedAt: string | null;
 }
 
 /** A fit typed by hand for one place and chip. */
@@ -151,6 +154,28 @@ export interface ChipOverrideRow {
   reason: string;
   setBy: string;
   setAt: string;
+}
+
+/** An onboarding question about this interest (see interest_questions in the schema). */
+export interface QuestionRow {
+  key: string;
+  order: number;
+  text: string;
+  options: string[];
+  /** 1 = pick one answer; 2 = "pick up to two". */
+  maxPicks: number;
+  kind: 'lean' | 'limit';
+  /** Keys of the interest's data columns the answer is matched against. */
+  columns: string[];
+  note: string;
+  /** Short reason-chip text for when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
+  missMessage: string;
+  /** Keys of the interest's chips that open this question: it is asked only when at least one is ticked. Empty = asked of everyone who picks the interest. */
+  whenChips: string[];
+  /** Chips Claude proposed to open this question that the owner has not accepted yet. They change nothing until accepted. */
+  suggestedChips: string[];
+  approvedBy: string;
+  approvedAt: string | null;
 }
 
 export interface InterestPageData {
@@ -172,6 +197,7 @@ export interface InterestPageData {
   completeness: Completeness;
   passes: AuthoringPassRow[];
   chips: ChipRow[];
+  questions: QuestionRow[];
   chipOverrides: ChipOverrideRow[];
   /** Admin-edited versions of Rules & scoring lists, keyed by section (e.g. "birding.ladder"). A missing key uses the built-in list. */
   ruleOverrides: Record<string, unknown[]>;

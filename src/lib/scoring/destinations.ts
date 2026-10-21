@@ -456,7 +456,7 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
           // Shared by many sliders (stargazing, auroraChasing,
           // historyArchaeology, museumsArt, architecture, cityExploration,
           // indigenousCultures, religiousSites, festivals,
-          // traditionalCrafts, familyFun, spectatorSports) that mostly
+          // traditionalCrafts, familyFun) that mostly
           // don't need this — museums/architecture at world monuments are
           // genuinely flat unless shopClosures already covers a real
           // low-season closure. Festivals and a couple of daylight-driven

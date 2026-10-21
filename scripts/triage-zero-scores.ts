@@ -41,11 +41,6 @@ const SCORES: Record<string, Array<[string, number]>> = {
     ['copenhagen', 7], ['rivieramaya', 6], ['barcelona', 5], ['london', 5], ['amsterdam', 5],
     ['bavaria-munich', 4], ['nyc', 4], ['bangkok', 4], ['taiwan', 4], ['mexicocity', 4], ['sydney', 3],
   ],
-  spectatorSports: [
-    ['tokyo-kyoto', 7], ['paris', 7], ['rome', 6], ['mexicocity', 6], ['seoul', 5], ['amsterdam', 5],
-    ['edinburgh', 5], ['ireland', 5], ['singapore', 5], ['istanbul', 5], ['nice-riviera', 4],
-    ['beijing', 4], ['lisbon', 4], ['copenhagen', 3],
-  ],
   hotSprings: [
     ['azores', 8], ['ecuadorian-andes', 7], ['chilean-lake-district', 7], ['banff', 6], ['aspen', 5],
     ['peru', 5], ['queenstown', 5], ['swissalps', 5], ['argentine-lake-district', 5], ['jordan', 4],

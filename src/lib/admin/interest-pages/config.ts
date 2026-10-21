@@ -77,12 +77,13 @@ const BIRDING_FACTS: FactDef[] = [
   { key: 'headlineBirds', label: 'Headline birds', type: 'text', group: 'draw', wide: true, animals: true, hint: 'The birds that make the trip. Format: Bird (likelihood), Bird (likelihood). Likelihood is guaranteed, likely, possible or unlikely for a few days at the best time of year; add "not present" only to record a bird people expect that is not there.' },
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether the draw birds were checked against a source.' },
   { key: 'daysNeeded', label: 'Days needed', type: 'text', group: 'planning' },
-  { key: 'guide', label: 'Guide needed?', type: 'text', group: 'planning' },
-  { key: 'selfDrive', label: 'Self-drive?', type: 'text', group: 'planning' },
-  { key: 'spread', label: 'How spread out', type: 'text', group: 'planning' },
-  { key: 'access', label: 'Accessibility', type: 'text', group: 'planning' },
+  { key: 'daysBand', label: 'Days needed (band)', type: 'choice', group: 'practical', options: [{ value: 'd12', label: '1 to 2 days' }, { value: 'd34', label: '3 to 4 days' }, { value: 'd57', label: '5 to 7 days' }, { value: 'd8plus', label: '8 days or more' }], hint: 'Days needed grouped into four bands, worked out from the number in the column before. The onboarding question "how many days could you give one place?" reads this.' },
+  { key: 'guide', label: 'Guide needed?', type: 'choice', group: 'practical', options: [{ value: 'Not needed', label: 'Not needed' }, { value: 'Helpful', label: 'Helpful' }, { value: 'Recommended', label: 'Recommended' }, { value: 'Essential', label: 'Essential' }], hint: 'How much a local guide matters for finding the birds.' },
+  { key: 'selfDrive', label: 'Self-drive?', type: 'choice', group: 'practical', options: [{ value: 'Yes', label: 'Yes' }, { value: 'Partly', label: 'Partly' }, { value: 'No', label: 'No' }, { value: 'Not needed', label: 'Not needed' }] },
+  { key: 'spread', label: 'How spread out', type: 'choice', group: 'practical', options: [{ value: 'Compact', label: 'Compact' }, { value: 'Moderate', label: 'Moderate' }, { value: 'Spread out', label: 'Spread out' }] },
+  { key: 'access', label: 'Accessibility', type: 'choice', group: 'practical', options: [{ value: 'Easy', label: 'Easy' }, { value: 'Moderate', label: 'Moderate' }, { value: 'Challenging', label: 'Challenging' }], hint: 'How much walking and effort it takes to reach the birds.' },
   // Kept from the old model script so nothing is lost; no column yet.
-  { key: 'drawConfidence', label: 'Draw confidence', type: 'text', group: 'draw', hidden: true },
+  { key: 'drawConfidence', label: 'Draw confidence', type: 'choice', group: 'practical', options: [{ value: 'high', label: 'High' }, { value: 'medium', label: 'Medium' }, { value: 'low', label: 'Low' }], hint: 'How sure the birding is: high means the birds are almost always there; low means a gamble.' },
   { key: 'endemismRating', label: 'Endemism rating (0-10)', type: 'rating', group: 'data', hidden: true },
   { key: 'lineageRating', label: 'Lineage rating (0-10)', type: 'rating', group: 'data', hidden: true },
 ];
@@ -299,8 +300,10 @@ const HIKING_FACTS: FactDef[] = [
   { key: 'ways', label: 'What you can do', type: 'multi', group: 'trails', options: [{ value: 'easyWalks', label: 'Easy walks' }, { value: 'dayHikes', label: 'Day hikes' }, { value: 'hutTreks', label: 'Hut-to-hut or lodge treks' }, { value: 'campTreks', label: 'Camping treks' }, { value: 'summits', label: 'Walk-up summits' }], hint: 'Every kind of walking a visitor can do here: pick all that apply. A walk-up summit needs no rope, crampons or ice axe; one that does belongs to Mountaineering.' },
   { key: 'howReach', label: 'How you reach the trails', type: 'multi', group: 'trails', options: [{ value: 'trailhead', label: 'Drive to a trailhead' }, { value: 'lifts', label: 'Cable car, gondola or chairlift' }, { value: 'shuttle', label: 'Shuttle or bus to the trailhead' }, { value: 'boat', label: 'Boat or ferry' }, { value: 'train', label: 'Train or cog railway' }, { value: 'flight', label: 'Flight to the trailhead (small plane, floatplane or helicopter)' }, { value: 'fromTown', label: 'Walk from town' }], hint: 'Every way visitors reach the best walking. "Drive to a trailhead" is the ordinary case (park, then a loop or out and back); tick the others when they are a real part of how it works, such as lifts that put hikers on high ridges. Gemini mentions it when it is not just a trailhead.' },
   { key: 'dayHikeRating', label: 'Day-hike rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for easy walks and day hikes, at its best time of year, on its own (the scenery the walks reach, trails, variety, signage, getting to trailheads). A place with no day hikes worth doing is 0-1.' },
+  { key: 'dayHikeEffort', label: 'Day-hike effort', type: 'multi', group: 'trails', options: [{ value: 'gentle', label: 'Gentle, 2 to 3 hours' }, { value: 'halfDay', label: 'A solid half day' }, { value: 'fullDay', label: 'A full day with real hills' }, { value: 'bigDay', label: 'A big day, 8 hours or more' }], hint: 'Every size of day hike the headline routes offer here: pick all that apply. Worked out from the difficulty and length of the signature day hikes (easy and short is gentle; steady is a half day; steep is a full day; strenuous is a big day). The onboarding question "how big a day suits you?" reads this.' },
   { key: 'trekRating', label: 'Trek rating', type: 'rating', group: 'experience', hint: '0-10. How good the place is for multi-day trekking, at its best time of year, on its own (the scenery the trek crosses, routes, huts or lodging, season, permits). A place with no multi-day route is 0-1.' },
   { key: 'altitude', label: 'Altitude', type: 'choice', group: 'style', optional: true, options: [{ value: 'low', label: 'Low (under 5,000 ft)' }, { value: 'moderate', label: 'Moderate (5,000 to 9,000 ft)' }, { value: 'high', label: 'High (9,000 to 14,000 ft, altitude sickness possible)' }, { value: 'veryHigh', label: 'Very high (over 14,000 ft, acclimatize)' }], hint: 'The elevation of the walking that most visitors do. Pick the level of the headline routes, not the highest point in the region.' },
+  { key: 'bookingAhead', label: 'Booking ahead', type: 'choice', group: 'style', options: [{ value: 'none', label: 'Nothing to book' }, { value: 'weeks', label: 'Book days to weeks ahead' }, { value: 'months', label: 'Book months ahead' }], hint: 'How far ahead the signature hikes have to be booked, worked out from the permit notes: nothing to book; a permit, timed ticket or reservation that is available on shorter notice; or a lottery or limited places that sell out months ahead. The onboarding question "how do you feel about booking ahead?" reads this.' },
   { key: 'permits', label: 'Permits, fees or guide rules', type: 'text', group: 'style', wide: true, hint: 'Anything that restricts or charges for walking: timed permits, reservations, park fees, routes where a guide is required by rule. Blank when there is nothing.' },
   { key: 'statusNotes', label: 'Status or closure notes', type: 'text', group: 'style', wide: true, maxLength: 700, hint: 'Closures, storm or fire damage, reopening dates, road or bridge outages and seasonal access limits that affect the main trails now or regularly, with the date you checked, e.g. "Sendero Los Quetzales: storm damage 2021, reopening unconfirmed (checked Oct 2026)". Blank when nothing is closed or restricted. These go stale, so recheck them.' },
   { key: 'crowdIndicators', label: 'Crowding evidence', type: 'multi', group: 'style', options: [{ value: 'volume', label: 'High volume' }, { value: 'recognized', label: 'Recognized problem' }, { value: 'controls', label: 'Access controls' }, { value: 'parking', label: 'Parking overflow' }, { value: 'queues', label: 'Queues or congestion' }], hint: 'An impartial count, not a feeling. Tick each one that is documented for the main hiking areas in season: HIGH VOLUME (about 2 million visits a year, or thousands a day at one site); RECOGNIZED PROBLEM (authorities or the press call it overtourism or a surge); ACCESS CONTROLS (reservations, timed entry, mandatory shuttle, toll, turnstile, road closure, introduced because of crowding); PARKING OVERFLOW (lots full early, cars along the road); QUEUES OR CONGESTION (lift lines, trail bottlenecks). 0-1 quiet, 2 moderate, 3 busy, 4 very busy, 5 crowded. Gemini must mention crowds at 5, may mention them in peak-crowd months at 4, and not at all at 3 or fewer. Put the sources in the next column.' },
@@ -331,6 +334,24 @@ const FINE_DINING_FACTS: FactDef[] = [
   rate('tastingMenus', 'Tasting menus and chef\'s tables', 'How strong the scene for multi-course tasting menus and chef\'s-table counters is. 0-1 almost none, 5 a few good ones, 8-10 a destination for them.'),
   rate('farmToTable', 'Farm-to-table dining', 'How strong the scene is for restaurants built on local farms, producers and the season. 0-1 almost none, 8-10 a defining part of the dining.'),
   rate('diningWithView', 'Dining with a view', 'How easy it is to dine somewhere with a memorable view (rooftop, vineyard, sea, mountains) at fine-dining level. 0-1 almost none, 8-10 many.'),
+];
+
+/**
+ * Scenic Landscapes (20 Oct 2026). Landscape Photography was folded into it as a chip, so the first column is that chip's: how good the place is
+ * for photographing landscapes. It started as a copy of the earlier Landscape Photography place score (capped at the place's own Scenic score);
+ * edit it here from now on. The other Scenic chips (types of landscape) still need their own columns before the rest of the data can be filled.
+ */
+const SCENIC_FACTS: FactDef[] = [
+  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
+];
+
+/**
+ * Festivals (20 Oct 2026). Spectator Sports was folded into Festivals as the "Sporting events" chip, so the first column is that chip's: how strong
+ * the place is for big sporting occasions (grand slams, grands prix, major league seasons). It started as a copy of the old Spectator Sports place
+ * score (23 places); edit it here from now on. The other Festivals chips still need their own columns.
+ */
+const FESTIVALS_FACTS: FactDef[] = [
+  rate('sportingEvents', 'Sporting events', 'How strong the place is for watching big sporting occasions: grand slams, grands prix, major league seasons, big derbies. 0-1 almost none, 5 regular top-level fixtures, 8-10 a world sporting capital. Blank means not looked at yet.'),
 ];
 
 const COFFEE_TEA_FACTS: FactDef[] = [
@@ -378,6 +399,8 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   diving: [...DIVING_FACTS, ...GEMINI_NOTE_FACTS],
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
+  scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
+  festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,
   coffeeTea: COFFEE_TEA_FACTS,
   streetFood: STREET_FOOD_FACTS,

@@ -10,11 +10,13 @@ const TABS = [
   { href: '/admin/destinations/cost-items', label: 'Cost Items' },
   { href: '/admin/destinations/seasonal-flags', label: 'Seasonal Flags' },
   { href: '/admin/destinations/advisories', label: 'Advisories' },
+  { href: '/admin/destinations/question-links', label: 'Question links' },
+  { href: '/admin/destinations/matching', label: 'Matching' },
   { href: '/admin/destinations/todo', label: 'To do' },
 ];
 
 /** `todoCount` is the number of open items that need you or are past their check date. */
-export function AdminDestinationTabs({ todoCount = 0 }: { todoCount?: number }) {
+export function AdminDestinationTabs({ todoCount = 0, linksCount = 0 }: { todoCount?: number; linksCount?: number }) {
   const pathname = usePathname();
   return (
     <div className="admin-tabs">
@@ -22,6 +24,7 @@ export function AdminDestinationTabs({ todoCount = 0 }: { todoCount?: number }) 
         <Link key={tab.href} href={tab.href} className={`admin-tab${pathname === tab.href ? ' active' : ''}`}>
           {tab.label}
           {tab.href.endsWith('/todo') && todoCount > 0 && <span className="admin-tab-count">{todoCount}</span>}
+          {tab.href.endsWith('/question-links') && linksCount > 0 && <span className="admin-tab-count">{linksCount}</span>}
         </Link>
       ))}
     </div>

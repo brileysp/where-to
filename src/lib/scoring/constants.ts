@@ -25,7 +25,9 @@ export const SLIDERS: Slider[] = [
   { key: 'safari', label: 'Safari', icon: '🐘', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'enthusiast' },
   { key: 'whaleWatching', label: 'Whale Watching', icon: '🐋', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'enthusiast' },
   { key: 'scenicLandscapes', label: 'Scenic Landscapes', icon: '🏞️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic' },
-  { key: 'landscapePhotography', label: 'Landscape Photography', icon: '📸', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'specialist' },
+  // Folded into Scenic Landscapes as the "Landscape photography" chip (20 Oct 2026), so no longer a separate pick. Kept scored and stored, like
+  // nationalParks: its place scores still feed Scenic Landscapes and the chip, and personas and saved weights keep working.
+  { key: 'landscapePhotography', label: 'Landscape Photography', icon: '📸', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'specialist', hidden: true },
   // Not a real interest — a type of place, not something to weight
   // (see docs/todo.md). Kept scored/stored like any other slider (personas
   // above still reference it) so nothing needs re-authoring; just hidden
@@ -38,7 +40,7 @@ export const SLIDERS: Slider[] = [
   // birding and trail running.
   { key: 'auroraChasing', label: 'Northern Lights / Aurora', icon: '🌌', group: 'Nature & Wildlife', formula: 'culture', audienceTier: 'enthusiast' },
   { key: 'geologyVolcanoes', label: 'Geology & Volcanoes', icon: '🌋', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'enthusiast' },
-  { key: 'wildflowerBlooms', label: 'Wildflowers & Seasonal Blooms', icon: '🌸', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'specialist' },
+  { key: 'wildflowerBlooms', label: 'Blooms and Fall Colors', icon: '🌸', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'specialist' },
   // Sports & Recreation
   { key: 'hiking', label: 'Hiking & Trekking', icon: '🥾', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'popular' },
   { key: 'mountaineering', label: 'Mountaineering & Rock Climbing', icon: '🧗', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'specialist' },
@@ -114,7 +116,6 @@ export const SLIDERS: Slider[] = [
   // picks interests (see VISIBLE_SLIDERS below), but scoring, stored data,
   // and audience-tier weighting are untouched.
   { key: 'familyFun', label: 'Family Fun', icon: '👨‍👩‍👧', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'popular', hidden: true },
-  { key: 'spectatorSports', label: 'Spectator Sporting Events', icon: '🏟️', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'specialist', hidden: true },
   // Value — practical/logistical, not domain interests (see comment above)
   { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist' },
   { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist' },

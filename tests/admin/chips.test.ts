@@ -102,6 +102,11 @@ describe('chip actions', () => {
     const noDriver = await actions.updateChip('hiking', made[0].key, { status: 'live' });
     expect(noDriver.ok).toBe(false);
     for (const c of made) await actions.updateChip('hiking', c.key, { drivers: [{ column: 'dayHikeRating' }] });
+    // Not approved yet: cannot go live.
+    const unapproved = await actions.updateChip('hiking', made[0].key, { status: 'live' });
+    expect(unapproved.ok).toBe(false);
+    if (!unapproved.ok) expect(unapproved.message).toMatch(/not been approved/);
+    for (const c of made) expect((await actions.setChipApproval('hiking', c.key, true)).ok).toBe(true);
     for (const c of made.slice(0, 5)) expect((await actions.updateChip('hiking', c.key, { status: 'live' })).ok).toBe(true);
     const sixth = await actions.updateChip('hiking', made[5].key, { status: 'live' });
     expect(sixth.ok).toBe(false);
@@ -116,6 +121,7 @@ describe('chip actions', () => {
     expect(live.ok).toBe(false);
     const cleared = await actions.updateChip('birding', r.chip.key, { needsColumn: '' });
     expect(cleared.ok).toBe(true);
+    await actions.setChipApproval('birding', r.chip.key, true);
     expect((await actions.updateChip('birding', r.chip.key, { status: 'live' })).ok).toBe(true);
   });
 
@@ -125,6 +131,21 @@ describe('chip actions', () => {
     expect((await actions.updateChip('safari', r.chip.key, { drivers: [{ column: 'nope' }] })).ok).toBe(false);
     await actions.updateChip('safari', r.chip.key, { drivers: [{ column: 'walking', option: 'sometimes' }] });
     expect((await actions.updateChip('safari', r.chip.key, { status: 'live' })).ok).toBe(false);
+  });
+
+  it('records who approved a chip, takes the approval back, and will not un-approve a live chip', async () => {
+    const r = await actions.createChip('surfing', 'Approvable');
+    if (!r.ok) throw new Error('create failed');
+    expect(r.chip.approvedAt).toBeNull();
+    const a = await actions.setChipApproval('surfing', r.chip.key, true);
+    expect(a.ok && a.chip.approvedAt).toBeTruthy();
+    expect(a.ok && a.chip.approvedBy).not.toBe('');
+    const back = await actions.setChipApproval('surfing', r.chip.key, false);
+    expect(back.ok && back.chip.approvedAt).toBeNull();
+    await actions.updateChip('surfing', r.chip.key, { drivers: [{ column: 'beginnerRating' }] });
+    await actions.setChipApproval('surfing', r.chip.key, true);
+    expect((await actions.updateChip('surfing', r.chip.key, { status: 'live' })).ok).toBe(true);
+    expect((await actions.setChipApproval('surfing', r.chip.key, false)).ok).toBe(false);
   });
 
   it('moves a chip, and keeps the order numbered 1 to n', async () => {
@@ -156,5 +177,41 @@ describe('chip actions', () => {
     expect((await actions.deleteChip('whaleWatching', c.chip.key)).ok).toBe(true);
     const left = await (h.db as ReturnType<typeof drizzle<typeof schema>>).select().from(schema.placeChipOverrides).where(eq(schema.placeChipOverrides.chipKey, c.chip.key));
     expect(left.length).toBe(0);
+  });
+
+  it('refuses to delete a chip that still opens a question, and unties it on request', async () => {
+    const q = await import('@/app/admin/destinations/interests/[key]/question-actions');
+    const chip = await actions.createChip('safari', 'Walking safaris');
+    const other = await actions.createChip('safari', 'Boat safaris');
+    if (!chip.ok || !other.ok) throw new Error('create failed');
+    const one = await q.createQuestion('safari');
+    const two = await q.createQuestion('safari');
+    if (!one.ok || !two.ok) throw new Error('create failed');
+    await q.setQuestionChips('safari', one.question.key, [chip.chip.key]);
+    await q.setQuestionChips('safari', two.question.key, [chip.chip.key, other.chip.key]);
+    await q.setQuestionApproval('safari', one.question.key, true);
+    await q.setQuestionApproval('safari', two.question.key, true);
+    const refused = await actions.deleteChip('safari', chip.chip.key);
+    expect(refused.ok).toBe(false);
+    expect(!refused.ok && refused.message).toContain('2 onboarding questions are opened by this chip');
+    const done = await actions.deleteChip('safari', chip.chip.key, { untie: true });
+    expect(done.ok && done.untied).toBe(2);
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    const rows = await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'safari'));
+    expect(rows.map((r) => `${r.questionKey}:${r.chipKey}`)).toEqual([`${two.question.key}:${other.chip.key}`]);
+    const qs = await dbx.select().from(schema.interestQuestions).where(eq(schema.interestQuestions.interestKey, 'safari'));
+    expect(qs.every((r) => r.approvedAt === null)).toBe(true); // who they are asked of changed, so the approval is gone
+  });
+
+  it('the database itself refuses to delete a chip that opens a question', async () => {
+    const dbx = h.db as ReturnType<typeof drizzle<typeof schema>>;
+    const chip = await actions.createChip('hiking', 'Hut-to-hut');
+    if (!chip.ok) throw new Error('create failed');
+    await dbx.insert(schema.interestQuestions).values({ interestKey: 'hiking', questionKey: 'q1', text: 'Booking?', options: ['a', 'b'] });
+    await dbx.insert(schema.interestQuestionChips).values({ interestKey: 'hiking', questionKey: 'q1', chipKey: chip.chip.key });
+    await expect(dbx.delete(schema.interestChips).where(eq(schema.interestChips.chipKey, chip.chip.key))).rejects.toThrow();
+    // deleting the question removes its rows, and then the chip can go
+    await dbx.delete(schema.interestQuestions).where(eq(schema.interestQuestions.questionKey, 'q1'));
+    expect((await dbx.select().from(schema.interestQuestionChips).where(eq(schema.interestQuestionChips.interestKey, 'hiking'))).length).toBe(0);
   });
 });
