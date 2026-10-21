@@ -1,4 +1,4 @@
-import { eq } from 'drizzle-orm';
+import { eq, isNotNull } from 'drizzle-orm';
 import { db } from '../client';
 import { interestChips, interestQuestionChips, interestQuestions, placeInterestFacts } from '../schema';
 import { factDefsFor } from '@/lib/admin/interest-pages/config';
@@ -7,14 +7,14 @@ import type { MatchChipDef, MatchQuestionDef } from '@/lib/scoring/interestMatch
 import type { MatchSetups } from '@/lib/onboarding/live-types';
 
 /**
- * What the new onboarding asks and how places answer it (docs/matching-model.md). Only what the owner approved is ever read: live chips and approved questions. Proposed links are ignored.
+ * What the new onboarding asks and how places answer it (docs/matching-model.md). Only what the owner approved is ever read: approved chips (live, or still waiting on data) and approved questions. Proposed links are ignored.
  */
 
 export type { OnboardingQuestion, InterestMatchSetup, MatchSetups } from '@/lib/onboarding/live-types';
 
 async function loadRows() {
   const [chipRows, questionRows, linkRows] = await Promise.all([
-    db.select().from(interestChips).where(eq(interestChips.status, 'live')),
+    db.select().from(interestChips).where(isNotNull(interestChips.approvedAt)),
     db.select().from(interestQuestions),
     db.select().from(interestQuestionChips).where(eq(interestQuestionChips.suggested, false)),
   ]);

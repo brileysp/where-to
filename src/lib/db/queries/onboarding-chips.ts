@@ -1,4 +1,4 @@
-import { asc, eq } from 'drizzle-orm';
+import { asc, isNotNull } from 'drizzle-orm';
 import { db } from '../client';
 import { interestChips } from '../schema';
 
@@ -8,11 +8,12 @@ export interface OnboardingChip {
 }
 
 /**
- * The live chips for every interest, in the admin's order: the "What kind?" specifics the onboarding shows under a top interest
+ * The approved chips for every interest (live, or approved and still waiting on data: the owner chose to show those too, even where no
+ * measure is wired up yet), in the admin's order: the "What kind?" specifics the onboarding shows under a top interest
  * (docs/onboarding-v2/SPEC.md 8.4). An interest with none has no specifics.
  */
 export async function getLiveInterestChips(): Promise<Record<string, OnboardingChip[]>> {
-  const rows = await db.select().from(interestChips).where(eq(interestChips.status, 'live')).orderBy(asc(interestChips.interestKey), asc(interestChips.sortOrder));
+  const rows = await db.select().from(interestChips).where(isNotNull(interestChips.approvedAt)).orderBy(asc(interestChips.interestKey), asc(interestChips.sortOrder));
   const out: Record<string, OnboardingChip[]> = {};
   for (const r of rows) (out[r.interestKey] ??= []).push({ key: r.chipKey, label: r.label });
   return out;
