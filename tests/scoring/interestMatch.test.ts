@@ -51,3 +51,38 @@ describe('interestMatchFor', () => {
     expect(m.factor).toBeLessThanOrEqual(1);
   });
 });
+
+describe('matchFromFits agrees with interestMatchFor', () => {
+  const places = [
+    high,
+    { dayHikeRating: 3, trekRating: 2, ways: ['dayHikes'], altitude: 'low', bookingAhead: 'none' },
+    { dayHikeRating: 6, ways: [], altitude: 'veryHigh', bookingAhead: 'weeks' },
+    {},
+  ];
+  const content = {
+    chips: chips.map((c) => ({ key: c.key, label: c.label, live: c.live })),
+    questions: [altitude, booking].map((q) => ({ key: q.key, kind: q.kind, whenChips: q.whenChips, missMessage: q.missMessage })),
+  };
+  const cases = [
+    { ticked: [] as string[], answers: {} as Record<string, number[]> },
+    { ticked: ['day-hikes'], answers: { q3: [0], q4: [0] } },
+    { ticked: ['hut-to-hut', 'multi-day-treks'], answers: { q3: [1, 2], q4: [1] } },
+    { ticked: ['draft'], answers: { q3: [3], q4: [2] } },
+    { ticked: ['day-hikes'], answers: { q3: [9], q4: [] } },
+  ];
+  it('gives the same factor, reasons and matches for every place and every set of picks', async () => {
+    const { buildPlaceFits, matchFromFits } = await import('@/lib/scoring/matchTable');
+    for (const facts of places) {
+      const fits = buildPlaceFits(chips, [altitude, booking], facts as never, defs);
+      for (const c of cases) {
+        const direct = interestMatchFor({ chips, questions: [altitude, booking], ticked: c.ticked, answers: c.answers, facts: facts as never, defs });
+        const viaTable = matchFromFits({ content, fits, ticked: c.ticked, answers: c.answers });
+        expect(viaTable).toEqual(direct);
+      }
+    }
+  });
+  it('treats a place with no table as a pass', async () => {
+    const { matchFromFits } = await import('@/lib/scoring/matchTable');
+    expect(matchFromFits({ content, fits: undefined, ticked: ['day-hikes'], answers: { q3: [0], q4: [0] } }).factor).toBe(1);
+  });
+});

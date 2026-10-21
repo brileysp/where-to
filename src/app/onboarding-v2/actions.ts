@@ -9,6 +9,7 @@ import { saveDnaState } from '@/app/dna/actions';
 import { allBandsSelected } from '@/lib/scoring/constants';
 import { dnaStateFor, weightsFor } from '@/lib/onboarding/bridge';
 import { fromTravelProfile, parseTravelProfile, type TravelProfile } from '@/lib/onboarding/profile';
+import { getMatchFits, getMatchSetups, type MatchFits } from '@/lib/db/queries/match-data';
 
 /**
  * Saving and loading what a traveler keeps from the new onboarding flow (docs/onboarding-v2/SPEC.md 6). Saving writes three places, so the
@@ -51,4 +52,15 @@ export async function saveTravelProfile(raw: unknown): Promise<SaveResult> {
     .values({ userId, personaId: null, weights, bands: { ...allBandsSelected(), ...profile.bands }, month: keepMonth ? profile.month! + 1 : null, monthChosen: keepMonth, showAllSliders: true })
     .onConflictDoUpdate({ target: userPreferences.userId, set });
   return { ok: true };
+}
+
+/**
+ * How every place does for the chips and questions of the interests the traveler picked (see lib/scoring/matchTable.ts). Public data, no
+ * sign-in needed; only interests that have approved questions are answered, and the list is capped.
+ */
+export async function loadMatchFits(interestKeys: unknown): Promise<MatchFits> {
+  if (!Array.isArray(interestKeys)) return {};
+  const setups = await getMatchSetups();
+  const keys = interestKeys.filter((k): k is string => typeof k === 'string' && k.length < 60 && k in setups).slice(0, 60);
+  return getMatchFits(keys);
 }

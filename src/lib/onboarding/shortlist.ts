@@ -1,4 +1,4 @@
-import { computeRankedDestinations, type RankedDestination } from '@/lib/scoring/rank';
+import { computeRankedDestinations, type InterestFactors, type RankedDestination } from '@/lib/scoring/rank';
 import { isVisibleForWeights } from '@/lib/scoring/gating';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { airportByCode, estimateFlightHours, milesBetween } from './airports';
@@ -10,8 +10,8 @@ import { getOnboardingSettings } from './settings';
 export const rankingMonth = (month: number | null): number => (month == null ? new Date().getMonth() + 1 : month + 1);
 
 /** Every place the traveler may see (specialist places they have not unlocked are left out), best first. */
-export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>): RankedDestination[] {
-  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands).filter((r) => isVisibleForWeights(r.d, weights));
+export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>, factors?: InterestFactors): RankedDestination[] {
+  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands, undefined, factors).filter((r) => isVisibleForWeights(r.d, weights));
 }
 
 export interface SetAside {

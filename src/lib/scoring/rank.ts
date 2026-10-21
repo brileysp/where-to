@@ -14,6 +14,11 @@ export type SelectedBands = Record<string, string[]>;
 // { cyclingRoad: ['mountainBiking', 'gravelRiding'] }) — see earnedStyles/
 // selectedStyles in db/schema.ts and DOMAIN_CORE_AXES in lib/dna/domains.ts.
 export type SelectedStyles = Record<string, string[]>;
+/**
+ * What the traveler's chips and answers keep of each place's score for each interest (0.3 to 1, see personalMatch.ts): place id, then interest
+ * key. Missing = 1, nothing changes. Only ever lowers a score, before the blend across interests.
+ */
+export type InterestFactors = Record<string, Record<string, number>>;
 
 // How much a destination's slider score counts when scoped to a
 // selected style: 'signature' is a full match, 'none' is a destination
@@ -330,10 +335,12 @@ export function scoreForMonth(
   monthIdx: number,
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
+  factors?: InterestFactors,
 ): number {
   // Everything below reads the floored weights, never the raw ones (see effectiveWeights).
   const weights = effectiveWeights(stated);
-  const scoreFor = (key: string) => styleAdjustedScore(dest, key, monthIdx, selectedStyles);
+  const placeFactors = factors?.[dest.id];
+  const scoreFor = (key: string) => styleAdjustedScore(dest, key, monthIdx, selectedStyles) * (placeFactors?.[key] ?? 1);
 
   // N/A sliders (isSliderNA) never count toward the BROAD average, in
   // either direction — that average's job is measuring breadth across
@@ -776,9 +783,10 @@ export function computeRankedDestinations(
   month: number,
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
+  factors?: InterestFactors,
 ): RankedDestination[] {
   const monthIdx = month - 1;
   return [...destinations]
-    .map((d) => ({ d, s: scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles) }))
+    .map((d) => ({ d, s: scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors) }))
     .sort((a, b) => b.s - a.s);
 }
