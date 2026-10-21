@@ -19,6 +19,16 @@ export interface MatchSettings {
   reasonThreshold: number;
   /** Most reason chips per place card. */
   maxReasons: number;
+  /** Trip length: hours of airports and transfers added to the flying time, both ways together. */
+  tripAirportHours: number;
+  /** Trip length: up to this share of the trip in transit is fine; above it the place ranks a little lower. */
+  tripStretchShare: number;
+  /** Trip length: above this share the trip is mostly travel and the place ranks much lower. */
+  tripFarShare: number;
+  /** What a place keeps of its score when the flights are a stretch for the trip length. */
+  keepIfTripStretch: number;
+  /** What a place keeps when the trip would be mostly travel. */
+  keepIfTripFar: number;
 }
 
 export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
@@ -29,6 +39,11 @@ export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
   interestFloor: 0.3,
   reasonThreshold: 0.15,
   maxReasons: 2,
+  tripAirportHours: 8,
+  tripStretchShare: 0.25,
+  tripFarShare: 0.45,
+  keepIfTripStretch: 0.85,
+  keepIfTripFar: 0.6,
 };
 
 export interface MatchSettingField {
@@ -51,6 +66,11 @@ export const MATCH_SETTING_FIELDS: MatchSettingField[] = [
   { key: 'interestFloor', label: 'Never keeps less than', help: 'However many things are missed, an interest keeps at least this much of its original score.', min: 0.1, max: 0.9, step: 0.05, percent: true },
   { key: 'reasonThreshold', label: 'Show a reason chip when a miss takes off at least', help: 'Smaller losses are applied quietly with no chip.', min: 0.05, max: 0.5, step: 0.05, percent: true },
   { key: 'maxReasons', label: 'Most reason chips on a place card', help: 'The biggest losses are shown first.', min: 1, max: 4, step: 1, percent: false },
+  { key: 'tripAirportHours', label: 'Airport and transfer time per trip (hours)', help: 'How long it takes to fly there depends on the distance; this adds the airports, connections and transfers, both ways together, before comparing with the trip length.', min: 0, max: 24, step: 1, percent: false },
+  { key: 'tripStretchShare', label: 'Trip length: share of the trip in transit that is still fine', help: 'Up to this share, a place is not affected by the traveler\'s trip length. Above it, the place is a stretch.', min: 0.05, max: 0.6, step: 0.05, percent: true },
+  { key: 'tripFarShare', label: 'Trip length: share that makes the trip mostly travel', help: 'Above this share of the trip in transit, the place is mostly travel.', min: 0.1, max: 0.9, step: 0.05, percent: true },
+  { key: 'keepIfTripStretch', label: 'Keeps this much when the flights are a stretch', help: 'A place whose flights take more than the fine share of the trip keeps this share of its score. Trip length never hides a place.', min: 0.3, max: 1, step: 0.05, percent: true },
+  { key: 'keepIfTripFar', label: 'Keeps this much when the trip would be mostly travel', help: 'A place whose flights take most of the trip keeps this share of its score.', min: 0.2, max: 1, step: 0.05, percent: true },
 ];
 
 export type MatchSettingsOverride = Partial<Record<keyof MatchSettings, number>>;
@@ -64,6 +84,7 @@ export function mergeMatchSettings(override: unknown): MatchSettings {
     if (typeof v === 'number' && Number.isFinite(v) && v >= f.min && v <= f.max) out[f.key] = v;
   }
   out.maxReasons = Math.round(out.maxReasons);
+  out.tripAirportHours = Math.round(out.tripAirportHours);
   return out;
 }
 
@@ -74,5 +95,7 @@ export function matchSettingsProblem(s: MatchSettings): string | null {
     if (!Number.isFinite(v) || v < f.min || v > f.max) return `${f.label}: use a number from ${f.percent ? Math.round(f.min * 100) + '%' : f.min} to ${f.percent ? Math.round(f.max * 100) + '%' : f.max}`;
   }
   if (s.interestFloor > Math.min(s.keepIfChipMissed, s.keepIfLimitMissed)) return 'The floor cannot be higher than what a place keeps for a missed chip or Limit, or those misses would make no difference';
+  if (s.tripStretchShare >= s.tripFarShare) return 'The share of the trip that is fine must be lower than the share that makes it mostly travel';
+  if (s.keepIfTripFar > s.keepIfTripStretch) return 'A mostly-travel trip cannot keep more of the score than a stretch one';
   return null;
 }
