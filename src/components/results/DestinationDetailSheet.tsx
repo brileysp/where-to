@@ -42,6 +42,7 @@ export function DestinationDetailSheet({
   onClose,
   factors,
   notes,
+  interestKeys,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -61,6 +62,8 @@ export function DestinationDetailSheet({
   /** What the traveler's chips and answers keep of each place's score (onboarding's live questions), and this place's reasons. */
   factors?: InterestFactors;
   notes?: Record<string, PlaceNote>;
+  /** Show exactly these interests as chips (the ones the traveler picked). */
+  interestKeys?: string[];
 }) {
   // The ranked list carries scores only; this place's text (overview, monthly blurbs, cost notes) is fetched now and merged in.
   const { detail, loading: detailLoading } = usePlaceDetail(dest.id);
@@ -215,6 +218,7 @@ export function DestinationDetailSheet({
               onSelectCategory={setSelectedCategory}
               factors={factors}
               notes={notes}
+              interestKeys={interestKeys}
             />
           </div>
           <div className={`detail-tab-panel${tab === 'about' ? ' active' : ''}`} aria-hidden={tab !== 'about'}>

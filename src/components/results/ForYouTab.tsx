@@ -59,6 +59,7 @@ export function ForYouTab({
   onSelectCategory,
   factors,
   notes,
+  interestKeys,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -77,6 +78,8 @@ export function ForYouTab({
   factors?: InterestFactors;
   /** This place's reasons and matches by interest, for the notes under the chips. */
   notes?: Record<string, PlaceNote>;
+  /** Show exactly these interests as chips (the ones the traveler picked) instead of working them out from the weights. */
+  interestKeys?: string[];
 }) {
   // Runs once per place-card open: this component remounts fresh every time
   // (DestinationDetailSheet keys the whole sheet by destination id), so a
@@ -118,7 +121,8 @@ export function ForYouTab({
   const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles, factors);
   const placeFactor = (key: string) => factors?.[dest.id]?.[key] ?? 1;
 
-  const chips = topInterestChips(weights).map((slider) => ({
+  const chipSliders = interestKeys ? interestKeys.flatMap((k) => SLIDERS.filter((x) => x.key === k)) : topInterestChips(weights);
+  const chips = chipSliders.map((slider) => ({
     slider,
     isNA: isSliderNA(dest, slider.key),
     score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles) * placeFactor(slider.key),

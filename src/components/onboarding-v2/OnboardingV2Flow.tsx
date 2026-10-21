@@ -49,6 +49,8 @@ export interface FlowEntry {
   name: string | null;
   /** True when opened from "Review Travel DNA": straight to the Travel DNA page. */
   review: boolean;
+  /** Opened with ?fresh=1 (testing): the one-time lessons play again. */
+  fresh: boolean;
 }
 
 export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowEntry }) {
@@ -358,6 +360,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             careProps={careProps('trip')}
             returning={returning}
             levels={levels}
+            fresh={entry.fresh}
             subs={subs}
             qa={qa}
             onAnswer={(interest, qkey, picks) => setQa((a) => ({ ...a, [interest]: { ...(a[interest] ?? {}), [qkey]: picks } }))}

@@ -5,8 +5,9 @@ import { SearchBox } from '@/components/results/SearchBox';
 import { StampsSheet } from '@/components/results/StampsSheet';
 import { VisitedCounterStamp } from '@/components/results/VisitedCounterStamp';
 import { BookmarkIcon } from '@/components/results/BookmarkIcon';
-import { useResortDemo } from '@/components/results/useResortDemo';
-import { topInterestChips } from '@/lib/scoring/breakdown';
+import { ONBOARDING_SEEN_KEY, useResortDemo } from '@/components/results/useResortDemo';
+import { SLIDERS } from '@/lib/scoring/constants';
+import { orderedByLevel } from '@/lib/onboarding/levels';
 import { DestinationDetailSheet } from '@/components/results/DestinationDetailSheet';
 import '@/components/results/results.css';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
@@ -61,6 +62,8 @@ export interface ShortlistProps {
   returning: boolean;
   /** The live questions (docs/matching-model.md): what the traveler picked, ticked and answered, and how to change it. */
   levels: Levels;
+  /** Opened with ?fresh=1: the one-time lessons play again. */
+  fresh: boolean;
   subs: Record<string, string[]>;
   qa: InterestAnswers;
   onAnswer: (interest: string, questionKey: string, picks: number[]) => void;
@@ -191,7 +194,9 @@ export function ShortlistScreen(p: ShortlistProps) {
   const chipRowRef = useRef<HTMLDivElement>(null);
   const chipEls = useRef<Map<string, HTMLElement>>(new Map());
   const listWrapRef = useRef<HTMLDivElement>(null);
-  const chipSliders = useMemo(() => topInterestChips(weights), [weights]);
+  // The chips are exactly the interests the traveler picked (top first), never ones worked out from their budget, weather or companions.
+  const chipSliders = useMemo(() => orderedByLevel(p.levels).flatMap((k) => SLIDERS.filter((x) => x.key === k)).slice(0, 8), [p.levels]);
+  const myInterestKeys = useMemo(() => chipSliders.map((x) => x.key), [chipSliders]);
   const toolsOn = liveOn && live.listShown;
   const matchFactors = match.factors;
   const shown = useMemo(() => {
@@ -212,8 +217,20 @@ export function ShortlistScreen(p: ShortlistProps) {
   const favoritedCount = Object.values(favorited).filter(Boolean).length;
 
   // First visit to the list: the re-sort walkthrough plays after the flag teaser is finished, so only one lesson is on screen at a time.
+  // The flag lesson's own show lasts about six seconds; the re-sort lesson may start once it has played, even if the card is still there.
+  const [teaserPlayed, setTeaserPlayed] = useState(false);
+  useEffect(() => {
+    if (live.teaser !== 'on') return;
+    const t = setTimeout(() => setTeaserPlayed(true), 6500);
+    return () => clearTimeout(t);
+  }, [live.teaser]);
+  useEffect(() => {
+    if (!p.fresh) return;
+    try { window.localStorage.removeItem(ONBOARDING_SEEN_KEY); } catch { /* storage blocked: the lesson may simply replay */ }
+  }, [p.fresh]);
   const demo = useResortDemo({
-    ready: toolsOn && live.fill === 'none' && live.teaser !== 'on' && !openId && shown.length > 0,
+    seenKey: ONBOARDING_SEEN_KEY,
+    ready: toolsOn && live.fill === 'none' && (live.teaser !== 'on' || teaserPlayed) && !openId && shown.length > 0,
     chipKeys: chipSliders.map((x) => x.key),
     pinChip: setPinnedChip,
     containerRef: listWrapRef,
@@ -222,6 +239,15 @@ export function ShortlistScreen(p: ShortlistProps) {
     cardRefs,
     rowIds: () => shown.map((r) => r.d.id),
   });
+  // When the flag lesson's show is over, bring the chip row into view so the re-sort lesson (which waits for it) is actually seen.
+  useEffect(() => {
+    if (!teaserPlayed) return;
+    let seen = false;
+    try { seen = window.localStorage.getItem(ONBOARDING_SEEN_KEY) === '1'; } catch { /* storage blocked */ }
+    if (seen) return;
+    const t = setTimeout(() => chipRowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+    return () => clearTimeout(t);
+  }, [teaserPlayed]);
   useEffect(() => {
     if (live.teaser !== 'done') return;
     const t = setTimeout(() => chipRowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 450);
@@ -588,6 +614,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           selectedStyles={{}}
           factors={match.factors}
           notes={match.notes[openEntry.d.id]}
+          interestKeys={myInterestKeys}
           month={p.month == null ? new Date().getMonth() + 1 : p.month + 1}
           visited={!!visited[openEntry.d.id]}
           onToggleVisited={() => setVisited((v) => ({ ...v, [openEntry.d.id]: !v[openEntry.d.id] }))}

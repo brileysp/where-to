@@ -38,5 +38,5 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
     getMatchSetups(),
     loadMatchSettings().then((m) => m.settings),
   ]);
-  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings }} entry={{ saved, name, review: params.review === '1' && !!saved }} />;
+  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh }} />;
 }
