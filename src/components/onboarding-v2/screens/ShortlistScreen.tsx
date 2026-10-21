@@ -368,6 +368,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           <>
             <QuestionBox ctx={boxCtx} />
             {barChips}
+            <div className="lq-listhead">
             <div className="lq-lh">
               <b>{live.listShown ? 'Your places' : 'Your top 5'}</b>
               <span>{live.listShown ? `ranked for you · ${limited.kept.length} places` : 'ranked for you'}</span>
@@ -417,6 +418,7 @@ export function ShortlistScreen(p: ShortlistProps) {
                 </div>
               </>
             )}
+            </div>
           </>
         ) : (
           <>

@@ -372,3 +372,9 @@
 .lq-lh { gap: 10px; }
 .lq-lh span { margin-left: auto; }
 .lq-lh .results-icon-btn { flex: none; }
+/* the list heading and the results tools sit together as one block, so the screen's row gap does not open up between empty parts */
+.lq-listhead { display: block; }
+.lq-listhead > .lq-lh { margin-bottom: 8px; }
+.lq-listhead .results-search-wrap { margin: 0; }
+.lq-listhead .quick-chip-row-wrap { margin-bottom: 4px; }
+.lq-listhead .results-stats-row { margin-bottom: 0; padding-bottom: 10px; }
