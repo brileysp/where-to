@@ -36,7 +36,7 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 
 ## Not built yet
 
-1. A rating column for every chip, written and checked (a chip's rating must not reuse a field like "main draw": the Red Sea reads as having no wrecks).
+1. Every chip needs its own trustworthy measure, written and checked. One column can serve many chips when it tells them apart (the wave-type options, one odds column per animal), so it is not one new column per chip. What is not allowed is a measure of something else: a chip must not reuse a field like "main draw" (the Red Sea reads as having no wrecks). A tick or option gives 10 or 0, which is right for "is it offered?" chips; add a 0-10 rating only where how good it is matters.
 2. ~~A fit for each question from its columns~~ **Done for the seven interests with data (21 Oct 2026, owner-reviewed):** `src/lib/onboarding/question-fit.ts` (checks) and `question-fit-rules.ts` (the 28 rules), saved in `interest_questions.fit_rule` and shown read-only in the question editor. Other interests wait on their columns.
 3. Storing the traveler's ticked chips and answers, and calling `matchInterest` from the scoring (replacing the old "styles" multiplier in `styleAdjustedScore`).
 4. Shadow mode first: calculate it, record what would change, show nothing until the biggest drops have been read.
