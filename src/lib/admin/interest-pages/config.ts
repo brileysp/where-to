@@ -336,6 +336,15 @@ const FINE_DINING_FACTS: FactDef[] = [
   rate('diningWithView', 'Dining with a view', 'How easy it is to dine somewhere with a memorable view (rooftop, vineyard, sea, mountains) at fine-dining level. 0-1 almost none, 8-10 many.'),
 ];
 
+/**
+ * Scenic Landscapes (20 Oct 2026). Landscape Photography was folded into it as a chip, so the first column is that chip's: how good the place is
+ * for photographing landscapes. It started as a copy of the earlier Landscape Photography place score (capped at the place's own Scenic score);
+ * edit it here from now on. The other Scenic chips (types of landscape) still need their own columns before the rest of the data can be filled.
+ */
+const SCENIC_FACTS: FactDef[] = [
+  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
+];
+
 const COFFEE_TEA_FACTS: FactDef[] = [
   tick('coffeeFarms', 'Coffee farm visits', 'Tick when visitors can tour a working coffee farm or estate within a day trip.'),
   rate('specialtyCafes', 'Specialty cafés and roasteries', 'How strong the specialty coffee scene is: independent roasters and cafés worth a trip. 0-1 almost none, 5 a few good ones, 8-10 a coffee destination.'),
@@ -381,6 +390,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   diving: [...DIVING_FACTS, ...GEMINI_NOTE_FACTS],
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
+  scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,
   coffeeTea: COFFEE_TEA_FACTS,
   streetFood: STREET_FOOD_FACTS,
