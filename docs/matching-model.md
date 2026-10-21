@@ -40,4 +40,5 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 2. A fit for each question from its columns (offered, within your limit, or level).
 3. Storing the traveler's ticked chips and answers, and calling `matchInterest` from the scoring (replacing the old "styles" multiplier in `styleAdjustedScore`).
 4. Shadow mode first: calculate it, record what would change, show nothing until the biggest drops have been read.
-5. The reason chips and green match chips on the place card.
+5. The reason chips and green match chips, **in the place's detail sheet only** (owner decision 21 Oct 2026; the card stays as it is today). The sheet's "adjusted lower because..." sentence gains the chips, the original and for-you scores, and a per-interest breakdown. Mockup: claude.ai/artifact/C8YqFKXEck6DufewouZyYt.
+6. Reason-chip messages (`interest_questions.miss_message`) are written per interest as its columns land, starting with the seven interests that already have data, not all at once.
