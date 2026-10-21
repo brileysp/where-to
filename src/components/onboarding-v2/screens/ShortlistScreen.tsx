@@ -19,7 +19,10 @@ import { dnaStateFor, weightsFor, type Answer, type ProfileInput } from '@/lib/o
 import { COMPANIONS, careCount, isNarrowed, type Bands } from '@/lib/onboarding/care';
 import { answerMessage, isShortlistLocked, questionsToUnlock } from '@/lib/onboarding/lock';
 import { pickQuestion } from '@/lib/onboarding/questions';
-import { applyFlightLimit, rankPlaces, rankingMonth } from '@/lib/onboarding/shortlist';
+import { applyFlightLimitFrom, rankPlaces, rankingMonth } from '@/lib/onboarding/shortlist';
+import { tripAdjust } from '@/lib/onboarding/trip-adjust';
+import type { TripLength } from '@/lib/onboarding/trip-length';
+import type { RegionKey } from '@/lib/onboarding/regions';
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import type { FlowData } from '../FlowData';
 import { interestByKey } from '@/lib/onboarding/interests';
@@ -31,13 +34,13 @@ import { loadMatchFits } from '@/app/onboarding-v2/actions';
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
-import { TripSheet, monthShort, tripSetCount } from '../live/TripSheet';
+import { TripSheet, monthShort, originOf, tripSetCount } from '../live/TripSheet';
 import { Sheet } from '../Sheet';
 import { SharpenCard } from '../SharpenCard';
 import { TasteCard } from '../TasteCard';
 import { OpenToCard } from '../OpenToCard';
 import { CareAccordion } from '../CareAccordion';
-import { HomePicker } from '../HomePicker';
+import { HomeLocation, type HomeBundle } from '../HomeLocation';
 import type { CareHandlers } from './EssentialsScreen';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -78,8 +81,12 @@ export interface ShortlistProps {
   onBandPill: (dim: string, band: string) => void;
   onMonth: (m: number) => void;
   onWeek: (w: number) => void;
-  onPickHome: (code: string) => void;
-  onClearHome: () => void;
+  /** Where you live (country, state or province, airport), how long the trip is, and the continents left in. */
+  loc: HomeBundle;
+  length: TripLength | null;
+  continents: RegionKey[];
+  onLength: (l: TripLength | null) => void;
+  onContinents: (next: RegionKey[]) => void;
   onMaxHours: (h: number) => void;
   onNeedHome: () => void;
   onSeeAll: (weights: Record<string, number>) => void;
@@ -115,16 +122,23 @@ export function ShortlistScreen(p: ShortlistProps) {
     return () => { live = false; };
   }, [interestSig]); // eslint-disable-line react-hooks/exhaustive-deps
   const match = useMemo(() => liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: p.qa, settings: data.matchSettings }), [interestKeys, data.setups, fits, p.subs, p.qa, data.matchSettings]);
-  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors), [data.destinations, weights, p.month, p.bands, match.factors]);
-  const limited = useMemo(() => applyFlightLimit(rankedAll, p.home, p.maxHours, data.coords), [rankedAll, p.home, p.maxHours, data.coords]);
+  // The trip settings: where flights start from, what the trip length does to far places, and which continents are left out.
+  const origin = useMemo(() => originOf(p.loc), [p.loc.airport, p.loc.country, p.loc.sub]); // eslint-disable-line react-hooks/exhaustive-deps
+  const adjust = useMemo(
+    () => tripAdjust({ coords: data.coords, regions: data.regions, origin, length: p.length, continents: p.continents, settings: data.matchSettings }),
+    [data.coords, data.regions, origin, p.length, p.continents, data.matchSettings],
+  );
+  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors]);
+  const inView = useMemo(() => rankedAll.filter((r) => !adjust.leftOut.has(r.d.id)), [rankedAll, adjust.leftOut]);
+  const limited = useMemo(() => applyFlightLimitFrom(inView, origin, p.maxHours, data.coords), [inView, origin, p.maxHours, data.coords]);
 
   /** The places that would be kept (best first) if the traveler's answers were these. */
   const keptWith = useCallback(
     (nextQa: InterestAnswers) => {
       const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, settings: data.matchSettings });
-      return applyFlightLimit(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors), p.home, p.maxHours, data.coords).kept;
+      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
     },
-    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, p.home, p.maxHours],
+    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours],
   );
   const withAnswer = (interest: string, qkey: string, picks: number[]): InterestAnswers => ({ ...p.qa, [interest]: { ...(p.qa[interest] ?? {}), [qkey]: picks } });
   const nameOf = (k: string) => ({ icon: data.emojiOverrides[k] ?? interestByKey(k)?.icon ?? '•', label: interestByKey(k)?.label ?? k });
@@ -163,7 +177,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   // "Reshuffles ~2 of your top 5": how many of the top five positions an answer would change, averaged over its options. Kept per state.
   const impactCache = useRef<{ sig: string; map: Map<string, string> }>({ sig: '', map: new Map() });
   function impactText(item: LiveItem): string {
-    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.home, p.maxHours, p.levels]);
+    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.loc.airport, p.loc.country, p.loc.sub, p.length, p.continents, p.maxHours, p.levels]);
     if (impactCache.current.sig !== sig) impactCache.current = { sig, map: new Map() };
     const id = `${item.interest}.${item.q.key}`;
     const hit = impactCache.current.map.get(id);
@@ -310,7 +324,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   function moverFor(card: DnaCard, type: SwipeType): { name: string; by: number } | null {
     const before = limited.kept.map((r) => r.d.id);
     const nextInput: ProfileInput = { ...input, answers: [...input.answers, { card, type } as Answer] };
-    const after = applyFlightLimit(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors), p.home, p.maxHours, data.coords).kept.slice(0, 10);
+    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
     let best = null as { name: string; by: number } | null;
     after.forEach((r, i) => {
       const was = before.indexOf(r.d.id);
@@ -356,7 +370,9 @@ export function ShortlistScreen(p: ShortlistProps) {
   const home = airportByCode(p.home);
   const nCare = careCount(p.careProps.care, p.bands);
 
-  const tripValues = { month: p.month, week: p.week, who: p.who, bands: p.bands, home: p.home, maxHours: p.maxHours, careProps: p.careProps };
+  const tripValues = { month: p.month, week: p.week, length: p.length, continents: p.continents, who: p.who, bands: p.bands, loc: p.loc, maxHours: p.maxHours, careProps: p.careProps };
+  const placeNames = useMemo(() => Object.fromEntries(data.destinations.map((d) => [d.id, d.name])), [data.destinations]);
+  const inViewIds = useMemo(() => new Set(inView.map((r) => r.d.id)), [inView]);
   const tripCount = tripSetCount(tripValues);
   const lockedNow = liveOn ? !live.unlocked : locked;
   const barChips = (
@@ -553,8 +569,11 @@ export function ShortlistScreen(p: ShortlistProps) {
       {tripOpen && (
         <TripSheet
           v={tripValues}
-          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onWho: p.onWho, onBandPill: p.onBandPill, onPickHome: p.onPickHome, onClearHome: p.onClearHome, onMaxHours: p.onMaxHours, onNeedHome: p.onNeedHome }}
+          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onLength: p.onLength, onContinents: p.onContinents, onWho: p.onWho, onBandPill: p.onBandPill, onMaxHours: p.onMaxHours, onNeedHome: p.onNeedHome }}
           placeCount={limited.kept.length}
+          adjust={adjust}
+          names={placeNames}
+          inScope={inViewIds}
           onClose={() => setTripOpen(false)}
         />
       )}
@@ -606,11 +625,11 @@ export function ShortlistScreen(p: ShortlistProps) {
         <Sheet onClose={() => setSheet(null)}>
           <h3>Your limits</h3>
           <div className="ob2-lbl">Flying from</div>
-          <HomePicker home={p.home} onPick={p.onPickHome} onClear={p.onClearHome} />
+          <HomeLocation {...p.loc} />
           <div className="ob2-lbl">Longest flight</div>
           <div className="ob2-chips">
             {settings.flightHourLimits.map((h) => (
-              <button key={h} type="button" className={`ob2-chip ${p.maxHours === h ? 'on' : ''}`} aria-pressed={p.maxHours === h} onClick={() => (p.home ? p.onMaxHours(h) : p.onNeedHome())}>
+              <button key={h} type="button" className={`ob2-chip ${p.maxHours === h ? 'on' : ''}`} aria-pressed={p.maxHours === h} onClick={() => (origin ? p.onMaxHours(h) : p.onNeedHome())}>
                 {h === 0 ? 'No limit' : `${h} hours`}
               </button>
             ))}

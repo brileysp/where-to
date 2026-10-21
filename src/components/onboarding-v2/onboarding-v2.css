@@ -404,3 +404,35 @@
 .lq-tp.on { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
 .lq-lbl { font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin: 12px 0 6px; }
 .lq-tripft { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0 calc(16px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--border); }
+
+/* ---- Home location, continents map, trip length ---- */
+.ob2-home { display: flex; flex-direction: column; gap: 8px; }
+.ob2-sel { width: 100%; background: var(--bg-card); border: 1.5px solid var(--border); border-radius: 12px; padding: 11px 12px; color: var(--text); font: inherit; font-size: 14.5px; }
+.ob2-sel:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.lq-cont { --rg-na: #4a7bd0; --rg-csa: #2f9e8f; --rg-eu: #8a63c8; --rg-af: #d49a1f; --rg-as: #d8604a; --rg-oc: #cc5f9e; --rg-off: #d5d1c9; }
+@media (prefers-color-scheme: dark) { .lq-cont { --rg-na: #6c9bf0; --rg-csa: #4cc2b1; --rg-eu: #a688e6; --rg-af: #e8b33f; --rg-as: #f0836c; --rg-oc: #e682bb; --rg-off: #323d41; } }
+.lq-mapbox { width: min(100%, 250px); margin: 2px auto 0; }
+.lq-mapbox svg { width: 100%; display: block; }
+.lq-mapbox path { cursor: pointer; transition: fill 0.2s, stroke 0.2s; }
+.lq-mapph { aspect-ratio: 720 / 284; }
+.lq-tp.reg { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; font-size: 13px; }
+.lq-tp.reg i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.lq-rules { margin-top: 8px; }
+.lq-rules summary { font-size: 12.5px; color: var(--text-dim); cursor: pointer; }
+.lq-rules ul { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--text-dim); }
+.lq-rules li { margin: 0 0 3px; }
+.lq-tpsub { display: block; font-size: 11px; color: var(--text-faint); font-weight: 500; }
+.ob2-opill .lq-tpsub { color: inherit; opacity: 0.75; }
+.lq-fit { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; margin-top: 10px; background: var(--bg-elevated); }
+.lq-fit .t { font-size: 12.5px; color: var(--text-dim); margin-bottom: 6px; }
+.lq-fit .t b { color: var(--text); }
+.lq-fit .bars { display: flex; height: 9px; border-radius: 5px; overflow: hidden; gap: 2px; margin: 6px 0 8px; }
+.lq-fit .bars i { display: block; height: 100%; }
+.lq-fit .b-ok { background: var(--good); }
+.lq-fit .b-st { background: var(--okay); }
+.lq-fit .b-far { background: var(--poor); }
+.lq-fit .tiers { display: grid; gap: 5px; font-size: 12.5px; }
+.lq-fit .tier { display: flex; gap: 8px; align-items: baseline; }
+.lq-fit .tier i { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(1px); }
+.lq-fit .tier span { color: var(--text-dim); }
+.lq-fit .tier b { color: var(--text); font-variant-numeric: tabular-nums; }

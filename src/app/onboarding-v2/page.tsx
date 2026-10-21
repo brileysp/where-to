@@ -8,6 +8,7 @@ import { loadFirstName } from '@/app/actions';
 import { loadTravelProfile } from './actions';
 import { loadFeatures } from '@/lib/featuresServer';
 import { getMatchSetups } from '@/lib/db/queries/match-data';
+import { regionsForPlaces } from '@/lib/onboarding/regions';
 import { loadMatchSettings } from '@/lib/scoring/matchSettingsServer';
 import { onboardingV2Allowed } from '@/lib/features';
 
@@ -38,5 +39,5 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
     getMatchSetups(),
     loadMatchSettings().then((m) => m.settings),
   ]);
-  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh }} />;
+  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings, regions: regionsForPlaces(coords) }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh }} />;
 }

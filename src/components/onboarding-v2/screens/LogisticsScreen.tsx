@@ -1,11 +1,11 @@
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
-import { HomePicker } from '../HomePicker';
+import { HomeLocation, type HomeBundle } from '../HomeLocation';
 
 /**
  * Getting there (spec 4.3), optional. A flight limit is firm: places that do not fit are set aside. The nonstop switch is not in the first
  * version (no real route data), as decided.
  */
-export function LogisticsScreen({ home, maxHours, onPick, onClear, onMaxHours, onNeedHome, onContinue }: { home: string | null; maxHours: number; onPick: (code: string) => void; onClear: () => void; onMaxHours: (h: number) => void; onNeedHome: () => void; onContinue: () => void }) {
+export function LogisticsScreen({ loc, hasOrigin, maxHours, onMaxHours, onNeedHome, onContinue }: { loc: HomeBundle; hasOrigin: boolean; maxHours: number; onMaxHours: (h: number) => void; onNeedHome: () => void; onContinue: () => void }) {
   return (
     <>
       <div className="ob2-scr">
@@ -13,13 +13,13 @@ export function LogisticsScreen({ home, maxHours, onPick, onClear, onMaxHours, o
         <p className="ob2-sub">Optional. If flights are not a limit, skip this. When you do set one, it is firm: places that do not fit are set aside, not just ranked lower.</p>
         <div className="ob2-card2">
           <h3>Flying from</h3>
-          <HomePicker home={home} onPick={onPick} onClear={onClear} />
+          <HomeLocation {...loc} />
         </div>
         <div className="ob2-card2">
           <h3>Longest flight I would take</h3>
           <div className="ob2-otp">
             {getOnboardingSettings().flightHourLimits.map((h) => (
-              <button key={h} type="button" className={`ob2-opill ${maxHours === h ? 'on' : ''}`} aria-pressed={maxHours === h} onClick={() => (home ? onMaxHours(h) : onNeedHome())}>
+              <button key={h} type="button" className={`ob2-opill ${maxHours === h ? 'on' : ''}`} aria-pressed={maxHours === h} onClick={() => (hasOrigin ? onMaxHours(h) : onNeedHome())}>
                 {h === 0 ? 'No limit' : `${h} hours`}
               </button>
             ))}

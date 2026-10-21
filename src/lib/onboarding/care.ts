@@ -22,6 +22,10 @@ export const toggleInList = (list: string[], key: string): string[] => (list.inc
 
 export type Bands = Record<string, string[]>;
 export const bandDims = () => BAND_DIMENSIONS;
+
+/** The names the trip screens show for the band groups: weather is called Climate there, and budget is Budget & comfort. */
+const BAND_TITLES: Record<string, string> = { budget: 'Budget & comfort', weather: 'Climate' };
+export const bandTitle = (d: { key: string; label: string }): string => BAND_TITLES[d.key] ?? d.label;
 const bandKeys = (dim: string): string[] => BAND_DIMENSIONS.find((d) => d.key === dim)?.bands.map((b) => b.key) ?? [];
 
 /** Nothing narrowed: every band of the dimension is selected. */

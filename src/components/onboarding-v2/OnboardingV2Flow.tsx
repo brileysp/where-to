@@ -20,6 +20,11 @@ import { dnaRows, dnaTags, keepOn } from '@/lib/onboarding/dna-rows';
 import { interestByKey } from '@/lib/onboarding/interests';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
 import { allBands, clearCare, setCareFirm, toggleBandChoice, toggleBandPill, toggleCareOption, toggleInList, resetBand, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
+import { useUnits } from '@/components/UnitsProvider';
+import { ELSEWHERE, type HomeBundle } from './HomeLocation';
+import { HOME_COUNTRIES, resolveOrigin } from '@/lib/onboarding/origin';
+import type { TripLength } from '@/lib/onboarding/trip-length';
+import type { RegionKey } from '@/lib/onboarding/regions';
 import { TopBar } from './TopBar';
 import { Toast } from './Toast';
 import { TopLimitModal } from './TopLimitModal';
@@ -78,7 +83,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [care, setCare] = useState<CareState>(start?.care ?? {});
   const [careOpen, setCareOpen] = useState(false);
   const [careTiles, setCareTiles] = useState<string[]>([]);
+  const { country: unitsCountry } = useUnits();
   const [home, setHome] = useState<string | null>(start?.home ?? null);
+  // Where you live: the saved country, else the home country already set for units, if it is one we list.
+  const [homeCountry, setHomeCountry] = useState<string | null>(start?.homeCountry ?? (HOME_COUNTRIES.some((c) => c[0] === unitsCountry) ? unitsCountry : null));
+  const [homeSub, setHomeSub] = useState<string | null>(start?.homeSub ?? null);
+  const [length, setLength] = useState<TripLength | null>(start?.length ?? null);
+  const [continents, setContinents] = useState<RegionKey[]>(start?.continents ?? []);
   const [maxHours, setMaxHours] = useState(start?.maxHours ?? 0);
   const [toast, setToast] = useState<string | null>(null);
   const [vibes, setVibes] = useState<string[]>(start?.vibes ?? []);
@@ -141,6 +152,9 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setCareOpen(false);
     setCareTiles([]);
     setHome(null);
+    setHomeSub(null);
+    setLength(null);
+    setContinents([]);
     setMaxHours(0);
     setToast(null);
     setVibes([]);
@@ -206,7 +220,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   /** What would be saved right now, and the save itself. */
   function choices(): FlowChoices {
-    return { levels, subs, qa, bands, care, who, home, vibes, answers: [...swipes, ...sharpen], month, week, maxHours };
+    return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, maxHours };
   }
   async function persist(): Promise<boolean> {
     const r = await saveTravelProfile(toTravelProfile(choices(), keep, mode === 'dna'));
@@ -234,6 +248,10 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setBands(kept.bands);
     setCare(kept.care);
     setHome(kept.home);
+    setHomeCountry(kept.homeCountry ?? null);
+    setHomeSub(kept.homeSub ?? null);
+    setLength(kept.length ?? null);
+    setContinents(kept.continents ?? []);
     setVibes(kept.vibes);
     setSwipes(kept.answers);
     setSharpen([]);
@@ -262,7 +280,24 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       go(f);
     } else onBack();
   }
-  const rowCtx = { dnaMode: mode === 'dna', bands, care, who, home, vibes, answerCount: input.answers.length, month, week, maxHours };
+  const rowCtx = { dnaMode: mode === 'dna', bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answerCount: input.answers.length, month, week, length, continents, maxHours };
+  const origin = resolveOrigin({ airport: home, country: homeCountry === ELSEWHERE ? null : homeCountry, sub: homeSub });
+  const loc: HomeBundle = {
+    country: homeCountry,
+    sub: homeSub,
+    airport: home,
+    onCountry: (c) => {
+      setHomeCountry(c);
+      setHomeSub(null);
+      setHome(null);
+    },
+    onSub: (c) => {
+      setHomeSub(c || null);
+      setHome(null);
+    },
+    onPickAirport: setHome,
+    onClearAirport: () => setHome(null),
+  };
   async function onSeeAll(weights: Record<string, number>) {
     // The full results page reads what is saved, so the whole profile goes first (it also records the Travel DNA the page shows), then the
     // exact weights and month this shortlist was ranked with, so the list there opens the same way.
@@ -309,34 +344,18 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
         ) : screen === 'rank' ? (
           <RankScreen levels={levels} chips={chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
         ) : screen === 'when' ? (
-          <WhenScreen month={month} week={week} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onContinue={onContinue} />
+          <WhenScreen month={month} week={week} length={length} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onLength={setLength} onContinue={onContinue} />
         ) : screen === 'logistics' ? (
-          <LogisticsScreen
-            home={home}
-            maxHours={maxHours}
-            onPick={setHome}
-            onClear={() => {
-              setHome(null);
-              setMaxHours(0);
-            }}
-            onMaxHours={setMaxHours}
-            onNeedHome={() => setToast('Choose your home airport first')}
-            onContinue={onContinue}
-          />
+          <LogisticsScreen loc={loc} hasOrigin={!!origin} maxHours={maxHours} onMaxHours={setMaxHours} onNeedHome={() => setToast('Choose where you live first')} onContinue={onContinue} />
         ) : screen === 'essentials' ? (
-          <EssentialsScreen who={who} bands={bands} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} careProps={careProps('trip')} onContinue={onContinue} />
+          <EssentialsScreen who={who} bands={bands} continents={continents} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
         ) : screen === 'dnabasics' ? (
           <DnaBasicsScreen
             who={who}
             bands={bands}
-            home={home}
+            loc={loc}
             onWho={(k) => setWho((w) => toggleInList(w, k))}
             onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
-            onPick={setHome}
-            onClear={() => {
-              setHome(null);
-              setMaxHours(0);
-            }}
             careProps={careProps('dna')}
             onContinue={onContinue}
           />
@@ -374,13 +393,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
             onMonth={setMonth}
             onWeek={setWeek}
-            onPickHome={setHome}
-            onClearHome={() => {
-              setHome(null);
-              setMaxHours(0);
-            }}
+            loc={loc}
+            length={length}
+            continents={continents}
+            onLength={setLength}
+            onContinents={setContinents}
             onMaxHours={setMaxHours}
-            onNeedHome={() => setToast('Choose your home airport first')}
+            onNeedHome={() => setToast('Choose where you live first')}
             onSeeAll={onSeeAll}
             onSave={openDna}
             onDna={openDna}
@@ -417,13 +436,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onCareOption={(item, o) => setCare((c) => toggleCareOption(c, item, o, true))}
             onCareFirm={(k, f) => setCare((c) => setCareFirm(c, k, f))}
             onWho={(k) => setWho((w) => toggleInList(w, k))}
-            onPickHome={setHome}
-            onClearHome={() => {
-              setHome(null);
-              setMaxHours(0);
-            }}
+            loc={loc}
+            length={length}
+            continents={continents}
+            onLength={setLength}
+            onContinents={setContinents}
             onMaxHours={setMaxHours}
-            onNeedHome={() => setToast('Choose your home airport first')}
+            onNeedHome={() => setToast('Choose where you live first')}
             onVibe={(k) => setVibes((v) => toggleInList(v, k))}
             onMonth={setMonth}
             onSave={onDnaSave}

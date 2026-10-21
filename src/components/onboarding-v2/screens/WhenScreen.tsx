@@ -1,8 +1,11 @@
+import { LengthPicker } from '../live/LengthPicker';
+import type { TripLength } from '@/lib/onboarding/trip-length';
+
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const WEEKS = ['Any week', 'Week 1', 'Week 2', 'Week 3', 'Week 4'];
 
 /** When (spec 4.2): a month, and for a specific window also the week. There is no "I am flexible" option. */
-export function WhenScreen({ month, week, windowMode, onMonth, onWeek, onContinue }: { month: number | null; week: number; windowMode: boolean; onMonth: (m: number) => void; onWeek: (w: number) => void; onContinue: () => void }) {
+export function WhenScreen({ month, week, length, windowMode, onMonth, onWeek, onLength, onContinue }: { month: number | null; week: number; length: TripLength | null; windowMode: boolean; onMonth: (m: number) => void; onWeek: (w: number) => void; onLength: (l: TripLength | null) => void; onContinue: () => void }) {
   return (
     <>
       <div className="ob2-scr">
@@ -26,6 +29,11 @@ export function WhenScreen({ month, week, windowMode, onMonth, onWeek, onContinu
               ))}
             </div>
           )}
+        </div>
+        <div className="ob2-card2">
+          <h3>How long?</h3>
+          <p className="ob2-sub small">Optional. Places far from home rank lower when the flights would eat most of a short trip.</p>
+          <LengthPicker value={length} onChange={onLength} variant="ob2" />
         </div>
       </div>
       <div className="ob2-foot">

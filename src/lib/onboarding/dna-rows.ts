@@ -1,5 +1,5 @@
 import { airportByCode } from './airports';
-import { CARE_ITEMS, COMPANIONS, careRowSummary, isNarrowed, bandDims, type Bands, type CareState } from './care';
+import { CARE_ITEMS, COMPANIONS, bandTitle, careRowSummary, isNarrowed, bandDims, type Bands, type CareState } from './care';
 import { VIBES } from './vibes';
 import { originLabel } from './origin';
 import { allRegions, REGION_KEYS, REGION_LABELS, type RegionKey } from './regions';
@@ -71,7 +71,7 @@ export function dnaRows(c: RowContext): DnaRow[] {
       // Weather is a Travel DNA default only in the Travel DNA path; in a trip it stays with the trip.
       def: d.key === 'weather' ? c.dnaMode : true,
       icon: d.icon,
-      title: d.label,
+      title: bandTitle(d),
       summary: isNarrowed(c.bands, d.key) ? c.bands[d.key].map((b) => bandLabel(d.key, b)).join(', ') : 'No preference',
     });
   }
