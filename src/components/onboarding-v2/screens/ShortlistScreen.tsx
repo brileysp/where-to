@@ -399,7 +399,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           <>
             <QuestionBox ctx={boxCtx} />
             {barChips}
-            <div className="lq-listhead">
+            <div className="lq-listhead res-scope">
             <div className="lq-lh">
               <b>{live.listShown ? 'Your places' : 'Your top 5'}</b>
               <span>{live.listShown ? `ranked for you · ${limited.kept.length} places` : 'ranked for you'}</span>
@@ -472,7 +472,7 @@ export function ShortlistScreen(p: ShortlistProps) {
             <SharpenCard question={question} onAnswer={(t) => question && answer(question.card, t)} onSkip={() => question && p.onSharpenSkip(question.card)} />
           </>
         )}
-        <div ref={listWrapRef} style={{ position: 'relative' }} className={`ob2-tz ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
+        <div ref={listWrapRef} style={{ position: 'relative' }} className={`ob2-tz res-scope ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
           {toolsOn && <div className="resort-cursor" aria-hidden style={{ left: demo.cursor.left, top: demo.cursor.top, opacity: demo.cursor.visible ? 1 : 0, transform: `translate(-50%, -50%) scale(${demo.cursor.pressed ? 0.65 : 1})` }} />}
           <ResultsList
             ranked={shown}
@@ -609,7 +609,7 @@ export function ShortlistScreen(p: ShortlistProps) {
         </Sheet>
       )}
       {openEntry && (
-        <DestinationDetailSheet
+        <div className="res-scope"><DestinationDetailSheet
           key={openEntry.d.id}
           dest={openEntry.d}
           weights={weights}
@@ -626,9 +626,9 @@ export function ShortlistScreen(p: ShortlistProps) {
           favorited={!!favorited[openEntry.d.id]}
           onToggleFavorited={() => setFavorited((f) => ({ ...f, [openEntry.d.id]: !f[openEntry.d.id] }))}
           onClose={() => setOpenId(null)}
-        />
+        /></div>
       )}
-      {showStamps && <StampsSheet destinations={data.destinations} visited={visited} onToggleVisited={(id) => setVisited((v) => ({ ...v, [id]: !v[id] }))} onClose={() => setShowStamps(false)} />}
+      {showStamps && <div className="res-scope"><StampsSheet destinations={data.destinations} visited={visited} onToggleVisited={(id) => setVisited((v) => ({ ...v, [id]: !v[id] }))} onClose={() => setShowStamps(false)} /></div>}
       {liveOn && (
         <div className={`lq-pop${live.pop.on ? ' show' : ''}`} role="status" aria-live="polite">
           {OPEN_LOCK}

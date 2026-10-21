@@ -14,7 +14,11 @@
   .ob2 { --ob-on-accent: #ffffff; }
 }
 .ob2 * { box-sizing: border-box; }
-.ob2 button { font: inherit; color: inherit; cursor: pointer; }
+/* The results page's own components (cards, chips, sheets) sit inside .res-scope and keep their own button fonts, as on the results page. */
+.ob2 button:where(:not(.res-scope *)) { font: inherit; color: inherit; cursor: pointer; }
+.ob2 .res-scope button, .ob2 .res-scope input { font-family: inherit; }
+.ob2 .res-scope button { cursor: pointer; }
+.ob2 .lq-teaser button { font-family: inherit; }
 .ob2 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .ob2-phone {
   width: 100%;
@@ -353,7 +357,6 @@
 .lq-teaser .tt b { display: block; font-size: 15px; }
 .lq-teaser .tt span { font-size: 12.5px; color: var(--text-dim); line-height: 1.4; display: block; margin-top: 2px; }
 .lq-demo { position: relative; }
-.lq-demo .card-region { display: none; }
 .lq-tf { display: flex; align-items: center; justify-content: space-between; }
 .lq-finger { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #1b1d1230; border: 2px solid var(--text); z-index: 60; transition: left 0.55s cubic-bezier(0.4, 0.1, 0.2, 1), top 0.55s cubic-bezier(0.4, 0.1, 0.2, 1); pointer-events: none; }
 .lq-finger[hidden] { display: none; }
