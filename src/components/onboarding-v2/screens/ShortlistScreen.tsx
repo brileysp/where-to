@@ -193,6 +193,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   const listWrapRef = useRef<HTMLDivElement>(null);
   const chipSliders = useMemo(() => topInterestChips(weights), [weights]);
   const toolsOn = liveOn && live.listShown;
+  const matchFactors = match.factors;
   const shown = useMemo(() => {
     if (!toolsOn) return shownBase;
     let list = shownBase;
@@ -201,12 +202,12 @@ export function ShortlistScreen(p: ShortlistProps) {
     if (pinnedChip) {
       const monthIdx = rankingMonth(p.month) - 1;
       list = list
-        .map((r) => ({ d: r.d, s: (r.d.monthly[pinnedChip]?.[monthIdx] ?? 0) * (match.factors[r.d.id]?.[pinnedChip] ?? 1), overall: r.s }))
+        .map((r) => ({ d: r.d, s: (r.d.monthly[pinnedChip]?.[monthIdx] ?? 0) * (matchFactors[r.d.id]?.[pinnedChip] ?? 1), overall: r.s }))
         .sort((a, b) => b.s - a.s || b.overall - a.overall)
         .map(({ d, s }) => ({ d, s }));
     }
     return list;
-  }, [toolsOn, shownBase, hideVisited, showWishlistOnly, visited, favorited, pinnedChip, p.month, match.factors]);
+  }, [toolsOn, shownBase, hideVisited, showWishlistOnly, visited, favorited, pinnedChip, p.month, matchFactors]);
   const visitedCount = Object.values(visited).filter(Boolean).length;
   const favoritedCount = Object.values(favorited).filter(Boolean).length;
 
