@@ -92,3 +92,56 @@ describe('reading a saved profile safely', () => {
     expect(p.maxHours).toBe(0);
   });
 });
+
+describe('where you live, how long, and which continents', () => {
+  const trip: FlowChoices = { ...choices, homeCountry: 'US', homeSub: 'IL', length: '1w', continents: ['eu', 'af'] };
+  it('keeps where you live by default, and the length and continents with the dates', () => {
+    const p = toTravelProfile(trip, {}, false);
+    expect(p.homeCountry).toBe('US');
+    expect(p.homeSub).toBe('IL');
+    expect(p.length).toBeNull();
+    expect(p.continents).toEqual([]);
+    const kept = toTravelProfile(trip, { when: true }, false);
+    expect(kept.length).toBe('1w');
+    expect(kept.continents).toEqual(['eu', 'af']);
+  });
+  it('saves "all continents" as an empty list', () => {
+    const all = toTravelProfile({ ...trip, continents: ['na', 'csa', 'eu', 'af', 'as', 'oc'] }, { when: true }, false);
+    expect(all.continents).toEqual([]);
+  });
+  it('can be switched to this trip only', () => {
+    const p = toTravelProfile(trip, { origin: false }, false);
+    expect(p.homeCountry).toBeNull();
+    expect(p.homeSub).toBeNull();
+  });
+  it('round trips through the stored copy', () => {
+    const saved = toTravelProfile(trip, { when: true }, false);
+    const back = parseTravelProfile(JSON.parse(JSON.stringify(saved)))!;
+    expect(back.homeCountry).toBe('US');
+    expect(back.homeSub).toBe('IL');
+    expect(back.length).toBe('1w');
+    expect(back.continents).toEqual(['eu', 'af']);
+    const choicesBack = fromTravelProfile(back, []);
+    expect(choicesBack.length).toBe('1w');
+    expect(choicesBack.continents).toEqual(['eu', 'af']);
+    expect(choicesBack.homeSub).toBe('IL');
+  });
+  it('cleans anything odd from storage or the browser', () => {
+    const odd = parseTravelProfile({ v: 1, levels: {}, homeCountry: 'zz', homeSub: 'IL', length: 'forever', continents: ['eu', 'mars', 7] })!;
+    expect(odd.homeCountry).toBeNull();
+    expect(odd.homeSub).toBeNull();
+    expect(odd.length).toBeNull();
+    expect(odd.continents).toEqual(['eu']);
+    const noSub = parseTravelProfile({ v: 1, levels: {}, homeCountry: 'GB', homeSub: 'IL' })!;
+    expect(noSub.homeCountry).toBe('GB');
+    expect(noSub.homeSub).toBeNull();
+    const badState = parseTravelProfile({ v: 1, levels: {}, homeCountry: 'CA', homeSub: 'TX' })!;
+    expect(badState.homeSub).toBeNull();
+  });
+  it('profiles saved before these settings existed still load', () => {
+    const old = parseTravelProfile({ v: 1, levels: { hiking: 'top' }, home: 'SFO' })!;
+    expect(old.homeCountry).toBeNull();
+    expect(old.length).toBeNull();
+    expect(old.continents).toEqual([]);
+  });
+});

@@ -10,8 +10,8 @@ import { getOnboardingSettings } from './settings';
 export const rankingMonth = (month: number | null): number => (month == null ? new Date().getMonth() + 1 : month + 1);
 
 /** Every place the traveler may see (specialist places they have not unlocked are left out), best first. */
-export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>, factors?: InterestFactors): RankedDestination[] {
-  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands, undefined, factors).filter((r) => isVisibleForWeights(r.d, weights));
+export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>, factors?: InterestFactors, placeFactors?: Record<string, number>): RankedDestination[] {
+  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands, undefined, factors, placeFactors).filter((r) => isVisibleForWeights(r.d, weights));
 }
 
 export interface SetAside {
@@ -29,7 +29,12 @@ export interface PlaceCoords {
  * with no coordinates on file can't be judged, so it stays. No home or no limit sets nothing aside.
  */
 export function applyFlightLimit(ranked: RankedDestination[], home: string | null, maxHours: number, coords: Record<string, PlaceCoords>): { kept: RankedDestination[]; aside: SetAside[] } {
-  const from = airportByCode(home);
+  const a = airportByCode(home);
+  return applyFlightLimitFrom(ranked, a ? { lat: a.lat, lon: a.lon, label: a.code } : null, maxHours, coords);
+}
+
+/** The same, from any starting point: an airport, the middle of a state, a province's main city or a country's main city. */
+export function applyFlightLimitFrom(ranked: RankedDestination[], from: { lat: number; lon: number; label: string } | null, maxHours: number, coords: Record<string, PlaceCoords>): { kept: RankedDestination[]; aside: SetAside[] } {
   if (!from || !maxHours) return { kept: ranked, aside: [] };
   const kept: RankedDestination[] = [];
   const aside: SetAside[] = [];
@@ -40,7 +45,7 @@ export function applyFlightLimit(ranked: RankedDestination[], home: string | nul
       continue;
     }
     const hours = estimateFlightHours(milesBetween(from, c));
-    if (hours > maxHours) aside.push({ d: r.d, why: `About ${hours} hours from ${from.code}, over your ${maxHours}-hour limit` });
+    if (hours > maxHours) aside.push({ d: r.d, why: `About ${hours} hours from ${from.label}, over your ${maxHours}-hour limit` });
     else kept.push(r);
   }
   return { kept, aside };

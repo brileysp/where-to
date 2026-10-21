@@ -784,9 +784,11 @@ export function computeRankedDestinations(
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
   factors?: InterestFactors,
+  /** What each whole place keeps of its final score (the trip length: flights that eat the trip). Missing = 1. */
+  placeFactors?: Record<string, number>,
 ): RankedDestination[] {
   const monthIdx = month - 1;
   return [...destinations]
-    .map((d) => ({ d, s: scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors) }))
+    .map((d) => ({ d, s: scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors) * (placeFactors?.[d.id] ?? 1) }))
     .sort((a, b) => b.s - a.s);
 }
