@@ -206,7 +206,7 @@ export function QuestionPanel({ ctx, item, measure }: { ctx: BoxContext; item: L
       </div>
       <div className="lq-foot">
         <div>{(measure || f.j > 0) && <button type="button" className="lq-link" onClick={f.back}>‹ Back</button>}</div>
-        <span className="fm">{measure ? 'Reshuffles ~3 of your top 5' : ctx.impactText(item)}</span>
+        <span className="fm">{measure ? 'Reshuffles ~3 of your top 5' : item.q.mapped ? ctx.impactText(item) : 'No effect on the list yet'}</span>
         <div className="fr">
           <button type="button" className="lq-link strong" hidden={!(multi && picks.length >= 1)} onClick={() => { if (!busy.current && picks.length) { busy.current = true; f.answer(item, picks.slice()); } }}>Next ›</button>
           <button type="button" className="lq-link" onClick={() => { if (!busy.current && !measure) { busy.current = true; f.skip(item); } }}>Skip</button>

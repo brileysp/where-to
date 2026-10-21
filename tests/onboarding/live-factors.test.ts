@@ -9,7 +9,7 @@ const setups: MatchSetups = {
       chips: [{ key: 'wrecks', label: 'Wrecks', live: true }, { key: 'reefs', label: 'Reefs', live: true }],
       questions: [{ key: 'q1', kind: 'limit', whenChips: [], missMessage: 'Water too cold' }],
     },
-    questions: [{ key: 'q1', text: 'Cold?', options: ['Warm only', 'Any'], maxPicks: 1, kind: 'limit', whenChips: [], order: 0 }],
+    questions: [{ key: 'q1', text: 'Cold?', options: ['Warm only', 'Any'], maxPicks: 1, kind: 'limit', whenChips: [], order: 0, mapped: true }],
   },
 };
 const fits = {

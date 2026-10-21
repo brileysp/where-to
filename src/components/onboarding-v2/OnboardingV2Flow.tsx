@@ -6,7 +6,6 @@ import { saveUserPreferences } from '@/app/actions';
 import { allBandsSelected } from '@/lib/scoring/constants';
 import { saveTravelProfile } from '@/app/onboarding-v2/actions';
 import { fromTravelProfile, toTravelProfile, type FlowChoices, type InterestAnswers, type TravelProfile } from '@/lib/onboarding/profile';
-import { gateItems } from '@/lib/onboarding/live-questions';
 import { chooseNextCard } from '@/lib/dna/selection';
 import type { DnaCard, SwipeType } from '@/lib/dna/types';
 import { dnaStateFor, type Answer, type ProfileInput } from '@/lib/onboarding/bridge';
@@ -280,8 +279,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setTopPopup(r.blocked);
   }
 
-  // When the top interests have questions to ask on the results screen, the chips are ticked there too (after the first questions), not here.
-  const liveQuestionsApply = useMemo(() => gateItems(orderedByLevel(levels).filter((k) => levels[k] === 'top'), data.setups).length > 0, [levels, data.setups]);
   const hasBack = backTarget(mode, doors, screen).kind !== 'none';
 
   return (
@@ -308,7 +305,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onContinue={onContinue}
           />
         ) : screen === 'rank' ? (
-          <RankScreen levels={levels} chips={liveQuestionsApply ? {} : chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
+          <RankScreen levels={levels} chips={chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
         ) : screen === 'when' ? (
           <WhenScreen month={month} week={week} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onContinue={onContinue} />
         ) : screen === 'logistics' ? (

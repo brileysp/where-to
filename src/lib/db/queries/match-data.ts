@@ -7,8 +7,7 @@ import type { MatchChipDef, MatchQuestionDef } from '@/lib/scoring/interestMatch
 import type { MatchSetups } from '@/lib/onboarding/live-types';
 
 /**
- * What the new onboarding asks and how places answer it (docs/matching-model.md). Only what the owner approved is ever read: live chips, and
- * questions that are approved AND mapped to columns (a question that changes nothing is never asked). Proposed links are ignored.
+ * What the new onboarding asks and how places answer it (docs/matching-model.md). Only what the owner approved is ever read: live chips and approved questions. Proposed links are ignored.
  */
 
 export type { OnboardingQuestion, InterestMatchSetup, MatchSetups } from '@/lib/onboarding/live-types';
@@ -22,11 +21,11 @@ async function loadRows() {
   return { chipRows, questionRows, linkRows };
 }
 
-/** Interests that have at least one approved, mapped question, each with its live chips and those questions. */
+/** Interests that have at least one approved question, each with its live chips and those questions. A question not yet tied to place data is still asked; it just changes nothing (`mapped` says which). */
 export async function getMatchSetups(): Promise<MatchSetups> {
   const { chipRows, questionRows, linkRows } = await loadRows();
   const out: MatchSetups = {};
-  const askable = questionRows.filter((q) => !!q.approvedAt && !!q.fitRule && q.options.length > 0);
+  const askable = questionRows.filter((q) => !!q.approvedAt && q.options.length > 0);
   for (const key of [...new Set(askable.map((q) => q.interestKey))]) {
     const chips = chipRows.filter((c) => c.interestKey === key).sort((a, b) => a.sortOrder - b.sortOrder);
     const questions = askable
@@ -40,6 +39,7 @@ export async function getMatchSetups(): Promise<MatchSetups> {
         kind: q.kind,
         whenChips: linkRows.filter((l) => l.interestKey === key && l.questionKey === q.questionKey).map((l) => l.chipKey).sort(),
         order: q.sortOrder,
+        mapped: !!q.fitRule,
         missMessage: q.missMessage,
       }));
     out[key] = {

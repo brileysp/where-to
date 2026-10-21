@@ -12,6 +12,8 @@ export interface OnboardingQuestion {
   /** Chips (same interest) that open the question; empty = asked of everyone who picks the interest. */
   whenChips: string[];
   order: number;
+  /** True when the answers are tied to place data, so the answer changes the list. False = asked anyway, changes nothing yet. */
+  mapped: boolean;
 }
 
 export interface InterestMatchSetup {

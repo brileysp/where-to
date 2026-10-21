@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { barPoints, barTotal, BAR_CAPS, deeperItems, dnaPercent, firstUnansweredGate, gateItems, gatePercent, newItems, qid, toUnlock, type BarInput } from '@/lib/onboarding/live-questions';
 import type { MatchSetups, OnboardingQuestion } from '@/lib/onboarding/live-types';
 
-const q = (key: string, whenChips: string[] = []): OnboardingQuestion => ({ key, text: `Question ${key}`, options: ['A', 'B', 'C'], maxPicks: 1, kind: 'lean', whenChips, order: 0 });
+const q = (key: string, whenChips: string[] = []): OnboardingQuestion => ({ key, text: `Question ${key}`, options: ['A', 'B', 'C'], maxPicks: 1, kind: 'lean', whenChips, order: 0, mapped: true });
 const setup = (questions: OnboardingQuestion[], chips: string[]): MatchSetups[string] => ({
   content: { chips: chips.map((key) => ({ key, label: key, live: true })), questions: questions.map((x) => ({ key: x.key, kind: x.kind, whenChips: x.whenChips, missMessage: '' })) },
   questions,
