@@ -10,6 +10,7 @@ const TABS = [
   { href: '/admin/destinations/cost-items', label: 'Cost Items' },
   { href: '/admin/destinations/seasonal-flags', label: 'Seasonal Flags' },
   { href: '/admin/destinations/advisories', label: 'Advisories' },
+  { href: '/admin/destinations/matching', label: 'Matching' },
   { href: '/admin/destinations/todo', label: 'To do' },
 ];
 

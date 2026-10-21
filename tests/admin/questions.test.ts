@@ -85,4 +85,14 @@ describe('question actions', () => {
     const approved = await a.setQuestionApproval('scenicLandscapes', q.question.key, true);
     expect(approved.ok && approved.question.whenChips).toEqual(['photo']);
   });
+
+  it('saves the reason-chip message without taking back the approval', async () => {
+    const q = await a.createQuestion('surfing');
+    if (!q.ok) throw new Error('create failed');
+    await a.setQuestionApproval('surfing', q.question.key, true);
+    const r = await a.updateQuestion('surfing', q.question.key, { missMessage: 'Water colder than your limit' });
+    expect(r.ok && r.question.missMessage).toBe('Water colder than your limit');
+    expect(r.ok && r.approvalCleared).toBe(false);
+    expect((await a.updateQuestion('surfing', q.question.key, { missMessage: 'x'.repeat(61) })).ok).toBe(false);
+  });
 });

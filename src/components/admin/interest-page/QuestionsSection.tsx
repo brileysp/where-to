@@ -138,8 +138,9 @@ function QuestionEditor({ q, busy, chips, columnsToPick, onSetWhen, onSave, onAp
   const [text, setText] = useState(q.text);
   const [options, setOptions] = useState(q.options.join('\n'));
   const [note, setNote] = useState(q.note);
+  const [miss, setMiss] = useState(q.missMessage);
   const parsed = options.split('\n').map((s) => s.trim()).filter(Boolean);
-  const dirty = text.trim() !== q.text || JSON.stringify(parsed) !== JSON.stringify(q.options) || note.trim() !== q.note;
+  const dirty = text.trim() !== q.text || JSON.stringify(parsed) !== JSON.stringify(q.options) || note.trim() !== q.note || miss.trim() !== q.missMessage;
   return (
     <div className="ip-q-edit">
       <label className="ip-faint">Question</label>
@@ -181,8 +182,10 @@ function QuestionEditor({ q, busy, chips, columnsToPick, onSetWhen, onSave, onAp
       <div className="ip-faint">Changing this takes back the approval, the same as changing the wording. The last chip cannot be unticked here; choose Always instead.</div>
       <label className="ip-faint">How the answer is used (a note)</label>
       <input className="ip-ch-name" style={{ width: '100%' }} value={note} maxLength={300} onChange={(e) => setNote(e.target.value)} />
+      <label className="ip-faint">Reason chip when this answer knocks a place down, e.g. &ldquo;Water colder than your limit&rdquo; (blank = no chip)</label>
+      <input className="ip-ch-name" style={{ width: '100%' }} value={miss} maxLength={60} onChange={(e) => setMiss(e.target.value)} />
       <div className="ip-toolbar">
-        <button className="btn btn-primary" disabled={busy || !dirty} onClick={() => void onSave({ text: text.trim(), options: parsed, note: note.trim() })}>Save wording</button>
+        <button className="btn btn-primary" disabled={busy || !dirty} onClick={() => void onSave({ text: text.trim(), options: parsed, note: note.trim(), missMessage: miss.trim() })}>Save wording</button>
         {q.approvedAt && <button className="ip-link-btn" disabled={busy} onClick={() => onApprove(false)}>Take back approval</button>}
         <span className="grow" />
         <button className="ip-link-btn danger" disabled={busy} onClick={onDelete}>Delete question</button>

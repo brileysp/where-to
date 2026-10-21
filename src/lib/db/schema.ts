@@ -660,6 +660,17 @@ export const interestMeta = pgTable('interest_meta', {
 });
 
 /**
+ * Site-wide settings the owner can change in the admin without a deploy, one row per group (key 'matching' holds the personalization numbers,
+ * see src/lib/scoring/matchSettings.ts). The value holds only what was changed; anything missing uses the built-in default.
+ */
+export const appSettings = pgTable('app_settings', {
+  key: text('key').primaryKey(),
+  value: jsonb('value').notNull().default({}).$type<Record<string, number>>(),
+  updatedBy: text('updated_by').notNull().default(''),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+/**
  * Admin edits to a persona (a starting set of interest weights): its name, icon and blurb, which interests it highlights, and
  * individual weights. Only what is saved here replaces the code values in constants.ts; everything else is untouched.
  */
@@ -1007,6 +1018,8 @@ export const interestQuestions = pgTable(
     kind: text('kind').$type<InterestQuestionKind>().notNull().default('lean'),
     columns: jsonb('columns').notNull().default([]).$type<string[]>(),
     note: text('note').notNull().default(''),
+    /** Short text for the reason chip when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
+    missMessage: text('miss_message').notNull().default(''),
     approvedBy: text('approved_by').notNull().default(''),
     approvedAt: timestamp('approved_at', { withTimezone: true }),
     updatedBy: text('updated_by').notNull().default(''),
