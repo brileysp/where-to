@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ResultsList } from '@/components/results/ResultsList';
+import { InterestChip, shortInterestLabel } from '@/components/results/InterestChip';
+import { SearchBox } from '@/components/results/SearchBox';
+import { StampsSheet } from '@/components/results/StampsSheet';
+import { VisitedCounterStamp } from '@/components/results/VisitedCounterStamp';
+import { BookmarkIcon } from '@/components/results/BookmarkIcon';
+import { useResortDemo } from '@/components/results/useResortDemo';
+import { topInterestChips } from '@/lib/scoring/breakdown';
 import { DestinationDetailSheet } from '@/components/results/DestinationDetailSheet';
 import '@/components/results/results.css';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
@@ -11,7 +18,7 @@ import { dnaStateFor, weightsFor, type Answer, type ProfileInput } from '@/lib/o
 import { COMPANIONS, careCount, isNarrowed, type Bands } from '@/lib/onboarding/care';
 import { answerMessage, isShortlistLocked, questionsToUnlock } from '@/lib/onboarding/lock';
 import { pickQuestion } from '@/lib/onboarding/questions';
-import { applyFlightLimit, rankPlaces } from '@/lib/onboarding/shortlist';
+import { applyFlightLimit, rankPlaces, rankingMonth } from '@/lib/onboarding/shortlist';
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import type { FlowData } from '../FlowData';
 import { interestByKey } from '@/lib/onboarding/interests';
@@ -172,14 +179,77 @@ export function ShortlistScreen(p: ShortlistProps) {
   useEffect(() => { if (live.msg.text) p.toast(live.msg.text); }, [live.msg.n]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [visibleCount, setVisibleCount] = useState(20);
-  const shown = liveOn ? (live.listShown ? limited.kept : limited.kept.slice(0, settings.shortlistPlaces)) : limited.kept.slice(0, settings.shortlistPlaces);
+  const shownBase = liveOn && live.listShown ? limited.kept : limited.kept.slice(0, settings.shortlistPlaces);
+
+  // The results page's own tools, back on the full list: re-sort by one interest, hide visited, show saved, search, the passport.
+  const [pinnedChip, setPinnedChip] = useState<string | null>(null);
+  const [hideVisited, setHideVisited] = useState(false);
+  const [showWishlistOnly, setShowWishlistOnly] = useState(false);
+  const [showStamps, setShowStamps] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
+  const chipRowRef = useRef<HTMLDivElement>(null);
+  const chipEls = useRef<Map<string, HTMLElement>>(new Map());
+  const listWrapRef = useRef<HTMLDivElement>(null);
+  const chipSliders = useMemo(() => topInterestChips(weights), [weights]);
+  const toolsOn = liveOn && live.listShown;
+  const shown = useMemo(() => {
+    if (!toolsOn) return shownBase;
+    let list = shownBase;
+    if (hideVisited) list = list.filter((r) => !visited[r.d.id]);
+    if (showWishlistOnly) list = list.filter((r) => favorited[r.d.id]);
+    if (pinnedChip) {
+      const monthIdx = rankingMonth(p.month) - 1;
+      list = list
+        .map((r) => ({ d: r.d, s: (r.d.monthly[pinnedChip]?.[monthIdx] ?? 0) * (match.factors[r.d.id]?.[pinnedChip] ?? 1), overall: r.s }))
+        .sort((a, b) => b.s - a.s || b.overall - a.overall)
+        .map(({ d, s }) => ({ d, s }));
+    }
+    return list;
+  }, [toolsOn, shownBase, hideVisited, showWishlistOnly, visited, favorited, pinnedChip, p.month, match.factors]);
+  const visitedCount = Object.values(visited).filter(Boolean).length;
+  const favoritedCount = Object.values(favorited).filter(Boolean).length;
+
+  // First visit to the list: the re-sort walkthrough plays after the flag teaser is finished, so only one lesson is on screen at a time.
+  const demo = useResortDemo({
+    ready: toolsOn && live.fill === 'none' && live.teaser !== 'on' && !openId && shown.length > 0,
+    chipKeys: chipSliders.map((x) => x.key),
+    pinChip: setPinnedChip,
+    containerRef: listWrapRef,
+    chipRowRef,
+    chipEls,
+    cardRefs,
+    rowIds: () => shown.map((r) => r.d.id),
+  });
+  useEffect(() => {
+    if (live.teaser !== 'done') return;
+    const t = setTimeout(() => chipRowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 450);
+    return () => clearTimeout(t);
+  }, [live.teaser]);
+
+  function selectSearchResult(id: string) {
+    const idx = shown.findIndex((r) => r.d.id === id);
+    if (idx < 0) {
+      if (rankedAll.some((r) => r.d.id === id)) setOpenId(id);
+      return;
+    }
+    setVisibleCount((v) => Math.max(v, idx + 1));
+    setHighlightedId(id);
+  }
+  useEffect(() => {
+    if (!highlightedId) return;
+    const el = cardRefs.current.get(highlightedId);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const t = setTimeout(() => setHighlightedId(null), 1700);
+    return () => clearTimeout(t);
+  }, [highlightedId]);
   const teaserRef = useRef<HTMLDivElement>(null);
 
   // The unlock sequence scrolls the page: down to the new places, then to the teaser.
   useEffect(() => {
     if (live.fill !== 'hold') return;
     const t = setTimeout(() => {
-      const id = shown[3]?.d.id;
+      const id = shownBase[3]?.d.id;
       const el = id ? cardRefs.current.get(id) : null;
       if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
     }, 100);
@@ -300,7 +370,52 @@ export function ShortlistScreen(p: ShortlistProps) {
             <div className="lq-lh">
               <b>{live.listShown ? 'Your places' : 'Your top 5'}</b>
               <span>{live.listShown ? `ranked for you · ${limited.kept.length} places` : 'ranked for you'}</span>
+              {toolsOn && (
+                <button type="button" className={`results-icon-btn${searchOpen ? ' on' : ''}`} aria-label={searchOpen ? 'Close search' : 'Search destinations'} aria-expanded={searchOpen} onClick={() => setSearchOpen((o) => !o)}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.3" y2="16.3" /></svg>
+                </button>
+              )}
             </div>
+            {toolsOn && <SearchBox destinations={data.destinations} ranked={limited.kept} rankedAll={rankedAll} onSelectResult={selectSearchResult} expanded={searchOpen} />}
+            {toolsOn && (
+              <>
+                <div className={`resort-callout${demo.calloutVisible ? ' show' : ''}`} aria-hidden={!demo.calloutVisible}>
+                  <span className="resort-callout-icon">👆</span>Tap any interest to re-sort your results
+                </div>
+                <div className="quick-chip-row-wrap">
+                  <div className="quick-chip-row" ref={chipRowRef}>
+                    <InterestChip emoji="🧬" label="My Interests" active={pinnedChip === null} onClick={() => setPinnedChip(null)} />
+                    {chipSliders.map((x) => (
+                      <InterestChip
+                        key={x.key}
+                        emoji={data.emojiOverrides[x.key] ?? x.icon}
+                        label={shortInterestLabel(x.label, data.shortNames[x.key])}
+                        fullLabel={x.label}
+                        active={pinnedChip === x.key}
+                        onClick={() => setPinnedChip(x.key)}
+                        chipRef={(el) => { if (el) chipEls.current.set(x.key, el); else chipEls.current.delete(x.key); }}
+                      />
+                    ))}
+                  </div>
+                  <div className="quick-chip-row-fade" aria-hidden />
+                </div>
+                <div className="results-stats-row">
+                  <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
+                    <VisitedCounterStamp count={visitedCount} size={34} />
+                    <span className="visited-stat-label">places visited</span>
+                    <span className="visited-stat-chevron">›</span>
+                  </button>
+                  <button type="button" className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`} onClick={() => setHideVisited((v) => !v)} disabled={visitedCount === 0}>
+                    Hide visited
+                    <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
+                  </button>
+                  <button type="button" className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`} onClick={() => setShowWishlistOnly((v) => !v)} disabled={favoritedCount === 0}>
+                    Show saved
+                    <span className="filter-icon"><BookmarkIcon filled={showWishlistOnly} /></span>
+                  </button>
+                </div>
+              </>
+            )}
           </>
         ) : (
           <>
@@ -323,19 +438,20 @@ export function ShortlistScreen(p: ShortlistProps) {
             <SharpenCard question={question} onAnswer={(t) => question && answer(question.card, t)} onSkip={() => question && p.onSharpenSkip(question.card)} />
           </>
         )}
-        <div className={`ob2-tz ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
+        <div ref={listWrapRef} style={{ position: 'relative' }} className={`ob2-tz ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
+          {toolsOn && <div className="resort-cursor" aria-hidden style={{ left: demo.cursor.left, top: demo.cursor.top, opacity: demo.cursor.visible ? 1 : 0, transform: `translate(-50%, -50%) scale(${demo.cursor.pressed ? 0.65 : 1})` }} />}
           <ResultsList
             ranked={shown}
             visibleCount={liveOn && live.listShown ? visibleCount : shown.length}
             onShowMore={() => setVisibleCount((v) => v + 20)}
-            highlightedId={null}
+            highlightedId={highlightedId}
             cardRefs={cardRefs}
             visited={visited}
             favorited={favorited}
             onOpenDetail={setOpenId}
             onToggleFavorited={(id) => { setFavorited((f) => ({ ...f, [id]: !f[id] })); live.markedPlace(); }}
             onToggleVisited={(id) => { setVisited((v) => ({ ...v, [id]: !v[id] })); live.markedPlace(); }}
-            filterKey=""
+            filterKey={`${hideVisited}:${showWishlistOnly}`}
             cardsRevealed
             inserted={liveOn && live.teaser === 'on' && shown.length >= 3 ? { after: 3, node: <div ref={teaserRef}><Teaser dest={shown[0].d} score={shown[0].s} onGotIt={live.closeTeaser} /></div> } : undefined}
           />
@@ -477,6 +593,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           onClose={() => setOpenId(null)}
         />
       )}
+      {showStamps && <StampsSheet destinations={data.destinations} visited={visited} onToggleVisited={(id) => setVisited((v) => ({ ...v, [id]: !v[id] }))} onClose={() => setShowStamps(false)} />}
       {liveOn && (
         <div className={`lq-pop${live.pop.on ? ' show' : ''}`} role="status" aria-live="polite">
           {OPEN_LOCK}

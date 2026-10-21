@@ -369,3 +369,6 @@
 /* while the unlock sequence holds the new places back, they wait invisible and then rise in */
 .lq-hold-new .results-list > .card-reveal:nth-child(n + 6) { animation-play-state: paused !important; }
 .lq-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.lq-lh { gap: 10px; }
+.lq-lh span { margin-left: auto; }
+.lq-lh .results-icon-btn { flex: none; }
