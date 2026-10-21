@@ -11,6 +11,8 @@ const FIXES: Array<[string, string, string, string]> = [
   ['wildlifeViewing', 'q2', 'A balance, some waiting ok', 'A balance, some waiting is okay'],
   ['wildlifeViewing', 'q2', 'Ok with waiting or hiking for hours for one special animal', 'Okay with waiting or hiking for hours for one special animal'],
   ['fineDining', 'q3', '$300 a person or more', '$300 or more per person'],
+  ['diving', 'q3', 'Drysuit cold ok', 'Drysuit cold okay'],
+  ['surfing', 'q4', 'Thick wetsuit, boots and hood ok', 'Thick wetsuit, boots and hood okay'],
 ];
 const APPROVE: Array<[string, string]> = [['safari', 'q1'], ['religiousSites', 'q2']];
 
