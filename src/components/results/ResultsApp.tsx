@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PERSONAS, SLIDERS, allBandsSelected } from '@/lib/scoring/constants';
-import { computeRankedDestinations } from '@/lib/scoring/rank';
+import { computeRankedDestinations, type InterestFactors } from '@/lib/scoring/rank';
+import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import { isVisibleForWeights } from '@/lib/scoring/gating';
 import { topInterestChips } from '@/lib/scoring/breakdown';
 import type { ScoredDestination } from '@/lib/scoring/types';
@@ -71,9 +72,13 @@ interface Props {
   emojiOverrides: Record<string, string>;
   /** Admin-set pill names, keyed by slider key. A key with no entry uses the automatic short name. */
   shortNames: Record<string, string>;
+  /** What the traveler's chips and answers from the new onboarding keep of each place's score, by place and interest. Missing for everyone else. */
+  matchFactors?: InterestFactors;
+  /** Why: each place's reasons and matched chips, by interest. */
+  matchNotes?: Record<string, Record<string, PlaceNote>>;
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames, matchFactors, matchNotes }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -169,8 +174,8 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // Every place, scored. Search and the detail sheet read this, so a specialist place is always findable by name.
   const rankedAll = useMemo(() => {
     if (!monthChosen || !month) return [];
-    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles);
-  }, [destinations, weights, month, bands, monthChosen, selectedStyles]);
+    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles, matchFactors);
+  }, [destinations, weights, month, bands, monthChosen, selectedStyles, matchFactors]);
 
   // The list itself leaves out specialist places the traveller has not unlocked (see lib/scoring/gating.ts).
   const ranked = useMemo(() => rankedAll.filter((r) => isVisibleForWeights(r.d, weights)), [rankedAll, weights]);
@@ -193,12 +198,12 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
     if (pinnedChip && month) {
       const monthIdx = month - 1;
       list = list
-        .map((r) => ({ d: r.d, s: r.d.monthly[pinnedChip]?.[monthIdx] ?? 0, overall: r.s }))
+        .map((r) => ({ d: r.d, s: (r.d.monthly[pinnedChip]?.[monthIdx] ?? 0) * (matchFactors?.[r.d.id]?.[pinnedChip] ?? 1), overall: r.s }))
         .sort((a, b) => b.s - a.s || b.overall - a.overall)
         .map(({ d, s }) => ({ d, s }));
     }
     return list;
-  }, [ranked, hideVisited, visited, showWishlistOnly, favorited, pinnedChip, month]);
+  }, [ranked, hideVisited, visited, showWishlistOnly, favorited, pinnedChip, month, matchFactors]);
 
   const resultsShown = hasStarted && monthChosen && !!month;
 
@@ -635,6 +640,8 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
           shortNames={shortNames}
           bands={bands}
           selectedStyles={selectedStyles}
+          factors={matchFactors}
+          notes={matchNotes?.[openDetailEntry.d.id]}
           month={month}
           visited={!!visited[openDetailEntry.d.id]}
           onToggleVisited={() => toggleVisited(openDetailEntry.d.id)}

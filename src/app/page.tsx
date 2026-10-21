@@ -4,6 +4,7 @@ import { loadDnaState } from '@/app/dna/actions';
 import { loadTravelProfile } from '@/app/onboarding-v2/actions';
 import { getInterestEmojiOverrides, getInterestShortNames } from '@/lib/scoring/interestMeta';
 import { ResultsApp } from '@/components/results/ResultsApp';
+import { liveMatchForProfile } from '@/lib/onboarding/live-match-server';
 
 const DEFAULT_DNA_HINT = 'Swipe through experiences to teach Where To? your travel style.';
 
@@ -18,6 +19,9 @@ export default async function Home() {
     getInterestEmojiOverrides(),
     getInterestShortNames(),
   ]);
+
+  // What the traveler's chips and answers (new onboarding) do to each place; null for everyone who never used it.
+  const match = await liveMatchForProfile(travelProfile);
 
   // A traveler who finished the new onboarding has a saved profile even when they answered no swipe questions, so the list is theirs to see.
   const hasDnaSignal = (!!dnaState && dnaState.swipeCount > 0) || !!travelProfile;
@@ -41,6 +45,8 @@ export default async function Home() {
       userFirstName={firstName}
       emojiOverrides={emojiOverrides}
       shortNames={shortNames}
+      matchFactors={match?.factors}
+      matchNotes={match?.notes}
     />
   );
 }
