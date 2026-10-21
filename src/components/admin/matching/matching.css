@@ -1,4 +1,6 @@
-.mt-wrap { padding: 20px 24px 60px; max-width: 1180px; display: flex; flex-direction: column; gap: 16px; font-size: 13px; }
+/* The admin shell does not scroll; each page owns its own scrolling (like .ip-wrap on the interest page). */
+.mt-wrap { flex: 1; min-width: 0; overflow: auto; padding: 20px 24px 60px; display: flex; flex-direction: column; gap: 16px; font-size: 13px; }
+.mt-wrap > * { max-width: 1180px; flex-shrink: 0; }
 .mt-wrap p { font-size: 13px; line-height: 1.5; }
 .mt-wrap h2 { font-size: 16px; }
 .mt-wrap h3 { font-size: 15px; }
