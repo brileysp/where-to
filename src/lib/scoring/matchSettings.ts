@@ -24,7 +24,7 @@ export interface MatchSettings {
 export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
   keepIfChipMissed: 0.5,
   chipFullMatchRating: 7,
-  keepIfLimitMissed: 0.5,
+  keepIfLimitMissed: 0.65,
   keepIfLeanMissed: 0.85,
   interestFloor: 0.3,
   reasonThreshold: 0.15,

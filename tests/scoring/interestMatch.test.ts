@@ -27,7 +27,7 @@ describe('interestMatchFor', () => {
   });
   it('a limit answer the place misses lowers the score and gives a reason', () => {
     const m = interestMatchFor({ chips, questions: [booking], ticked: [], answers: { q4: [0] }, facts: high, defs });
-    expect(m.factor).toBeCloseTo(0.5, 5);
+    expect(m.factor).toBeCloseTo(0.65, 5);
     expect(m.reasons[0].message).toBe('Needs booking ahead');
     expect(m.checked).toBe(1);
   });

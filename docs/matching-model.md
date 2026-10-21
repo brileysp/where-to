@@ -22,7 +22,7 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 |---|---|
 | A place has none of the chips you ticked keeps | 50% |
 | A chip rating that counts as a full match | 7 of 10 |
-| A missed Limit answer keeps | 50% |
+| A missed Limit answer keeps | 65% (weakened from 50% on 22 Oct 2026: the first shadow run showed stacked Limits pushing most places to the floor) |
 | A missed Lean answer keeps | 85% |
 | An interest never keeps less than | 30% |
 | Show a reason chip when a miss takes off at least | 15% |
