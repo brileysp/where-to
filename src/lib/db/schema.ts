@@ -18,6 +18,7 @@ import {
   type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
+import type { QuestionFitRule } from '../onboarding/question-fit';
 
 // ---- Enums -----------------------------------------------------------------
 
@@ -1020,6 +1021,8 @@ export const interestQuestions = pgTable(
     note: text('note').notNull().default(''),
     /** Short text for the reason chip when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
     missMessage: text('miss_message').notNull().default(''),
+    /** How a place's columns answer this question: one check per answer option (see src/lib/onboarding/question-fit.ts). Null = not mapped to columns yet. */
+    fitRule: jsonb('fit_rule').$type<QuestionFitRule | null>(),
     approvedBy: text('approved_by').notNull().default(''),
     approvedAt: timestamp('approved_at', { withTimezone: true }),
     updatedBy: text('updated_by').notNull().default(''),

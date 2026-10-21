@@ -63,3 +63,4 @@ Where the other lists live: the admin **To do** tab (site-wide items, due dates,
 - **Broadened places** (`docs/renamed-places.json`) need a scope sheet before any generation; call a place by its current name.
 - Scripts that read the database must load `.env.local`; set `PLACE_ROWS_SNAPSHOT=1` to avoid re-downloading the catalog; avoid repeated production builds.
 - Species names: birds full official name in Title Case; every other animal lowercase except proper nouns and adjectives; `**bold**` markers are written automatically for safari and whale watching.
+- **Question mapping (21 Oct 2026):** the 28 questions of Hiking, Birding, Safari, Wildlife Viewing, Diving, Whale Watching and Surfing are mapped to columns, reviewed by you and saved (`fit_rule`), with reason-chip messages. Next: one dedicated rating column per chip, ask the new conditional questions in the live onboarding, store travelers' answers, run matching in shadow mode.

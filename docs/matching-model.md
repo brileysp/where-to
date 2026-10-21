@@ -37,8 +37,8 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 ## Not built yet
 
 1. A rating column for every chip, written and checked (a chip's rating must not reuse a field like "main draw": the Red Sea reads as having no wrecks).
-2. A fit for each question from its columns (offered, within your limit, or level).
+2. ~~A fit for each question from its columns~~ **Done for the seven interests with data (21 Oct 2026, owner-reviewed):** `src/lib/onboarding/question-fit.ts` (checks) and `question-fit-rules.ts` (the 28 rules), saved in `interest_questions.fit_rule` and shown read-only in the question editor. Other interests wait on their columns.
 3. Storing the traveler's ticked chips and answers, and calling `matchInterest` from the scoring (replacing the old "styles" multiplier in `styleAdjustedScore`).
 4. Shadow mode first: calculate it, record what would change, show nothing until the biggest drops have been read.
 5. The reason chips and green match chips, **in the place's detail sheet only** (owner decision 21 Oct 2026; the card stays as it is today). The sheet's "adjusted lower because..." sentence gains the chips, the original and for-you scores, and a per-interest breakdown. Mockup: claude.ai/artifact/C8YqFKXEck6DufewouZyYt.
-6. Reason-chip messages (`interest_questions.miss_message`) are written per interest as its columns land, starting with the seven interests that already have data, not all at once.
+6. Reason-chip messages (`interest_questions.miss_message`): written for the 28 mapped questions (21 Oct 2026); the rest are written as their columns land.

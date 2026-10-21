@@ -1,0 +1,1 @@
+ALTER TABLE "interest_questions" ADD COLUMN "fit_rule" jsonb;

@@ -188,3 +188,9 @@ export function describeAnswerRule(a: AnswerRule | null, defs: FactDef[]): strin
   const parts = a.checks.map((c) => describeCheck(c, defs));
   return parts.length === 1 ? parts[0] : `${a.mode === 'any' ? 'Either' : 'Both'}: ${parts.join(a.mode === 'any' ? ' / ' : ' and ')}`;
 }
+
+/** One line per answer for the admin: "Stay low: Altitude is Low ...". Empty when the question is not mapped to columns yet. */
+export function describeQuestionRule(rule: QuestionFitRule | null, options: string[], defs: FactDef[]): string[] {
+  if (!rule) return [];
+  return options.map((o, i) => `${o}: ${describeAnswerRule(rule.answers[i] ?? null, defs)}`);
+}

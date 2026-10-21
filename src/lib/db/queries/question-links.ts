@@ -2,6 +2,8 @@ import { eq, inArray } from 'drizzle-orm';
 import { db } from '../client';
 import { interestChips, interestQuestionChips, interestQuestions } from '../schema';
 import { SLIDERS } from '@/lib/scoring/constants';
+import { factDefsFor } from '@/lib/admin/interest-pages/config';
+import { describeQuestionRule } from '@/lib/onboarding/question-fit';
 import type { ChipRow, QuestionRow } from '@/lib/admin/interest-pages/types';
 
 /** How many proposed question-to-chip links are waiting for the owner. Shown as a badge on the admin tab. */
@@ -41,7 +43,7 @@ export async function getSuggestedLinkReview(): Promise<{ total: number; interes
         .filter((r) => r.interestKey === k && withProposal.has(r.questionKey))
         .sort((a, b) => a.sortOrder - b.sortOrder)
         .map((r): QuestionRow => ({
-          key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage,
+          key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, fitSummary: describeQuestionRule(r.fitRule ?? null, r.options, factDefsFor(r.interestKey)),
           whenChips: linkRows.filter((l) => l.interestKey === k && l.questionKey === r.questionKey && !l.suggested).map((l) => l.chipKey).sort(),
           suggestedChips: linkRows.filter((l) => l.interestKey === k && l.questionKey === r.questionKey && l.suggested).map((l) => l.chipKey).sort(),
           approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null,

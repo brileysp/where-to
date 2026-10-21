@@ -8,6 +8,7 @@ import { requireAdminUser } from '@/lib/admin/auth';
 import { withAdminAudit } from '@/lib/admin/write';
 import { SLIDERS } from '@/lib/scoring/constants';
 import { factDefsFor } from '@/lib/admin/interest-pages/config';
+import { describeQuestionRule } from '@/lib/onboarding/question-fit';
 import type { QuestionRow } from '@/lib/admin/interest-pages/types';
 
 /**
@@ -20,7 +21,7 @@ const fail = (message: string): { ok: false; message: string } => ({ ok: false, 
 const validInterest = (key: string) => SLIDERS.some((s) => s.key === key);
 
 type Row = typeof interestQuestions.$inferSelect;
-const toRow = (r: Row, whenChips: string[] = [], suggestedChips: string[] = []): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, whenChips, suggestedChips, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
+const toRow = (r: Row, whenChips: string[] = [], suggestedChips: string[] = []): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, fitSummary: describeQuestionRule(r.fitRule ?? null, r.options, factDefsFor(r.interestKey)), whenChips, suggestedChips, approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null });
 const byOrder = (a: Row, b: Row) => a.sortOrder - b.sortOrder;
 
 const patchSchema = z.object({
@@ -68,7 +69,9 @@ export async function updateQuestion(interestKey: string, questionKey: string, p
   // The wording the owner approved changed: the approval no longer applies.
   const wordingChanged = (p.data.text !== undefined && p.data.text !== cur.text) || (p.data.options !== undefined && JSON.stringify(p.data.options) !== JSON.stringify(cur.options)) || (p.data.maxPicks !== undefined && p.data.maxPicks !== cur.maxPicks);
   const approvalCleared = wordingChanged && !!cur.approvedAt;
-  const set = { text: next.text, options: next.options, maxPicks: next.maxPicks, kind: next.kind, columns: next.columns, note: next.note, missMessage: next.missMessage, ...(approvalCleared ? { approvedBy: '', approvedAt: null } : {}), updatedBy: admin.email, updatedAt: new Date() };
+  // The mapping to columns has one entry per answer: adding or removing an answer would shift them, so it is dropped (reword freely, same number of answers).
+  const answerCountChanged = next.options.length !== cur.options.length;
+  const set = { text: next.text, options: next.options, maxPicks: next.maxPicks, kind: next.kind, columns: next.columns, note: next.note, missMessage: next.missMessage, ...(answerCountChanged ? { fitRule: null } : {}), ...(approvalCleared ? { approvedBy: '', approvedAt: null } : {}), updatedBy: admin.email, updatedAt: new Date() };
   const [row] = await withAdminAudit<Row[]>({
     actor: admin, skipPlaceCache: true, entityType: 'interest_question', entityId: `${interestKey}:${questionKey}`, action: 'update', before: cur, after: { ...cur, ...set },
     write: (tx) => tx.update(interestQuestions).set(set).where(and(eq(interestQuestions.interestKey, interestKey), eq(interestQuestions.questionKey, questionKey))).returning(),
