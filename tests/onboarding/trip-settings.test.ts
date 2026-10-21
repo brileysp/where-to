@@ -123,3 +123,41 @@ describe('trip length settings', () => {
     expect(m.tripFarShare).toBe(0.5);
   });
 });
+
+describe('tripAdjust', () => {
+  const coords = { near: { lat: 41, lon: -87 }, far: { lat: -8.4, lon: 115.2 }, ice: { lat: 64, lon: -21 } };
+  const regions = { near: 'na', far: 'as', ice: 'eu' } as const;
+  const origin = resolveOrigin({ country: 'US', sub: 'IL' });
+  it('lowers far places for a short trip and leaves near ones alone', async () => {
+    const { tripAdjust } = await import('@/lib/onboarding/trip-adjust');
+    const a = tripAdjust({ coords, regions, origin, length: 'wk', continents: [] });
+    expect(a.factors.near).toBeUndefined();
+    expect(a.factors.far).toBeLessThan(1);
+    expect(a.tiers.far).toBe('far');
+    expect(a.leftOut.size).toBe(0);
+  });
+  it('does nothing without a home or a length', async () => {
+    const { tripAdjust } = await import('@/lib/onboarding/trip-adjust');
+    expect(Object.keys(tripAdjust({ coords, regions, origin: null, length: 'wk', continents: [] }).factors)).toEqual([]);
+    expect(Object.keys(tripAdjust({ coords, regions, origin, length: null, continents: [] }).factors)).toEqual([]);
+  });
+  it('leaves out places in continents that are off, and nothing when all are on', async () => {
+    const { tripAdjust } = await import('@/lib/onboarding/trip-adjust');
+    const eu = tripAdjust({ coords, regions, origin, length: null, continents: ['eu'] });
+    expect([...eu.leftOut].sort()).toEqual(['far', 'near']);
+    expect(tripAdjust({ coords, regions, origin, length: null, continents: REGION_KEYS }).leftOut.size).toBe(0);
+  });
+  it('a longer trip is kinder to far places', async () => {
+    const { tripAdjust } = await import('@/lib/onboarding/trip-adjust');
+    const wk = tripAdjust({ coords, regions, origin, length: 'wk', continents: [] }).factors.far;
+    const w3 = tripAdjust({ coords, regions, origin, length: '3w', continents: [] }).factors.far;
+    expect(w3 ?? 1).toBeGreaterThan(wk);
+  });
+  it('the flight limit works from a state, not only an airport', async () => {
+    const { applyFlightLimitFrom } = await import('@/lib/onboarding/shortlist');
+    const ranked = [{ d: { id: 'near' }, s: 5 }, { d: { id: 'far' }, s: 6 }] as never;
+    const r = applyFlightLimitFrom(ranked, origin, 8, coords);
+    expect(r.kept.map((x: { d: { id: string } }) => x.d.id)).toEqual(['near']);
+    expect(r.aside[0].why).toContain('Illinois');
+  });
+});

@@ -42,3 +42,7 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 4. Shadow mode first: calculate it, record what would change, show nothing until the biggest drops have been read. **First offline run done:** `docs/shadow-match-report-2026-10-21.md`.
 5. The reason chips and green match chips, **in the place's detail sheet only** (owner decision 21 Oct 2026; the card stays as it is today). The sheet's "adjusted lower because..." sentence gains the chips, the original and for-you scores, and a per-interest breakdown. Mockup: claude.ai/artifact/C8YqFKXEck6DufewouZyYt.
 6. Reason-chip messages (`interest_questions.miss_message`): written for the 28 mapped questions (21 Oct 2026); the rest are written as their columns land.
+
+## Trip settings (22 Oct 2026)
+
+Separate from interests, chips and answers. **How long** (long weekend, 1 week, 2 weeks, 3+ weeks) counts the flights against the trip: round-trip flying hours plus `tripAirportHours` as a share of the trip's days. Up to `tripStretchShare` is fine; up to `tripFarShare` the place keeps `keepIfTripStretch` of its final score; above that it keeps `keepIfTripFar`. It needs the traveler's home (country, US state or Canadian province, or an airport). **Continents** leave out places in regions turned off (six regions; Russia and Turkey split by location, see `src/lib/onboarding/regions.ts`). Both live in `src/lib/onboarding/trip-adjust.ts` and feed `computeRankedDestinations` through `placeFactors`.

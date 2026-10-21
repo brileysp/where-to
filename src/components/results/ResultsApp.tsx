@@ -76,9 +76,12 @@ interface Props {
   matchFactors?: InterestFactors;
   /** Why: each place's reasons and matched chips, by interest. */
   matchNotes?: Record<string, Record<string, PlaceNote>>;
+  /** From the new onboarding's trip settings: what each place keeps for the trip length, and the places left out (a continent turned off, or past the longest flight). */
+  tripPlaceFactors?: Record<string, number>;
+  tripHidden?: string[];
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames, matchFactors, matchNotes }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames, matchFactors, matchNotes, tripPlaceFactors, tripHidden }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -174,11 +177,12 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // Every place, scored. Search and the detail sheet read this, so a specialist place is always findable by name.
   const rankedAll = useMemo(() => {
     if (!monthChosen || !month) return [];
-    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles, matchFactors);
-  }, [destinations, weights, month, bands, monthChosen, selectedStyles, matchFactors]);
+    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles, matchFactors, tripPlaceFactors);
+  }, [destinations, weights, month, bands, monthChosen, selectedStyles, matchFactors, tripPlaceFactors]);
 
   // The list itself leaves out specialist places the traveller has not unlocked (see lib/scoring/gating.ts).
-  const ranked = useMemo(() => rankedAll.filter((r) => isVisibleForWeights(r.d, weights)), [rankedAll, weights]);
+  const hiddenSet = useMemo(() => new Set(tripHidden ?? []), [tripHidden]);
+  const ranked = useMemo(() => rankedAll.filter((r) => isVisibleForWeights(r.d, weights) && !hiddenSet.has(r.d.id)), [rankedAll, weights, hiddenSet]);
 
   // Overall + your top interests — the exact same topInterestChips list the
   // detail sheet's For You tab shows (same pool, same adaptive 1-5 count),
