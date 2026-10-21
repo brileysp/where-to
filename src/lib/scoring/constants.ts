@@ -116,7 +116,6 @@ export const SLIDERS: Slider[] = [
   // picks interests (see VISIBLE_SLIDERS below), but scoring, stored data,
   // and audience-tier weighting are untouched.
   { key: 'familyFun', label: 'Family Fun', icon: '👨‍👩‍👧', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'popular', hidden: true },
-  { key: 'spectatorSports', label: 'Spectator Sporting Events', icon: '🏟️', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'specialist', hidden: true },
   // Value — practical/logistical, not domain interests (see comment above)
   { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist' },
   { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist' },

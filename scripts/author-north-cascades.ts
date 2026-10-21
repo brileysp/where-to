@@ -61,7 +61,7 @@ const SCORES: Record<string, number> = {
 const NA = [
   'safari', 'whaleWatching', 'sailing', 'golf', 'beachesSwimming', 'sunbathing',
   'allInclusive', 'spaWellness', 'yogaRetreats', 'themeParks', 'shopping',
-  'spectatorSports', 'cityExploration', 'historyArchaeology', 'religiousSites',
+  'cityExploration', 'historyArchaeology', 'religiousSites',
   'festivals', 'traditionalCrafts', 'streetFood', 'fineDining', 'wineSpirits',
   'hotSprings', // no developed springs in the park
   'auroraChasing', // 48.7°N — visible only in exceptional storms, not a draw

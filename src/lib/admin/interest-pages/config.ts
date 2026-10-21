@@ -345,6 +345,15 @@ const SCENIC_FACTS: FactDef[] = [
   rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
 ];
 
+/**
+ * Festivals (20 Oct 2026). Spectator Sports was folded into Festivals as the "Sporting events" chip, so the first column is that chip's: how strong
+ * the place is for big sporting occasions (grand slams, grands prix, major league seasons). It started as a copy of the old Spectator Sports place
+ * score (23 places); edit it here from now on. The other Festivals chips still need their own columns.
+ */
+const FESTIVALS_FACTS: FactDef[] = [
+  rate('sportingEvents', 'Sporting events', 'How strong the place is for watching big sporting occasions: grand slams, grands prix, major league seasons, big derbies. 0-1 almost none, 5 regular top-level fixtures, 8-10 a world sporting capital. Blank means not looked at yet.'),
+];
+
 const COFFEE_TEA_FACTS: FactDef[] = [
   tick('coffeeFarms', 'Coffee farm visits', 'Tick when visitors can tour a working coffee farm or estate within a day trip.'),
   rate('specialtyCafes', 'Specialty cafés and roasteries', 'How strong the specialty coffee scene is: independent roasters and cafés worth a trip. 0-1 almost none, 5 a few good ones, 8-10 a coffee destination.'),
@@ -391,6 +400,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
+  festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,
   coffeeTea: COFFEE_TEA_FACTS,
   streetFood: STREET_FOOD_FACTS,

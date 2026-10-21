@@ -69,7 +69,6 @@ export const INTEREST_THRESHOLDS: Record<string, InterestThreshold> = {
   nightlife: { signature: 8, strong: 6, casual: 4 },
   shopping: { signature: 8, strong: 6, casual: 4 },
   familyFun: { signature: 8, strong: 7, casual: 4 },
-  spectatorSports: { signature: 8, strong: 7, casual: 4 },
   roadtrip: { signature: 8, strong: 6, casual: 4 },
 };
 

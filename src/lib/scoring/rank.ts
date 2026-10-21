@@ -288,7 +288,7 @@ export const WEIGHT_FLOOR_HIGH = 0.5;
 // "cycling 10, scenery 8, nothing else above 3" still ranked mostly on the 3s.
 export const PASSING_MENTION_WEIGHT = NEUTRAL_WEIGHT + 1;
 
-// Hidden sliders (nationalParks, familyFun, spectatorSports) are not shown in the picker, so a
+// Hidden sliders (nationalParks, familyFun, landscapePhotography) are not shown in the picker, so a
 // weight sitting on one can only be persona residue the user can neither see nor change. The
 // Naturalist and Active personas carried nationalParks at 7: a profile of "cycling 10, scenery 8,
 // everything visible else at 2" ranked Nepal (national parks 8) 17th at 7.7 and Andalucia

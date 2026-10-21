@@ -73,7 +73,6 @@ export const SLIDER_ATTRIBUTE_MAP: Record<string, Array<[string, number]>> = {
   nightlife: [['nightlife', 1], ['cities', 0.2]],
   shopping: [['shopping', 1], ['cities', 0.2]],
   familyFun: [['family', 1]],
-  spectatorSports: [['nightlife', 0.2], ['cities', 0.3], ['adrenaline', 0.2]],
   // Value — unchanged
   deals: [['lowSeasonDeals', 1]],
   crowds: [['avoidingCrowds', 1]],
