@@ -194,8 +194,13 @@ export function ShortlistScreen(p: ShortlistProps) {
   const chipRowRef = useRef<HTMLDivElement>(null);
   const chipEls = useRef<Map<string, HTMLElement>>(new Map());
   const listWrapRef = useRef<HTMLDivElement>(null);
-  // The chips are exactly the interests the traveler picked (top first), never ones worked out from their budget, weather or companions.
-  const chipSliders = useMemo(() => orderedByLevel(p.levels).flatMap((k) => SLIDERS.filter((x) => x.key === k)).slice(0, 8), [p.levels]);
+  // The chips are exactly the interests the traveler starred as top (what they would build a trip around), never other picks and never ones worked
+  // out from their budget, weather or companions. Only when they starred none do their picked interests stand in, so the row is not empty.
+  const chipSliders = useMemo(() => {
+    const ordered = orderedByLevel(p.levels);
+    const tops = ordered.filter((k) => p.levels[k] === 'top');
+    return (tops.length ? tops : ordered.slice(0, 5)).flatMap((k) => SLIDERS.filter((x) => x.key === k));
+  }, [p.levels]);
   const myInterestKeys = useMemo(() => chipSliders.map((x) => x.key), [chipSliders]);
   const toolsOn = liveOn && live.listShown;
   const matchFactors = match.factors;
