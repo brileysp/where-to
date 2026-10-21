@@ -49,7 +49,7 @@ export const DEFAULT_ONBOARDING_SETTINGS: OnboardingSettings = {
   airportMatches: 6,
   airportMinLetters: 2,
   primaryInterests: {
-    'Nature & Wildlife': ['scenicLandscapes', 'wildlifeViewing', 'safari', 'whaleWatching', 'campingBackcountry', 'stargazing', 'birding', 'landscapePhotography'],
+    'Nature & Wildlife': ['scenicLandscapes', 'wildlifeViewing', 'safari', 'whaleWatching', 'campingBackcountry', 'stargazing', 'birding', 'auroraChasing'],
     'Sports & Recreation': ['hiking', 'skiingSnowboarding', 'cyclingRoad', 'surfing', 'diving', 'golf', 'fishing', 'sailing'],
     'Culture & Discovery': ['historyArchaeology', 'architecture', 'cityExploration', 'streetFood', 'museumsArt', 'fineDining', 'festivals', 'wineSpirits'],
     'Relaxation & Leisure': ['beachesSwimming', 'sunbathing', 'luxuryHotels', 'nightlife', 'shopping', 'spaWellness', 'hotSprings', 'yogaRetreats'],

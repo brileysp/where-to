@@ -37,7 +37,7 @@ export interface PickerInterest {
 /** Shorter names for three long labels (SPEC 8.2). */
 const DISPLAY_LABELS: Record<string, string> = {
   yogaRetreats: 'Yoga & Wellness',
-  wildflowerBlooms: 'Seasonal Blooms',
+  wildflowerBlooms: 'Blooms & Colors',
   mountaineering: 'Climbing & Mountaineering',
 };
 

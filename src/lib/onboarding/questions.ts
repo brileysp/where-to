@@ -34,7 +34,7 @@ const MAX_CANDIDATES = 12;
 /** The experience-card categories that belong to each interest, most specific first. An interest not listed falls back to the engine's coarser category list for it. */
 export const INTEREST_CARD_CATEGORIES: Record<string, string[]> = {
   wildlifeViewing: ['Wildlife'], safari: ['Wildlife'], whaleWatching: ['Wildlife'], birding: ['Birding'],
-  scenicLandscapes: ['Scenic Touring & Rentals', 'Photography'], landscapePhotography: ['Photography'], campingBackcountry: ['Rustic Adventure', 'Remote Wilderness'],
+  scenicLandscapes: ['Scenic Touring & Rentals', 'Photography'], campingBackcountry: ['Rustic Adventure', 'Remote Wilderness'],
   hiking: ['Hiking'], mountaineering: ['Hiking', 'Adventure Sports'], trailRunning: ['Hiking'], cyclingRoad: ['Cycling'], mountainBiking: ['Cycling'],
   skiingSnowboarding: ['Snow Sports'], surfing: ['Surfing'], diving: ['Snorkeling & Diving'], windSports: ['Ocean Swimming'], sailing: ['Sailing & Yachting'], kayakingRafting: ['Adventure Sports'], adventureSports: ['Adventure Sports'],
   golf: ['Golf'], fishing: ['Fishing'],
