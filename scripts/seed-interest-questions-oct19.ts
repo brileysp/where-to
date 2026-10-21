@@ -27,7 +27,7 @@ const QUESTIONS: Record<string, Q[]> = {
     { text: 'How much does a sure thing matter?', options: ['A reliable spot where the birds are almost always there', 'A bit of a gamble is fine', 'I would gamble for a rarity'], kind: 'lean', columns: ['drawConfidence'], note: 'Draw confidence.' },
   ],
   safari: [
-    { text: 'Which animal would make the trip for you?', options: ['Leopard', 'Lion', 'Cheetah', 'Elephant', 'Rhino', 'Wild dog', 'Hippo and giraffe', 'Tiger'], maxPicks: 2, kind: 'lean', columns: ['leopard', 'lion', 'cheetah', 'elephant', 'rhino', 'wildDog', 'hippo', 'giraffe', 'tiger'], note: 'The odds grid, one column per animal.' },
+    { text: 'Which animal would make the trip for you?', options: ['Leopard', 'Lion', 'Cheetah', 'Elephant', 'Rhino', 'Wild dog', 'Tiger'], maxPicks: 2, kind: 'lean', columns: ['leopard', 'lion', 'cheetah', 'elephant', 'rhino', 'wildDog', 'tiger'], note: 'The odds grid, one column per animal.' },
     { text: 'How do you feel about sharing a sighting?', options: ['Just my vehicle', 'A few vehicles is fine', 'Crowds are fine if the animal is great'], kind: 'lean', columns: ['crowding'], note: 'Crowding.' },
     { text: 'How do you feel about malaria precautions?', options: ['I want to avoid malaria areas', 'Fine with precautions and the right season', 'No concern'], kind: 'limit', columns: ['malaria'], note: 'Malaria.' },
     { text: 'How do you want to reach camp?', options: ['By road the whole way', 'Short bush flights are fine', 'Remote fly-in camps are the dream'], kind: 'lean', columns: ['access'], note: 'Access.' },

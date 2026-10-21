@@ -42,7 +42,7 @@ Kind: Limit = can rule a place out; Lean = nudges places up or down. Data: Ready
 ## Safari
 
 1. **Which animal would make the trip for you?  (pick up to two)** (was question 1)
-   - Options: Leopard / Lion / Cheetah / Elephant / Rhino / Wild dog / Hippo and giraffe / Tiger
+   - Options: Leopard / Lion / Cheetah / Elephant / Rhino / Wild dog / Tiger
    - Uses: The odds grid, one column per animal. Kind: Lean. Data: Ready.
 2. **How do you feel about sharing a sighting?** (was question 3)
    - Options: Just my vehicle / A few vehicles is fine / Crowds are fine if the animal is great

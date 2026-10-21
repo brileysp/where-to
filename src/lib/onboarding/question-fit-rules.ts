@@ -40,7 +40,7 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'birding.q4': R(within('drawConfidence', CONFIDENCE, 'high'), null, null),
 
   // ---- Safari ----
-  'safari.q1': R(atLeast(8, 'leopard'), atLeast(8, 'lion'), atLeast(8, 'cheetah'), atLeast(8, 'elephant'), atLeast(8, 'rhino'), atLeast(8, 'wildDog'), atLeast(8, 'hippo', 'giraffe'), atLeast(8, 'tiger')),
+  'safari.q1': R(atLeast(8, 'leopard'), atLeast(8, 'lion'), atLeast(8, 'cheetah'), atLeast(8, 'elephant'), atLeast(8, 'rhino'), atLeast(8, 'wildDog'), atLeast(8, 'tiger')),
   'safari.q2': R(within('crowding', CROWDING, 'low'), within('crowding', CROWDING, 'medium'), null),
   'safari.q3': R(within('malaria', MALARIA, 'low'), within('malaria', MALARIA, 'seasonal'), null),
   'safari.q4': R(has('access', 'road', 'mixed'), null, has('access', 'flyIn', 'mixed')),
