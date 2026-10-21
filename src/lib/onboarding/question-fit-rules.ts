@@ -43,12 +43,13 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'safari.q1': R(atLeast(8, 'leopard'), atLeast(8, 'lion'), atLeast(8, 'cheetah'), atLeast(8, 'elephant'), atLeast(8, 'rhino'), atLeast(8, 'wildDog'), atLeast(8, 'tiger')),
   'safari.q2': R(within('crowding', CROWDING, 'low'), within('crowding', CROWDING, 'medium'), null),
   'safari.q3': R(within('malaria', MALARIA, 'low'), within('malaria', MALARIA, 'seasonal'), null),
-  'safari.q4': R(has('access', 'road', 'mixed'), null, has('access', 'flyIn', 'mixed')),
+  // Owner, 21 Oct 2026: even where you can drive in, you can usually fly in, so the fly-in wish is not checked (no column says which places have bush planes or lodge airstrips).
+  'safari.q4': R(has('access', 'road', 'mixed'), null, null),
   'safari.q5': R(null, any({ type: 'has', column: 'nightDrives', options: ['yes'] }, { type: 'has', column: 'offRoad', options: ['yes'] }), all({ type: 'has', column: 'nightDrives', options: ['yes'] }, { type: 'has', column: 'offRoad', options: ['yes'] })),
 
   // ---- Wildlife viewing ----
   'wildlifeViewing.q1': R(has('howWatch', 'vehicle'), has('howWatch', 'onFoot'), has('howWatch', 'boat'), has('howWatch', 'hide'), has('howWatch', 'water')),
-  'wildlifeViewing.q2': R(atLeast(6, 'density'), null, null),
+  'wildlifeViewing.q2': R(atLeast(4, 'density'), null, null),
   'wildlifeViewing.q3': R(atLeast(6, 'spectacle'), null, atLeast(6, 'closeUp')),
 
   // ---- Diving ----
