@@ -1,4 +1,4 @@
-// 21 Oct 2026: proposes which chips should open which questions, only where it is very clear that the question means nothing unless the chip is
+// 21 Oct 2026 (first pass): proposes which chips should open which questions, only where it is very clear that the question means nothing unless the chip is
 // ticked (a question about tasting menus opens with the Tasting menus chip; "skis or snowboard?" does not open for cross-country skiers).
 // They are saved as SUGGESTED links: they change nothing and take no approval away until the owner accepts them in the Grid view of the admin.
 // Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/suggest-question-links-oct21.ts [--apply]
