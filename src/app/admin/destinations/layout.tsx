@@ -7,6 +7,7 @@ import { TrayCollapseProvider, PendingTrayToggle, PendingTrayPanel } from '@/com
 import { ToastHost } from '@/components/admin/ToastHost';
 import { AdminDestinationTabs } from '@/components/admin/AdminDestinationTabs';
 import { getAttentionTodoCount } from '@/lib/db/queries/site-todos';
+import { getSuggestedLinkCount } from '@/lib/db/queries/question-links';
 import './admin-grid.css';
 
 const plexSans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-plex-sans' });
@@ -14,7 +15,7 @@ const plexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500', '600
 
 export default async function AdminDestinationsLayout({ children }: { children: React.ReactNode }) {
   await requireAdminUser();
-  const todoCount = await getAttentionTodoCount();
+  const [todoCount, linksCount] = await Promise.all([getAttentionTodoCount(), getSuggestedLinkCount().catch(() => 0)]);
 
   return (
     <div
@@ -27,7 +28,7 @@ export default async function AdminDestinationsLayout({ children }: { children: 
             <Link href="/admin/destinations" className="admin-brand">
               <span className="mark">W?</span> Data Control
             </Link>
-            <AdminDestinationTabs todoCount={todoCount} />
+            <AdminDestinationTabs todoCount={todoCount} linksCount={linksCount} />
             <div className="admin-topbar-spacer" />
             <HomeCountryPicker />
             <PendingTrayToggle />

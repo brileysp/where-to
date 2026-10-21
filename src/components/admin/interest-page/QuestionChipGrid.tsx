@@ -23,8 +23,9 @@ export function QuestionChipGrid({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
+  const [onlyProposed, setOnlyProposed] = useState(false);
   const sortedChips = [...chips].sort((a, b) => a.order - b.order);
-  const sorted = [...questions].sort((a, b) => a.order - b.order);
+  const sorted = [...questions].sort((a, b) => a.order - b.order).filter((q) => !onlyProposed || q.suggestedChips.length > 0);
   const suggestedTotal = questions.reduce((n, q) => n + q.suggestedChips.length, 0);
   const confirmedTotal = questions.reduce((n, q) => n + q.whenChips.length, 0);
 
@@ -63,6 +64,7 @@ export function QuestionChipGrid({
         {info && <span className="ip-faint">{info}</span>}
         {suggestedTotal > 0 && (
           <>
+            <label className="ip-ch-lab"><input type="checkbox" checked={onlyProposed} onChange={(e) => setOnlyProposed(e.target.checked)} /> Only questions with a suggestion</label>
             <button className="btn" disabled={busy} onClick={() => accept(null)}>Accept all suggested</button>
             <button className="btn" disabled={busy} onClick={() => dismiss(null)}>Dismiss all suggested</button>
           </>
