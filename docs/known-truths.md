@@ -2,7 +2,7 @@
 
 Checked 2026-10-22. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
-**51 truths: 47 hold, 0 fail, 4 pending.** Pending means we know it does not hold yet and what will close it.
+**52 truths: 48 hold, 0 fail, 4 pending.** Pending means we know it does not hold yet and what will close it.
 
 ## Matching
 
@@ -54,6 +54,7 @@ Checked 2026-10-22. Each line is something that must always be true of Where To?
 | holds | P06: The Wildflowers interest is called "Blooms and Fall Colors", shown as "Blooms & Colors" on the pill. |  |
 | holds | P07: The Red Sea & Nile is among the ten best places for diving. |  |
 | holds | P09: The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia) or a city with a real urban swimming scene (Paris, Berlin, Vienna). |  |
+| holds | P10: Every place has both its peak crowd intensity and its seasonal price swing set (Crowds & prices reads them separately). |  |
 | pending | P08: The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded). | Needs the "Wreck diving rating" column (chip measures audit, item C1). Today the chip reads only the main draw. |
 
 ## Facts

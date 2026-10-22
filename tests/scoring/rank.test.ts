@@ -28,6 +28,7 @@ function makeDestination(overrides: Partial<ScoredDestination> = {}): ScoredDest
     peak: [],
     low: [],
     peakIntensity: null,
+    priceSwing: null,
     crowdBaseline: null,
     hotSeverity: null,
     coldSeverity: null,

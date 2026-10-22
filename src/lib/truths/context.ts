@@ -49,6 +49,9 @@ export interface TruthPlace {
   curves: Record<string, { anchors: Array<{ month: number; value: number }> }>;
   naSliders: string[];
   naReasons: Record<string, { reason?: string }>;
+  /** How extreme the crowds are in the peak months, and how much prices swing between seasons (both mild, moderate or extreme). */
+  peakIntensity?: string | null;
+  priceSwing?: string | null;
   overview: Record<string, string>;
   monthly: Record<string, Array<string | null>>;
 }

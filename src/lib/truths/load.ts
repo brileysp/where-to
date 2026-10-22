@@ -10,7 +10,7 @@ export async function loadTruthContext(): Promise<TruthContext> {
     db.select().from(interestQuestions),
     db.select().from(interestQuestionChips),
     db.select().from(placeInterestFacts),
-    db.select({ id: places.id, name: places.name, region: places.region, emoji: places.emoji, baseScores: places.baseScores, curves: places.sliderCurves, naSliders: places.naSliders, naReasons: places.naReasons, overview: places.sliderOverview, monthly: places.sliderMonthlyWeather }).from(places),
+    db.select({ id: places.id, name: places.name, region: places.region, emoji: places.emoji, baseScores: places.baseScores, curves: places.sliderCurves, naSliders: places.naSliders, naReasons: places.naReasons, peakIntensity: places.peakIntensity, priceSwing: places.priceSwing, overview: places.sliderOverview, monthly: places.sliderMonthlyWeather }).from(places),
     db.select({ id: interestTodos.id, status: interestTodos.status, doneAt: interestTodos.doneAt }).from(interestTodos),
     db.select().from(appSettings).where(eq(appSettings.key, 'matching')),
   ]);
@@ -19,7 +19,7 @@ export async function loadTruthContext(): Promise<TruthContext> {
     questions: questions.map((q) => ({ interestKey: q.interestKey, questionKey: q.questionKey, text: q.text, options: q.options, maxPicks: q.maxPicks, missMessage: q.missMessage, fitRule: (q.fitRule as never) ?? null, approvedBy: q.approvedBy, approvedAt: q.approvedAt })),
     links: links.map((l) => ({ interestKey: l.interestKey, questionKey: l.questionKey, chipKey: l.chipKey, suggested: l.suggested })),
     facts: facts.map((f) => ({ placeId: f.placeId, interestKey: f.interestKey, facts: f.facts })),
-    places: placeRows.map((p) => ({ id: p.id, name: p.name, region: p.region, emoji: p.emoji, baseScores: p.baseScores, curves: p.curves, naSliders: p.naSliders, naReasons: p.naReasons, overview: p.overview ?? {}, monthly: (p.monthly as never) ?? {} })),
+    places: placeRows.map((p) => ({ id: p.id, name: p.name, region: p.region, emoji: p.emoji, baseScores: p.baseScores, curves: p.curves, naSliders: p.naSliders, naReasons: p.naReasons, peakIntensity: p.peakIntensity, priceSwing: p.priceSwing, overview: p.overview ?? {}, monthly: (p.monthly as never) ?? {} })),
     todos,
     matchOverride: setting[0]?.value ?? null,
   };

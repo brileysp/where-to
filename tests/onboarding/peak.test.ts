@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_PEAK, PEAK_NAMES, PEAK_STEPS, isPeak, peakGain } from '@/lib/onboarding/peak';
 import { DEFAULT_MATCH_SETTINGS, matchSettingsProblem, mergeMatchSettings } from '@/lib/scoring/matchSettings';
 import { shiftForSeason } from '@/lib/scoring/rank';
-import { seasonOffset, seasonQuietness } from '@/lib/scoring/seasonCrowds';
+import { crowdOffset, priceOffset, seasonOffset } from '@/lib/scoring/seasonCrowds';
 import { parseTravelProfile } from '@/lib/onboarding/profile';
 import { parseTrip, effectiveTrip, overridesFor } from '@/lib/onboarding/trips';
 import { allBands } from '@/lib/onboarding/care';
@@ -35,28 +35,34 @@ describe('crowds and prices scale', () => {
   });
 });
 
-describe('how busy a month is for a place', () => {
-  const amalfi = { peak: [6, 7, 8], low: [12, 1, 2], peakIntensity: 'extreme' as const, crowdBaseline: null, inaccessible: [] as number[] };
-  const mild = { ...amalfi, peakIntensity: 'mild' as const };
-  it('uses the authored peak and low months and how extreme the peak is', () => {
-    expect(seasonQuietness(amalfi, 6)).toBe(1);
-    expect(seasonQuietness(mild, 6)).toBe(5);
-    expect(seasonQuietness(amalfi, 0)).toBe(9);
-    expect(seasonQuietness(amalfi, 3)).toBe(6);
+describe('how busy and pricey a month is for a place', () => {
+  const base = { peak: [6, 7, 8], low: [12, 1, 2], peakIntensity: 'extreme' as const, priceSwing: 'extreme' as const, crowdBaseline: null, inaccessible: [] as number[] };
+  const flat = { ...base, peakIntensity: 'mild' as const, priceSwing: 'mild' as const };
+  it('an extreme place swings a lot, a place with mild crowds and flat prices barely moves', () => {
+    expect(seasonOffset(base, 6)).toBe(-5);
+    expect(seasonOffset(base, 0)).toBe(3);
+    expect(seasonOffset(base, 3)).toBe(0);
+    expect(Math.abs(seasonOffset(flat, 6))).toBeCloseTo(1, 5);
+    expect(Math.abs(seasonOffset(flat, 0))).toBeCloseTo(0.6, 5);
   });
-  it('an extreme peak is a much bigger swing than a mild one, so a mild place barely moves', () => {
-    expect(seasonOffset(amalfi, 6)).toBe(-5);
-    expect(seasonOffset(mild, 6)).toBe(-1);
-    expect(seasonOffset(amalfi, 3)).toBe(0);
+  it('crowds and prices are separate: few crowds but wild prices still counts as a busy-pricey peak', () => {
+    const safari = { ...base, peakIntensity: 'mild' as const, priceSwing: 'extreme' as const, crowdBaseline: 'low' as const };
+    expect(crowdOffset(safari, 6)).toBe(2);
+    expect(priceOffset(safari, 6)).toBe(-5);
+    expect(seasonOffset(safari, 6)).toBe(-5);
+    const capped = { ...base, peakIntensity: 'mild' as const, priceSwing: 'mild' as const };
+    expect(seasonOffset(capped, 6)).toBeGreaterThan(seasonOffset(safari, 6));
+  });
+  it('an unset price swing follows the crowds, and both default to moderate', () => {
+    expect(priceOffset({ ...base, priceSwing: null, peakIntensity: 'mild' }, 6)).toBeCloseTo(-1, 5);
+    expect(seasonOffset({ ...base, priceSwing: null, peakIntensity: null }, 6)).toBeCloseTo(-3, 5);
   });
   it('a month nobody can visit is neither a deal nor quiet', () => {
-    expect(seasonQuietness({ ...amalfi, inaccessible: [7] }, 6)).toBeNull();
-    expect(seasonOffset({ ...amalfi, inaccessible: [7] }, 6)).toBe(0);
+    expect(seasonOffset({ ...base, inaccessible: [7] }, 6)).toBe(0);
   });
-  it('a chronically busy place stays pricey in its low season; a quiet place still has an expensive peak', () => {
-    expect(seasonQuietness({ ...amalfi, crowdBaseline: 'high' }, 0)).toBe(5);
-    expect(seasonQuietness({ ...mild, crowdBaseline: 'low' }, 6)).toBe(3);
-    expect(seasonQuietness({ ...mild, crowdBaseline: 'low' }, 3)).toBe(6);
+  it('a chronically busy place stays busy in its low season', () => {
+    expect(crowdOffset({ ...base, crowdBaseline: 'high' }, 0)).toBe(-1);
+    expect(crowdOffset({ ...base, crowdBaseline: 'high' }, 6)).toBe(-5);
   });
 });
 

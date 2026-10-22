@@ -63,6 +63,10 @@ describe('the known truths', () => {
     expect(ok('P09', { ...emptyContext(), places: [place({ id: 'copenhagen', naSliders: ['surfing', 'diving'] })] })).toBe(true);
     expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['surfing'] })] })).toBe(true);
   });
+  it('can fail: the crowd and price tiers', () => {
+    expect(ok('P10', { ...emptyContext(), places: [place({ peakIntensity: 'mild' })] })).toBe(false);
+    expect(ok('P10', { ...emptyContext(), places: [place({ peakIntensity: 'mild', priceSwing: 'extreme' })] })).toBe(true);
+  });
   it('can fail: a saved rule that differs from the code, but not when only the key order differs', () => {
     const rule = QUESTION_FIT_RULES['hiking.q3'];
     const reordered = JSON.parse(JSON.stringify(rule, (_k, v) => (v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).reverse()) : v)));

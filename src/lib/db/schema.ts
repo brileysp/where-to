@@ -142,6 +142,8 @@ export const places = pgTable(
       .$type<Record<string, { label: string; weight: number; months: Record<string, number> }[]>>(),
 
     peakIntensity: peakIntensityEnum('peak_intensity'),
+    /** How much prices swing between the peak and low seasons (mild, moderate, extreme), separate from the crowds in peakIntensity: a safari lodge can have few crowds and wildly seasonal rates. */
+    priceSwing: peakIntensityEnum('price_swing'),
     crowdBaseline: crowdBaselineEnum('crowd_baseline'),
     hotSeverity: severityEnum('hot_severity'),
     coldSeverity: severityEnum('cold_severity'),

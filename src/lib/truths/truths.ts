@@ -252,6 +252,7 @@ export const TRUTHS: Truth[] = [
     }
     return noneOf(bad, 'places that break the coast rule');
   } },
+  { id: 'P10', area: 'Places and scores', says: 'Every place has both its peak crowd intensity and its seasonal price swing set (Crowds & prices reads them separately).', check: (ctx) => noneOf(ctx.places.filter((p) => !p.peakIntensity || !p.priceSwing).map((p) => p.name), 'places missing a peak crowd intensity or a price swing') },
   { id: 'P08', area: 'Places and scores', says: 'The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded).', check: (ctx) => {
     const p = ctx.places.find((x) => /red sea/i.test(x.name)); const f = p && ctx.facts.find((r) => r.placeId === p.id && r.interestKey === 'diving');
     const draw = (f?.facts.drawType as string[] | undefined) ?? [];
