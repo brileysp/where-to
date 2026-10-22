@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { saveUserPreferences } from '@/app/actions';
 import { allBandsSelected } from '@/lib/scoring/constants';
@@ -21,6 +21,8 @@ import { interestByKey } from '@/lib/onboarding/interests';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
 import { allBands, clearCare, setCareFirm, toggleBandChoice, toggleBandPill, toggleCareOption, toggleInList, resetBand, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
 import { useUnits } from '@/components/UnitsProvider';
+import { loadMatchFits } from '@/app/onboarding-v2/actions';
+import type { MatchFitsByInterest } from '@/lib/onboarding/live-factors';
 import { ELSEWHERE, type HomeBundle } from './HomeLocation';
 import { HOME_COUNTRIES, resolveOrigin } from '@/lib/onboarding/origin';
 import type { TripLength } from '@/lib/onboarding/trip-length';
@@ -86,6 +88,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [careOpen, setCareOpen] = useState(false);
   const [careTiles, setCareTiles] = useState<string[]>([]);
   const { country: unitsCountry } = useUnits();
+  // How places do for each picked interest's chips and answers, loaded as soon as the interests are known so the results never re-sort on arrival.
+  const [fits, setFits] = useState<MatchFitsByInterest>({});
   const [home, setHome] = useState<string | null>(start?.home ?? null);
   // Where you live: the saved country, else the home country already set for units, if it is one we list.
   const [homeCountry, setHomeCountry] = useState<string | null>(start?.homeCountry ?? (HOME_COUNTRIES.some((c) => c[0] === unitsCountry) ? unitsCountry : null));
@@ -105,6 +109,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const tasteTotal = getOnboardingSettings().shortlistPlaces;
   /** The Travel DNA page: where it was opened from, which cards are open or closed, the order fixed on entry, "show all", and the keep switches. */
   const [dnaFrom, setDnaFrom] = useState<ScreenId | null>(null);
+  /** The Travel DNA page open as a sheet over the results (it keeps the list where it is). */
+  const [dnaSheet, setDnaSheet] = useState(false);
   const [dxo, setDxo] = useState<Record<string, boolean>>({});
   const [dsc, setDsc] = useState<Record<string, boolean>>({});
   const [dorder, setDorder] = useState<string[]>(() => (entry.review ? orderedByLevel(start?.levels ?? {}) : []));
@@ -205,6 +211,12 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     const n = tasteCount + 1;
     setTasteCount(n);
     setTasteCard(n >= tasteTotal ? null : chooseNextCard(dnaStateFor({ ...input, answers: [...next, ...sharpen] }, data.dimensions), data.cards, data.domains));
+  }
+  function openDnaSheet() {
+    setDorder(orderedByLevel(levels));
+    setDall(false);
+    setDxo({});
+    setDnaSheet(true);
   }
   function openDna() {
     setDnaFrom('results');
@@ -318,6 +330,61 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setTopPopup(r.blocked);
   }
 
+  /** The Travel DNA page as an element: the full screen, or the sheet over the results. */
+  const renderDna = (h: { onSave: () => void; onSecondary: () => void; onBack: () => void }) => (
+      <DnaPage
+        data={data}
+        dnaMode={mode === 'dna'}
+        input={input}
+        levels={levels}
+        subs={subs}
+        bands={bands}
+        care={care}
+        who={who}
+        home={home}
+        vibes={vibes}
+        month={month}
+        week={week}
+        maxHours={maxHours}
+        order={dorder}
+        open={dxo}
+        collapsed={dsc}
+        showAll={dall}
+        keep={keep}
+        onLevel={onDnaLevel}
+        onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))}
+        onToggleOpen={(k, cur) => setDxo((o) => ({ ...o, [k]: !cur }))}
+        onToggleBlock={(k) => setDsc((c) => ({ ...c, [k]: !c[k] }))}
+        onShowAll={() => setDall((a) => !a)}
+        onKeep={(k, def) => setKeep((m) => ({ ...m, [k]: !keepOn(m, k, def) }))}
+        onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
+        onBandChoice={(d, b) => setBands((x) => toggleBandChoice(x, d, b))}
+        onCareOption={(item, o) => setCare((c) => toggleCareOption(c, item, o, true))}
+        onCareFirm={(k, f) => setCare((c) => setCareFirm(c, k, f))}
+        onWho={(k) => setWho((w) => toggleInList(w, k))}
+        loc={loc}
+        length={length}
+        continents={continents}
+        onLength={setLength}
+        onContinents={setContinents}
+        onMaxHours={setMaxHours}
+        onNeedHome={() => setToast('Choose where you live first')}
+        onVibe={(k) => setVibes((v) => toggleInList(v, k))}
+        onMonth={setMonth}
+        {...h}
+                      />
+  );
+
+  const fitKeys = Object.keys(levels).filter((k) => data.setups[k]);
+  const fitSig = fitKeys.join('|');
+  useEffect(() => {
+    const need = fitKeys.filter((k) => !fits[k]);
+    if (!need.length) return;
+    let live = true;
+    loadMatchFits(need).then((r) => { if (live) setFits((f) => ({ ...f, ...r })); }).catch(() => {});
+    return () => { live = false; };
+  }, [fitSig]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const hasBack = backTarget(mode, doors, screen).kind !== 'none';
 
   return (
@@ -381,6 +448,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             careProps={careProps('trip')}
             returning={returning}
             levels={levels}
+            fits={fits}
             fresh={entry.fresh}
             subs={subs}
             qa={qa}
@@ -403,54 +471,14 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onMaxHours={setMaxHours}
             onNeedHome={() => setToast('Choose where you live first')}
             onSeeAll={onSeeAll}
-            onSave={openDna}
-            onDna={openDna}
+            onSave={openDnaSheet}
+            onDna={openDnaSheet}
+            onCloseDna={() => setDnaSheet(false)}
+            dnaSheet={dnaSheet ? renderDna({ onSave: async () => { if (await persist()) { setDnaSheet(false); setToast('Travel DNA saved'); } }, onSecondary: () => setDnaSheet(false), onBack: () => setDnaSheet(false) }) : null}
             toast={setToast}
           />
         ) : screen === 'dnasum' ? (
-          <DnaPage
-            data={data}
-            dnaMode={mode === 'dna'}
-            input={input}
-            levels={levels}
-            subs={subs}
-            bands={bands}
-            care={care}
-            who={who}
-            home={home}
-            vibes={vibes}
-            month={month}
-            week={week}
-            maxHours={maxHours}
-            order={dorder}
-            open={dxo}
-            collapsed={dsc}
-            showAll={dall}
-            keep={keep}
-            onLevel={onDnaLevel}
-            onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))}
-            onToggleOpen={(k, cur) => setDxo((o) => ({ ...o, [k]: !cur }))}
-            onToggleBlock={(k) => setDsc((c) => ({ ...c, [k]: !c[k] }))}
-            onShowAll={() => setDall((a) => !a)}
-            onKeep={(k, def) => setKeep((m) => ({ ...m, [k]: !keepOn(m, k, def) }))}
-            onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
-            onBandChoice={(d, b) => setBands((x) => toggleBandChoice(x, d, b))}
-            onCareOption={(item, o) => setCare((c) => toggleCareOption(c, item, o, true))}
-            onCareFirm={(k, f) => setCare((c) => setCareFirm(c, k, f))}
-            onWho={(k) => setWho((w) => toggleInList(w, k))}
-            loc={loc}
-            length={length}
-            continents={continents}
-            onLength={setLength}
-            onContinents={setContinents}
-            onMaxHours={setMaxHours}
-            onNeedHome={() => setToast('Choose where you live first')}
-            onVibe={(k) => setVibes((v) => toggleInList(v, k))}
-            onMonth={setMonth}
-            onSave={onDnaSave}
-            onSecondary={onDnaSecondary}
-            onBack={onDnaBack}
-          />
+          renderDna({ onSave: onDnaSave, onSecondary: onDnaSecondary, onBack: onDnaBack })
         ) : screen === 'saved' ? (
           <SavedScreen
             tags={dnaTags({ bands, care, vibes, levels, subs, chips, interestOrder: orderedByLevel(levels), interestName: (k) => interestByKey(k) ?? { icon: '•', label: k } })}

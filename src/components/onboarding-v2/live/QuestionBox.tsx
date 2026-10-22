@@ -34,6 +34,8 @@ export interface BoxContext {
   /** "Reshuffles ~2 of your top 5" for a question. */
   impactText: (item: LiveItem) => string;
   onTick: (interest: string, chip: string) => void;
+  /** Opens the full Travel DNA page (a sheet over the results). */
+  onManage: () => void;
 }
 
 /** Every question in the flow, so the box can be sized to the tallest one. */
@@ -80,6 +82,7 @@ export function QuestionBox({ ctx, wrapRef }: { ctx: BoxContext; wrapRef?: React
               <div className={`lq-gate ${f.unlocked ? 'open' : ''}`} style={{ ['--gx' as string]: `${f.gatePct}%` }}>{f.unlocked ? OPEN_LOCK : LOCK}</div>
             </div>
             <span className="lq-sr">{label}</span>
+                      <button type="button" className="lq-link manage" onClick={ctx.onManage}>Manage DNA ›</button>
           </div>
           <SwapBody bodyRef={bodyRef} panelKey={panelKey(f)} dir={f.dir} fixedHeight={f.step === 'q1' || f.step === 'q3' || f.step === 'newq' ? qh : null}>
             {renderPanel(ctx)}

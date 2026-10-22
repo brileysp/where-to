@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ResultsList } from '@/components/results/ResultsList';
 import { InterestChip, shortInterestLabel } from '@/components/results/InterestChip';
 import { SearchBox } from '@/components/results/SearchBox';
@@ -30,7 +30,6 @@ import type { Levels } from '@/lib/onboarding/levels';
 import type { InterestAnswers } from '@/lib/onboarding/profile';
 import type { LiveItem } from '@/lib/onboarding/live-questions';
 import { liveMatch, type MatchFitsByInterest } from '@/lib/onboarding/live-factors';
-import { loadMatchFits } from '@/app/onboarding-v2/actions';
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
@@ -66,6 +65,8 @@ export interface ShortlistProps {
   returning: boolean;
   /** The live questions (docs/matching-model.md): what the traveler picked, ticked and answered, and how to change it. */
   levels: Levels;
+  /** How each place does for each interest's chips and answers (loaded by the flow). */
+  fits: MatchFitsByInterest;
   /** Opened with ?fresh=1: the one-time lessons play again. */
   fresh: boolean;
   subs: Record<string, string[]>;
@@ -92,6 +93,9 @@ export interface ShortlistProps {
   onSeeAll: (weights: Record<string, number>) => void;
   onSave: () => void;
   onDna: () => void;
+  /** The Travel DNA page as a sheet over the results, or null when closed; and the way to close it. */
+  dnaSheet?: ReactNode | null;
+  onCloseDna?: () => void;
   toast: (msg: string) => void;
 }
 
@@ -110,17 +114,19 @@ export function ShortlistScreen(p: ShortlistProps) {
 
   const weights = useMemo(() => weightsFor(input), [input]);
 
-  // How each place does for the chips and answers of the interests the traveler has (loaded once per interest, small).
-  const [fits, setFits] = useState<MatchFitsByInterest>({});
+  // How each place does for the chips and answers of the interests the traveler has. The flow loads these as soon as the interests are picked, so they
+  // are normally here before this screen shows; if a ticked chip still has to wait for them, the list waits too (up to 2.5 seconds), so it never
+  // shows one order and then re-sorts by itself.
+  const fits = p.fits;
   const interestKeys = useMemo(() => Object.keys(p.levels).filter((k) => data.setups[k]), [p.levels, data.setups]);
-  const interestSig = interestKeys.join('|');
+  const needsFits = interestKeys.some((k) => (p.subs[k]?.length ?? 0) > 0 || Object.keys(p.qa[k] ?? {}).length > 0);
+  const fitsReady = !needsFits || interestKeys.every((k) => fits[k]);
+  const [waited, setWaited] = useState(false);
   useEffect(() => {
-    const need = interestKeys.filter((k) => !fits[k]);
-    if (!need.length) return;
-    let live = true;
-    loadMatchFits(need).then((r) => { if (live) setFits((f) => ({ ...f, ...r })); }).catch(() => {});
-    return () => { live = false; };
-  }, [interestSig]); // eslint-disable-line react-hooks/exhaustive-deps
+    const t = setTimeout(() => setWaited(true), 2500);
+    return () => clearTimeout(t);
+  }, []);
+  const listReady = fitsReady || waited;
   const match = useMemo(() => liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: p.qa, settings: data.matchSettings }), [interestKeys, data.setups, fits, p.subs, p.qa, data.matchSettings]);
   // The trip settings: where flights start from, what the trip length does to far places, and which continents are left out.
   const origin = useMemo(() => originOf(p.loc), [p.loc.airport, p.loc.country, p.loc.sub]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -392,7 +398,7 @@ export function ShortlistScreen(p: ShortlistProps) {
       <button type="button" className="ob2-chip" onClick={() => setSheet('care')}>{nCare ? `What matters · ${nCare}` : '+ What matters'}</button>
     </div>
   );
-  const boxCtx = { flow: live, setups: data.setups, levels: p.levels, subs: p.subs, qa: p.qa, chips: data.chips, nameOf, impactText, onTick: p.onTick };
+  const boxCtx = { flow: live, setups: data.setups, levels: p.levels, subs: p.subs, qa: p.qa, chips: data.chips, nameOf, impactText, onTick: p.onTick, onManage: p.onDna };
 
   return (
     <div className={liveOn ? 'lq' : undefined}>
@@ -500,6 +506,9 @@ export function ShortlistScreen(p: ShortlistProps) {
         )}
         <div ref={listWrapRef} style={{ position: 'relative' }} className={`ob2-tz res-scope ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
           {toolsOn && <div className="resort-cursor" aria-hidden style={{ left: demo.cursor.left, top: demo.cursor.top, opacity: demo.cursor.visible ? 1 : 0, transform: `translate(-50%, -50%) scale(${demo.cursor.pressed ? 0.65 : 1})` }} />}
+          {!listReady ? (
+            <div className="lq-wait" role="status">Ranking places for you…</div>
+          ) : (
           <ResultsList
             ranked={shown}
             visibleCount={liveOn && live.listShown ? visibleCount : shown.length}
@@ -515,6 +524,7 @@ export function ShortlistScreen(p: ShortlistProps) {
             cardsRevealed
             inserted={liveOn && live.teaser === 'on' && shown.length >= 3 ? { after: 3, node: <div ref={teaserRef}><Teaser dest={shown[0].d} score={shown[0].s} onGotIt={live.closeTeaser} /></div> } : undefined}
           />
+          )}
         </div>
         {liveOn && !live.unlocked && (
           <div className="lq-lockrow">
@@ -566,6 +576,13 @@ export function ShortlistScreen(p: ShortlistProps) {
         </button>
       </div>
 
+      {p.dnaSheet && (
+        <div className="ob2-sbg" onClick={(e) => e.target === e.currentTarget && p.onCloseDna?.()}>
+          <div className="ob2-sheet lq-dnasheet" role="dialog" aria-modal="true" aria-label="Your Travel DNA">
+            {p.dnaSheet}
+          </div>
+        </div>
+      )}
       {tripOpen && (
         <TripSheet
           v={tripValues}

@@ -387,7 +387,7 @@
 .lq-listhead .ichip { height: 40px; min-width: 40px; border-radius: 20px; padding: 0 10px; }
 .lq-listhead .ichip.active { padding: 0 13px 0 11px; }
 .lq-listhead .ichip-emoji { font-size: 19px; }
-.lq-listhead .results-stats-row { margin-bottom: 0; padding: 4px 0 8px; gap: 12px; }
+.lq-listhead .results-stats-row { margin-bottom: 0; padding: 2px 0 6px; gap: 12px; border-bottom: none; }
 
 /* ---- Trip button and "Your trip" sheet ---- */
 .lq-tripbtn { position: relative; display: flex; align-items: center; gap: 6px; border: 1.5px solid var(--border); background: var(--bg-card); color: var(--text); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 700; }
@@ -443,3 +443,9 @@
 .lq-fit .tier i { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(1px); }
 .lq-fit .tier span { color: var(--text-dim); }
 .lq-fit .tier b { color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* the Travel DNA page as a sheet from the bottom, like Your trip */
+.lq-dnasheet { padding: 0; gap: 0; height: 94vh; max-height: 94vh; }
+.lq-dnasheet .ob2-foot { bottom: 0; }
+.lq-meter .manage { white-space: nowrap; font-weight: 700; color: var(--accent); text-decoration: none; }
+.lq-wait { padding: 28px 0; text-align: center; color: var(--text-faint); font-size: 13px; }
