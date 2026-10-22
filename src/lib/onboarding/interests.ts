@@ -45,13 +45,23 @@ const TIER_ORDER: Record<string, number> = { iconic: 0, popular: 1, enthusiast: 
 
 let cache: { version: number; list: PickerInterest[] } | null = null;
 
+/**
+ * Emoji the admin chose for an interest (Interests list), by key. They win over the code's own icon, so every screen of the new flow shows the same
+ * emoji as the results page. Set once by the flow from what the server sends; they are site-wide, not per visitor.
+ */
+let emojiOverrides: Record<string, string> = {};
+export function setInterestEmojiOverrides(map: Record<string, string>): void {
+  emojiOverrides = map;
+  cache = null;
+}
+
 /** Every pickable interest, in the app's order. */
 export function pickerInterests(): PickerInterest[] {
   if (cache && cache.version === sliderState.version) return cache.list;
   const list = VISIBLE_SLIDERS.filter((s) => s.group !== 'Value').map((s, index) => ({
     key: s.key,
     label: DISPLAY_LABELS[s.key] ?? s.label,
-    icon: s.icon,
+    icon: emojiOverrides[s.key] ?? s.icon,
     group: s.group,
     tier: s.audienceTier ?? 'enthusiast',
     index,

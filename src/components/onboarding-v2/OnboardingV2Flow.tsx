@@ -14,7 +14,7 @@ import type { FlowData } from './FlowData';
 import './onboarding-v2.css';
 import { backTarget, buildPath, chooseDoor, emptyDoors, nextScreen, progressPercent, type DoorKey, type Doors, type FlowMode, type ScreenId } from '@/lib/onboarding/path';
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
-import { pickerGroups } from '@/lib/onboarding/interests';
+import { pickerGroups, setInterestEmojiOverrides } from '@/lib/onboarding/interests';
 import { orderedByLevel, setLevel, togglePick, toggleSpecific, toggleTop, type Levels } from '@/lib/onboarding/levels';
 import { dnaRows, dnaTags, keepOn } from '@/lib/onboarding/dna-rows';
 import { interestByKey } from '@/lib/onboarding/interests';
@@ -60,6 +60,8 @@ export interface FlowEntry {
 
 export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowEntry }) {
   const router = useRouter();
+  // The admin's emoji for each interest, applied before any screen reads an interest's icon (a state initializer runs once, ahead of the children).
+  useState(() => setInterestEmojiOverrides(data.emojiOverrides));
   const chips = data.chips;
   // A returning traveler's choices from last time (answers whose card no longer exists are dropped).
   const start: FlowChoices | null = useMemo(() => (entry.saved ? fromTravelProfile(entry.saved, data.cards) : null), [entry.saved, data.cards]);
