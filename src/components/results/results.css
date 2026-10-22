@@ -1891,8 +1891,13 @@
 .filter-link.empty,
 .filter-link:disabled {
   color: var(--text-faint);
-  opacity: 1;
+  /* Nothing to hide or show yet: clearly dimmed, so it reads as unavailable and not as a quiet link. */
+  opacity: 0.4;
   cursor: default;
+}
+.filter-link.empty .filter-icon,
+.filter-link:disabled .filter-icon {
+  opacity: 0.7;
 }
 
 /* Icon trails the label and carries the "is this on" color — with both

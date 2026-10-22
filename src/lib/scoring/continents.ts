@@ -100,7 +100,8 @@ export function stampsRegionFor(destinationId: string): StampsRegion {
   if (continent !== 'North America') return continent;
   const loc = DESTINATION_LOCATIONS[destinationId] ?? locationFor(destinationId);
   if (loc.code === 'CAN') return 'Canada';
-  if (loc.type === 'us-state') return 'US';
+  // Puerto Rico is a US territory but a Caribbean island: it belongs with the Caribbean, not the mainland US.
+  if (loc.type === 'us-state') return loc.code === 'PR' ? 'Mexico, Central America and Caribbean' : 'US';
   return 'Mexico, Central America and Caribbean';
 }
 
