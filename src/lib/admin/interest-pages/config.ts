@@ -346,6 +346,22 @@ const SCENIC_FACTS: FactDef[] = [
 ];
 
 /**
+ * Beaches & Swimming (22 Oct 2026). Seven columns that give the five approved chips and four approved questions something to read (owner approved
+ * the set, with the access column as a multi-select). Ratings are for the place at its best beach season, on its own; a rating of 7 or more is a full
+ * chip match. Proposal page: claude.ai/artifact/LZcc2w5fEcjsxQJ68Xs1rF.
+ */
+const BEACHES_FACTS: FactDef[] = [
+  rate('calmWater', 'Calm swimming water', 'How easy it is for an ordinary swimmer to get into calm, safe water at the place\'s best beaches in beach season: sheltered bays, lagoons and coves, flat water, no strong surf, rips or hazards that keep people out. 0-1 no beach to swim from, 5 a mix of calm coves and surf beaches, 8-10 water like a lake (Maldives lagoons, Bora Bora).'),
+  rate('resortBeaches', 'Resort beaches', 'How strong the place is for the classic beach-resort holiday: good sand with hotels and resorts right on it, sunbeds, beach restaurants and bars, water sports, easy to spend a week without leaving the beach. 0-1 none, 5 a town or city that happens to have a beach, 8-10 a resort coast (Riviera Maya, Mauritius).'),
+  rate('whiteSand', 'White sand', 'How much of the sand on the place\'s best beaches is white or very pale. Coral sand counts; black volcanic sand, brown or gray sand and shingle do not. 0-1 no sand beaches, 4 golden or tan with a few white, 7 mostly white, 10 brilliant white throughout (Maldives, Turks & Caicos).'),
+  rate('remoteBeaches', 'Remote and empty beaches', 'How easy it is to find a beach you will share with very few people, even in season, because it takes a boat, a hike, a long drive or an uninhabited island to reach it. Crowds at the main beaches do not lower it if the empty ones are real and reachable. 0-1 none, 5 quiet corners but busy main beaches, 8-10 hundreds of empty beaches within reach (Palawan, Raja Ampat).'),
+  rate('wildCoast', 'Wild, dramatic coastlines', 'How good the place is for a rugged, scenic coast: cliffs, sea stacks, headlands, big waves and wild shoreline you walk or drive along, more than for swimming. Swimming does not need to be good. 0-1 no coast, 5 some cliffs but mostly gentle coast, 10 a coastline people travel for (Big Sur, Cornwall, Ireland\'s Atlantic coast).'),
+  { key: 'seaTempF', label: 'Sea temperature in beach season (F)', type: 'int', group: 'style', hint: 'The typical water temperature, in whole degrees F, at the place\'s swimming beaches during its main beach season (the warm months for temperate coasts, the usual holiday season for tropical ones, the lake\'s summer figure for a lake place). One number. Source: ocean climatology (for example seatemperature.org, weather-stats.com or NOAA). Blank where there is no swimmable water.' },
+  { key: 'beachAccess', label: 'How you reach the best beaches', type: 'multi', group: 'practical', options: [{ value: 'door', label: 'At your door' }, { value: 'short', label: 'A short walk, drive or shuttle' }, { value: 'trip', label: 'A boat, long drive or hike' }], hint: 'How visitors reach the place\'s best beaches from where they stay. Pick every way that applies: At your door means the best beaches are steps from hotels or in the town itself; a short walk, drive or shuttle means quick to reach; a boat, long drive or hike means the best beaches need a day trip or a walk in. A place with both a town beach and remote ones ticks both.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
  * Festivals (20 Oct 2026). Spectator Sports was folded into Festivals as the "Sporting events" chip, so the first column is that chip's: how strong
  * the place is for big sporting occasions (grand slams, grands prix, major league seasons). It started as a copy of the old Spectator Sports place
  * score (23 places); edit it here from now on. The other Festivals chips still need their own columns.
@@ -399,6 +415,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   diving: [...DIVING_FACTS, ...GEMINI_NOTE_FACTS],
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
+  beachesSwimming: [...BEACHES_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,

@@ -16,7 +16,7 @@ import { LIKELIHOODS, type FactDef } from '@/lib/admin/interest-pages/config';
  *   atLeast   the best 0 to 10 reading among the listed columns (a rating, or the odds written in an animal cell) reaches a number.
  *   atMost    a 0 to 10 rating stays at or under a number; above it, it falls away to nothing at 10.
  *   count     a multi column has at most this many options ticked (for the crowding evidence).
- *   warmest   the lowest water temperature written in a text column such as "54-79 F, 3/2 mm" stays at or above a number of degrees F.
+ *   warmest   the lowest water temperature written in a text column such as "54-79 F, 3/2 mm" (or one number of degrees F) stays at or above a number of degrees F.
  *   named     a named animal in an "Animal (likelihood, months)" cell, scored by its odds (guaranteed 10, likely 8, possible 5, unlikely 2).
  */
 export type FitCheck =
@@ -49,6 +49,8 @@ const hasFacts = (facts: Record<string, InterestFactValue>) => Object.keys(facts
 
 /** The lowest temperature (degrees F) written in a text such as "54-79 F, 3/2 mm in winter". Null when there is no number to read. */
 export function lowestTempF(text: unknown): number | null {
+  // A column that holds one number of degrees F (Beaches' sea temperature) reads as that number.
+  if (typeof text === 'number') return Number.isFinite(text) && text >= 20 && text <= 100 ? text : null;
   if (typeof text !== 'string') return null;
   const m = text.match(/-?\d+(?:\.\d+)?/);
   if (!m) return null;

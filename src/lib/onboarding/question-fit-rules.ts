@@ -1,8 +1,8 @@
 import type { AnswerRule, FitCheck, QuestionFitRule } from './question-fit';
 
 /**
- * Which columns answer each onboarding question, for the seven interests that already have data (hiking, birding, safari, wildlife viewing,
- * diving, whale watching, surfing). Drafted 21 Oct 2026 for the owner's review; see question-fit.ts for what each check means.
+ * Which columns answer each onboarding question, for the eight interests that already have data (hiking, birding, safari, wildlife viewing,
+ * diving, whale watching, surfing, beaches & swimming). Drafted 21 Oct 2026 for the owner's review; see question-fit.ts for what each check means.
  *
  * Keyed "interestKey.questionKey". `answers` follows the order of the question's options in the admin. Questions with no rule yet are
  * listed in QUESTIONS_WAITING_ON_COLUMNS with the reason.
@@ -64,6 +64,12 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'whaleWatching.q3': R(atLeast(10, ...WHALE_COLUMNS), atLeast(8, ...WHALE_COLUMNS), null),
   'whaleWatching.q4': R(all({ type: 'has', column: 'swimAllowed', options: ['true'] }), null, null),
 
+  // ---- Beaches & Swimming ---- (columns and thresholds approved 22 Oct 2026)
+  'beachesSwimming.q1': R(all({ type: 'warmest', column: 'seaTempF', minF: 82 }), all({ type: 'warmest', column: 'seaTempF', minF: 75 }), null, null),
+  'beachesSwimming.q2': R(has('beachAccess', 'door'), has('beachAccess', 'door', 'short'), null),
+  'beachesSwimming.q3': R(atLeast(8, 'calmWater'), atLeast(6, 'calmWater'), atLeast(4, 'calmWater'), null),
+  'beachesSwimming.q4': R(has('beachAccess', 'door', 'short'), any({ type: 'has', column: 'beachAccess', options: ['trip'] }, { type: 'atLeast', columns: ['remoteBeaches'], value: 7 }), null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -96,6 +102,10 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'whaleWatching.q2': 'Not your kind of boat',
   'whaleWatching.q3': 'Sightings less certain',
   'whaleWatching.q4': 'No swimming with whales',
+  'beachesSwimming.q1': 'Colder water',
+  'beachesSwimming.q2': 'Farther from where you stay',
+  'beachesSwimming.q3': 'Rougher water',
+  'beachesSwimming.q4': 'Not the beach access you like',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

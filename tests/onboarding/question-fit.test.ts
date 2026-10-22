@@ -121,7 +121,8 @@ describe('the drafted rules', () => {
           }
           if (c.type === 'atMost' || (c.type === 'atLeast' && def.type === 'rating')) expect(def.type).toBe('rating');
           if (c.type === 'count') expect(def.type).toBe('multi');
-          if (c.type === 'warmest' || c.type === 'named') expect(def.type).toBe('text');
+          if (c.type === 'named') expect(def.type).toBe('text');
+          if (c.type === 'warmest') expect(['text', 'int']).toContain(def.type);
         }
         expect(describeAnswerRule(a, defs).length).toBeGreaterThan(0);
       }
@@ -131,4 +132,35 @@ describe('the drafted rules', () => {
       expect(PROPOSED_MISS_MESSAGES[id].length).toBeLessThanOrEqual(40);
     });
   }
+});
+
+describe('Beaches & Swimming questions', () => {
+  const defs = factDefsFor('beachesSwimming');
+  const fit = (q: string, picked: number[], facts: Record<string, never | number | string[]>) => questionFit(QUESTION_FIT_RULES[`beachesSwimming.${q}`], picked, defs, facts as never);
+  it('reads a plain number of degrees F for the water', () => {
+    expect(lowestTempF(84)).toBe(84);
+    expect(lowestTempF(5)).toBeNull();
+  });
+  it('bath-warm water needs 82 F or more; refreshing is fine never misses', () => {
+    expect(fit('q1', [0], { seaTempF: 85 })).toBe(1);
+    expect(fit('q1', [0], { seaTempF: 77 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [1], { seaTempF: 77 })).toBe(1);
+    expect(fit('q1', [2], { seaTempF: 55 })).toBeNull();
+  });
+  it('calm water reads the calm rating', () => {
+    expect(fit('q3', [0], { calmWater: 10 })).toBe(1);
+    expect(fit('q3', [0], { calmWater: 4 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [3], { calmWater: 1 })).toBeNull();
+  });
+  it('access: steps away, short walk, secluded hike', () => {
+    expect(fit('q2', [0], { beachAccess: ['door', 'trip'] })).toBe(1);
+    expect(fit('q2', [0], { beachAccess: ['short'] })).toBe(0);
+    expect(fit('q2', [1], { beachAccess: ['short'] })).toBe(1);
+    expect(fit('q4', [1], { beachAccess: ['door'], remoteBeaches: 9 })).toBe(1);
+    expect(fit('q4', [1], { beachAccess: ['door'], remoteBeaches: 2 })).toBeCloseTo(2 / 7, 5);
+    expect(fit('q4', [2], { beachAccess: ['door'] })).toBeNull();
+  });
+  it('a place with no data is not marked down', () => {
+    expect(fit('q3', [0], {})).toBeNull();
+  });
 });
