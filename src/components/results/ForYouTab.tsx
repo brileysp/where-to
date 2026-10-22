@@ -380,9 +380,9 @@ function EmphasisText({ text }: { text: string }) {
 
 /**
  * Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. A match is good news only
- * when the month itself is workable, so "Matches" notes are left out for an interest that scores under 5 in the month shown (the drops stay).
+ * when the month itself is workable, so "Matches" notes are left out for an interest that scores under 6 in the month shown (the drops stay).
  */
-const MATCH_NOTE_MIN_SCORE = 5;
+const MATCH_NOTE_MIN_SCORE = 6;
 function MatchNotes({ notes, emojiOverrides, monthScore }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string>; monthScore: (interest: string) => number | null }) {
   const slider = (key: string) => SLIDERS.find((x) => x.key === key);
   const rows = Object.entries(notes)
