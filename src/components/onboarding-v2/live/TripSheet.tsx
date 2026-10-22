@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from 'react';
 import { useUnitText } from '@/components/UnitsProvider';
-import { BAND_DIMENSIONS } from '@/lib/scoring/constants';
+import { BAND_DIMENSIONS, MONTH_NAMES } from '@/lib/scoring/constants';
 import { CARE_ITEMS, COMPANIONS, bandDims, bandTitle, careCount, isNarrowed, type Bands } from '@/lib/onboarding/care';
 import { ELSEWHERE, HomeLocation, type HomeBundle } from '../HomeLocation';
 import { originLabel, resolveOrigin, type Origin } from '@/lib/onboarding/origin';
@@ -148,7 +148,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, onClose }:
     {
       id: 'when',
       label: 'When',
-      value: v.month == null ? 'Any month' : MONTHS[v.month] + (v.week ? ` · week ${v.week}` : ''),
+      value: v.month == null ? 'Any month' : MONTH_NAMES[v.month] + (v.week ? ` · week ${v.week}` : ''),
       set: false,
       body: (
         <>

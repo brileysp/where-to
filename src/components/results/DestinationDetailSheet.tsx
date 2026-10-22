@@ -154,8 +154,12 @@ export function DestinationDetailSheet({
           <span className="detail-sheet-month-group">
             <MonthChip month={previewIdx + 1} onChangeMonth={(m) => setPreviewIdx(m - 1)} />
             {previewIdx !== monthIdx && (
-              <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)}>
-                Back to {MONTH_NAMES[monthIdx]}
+              <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)} aria-label={`Back to ${MONTH_NAMES[monthIdx]}`}>
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 7.5a5 5 0 1 1 1.6 3.7" />
+                  <path d="M3 3.2v4.3h4.3" />
+                </svg>
+                {MONTH_NAMES[monthIdx]}
               </button>
             )}
           </span>

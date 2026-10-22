@@ -132,7 +132,6 @@ export function ForYouTab({
 
   return (
     <div className="detail-tab-content">
-      {notes && Object.keys(notes).length > 0 && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
       {chips.length > 0 && (
         <>
           <div className="detail-section-title interest-chips-title">Your top interests · Tap to compare</div>
@@ -164,7 +163,7 @@ export function ForYouTab({
 
           {stage >= 3 &&
             (isDnaSelected ? (
-              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
+              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} notes={notes} emojiOverrides={emojiOverrides} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
             ) : (
               selectedChip && (
                 <InterestDetail
@@ -172,6 +171,8 @@ export function ForYouTab({
                   row={selectedChip}
                   icon={emojiOverrides[selectedChip.slider.key] ?? selectedChip.slider.icon}
                   shortName={shortInterestLabel(selectedChip.slider.label, shortNames[selectedChip.slider.key])}
+                  notes={notes?.[selectedChip.slider.key] ? { [selectedChip.slider.key]: notes[selectedChip.slider.key] } : undefined}
+                  emojiOverrides={emojiOverrides}
                   previewIdx={previewIdx}
                   onChangeMonth={handleChangeMonth}
                 />
@@ -196,6 +197,8 @@ function DnaDetail({
   bands,
   selectedStyles,
   factors,
+  notes,
+  emojiOverrides,
   previewIdx,
   onChangeMonth,
 }: {
@@ -204,6 +207,8 @@ function DnaDetail({
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   factors?: InterestFactors;
+  notes?: Record<string, PlaceNote>;
+  emojiOverrides: Record<string, string>;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
@@ -224,7 +229,6 @@ function DnaDetail({
         </span>
         My Interests
       </div>
-      <p className="dna-sentence">{sentence}</p>
       <p className="dna-hint">Tap any interest above to learn more.</p>
       <p className="dna-hint">Tap any month on the chart below to see how it compares.</p>
       <div className="detail-section-title interest-detail-months-title">Combined match by month · Tap to compare</div>
@@ -258,6 +262,8 @@ function DnaDetail({
           <div className={`month-detail-score score-${quality.cls}`}>{score.toFixed(1)}</div>
         </div>
       </div>
+      <p className="dna-sentence">{sentence}</p>
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
     </div>
   );
 }
@@ -267,10 +273,14 @@ function InterestDetail({
   row,
   icon,
   shortName,
+  notes,
+  emojiOverrides,
   previewIdx,
   onChangeMonth,
 }: {
   dest: ScoredDestination;
+  notes?: Record<string, PlaceNote>;
+  emojiOverrides: Record<string, string>;
   row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
   /** Resolved icon (admin override already applied) — don't read row.slider.icon directly here. */
   icon: string;
@@ -344,6 +354,7 @@ function InterestDetail({
         </div>
         {monthBlurb && <p className="card-monthly-blurb"><EmphasisText text={monthBlurb} /></p>}
       </div>
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
     </div>
   );
 }
