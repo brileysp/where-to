@@ -8,6 +8,7 @@ import { lowestTempF } from '@/lib/onboarding/question-fit';
 import { questionsToAsk, questionsWaitingOnDrafts } from '@/lib/onboarding/question-rules';
 import { pickerInterests } from '@/lib/onboarding/interests';
 import { birdCaseProblems, SPECIES_CASE_INTERESTS } from '@/lib/text/species-case';
+import { retiredBirdNames } from '@/lib/text/retired-bird-names';
 import { emphasisIsBalanced } from '@/lib/text/emphasis';
 import type { TruthContext } from './context';
 import { REMOVED_ANSWERS, REMOVED_INTERESTS, UNSELECTED_CHIPS } from './decisions';
@@ -295,7 +296,12 @@ export const TRUTHS: Truth[] = [
     const re = /\b[Gg]rey\b/; const bad: string[] = [];
     for (const p of ctx.places) for (const [k, t] of Object.entries(p.overview)) if (t && re.test(t)) bad.push(`${p.name} ${k}`);
     return noneOf(bad, 'overviews that write "grey"');
-  }, pending: 'Part of the bird-name sweep to eBird names (to-do on the Birding page): Grey Heron becomes Gray Heron, and the animals follow.' },
+  } },
+  { id: 'T06', area: 'Text', says: 'Bird names are the eBird names: a name swept out on 22 Oct 2026 (Common Starling, Griffon Vulture, Little Auk and the rest) never comes back.', check: (ctx) => {
+    const bad: string[] = [];
+    for (const p of ctx.places) for (const k of SPECIES_CASE_INTERESTS) for (const t of [p.overview[k], ...(p.monthly[k] ?? [])]) if (t) for (const x of retiredBirdNames(t)) bad.push(`${p.name}: ${x.found} (now ${x.use})`);
+    return noneOf(bad, 'texts with an older bird name');
+  } },
 
   // ======================= Admin =======================
   { id: 'A01', area: 'Admin', says: 'Everything the owner approved records who approved it and when.', check: (ctx) => noneOf([...ctx.chips.filter((c) => approved(c) && !c.approvedBy.trim()).map((c) => `chip ${c.interestKey}/${c.label}`), ...ctx.questions.filter((q) => approved(q) && !q.approvedBy.trim()).map((q) => `question ${q.interestKey}/${q.questionKey}`)], 'approvals with no approver') },

@@ -52,6 +52,10 @@ describe('the known truths', () => {
     expect(ok('T03', { ...emptyContext(), places: [place({ overview: { hiking: 'A 12 km ridge walk.' } })] })).toBe(false);
     expect(ok('T04', { ...emptyContext(), places: [place({ overview: { hiking: 'Colour-coded routes.'.toLowerCase() } })] })).toBe(false);
     expect(ok('T04', { ...emptyContext(), places: [place({ overview: { birding: 'The London Wetland Centre is close.' } })] })).toBe(true);
+    expect(ok('T05', { ...emptyContext(), places: [place({ overview: { wildlifeViewing: 'Grey seals haul out here.' } })] })).toBe(false);
+    expect(ok('T06', { ...emptyContext(), places: [place({ overview: { birding: 'Common Starlings and Griffon Vultures wheel overhead.' } })] })).toBe(false);
+    expect(ok('T06', { ...emptyContext(), places: [place({ overview: { birding: 'European Starlings, Eurasian Griffons and Little Ringed Plovers wheel overhead.' } })] })).toBe(true);
+    expect(ok('T06', { ...emptyContext(), places: [place({ overview: { birding: 'European Pied Flycatchers and Rüppell\'s Griffon Vultures.' } })] })).toBe(true);
   });
   it('can fail: a saved rule that differs from the code, but not when only the key order differs', () => {
     const rule = QUESTION_FIT_RULES['hiking.q3'];

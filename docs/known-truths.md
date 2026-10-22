@@ -2,7 +2,7 @@
 
 Checked 2026-10-22. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
-**49 truths: 44 hold, 0 fail, 5 pending.** Pending means we know it does not hold yet and what will close it.
+**50 truths: 46 hold, 0 fail, 4 pending.** Pending means we know it does not hold yet and what will close it.
 
 ## Matching
 
@@ -72,7 +72,8 @@ Checked 2026-10-22. Each line is something that must always be true of Where To?
 | holds | T02: Species-name markers (**) are balanced in every live text. |  |
 | holds | T03: Live texts use US units (miles, feet, degrees F), never kilometers, meters or degrees C on their own. |  |
 | holds | T04: Live texts use US spelling (color, center, neighbor), not UK spelling. Proper names such as "Wetland Centre" are left alone. |  |
-| pending | T05: Animal names use American spelling ("gray seal", "Gray Heron"), the way eBird and NOAA write them. | Part of the bird-name sweep to eBird names (to-do on the Birding page): Grey Heron becomes Gray Heron, and the animals follow. |
+| holds | T05: Animal names use American spelling ("gray seal", "Gray Heron"), the way eBird and NOAA write them. |  |
+| holds | T06: Bird names are the eBird names: a name swept out on 22 Oct 2026 (Common Starling, Griffon Vulture, Little Auk and the rest) never comes back. |  |
 
 ## Admin
 

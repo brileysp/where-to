@@ -28,7 +28,7 @@ Score a task 0 to 2 on each: (1) compounds, (2) checkable, (3) reduces the bigge
 - Fewer than 15 of 50 real users return within 30 days (once there are 50).
 
 ## Proof milestones
-M1 100+ known truths holding (49 written on 22 Oct 2026; `npm run truths` checks them against the live data, list in `docs/known-truths.md`). M2 five friendly users finish onboarding. M3 an assistant can call the connector. M4 fifty saved profiles. M5 30-day return rate measured.
+M1 100+ known truths holding (50 written by 22 Oct 2026; `npm run truths` checks them against the live data, list in `docs/known-truths.md`). M2 five friendly users finish onboarding. M3 an assistant can call the connector. M4 fifty saved profiles. M5 30-day return rate measured.
 
 ## Two month-long experiments (play budget)
 - A "live here" lens on 20 places, shown to ten people considering a move.
