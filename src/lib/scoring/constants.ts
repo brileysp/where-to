@@ -20,11 +20,11 @@ import type { Slider, Persona, BandDimension } from './types';
 // bands) is separate, later onboarding-flow work.
 export const SLIDERS: Slider[] = [
   // Nature & Wildlife
-  { key: 'wildlifeViewing', label: 'Wildlife Viewing', icon: '🦁', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'popular' },
+  { key: 'wildlifeViewing', label: 'Wildlife Viewing', icon: '🐾', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'popular' },
   { key: 'birding', label: 'Birding', icon: '🦜', group: 'Nature & Wildlife', formula: 'birding', audienceTier: 'specialist' },
   { key: 'safari', label: 'Safari', icon: '🐘', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'enthusiast' },
   { key: 'whaleWatching', label: 'Whale Watching', icon: '🐋', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'enthusiast' },
-  { key: 'scenicLandscapes', label: 'Scenic Landscapes', icon: '🏞️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic' },
+  { key: 'scenicLandscapes', label: 'Scenic Landscapes', icon: '⛰️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic' },
   // Folded into Scenic Landscapes as the "Landscape photography" chip (20 Oct 2026), so no longer a separate pick. Kept scored and stored, like
   // nationalParks: its place scores still feed Scenic Landscapes and the chip, and personas and saved weights keep working.
   { key: 'landscapePhotography', label: 'Landscape Photography', icon: '📸', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'specialist', hidden: true },
@@ -78,7 +78,7 @@ export const SLIDERS: Slider[] = [
   // the tier's own test ("how many people decide where to travel based, at
   // least partly, on this?") Barcelona, Rome, Venice and Chicago answer it.
   { key: 'architecture', label: 'Architecture', icon: '🏛️', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'iconic' },
-  { key: 'cityExploration', label: 'Local Culture & City Exploration', icon: '🚶', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'iconic' },
+  { key: 'cityExploration', label: 'Local Culture & City Exploration', icon: '🛵', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'iconic' },
   { key: 'indigenousCultures', label: 'Indigenous Cultures', icon: '🪶', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'specialist' },
   { key: 'religiousSites', label: 'Religious & Spiritual Sites', icon: '🕌', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'popular' },
   { key: 'festivals', label: 'Festivals & Live Events', icon: '🎉', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'enthusiast' },
@@ -104,8 +104,8 @@ export const SLIDERS: Slider[] = [
   // destinations apart from their hotels; "where can we stay" is upstream of
   // "where should we go" for a large share of travellers. At 0.4 this was
   // worth less than shopping.
-  { key: 'luxuryHotels', label: 'Luxury Hotels', icon: '🏨', group: 'Relaxation & Leisure', formula: 'luxury', audienceTier: 'popular' },
-  { key: 'allInclusive', label: 'All-inclusive Resorts', icon: '🏝️', group: 'Relaxation & Leisure', formula: 'luxury', audienceTier: 'popular' },
+  { key: 'luxuryHotels', label: 'Luxury Hotels', icon: '✨', group: 'Relaxation & Leisure', formula: 'luxury', audienceTier: 'popular' },
+  { key: 'allInclusive', label: 'All-inclusive Resorts', icon: '🍹', group: 'Relaxation & Leisure', formula: 'luxury', audienceTier: 'popular' },
   { key: 'spaWellness', label: 'Spa & Wellness', icon: '💆', group: 'Relaxation & Leisure', formula: 'food', audienceTier: 'enthusiast' },
   { key: 'hotSprings', label: 'Hot Springs', icon: '♨️', group: 'Relaxation & Leisure', formula: 'swim', audienceTier: 'enthusiast' },
   { key: 'yogaRetreats', label: 'Yoga & Wellness Retreats', icon: '🧘', group: 'Relaxation & Leisure', formula: 'food', audienceTier: 'specialist' },
