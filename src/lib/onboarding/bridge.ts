@@ -63,11 +63,24 @@ export function buildProfile(input: ProfileInput): PreferenceProfile {
   return p;
 }
 
-/** The 0 to 10 weight for every interest, given an already-built profile: picked interests use their level's weight, the rest come from the profile. */
+/** With only one interest picked, the interests the profile suggests alongside it count a little, but never more than this. */
+export const SINGLE_PICK_INFERRED_CAP = 4;
+
+/**
+ * The 0 to 10 weight for every interest, given an already-built profile (owner decision, 22 Oct 2026: nothing is inferred when the traveler has picked
+ * interests, because inferred interests were outweighing the picks and pulling every score down).
+ *  - Two or more interests picked: only the picked interests count, each at its level's weight (top, love, like, curious). The rest are 0.
+ *  - Exactly one picked: it counts at its level, and the profile's suggestions count a little (capped at SINGLE_PICK_INFERRED_CAP).
+ *  - None picked (photos, swipes, "surprise me"): the profile decides everything, as before.
+ */
 export function weightsFromProfile(profile: PreferenceProfile, levels: Levels): Record<string, number> {
   const derived = convertTravelDNAToRecommendationWeights(profile);
+  const picked = Object.keys(levels).filter((k) => weightOf(levels[k]) > 0);
   const out: Record<string, number> = {};
-  for (const s of SLIDERS) out[s.key] = derived[s.key] ?? NEUTRAL_WEIGHT;
+  for (const s of SLIDERS) {
+    const inferred = derived[s.key] ?? NEUTRAL_WEIGHT;
+    out[s.key] = picked.length >= 2 ? 0 : picked.length === 1 ? Math.min(inferred, SINGLE_PICK_INFERRED_CAP) : inferred;
+  }
   for (const [k, level] of Object.entries(levels)) out[k] = weightOf(level);
   return out;
 }

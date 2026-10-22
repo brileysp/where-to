@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import type { DnaCard } from '@/lib/dna/types';
 import { PREFERENCE_ATTRIBUTES } from '@/lib/dna/profile';
 import { SLIDERS } from '@/lib/scoring/constants';
-import { INTEREST_TO_DNA_PICK, buildProfile, dnaPicksFor, weightsFor, weightsFromProfile } from '@/lib/onboarding/bridge';
+import { INTEREST_TO_DNA_PICK, SINGLE_PICK_INFERRED_CAP, buildProfile, dnaPicksFor, weightsFor, weightsFromProfile } from '@/lib/onboarding/bridge';
 import { VIBES } from '@/lib/onboarding/vibes';
 import { applyFlightLimit, changedPositions, topIds } from '@/lib/onboarding/shortlist';
 import { airportByCode } from '@/lib/onboarding/airports';
@@ -53,11 +53,24 @@ describe('joining the new flow to the existing Travel DNA engine', () => {
     const p = buildProfile({ levels: {}, who: [], bands: {}, vibes: ['beach'], answers: [] });
     expect(p.beach).toBeGreaterThan(2);
   });
-  it('picked interests use their level weight and the rest come from the profile', () => {
-    const w = weightsFor({ levels: { hiking: 'top', golf: 'like' }, who: [], bands: {}, vibes: [], answers: [] });
+  it('with two or more interests picked, only those count: nothing is inferred', () => {
+    const w = weightsFor({ levels: { hiking: 'top', golf: 'like' }, who: [], bands: {}, vibes: ['wild'], answers: [] });
     expect(w.hiking).toBe(9.5);
     expect(w.golf).toBe(5);
-    expect(typeof w.birding).toBe('number');
+    expect(w.birding).toBe(0);
+    expect(w.wildlifeViewing).toBe(0);
+    expect(Object.entries(w).filter(([, v]) => v > 0).map(([k]) => k).sort()).toEqual(['golf', 'hiking']);
+  });
+  it('with exactly one interest picked, the profile suggests a little, never more than the cap', () => {
+    const w = weightsFor({ levels: { hiking: 'top' }, who: [], bands: {}, vibes: ['wild', 'trail'], answers: [] });
+    expect(w.hiking).toBe(9.5);
+    const others = Object.entries(w).filter(([k]) => k !== 'hiking').map(([, v]) => v);
+    expect(Math.max(...others)).toBeLessThanOrEqual(SINGLE_PICK_INFERRED_CAP);
+    expect(others.some((v) => v > 2)).toBe(true);
+  });
+  it('with nothing picked the profile decides everything, as before', () => {
+    const w = weightsFor({ levels: {}, who: [], bands: {}, vibes: ['wild'], answers: [] });
+    expect(Math.max(...Object.values(w))).toBeGreaterThan(SINGLE_PICK_INFERRED_CAP);
   });
   it('a love answer raises the interests that card is about', () => {
     const base = weightsFromProfile(buildProfile({ levels: {}, who: [], bands: {}, vibes: [], answers: [] }), {});

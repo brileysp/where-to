@@ -1,3 +1,4 @@
+import { seasonOffset } from './seasonCrowds';
 import { BAND_DIMENSIONS, NEUTRAL_WEIGHT, SLIDERS, sliderState } from './constants';
 import { deriveWeatherBand, has, isSliderNA } from './destinations';
 import { seasonPosition } from './blurb';
@@ -786,17 +787,20 @@ export function computeRankedDestinations(
   factors?: InterestFactors,
   /** What each whole place keeps of its final score (the trip length: flights that eat the trip). Missing = 1. */
   placeFactors?: Record<string, number>,
-  /** Peak or off peak: the share of each place's off-peak value for the month mixed into its score (0 = none). */
-  offPeakWeight = 0,
+  /** Crowds & prices: points moved per point of season difference (negative = prefers peak times, positive = prefers off peak, 0 = neutral). */
+  peakGain = 0,
 ): RankedDestination[] {
   const monthIdx = month - 1;
   return [...destinations]
-    .map((d) => ({ d, s: blendOffPeak(scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors), d.monthly.deals?.[monthIdx], offPeakWeight) * (placeFactors?.[d.id] ?? 1) }))
+    .map((d) => ({ d, s: shiftForSeason(scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors), seasonOffset(d, monthIdx), peakGain) * (placeFactors?.[d.id] ?? 1) }))
     .sort((a, b) => b.s - a.s);
 }
 
-/** A score with some of the place's off-peak value for the month mixed in. No weight, or no off-peak value on file, leaves the score as it was. */
-export function blendOffPeak(score: number, offPeak: number | undefined, weight: number): number {
-  if (!(weight > 0) || offPeak === undefined || !Number.isFinite(offPeak)) return score;
-  return score * (1 - weight) + offPeak * weight;
+/**
+ * A score moved for the traveler's Crowds & prices leaning. `offset` is how far the month is from a typical one for this place (see seasonCrowds.ts):
+ * zero for a place whose season makes no real difference, so those places are left alone. A neutral leaning (gain 0) never changes anything.
+ */
+export function shiftForSeason(score: number, offset: number, gain: number): number {
+  if (!gain || !offset || !Number.isFinite(offset)) return score;
+  return Math.max(0, Math.min(10, score + gain * offset));
 }

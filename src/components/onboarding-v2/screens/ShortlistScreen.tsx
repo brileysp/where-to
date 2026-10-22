@@ -33,7 +33,7 @@ import { liveMatch, type MatchFitsByInterest } from '@/lib/onboarding/live-facto
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
-import { peakWeight } from '@/lib/onboarding/peak';
+import { peakGain } from '@/lib/onboarding/peak';
 import { TripSheet, monthShort, originOf, tripSetCount } from '../live/TripSheet';
 import { TripsSheet } from '../live/TripsSheet';
 import type { TripsApi } from '../live/useTrips';
@@ -143,9 +143,9 @@ export function ShortlistScreen(p: ShortlistProps) {
     () => tripAdjust({ coords: data.coords, regions: data.regions, origin, length: p.length, continents: p.continents, settings: data.matchSettings }),
     [data.coords, data.regions, origin, p.length, p.continents, data.matchSettings],
   );
-  // Peak or off peak mixes some of each place's off-peak value for the month into its score; it needs a month to mean anything.
-  const offPeakWeight = peakWeight(p.peak, data.matchSettings);
-  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, offPeakWeight), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, offPeakWeight]);
+  // Crowds & prices moves a score by how busy or quiet the month is for that place (neutral in the middle); it needs a month to mean anything.
+  const seasonGain = peakGain(p.peak, data.matchSettings);
+  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, seasonGain), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, seasonGain]);
   const inView = useMemo(() => rankedAll.filter((r) => !adjust.leftOut.has(r.d.id)), [rankedAll, adjust.leftOut]);
   const limited = useMemo(() => applyFlightLimitFrom(inView, origin, p.maxHours, data.coords), [inView, origin, p.maxHours, data.coords]);
 
@@ -153,9 +153,9 @@ export function ShortlistScreen(p: ShortlistProps) {
   const keptWith = useCallback(
     (nextQa: InterestAnswers) => {
       const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, settings: data.matchSettings });
-      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors, offPeakWeight).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
+      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors, seasonGain).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
     },
-    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours, offPeakWeight],
+    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours, seasonGain],
   );
   const withAnswer = (interest: string, qkey: string, picks: number[]): InterestAnswers => ({ ...p.qa, [interest]: { ...(p.qa[interest] ?? {}), [qkey]: picks } });
   const nameOf = (k: string) => ({ icon: data.emojiOverrides[k] ?? interestByKey(k)?.icon ?? '•', label: interestByKey(k)?.label ?? k });
@@ -341,7 +341,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   function moverFor(card: DnaCard, type: SwipeType): { name: string; by: number } | null {
     const before = limited.kept.map((r) => r.d.id);
     const nextInput: ProfileInput = { ...input, answers: [...input.answers, { card, type } as Answer] };
-    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors, offPeakWeight).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
+    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors, seasonGain).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
     let best = null as { name: string; by: number } | null;
     after.forEach((r, i) => {
       const was = before.indexOf(r.d.id);

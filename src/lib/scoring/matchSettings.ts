@@ -30,13 +30,15 @@ export interface MatchSettings {
   /** What a place keeps when the trip would be mostly travel. */
   keepIfTripFar: number;
   /**
-   * Peak or off peak: how much of a place's off-peak value for the month (0 to 10, high = few visitors and off-season prices) is mixed into its
-   * match score, for each step of the scale. "Peak times" mixes in nothing. Unlike every number above, this one can move a place up as well as down.
+   * Peak or off peak (Crowds & prices): points a place's score moves for each point its month is busier or quieter than a typical month for that
+   * place (a peak month is 1 to 5 points below typical depending on how extreme its peak is, a low-season month 3 above; see seasonCrowds.ts). The
+   * middle step is neutral and changes nothing. A negative number prefers busy times; a positive one prefers quiet times. A place whose season
+   * makes little difference barely moves. Unlike every number above, this one can move a place up as well as down.
    */
-  peakLeanPeak: number;
-  peakMiddle: number;
-  peakLeanOff: number;
-  peakOff: number;
+  peakStepPeak: number;
+  peakStepLeanPeak: number;
+  peakStepLeanOff: number;
+  peakStepOff: number;
 }
 
 export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
@@ -52,10 +54,10 @@ export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
   tripFarShare: 0.45,
   keepIfTripStretch: 0.85,
   keepIfTripFar: 0.6,
-  peakLeanPeak: 0.1,
-  peakMiddle: 0.2,
-  peakLeanOff: 0.35,
-  peakOff: 0.5,
+  peakStepPeak: -0.25,
+  peakStepLeanPeak: -0.125,
+  peakStepLeanOff: 0.125,
+  peakStepOff: 0.25,
 };
 
 export interface MatchSettingField {
@@ -83,10 +85,10 @@ export const MATCH_SETTING_FIELDS: MatchSettingField[] = [
   { key: 'tripFarShare', label: 'Trip length: share that makes the trip mostly travel', help: 'Above this share of the trip in transit, the place is mostly travel.', min: 0.1, max: 0.9, step: 0.05, percent: true },
   { key: 'keepIfTripStretch', label: 'Keeps this much when the flights are a stretch', help: 'A place whose flights take more than the fine share of the trip keeps this share of its score. Trip length never hides a place.', min: 0.3, max: 1, step: 0.05, percent: true },
   { key: 'keepIfTripFar', label: 'Keeps this much when the trip would be mostly travel', help: 'A place whose flights take most of the trip keeps this share of its score.', min: 0.2, max: 1, step: 0.05, percent: true },
-  { key: 'peakLeanPeak', label: 'Peak or off peak: "Leaning peak" mixes in', help: 'The share of the place\'s off-peak value for the month that is mixed into its score. "Peak times" mixes in none. This can move a place up as well as down.', min: 0, max: 1, step: 0.05, percent: true },
-  { key: 'peakMiddle', label: 'Peak or off peak: "In between" mixes in', help: 'Where the scale starts. A little off-peak weight means a place at its busiest and most expensive loses a little.', min: 0, max: 1, step: 0.05, percent: true },
-  { key: 'peakLeanOff', label: 'Peak or off peak: "Leaning off peak" mixes in', help: 'More weight on few visitors and off-season prices.', min: 0, max: 1, step: 0.05, percent: true },
-  { key: 'peakOff', label: 'Peak or off peak: "Off peak" mixes in', help: 'The far end: fewer crowds and off-season deals count as much as the weather and fit.', min: 0, max: 1, step: 0.05, percent: true },
+  { key: 'peakStepPeak', label: 'Crowds & prices: "Peak times" moves a score by', help: 'Points moved per point a month is busier or quieter than typical for that place. Negative means busy, expensive months gain and quiet ones lose. A peak month of an extreme-peak place is 5 points below typical, so -0.25 is about 1.25 points. Places with no real season barely move.', min: -1, max: 0, step: 0.025, percent: false },
+  { key: 'peakStepLeanPeak', label: 'Crowds & prices: "Leaning peak" moves a score by', help: 'The same, one step toward the middle. The middle step moves nothing.', min: -1, max: 0, step: 0.025, percent: false },
+  { key: 'peakStepLeanOff', label: 'Crowds & prices: "Leaning off peak" moves a score by', help: 'Positive means quiet, cheaper months gain and busy ones lose.', min: 0, max: 1, step: 0.025, percent: false },
+  { key: 'peakStepOff', label: 'Crowds & prices: "Off peak" moves a score by', help: 'The far end: an extreme-peak place loses about 1.25 points in its busiest months and a low-season month gains about 0.75 at the default.', min: 0, max: 1, step: 0.025, percent: false },
 ];
 
 export type MatchSettingsOverride = Partial<Record<keyof MatchSettings, number>>;
@@ -113,6 +115,6 @@ export function matchSettingsProblem(s: MatchSettings): string | null {
   if (s.interestFloor > Math.min(s.keepIfChipMissed, s.keepIfLimitMissed)) return 'The floor cannot be higher than what a place keeps for a missed chip or Limit, or those misses would make no difference';
   if (s.tripStretchShare >= s.tripFarShare) return 'The share of the trip that is fine must be lower than the share that makes it mostly travel';
   if (s.keepIfTripFar > s.keepIfTripStretch) return 'A mostly-travel trip cannot keep more of the score than a stretch one';
-  if (!(s.peakLeanPeak <= s.peakMiddle && s.peakMiddle <= s.peakLeanOff && s.peakLeanOff <= s.peakOff)) return 'The peak or off peak steps must mix in more, one step to the next, from Leaning peak to Off peak';
+  if (!(s.peakStepPeak <= s.peakStepLeanPeak && s.peakStepLeanPeak <= 0 && 0 <= s.peakStepLeanOff && s.peakStepLeanOff <= s.peakStepOff)) return 'The Crowds & prices steps must run from Peak times (most negative) through the neutral middle to Off peak (most positive)';
   return null;
 }

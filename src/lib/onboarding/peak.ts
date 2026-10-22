@@ -23,7 +23,7 @@ export const PEAK_ENDS = {
 /** The title of the row, wherever the scale is shown. */
 export const PEAK_TITLE = 'Crowds & prices';
 
-/** How much of a place's off-peak value for the month is mixed into its score at a step (the numbers are on the Matching tab). */
-export function peakWeight(peak: number, s: MatchSettings): number {
-  return [0, s.peakLeanPeak, s.peakMiddle, s.peakLeanOff, s.peakOff][isPeak(peak) ? peak : DEFAULT_PEAK];
+/** How far a score moves at a step, per point a month is busier or quieter than typical for the place (the numbers are on the Matching tab). The middle is 0. */
+export function peakGain(peak: number, s: MatchSettings): number {
+  return [s.peakStepPeak, s.peakStepLeanPeak, 0, s.peakStepLeanOff, s.peakStepOff][isPeak(peak) ? peak : DEFAULT_PEAK];
 }

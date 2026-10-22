@@ -9,7 +9,7 @@ import { allRegions } from './regions';
 import { estimateFlightHours, milesBetween } from './airports';
 import type { TravelProfile } from './profile';
 import { effectiveTrip, type Trip } from './trips';
-import { peakWeight } from './peak';
+import { peakGain } from './peak';
 
 /**
  * What a saved traveler's chips and answers do to every place, worked out on the server so the full results page ranks the same way the
@@ -33,8 +33,8 @@ export interface TripEffect {
   placeFactors: Record<string, number>;
   /** Places left out: in a continent turned off, or further than the longest flight. */
   hidden: string[];
-  /** Peak or off peak: how much of each place's off-peak value for the month is mixed into its score. */
-  offPeakWeight: number;
+  /** Crowds & prices: points a score moves per point of season difference (0 = neutral). */
+  peakGain: number;
 }
 
 /**
@@ -53,11 +53,11 @@ export async function tripEffectForProfile(saved: TravelProfile | null, activeTr
   const hasLimit = !!profile.maxHours && !!origin;
   const step = activeTrip ? effectiveTrip(saved, activeTrip).peak : saved.peak;
   const [coords, { settings }] = await Promise.all([getPlaceCoords(), loadMatchSettings()]);
-  const offPeakWeight = peakWeight(step, settings);
-  if (!hasLength && !hasContinents && !hasLimit && offPeakWeight === 0) return null;
+  const gain = peakGain(step, settings);
+  if (!hasLength && !hasContinents && !hasLimit && gain === 0) return null;
   const regions = regionsForPlaces(coords);
   const adj = tripAdjust({ coords, regions, origin, length: profile.length, continents: profile.continents ?? [], settings });
   const hidden = new Set(adj.leftOut);
   if (hasLimit && origin) for (const [id, at] of Object.entries(coords)) if (estimateFlightHours(milesBetween(origin, at)) > profile.maxHours) hidden.add(id);
-  return { placeFactors: adj.factors, hidden: [...hidden], offPeakWeight };
+  return { placeFactors: adj.factors, hidden: [...hidden], peakGain: gain };
 }
