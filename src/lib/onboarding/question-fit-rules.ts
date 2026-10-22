@@ -43,7 +43,6 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   // Owner, 21 Oct 2026: wild dog counts as a full match at "possible" or better (they are rare everywhere); the other animals need "likely".
   'safari.q1': R(atLeast(8, 'leopard'), atLeast(8, 'lion'), atLeast(8, 'cheetah'), atLeast(8, 'elephant'), atLeast(8, 'rhino'), atLeast(5, 'wildDog'), atLeast(8, 'tiger')),
   'safari.q2': R(within('crowding', CROWDING, 'low'), within('crowding', CROWDING, 'medium'), null),
-  'safari.q3': R(within('malaria', MALARIA, 'low'), within('malaria', MALARIA, 'seasonal'), null),
   // Owner, 21 Oct 2026: even where you can drive in, you can usually fly in, so the fly-in wish is not checked (no column says which places have bush planes or lodge airstrips).
   'safari.q4': R(has('access', 'road', 'mixed'), null, null),
   'safari.q5': R(null, any({ type: 'has', column: 'nightDrives', options: ['yes'] }, { type: 'has', column: 'offRoad', options: ['yes'] }), all({ type: 'has', column: 'nightDrives', options: ['yes'] }, { type: 'has', column: 'offRoad', options: ['yes'] })),
@@ -84,7 +83,6 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'birding.q4': 'Birds not reliable',
   'safari.q1': 'Less likely to see your animal',
   'safari.q2': 'More vehicles around',
-  'safari.q3': 'Malaria risk',
   'safari.q4': 'Different way into camp',
   'safari.q5': 'No night drives or off-road',
   'wildlifeViewing.q1': 'Not the way you like to watch',
