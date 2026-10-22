@@ -37,8 +37,11 @@ export interface Truth {
   pending?: string;
 }
 
-/** Places with a real coast where neither surfing nor diving applies (no waves, no diving), so Beaches stays on. Owner rule, 22 Oct 2026. */
-const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia'];
+/**
+ * Places where Beaches is on although neither surfing nor diving applies: a real coast with no waves or diving (Copenhagen, Acadia), and cities with a real
+ * urban swimming scene (Paris Plages, Berlin's lakes, Vienna's Alte Donau). Owner rule, 22 Oct 2026.
+ */
+const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia', 'paris', 'berlin', 'vienna'];
 const pass: TruthResult = { ok: true };
 const fail = (detail: string): TruthResult => ({ ok: false, detail });
 const some = (xs: string[], n = 5) => (xs.length > n ? `${xs.slice(0, n).join('; ')} (and ${xs.length - n} more)` : xs.join('; '));
@@ -240,7 +243,7 @@ export const TRUTHS: Truth[] = [
     const rank = [...ctx.places].filter((p) => !p.naSliders.includes('diving')).sort((a, b) => peak(b) - peak(a)).findIndex((p) => /red sea/i.test(p.name));
     return rank >= 0 && rank < 10 ? pass : fail(rank < 0 ? 'not found' : `ranks ${rank + 1}`);
   } },
-  { id: 'P09', area: 'Places and scores', says: 'The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia).', check: (ctx) => {
+  { id: 'P09', area: 'Places and scores', says: 'The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia) or a city with a real urban swimming scene (Paris, Berlin, Vienna).', check: (ctx) => {
     const on = (p: (typeof ctx.places)[number], k: string) => !p.naSliders.includes(k);
     const bad: string[] = [];
     for (const p of ctx.places) {
