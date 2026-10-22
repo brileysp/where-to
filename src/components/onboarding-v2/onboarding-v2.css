@@ -375,12 +375,19 @@
 .lq-lh { gap: 10px; }
 .lq-lh span { margin-left: auto; }
 .lq-lh .results-icon-btn { flex: none; }
-/* the list heading and the results tools sit together as one block, so the screen's row gap does not open up between empty parts */
-.lq-listhead { display: block; }
-.lq-listhead > .lq-lh { margin-bottom: 8px; }
+/* the list heading and the results tools sit together as one tight block, like an app's own toolbar */
+.lq-listhead { display: block; margin-bottom: -4px; }
+.lq-listhead > .lq-lh { margin-bottom: 4px; min-height: 30px; align-items: center; }
+.lq-listhead > .lq-lh b { font-size: 18px; }
+.lq-listhead .lq-lh .results-icon-btn { width: 30px; height: 30px; }
+.lq-listhead .lq-lh .results-icon-btn svg { width: 14px; height: 14px; }
 .lq-listhead .results-search-wrap { margin: 0; }
-.lq-listhead .quick-chip-row-wrap { margin-bottom: 4px; }
-.lq-listhead .results-stats-row { margin-bottom: 0; padding-bottom: 10px; }
+.lq-listhead .quick-chip-row-wrap { margin-bottom: 0; }
+.lq-listhead .quick-chip-row { padding: 2px 20px 2px 2px; gap: 8px; }
+.lq-listhead .ichip { height: 40px; min-width: 40px; border-radius: 20px; padding: 0 10px; }
+.lq-listhead .ichip.active { padding: 0 13px 0 11px; }
+.lq-listhead .ichip-emoji { font-size: 19px; }
+.lq-listhead .results-stats-row { margin-bottom: 0; padding: 4px 0 8px; gap: 12px; }
 
 /* ---- Trip button and "Your trip" sheet ---- */
 .lq-tripbtn { position: relative; display: flex; align-items: center; gap: 6px; border: 1.5px solid var(--border); background: var(--bg-card); color: var(--text); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 700; }

@@ -460,7 +460,7 @@ export function ShortlistScreen(p: ShortlistProps) {
                 </div>
                 <div className="results-stats-row">
                   <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
-                    <VisitedCounterStamp count={visitedCount} size={34} />
+                    <VisitedCounterStamp count={visitedCount} size={26} />
                     <span className="visited-stat-label">places visited</span>
                     <span className="visited-stat-chevron">›</span>
                   </button>
