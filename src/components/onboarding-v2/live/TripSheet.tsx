@@ -13,6 +13,8 @@ import { TRIP_LENGTHS, type TripLength } from '@/lib/onboarding/trip-length';
 import { CareAccordion } from '../CareAccordion';
 import type { CareHandlers } from '../screens/EssentialsScreen';
 import { ContinentPicker } from './ContinentPicker';
+import { TripName } from './TripsSheet';
+import { nextYearFor, type Trip } from '@/lib/onboarding/trips';
 import { LengthPicker } from './LengthPicker';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -107,7 +109,7 @@ function LengthEffect({ length, adjust, names, inScope, home }: { length: TripLe
  * Climate, Continents, Flying from, then Who is going (not in the list the owner gave, kept so travelers can still say who is coming), What else matters. A row opens its choices right under it (one open at a time). The button at the bottom
  * shows how many places are in view and closes the sheet. The list behind keeps following every change.
  */
-export function TripSheet({ v, h, placeCount, adjust, names, inScope, onClose }: { v: TripValues; h: TripHandlers; placeCount: number; adjust: TripAdjust; names: Record<string, string>; inScope: Set<string>; onClose: () => void }) {
+export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRename, onYear, onClose }: { v: TripValues; h: TripHandlers; placeCount: number; adjust: TripAdjust; names: Record<string, string>; inScope: Set<string>; trip: Trip; onRename: (name: string) => void; onYear: (year: number) => void; onClose: () => void }) {
   const unitText = useUnitText();
   const [openRow, setOpenRow] = useState<string | null>('when');
   const settings = getOnboardingSettings();
@@ -148,7 +150,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, onClose }:
     {
       id: 'when',
       label: 'When',
-      value: v.month == null ? 'Any month' : MONTH_NAMES[v.month] + (v.week ? ` · week ${v.week}` : ''),
+      value: v.month == null ? 'Any month' : `${MONTH_NAMES[v.month]}${trip.year != null ? ` ${trip.year}` : ''}${v.week ? ` · week ${v.week}` : ''}`,
       set: false,
       body: (
         <>
@@ -157,6 +159,14 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, onClose }:
               <button key={m} type="button" className={`lq-tp sm${v.month === i ? ' on' : ''}`} aria-pressed={v.month === i} onClick={() => h.onMonth(i)}>{m}</button>
             ))}
           </div>
+          {v.month != null && trip.year != null && (
+            <div className="lq-yearseg">
+              <span className="lq-lbl">Year</span>
+              {[...new Set([nextYearFor(v.month), nextYearFor(v.month) + 1, nextYearFor(v.month) + 2, trip.year])].sort().map((y) => (
+                <button key={y} type="button" className={`lq-tp sm${trip.year === y ? ' on' : ''}`} aria-pressed={trip.year === y} onClick={() => onYear(y)}>{y}</button>
+              ))}
+            </div>
+          )}
           {v.month != null && (
             <div className="lq-seg" style={{ marginTop: 8 }}>
               {WEEKS.map((w, i) => (
@@ -233,7 +243,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, onClose }:
     <div className="ob2-sbg" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="ob2-sheet lq-trip" role="dialog" aria-modal="true" aria-label="Your trip">
         <div className="lq-triphd">
-          <h3>Your trip</h3>
+          <TripName name={trip.name} onRename={onRename} big />
           <button type="button" className="lq-link" onClick={reset}>Reset</button>
         </div>
         <div className="lq-tripbody">

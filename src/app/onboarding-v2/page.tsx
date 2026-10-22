@@ -6,6 +6,7 @@ import { getAllDnaCards, getAllDomainDefs, getAllDimensionDefs } from '@/lib/db/
 import { getInterestEmojiOverrides, getInterestShortNames } from '@/lib/scoring/interestMeta';
 import { loadFirstName } from '@/app/actions';
 import { loadTravelProfile } from './actions';
+import { loadTrips } from './trip-actions';
 import { loadFeatures } from '@/lib/featuresServer';
 import { getMatchSetups } from '@/lib/db/queries/match-data';
 import { regionsForPlaces } from '@/lib/onboarding/regions';
@@ -25,7 +26,8 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
   const params = await searchParams;
   if (!onboardingV2Allowed(await loadFeatures(), params.preview)) notFound();
   const fresh = params.fresh === '1';
-  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name, setups, matchSettings] = await Promise.all([
+  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name, setups, matchSettings, trips] = await Promise.all([
+    // (the trips load last in the list below)
     getLiveInterestChips(),
     getListScoredPlaces(),
     getAllDnaCards(),
@@ -38,6 +40,7 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
     loadFirstName(),
     getMatchSetups(),
     loadMatchSettings().then((m) => m.settings),
+    fresh ? Promise.resolve([]) : loadTrips(),
   ]);
-  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings, regions: regionsForPlaces(coords) }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh }} />;
+  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings, regions: regionsForPlaces(coords) }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh, trips }} />;
 }

@@ -8,6 +8,7 @@ import { tripAdjust } from './trip-adjust';
 import { allRegions } from './regions';
 import { estimateFlightHours, milesBetween } from './airports';
 import type { TravelProfile } from './profile';
+import { effectiveTrip, type Trip } from './trips';
 
 /**
  * What a saved traveler's chips and answers do to every place, worked out on the server so the full results page ranks the same way the
@@ -35,10 +36,14 @@ export interface TripEffect {
 
 /**
  * What the trip settings in a saved profile (trip length, continents, where you live, longest flight) do to every place, for the full results
- * page. Null when the profile sets none of them, so everyone else sees no change.
+ * page. When the traveler has saved trips, the active one supplies trip length, continents and longest flight (a trip can change that last one
+ * for itself); otherwise the profile's own values are used. Null when none of them is set, so everyone else sees no change.
  */
-export async function tripEffectForProfile(profile: TravelProfile | null): Promise<TripEffect | null> {
-  if (!profile) return null;
+export async function tripEffectForProfile(saved: TravelProfile | null, activeTrip?: Trip | null): Promise<TripEffect | null> {
+  if (!saved) return null;
+  const profile: TravelProfile = activeTrip
+    ? { ...saved, length: activeTrip.length, continents: activeTrip.continents, maxHours: effectiveTrip(saved, activeTrip).maxHours }
+    : saved;
   const origin = resolveOrigin({ airport: profile.home, country: profile.homeCountry, sub: profile.homeSub });
   const hasLength = !!profile.length && !!origin;
   const hasContinents = !allRegions(profile.continents ?? []);

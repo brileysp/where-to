@@ -21,7 +21,6 @@ const BOOKING = ['none', 'weeks', 'months'];
 const GUIDE = ['Not needed', 'Helpful', 'Recommended', 'Essential'];
 const BIRD_ACCESS = ['Easy', 'Moderate', 'Challenging'];
 const CONFIDENCE = ['high', 'medium', 'low'];
-const MALARIA = ['none', 'low', 'seasonal', 'high'];
 const CROWDING = ['low', 'medium', 'high'];
 const CERTIFICATION = ['none', 'openWater', 'advanced', 'specialty'];
 const CURRENT = ['none', 'mild', 'moderate', 'strong'];

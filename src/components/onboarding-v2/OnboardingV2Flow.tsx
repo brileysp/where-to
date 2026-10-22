@@ -27,6 +27,8 @@ import { ELSEWHERE, type HomeBundle } from './HomeLocation';
 import { HOME_COUNTRIES, resolveOrigin } from '@/lib/onboarding/origin';
 import type { TripLength } from '@/lib/onboarding/trip-length';
 import type { RegionKey } from '@/lib/onboarding/regions';
+import { effectiveTrip, type Trip } from '@/lib/onboarding/trips';
+import { useTrips, type TripDefaults } from './live/useTrips';
 import { TopBar } from './TopBar';
 import { Toast } from './Toast';
 import { TopLimitModal } from './TopLimitModal';
@@ -58,6 +60,8 @@ export interface FlowEntry {
   review: boolean;
   /** Opened with ?fresh=1 (testing): the one-time lessons play again. */
   fresh: boolean;
+  /** The traveler's saved trips, the most recently saved first. */
+  trips: Trip[];
 }
 
 export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowEntry }) {
@@ -67,6 +71,11 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const chips = data.chips;
   // A returning traveler's choices from last time (answers whose card no longer exists are dropped).
   const start: FlowChoices | null = useMemo(() => (entry.saved ? fromTravelProfile(entry.saved, data.cards) : null), [entry.saved, data.cards]);
+  /** What the profile says for the choices a trip can change: the defaults every trip inherits. */
+  const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, maxHours: start?.maxHours ?? 0 }));
+  // The most recently saved trip is the one open; its settings are laid over the profile's defaults.
+  const openTrip = entry.trips[0] ?? null;
+  const openEff = openTrip ? effectiveTrip(defaults, openTrip) : null;
   const [returning, setReturning] = useState(!!entry.saved);
   const [mode, setMode] = useState<FlowMode>('trip');
   const [doors, setDoors] = useState<Doors>(emptyDoors());
@@ -80,11 +89,11 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [seen, setSeen] = useState<Record<string, boolean>>({ [firstGroup]: true });
   const [more, setMore] = useState<Record<string, boolean>>({});
   const [topPopup, setTopPopup] = useState(false);
-  const [month, setMonth] = useState<number | null>(start?.month ?? null);
-  const [week, setWeek] = useState(start?.week ?? 0);
-  const [who, setWho] = useState<string[]>(start?.who ?? []);
-  const [bands, setBands] = useState<Bands>(start?.bands ?? allBands());
-  const [care, setCare] = useState<CareState>(start?.care ?? {});
+  const [month, setMonth] = useState<number | null>(openTrip ? openTrip.month : (start?.month ?? null));
+  const [week, setWeek] = useState(openTrip ? openTrip.week : (start?.week ?? 0));
+  const [who, setWho] = useState<string[]>(openEff ? openEff.who : (start?.who ?? []));
+  const [bands, setBands] = useState<Bands>(openEff ? openEff.bands : (start?.bands ?? allBands()));
+  const [care, setCare] = useState<CareState>(openEff ? openEff.care : (start?.care ?? {}));
   const [careOpen, setCareOpen] = useState(false);
   const [careTiles, setCareTiles] = useState<string[]>([]);
   const { country: unitsCountry } = useUnits();
@@ -94,9 +103,9 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   // Where you live: the saved country, else the home country already set for units, if it is one we list.
   const [homeCountry, setHomeCountry] = useState<string | null>(start?.homeCountry ?? (HOME_COUNTRIES.some((c) => c[0] === unitsCountry) ? unitsCountry : null));
   const [homeSub, setHomeSub] = useState<string | null>(start?.homeSub ?? null);
-  const [length, setLength] = useState<TripLength | null>(start?.length ?? null);
-  const [continents, setContinents] = useState<RegionKey[]>(start?.continents ?? []);
-  const [maxHours, setMaxHours] = useState(start?.maxHours ?? 0);
+  const [length, setLength] = useState<TripLength | null>(openTrip ? openTrip.length : (start?.length ?? null));
+  const [continents, setContinents] = useState<RegionKey[]>(openTrip ? openTrip.continents : (start?.continents ?? []));
+  const [maxHours, setMaxHours] = useState(openEff ? openEff.maxHours : (start?.maxHours ?? 0));
   const [toast, setToast] = useState<string | null>(null);
   const [vibes, setVibes] = useState<string[]>(start?.vibes ?? []);
   /** Taste-card swipes, and sharpen-question answers (kept apart: only sharpen answers count toward the unlock). */
@@ -116,6 +125,27 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [dorder, setDorder] = useState<string[]>(() => (entry.review ? orderedByLevel(start?.levels ?? {}) : []));
   const [dall, setDall] = useState(false);
   const [keep, setKeep] = useState<Record<string, boolean>>({});
+
+  // Saved trips: the screens work on one set of values; this keeps the list of trips, saves the open one, and loads another when switching.
+  const tripWork = useMemo(() => ({ month, week, length, continents, who, bands, care, maxHours }), [month, week, length, continents, who, bands, care, maxHours]);
+  const trips = useTrips({
+    initial: entry.trips,
+    first: entry.name,
+    enabled: screen === 'results',
+    work: tripWork,
+    defaults,
+    apply: (t, eff) => {
+      setMonth(t.month);
+      setWeek(t.week);
+      setLength(t.length);
+      setContinents(t.continents);
+      setWho(eff.who);
+      setBands(eff.bands);
+      setCare(eff.care);
+      setMaxHours(eff.maxHours);
+    },
+    toast: setToast,
+  });
 
   function go(next: ScreenId | null) {
     if (!next) return;
@@ -233,8 +263,10 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, maxHours };
   }
   async function persist(): Promise<boolean> {
-    const r = await saveTravelProfile(toTravelProfile(choices(), keep, mode === 'dna'));
+    const profile = toTravelProfile(choices(), keep, mode === 'dna');
+    const r = await saveTravelProfile(profile);
     if (!r.ok) setToast('Could not save. Try again.');
+    else setDefaults({ who: profile.who, bands: profile.bands, care: profile.care, maxHours: profile.maxHours });
     return r.ok;
   }
   async function onDnaSave() {
@@ -444,6 +476,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             careProps={careProps('trip')}
             returning={returning}
             levels={levels}
+            trips={trips}
             fits={fits}
             fresh={entry.fresh}
             subs={subs}

@@ -34,6 +34,8 @@ import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
 import { TripSheet, monthShort, originOf, tripSetCount } from '../live/TripSheet';
+import { TripsSheet } from '../live/TripsSheet';
+import type { TripsApi } from '../live/useTrips';
 import { Sheet } from '../Sheet';
 import { SharpenCard } from '../SharpenCard';
 import { TasteCard } from '../TasteCard';
@@ -65,6 +67,8 @@ export interface ShortlistProps {
   returning: boolean;
   /** The live questions (docs/matching-model.md): what the traveler picked, ticked and answered, and how to change it. */
   levels: Levels;
+  /** The saved trips and what can be done with them. */
+  trips: TripsApi;
   /** How each place does for each interest's chips and answers (loaded by the flow). */
   fits: MatchFitsByInterest;
   /** Opened with ?fresh=1: the one-time lessons play again. */
@@ -105,6 +109,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   const [sheet, setSheet] = useState<SheetId>(null);
   const [showAside, setShowAside] = useState(false);
   const [tripOpen, setTripOpen] = useState(false);
+  const [tripsOpen, setTripsOpen] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
   const [visited, setVisited] = useState<Record<string, boolean>>({});
   const [favorited, setFavorited] = useState<Record<string, boolean>>({});
@@ -404,7 +409,10 @@ export function ShortlistScreen(p: ShortlistProps) {
     <div className={liveOn ? 'lq' : undefined}>
       {liveOn ? (
         <div className="ob2-top shortlist lq-sticky">
-          <div className="ob2-brand">Your shortlist</div>
+          <button type="button" className="lq-tnbtn" onClick={() => setTripsOpen(true)} aria-haspopup="dialog" aria-label={`${p.trips.active.name}. Your trips`}>
+            <b>{p.trips.active.name}</b>
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 4.2 6 8l4-3.8" /></svg>
+          </button>
           <div className="lq-topbtns">
             <button type="button" className={`lq-tripbtn${tripOpen ? ' open' : ''}`} onClick={() => setTripOpen(true)} aria-haspopup="dialog" aria-label={`Your trip settings${tripCount ? `, ${tripCount} set` : ''}`}>
               <span aria-hidden="true">🧳</span>
@@ -583,6 +591,17 @@ export function ShortlistScreen(p: ShortlistProps) {
           </div>
         </div>
       )}
+      {tripsOpen && (
+        <TripsSheet
+          api={p.trips}
+          onClose={() => setTripsOpen(false)}
+          onNew={async () => {
+            await p.trips.create();
+            setTripsOpen(false);
+            setTripOpen(true);
+          }}
+        />
+      )}
       {tripOpen && (
         <TripSheet
           v={tripValues}
@@ -591,6 +610,9 @@ export function ShortlistScreen(p: ShortlistProps) {
           adjust={adjust}
           names={placeNames}
           inScope={inViewIds}
+          trip={p.trips.active}
+          onRename={p.trips.rename}
+          onYear={p.trips.setYear}
           onClose={() => setTripOpen(false)}
         />
       )}

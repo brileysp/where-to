@@ -449,3 +449,21 @@
 .lq-dnasheet .ob2-foot { bottom: 0; }
 .lq-meter .manage { white-space: nowrap; font-weight: 700; color: var(--accent); text-decoration: none; }
 .lq-wait { padding: 28px 0; text-align: center; color: var(--text-faint); font-size: 13px; }
+
+/* ---- Saved trips: the name with its pencil, and the Your trips sheet ---- */
+.lq-tripname { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1; }
+.lq-tnbtn { display: flex; align-items: center; gap: 6px; background: none; border: 0; padding: 2px 0; min-width: 0; flex: 1; text-align: left; color: var(--text); }
+.lq-tnbtn b { font-size: 15px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.lq-tnbtn svg { width: 12px; height: 12px; flex: none; color: var(--text-faint); }
+.lq-tname-b { font-size: 15px; }
+.lq-tname-h { margin: 0; font-size: 19px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lq-pen { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-card); display: inline-flex; align-items: center; justify-content: center; flex: none; color: var(--text-dim); padding: 0; }
+.lq-nameinp { flex: 1; min-width: 0; border: 1.5px solid var(--accent); border-radius: 10px; padding: 6px 10px; font-size: 16px; font-weight: 700; background: var(--bg-card); color: var(--text); font-family: inherit; }
+.lq-tripitem { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 10px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.lq-tripdot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--border); background: none; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; flex: none; }
+.lq-tripitem.on .lq-tripdot { background: var(--accent); border-color: var(--accent); }
+.lq-tripsel { display: flex; align-items: center; gap: 6px; min-width: 0; background: none; border: 0; padding: 0; text-align: left; color: var(--text); }
+.lq-tripsel .lq-tname-b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lq-tripsum { grid-column: 2 / 4; color: var(--text-faint); font-size: 12.5px; }
+.lq-yearseg { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.lq-yearseg .lq-lbl { margin: 0 4px 0 0; }

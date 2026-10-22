@@ -593,6 +593,31 @@ export const userTravelProfiles = pgTable('user_travel_profiles', {
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * A traveler's saved trips, so they can plan more than one at once. Each holds what must be set per trip (month, year, length, continents) and
+ * only the choices that differ from the traveler's profile defaults (`overrides`: who, bands, what matters, longest flight). Interests, Travel DNA
+ * and where they live stay in user_travel_profiles. The most recently updated trip is the active one. Shape: src/lib/onboarding/trips.ts.
+ */
+export const userTrips = pgTable(
+  'user_trips',
+  {
+    id: uuid('id').primaryKey(),
+    userId: uuid('user_id').notNull(),
+    name: text('name').notNull(),
+    nameAuto: boolean('name_auto').notNull().default(true),
+    month: integer('month'),
+    week: integer('week').notNull().default(0),
+    year: integer('year'),
+    yearAuto: boolean('year_auto').notNull().default(true),
+    length: text('length'),
+    continents: jsonb('continents').notNull().default([]).$type<string[]>(),
+    overrides: jsonb('overrides').notNull().default({}),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('user_trips_user_idx').on(table.userId, table.updatedAt)],
+);
+
 export const userSavedProfiles = pgTable('user_saved_profiles', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull(),
