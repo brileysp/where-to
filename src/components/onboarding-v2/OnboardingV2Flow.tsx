@@ -218,10 +218,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setDxo({});
     setDnaSheet(true);
   }
-  function openDna() {
-    setDnaFrom('results');
-    go('dnasum');
-  }
   function onDnaLevel(key: string, level: Parameters<typeof setLevel>[2]) {
     const r = setLevel(levels, key, level);
     if (r.blocked) {
