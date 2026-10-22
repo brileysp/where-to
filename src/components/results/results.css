@@ -2512,3 +2512,15 @@
 .match-reason, .match-ok { font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
 .match-reason { color: var(--poor); background: color-mix(in srgb, var(--poor) 14%, transparent); }
 .match-ok { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
+
+/* Collapsed blurbs: two and a half lines, the half line fading out so the third line is plainly there, "Read more" to open. */
+.cb-text.cb-clip { overflow: hidden; cursor: pointer; transition: max-height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.cb-text.cb-fade {
+  /* Solid for the first two lines, then the top half of the third fades toward (not quite to) nothing, so it reads as a line that goes on. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
+}
+.cb-more { display: inline-flex; align-items: center; gap: 4px; margin: -8px 0 12px; border: none; background: none; padding: 2px 0; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--accent); cursor: pointer; }
+.cb-more svg { width: 12px; height: 12px; transition: transform 0.25s; }
+.cb-more[aria-expanded='true'] svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .cb-text.cb-clip, .cb-more svg { transition: none; } }

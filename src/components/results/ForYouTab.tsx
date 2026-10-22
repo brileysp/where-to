@@ -10,6 +10,7 @@ import type { MatchAdjustment } from '@/lib/scoring/matchExplainer';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { InterestChip, shortInterestLabel } from './InterestChip';
+import { CollapsibleBlurb } from './CollapsibleBlurb';
 import { prefersReducedMotion } from './useResortDemo';
 import { splitEmphasis } from '@/lib/text/emphasis';
 
@@ -312,7 +313,7 @@ function InterestDetail({
   return (
     <div className="interest-detail">
       {heading}
-      {placeBlurb && <p className="interest-place-blurb"><EmphasisText text={placeBlurb} /></p>}
+      {placeBlurb && <CollapsibleBlurb className="interest-place-blurb"><EmphasisText text={placeBlurb} /></CollapsibleBlurb>}
       <div className="detail-section-title interest-detail-months-title">{shortName} by month · Tap to compare</div>
       <div className="months-chart">
         {dest.monthly[slider.key].map((_, i) => {
