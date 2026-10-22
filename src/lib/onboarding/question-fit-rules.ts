@@ -24,6 +24,8 @@ const CONFIDENCE = ['high', 'medium', 'low'];
 const CROWDING = ['low', 'medium', 'high'];
 const CERTIFICATION = ['none', 'openWater', 'advanced', 'specialty'];
 const CURRENT = ['none', 'mild', 'moderate', 'strong'];
+const GUIDE_RULES = ['free', 'partly', 'always'];
+const GEAR_RENTAL = ['plentiful', 'some', 'few'];
 const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
@@ -70,6 +72,12 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'beachesSwimming.q3': R(atLeast(8, 'calmWater'), atLeast(6, 'calmWater'), atLeast(4, 'calmWater'), null),
   'beachesSwimming.q4': R(has('beachAccess', 'door', 'short'), any({ type: 'has', column: 'beachAccess', options: ['trip'] }, { type: 'atLeast', columns: ['remoteBeaches'], value: 7 }), null),
 
+  // ---- Mountaineering & Rock Climbing ---- (columns approved 22 Oct 2026; Always guided and Guided for the hard parts ask for nothing)
+  'mountaineering.q1': R(has('climbingLevels', 'beginner'), has('climbingLevels', 'beginner'), has('climbingLevels', 'intermediate'), has('climbingLevels', 'advanced')),
+  'mountaineering.q2': R(null, null, within('guideRules', GUIDE_RULES, 'free')),
+  'mountaineering.q3': R(has('routeCommitment', 'single'), has('routeCommitment', 'multi'), has('routeCommitment', 'alpine'), has('routeCommitment', 'expedition')),
+  'mountaineering.q4': R(within('gearRental', GEAR_RENTAL, 'some'), null, null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -102,6 +110,10 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'whaleWatching.q2': 'Not your kind of boat',
   'whaleWatching.q3': 'Sightings less certain',
   'whaleWatching.q4': 'No swimming with whales',
+  'mountaineering.q1': 'Not suited to your level',
+  'mountaineering.q2': 'Needs a guide',
+  'mountaineering.q3': 'Not the size of climb you want',
+  'mountaineering.q4': 'Little gear to rent',
   'beachesSwimming.q1': 'Colder water',
   'beachesSwimming.q2': 'Farther from where you stay',
   'beachesSwimming.q3': 'Rougher water',

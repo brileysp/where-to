@@ -346,6 +346,27 @@ const SCENIC_FACTS: FactDef[] = [
 ];
 
 /**
+ * Mountaineering & Rock Climbing (22 Oct 2026). Columns that give the four approved chips and four approved questions something to read, plus the
+ * planning columns the owner asked for (how far ahead to book, permits, closures) and a rating for non-technical summit ascents (Kilimanjaro, Kinabalu).
+ * Ratings are for the place at its best time of year, on its own; 7 or more is a full chip match. Proposal page: claude.ai/artifact/2C4uzGD7A2dxsQwgfEgXQu.
+ */
+const MOUNTAINEERING_FACTS: FactDef[] = [
+  rate('boulderingRating', 'Bouldering', 'How good the place is for bouldering (short, rope-free climbs on boulders and low crags): how many problems, how good the rock and landings, how easy to reach. 0-1 none, 5 a few good areas, 8 large well-known areas, 10 a bouldering destination people fly to (Fontainebleau, Joshua Tree).'),
+  rate('rockClimbingRating', 'Rock climbing', 'How good the place is for climbing with ropes (sport, trad and multi-pitch): how many routes, how good the rock, the range of grades, how easy the crags are to reach. Routes of every length count, from one pitch to big walls. 0-1 nothing worth planning around, 4 a few crags, 7 a strong regional area, 9 world-famous, 10 a climbing capital (Yosemite).'),
+  rate('alpineRating', 'Alpine climbing', 'How good the place is for alpine climbing: high or glaciated mountains with snow, ice and rock routes that need ropes, crampons and an ice axe. A high peak that is a non-technical trek (Kilimanjaro, Kinabalu) counts at a medium level, 3 to 5, because it is still a unique high-altitude challenge. 0-1 none, 5 smaller or seasonal terrain, 8 big glaciated ranges, 10 the world\'s alpine centers (Chamonix, Nepal, Pakistan).'),
+  rate('nonTechnicalSummits', 'Non-technical summits', 'How good the place is for reaching a big summit on foot with no ropes or ice axe (no technical climbing): a famous or high peak, a clear standard route, guides and logistics in place. 0-1 none, 5 a few good hill-walking summits, 8 a major peak many people attempt (Mount Kinabalu, Toubkal), 10 a bucket-list summit (Kilimanjaro, Aconcagua).'),
+  { key: 'viaFerrata', label: 'Via ferrata', type: 'bool', group: 'experience', hint: 'Tick when the place has at least one via ferrata (a protected climbing route with fixed steel cables and rungs) that a visitor can do, with or without a guide.' },
+  { key: 'climbingLevels', label: 'Climbing levels served', type: 'multi', group: 'style', options: [{ value: 'beginner', label: 'Beginner (guided intro on easy routes)' }, { value: 'intermediate', label: 'Intermediate (moderate routes to lead)' }, { value: 'advanced', label: 'Advanced (hard walls and technical alpine)' }], hint: 'Which kinds of climber the place really serves. Beginner: guides and schools take people who have never climbed on easy routes, or a non-technical guided climb. Intermediate: plenty of routes an experienced rope climber can lead outdoors. Advanced: hard trad, big walls and technical alpine routes. Pick all that apply.' },
+  { key: 'routeCommitment', label: 'How committing the climbs are', type: 'multi', group: 'style', options: [{ value: 'single', label: 'Short single-pitch routes' }, { value: 'multi', label: 'Half-day multi-pitch' }, { value: 'alpine', label: 'Full-day alpine routes' }, { value: 'expedition', label: 'Multi-day expeditions' }], hint: 'The sizes of climbing day the place offers: short single-pitch routes (one rope length, near the road), half-day multi-pitch routes, full-day alpine routes, multi-day expeditions (huts or camping for several days, including big-wall bivouacs and multi-day guided summits). Pick all that apply.' },
+  { key: 'guideRules', label: 'Guide rules', type: 'choice', group: 'practical', options: [{ value: 'free', label: 'Independent is normal' }, { value: 'partly', label: 'A guide for the big climbs' }, { value: 'always', label: 'A guide for almost everything' }], hint: 'Whether a visitor can climb without a guide. Independent is normal: you can climb on your own and guides are optional. A guide for the big climbs: independent on crags and low routes, but a guide is required by rule or by common sense for the glaciers or the high peaks. A guide for almost everything: required or standard for nearly all climbing here (for example Kilimanjaro and Kinabalu).' },
+  { key: 'gearRental', label: 'Gear rental', type: 'choice', group: 'practical', options: [{ value: 'plentiful', label: 'Plentiful' }, { value: 'some', label: 'Some' }, { value: 'few', label: 'Few or none' }], hint: 'How easily a visitor rents climbing gear (shoes, harness, helmet, crampons, ice axe) on the spot. Plentiful: several shops or guide companies rent everything in town. Some: basic items only. Few or none: bring your own.' },
+  { key: 'bookingAhead', label: 'Planning ahead', type: 'choice', group: 'practical', options: [{ value: 'none', label: 'Nothing to book' }, { value: 'weeks', label: 'Plan days to weeks ahead' }, { value: 'months', label: 'Plan months ahead' }], hint: 'How far ahead a visitor has to book, plan or get permits for the signature climbs: nothing to book; a hut, campsite or permit that is available on shorter notice; or a lottery, a quota, a mandatory hut reservation, an operator-arranged permit or limited places that need months. This is the key planning question for mountaineering.' },
+  { key: 'permits', label: 'Permits, fees or guide rules', type: 'text', group: 'practical', wide: true, maxLength: 700, hint: 'Anything that restricts or charges for climbing: permits (with how far ahead to apply), quotas, mandatory huts or reservations, guide or operator requirements, park fees. Blank when there is nothing.' },
+  { key: 'statusNotes', label: 'Status or closure notes', type: 'text', group: 'practical', wide: true, maxLength: 700, hint: 'Closures, bans, volcanic or weather limits and seasonal access limits that affect the main climbs now or regularly (raptor nesting closures, road closures, hut opening dates), with the date you checked. Blank when nothing is closed or restricted. These go stale, so recheck them.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
  * Beaches & Swimming (22 Oct 2026). Seven columns that give the five approved chips and four approved questions something to read (owner approved
  * the set, with the access column as a multi-select). Ratings are for the place at its best beach season, on its own; a rating of 7 or more is a full
  * chip match. Proposal page: claude.ai/artifact/LZcc2w5fEcjsxQJ68Xs1rF.
@@ -416,6 +437,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   surfing: [...SURFING_FACTS, ...GEMINI_NOTE_FACTS],
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
   beachesSwimming: [...BEACHES_FACTS, ...GEMINI_NOTE_FACTS],
+  mountaineering: [...MOUNTAINEERING_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,

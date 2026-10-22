@@ -164,3 +164,27 @@ describe('Beaches & Swimming questions', () => {
     expect(fit('q3', [0], {})).toBeNull();
   });
 });
+
+describe('Mountaineering questions', () => {
+  const defs = factDefsFor('mountaineering');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number>) => questionFit(QUESTION_FIT_RULES[`mountaineering.${q}`], picked, defs, facts as never);
+  it('level: beginners need a beginner option, advanced climbers an advanced one', () => {
+    expect(fit('q1', [0], { climbingLevels: ['beginner', 'intermediate'] })).toBe(1);
+    expect(fit('q1', [1], { climbingLevels: ['advanced'] })).toBe(0);
+    expect(fit('q1', [3], { climbingLevels: ['beginner', 'intermediate'] })).toBe(0);
+    expect(fit('q1', [2], { climbingLevels: ['intermediate'] })).toBe(1);
+  });
+  it('independent climbers lose half where a guide is needed for the big climbs, all where for almost everything', () => {
+    expect(fit('q2', [2], { guideRules: 'free' })).toBe(1);
+    expect(fit('q2', [2], { guideRules: 'partly' })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { guideRules: 'always' })).toBe(0);
+    expect(fit('q2', [0], { guideRules: 'always' })).toBeNull();
+  });
+  it('commitment and gear', () => {
+    expect(fit('q3', [3], { routeCommitment: ['single', 'expedition'] })).toBe(1);
+    expect(fit('q3', [2], { routeCommitment: ['single'] })).toBe(0);
+    expect(fit('q4', [0], { gearRental: 'plentiful' })).toBe(1);
+    expect(fit('q4', [0], { gearRental: 'few' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [1], { gearRental: 'few' })).toBeNull();
+  });
+});
