@@ -52,6 +52,7 @@ export default async function Home() {
       matchNotes={match?.notes}
       tripPlaceFactors={trip?.placeFactors}
       tripHidden={trip?.hidden}
+      tripOffPeakWeight={trip?.offPeakWeight}
     />
   );
 }

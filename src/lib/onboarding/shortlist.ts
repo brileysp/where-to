@@ -10,8 +10,8 @@ import { getOnboardingSettings } from './settings';
 export const rankingMonth = (month: number | null): number => (month == null ? new Date().getMonth() + 1 : month + 1);
 
 /** Every place the traveler may see (specialist places they have not unlocked are left out), best first. */
-export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>, factors?: InterestFactors, placeFactors?: Record<string, number>): RankedDestination[] {
-  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands, undefined, factors, placeFactors).filter((r) => isVisibleForWeights(r.d, weights));
+export function rankPlaces(destinations: ScoredDestination[], weights: Record<string, number>, month: number | null, bands: Record<string, string[]>, factors?: InterestFactors, placeFactors?: Record<string, number>, offPeakWeight = 0): RankedDestination[] {
+  return computeRankedDestinations(destinations, weights, rankingMonth(month), bands, undefined, factors, placeFactors, month == null ? 0 : offPeakWeight).filter((r) => isVisibleForWeights(r.d, weights));
 }
 
 export interface SetAside {

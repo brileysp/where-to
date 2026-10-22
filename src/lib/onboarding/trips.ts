@@ -1,12 +1,12 @@
 import { COMPANIONS, allBands, bandDims, type Bands, type CareState } from './care';
 import { isTripLength, type TripLength } from './trip-length';
 import { REGION_KEYS, allRegions, type RegionKey } from './regions';
-import { getOnboardingSettings } from './settings';
+import { isPeak } from './peak';
 
 /**
  * Saved trips: a traveler can plan more than one at once. What stays the same across trips (interests, Travel DNA, where you live, and the
  * defaults for who, budget and what matters) lives in the travel profile. A trip adds what has to be set for each trip (month and year, how long,
- * continents) and any choices that differ from the profile's defaults (who, bands, what matters, longest flight).
+ * continents) and any choices that differ from the profile's defaults (who, bands, what matters, peak or off peak).
  */
 
 export const MONTH_FULL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -16,7 +16,8 @@ export interface TripOverrides {
   who?: string[];
   bands?: Bands;
   care?: CareState;
-  maxHours?: number;
+  /** Peak or off peak, a step from 0 to 4 (see peak.ts). */
+  peak?: number;
 }
 
 export interface Trip {
@@ -90,23 +91,23 @@ export interface EffectiveTrip {
   who: string[];
   bands: Bands;
   care: CareState;
-  maxHours: number;
+  peak: number;
 }
 
-export function effectiveTrip(profile: { who: string[]; bands: Bands; care: CareState; maxHours: number }, trip: Pick<Trip, 'overrides'>): EffectiveTrip {
+export function effectiveTrip(profile: { who: string[]; bands: Bands; care: CareState; peak: number }, trip: Pick<Trip, 'overrides'>): EffectiveTrip {
   const o = trip.overrides;
   return {
     who: o.who ?? profile.who,
     bands: o.bands ?? profile.bands,
     care: { ...profile.care, ...(o.care ?? {}) },
-    maxHours: o.maxHours ?? profile.maxHours,
+    peak: o.peak ?? profile.peak,
   };
 }
 
 const sameJson = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
 /** The overrides to save for a trip whose working choices are `current`: only what differs from the profile's defaults. */
-export function overridesFor(profile: { who: string[]; bands: Bands; care: CareState; maxHours: number }, current: EffectiveTrip): TripOverrides {
+export function overridesFor(profile: { who: string[]; bands: Bands; care: CareState; peak: number }, current: EffectiveTrip): TripOverrides {
   const out: TripOverrides = {};
   if (!sameJson(current.who, profile.who)) out.who = current.who;
   if (!sameJson(current.bands, profile.bands)) out.bands = current.bands;
@@ -115,7 +116,7 @@ export function overridesFor(profile: { who: string[]; bands: Bands; care: CareS
   // An item the profile has but the trip cleared is an override too (an empty choice).
   for (const k of Object.keys(profile.care)) if (!current.care[k]) care[k] = { o: [], firm: false };
   if (Object.keys(care).length) out.care = care;
-  if (current.maxHours !== profile.maxHours) out.maxHours = current.maxHours;
+  if (current.peak !== profile.peak) out.peak = current.peak;
   return out;
 }
 
@@ -148,7 +149,7 @@ export function parseTrip(raw: unknown): Trip | null {
     }
     overrides.care = care;
   }
-  if (typeof o.maxHours === 'number' && getOnboardingSettings().flightHourLimits.includes(o.maxHours)) overrides.maxHours = o.maxHours;
+  if (isPeak(o.peak)) overrides.peak = o.peak;
   const nameAuto = raw.nameAuto !== false;
   return {
     id: raw.id.toLowerCase(),

@@ -79,9 +79,11 @@ interface Props {
   /** From the new onboarding's trip settings: what each place keeps for the trip length, and the places left out (a continent turned off, or past the longest flight). */
   tripPlaceFactors?: Record<string, number>;
   tripHidden?: string[];
+  /** Peak or off peak: how much of each place's off-peak value for the month is mixed into its score (only once a month is chosen). */
+  tripOffPeakWeight?: number;
 }
 
-export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames, matchFactors, matchNotes, tripPlaceFactors, tripHidden }: Props) {
+export function ResultsApp({ destinations, initialPreferences, initialSavedProfiles, initialDnaHint, initialHasDnaSignal, userFirstName, emojiOverrides, shortNames, matchFactors, matchNotes, tripPlaceFactors, tripHidden, tripOffPeakWeight }: Props) {
   const router = useRouter();
 
   // No default persona/weights for a brand-new visitor — recommendations
@@ -177,8 +179,8 @@ export function ResultsApp({ destinations, initialPreferences, initialSavedProfi
   // Every place, scored. Search and the detail sheet read this, so a specialist place is always findable by name.
   const rankedAll = useMemo(() => {
     if (!monthChosen || !month) return [];
-    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles, matchFactors, tripPlaceFactors);
-  }, [destinations, weights, month, bands, monthChosen, selectedStyles, matchFactors, tripPlaceFactors]);
+    return computeRankedDestinations(destinations, weights, month, bands, selectedStyles, matchFactors, tripPlaceFactors, monthChosen ? (tripOffPeakWeight ?? 0) : 0);
+  }, [destinations, weights, month, bands, monthChosen, selectedStyles, matchFactors, tripPlaceFactors, tripOffPeakWeight]);
 
   // The list itself leaves out specialist places the traveller has not unlocked (see lib/scoring/gating.ts).
   const hiddenSet = useMemo(() => new Set(tripHidden ?? []), [tripHidden]);

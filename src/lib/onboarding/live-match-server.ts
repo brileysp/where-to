@@ -9,6 +9,7 @@ import { allRegions } from './regions';
 import { estimateFlightHours, milesBetween } from './airports';
 import type { TravelProfile } from './profile';
 import { effectiveTrip, type Trip } from './trips';
+import { peakWeight } from './peak';
 
 /**
  * What a saved traveler's chips and answers do to every place, worked out on the server so the full results page ranks the same way the
@@ -32,27 +33,31 @@ export interface TripEffect {
   placeFactors: Record<string, number>;
   /** Places left out: in a continent turned off, or further than the longest flight. */
   hidden: string[];
+  /** Peak or off peak: how much of each place's off-peak value for the month is mixed into its score. */
+  offPeakWeight: number;
 }
 
 /**
- * What the trip settings in a saved profile (trip length, continents, where you live, longest flight) do to every place, for the full results
- * page. When the traveler has saved trips, the active one supplies trip length, continents and longest flight (a trip can change that last one
- * for itself); otherwise the profile's own values are used. Null when none of them is set, so everyone else sees no change.
+ * What the trip settings in a saved profile (trip length, continents, where you live, peak or off peak) do to every place, for the full results
+ * page. When the traveler has saved trips, the active one supplies trip length and continents, and its own peak or off peak step if it set one;
+ * otherwise the profile's own values are used. Null for a traveler with no saved profile, so everyone else sees no change.
  */
 export async function tripEffectForProfile(saved: TravelProfile | null, activeTrip?: Trip | null): Promise<TripEffect | null> {
   if (!saved) return null;
   const profile: TravelProfile = activeTrip
-    ? { ...saved, length: activeTrip.length, continents: activeTrip.continents, maxHours: effectiveTrip(saved, activeTrip).maxHours }
+    ? { ...saved, length: activeTrip.length, continents: activeTrip.continents }
     : saved;
   const origin = resolveOrigin({ airport: profile.home, country: profile.homeCountry, sub: profile.homeSub });
   const hasLength = !!profile.length && !!origin;
   const hasContinents = !allRegions(profile.continents ?? []);
   const hasLimit = !!profile.maxHours && !!origin;
-  if (!hasLength && !hasContinents && !hasLimit) return null;
+  const step = activeTrip ? effectiveTrip(saved, activeTrip).peak : saved.peak;
   const [coords, { settings }] = await Promise.all([getPlaceCoords(), loadMatchSettings()]);
+  const offPeakWeight = peakWeight(step, settings);
+  if (!hasLength && !hasContinents && !hasLimit && offPeakWeight === 0) return null;
   const regions = regionsForPlaces(coords);
   const adj = tripAdjust({ coords, regions, origin, length: profile.length, continents: profile.continents ?? [], settings });
   const hidden = new Set(adj.leftOut);
   if (hasLimit && origin) for (const [id, at] of Object.entries(coords)) if (estimateFlightHours(milesBetween(origin, at)) > profile.maxHours) hidden.add(id);
-  return { placeFactors: adj.factors, hidden: [...hidden] };
+  return { placeFactors: adj.factors, hidden: [...hidden], offPeakWeight };
 }

@@ -33,6 +33,7 @@ import { liveMatch, type MatchFitsByInterest } from '@/lib/onboarding/live-facto
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
 import { Teaser } from '../live/Teaser';
+import { peakWeight } from '@/lib/onboarding/peak';
 import { TripSheet, monthShort, originOf, tripSetCount } from '../live/TripSheet';
 import { TripsSheet } from '../live/TripsSheet';
 import type { TripsApi } from '../live/useTrips';
@@ -93,6 +94,9 @@ export interface ShortlistProps {
   onLength: (l: TripLength | null) => void;
   onContinents: (next: RegionKey[]) => void;
   onMaxHours: (h: number) => void;
+  /** Peak or off peak (a step from 0 to 4) and how to change it. */
+  peak: number;
+  onPeak: (step: number) => void;
   onNeedHome: () => void;
   onSeeAll: (weights: Record<string, number>) => void;
   onSave: () => void;
@@ -139,7 +143,9 @@ export function ShortlistScreen(p: ShortlistProps) {
     () => tripAdjust({ coords: data.coords, regions: data.regions, origin, length: p.length, continents: p.continents, settings: data.matchSettings }),
     [data.coords, data.regions, origin, p.length, p.continents, data.matchSettings],
   );
-  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors]);
+  // Peak or off peak mixes some of each place's off-peak value for the month into its score; it needs a month to mean anything.
+  const offPeakWeight = peakWeight(p.peak, data.matchSettings);
+  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, offPeakWeight), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, offPeakWeight]);
   const inView = useMemo(() => rankedAll.filter((r) => !adjust.leftOut.has(r.d.id)), [rankedAll, adjust.leftOut]);
   const limited = useMemo(() => applyFlightLimitFrom(inView, origin, p.maxHours, data.coords), [inView, origin, p.maxHours, data.coords]);
 
@@ -147,9 +153,9 @@ export function ShortlistScreen(p: ShortlistProps) {
   const keptWith = useCallback(
     (nextQa: InterestAnswers) => {
       const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, settings: data.matchSettings });
-      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
+      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors, offPeakWeight).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
     },
-    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours],
+    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours, offPeakWeight],
   );
   const withAnswer = (interest: string, qkey: string, picks: number[]): InterestAnswers => ({ ...p.qa, [interest]: { ...(p.qa[interest] ?? {}), [qkey]: picks } });
   const nameOf = (k: string) => ({ icon: data.emojiOverrides[k] ?? interestByKey(k)?.icon ?? '•', label: interestByKey(k)?.label ?? k });
@@ -188,7 +194,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   // "Reshuffles ~2 of your top 5": how many of the top five positions an answer would change, averaged over its options. Kept per state.
   const impactCache = useRef<{ sig: string; map: Map<string, string> }>({ sig: '', map: new Map() });
   function impactText(item: LiveItem): string {
-    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.loc.airport, p.loc.country, p.loc.sub, p.length, p.continents, p.maxHours, p.levels]);
+    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.loc.airport, p.loc.country, p.loc.sub, p.length, p.continents, p.maxHours, p.peak, p.levels]);
     if (impactCache.current.sig !== sig) impactCache.current = { sig, map: new Map() };
     const id = `${item.interest}.${item.q.key}`;
     const hit = impactCache.current.map.get(id);
@@ -335,7 +341,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   function moverFor(card: DnaCard, type: SwipeType): { name: string; by: number } | null {
     const before = limited.kept.map((r) => r.d.id);
     const nextInput: ProfileInput = { ...input, answers: [...input.answers, { card, type } as Answer] };
-    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
+    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors, offPeakWeight).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
     let best = null as { name: string; by: number } | null;
     after.forEach((r, i) => {
       const was = before.indexOf(r.d.id);
@@ -381,7 +387,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   const home = airportByCode(p.home);
   const nCare = careCount(p.careProps.care, p.bands);
 
-  const tripValues = { month: p.month, week: p.week, length: p.length, continents: p.continents, who: p.who, bands: p.bands, loc: p.loc, maxHours: p.maxHours, careProps: p.careProps };
+  const tripValues = { month: p.month, week: p.week, length: p.length, continents: p.continents, who: p.who, bands: p.bands, loc: p.loc, maxHours: p.maxHours, peak: p.peak, careProps: p.careProps };
   const placeNames = useMemo(() => Object.fromEntries(data.destinations.map((d) => [d.id, d.name])), [data.destinations]);
   const inViewIds = useMemo(() => new Set(inView.map((r) => r.d.id)), [inView]);
   const tripCount = tripSetCount(tripValues);
@@ -605,7 +611,7 @@ export function ShortlistScreen(p: ShortlistProps) {
       {tripOpen && (
         <TripSheet
           v={tripValues}
-          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onLength: p.onLength, onContinents: p.onContinents, onWho: p.onWho, onBandPill: p.onBandPill, onMaxHours: p.onMaxHours, onNeedHome: p.onNeedHome }}
+          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onLength: p.onLength, onContinents: p.onContinents, onWho: p.onWho, onBandPill: p.onBandPill, onMaxHours: p.onMaxHours, onPeak: p.onPeak, onNeedHome: p.onNeedHome }}
           placeCount={limited.kept.length}
           adjust={adjust}
           names={placeNames}

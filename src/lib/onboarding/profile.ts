@@ -10,6 +10,7 @@ import { isTripLength, type TripLength } from './trip-length';
 import { REGION_KEYS, allRegions, type RegionKey } from './regions';
 import { hasSubStep, subChoices } from './origin';
 import { isCountryCode } from '@/lib/units/countries';
+import { DEFAULT_PEAK, isPeak } from './peak';
 
 /**
  * What a traveler keeps from the new onboarding flow (docs/onboarding-v2/SPEC.md 6, 4.11). Only the rows whose "keep in my Travel DNA"
@@ -45,6 +46,8 @@ export interface TravelProfile {
   continents: RegionKey[];
   /** Only when the traveler chose to keep flight limits. */
   maxHours: number;
+  /** Peak or off peak, the traveler's usual leaning (a step from 0 to 4; a trip can change it). */
+  peak: number;
 }
 
 export interface FlowChoices {
@@ -64,6 +67,7 @@ export interface FlowChoices {
   length?: TripLength | null;
   continents?: RegionKey[];
   maxHours: number;
+  peak?: number;
 }
 
 /** Answers only for interests the traveler still has. */
@@ -119,6 +123,7 @@ export function toTravelProfile(c: FlowChoices, keep: Record<string, boolean>, d
     length: kept('when') ? c.length ?? null : null,
     continents: kept('when') && !allRegions(c.continents ?? []) ? (c.continents ?? []) : [],
     maxHours: kept('limits') ? c.maxHours : 0,
+    peak: isPeak(c.peak) ? c.peak : DEFAULT_PEAK,
   };
 }
 
@@ -142,6 +147,7 @@ export function fromTravelProfile(p: TravelProfile, cards: DnaCard[]): FlowChoic
     length: p.length ?? null,
     continents: p.continents ?? [],
     maxHours: p.maxHours,
+    peak: isPeak(p.peak) ? p.peak : DEFAULT_PEAK,
   };
 }
 
@@ -204,5 +210,6 @@ export function parseTravelProfile(raw: unknown): TravelProfile | null {
     length: isTripLength(raw.length) ? raw.length : null,
     continents: allRegions(continents) ? [] : continents,
     maxHours,
+    peak: isPeak(raw.peak) ? raw.peak : DEFAULT_PEAK,
   };
 }

@@ -16,7 +16,7 @@ export interface TripWork {
   who: string[];
   bands: Bands;
   care: CareState;
-  maxHours: number;
+  peak: number;
 }
 
 /** What the traveler's profile says for the choices a trip can change (the defaults a trip inherits). */
@@ -24,7 +24,7 @@ export interface TripDefaults {
   who: string[];
   bands: Bands;
   care: CareState;
-  maxHours: number;
+  peak: number;
 }
 
 export interface TripsArgs {
@@ -60,7 +60,7 @@ export function useTrips(a: TripsArgs) {
       week: a.work.week,
       length: a.work.length,
       continents: a.work.continents,
-      overrides: overridesFor(a.defaults, { who: a.work.who, bands: a.work.bands, care: a.work.care, maxHours: a.work.maxHours }),
+      overrides: overridesFor(a.defaults, { who: a.work.who, bands: a.work.bands, care: a.work.care, peak: a.work.peak }),
     };
   }, [stored, a.first, a.work, a.defaults]);
 

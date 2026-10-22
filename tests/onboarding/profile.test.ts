@@ -66,7 +66,7 @@ describe('reading a saved profile safely', () => {
       levels: { hiking: 'top', golf: 'nonsense', madeUp: 'like', surfing: 'top', diving: 'top', birding: 'top', safari: 'top', sailing: 'top' },
       subs: { hiking: ['day-hikes', 7], golf: ['x'] },
       bands: { budget: ['luxury', 'bogus'], weather: [] },
-      care: { food: { o: ['vegan', 'pizza'], firm: true }, deals: { o: ['off'], firm: true }, nothing: { o: [] } },
+      care: { food: { o: ['vegan', 'pizza'], firm: true }, how: { o: ['road'], firm: true }, deals: { o: ['off'], firm: true }, nothing: { o: [] } },
       who: ['partner', 'dog'],
       home: 'sfo',
       vibes: ['beach', 'nope'],
@@ -82,7 +82,8 @@ describe('reading a saved profile safely', () => {
     expect(p.subs).toEqual({ hiking: ['day-hikes'] });
     expect(p.bands.budget).toEqual(['luxury']);
     expect(p.bands.weather).toEqual(allBands().weather);
-    expect(p.care).toEqual({ food: { o: ['vegan'], firm: true }, deals: { o: ['off'], firm: false } });
+    // 'Deals' is no longer an item (it became the peak or off peak scale), so a saved one is dropped.
+    expect(p.care).toEqual({ food: { o: ['vegan'], firm: true }, how: { o: ['road'], firm: false } });
     expect(p.who).toEqual(['partner']);
     expect(p.home).toBe('SFO');
     expect(p.vibes).toEqual(['beach']);

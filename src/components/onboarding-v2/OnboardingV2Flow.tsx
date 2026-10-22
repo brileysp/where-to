@@ -11,6 +11,7 @@ import type { DnaCard, SwipeType } from '@/lib/dna/types';
 import { dnaStateFor, type Answer, type ProfileInput } from '@/lib/onboarding/bridge';
 import { rankingMonth } from '@/lib/onboarding/shortlist';
 import { startingInterests } from '@/lib/onboarding/vibe-interests';
+import { DEFAULT_PEAK } from '@/lib/onboarding/peak';
 import type { FlowData } from './FlowData';
 import './onboarding-v2.css';
 import { backTarget, buildPath, chooseDoor, emptyDoors, nextScreen, progressPercent, type DoorKey, type Doors, type FlowMode, type ScreenId } from '@/lib/onboarding/path';
@@ -74,7 +75,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   // The longest-flight question is gone (flights are worked out from where you live and the trip length), so a limit saved earlier no longer applies.
   const start: FlowChoices | null = useMemo(() => (entry.saved ? { ...fromTravelProfile(entry.saved, data.cards), maxHours: 0 } : null), [entry.saved, data.cards]);
   /** What the profile says for the choices a trip can change: the defaults every trip inherits. */
-  const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, maxHours: start?.maxHours ?? 0 }));
+  const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, peak: start?.peak ?? DEFAULT_PEAK }));
   // The most recently saved trip is the one open; its settings are laid over the profile's defaults.
   const openTrip = entry.trips[0] ?? null;
   const openEff = openTrip ? effectiveTrip(defaults, openTrip) : null;
@@ -107,7 +108,9 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [homeSub, setHomeSub] = useState<string | null>(start?.homeSub ?? null);
   const [length, setLength] = useState<TripLength | null>(openTrip ? openTrip.length : (start?.length ?? null));
   const [continents, setContinents] = useState<RegionKey[]>(openTrip ? openTrip.continents : (start?.continents ?? []));
-  const [maxHours, setMaxHours] = useState(openEff ? openEff.maxHours : (start?.maxHours ?? 0));
+  const [maxHours, setMaxHours] = useState(start?.maxHours ?? 0);
+  /** Peak or off peak (a step from 0 to 4, starting in the middle). */
+  const [peak, setPeak] = useState(openEff ? openEff.peak : (start?.peak ?? DEFAULT_PEAK));
   const [toast, setToast] = useState<string | null>(null);
   const [vibes, setVibes] = useState<string[]>(start?.vibes ?? []);
   /** Taste-card swipes, and sharpen-question answers (kept apart: only sharpen answers count toward the unlock). */
@@ -129,7 +132,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [keep, setKeep] = useState<Record<string, boolean>>({});
 
   // Saved trips: the screens work on one set of values; this keeps the list of trips, saves the open one, and loads another when switching.
-  const tripWork = useMemo(() => ({ month, week, length, continents, who, bands, care, maxHours }), [month, week, length, continents, who, bands, care, maxHours]);
+  const tripWork = useMemo(() => ({ month, week, length, continents, who, bands, care, peak }), [month, week, length, continents, who, bands, care, peak]);
   const trips = useTrips({
     initial: entry.trips,
     first: entry.name,
@@ -144,7 +147,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       setWho(eff.who);
       setBands(eff.bands);
       setCare(eff.care);
-      setMaxHours(eff.maxHours);
+      setPeak(eff.peak);
     },
     toast: setToast,
   });
@@ -214,6 +217,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setLength(null);
     setContinents([]);
     setMaxHours(0);
+    setPeak(DEFAULT_PEAK);
     setToast(null);
     setVibes([]);
     setSwipes([]);
@@ -281,13 +285,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   /** What would be saved right now, and the save itself. */
   function choices(): FlowChoices {
-    return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, maxHours };
+    return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, maxHours, peak };
   }
   async function persist(): Promise<boolean> {
     const profile = toTravelProfile(choices(), keep, mode === 'dna');
     const r = await saveTravelProfile(profile);
     if (!r.ok) setToast('Could not save. Try again.');
-    else setDefaults({ who: profile.who, bands: profile.bands, care: profile.care, maxHours: profile.maxHours });
+    else setDefaults({ who: profile.who, bands: profile.bands, care: profile.care, peak: profile.peak });
     return r.ok;
   }
   async function onDnaSave() {
@@ -322,6 +326,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setMonth(kept.month);
     setWeek(kept.week);
     setMaxHours(kept.maxHours);
+    setPeak(kept.peak ?? DEFAULT_PEAK);
     setMode('trip');
     setReturning(true);
     go('welcome');
@@ -476,7 +481,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
         ) : screen === 'logistics' ? (
           <LogisticsScreen loc={loc} onContinue={onContinue} />
         ) : screen === 'essentials' ? (
-          <EssentialsScreen who={who} bands={bands} continents={continents} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
+          <EssentialsScreen who={who} bands={bands} continents={continents} peak={peak} onPeak={setPeak} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
         ) : screen === 'dnabasics' ? (
           <DnaBasicsScreen
             who={who}
@@ -506,6 +511,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             bands={bands}
             home={home}
             maxHours={maxHours}
+            peak={peak}
+            onPeak={setPeak}
             careProps={careProps('trip')}
             returning={returning}
             levels={levels}

@@ -2,6 +2,8 @@ import { WhoCard } from '../WhoCard';
 import { OpenToCard } from '../OpenToCard';
 import { CareAccordion } from '../CareAccordion';
 import { ContinentPicker } from '../live/ContinentPicker';
+import { PeakScale } from '../live/PeakScale';
+import { PEAK_TITLE } from '@/lib/onboarding/peak';
 import type { Bands, CareItem, CareState } from '@/lib/onboarding/care';
 import type { RegionKey } from '@/lib/onboarding/regions';
 
@@ -24,7 +26,7 @@ export interface CareHandlers {
 }
 
 /** "The basics" (spec 4.6): who is going, budget and weather, and one optional line for everything else. */
-export function EssentialsScreen({ who, bands, continents, onWho, onBand, onContinents, careProps, onContinue }: { who: string[]; bands: Bands; continents: RegionKey[]; onWho: (k: string) => void; onBand: (dim: string, band: string) => void; onContinents: (next: RegionKey[]) => void; careProps: CareHandlers; onContinue: () => void }) {
+export function EssentialsScreen({ who, bands, continents, peak, onPeak, onWho, onBand, onContinents, careProps, onContinue }: { who: string[]; bands: Bands; continents: RegionKey[]; peak: number; onPeak: (step: number) => void; onWho: (k: string) => void; onBand: (dim: string, band: string) => void; onContinents: (next: RegionKey[]) => void; careProps: CareHandlers; onContinue: () => void }) {
   return (
     <>
       <div className="ob2-scr">
@@ -32,6 +34,10 @@ export function EssentialsScreen({ who, bands, continents, onWho, onBand, onCont
         <p className="ob2-sub">A few taps. Your shortlist appears right after.</p>
         <WhoCard title="Who is going?" sub="Select all that apply." who={who} onToggle={onWho} />
         <OpenToCard dims={['budget', 'weather']} bands={bands} onToggle={onBand} />
+        <div className="ob2-card2">
+          <h3>{PEAK_TITLE}</h3>
+          <PeakScale value={peak} onChange={onPeak} />
+        </div>
         <div className="ob2-card2">
           <h3>Where in the world?</h3>
           <p className="ob2-sub small">Everywhere is on. Tap a continent to leave it out.</p>

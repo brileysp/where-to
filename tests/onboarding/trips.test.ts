@@ -57,29 +57,29 @@ describe('editing the year', () => {
 });
 
 describe('what a trip inherits', () => {
-  const profile = { who: ['solo'], bands: toggleBandChoice(allBands(), 'budget', 'luxury'), care: { food: { o: ['vegan'], firm: true } }, maxHours: 0 };
+  const profile = { who: ['solo'], bands: toggleBandChoice(allBands(), 'budget', 'luxury'), care: { food: { o: ['vegan'], firm: true } }, peak: 2 };
   it('uses the profile for everything the trip has not changed', () => {
     const e = effectiveTrip(profile, { overrides: {} });
     expect(e.who).toEqual(['solo']);
     expect(e.bands.budget).toEqual(['luxury']);
     expect(e.care.food.o).toEqual(['vegan']);
-    expect(e.maxHours).toBe(0);
+    expect(e.peak).toBe(2);
   });
-  it('lets a trip change who, budget, dietary needs and the flight limit without touching the others', () => {
-    const e = effectiveTrip(profile, { overrides: { who: ['kids'], care: { food: { o: ['halal'], firm: false } }, maxHours: 8 } });
+  it('lets a trip change who, dietary needs and peak or off peak without touching the others', () => {
+    const e = effectiveTrip(profile, { overrides: { who: ['kids'], care: { food: { o: ['halal'], firm: false } }, peak: 4 } });
     expect(e.who).toEqual(['kids']);
     expect(e.care.food.o).toEqual(['halal']);
     expect(e.bands.budget).toEqual(['luxury']);
-    expect(e.maxHours).toBe(8);
+    expect(e.peak).toBe(4);
   });
   it('saves only what differs from the profile', () => {
-    const same = overridesFor(profile, { who: ['solo'], bands: profile.bands, care: profile.care, maxHours: 0 });
+    const same = overridesFor(profile, { who: ['solo'], bands: profile.bands, care: profile.care, peak: 2 });
     expect(same).toEqual({});
-    const diff = overridesFor(profile, { who: ['kids'], bands: profile.bands, care: { ...profile.care, kids: { o: ['k'], firm: false } }, maxHours: 4 });
-    expect(diff).toEqual({ who: ['kids'], care: { kids: { o: ['k'], firm: false } }, maxHours: 4 });
+    const diff = overridesFor(profile, { who: ['kids'], bands: profile.bands, care: { ...profile.care, kids: { o: ['k'], firm: false } }, peak: 0 });
+    expect(diff).toEqual({ who: ['kids'], care: { kids: { o: ['k'], firm: false } }, peak: 0 });
   });
   it('treats an item the trip cleared as an override', () => {
-    const o = overridesFor(profile, { who: ['solo'], bands: profile.bands, care: {}, maxHours: 0 });
+    const o = overridesFor(profile, { who: ['solo'], bands: profile.bands, care: {}, peak: 2 });
     expect(o.care).toEqual({ food: { o: [], firm: false } });
     expect(effectiveTrip(profile, { overrides: o }).care.food.o).toEqual([]);
   });
@@ -87,7 +87,7 @@ describe('what a trip inherits', () => {
 
 describe('parseTrip', () => {
   it('cleans what it is given', () => {
-    const t = parseTrip({ id, name: ' My trip ', month: 8, year: 2027, week: 9, length: 'forever', continents: ['eu', 'mars'], overrides: { who: ['solo', 'dog'], maxHours: 5 } })!;
+    const t = parseTrip({ id, name: ' My trip ', month: 8, year: 2027, week: 9, length: 'forever', continents: ['eu', 'mars'], overrides: { who: ['solo', 'dog'], peak: 9 } })!;
     expect(t.name).toBe('My trip');
     expect(t.week).toBe(0);
     expect(t.length).toBeNull();

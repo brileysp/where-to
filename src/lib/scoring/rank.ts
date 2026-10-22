@@ -786,9 +786,17 @@ export function computeRankedDestinations(
   factors?: InterestFactors,
   /** What each whole place keeps of its final score (the trip length: flights that eat the trip). Missing = 1. */
   placeFactors?: Record<string, number>,
+  /** Peak or off peak: the share of each place's off-peak value for the month mixed into its score (0 = none). */
+  offPeakWeight = 0,
 ): RankedDestination[] {
   const monthIdx = month - 1;
   return [...destinations]
-    .map((d) => ({ d, s: scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors) * (placeFactors?.[d.id] ?? 1) }))
+    .map((d) => ({ d, s: blendOffPeak(scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors), d.monthly.deals?.[monthIdx], offPeakWeight) * (placeFactors?.[d.id] ?? 1) }))
     .sort((a, b) => b.s - a.s);
+}
+
+/** A score with some of the place's off-peak value for the month mixed in. No weight, or no off-peak value on file, leaves the score as it was. */
+export function blendOffPeak(score: number, offPeak: number | undefined, weight: number): number {
+  if (!(weight > 0) || offPeak === undefined || !Number.isFinite(offPeak)) return score;
+  return score * (1 - weight) + offPeak * weight;
 }

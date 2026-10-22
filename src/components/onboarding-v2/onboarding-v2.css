@@ -467,3 +467,16 @@
 .lq-tripsum { grid-column: 2 / 4; color: var(--text-faint); font-size: 12.5px; }
 .lq-yearseg { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
 .lq-yearseg .lq-lbl { margin: 0 4px 0 0; }
+
+/* Crowds & prices: the peak to off peak scale */
+.pk { display: flex; flex-direction: column; gap: 8px; padding-right: 6px; }
+.pk-ends { display: flex; justify-content: space-between; gap: 14px; font-size: 12px; line-height: 1.3; }
+.pk-ends > div { flex: 1; min-width: 0; }
+.pk-ends .r { text-align: right; }
+.pk-ends b { display: block; font-size: 12.5px; color: var(--text); }
+.pk-ends small { color: var(--text-faint); font-size: 12px; }
+.pk-track { position: relative; height: 34px; margin: 2px 18px 0; }
+.pk-track::before { content: ""; position: absolute; left: 0; right: 0; top: 15px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--border) 50%, var(--ob-blue)); }
+.pk-stop { position: absolute; top: 8px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg-card); padding: 0; cursor: pointer; }
+.pk-stop.on { width: 26px; height: 26px; margin-left: -13px; top: 4px; background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.pk-cur { text-align: center; font-size: 13.5px; font-weight: 700; color: var(--accent); }

@@ -77,7 +77,6 @@ export const CARE_ITEMS: CareItem[] = [
   { key: 'food', icon: '🥗', name: 'Food needs', detail: 'Vegetarian, halal, gluten-free', question: 'Needs', options: [['veg', 'Vegetarian'], ['vegan', 'Vegan'], ['gf', 'Gluten-free'], ['halal', 'Halal'], ['kosher', 'Kosher']], multi: true, firm: 'Rule out places with few options', lasting: true },
   { key: 'lang', icon: '🗣️', name: 'Language', detail: 'How easy it is to get by', question: 'I need', options: [['en', 'English to work'], ['es', 'Spanish'], ['pt', 'Portuguese'], ['it', 'Italian'], ['ja', 'Japanese']], multi: true, firm: 'Rule out places where English is hard', lasting: true },
   { key: 'how', icon: '🧭', name: 'How you travel', detail: 'Road trip, tour, cruise', question: 'I like', options: [['road', 'Road trip'], ['tour', 'Guided tour'], ['cruise', 'Cruise'], ['base', 'One base, day trips']], multi: true, lasting: true },
-  { key: 'deals', icon: '💸', name: 'Deals', detail: 'Cheaper off-peak travel', options: [['off', 'Show me the low-season value']], multi: false, trip: true },
 ];
 
 export type CareState = Record<string, { o: string[]; firm: boolean }>;

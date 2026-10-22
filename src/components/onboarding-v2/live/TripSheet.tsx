@@ -13,6 +13,8 @@ import { CareAccordion } from '../CareAccordion';
 import type { CareHandlers } from '../screens/EssentialsScreen';
 import { ContinentPicker } from './ContinentPicker';
 import { TripName } from './TripsSheet';
+import { PeakScale } from './PeakScale';
+import { DEFAULT_PEAK, PEAK_NAMES, PEAK_TITLE } from '@/lib/onboarding/peak';
 import { nextYearFor, type Trip } from '@/lib/onboarding/trips';
 import { LengthPicker } from './LengthPicker';
 
@@ -29,6 +31,7 @@ export interface TripValues {
   bands: Bands;
   loc: HomeBundle;
   maxHours: number;
+  peak: number;
   careProps: CareHandlers;
 }
 
@@ -40,6 +43,7 @@ export interface TripHandlers {
   onWho: (k: string) => void;
   onBandPill: (dim: string, band: string) => void;
   onMaxHours: (h: number) => void;
+  onPeak: (step: number) => void;
   onNeedHome: () => void;
 }
 
@@ -53,6 +57,7 @@ export function tripSetCount(v: TripValues): number {
     (v.who.length > 0 ? 1 : 0) +
     (isNarrowed(v.bands, 'budget') ? 1 : 0) +
     (isNarrowed(v.bands, 'weather') ? 1 : 0) +
+    (v.peak !== DEFAULT_PEAK ? 1 : 0) +
     (!allRegions(v.continents) ? 1 : 0) +
     (originOf(v.loc) ? 1 : 0) +
     (careCount(v.careProps.care, v.bands) > 0 ? 1 : 0)
@@ -117,6 +122,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
   function reset() {
     v.who.forEach((k) => h.onWho(k));
     for (const d of ['budget', 'weather']) if (isNarrowed(v.bands, d)) v.careProps.onBandReset(d);
+    h.onPeak(DEFAULT_PEAK);
     h.onLength(null);
     h.onContinents([]);
     v.loc.onClearAirport();
@@ -191,6 +197,13 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
     },
     bandRow('budget'),
     bandRow('weather'),
+    {
+      id: 'peak',
+      label: PEAK_TITLE,
+      value: PEAK_NAMES[v.peak] ?? PEAK_NAMES[DEFAULT_PEAK],
+      set: v.peak !== DEFAULT_PEAK,
+      body: <PeakScale value={v.peak} onChange={h.onPeak} />,
+    },
     {
       id: 'continents',
       label: 'Continents',
