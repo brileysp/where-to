@@ -1,4 +1,4 @@
-import { bandDims, careCount, careHas, careItemsFor, careRowSummary, careSummary, isNarrowed, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
+import { bandDims, careCount, careHas, careItemsFor, careRowSummary, isNarrowed, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
 
 /**
  * The collapsed "What else matters when you choose?" line (spec 5.3). Open, it is a list of rows, one per item. Each row shows one chip with
@@ -15,10 +15,8 @@ export function CareAccordion({
   onOpen,
   onTile,
   onBandChoice,
-  onBandReset,
   onOption,
   onFirm,
-  onClear,
   onAddKids,
 }: {
   scope: 'trip' | 'dna';
@@ -33,10 +31,10 @@ export function CareAccordion({
   onOpen: () => void;
   onTile: (key: string) => void;
   onBandChoice: (dim: string, band: string) => void;
-  onBandReset: (dim: string) => void;
+  onBandReset?: (dim: string) => void;
   onOption: (item: CareItem, option: string) => void;
   onFirm: (key: string, firm: boolean) => void;
-  onClear: (key: string) => void;
+  onClear?: (key: string) => void;
   onAddKids: () => void;
 }) {
   const items = careItemsFor(scope);
@@ -56,7 +54,7 @@ export function CareAccordion({
           <button type="button" className="carehd" aria-expanded={open} onClick={onOpen}>
             <span>
               <b>What else matters when you choose?</b>
-              <small>{n ? careSummary(care, bands).join(' · ') : 'Optional: kids, food needs, language, travel modes and more.'}</small>
+              {!open && <small>{n ? `${n} of ${items.length} selected` : 'Optional: kids, food needs, language, travel modes and more.'}</small>}
             </span>
             <i aria-hidden="true">{open ? '▾' : '▸'}</i>
           </button>
@@ -76,14 +74,14 @@ export function CareAccordion({
                         <b>{c.name}</b>
                         <small>{c.detail}</small>
                       </span>
-                      <span className={`sumchip ${on ? 'on' : ''}`}>{careRowSummary(c, care, bands)}</span>
+                      {!sel && <span className={`sumchip ${on ? 'on' : ''}`}>{careRowSummary(c, care, bands)}</span>}
                       <i aria-hidden="true">{sel ? '▴' : '▾'}</i>
                     </button>
                     {sel && (
                       <div className="crb">
                         {c.band ? (
                           <>
-                            <div className="ob2-fine" style={{ margin: 0 }}>Pick any that sound good. Pick none for no preference.</div>
+                            <div className="ob2-fine" style={{ margin: 0 }}>Pick any that sound good. Untick them all for no preference.</div>
                             <div className="ob2-chips">
                               {bandDims()
                                 .find((x) => x.key === c.key)!
@@ -96,15 +94,10 @@ export function CareAccordion({
                                   );
                                 })}
                             </div>
-                            {isNarrowed(bands, c.key) && (
-                              <button type="button" className="ob2-link" onClick={() => onBandReset(c.key)}>
-                                Back to no preference
-                              </button>
-                            )}
                           </>
                         ) : (
                           <>
-                            <div className="ob2-fine" style={{ margin: 0 }}>Pick any that apply. Pick none for no preference.</div>
+                            <div className="ob2-fine" style={{ margin: 0 }}>Pick any that apply. Untick them all for no preference.</div>
                             <div className="ob2-chips">
                               {c.options!.map(([o, l]) => (
                                 <button key={o} type="button" className={`ob2-chip ${v?.o.includes(o) ? 'on' : ''}`} aria-pressed={!!v?.o.includes(o)} onClick={() => onOption(c, o)}>
@@ -121,11 +114,6 @@ export function CareAccordion({
                                   {c.firm}
                                 </button>
                               </div>
-                            )}
-                            {v && v.o.length > 0 && (
-                              <button type="button" className="ob2-link" onClick={() => onClear(c.key)}>
-                                Back to no preference
-                              </button>
                             )}
                           </>
                         )}

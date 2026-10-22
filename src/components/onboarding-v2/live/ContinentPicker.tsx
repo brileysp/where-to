@@ -1,14 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { REGION_KEYS, REGION_LABELS, REGION_RULES, allRegions, type RegionKey } from '@/lib/onboarding/regions';
+import { REGION_KEYS, REGION_LABELS, allRegions, type RegionKey } from '@/lib/onboarding/regions';
 
 const COLORS: Record<RegionKey, string> = { na: 'var(--rg-na)', csa: 'var(--rg-csa)', eu: 'var(--rg-eu)', af: 'var(--rg-af)', as: 'var(--rg-as)', oc: 'var(--rg-oc)' };
-
-/** **bold** markers in the rules to real bold text. */
-function bold(text: string) {
-  return text.split('**').map((part, i) => (i % 2 ? <b key={i}>{part}</b> : part));
-}
 
 /**
  * "Continents": a small map with no borders, six coloured shapes, all on to start. Tapping a shape or its pill turns that region off (grey);
@@ -56,15 +51,7 @@ export function ContinentPicker({ on, onChange, onKeepOne }: { on: readonly Regi
           </button>
         ))}
       </div>
-      <div className="lq-hint" style={{ marginTop: 6 }}>{all ? 'All continents are on. Tap one to leave it out.' : `${current.length} of ${REGION_KEYS.length} on. Tap All to turn everything back on.`}</div>
-      <details className="lq-rules">
-        <summary>How we draw the lines</summary>
-        <ul>
-          {REGION_RULES.map((r) => (
-            <li key={r}>{bold(r)}</li>
-          ))}
-        </ul>
-      </details>
+      {!all && <div className="lq-hint" style={{ marginTop: 6 }}>{`${current.length} of ${REGION_KEYS.length} on.`}</div>}
     </div>
   );
 }

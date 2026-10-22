@@ -150,7 +150,7 @@
 .crh .t { flex: 1; min-width: 0; }
 .crh .t b { display: block; font-size: 13.5px; line-height: 1.2; }
 .crh .t small { display: block; color: var(--text-faint); font-size: 11.5px; line-height: 1.25; }
-.crh .sumchip { flex: 0 1 46%; max-width: 46%; font-size: 12px; line-height: 1.2; color: var(--text-dim); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 99px; padding: 4px 10px; text-align: center; white-space: normal; }
+.crh .sumchip { flex: 0 1 46%; max-width: 46%; font-size: 12px; line-height: 1.2; color: var(--text-dim); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 99px; padding: 4px 10px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .crh .sumchip.on { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); font-weight: 600; }
 .crh i { font-style: normal; color: var(--text-faint); font-size: 12px; }
 .crb { display: flex; flex-direction: column; gap: 8px; padding: 2px 12px 12px; border-top: 1px solid var(--border); padding-top: 10px; }

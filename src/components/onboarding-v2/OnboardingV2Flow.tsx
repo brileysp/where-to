@@ -10,6 +10,7 @@ import { chooseNextCard } from '@/lib/dna/selection';
 import type { DnaCard, SwipeType } from '@/lib/dna/types';
 import { dnaStateFor, type Answer, type ProfileInput } from '@/lib/onboarding/bridge';
 import { rankingMonth } from '@/lib/onboarding/shortlist';
+import { startingInterests } from '@/lib/onboarding/vibe-interests';
 import type { FlowData } from './FlowData';
 import './onboarding-v2.css';
 import { backTarget, buildPath, chooseDoor, emptyDoors, nextScreen, progressPercent, type DoorKey, type Doors, type FlowMode, type ScreenId } from '@/lib/onboarding/path';
@@ -24,7 +25,7 @@ import { useUnits } from '@/components/UnitsProvider';
 import { loadMatchFits } from '@/app/onboarding-v2/actions';
 import type { MatchFitsByInterest } from '@/lib/onboarding/live-factors';
 import { ELSEWHERE, type HomeBundle } from './HomeLocation';
-import { HOME_COUNTRIES, resolveOrigin } from '@/lib/onboarding/origin';
+import { HOME_COUNTRIES } from '@/lib/onboarding/origin';
 import type { TripLength } from '@/lib/onboarding/trip-length';
 import type { RegionKey } from '@/lib/onboarding/regions';
 import { effectiveTrip, type Trip } from '@/lib/onboarding/trips';
@@ -70,7 +71,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   useState(() => setInterestEmojiOverrides(data.emojiOverrides));
   const chips = data.chips;
   // A returning traveler's choices from last time (answers whose card no longer exists are dropped).
-  const start: FlowChoices | null = useMemo(() => (entry.saved ? fromTravelProfile(entry.saved, data.cards) : null), [entry.saved, data.cards]);
+  // The longest-flight question is gone (flights are worked out from where you live and the trip length), so a limit saved earlier no longer applies.
+  const start: FlowChoices | null = useMemo(() => (entry.saved ? { ...fromTravelProfile(entry.saved, data.cards), maxHours: 0 } : null), [entry.saved, data.cards]);
   /** What the profile says for the choices a trip can change: the defaults every trip inherits. */
   const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, maxHours: start?.maxHours ?? 0 }));
   // The most recently saved trip is the one open; its settings are laid over the profile's defaults.
@@ -147,8 +149,25 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     toast: setToast,
   });
 
+  /**
+   * A traveler who picked no interests (photos only, or "surprise me") still gets the live questions: the interests their photos point to,
+   * everyday ones only (never the specialist tier) and only those with questions, become their starting interests (as Like). Worked out when
+   * the photos are left and again on the way to the results, until the traveler changes interests themselves.
+   */
+  const [autoLevels, setAutoLevels] = useState(false);
+  function startingLevels(): Levels {
+    const ok = (k: string) => (interestByKey(k)?.tier ?? 'specialist') !== 'specialist' && (data.setups[k]?.questions.length ?? 0) > 0;
+    return Object.fromEntries(startingInterests(vibes, ok).map((k) => [k, 'like' as const]));
+  }
   function go(next: ScreenId | null) {
     if (!next) return;
+    if ((screen === 'vibes' || next === 'results') && (Object.keys(levels).length === 0 || autoLevels)) {
+      const auto = startingLevels();
+      if (Object.keys(auto).length) {
+        setLevels(auto);
+        setAutoLevels(true);
+      }
+    }
     if (next === 'cards' && !tasteCard) {
       setTasteCount(0);
       setTasteCard(chooseNextCard(dnaStateFor(input, data.dimensions), data.cards, data.domains));
@@ -176,6 +195,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setDoors(emptyDoors());
     setScreen('door');
     setLevels({});
+    setAutoLevels(false);
     setSubs({});
     setQa({});
     setGroup(firstGroup);
@@ -254,6 +274,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       setTopPopup(true);
       return;
     }
+    setAutoLevels(false);
     setLevels(r.levels);
     setTopPopup(false);
     setDxo((o) => ({ ...o, [`i:${key}`]: r.open }));
@@ -323,7 +344,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     } else onBack();
   }
   const rowCtx = { dnaMode: mode === 'dna', bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answerCount: input.answers.length, month, week, length, continents, maxHours };
-  const origin = resolveOrigin({ airport: home, country: homeCountry === ELSEWHERE ? null : homeCountry, sub: homeSub });
   const loc: HomeBundle = {
     country: homeCountry,
     sub: homeSub,
@@ -354,6 +374,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   function onStar(key: string) {
     const r = toggleTop(levels, key);
+    setAutoLevels(false);
     setLevels(r.levels);
     setTopPopup(r.blocked);
   }
@@ -413,6 +434,16 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     return () => { live = false; };
   }, [fitSig]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // The shortlist opens only once how places do for the traveler's interests has arrived, so the list never re-sorts by itself. If it is slow, show it anyway after a few seconds.
+  const fitsPending = fitKeys.some((k) => !fits[k]);
+  const [fitsGiveUp, setFitsGiveUp] = useState(false);
+  useEffect(() => {
+    if (screen !== 'results' || !fitsPending) return;
+    const t = setTimeout(() => setFitsGiveUp(true), 5000);
+    return () => clearTimeout(t);
+  }, [screen, fitsPending]);
+  const waitingForFits = screen === 'results' && fitsPending && !fitsGiveUp;
+
   const hasBack = backTarget(mode, doors, screen).kind !== 'none';
 
   return (
@@ -429,7 +460,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             seen={seen}
             more={more}
             dnaMode={mode === 'dna'}
-            onToggle={(k) => setLevels((l) => togglePick(l, k))}
+            onToggle={(k) => { setAutoLevels(false); setLevels((l) => togglePick(l, k)); }}
             onGroup={openGroup}
             onMore={(g) => setMore((m) => ({ ...m, [g]: !m[g] }))}
             onSkip={() => {
@@ -443,7 +474,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
         ) : screen === 'when' ? (
           <WhenScreen month={month} week={week} length={length} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onLength={setLength} onContinue={onContinue} />
         ) : screen === 'logistics' ? (
-          <LogisticsScreen loc={loc} hasOrigin={!!origin} maxHours={maxHours} onMaxHours={setMaxHours} onNeedHome={() => setToast('Choose where you live first')} onContinue={onContinue} />
+          <LogisticsScreen loc={loc} onContinue={onContinue} />
         ) : screen === 'essentials' ? (
           <EssentialsScreen who={who} bands={bands} continents={continents} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
         ) : screen === 'dnabasics' ? (
@@ -460,6 +491,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
           <VibesScreen picked={vibes} onToggle={(k) => setVibes((v) => toggleInList(v, k))} onContinue={onContinue} />
         ) : screen === 'cards' ? (
           <CardsScreen card={tasteCard} done={tasteCount >= tasteTotal} index={tasteCount} total={tasteTotal} onAnswer={onTasteAnswer} onContinue={onContinue} />
+        ) : screen === 'results' && waitingForFits ? (
+          <div className="ob2-scr"><p className="ob2-sub" role="status">Finding your places…</p></div>
         ) : screen === 'results' ? (
           <ShortlistScreen
             data={data}
@@ -483,8 +516,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             qa={qa}
             onAnswer={(interest, qkey, picks) => setQa((a) => ({ ...a, [interest]: { ...(a[interest] ?? {}), [qkey]: picks } }))}
             onTick={(interest, chip) => setSubs((x) => toggleSpecific(x, interest, chip))}
-            onAddInterest={(k) => setLevels((l) => (l[k] ? l : { ...l, [k]: 'like' }))}
-            onRemoveInterest={(k) => setLevels((l) => { const n = { ...l }; delete n[k]; return n; })}
+            onAddInterest={(k) => { setAutoLevels(false); setLevels((l) => (l[k] ? l : { ...l, [k]: 'like' })); }}
+            onRemoveInterest={(k) => { setAutoLevels(false); setLevels((l) => { const n = { ...l }; delete n[k]; return n; }); }}
             onSharpenAnswer={(card, type) => setSharpen((a) => [...a, { card, type }])}
             onSharpenSkip={(card) => setSkipped((s) => [...s, card.id])}
             onSwipe={(card, type) => setSwipes((a) => [...a, { card, type }])}

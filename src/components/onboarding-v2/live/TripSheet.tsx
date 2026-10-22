@@ -7,7 +7,6 @@ import { CARE_ITEMS, COMPANIONS, bandDims, bandTitle, careCount, isNarrowed, typ
 import { ELSEWHERE, HomeLocation, type HomeBundle } from '../HomeLocation';
 import { originLabel, resolveOrigin, type Origin } from '@/lib/onboarding/origin';
 import { allRegions, REGION_KEYS, REGION_LABELS, type RegionKey } from '@/lib/onboarding/regions';
-import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import type { TripAdjust } from '@/lib/onboarding/trip-adjust';
 import { TRIP_LENGTHS, type TripLength } from '@/lib/onboarding/trip-length';
 import { CareAccordion } from '../CareAccordion';
@@ -112,7 +111,6 @@ function LengthEffect({ length, adjust, names, inScope, home }: { length: TripLe
 export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRename, onYear, onClose }: { v: TripValues; h: TripHandlers; placeCount: number; adjust: TripAdjust; names: Record<string, string>; inScope: Set<string>; trip: Trip; onRename: (name: string) => void; onYear: (year: number) => void; onClose: () => void }) {
   const unitText = useUnitText();
   const [openRow, setOpenRow] = useState<string | null>('when');
-  const settings = getOnboardingSettings();
   const origin = originOf(v.loc);
   const nCare = careCount(v.careProps.care, v.bands);
 
@@ -203,19 +201,9 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
     {
       id: 'from',
       label: 'Flying from',
-      value: origin ? `${originLabel({ airport: v.loc.airport, country: v.loc.country === ELSEWHERE ? null : v.loc.country, sub: v.loc.sub })}${v.maxHours ? ` · under ${v.maxHours} h` : ''}` : 'Not set',
+      value: origin ? originLabel({ airport: v.loc.airport, country: v.loc.country === ELSEWHERE ? null : v.loc.country, sub: v.loc.sub }) : 'Not set',
       set: !!origin,
-      body: (
-        <>
-          <HomeLocation {...v.loc} />
-          <div className="lq-lbl">Longest flight</div>
-          <div className="lq-seg">
-            {settings.flightHourLimits.map((x) => (
-              <button key={x} type="button" className={`lq-tp${v.maxHours === x ? ' on' : ''}`} aria-pressed={v.maxHours === x} onClick={() => (origin ? h.onMaxHours(x) : h.onNeedHome())}>{x === 0 ? 'No limit' : `${x} hours`}</button>
-            ))}
-          </div>
-        </>
-      ),
+      body: <HomeLocation {...v.loc} />,
     },
     {
       id: 'who',

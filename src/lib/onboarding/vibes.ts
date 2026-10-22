@@ -12,17 +12,19 @@ export interface Vibe {
   emoji: string;
   gradient: string;
   signals: Record<string, number>;
+  /** The interests this photo points to, most likely first. They decide which questions the shortlist asks (see vibe-interests.ts). */
+  interests: string[];
 }
 
 export const VIBES: Vibe[] = [
-  { key: 'beach', label: 'Toes in the sand', emoji: '🏖️', gradient: 'linear-gradient(135deg,#1c7c8a,#e9a95b)', signals: { beach: 1.5, relaxation: 0.5 } },
-  { key: 'food', label: 'Long lunches and market crawls', emoji: '🍜', gradient: 'linear-gradient(135deg,#a8452c,#e0a24a)', signals: { food: 1.5, streetFood: 0.5 } },
-  { key: 'hotel', label: 'A hotel you never want to leave', emoji: '🛎️', gradient: 'linear-gradient(135deg,#3b3f6e,#b58fc4)', signals: { luxury: 1.5, relaxation: 0.5 } },
-  { key: 'trail', label: 'Trail dust and big views', emoji: '🏔️', gradient: 'linear-gradient(135deg,#2f5d44,#8aa6b8)', signals: { hiking: 1.5, remoteWilderness: 1, physicalChallenge: 0.5 } },
-  { key: 'old', label: 'Old streets and big museums', emoji: '🏛️', gradient: 'linear-gradient(135deg,#6b4a2f,#c9a77a)', signals: { culture: 1.5, museums: 0.5, architecture: 0.5 } },
-  { key: 'night', label: 'Rooftops and late nights', emoji: '🍸', gradient: 'linear-gradient(135deg,#271a4d,#c0407a)', signals: { nightlife: 1.5 } },
-  { key: 'wild', label: 'Wild animals up close', emoji: '🐆', gradient: 'linear-gradient(135deg,#3d5a24,#c9a23a)', signals: { wildlife: 1.5, remoteWilderness: 0.5 } },
-  { key: 'quiet', label: 'Total quiet', emoji: '🌿', gradient: 'linear-gradient(135deg,#1f4a4a,#7fb59a)', signals: { relaxation: 1, avoidingCrowds: 1.5, remoteWilderness: 0.5 } },
+  { key: 'beach', label: 'Toes in the sand', emoji: '🏖️', gradient: 'linear-gradient(135deg,#1c7c8a,#e9a95b)', signals: { beach: 1.5, relaxation: 0.5 }, interests: ['beachesSwimming', 'sunbathing'] },
+  { key: 'food', label: 'Long lunches and market crawls', emoji: '🍜', gradient: 'linear-gradient(135deg,#a8452c,#e0a24a)', signals: { food: 1.5, streetFood: 0.5 }, interests: ['streetFood', 'fineDining', 'wineSpirits'] },
+  { key: 'hotel', label: 'A hotel you never want to leave', emoji: '🛎️', gradient: 'linear-gradient(135deg,#3b3f6e,#b58fc4)', signals: { luxury: 1.5, relaxation: 0.5 }, interests: ['luxuryHotels', 'spaWellness', 'allInclusive'] },
+  { key: 'trail', label: 'Trail dust and big views', emoji: '🏔️', gradient: 'linear-gradient(135deg,#2f5d44,#8aa6b8)', signals: { hiking: 1.5, remoteWilderness: 1, physicalChallenge: 0.5 }, interests: ['hiking', 'scenicLandscapes', 'campingBackcountry'] },
+  { key: 'old', label: 'Old streets and big museums', emoji: '🏛️', gradient: 'linear-gradient(135deg,#6b4a2f,#c9a77a)', signals: { culture: 1.5, museums: 0.5, architecture: 0.5 }, interests: ['historyArchaeology', 'museumsArt', 'architecture'] },
+  { key: 'night', label: 'Rooftops and late nights', emoji: '🍸', gradient: 'linear-gradient(135deg,#271a4d,#c0407a)', signals: { nightlife: 1.5 }, interests: ['nightlife', 'festivals'] },
+  { key: 'wild', label: 'Wild animals up close', emoji: '🐆', gradient: 'linear-gradient(135deg,#3d5a24,#c9a23a)', signals: { wildlife: 1.5, remoteWilderness: 0.5 }, interests: ['wildlifeViewing', 'safari', 'whaleWatching'] },
+  { key: 'quiet', label: 'Total quiet', emoji: '🌿', gradient: 'linear-gradient(135deg,#1f4a4a,#7fb59a)', signals: { relaxation: 1, avoidingCrowds: 1.5, remoteWilderness: 0.5 }, interests: ['scenicLandscapes', 'hotSprings', 'spaWellness'] },
 ];
 
 const VIBE_STRENGTH = 2;

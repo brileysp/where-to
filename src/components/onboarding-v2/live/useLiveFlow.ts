@@ -37,7 +37,10 @@ export function useLiveFlow(a: LiveFlowArgs) {
   // What the traveler had when the screen opened: these fix the first batch and the bar's total, so adding interests later never moves them.
   const [initial] = useState(() => {
     const all = Object.keys(levels);
-    const top = orderedByLevel(levels).filter((k) => levels[k] === 'top');
+    const ordered = orderedByLevel(levels);
+    // The interests starred as top; a traveler who starred none (or whose interests came from their photos) is asked about their first five.
+    const starred = ordered.filter((k) => levels[k] === 'top');
+    const top = starred.length ? starred : ordered.filter((k) => setups[k]).slice(0, 5);
     return { all, keys: all.filter((k) => setups[k]), top, gate: gateItems(top, setups) };
   });
   const gate = initial.gate;

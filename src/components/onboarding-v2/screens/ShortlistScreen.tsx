@@ -665,14 +665,6 @@ export function ShortlistScreen(p: ShortlistProps) {
           <h3>Your limits</h3>
           <div className="ob2-lbl">Flying from</div>
           <HomeLocation {...p.loc} />
-          <div className="ob2-lbl">Longest flight</div>
-          <div className="ob2-chips">
-            {settings.flightHourLimits.map((h) => (
-              <button key={h} type="button" className={`ob2-chip ${p.maxHours === h ? 'on' : ''}`} aria-pressed={p.maxHours === h} onClick={() => (origin ? p.onMaxHours(h) : p.onNeedHome())}>
-                {h === 0 ? 'No limit' : `${h} hours`}
-              </button>
-            ))}
-          </div>
         </Sheet>
       )}
       {sheet === 'swipe' && swipeCard && (

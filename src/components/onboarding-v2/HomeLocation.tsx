@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { airportByCode } from '@/lib/onboarding/airports';
 import { HOME_COUNTRIES, airportsFor, hasSubStep, resolveOrigin, subChoices, subLabel } from '@/lib/onboarding/origin';
 import { HomePicker } from './HomePicker';
@@ -46,6 +46,21 @@ export function HomeLocation({
   const elsewhere = country === ELSEWHERE;
   const origin = resolveOrigin({ airport, country: elsewhere ? null : country, sub });
   const chosen = airportByCode(airport);
+  // "Don't know yet" folds the airport choice away for the country and state it was said for; picking another place opens it again.
+  const spot = `${country ?? ''}|${sub ?? ''}`;
+  const [unsure, setUnsure] = useState<string | null>(null);
+  const skipped = unsure === spot && !airport;
+  const unsureBtn = (
+    <button type="button" className="ob2-chip sug" onClick={() => setUnsure(spot)}>Don’t know yet</button>
+  );
+  const chosenRow = (
+    <div className="ob2-hpset">
+      <span className="hpc">
+        📍 <b>{chosen ? chosen.city : airport}</b> <em>{chosen ? chosen.code : ''}</em>
+      </span>
+      <button type="button" className="ob2-link" onClick={onClearAirport}>Change</button>
+    </div>
+  );
   function hint(): string {
     if (!origin) {
       if (elsewhere) return 'Type a city or airport code.';
@@ -78,19 +93,35 @@ export function HomeLocation({
           ))}
         </select>
       )}
-      {elsewhere && <HomePicker home={airport} onPick={onPickAirport} onClear={onClearAirport} />}
-      {!elsewhere && near.length > 0 && (
+      {elsewhere && (skipped ? (
+        <div className="ob2-hpset">
+          <span className="hpc">Airport: not chosen yet</span>
+          <button type="button" className="ob2-link" onClick={() => setUnsure(null)}>Change</button>
+        </div>
+      ) : (
+        <>
+          <HomePicker home={airport} onPick={onPickAirport} onClear={onClearAirport} />
+          {!airport && <div className="ob2-chips">{unsureBtn}</div>}
+        </>
+      ))}
+      {!elsewhere && near.length > 0 && (airport ? chosenRow : skipped ? (
+        <div className="ob2-hpset">
+          <span className="hpc">Airport: not chosen yet</span>
+          <button type="button" className="ob2-link" onClick={() => setUnsure(null)}>Change</button>
+        </div>
+      ) : (
         <>
           <div className="ob2-lbl">Nearest big airport (optional)</div>
           <div className="ob2-chips">
             {near.map((a) => (
-              <button key={a.code} type="button" className={`ob2-chip ${airport === a.code ? 'on' : ''}`} aria-pressed={airport === a.code} onClick={() => (airport === a.code ? onClearAirport() : onPickAirport(a.code))}>
+              <button key={a.code} type="button" className="ob2-chip" onClick={() => onPickAirport(a.code)}>
                 {a.city} {a.code}
               </button>
             ))}
+            {unsureBtn}
           </div>
         </>
-      )}
+      ))}
       <div className="ob2-fine">{hint()}</div>
     </div>
   );
