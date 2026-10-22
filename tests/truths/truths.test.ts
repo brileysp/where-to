@@ -57,6 +57,12 @@ describe('the known truths', () => {
     expect(ok('T06', { ...emptyContext(), places: [place({ overview: { birding: 'European Starlings, Eurasian Griffons and Little Ringed Plovers wheel overhead.' } })] })).toBe(true);
     expect(ok('T06', { ...emptyContext(), places: [place({ overview: { birding: 'European Pied Flycatchers and Rüppell\'s Griffon Vultures.' } })] })).toBe(true);
   });
+  it('can fail: the coast rule', () => {
+    expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['beachesSwimming'] })] })).toBe(false);
+    expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['surfing', 'diving'] })] })).toBe(false);
+    expect(ok('P09', { ...emptyContext(), places: [place({ id: 'copenhagen', naSliders: ['surfing', 'diving'] })] })).toBe(true);
+    expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['surfing'] })] })).toBe(true);
+  });
   it('can fail: a saved rule that differs from the code, but not when only the key order differs', () => {
     const rule = QUESTION_FIT_RULES['hiking.q3'];
     const reordered = JSON.parse(JSON.stringify(rule, (_k, v) => (v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.entries(v).reverse()) : v)));

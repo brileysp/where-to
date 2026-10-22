@@ -1,0 +1,1337 @@
+{
+ "berlin": {
+  "overview": "Berlin's real summer swim option is its many lakes (Wannsee foremost among them) — a genuine local tradition, not a beach destination, and firmly a summer-only one.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Lakes still too cold.",
+   "Same cold conditions.",
+   "Real lake season begins.",
+   "Peak lake season.",
+   "Same peak conditions.",
+   "Same peak conditions.",
+   "Cooling, still swimmable.",
+   "Too cold again.",
+   "Same cold conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 4,
+     "value": 2,
+     "steepness": 4
+    },
+    {
+     "month": 5,
+     "value": 3.4,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1.7,
+     "steepness": 4
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "seaTempF": 70,
+   "calmWater": 8,
+   "whiteSand": 4,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 5,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "bhutan": {
+  "overview": "Bhutan is landlocked and mountainous, with cold rivers used for rafting, not swimming — this simply isn't a swim destination, monsoon season or not.",
+  "monthly": [
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Monsoon season — rivers running high, not a swim consideration either way.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0.7,
+     "steepness": 4
+    },
+    {
+     "month": 3,
+     "value": 2.4,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 2.4,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 1.6,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 0,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "zambia": {
+  "overview": "South Luangwa's rivers hold real crocodile and hippo populations — this is a wildlife-viewing destination, not a swimming one.",
+  "monthly": [
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 3,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 2.9,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2.9,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 1,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "great-smoky-mountains": {
+  "overview": "The Smokies' real swim spots are its rivers — the Townsend Y and Midnight Hole among the best-known — cold, clear mountain water that's a real summer draw and firmly too cold the rest of the year.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Rivers still too cold and often too high with runoff.",
+   "Same cold, high-water conditions.",
+   "Warming, runoff easing.",
+   "Real season begins — cold, clear mountain water.",
+   "Peak season.",
+   "Same peak conditions.",
+   "Still swimmable, cooling.",
+   "Too cold again.",
+   "Same cold conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 4,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "lake-district": {
+  "overview": "England's lakes warm faster than the sea but still peak Jun-Sep (into the 60s°F) and turn genuinely cold (45-52°F) the rest of the year — real wild swimming, not a warm-water destination.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Lakes still cold.",
+   "Same cold conditions.",
+   "Same cold conditions, warming slowly.",
+   "Real season begins.",
+   "Peak season, into the 60s°F.",
+   "Same peak conditions.",
+   "Still within the real season.",
+   "Cooling back down.",
+   "Same cooling conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "seaTempF": 62,
+   "calmWater": 6,
+   "whiteSand": 1,
+   "wildCoast": 1,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 5,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "nepal": {
+  "overview": "Nepal is landlocked and mountainous, with rivers used for rafting, not swimming — this simply isn't a swim destination.",
+  "monthly": [
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Monsoon season begins — rivers running high, not a swim consideration either way.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits.",
+   "Same as any other month — this isn't why anyone visits."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 2.2,
+     "steepness": 4
+    },
+    {
+     "month": 4,
+     "value": 2.2,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 0,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "luangprabang": {
+  "overview": "Laos is inland here — any swimming means the Mekong or a waterfall pool (Kuang Si is the well-known one), not a beach destination; the cooler, driest months (Nov-Feb) are the most pleasant for it.",
+  "monthly": [
+   "Cool, dry season — pleasant for a river or waterfall pool.",
+   "Same cool, dry conditions.",
+   "Warming into hot season.",
+   "Hot season's peak.",
+   "Same hot conditions.",
+   "Rainy season begins.",
+   "Same rainy conditions.",
+   "Same rainy conditions.",
+   "Same rainy conditions.",
+   "Rainy season's tail end.",
+   "Cool, dry season returns.",
+   "Same cool, dry conditions."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 3.3,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 1.6,
+     "steepness": 4
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 3.3,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 5,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 5,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "yosemite": {
+  "overview": "Yosemite's rivers (the Merced especially) offer real, cold, snowmelt-fed swimming — a genuine summer draw once spring runoff eases, and too cold or too dangerous (high, fast water) outside that window.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Rivers running high and cold with spring runoff — genuinely dangerous, not just cold.",
+   "Same high, dangerous runoff.",
+   "Runoff easing; real season begins.",
+   "Peak season — cold, clear water.",
+   "Same peak conditions.",
+   "Same peak conditions.",
+   "Still swimmable, cooling.",
+   "Too cold again.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 1,
+     "steepness": 4
+    },
+    {
+     "month": 5,
+     "value": 3.7,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 3.7,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 2,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 4,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "chilean-lake-district": {
+  "overview": "The Lake District's glacial lakes are genuinely cold in the Southern Hemisphere winter (Jun-Aug) — real swimming is a summer-only (Dec-Feb) proposition here, not a year-round option.",
+  "monthly": [
+   "Southern Hemisphere summer — the real swim season.",
+   "Same warm summer conditions.",
+   "Still summer-warm, cooling as autumn approaches.",
+   "Autumn — cooling, still swimmable for the hardy.",
+   "Cold enough now that this is a real stretch, not just quieter.",
+   "Southern Hemisphere winter — genuinely cold, not a realistic swim month.",
+   "Southern Hemisphere winter — genuinely cold, not a realistic swim month.",
+   "Southern Hemisphere winter — genuinely cold, not a realistic swim month.",
+   "Spring begins — still cold, warming slowly.",
+   "Same cool spring conditions.",
+   "Warming further.",
+   "Summer returns — warm again."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 6.3,
+     "steepness": 4
+    },
+    {
+     "month": 3,
+     "value": 6.3,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 5,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 8,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 4.8,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 5,
+  "facts": {
+   "seaTempF": 66,
+   "calmWater": 6,
+   "whiteSand": 1,
+   "wildCoast": 2,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 6,
+   "resortBeaches": 2,
+   "drawSourceChecked": false
+  }
+ },
+ "rioja": {
+  "overview": "Wine country, landlocked — any swimming here is an incidental river dip, not a real feature of this destination.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Incidental at best, same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 1.4,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 1.4,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 0,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "sedona": {
+  "overview": "Sedona's real swim spots are its creeks — Slide Rock is the well-known one — cool, clear water that's pleasant in the desert heat and a much smaller draw in cooler months.",
+  "monthly": [
+   "Cool for a creek dip, but a real desert-heat escape when needed.",
+   "Same cool conditions.",
+   "Warming.",
+   "Same mild conditions.",
+   "Same mild conditions.",
+   "A welcome cool-off from the desert heat.",
+   "Same welcome cool-off.",
+   "Same welcome cool-off.",
+   "Still warm enough to be a real draw.",
+   "Cooling, smaller draw now.",
+   "Same cool conditions.",
+   "Cool again."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 3.2,
+     "steepness": 4
+    },
+    {
+     "month": 5,
+     "value": 3.2,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 1.9,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 4,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 3,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "black-forest": {
+  "overview": "The Black Forest's real swim options are its lakes — Titisee and Schluchsee both warm enough for a real summer swim, cold and closed to it the rest of the year.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Lakes still too cold.",
+   "Same cold conditions.",
+   "Warming, not yet the real season.",
+   "Real lake season begins.",
+   "Peak lake season.",
+   "Same peak conditions.",
+   "Still swimmable, cooling.",
+   "Too cold again.",
+   "Same cold conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "seaTempF": 70,
+   "calmWater": 6,
+   "whiteSand": 1,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 3,
+   "resortBeaches": 1,
+   "drawSourceChecked": false
+  }
+ },
+ "badlands-black-hills": {
+  "overview": "There's no real beach or lake culture in this destination — Pactola Reservoir in the Black Hills offers a modest, secondary swim option in summer, but it's not why anyone comes here.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Reservoir still too cold.",
+   "Same cold conditions.",
+   "Same cold conditions.",
+   "A modest real window begins.",
+   "Same modest window.",
+   "Same modest window.",
+   "Same modest window.",
+   "Cooling.",
+   "Too cold again.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 0,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "chiang-mai": {
+  "overview": "Northern Thailand is inland and mountainous — any swimming here means a river or a pool, not a real beach destination; the cooler, driest months (Nov-Feb) are pleasant for it, the hot season less so.",
+  "monthly": [
+   "Cool, dry season — pleasant for a river or pool dip.",
+   "Same cool, dry conditions.",
+   "Warming into hot season.",
+   "Hot season's peak — water time is about cooling off, not a real \"swim season.\"",
+   "Same hot conditions.",
+   "Rainy season begins.",
+   "Same rainy conditions.",
+   "Same rainy conditions.",
+   "Same rainy conditions.",
+   "Rainy season's tail end.",
+   "Cool, dry season returns.",
+   "Same cool, dry conditions."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 2.9,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 2.4,
+     "steepness": 4
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 2.9,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 2,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "tbilisi-caucasus": {
+  "overview": "Georgia's Black Sea coast isn't part of this destination — real swimming here means a river or the reservoir known as the 'Tbilisi Sea,' a genuine if modest local summer option.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Still too cold.",
+   "Same cold conditions.",
+   "Warming, not yet real season.",
+   "Real season begins at the reservoir and rivers.",
+   "Peak season.",
+   "Same peak conditions.",
+   "Still swimmable, cooling.",
+   "Too cold again.",
+   "Same cold conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 1,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 2,
+   "resortBeaches": 1,
+   "drawSourceChecked": false
+  }
+ },
+ "queenstown": {
+  "overview": "Queenstown's lakes (Wakatipu especially) are genuinely, bracingly cold even in the Southern Hemisphere summer — real swimming for the hardy, not a warm-water option at any time of year.",
+  "monthly": [
+   "Southern Hemisphere summer — the least cold this gets, still bracing.",
+   "Same conditions.",
+   "Cooling as autumn approaches.",
+   "Same cooling conditions.",
+   "Same cooling conditions.",
+   "Southern Hemisphere winter — genuinely cold, not just quieter.",
+   "Southern Hemisphere winter — genuinely cold, not just quieter.",
+   "Southern Hemisphere winter — genuinely cold, not just quieter.",
+   "Spring begins — still cold.",
+   "Same cold spring conditions.",
+   "Same cold spring conditions.",
+   "Summer returns — the least cold this gets."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 3.1,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 3.1,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 3.1,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "seaTempF": 57,
+   "calmWater": 6,
+   "whiteSand": 2,
+   "wildCoast": 3,
+   "beachAccess": [
+    "short",
+    "trip"
+   ],
+   "remoteBeaches": 7,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "sequoia-kings-canyon": {
+  "overview": "The high Sierra's rivers and lakes are genuinely cold, snowmelt-fed water — real swimming for the hardy in summer, and simply too cold the rest of the year.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Rivers running high and cold with snowmelt.",
+   "Same high, cold-water conditions.",
+   "Runoff easing, still cold.",
+   "Real season begins for the hardy.",
+   "Peak season.",
+   "Same peak conditions.",
+   "Still swimmable, cooling.",
+   "Too cold again.",
+   "Same cold conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 3,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "beachAccess": [
+    "trip"
+   ],
+   "remoteBeaches": 4,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "budapest": {
+  "overview": "Budapest's real water tradition is its thermal baths, not open-water swimming — the Danube itself isn't a real swim destination, warm season or not.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Cold, not yet swim season.",
+   "Same cool conditions.",
+   "The thermal baths, not the river, are the real option here — year-round.",
+   "Warmest stretch, still about the baths more than open water.",
+   "Same warm conditions.",
+   "Same warm conditions.",
+   "Cooling.",
+   "Same cool conditions.",
+   "Same cool conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 4
+    },
+    {
+     "month": 4,
+     "value": 2,
+     "steepness": 4
+    },
+    {
+     "month": 5,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 7,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 5,
+   "whiteSand": 1,
+   "wildCoast": 0,
+   "beachAccess": [
+    "short"
+   ],
+   "remoteBeaches": 2,
+   "resortBeaches": 1,
+   "drawSourceChecked": false
+  }
+ },
+ "zion-bryce": {
+  "overview": "Real swimming here means the Virgin River's Narrows hike (wading more than swimming) — genuinely cold, snowmelt-fed water, and closed outright during spring runoff and flash-flood risk.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Spring runoff — the Narrows may be closed to hiking/wading outright.",
+   "Same high-runoff conditions.",
+   "Runoff easing; the Narrows may reopen.",
+   "Real season — cold, snowmelt-fed water.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "Real season resumes as flash-flood risk eases.",
+   "Same real-season conditions.",
+   "Same real-season conditions.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 3,
+     "value": 2.1,
+     "steepness": 2
+    },
+    {
+     "month": 5,
+     "value": 2.1,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 8,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 9,
+     "value": 2.2,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 2.2,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 3,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 3,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "zimbabwe": {
+  "overview": "Victoria Falls' powerful currents and real crocodile population rule out casual swimming in the Zambezi — the famous exception is Devil's Pool, a natural infinity pool right at the falls' edge, open only in the low-water season.",
+  "monthly": [
+   "Devil's Pool is closed — water levels are too high and dangerous.",
+   "Same high-water conditions.",
+   "Same high-water conditions.",
+   "Water levels dropping; the pool may open toward month's end.",
+   "Devil's Pool season begins as levels drop further.",
+   "Same low-water season.",
+   "Same low-water season.",
+   "Same low-water season.",
+   "Same low-water season, at its most reliable.",
+   "Same low-water season.",
+   "Levels starting to rise again.",
+   "Water levels rising; the pool is closing for the season."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 3,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 3.4,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 3.4,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 1,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "cotswolds": {
+  "overview": "No coastline here — any swimming means a village lido or a stretch of the Thames or Windrush. A pleasant local pastime, not a real reason to visit.",
+  "monthly": [
+   "Outside the swim season — cold enough that this isn't a realistic month for it.",
+   "The same modest local options as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Outside the swim season — cold enough that this isn't a realistic month for it."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 2,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 1,
+  "facts": {
+   "calmWater": 2,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 1,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "botswana": {
+  "overview": "The Okavango Delta isn't a swim destination — crocodiles and hippos make open-water swimming a real hazard, not a recreational option; any water time here is a mokoro ride, not a dip.",
+  "monthly": [
+   "Not a swim destination — wildlife, not water, is the point.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month.",
+   "Same as any other month."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 2.6,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 2.6,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 2,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "pantanal": {
+  "overview": "Like the Okavango, the Pantanal's wildlife-rich waters (piranhas, caimans) make this a wildlife-viewing destination, not a swimming one — real open-water swimming isn't the point here.",
+  "monthly": [
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one.",
+   "Same as any other month — this is a wildlife-viewing destination, not a swimming one."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 2.2,
+     "steepness": 4
+    },
+    {
+     "month": 7,
+     "value": 2.6,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 2.6,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 1
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 2,
+   "whiteSand": 2,
+   "wildCoast": 0,
+   "beachAccess": [
+    "trip"
+   ],
+   "remoteBeaches": 5,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ },
+ "peru": {
+  "overview": "The Sacred Valley and Cusco are high-altitude and inland — swimming isn't a real feature of this destination at all; any water time is incidental, not a reason to visit.",
+  "monthly": [
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination.",
+   "Same as any other month — swimming isn't a real feature of this high-altitude, inland destination."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 4
+    },
+    {
+     "month": 3,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 2.9,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 2.9,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2,
+     "steepness": 2
+    }
+   ]
+  },
+  "baseScore": 2,
+  "facts": {
+   "calmWater": 1,
+   "whiteSand": 0,
+   "wildCoast": 0,
+   "remoteBeaches": 0,
+   "resortBeaches": 0,
+   "drawSourceChecked": false
+  }
+ }
+}

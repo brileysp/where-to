@@ -37,6 +37,8 @@ export interface Truth {
   pending?: string;
 }
 
+/** Places with a real coast where neither surfing nor diving applies (no waves, no diving), so Beaches stays on. Owner rule, 22 Oct 2026. */
+const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia'];
 const pass: TruthResult = { ok: true };
 const fail = (detail: string): TruthResult => ({ ok: false, detail });
 const some = (xs: string[], n = 5) => (xs.length > n ? `${xs.slice(0, n).join('; ')} (and ${xs.length - n} more)` : xs.join('; '));
@@ -237,6 +239,15 @@ export const TRUTHS: Truth[] = [
     const peak = (p: (typeof ctx.places)[number]) => Math.max(0, ...(p.curves.diving?.anchors ?? []).map((a) => a.value));
     const rank = [...ctx.places].filter((p) => !p.naSliders.includes('diving')).sort((a, b) => peak(b) - peak(a)).findIndex((p) => /red sea/i.test(p.name));
     return rank >= 0 && rank < 10 ? pass : fail(rank < 0 ? 'not found' : `ranks ${rank + 1}`);
+  } },
+  { id: 'P09', area: 'Places and scores', says: 'The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia).', check: (ctx) => {
+    const on = (p: (typeof ctx.places)[number], k: string) => !p.naSliders.includes(k);
+    const bad: string[] = [];
+    for (const p of ctx.places) {
+      if (on(p, 'surfing') && !on(p, 'beachesSwimming')) bad.push(`${p.name}: scored for surfing but no beaches`);
+      if (on(p, 'beachesSwimming') && !on(p, 'surfing') && !on(p, 'diving') && !COASTAL_WITHOUT_SURF.includes(p.id)) bad.push(`${p.name}: beaches but too far from the coast for surfing or diving`);
+    }
+    return noneOf(bad, 'places that break the coast rule');
   } },
   { id: 'P08', area: 'Places and scores', says: 'The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded).', check: (ctx) => {
     const p = ctx.places.find((x) => /red sea/i.test(x.name)); const f = p && ctx.facts.find((r) => r.placeId === p.id && r.interestKey === 'diving');
