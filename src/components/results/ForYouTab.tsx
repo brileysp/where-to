@@ -264,7 +264,7 @@ function DnaDetail({
         </div>
       </div>
       <p className="dna-sentence">{sentence}</p>
-      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={(key) => dest.monthly[key]?.[previewIdx] ?? null} />}
     </div>
   );
 }
@@ -355,7 +355,7 @@ function InterestDetail({
         </div>
         {monthBlurb && <p className="card-monthly-blurb"><EmphasisText text={monthBlurb} /></p>}
       </div>
-      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} />}
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={() => score} />}
     </div>
   );
 }
@@ -378,10 +378,19 @@ function EmphasisText({ text }: { text: string }) {
   );
 }
 
-/** Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. */
-function MatchNotes({ notes, emojiOverrides }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string> }) {
+/**
+ * Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. A match is good news only
+ * when the month itself is workable, so "Matches" notes are left out for an interest that scores under 5 in the month shown (the drops stay).
+ */
+const MATCH_NOTE_MIN_SCORE = 5;
+function MatchNotes({ notes, emojiOverrides, monthScore }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string>; monthScore: (interest: string) => number | null }) {
   const slider = (key: string) => SLIDERS.find((x) => x.key === key);
-  const rows = Object.entries(notes).filter(([, n]) => n.reasons.length > 0 || n.matches.length > 0);
+  const rows = Object.entries(notes)
+    .map(([key, n]) => {
+      const s = monthScore(key);
+      return [key, s !== null && s < MATCH_NOTE_MIN_SCORE ? { ...n, matches: [] } : n] as const;
+    })
+    .filter(([, n]) => n.reasons.length > 0 || n.matches.length > 0);
   if (!rows.length) return null;
   return (
     <div className="match-notes">
