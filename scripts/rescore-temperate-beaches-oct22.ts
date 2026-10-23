@@ -1,4 +1,4 @@
-// 22 Oct 2026: re-scores the monthly Beaches & Swimming curves of temperate-water places from sea (or lake) temperature, because the old curves were
+// 22 Oct 2026 (pass 2 on 23 Oct: higher peaks for beach destinations and a much higher off-season floor, because walks, ball games and dogs on the beach still count): re-scores the monthly Beaches & Swimming curves of temperate-water places from sea (or lake) temperature, because the old curves were
 // far too high outside summer (the Dalmatian Coast scored 6.0 in January and 8.2 in March to May while its sea is a cold 54 to 60 F).
 // Method: for each place, a typical year of water temperature (a smooth curve from its coldest month to its warmest, warmest in August in the north
 // and February in the south); a swimming comfort factor from the temperature (about 60 F = 15%, 66 F = 42%, 70 F = 70%, 74 F = 95%, 76 F or more = 100%), taken
@@ -12,22 +12,22 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
 /** id: [coldest month F, warmest month F, hemisphere, floor share of the peak that mild air alone gives]. */
 export const WATER: Record<string, [number, number, 'N' | 'S', number]> = {
   // Mediterranean and Black Sea
-  mallorca: [57, 77, 'N', 0.2], sardinia: [57, 78, 'N', 0.2], sicily: [59, 79, 'N', 0.2], puglia: [56, 77, 'N', 0.15], croatia: [54, 76, 'N', 0.12],
-  santorini: [60, 76, 'N', 0.15], amalfi: [57, 77, 'N', 0.12], 'nice-riviera': [55, 76, 'N', 0.15], provence: [54, 74, 'N', 0.12], barcelona: [56, 77, 'N', 0.15],
-  athens: [59, 78, 'N', 0.15], tuscany: [54, 76, 'N', 0.1], rome: [55, 77, 'N', 0.1], venice: [47, 77, 'N', 0.08], istanbul: [50, 73, 'N', 0.1], andalucia: [60, 72, 'N', 0.2],
+  mallorca: [57, 77, 'N', 0.4], sardinia: [57, 78, 'N', 0.4], sicily: [59, 79, 'N', 0.45], puglia: [56, 77, 'N', 0.4], croatia: [54, 76, 'N', 0.35],
+  santorini: [60, 76, 'N', 0.3], amalfi: [57, 77, 'N', 0.35], 'nice-riviera': [55, 76, 'N', 0.4], provence: [54, 74, 'N', 0.25], barcelona: [56, 77, 'N', 0.45],
+  athens: [59, 78, 'N', 0.4], tuscany: [54, 76, 'N', 0.25], rome: [55, 77, 'N', 0.35], venice: [47, 77, 'N', 0.15], istanbul: [50, 73, 'N', 0.2], andalucia: [60, 72, 'N', 0.45],
   // Atlantic islands and coasts of southern Europe
-  canaries: [64, 73, 'N', 0.55], madeira: [64, 72, 'N', 0.4], azores: [62, 71, 'N', 0.25], algarve: [59, 69, 'N', 0.3], lisbon: [58, 68, 'N', 0.2],
-  'douro-valley-porto': [57, 65, 'N', 0.1], 'basque-country': [55, 66, 'N', 0.1], bordeaux: [54, 68, 'N', 0.1],
+  canaries: [64, 73, 'N', 0.6], madeira: [64, 72, 'N', 0.45], azores: [62, 71, 'N', 0.3], algarve: [59, 69, 'N', 0.4], lisbon: [58, 68, 'N', 0.4],
+  'douro-valley-porto': [57, 65, 'N', 0.25], 'basque-country': [55, 66, 'N', 0.25], bordeaux: [54, 68, 'N', 0.25],
   // British Isles
-  cornwall: [50, 63, 'N', 0.15], snowdonia: [49, 60, 'N', 0.1], ireland: [49, 60, 'N', 0.1], 'belfast-giants-causeway': [48, 58, 'N', 0.1], 'scottish-highlands-skye': [47, 57, 'N', 0.1],
-  edinburgh: [44, 57, 'N', 0.1], 'st-andrews-fife': [44, 56, 'N', 0.1],
+  cornwall: [50, 63, 'N', 0.3], snowdonia: [49, 60, 'N', 0.2], ireland: [49, 60, 'N', 0.2], 'belfast-giants-causeway': [48, 58, 'N', 0.2], 'scottish-highlands-skye': [47, 57, 'N', 0.2],
+  edinburgh: [44, 57, 'N', 0.2], 'st-andrews-fife': [44, 56, 'N', 0.2],
   // Northern Europe and the cities with lakes, canals and river lidos
-  amsterdam: [41, 66, 'N', 0.08], copenhagen: [36, 66, 'N', 0.08], berlin: [36, 72, 'N', 0.05], vienna: [37, 75, 'N', 0.05], paris: [40, 70, 'N', 0.05], 'bavaria-munich': [36, 72, 'N', 0.05],
+  amsterdam: [41, 66, 'N', 0.15], copenhagen: [36, 66, 'N', 0.1], berlin: [36, 72, 'N', 0.05], vienna: [37, 75, 'N', 0.05], paris: [40, 70, 'N', 0.05], 'bavaria-munich': [36, 72, 'N', 0.05],
   // North America
-  'cape-cod-islands': [40, 70, 'N', 0.1], nyc: [38, 74, 'N', 0.08], 'hudson-valley': [35, 75, 'N', 0.05], chicago: [33, 72, 'N', 0.05], vermont: [34, 72, 'N', 0.05],
-  'charleston-savannah': [52, 82, 'N', 0.15], acadia: [40, 58, 'N', 0.1], 'nova-scotia': [38, 65, 'N', 0.1], 'upper-peninsula': [36, 60, 'N', 0.05], whistler: [44, 65, 'N', 0.08], 'texas-hill-country': [52, 85, 'N', 0.1],
+  'cape-cod-islands': [40, 70, 'N', 0.2], nyc: [38, 74, 'N', 0.15], 'hudson-valley': [35, 75, 'N', 0.05], chicago: [33, 72, 'N', 0.05], vermont: [34, 72, 'N', 0.05],
+  'charleston-savannah': [52, 82, 'N', 0.35], acadia: [40, 58, 'N', 0.15], 'nova-scotia': [38, 65, 'N', 0.15], 'upper-peninsula': [36, 60, 'N', 0.1], whistler: [44, 65, 'N', 0.05], 'texas-hill-country': [52, 85, 'N', 0.2],
   // Southern hemisphere
-  sydney: [63, 74, 'S', 0.3], tasmania: [52, 64, 'S', 0.1], 'north-island': [58, 70, 'S', 0.2], 'marlborough-abel-tasman': [53, 65, 'S', 0.1], 'cape-town': [56, 68, 'S', 0.2],
+  sydney: [63, 74, 'S', 0.4], tasmania: [52, 64, 'S', 0.25], 'north-island': [58, 70, 'S', 0.4], 'marlborough-abel-tasman': [53, 65, 'S', 0.3], 'cape-town': [56, 68, 'S', 0.4],
   // Asia
   hokkaido: [36, 70, 'N', 0.05],
 };
@@ -43,12 +43,14 @@ export const waterF = (cold: number, warm: number, hem: 'N' | 'S', m: number): n
   const peakMonth = hem === 'N' ? 8.3 : 2.3;
   return (cold + warm) / 2 + ((warm - cold) / 2) * Math.cos((2 * Math.PI * (m - peakMonth)) / 12);
 };
+/** 23 Oct 2026 pass 2: peaks raised where a place is a beach destination in its own right (owner: such places should reach about 9). */
+export const PEAK_RAISE: Record<string, number> = { algarve: 9.3, canaries: 9, sicily: 9, croatia: 9, puglia: 8.8, 'nice-riviera': 8.5, amalfi: 8.5, barcelona: 8.5, cornwall: 6.5 };
 export function rescored(id: string, peak: number): number[] {
   const [cold, warm, hem, floor] = WATER[id];
   const best = Math.max(...Array.from({ length: 12 }, (_, i) => comfort(waterF(cold, warm, hem, i + 1))));
   return Array.from({ length: 12 }, (_, i) => {
     const rel = comfort(waterF(cold, warm, hem, i + 1)) / best;
-    return Math.round(Math.max(floor, rel) * peak * 10) / 10;
+    return Math.round((floor + (1 - floor) * rel) * peak * 10) / 10;
   });
 }
 
@@ -71,7 +73,7 @@ export function rescored(id: string, peak: number): number[] {
     if (!r || !p) throw new Error(`no place ${id}`);
     if ((r.naSliders ?? []).includes('beachesSwimming')) { console.log(`${id}: beaches off, skipped`); continue; }
     const before: number[] = p.monthly.beachesSwimming;
-    const peak = Math.max(...before);
+    const peak = PEAK_RAISE[id] ?? Math.max(...before);
     const after = rescored(id, peak);
     const curve = parseSliderCurve({ anchors: after.map((value, i) => ({ month: i + 1, value, steepness: 1 })) });
     backup[id] = (r.sliderCurves as Record<string, unknown>).beachesSwimming ?? null;
@@ -82,7 +84,7 @@ export function rescored(id: string, peak: number): number[] {
   if (out) writeFileSync(out, JSON.stringify(report));
   console.log(report.length, 'places');
   if (!apply) { console.log('dry run'); process.exit(0); }
-  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'beach-curves-temperate-2026-10-22.json'), JSON.stringify(backup, null, 1));
+  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'beach-curves-temperate-2026-10-23-pass2.json'), JSON.stringify(backup, null, 1));
   const res = await applyAdminEdits(patches, CLAUDE_ACTOR);
   console.log('saved', res.saved.length, 'conflicts', res.conflicts.length, 'errors', JSON.stringify(res.errors));
   process.exit(res.errors.length || res.conflicts.length ? 1 : 0);
