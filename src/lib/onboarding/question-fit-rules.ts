@@ -102,6 +102,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'auroraChasing.q2': R(has('howSeen', 'tour'), has('howSeen', 'car'), has('howSeen', 'lodge')),
   'auroraChasing.q3': R(atLeast(9, 'auroraStrength'), atLeast(7, 'auroraStrength'), atLeast(5, 'auroraStrength'), null),
 
+  // ---- Scenic Landscapes ---- (plan approved 23 Oct 2026; I want THE spot ... is iconic 7+, A bit of both asks nothing; question 4 (gear) has no place column, so it is asked but changes nothing)
+  'scenicLandscapes.q1': R(has('viewAccess', 'roadside'), has('viewAccess', 'short'), has('viewAccess', 'halfDay', 'longHike', 'backcountry'), has('viewAccess', 'airBoat')),
+  'scenicLandscapes.q2': R(atLeast(7, 'iconicRating'), atLeast(6, 'hiddenGemsRating'), null),
+  'scenicLandscapes.q3': R(has('viewAccess', 'roadside', 'short'), has('viewAccess', 'halfDay'), has('viewAccess', 'longHike'), has('viewAccess', 'backcountry')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -155,6 +160,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'auroraChasing.q1': 'Colder than you want',
   'auroraChasing.q2': 'Not the way you want to see it',
   'auroraChasing.q3': 'Needs more nights',
+  'scenicLandscapes.q1': 'Not the way you want to see it',
+  'scenicLandscapes.q2': 'Not the kind of view you want',
+  'scenicLandscapes.q3': 'More effort than you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

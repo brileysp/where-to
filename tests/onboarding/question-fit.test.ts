@@ -290,3 +290,24 @@ describe('Aurora questions', () => {
     expect(fit('q3', [3], { auroraStrength: 2 })).toBeNull();
   });
 });
+
+describe('Scenic Landscapes questions', () => {
+  const defs = factDefsFor('scenicLandscapes');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`scenicLandscapes.${q}`], picked, defs, facts as never);
+  it('how you take in a view', () => {
+    expect(fit('q1', [0], { viewAccess: ['roadside', 'short'] })).toBe(1);
+    expect(fit('q1', [2], { viewAccess: ['roadside', 'short'] })).toBe(0);
+    expect(fit('q1', [2], { viewAccess: ['longHike'] })).toBe(1);
+    expect(fit('q1', [3], { viewAccess: ['airBoat'] })).toBe(1);
+  });
+  it('iconic spots or gems, and a bit of both asks nothing', () => {
+    expect(fit('q2', [0], { iconicRating: 10, hiddenGemsRating: 3 })).toBe(1);
+    expect(fit('q2', [1], { iconicRating: 10, hiddenGemsRating: 3 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { iconicRating: 3 })).toBeNull();
+  });
+  it('how far you will go for the shot', () => {
+    expect(fit('q3', [0], { viewAccess: ['short'] })).toBe(1);
+    expect(fit('q3', [3], { viewAccess: ['roadside', 'short', 'halfDay'] })).toBe(0);
+    expect(fit('q3', [3], { viewAccess: ['backcountry'] })).toBe(1);
+  });
+});

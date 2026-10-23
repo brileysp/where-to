@@ -1,0 +1,3542 @@
+{
+ "atacama": {
+  "m": 5,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 2,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Moon Valley and the Altiplanic lagoons (deserts); El Tatio geysers at dawn"
+ },
+ "chamonix": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 4,
+  "w": 4,
+  "i": 8,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Aiguille du Midi and the Mont Blanc massif (mountains); the Mer de Glace (ice)"
+ },
+ "dolomites": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 5,
+  "w": 5,
+  "i": 1,
+  "o": 9,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Tre Cime di Lavaredo and Alpe di Siusi (mountains); Lago di Braies (lakes)"
+ },
+ "el-chalten": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 5,
+  "t": 1,
+  "w": 6,
+  "i": 7,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Fitz Roy and Cerro Torre (mountains); Perito Moreno Glacier (ice)"
+ },
+ "fjords": {
+  "m": 7,
+  "d": 0,
+  "c": 10,
+  "f": 4,
+  "t": 3,
+  "w": 8,
+  "i": 3,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Geirangerfjord and Nærøyfjord by boat (coasts); Trolltunga and Preikestolen (mountains)"
+ },
+ "greenland": {
+  "m": 7,
+  "d": 0,
+  "c": 8,
+  "f": 0,
+  "t": 3,
+  "w": 4,
+  "i": 10,
+  "o": 8,
+  "g": 9,
+  "v": [
+   "short",
+   "airBoat",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Ilulissat Icefjord (ice); the fjords and ice cap of South Greenland"
+ },
+ "guilin-yangshuo": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 5,
+  "w": 8,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Li River karst peaks by boat (mountains and rivers); the Yulong River bamboo rafts"
+ },
+ "iceland": {
+  "m": 7,
+  "d": 3,
+  "c": 8,
+  "f": 0,
+  "t": 3,
+  "w": 10,
+  "i": 10,
+  "o": 9,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "Skógafoss and Gullfoss (waterfalls); Jökulsárlón glacier lagoon (ice); Landmannalaugar (mountains)"
+ },
+ "lofoten": {
+  "m": 8,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 6,
+  "w": 3,
+  "i": 1,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Reine and Hamnøy fishing villages under the peaks (coasts and villages); Reinebringen (mountains)"
+ },
+ "milford-sound-fiordland": {
+  "m": 8,
+  "d": 0,
+  "c": 9,
+  "f": 8,
+  "t": 0,
+  "w": 9,
+  "i": 3,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Milford Sound by boat or air (coasts); the Milford Track (mountains and forest)"
+ },
+ "nepal": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 5,
+  "t": 4,
+  "w": 5,
+  "i": 8,
+  "o": 10,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "Everest and Annapurna views by trek or flight (mountains); Kathmandu Valley's old towns (villages)"
+ },
+ "swissalps": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 7,
+  "w": 7,
+  "i": 8,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "The Matterhorn from Zermatt (mountains); the Jungfrau region and the Glacier Express; Lauterbrunnen's waterfalls"
+ },
+ "torres-del-paine": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 0,
+  "w": 8,
+  "i": 8,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "The Torres towers at dawn and the Cuernos (mountains); Grey Glacier (ice)"
+ },
+ "uyuni": {
+  "m": 5,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 1,
+  "w": 6,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "backcountry"
+  ],
+  "s": "The salt flat mirror in the wet season (deserts); Laguna Colorada and the Siloli Desert"
+ },
+ "yosemite": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 9,
+  "t": 0,
+  "w": 9,
+  "i": 3,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Tunnel View, El Capitan and Half Dome (mountains); Yosemite Falls (waterfalls); Mariposa Grove (forests)"
+ },
+ "amalfi": {
+  "m": 5,
+  "d": 0,
+  "c": 10,
+  "f": 2,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 10,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Positano and the Path of the Gods (coasts and villages); boat trips along the coast"
+ },
+ "argentine-lake-district": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 4,
+  "w": 9,
+  "i": 1,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "The Seven Lakes Road and Circuito Chico (lakes and mountains)"
+ },
+ "azores": {
+  "m": 5,
+  "d": 0,
+  "c": 8,
+  "f": 7,
+  "t": 4,
+  "w": 9,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Sete Cidades' twin lakes and Fogo caldera lake (lakes); Faial's hydrangea coast"
+ },
+ "peru": {
+  "m": 9,
+  "d": 2,
+  "c": 0,
+  "f": 6,
+  "t": 7,
+  "w": 5,
+  "i": 5,
+  "o": 10,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "Machu Picchu and the Sacred Valley terraces (mountains and villages); Rainbow Mountain"
+ },
+ "tuscany": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 2,
+  "t": 9,
+  "w": 1,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Val d'Orcia's cypress roads and hill towns (villages and landscapes)"
+ },
+ "ecuadorian-andes": {
+  "m": 9,
+  "d": 1,
+  "c": 0,
+  "f": 6,
+  "t": 6,
+  "w": 6,
+  "i": 6,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Cotopaxi and Chimborazo volcanoes (mountains); Quilotoa crater lake (lakes)"
+ },
+ "olympic": {
+  "m": 8,
+  "d": 0,
+  "c": 7,
+  "f": 9,
+  "t": 0,
+  "w": 8,
+  "i": 4,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Hurricane Ridge (mountains); the Hoh Rain Forest (forests); Rialto Beach sea stacks (coasts)"
+ },
+ "antarctica": {
+  "m": 6,
+  "d": 0,
+  "c": 7,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 10,
+  "o": 9,
+  "g": 3,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Icebergs and glaciers by Zodiac and ship (ice); the Lemaire Channel"
+ },
+ "big-island": {
+  "m": 7,
+  "d": 5,
+  "c": 8,
+  "f": 5,
+  "t": 0,
+  "w": 8,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Kilauea and the Mauna Kea summit (mountains); Hamakua coast waterfalls; the Kona and Kohala coasts"
+ },
+ "glacier-waterton": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 0,
+  "w": 9,
+  "i": 5,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Going-to-the-Sun Road and Logan Pass (mountains); Lake McDonald (lakes)"
+ },
+ "ladakh": {
+  "m": 9,
+  "d": 6,
+  "c": 0,
+  "f": 0,
+  "t": 4,
+  "w": 6,
+  "i": 4,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Pangong Lake and Nubra's dunes (lakes and deserts); monasteries on the ridges"
+ },
+ "north-cascades": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 0,
+  "w": 8,
+  "i": 6,
+  "o": 6,
+  "g": 9,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Diablo Lake and Mount Shuksan (mountains and lakes)"
+ },
+ "queenstown": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 3,
+  "w": 9,
+  "i": 2,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Lake Wakatipu and the Remarkables (lakes and mountains); Glenorchy and the Routeburn Track"
+ },
+ "snowdonia": {
+  "m": 7,
+  "d": 0,
+  "c": 6,
+  "f": 4,
+  "t": 4,
+  "w": 7,
+  "i": 0,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Snowdon and the Glyderau (mountains); Portmeirion (villages)"
+ },
+ "svalbard": {
+  "m": 6,
+  "d": 0,
+  "c": 7,
+  "f": 0,
+  "t": 0,
+  "w": 1,
+  "i": 10,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Glaciers and fjords by boat and snowmobile (ice); the polar light on the sea ice"
+ },
+ "canaries": {
+  "m": 7,
+  "d": 6,
+  "c": 8,
+  "f": 5,
+  "t": 3,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Teide and the Roques de García (mountains); the Anaga forests; Fuerteventura's dunes (deserts)"
+ },
+ "cape-town": {
+  "m": 8,
+  "d": 0,
+  "c": 9,
+  "f": 2,
+  "t": 6,
+  "w": 2,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Table Mountain and Cape Point (mountains and coasts); Chapman's Peak Drive"
+ },
+ "lake-district": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 5,
+  "w": 9,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Windermere and Derwentwater (lakes); Helvellyn and the high fells"
+ },
+ "arches-canyonlands": {
+  "m": 2,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 0,
+  "w": 3,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Delicate Arch at sunset and Mesa Arch at dawn (deserts); Canyonlands' Island in the Sky"
+ },
+ "banff": {
+  "m": 10,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 3,
+  "w": 9,
+  "i": 6,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Moraine Lake and Lake Louise (lakes); the Icefields Parkway (mountains and ice)"
+ },
+ "bhutan": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 6,
+  "w": 3,
+  "i": 4,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Tiger's Nest monastery (mountains); Punakha Dzong and Dochula Pass (villages)"
+ },
+ "denali-interior": {
+  "m": 9,
+  "d": 3,
+  "c": 0,
+  "f": 5,
+  "t": 0,
+  "w": 6,
+  "i": 8,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "Denali from Wonder Lake or a flightseeing trip (mountains); the fall tundra"
+ },
+ "grandcanyon": {
+  "m": 1,
+  "d": 10,
+  "c": 0,
+  "f": 2,
+  "t": 0,
+  "w": 6,
+  "i": 0,
+  "o": 10,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "The South Rim at sunrise and sunset (deserts); Bright Angel and Kaibab trails; helicopter and raft views"
+ },
+ "jordan": {
+  "m": 3,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 7,
+  "w": 1,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Petra's Treasury and the Siq (deserts and villages); Wadi Rum's red sands"
+ },
+ "madeira": {
+  "m": 7,
+  "d": 0,
+  "c": 7,
+  "f": 8,
+  "t": 3,
+  "w": 7,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Levada walks through laurel forest (forests); the Pico do Arieiro ridge (mountains); Cabo Girão cliffs (coasts)"
+ },
+ "marlborough-abel-tasman": {
+  "m": 3,
+  "d": 0,
+  "c": 9,
+  "f": 6,
+  "t": 2,
+  "w": 5,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "The Abel Tasman coast by kayak and water taxi (coasts); the Marlborough Sounds"
+ },
+ "rio": {
+  "m": 7,
+  "d": 0,
+  "c": 9,
+  "f": 7,
+  "t": 9,
+  "w": 3,
+  "i": 0,
+  "o": 10,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Sugarloaf and Christ the Redeemer (mountains and coasts); the city skyline from Ipanema"
+ },
+ "rocky-mountain": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 0,
+  "w": 7,
+  "i": 3,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Trail Ridge Road and Bear Lake (mountains); elk in the meadows"
+ },
+ "santorini": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Oia and Fira's caldera sunsets (coasts and villages); boat trips to the volcano"
+ },
+ "scottish-highlands-skye": {
+  "m": 8,
+  "d": 0,
+  "c": 8,
+  "f": 4,
+  "t": 4,
+  "w": 7,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Skye's Old Man of Storr and the Quiraing (mountains); Glencoe and Eilean Donan (lakes and villages)"
+ },
+ "sequoia-kings-canyon": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 10,
+  "t": 0,
+  "w": 6,
+  "i": 2,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "General Sherman and the giant sequoias (forests); Kings Canyon (mountains)"
+ },
+ "southeast-alaska": {
+  "m": 8,
+  "d": 0,
+  "c": 9,
+  "f": 8,
+  "t": 2,
+  "w": 4,
+  "i": 9,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Glacier Bay and the Inside Passage by ship (ice and coasts); Mendenhall Glacier"
+ },
+ "yellowstone": {
+  "m": 6,
+  "d": 0,
+  "c": 0,
+  "f": 5,
+  "t": 0,
+  "w": 8,
+  "i": 1,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Grand Prismatic Spring and Old Faithful; the Grand Canyon of the Yellowstone (waterfalls); Hayden Valley"
+ },
+ "zion-bryce": {
+  "m": 3,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 0,
+  "w": 5,
+  "i": 0,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Bryce's hoodoos at sunrise and Angels Landing (deserts); the Narrows"
+ },
+ "sedona": {
+  "m": 2,
+  "d": 9,
+  "c": 0,
+  "f": 0,
+  "t": 4,
+  "w": 2,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Cathedral Rock and Bell Rock at sunset (deserts); Oak Creek Canyon"
+ },
+ "tierra-del-fuego": {
+  "m": 8,
+  "d": 0,
+  "c": 8,
+  "f": 6,
+  "t": 3,
+  "w": 7,
+  "i": 6,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The Beagle Channel and Ushuaia by boat (coasts); the end-of-the-world national park"
+ },
+ "chilean-lake-district": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 3,
+  "w": 9,
+  "i": 2,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Osorno and Villarrica volcanoes over the lakes (mountains and lakes); Huerquehue's lenga forest"
+ },
+ "faroe-islands": {
+  "m": 7,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 5,
+  "w": 7,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Múlafossur waterfall and Gásadalur (coasts and waterfalls); Slættaratindur and the Mykines cliffs"
+ },
+ "monterey-big-sur": {
+  "m": 4,
+  "d": 0,
+  "c": 10,
+  "f": 6,
+  "t": 4,
+  "w": 2,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Bixby Bridge and Big Sur's cliffs (coasts); Point Lobos"
+ },
+ "namibia": {
+  "m": 3,
+  "d": 10,
+  "c": 6,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Sossusvlei and Deadvlei's dunes (deserts); the Skeleton Coast (coasts)"
+ },
+ "pakistan": {
+  "m": 10,
+  "d": 2,
+  "c": 0,
+  "f": 3,
+  "t": 4,
+  "w": 6,
+  "i": 8,
+  "o": 8,
+  "g": 9,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Hunza and Fairy Meadows under Nanga Parbat (mountains); Attabad Lake (lakes)"
+ },
+ "kyrgyzstan": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 3,
+  "w": 8,
+  "i": 3,
+  "o": 6,
+  "g": 10,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Song-Köl and Issyk-Kul (lakes); the Tian Shan valleys"
+ },
+ "acadia": {
+  "m": 3,
+  "d": 0,
+  "c": 9,
+  "f": 7,
+  "t": 2,
+  "w": 6,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Cadillac Mountain sunrise (coasts); the carriage roads and Jordan Pond"
+ },
+ "aspen": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 3,
+  "w": 6,
+  "i": 1,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "The Maroon Bells (mountains and lakes); Independence Pass; the aspen groves"
+ },
+ "bend-crater-lake": {
+  "m": 7,
+  "d": 2,
+  "c": 0,
+  "f": 6,
+  "t": 2,
+  "w": 8,
+  "i": 1,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Crater Lake (lakes); the Cascades volcanoes and lava fields around Bend"
+ },
+ "colombian-andes": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 7,
+  "w": 5,
+  "i": 3,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Cocora Valley's wax palms (forests); the coffee region's hills and villages"
+ },
+ "cornwall": {
+  "m": 0,
+  "d": 0,
+  "c": 9,
+  "f": 1,
+  "t": 6,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Land's End, St Michael's Mount and the coast path (coasts); St Ives harbor"
+ },
+ "ireland": {
+  "m": 5,
+  "d": 0,
+  "c": 9,
+  "f": 2,
+  "t": 6,
+  "w": 6,
+  "i": 0,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "The Cliffs of Moher and the Ring of Kerry (coasts); Connemara's lakes; the Dingle Peninsula"
+ },
+ "lapland": {
+  "m": 4,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 2,
+  "w": 6,
+  "i": 3,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Snow-covered forest and frozen lakes; the fells above the tree line (mountains)"
+ },
+ "papua-new-guinea": {
+  "m": 7,
+  "d": 0,
+  "c": 6,
+  "f": 8,
+  "t": 2,
+  "w": 4,
+  "i": 0,
+  "o": 5,
+  "g": 10,
+  "v": [
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry",
+   "airBoat"
+  ],
+  "s": "Highland valleys and the Kokoda Track (mountains and forests)"
+ },
+ "rwanda": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 8,
+  "t": 2,
+  "w": 7,
+  "i": 0,
+  "o": 5,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Virunga peaks in Volcanoes National Park (mountains); Lake Kivu"
+ },
+ "tbilisi-caucasus": {
+  "m": 9,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 7,
+  "w": 3,
+  "i": 5,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Kazbegi and the Gergeti Trinity Church (mountains); Tbilisi's old town"
+ },
+ "thailand": {
+  "m": 3,
+  "d": 0,
+  "c": 9,
+  "f": 6,
+  "t": 3,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Phang Nga Bay's limestone karsts and Railay (coasts)"
+ },
+ "zimbabwe": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 5,
+  "t": 0,
+  "w": 10,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Victoria Falls and the gorge below (waterfalls); the Zambezi river by boat"
+ },
+ "uganda": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 8,
+  "t": 0,
+  "w": 8,
+  "i": 1,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Murchison Falls (waterfalls); the Rwenzori and Bwindi's forests"
+ },
+ "chiapas": {
+  "m": 4,
+  "d": 3,
+  "c": 0,
+  "f": 8,
+  "t": 7,
+  "w": 9,
+  "i": 0,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Cañón del Sumidero and Agua Azul's waterfalls; San Cristóbal's colonial town"
+ },
+ "costa-rica": {
+  "m": 5,
+  "d": 0,
+  "c": 7,
+  "f": 9,
+  "t": 0,
+  "w": 8,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Arenal volcano and cloud forest (mountains and forests); the Manuel Antonio coast"
+ },
+ "palau": {
+  "m": 0,
+  "d": 0,
+  "c": 9,
+  "f": 5,
+  "t": 0,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The Rock Islands' lagoons by boat and air (coasts)"
+ },
+ "belize": {
+  "m": 2,
+  "d": 0,
+  "c": 9,
+  "f": 6,
+  "t": 1,
+  "w": 3,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The Great Blue Hole from the air (coasts); the barrier reef cayes"
+ },
+ "borabora": {
+  "m": 5,
+  "d": 0,
+  "c": 10,
+  "f": 2,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 10,
+  "g": 4,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Mount Otemanu above the lagoon (coasts); overwater bungalows"
+ },
+ "borneo": {
+  "m": 6,
+  "d": 0,
+  "c": 5,
+  "f": 10,
+  "t": 0,
+  "w": 6,
+  "i": 0,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "short",
+   "airBoat",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Mount Kinabalu and Danum Valley's rainforest (forests); the Kinabatangan river by boat"
+ },
+ "ethiopia": {
+  "m": 9,
+  "d": 5,
+  "c": 0,
+  "f": 2,
+  "t": 7,
+  "w": 4,
+  "i": 0,
+  "o": 7,
+  "g": 9,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "The Simien Mountains (mountains); Lalibela's rock churches (villages); the Danakil depression (deserts)"
+ },
+ "kenya": {
+  "m": 5,
+  "d": 3,
+  "c": 0,
+  "f": 2,
+  "t": 0,
+  "w": 4,
+  "i": 1,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Kilimanjaro over Amboseli and the Mara plains (mountains)"
+ },
+ "komodo": {
+  "m": 4,
+  "d": 0,
+  "c": 10,
+  "f": 4,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "short",
+   "halfDay",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Padar Island's viewpoint and the pink beaches (coasts)"
+ },
+ "madagascar": {
+  "m": 5,
+  "d": 4,
+  "c": 6,
+  "f": 9,
+  "t": 0,
+  "w": 5,
+  "i": 0,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Avenue of the Baobabs and the Tsingy of Bemaraha (forests and deserts)"
+ },
+ "palawan": {
+  "m": 5,
+  "d": 0,
+  "c": 10,
+  "f": 6,
+  "t": 0,
+  "w": 5,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "El Nido's lagoons and Coron's lakes by boat (coasts)"
+ },
+ "whistler": {
+  "m": 9,
+  "d": 0,
+  "c": 5,
+  "f": 8,
+  "t": 3,
+  "w": 7,
+  "i": 5,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Whistler's peaks and Garibaldi Lake (mountains); Vancouver's seawall"
+ },
+ "algarve": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 5,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Ponta da Piedade's sea stacks and Benagil cave (coasts)"
+ },
+ "badlands-black-hills": {
+  "m": 4,
+  "d": 8,
+  "c": 0,
+  "f": 4,
+  "t": 0,
+  "w": 3,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "The Badlands' banded buttes (deserts); the Needles Highway"
+ },
+ "bagan": {
+  "m": 2,
+  "d": 4,
+  "c": 0,
+  "f": 2,
+  "t": 9,
+  "w": 4,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Thousands of temples at sunrise, best from a balloon (villages)"
+ },
+ "bahamas": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 2,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 4,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Exuma's turquoise cays (coasts); the swimming pigs beach"
+ },
+ "barbados": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 3,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Bathsheba's rock-strewn east coast and the west coast beaches (coasts)"
+ },
+ "croatia": {
+  "m": 3,
+  "d": 0,
+  "c": 10,
+  "f": 4,
+  "t": 9,
+  "w": 7,
+  "i": 0,
+  "o": 9,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Dubrovnik's walls above the sea (cities and coasts); Krka and Plitvice waterfalls"
+ },
+ "everglades": {
+  "m": 0,
+  "d": 0,
+  "c": 5,
+  "f": 6,
+  "t": 0,
+  "w": 7,
+  "i": 0,
+  "o": 5,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Sawgrass prairies and mangroves by airboat and kayak (forests and water)"
+ },
+ "falklands": {
+  "m": 2,
+  "d": 0,
+  "c": 8,
+  "f": 0,
+  "t": 1,
+  "w": 0,
+  "i": 1,
+  "o": 5,
+  "g": 9,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Penguin colonies on white beaches (coasts); the camp's open land"
+ },
+ "havana": {
+  "m": 2,
+  "d": 0,
+  "c": 6,
+  "f": 2,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Old Havana's colonial streets and the Malecón (city); the Viñales valley mogotes"
+ },
+ "istanbul": {
+  "m": 0,
+  "d": 0,
+  "c": 7,
+  "f": 0,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 10,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The skyline of mosques over the Bosphorus (cities); Hagia Sophia and the Blue Mosque"
+ },
+ "mallorca": {
+  "m": 6,
+  "d": 0,
+  "c": 9,
+  "f": 3,
+  "t": 6,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Serra de Tramuntana and Formentor (mountains and coasts); Sóller and Deià villages"
+ },
+ "mongolia": {
+  "m": 5,
+  "d": 8,
+  "c": 0,
+  "f": 2,
+  "t": 0,
+  "w": 4,
+  "i": 0,
+  "o": 8,
+  "g": 10,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "backcountry"
+  ],
+  "s": "The Gobi's dunes and the steppe with gers (deserts); Lake Khuvsgul"
+ },
+ "north-island": {
+  "m": 6,
+  "d": 0,
+  "c": 7,
+  "f": 8,
+  "t": 1,
+  "w": 6,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Tongariro and Rotorua's geothermal landscape (mountains); the Bay of Islands"
+ },
+ "nova-scotia": {
+  "m": 3,
+  "d": 0,
+  "c": 9,
+  "f": 8,
+  "t": 4,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Cabot Trail and Peggy's Cove lighthouse (coasts); the fall forests"
+ },
+ "prague": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Prague Castle above the Vltava and the Charles Bridge (cities)"
+ },
+ "punta-cana": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 5,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Palm-lined white beaches (coasts)"
+ },
+ "rivieramaya": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 4,
+  "t": 2,
+  "w": 5,
+  "i": 0,
+  "o": 6,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Tulum's ruins above the sea (coasts); the cenote pools (lakes)"
+ },
+ "rome": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Colosseum and the Forum at dawn; the rooftops from the Pincio (cities)"
+ },
+ "sardinia": {
+  "m": 4,
+  "d": 0,
+  "c": 10,
+  "f": 3,
+  "t": 4,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Costa Smeralda, La Maddalena and Cala Goloritzé (coasts)"
+ },
+ "seychelles": {
+  "m": 3,
+  "d": 0,
+  "c": 10,
+  "f": 6,
+  "t": 0,
+  "w": 1,
+  "i": 0,
+  "o": 9,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Granite boulder beaches at Anse Source d'Argent (coasts)"
+ },
+ "sicily": {
+  "m": 7,
+  "d": 2,
+  "c": 8,
+  "f": 2,
+  "t": 7,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Mount Etna's lava landscape (mountains); Taormina's Greek theater above the sea (cities and coasts)"
+ },
+ "tasmania": {
+  "m": 7,
+  "d": 0,
+  "c": 8,
+  "f": 6,
+  "t": 2,
+  "w": 6,
+  "i": 0,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Cradle Mountain and Wineglass Bay (mountains and coasts); the Bay of Fires"
+ },
+ "uluru": {
+  "m": 0,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 0,
+  "w": 2,
+  "i": 0,
+  "o": 10,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Uluru and Kata Tjuta at sunrise and sunset (deserts); Kings Canyon"
+ },
+ "uzbekistan": {
+  "m": 2,
+  "d": 4,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Registan's blue-tiled domes in Samarkand (cities); Bukhara's old town"
+ },
+ "vancouver-island": {
+  "m": 5,
+  "d": 0,
+  "c": 9,
+  "f": 9,
+  "t": 2,
+  "w": 6,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Tofino's beaches and old-growth rain forest (coasts and forests); Cathedral Grove"
+ },
+ "vermont": {
+  "m": 3,
+  "d": 0,
+  "c": 0,
+  "f": 9,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Fall foliage over covered bridges and white-steepled villages (forests and villages)"
+ },
+ "vietnam": {
+  "m": 8,
+  "d": 0,
+  "c": 8,
+  "f": 5,
+  "t": 6,
+  "w": 5,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Ha Long Bay's karst by boat (coasts); the Sapa rice terraces (mountains); Hoi An at dusk (villages)"
+ },
+ "copenhagen": {
+  "m": 0,
+  "d": 0,
+  "c": 4,
+  "f": 1,
+  "t": 8,
+  "w": 2,
+  "i": 0,
+  "o": 7,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Nyhavn's colorful harbor and the canals (cities)"
+ },
+ "galapagos": {
+  "m": 2,
+  "d": 0,
+  "c": 8,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Bartolomé's Pinnacle Rock and the volcanic coasts (coasts)"
+ },
+ "gbr": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 10,
+  "g": 5,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The reef from a boat or the air; Whitehaven Beach (coasts)"
+ },
+ "joshua-tree": {
+  "m": 2,
+  "d": 9,
+  "c": 0,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Joshua trees among the boulders at sunset (deserts)"
+ },
+ "maui": {
+  "m": 6,
+  "d": 3,
+  "c": 8,
+  "f": 6,
+  "t": 0,
+  "w": 8,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "airBoat"
+  ],
+  "s": "Haleakalā at sunrise (mountains); the Road to Hana waterfalls; Molokini"
+ },
+ "rajaampat": {
+  "m": 4,
+  "d": 0,
+  "c": 10,
+  "f": 5,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The Wayag and Piaynemo karst islands from above (coasts)"
+ },
+ "zambia": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 0,
+  "w": 7,
+  "i": 0,
+  "o": 5,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Luangwa River and its oxbow lagoons at golden hour (rivers)"
+ },
+ "guatemala": {
+  "m": 8,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 7,
+  "w": 8,
+  "i": 1,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Lake Atitlán under three volcanoes (lakes and mountains); Antigua's colonial streets"
+ },
+ "peruvian-amazon": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 10,
+  "t": 0,
+  "w": 7,
+  "i": 0,
+  "o": 6,
+  "g": 8,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The rainforest canopy and oxbow lakes from a river boat (forests)"
+ },
+ "redwood": {
+  "m": 2,
+  "d": 0,
+  "c": 7,
+  "f": 10,
+  "t": 0,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Fern Canyon and the redwood groves (forests); the rugged Pacific coast"
+ },
+ "srilanka": {
+  "m": 5,
+  "d": 0,
+  "c": 7,
+  "f": 6,
+  "t": 5,
+  "w": 6,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Nine Arches Bridge and Ella's tea hills (mountains); Sigiriya rock fortress"
+ },
+ "tanzania": {
+  "m": 5,
+  "d": 3,
+  "c": 0,
+  "f": 2,
+  "t": 0,
+  "w": 3,
+  "i": 4,
+  "o": 9,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Ngorongoro Crater's rim (deserts and plains); Kilimanjaro's snow cap over the plains"
+ },
+ "champagne": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 6,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Vine-covered hillsides and the Reims cathedral (villages)"
+ },
+ "botswana": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 0,
+  "w": 9,
+  "i": 0,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The Okavango Delta's waterways from a mokoro or the air (rivers)"
+ },
+ "death-valley": {
+  "m": 3,
+  "d": 10,
+  "c": 0,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Badwater Basin and Zabriskie Point (deserts); Mesquite Flat dunes"
+ },
+ "okinawa": {
+  "m": 0,
+  "d": 0,
+  "c": 9,
+  "f": 3,
+  "t": 1,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Kerama's blue sea and the Churaumi coast (coasts)"
+ },
+ "panama": {
+  "m": 3,
+  "d": 0,
+  "c": 8,
+  "f": 7,
+  "t": 5,
+  "w": 2,
+  "i": 0,
+  "o": 5,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "The San Blas islands and Casco Viejo's skyline (coasts and city)"
+ },
+ "hongkong": {
+  "m": 2,
+  "d": 0,
+  "c": 5,
+  "f": 3,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The skyline from Victoria Peak at night (cities)"
+ },
+ "colombian-caribbean": {
+  "m": 0,
+  "d": 0,
+  "c": 7,
+  "f": 2,
+  "t": 9,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Cartagena's walled old town (cities); the Rosario Islands"
+ },
+ "egypt": {
+  "m": 0,
+  "d": 7,
+  "c": 4,
+  "f": 0,
+  "t": 6,
+  "w": 4,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The pyramids at sunrise and Nile sunsets; Red Sea coral coast"
+ },
+ "fiji": {
+  "m": 2,
+  "d": 0,
+  "c": 10,
+  "f": 5,
+  "t": 0,
+  "w": 2,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Turquoise lagoons and white-sand islands (coasts)"
+ },
+ "jamaica": {
+  "m": 4,
+  "d": 0,
+  "c": 8,
+  "f": 6,
+  "t": 0,
+  "w": 5,
+  "i": 0,
+  "o": 6,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Dunn's River Falls (waterfalls); the Blue Mountains; Negril's cliffs"
+ },
+ "luangprabang": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 7,
+  "w": 8,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Kuang Si waterfalls (waterfalls); the Mekong and the old royal town"
+ },
+ "nicaragua": {
+  "m": 6,
+  "d": 0,
+  "c": 6,
+  "f": 6,
+  "t": 7,
+  "w": 7,
+  "i": 0,
+  "o": 6,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Granada's colonial streets (villages); the volcano crater lakes"
+ },
+ "belfast-giants-causeway": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 3,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "The Giant's Causeway's basalt columns (coasts); the Dark Hedges"
+ },
+ "dubai": {
+  "m": 0,
+  "d": 8,
+  "c": 4,
+  "f": 0,
+  "t": 9,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Burj Khalifa skyline and the desert dunes (cities and deserts)"
+ },
+ "kerala": {
+  "m": 3,
+  "d": 0,
+  "c": 6,
+  "f": 6,
+  "t": 4,
+  "w": 8,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The backwaters by houseboat (rivers and lakes); Munnar's tea hills"
+ },
+ "london": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 1,
+  "t": 10,
+  "w": 2,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Thames skyline from Tower Bridge and the Shard (cities)"
+ },
+ "mauritius": {
+  "m": 5,
+  "d": 0,
+  "c": 9,
+  "f": 4,
+  "t": 0,
+  "w": 5,
+  "i": 0,
+  "o": 8,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Le Morne Brabant under the lagoon (coasts); Chamarel's colored earths"
+ },
+ "amsterdam": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 9,
+  "w": 4,
+  "i": 0,
+  "o": 8,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The canals at dusk (cities); the bulb fields in spring"
+ },
+ "andalucia": {
+  "m": 4,
+  "d": 3,
+  "c": 7,
+  "f": 2,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "The Alhambra and Ronda's gorge (cities and mountains); whitewashed villages"
+ },
+ "budapest": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 9,
+  "w": 5,
+  "i": 0,
+  "o": 9,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Parliament and the Chain Bridge over the Danube at night (cities)"
+ },
+ "cape-cod-islands": {
+  "m": 0,
+  "d": 0,
+  "c": 9,
+  "f": 3,
+  "t": 6,
+  "w": 1,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Dunes at Provincetown and Nantucket's gray-shingled villages (coasts)"
+ },
+ "churchill": {
+  "m": 0,
+  "d": 0,
+  "c": 4,
+  "f": 2,
+  "t": 0,
+  "w": 3,
+  "i": 6,
+  "o": 5,
+  "g": 7,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "The tundra and Hudson Bay ice with polar bears (ice and coasts)"
+ },
+ "cotswolds": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 9,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Honey-stone villages like Bibury and Castle Combe (villages)"
+ },
+ "great-smoky-mountains": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 9,
+  "t": 0,
+  "w": 6,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Clingmans Dome and Cades Cove (mountains and forests); the fall color"
+ },
+ "hokkaido": {
+  "m": 6,
+  "d": 0,
+  "c": 5,
+  "f": 6,
+  "t": 3,
+  "w": 6,
+  "i": 3,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Furano's flower fields and Biei's rolling hills; Lake Mashu"
+ },
+ "mexicocity": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 9,
+  "w": 2,
+  "i": 0,
+  "o": 7,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Zócalo and Xochimilco's canals (cities)"
+ },
+ "nice-riviera": {
+  "m": 3,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 8,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "The Promenade des Anglais and the hilltop village of Èze (coasts and villages)"
+ },
+ "nyc": {
+  "m": 0,
+  "d": 0,
+  "c": 3,
+  "f": 1,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The skyline from the Brooklyn Bridge and the Empire State Building (cities)"
+ },
+ "paris": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Eiffel Tower and the Seine at dusk (cities)"
+ },
+ "provence": {
+  "m": 2,
+  "d": 0,
+  "c": 2,
+  "f": 3,
+  "t": 8,
+  "w": 2,
+  "i": 0,
+  "o": 8,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Valensole's lavender fields and the hilltop villages of the Luberon (villages)"
+ },
+ "singapore": {
+  "m": 0,
+  "d": 0,
+  "c": 3,
+  "f": 3,
+  "t": 8,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Marina Bay and the Gardens by the Bay skyline (cities)"
+ },
+ "sydney": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 8,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Opera House and Harbour Bridge (cities and coasts)"
+ },
+ "taiwan": {
+  "m": 8,
+  "d": 0,
+  "c": 7,
+  "f": 7,
+  "t": 6,
+  "w": 6,
+  "i": 0,
+  "o": 7,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Taroko Gorge and Alishan's sunrise (mountains); the Jiufen old street"
+ },
+ "upper-peninsula": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 7,
+  "t": 0,
+  "w": 7,
+  "i": 0,
+  "o": 6,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Pictured Rocks' sandstone cliffs on Lake Superior (coasts); the Keweenaw's waterfalls"
+ },
+ "vienna": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 1,
+  "t": 9,
+  "w": 2,
+  "i": 0,
+  "o": 8,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Ringstrasse palaces and Schönbrunn's gardens (cities)"
+ },
+ "douro-valley-porto": {
+  "m": 3,
+  "d": 0,
+  "c": 0,
+  "f": 2,
+  "t": 8,
+  "w": 7,
+  "i": 0,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "The terraced vineyards above the river by boat (valleys); Porto's riverfront"
+ },
+ "los-cabos": {
+  "m": 1,
+  "d": 7,
+  "c": 8,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "El Arco at Land's End (coasts and desert)"
+ },
+ "maldives": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 2,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 4,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Atolls from a seaplane (coasts)"
+ },
+ "pantanal": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 5,
+  "t": 0,
+  "w": 8,
+  "i": 0,
+  "o": 5,
+  "g": 9,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Wetland waterways and flooded plains by boat (rivers)"
+ },
+ "bali": {
+  "m": 5,
+  "d": 0,
+  "c": 8,
+  "f": 8,
+  "t": 5,
+  "w": 7,
+  "i": 0,
+  "o": 9,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Tegallalang's rice terraces and Uluwatu's cliffs (forests and coasts); Mount Batur"
+ },
+ "edinburgh": {
+  "m": 1,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 9,
+  "w": 1,
+  "i": 0,
+  "o": 8,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "The castle on its rock and Arthur's Seat (cities)"
+ },
+ "morocco": {
+  "m": 7,
+  "d": 7,
+  "c": 0,
+  "f": 1,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "The High Atlas peaks (mountains); the Sahara dunes at Merzouga (deserts); Marrakech's medina"
+ },
+ "napa": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 6,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Vine-covered valleys at sunset (valleys)"
+ },
+ "berlin": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 1,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 7,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Brandenburg Gate and the Spree's embankments (cities)"
+ },
+ "oaxaca": {
+  "m": 7,
+  "d": 3,
+  "c": 5,
+  "f": 4,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Hierve el Agua's frozen waterfalls and Monte Albán (villages and mountains)"
+ },
+ "puerto-rico": {
+  "m": 3,
+  "d": 0,
+  "c": 8,
+  "f": 8,
+  "t": 5,
+  "w": 4,
+  "i": 0,
+  "o": 6,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "El Yunque rainforest and Old San Juan's blue streets (forests and city)"
+ },
+ "barcelona": {
+  "m": 2,
+  "d": 0,
+  "c": 5,
+  "f": 0,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 9,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Gaudí's Sagrada Família and the view from Park Güell (cities)"
+ },
+ "basque-country": {
+  "m": 3,
+  "d": 0,
+  "c": 8,
+  "f": 3,
+  "t": 7,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "San Sebastián's La Concha bay and the Flysch coast (coasts)"
+ },
+ "charleston-savannah": {
+  "m": 0,
+  "d": 0,
+  "c": 3,
+  "f": 3,
+  "t": 8,
+  "w": 2,
+  "i": 0,
+  "o": 6,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Pastel Rainbow Row and Savannah's oak-draped squares (cities)"
+ },
+ "chiang-mai": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 7,
+  "w": 6,
+  "i": 0,
+  "o": 6,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Doi Inthanon peaks (mountains); temple-filled old town"
+ },
+ "piedmont": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 2,
+  "t": 8,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Langhe's vine-striped hills with Alps beyond (villages)"
+ },
+ "seoul": {
+  "m": 4,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 8,
+  "w": 1,
+  "i": 0,
+  "o": 7,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Palaces below Bukhansan's granite peaks (cities); N Seoul Tower view"
+ },
+ "lisbon": {
+  "m": 0,
+  "d": 0,
+  "c": 5,
+  "f": 0,
+  "t": 9,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The tiled hills and tram routes with the Tagus (cities)"
+ },
+ "texas-hill-country": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 5,
+  "w": 4,
+  "i": 0,
+  "o": 6,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Bluebonnet fields in spring (valleys)"
+ },
+ "aruba": {
+  "m": 0,
+  "d": 3,
+  "c": 8,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 5,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Arikok's dry coast and Eagle Beach (coasts)"
+ },
+ "san-miguel-guanajuato": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 0,
+  "i": 0,
+  "o": 8,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Guanajuato's colorful hillside and San Miguel's pink church (villages)"
+ },
+ "athens": {
+  "m": 2,
+  "d": 0,
+  "c": 4,
+  "f": 0,
+  "t": 8,
+  "w": 0,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Acropolis above the city (cities)"
+ },
+ "bangkok": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Wat Arun and the Chao Phraya at dusk (cities)"
+ },
+ "beijing": {
+  "m": 3,
+  "d": 0,
+  "c": 0,
+  "f": 3,
+  "t": 8,
+  "w": 2,
+  "i": 0,
+  "o": 9,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Great Wall at Mutianyu and the Forbidden City (cities and mountains)"
+ },
+ "black-forest": {
+  "m": 5,
+  "d": 0,
+  "c": 0,
+  "f": 8,
+  "t": 6,
+  "w": 4,
+  "i": 0,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The wooded ridges and Triberg waterfalls (forests)"
+ },
+ "buenosaires": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 6,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "La Boca's colors and the Recoleta streets (cities)"
+ },
+ "hudson-valley": {
+  "m": 3,
+  "d": 0,
+  "c": 0,
+  "f": 8,
+  "t": 4,
+  "w": 5,
+  "i": 0,
+  "o": 6,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "The Catskills and river views in the fall (forests)"
+ },
+ "puglia": {
+  "m": 0,
+  "d": 0,
+  "c": 8,
+  "f": 2,
+  "t": 8,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Alberobello's trulli and Polignano a Mare's cliffs (villages and coasts)"
+ },
+ "quebec-city": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 8,
+  "t": 8,
+  "w": 3,
+  "i": 0,
+  "o": 7,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Old Quebec above the St. Lawrence and fall color (cities and forests)"
+ },
+ "rioja": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 2,
+  "t": 6,
+  "w": 0,
+  "i": 0,
+  "o": 5,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Vine-covered plains under the Sierra de Cantabria (villages)"
+ },
+ "st-andrews-fife": {
+  "m": 0,
+  "d": 0,
+  "c": 6,
+  "f": 1,
+  "t": 6,
+  "w": 0,
+  "i": 0,
+  "o": 6,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The old town and the coast (villages and coasts)"
+ },
+ "tokyo-kyoto": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 10,
+  "w": 2,
+  "i": 0,
+  "o": 10,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "airBoat"
+  ],
+  "s": "Kyoto's temples and Fushimi Inari's gates; Tokyo's skyline and Mount Fuji (cities)"
+ },
+ "venice": {
+  "m": 0,
+  "d": 0,
+  "c": 4,
+  "f": 0,
+  "t": 10,
+  "w": 5,
+  "i": 0,
+  "o": 10,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Grand Canal and St Mark's Square (cities)"
+ },
+ "bavaria-munich": {
+  "m": 7,
+  "d": 0,
+  "c": 0,
+  "f": 6,
+  "t": 7,
+  "w": 8,
+  "i": 2,
+  "o": 9,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike"
+  ],
+  "s": "Neuschwanstein Castle above the Alps (mountains); Lake Königssee"
+ },
+ "turks-caicos": {
+  "m": 0,
+  "d": 0,
+  "c": 10,
+  "f": 0,
+  "t": 0,
+  "w": 0,
+  "i": 0,
+  "o": 7,
+  "g": 4,
+  "v": [
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Grace Bay's turquoise water (coasts)"
+ },
+ "kaziranga": {
+  "m": 2,
+  "d": 0,
+  "c": 0,
+  "f": 7,
+  "t": 0,
+  "w": 7,
+  "i": 0,
+  "o": 5,
+  "g": 8,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat",
+   "backcountry"
+  ],
+  "s": "Brahmaputra grasslands and the river at sunrise (rivers)"
+ },
+ "mendoza": {
+  "m": 8,
+  "d": 3,
+  "c": 0,
+  "f": 3,
+  "t": 4,
+  "w": 4,
+  "i": 3,
+  "o": 7,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay",
+   "longHike",
+   "backcountry"
+  ],
+  "s": "Aconcagua over the vineyards (mountains); the Andes and Uspallata (valleys)"
+ },
+ "rajasthan-golden-triangle": {
+  "m": 1,
+  "d": 5,
+  "c": 0,
+  "f": 0,
+  "t": 10,
+  "w": 1,
+  "i": 0,
+  "o": 9,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The Taj Mahal at sunrise (cities); Amber Fort and Jaipur's palaces"
+ },
+ "angkor": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 4,
+  "t": 9,
+  "w": 2,
+  "i": 0,
+  "o": 10,
+  "g": 6,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "Angkor Wat at sunrise (villages); the jungle-covered Ta Prohm"
+ },
+ "kruger": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 2,
+  "t": 0,
+  "w": 4,
+  "i": 0,
+  "o": 5,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "Open bushveld and waterholes at golden hour (plains)"
+ },
+ "bordeaux": {
+  "m": 0,
+  "d": 0,
+  "c": 2,
+  "f": 0,
+  "t": 6,
+  "w": 1,
+  "i": 0,
+  "o": 5,
+  "g": 5,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The Place de la Bourse's water mirror and the vine-covered Médoc (cities)"
+ },
+ "ghana": {
+  "m": 0,
+  "d": 0,
+  "c": 7,
+  "f": 6,
+  "t": 2,
+  "w": 3,
+  "i": 0,
+  "o": 4,
+  "g": 7,
+  "v": [
+   "roadside",
+   "short",
+   "halfDay"
+  ],
+  "s": "Cape Coast Castle and Kakum's canopy walkway (coasts and forests)"
+ },
+ "chicago": {
+  "m": 0,
+  "d": 0,
+  "c": 2,
+  "f": 0,
+  "t": 10,
+  "w": 3,
+  "i": 0,
+  "o": 8,
+  "g": 3,
+  "v": [
+   "roadside",
+   "short",
+   "airBoat"
+  ],
+  "s": "The skyline from the lakefront and the river (cities)"
+ },
+ "new-orleans": {
+  "m": 0,
+  "d": 0,
+  "c": 0,
+  "f": 0,
+  "t": 8,
+  "w": 1,
+  "i": 0,
+  "o": 7,
+  "g": 4,
+  "v": [
+   "roadside",
+   "short"
+  ],
+  "s": "The French Quarter's balconies and the bayou nearby (cities)"
+ }
+}

@@ -343,6 +343,21 @@ const FINE_DINING_FACTS: FactDef[] = [
  */
 const SCENIC_FACTS: FactDef[] = [
   rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
+  // 23 Oct 2026: the other columns. Ratings are for the place in a good season, on its own, against the best of that kind in the world; 7 or more is a full chip match.
+  // A place is rated for the landscapes it has (Venice is a 10 for cities and a 0 for mountains). Owner approved the plan on 23 Oct 2026 with two changes: lakes and ice are
+  // two columns, not one. Proposal page: claude.ai/artifact/TwyGHpABKoHDuAhxVzxKRK.
+  rate('mountainsRating', 'Mountains', 'Mountain scenery: peaks, ranges, alpine valleys, volcanoes, karst towers. 0-1 none, 5 pleasant hills and low mountains, 8 a major range, 10 among the best in the world (Himalaya, Dolomites, Patagonia).'),
+  rate('desertsRating', 'Deserts and canyons', 'Desert, canyon and badland scenery: dunes, salt flats, red rock, slot canyons. 0-1 none, 5 a pleasant dry landscape, 8 a major draw, 10 among the best in the world (Atacama, Uyuni, Zion and Bryce).'),
+  rate('coastsRating', 'Coasts', 'Coastal scenery: cliffs, fjords, sea stacks, island coasts, lagoons. 0-1 none, 5 a pleasant coast, 8 a major draw, 10 among the best in the world (Amalfi, Big Sur, the Norwegian fjords).'),
+  rate('forestsRating', 'Forests', 'Forest scenery: rainforest, jungle, giant trees, cloud forest, autumn woods. 0-1 none, 5 pleasant woods, 8 a major draw, 10 among the best in the world (Borneo, the Redwoods, Costa Rica).'),
+  rate('citiesRating', 'Cities and villages', 'Scenic towns and cities seen as a landscape: old towns, hillside villages, canal cities, skylines. 0-1 none, 5 a pleasant town, 8 a major draw, 10 among the best in the world (Venice, Santorini, Prague).'),
+  rate('lakesRating', 'Lakes, rivers and waterfalls', 'Water scenery that is none of the other types: lakes, rivers, waterfalls and gorges. 0-1 none, 5 a pleasant lake or falls, 8 a major draw, 10 among the best in the world (Victoria Falls, Iceland, Moraine Lake).'),
+  rate('iceRating', 'Polar, glaciers and ice', 'Ice scenery: glaciers, ice fields, icebergs, polar landscapes. 0-1 none, 5 a glacier worth a trip, 8 a major draw, 10 among the best in the world (Antarctica, Greenland, Patagonia\'s ice fields).'),
+  rate('iconicRating', 'Iconic draw', 'How famous the place\'s signature view is: a spot people dream about and travel for (Torres del Paine, Antelope Canyon, Santorini). 0-1 nothing famous, 5 known in the region, 8 a national icon, 10 a view on every bucket list.'),
+  rate('hiddenGemsRating', 'Beyond the icons', 'How easy it is to find lesser-known, uncrowded scenery of the same quality without a guide. 0-1 only the famous spots, 5 a few quiet alternatives, 8 plenty, 10 almost everywhere is quiet and beautiful.'),
+  { key: 'viewAccess', label: 'Ways to reach the best views', type: 'multi', group: 'experience', options: [{ value: 'roadside', label: 'From the road or a viewpoint' }, { value: 'short', label: 'Short walks to lookouts' }, { value: 'halfDay', label: 'Half-day walks' }, { value: 'longHike', label: 'Long hikes' }, { value: 'backcountry', label: 'Backcountry trips with camping' }, { value: 'airBoat', label: 'From the air or a boat' }], hint: 'The ways a visitor can really reach the place\'s best views. From the road or a viewpoint: from a car or a roadside lookout. Short walks: lookouts a short walk from a parking area. Half-day walks: a half-day walk to the view. Long hikes: a full day or an early start. Backcountry: a multi-day trip with camping or huts. From the air or a boat: scenic flights, boat cruises, balloons.' },
+  { key: 'signatureViews', label: 'Signature views', type: 'text', group: 'experience', wide: true, maxLength: 700, hint: 'The two to four views a trip is built around, with the kind of landscape in brackets.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
 /**
