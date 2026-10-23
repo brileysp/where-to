@@ -78,6 +78,12 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'mountaineering.q3': R(has('routeCommitment', 'single'), has('routeCommitment', 'multi'), has('routeCommitment', 'alpine'), has('routeCommitment', 'expedition')),
   'mountaineering.q4': R(within('gearRental', GEAR_RENTAL, 'some'), null, null),
 
+  // ---- Wind sports ---- (columns approved 22 Oct 2026; Everything and Bring my own / No preference ask for nothing)
+  'windSports.q1': R(has('waterType', 'flat'), has('waterType', 'chop', 'flat'), has('waterType', 'waves'), null),
+  'windSports.q2': R(has('levelsServed', 'beginner'), has('levelsServed', 'intermediate'), has('levelsServed', 'advanced')),
+  'windSports.q3': R(has('windStrength', 'light'), has('windStrength', 'medium'), has('windStrength', 'strong')),
+  'windSports.q4': R(within('gearRental', GEAR_RENTAL, 'some'), null, null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -110,6 +116,10 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'whaleWatching.q2': 'Not your kind of boat',
   'whaleWatching.q3': 'Sightings less certain',
   'whaleWatching.q4': 'No swimming with whales',
+  'windSports.q1': 'Not the water you want',
+  'windSports.q2': 'Not suited to your level',
+  'windSports.q3': 'Not the wind you want',
+  'windSports.q4': 'Little gear to rent',
   'mountaineering.q1': 'Not suited to your level',
   'mountaineering.q2': 'Needs a guide',
   'mountaineering.q3': 'Not the size of climb you want',

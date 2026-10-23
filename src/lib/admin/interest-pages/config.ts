@@ -367,6 +367,23 @@ const MOUNTAINEERING_FACTS: FactDef[] = [
 ];
 
 /**
+ * Wind sports (22 Oct 2026): windsurfing, kitesurfing and wing foiling. Columns that give the three approved chips and four approved questions something to read
+ * (owner approved the set: wing foiling is a rating like the other two, no wind reliability column because the monthly scores already carry it, and one optional
+ * rules column). Ratings are for the place at its best time of year, on its own; 7 or more is a full chip match. Proposal page: claude.ai/artifact/U75NHrNGMgEdbxUgPE4jrb.
+ */
+const WIND_FACTS: FactDef[] = [
+  rate('windsurfingRating', 'Windsurfing', 'How good the place is for windsurfing at its best time of year: how reliable and strong the wind is, the quality of the best spot (water, waves, space), the range of conditions, and the schools, rentals and community there. 0-1 none, 3 a small local scene, 6 a good regional spot with a real season, 8 a known destination, 10 a place windsurfers plan a whole trip around (Maui, Tarifa, Aruba).'),
+  rate('kitesurfingRating', 'Kitesurfing', 'The same for kitesurfing: wind reliability, the quality of the best spot (flat water, waves, room away from swimmers), range of conditions, schools and rentals. Rated on its own because kite spots and windsurf spots differ. 0-1 none, 3 a small local scene, 6 a good regional spot, 8 a known destination, 10 a kite capital (Le Morne, Tarifa, La Ventana).'),
+  rate('wingFoilingRating', 'Wing foiling', 'The same for wing foiling (a hand-held wing and a hydrofoil board). Rated on its own because it needs different things from kiting: lighter wind, smooth or deeper water for the foil, and schools or rentals that offer it. A strong-wind spot with shallow rocky water can be a 10 for kiting and a 4 for wing foiling. 0-1 not realistic, 4 possible but little set up for it, 7 a good wing scene, 10 light-to-medium wind most days with many schools (Sardinia, Maui, Tarifa).'),
+  { key: 'waterType', label: 'Kind of water', type: 'multi', group: 'style', options: [{ value: 'flat', label: 'Flat water (lagoon, shallow bay, lake)' }, { value: 'chop', label: 'A little chop' }, { value: 'waves', label: 'Waves and swell' }], hint: 'The water the place\'s best spots offer. Flat water: a lagoon, shallow bay or lake with no real waves. A little chop: open water with small wind-chop. Waves and swell: ocean waves to jump or ride. Pick every kind the place offers.' },
+  { key: 'levelsServed', label: 'Levels served', type: 'multi', group: 'style', options: [{ value: 'beginner', label: 'Beginner (schools, shallow water)' }, { value: 'intermediate', label: 'Intermediate (riding both ways)' }, { value: 'advanced', label: 'Advanced (jumps, waves, strong wind)' }], hint: 'Which riders the place really serves. Beginner: schools and shallow, flat water for learning. Intermediate: reliable wind and room to ride both directions. Advanced: jumps, waves, strong wind and technical spots. Pick all that apply.' },
+  { key: 'windStrength', label: 'Typical wind strength', type: 'multi', group: 'style', options: [{ value: 'light', label: 'Light (under about 12 knots)' }, { value: 'medium', label: 'Steady medium (about 12 to 20 knots)' }, { value: 'strong', label: 'Strong and gusty (over 20 knots)' }], hint: 'The wind a rider usually finds in the place\'s season. Light: under about 12 knots, easy and gentle (foil and big-kite weather). Steady medium: about 12 to 20 knots, the comfortable range for most riders. Strong and gusty: over 20 knots or gusty, for experienced riders. Pick every range that is common in season.' },
+  { key: 'gearRental', label: 'Gear rental', type: 'choice', group: 'practical', options: [{ value: 'plentiful', label: 'Plentiful' }, { value: 'some', label: 'Some' }, { value: 'few', label: 'Few or none' }], hint: 'How easily a visitor rents windsurf, kite or foil gear on the spot. Plentiful: several centers rent full modern kit. Some: a few centers or limited sizes. Few or none: bring your own.' },
+  { key: 'rules', label: 'Rules and restrictions', type: 'text', group: 'practical', wide: true, optional: true, maxLength: 700, hint: 'Local rules that limit or shape riding: summer exclusion zones on busy beaches, designated kite areas, nature-reserve zones, a swimmers-first rule, required insurance or a school card, commercial-permit limits on lessons. There is no national permit system and nothing to book ahead; this is about where and when you may ride. Name the rule, when it applies and the date checked. Blank when there is nothing known and sourced.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
  * Beaches & Swimming (22 Oct 2026). Seven columns that give the five approved chips and four approved questions something to read (owner approved
  * the set, with the access column as a multi-select). Ratings are for the place at its best beach season, on its own; a rating of 7 or more is a full
  * chip match. Proposal page: claude.ai/artifact/LZcc2w5fEcjsxQJ68Xs1rF.
@@ -441,6 +458,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   hiking: [...HIKING_FACTS, ...GEMINI_NOTE_FACTS],
   beachesSwimming: [...BEACHES_FACTS, ...GEMINI_NOTE_FACTS],
   mountaineering: [...MOUNTAINEERING_FACTS, ...GEMINI_NOTE_FACTS],
+  windSports: [...WIND_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,

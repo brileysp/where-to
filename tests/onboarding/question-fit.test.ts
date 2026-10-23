@@ -188,3 +188,26 @@ describe('Mountaineering questions', () => {
     expect(fit('q4', [1], { gearRental: 'few' })).toBeNull();
   });
 });
+
+describe('Wind sports questions', () => {
+  const defs = factDefsFor('windSports');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number>) => questionFit(QUESTION_FIT_RULES[`windSports.${q}`], picked, defs, facts as never);
+  it('water: a flat-water rider needs flat water, a wave rider needs waves, everything asks nothing', () => {
+    expect(fit('q1', [0], { waterType: ['flat', 'chop'] })).toBe(1);
+    expect(fit('q1', [0], { waterType: ['waves'] })).toBe(0);
+    expect(fit('q1', [1], { waterType: ['flat'] })).toBe(1);
+    expect(fit('q1', [2], { waterType: ['chop'] })).toBe(0);
+    expect(fit('q1', [3], { waterType: ['chop'] })).toBeNull();
+  });
+  it('level and wind strength', () => {
+    expect(fit('q2', [0], { levelsServed: ['beginner', 'intermediate'] })).toBe(1);
+    expect(fit('q2', [2], { levelsServed: ['beginner'] })).toBe(0);
+    expect(fit('q3', [2], { windStrength: ['medium', 'strong'] })).toBe(1);
+    expect(fit('q3', [0], { windStrength: ['strong'] })).toBe(0);
+  });
+  it('gear: renting needs Some or Plentiful', () => {
+    expect(fit('q4', [0], { gearRental: 'plentiful' })).toBe(1);
+    expect(fit('q4', [0], { gearRental: 'few' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [1], { gearRental: 'few' })).toBeNull();
+  });
+});
