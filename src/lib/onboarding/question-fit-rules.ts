@@ -97,6 +97,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'hotSprings.q2': R(onMonth('coldMonths'), null, onMonth('coolMonths')),
   'hotSprings.q3': R(has('waterHeat', 'gentle'), has('waterHeat', 'hot'), has('waterHeat', 'veryHot')),
 
+  // ---- Northern Lights / Aurora ---- (plan approved 23 Oct 2026; Properly cold is fine and Two weeks ask for nothing; the mild-winter answer needs the month the traveler is going)
+  'auroraChasing.q1': R(all({ type: 'month', column: 'coldMonths', on: false }), null),
+  'auroraChasing.q2': R(has('howSeen', 'tour'), has('howSeen', 'car'), has('howSeen', 'lodge')),
+  'auroraChasing.q3': R(atLeast(9, 'auroraStrength'), atLeast(7, 'auroraStrength'), atLeast(5, 'auroraStrength'), null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -147,6 +152,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'hotSprings.q1': 'Not the bathing you want',
   'hotSprings.q2': 'Not the weather you want',
   'hotSprings.q3': 'Not the water heat you want',
+  'auroraChasing.q1': 'Colder than you want',
+  'auroraChasing.q2': 'Not the way you want to see it',
+  'auroraChasing.q3': 'Needs more nights',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

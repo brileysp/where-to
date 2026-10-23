@@ -1,0 +1,365 @@
+{
+ "churchill": {
+  "a": 9,
+  "s": false,
+  "e": true,
+  "w": [
+   "dogSledding",
+   "snowshoeIce"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "h": [
+   "tour",
+   "lodge"
+  ]
+ },
+ "denali-interior": {
+  "a": 9,
+  "s": false,
+  "e": true,
+  "w": [
+   "dogSledding",
+   "snowmobiling",
+   "skiing",
+   "hotSprings",
+   "iceLodging",
+   "snowshoeIce"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "h": [
+   "tour",
+   "car",
+   "lodge"
+  ]
+ },
+ "lapland": {
+  "a": 8,
+  "s": false,
+  "e": true,
+  "w": [
+   "dogSledding",
+   "snowmobiling",
+   "skiing",
+   "reindeerSleigh",
+   "iceLodging",
+   "snowshoeIce"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "tour",
+   "car",
+   "lodge"
+  ]
+ },
+ "svalbard": {
+  "a": 8,
+  "s": false,
+  "e": true,
+  "w": [
+   "dogSledding",
+   "snowmobiling",
+   "skiing"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "h": [
+   "tour"
+  ]
+ },
+ "lofoten": {
+  "a": 7,
+  "s": false,
+  "e": true,
+  "w": [
+   "skiing",
+   "whaleWatching"
+  ],
+  "c": [],
+  "h": [
+   "tour",
+   "car",
+   "lodge"
+  ]
+ },
+ "greenland": {
+  "a": 7,
+  "s": false,
+  "e": true,
+  "w": [
+   "dogSledding",
+   "snowmobiling"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "h": [
+   "tour",
+   "lodge"
+  ]
+ },
+ "iceland": {
+  "a": 6,
+  "s": false,
+  "e": true,
+  "w": [
+   "hotSprings",
+   "snowmobiling",
+   "whaleWatching",
+   "snowshoeIce"
+  ],
+  "c": [],
+  "h": [
+   "tour",
+   "car",
+   "lodge"
+  ]
+ },
+ "fjords": {
+  "a": 2,
+  "s": false,
+  "e": false,
+  "w": [
+   "skiing",
+   "snowshoeIce"
+  ],
+  "c": [],
+  "h": [
+   "tour",
+   "car"
+  ]
+ },
+ "southeast-alaska": {
+  "a": 3,
+  "s": false,
+  "e": true,
+  "w": [
+   "skiing",
+   "snowshoeIce"
+  ],
+  "c": [],
+  "h": [
+   "tour",
+   "car"
+  ]
+ },
+ "banff": {
+  "a": 4,
+  "s": false,
+  "e": true,
+  "w": [
+   "skiing",
+   "hotSprings",
+   "dogSledding",
+   "snowshoeIce"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "tour",
+   "car"
+  ]
+ },
+ "faroe-islands": {
+  "a": 3,
+  "s": false,
+  "e": true,
+  "w": [],
+  "c": [],
+  "h": [
+   "tour",
+   "car"
+  ]
+ },
+ "upper-peninsula": {
+  "a": 3,
+  "s": false,
+  "e": true,
+  "w": [
+   "snowmobiling",
+   "skiing",
+   "snowshoeIce",
+   "dogSledding"
+  ],
+  "c": [
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "car",
+   "lodge"
+  ]
+ },
+ "glacier-waterton": {
+  "a": 3,
+  "s": false,
+  "e": true,
+  "w": [
+   "skiing",
+   "snowshoeIce"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "car",
+   "lodge"
+  ]
+ },
+ "scottish-highlands-skye": {
+  "a": 2,
+  "s": false,
+  "e": true,
+  "w": [
+   "skiing"
+  ],
+  "c": [],
+  "h": [
+   "car"
+  ]
+ },
+ "whistler": {
+  "a": 2,
+  "s": false,
+  "e": false,
+  "w": [
+   "skiing",
+   "snowmobiling",
+   "dogSledding",
+   "hotSprings"
+  ],
+  "c": [],
+  "h": [
+   "car"
+  ]
+ },
+ "vancouver-island": {
+  "a": 2,
+  "s": false,
+  "e": false,
+  "w": [
+   "skiing",
+   "whaleWatching"
+  ],
+  "c": [],
+  "h": [
+   "car"
+  ]
+ },
+ "acadia": {
+  "a": 2,
+  "s": false,
+  "e": false,
+  "w": [
+   "snowshoeIce",
+   "skiing"
+  ],
+  "c": [
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "car"
+  ]
+ },
+ "vermont": {
+  "a": 2,
+  "s": false,
+  "e": false,
+  "w": [
+   "skiing",
+   "snowmobiling",
+   "snowshoeIce"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "h": [
+   "car"
+  ]
+ },
+ "tasmania": {
+  "a": 2,
+  "s": true,
+  "e": false,
+  "w": [
+   "skiing",
+   "whaleWatching"
+  ],
+  "c": [],
+  "h": [
+   "car",
+   "tour"
+  ]
+ },
+ "falklands": {
+  "a": 2,
+  "s": true,
+  "e": true,
+  "w": [],
+  "c": [],
+  "h": [
+   "car",
+   "lodge"
+  ]
+ },
+ "tierra-del-fuego": {
+  "a": 2,
+  "s": true,
+  "e": false,
+  "w": [
+   "skiing",
+   "dogSledding",
+   "snowshoeIce"
+  ],
+  "c": [],
+  "h": [
+   "tour",
+   "car"
+  ]
+ },
+ "milford-sound-fiordland": {
+  "a": 2,
+  "s": true,
+  "e": false,
+  "w": [],
+  "c": [],
+  "h": [
+   "car",
+   "lodge"
+  ]
+ }
+}

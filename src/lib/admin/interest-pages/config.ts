@@ -403,6 +403,22 @@ const HOT_SPRINGS_FACTS: FactDef[] = [
 ];
 
 /**
+ * Northern Lights / Aurora (23 Oct 2026). Seven columns that give the three approved chips and three approved questions something to read (owner approved the
+ * plan after it was revised: no nights column and no winter-cold choice; question 3 reads the strength rating and question 1 reads a list of properly cold months
+ * with the month the traveler is going). The strength rating is the chance of seeing it in a short stay in the dark season, cloud included: 10 is about nine in ten
+ * visitors within three nights, 8 about a week is enough, 6 a week or more, 4 a strong storm helps, 2 a rare storm only. Proposal page: claude.ai/artifact/VfrGYrwXfBRZy1ptpupLgV.
+ */
+const AURORA_FACTS: FactDef[] = [
+  rate('auroraStrength', 'Aurora strength', 'How likely you are to see the aurora in a short stay in the dark season, on the usual forecast, cloud included (not only latitude). 10 = about nine in ten visitors see it within three nights (Fairbanks, Churchill); 8 = about a week is enough; 6 = a week or more; 4 = a strong storm helps; 2 = a rare storm only (Scotland, Tasmania). Season months are in the monthly scores.'),
+  tick('southernLights', 'Southern lights', 'Tick when the place sees the aurora australis (the southern hemisphere aurora): Tasmania, Fiordland, Tierra del Fuego, the Falklands.'),
+  tick('easyFromTown', 'Easy from a town', 'Tick when you can see the aurora from a town or its edge, without a long drive or a tour (Churchill, Rovaniemi, Longyearbyen, Fairbanks).'),
+  { key: 'winterActivities', label: 'Winter activities nearby', type: 'multi', group: 'experience', options: [{ value: 'dogSledding', label: 'Dog sledding' }, { value: 'snowmobiling', label: 'Snowmobiling' }, { value: 'skiing', label: 'Skiing or snowboarding' }, { value: 'hotSprings', label: 'Hot springs and spas' }, { value: 'iceLodging', label: 'Ice or glass lodging' }, { value: 'whaleWatching', label: 'Winter whale watching' }, { value: 'reindeerSleigh', label: 'Reindeer or sleigh rides' }, { value: 'snowshoeIce', label: 'Snowshoeing and ice fishing' }], hint: 'Winter activities a visitor can easily add to an aurora trip. The "Aurora plus winter activities" chip counts dog sledding, snowmobiling, skiing or hot springs; the others are for reading.' },
+  { key: 'coldMonths', label: 'Properly cold months', type: 'multi', group: 'style', options: MONTH_OPTIONS, hint: 'The months in the aurora season when it is properly cold at night (lows roughly under 10 F). Leave empty when there are none (Iceland, Lofoten). The "Mild winter only" answer reads this together with the month the traveler is going.' },
+  { key: 'howSeen', label: 'How you can see it', type: 'multi', group: 'practical', options: [{ value: 'tour', label: 'Guided tour with transport' }, { value: 'car', label: 'Rent a car and chase' }, { value: 'lodge', label: 'Watch from the lodge or cabin' }], hint: 'The ways a visitor can really see it. Guided tour: tours with transport are the practical way (Svalbard needs an armed guide outside town). Rent a car: roads and clear-sky mobility let you chase it yourself (Iceland, Lapland, Fairbanks). Lodge: lodges or cabins with dark skies to watch from.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
  * Blooms and Fall Colors (23 Oct 2026). Twelve columns that give the approved chips and the three approved questions something to read (owner approved
  * the set on 23 Oct 2026, including the two ratings with no chip yet and counting off-spring flowering trees in the first rating). Ratings are for the place
  * in a good year at the best time of year, on its own, against the best of that kind in the world; 7 or more is a full chip match. The chance of the bloom
@@ -501,6 +517,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   windSports: [...WIND_FACTS, ...GEMINI_NOTE_FACTS],
   wildflowerBlooms: [...BLOOMS_FACTS, ...GEMINI_NOTE_FACTS],
   hotSprings: [...HOT_SPRINGS_FACTS, ...GEMINI_NOTE_FACTS],
+  auroraChasing: [...AURORA_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,

@@ -265,3 +265,28 @@ describe('Hot Springs questions', () => {
     expect(fit('q2', [2], { waterHeat: ['gentle'] }, 0)).toBe(0);
   });
 });
+
+describe('Aurora questions', () => {
+  const defs = factDefsFor('auroraChasing');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>, month?: number | null) => questionFit(QUESTION_FIT_RULES[`auroraChasing.${q}`], picked, defs, facts as never, month);
+  it('mild winter only reads the properly cold months and the trip month', () => {
+    const fairbanks = { auroraStrength: 9, coldMonths: ['nov', 'dec', 'jan', 'feb', 'mar'] };
+    expect(fit('q1', [0], fairbanks, 8)).toBe(1); // September
+    expect(fit('q1', [0], fairbanks, 1)).toBe(0); // February
+    expect(fit('q1', [0], { auroraStrength: 6 }, 1)).toBe(1); // Iceland has no cold months
+    expect(fit('q1', [0], fairbanks, null)).toBeNull();
+    expect(fit('q1', [1], fairbanks, 1)).toBeNull();
+  });
+  it('tour, car or lodge', () => {
+    expect(fit('q2', [0], { howSeen: ['tour'] })).toBe(1);
+    expect(fit('q2', [1], { howSeen: ['tour'] })).toBe(0);
+    expect(fit('q2', [1], { howSeen: ['tour', 'car', 'lodge'] })).toBe(1);
+  });
+  it('nights read the strength rating', () => {
+    expect(fit('q3', [0], { auroraStrength: 9 })).toBe(1);
+    expect(fit('q3', [0], { auroraStrength: 6 })).toBeCloseTo(6 / 9, 5);
+    expect(fit('q3', [1], { auroraStrength: 8 })).toBe(1);
+    expect(fit('q3', [2], { auroraStrength: 6 })).toBe(1);
+    expect(fit('q3', [3], { auroraStrength: 2 })).toBeNull();
+  });
+});
