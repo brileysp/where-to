@@ -211,3 +211,28 @@ describe('Wind sports questions', () => {
     expect(fit('q4', [1], { gearRental: 'few' })).toBeNull();
   });
 });
+
+describe('Blooms and Fall Colors questions', () => {
+  const defs = factDefsFor('wildflowerBlooms');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number>) => questionFit(QUESTION_FIT_RULES[`wildflowerBlooms.${q}`], picked, defs, facts as never);
+  it('timing: near-certain needs a dependable bloom, a good chance allows a shifting one, gambling asks nothing', () => {
+    expect(fit('q1', [0], { timingReliability: 'dependable' })).toBe(1);
+    expect(fit('q1', [0], { timingReliability: 'shifts' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [1], { timingReliability: 'shifts' })).toBe(1);
+    expect(fit('q1', [1], { timingReliability: 'rainDependent' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [1], { timingReliability: 'rare' })).toBe(0);
+    expect(fit('q1', [2], { timingReliability: 'rare' })).toBeNull();
+  });
+  it('how you see it', () => {
+    expect(fit('q2', [0], { howSeen: ['road', 'easy'] })).toBe(1);
+    expect(fit('q2', [2], { howSeen: ['road', 'easy'] })).toBe(0);
+    expect(fit('q2', [2], { howSeen: ['hike'] })).toBe(1);
+  });
+  it('crowds: the crowd is fun asks nothing, early mornings allows busy but beatable, quiet only needs quiet', () => {
+    expect(fit('q3', [0], { bloomCrowds: 'festival' })).toBeNull();
+    expect(fit('q3', [1], { bloomCrowds: 'beatable' })).toBe(1);
+    expect(fit('q3', [1], { bloomCrowds: 'festival' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { bloomCrowds: 'beatable' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { bloomCrowds: 'quiet' })).toBe(1);
+  });
+});

@@ -27,6 +27,8 @@ const CURRENT = ['none', 'mild', 'moderate', 'strong'];
 const GUIDE_RULES = ['free', 'partly', 'always'];
 const GEAR_RENTAL = ['plentiful', 'some', 'few'];
 const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
+const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
+const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
 export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
@@ -84,6 +86,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'windSports.q3': R(has('windStrength', 'light'), has('windStrength', 'medium'), has('windStrength', 'strong')),
   'windSports.q4': R(within('gearRental', GEAR_RENTAL, 'some'), null, null),
 
+  // ---- Blooms and Fall Colors ---- (columns approved 23 Oct 2026; Gamble on a rare event and The crowd is part of the fun ask for nothing)
+  'wildflowerBlooms.q1': R(within('timingReliability', BLOOM_TIMING, 'dependable'), within('timingReliability', BLOOM_TIMING, 'shifts'), null),
+  'wildflowerBlooms.q2': R(has('howSeen', 'road'), has('howSeen', 'easy'), has('howSeen', 'hike')),
+  'wildflowerBlooms.q3': R(null, within('bloomCrowds', BLOOM_CROWDS, 'beatable'), within('bloomCrowds', BLOOM_CROWDS, 'quiet')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -128,6 +135,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'beachesSwimming.q2': 'Farther from where you stay',
   'beachesSwimming.q3': 'Rougher water',
   'beachesSwimming.q4': 'Not the beach access you like',
+  'wildflowerBlooms.q1': 'Timing less certain',
+  'wildflowerBlooms.q2': 'Not the way you want to see it',
+  'wildflowerBlooms.q3': 'Busier than you like',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

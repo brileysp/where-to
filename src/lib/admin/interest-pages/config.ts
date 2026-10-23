@@ -384,6 +384,27 @@ const WIND_FACTS: FactDef[] = [
 ];
 
 /**
+ * Blooms and Fall Colors (23 Oct 2026). Twelve columns that give the approved chips and the three approved questions something to read (owner approved
+ * the set on 23 Oct 2026, including the two ratings with no chip yet and counting off-spring flowering trees in the first rating). Ratings are for the place
+ * in a good year at the best time of year, on its own, against the best of that kind in the world; 7 or more is a full chip match. The chance of the bloom
+ * happening is in the timing column, not in the ratings. Proposal page: claude.ai/artifact/Dve6Q4crcb5R1GDpRPLXFD.
+ */
+const BLOOMS_FACTS: FactDef[] = [
+  rate('blossomRating', 'Blossoming trees', 'How good the place is for blossoming trees at their best: cherry, almond, apricot, plum and similar, in a good year. Trees that flower outside spring (Pōhutukawa, jacaranda) count a little lower, about 5 to 6. 0-1 none, 5 a pleasant local show, 8 a major event people travel for, 10 among the world\'s best (Kyoto sakura).'),
+  rate('desertRating', 'Desert and dry-land blooms', 'How good the place is for the bloom that follows rain in a dry landscape (Namaqualand, Atacama, Death Valley), in a year when it happens. How likely that is goes in the timing column, not here. 0-1 none, 5 a modest bloom, 8 big carpets, 10 a world-famous superbloom.'),
+  rate('fieldsRating', 'Flower fields, farms and gardens', 'How good the place is for planted or farmed color: tulips, lavender, poppies, mustard, sunflowers and show gardens (Keukenhof). 0-1 none, 5 a pleasant local display, 8 a major draw, 10 among the world\'s best (Keukenhof, Valensole lavender).'),
+  rate('fallRating', 'Fall color', 'How good the place is for leaves turning, in a good year at the peak: maples, aspen, larches, beech, vineyards. 0-1 none, 5 a pleasant autumn, 8 a major draw people travel for, 10 among the world\'s best (New England, Kyoto momiji).'),
+  rate('meadowRating', 'Wild meadows and mountain flowers', 'How good the place is for wild flowers in meadows, tundra, prairie and roadsides: alpine meadows, bluebonnets, lupines. 0-1 none, 5 a pleasant display, 8 a major draw, 10 among the world\'s best (Alpe di Siusi, Texas bluebonnets).'),
+  rate('woodlandRating', 'Woodland, heath and hedgerow', 'How good the place is for flowers in woods, heath and hedges: bluebells, rhododendron, heather, daffodils, trillium, hydrangea hedges. 0-1 none, 5 a pleasant display, 8 a major draw, 10 among the world\'s best (Nepal rhododendron forests).'),
+  { key: 'timingReliability', label: 'How dependable the timing is', type: 'choice', group: 'practical', options: [{ value: 'dependable', label: 'Dependable (every year, the peak shifts a week at most)' }, { value: 'shifts', label: 'Shifts (every year, the peak can move 1 to 3 weeks with the weather)' }, { value: 'rainDependent', label: 'Rain-dependent (most years, but the size varies a lot)' }, { value: 'rare', label: 'Rare (only in exceptional years)' }], hint: 'How sure a visitor can be of catching the place\'s headline bloom or color at the right time. Dependable: a fixed event or a bloom that arrives within a week of the same date every year (Keukenhof). Shifts: every year but weather moves the peak by weeks (sakura, snowmelt meadows). Rain-dependent: usually happens, but the size depends on rain (Namaqualand, bluebonnets). Rare: only in exceptional years (Atacama).' },
+  { key: 'howSeen', label: 'How you see it', type: 'multi', group: 'style', options: [{ value: 'road', label: 'From the road or a train' }, { value: 'easy', label: 'Easy paths and gardens' }, { value: 'hike', label: 'Hikes to reach it' }], hint: 'The ways a visitor can see the place\'s main blooms or colors. From the road or a train: from a car, a scenic drive or a train window. Easy paths and gardens: short, flat walks, parks and gardens. Hikes: you have to walk to reach them.' },
+  { key: 'bloomCrowds', label: 'Crowds at the main bloom', type: 'choice', group: 'practical', options: [{ value: 'quiet', label: 'Quiet' }, { value: 'beatable', label: 'Busy, but early mornings beat it' }, { value: 'festival', label: 'Festival-scale crowds' }], hint: 'How crowded the main bloom itself is at its peak (not the whole season: that is the crowd-level column). Quiet: you can have it nearly to yourself. Busy but beatable: crowds arrive mid-morning and an early start avoids them. Festival-scale: crowds all day and a hanami-style party (Kyoto, Keukenhof).' },
+  { key: 'organisedEvent', label: 'Organised bloom event', type: 'bool', group: 'experience', hint: 'Tick when a festival, official route or ticketed garden is built around the bloom (Istanbul Tulip Festival, Keukenhof, the Mallorca almond fair, Bhutan\'s Rhododendron Festival).' },
+  { key: 'signatureBlooms', label: 'Signature blooms', type: 'text', group: 'experience', wide: true, maxLength: 700, hint: 'The two to four blooms or colors a trip is built around, as "Bloom (kind, months)", e.g. "Sakura (cherry blossom, late March to mid April)". This carries the months without a banned "best months" column.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
  * Beaches & Swimming (22 Oct 2026). Seven columns that give the five approved chips and four approved questions something to read (owner approved
  * the set, with the access column as a multi-select). Ratings are for the place at its best beach season, on its own; a rating of 7 or more is a full
  * chip match. Proposal page: claude.ai/artifact/LZcc2w5fEcjsxQJ68Xs1rF.
@@ -459,6 +480,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   beachesSwimming: [...BEACHES_FACTS, ...GEMINI_NOTE_FACTS],
   mountaineering: [...MOUNTAINEERING_FACTS, ...GEMINI_NOTE_FACTS],
   windSports: [...WIND_FACTS, ...GEMINI_NOTE_FACTS],
+  wildflowerBlooms: [...BLOOMS_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,
