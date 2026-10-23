@@ -16,7 +16,7 @@ import { peakGain } from './peak';
  * onboarding shortlist did. Null when the profile has no chips or answers (nothing to apply), so travelers who never used the new flow see
  * no change at all.
  */
-export async function liveMatchForProfile(profile: TravelProfile | null): Promise<LiveMatch | null> {
+export async function liveMatchForProfile(profile: TravelProfile | null, activeTrip?: Trip | null): Promise<LiveMatch | null> {
   if (!profile) return null;
   const hasPicks = Object.keys(profile.qa ?? {}).length > 0 || Object.values(profile.subs).some((v) => v.length > 0);
   if (!hasPicks) return null;
@@ -24,7 +24,7 @@ export async function liveMatchForProfile(profile: TravelProfile | null): Promis
   const interests = Object.keys(profile.levels).filter((k) => setups[k]);
   if (!interests.length) return null;
   const [fits, { settings }] = await Promise.all([getMatchFits(interests), loadMatchSettings()]);
-  const m = liveMatch({ interests, setups, fits, ticked: profile.subs, qa: profile.qa ?? {}, settings });
+  const m = liveMatch({ interests, setups, fits, ticked: profile.subs, qa: profile.qa ?? {}, month: activeTrip ? activeTrip.month : profile.month, settings });
   return Object.keys(m.factors).length || Object.keys(m.notes).length ? m : null;
 }
 

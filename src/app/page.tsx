@@ -24,7 +24,7 @@ export default async function Home() {
   // What the traveler's chips and answers (new onboarding) do to each place; null for everyone who never used it.
   // The trip settings come from the traveler's active trip (the one saved most recently), if they have any.
   const activeTrip = (await loadTrips())[0] ?? null;
-  const [match, trip] = await Promise.all([liveMatchForProfile(travelProfile), tripEffectForProfile(travelProfile, activeTrip)]);
+  const [match, trip] = await Promise.all([liveMatchForProfile(travelProfile, activeTrip), tripEffectForProfile(travelProfile, activeTrip)]);
 
   // A traveler who finished the new onboarding has a saved profile even when they answered no swipe questions, so the list is theirs to see.
   const hasDnaSignal = (!!dnaState && dnaState.swipeCount > 0) || !!travelProfile;

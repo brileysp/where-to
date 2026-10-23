@@ -17,6 +17,7 @@ import { LIKELIHOODS, type FactDef } from '@/lib/admin/interest-pages/config';
  *   atMost    a 0 to 10 rating stays at or under a number; above it, it falls away to nothing at 10.
  *   count     a multi column has at most this many options ticked (for the crowding evidence).
  *   warmest   the lowest water temperature written in a text column such as "54-79 F, 3/2 mm" (or one number of degrees F) stays at or above a number of degrees F.
+ *   month     the month the traveler is going (0 = January) is on, or off, a list of months in a multi column (Hot Springs: the cold or snowy months). With no month chosen it asks for nothing.
  *   named     a named animal in an "Animal (likelihood, months)" cell, scored by its odds (guaranteed 10, likely 8, possible 5, unlikely 2).
  */
 export type FitCheck =
@@ -26,6 +27,7 @@ export type FitCheck =
   | { type: 'atMost'; column: string; value: number }
   | { type: 'count'; column: string; atMost: number }
   | { type: 'warmest'; column: string; minF: number }
+  | { type: 'month'; column: string; on: boolean }
   | { type: 'named'; column: string; names: string[] };
 
 export interface AnswerRule {
@@ -72,7 +74,11 @@ export function namedAnimalFit(text: unknown, names: string[]): number | null {
   return best;
 }
 
-export function checkFit(c: FitCheck, defs: FactDef[], facts: Record<string, InterestFactValue>): number | null {
+/** The month names a multi column of months stores, January first. */
+export const MONTH_KEYS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+/** `month` is the traveler's month, 0 = January; null or undefined when none is chosen (a month check then asks for nothing). */
+export function checkFit(c: FitCheck, defs: FactDef[], facts: Record<string, InterestFactValue>, month?: number | null): number | null {
   if (!hasFacts(facts)) return null;
   switch (c.type) {
     case 'within': {
@@ -117,12 +123,21 @@ export function checkFit(c: FitCheck, defs: FactDef[], facts: Record<string, Int
       const v = namedAnimalFit(facts[c.column], c.names);
       return v === null ? null : v / 10;
     }
+    case 'month': {
+      if (month === null || month === undefined || month < 0 || month > 11) return null;
+      // A place with data on file but nothing ticked in the list has no such months (Costa Rica has no cold months).
+      const v = facts[c.column];
+      return (Array.isArray(v) ? v : []).includes(MONTH_KEYS[month]) === c.on ? 1 : 0;
+    }
   }
 }
 
+/** True when a rule reads the traveler's month, so its fit has to be worked out for each month. */
+export const rulesUseMonth = (a: AnswerRule | null): boolean => !!a && a.checks.some((c) => c.type === 'month');
+
 /** The fit of a place for one answer: every check (weakest) or any check (best); null when none of them has data. */
-export function answerRuleFit(a: AnswerRule, defs: FactDef[], facts: Record<string, InterestFactValue>): number | null {
-  const fits = a.checks.map((c) => checkFit(c, defs, facts)).filter((x): x is number => x !== null);
+export function answerRuleFit(a: AnswerRule, defs: FactDef[], facts: Record<string, InterestFactValue>, month?: number | null): number | null {
+  const fits = a.checks.map((c) => checkFit(c, defs, facts, month)).filter((x): x is number => x !== null);
   if (!fits.length) return null;
   return (a.mode ?? 'all') === 'any' ? Math.max(...fits) : Math.min(...fits);
 }
@@ -132,11 +147,11 @@ export function answerRuleFit(a: AnswerRule, defs: FactDef[], facts: Record<stri
  * Picking an answer that asks for nothing, or no answer at all, gives null (no check). Several picks: the best one counts, because each is a
  * wish for something different.
  */
-export function questionFit(rule: QuestionFitRule, picked: readonly number[], defs: FactDef[], facts: Record<string, InterestFactValue>): number | null {
+export function questionFit(rule: QuestionFitRule, picked: readonly number[], defs: FactDef[], facts: Record<string, InterestFactValue>, month?: number | null): number | null {
   if (picked.length === 0) return null;
   const rules = picked.map((i) => rule.answers[i] ?? null);
   if (rules.some((r) => r === null)) return null;
-  const fits = (rules as AnswerRule[]).map((r) => answerRuleFit(r, defs, facts)).filter((x): x is number => x !== null);
+  const fits = (rules as AnswerRule[]).map((r) => answerRuleFit(r, defs, facts, month)).filter((x): x is number => x !== null);
   return fits.length ? Math.max(...fits) : null;
 }
 
@@ -180,6 +195,10 @@ export function describeCheck(c: FitCheck, defs: FactDef[]): string {
       return `${labelOf(defs, c.column)} shows ${c.atMost === 0 ? 'no signs' : c.atMost === 1 ? 'at most 1 sign' : `at most ${c.atMost} signs`} of crowding`;
     case 'warmest':
       return `The coldest water written in "${labelOf(defs, c.column)}" is ${c.minF} F or warmer`;
+    case 'month': {
+      const d = defs.find((x) => x.key === c.column);
+      return `The month you are going ${c.on ? 'is' : 'is not'} one of the months in "${d?.label ?? c.column}" (no month chosen asks for nothing)`;
+    }
     case 'named':
       return `${labelOf(defs, c.column)} lists ${list(c.names)} with good odds (a place that lists animals but not this one counts as a miss)`;
   }

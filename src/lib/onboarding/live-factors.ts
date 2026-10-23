@@ -33,6 +33,8 @@ export function liveMatch(args: {
   /** Ticked chips per interest. */
   ticked: Record<string, string[]>;
   qa: InterestAnswers;
+  /** The month the traveler is going, 0 = January; null when none is chosen. */
+  month?: number | null;
   settings?: MatchSettings;
 }): LiveMatch {
   const factors: InterestFactors = {};
@@ -45,7 +47,7 @@ export function liveMatch(args: {
     const answers = args.qa[k] ?? {};
     if (ticked.length === 0 && Object.keys(answers).length === 0) continue;
     for (const [placeId, fits] of Object.entries(perPlace)) {
-      const m = matchFromFits({ content: setup.content, fits, ticked, answers, settings: args.settings });
+      const m = matchFromFits({ content: setup.content, fits, ticked, answers, month: args.month, settings: args.settings });
       if (m.factor < 0.999999) (factors[placeId] ??= {})[k] = m.factor;
       if (m.factor < 0.999999 || m.matches.length) (notes[placeId] ??= {})[k] = { factor: m.factor, reasons: m.reasons, matches: m.matches };
     }

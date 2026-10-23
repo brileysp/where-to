@@ -60,3 +60,8 @@ How it works now (`src/lib/scoring/seasonCrowds.ts`, `shiftForSeason` in `rank.t
 ### Which interests count in a score (22 Oct 2026)
 
 Owner decision: **nothing is inferred when the traveler has picked interests.** Two or more picked: only the picked interests count, at their levels (top, love, like, curious), then the bands and trip settings adjust. Exactly one picked: it counts at its level and the profile's suggestions count a little, capped at weight 4 (`SINGLE_PICK_INFERRED_CAP` in `bridge.ts`). None picked (photos, swipes): the profile decides everything, as before. Before this, an interest the traveler never picked could count at a weight as high as their own picks (camping at 10 for a hiking, safari and birding traveler).
+
+
+### Answers that read the trip month (23 Oct 2026)
+
+A question's answer can ask about the month the traveler is going (a `month` check: Hot Springs "Winter, in the snow" and "Cool weather only" read the place's cold or snowy and cool months). The per-place table then holds 12 fits for that option, January first, and `matchFromFits` / `liveMatch` take the trip month (0 = January); `liveMatchForProfile` uses the active trip's month, else the profile's. With no month chosen such an answer asks for nothing. A place with data on file and nothing ticked in the list has no such months, so it does not fit. Only Hot Springs uses it so far.

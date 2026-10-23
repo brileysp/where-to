@@ -383,6 +383,25 @@ const WIND_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
+const MONTH_OPTIONS: FactOption[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((label) => ({ value: label.slice(0, 3).toLowerCase(), label }));
+
+/**
+ * Hot Springs (23 Oct 2026). Nine columns that give the three approved chips and three approved questions something to read (owner approved the plan after
+ * revising it: no soaking-climate or pool-temperature columns, because a place has neither one climate nor one pool heat; instead two lists of months and a
+ * list of heat levels on offer). Ratings are for the place at its best, on its own; 7 or more is a full chip match. Proposal page: claude.ai/artifact/1FrPhda8M4B5r2D9QbdQFK.
+ */
+const HOT_SPRINGS_FACTS: FactDef[] = [
+  rate('naturalPools', 'Natural outdoor pools', 'How good the place is for soaking outdoors in springs and pools in a natural setting: Japanese rotenburo, Chile\'s Termas Geométricas, Iceland\'s river and lagoon pools, Saturnia\'s cascades. Developed spas with no natural outdoor setting score low. 0-1 none, 5 a pleasant outdoor pool, 8 several beautiful natural settings, 10 among the best in the world.'),
+  tick('onsenRyokan', 'Onsen and ryokan', 'Tick when traditional Japanese-style bathing is a real option somewhere in the place: onsen towns, public bathhouses or a ryokan stay with a spring bath (Japan, and Taiwan\'s Beitou). Open all year.'),
+  tick('geothermalSpas', 'Geothermal spas', 'Tick when the place has a large developed geothermal spa, lagoon or bath complex somewhere in it: Blue Lagoon, Széchenyi, Polynesian Spa, Leukerbad.'),
+  { key: 'bathingStyles', label: 'Bathing customs', type: 'multi', group: 'style', options: [{ value: 'swimsuit', label: 'Swimsuit pools' }, { value: 'gendered', label: 'Nude gendered baths (onsen style)' }, { value: 'private', label: 'A private bath or pool you can book' }], hint: 'Which kinds of bathing the place offers somewhere in it. Swimsuit pools: mixed pools where swimwear is required. Nude gendered baths: separate men\'s and women\'s baths without swimwear (onsen, Roman-Irish baths). A private bath or pool: a room, tub or pool you book for yourself.' },
+  { key: 'waterHeat', label: 'Water heat on offer', type: 'multi', group: 'style', options: [{ value: 'gentle', label: 'Gentle (about 100 F or cooler)' }, { value: 'hot', label: 'Hot (about 104 F)' }, { value: 'veryHot', label: 'Very hot (108 F and up)' }], hint: 'Which heat levels the place has notable pools at, anywhere in it. Tick every level that is really on offer, so a region with several kinds of spring gets several ticks.' },
+  { key: 'coldMonths', label: 'Cold or snowy months', type: 'multi', group: 'style', options: MONTH_OPTIONS, hint: 'The months when the air at the springs is cold enough for steam and, in snow country, snow on the ground (daytime highs roughly under 45 F). Leave empty when there are none. The "Winter, in the snow" answer reads this together with the month the traveler is going.' },
+  { key: 'coolMonths', label: 'Cool or cold months', type: 'multi', group: 'style', options: MONTH_OPTIONS, hint: 'The months when the air at the springs is cool or colder (daytime highs roughly under 68 F), including the cold months above. Leave empty when there are none. The "Cool weather only" answer reads this together with the month the traveler is going.' },
+  { key: 'signatureSprings', label: 'Signature springs', type: 'text', group: 'experience', wide: true, maxLength: 700, hint: 'The two to four springs a trip is built around, as "Spring (kind)".' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
 /**
  * Blooms and Fall Colors (23 Oct 2026). Twelve columns that give the approved chips and the three approved questions something to read (owner approved
  * the set on 23 Oct 2026, including the two ratings with no chip yet and counting off-spring flowering trees in the first rating). Ratings are for the place
@@ -481,6 +500,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   mountaineering: [...MOUNTAINEERING_FACTS, ...GEMINI_NOTE_FACTS],
   windSports: [...WIND_FACTS, ...GEMINI_NOTE_FACTS],
   wildflowerBlooms: [...BLOOMS_FACTS, ...GEMINI_NOTE_FACTS],
+  hotSprings: [...HOT_SPRINGS_FACTS, ...GEMINI_NOTE_FACTS],
   scenicLandscapes: [...SCENIC_FACTS, ...GEMINI_NOTE_FACTS],
   festivals: [...FESTIVALS_FACTS, ...GEMINI_NOTE_FACTS],
   fineDining: FINE_DINING_FACTS,

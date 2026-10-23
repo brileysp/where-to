@@ -85,4 +85,24 @@ describe('matchFromFits agrees with interestMatchFor', () => {
     const { matchFromFits } = await import('@/lib/scoring/matchTable');
     expect(matchFromFits({ content, fits: undefined, ticked: ['day-hikes'], answers: { q3: [0], q4: [0] } }).factor).toBe(1);
   });
+  it('a question that reads the trip month agrees between the table and the direct route, for every month', async () => {
+    const { buildPlaceFits, matchFromFits } = await import('@/lib/scoring/matchTable');
+    const hsDefs = factDefsFor('hotSprings');
+    const hsChips = [{ key: 'natural-outdoor-pools', label: 'Natural outdoor pools', live: true, drivers: [{ column: 'naturalPools' }] }];
+    const q2 = { key: 'q2', kind: 'lean' as const, whenChips: [], fitRule: QUESTION_FIT_RULES['hotSprings.q2'], missMessage: 'Not the weather you want', approved: true };
+    const hsContent = { chips: hsChips.map((c) => ({ key: c.key, label: c.label, live: true })), questions: [{ key: 'q2', kind: 'lean' as const, whenChips: [], missMessage: 'Not the weather you want' }] };
+    const facts = { naturalPools: 9, coldMonths: ['dec', 'jan', 'feb'], coolMonths: ['nov', 'dec', 'jan', 'feb', 'mar'] };
+    const fits = buildPlaceFits(hsChips, [q2], facts as never, hsDefs);
+    for (const month of [null, 0, 3, 6, 10]) {
+      for (const pick of [0, 1, 2]) {
+        const direct = interestMatchFor({ chips: hsChips, questions: [q2], ticked: [], answers: { q2: [pick] }, facts: facts as never, defs: hsDefs, month });
+        const viaTable = matchFromFits({ content: hsContent, fits, ticked: [], answers: { q2: [pick] }, month });
+        expect(viaTable).toEqual(direct);
+      }
+    }
+    // January keeps the whole score for winter in the snow; July drops it.
+    expect(matchFromFits({ content: hsContent, fits, ticked: [], answers: { q2: [0] }, month: 0 }).factor).toBe(1);
+    expect(matchFromFits({ content: hsContent, fits, ticked: [], answers: { q2: [0] }, month: 6 }).factor).toBeLessThan(1);
+    expect(matchFromFits({ content: hsContent, fits, ticked: [], answers: { q2: [0] }, month: null }).factor).toBe(1);
+  });
 });

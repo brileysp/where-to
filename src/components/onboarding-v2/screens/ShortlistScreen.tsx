@@ -136,7 +136,7 @@ export function ShortlistScreen(p: ShortlistProps) {
     return () => clearTimeout(t);
   }, []);
   const listReady = fitsReady || waited;
-  const match = useMemo(() => liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: p.qa, settings: data.matchSettings }), [interestKeys, data.setups, fits, p.subs, p.qa, data.matchSettings]);
+  const match = useMemo(() => liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: p.qa, month: p.month, settings: data.matchSettings }), [interestKeys, data.setups, fits, p.subs, p.qa, p.month, data.matchSettings]);
   // The trip settings: where flights start from, what the trip length does to far places, and which continents are left out.
   const origin = useMemo(() => originOf(p.loc), [p.loc.airport, p.loc.country, p.loc.sub]); // eslint-disable-line react-hooks/exhaustive-deps
   const adjust = useMemo(
@@ -152,7 +152,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   /** The places that would be kept (best first) if the traveler's answers were these. */
   const keptWith = useCallback(
     (nextQa: InterestAnswers) => {
-      const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, settings: data.matchSettings });
+      const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, month: p.month, settings: data.matchSettings });
       return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors, seasonGain).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
     },
     [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours, seasonGain],

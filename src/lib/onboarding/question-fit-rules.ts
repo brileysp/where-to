@@ -27,6 +27,7 @@ const CURRENT = ['none', 'mild', 'moderate', 'strong'];
 const GUIDE_RULES = ['free', 'partly', 'always'];
 const GEAR_RENTAL = ['plentiful', 'some', 'few'];
 const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
+const onMonth = (column: string): AnswerRule => all({ type: 'month', column, on: true });
 const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
 const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
@@ -91,6 +92,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'wildflowerBlooms.q2': R(has('howSeen', 'road'), has('howSeen', 'easy'), has('howSeen', 'hike')),
   'wildflowerBlooms.q3': R(null, within('bloomCrowds', BLOOM_CROWDS, 'beatable'), within('bloomCrowds', BLOOM_CROWDS, 'quiet')),
 
+  // ---- Hot Springs ---- (plan approved 23 Oct 2026; Fine with nude gendered baths, Year-round ask for nothing; the two month answers need the month the traveler is going)
+  'hotSprings.q1': R(has('bathingStyles', 'swimsuit'), null, has('bathingStyles', 'private')),
+  'hotSprings.q2': R(onMonth('coldMonths'), null, onMonth('coolMonths')),
+  'hotSprings.q3': R(has('waterHeat', 'gentle'), has('waterHeat', 'hot'), has('waterHeat', 'veryHot')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -138,6 +144,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'wildflowerBlooms.q1': 'Timing less certain',
   'wildflowerBlooms.q2': 'Not the way you want to see it',
   'wildflowerBlooms.q3': 'Busier than you like',
+  'hotSprings.q1': 'Not the bathing you want',
+  'hotSprings.q2': 'Not the weather you want',
+  'hotSprings.q3': 'Not the water heat you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

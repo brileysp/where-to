@@ -2,7 +2,7 @@ import type { InterestFactValue } from '@/lib/db/schema';
 import type { FactDef } from '@/lib/admin/interest-pages/config';
 import { chipFit } from '@/lib/admin/interest-pages/chips';
 import { questionsToAsk } from '@/lib/onboarding/question-rules';
-import { answerRuleFit } from '@/lib/onboarding/question-fit';
+import { answerRuleFit, rulesUseMonth } from '@/lib/onboarding/question-fit';
 import { matchInterest, type AnswerCheck, type TickedChip } from './personalMatch';
 import { DEFAULT_MATCH_SETTINGS, type MatchSettings } from './matchSettings';
 import type { InterestMatchDetail, MatchChipDef, MatchQuestionDef } from './interestMatch';
@@ -19,8 +19,8 @@ export const ASKS_NOTHING = -1;
 export interface PlaceMatchFits {
   /** Chip key to the place's 0 to 10 rating, or null when it has no data (which counts as fine). Live chips only. */
   chips: Record<string, number | null>;
-  /** Question key to one entry per answer option: a 0 to 1 fit, null for no data, or ASKS_NOTHING. Asked-about questions only. */
-  answers: Record<string, Array<number | null>>;
+  /** Question key to one entry per answer option: a 0 to 1 fit, null for no data, or ASKS_NOTHING. An option that reads the traveler's month (Hot Springs: cold months) holds 12 entries instead, January first. Asked-about questions only. */
+  answers: Record<string, Array<number | null | Array<number | null>>>;
 }
 
 /** What the browser needs to know about an interest to combine picks with the tables (no place data in here). */
@@ -38,15 +38,23 @@ export function buildPlaceFits(chips: MatchChipDef[], questions: MatchQuestionDe
   }
   for (const q of questions) {
     if (!q.approved || !q.fitRule) continue;
-    out.answers[q.key] = q.fitRule.answers.map((rule) => (rule ? answerRuleFit(rule, defs, facts) : ASKS_NOTHING));
+    out.answers[q.key] = q.fitRule.answers.map((rule) => {
+      if (!rule) return ASKS_NOTHING;
+      if (rulesUseMonth(rule)) return Array.from({ length: 12 }, (_, m) => answerRuleFit(rule, defs, facts, m));
+      return answerRuleFit(rule, defs, facts);
+    });
   }
   return out;
 }
 
 /** The fit for the picked answer positions, the same rule as `questionFit`: skipped if any pick asks for nothing, otherwise the best pick. */
-export function fitFromOptions(perOption: ReadonlyArray<number | null> | undefined, picked: readonly number[]): number | null {
+export function fitFromOptions(perOption: ReadonlyArray<number | null | ReadonlyArray<number | null>> | undefined, picked: readonly number[], month?: number | null): number | null {
   if (!perOption || picked.length === 0) return null;
-  const reads = picked.map((i) => (i >= 0 && i < perOption.length ? perOption[i] : ASKS_NOTHING));
+  const reads = picked.map((i) => {
+    const e = i >= 0 && i < perOption.length ? perOption[i] : ASKS_NOTHING;
+    // An option that reads the traveler's month: the entry for that month, or no check when no month is chosen.
+    return Array.isArray(e) ? (month === null || month === undefined ? null : (e[month] ?? null)) : (e as number | null);
+  });
   if (reads.some((r) => r === ASKS_NOTHING)) return null;
   const fits = (reads as Array<number | null>).filter((x): x is number => x !== null);
   return fits.length ? Math.max(...fits) : null;
@@ -59,6 +67,8 @@ export interface MatchFromFitsArgs {
   ticked: readonly string[];
   /** Question key to the positions picked. */
   answers: Readonly<Record<string, readonly number[]>>;
+  /** The month the traveler is going, 0 = January; null when none is chosen. */
+  month?: number | null;
   settings?: MatchSettings;
 }
 
@@ -76,7 +86,7 @@ export function matchFromFits(a: MatchFromFitsArgs): InterestMatchDetail {
     if (!picked || picked.length === 0) continue;
     const perOption = a.fits?.answers[q.key];
     if (!perOption) continue;
-    answers.push({ kind: q.kind, fit: fitFromOptions(perOption, picked), message: q.missMessage });
+    answers.push({ kind: q.kind, fit: fitFromOptions(perOption, picked, a.month), message: q.missMessage });
   }
   const m = matchInterest({ ticked, chipsOffered: live.length, answers }, s);
   return { ...m, checked: answers.length };

@@ -41,6 +41,8 @@ export interface InterestMatchArgs {
   /** The place's facts for this interest, and the interest's column definitions. */
   facts: Record<string, InterestFactValue>;
   defs: FactDef[];
+  /** The month the traveler is going, 0 = January; null when none is chosen. */
+  month?: number | null;
   settings?: MatchSettings;
 }
 
@@ -60,7 +62,7 @@ export function interestMatchFor(a: InterestMatchArgs): InterestMatchDetail {
   for (const q of asked) {
     const picked = a.answers[q.key];
     if (!q.approved || !q.fitRule || !picked || picked.length === 0) continue;
-    answers.push({ kind: q.kind, fit: questionFit(q.fitRule, picked, a.defs, a.facts), message: q.missMessage });
+    answers.push({ kind: q.kind, fit: questionFit(q.fitRule, picked, a.defs, a.facts, a.month), message: q.missMessage });
   }
   const m = matchInterest({ ticked, chipsOffered: live.length, answers }, a.settings ?? DEFAULT_MATCH_SETTINGS);
   return { ...m, checked: answers.length };

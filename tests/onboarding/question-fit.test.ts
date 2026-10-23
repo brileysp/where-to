@@ -236,3 +236,32 @@ describe('Blooms and Fall Colors questions', () => {
     expect(fit('q3', [2], { bloomCrowds: 'quiet' })).toBe(1);
   });
 });
+
+describe('Hot Springs questions', () => {
+  const defs = factDefsFor('hotSprings');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>, month?: number | null) => questionFit(QUESTION_FIT_RULES[`hotSprings.${q}`], picked, defs, facts as never, month);
+  it('bathing customs: swimsuit and private baths read the list, onsen style asks for nothing', () => {
+    expect(fit('q1', [0], { bathingStyles: ['swimsuit', 'private'] })).toBe(1);
+    expect(fit('q1', [0], { bathingStyles: ['gendered', 'private'] })).toBe(0);
+    expect(fit('q1', [2], { bathingStyles: ['gendered', 'private'] })).toBe(1);
+    expect(fit('q1', [1], { bathingStyles: ['swimsuit'] })).toBeNull();
+  });
+  it('the heat levels on offer', () => {
+    expect(fit('q3', [0], { waterHeat: ['gentle', 'hot'] })).toBe(1);
+    expect(fit('q3', [2], { waterHeat: ['gentle', 'hot'] })).toBe(0);
+    expect(fit('q3', [2], { waterHeat: ['hot', 'veryHot'] })).toBe(1);
+  });
+  it('winter in the snow and cool weather need the month the traveler is going', () => {
+    const hokkaido = { coldMonths: ['dec', 'jan', 'feb', 'mar'], coolMonths: ['oct', 'nov', 'dec', 'jan', 'feb', 'mar', 'apr', 'may'], waterHeat: ['hot'] };
+    expect(fit('q2', [0], hokkaido, 0)).toBe(1); // January
+    expect(fit('q2', [0], hokkaido, 6)).toBe(0); // July
+    expect(fit('q2', [2], hokkaido, 10)).toBe(1); // November is cool
+    expect(fit('q2', [2], hokkaido, 7)).toBe(0); // August
+    expect(fit('q2', [0], hokkaido, null)).toBeNull(); // no month chosen: asks for nothing
+    expect(fit('q2', [1], hokkaido, 6)).toBeNull(); // year-round asks for nothing
+  });
+  it('a place with data but no cold months does not fit winter in the snow', () => {
+    expect(fit('q2', [0], { waterHeat: ['gentle'] }, 0)).toBe(0);
+    expect(fit('q2', [2], { waterHeat: ['gentle'] }, 0)).toBe(0);
+  });
+});
