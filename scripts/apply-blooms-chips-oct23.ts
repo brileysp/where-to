@@ -1,10 +1,10 @@
-// 23 Oct 2026: connects the three approved Blooms and Fall Colors chips to their columns and makes them live (the columns are filled for all 40
+// 23 Oct 2026: connects the approved Blooms and Fall Colors chips to their columns and makes them live (the columns are filled for all 40
 // places). A chip must be approved first; nothing unapproved is touched. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/apply-blooms-chips-oct23.ts [--apply]
 import { readFileSync } from 'fs';
 import { join } from 'path';
 for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').split('\n')) { const t = line.trim(); if (!t || t.startsWith('#')) continue; const i = t.indexOf('='); if (i === -1) continue; let v = t.slice(i + 1).trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); if (process.env[t.slice(0, i).trim()] === undefined) process.env[t.slice(0, i).trim()] = v; }
-// The Fall foliage chip is left for the separate fall-color step (owner, 23 Oct 2026): no place is scored for fall color yet.
-const DRIVERS: Record<string, string> = { 'cherry-and-spring-blossoms': 'blossomRating', 'desert-superblooms': 'desertRating', 'flower-fields': 'fieldsRating' };
+// Fall foliage was connected the same day, after the fall-color step (scripts/fall-color-oct23.ts) scored 31 places for it.
+const DRIVERS: Record<string, string> = { 'cherry-and-spring-blossoms': 'blossomRating', 'desert-superblooms': 'desertRating', 'flower-fields': 'fieldsRating', 'fall-foliage': 'fallRating' };
 (async () => {
   const apply = process.argv.includes('--apply');
   const { db } = await import('../src/lib/db/client');
