@@ -2,7 +2,7 @@
 // (owner: the crowd and price tiers looked wrong in places). Evidence per place is in scripts/data/price-swing-oct23.json (tier, basis, note;
 // basis says how strong it is: rate-card, data, official, news, guide, aggregator, anecdote, or none = no figure found, tier left as it was).
 // Tier rule: how much cheaper the low season is than the peak for a typical mid-range or lodge room; mild is under about 25%, moderate about
-// 25 to 45%, extreme about 45% or more (event spikes and closures count when they are the peak). Old values are saved to docs/backups.
+// 25 to 45%, high about 45 to 60%, extreme about 60% or more (the fourth level, high, was added the same day and the first run used extreme for 45% and up) (event spikes and closures count when they are the peak). Old values are saved to docs/backups.
 // A DRY RUN unless --apply. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/set-price-swing-oct23.ts [--apply]
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
@@ -26,7 +26,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   }
   console.log(patches.length, 'places change');
   if (!apply) { console.log('dry run'); process.exit(0); }
-  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'price-swing-2026-10-23.json'), JSON.stringify(backup, null, 1));
+  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'price-swing-2026-10-23-high.json'), JSON.stringify(backup, null, 1));
   const res = await applyAdminEdits(patches, CLAUDE_ACTOR);
   console.log('saved', res.saved.length, 'conflicts', res.conflicts.length, 'errors', JSON.stringify(res.errors));
   process.exit(res.errors.length || res.conflicts.length ? 1 : 0);
