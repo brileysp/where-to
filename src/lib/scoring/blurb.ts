@@ -119,7 +119,7 @@ export function crowdPriceClause(d: ScoringDestination, m: number): string {
   const low = has(d.low, m);
   if (peak) {
     const intensity = d.peakIntensity || 'moderate';
-    if (intensity === 'extreme') return ', with peak crowds and prices';
+    if (intensity === 'extreme' || intensity === 'high') return ', with peak crowds and prices';
     if (intensity === 'moderate') return ', with higher tourism volume and prices';
     return '';
   }

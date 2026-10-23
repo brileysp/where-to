@@ -1,5 +1,5 @@
 // 23 Oct 2026 (owner): sets every place's peak crowd intensity from the owner's own ranking of all 200 places (1 = most crowded at its peak), cut into
-// extreme (1-52), moderate (53-127) and mild (128-200). The ranking is kept in scripts/data/crowd-intensity-ranking-oct23.json in case a finer scale is wanted later.
+// extreme (1-25), high (26-52), moderate (53-127) and mild (128-200) once the fourth level 'high' was added the same day (the first run used extreme 1-52). The ranking is kept in scripts/data/crowd-intensity-ranking-oct23.json in case a finer scale is wanted later.
 // Old values are saved to docs/backups. A DRY RUN unless --apply. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/set-peak-intensity-oct23.ts [--apply]
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
@@ -24,7 +24,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   }
   console.log(patches.length, 'places change');
   if (!apply) { console.log('dry run'); process.exit(0); }
-  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'peak-intensity-2026-10-23.json'), JSON.stringify(backup, null, 1));
+  writeFileSync(join(__dirname, '..', 'docs', 'backups', 'peak-intensity-2026-10-23-high.json'), JSON.stringify(backup, null, 1));
   const res = await applyAdminEdits(patches, CLAUDE_ACTOR);
   console.log('saved', res.saved.length, 'conflicts', res.conflicts.length, 'errors', JSON.stringify(res.errors));
   process.exit(res.errors.length || res.conflicts.length ? 1 : 0);

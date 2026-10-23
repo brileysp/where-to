@@ -233,7 +233,7 @@ export function PlacesGrid({ initialRows, showRetired }: { initialRows: PlaceRow
         <InlineSelectCell
           ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'peakIntensity', fieldLabel: 'Peak crowd intensity', loadedUpdatedAt: r.updatedAt }}
           value={r.peakIntensity}
-          options={['mild', 'moderate', 'extreme']}
+          options={['mild', 'moderate', 'high', 'extreme']}
           setLocal={(v) => patchRow(r.id, { peakIntensity: v })}
         />
       ),
@@ -247,7 +247,7 @@ export function PlacesGrid({ initialRows, showRetired }: { initialRows: PlaceRow
         <InlineSelectCell
           ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'priceSwing', fieldLabel: 'Seasonal price swing', loadedUpdatedAt: r.updatedAt }}
           value={r.priceSwing}
-          options={['mild', 'moderate', 'extreme']}
+          options={['mild', 'moderate', 'high', 'extreme']}
           setLocal={(v) => patchRow(r.id, { priceSwing: v })}
         />
       ),

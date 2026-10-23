@@ -31,7 +31,7 @@ export const climateEnum = pgEnum('climate', [
   'polar',
 ]);
 
-export const peakIntensityEnum = pgEnum('peak_intensity', ['mild', 'moderate', 'extreme']);
+export const peakIntensityEnum = pgEnum('peak_intensity', ['mild', 'moderate', 'high', 'extreme']);
 
 export const crowdBaselineEnum = pgEnum('crowd_baseline', ['low', 'high']);
 

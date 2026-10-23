@@ -45,6 +45,13 @@ describe('how busy and pricey a month is for a place', () => {
     expect(Math.abs(seasonOffset(flat, 6))).toBeCloseTo(1, 5);
     expect(Math.abs(seasonOffset(flat, 0))).toBeCloseTo(0.6, 5);
   });
+  it('a high place sits between extreme and moderate', () => {
+    const high = { ...base, peakIntensity: 'high' as const, priceSwing: 'high' as const };
+    expect(seasonOffset(high, 6)).toBeCloseTo(-4, 5);
+    expect(seasonOffset(high, 0)).toBeCloseTo(2.4, 5);
+    expect(seasonOffset(high, 6)).toBeGreaterThan(seasonOffset(base, 6));
+    expect(seasonOffset(high, 6)).toBeLessThan(seasonOffset({ ...base, peakIntensity: 'moderate', priceSwing: 'moderate' }, 6));
+  });
   it('crowds and prices are separate: few crowds but wild prices still counts as a busy-pricey peak', () => {
     const safari = { ...base, peakIntensity: 'mild' as const, priceSwing: 'extreme' as const, crowdBaseline: 'low' as const };
     expect(crowdOffset(safari, 6)).toBe(2);

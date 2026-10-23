@@ -51,7 +51,7 @@ export interface BandDimension {
   bands: Band[];
 }
 
-export type PeakIntensity = 'mild' | 'moderate' | 'extreme';
+export type PeakIntensity = 'mild' | 'moderate' | 'high' | 'extreme';
 export type CrowdBaseline = 'low' | 'high';
 
 export interface SpecialSeason {

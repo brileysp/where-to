@@ -177,7 +177,7 @@ function severityBadge(severity: Severity | null, label: string, moderateTone: B
 }
 
 /**
- * "Peak" isn't one thing — d.peakIntensity ('extreme' | 'moderate' | 'mild')
+ * "Peak" isn't one thing — d.peakIntensity ('extreme' | 'high' | 'moderate' | 'mild')
  * captures whether a peak month is a documented overtourism/price-spike
  * case or just modestly busier than the destination's own rainy season.
  * Absent = 'moderate'. 'mild' isn't flagged at all.
@@ -185,7 +185,7 @@ function severityBadge(severity: Severity | null, label: string, moderateTone: B
 export function peakBadge(d: ScoringDestination, m: number): Badge | null {
   if (!has(d.peak, m)) return null;
   const intensity = d.peakIntensity || 'moderate';
-  if (intensity === 'extreme') return { label: 'Peak crowds & prices', tone: 'warn' };
+  if (intensity === 'extreme' || intensity === 'high') return { label: 'Peak crowds & prices', tone: 'warn' };
   if (intensity === 'moderate') return { label: 'Higher tourism & prices', tone: 'warn' };
   return null;
 }
@@ -526,7 +526,7 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
           let reason: string;
           if (has(d.peak, m)) {
             const intensity = d.peakIntensity || 'moderate';
-            v = intensity === 'extreme' ? 1 : intensity === 'mild' ? 5 : 3;
+            v = intensity === 'extreme' ? 1 : intensity === 'high' ? 2 : intensity === 'mild' ? 5 : 3;
             reason = `peak month, ${intensity} intensity → ${v}`;
           } else {
             v = has(d.low, m) ? 9 : 6;
