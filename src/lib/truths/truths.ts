@@ -42,6 +42,10 @@ export interface Truth {
  * urban swimming scene (Paris Plages, Berlin's lakes, Vienna's Alte Donau). Owner rule, 22 Oct 2026.
  */
 const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia', 'paris', 'berlin', 'vienna'];
+/** Swimming that is not about the ocean at all (river and swimming holes), so it says nothing about being near a coast. */
+const INLAND_SWIMMING = ['guilin-yangshuo', 'hudson-valley'];
+/** A not-applicable reason that says the place is too far away. Murky water or no diving is a fine reason; being too far is not (owner rule, 24 Oct 2026). */
+const TOO_FAR = /too far|far from|requires? travel|other regions/i;
 const pass: TruthResult = { ok: true };
 const fail = (detail: string): TruthResult => ({ ok: false, detail });
 const some = (xs: string[], n = 5) => (xs.length > n ? `${xs.slice(0, n).join('; ')} (and ${xs.length - n} more)` : xs.join('; '));
@@ -243,12 +247,16 @@ export const TRUTHS: Truth[] = [
     const rank = [...ctx.places].filter((p) => !p.naSliders.includes('diving')).sort((a, b) => peak(b) - peak(a)).findIndex((p) => /red sea/i.test(p.name));
     return rank >= 0 && rank < 10 ? pass : fail(rank < 0 ? 'not found' : `ranks ${rank + 1}`);
   } },
-  { id: 'P09', area: 'Places and scores', says: 'The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia) or a city with a real urban swimming scene (Paris, Berlin, Vienna).', check: (ctx) => {
+  { id: 'P09', area: 'Places and scores', says: 'The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place close enough to the ocean to have a surf or beach score is close enough to be considered for diving. It can be not applicable for murky water or no diving, but never for being "too far from the coast". (River and city swimming that has nothing to do with the ocean is not covered.)', check: (ctx) => {
     const on = (p: (typeof ctx.places)[number], k: string) => !p.naSliders.includes(k);
     const bad: string[] = [];
     for (const p of ctx.places) {
       if (on(p, 'surfing') && !on(p, 'beachesSwimming')) bad.push(`${p.name}: scored for surfing but no beaches`);
-      if (on(p, 'beachesSwimming') && !on(p, 'surfing') && !on(p, 'diving') && !COASTAL_WITHOUT_SURF.includes(p.id)) bad.push(`${p.name}: beaches but too far from the coast for surfing or diving`);
+      if (on(p, 'diving') || (!on(p, 'surfing') && !on(p, 'beachesSwimming'))) continue;
+      if (COASTAL_WITHOUT_SURF.includes(p.id) || INLAND_SWIMMING.includes(p.id)) continue;
+      const reason = ((p.naReasons as Record<string, { reason?: string }> | null)?.diving?.reason) ?? '';
+      if (!reason) bad.push(`${p.name}: diving is not applicable with no reason written down`);
+      else if (TOO_FAR.test(reason)) bad.push(`${p.name}: diving is not applicable for being too far, yet it has a surf or beach score`);
     }
     return noneOf(bad, 'places that break the coast rule');
   } },
