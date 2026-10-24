@@ -17,6 +17,7 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['cyclingRoad', 'gravel-and-dirt-roads', [{ column: 'gravel' }]],
   ['cyclingRoad', 'big-mountain-climbs', [{ column: 'iconicClimbs', fullAt: 5 }]],
   ['cyclingRoad', 'multi-day-touring', [{ column: 'multiDayTouring' }]],
+  ['birding', 'seabirds', [{ column: 'habitats', option: 'ocean' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');
