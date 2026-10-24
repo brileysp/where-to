@@ -9,6 +9,8 @@ import type { AnswerRule, FitCheck, QuestionFitRule } from './question-fit';
  */
 
 const R = (...answers: Array<AnswerRule | null>): QuestionFitRule => ({ answers });
+/** Match-only: a place without the stay is never marked down, it just does not get the green match. */
+const B = (...answers: Array<AnswerRule | null>): QuestionFitRule => ({ answers, bonusOnly: true });
 const all = (...checks: FitCheck[]): AnswerRule => ({ mode: 'all', checks });
 const any = (...checks: FitCheck[]): AnswerRule => ({ mode: 'any', checks });
 const within = (column: string, order: string[], allowed: string): AnswerRule => all({ type: 'within', column, order, allowed });
@@ -30,6 +32,7 @@ const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
 const onMonth = (column: string): AnswerRule => all({ type: 'month', column, on: true });
 const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
 const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
+const ILLNESS_RISK = ['low', 'some', 'high'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
 export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
@@ -107,6 +110,23 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'scenicLandscapes.q2': R(atLeast(7, 'iconicRating'), atLeast(6, 'hiddenGemsRating'), null),
   'scenicLandscapes.q3': R(has('viewAccess', 'roadside', 'short'), has('viewAccess', 'halfDay'), has('viewAccess', 'longHike'), has('viewAccess', 'backcountry')),
 
+  // ---- Street Food & Markets ---- (24 Oct 2026; plan approved 23 Oct with Hygiene renamed Illness risk)
+  'streetFood.q1': R(has('foodAdventure', 'familiar', 'mixed'), null, null),
+  'streetFood.q2': R(within('illnessRisk', ILLNESS_RISK, 'low'), within('illnessRisk', ILLNESS_RISK, 'some'), null),
+  'streetFood.q3': R(has('eatingStyle', 'standing'), has('eatingStyle', 'stools', 'table'), has('eatingStyle', 'table')),
+  'streetFood.q4': R(null, atLeast(5, 'streetStalls'), atLeast(8, 'streetStalls')),
+
+  // ---- Luxury Hotels ---- (24 Oct 2026; the dream-stay answer only adds a match, owner's decision of 23 Oct)
+  'luxuryHotels.q1': R(null, has('privateVillas', 'plentiful', 'some'), null),
+  'luxuryHotels.q2': R(atLeast(7, 'hotelIsDestination'), atLeast(4, 'hotelIsDestination'), null),
+  'luxuryHotels.q3': B(has('stayTypes', 'penthouse'), has('stayTypes', 'villaPool'), has('stayTypes', 'castleSuite'), has('stayTypes', 'overwater')),
+
+  // ---- Cycling - Road & Gravel ---- (24 Oct 2026; traffic reads the quiet scenic rating, owner approved 23 Oct)
+  'cyclingRoad.q1': R(has('rideLevels', 'easy'), has('rideLevels', 'moderate'), has('rideLevels', 'strong'), has('rideLevels', 'racer')),
+  'cyclingRoad.q2': R(within('roadBikeRental', GEAR_RENTAL, 'some'), null, has('eBikeRental', 'true')),
+  'cyclingRoad.q3': R(atLeast(7, 'quietScenic'), atLeast(4, 'quietScenic'), null),
+  'cyclingRoad.q4': R(has('touringSupport', 'guided'), has('touringSupport', 'luggage'), has('touringSupport', 'selfSupported')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -163,6 +183,17 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'scenicLandscapes.q1': 'Not the way you want to see it',
   'scenicLandscapes.q2': 'Not the kind of view you want',
   'scenicLandscapes.q3': 'More effort than you want',
+  'streetFood.q1': 'More adventurous than you want',
+  'streetFood.q2': 'Higher illness risk than you want',
+  'streetFood.q3': 'Not how you like to eat',
+  'streetFood.q4': 'Less street food than you want',
+  'luxuryHotels.q1': 'Few private villas',
+  'luxuryHotels.q2': 'Not a hotel-led trip',
+  'luxuryHotels.q3': 'Not the stay you dream of',
+  'cyclingRoad.q1': 'Not the rides you want',
+  'cyclingRoad.q2': 'Hard to rent the bike you want',
+  'cyclingRoad.q3': 'Busier roads than you want',
+  'cyclingRoad.q4': 'Not the support you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

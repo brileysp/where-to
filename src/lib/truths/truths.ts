@@ -190,11 +190,11 @@ export const TRUTHS: Truth[] = [
     }
     return noneOf(bad, 'rating or choice columns that are mostly blank');
   } },
-  { id: 'C14b', area: 'Chips and questions', says: 'The two text columns that questions read (Diving "Signature animals", Whale "Boat style") are filled for at least 70% of their places.', check: (ctx) => {
+  { id: 'C14b', area: 'Chips and questions', says: 'The text column that a question reads and that should be filled everywhere (Whale "Boat style") is filled for at least 70% of its places. Diving "Signature animals" is left blank on purpose where nothing is worth building a trip around (owner, 24 Oct 2026).', check: (ctx) => {
     const frac = (ik: string, col: string) => { const rows = ctx.facts.filter((f) => f.interestKey === ik); if (!rows.length) return 1; return rows.filter((r) => { const v = r.facts[col]; return v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0); }).length / rows.length; };
-    const bad = [['diving', 'animals'], ['whaleWatching', 'boatStyle']].filter(([ik, col]) => frac(ik, col) < 0.7).map(([ik, col]) => `${ik}.${col} ${Math.round(frac(ik, col) * 100)}%`);
+    const bad = [['whaleWatching', 'boatStyle']].filter(([ik, col]) => frac(ik, col) < 0.7).map(([ik, col]) => `${ik}.${col} ${Math.round(frac(ik, col) * 100)}%`);
     return noneOf(bad, 'columns under 70% filled');
-  }, pending: 'Two to-dos: fill Diving "Signature animals" (48 of 111) and re-review Whale "Boat style" (94 of 124).' },
+  } },
   { id: 'C15', area: 'Chips and questions', says: 'Every live chip measured on a rating or choice has a value for at least half of the interest\'s places.', check: (ctx) => {
     const bad: string[] = [];
     for (const c of ctx.chips) {

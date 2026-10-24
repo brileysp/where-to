@@ -311,3 +311,68 @@ describe('Scenic Landscapes questions', () => {
     expect(fit('q3', [3], { viewAccess: ['backcountry'] })).toBe(1);
   });
 });
+
+describe('Street Food questions', () => {
+  const defs = factDefsFor('streetFood');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`streetFood.${q}`], picked, defs, facts as never);
+  it('safe favorites need familiar or mixed food; the others ask for nothing', () => {
+    expect(fit('q1', [0], { foodAdventure: 'mixed' })).toBe(1);
+    expect(fit('q1', [0], { foodAdventure: 'adventurous' })).toBe(0);
+    expect(fit('q1', [2], { foodAdventure: 'adventurous' })).toBeNull();
+  });
+  it('very careful needs low illness risk, normal care allows some', () => {
+    expect(fit('q2', [0], { illnessRisk: 'low' })).toBe(1);
+    expect(fit('q2', [0], { illnessRisk: 'some' })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [1], { illnessRisk: 'some' })).toBe(1);
+    expect(fit('q2', [2], { illnessRisk: 'high' })).toBeNull();
+  });
+  it('eating style and how much of your eating', () => {
+    expect(fit('q3', [2], { eatingStyle: ['standing', 'stools'] })).toBe(0);
+    expect(fit('q3', [1], { eatingStyle: ['table'] })).toBe(1);
+    expect(fit('q4', [2], { streetStalls: 8 })).toBe(1);
+    expect(fit('q4', [1], { streetStalls: 3 })).toBeCloseTo(0.6, 5);
+    expect(fit('q4', [0], { streetStalls: 1 })).toBeNull();
+  });
+});
+
+describe('Luxury Hotels questions', () => {
+  const defs = factDefsFor('luxuryHotels');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`luxuryHotels.${q}`], picked, defs, facts as never);
+  it('a private villa needs a villa market', () => {
+    expect(fit('q1', [1], { privateVillas: 'plentiful' })).toBe(1);
+    expect(fit('q1', [1], { privateVillas: 'few' })).toBe(0);
+    expect(fit('q1', [0], { privateVillas: 'few' })).toBeNull();
+  });
+  it('the hotel is the trip reads the rating', () => {
+    expect(fit('q2', [0], { hotelIsDestination: 7 })).toBe(1);
+    expect(fit('q2', [0], { hotelIsDestination: 3.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { hotelIsDestination: 1 })).toBeNull();
+  });
+  it('the dream stay only adds a match and never marks a place down', () => {
+    expect(fit('q3', [3], { stayTypes: ['overwater', 'villaPool'] })).toBe(1);
+    expect(fit('q3', [3], { stayTypes: ['penthouse'] })).toBeNull();
+  });
+});
+
+describe('Road Cycling questions', () => {
+  const defs = factDefsFor('cyclingRoad');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`cyclingRoad.${q}`], picked, defs, facts as never);
+  it('ride level', () => {
+    expect(fit('q1', [3], { rideLevels: ['moderate', 'racer'] })).toBe(1);
+    expect(fit('q1', [0], { rideLevels: ['strong', 'racer'] })).toBe(0);
+  });
+  it('renting a road bike or an e-bike', () => {
+    expect(fit('q2', [0], { roadBikeRental: 'plentiful' })).toBe(1);
+    expect(fit('q2', [0], { roadBikeRental: 'few' })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [1], { roadBikeRental: 'few' })).toBeNull();
+    expect(fit('q2', [2], { eBikeRental: true })).toBe(1);
+    expect(fit('q2', [2], { eBikeRental: false })).toBe(0);
+  });
+  it('traffic reads the quiet scenic rating, and support reads the touring list', () => {
+    expect(fit('q3', [0], { quietScenic: 7 })).toBe(1);
+    expect(fit('q3', [1], { quietScenic: 2 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { quietScenic: 0 })).toBeNull();
+    expect(fit('q4', [1], { touringSupport: ['luggage'] })).toBe(1);
+    expect(fit('q4', [2], { touringSupport: ['guided'] })).toBe(0);
+  });
+});

@@ -495,6 +495,46 @@ const STREET_FOOD_FACTS: FactDef[] = [
   tick('foodTours', 'Guided food tours', 'Tick when guided street-food or market tastings are readily available.'),
   tick('cookingClasses', 'Cooking classes', 'Tick when visitor cooking classes (market visit plus cooking) are readily available.'),
   rate('produceMarkets', 'Fresh produce markets', 'How strong the fresh-produce and food-market scene is for visitors. 0-1 almost none, 8-10 famous markets.'),
+  // 24 Oct 2026: the columns the four questions read (owner approved the plan on 23 Oct, with "Hygiene" renamed "Illness risk"). Blank means the place has no real street-food scene to describe.
+  { key: 'foodAdventure', label: 'Food adventurousness', type: 'choice', group: 'style', options: [{ value: 'familiar', label: 'Familiar' }, { value: 'mixed', label: 'Mixed' }, { value: 'adventurous', label: 'Adventurous' }], hint: 'How far the typical street food is from safe, familiar food. Familiar: recognizable (pizza, kebabs, sandwiches, burgers). Mixed: a mix of familiar and unfamiliar. Adventurous: offal, insects, fermented or very spicy food, very unfamiliar.' },
+  { key: 'illnessRisk', label: 'Illness risk', type: 'choice', group: 'practical', options: [{ value: 'low', label: 'Low' }, { value: 'some', label: 'Some' }, { value: 'high', label: 'High' }], hint: 'How likely a visitor is to get sick from street food, written plainly and not as a health rating. Low: stomach trouble is uncommon (Singapore, Japan, most of Europe). Some: it happens often enough to choose busy stalls and food cooked to order. High: a real risk; pick high-turnover stalls and cooked-to-order food.' },
+  { key: 'eatingStyle', label: 'Eating style', type: 'multi', group: 'style', options: [{ value: 'standing', label: 'Standing or walking' }, { value: 'stools', label: 'Plastic stools' }, { value: 'table', label: 'A proper table' }], hint: 'How people usually eat street food here: pick every style a visitor will meet. A proper table covers hawker centers, food halls and seated stalls.' },
+  { key: 'signatureFoods', label: 'Signature street foods', type: 'text', group: 'experience', wide: true, hint: 'The two to four dishes or places a street-food trip is built around. Reading only; no question uses it.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Luxury Hotels (24 Oct 2026). Seven columns for the three approved chips and three approved questions (owner approved the plan on 23 Oct, with the
+ * "Signature hotels" column dropped because hotel names go stale and hotels are meant to become sub-places later). Ratings are 0 to 10 at the
+ * place's best on its own: 10 means among the best in the world, 7 or more is a full chip match. The dream-stay question only adds a match, it never
+ * marks a place down. Proposal page: claude.ai/artifact/2pMR7oSV6iF3QGg3Q61Tj7.
+ */
+const LUXURY_HOTELS_FACTS: FactDef[] = [
+  rate('boutiqueHotels', 'Boutique hotels', 'How strong the scene of small, design-led luxury hotels is: a handful of distinctive properties of 50 rooms or fewer. 10 = a boutique-hotel capital (Paris, Lisbon, Tokyo). Feeds the Boutique hotels chip.'),
+  rate('grandHotels', 'Grand and historic hotels', 'How strong the grand-dame and historic hotel scene is: palace hotels, castles, landmark properties with a century of history. 10 = Raffles Singapore, the Savoy in London, the palazzi of Venice. Feeds the Grand and historic hotels chip.'),
+  rate('remoteLodges', 'Remote luxury lodges', 'How strong the scene of luxury lodges, camps and villas in wild or remote settings is: safari lodges, island lodges, wilderness camps. 10 = the Okavango, the Maasai Mara, Patagonia. Feeds the Remote luxury lodges chip.'),
+  { key: 'privateVillas', label: 'Private villas', type: 'choice', group: 'practical', options: [{ value: 'plentiful', label: 'Plentiful' }, { value: 'some', label: 'Some' }, { value: 'few', label: 'Few' }], hint: 'How easy it is to rent a luxury private villa with staff and a pool. Plentiful: a real villa market (Bali, Tuscany, the Caribbean). Some: available but not the norm. Few: hardly any. Question 1 reads it.' },
+  rate('hotelIsDestination', 'The hotel is the destination', 'How much the best hotels are a reason to go in themselves (the Maldives resorts, the Burj Al Arab, Amanresorts, safari lodges). 10 = people book the hotel first and the place second; 0-2 hotels are just somewhere to sleep. Question 2 reads it.'),
+  { key: 'stayTypes', label: 'Signature stay types', type: 'multi', group: 'style', options: [{ value: 'penthouse', label: 'Penthouse suite with city views' }, { value: 'villaPool', label: 'Villa with a private pool and a view' }, { value: 'castleSuite', label: 'Royal suite in a castle or palace' }, { value: 'overwater', label: 'Overwater bungalow' }], hint: 'The kinds of stay the place is known for. A place can have several. Question 3 reads it, and only ever adds a match: a place without the stay is never marked down.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Cycling - Road & Gravel Biking (24 Oct 2026). Ten columns for the four approved chips and four approved questions (owner approved the plan on 23 Oct,
+ * with "Big mountain climbs" renamed "Iconic climbs": a count of the famous climbs, not every climb). Ratings are 0 to 10 in the best season, on their own.
+ * Proposal page: claude.ai/artifact/Q3jaDEzQaFos4EAto1HpKx.
+ */
+const CYCLING_ROAD_FACTS: FactDef[] = [
+  rate('quietScenic', 'Quiet scenic road riding', 'Roads with little traffic and views worth the ride: country lanes, coast roads, mountain roads. Includes how calm the traffic is. 10 = Mallorca, Provence, Tuscany, the Dolomites. Feeds the Quiet scenic road riding chip and the traffic question.'),
+  rate('gravel', 'Gravel and dirt roads', 'Gravel, dirt and mixed-surface riding: how many routes, how good, how easy to reach. 10 = Bend, the strade bianche of Tuscany, the Flint Hills. Feeds the Gravel and dirt roads chip.'),
+  { key: 'iconicClimbs', label: 'Iconic climbs', type: 'int', group: 'experience', hint: 'How many famous, iconic long climbs a rider can do here (the Dolomites passes, Alpe d\'Huez-type climbs). Count only the famous ones, not every climb; some places have hundreds. The Big mountain climbs chip is full at 5.' },
+  tick('multiDayTouring', 'Multi-day touring', 'Tick when established multi-day routes or tours exist, with places to stay along the way. Feeds the Multi-day touring chip.'),
+  { key: 'rideLevels', label: 'Ride levels served', type: 'multi', group: 'style', options: [{ value: 'easy', label: 'Easy (a couple of hours, flat)' }, { value: 'moderate', label: 'Moderate (half a day)' }, { value: 'strong', label: 'Strong (60 miles with hills)' }, { value: 'racer', label: 'Racer (big climbs, long days)' }], hint: 'Which riders the place really serves, from easy to racer. Question 1 reads it.' },
+  { key: 'roadBikeRental', label: 'Road bike rental', type: 'choice', group: 'practical', options: [{ value: 'plentiful', label: 'Plentiful' }, { value: 'some', label: 'Some' }, { value: 'few', label: 'Few or none' }], hint: 'How easily a visitor rents a good road bike. Plentiful: several shops with quality bikes. Some: a shop or two. Few or none: bring your own. Question 2 reads it.' },
+  tick('eBikeRental', 'E-bike rental', 'Tick when a visitor can rent an e-bike (a road or gravel e-bike, not only a city bike). Question 2 reads it.'),
+  { key: 'touringSupport', label: 'Touring support', type: 'multi', group: 'practical', options: [{ value: 'guided', label: 'Guided tours with a support van' }, { value: 'luggage', label: 'Self-guided with luggage transfer' }, { value: 'selfSupported', label: 'Fully self-supported riding is practical (services every day)' }], hint: 'Which ways of touring are really available. Question 4 reads it.' },
+  { key: 'signatureRides', label: 'Signature rides', type: 'text', group: 'experience', wide: true, hint: 'The two to four rides a trip is built around, with the kind of riding in brackets. Reading only; no question uses it.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
 const SHOPPING_FACTS: FactDef[] = [
@@ -538,6 +578,8 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   fineDining: FINE_DINING_FACTS,
   coffeeTea: COFFEE_TEA_FACTS,
   streetFood: STREET_FOOD_FACTS,
+  luxuryHotels: LUXURY_HOTELS_FACTS,
+  cyclingRoad: CYCLING_ROAD_FACTS,
   shopping: SHOPPING_FACTS,
   nightlife: NIGHTLIFE_FACTS,
   traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,

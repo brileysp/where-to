@@ -1,8 +1,8 @@
 # Known truths
 
-Checked 2026-10-23. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
+Checked 2026-10-24. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
-**52 truths: 48 hold, 0 fail, 4 pending.** Pending means we know it does not hold yet and what will close it.
+**52 truths: 48 hold, 1 fail, 3 pending.** Pending means we know it does not hold yet and what will close it.
 
 ## Matching
 
@@ -39,7 +39,7 @@ Checked 2026-10-23. Each line is something that must always be true of Where To?
 | holds | C12: Every question that is checked against place columns has a short reason-chip message (40 characters or less). |  |
 | holds | C13: Every question's column rule reads columns that really exist for its interest. |  |
 | holds | C14: No answer is checked against a rating or choice column that is mostly blank (at least 70% of the interest's places have a value). |  |
-| pending | C14b: The two text columns that questions read (Diving "Signature animals", Whale "Boat style") are filled for at least 70% of their places. | Two to-dos: fill Diving "Signature animals" (48 of 111) and re-review Whale "Boat style" (94 of 124). |
+| holds | C14b: The text column that a question reads and that should be filled everywhere (Whale "Boat style") is filled for at least 70% of its places. Diving "Signature animals" is left blank on purpose where nothing is worth building a trip around (owner, 24 Oct 2026). |  |
 | holds | C15: Every live chip measured on a rating or choice has a value for at least half of the interest's places. |  |
 
 ## Places and scores
@@ -53,7 +53,7 @@ Checked 2026-10-23. Each line is something that must always be true of Where To?
 | holds | P05: Hidden interests (Landscape Photography) are never offered in the interest picker, and removed ones are gone from it. |  |
 | holds | P06: The Wildflowers interest is called "Blooms and Fall Colors", shown as "Blooms & Colors" on the pill. |  |
 | holds | P07: The Red Sea & Nile is among the ten best places for diving. |  |
-| holds | P09: The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia) or a city with a real urban swimming scene (Paris, Berlin, Vienna). |  |
+| **FAILS** | P09: The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place with Beaches on is either scored for Surfing or Diving or is a known coastal place with no surf (Copenhagen, Acadia) or a city with a real urban swimming scene (Paris, Berlin, Vienna). | 5 places that break the coast rule: Everglades National Park: beaches but too far from the coast for surfing or diving; Guilin & Yangshuo: beaches but too far from the coast for surfing or diving; New Orleans: beaches but too far from the coast for surfing or diving; Hudson Valley: beaches but too far from the coast for surfing or diving; Venice: beaches but too far from the coast for surfing or diving |
 | holds | P10: Every place has both its peak crowd intensity and its seasonal price swing set (Crowds & prices reads them separately). |  |
 | pending | P08: The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded). | Needs the "Wreck diving rating" column (chip measures audit, item C1). Today the chip reads only the main draw. |
 

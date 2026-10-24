@@ -1,0 +1,2938 @@
+{
+ "uganda": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "mauritius": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "morocco": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "High Atlas passes and Tizi n'Tichka (mountain road), Ouarzazate desert loops (gravel)"
+ },
+ "aruba": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "everglades": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "panama": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "ethiopia": {
+  "quietScenic": 6,
+  "gravel": 6,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "signatureRides": "Entoto hills above Addis (mountain road)"
+ },
+ "mendoza": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Uco Valley wine-road loops (quiet roads), Uspallata and Andes passes (mountain road)"
+ },
+ "gbr": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "luangprabang": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Mekong valley loops (quiet roads), Kuang Si back roads (mixed surface)"
+ },
+ "london": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true
+ },
+ "guatemala": {
+  "quietScenic": 5,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "signatureRides": "Lake Atitlán loop (quiet roads and dirt)"
+ },
+ "bhutan": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Thimphu to Paro and Dochula pass (mountain road), Tour of the Dragon (mountain road)"
+ },
+ "athens": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "istanbul": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": true
+ },
+ "dubai": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "atacama": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "thailand": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "havana": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "colombian-andes": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 8,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Alto de Letras (iconic climb), Alto del Escobero near Medellín (climb), Paletará loops in the coffee region (mountain road)"
+ },
+ "turks-caicos": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "sedona": {
+  "quietScenic": 7,
+  "gravel": 6,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Schnebly Hill road (climb), Red Rock Scenic Byway (quiet roads), Dry Creek gravel (gravel)"
+ },
+ "ecuadorian-andes": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Cotopaxi park roads (high altitude), Quilotoa loop (mountain road)"
+ },
+ "monterey-big-sur": {
+  "quietScenic": 9,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Highway 1 to Big Sur (coast road), Laureles Grade (climb), Carmel Valley (quiet roads)"
+ },
+ "olympic": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "andalucia": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 8,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Sierra Nevada Pico Veleta (iconic climb), Ronda to Grazalema (mountain road), Sierra de Aracena loops (quiet roads)"
+ },
+ "big-island": {
+  "quietScenic": 6,
+  "gravel": 3,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "signatureRides": "Hawi to Kona Ironman course (coast road), Mauna Kea road (climb)"
+ },
+ "chiapas": {
+  "quietScenic": 5,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "rajaampat": {
+  "quietScenic": 2,
+  "gravel": 1,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "colombian-caribbean": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "madeira": {
+  "quietScenic": 7,
+  "gravel": 2,
+  "iconicClimbs": 6,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Pico do Arieiro (iconic climb), Paul da Serra plateau (mountain road)"
+ },
+ "zimbabwe": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "madagascar": {
+  "quietScenic": 4,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "berlin": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true
+ },
+ "kenya": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "basque-country": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Jaizkibel (iconic climb), Urkiola and Gorbea loops (mountain road), Basque coastal road (quiet roads)"
+ },
+ "fiji": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "rome": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Appian Way (quiet roads), Castelli Romani loops (hills)"
+ },
+ "bordeaux": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Médoc vineyard roads (quiet roads), Saint-Émilion loops (quiet roads)"
+ },
+ "barbados": {
+  "quietScenic": 5,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "grandcanyon": {
+  "quietScenic": 4,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "badlands-black-hills": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Needles Highway (mountain road), Custer State Park loop (quiet roads), Mickelson Trail (gravel)"
+ },
+ "milford-sound-fiordland": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "rajasthan-golden-triangle": {
+  "quietScenic": 5,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "komodo": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "denali-interior": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "buenosaires": {
+  "quietScenic": 5,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "southeast-alaska": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "los-cabos": {
+  "quietScenic": 6,
+  "gravel": 3,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Cape East road (coast road)"
+ },
+ "oaxaca": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "lapland": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "angkor": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Angkor temple circuits (quiet roads), Tonlé Sap village back roads (mixed surface)"
+ },
+ "nepal": {
+  "quietScenic": 5,
+  "gravel": 7,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Kathmandu valley rim (climb), Annapurna foothills (mountain road), Mustang jeep tracks (gravel)"
+ },
+ "bali": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Kintamani volcano rim (climb), Ubud to Sidemen back roads (quiet roads)"
+ },
+ "charleston-savannah": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "srilanka": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Hill Country tea roads (climb), Ella to Nuwara Eliya (mountain road)"
+ },
+ "kaziranga": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "tokyo-kyoto": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Lake Biwa loop (quiet roads), Kyoto northern mountains (climb), Shimanami Kaido (bridge route)"
+ },
+ "fjords": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Trollstigen (iconic climb), Geirangerfjord and Dalsnibba road (mountain road), Hardangerfjord loops (quiet roads)"
+ },
+ "kruger": {
+  "quietScenic": 2,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "great-smoky-mountains": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Newfound Gap (climb), Foothills Parkway (quiet roads), Blue Ridge Parkway (mountain road)"
+ },
+ "scottish-highlands-skye": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Applecross Bealach na Bà (iconic climb), North Coast 500 (touring), Skye loops (quiet roads)"
+ },
+ "dolomites": {
+  "quietScenic": 10,
+  "gravel": 6,
+  "iconicClimbs": 12,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Passo Giau, Passo Pordoi and Passo Gardena (iconic climbs), Sella Ronda loop (mountain road), Stelvio nearby (iconic climb)"
+ },
+ "lake-district": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Hardknott and Wrynose passes (iconic climbs), Kirkstone Pass (climb), Windermere quiet lanes (quiet roads)"
+ },
+ "taiwan": {
+  "quietScenic": 8,
+  "gravel": 4,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Wuling Pass (iconic climb), Sun Moon Lake loop (quiet roads), Taroko Gorge (mountain road), Round Island route (touring)"
+ },
+ "hongkong": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "st-andrews-fife": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "East Neuk coast road (quiet roads), Fife Coastal Route (touring)"
+ },
+ "black-forest": {
+  "quietScenic": 9,
+  "gravel": 7,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Schauinsland (iconic climb), Black Forest High Road (mountain road), Kandel loops (climb)"
+ },
+ "palau": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "yosemite": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Tioga Road (mountain road), Glacier Point Road (climb)"
+ },
+ "tierra-del-fuego": {
+  "quietScenic": 4,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "aspen": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Independence Pass (iconic climb), Maroon Bells road (climb), Rio Grande Trail (gravel)"
+ },
+ "torres-del-paine": {
+  "quietScenic": 5,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "chilean-lake-district": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Road to Volcán Osorno (climb), Lake Llanquihue loop (quiet roads)"
+ },
+ "vietnam": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Hai Van Pass (iconic climb), Ha Giang Loop (mountain road), Mekong Delta back roads (quiet roads)"
+ },
+ "beijing": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "lofoten": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Lofoten coast road (quiet roads), Nusfjord and Reine route (coast road)"
+ },
+ "rioja": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Rioja Alavesa vineyard roads (quiet roads), Sierra de Cantabria (climb)"
+ },
+ "banff": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Icefields Parkway (mountain road), Bow Valley Parkway (quiet roads), Lake Louise road (climb)"
+ },
+ "nyc": {
+  "quietScenic": 5,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Hudson River Greenway (path), Piermont and Nyack loop (quiet roads), Bear Mountain (climb)"
+ },
+ "arches-canyonlands": {
+  "quietScenic": 8,
+  "gravel": 7,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Moab canyon roads (quiet roads), Potash Road and Shafer Trail (gravel), La Sal Mountain Loop (mountain road)"
+ },
+ "provence": {
+  "quietScenic": 10,
+  "gravel": 6,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Mont Ventoux (iconic climb), Gorges de la Nesque (mountain road), Luberon villages (quiet roads)"
+ },
+ "sicily": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Mount Etna (iconic climb), Madonie mountains (mountain road), Ragusa baroque loops (quiet roads)"
+ },
+ "chicago": {
+  "quietScenic": 5,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Lakefront Trail (path), North Shore loops (quiet roads)"
+ },
+ "prague": {
+  "quietScenic": 6,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true
+ },
+ "mallorca": {
+  "quietScenic": 10,
+  "gravel": 5,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Sa Calobra (iconic climb), Cap de Formentor (coast road), Puig Major (climb), Tramuntana loops (mountain road)"
+ },
+ "amalfi": {
+  "quietScenic": 6,
+  "gravel": 3,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Amalfi Drive (coast road), Agerola climb (climb)"
+ },
+ "namibia": {
+  "quietScenic": 5,
+  "gravel": 7,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "okinawa": {
+  "quietScenic": 6,
+  "gravel": 2,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "el-chalten": {
+  "quietScenic": 5,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "seoul": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Han River bike paths (path), Bukhansan loops (climb)"
+ },
+ "edinburgh": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Pentland Hills loops (climb), Union Canal towpath (gravel)"
+ },
+ "belize": {
+  "quietScenic": 4,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "acadia": {
+  "quietScenic": 9,
+  "gravel": 7,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Park Loop Road (quiet roads), Carriage roads (gravel), Cadillac Mountain road (iconic climb)"
+ },
+ "sequoia-kings-canyon": {
+  "quietScenic": 6,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "signatureRides": "Generals Highway (mountain road), Kings Canyon road (mountain road)"
+ },
+ "svalbard": {
+  "quietScenic": 2,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "rio": {
+  "quietScenic": 6,
+  "gravel": 3,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Tijuca Forest roads (climb), Vista Chinesa and Corcovado (iconic climb)"
+ },
+ "guilin-yangshuo": {
+  "quietScenic": 8,
+  "gravel": 7,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Yulong River and karst countryside (quiet roads), Li River bank paths (gravel)"
+ },
+ "napa": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Silverado Trail (quiet roads), Mount Veeder and Oakville Grade (climb), Sonoma back roads (quiet roads)"
+ },
+ "costa-rica": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Irazú volcano road (climb), Monteverde dirt roads (gravel)"
+ },
+ "bend-crater-lake": {
+  "quietScenic": 9,
+  "gravel": 10,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Cascade Lakes Scenic Byway (quiet roads), Crater Lake rim road (climb), McKenzie Pass (iconic climb), Oregon Timber Trail (gravel)"
+ },
+ "kerala": {
+  "quietScenic": 6,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Munnar tea-hill climbs (climb), Alleppey backwater lanes (quiet roads)"
+ },
+ "chiang-mai": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Doi Suthep (iconic climb), Mae Rim and Samoeng loop (mountain road), Doi Inthanon (iconic climb)"
+ },
+ "puerto-rico": {
+  "quietScenic": 6,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Ruta Panorámica (mountain road), El Yunque roads (climb)"
+ },
+ "zion-bryce": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Zion-Mount Carmel Highway (mountain road), Scenic Byway 12 (mountain road), Bryce Canyon rim road (quiet roads)"
+ },
+ "kyrgyzstan": {
+  "quietScenic": 8,
+  "gravel": 9,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Issyk-Kul lake loop (quiet roads), Song-Kul high plateau (gravel), Naryn and Torugart road (mountain road)"
+ },
+ "egypt": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "champagne": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Champagne Route vineyard roads (quiet roads), Marne valley loops (quiet roads)"
+ },
+ "cape-cod-islands": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Cape Cod Rail Trail (path), Martha's Vineyard loops (quiet roads)"
+ },
+ "north-island": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Hawke's Bay wine trails (quiet roads), Waikato River Trail (gravel), Rotorua trails (gravel)"
+ },
+ "chamonix": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 12,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Col de la Forclaz and Col des Montets (iconic climbs), Tour du Mont Blanc roads (touring), Col des Aravis (iconic climb)"
+ },
+ "piedmont": {
+  "quietScenic": 9,
+  "gravel": 7,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Langhe vineyard roads (quiet roads), Barolo hills (climb), Colle delle Finestre (iconic climb)"
+ },
+ "ireland": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Wild Atlantic Way (touring), Ring of Kerry (coast road), Healy Pass (climb), Slea Head Drive (coast road)"
+ },
+ "marlborough-abel-tasman": {
+  "quietScenic": 7,
+  "gravel": 6,
+  "iconicClimbs": 1,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Marlborough Sounds roads (quiet roads), Great Taste Trail (gravel)"
+ },
+ "new-orleans": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "pantanal": {
+  "quietScenic": 3,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "vienna": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 1,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Danube Cycle Path (path), Vienna Woods loops (climb), Wachau valley (quiet roads)"
+ },
+ "sardinia": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Supramonte and Orgosolo roads (mountain road), Gennargentu climbs (climb), Costa Smeralda coast road (coast road)"
+ },
+ "croatia": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Pelješac peninsula road (coast road), Biokovo climb (iconic climb), Island hops (touring)"
+ },
+ "greenland": {
+  "quietScenic": 2,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "nice-riviera": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 6,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Col de la Madone (iconic climb), Col d'Èze (climb), Corniche roads (coast road)"
+ },
+ "yellowstone": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Grand Loop road (quiet roads in shoulder season), Dunraven Pass (climb)"
+ },
+ "pakistan": {
+  "quietScenic": 4,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "signatureRides": "Karakoram Highway sections (mountain road)"
+ },
+ "whistler": {
+  "quietScenic": 7,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Sea to Sky highway (coast and mountain road), Callaghan Valley road (climb), Valley Trail (path)"
+ },
+ "tuscany": {
+  "quietScenic": 10,
+  "gravel": 10,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Strade Bianche roads near Siena (gravel), Chianti hills (quiet roads), Val d'Orcia loops (quiet roads)"
+ },
+ "san-miguel-guanajuato": {
+  "quietScenic": 5,
+  "gravel": 6,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "hokkaido": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Furano and Biei patchwork hills (quiet roads), Shikotsu lake loop (quiet roads), Daisetsuzan roads (climb)"
+ },
+ "mexicocity": {
+  "quietScenic": 5,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Sunday Ciclovía (path), Desierto de los Leones (climb)"
+ },
+ "maui": {
+  "quietScenic": 6,
+  "gravel": 3,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Haleakalā (iconic climb), Hana Highway (coast road)"
+ },
+ "bahamas": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "lisbon": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 3,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Sintra and Cabo da Roca (climb), Arrábida loops (coast road)"
+ },
+ "borabora": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "azores": {
+  "quietScenic": 7,
+  "gravel": 6,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Sete Cidades crater rim (climb), Furnas valley loops (quiet roads)"
+ },
+ "maldives": {
+  "quietScenic": 1,
+  "gravel": 1,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "douro-valley-porto": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Douro river road (quiet roads), Alto do Marão (climb), Porto to the vineyards (touring)"
+ },
+ "mongolia": {
+  "quietScenic": 4,
+  "gravel": 9,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "belfast-giants-causeway": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Causeway Coastal Route (coast road), Torr Head (climb), Glens of Antrim (mountain road)"
+ },
+ "vancouver-island": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Galloping Goose Trail (path), Cowichan Valley (quiet roads), Mount Washington road (climb)"
+ },
+ "seychelles": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "copenhagen": {
+  "quietScenic": 8,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Strandvejen coast road (quiet roads), Zealand lake circuits (quiet roads)"
+ },
+ "uzbekistan": {
+  "quietScenic": 4,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "cotswolds": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Cotswold Way villages (quiet roads), Slad Valley (climb), Windrush valley (quiet roads)"
+ },
+ "bagan": {
+  "quietScenic": 6,
+  "gravel": 6,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Bagan temple plain (quiet roads and sand tracks)"
+ },
+ "paris": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Paris to Versailles (quiet roads), Chevreuse valley loops (quiet roads), Seine Avenue Verte (path)"
+ },
+ "canaries": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 10,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Teide (iconic climb), Gran Canaria's Pico de las Nieves (iconic climb), Masca and Santiago del Teide (mountain road)"
+ },
+ "bavaria-munich": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Tegernsee and Schliersee circuits (quiet roads), Kesselberg (climb), Lake Constance to the Alps (touring)"
+ },
+ "iceland": {
+  "quietScenic": 6,
+  "gravel": 6,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Ring Road (touring), Westfjords dirt roads (gravel)"
+ },
+ "hudson-valley": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Bear Mountain loop (climb), Shawangunk Ridge (quiet roads), Walkway Over the Hudson and rail trails (path)"
+ },
+ "upper-peninsula": {
+  "quietScenic": 6,
+  "gravel": 6,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "nova-scotia": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Cabot Trail (iconic climb), Lighthouse Route (coast road)"
+ },
+ "ghana": {
+  "quietScenic": 3,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "texas-hill-country": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Willow City Loop (quiet roads), Three Sisters (climb), Fredericksburg wine roads (quiet roads)"
+ },
+ "tasmania": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Bay of Fires coast road (quiet roads), Mount Wellington (iconic climb), Freycinet loops (coast road)"
+ },
+ "galapagos": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "cape-town": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Chapman's Peak (iconic climb), Cape Point loop (coast road), Franschhoek Pass (climb)"
+ },
+ "swissalps": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 15,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Furka, Grimsel and Susten passes (iconic climbs), Gotthard Pass (iconic climb), Albula Pass (iconic climb)"
+ },
+ "vermont": {
+  "quietScenic": 9,
+  "gravel": 8,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Middlebury Gap and Appalachian Gap (climbs), Moosalamoo gravel roads (gravel), Lamoille valley (quiet roads)"
+ },
+ "quebec-city": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Route Verte (path), Île d'Orléans loop (quiet roads), Charlevoix coast road (coast road)"
+ },
+ "uyuni": {
+  "quietScenic": 3,
+  "gravel": 6,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "punta-cana": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "tbilisi-caucasus": {
+  "quietScenic": 6,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Georgian Military Road (mountain road), Kakheti wine roads (quiet roads)"
+ },
+ "bangkok": {
+  "quietScenic": 3,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true
+ },
+ "borneo": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "queenstown": {
+  "quietScenic": 9,
+  "gravel": 8,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Arrow River and Gibbston roads (quiet roads), Crown Range (iconic climb), Otago Central Rail Trail (gravel)"
+ },
+ "jordan": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "joshua-tree": {
+  "quietScenic": 7,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "signatureRides": "Palm Springs tram road (iconic climb), Joshua Tree park road (quiet roads)"
+ },
+ "venice": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "nicaragua": {
+  "quietScenic": 7,
+  "gravel": 7,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "signatureRides": "Ometepe Island (mixed surface)"
+ },
+ "singapore": {
+  "quietScenic": 4,
+  "gravel": 2,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true
+ },
+ "glacier-waterton": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Going-to-the-Sun Road (iconic climb), Chief Mountain Highway (quiet roads), Waterton parkway (quiet roads)"
+ },
+ "redwood": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "signatureRides": "Avenue of the Giants (quiet roads), Howland Hill Road (gravel)"
+ },
+ "santorini": {
+  "quietScenic": 5,
+  "gravel": 2,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true
+ },
+ "tanzania": {
+  "quietScenic": 3,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "death-valley": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 4,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "signatureRides": "Badwater road (quiet roads), Towne Pass and Daylight Pass (climbs)"
+ },
+ "botswana": {
+  "quietScenic": 2,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "algarve": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Foia (iconic climb), Costa Vicentina coast roads (coast road), Monchique loops (climb)"
+ },
+ "rocky-mountain": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Trail Ridge Road (iconic climb), Peak to Peak Highway (mountain road), Boulder Canyon (climb)"
+ },
+ "faroe-islands": {
+  "quietScenic": 7,
+  "gravel": 4,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "snowdonia": {
+  "quietScenic": 8,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Llanberis Pass (iconic climb), Bwlch y Groes (climb), Anglesey coast loops (coast road)"
+ },
+ "north-cascades": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "signatureRides": "Highway 20 North Cascades Highway (iconic climb), Washington Pass (climb)"
+ },
+ "cornwall": {
+  "quietScenic": 8,
+  "gravel": 4,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Camel Trail (path), Penwith moors loops (quiet roads), Coast to Coast trail (path)"
+ },
+ "papua-new-guinea": {
+  "quietScenic": 2,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "peru": {
+  "quietScenic": 5,
+  "gravel": 5,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Sacred Valley loops (quiet roads), Abra Málaga pass (iconic climb), Moray and Maras back roads (mixed surface)"
+ },
+ "uluru": {
+  "quietScenic": 3,
+  "gravel": 5,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "rivieramaya": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false
+ },
+ "argentine-lake-district": {
+  "quietScenic": 9,
+  "gravel": 7,
+  "iconicClimbs": 3,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Circuito Chico (quiet roads), Seven Lakes Road (quiet roads), Cerro Otto (climb)"
+ },
+ "sydney": {
+  "quietScenic": 6,
+  "gravel": 4,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Royal National Park loops (quiet roads), Bobbin Head (climb), Palm Beach coast road (coast road)"
+ },
+ "palawan": {
+  "quietScenic": 3,
+  "gravel": 3,
+  "iconicClimbs": 1,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy",
+   "moderate"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "puglia": {
+  "quietScenic": 9,
+  "gravel": 7,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Itria Valley trulli roads (quiet roads), Salento coast (quiet roads), Gargano coast loop (coast road)"
+ },
+ "jamaica": {
+  "quietScenic": 4,
+  "gravel": 3,
+  "iconicClimbs": 2,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "some",
+  "eBikeRental": false,
+  "signatureRides": "Blue Mountains roads (climb)"
+ },
+ "amsterdam": {
+  "quietScenic": 9,
+  "gravel": 6,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Dutch dyke roads (quiet roads), Waterland loops (quiet roads), Utrecht and Hoge Veluwe (path)"
+ },
+ "barcelona": {
+  "quietScenic": 9,
+  "gravel": 5,
+  "iconicClimbs": 5,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Montserrat (iconic climb), Tibidabo (climb), Costa Brava coast road (coast road), Garraf loops (climb)"
+ },
+ "budapest": {
+  "quietScenic": 6,
+  "gravel": 4,
+  "iconicClimbs": 0,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "easy",
+   "moderate",
+   "strong"
+  ],
+  "roadBikeRental": "plentiful",
+  "eBikeRental": true,
+  "touringSupport": [
+   "luggage"
+  ],
+  "signatureRides": "Danube Bend loop (path and quiet roads), Buda Hills loops (climb)"
+ },
+ "zambia": {
+  "quietScenic": 2,
+  "gravel": 3,
+  "iconicClimbs": 0,
+  "multiDayTouring": false,
+  "rideLevels": [
+   "easy"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false
+ },
+ "rwanda": {
+  "quietScenic": 6,
+  "gravel": 8,
+  "iconicClimbs": 2,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "moderate",
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Congo Nile Trail along Lake Kivu (mixed surface), Tour du Rwanda hill roads (climb)"
+ },
+ "ladakh": {
+  "quietScenic": 8,
+  "gravel": 6,
+  "iconicClimbs": 4,
+  "multiDayTouring": true,
+  "rideLevels": [
+   "strong",
+   "racer"
+  ],
+  "roadBikeRental": "few",
+  "eBikeRental": false,
+  "touringSupport": [
+   "guided"
+  ],
+  "signatureRides": "Khardung La (iconic climb), Manali to Leh highway (high mountain road)"
+ }
+}

@@ -39,6 +39,8 @@ export interface AnswerRule {
 export interface QuestionFitRule {
   /** One entry per answer option, in the order of the question's options. null = this answer asks for nothing. */
   answers: Array<AnswerRule | null>;
+  /** The answer only ever adds a match: a place that does not fully match is left alone, never marked down (Luxury Hotels' dream stay). */
+  bonusOnly?: boolean;
 }
 
 /** What one step over an accepted level costs. */
@@ -152,7 +154,8 @@ export function questionFit(rule: QuestionFitRule, picked: readonly number[], de
   const rules = picked.map((i) => rule.answers[i] ?? null);
   if (rules.some((r) => r === null)) return null;
   const fits = (rules as AnswerRule[]).map((r) => answerRuleFit(r, defs, facts, month)).filter((x): x is number => x !== null);
-  return fits.length ? Math.max(...fits) : null;
+  const best = fits.length ? Math.max(...fits) : null;
+  return rule.bonusOnly && best !== null && best < 1 ? null : best;
 }
 
 // ---- Plain-language description, for the admin and the review page ----

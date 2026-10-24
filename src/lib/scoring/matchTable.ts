@@ -38,10 +38,13 @@ export function buildPlaceFits(chips: MatchChipDef[], questions: MatchQuestionDe
   }
   for (const q of questions) {
     if (!q.approved || !q.fitRule) continue;
+    // A match-only question (Luxury Hotels' dream stay) leaves a place that does not fully match alone: no check, no mark-down.
+    const bonusOnly = !!q.fitRule.bonusOnly;
+    const keep = (f: number | null) => (bonusOnly && f !== null && f < 1 ? null : f);
     out.answers[q.key] = q.fitRule.answers.map((rule) => {
       if (!rule) return ASKS_NOTHING;
-      if (rulesUseMonth(rule)) return Array.from({ length: 12 }, (_, m) => answerRuleFit(rule, defs, facts, m));
-      return answerRuleFit(rule, defs, facts);
+      if (rulesUseMonth(rule)) return Array.from({ length: 12 }, (_, m) => keep(answerRuleFit(rule, defs, facts, m)));
+      return keep(answerRuleFit(rule, defs, facts));
     });
   }
   return out;
