@@ -1,0 +1,2069 @@
+{
+ "bahamas:diving": {
+  "name": "Bahamas",
+  "naSliders": [
+   "skiingSnowboarding",
+   "wineSpirits",
+   "mountainBiking",
+   "safari",
+   "landscapePhotography",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks"
+  ],
+  "overview": "Shark diving is the real specialty — Tiger Beach draws tiger sharks reliably from October through March, and oceanic whitetip sharks gather off Cat Island each spring. Blue holes (deep, flooded sinkholes, mostly in Andros) are the other signature feature, alongside generally calm, clear Caribbean water.",
+  "blurbs": [
+   "Tiger sharks are at Tiger Beach in good numbers, and conditions overall are calm and clear — the best window of the year.",
+   "Tiger sharks are at Tiger Beach in good numbers, and conditions overall are calm and clear — the best window of the year.",
+   "Tiger sharks are at Tiger Beach in good numbers, and conditions overall are calm and clear — the best window of the year.",
+   "Tiger sharks are at Tiger Beach in good numbers, and conditions overall are calm and clear — the best window of the year.",
+   "Still good conditions, and oceanic whitetip sharks begin arriving off Cat Island.",
+   "Oceanic whitetip season continues, though hurricane season is starting and conditions ease.",
+   "Oceanic whitetip season continues, though hurricane season is starting and conditions ease.",
+   "Peak hurricane risk — the least reliable stretch of the year, with real potential for trip disruption.",
+   "Peak hurricane risk — the least reliable stretch of the year, with real potential for trip disruption.",
+   "Peak hurricane risk — the least reliable stretch of the year, with real potential for trip disruption.",
+   "Conditions recover, and tiger sharks return to Tiger Beach for the season.",
+   "Calm, clear conditions return, tiger sharks reliably present."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 5,
+     "value": 9,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 6,
+     "steepness": 2
+    },
+    {
+     "month": 7,
+     "value": 6,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 9,
+     "steepness": 2
+    }
+   ]
+  },
+  "overrides": {
+   "4": 8.5,
+   "5": 6.9,
+   "6": 6.4,
+   "7": 3.4,
+   "8": 2.6,
+   "9": 3.2,
+   "10": 7,
+   "11": 8.6
+  },
+  "authoredCurves": [
+   "diving",
+   "surfing",
+   "shopping",
+   "familyFun",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "allInclusive",
+   "architecture",
+   "luxuryHotels",
+   "beachesSwimming",
+   "cityExploration",
+   "fishing",
+   "sailing",
+   "whaleWatching",
+   "windSports",
+   "wildlifeViewing",
+   "birding",
+   "hiking"
+  ]
+ },
+ "borabora:diving": {
+  "name": "French Polynesia",
+  "naSliders": [
+   "skiingSnowboarding",
+   "museumsArt",
+   "architecture",
+   "festivals",
+   "shopping",
+   "wineSpirits",
+   "mountainBiking",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "The Tuamotu atolls, Rangiroa and Fakarava above all, are drift dives through narrow passes where the tide brings in gray reef sharks, dolphins, eagle rays and, in season, hammerheads, mantas and a spawning gathering of groupers. The passes have strong current and suit experienced divers. Moorea, Tahiti and Bora Bora have calmer lagoon dives and snorkels with lemon sharks, rays and turtles, though some ray and shark tours feed the animals. Water holds 79 to 84°F all year, and the clearest months are May to October.",
+  "blurbs": [
+   "Hammerhead sharks school in the Tiputa Pass at Rangiroa, at their best from January to March, with eagle rays in the same current. The water is at its warmest, about 84°F. It is the wet season, so rain can cloud the Society Islands more than the atolls.",
+   "Hammerheads are still gathering in the Tiputa Pass at Rangiroa, and gray reef sharks and eagle rays work the current alongside them. Water stays near 84°F, and the Tuamotu atolls get less rain than the Society Islands, so visibility holds up better there.",
+   "The last of the hammerhead season at Rangiroa, with gray reef sharks, dolphins and eagle rays still working the Tiputa Pass. Water is a warm 83°F and the atolls are calm and clear, with the rain easing in the Society Islands.",
+   "Rain is tapering off in the Society Islands and visibility there is variable, while the Tuamotu passes at Rangiroa and Fakarava stay good, with gray reef sharks in the current and dolphins in the Tiputa Pass in any month. A quieter month between the hammerheads and the dry-season peak.",
+   "The dry season brings the best visibility of the year to the atoll passes. Fakarava's South Pass holds hundreds of gray reef sharks facing the current, and Rangiroa has dolphins and eagle rays. The lagoons at Moorea and Bora Bora are calm and clear for snorkeling. Water is about 82°F, so a 3 mm wetsuit is enough.",
+   "Camouflage groupers gather to spawn in Fakarava's South Pass around the June full moon, and the gray reef sharks already holding the current feed on them. The current is strong and the dive suits experienced divers. Southeast winds can roughen the sea on the way out.",
+   "The grouper spawning in Fakarava's South Pass can still fill the channel with sharks around the July full moon, and manta rays begin to appear at Rangiroa. Humpback whales are in the waters around Moorea and Tahiti. This is the coolest water of the year, about 79°F, so a thicker wetsuit helps.",
+   "Manta rays visit Rangiroa's Tiputa Pass from late August, and humpback whales with calves are around Moorea, where regulated swims let snorkelers get in the water with them. Visibility is excellent and the seas are mostly calm.",
+   "The peak month for humpback whales around Moorea and Tahiti, with mothers and calves and regulated swims in the water for snorkelers. At Rangiroa, manta rays are in the pass, and Fakarava's passes stay clear and full of gray reef sharks. Water is about 79 to 80°F.",
+   "Humpbacks stay around Moorea through October, and manta rays at Rangiroa are seen through mid-October. The dry season is closing out, with clear water and good visibility in the passes.",
+   "The wet season sets in with more rain and some storm risk, and the whale season is over by early November. The Tuamotu atolls get less rain than the Society Islands, so the passes at Rangiroa and Fakarava are still worth diving, with gray reef sharks and dolphins.",
+   "Hammerhead sharks begin to return to the Tiputa Pass at Rangiroa, and the water warms toward 84°F. It is the wet season, with rain around the Society Islands, but the atoll passes keep good visibility."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 8.7,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 7.5,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 9.1,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 8.6,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 7.6,
+     "steepness": 2
+    }
+   ]
+  },
+  "overrides": {
+   "0": 8.5,
+   "2": 8.2,
+   "4": 8.4,
+   "5": 9,
+   "7": 8.8,
+   "8": 8.9
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Overview edited",
+   "lastEditedAt": "2026-10-22T13:36:21.436Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5"
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "diving",
+   "whaleWatching",
+   "wildlifeViewing",
+   "birding",
+   "hiking",
+   "surfing"
+  ]
+ },
+ "cape-town:diving": {
+  "name": "Cape Town",
+  "naSliders": [
+   "skiingSnowboarding",
+   "safari",
+   "auroraChasing",
+   "horsebackRiding",
+   "indigenousCultures",
+   "traditionalCrafts",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks"
+  ],
+  "overview": "Cape Town's cold Atlantic kelp forests — the same ecosystem made famous by \"My Octopus Teacher\" — are the real specialty here: octopus, pyjama sharks, and dense kelp canopies in clear, cold water. A thick wetsuit or drysuit is essential.",
+  "blurbs": [
+   "Summer — generally the clearest, calmest conditions.",
+   "Summer — generally the clearest, calmest conditions.",
+   "Summer — generally the clearest, calmest conditions.",
+   "Conditions ease as winter approaches.",
+   "Conditions ease as winter approaches.",
+   "Winter — the roughest, least consistent stretch of the year.",
+   "Winter — the roughest, least consistent stretch of the year.",
+   "Winter — the roughest, least consistent stretch of the year.",
+   "Conditions are recovering.",
+   "Conditions are recovering.",
+   "Back to the clearer summer conditions.",
+   "Back to the clearer summer conditions."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 6.8,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 5.7,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 3.4,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 3.4,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 5.7,
+     "steepness": 2
+    },
+    {
+     "month": 12,
+     "value": 6.8,
+     "steepness": 1
+    }
+   ]
+  },
+  "overrides": {
+   "2": 6.2,
+   "3": 5.7,
+   "9": 5.7,
+   "10": 6.2
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "hiking",
+   "whaleWatching",
+   "nationalParks",
+   "sunbathing",
+   "birding",
+   "golf",
+   "roadtrip",
+   "cyclingRoad",
+   "trailRunning",
+   "mountainBiking",
+   "mountaineering",
+   "adventureSports",
+   "geologyVolcanoes",
+   "campingBackcountry",
+   "diving",
+   "surfing",
+   "shopping",
+   "coffeeTea",
+   "familyFun",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "wineSpirits",
+   "architecture",
+   "luxuryHotels",
+   "religiousSites",
+   "beachesSwimming",
+   "cityExploration",
+   "historyArchaeology",
+   "wildlifeViewing",
+   "wildflowerBlooms",
+   "sailing",
+   "windSports"
+  ]
+ },
+ "galapagos:diving": {
+  "name": "Galápagos Islands",
+  "naSliders": [
+   "skiingSnowboarding",
+   "architecture",
+   "festivals",
+   "nightlife",
+   "wineSpirits",
+   "mountainBiking",
+   "safari",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "This is cold, current-swept, advanced diving, not a tropical reef — a wetsuit (often 7mm, sometimes a hood) is essential even at the equator. Darwin and Wolf, the two legendary sites, are liveaboard-only and have the highest concentration of shark biomass recorded anywhere on Earth, with hammerhead schools numbering in the hundreds.",
+  "blurbs": [
+   "Warmer, calmer water — more manta rays and the biggest hammerhead schools, though whale sharks are scarce.",
+   "Warmer, calmer water — more manta rays and the biggest hammerhead schools, though whale sharks are scarce.",
+   "Warmer, calmer water — more manta rays and the biggest hammerhead schools, though whale sharks are scarce.",
+   "Warmer, calmer water — more manta rays and the biggest hammerhead schools, though whale sharks are scarce.",
+   "Transitioning — cooling, with conditions building toward the pelagic season.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Cooler, nutrient-rich water — the best season for whale sharks (often pregnant females) at Darwin and Wolf, though hammerhead schools tend to be smaller and a thicker wetsuit is worth it.",
+   "Transitioning back toward the warmer season."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 6,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 6,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 10,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 10,
+     "steepness": 1
+    }
+   ]
+  },
+  "overrides": {
+   "5": 9.5,
+   "6": 9.7,
+   "10": 9.6
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "nationalParks",
+   "hiking",
+   "birding",
+   "diving",
+   "surfing",
+   "shopping",
+   "familyFun",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "luxuryHotels",
+   "beachesSwimming",
+   "sailing",
+   "wildlifeViewing",
+   "whaleWatching"
+  ]
+ },
+ "iceland:diving": {
+  "name": "Iceland",
+  "naSliders": [
+   "wineSpirits",
+   "safari",
+   "historyArchaeology",
+   "cityExploration",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "allInclusive",
+   "yogaRetreats",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "Silfra fissure — a crack between two tectonic plates filled with glacial meltwater so clear visibility can exceed 330 ft — is Iceland's genuinely unique dive site, cold enough to require a drysuit even in summer.",
+  "blurbs": [
+   "Silfra stays open all winter, with the same 35 to 39°F water. A drysuit is essential and daylight is short, about 4 to 7 hours, so dive times are limited and wind chill can be harsh.",
+   "Silfra stays open all winter, with the same 35 to 39°F water. A drysuit is essential and daylight is short, about 4 to 7 hours, so dive times are limited and wind chill can be harsh.",
+   "Silfra is open in every season, and daylight is longer than in midwinter, so there are more dive times. A drysuit is essential in the 35 to 39°F water.",
+   "Diveable, with a drysuit essential in the 35 to 39°F water and long daylight for dive times.",
+   "Diveable, with a drysuit essential in the 35 to 39°F water and long daylight for dive times.",
+   "The most accessible window of the year, with the longest daylight and the busiest dive times, though the 35 to 39°F water stays glacially cold in every season.",
+   "The most accessible window of the year, with the longest daylight and the busiest dive times, though the 35 to 39°F water stays glacially cold in every season.",
+   "The most accessible window of the year, with the longest daylight and the busiest dive times, though the 35 to 39°F water stays glacially cold in every season.",
+   "Diveable, with a drysuit essential in the 35 to 39°F water and daylight still good for dive times.",
+   "Diveable, with a drysuit essential in the 35 to 39°F water and daylight still good for dive times.",
+   "Silfra stays open as the days shorten, with the same 35 to 39°F water and a drysuit essential.",
+   "Silfra stays open all winter, with the same 35 to 39°F water. A drysuit is essential and daylight is short, about 4 to 7 hours, so dive times are limited and wind chill can be harsh."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 4,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 6.9,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 6.9,
+     "steepness": 2
+    },
+    {
+     "month": 12,
+     "value": 4,
+     "steepness": 1
+    }
+   ]
+  },
+  "overrides": {
+   "1": 4.2,
+   "2": 4.8,
+   "3": 5.6,
+   "4": 5.9,
+   "7": 6.7,
+   "8": 5.8,
+   "9": 5.5,
+   "10": 4.5
+  },
+  "meta": {
+   "origin": "human",
+   "lastChange": "Overview edited",
+   "lastEditedAt": "2026-10-11T20:22:54.529Z",
+   "lastEditedBy": "human",
+   "lastEditorName": "gemini-pipeline@system"
+  },
+  "authoredCurves": [
+   "nationalParks",
+   "campingBackcountry",
+   "adventureSports",
+   "birding",
+   "hiking",
+   "fishing",
+   "cyclingRoad",
+   "trailRunning",
+   "mountainBiking",
+   "mountaineering",
+   "horsebackRiding",
+   "geologyVolcanoes",
+   "scenicLandscapes",
+   "landscapePhotography",
+   "golf",
+   "roadtrip",
+   "diving",
+   "surfing",
+   "shopping",
+   "coffeeTea",
+   "familyFun",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "hotSprings",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "architecture",
+   "luxuryHotels",
+   "auroraChasing",
+   "sunbathing",
+   "wildlifeViewing",
+   "whaleWatching",
+   "wildflowerBlooms",
+   "beachesSwimming"
+  ]
+ },
+ "maldives:diving": {
+  "name": "Maldives",
+  "naSliders": [
+   "skiingSnowboarding",
+   "museumsArt",
+   "architecture",
+   "festivals",
+   "mountainBiking",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "hotSprings",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "Diving here is mostly about channel and atoll diving — thilas (underwater pinnacles) and kandus (channels) where strong currents draw in gray reef sharks, eagle rays, and big schools of fish. Manta ray and whale shark aggregations at sites like Hanifaru Bay are the marquee wildlife draw, on top of house-reef diving right off many resorts.",
+  "blurbs": [
+   "Dry northeast monsoon — the calmest seas, clearest water, and busiest, most expensive season.",
+   "Dry northeast monsoon — the calmest seas, clearest water, and busiest, most expensive season.",
+   "Dry northeast monsoon — the calmest seas, clearest water, and busiest, most expensive season.",
+   "Dry northeast monsoon — the calmest seas, clearest water, and busiest, most expensive season.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The wetter southwest monsoon — windier and less predictable, though diving continues, and it's this season that brings the manta and whale shark aggregations to Hanifaru Bay.",
+   "The dry season returns — calm water and clear visibility again."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 4,
+     "value": 10,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 8,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 9,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 9,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 8,
+     "steepness": 2
+    },
+    {
+     "month": 12,
+     "value": 10,
+     "steepness": 2
+    }
+   ]
+  },
+  "overrides": {
+   "0": 9.5,
+   "11": 9.7
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Overview edited",
+   "lastEditedAt": "2026-10-22T13:36:36.414Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5"
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "birding",
+   "wildlifeViewing",
+   "surfing",
+   "fishing",
+   "diving",
+   "whaleWatching",
+   "hiking"
+  ]
+ },
+ "seychelles:diving": {
+  "name": "Seychelles",
+  "naSliders": [
+   "skiingSnowboarding",
+   "museumsArt",
+   "architecture",
+   "wineSpirits",
+   "mountainBiking",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "Diving here is built around granite boulder dive sites, a formation found almost nowhere else in the tropics, alongside sharks and rays on the outer reefs. Whale sharks pass through between August and November, a real if unpredictable bonus.",
+  "blurbs": [
+   "The rainier, windier stretch of the year — the least consistent conditions.",
+   "The rainier, windier stretch of the year — the least consistent conditions.",
+   "Conditions are improving between the trade winds.",
+   "One of the two calmest windows of the year.",
+   "One of the two calmest windows of the year.",
+   "Good conditions continue, and whale sharks are possible from August.",
+   "Good conditions continue, and whale sharks are possible from August.",
+   "Good conditions continue, and whale sharks are possible from August.",
+   "Good conditions continue, and whale sharks are possible from August.",
+   "The other calm window, and the best chance of whale sharks.",
+   "The other calm window, and the best chance of whale sharks.",
+   "The rainier season returns."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 6.2,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 8,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 8,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 6.2,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "diving",
+   "sunbathing",
+   "birding",
+   "wildlifeViewing",
+   "fishing",
+   "sailing",
+   "whaleWatching",
+   "hiking",
+   "surfing"
+  ]
+ },
+ "bagan:wildlifeViewing": {
+  "name": "Myanmar",
+  "naSliders": [
+   "skiingSnowboarding",
+   "surfing",
+   "wineSpirits",
+   "kayakingRafting",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Irrawaddy dolphins still fish cooperatively with cast-net fishermen between Mingun and Kyaukmyaung, north of Mandalay, the only place they do so; about 65 were counted in 2016. Macaques are common on Mount Popa's trails, and bats roost in Bagan's temples.",
+  "blurbs": [
+   "Low, dry-season water makes Irrawaddy dolphins easier to see on boat trips near Kyaukmyaung, and macaques are common on Mount Popa's trails in cool weather.",
+   "Low, dry-season water makes Irrawaddy dolphins easier to see on boat trips near Kyaukmyaung, and macaques are common on Mount Popa's trails in cool weather.",
+   "Rising heat limits dolphin boat trips near Kyaukmyaung and macaque viewing on Mount Popa to early morning as dry-zone temperatures climb.",
+   "Dry-zone heat above 104°F keeps wildlife viewing to early mornings: dolphin boat trips near Kyaukmyaung and macaques on Mount Popa's cooler slopes.",
+   "Dry-zone heat above 104°F keeps wildlife viewing to early mornings: dolphin boat trips near Kyaukmyaung and macaques on Mount Popa's cooler slopes.",
+   "The swollen monsoon river makes Irrawaddy dolphins harder to see near Kyaukmyaung; macaques stay on Mount Popa's trails and bats roost in Bagan's temples.",
+   "The swollen monsoon river makes Irrawaddy dolphins harder to see near Kyaukmyaung; macaques stay on Mount Popa's trails and bats roost in Bagan's temples.",
+   "The swollen monsoon river makes Irrawaddy dolphins harder to see near Kyaukmyaung; macaques stay on Mount Popa's trails and bats roost in Bagan's temples.",
+   "The swollen monsoon river makes Irrawaddy dolphins harder to see near Kyaukmyaung; macaques stay on Mount Popa's trails and bats roost in Bagan's temples.",
+   "Rains ease and the river starts to fall, improving dolphin sightings near Kyaukmyaung; macaques remain common on Mount Popa's trails.",
+   "Falling river levels after the rains make Irrawaddy dolphin boat trips near Kyaukmyaung easier, and cool mornings suit macaque sightings on Mount Popa's trails.",
+   "Low, dry-season water makes Irrawaddy dolphins easier to see on boat trips near Kyaukmyaung, and macaques are common on Mount Popa's trails in cool weather."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 2,
+     "value": 2.9,
+     "steepness": 2
+    },
+    {
+     "month": 3,
+     "value": 1.9,
+     "steepness": 2
+    },
+    {
+     "month": 4,
+     "value": 1.2,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 1.5,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 1.4,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 2.6,
+     "steepness": 1
+    }
+   ]
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Rewritten for the broader place scope (Oct 2026)",
+   "lastEditedAt": "2026-10-07T04:24:28.536Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5.5"
+  },
+  "authoredCurves": [
+   "landscapePhotography",
+   "architecture",
+   "roadtrip",
+   "adventureSports",
+   "birding",
+   "shopping",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "luxuryHotels",
+   "religiousSites",
+   "cityExploration",
+   "traditionalCrafts",
+   "historyArchaeology",
+   "wildlifeViewing",
+   "whaleWatching",
+   "diving",
+   "hiking",
+   "beachesSwimming"
+  ]
+ },
+ "kaziranga:wildlifeViewing": {
+  "name": "Assam & Northeast India",
+  "naSliders": [
+   "skiingSnowboarding",
+   "beachesSwimming",
+   "surfing",
+   "diving",
+   "sailing",
+   "nightlife",
+   "wineSpirits",
+   "mountainBiking",
+   "kayakingRafting",
+   "whaleWatching",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Greater one-horned rhinos are virtually guaranteed on jeep safaris at Kaziranga, about four hours from Guwahati, which holds about two-thirds of the world's population. Wild elephants and wild water buffalo are also common, while tigers are seen only with luck. Hoollongapar, near Jorhat, is the best place for hoolock gibbons, India's only apes, with good chances on a quiet dawn walk.",
+  "blurbs": [
+   "Burned patches open up Kaziranga's grassland and animals gather on the new shoots and ash, so rhinos, elephants and water buffalo are easy to see; tigers are elusive but sightings improve as cover drops.",
+   "Visibility is excellent where the grass has been burned and grazed low, making jeep safaris at Kaziranga very productive for rhinos, elephants and swamp deer, with better odds at a tiger than earlier in the season, still never certain.",
+   "Dry conditions gather rhinos, elephants and water buffalo around Kaziranga's remaining wetlands, and with the grass burned and grazed low, tiger sightings are likeliest now, though still a matter of luck. Manas burns its grass in March and April too, improving its visibility.",
+   "Last month before Kaziranga closes on 30 April: rhinos and elephants are concentrated at waterholes and tigers are most visible in short grass, but heat and humidity build and regrowth begins to cover sightlines.",
+   "Kaziranga is closed for the monsoon floods, and its rhinos, elephants and tigers retreat to the higher Karbi Anglong hills until the waters fall.",
+   "Kaziranga is closed for the monsoon floods, and its rhinos, elephants and tigers retreat to the higher Karbi Anglong hills until the waters fall.",
+   "Kaziranga is closed for the monsoon floods, and its rhinos, elephants and tigers retreat to the higher Karbi Anglong hills until the waters fall.",
+   "Kaziranga is closed for the monsoon floods, and its rhinos, elephants and tigers retreat to the higher Karbi Anglong hills until the waters fall.",
+   "Kaziranga is closed for the monsoon floods, and its rhinos, elephants and tigers retreat to the higher Karbi Anglong hills until the waters fall.",
+   "Ranges reopen in stages from late September, but tall post-monsoon elephant grass and waterlogged tracks hide most animals; rhinos and elephants are returning to the floodplain, and Pobitora reopens for its dense rhino population.",
+   "Kaziranga is open in stages from October and fully from 1 November. Rhinos and elephants are present, but the post-monsoon elephant grass is at its tallest, hiding tigers and swamp deer until burning begins. Manas is open.",
+   "Controlled burning starts in the dry elephant grass this month, slowly improving sightlines at Kaziranga. Rhinos and water buffalo are reliably seen, elephants are frequently seen moving through the marshes, and tigers stay elusive in the remaining tall cover."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 3,
+     "value": 8.9,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 8.5,
+     "steepness": 2
+    },
+    {
+     "month": 5,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 9,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2.5,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 7.5,
+     "steepness": 2
+    }
+   ]
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Overview edited",
+   "lastEditedAt": "2026-10-19T04:15:56.504Z",
+   "lastEditedBy": "human",
+   "lastEditorName": "brileysp@gmail.com"
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "birding",
+   "shopping",
+   "festivals",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "architecture",
+   "luxuryHotels",
+   "indigenousCultures",
+   "safari",
+   "wildlifeViewing",
+   "hiking"
+  ]
+ },
+ "bagan:birding": {
+  "name": "Myanmar",
+  "naSliders": [
+   "skiingSnowboarding",
+   "surfing",
+   "wineSpirits",
+   "kayakingRafting",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Bagan's dry scrub holds four Myanmar endemics: White-throated Babbler, Burmese Bushlark, Hooded Treepie and the scarcer Jerdon's Minivet, with Mount Popa, about 90 minutes away, adding forest birds. Inle Lake holds over 20,000 migratory waterbirds from October to March, seen from boat tours.",
+  "blurbs": [
+   "Cool, dry mornings suit Bagan's endemics (White-throated Babbler, Burmese Bushlark, Hooded Treepie, scarcer Jerdon's Minivet), and Inle Lake's wintering waterbirds, including Glossy Ibis and Brown-headed Gull, are seen on boat tours.",
+   "Cool, dry mornings suit Bagan's endemics (White-throated Babbler, Burmese Bushlark, Hooded Treepie, scarcer Jerdon's Minivet), and Inle Lake's wintering waterbirds, including Glossy Ibis and Brown-headed Gull, are seen on boat tours.",
+   "Heat builds across the dry zone and wintering waterbirds leave Inle Lake. White-throated Babbler and Hooded Treepie stay resident but are active mainly in the first hours after dawn.",
+   "Dry-zone heat above 104°F confines birding at Bagan and Mount Popa to the first hour after dawn. White-throated Babbler and Hooded Treepie stay resident, but few other birds are active in the heat.",
+   "Dry-zone heat above 104°F confines birding at Bagan and Mount Popa to the first hour after dawn. White-throated Babbler and Hooded Treepie stay resident, but few other birds are active in the heat.",
+   "Monsoon showers cut birding time, though Bagan lies in a rain shadow and stays among the driest parts of Myanmar. Resident White-throated Babbler, Burmese Bushlark and Hooded Treepie remain findable, and Mount Popa's forest holds more species.",
+   "Monsoon showers cut birding time, though Bagan lies in a rain shadow and stays among the driest parts of Myanmar. Resident White-throated Babbler, Burmese Bushlark and Hooded Treepie remain findable, and Mount Popa's forest holds more species.",
+   "Monsoon showers cut birding time, though Bagan lies in a rain shadow and stays among the driest parts of Myanmar. Resident White-throated Babbler, Burmese Bushlark and Hooded Treepie remain findable, and Mount Popa's forest holds more species.",
+   "Monsoon showers cut birding time, though Bagan lies in a rain shadow and stays among the driest parts of Myanmar. Resident White-throated Babbler, Burmese Bushlark and Hooded Treepie remain findable, and Mount Popa's forest holds more species.",
+   "Rains ease and the first migrants return to Inle Lake. Bagan's White-throated Babbler, Burmese Bushlark and Hooded Treepie remain resident and easiest to find at dawn.",
+   "Wintering waterbirds begin arriving at Inle Lake as the dry season sets in, and Bagan's scrub is cool enough for dawn walks. White-throated Babbler, Burmese Bushlark and Hooded Treepie are resident and easiest to find in the first hours of light.",
+   "Cool, dry mornings suit Bagan's endemics (White-throated Babbler, Burmese Bushlark, Hooded Treepie, scarcer Jerdon's Minivet), and Inle Lake's wintering waterbirds, including Glossy Ibis and Brown-headed Gull, are seen on boat tours."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 5.2,
+     "steepness": 2
+    },
+    {
+     "month": 2,
+     "value": 4.9,
+     "steepness": 2
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 4,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 5,
+     "value": 2.1,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 7,
+     "value": 3.2,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 3.1,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 3.6,
+     "steepness": 1
+    },
+    {
+     "month": 11,
+     "value": 4.7,
+     "steepness": 2
+    },
+    {
+     "month": 12,
+     "value": 5.3,
+     "steepness": 2
+    }
+   ]
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Rewritten for the broader place scope (Oct 2026)",
+   "lastEditedAt": "2026-10-07T04:24:28.536Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5.5"
+  },
+  "authoredCurves": [
+   "landscapePhotography",
+   "architecture",
+   "roadtrip",
+   "adventureSports",
+   "birding",
+   "shopping",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "luxuryHotels",
+   "religiousSites",
+   "cityExploration",
+   "traditionalCrafts",
+   "historyArchaeology",
+   "wildlifeViewing",
+   "whaleWatching",
+   "diving",
+   "hiking",
+   "beachesSwimming"
+  ]
+ },
+ "kaziranga:birding": {
+  "name": "Assam & Northeast India",
+  "naSliders": [
+   "skiingSnowboarding",
+   "beachesSwimming",
+   "surfing",
+   "diving",
+   "sailing",
+   "nightlife",
+   "wineSpirits",
+   "mountainBiking",
+   "kayakingRafting",
+   "whaleWatching",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Kaziranga's prized, elusive targets are the Bengal Florican and Swamp Francolin; Great Hornbills are commonly seen, Pallas's Fish-Eagles frequent the wetlands and Bar-headed Geese winter. Manas, four to five hours from Guwahati, also holds the florican and Rufous-necked Hornbill; Nameri, explored on foot, is the best place for the White-winged Duck, a long shot.",
+  "blurbs": [
+   "With the grass burned back, jeep safaris give their best chances at the elusive Bengal Florican and Swamp Francolin, while Bar-headed Geese and Spot-billed Pelicans fill the wetlands. Manas and Nameri are also open.",
+   "Dry conditions make jeep safaris ideal for finding resident Swamp Francolin and Pallas's Fish-Eagle, with wintering Spot-billed Pelicans still abundant on the shrinking wetlands.",
+   "Bengal Florican males display over the burned, open grassland at Kaziranga and Manas, the best window to see one. Wintering waterfowl depart the wetlands, while resident Great Hornbills are commonly seen in the woodland.",
+   "Florican display continues at Kaziranga and Manas in the shortening grass, though rising heat and the departure of wintering waterfowl thin the list. Great Hornbills and Gray-headed Fish-Eagles remain commonly seen.",
+   "Kaziranga and Manas are closed for the monsoon floods, so there is no birding access to the grasslands and wetlands.",
+   "Kaziranga and Manas are closed for the monsoon floods, so there is no birding access to the grasslands and wetlands.",
+   "Kaziranga and Manas are closed for the monsoon floods, so there is no birding access to the grasslands and wetlands.",
+   "Kaziranga and Manas are closed for the monsoon floods, so there is no birding access to the grasslands and wetlands.",
+   "Kaziranga and Manas are closed for the monsoon floods, so there is no birding access to the grasslands and wetlands.",
+   "Ranges reopen in stages from late September as the first migrants return, but tall post-monsoon grass and waterlogged tracks limit access; Manas reopens in early October.",
+   "Kaziranga's official season begins 1 November and the first Bar-headed Geese and waterfowl arrive on the wetlands. Jeep safaris reach Great Hornbills and Pallas's Fish-Eagles, though tall grass still hides the Swamp Francolin and Bengal Florican. Manas and Nameri are open.",
+   "Winter waterfowl, including Bar-headed Geese and Spot-billed Pelicans, peak on the wetlands while burning shortens the grass; jeep safaris give the first good chances at Swamp Francolin and Bengal Florican, both elusive."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 7.6,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 6.5,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 1.2,
+     "steepness": 2
+    },
+    {
+     "month": 7,
+     "value": 0.9,
+     "steepness": 1
+    },
+    {
+     "month": 9,
+     "value": 1.2,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2.5,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 6.8,
+     "steepness": 2
+    }
+   ]
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Rewritten for the broader place scope (Oct 2026)",
+   "lastEditedAt": "2026-10-07T04:24:29.946Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5.5"
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "birding",
+   "shopping",
+   "festivals",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "architecture",
+   "luxuryHotels",
+   "indigenousCultures",
+   "safari",
+   "wildlifeViewing",
+   "hiking"
+  ]
+ },
+ "kaziranga:safari": {
+  "name": "Assam & Northeast India",
+  "naSliders": [
+   "skiingSnowboarding",
+   "beachesSwimming",
+   "surfing",
+   "diving",
+   "sailing",
+   "nightlife",
+   "wineSpirits",
+   "mountainBiking",
+   "kayakingRafting",
+   "whaleWatching",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "**Greater one-horned rhinos** are virtually guaranteed on jeep safaris at Kaziranga, about four hours from Guwahati, with **elephants** and **water buffalo** common and **tigers** never promised. Manas, four to five hours away, adds elephants, reintroduced rhinos and tigers; Pobitora, an hour away, holds over 100 rhinos. Kaziranga's season runs 1 November to 30 April.",
+  "blurbs": [
+   "With the elephant grass burned back (burning runs December to February), sightlines are at their best at Kaziranga. Jeep safaris from Kohora and Bagori find **rhinos**, **elephants** and **water buffalo**; **tigers** are possible, never promised. Manas and Pobitora are also open.",
+   "With the elephant grass burned back (burning runs December to February), sightlines are at their best at Kaziranga. Jeep safaris from Kohora and Bagori find **rhinos**, **elephants** and **water buffalo**; **tigers** are possible, never promised. Manas and Pobitora are also open.",
+   "Burned grass regrows in the heat and trims sightlines, but **rhinos**, **elephants** and **water buffalo** still gather at Kaziranga's remaining waterholes. Manas and Pobitora remain open for jeep safaris.",
+   "Kaziranga's last month before it closes on 30 April: rising heat and humidity and regrown grass reduce sightlines, though **rhinos** and **elephants** are still found around the wetlands. Manas and Pobitora stay open until the monsoon.",
+   "Kaziranga is closed for the monsoon floods, halting all jeep safaris, and Manas and Pobitora are closed or on reduced programs as the rains arrive.",
+   "Kaziranga, Manas and Pobitora are closed for the monsoon floods, halting all jeep safaris.",
+   "Kaziranga, Manas and Pobitora are closed for the monsoon floods, halting all jeep safaris.",
+   "Kaziranga, Manas and Pobitora are closed for the monsoon floods, halting all jeep safaris.",
+   "Kaziranga, Manas and Pobitora are closed for the monsoon floods, halting all jeep safaris.",
+   "Ranges reopen in stages from late September, and Manas follows in early October, but post-monsoon elephant grass is at its tallest and tracks can be waterlogged, hiding **rhinos** and **elephants**. Pobitora reopens this month; the full season, with limited elephant-back rides, begins 1 November.",
+   "The official season begins 1 November, with all Kaziranga ranges and a limited number of **elephant**-back rides running and Manas open. **Rhinos** are regularly seen, but tall elephant grass still hides elephants, **water buffalo** and **tigers** until the burning.",
+   "The elephant grass dries out in the dry season and burning begins, so sightlines at Kaziranga improve through the month. Jeep safaris find **rhinos**, swamp deer and **elephants**, and Manas offers elephants, **water buffalo** and **tigers** in cooler weather."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 8.3,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 7,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 0.2,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 7,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 9,
+     "value": 0.1,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 2.3,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 6.5,
+     "steepness": 2
+    }
+   ]
+  },
+  "meta": {
+   "origin": "claude",
+   "lastChange": "Overview edited",
+   "lastEditedAt": "2026-10-07T23:34:46.606Z",
+   "lastEditedBy": "claude",
+   "lastEditorName": "claude-sonnet-5"
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "birding",
+   "shopping",
+   "festivals",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "architecture",
+   "luxuryHotels",
+   "indigenousCultures",
+   "safari",
+   "wildlifeViewing",
+   "hiking"
+  ]
+ },
+ "morocco:diving": {
+  "name": "Marrakech & Atlas",
+  "naSliders": [
+   "skiingSnowboarding",
+   "safari",
+   "whaleWatching",
+   "auroraChasing",
+   "wildflowerBlooms",
+   "allInclusive",
+   "hotSprings",
+   "themeParks",
+   "familyFun"
+  ],
+  "overview": "The Atlantic coast has real, modest diving — cooler water than the Mediterranean, a clear secondary activity to the souks and mountain trekking.",
+  "blurbs": [
+   "Cooler Atlantic water.",
+   "Cooler Atlantic water.",
+   "The more comfortable stretch of the year.",
+   "The more comfortable stretch of the year.",
+   "The more comfortable stretch of the year.",
+   "Cooler Atlantic water.",
+   "Cooler Atlantic water.",
+   "Cooler Atlantic water.",
+   "The more comfortable stretch of the year.",
+   "The more comfortable stretch of the year.",
+   "The more comfortable stretch of the year.",
+   "Cooler Atlantic water."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 4
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "architecture",
+   "roadtrip",
+   "hiking",
+   "birding",
+   "diving",
+   "surfing",
+   "shopping",
+   "coffeeTea",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "museumsArt",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "wineSpirits",
+   "luxuryHotels",
+   "yogaRetreats",
+   "religiousSites",
+   "beachesSwimming",
+   "cityExploration",
+   "traditionalCrafts",
+   "historyArchaeology",
+   "indigenousCultures",
+   "windSports",
+   "wildlifeViewing"
+  ]
+ },
+ "charleston-savannah:diving": {
+  "name": "Charleston & Savannah",
+  "naSliders": [
+   "skiingSnowboarding",
+   "mountainBiking",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "traditionalCrafts",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Not a diving or snorkeling destination — murky, low-visibility coastal water; this is a history-and-architecture stop, not a coastal activity one.",
+  "blurbs": [
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 2,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "golf",
+   "hiking",
+   "roadtrip",
+   "cyclingRoad",
+   "adventureSports",
+   "scenicLandscapes",
+   "landscapePhotography",
+   "fishing",
+   "whaleWatching",
+   "birding",
+   "wildlifeViewing",
+   "surfing",
+   "beachesSwimming"
+  ]
+ },
+ "tokyo-kyoto:diving": {
+  "name": "Tokyo & Kyoto",
+  "naSliders": [
+   "sailing",
+   "mountainBiking",
+   "kayakingRafting",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "allInclusive",
+   "yogaRetreats",
+   "windSports"
+  ],
+  "overview": "Not a dedicated diving destination in these cities themselves — real diving exists elsewhere in Japan (Okinawa, the Izu Peninsula), well outside this itinerary.",
+  "blurbs": [
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves.",
+   "Not a dedicated diving destination in these cities themselves."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 2,
+     "steepness": 4
+    },
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 3,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 8,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 9,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 3,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "museumsArt",
+   "streetFood",
+   "hiking",
+   "sunbathing",
+   "golf",
+   "roadtrip",
+   "cyclingRoad",
+   "adventureSports",
+   "geologyVolcanoes",
+   "diving",
+   "shopping",
+   "coffeeTea",
+   "familyFun",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "hotSprings",
+   "stargazing",
+   "spaWellness",
+   "wineSpirits",
+   "architecture",
+   "luxuryHotels",
+   "religiousSites",
+   "beachesSwimming",
+   "cityExploration",
+   "traditionalCrafts",
+   "historyArchaeology",
+   "whaleWatching",
+   "wildlifeViewing",
+   "birding",
+   "surfing",
+   "wildflowerBlooms"
+  ]
+ },
+ "everglades:diving": {
+  "name": "Everglades National Park",
+  "naSliders": [
+   "surfing",
+   "museumsArt",
+   "architecture",
+   "festivals",
+   "nightlife",
+   "skiingSnowboarding",
+   "wineSpirits",
+   "shopping",
+   "mountainBiking",
+   "safari",
+   "landscapePhotography",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "historyArchaeology",
+   "cityExploration",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "windSports"
+  ],
+  "overview": "Not a diving destination — murky freshwater and brackish water, low visibility; wildlife-watching by airboat is the park's real water activity.",
+  "blurbs": [
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination — murky water and real hurricane risk.",
+   "Not a diving destination — murky water and real hurricane risk.",
+   "Not a diving destination — murky water and real hurricane risk.",
+   "Not a diving destination — murky water and real hurricane risk.",
+   "Not a diving destination — murky water and real hurricane risk.",
+   "Not a diving destination this time of year — murky, low-visibility water.",
+   "Not a diving destination this time of year — murky, low-visibility water."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 4,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 2,
+     "steepness": 1
+    }
+   ]
+  },
+  "authoredCurves": [
+   "nationalParks",
+   "birding",
+   "fishing",
+   "kayakingRafting",
+   "wildlifeViewing",
+   "whaleWatching",
+   "hiking"
+  ]
+ },
+ "guilin-yangshuo:diving": {
+  "name": "Guilin & Yangshuo",
+  "naSliders": [
+   "surfing",
+   "skiingSnowboarding",
+   "wineSpirits",
+   "safari",
+   "whaleWatching",
+   "campingBackcountry",
+   "auroraChasing",
+   "wildflowerBlooms",
+   "horsebackRiding",
+   "trailRunning",
+   "religiousSites",
+   "traditionalCrafts",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Not a diving or snorkeling destination — inland limestone karst scenery, no coast.",
+  "blurbs": [
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 3,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 4,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 6,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 1,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "geologyVolcanoes",
+   "cyclingRoad",
+   "adventureSports",
+   "hiking",
+   "scenicLandscapes",
+   "golf",
+   "roadtrip",
+   "nationalParks",
+   "mountainBiking",
+   "landscapePhotography",
+   "birding",
+   "wildlifeViewing"
+  ]
+ },
+ "new-orleans:diving": {
+  "name": "New Orleans",
+  "naSliders": [
+   "skiingSnowboarding",
+   "surfing",
+   "mountainBiking",
+   "safari",
+   "landscapePhotography",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "traditionalCrafts",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "windSports",
+   "whaleWatching"
+  ],
+  "overview": "Not a diving or snorkeling destination — no reef and no clear water nearby; this is a food-and-music city, not a coastal one in any relevant sense.",
+  "blurbs": [
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 2,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "streetFood",
+   "birding",
+   "sunbathing",
+   "fishing",
+   "wildlifeViewing",
+   "whaleWatching",
+   "hiking"
+  ]
+ },
+ "hudson-valley:diving": {
+  "name": "Hudson Valley",
+  "naSliders": [
+   "surfing",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "religiousSites",
+   "traditionalCrafts",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports",
+   "whaleWatching"
+  ],
+  "overview": "Not a diving or snorkeling destination — inland, no coast.",
+  "blurbs": [
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month.",
+   "Not a diving or snorkeling destination in any month."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 2,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 3,
+     "value": 1,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 1,
+     "steepness": 1
+    },
+    {
+     "month": 12,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "sunbathing",
+   "golf",
+   "hiking",
+   "roadtrip",
+   "cyclingRoad",
+   "mountainBiking",
+   "adventureSports",
+   "whaleWatching",
+   "wildlifeViewing",
+   "birding",
+   "beachesSwimming",
+   "wildflowerBlooms"
+  ]
+ },
+ "ghana:diving": {
+  "name": "Ghana",
+  "naSliders": [
+   "skiingSnowboarding",
+   "wineSpirits",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "coffeeTea",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Not a dedicated diving destination — Atlantic surf and murky coastal water; wildlife and cultural sites are the real draw here.",
+  "blurbs": [
+   "Dry season, though this still isn't a diving destination — Atlantic surf and murky water.",
+   "Dry season, though this still isn't a diving destination — Atlantic surf and murky water.",
+   "Dry season, though this still isn't a diving destination — Atlantic surf and murky water.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Not a diving destination.",
+   "Dry season returns, though this still isn't a diving destination.",
+   "Dry season returns, though this still isn't a diving destination."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 3,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 5,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 7,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 8,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 9,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 10,
+     "value": 0,
+     "steepness": 2
+    },
+    {
+     "month": 11,
+     "value": 3,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "birding",
+   "hiking",
+   "golf",
+   "roadtrip",
+   "cyclingRoad",
+   "mountainBiking",
+   "adventureSports",
+   "wildlifeViewing",
+   "whaleWatching",
+   "safari",
+   "surfing"
+  ]
+ },
+ "venice:diving": {
+  "name": "Venice",
+  "naSliders": [
+   "skiingSnowboarding",
+   "surfing",
+   "mountainBiking",
+   "safari",
+   "nationalParks",
+   "campingBackcountry",
+   "auroraChasing",
+   "geologyVolcanoes",
+   "wildflowerBlooms",
+   "mountaineering",
+   "horsebackRiding",
+   "trailRunning",
+   "indigenousCultures",
+   "allInclusive",
+   "hotSprings",
+   "yogaRetreats",
+   "themeParks",
+   "familyFun",
+   "windSports"
+  ],
+  "overview": "Not a diving destination — the lagoon is shallow, murky, and has essentially zero visibility; this is a city built on water, not a place to dive in it.",
+  "blurbs": [
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility.",
+   "Not a diving destination in any month — the lagoon has essentially zero visibility."
+  ],
+  "curve": {
+   "anchors": [
+    {
+     "month": 1,
+     "value": 0,
+     "steepness": 1
+    },
+    {
+     "month": 2,
+     "value": 2,
+     "steepness": 2
+    },
+    {
+     "month": 4,
+     "value": 3,
+     "steepness": 1
+    },
+    {
+     "month": 6,
+     "value": 2,
+     "steepness": 1
+    },
+    {
+     "month": 10,
+     "value": 3,
+     "steepness": 4
+    },
+    {
+     "month": 11,
+     "value": 0,
+     "steepness": 2
+    }
+   ]
+  },
+  "authoredCurves": [
+   "scenicLandscapes",
+   "landscapePhotography",
+   "museumsArt",
+   "cityExploration",
+   "historyArchaeology",
+   "diving",
+   "shopping",
+   "coffeeTea",
+   "festivals",
+   "nightlife",
+   "fineDining",
+   "stargazing",
+   "streetFood",
+   "spaWellness",
+   "wineSpirits",
+   "architecture",
+   "luxuryHotels",
+   "religiousSites",
+   "beachesSwimming",
+   "traditionalCrafts",
+   "wildlifeViewing",
+   "birding",
+   "whaleWatching",
+   "hiking"
+  ]
+ }
+}
