@@ -506,3 +506,62 @@ describe('Sunbathing question 1, how hot', () => {
     expect(fit([2], 6)).toBeNull();
   });
 });
+
+describe('Religious & Spiritual Sites questions', () => {
+  const defs = factDefsFor('religiousSites');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`religiousSites.${q}`], picked, defs, facts as never);
+  it('rules, closeness and stays', () => {
+    expect(fit('q1', [1], { siteRules: 'modest' })).toBe(1);
+    expect(fit('q1', [1], { siteRules: 'strict' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [2], { siteRules: 'modest' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [0], { siteRules: 'strict' })).toBeNull();
+    expect(fit('q2', [2], { religiousDensity: 8 })).toBe(1);
+    expect(fit('q3', [2], { templeStays: false })).toBe(0);
+    expect(fit('q3', [1], { templeStays: false })).toBeNull();
+  });
+});
+
+describe('Spa & Wellness questions', () => {
+  const defs = factDefsFor('spaWellness');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`spaWellness.${q}`], picked, defs, facts as never);
+  it('indulgence, bathing customs and length', () => {
+    expect(fit('q1', [0], { daySpas: 7 })).toBe(1);
+    expect(fit('q1', [2], { clinicalWellness: 3 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [0], { bathingCustoms: ['swimwear', 'private'] })).toBe(1);
+    expect(fit('q2', [2], { bathingCustoms: ['swimwear'] })).toBe(0);
+    expect(fit('q2', [1], { bathingCustoms: ['nude'] })).toBeNull();
+    expect(fit('q3', [1], { daySpas: 2, thermalBaths: 9 })).toBe(1);
+    expect(fit('q3', [2], { wellnessResorts: 7 })).toBe(1);
+  });
+});
+
+describe('Stargazing questions', () => {
+  const defs = factDefsFor('stargazing');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`stargazing.${q}`], picked, defs, facts as never);
+  it('darkness reads the Bortle class with soft edges', () => {
+    expect(fit('q1', [2], { bortle: 1 })).toBe(1);
+    expect(fit('q1', [2], { bortle: 3.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [2], { bortle: 5 })).toBe(0);
+    expect(fit('q1', [0], { bortle: 6 })).toBe(1);
+    expect(fit('q1', [1], { bortle: 7 })).toBe(0);
+  });
+  it('cold and high', () => {
+    expect(fit('q2', [0], { nightConditions: 'cool' })).toBe(0);
+    expect(fit('q2', [1], { nightConditions: 'cold' })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { nightConditions: 'cold' })).toBeNull();
+  });
+});
+
+describe('Adventure Sports questions', () => {
+  const defs = factDefsFor('adventureSports');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`adventureSports.${q}`], picked, defs, facts as never);
+  it('standards, effort and private trips', () => {
+    expect(fit('q1', [0], { operatorStandards: 'regulated' })).toBe(1);
+    expect(fit('q1', [1], { operatorStandards: 'basic' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [1], { operatorStandards: 'mixed' })).toBe(1);
+    expect(fit('q1', [2], { operatorStandards: 'basic' })).toBeNull();
+    expect(fit('q2', [0], { effortLevels: ['stamina', 'fit'] })).toBe(0);
+    expect(fit('q2', [1], { effortLevels: ['stamina'] })).toBe(1);
+    expect(fit('q3', [0], { privateTrips: true })).toBe(1);
+  });
+});

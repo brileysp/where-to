@@ -34,6 +34,9 @@ const onMonth = (column: string): AnswerRule => all({ type: 'month', column, on:
 const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
 const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
 const GETTING_AROUND = ['walk', 'transit', 'car'];
+const SITE_RULES = ['open', 'modest', 'strict'];
+const NIGHT = ['warm', 'cool', 'cold'];
+const STANDARDS = ['regulated', 'mixed', 'basic'];
 const GROUND = ['flat', 'climb', 'rough'];
 const ILLNESS_RISK = ['low', 'some', 'high'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
@@ -163,6 +166,25 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'skiingSnowboarding.q2': R(null, atLeast(4, 'apres'), atLeast(7, 'apres')),
   'skiingSnowboarding.q3': R(null, atLeast(5, 'snowboardParks'), null),
 
+  // ---- Religious & Spiritual Sites ---- (25 Oct 2026)
+  'religiousSites.q1': R(null, within('siteRules', SITE_RULES, 'modest'), within('siteRules', SITE_RULES, 'open')),
+  'religiousSites.q2': R(null, atLeast(5, 'religiousDensity'), atLeast(8, 'religiousDensity')),
+  'religiousSites.q3': R(null, null, has('templeStays', 'true')),
+
+  // ---- Spa & Wellness ---- (25 Oct 2026; thermal baths are built bathing culture, natural pools are Hot Springs)
+  'spaWellness.q1': R(atLeast(7, 'daySpas'), atLeast(6, 'thermalBaths'), atLeast(6, 'clinicalWellness')),
+  'spaWellness.q2': R(has('bathingCustoms', 'swimwear'), null, has('bathingCustoms', 'private')),
+  'spaWellness.q3': R(null, atLeast(6, 'daySpas', 'thermalBaths'), atLeast(7, 'wellnessResorts')),
+
+  // ---- Stargazing ---- (25 Oct 2026; question 3, the moon, waits for the moon calculator)
+  'stargazing.q1': R(range('bortle', { fullTo: 6, zeroAbove: 8 }), range('bortle', { fullTo: 4, zeroAbove: 7 }), range('bortle', { fullTo: 2, zeroAbove: 5 })),
+  'stargazing.q2': R(has('nightConditions', 'warm'), within('nightConditions', NIGHT, 'cool'), null),
+
+  // ---- Adventure Sports ---- (25 Oct 2026)
+  'adventureSports.q1': R(has('operatorStandards', 'regulated'), within('operatorStandards', STANDARDS, 'mixed'), null),
+  'adventureSports.q2': R(has('effortLevels', 'easy'), has('effortLevels', 'easy', 'stamina'), null),
+  'adventureSports.q3': R(has('privateTrips', 'true'), null, null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -251,6 +273,17 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'skiingSnowboarding.q2': 'Less apres than you want',
   'skiingSnowboarding.q3': 'Fewer snowboard options',
   'sunbathing.q1': 'Not the heat you want',
+  'religiousSites.q1': 'Stricter rules than you want',
+  'religiousSites.q2': 'Fewer sites close together',
+  'religiousSites.q3': 'No monastery stays',
+  'spaWellness.q1': 'Not the kind of spa you want',
+  'spaWellness.q2': 'Not your kind of bathing',
+  'spaWellness.q3': 'Not enough for that long',
+  'stargazing.q1': 'Brighter sky than you want',
+  'stargazing.q2': 'Colder than you want',
+  'adventureSports.q1': 'Less regulated than you want',
+  'adventureSports.q2': 'Harder than you want',
+  'adventureSports.q3': 'No private trips',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

@@ -1,0 +1,794 @@
+{
+ "ethiopia": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 10,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": false
+ },
+ "luangprabang": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 0,
+  "templesShrines": 8,
+  "siteRules": "modest",
+  "religiousDensity": 7,
+  "templeStays": true
+ },
+ "london": {
+  "mosquesIslamic": 4,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 7,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "guatemala": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 6,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "bhutan": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 0,
+  "templesShrines": 10,
+  "siteRules": "modest",
+  "religiousDensity": 7,
+  "templeStays": true
+ },
+ "athens": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 4,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "istanbul": {
+  "mosquesIslamic": 10,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 7,
+  "templesShrines": 1,
+  "siteRules": "modest",
+  "religiousDensity": 9,
+  "templeStays": false
+ },
+ "dubai": {
+  "mosquesIslamic": 5,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 1,
+  "siteRules": "modest",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "morocco": {
+  "mosquesIslamic": 9,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 0,
+  "templesShrines": 0,
+  "siteRules": "strict",
+  "religiousDensity": 7,
+  "templeStays": false
+ },
+ "havana": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 5,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "ecuadorian-andes": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "andalucia": {
+  "mosquesIslamic": 10,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 9,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 9,
+  "templeStays": true
+ },
+ "big-island": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "chiapas": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 5,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "colombian-caribbean": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "madagascar": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 1,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 1,
+  "templeStays": false
+ },
+ "berlin": {
+  "mosquesIslamic": 3,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 4,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "basque-country": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "fiji": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 1,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 1,
+  "templeStays": false
+ },
+ "rome": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 10,
+  "templesShrines": 1,
+  "siteRules": "modest",
+  "religiousDensity": 10,
+  "templeStays": true
+ },
+ "bordeaux": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "rajasthan-golden-triangle": {
+  "mosquesIslamic": 7,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 0,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": false
+ },
+ "buenosaires": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 4,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "oaxaca": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 6,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "angkor": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 0,
+  "templesShrines": 10,
+  "siteRules": "modest",
+  "religiousDensity": 9,
+  "templeStays": true
+ },
+ "nepal": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 0,
+  "templesShrines": 10,
+  "siteRules": "strict",
+  "religiousDensity": 9,
+  "templeStays": true
+ },
+ "ladakh": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 0,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 6,
+  "templeStays": true
+ },
+ "bali": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 0,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": true
+ },
+ "charleston-savannah": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "srilanka": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 1,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": true
+ },
+ "tokyo-kyoto": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 7,
+  "cathedralsChurches": 0,
+  "templesShrines": 10,
+  "siteRules": "open",
+  "religiousDensity": 10,
+  "templeStays": true
+ },
+ "taiwan": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 0,
+  "templesShrines": 8,
+  "siteRules": "open",
+  "religiousDensity": 6,
+  "templeStays": false
+ },
+ "hongkong": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 0,
+  "templesShrines": 5,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "vietnam": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 1,
+  "templesShrines": 6,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "beijing": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 0,
+  "templesShrines": 8,
+  "siteRules": "open",
+  "religiousDensity": 6,
+  "templeStays": false
+ },
+ "rioja": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 5,
+  "templeStays": true
+ },
+ "nyc": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 6,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "provence": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "sicily": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 8,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 7,
+  "templeStays": true
+ },
+ "chicago": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 3,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "prague": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 8,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 6,
+  "templeStays": false
+ },
+ "amalfi": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 6,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "seoul": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 0,
+  "templesShrines": 6,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": true
+ },
+ "edinburgh": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "budapest": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "rio": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 6,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "kerala": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 3,
+  "templesShrines": 6,
+  "siteRules": "strict",
+  "religiousDensity": 5,
+  "templeStays": true
+ },
+ "chiang-mai": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 0,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 7,
+  "templeStays": true
+ },
+ "kyrgyzstan": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 1,
+  "siteRules": "modest",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "egypt": {
+  "mosquesIslamic": 8,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 5,
+  "templesShrines": 3,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": true
+ },
+ "champagne": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "ireland": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": true
+ },
+ "new-orleans": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 4,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "vienna": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 8,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "croatia": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "nice-riviera": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 5,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": true
+ },
+ "pakistan": {
+  "mosquesIslamic": 8,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 0,
+  "templesShrines": 3,
+  "siteRules": "strict",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "tuscany": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 9,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": true
+ },
+ "san-miguel-guanajuato": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "mexicocity": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 8,
+  "cathedralsChurches": 8,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 7,
+  "templeStays": false
+ },
+ "lisbon": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 7,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "douro-valley-porto": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 6,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "mongolia": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 0,
+  "templesShrines": 5,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": true
+ },
+ "copenhagen": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 3,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "uzbekistan": {
+  "mosquesIslamic": 10,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 0,
+  "templesShrines": 2,
+  "siteRules": "modest",
+  "religiousDensity": 9,
+  "templeStays": false
+ },
+ "bagan": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 0,
+  "templesShrines": 10,
+  "siteRules": "modest",
+  "religiousDensity": 10,
+  "templeStays": true
+ },
+ "paris": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 9,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 6,
+  "templeStays": false
+ },
+ "bavaria-munich": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 4,
+  "cathedralsChurches": 8,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": true
+ },
+ "ghana": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 3,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "cape-town": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 3,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "quebec-city": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 8,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 5,
+  "templeStays": false
+ },
+ "tbilisi-caucasus": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 6,
+  "templeStays": true
+ },
+ "bangkok": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 9,
+  "siteRules": "modest",
+  "religiousDensity": 8,
+  "templeStays": false
+ },
+ "borneo": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 1,
+  "templeStays": false
+ },
+ "jordan": {
+  "mosquesIslamic": 1,
+  "pilgrimageRoutes": 3,
+  "cathedralsChurches": 3,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "venice": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 9,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 7,
+  "templeStays": false
+ },
+ "nicaragua": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 6,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": false
+ },
+ "singapore": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 1,
+  "templesShrines": 6,
+  "siteRules": "open",
+  "religiousDensity": 4,
+  "templeStays": false
+ },
+ "santorini": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 4,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 3,
+  "templeStays": true
+ },
+ "tanzania": {
+  "mosquesIslamic": 2,
+  "pilgrimageRoutes": 1,
+  "cathedralsChurches": 1,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "peru": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 6,
+  "cathedralsChurches": 7,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 6,
+  "templeStays": true
+ },
+ "uluru": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 3,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "rivieramaya": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 0,
+  "templesShrines": 2,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "sydney": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 4,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "palawan": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 2,
+  "templesShrines": 0,
+  "siteRules": "open",
+  "religiousDensity": 1,
+  "templeStays": false
+ },
+ "puglia": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 5,
+  "cathedralsChurches": 6,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 4,
+  "templeStays": true
+ },
+ "amsterdam": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 0,
+  "cathedralsChurches": 4,
+  "templesShrines": 1,
+  "siteRules": "open",
+  "religiousDensity": 2,
+  "templeStays": false
+ },
+ "barcelona": {
+  "mosquesIslamic": 0,
+  "pilgrimageRoutes": 2,
+  "cathedralsChurches": 9,
+  "templesShrines": 0,
+  "siteRules": "modest",
+  "religiousDensity": 5,
+  "templeStays": true
+ }
+}

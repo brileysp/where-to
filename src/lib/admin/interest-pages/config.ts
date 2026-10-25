@@ -641,6 +641,66 @@ const SKIING_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
+/**
+ * Religious & Spiritual Sites (25 Oct 2026). Eight columns for the four approved chips and three approved questions (owner approved the plan on 25 Oct:
+ * Pilgrimage routes as a rating, Site rules as an ordered three-level choice, one "close together" rating for question 2). Ratings are 0 to 10: 10 means a
+ * world-reference concentration of that tradition, 7 or more is a full chip match. Proposal page: claude.ai/artifact/4cJqerciWJnFCxiMmTjLgX.
+ */
+const RELIGIOUS_FACTS: FactDef[] = [
+  rate('mosquesIslamic', 'Mosques and Islamic heritage', 'Strength of mosques and Islamic architecture and heritage worth a trip. 10 = Istanbul, Samarkand, Andalusia, Marrakech. Feeds the Mosques and Islamic heritage chip.'),
+  rate('pilgrimageRoutes', 'Pilgrimage routes', 'How strong the walkable or traditional pilgrimage routes are: the Camino de Santiago, Shikoku, Adam\'s Peak, the Via Francigena. 10 = a route people plan a trip around. Feeds the Pilgrimage routes chip.'),
+  rate('cathedralsChurches', 'Cathedrals and churches', 'Strength of cathedrals, churches and Christian heritage. 10 = Rome, Paris, Ethiopia\'s rock churches. Feeds the Cathedrals and churches chip.'),
+  rate('templesShrines', 'Temples and shrines', 'Strength of Buddhist, Hindu, Shinto and other temples and shrines. 10 = Kyoto, Bagan, Bhutan, Angkor, Nepal. Feeds the Temples and shrines chip.'),
+  { key: 'siteRules', label: 'Site rules', type: 'choice', group: 'practical', options: [{ value: 'open', label: 'Open (few rules)' }, { value: 'modest', label: 'Modest dress and shoes off' }, { value: 'strict', label: 'Strict (some sites closed to non-believers or at prayer times)' }], hint: 'The usual rules at the main sites. Question 1 (a limit) reads it in this order.' },
+  rate('religiousDensity', 'Religious sites close together', 'How many significant religious sites sit within easy reach, so a trip can be built around them. 10 = Rome, Kyoto, Bagan. Question 2 reads it.'),
+  tick('templeStays', 'Monastery and temple stays', 'Tick when a visitor can stay overnight at a monastery or temple (a templestay, hospice or retreat). Question 3 reads it.'),
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Spa & Wellness (25 Oct 2026). Six columns for the three approved chips and three approved questions (owner approved the plan on 25 Oct: thermal baths and
+ * wellness resorts as ratings, bathing customs as a list, thermal baths meaning built bathing culture while Hot Springs holds natural pools).
+ * Proposal page: claude.ai/artifact/4cJqerciWJnFCxiMmTjLgX.
+ */
+const SPA_FACTS: FactDef[] = [
+  rate('daySpas', 'Day spas and massage', 'How strong the day-spa and massage scene is. 10 = Bali, Thailand, Mauritius. Feeds the Day spas and massage chip.'),
+  rate('thermalBaths', 'Thermal baths and hammams', 'How strong the built bathing culture is: thermal bathhouses, hammams, onsen towns, spa towns. 10 = Budapest, Istanbul, Baden-Baden. Hot Springs holds the natural pools; this is the built bathing culture. Feeds the Thermal baths and hammams chip.'),
+  rate('wellnessResorts', 'Wellness resort stays', 'How strong the multi-day wellness resort offer is: retreats, health resorts, wellness hotels. 10 = Kerala, Bali, Sedona, Swiss and Austrian spa hotels. Feeds the Wellness resort stays chip.'),
+  rate('clinicalWellness', 'Clinical and medical wellness', 'How strong physio-based, medical and cure-style wellness is: rehab spas, Ayurvedic cures, spa-town doctors, Dead Sea therapy. 10 = Kerala, Baden-Baden. Question 1 reads it.'),
+  { key: 'bathingCustoms', label: 'Bathing customs', type: 'multi', group: 'practical', options: [{ value: 'swimwear', label: 'Swimwear baths and pools are available' }, { value: 'nude', label: 'Nude or mixed bathing is normal at some main baths (Germany, Nordics, Japan, Korea)' }, { value: 'private', label: 'Private rooms are available' }], hint: 'Pick every one that applies. Question 2 (a limit) reads it: swimwear only needs swimwear baths; private rooms only needs private rooms.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Stargazing (25 Oct 2026). Six columns for the four approved chips and the darkness and cold questions (owner approved the plan on 25 Oct: Bortle class as the
+ * darkness measure, a Night sky photography rating, and a moon calculator for question 3, which is built later and so stays unmapped here).
+ * Proposal page: claude.ai/artifact/4cJqerciWJnFCxiMmTjLgX.
+ */
+const STARGAZING_FACTS: FactDef[] = [
+  tick('darkSkyCertified', 'Certified dark-sky place', 'A site in the place is certified by the International Dark-Sky Association (a Dark Sky Park, Reserve, Community or Sanctuary). The official list is the source. Feeds the Certified dark-sky places chip.'),
+  { key: 'bortle', label: 'Sky darkness (Bortle class)', type: 'int', group: 'style', hint: 'The darkness of the best sky a visitor can reach within about two hours\' drive of the usual base, on the Bortle scale: 1 darkest (Atacama), 2 truly dark, 3 rural, 4 rural-suburban, 5 suburban, 6 bright suburban, 7 suburban-urban, 9 inner city. Published light-pollution maps make this checkable. Question 1 (a limit) reads it.' },
+  rate('clearHighSkies', 'Clear high skies', 'How remote, high and dry the best viewing is: thin air and clear nights. 10 = Atacama, Mauna Kea, the Canaries, Uyuni, Ladakh. Feeds the Remote and high-altitude clear skies chip.'),
+  rate('skyPhotography', 'Night sky photography', 'How good the place is for photographing the night sky: dark sky, foregrounds, easy access and safety at night. Feeds the Night sky photography chip.'),
+  { key: 'skyHemisphere', label: 'Sky hemisphere', type: 'choice', group: 'style', options: [{ value: 'northern', label: 'Northern' }, { value: 'southern', label: 'Southern' }, { value: 'equatorial', label: 'Equatorial (both skies)' }], hint: 'Which half of the sky is overhead. Filled from the latitude: north of 5 degrees north, south of 5 degrees south, equatorial between. The Southern sky chip reads Southern.' },
+  { key: 'nightConditions', label: 'Night conditions at the best sites', type: 'choice', group: 'practical', options: [{ value: 'warm', label: 'Warm (nights above about 60 F)' }, { value: 'cool', label: 'Cool' }, { value: 'cold', label: 'Cold or high (freezing, or above about 8,000 ft)' }], hint: 'The usual night at the best viewing sites in the best season. Question 2 (a limit) reads it in this order.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Adventure Sports (25 Oct 2026). Eight columns for the four approved chips and three approved questions (owner approved the plan on 25 Oct: the four chips as
+ * ratings, operator standards as an ordered choice, effort levels as a list). Proposal page: claude.ai/artifact/4cJqerciWJnFCxiMmTjLgX.
+ */
+const ADVENTURE_FACTS: FactDef[] = [
+  rate('paragliding', 'Paragliding', 'How strong the paragliding is: launch sites, schools, tandem flights. 10 = Interlaken, Pokhara, Chamonix. Feeds the Paragliding chip.'),
+  rate('aerialParks', 'Ziplining and aerial parks', 'How strong the zipline, canopy and aerial-park scene is. 10 = Costa Rica. Feeds the Ziplining and aerial parks chip.'),
+  rate('skydivingBungee', 'Skydiving and bungee', 'How strong skydiving and bungee are: drop zones, famous jumps. 10 = Queenstown, Victoria Falls, Interlaken. Feeds the Skydiving and bungee chip.'),
+  rate('canyoneering', 'Canyoneering', 'How strong canyoneering and canyon descents are. 10 = Zion and Moab, Interlaken, Madeira. Feeds the Canyoneering chip.'),
+  { key: 'operatorStandards', label: 'Operator standards', type: 'choice', group: 'practical', options: [{ value: 'regulated', label: 'Certified and regulated operators are the norm' }, { value: 'mixed', label: 'A mix of regulated and informal operators' }, { value: 'basic', label: 'Mostly basic and informal' }], hint: 'Question 1 (a limit) reads it in this order.' },
+  { key: 'effortLevels', label: 'Effort levels offered', type: 'multi', group: 'style', options: [{ value: 'easy', label: 'Easy (no fitness needed)' }, { value: 'stamina', label: 'Some stamina (a hike in, a steep scramble)' }, { value: 'fit', label: 'Strong and fit (a full day)' }], hint: 'Pick every level a visitor can find. Question 2 (a limit) reads it.' },
+  tick('privateTrips', 'Private trips', 'Operators offer private or own-group trips, not only shared departures. Question 3 reads it.'),
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
 const SHOPPING_FACTS: FactDef[] = [
   rate('marketsBazaars', 'Markets and bazaars', 'How strong the market and bazaar shopping is (souks, flea markets, craft and street markets). 0-1 almost none, 8-10 a main reason to go.'),
   rate('luxuryShopping', 'Luxury and designer', 'How strong the luxury and designer shopping is (flagship stores, luxury districts). 0-1 almost none, 8-10 a global luxury destination.'),
@@ -684,6 +744,10 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   streetFood: STREET_FOOD_FACTS,
   historyArchaeology: HISTORY_FACTS,
   sunbathing: SUNBATHING_FACTS,
+  religiousSites: RELIGIOUS_FACTS,
+  spaWellness: SPA_FACTS,
+  stargazing: STARGAZING_FACTS,
+  adventureSports: ADVENTURE_FACTS,
   architecture: ARCHITECTURE_FACTS,
   cityExploration: CITY_FACTS,
   museumsArt: MUSEUMS_FACTS,
