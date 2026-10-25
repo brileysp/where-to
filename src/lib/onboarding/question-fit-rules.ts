@@ -219,6 +219,12 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'themeParks.q2': R(has('parkHotels', 'onsite'), has('parkHotels', 'onsite', 'nearby'), null),
   'themeParks.q3': R(null, atLeast(4, 'thrillRides'), atLeast(8, 'thrillRides')),
 
+  // ---- All-inclusive Resorts ---- (25 Oct 2026; Pure relaxation and Buffets are fine ask for nothing; resort size has soft edges)
+  'allInclusive.q1': R(null, atLeast(4, 'activities'), atLeast(7, 'activities')),
+  'allInclusive.q2': R(null, atLeast(5, 'diningDepth'), atLeast(8, 'diningDepth')),
+  'allInclusive.q3': R(has('eveningScene', 'quiet'), has('eveningScene', 'shows'), has('eveningScene', 'party')),
+  'allInclusive.q4': R(range('typicalResortSize', { fullTo: 150, zeroAbove: 400 }), range('typicalResortSize', { zeroBelow: 60, fullFrom: 150, fullTo: 500, zeroAbove: 1000 }), range('typicalResortSize', { zeroBelow: 200, fullFrom: 500 })),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -339,6 +345,10 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'themeParks.q1': 'Not enough parks for that long',
   'themeParks.q2': 'No hotel at the parks',
   'themeParks.q3': 'Fewer big rides than you want',
+  'allInclusive.q1': 'Not enough to do',
+  'allInclusive.q2': 'Fewer places to eat than you want',
+  'allInclusive.q3': 'Not the evenings you want',
+  'allInclusive.q4': 'Not the size of resort you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

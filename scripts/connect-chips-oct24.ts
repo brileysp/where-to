@@ -82,6 +82,9 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['themeParks', 'thrill-rides-and-coasters', [{ column: 'thrillRides' }]],
   ['themeParks', 'water-parks', [{ column: 'waterParks' }]],
   ['themeParks', 'zoos-and-aquariums', [{ column: 'zoosAquariums' }]],
+  ['allInclusive', 'adults-only', [{ column: 'adultsOnly' }]],
+  ['allInclusive', 'family-resorts', [{ column: 'familyResorts' }]],
+  ['allInclusive', 'luxury-all-inclusive', [{ column: 'luxuryAllInclusive' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');

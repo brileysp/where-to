@@ -765,6 +765,23 @@ const THEME_PARKS_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
 ];
 
+/**
+ * All-inclusive Resorts (25 Oct 2026), built to the owner's definition (docs/all-inclusive-definition.md): one rate covers the room, meals, drinks and on-site activities, and the
+ * property itself fills the days. Safari lodges, wilderness camps and cruises are out. There is no published dataset for this, so the three chip ratings come from an approximate
+ * count of bookable properties of each kind (from memory, not looked up, listed in docs/evidence/all-inclusive-inputs.json); the other columns describe the typical 4-5 star resort.
+ */
+const ALL_INCLUSIVE_FACTS: FactDef[] = [
+  rate('adultsOnly', 'Adults-only', 'From the approximate number of adults-only all-inclusive properties a traveler can book: none 0, one 2, two or three 3, four to six 4, seven to ten 6, eleven to twenty 8, more than twenty 10. Anchors: 10 Riviera Maya, 8 Jamaica and Punta Cana, 4 Bahamas, 0 Okinawa.'),
+  rate('familyResorts', 'Family resorts', 'Same count and tiers, for family all-inclusives with kids\' clubs. Anchors: 10 Riviera Maya, Punta Cana, the Canaries and Egypt, 8 Jamaica and Mauritius, 3 Turks and Caicos.'),
+  rate('luxuryAllInclusive', 'Luxury all-inclusive', 'Same count and tiers, for premium (5-star or luxury-brand) all-inclusive properties. Anchors: 10 Maldives, 8 Riviera Maya, Punta Cana and Mauritius, 6 Jamaica, 3 Turks and Caicos.'),
+  rate('activities', 'Activities and excursions', 'What a typical 4-5 star all-inclusive includes. 1-2 only a pool; 4 a pool, a gym and a daily activity; 6 non-motorized water sports and a few classes; 8 water sports, diving or golf nearby, and included excursions; 9-10 a week of sport and excursions with little repeated (Mauritius). Question 1 reads it.'),
+  rate('diningDepth', 'Dining depth', 'What a typical 4-5 star all-inclusive serves. 1-3 buffet only; 5 a buffet and two or three à la carte restaurants; 7 five or more restaurants including a specialty; 8-10 a gourmet à la carte kitchen with no extra charge. Question 2 reads it.'),
+  { key: 'eveningScene', label: 'Evening scene', type: 'choice', group: 'style', options: [{ value: 'quiet', label: 'Quiet' }, { value: 'shows', label: 'Shows and a bar' }, { value: 'party', label: 'Late-night party' }], hint: 'The typical evening at a 4-5 star all-inclusive. Question 3 reads it.' },
+  { key: 'typicalResortSize', label: 'Typical resort size (rooms)', type: 'int', group: 'style', hint: 'Rooms at a typical all-inclusive resort in the place: Maldives 100, Fiji 150, Jamaica 300, Riviera Maya 500, Punta Cana 600. Question 4 reads it with soft edges.' },
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the count, the tier it gives, and examples. Counts are from memory and need checking.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the counts have been checked against the resorts\' own sites. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -800,6 +817,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   nightlife: NIGHTLIFE_FACTS,
   traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,
   themeParks: THEME_PARKS_FACTS,
+  allInclusive: ALL_INCLUSIVE_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {
