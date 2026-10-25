@@ -1,6 +1,6 @@
 import { eq, isNotNull } from 'drizzle-orm';
 import { db } from '../client';
-import { interestChips, interestQuestionChips, interestQuestions, placeInterestFacts } from '../schema';
+import { interestChips, interestQuestionChips, interestQuestions, placeInterestFacts, places } from '../schema';
 import { factDefsFor } from '@/lib/admin/interest-pages/config';
 import { buildPlaceFits, type PlaceMatchFits } from '@/lib/scoring/matchTable';
 import type { MatchChipDef, MatchQuestionDef } from '@/lib/scoring/interestMatch';
@@ -62,6 +62,9 @@ export async function getMatchFits(interestKeys: string[]): Promise<MatchFits> {
   if (missing.length) {
     const { chipRows, questionRows, linkRows } = await loadRows();
     const factRows = await db.select().from(placeInterestFacts);
+    const MONTH_KEYS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const toKeys = (xs: number[]) => xs.filter((m) => m >= 1 && m <= 12).map((m) => MONTH_KEYS[m - 1]);
+    const placeMonths = wanted.includes('sunbathing') ? new Map((await db.select({ id: places.id, dry: places.dryMonths, wet: places.wetMonths }).from(places)).map((p) => [p.id, { dryMonths: toKeys(p.dry), wetMonths: toKeys(p.wet) }])) : new Map<string, { dryMonths: string[]; wetMonths: string[] }>();
     for (const key of missing) {
       const defs = factDefsFor(key);
       const chips: MatchChipDef[] = chipRows.filter((c) => c.interestKey === key).map((c) => ({ key: c.chipKey, label: c.label, live: true, drivers: c.drivers }));
@@ -69,7 +72,12 @@ export async function getMatchFits(interestKeys: string[]): Promise<MatchFits> {
         .filter((q) => q.interestKey === key)
         .map((q) => ({ key: q.questionKey, kind: q.kind, whenChips: linkRows.filter((l) => l.interestKey === key && l.questionKey === q.questionKey).map((l) => l.chipKey), fitRule: q.fitRule ?? null, missMessage: q.missMessage, approved: !!q.approvedAt }));
       const perPlace: Record<string, PlaceMatchFits> = {};
-      for (const f of factRows) if (f.interestKey === key) perPlace[f.placeId] = buildPlaceFits(chips, questions, f.facts, defs);
+      for (const f of factRows) {
+        if (f.interestKey !== key) continue;
+        // Dry and wet months come from the place itself (Sunbathing's sun-certainty question), as month keys like the multi columns use.
+        const monthLists = key === 'sunbathing' ? placeMonths.get(f.placeId) : undefined;
+        perPlace[f.placeId] = buildPlaceFits(chips, questions, monthLists ? { ...f.facts, ...monthLists } : f.facts, defs);
+      }
       cache.value.set(key, perPlace);
     }
   }

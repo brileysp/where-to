@@ -376,3 +376,48 @@ describe('Road Cycling questions', () => {
     expect(fit('q4', [2], { touringSupport: ['guided'] })).toBe(0);
   });
 });
+
+describe('History & Archaeology questions', () => {
+  const defs = factDefsFor('historyArchaeology');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`historyArchaeology.${q}`], picked, defs, facts as never);
+  it('how much is explained', () => {
+    expect(fit('q1', [0], { interpretation: ['audio'] })).toBeNull();
+    expect(fit('q1', [1], { interpretation: ['audio', 'local'] })).toBe(1);
+    expect(fit('q1', [3], { interpretation: ['audio', 'local'] })).toBe(0);
+  });
+  it('sites in place read the best of the four site ratings, museums read their own', () => {
+    expect(fit('q2', [0], { ancientRuins: 2, warHistory: 9, prehistoricSites: 1, castles: 3 })).toBe(1);
+    expect(fit('q2', [0], { ancientRuins: 2, warHistory: 3, prehistoricSites: 1, castles: 3.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [1], { archaeologyMuseums: 10 })).toBe(1);
+    expect(fit('q2', [2], { archaeologyMuseums: 1 })).toBeNull();
+  });
+  it('ground and history in a day', () => {
+    expect(fit('q3', [0], { roughestGround: 'climb' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [1], { roughestGround: 'climb' })).toBe(1);
+    expect(fit('q3', [2], { roughestGround: 'rough' })).toBeNull();
+    expect(fit('q4', [2], { historyDensity: 8 })).toBe(1);
+    expect(fit('q4', [0], { historyDensity: 1 })).toBeNull();
+  });
+});
+
+describe('Sunbathing questions', () => {
+  const defs = factDefsFor('sunbathing');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>, month?: number) => questionFit(QUESTION_FIT_RULES[`sunbathing.${q}`], picked, defs, facts as never, month);
+  it('sun certainty reads the place\'s dry and wet months for the month chosen', () => {
+    const f = { dryMonths: ['jun', 'jul'], wetMonths: ['dec'] };
+    expect(fit('q2', [0], f, 5)).toBe(1);
+    expect(fit('q2', [0], f, 0)).toBe(0);
+    expect(fit('q2', [1], f, 11)).toBe(0);
+    expect(fit('q2', [1], f, 5)).toBe(1);
+    expect(fit('q2', [0], f, undefined)).toBeNull();
+    expect(fit('q2', [2], f, 11)).toBeNull();
+  });
+  it('wind and service', () => {
+    expect(fit('q3', [0], { calmShores: 7 })).toBe(1);
+    expect(fit('q3', [1], { calmShores: 2 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { calmShores: 0 })).toBeNull();
+    expect(fit('q4', [1], { serviceLevel: 'table' })).toBe(1);
+    expect(fit('q4', [2], { serviceLevel: 'snack' })).toBe(0);
+    expect(fit('q4', [0], { serviceLevel: 'self' })).toBeNull();
+  });
+});

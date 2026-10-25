@@ -17,6 +17,13 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['cyclingRoad', 'gravel-and-dirt-roads', [{ column: 'gravel' }]],
   ['cyclingRoad', 'big-mountain-climbs', [{ column: 'iconicClimbs', fullAt: 5 }]],
   ['cyclingRoad', 'multi-day-touring', [{ column: 'multiDayTouring' }]],
+  ['historyArchaeology', 'ancient-ruins', [{ column: 'ancientRuins' }]],
+  ['historyArchaeology', 'war-and-battlefield-history', [{ column: 'warHistory' }]],
+  ['historyArchaeology', 'prehistoric-sites', [{ column: 'prehistoricSites' }]],
+  ['historyArchaeology', 'castles', [{ column: 'castles' }]],
+  ['sunbathing', 'beach-clubs-and-loungers', [{ column: 'beachClubs' }]],
+  ['sunbathing', 'quiet-shores', [{ column: 'quietShores' }]],
+  ['sunbathing', 'resort-pool-days', [{ column: 'resortPoolDays' }]],
   ['birding', 'seabirds', [{ column: 'habitats', option: 'ocean' }]],
 ];
 (async () => {

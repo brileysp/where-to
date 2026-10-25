@@ -32,6 +32,7 @@ const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
 const onMonth = (column: string): AnswerRule => all({ type: 'month', column, on: true });
 const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
 const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
+const GROUND = ['flat', 'climb', 'rough'];
 const ILLNESS_RISK = ['low', 'some', 'high'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
@@ -127,6 +128,17 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'cyclingRoad.q3': R(atLeast(7, 'quietScenic'), atLeast(4, 'quietScenic'), null),
   'cyclingRoad.q4': R(has('touringSupport', 'guided'), has('touringSupport', 'luggage'), has('touringSupport', 'selfSupported')),
 
+  // ---- History & Archaeology ---- (25 Oct 2026; plan approved 25 Oct: sites in place read the best of the four site ratings)
+  'historyArchaeology.q1': R(null, has('interpretation', 'audio'), has('interpretation', 'local'), has('interpretation', 'expert')),
+  'historyArchaeology.q2': R(atLeast(7, 'ancientRuins', 'warHistory', 'prehistoricSites', 'castles'), atLeast(7, 'archaeologyMuseums'), null),
+  'historyArchaeology.q3': R(within('roughestGround', GROUND, 'flat'), within('roughestGround', GROUND, 'climb'), null),
+  'historyArchaeology.q4': R(null, atLeast(5, 'historyDensity'), atLeast(8, 'historyDensity')),
+
+  // ---- Sunbathing ---- (25 Oct 2026; question 1, how hot, waits on a source for properly hot months)
+  'sunbathing.q2': R(onMonth('dryMonths'), all({ type: 'month', column: 'wetMonths', on: false }), null),
+  'sunbathing.q3': R(atLeast(7, 'calmShores'), atLeast(4, 'calmShores'), null),
+  'sunbathing.q4': R(null, has('serviceLevel', 'snack', 'table'), has('serviceLevel', 'table')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -194,6 +206,13 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'cyclingRoad.q2': 'Hard to rent the bike you want',
   'cyclingRoad.q3': 'Busier roads than you want',
   'cyclingRoad.q4': 'Not the support you want',
+  'historyArchaeology.q1': 'Not explained the way you want',
+  'historyArchaeology.q2': 'Not the kind of history you want',
+  'historyArchaeology.q3': 'Rougher ground than you want',
+  'historyArchaeology.q4': 'Fewer sites close together',
+  'sunbathing.q2': 'Wetter than you want',
+  'sunbathing.q3': 'Windier than you want',
+  'sunbathing.q4': 'Less service than you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

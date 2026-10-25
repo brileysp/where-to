@@ -538,6 +538,41 @@ const CYCLING_ROAD_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
+/**
+ * History & Archaeology (25 Oct 2026). Nine columns for the four approved chips and four approved questions (owner approved the whole plan on 25 Oct:
+ * Prehistoric sites and Castles as ratings, "sites in place" reading the best of the four site ratings, and "How it is explained" as a list of three ways).
+ * Ratings are 0 to 10: 10 means among the best in the world and 7 or more is a full chip match. Proposal page: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n.
+ */
+const HISTORY_FACTS: FactDef[] = [
+  rate('ancientRuins', 'Ancient ruins', 'Strength of ancient sites worth a trip: temples, forums, tombs, ancient cities. 10 = Rome, Athens, Egypt, Petra, Angkor. Feeds the Ancient ruins chip and the "sites in place" answer.'),
+  rate('warHistory', 'War and battlefield history', 'Battlefields, memorials, fortifications and war museums. 10 = a place people visit mainly for it (Normandy, Verdun, Berlin). Feeds the War and battlefield history chip and the "sites in place" answer.'),
+  rate('prehistoricSites', 'Prehistoric sites', 'Cave art, megaliths, early settlements: Stonehenge, the caves of the Dordogne, Orkney. 10 = a world-class concentration. Feeds the Prehistoric sites chip and the "sites in place" answer.'),
+  rate('castles', 'Castles and fortresses', 'Castles, citadels and fortified towns that are a visit in themselves. 10 = the Loire, Wales, the Rhine, Scotland, Rajasthan. Feeds the Castles chip and the "sites in place" answer.'),
+  rate('archaeologyMuseums', 'Archaeology museums', 'Museums of ancient objects that justify a visit: Athens, Cairo, Istanbul, Mexico City. 10 = among the best in the world. Question 2 reads it ("museums with the objects").'),
+  { key: 'interpretation', label: 'How it is explained', type: 'multi', group: 'practical', options: [{ value: 'audio', label: 'Signs and audio guides' }, { value: 'local', label: 'Local guides' }, { value: 'expert', label: 'Expert-led tours (archaeologist or historian)' }], hint: 'The ways a visitor can have the sites explained: pick every one that is readily available at the main sites. Question 1 reads it.' },
+  { key: 'roughestGround', label: 'Roughest ground at the main sites', type: 'choice', group: 'practical', options: [{ value: 'flat', label: 'Flat and paved' }, { value: 'climb', label: 'Some climbing' }, { value: 'rough', label: 'Rough ground and steps' }], hint: 'The roughest walking a visitor meets at the main sites, not the easiest. Question 3 (a limit) reads it.' },
+  rate('historyDensity', 'History density', 'How many significant sites sit close together, so a day can hold several. 10 = Rome, Athens, Istanbul. Question 4 reads it.'),
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Sunbathing (25 Oct 2026). Five columns for the three approved chips and the wind, sun-certainty and food questions (owner approved the plan on 25 Oct, with
+ * Resort pool days as a 0 to 10 rating instead of a tick). A first draft started from the Beaches ratings: resort beaches, remote beaches and calm water.
+ * "How hot do you like to lie out" is not mapped yet: the places' hot-months list only marks uncomfortably hot months, so it cannot say "properly hot".
+ * Dry and wet months come from the lists every place already has (added to the facts when the match tables are built), so they are hidden columns here.
+ * Proposal page: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n.
+ */
+const SUNBATHING_FACTS: FactDef[] = [
+  tick('beachClubs', 'Beach clubs and loungers', 'Tick when beach clubs or hired loungers and umbrellas are easy to find at the main beaches. Feeds the Beach clubs and loungers chip.'),
+  rate('quietShores', 'Quiet shores', 'How easy it is to find an uncrowded stretch of sand to lie on, even in season. 10 = empty beaches a short walk away; 0-1 no shore at all. Feeds the Quiet shores chip.'),
+  rate('resortPoolDays', 'Resort pool days', 'How strong the resort pool day is: big pools, loungers and service, a real way to spend a sun day without the beach (Dubai, Palm Springs, Mauritius). 0-1 almost none, 8-10 a resort-pool destination. Feeds the Resort pool days chip.'),
+  { key: 'serviceLevel', label: 'Service at the lounger', type: 'choice', group: 'practical', options: [{ value: 'self', label: 'Bring your own' }, { value: 'snack', label: 'A snack bar nearby' }, { value: 'table', label: 'Table service at the lounger' }], hint: 'The usual level of food and drink service at the main sun spots. Question 4 reads it.' },
+  rate('calmShores', 'Calm, low-wind shores', 'How rarely wind spoils lying out at the best beaches. 10 = sheltered beaches that are calm almost every day; 0-1 no shore or always windy. Question 3 (a limit) reads it.'),
+  { key: 'dryMonths', label: 'Dry months (from the place)', type: 'multi', group: 'style', options: MONTH_OPTIONS, hidden: true, optional: true, hint: 'Filled from the place\'s own dry months list when the match tables are built; never typed here.' },
+  { key: 'wetMonths', label: 'Wet months (from the place)', type: 'multi', group: 'style', options: MONTH_OPTIONS, hidden: true, optional: true, hint: 'Filled from the place\'s own wet months list when the match tables are built; never typed here.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
 const SHOPPING_FACTS: FactDef[] = [
   rate('marketsBazaars', 'Markets and bazaars', 'How strong the market and bazaar shopping is (souks, flea markets, craft and street markets). 0-1 almost none, 8-10 a main reason to go.'),
   rate('luxuryShopping', 'Luxury and designer', 'How strong the luxury and designer shopping is (flagship stores, luxury districts). 0-1 almost none, 8-10 a global luxury destination.'),
@@ -579,6 +614,8 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   fineDining: FINE_DINING_FACTS,
   coffeeTea: COFFEE_TEA_FACTS,
   streetFood: STREET_FOOD_FACTS,
+  historyArchaeology: HISTORY_FACTS,
+  sunbathing: SUNBATHING_FACTS,
   luxuryHotels: LUXURY_HOTELS_FACTS,
   cyclingRoad: CYCLING_ROAD_FACTS,
   shopping: SHOPPING_FACTS,
