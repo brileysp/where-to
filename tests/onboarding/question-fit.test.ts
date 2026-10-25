@@ -565,3 +565,74 @@ describe('Adventure Sports questions', () => {
     expect(fit('q3', [0], { privateTrips: true })).toBe(1);
   });
 });
+
+describe('The seven interests finished on 25 Oct 2026', () => {
+  type Facts = Record<string, string | string[] | number | boolean>;
+  const make = (interest: string) => {
+    const defs = factDefsFor(interest);
+    return (q: string, picked: number[], facts: Facts) => questionFit(QUESTION_FIT_RULES[`${interest}.${q}`], picked, defs, facts as never);
+  };
+  it('Fine Dining: booking ahead and price', () => {
+    const fit = make('fineDining');
+    expect(fit('q2', [0], { bookingAhead: 'months' })).toBe(0);
+    expect(fit('q2', [1], { bookingAhead: 'months' })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { bookingAhead: 'months' })).toBeNull();
+    expect(fit('q3', [0], { tastingMenuPrice: 90 })).toBe(1);
+    expect(fit('q3', [0], { tastingMenuPrice: 330 })).toBe(0);
+    expect(fit('q3', [1], { tastingMenuPrice: 200 })).toBe(1);
+    expect(fit('q3', [0], {})).toBeNull();
+    expect(fit('q1', [2], { tastingMenus: 4 })).toBeCloseTo(0.5, 5);
+  });
+  it('Coffee & Tea: tasting, café style and ceremony', () => {
+    const fit = make('coffeeTea');
+    expect(fit('q1', [2], { coffeeFarms: false, teaPlantations: false })).toBe(0);
+    expect(fit('q1', [2], { coffeeFarms: true })).toBe(1);
+    expect(fit('q2', [0], { cafeStyles: ['quick'] })).toBe(0);
+    expect(fit('q2', [1], { cafeStyles: ['quick'] })).toBe(1);
+    expect(fit('q3', [0], { teaCeremonies: 9, ceremonyStyles: ['formal'] })).toBe(1);
+    expect(fit('q3', [0], { teaCeremonies: 1 })).toBeCloseTo(1 / 3, 5);
+  });
+  it('Nightlife: how late, dress and noise', () => {
+    const fit = make('nightlife');
+    expect(fit('q1', [2], { lateNights: 'early' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [3], { lateNights: 'early' })).toBe(0);
+    expect(fit('q1', [3], { lateNights: 'allNight' })).toBe(1);
+    expect(fit('q2', [0], { dressCode: 'strict' })).toBe(0);
+    expect(fit('q2', [1], { dressCode: 'strict' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [0], { quietBars: 9 })).toBe(1);
+    expect(fit('q3', [2], { clubs: 7 })).toBe(1);
+  });
+  it('Shopping: haggling, crowds and goods', () => {
+    const fit = make('shopping');
+    expect(fit('q1', [2], { haggling: 'expected' })).toBe(0);
+    expect(fit('q1', [2], { haggling: 'some' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [0], { haggling: 'expected' })).toBeNull();
+    expect(fit('q2', [2], { crowdedBazaars: 10 })).toBe(0);
+    expect(fit('q2', [2], { crowdedBazaars: 2 })).toBe(1);
+    expect(fit('q2', [0], { crowdedBazaars: 6 })).toBe(1);
+    expect(fit('q3', [2], { luxuryShopping: 2, outletsBargains: true })).toBe(1);
+  });
+  it('Traditional Crafts: courses, settings and serious pieces', () => {
+    const fit = make('traditionalCrafts');
+    expect(fit('q1', [1], { craftWorkshops: true, courseLengths: ['short'] })).toBe(1);
+    expect(fit('q1', [2], { craftWorkshops: true, courseLengths: ['short'] })).toBe(0);
+    expect(fit('q1', [1], { craftWorkshops: false })).toBe(0);
+    expect(fit('q2', [3], { craftSettings: ['markets'] })).toBe(0);
+    expect(fit('q2', [2], { craftSettings: ['markets'] })).toBe(1);
+    expect(fit('q3', [2], { seriousPieces: 3 })).toBeCloseTo(0.5, 5);
+  });
+  it('Festivals: size and booking', () => {
+    const fit = make('festivals');
+    expect(fit('q1', [2], { festivalScales: ['small', 'mid'] })).toBe(0);
+    expect(fit('q1', [0], { festivalScales: ['small'] })).toBe(1);
+    expect(fit('q2', [0], { ticketAvailability: 'months' })).toBe(0);
+    expect(fit('q2', [2], { ticketAvailability: 'months' })).toBeNull();
+  });
+  it('Scenic Landscapes: camera gear rules', () => {
+    const fit = make('scenicLandscapes');
+    expect(fit('q4', [0], { gearRules: 'many' })).toBeNull();
+    expect(fit('q4', [2], { gearRules: 'many' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [3], { gearRules: 'some' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [3], { gearRules: 'many' })).toBe(0);
+  });
+});

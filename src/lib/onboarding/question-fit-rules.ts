@@ -17,6 +17,10 @@ const within = (column: string, order: string[], allowed: string): AnswerRule =>
 const has = (column: string, ...options: string[]): AnswerRule => all({ type: 'has', column, options });
 const atLeast = (value: number, ...columns: string[]): AnswerRule => all({ type: 'atLeast', columns, value });
 const animal = (column: string, ...names: string[]): AnswerRule => all({ type: 'named', column, names });
+const atMost = (value: number, column: string): AnswerRule => all({ type: 'atMost', column, value });
+/** The same checks as a bare FitCheck, for rules that combine them with all() or any(). */
+const kHas = (column: string, ...options: string[]): FitCheck => ({ type: 'has', column, options });
+const kAtLeast = (value: number, ...columns: string[]): FitCheck => ({ type: 'atLeast', columns, value });
 
 const ALTITUDE = ['low', 'moderate', 'high', 'veryHigh'];
 const BOOKING = ['none', 'weeks', 'months'];
@@ -39,6 +43,10 @@ const NIGHT = ['warm', 'cool', 'cold'];
 const STANDARDS = ['regulated', 'mixed', 'basic'];
 const GROUND = ['flat', 'climb', 'rough'];
 const ILLNESS_RISK = ['low', 'some', 'high'];
+const LATE_NIGHTS = ['allNight', 'late', 'early'];
+const DRESS_CODE = ['casual', 'smart', 'strict'];
+const HAGGLING = ['fixed', 'some', 'expected'];
+const GEAR_RULES_ORDER = ['none', 'some', 'many'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
 export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
@@ -115,6 +123,8 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'scenicLandscapes.q1': R(has('viewAccess', 'roadside'), has('viewAccess', 'short'), has('viewAccess', 'halfDay', 'longHike', 'backcountry'), has('viewAccess', 'airBoat')),
   'scenicLandscapes.q2': R(atLeast(7, 'iconicRating'), atLeast(6, 'hiddenGemsRating'), null),
   'scenicLandscapes.q3': R(has('viewAccess', 'roadside', 'short'), has('viewAccess', 'halfDay'), has('viewAccess', 'longHike'), has('viewAccess', 'backcountry')),
+  // 25 Oct 2026: gear. A phone and one lens meet no rules anywhere; a tripod kit is held back where tripods or drones are restricted, and several cameras where drones are restricted at all.
+  'scenicLandscapes.q4': R(null, null, within('gearRules', GEAR_RULES_ORDER, 'some'), within('gearRules', GEAR_RULES_ORDER, 'none')),
 
   // ---- Street Food & Markets ---- (24 Oct 2026; plan approved 23 Oct with Hygiene renamed Illness risk)
   'streetFood.q1': R(has('foodAdventure', 'familiar', 'mixed'), null, null),
@@ -184,6 +194,25 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'adventureSports.q1': R(has('operatorStandards', 'regulated'), within('operatorStandards', STANDARDS, 'mixed'), null),
   'adventureSports.q2': R(has('effortLevels', 'easy'), has('effortLevels', 'easy', 'stamina'), null),
   'adventureSports.q3': R(has('privateTrips', 'true'), null, null),
+
+  // ---- The seven interests finished on 25 Oct 2026 (each answer reads the new columns; blank cells ask for nothing) ----
+  'fineDining.q1': R(null, atLeast(5, 'tastingMenus'), atLeast(8, 'tastingMenus')),
+  'fineDining.q2': R(within('bookingAhead', BOOKING, 'none'), within('bookingAhead', BOOKING, 'weeks'), null),
+  'fineDining.q3': R(range('tastingMenuPrice', { fullTo: 100, zeroAbove: 200 }), range('tastingMenuPrice', { fullTo: 200, zeroAbove: 350 }), null),
+  'coffeeTea.q1': R(null, any(kAtLeast(6, 'specialtyCafes'), kHas('coffeeFarms', 'true'), kHas('teaPlantations', 'true')), any(kHas('coffeeFarms', 'true'), kHas('teaPlantations', 'true'))),
+  'coffeeTea.q2': R(has('cafeStyles', 'linger'), has('cafeStyles', 'quick'), null),
+  'coffeeTea.q3': R(all(kAtLeast(3, 'teaCeremonies'), kHas('ceremonyStyles', 'formal')), all(kAtLeast(3, 'teaCeremonies'), kHas('ceremonyStyles', 'relaxed')), all(kAtLeast(3, 'teaCeremonies'), kHas('ceremonyStyles', 'demonstration'))),
+  'nightlife.q1': R(null, null, within('lateNights', LATE_NIGHTS, 'late'), within('lateNights', LATE_NIGHTS, 'allNight')),
+  'nightlife.q2': R(within('dressCode', DRESS_CODE, 'casual'), within('dressCode', DRESS_CODE, 'smart'), null),
+  'nightlife.q3': R(atLeast(6, 'quietBars'), atLeast(5, 'cocktailBars', 'liveMusic'), atLeast(7, 'clubs')),
+  'shopping.q1': R(null, null, within('haggling', HAGGLING, 'fixed')),
+  'shopping.q2': R(atLeast(6, 'crowdedBazaars'), null, atMost(4, 'crowdedBazaars')),
+  'shopping.q3': R(atLeast(7, 'authenticLocalGoods'), null, any(kAtLeast(4, 'luxuryShopping'), kHas('outletsBargains', 'true'))),
+  'traditionalCrafts.q1': R(null, all(kHas('craftWorkshops', 'true'), kHas('courseLengths', 'short', 'multiDay', 'apprenticeship')), all(kHas('craftWorkshops', 'true'), kHas('courseLengths', 'multiDay', 'apprenticeship')), all(kHas('craftWorkshops', 'true'), kHas('courseLengths', 'apprenticeship'))),
+  'traditionalCrafts.q2': R(has('craftSettings', 'village'), has('craftSettings', 'studios'), has('craftSettings', 'markets'), has('craftSettings', 'museums')),
+  'traditionalCrafts.q3': R(null, null, atLeast(6, 'seriousPieces')),
+  'festivals.q1': R(has('festivalScales', 'small'), has('festivalScales', 'mid'), has('festivalScales', 'huge')),
+  'festivals.q2': R(within('ticketAvailability', BOOKING, 'none'), within('ticketAvailability', BOOKING, 'weeks'), null),
 
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
@@ -284,6 +313,24 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'adventureSports.q1': 'Less regulated than you want',
   'adventureSports.q2': 'Harder than you want',
   'adventureSports.q3': 'No private trips',
+  'fineDining.q1': 'Not enough fine dining for that',
+  'fineDining.q2': 'Needs booking ahead',
+  'fineDining.q3': 'Pricier than you want',
+  'coffeeTea.q1': 'Not much to taste or learn',
+  'coffeeTea.q2': 'Not the café style you want',
+  'coffeeTea.q3': 'Not the kind of ceremony you want',
+  'nightlife.q1': 'Winds down earlier than you want',
+  'nightlife.q2': 'Dressier than you want',
+  'nightlife.q3': 'Not the crowd you want',
+  'shopping.q1': 'Haggling is part of it',
+  'shopping.q2': 'Not the bazaar crowd you want',
+  'shopping.q3': 'Not the kind of goods you want',
+  'traditionalCrafts.q1': 'No course that long',
+  'traditionalCrafts.q2': 'Not where you want to find it',
+  'traditionalCrafts.q3': 'Hard to ship home',
+  'festivals.q1': 'Not the festival size you want',
+  'festivals.q2': 'Needs booking ahead',
+  'scenicLandscapes.q4': 'Camera gear rules may limit you',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

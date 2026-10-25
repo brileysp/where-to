@@ -35,7 +35,7 @@ const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.sl
       if (!parsed.ok) { problems.push(`${id}: bad ${key} (${parsed.message})`); continue; }
       if ((empty(have[key]) || overwrite.has(key)) && !empty(parsed.value) && JSON.stringify(have[key]) !== JSON.stringify(parsed.value)) { next[key] = parsed.value; added++; }
     }
-    if (next.drawSourceChecked === undefined) next.drawSourceChecked = false;
+    if (next.drawSourceChecked === undefined && defs.some((d) => d.key === 'drawSourceChecked')) next.drawSourceChecked = false;
     if (added) {
       cells += added; touched++;
       if (!existing) created++;

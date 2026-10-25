@@ -183,7 +183,8 @@ export const TRUTHS: Truth[] = [
     const bad: string[] = [];
     for (const q of ctx.questions) {
       if (!q.fitRule) continue;
-      const rows = ctx.facts.filter((f) => f.interestKey === q.interestKey); if (!rows.length) continue;
+      // Rows kept for places where the interest is not applicable do not count: nothing is asked of those places.
+      const rows = ctx.facts.filter((f) => f.interestKey === q.interestKey && !ctx.places.find((p) => p.id === f.placeId)?.naSliders.includes(q.interestKey)); if (!rows.length) continue;
       const defs = factDefsFor(q.interestKey);
       const cols = new Set<string>(); for (const a of q.fitRule.answers) for (const c of a?.checks ?? []) for (const col of ((c as { columns?: string[] }).columns ?? [(c as { column?: string }).column]).filter(Boolean) as string[]) cols.add(col);
       for (const col of cols) {
@@ -202,7 +203,7 @@ export const TRUTHS: Truth[] = [
   { id: 'C15', area: 'Chips and questions', says: 'Every live chip measured on a rating or choice has a value for at least half of the interest\'s places.', check: (ctx) => {
     const bad: string[] = [];
     for (const c of ctx.chips) {
-      if (c.status !== 'live') continue; const rows = ctx.facts.filter((f) => f.interestKey === c.interestKey); if (!rows.length) continue;
+      if (c.status !== 'live') continue; const rows = ctx.facts.filter((f) => f.interestKey === c.interestKey && !ctx.places.find((p) => p.id === f.placeId)?.naSliders.includes(c.interestKey)); if (!rows.length) continue;
       // A blank animal cell or an unticked box means "not a feature here", which is a real answer, so only graded columns count.
       const defs = factDefsFor(c.interestKey); const graded = c.drivers.filter((d) => { const t = defs.find((x) => x.key === d.column); return t && ['rating', 'int', 'choice', 'likelihood'].includes(t.type); }); if (!graded.length) continue;
       const best = Math.max(0, ...graded.map((d) => rows.filter((r) => { const v = r.facts[d.column]; return v !== undefined && v !== null && v !== ''; }).length));

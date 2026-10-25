@@ -335,6 +335,9 @@ const FINE_DINING_FACTS: FactDef[] = [
   rate('tastingMenus', 'Tasting menus and chef\'s tables', 'How strong the scene for multi-course tasting menus and chef\'s-table counters is. 0-1 almost none, 5 a few good ones, 8-10 a destination for them.'),
   rate('farmToTable', 'Farm-to-table dining', 'How strong the scene is for restaurants built on local farms, producers and the season. 0-1 almost none, 8-10 a defining part of the dining.'),
   rate('diningWithView', 'Dining with a view', 'How easy it is to dine somewhere with a memorable view (rooftop, vineyard, sea, mountains) at fine-dining level. 0-1 almost none, 8-10 many.'),
+  // 25 Oct 2026: the two columns the questions "how far ahead will you book" and "how much will you spend" read. Drafted from the Michelin and tasting-menu columns and typical menu prices by country; check against the guide.
+  { key: 'bookingAhead', label: 'Booking ahead', type: 'choice', group: 'practical', options: [{ value: 'none', label: 'Walk-ins work' }, { value: 'weeks', label: 'Book days to weeks ahead' }, { value: 'months', label: 'Book months ahead for the hard tables' }], hint: 'How far ahead the best tables have to be booked: walk-ins and short notice work; the best restaurants need days to weeks; the famous ones book out months ahead. Question 2 (a limit) reads it in this order.' },
+  { key: 'tastingMenuPrice', label: 'Tasting-menu price (US dollars per person)', type: 'int', group: 'practical', hint: 'What a memorable tasting-menu dinner typically costs per person in dollars, food only, at a well-regarded restaurant: Tokyo 290, Lima 120, Copenhagen 380, Hanoi 110. Blank where there is no real tasting-menu scene. Question 3 reads it with soft edges.' },
 ];
 
 /**
@@ -358,6 +361,7 @@ const SCENIC_FACTS: FactDef[] = [
   rate('hiddenGemsRating', 'Beyond the icons', 'How easy it is to find lesser-known, uncrowded scenery of the same quality without a guide. 0-1 only the famous spots, 5 a few quiet alternatives, 8 plenty, 10 almost everywhere is quiet and beautiful.'),
   { key: 'viewAccess', label: 'Ways to reach the best views', type: 'multi', group: 'experience', options: [{ value: 'roadside', label: 'From the road or a viewpoint' }, { value: 'short', label: 'Short walks to lookouts' }, { value: 'halfDay', label: 'Half-day walks' }, { value: 'longHike', label: 'Long hikes' }, { value: 'backcountry', label: 'Backcountry trips with camping' }, { value: 'airBoat', label: 'From the air or a boat' }], hint: 'The ways a visitor can really reach the place\'s best views. From the road or a viewpoint: from a car or a roadside lookout. Short walks: lookouts a short walk from a parking area. Half-day walks: a half-day walk to the view. Long hikes: a full day or an early start. Backcountry: a multi-day trip with camping or huts. From the air or a boat: scenic flights, boat cruises, balloons.' },
   { key: 'signatureViews', label: 'Signature views', type: 'text', group: 'experience', wide: true, maxLength: 700, hint: 'The two to four views a trip is built around, with the kind of landscape in brackets.' },
+  { key: 'gearRules', label: 'Camera gear rules', type: 'choice', group: 'practical', options: [{ value: 'none', label: 'Few rules on tripods and drones' }, { value: 'some', label: 'Drones restricted or need a permit' }, { value: 'many', label: 'Tripods and drones both restricted' }], hint: 'What a photographer meets at the main viewpoints: nothing special; drones banned or permitted in the parks; or both tripods and drones restricted. Question 4 (a limit) reads it in this order.' },
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
@@ -481,6 +485,12 @@ const BEACHES_FACTS: FactDef[] = [
  */
 const FESTIVALS_FACTS: FactDef[] = [
   rate('sportingEvents', 'Sporting events', 'How strong the place is for watching big sporting occasions: grand slams, grands prix, major league seasons, big derbies. 0-1 almost none, 5 regular top-level fixtures, 8-10 a world sporting capital. Blank means not looked at yet.'),
+  // 25 Oct 2026: the other columns. Ratings are for the place across the whole year, against the best of that kind in the world; 7 or more is a full chip match. Drafted; check them.
+  rate('musicFestivals', 'Music festivals', 'How strong the place is for music festivals and big concert series across the year. 0-1 almost none, 5 a couple of good ones, 8-10 a world festival destination (New Orleans, Berlin, Barcelona).'),
+  rate('foodFestivals', 'Food and drink festivals', 'How strong the place is for food, wine and beer festivals. 0-1 almost none, 5 a couple of good ones, 8-10 a world destination (Munich, Piedmont, Napa).'),
+  rate('culturalCelebrations', 'Cultural celebrations', 'How strong the place is for carnivals, religious and traditional festivals a visitor can join. 0-2 almost none, 5 a couple of good ones, 8-10 a world destination (Rio, Venice, Oaxaca, Kyoto).'),
+  { key: 'festivalScales', label: 'Festival sizes', type: 'multi', group: 'style', options: [{ value: 'small', label: 'Small and local' }, { value: 'mid', label: 'Mid-size' }, { value: 'huge', label: 'Huge (tens of thousands or more)' }], hint: 'Pick every size a visitor can really find in a year. Question 1 reads it.' },
+  { key: 'ticketAvailability', label: 'Booking ahead', type: 'choice', group: 'practical', options: [{ value: 'none', label: 'Walk-up works' }, { value: 'weeks', label: 'A few weeks ahead' }, { value: 'months', label: 'Months ahead (sells out)' }], hint: 'How far ahead tickets and rooms for the main festivals have to be booked. Question 2 (a limit) reads it in this order.' },
 ];
 
 const COFFEE_TEA_FACTS: FactDef[] = [
@@ -488,6 +498,9 @@ const COFFEE_TEA_FACTS: FactDef[] = [
   rate('specialtyCafes', 'Specialty cafés and roasteries', 'How strong the specialty coffee scene is: independent roasters and cafés worth a trip. 0-1 almost none, 5 a few good ones, 8-10 a coffee destination.'),
   tick('teaPlantations', 'Tea plantation visits', 'Tick when visitors can tour a working tea plantation or estate within a day trip.'),
   rate('teaCeremonies', 'Tea ceremonies and tea houses', 'How strong the tea-house and tea-ceremony culture is for visitors (a ceremony you can attend, tea houses worth a visit). 0-1 almost none, 8-10 central to the place.'),
+  // 25 Oct 2026: the columns for questions 2 and 3. Drafted from the café and tea columns plus what each place is known for; check them.
+  { key: 'cafeStyles', label: 'Café style', type: 'multi', group: 'style', options: [{ value: 'linger', label: 'Cafés to linger in for hours' }, { value: 'quick', label: 'Quick stops (standing at the bar, take-away)' }], hint: 'Pick every one that applies. Question 2 reads it: "linger" needs cafés made for sitting (Vienna, Seoul, Istanbul); "quick" needs coffee you can have in five minutes (Italy, Spain, Portugal). Most cities have both.' },
+  { key: 'ceremonyStyles', label: 'Tea ceremony style', type: 'multi', group: 'style', options: [{ value: 'formal', label: 'Formal, with strict etiquette' }, { value: 'relaxed', label: 'Relaxed, you just sit and drink' }, { value: 'demonstration', label: 'A short demonstration for visitors' }], hint: 'Pick every one a visitor can really find. Only filled where the tea-ceremony score is 3 or more. Question 3 reads it.' },
 ];
 
 const STREET_FOOD_FACTS: FactDef[] = [
@@ -706,6 +719,11 @@ const SHOPPING_FACTS: FactDef[] = [
   rate('luxuryShopping', 'Luxury and designer', 'How strong the luxury and designer shopping is (flagship stores, luxury districts). 0-1 almost none, 8-10 a global luxury destination.'),
   rate('localCrafts', 'Local crafts and souvenirs', 'How good the shopping is for local crafts and distinctive, locally made souvenirs. 0-1 mostly imported goods, 8-10 rich and easy to find.'),
   tick('outletsBargains', 'Outlets and bargains', 'Tick when outlet malls or well-known bargain shopping are a real draw.'),
+  // 25 Oct 2026: the four columns for the vintage chip and the questions. Drafted; check them.
+  rate('vintageAntiques', 'Vintage and antiques', 'How strong the flea-market, vintage and antiques scene is (Paris, London, Buenos Aires). 0-1 almost none, 5 a few good markets, 8-10 a destination for it.'),
+  { key: 'haggling', label: 'Haggling', type: 'choice', group: 'practical', options: [{ value: 'fixed', label: 'Fixed prices' }, { value: 'some', label: 'Haggling in markets, fixed in shops' }, { value: 'expected', label: 'Haggling expected almost everywhere' }], hint: 'What a visitor meets when shopping. Question 1 (a limit) reads it in this order.' },
+  rate('crowdedBazaars', 'Crowded bazaars', 'How crowded and intense the main markets and bazaars are. 0-2 calm, 5 busy but easy, 8-10 a crush (Istanbul, Marrakech, Cairo). Question 2 reads it.'),
+  rate('authenticLocalGoods', 'Authentic local goods', 'How easy it is to buy genuinely handmade, local goods instead of imported souvenirs. 0-2 mostly imports, 5 a mix, 8-10 makers sell direct and fakes are rare. Question 3 reads it.'),
 ];
 
 const NIGHTLIFE_FACTS: FactDef[] = [
@@ -714,6 +732,10 @@ const NIGHTLIFE_FACTS: FactDef[] = [
   rate('cocktailBars', 'Cocktail and rooftop bars', 'How strong the cocktail-bar and rooftop-bar scene is. 0-1 almost none, 8-10 world-class.'),
   tick('lgbtqScene', 'LGBTQ+ scene', 'Tick when the place has an established LGBTQ+ nightlife scene (several venues or a recognized district).'),
   tick('beachParties', 'Beach and island parties', 'Tick when beach clubs, boat parties or island party scenes are a real part of the nightlife.'),
+  // 25 Oct 2026: the three columns for the questions. Drafted from the venue scores and each place's reputation; check them.
+  { key: 'lateNights', label: 'How late it runs', type: 'choice', group: 'style', options: [{ value: 'early', label: 'Quiet by midnight' }, { value: 'late', label: 'Going until about 2am' }, { value: 'allNight', label: 'Until sunrise' }], hint: 'How late the scene really runs at the weekend. Question 1 reads it.' },
+  { key: 'dressCode', label: 'Dress code', type: 'choice', group: 'style', options: [{ value: 'casual', label: 'Casual almost everywhere' }, { value: 'smart', label: 'Smart casual in the better venues' }, { value: 'strict', label: 'Dressed up, with strict doors' }], hint: 'What the better bars and clubs expect. Question 2 (a preference) reads it in this order.' },
+  rate('quietBars', 'Quiet bars', 'How easy it is to find a quiet bar or pub where you can hold a conversation. 0-1 none, 5 a few, 8-10 a bar and pub culture built for talking (Dublin, Tokyo, Paris).'),
 ];
 
 const TRADITIONAL_CRAFTS_FACTS: FactDef[] = [
@@ -721,6 +743,10 @@ const TRADITIONAL_CRAFTS_FACTS: FactDef[] = [
   tick('potteryCeramics', 'Pottery and ceramics', 'Tick when pottery or ceramics are a living local craft that visitors can see or buy.'),
   tick('craftWorkshops', 'Hands-on workshops', 'Tick when visitors can take a hands-on workshop or class to make a traditional craft.'),
   tick('carvingMetalwork', 'Carving and metalwork', 'Tick when wood or stone carving, silver, copper or other metalwork are a living local craft that visitors can see or buy.'),
+  // 25 Oct 2026: the columns for the questions. Drafted; check them.
+  { key: 'courseLengths', label: 'Course lengths', type: 'multi', group: 'practical', options: [{ value: 'short', label: 'A short workshop (1 to 2 hours)' }, { value: 'multiDay', label: 'A multi-day course' }, { value: 'apprenticeship', label: 'A longer apprenticeship' }], hint: 'Pick every length a visitor can really book. Only filled where hands-on workshops are ticked. Question 1 reads it.' },
+  { key: 'craftSettings', label: 'Where the craft is found', type: 'multi', group: 'style', options: [{ value: 'village', label: 'Village workshops' }, { value: 'studios', label: 'City studios' }, { value: 'markets', label: 'Markets and shops' }, { value: 'museums', label: 'Museums and craft centres' }], hint: 'Pick every place a visitor can really meet the craft. Question 2 reads it.' },
+  rate('seriousPieces', 'Buying serious pieces', 'How easy it is to buy a serious piece (a rug, a large ceramic, furniture) and get it home: established dealers, shipping, no export trouble. 0-2 hard, 5 possible with effort, 8-10 easy. Question 3 reads it.'),
 ];
 
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {

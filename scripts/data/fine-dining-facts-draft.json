@@ -1,0 +1,739 @@
+{
+ "uganda": {
+  "bookingAhead": "none"
+ },
+ "mauritius": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 130
+ },
+ "aruba": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 140
+ },
+ "everglades": {
+  "bookingAhead": "none"
+ },
+ "panama": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "ethiopia": {
+  "bookingAhead": "none"
+ },
+ "mendoza": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 80
+ },
+ "gbr": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 190
+ },
+ "luangprabang": {
+  "bookingAhead": "none"
+ },
+ "london": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 280
+ },
+ "guatemala": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 60
+ },
+ "bhutan": {
+  "bookingAhead": "none"
+ },
+ "athens": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 120
+ },
+ "istanbul": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 110
+ },
+ "dubai": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 300
+ },
+ "peruvian-amazon": {
+  "bookingAhead": "none"
+ },
+ "atacama": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "morocco": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 90
+ },
+ "thailand": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "havana": {
+  "bookingAhead": "none"
+ },
+ "colombian-andes": {
+  "bookingAhead": "none"
+ },
+ "turks-caicos": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 200
+ },
+ "sedona": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "ecuadorian-andes": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "monterey-big-sur": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 240
+ },
+ "olympic": {
+  "bookingAhead": "none"
+ },
+ "andalucia": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "big-island": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "chiapas": {
+  "bookingAhead": "none"
+ },
+ "rajaampat": {
+  "bookingAhead": "none"
+ },
+ "colombian-caribbean": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "madeira": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 140
+ },
+ "zimbabwe": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 70
+ },
+ "madagascar": {
+  "bookingAhead": "none"
+ },
+ "berlin": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "kenya": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 90
+ },
+ "basque-country": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 260
+ },
+ "fiji": {
+  "bookingAhead": "none"
+ },
+ "rome": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "bordeaux": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 260
+ },
+ "barbados": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 180
+ },
+ "grandcanyon": {
+  "bookingAhead": "none"
+ },
+ "badlands-black-hills": {
+  "bookingAhead": "none"
+ },
+ "milford-sound-fiordland": {
+  "bookingAhead": "none"
+ },
+ "rajasthan-golden-triangle": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 90
+ },
+ "komodo": {
+  "bookingAhead": "none"
+ },
+ "denali-interior": {
+  "bookingAhead": "none"
+ },
+ "buenosaires": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 80
+ },
+ "southeast-alaska": {
+  "bookingAhead": "none"
+ },
+ "los-cabos": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 180
+ },
+ "oaxaca": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 110
+ },
+ "lapland": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "angkor": {
+  "bookingAhead": "none"
+ },
+ "nepal": {
+  "bookingAhead": "none"
+ },
+ "rwanda": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 70
+ },
+ "ladakh": {
+  "bookingAhead": "none"
+ },
+ "bali": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 90
+ },
+ "charleston-savannah": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 240
+ },
+ "srilanka": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 70
+ },
+ "tokyo-kyoto": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 290
+ },
+ "kaziranga": {
+  "bookingAhead": "none"
+ },
+ "fjords": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 280
+ },
+ "kruger": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 95
+ },
+ "great-smoky-mountains": {
+  "bookingAhead": "none"
+ },
+ "scottish-highlands-skye": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 230
+ },
+ "dolomites": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "lake-district": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 280
+ },
+ "falklands": {
+  "bookingAhead": "none"
+ },
+ "taiwan": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 170
+ },
+ "antarctica": {
+  "bookingAhead": "none"
+ },
+ "hongkong": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 290
+ },
+ "zambia": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "st-andrews-fife": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 230
+ },
+ "black-forest": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "palau": {
+  "bookingAhead": "none"
+ },
+ "yosemite": {
+  "bookingAhead": "none"
+ },
+ "tierra-del-fuego": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "aspen": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 270
+ },
+ "torres-del-paine": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "chilean-lake-district": {
+  "bookingAhead": "none"
+ },
+ "vietnam": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 110
+ },
+ "beijing": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 170
+ },
+ "lofoten": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 280
+ },
+ "rioja": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "banff": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 170
+ },
+ "nyc": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 330
+ },
+ "arches-canyonlands": {
+  "bookingAhead": "none"
+ },
+ "provence": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 260
+ },
+ "sicily": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "chicago": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 280
+ },
+ "prague": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 110
+ },
+ "mallorca": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "amalfi": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "namibia": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 90
+ },
+ "okinawa": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 220
+ },
+ "el-chalten": {
+  "bookingAhead": "none"
+ },
+ "churchill": {
+  "bookingAhead": "none"
+ },
+ "seoul": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 210
+ },
+ "edinburgh": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "belize": {
+  "bookingAhead": "none"
+ },
+ "acadia": {
+  "bookingAhead": "none"
+ },
+ "sequoia-kings-canyon": {
+  "bookingAhead": "none"
+ },
+ "budapest": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 110
+ },
+ "svalbard": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 280
+ },
+ "rio": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 120
+ },
+ "guilin-yangshuo": {
+  "bookingAhead": "none"
+ },
+ "napa": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 320
+ },
+ "costa-rica": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "bend-crater-lake": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "kerala": {
+  "bookingAhead": "none"
+ },
+ "chiang-mai": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "puerto-rico": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "zion-bryce": {
+  "bookingAhead": "none"
+ },
+ "kyrgyzstan": {
+  "bookingAhead": "none"
+ },
+ "egypt": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 70
+ },
+ "champagne": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 260
+ },
+ "cape-cod-islands": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "north-island": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "chamonix": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 260
+ },
+ "piedmont": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 210
+ },
+ "ireland": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 180
+ },
+ "marlborough-abel-tasman": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "new-orleans": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 240
+ },
+ "pantanal": {
+  "bookingAhead": "none"
+ },
+ "vienna": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "sardinia": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "croatia": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 120
+ },
+ "greenland": {
+  "bookingAhead": "none"
+ },
+ "nice-riviera": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 290
+ },
+ "yellowstone": {
+  "bookingAhead": "none"
+ },
+ "pakistan": {
+  "bookingAhead": "none"
+ },
+ "whistler": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 170
+ },
+ "tuscany": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 190
+ },
+ "san-miguel-guanajuato": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 110
+ },
+ "hokkaido": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 220
+ },
+ "mexicocity": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 140
+ },
+ "maui": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "bahamas": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 200
+ },
+ "lisbon": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 140
+ },
+ "borabora": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 260
+ },
+ "azores": {
+  "bookingAhead": "none"
+ },
+ "maldives": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 300
+ },
+ "douro-valley-porto": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 140
+ },
+ "mongolia": {
+  "bookingAhead": "none"
+ },
+ "belfast-giants-causeway": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 230
+ },
+ "vancouver-island": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 170
+ },
+ "seychelles": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "copenhagen": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 380
+ },
+ "uzbekistan": {
+  "bookingAhead": "none"
+ },
+ "cotswolds": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "bagan": {
+  "bookingAhead": "none"
+ },
+ "paris": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 340
+ },
+ "canaries": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "bavaria-munich": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 230
+ },
+ "iceland": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "hudson-valley": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "upper-peninsula": {
+  "bookingAhead": "none"
+ },
+ "nova-scotia": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 170
+ },
+ "ghana": {
+  "bookingAhead": "none"
+ },
+ "texas-hill-country": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "tasmania": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "galapagos": {
+  "bookingAhead": "none"
+ },
+ "cape-town": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 100
+ },
+ "swissalps": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 340
+ },
+ "vermont": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "quebec-city": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 170
+ },
+ "uyuni": {
+  "bookingAhead": "none"
+ },
+ "punta-cana": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "tbilisi-caucasus": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 60
+ },
+ "bangkok": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 170
+ },
+ "borneo": {
+  "bookingAhead": "none"
+ },
+ "queenstown": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "jordan": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "joshua-tree": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 240
+ },
+ "venice": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "nicaragua": {
+  "bookingAhead": "none"
+ },
+ "singapore": {
+  "bookingAhead": "months",
+  "tastingMenuPrice": 280
+ },
+ "glacier-waterton": {
+  "bookingAhead": "none"
+ },
+ "redwood": {
+  "bookingAhead": "none"
+ },
+ "santorini": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 170
+ },
+ "tanzania": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 90
+ },
+ "death-valley": {
+  "bookingAhead": "none"
+ },
+ "botswana": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 150
+ },
+ "algarve": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 140
+ },
+ "rocky-mountain": {
+  "bookingAhead": "none"
+ },
+ "faroe-islands": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "snowdonia": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "cornwall": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 230
+ },
+ "papua-new-guinea": {
+  "bookingAhead": "none"
+ },
+ "peru": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 120
+ },
+ "uluru": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 190
+ },
+ "rivieramaya": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 110
+ },
+ "argentine-lake-district": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 80
+ },
+ "sydney": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "palawan": {
+  "bookingAhead": "none"
+ },
+ "puglia": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 200
+ },
+ "jamaica": {
+  "bookingAhead": "none",
+  "tastingMenuPrice": 100
+ },
+ "amsterdam": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ },
+ "barcelona": {
+  "bookingAhead": "weeks",
+  "tastingMenuPrice": 190
+ }
+}
