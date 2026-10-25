@@ -749,6 +749,22 @@ const TRADITIONAL_CRAFTS_FACTS: FactDef[] = [
   rate('seriousPieces', 'Buying serious pieces', 'How easy it is to buy a serious piece (a rug, a large ceramic, furniture) and get it home: established dealers, shipping, no export trouble. 0-2 hard, 5 possible with effort, 8-10 easy. Question 3 reads it.'),
 ];
 
+/**
+ * Theme Parks & Attractions (25 Oct 2026). The first interest scored by the method in docs/column-scoring-plan.md: every rating comes from a stated formula on published
+ * figures, and the Evidence column keeps one line per rating so any cell can be audited. A park counts when it is within about 90 minutes door to door (road or direct
+ * train) of the place's main base. Sources: Roller Coaster Database (RCDB) park pages for coasters, the TEA/AECOM water park attendance ranking (via Wikipedia), park
+ * infobox figures for zoos and aquariums; anything from memory is marked as such. Full working: docs/evidence/theme-parks-evidence.json.
+ */
+const THEME_PARKS_FACTS: FactDef[] = [
+  rate('thrillRides', 'Thrill rides and coasters', 'Points from the Roller Coaster Database list of operating coasters in reach: 1 for each coaster it scales Extreme, 0.5 for each Thrill, +1 for each coaster that is 150 ft tall, 65 mph or has 5 inversions, +2 for each record-class coaster (300 ft or 90 mph, at most two). Points to rating: none 1, up to 2 is 2, 4 is 3, 6 is 4, 8 is 5, 10 is 6, 13 is 7, 17 is 8, 24 is 9, more is 10. Anchors: 10 Tokyo and Kyoto (Fuji-Q, Nagashima, Universal Japan), 7 London, Paris and Barcelona, 4 Munich, 1 no coasters.'),
+  rate('waterParks', 'Water parks', 'From the TEA/AECOM 2024 ranking of the world\'s water parks by attendance: the best ranked park in reach sets the rating (2.0 million or more is 10, 1.8 is 9, 1.5 is 8, 1.1 is 7, 0.8 is 6, 0.6 is 5, any ranked park 4), plus 1 for a second ranked park over 0.8 million. Unranked: 3 for a full-day water park with its own gate (4 for two), 2 for a half-day one, 1 for none. Anchors: 10 Dubai (Aquaventure), 9 Munich (Therme Erding), 7 Black Forest (Rulantica), 1 none.'),
+  rate('zoosAquariums', 'Zoos and aquariums', 'Points for every zoo, safari park and aquarium in reach: 2 for a major one (10,000 or more land animals, 30,000 or more aquatic animals, or 2 million visitors a year), 1 for a notable one (3,000 animals, 10,000 aquatic animals or 1 million visitors), 0.5 for a named one with no published size. Points to rating: none 1, up to 0.5 is 2, 1 is 3, 2 is 4, 3 is 5, 4 is 6, 5 is 7, 6.5 is 8, under 8 is 9, 8 or more is 10. Anchors: 10 Singapore (Zoo, Night Safari, River Wonders, Bird Paradise and the S.E.A. Aquarium, 8 points), 8 Tokyo and Kyoto (two of the world\'s biggest aquariums), 3 Paris.'),
+  { key: 'daysOfParks', label: 'Days of parks', type: 'int', group: 'style', hint: 'How many full days of gated attractions (theme parks, water parks, big zoos and aquariums) a visitor can fill in reach without repeating one. Question 1 reads it: two days needs 2 or more, three or more needs 3 or more.' },
+  { key: 'parkHotels', label: 'Hotels at the parks', type: 'choice', group: 'practical', options: [{ value: 'onsite', label: 'Park hotels at the gate' }, { value: 'nearby', label: 'Hotels in or near some parks' }, { value: 'city', label: 'Day trips from a city hotel' }], hint: 'Whether the main parks have hotels at the gate (a resort stay), only some do, or the parks are day trips from the city. Question 2 reads it in this order.' },
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per rating: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -783,6 +799,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   shopping: SHOPPING_FACTS,
   nightlife: NIGHTLIFE_FACTS,
   traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,
+  themeParks: THEME_PARKS_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

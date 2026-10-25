@@ -214,6 +214,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'festivals.q1': R(has('festivalScales', 'small'), has('festivalScales', 'mid'), has('festivalScales', 'huge')),
   'festivals.q2': R(within('ticketAvailability', BOOKING, 'none'), within('ticketAvailability', BOOKING, 'weeks'), null),
 
+  // ---- Theme Parks & Attractions ---- (25 Oct 2026; Gentle rides only asks for nothing, the other two read the thrill rating)
+  'themeParks.q1': R(null, range('daysOfParks', { zeroBelow: 1, fullFrom: 2 }), range('daysOfParks', { zeroBelow: 1, fullFrom: 3 })),
+  'themeParks.q2': R(has('parkHotels', 'onsite'), has('parkHotels', 'onsite', 'nearby'), null),
+  'themeParks.q3': R(null, atLeast(4, 'thrillRides'), atLeast(8, 'thrillRides')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -331,6 +336,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'festivals.q1': 'Not the festival size you want',
   'festivals.q2': 'Needs booking ahead',
   'scenicLandscapes.q4': 'Camera gear rules may limit you',
+  'themeParks.q1': 'Not enough parks for that long',
+  'themeParks.q2': 'No hotel at the parks',
+  'themeParks.q3': 'Fewer big rides than you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

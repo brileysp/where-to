@@ -636,3 +636,21 @@ describe('The seven interests finished on 25 Oct 2026', () => {
     expect(fit('q4', [3], { gearRules: 'many' })).toBe(0);
   });
 });
+
+describe('Theme Parks questions', () => {
+  const defs = factDefsFor('themeParks');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`themeParks.${q}`], picked, defs, facts as never);
+  it('days, hotels and how thrilling', () => {
+    expect(fit('q1', [0], { daysOfParks: 1 })).toBeNull();
+    expect(fit('q1', [1], { daysOfParks: 1 })).toBe(0);
+    expect(fit('q1', [1], { daysOfParks: 2 })).toBe(1);
+    expect(fit('q1', [2], { daysOfParks: 2 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [2], { daysOfParks: 5 })).toBe(1);
+    expect(fit('q2', [0], { parkHotels: 'city' })).toBe(0);
+    expect(fit('q2', [1], { parkHotels: 'nearby' })).toBe(1);
+    expect(fit('q2', [2], { parkHotels: 'city' })).toBeNull();
+    expect(fit('q3', [0], { thrillRides: 1 })).toBeNull();
+    expect(fit('q3', [2], { thrillRides: 4 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [1], { thrillRides: 7 })).toBe(1);
+  });
+});
