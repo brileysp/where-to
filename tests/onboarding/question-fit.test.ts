@@ -421,3 +421,88 @@ describe('Sunbathing questions', () => {
     expect(fit('q4', [0], { serviceLevel: 'self' })).toBeNull();
   });
 });
+
+describe('Architecture questions', () => {
+  const defs = factDefsFor('architecture');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`architecture.${q}`], picked, defs, facts as never);
+  it('old or new, monuments or streets, and how far inside', () => {
+    expect(fit('q1', [0], { historicArchitecture: 9 })).toBe(1);
+    expect(fit('q1', [2], { modernArchitecture: 3.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [1], { historicArchitecture: 1 })).toBeNull();
+    expect(fit('q2', [1], { everydayStreets: 7 })).toBe(1);
+    expect(fit('q3', [1], { buildingsInside: 6 })).toBe(1);
+    expect(fit('q3', [2], { buildingsInside: 4 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [0], { buildingsInside: 0 })).toBeNull();
+  });
+});
+
+describe('City Exploration questions', () => {
+  const defs = factDefsFor('cityExploration');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`cityExploration.${q}`], picked, defs, facts as never);
+  it('getting around is an ordered limit', () => {
+    expect(fit('q1', [0], { gettingAround: 'walk' })).toBe(1);
+    expect(fit('q1', [0], { gettingAround: 'transit' })).toBe(0);
+    expect(fit('q1', [1], { gettingAround: 'transit' })).toBe(1);
+    expect(fit('q1', [1], { gettingAround: 'car' })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [2], { gettingAround: 'car' })).toBeNull();
+  });
+  it('city size reads the population with soft edges', () => {
+    expect(fit('q3', [0], { cityPopulation: 21800 })).toBe(1);
+    expect(fit('q3', [0], { cityPopulation: 3000 })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [0], { cityPopulation: 840 })).toBe(0);
+    expect(fit('q3', [1], { cityPopulation: 840 })).toBe(1);
+    expect(fit('q3', [1], { cityPopulation: 21800 })).toBe(0);
+    expect(fit('q3', [2], { cityPopulation: 2.5 })).toBe(1);
+    expect(fit('q3', [2], { cityPopulation: 625 })).toBeCloseTo(0.5, 5);
+  });
+  it('days and how you explore', () => {
+    expect(fit('q4', [2], { daysItCanFill: 'longer' })).toBe(1);
+    expect(fit('q4', [2], { daysItCanFill: '4to5' })).toBe(0);
+    expect(fit('q4', [0], { daysItCanFill: 'weekend' })).toBeNull();
+    expect(fit('q2', [1], { offTheBeatenPath: 3, marketsStreetLife: 9 })).toBe(1);
+    expect(fit('q2', [2], { guidedWalks: true })).toBe(1);
+  });
+});
+
+describe('Museums & Art questions', () => {
+  const defs = factDefsFor('museumsArt');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`museumsArt.${q}`], picked, defs, facts as never);
+  it('how long reads the biggest museum in hours, several days reads the depth', () => {
+    expect(fit('q1', [1], { biggestMuseumHours: 5 })).toBe(1);
+    expect(fit('q1', [1], { biggestMuseumHours: 1 })).toBe(0);
+    expect(fit('q1', [2], { biggestMuseumHours: 4 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [3], { daysOfMuseums: 4 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [0], { biggestMuseumHours: 1 })).toBeNull();
+  });
+  it('famous or quirky, and timed entry', () => {
+    expect(fit('q2', [1], { quirkyMuseums: 8 })).toBe(1);
+    expect(fit('q3', [2], { timedEntry: 'some' })).toBe(0);
+    expect(fit('q3', [1], { timedEntry: 'some' })).toBe(1);
+  });
+});
+
+describe('Skiing questions', () => {
+  const defs = factDefsFor('skiingSnowboarding');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`skiingSnowboarding.${q}`], picked, defs, facts as never);
+  it('level, apres and snowboard', () => {
+    expect(fit('q1', [0], { beginnerFriendly: 6 })).toBe(1);
+    expect(fit('q1', [2], { advancedTerrain: 3.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [2], { apres: 7 })).toBe(1);
+    expect(fit('q3', [1], { snowboardParks: 5 })).toBe(1);
+    expect(fit('q3', [0], { snowboardParks: 0 })).toBeNull();
+  });
+});
+
+describe('Sunbathing question 1, how hot', () => {
+  const defs = factDefsFor('sunbathing');
+  const highs = '80,80,82,84,86,88,90,90,88,86,84,82';
+  const fit = (picked: number[], month?: number) => questionFit(QUESTION_FIT_RULES['sunbathing.q1'], picked, defs, { afternoonHighsF: highs } as never, month);
+  it('reads the afternoon high of the month chosen', () => {
+    expect(fit([0], 0)).toBe(1);
+    expect(fit([0], 6)).toBeCloseTo(0.2, 5);
+    expect(fit([1], 6)).toBe(1);
+    expect(fit([1], 0)).toBeCloseTo(0.8, 5);
+    expect(fit([0], undefined)).toBeNull();
+    expect(fit([2], 6)).toBeNull();
+  });
+});

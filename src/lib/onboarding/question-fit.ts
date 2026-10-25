@@ -18,6 +18,7 @@ import { LIKELIHOODS, type FactDef } from '@/lib/admin/interest-pages/config';
  *   count     a multi column has at most this many options ticked (for the crowding evidence).
  *   warmest   the lowest water temperature written in a text column such as "54-79 F, 3/2 mm" (or one number of degrees F) stays at or above a number of degrees F.
  *   month     the month the traveler is going (0 = January) is on, or off, a list of months in a multi column (Hot Springs: the cold or snowy months). With no month chosen it asks for nothing.
+ *   range     a number (a rating, a count, or the traveler's month in a 12-number series such as the afternoon highs) that is a full fit between `fullFrom` and `fullTo` and fades in a straight line to nothing at `zeroBelow` and `zeroAbove`. With `monthly`, the column holds 12 comma-separated numbers, January first, and no month chosen asks for nothing.
  *   named     a named animal in an "Animal (likelihood, months)" cell, scored by its odds (guaranteed 10, likely 8, possible 5, unlikely 2).
  */
 export type FitCheck =
@@ -28,7 +29,8 @@ export type FitCheck =
   | { type: 'count'; column: string; atMost: number }
   | { type: 'warmest'; column: string; minF: number }
   | { type: 'month'; column: string; on: boolean }
-  | { type: 'named'; column: string; names: string[] };
+  | { type: 'named'; column: string; names: string[] }
+  | { type: 'range'; column: string; zeroBelow?: number; fullFrom?: number; fullTo?: number; zeroAbove?: number; monthly?: boolean };
 
 export interface AnswerRule {
   /** all = every check must hold (the weakest counts); any = one is enough (the best counts). Default all. */
@@ -125,6 +127,20 @@ export function checkFit(c: FitCheck, defs: FactDef[], facts: Record<string, Int
       const v = namedAnimalFit(facts[c.column], c.names);
       return v === null ? null : v / 10;
     }
+    case 'range': {
+      let v: number | null = null;
+      if (c.monthly) {
+        if (month === null || month === undefined || month < 0 || month > 11) return null;
+        v = monthlySeries(facts[c.column])?.[month] ?? null;
+      } else {
+        const raw = facts[c.column];
+        v = typeof raw === 'number' ? raw : null;
+      }
+      if (v === null) return null;
+      const low = c.fullFrom !== undefined && v < c.fullFrom ? (c.zeroBelow !== undefined && c.fullFrom > c.zeroBelow ? clamp01((v - c.zeroBelow) / (c.fullFrom - c.zeroBelow)) : 0) : 1;
+      const high = c.fullTo !== undefined && v > c.fullTo ? (c.zeroAbove !== undefined && c.zeroAbove > c.fullTo ? clamp01((c.zeroAbove - v) / (c.zeroAbove - c.fullTo)) : 0) : 1;
+      return Math.min(low, high);
+    }
     case 'month': {
       if (month === null || month === undefined || month < 0 || month > 11) return null;
       // A place with data on file but nothing ticked in the list has no such months (Costa Rica has no cold months).
@@ -135,7 +151,14 @@ export function checkFit(c: FitCheck, defs: FactDef[], facts: Record<string, Int
 }
 
 /** True when a rule reads the traveler's month, so its fit has to be worked out for each month. */
-export const rulesUseMonth = (a: AnswerRule | null): boolean => !!a && a.checks.some((c) => c.type === 'month');
+export const rulesUseMonth = (a: AnswerRule | null): boolean => !!a && a.checks.some((c) => c.type === 'month' || (c.type === 'range' && !!c.monthly));
+
+/** Twelve numbers written as "78,79,81,...", January first; null when the cell does not hold exactly twelve numbers. */
+export function monthlySeries(text: unknown): number[] | null {
+  if (typeof text !== 'string') return null;
+  const parts = text.split(',').map((x) => Number(x.trim()));
+  return parts.length === 12 && parts.every((n) => Number.isFinite(n)) ? parts : null;
+}
 
 /** The fit of a place for one answer: every check (weakest) or any check (best); null when none of them has data. */
 export function answerRuleFit(a: AnswerRule, defs: FactDef[], facts: Record<string, InterestFactValue>, month?: number | null): number | null {
@@ -201,6 +224,13 @@ export function describeCheck(c: FitCheck, defs: FactDef[]): string {
     case 'month': {
       const d = defs.find((x) => x.key === c.column);
       return `The month you are going ${c.on ? 'is' : 'is not'} one of the months in "${d?.label ?? c.column}" (no month chosen asks for nothing)`;
+    }
+    case 'range': {
+      const name = labelOf(defs, c.column) + (c.monthly ? ' in the month chosen' : '');
+      const bits: string[] = [];
+      if (c.fullFrom !== undefined) bits.push(`${c.fullFrom} or more${c.zeroBelow !== undefined ? ` (fading to nothing at ${c.zeroBelow})` : ''}`);
+      if (c.fullTo !== undefined) bits.push(`${c.fullTo} or less${c.zeroAbove !== undefined ? ` (fading to nothing at ${c.zeroAbove})` : ''}`);
+      return `${name} is ${bits.join(' and ')}`;
     }
     case 'named':
       return `${labelOf(defs, c.column)} lists ${list(c.names)} with good odds (a place that lists animals but not this one counts as a miss)`;

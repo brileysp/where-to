@@ -1,0 +1,1192 @@
+{
+ "uganda": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 1,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 3000,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "mauritius": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 3,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 150,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "aruba": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 2,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 30,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "panama": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 6,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 2000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "ethiopia": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 5,
+  "gettingAround": "car",
+  "cityPopulation": 5000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "luangprabang": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 9,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 60,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "london": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 8,
+  "famousSights": 10,
+  "gettingAround": "transit",
+  "cityPopulation": 9500,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "guatemala": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 6,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 45,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "athens": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 5,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 3200,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "istanbul": {
+  "marketsStreetLife": 10,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 9,
+  "famousSights": 10,
+  "gettingAround": "transit",
+  "cityPopulation": 15500,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "dubai": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 2,
+  "famousSights": 5,
+  "gettingAround": "car",
+  "cityPopulation": 3600,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "morocco": {
+  "marketsStreetLife": 10,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 1400,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "thailand": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 80,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "havana": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 2100,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "colombian-andes": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 5,
+  "famousSights": 4,
+  "gettingAround": "transit",
+  "cityPopulation": 4000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "turks-caicos": {
+  "marketsStreetLife": 2,
+  "offTheBeatenPath": 1,
+  "historicOldTown": 1,
+  "famousSights": 1,
+  "gettingAround": "car",
+  "cityPopulation": 25,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "ecuadorian-andes": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 2800,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "andalucia": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 8,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 1300,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "big-island": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 1,
+  "famousSights": 1,
+  "gettingAround": "car",
+  "cityPopulation": 45,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "chiapas": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 7,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 215,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "colombian-caribbean": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 7,
+  "gettingAround": "walk",
+  "cityPopulation": 1000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "madeira": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 4,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 105,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "zimbabwe": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 1,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 40,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "madagascar": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 3500,
+  "guidedWalks": false,
+  "daysItCanFill": "4to5"
+ },
+ "berlin": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 10,
+  "historicOldTown": 5,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 3700,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "basque-country": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 8,
+  "famousSights": 7,
+  "gettingAround": "walk",
+  "cityPopulation": 1000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "fiji": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 1,
+  "famousSights": 1,
+  "gettingAround": "car",
+  "cityPopulation": 90,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "rome": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 10,
+  "famousSights": 10,
+  "gettingAround": "walk",
+  "cityPopulation": 4300,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "bordeaux": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 7,
+  "gettingAround": "walk",
+  "cityPopulation": 1300,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "barbados": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 5,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 110,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "rajasthan-golden-triangle": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 7,
+  "famousSights": 8,
+  "gettingAround": "car",
+  "cityPopulation": 3900,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "buenosaires": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 6,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 15000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "los-cabos": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 3,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 350,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "oaxaca": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 8,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 300,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "angkor": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 6,
+  "gettingAround": "car",
+  "cityPopulation": 250,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "nepal": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 6,
+  "gettingAround": "car",
+  "cityPopulation": 3000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "bali": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 900,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "charleston-savannah": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 9,
+  "famousSights": 7,
+  "gettingAround": "walk",
+  "cityPopulation": 800,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "srilanka": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 5600,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "tokyo-kyoto": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 10,
+  "historicOldTown": 9,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 37000,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "taiwan": {
+  "marketsStreetLife": 10,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 5,
+  "famousSights": 7,
+  "gettingAround": "transit",
+  "cityPopulation": 7000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "hongkong": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 5,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 7500,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "st-andrews-fife": {
+  "marketsStreetLife": 2,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 7,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 17,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "aspen": {
+  "marketsStreetLife": 2,
+  "offTheBeatenPath": 1,
+  "historicOldTown": 3,
+  "famousSights": 2,
+  "gettingAround": "walk",
+  "cityPopulation": 7,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "vietnam": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 7,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 9000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "beijing": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 7,
+  "famousSights": 10,
+  "gettingAround": "transit",
+  "cityPopulation": 22000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "rioja": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 6,
+  "famousSights": 4,
+  "gettingAround": "walk",
+  "cityPopulation": 150,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "nyc": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 9,
+  "historicOldTown": 6,
+  "famousSights": 10,
+  "gettingAround": "transit",
+  "cityPopulation": 20000,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "provence": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 7,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 870,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "sicily": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 7,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 650,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "chicago": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 5,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 9500,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "prague": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 9,
+  "famousSights": 8,
+  "gettingAround": "walk",
+  "cityPopulation": 1300,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "mallorca": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 5,
+  "famousSights": 4,
+  "gettingAround": "transit",
+  "cityPopulation": 420,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "amalfi": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 6,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 130,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "okinawa": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "transit",
+  "cityPopulation": 320,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "seoul": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 9,
+  "historicOldTown": 7,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 25500,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "edinburgh": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 8,
+  "gettingAround": "walk",
+  "cityPopulation": 540,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "budapest": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 7,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 1750,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "rio": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 4,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 13500,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "guilin-yangshuo": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 1400,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "bend-crater-lake": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 2,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 100,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "kerala": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 5,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 2200,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "chiang-mai": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 7,
+  "famousSights": 5,
+  "gettingAround": "transit",
+  "cityPopulation": 1000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "puerto-rico": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 8,
+  "famousSights": 5,
+  "gettingAround": "car",
+  "cityPopulation": 2000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "egypt": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 5,
+  "famousSights": 7,
+  "gettingAround": "car",
+  "cityPopulation": 22000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "champagne": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 4,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 185,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "cape-cod-islands": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 5,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 45,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "piedmont": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 7,
+  "famousSights": 5,
+  "gettingAround": "transit",
+  "cityPopulation": 1700,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "ireland": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 5,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 1400,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "new-orleans": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 7,
+  "famousSights": 7,
+  "gettingAround": "transit",
+  "cityPopulation": 1300,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "vienna": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 2000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "sardinia": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 5,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 155,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "croatia": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 9,
+  "famousSights": 7,
+  "gettingAround": "walk",
+  "cityPopulation": 180,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "nice-riviera": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 8,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 350,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "whistler": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 3,
+  "famousSights": 2,
+  "gettingAround": "walk",
+  "cityPopulation": 2600,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "tuscany": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 8,
+  "gettingAround": "walk",
+  "cityPopulation": 380,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "san-miguel-guanajuato": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 9,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 170,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "mexicocity": {
+  "marketsStreetLife": 10,
+  "offTheBeatenPath": 9,
+  "historicOldTown": 7,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 21800,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "maui": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 1,
+  "famousSights": 1,
+  "gettingAround": "car",
+  "cityPopulation": 27,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "bahamas": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 4,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 275,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "lisbon": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 9,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 2900,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "azores": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 5,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 70,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "douro-valley-porto": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 9,
+  "famousSights": 7,
+  "gettingAround": "transit",
+  "cityPopulation": 1700,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "belfast-giants-causeway": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 6,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 640,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "vancouver-island": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 6,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 400,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "seychelles": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 2,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 30,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "copenhagen": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 8,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 2100,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "uzbekistan": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 10,
+  "famousSights": 8,
+  "gettingAround": "walk",
+  "cityPopulation": 550,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "cotswolds": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 8,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 120,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "bagan": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 4,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 1400,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "paris": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 9,
+  "historicOldTown": 8,
+  "famousSights": 10,
+  "gettingAround": "transit",
+  "cityPopulation": 13000,
+  "guidedWalks": true,
+  "daysItCanFill": "longer"
+ },
+ "canaries": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 3,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 380,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "bavaria-munich": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 2900,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "hudson-valley": {
+  "marketsStreetLife": 2,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 3,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 30,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "ghana": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 3,
+  "famousSights": 4,
+  "gettingAround": "car",
+  "cityPopulation": 5000,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "texas-hill-country": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 4,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 2300,
+  "guidedWalks": false,
+  "daysItCanFill": "4to5"
+ },
+ "tasmania": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 6,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 230,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "cape-town": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 6,
+  "famousSights": 8,
+  "gettingAround": "car",
+  "cityPopulation": 4700,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "quebec-city": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 10,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 4300,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "tbilisi-caucasus": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 6,
+  "historicOldTown": 8,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 1200,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "bangkok": {
+  "marketsStreetLife": 9,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 6,
+  "famousSights": 8,
+  "gettingAround": "transit",
+  "cityPopulation": 11000,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "queenstown": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 3,
+  "famousSights": 2,
+  "gettingAround": "walk",
+  "cityPopulation": 48,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "jordan": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 5,
+  "famousSights": 5,
+  "gettingAround": "car",
+  "cityPopulation": 4000,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "venice": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 10,
+  "famousSights": 9,
+  "gettingAround": "walk",
+  "cityPopulation": 260,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "nicaragua": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 9,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 130,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ },
+ "singapore": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 3,
+  "famousSights": 6,
+  "gettingAround": "transit",
+  "cityPopulation": 5900,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "santorini": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 6,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 15,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "algarve": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 5,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 65,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "papua-new-guinea": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 1,
+  "famousSights": 1,
+  "gettingAround": "car",
+  "cityPopulation": 400,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "peru": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 9,
+  "famousSights": 6,
+  "gettingAround": "walk",
+  "cityPopulation": 430,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "rivieramaya": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 2,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 300,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "sydney": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 7,
+  "historicOldTown": 5,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 5400,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "palawan": {
+  "marketsStreetLife": 4,
+  "offTheBeatenPath": 2,
+  "historicOldTown": 2,
+  "famousSights": 2,
+  "gettingAround": "car",
+  "cityPopulation": 300,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "puglia": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 5,
+  "historicOldTown": 8,
+  "famousSights": 5,
+  "gettingAround": "walk",
+  "cityPopulation": 320,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "jamaica": {
+  "marketsStreetLife": 6,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 3,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 110,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "amsterdam": {
+  "marketsStreetLife": 7,
+  "offTheBeatenPath": 8,
+  "historicOldTown": 9,
+  "famousSights": 8,
+  "gettingAround": "walk",
+  "cityPopulation": 2500,
+  "guidedWalks": true,
+  "daysItCanFill": "4to5"
+ },
+ "barcelona": {
+  "marketsStreetLife": 8,
+  "offTheBeatenPath": 9,
+  "historicOldTown": 8,
+  "famousSights": 9,
+  "gettingAround": "transit",
+  "cityPopulation": 5600,
+  "guidedWalks": true,
+  "daysItCanFill": "week"
+ },
+ "bhutan": {
+  "marketsStreetLife": 3,
+  "offTheBeatenPath": 3,
+  "historicOldTown": 4,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 115,
+  "guidedWalks": false,
+  "daysItCanFill": "weekend"
+ },
+ "rwanda": {
+  "marketsStreetLife": 5,
+  "offTheBeatenPath": 4,
+  "historicOldTown": 2,
+  "famousSights": 3,
+  "gettingAround": "car",
+  "cityPopulation": 1300,
+  "guidedWalks": true,
+  "daysItCanFill": "weekend"
+ }
+}

@@ -1,1395 +1,1594 @@
 {
  "uganda": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "81,81,81,80,78,76,75,75,75,76,78,80"
  },
  "mauritius": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "86,87,86,84,82,80,78,77,78,80,82,84"
  },
  "aruba": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 3,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "87,86,86,86,87,88,89,90,90,90,89,88"
  },
  "everglades": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 7,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "75,74,75,79,84,89,93,94,93,89,84,79"
  },
  "panama": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 9,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "90,91,91,91,90,88,86,85,85,85,86,88"
  },
  "ethiopia": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "74,76,78,79,78,76,74,72,70,69,70,72"
  },
  "mendoza": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 4,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "94,91,83,72,61,53,50,53,61,72,83,91"
  },
  "gbr": {
-  "beachClubs": true,
+  "beachClubs": 7,
   "quietShores": 8,
   "resortPoolDays": 7,
   "serviceLevel": "table",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "90,89,86,82,78,75,74,75,78,82,86,89"
  },
  "luangprabang": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "88,92,95,96,95,92,88,84,81,80,81,84"
  },
  "london": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "48,48,51,58,66,73,76,76,73,66,58,51"
  },
  "guatemala": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 5,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "78,80,82,83,82,80,78,76,74,73,74,76"
  },
  "bhutan": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "54,56,60,66,72,76,78,76,72,66,60,56"
  },
  "athens": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 4,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "59,59,63,71,81,89,93,93,89,81,71,63"
  },
  "istanbul": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 3,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "48,48,53,61,71,79,84,84,79,71,61,53"
  },
  "dubai": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 1,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 9
+  "calmShores": 9,
+  "afternoonHighsF": "75,75,79,87,97,105,109,109,105,97,87,79"
  },
  "peruvian-amazon": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "87,86,86,86,87,88,89,90,90,90,89,88"
  },
  "atacama": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "84,83,79,74,69,65,64,65,69,74,79,83"
  },
  "morocco": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 2,
   "resortPoolDays": 6,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "69,69,73,80,88,95,99,99,95,88,80,73"
  },
  "thailand": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 7,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "90,92,93,94,93,92,90,88,87,86,87,88"
  },
  "havana": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 6,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "80,79,80,82,86,90,92,93,92,90,86,82"
  },
  "colombian-andes": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "70,70,70,69,68,67,66,66,66,67,68,69"
  },
  "turks-caicos": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 6,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 10
+  "calmShores": 10,
+  "afternoonHighsF": "82,81,82,84,86,88,90,91,90,88,86,84"
  },
  "sedona": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 7,
   "serviceLevel": "snack",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "56,59,67,78,89,97,100,97,89,78,67,59"
  },
  "ecuadorian-andes": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "68,67,66,66,66,67,68,69,70,70,70,69"
  },
  "monterey-big-sur": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 6,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "62,60,59,60,62,64,66,68,69,68,66,64"
  },
  "olympic": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "44,44,47,54,62,69,72,72,69,62,54,47"
  },
  "andalucia": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 5,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "59,59,63,71,81,89,93,93,89,81,71,63"
  },
  "big-island": {
-  "beachClubs": true,
+  "beachClubs": 7,
   "quietShores": 7,
   "resortPoolDays": 7,
   "serviceLevel": "table",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "79,79,79,80,82,84,85,85,85,84,82,80"
  },
  "chiapas": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 6,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "80,82,83,84,83,82,80,78,77,76,77,78"
  },
  "rajaampat": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 10,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 9
+  "calmShores": 9,
+  "afternoonHighsF": "88,87,86,86,86,87,88,89,90,90,90,89"
  },
  "colombian-caribbean": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 7,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "89,90,92,92,92,90,89,88,86,86,86,88"
  },
  "madeira": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 3,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "65,64,65,68,72,76,79,80,79,76,72,68"
  },
  "zimbabwe": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "84,80,76,75,76,80,84,88,92,93,92,88"
  },
  "madagascar": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 9,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "90,89,87,84,81,79,78,79,81,84,87,89"
  },
  "berlin": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 5,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "40,40,45,53,63,71,76,76,71,63,53,45"
  },
  "kenya": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "81,82,81,80,78,76,75,74,75,76,78,80"
  },
  "basque-country": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 4,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "53,51,53,57,63,69,73,75,73,69,63,57"
  },
  "fiji": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 9,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "87,88,87,86,84,82,81,80,81,82,84,86"
  },
  "rome": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 3,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "56,56,60,68,76,84,88,88,84,76,68,60"
  },
  "bordeaux": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 6,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "50,50,54,62,70,78,82,82,78,70,62,54"
  },
  "barbados": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 4,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "84,83,83,83,84,86,88,89,89,89,88,86"
  },
  "grandcanyon": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "46,49,57,68,79,87,90,87,79,68,57,49"
  },
  "badlands-black-hills": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "36,36,42,54,66,78,84,84,78,66,54,42"
  },
  "milford-sound-fiordland": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "66,65,61,56,51,47,46,47,51,56,61,65"
  },
  "rajasthan-golden-triangle": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "79,86,94,101,105,105,101,94,86,79,75,75"
  },
  "komodo": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 10,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "90,88,87,86,87,88,90,92,93,94,93,92"
  },
  "denali-interior": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "12,16,26,40,54,64,68,64,54,40,26,16"
  },
  "buenosaires": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "87,85,80,73,66,61,59,61,66,73,80,85"
  },
  "southeast-alaska": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "35,35,39,46,54,61,65,65,61,54,46,39"
  },
  "los-cabos": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "77,76,77,81,86,91,95,96,95,91,86,81"
  },
  "oaxaca": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 8,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "79,82,85,87,88,87,85,82,79,77,76,77"
  },
  "lapland": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "17,17,22,31,41,50,55,55,50,41,31,22"
  },
  "angkor": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 8,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "90,93,95,96,95,93,90,87,85,84,85,87"
  },
  "nepal": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "69,73,79,83,86,86,83,79,73,69,66,66"
  },
  "rwanda": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "76,76,76,77,78,79,80,80,80,79,78,77"
  },
  "ladakh": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "31,31,36,46,58,68,73,73,68,58,46,36"
  },
  "bali": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 5,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "87,86,85,85,85,86,87,88,89,89,89,88"
  },
  "charleston-savannah": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 6,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "61,61,65,73,81,89,93,93,89,81,73,65"
  },
  "srilanka": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 7,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "88,89,90,90,90,89,88,87,86,86,86,87"
  },
  "tokyo-kyoto": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "54,52,54,61,70,79,86,88,86,79,70,61"
  },
  "kaziranga": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "74,75,79,84,89,93,94,93,89,84,79,75"
  },
  "fjords": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "38,38,41,48,56,63,66,66,63,56,48,41"
  },
  "kruger": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "95,94,90,86,82,78,77,78,82,86,90,94"
  },
  "great-smoky-mountains": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "51,51,55,63,73,81,85,85,81,73,63,55"
  },
  "scottish-highlands-skye": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "39,39,43,49,55,61,65,65,61,55,49,43"
  },
  "dolomites": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "39,39,44,53,63,72,77,77,72,63,53,44"
  },
  "lake-district": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "41,41,45,51,59,65,69,69,65,59,51,45"
  },
  "falklands": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 10,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "61,60,56,50,44,40,39,40,44,50,56,60"
  },
  "taiwan": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 6,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "69,69,72,77,83,88,91,91,88,83,77,72"
  },
  "antarctica": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "40,38,34,28,22,18,16,18,22,28,34,38"
  },
  "hongkong": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 5,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "65,65,69,75,81,87,91,91,87,81,75,69"
  },
  "zambia": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "86,82,80,79,80,82,86,90,92,93,92,90"
  },
  "st-andrews-fife": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 6,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "40,40,44,50,58,64,68,68,64,58,50,44"
  },
  "black-forest": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "39,39,43,51,61,69,73,73,69,61,51,43"
  },
  "palau": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 9,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "86,87,88,89,90,90,90,89,88,87,86,86"
  },
  "yosemite": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "43,43,49,60,72,83,89,89,83,72,60,49"
  },
  "tierra-del-fuego": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "62,60,55,48,41,36,34,36,41,48,55,60"
  },
  "aspen": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "29,29,36,47,61,72,79,79,72,61,47,36"
  },
  "torres-del-paine": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "67,65,60,54,48,43,41,43,47,54,60,65"
  },
  "chilean-lake-district": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "77,75,70,62,54,49,47,49,54,62,70,75"
  },
  "vietnam": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 6,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "81,84,88,91,93,93,91,88,84,81,79,79"
  },
  "beijing": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "42,42,48,60,72,84,90,90,84,72,60,48"
  },
  "lofoten": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 8,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "32,32,36,42,50,56,60,60,56,50,42,36"
  },
  "rioja": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "47,47,52,60,70,78,83,83,78,70,60,52"
  },
  "banff": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "26,26,32,44,56,68,74,74,68,56,44,32"
  },
  "nyc": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "40,40,46,56,68,78,84,84,78,68,56,46"
  },
  "arches-canyonlands": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "44,48,58,72,86,96,100,96,86,72,58,48"
  },
  "provence": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 5,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "51,51,56,64,74,82,87,87,82,74,64,56"
  },
  "sicily": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 6,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "60,58,60,66,73,80,86,88,86,80,73,66"
  },
  "chicago": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "34,34,40,52,64,76,82,82,76,64,52,40"
  },
  "prague": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "37,37,42,51,61,70,75,75,70,61,51,42"
  },
  "mallorca": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 6,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "59,57,59,64,72,80,85,87,85,80,72,64"
  },
  "amalfi": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 4,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "58,56,58,64,71,78,84,86,84,78,71,64"
  },
  "namibia": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 8,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "92,90,86,80,74,70,68,70,74,80,86,90"
  },
  "okinawa": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 7,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "70,70,73,77,83,87,90,90,87,83,77,73"
  },
  "el-chalten": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "65,63,58,50,42,37,35,37,42,50,58,63"
  },
  "churchill": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "1,1,8,21,35,48,55,55,48,35,21,8"
  },
  "seoul": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "37,37,44,55,69,80,87,87,80,69,55,44"
  },
  "edinburgh": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 5,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "41,41,45,51,57,63,67,67,63,57,51,45"
  },
  "belize": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 8,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "83,85,87,89,90,90,89,87,85,83,82,82"
  },
  "acadia": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 5,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "31,31,37,48,60,71,77,77,71,60,48,37"
  },
  "sequoia-kings-canyon": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "39,39,45,56,68,79,85,85,79,68,56,45"
  },
  "budapest": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "38,38,44,54,66,76,82,82,76,66,54,44"
  },
  "svalbard": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "6,6,11,20,30,39,44,44,39,30,20,11"
  },
  "rio": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 4,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "90,90,88,84,80,76,74,74,76,80,84,88"
  },
  "guilin-yangshuo": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 3,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "64,64,68,74,82,88,92,92,88,82,74,68"
  },
  "napa": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 7,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "59,59,63,70,78,85,89,89,85,78,70,63"
  },
  "costa-rica": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 8,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "84,85,85,85,84,82,80,79,79,79,80,82"
  },
  "bend-crater-lake": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "35,35,42,53,67,78,85,85,78,67,53,42"
  },
  "kerala": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 5,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "87,89,90,91,90,89,87,85,84,83,84,85"
  },
  "chiang-mai": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "90,95,99,100,99,95,90,85,81,80,81,85"
  },
  "puerto-rico": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 6,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "83,82,83,84,86,88,89,90,89,88,86,84"
  },
  "zion-bryce": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "46,46,52,64,76,88,94,94,88,76,64,52"
  },
  "kyrgyzstan": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "31,31,38,51,65,78,85,85,78,65,51,38"
  },
  "egypt": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "72,74,80,88,96,102,104,102,96,88,80,74"
  },
  "champagne": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "41,41,46,55,65,74,79,79,74,65,55,46"
  },
  "cape-cod-islands": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 6,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "35,35,41,52,64,75,81,81,75,64,52,41"
  },
  "north-island": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 8,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "78,78,74,69,63,58,54,54,58,63,69,74"
  },
  "chamonix": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "31,31,36,46,58,68,73,73,68,58,46,36"
  },
  "piedmont": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "43,43,48,58,70,80,85,85,80,70,58,48"
  },
  "ireland": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 8,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "46,46,49,53,59,63,66,66,63,59,53,49"
  },
  "marlborough-abel-tasman": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 9,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "76,76,72,67,61,56,52,52,56,61,67,72"
  },
  "new-orleans": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "64,64,68,75,83,90,94,94,90,83,75,68"
  },
  "pantanal": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "90,87,85,84,85,87,90,93,95,96,95,93"
  },
  "vienna": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 3,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "38,38,43,53,63,73,78,78,73,63,53,43"
  },
  "sardinia": {
-  "beachClubs": true,
+  "beachClubs": 7,
   "quietShores": 7,
   "resortPoolDays": 7,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "60,58,60,65,72,79,84,86,84,79,72,65"
  },
  "croatia": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 6,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "55,55,59,66,74,81,85,85,81,74,66,59"
  },
  "greenland": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "15,15,19,26,34,41,45,45,41,34,26,19"
  },
  "nice-riviera": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 2,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "56,54,56,61,68,75,80,82,80,75,68,61"
  },
  "yellowstone": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "27,27,33,44,56,67,73,73,67,56,44,33"
  },
  "pakistan": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "67,74,84,94,101,104,101,94,84,74,67,64"
  },
  "whistler": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 5,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "31,31,36,46,58,68,73,73,68,58,46,36"
  },
  "tuscany": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 4,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "50,50,55,63,73,81,86,86,81,73,63,55"
  },
  "san-miguel-guanajuato": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "74,78,82,85,86,85,82,78,74,71,70,71"
  },
  "hokkaido": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 6,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "31,28,31,40,52,64,73,76,73,64,52,40"
  },
  "mexicocity": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "70,73,76,78,79,78,76,73,70,68,67,68"
  },
  "maui": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "79,78,79,80,82,84,85,86,85,84,82,80"
  },
  "bahamas": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 9,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "77,77,79,82,86,89,91,91,89,86,82,79"
  },
  "lisbon": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 4,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "58,58,62,67,73,78,82,82,78,73,67,62"
  },
  "borabora": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 9,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 10
+  "calmShores": 10,
+  "afternoonHighsF": "88,88,88,86,85,84,82,82,82,84,85,86"
  },
  "azores": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 5,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "61,60,61,64,68,72,75,76,75,72,68,64"
  },
  "maldives": {
-  "beachClubs": true,
+  "beachClubs": 10,
   "quietShores": 8,
   "resortPoolDays": 10,
   "serviceLevel": "table",
-  "calmShores": 10
+  "calmShores": 10,
+  "afternoonHighsF": "87,88,89,89,89,88,87,86,85,85,85,86"
  },
  "douro-valley-porto": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 4,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "52,52,55,62,70,77,80,80,77,70,62,55"
  },
  "mongolia": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "23,23,30,43,57,70,77,77,70,57,43,30"
  },
  "belfast-giants-causeway": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 6,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "42,42,46,51,57,62,66,66,62,57,51,46"
  },
  "vancouver-island": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 9,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "44,44,47,54,62,69,72,72,69,62,54,47"
  },
  "seychelles": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 8,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "87,88,89,89,89,88,87,86,85,85,85,86"
  },
  "copenhagen": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "38,38,42,50,58,66,70,70,66,58,50,42"
  },
  "uzbekistan": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "47,47,54,65,79,90,97,97,90,79,65,54"
  },
  "cotswolds": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "44,44,47,54,62,69,72,72,69,62,54,47"
  },
  "bagan": {
-  "beachClubs": true,
+  "beachClubs": 6,
   "quietShores": 8,
   "resortPoolDays": 6,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "92,97,101,102,101,97,92,87,83,82,83,87"
  },
  "paris": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 0,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "43,43,47,55,65,73,77,77,73,65,55,47"
  },
  "canaries": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "69,68,69,71,74,77,79,80,79,77,74,71"
  },
  "bavaria-munich": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 3,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "36,36,41,50,60,69,74,74,69,60,50,41"
  },
  "iceland": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "34,34,37,41,47,51,54,54,51,47,41,37"
  },
  "hudson-valley": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 3,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "39,39,45,56,68,79,85,85,79,68,56,45"
  },
  "upper-peninsula": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 8,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "26,26,32,44,56,68,74,74,68,56,44,32"
  },
  "nova-scotia": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 8,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "35,35,40,49,59,68,73,73,68,59,49,40"
  },
  "ghana": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 7,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "90,91,91,91,90,88,86,85,85,85,86,88"
  },
  "texas-hill-country": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 3,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "59,59,64,73,83,92,97,97,92,83,73,64"
  },
  "tasmania": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 9,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "70,70,68,64,60,56,54,54,56,60,64,68"
  },
  "galapagos": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 9,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "84,86,87,86,84,82,80,78,77,78,80,82"
  },
  "cape-town": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 3,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "79,79,76,72,68,64,61,61,64,68,72,76"
  },
  "swissalps": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "31,31,36,45,55,64,69,69,64,55,45,36"
  },
  "vermont": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 5,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "31,31,37,48,60,71,77,77,71,60,48,37"
  },
  "quebec-city": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 2,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "26,26,32,44,56,68,74,74,68,56,44,32"
  },
  "uyuni": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "65,64,62,60,58,56,55,56,58,60,62,64"
  },
  "punta-cana": {
-  "beachClubs": true,
+  "beachClubs": 10,
   "quietShores": 6,
   "resortPoolDays": 10,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "83,82,83,84,86,88,89,90,89,88,86,84"
  },
  "tbilisi-caucasus": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "41,41,47,57,69,79,85,85,79,69,57,47"
  },
  "bangkok": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "92,94,95,96,95,94,92,90,89,88,89,90"
  },
  "borneo": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 8,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "87,88,89,90,90,90,89,88,87,86,86,86"
  },
  "queenstown": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "73,73,69,62,54,47,43,43,47,54,62,69"
  },
  "jordan": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 1,
   "resortPoolDays": 4,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "67,67,71,79,89,97,101,101,97,89,79,71"
  },
  "joshua-tree": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "62,65,74,86,98,107,110,107,98,86,74,65"
  },
  "venice": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 3,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "46,46,51,59,69,77,82,82,77,69,59,51"
  },
  "nicaragua": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 8,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "92,94,95,95,94,92,90,88,87,87,88,90"
  },
  "singapore": {
-  "beachClubs": true,
+  "beachClubs": 7,
   "quietShores": 3,
   "resortPoolDays": 7,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "87,88,89,90,90,90,89,88,87,86,86,86"
  },
  "glacier-waterton": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 8,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 3
+  "calmShores": 3,
+  "afternoonHighsF": "28,28,34,46,58,70,76,76,70,58,46,34"
  },
  "redwood": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 2
+  "calmShores": 2,
+  "afternoonHighsF": "54,52,52,54,56,60,62,64,64,62,60,56"
  },
  "santorini": {
-  "beachClubs": true,
+  "beachClubs": 7,
   "quietShores": 7,
   "resortPoolDays": 7,
   "serviceLevel": "table",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "60,58,60,65,72,79,84,86,84,79,72,65"
  },
  "death-valley": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 4,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "62,66,76,90,104,114,118,114,104,90,76,66"
  },
  "botswana": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "89,83,79,76,76,79,83,89,93,96,96,93"
  },
  "algarve": {
-  "beachClubs": true,
+  "beachClubs": 8,
   "quietShores": 5,
   "resortPoolDays": 8,
   "serviceLevel": "table",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "60,60,64,69,75,80,84,84,80,75,69,64"
  },
  "rocky-mountain": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "26,26,32,44,56,68,74,74,68,56,44,32"
  },
  "faroe-islands": {
-  "beachClubs": false,
+  "beachClubs": 0,
   "quietShores": 9,
   "resortPoolDays": 0,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "40,40,43,47,53,57,60,60,57,53,47,43"
  },
  "snowdonia": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 7,
   "resortPoolDays": 1,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "40,40,44,50,56,62,66,66,62,56,50,44"
  },
  "north-cascades": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "29,29,35,46,58,69,75,75,69,58,46,35"
  },
  "cornwall": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 6,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 4
+  "calmShores": 4,
+  "afternoonHighsF": "48,48,51,55,61,65,68,68,65,61,55,51"
  },
  "papua-new-guinea": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 10,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "87,86,85,85,85,86,87,88,89,89,89,88"
  },
  "peru": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "66,64,63,63,63,64,66,68,69,69,69,68"
  },
  "uluru": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "99,97,90,82,74,67,65,67,74,82,90,97"
  },
  "rivieramaya": {
-  "beachClubs": true,
+  "beachClubs": 10,
   "quietShores": 4,
   "resortPoolDays": 10,
   "serviceLevel": "table",
-  "calmShores": 8
+  "calmShores": 8,
+  "afternoonHighsF": "82,82,84,86,90,92,94,94,92,90,86,84"
  },
  "argentine-lake-district": {
-  "beachClubs": false,
+  "beachClubs": 1,
   "quietShores": 1,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 1
+  "calmShores": 1,
+  "afternoonHighsF": "74,72,66,59,52,46,44,46,51,59,66,72"
  },
  "sydney": {
-  "beachClubs": false,
+  "beachClubs": 2,
   "quietShores": 3,
   "resortPoolDays": 2,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "80,80,77,73,67,63,60,60,63,67,73,77"
  },
  "palawan": {
-  "beachClubs": false,
+  "beachClubs": 4,
   "quietShores": 10,
   "resortPoolDays": 4,
   "serviceLevel": "snack",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "87,89,90,91,91,90,89,87,86,85,85,86"
  },
  "puglia": {
-  "beachClubs": true,
+  "beachClubs": 5,
   "quietShores": 5,
   "resortPoolDays": 5,
   "serviceLevel": "snack",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "58,58,61,68,76,83,86,86,83,76,68,61"
  },
  "jamaica": {
-  "beachClubs": true,
+  "beachClubs": 9,
   "quietShores": 5,
   "resortPoolDays": 9,
   "serviceLevel": "table",
-  "calmShores": 7
+  "calmShores": 7,
+  "afternoonHighsF": "84,84,84,86,87,88,90,90,90,88,87,86"
  },
  "amsterdam": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 3,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 5
+  "calmShores": 5,
+  "afternoonHighsF": "44,44,47,54,62,69,72,72,69,62,54,47"
  },
  "barcelona": {
-  "beachClubs": false,
+  "beachClubs": 3,
   "quietShores": 2,
   "resortPoolDays": 3,
   "serviceLevel": "self",
-  "calmShores": 6
+  "calmShores": 6,
+  "afternoonHighsF": "55,55,59,65,71,77,81,81,77,71,65,59"
  }
 }

@@ -7,6 +7,8 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
 const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3);
 (async () => {
   const apply = process.argv.includes('--apply');
+  // --overwrite=col1,col2 replaces those columns even where a cell is already filled (used when a column changes type).
+  const overwrite = new Set((process.argv.find((a) => a.startsWith('--overwrite='))?.split('=')[1] ?? '').split(',').filter(Boolean));
   const interest = arg('interest')!, file = arg('file')!;
   const data = JSON.parse(readFileSync(join(__dirname, '..', file), 'utf8')) as Record<string, Record<string, unknown>>;
   const { db } = await import('../src/lib/db/client');
@@ -31,7 +33,7 @@ const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.sl
       if (!def) { problems.push(`${id}: unknown column ${key}`); continue; }
       const parsed = parseFact(def, v);
       if (!parsed.ok) { problems.push(`${id}: bad ${key} (${parsed.message})`); continue; }
-      if (empty(have[key]) && !empty(parsed.value)) { next[key] = parsed.value; added++; }
+      if ((empty(have[key]) || overwrite.has(key)) && !empty(parsed.value) && JSON.stringify(have[key]) !== JSON.stringify(parsed.value)) { next[key] = parsed.value; added++; }
     }
     if (next.drawSourceChecked === undefined) next.drawSourceChecked = false;
     if (added) {

@@ -43,6 +43,8 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 5. The reason chips and green match chips, **in the place's detail sheet only** (owner decision 21 Oct 2026; the card stays as it is today). The sheet's "adjusted lower because..." sentence gains the chips, the original and for-you scores, and a per-interest breakdown. Mockup: claude.ai/artifact/C8YqFKXEck6DufewouZyYt.
 6. Reason-chip messages (`interest_questions.miss_message`): written for the 28 mapped questions (21 Oct 2026); the rest are written as their columns land.
 
+A `range` check reads a number (a rating, a count, or the traveler's month in a 12-number series) with soft edges: a full fit between two values that fades in a straight line to nothing at two outer values (City size, Biggest museum in hours, Sunbathing's afternoon highs, 25 Oct 2026).
+
 A question rule can be marked `bonusOnly` (`QuestionFitRule.bonusOnly`): the answer only ever adds a green match; a place that does not fully match is left alone, never marked down. Used for Luxury Hotels' dream stay (24 Oct 2026).
 
 ## Trip settings (22 Oct 2026)

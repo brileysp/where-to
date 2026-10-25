@@ -558,18 +558,86 @@ const HISTORY_FACTS: FactDef[] = [
 /**
  * Sunbathing (25 Oct 2026). Five columns for the three approved chips and the wind, sun-certainty and food questions (owner approved the plan on 25 Oct, with
  * Resort pool days as a 0 to 10 rating instead of a tick). A first draft started from the Beaches ratings: resort beaches, remote beaches and calm water.
- * "How hot do you like to lie out" is not mapped yet: the places' hot-months list only marks uncomfortably hot months, so it cannot say "properly hot".
+ * "How hot do you like to lie out" reads a column of twelve afternoon highs (the places' hot-months list only marks uncomfortably hot months, so it cannot say "properly hot").
  * Dry and wet months come from the lists every place already has (added to the facts when the match tables are built), so they are hidden columns here.
  * Proposal page: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n.
  */
 const SUNBATHING_FACTS: FactDef[] = [
-  tick('beachClubs', 'Beach clubs and loungers', 'Tick when beach clubs or hired loungers and umbrellas are easy to find at the main beaches. Feeds the Beach clubs and loungers chip.'),
+  rate('beachClubs', 'Beach clubs and loungers', 'How strong the beach-club and lounger scene is: beach clubs, hired loungers and umbrellas at the main beaches. 0-1 none, 5 easy to find, 8-10 a beach-club destination. Feeds the Beach clubs and loungers chip.'),
   rate('quietShores', 'Quiet shores', 'How easy it is to find an uncrowded stretch of sand to lie on, even in season. 10 = empty beaches a short walk away; 0-1 no shore at all. Feeds the Quiet shores chip.'),
   rate('resortPoolDays', 'Resort pool days', 'How strong the resort pool day is: big pools, loungers and service, a real way to spend a sun day without the beach (Dubai, Palm Springs, Mauritius). 0-1 almost none, 8-10 a resort-pool destination. Feeds the Resort pool days chip.'),
   { key: 'serviceLevel', label: 'Service at the lounger', type: 'choice', group: 'practical', options: [{ value: 'self', label: 'Bring your own' }, { value: 'snack', label: 'A snack bar nearby' }, { value: 'table', label: 'Table service at the lounger' }], hint: 'The usual level of food and drink service at the main sun spots. Question 4 reads it.' },
   rate('calmShores', 'Calm, low-wind shores', 'How rarely wind spoils lying out at the best beaches. 10 = sheltered beaches that are calm almost every day; 0-1 no shore or always windy. Question 3 (a limit) reads it.'),
+  { key: 'afternoonHighsF', label: 'Afternoon highs by month (F)', type: 'text', group: 'style', maxLength: 80, hint: 'Twelve typical afternoon highs in whole degrees F, January first, separated by commas: 84,85,86,... Question 1 (how hot do you like to lie out) reads the month the traveler picks.' },
   { key: 'dryMonths', label: 'Dry months (from the place)', type: 'multi', group: 'style', options: MONTH_OPTIONS, hidden: true, optional: true, hint: 'Filled from the place\'s own dry months list when the match tables are built; never typed here.' },
   { key: 'wetMonths', label: 'Wet months (from the place)', type: 'multi', group: 'style', options: MONTH_OPTIONS, hidden: true, optional: true, hint: 'Filled from the place\'s own wet months list when the match tables are built; never typed here.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Architecture (25 Oct 2026). Eight columns for the three approved chips and three approved questions (owner approved the plan on 25 Oct; the "private building
+ * tours" answer reads "Buildings you can go inside" at 8 or more instead of a column of its own). Ratings are 0 to 10: 10 means among the best in the world
+ * and 7 or more is a full chip match. Proposal pages: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n and DSGYGjGPLzkUZaAytepxib.
+ */
+const ARCHITECTURE_FACTS: FactDef[] = [
+  rate('castlesPalaces', 'Castles and palaces', 'How strong the castle, palace and royal-residence scene is. 10 = the Loire, Vienna, Scotland, Prague. Feeds the Castles and palaces chip.'),
+  rate('modernArchitecture', 'Modern and contemporary', 'How strong the modern and contemporary architecture is: skyscrapers, landmark new buildings, starchitects. 10 = Chicago, Tokyo, Dubai. Feeds the Modern and contemporary chip and question 1 ("mostly modern").'),
+  rate('artNouveauDeco', 'Art Nouveau and Art Deco', 'How strong the Art Nouveau and Art Deco heritage is. 10 = Barcelona, Prague, Miami, Riga. Feeds the Art Nouveau and Art Deco chip.'),
+  rate('historicArchitecture', 'Historic architecture', 'How strong the architecture from before 1900 is overall: medieval, Renaissance, baroque, classical. 10 = Rome, Prague, Samarkand. Question 1 ("mostly old") reads it.'),
+  rate('grandMonuments', 'Grand monuments', 'How strong the famous landmark monuments are: cathedrals, palaces, great mosques. Question 2 reads it.'),
+  rate('everydayStreets', 'Everyday streets and vernacular', 'How rewarding the ordinary built fabric is: old streets, traditional houses, villages. 10 = places where the streets are the sight. Question 2 reads it.'),
+  rate('buildingsInside', 'Buildings you can go inside', 'How easily a visitor can enter the best buildings: cathedrals, palaces, houses, towers, including tours of normally closed buildings and open-house events. Question 3 reads it: "I want to go inside" needs 6 or more, "tours of private buildings" needs 8 or more.'),
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * City Exploration (25 Oct 2026). Nine columns for the three approved chips and four approved questions (owner approved the plan on 25 Oct, with city size stored
+ * as a real population number so the answers can read it with soft edges). Proposal pages: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n and DSGYGjGPLzkUZaAytepxib.
+ */
+const CITY_FACTS: FactDef[] = [
+  rate('marketsStreetLife', 'Markets and street life', 'How alive the street life is: markets, food streets, squares where the city lives outdoors. 10 = Istanbul, Hong Kong, Marrakech. Feeds the Markets and street life chip and question 2.'),
+  rate('offTheBeatenPath', 'Neighborhoods off the tourist trail', 'How rewarding it is to leave the sights for local neighborhoods: districts worth wandering where visitors are few. 10 = Tokyo, Berlin, Mexico City. Feeds the Neighborhoods chip and question 2.'),
+  rate('historicOldTown', 'Historic old town', 'How strong the walkable historic core is. 10 = Rome, Prague, Venice, Quebec City. Feeds the Historic old towns chip.'),
+  rate('famousSights', 'Famous sights', 'How many must-see sights there are to plan a day around. 10 = London, Rome, Paris. Question 2 ("with a plan") reads it.'),
+  { key: 'gettingAround', label: 'Getting around', type: 'choice', group: 'practical', options: [{ value: 'walk', label: 'Everything on foot (a compact core)' }, { value: 'transit', label: 'Walk plus metro or tram' }, { value: 'car', label: 'A taxi or bus is needed' }], hint: 'How a visitor gets between the places worth seeing. Question 1 (a limit) reads it in this order.' },
+  { key: 'cityPopulation', label: 'City size (thousands of people)', type: 'int', group: 'style', hint: 'Population of the largest city a visitor would base in, metro area, in thousands: Mexico City 21800, Montreal 4300, Quebec City 840, Windhoek 430, Churchill 1. Blank where there is no city (Antarctica). Question 3 reads it with soft edges.' },
+  tick('guidedWalks', 'Guided walks', 'Tick when guided walking tours or free walking tours are readily available. Question 2 reads it.'),
+  { key: 'daysItCanFill', label: 'Days it can fill', type: 'choice', group: 'style', options: [{ value: 'weekend', label: 'A weekend' }, { value: '4to5', label: '4 to 5 days' }, { value: 'week', label: 'A week' }, { value: 'longer', label: 'Longer, slow travel' }], hint: 'The most a visitor can enjoy without repeating. Question 4 reads it.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Museums & Art (25 Oct 2026). Ten columns for the four approved chips and three approved questions (owner approved the plan on 25 Oct, including Modern Art
+ * as a rating and a new "Biggest museum, in hours" for the first three answers of "How long in a museum?"). Proposal pages: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n
+ * and DSGYGjGPLzkUZaAytepxib.
+ */
+const MUSEUMS_FACTS: FactDef[] = [
+  rate('fineArt', 'Fine art masterworks', 'Old-master and major collections of painting and sculpture. 10 = Paris, Florence, Madrid, Amsterdam. Feeds the Fine art masterworks chip.'),
+  rate('streetArt', 'Street art and murals', 'How strong the street art scene is: murals, districts, festivals. 10 = Berlin, Mexico City, Valparaiso. Feeds the Street art and murals chip.'),
+  rate('historyMuseums', 'History and natural history museums', 'Major museums of history, science and natural history. 10 = London, Washington, Berlin. Feeds the History and natural history museums chip.'),
+  rate('modernArt', 'Modern and contemporary art', 'Museums and galleries of modern and contemporary art. 10 = New York, London, Paris, Tokyo. Feeds the Modern Art chip.'),
+  { key: 'biggestMuseumHours', label: 'Biggest museum, in hours', type: 'int', group: 'style', hint: 'How long the largest museum in the place takes to see properly, as a whole number of hours: the Louvre 10, the Prado 5, the Met 8, a small-town museum 1. Question 1 reads it for "half a day" (3 or more) and "a full day" (6 or more).' },
+  rate('daysOfMuseums', 'Days of museums', 'How many days of museums the place can fill without running out. 10 = a week or more. Only the "several days in one city" answer of question 1 reads it.'),
+  rate('famousMuseums', 'Famous museums', 'How many world-famous museums there are. Question 2 reads it.'),
+  rate('quirkyMuseums', 'Small and quirky museums', 'How strong the small, specialist and unusual museums are. Question 2 reads it.'),
+  { key: 'timedEntry', label: 'Timed entry', type: 'choice', group: 'practical', options: [{ value: 'widely', label: 'Widely: timed tickets skip the queue at the main museums' }, { value: 'some', label: 'At some museums' }, { value: 'rarely', label: 'Rarely' }], hint: 'Whether timed tickets let you skip the queue. Question 3 (a limit) reads it.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
+];
+
+/**
+ * Skiing & Snowboarding (25 Oct 2026). Nine columns for the four approved chips and three approved questions (owner approved the plan on 25 Oct, with cross-country
+ * as a 0 to 10 rating anchored on kilometers because a kilometer total depends on where the region's border is drawn). Proposal pages: claude.ai/artifact/5oPpYg8Qvr5MTtQchk4L1n
+ * and DSGYGjGPLzkUZaAytepxib.
+ */
+const SKIING_FACTS: FactDef[] = [
+  rate('downhillResort', 'Downhill resort skiing', 'How strong the lift-served skiing is: lifts, runs, vertical, snow. 10 = a top-ten ski region. Feeds the Downhill resort skiing chip and question 1 (intermediate).'),
+  rate('offPiste', 'Off-piste and backcountry', 'How strong the off-piste, ski touring and backcountry is, and how accessible. Feeds the Off-piste and backcountry chip.'),
+  rate('crossCountry', 'Cross-country skiing', 'How strong the cross-country skiing is. 10 = about 300 km or more of groomed trails and a Nordic ski culture (Lillehammer, Davos, Seefeld); 7 = about 100 km; 4 = about 30 km; 1 = a few loops. Feeds the Cross-country skiing chip.'),
+  tick('heliCat', 'Heli and cat skiing', 'Tick when heli-skiing or cat-skiing is offered and legal. It is banned in France and some other countries. Feeds the Heli-skiing and cat-skiing chip.'),
+  rate('beginnerFriendly', 'Beginner-friendly', 'How good the gentle terrain is: wide green runs, ski schools, magic carpets. Question 1 (a limit) reads it.'),
+  rate('advancedTerrain', 'Advanced terrain', 'How much steep, challenging terrain there is: black runs, couloirs, expert zones. Question 1 (a limit) reads it.'),
+  rate('apres', 'Apres-ski and village charm', 'How lively the apres-ski is and how charming the village is. 10 = a famous ski town. Question 2 reads it.'),
+  rate('snowboardParks', 'Snowboard parks and freeride', 'How good the terrain parks, natural features and freeride terrain are for snowboarders. Question 3 reads it.'),
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Whether these entries were checked against a source.' },
 ];
 
@@ -616,6 +684,10 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   streetFood: STREET_FOOD_FACTS,
   historyArchaeology: HISTORY_FACTS,
   sunbathing: SUNBATHING_FACTS,
+  architecture: ARCHITECTURE_FACTS,
+  cityExploration: CITY_FACTS,
+  museumsArt: MUSEUMS_FACTS,
+  skiingSnowboarding: SKIING_FACTS,
   luxuryHotels: LUXURY_HOTELS_FACTS,
   cyclingRoad: CYCLING_ROAD_FACTS,
   shopping: SHOPPING_FACTS,

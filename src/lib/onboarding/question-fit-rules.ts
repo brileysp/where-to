@@ -29,9 +29,11 @@ const CURRENT = ['none', 'mild', 'moderate', 'strong'];
 const GUIDE_RULES = ['free', 'partly', 'always'];
 const GEAR_RENTAL = ['plentiful', 'some', 'few'];
 const LOCALISM = ['welcoming', 'mixed', 'protective', 'hostile'];
+const range = (column: string, o: { zeroBelow?: number; fullFrom?: number; fullTo?: number; zeroAbove?: number; monthly?: boolean }): AnswerRule => all({ type: 'range', column, ...o });
 const onMonth = (column: string): AnswerRule => all({ type: 'month', column, on: true });
 const BLOOM_TIMING = ['dependable', 'shifts', 'rainDependent', 'rare'];
 const BLOOM_CROWDS = ['quiet', 'beatable', 'festival'];
+const GETTING_AROUND = ['walk', 'transit', 'car'];
 const GROUND = ['flat', 'climb', 'rough'];
 const ILLNESS_RISK = ['low', 'some', 'high'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
@@ -134,10 +136,32 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'historyArchaeology.q3': R(within('roughestGround', GROUND, 'flat'), within('roughestGround', GROUND, 'climb'), null),
   'historyArchaeology.q4': R(null, atLeast(5, 'historyDensity'), atLeast(8, 'historyDensity')),
 
-  // ---- Sunbathing ---- (25 Oct 2026; question 1, how hot, waits on a source for properly hot months)
+  // ---- Sunbathing ---- (25 Oct 2026; question 1 reads twelve afternoon highs and the month chosen)
+  'sunbathing.q1': R(range('afternoonHighsF', { fullTo: 82, zeroAbove: 92, monthly: true }), range('afternoonHighsF', { zeroBelow: 72, fullFrom: 82, monthly: true }), null),
   'sunbathing.q2': R(onMonth('dryMonths'), all({ type: 'month', column: 'wetMonths', on: false }), null),
   'sunbathing.q3': R(atLeast(7, 'calmShores'), atLeast(4, 'calmShores'), null),
   'sunbathing.q4': R(null, has('serviceLevel', 'snack', 'table'), has('serviceLevel', 'table')),
+
+  // ---- Architecture ---- (25 Oct 2026; private building tours read Buildings you can go inside at 8 or more)
+  'architecture.q1': R(atLeast(7, 'historicArchitecture'), null, atLeast(7, 'modernArchitecture')),
+  'architecture.q2': R(atLeast(7, 'grandMonuments'), atLeast(7, 'everydayStreets'), null),
+  'architecture.q3': R(null, atLeast(6, 'buildingsInside'), atLeast(8, 'buildingsInside')),
+
+  // ---- City Exploration ---- (25 Oct 2026; city size is a population number with soft edges)
+  'cityExploration.q1': R(has('gettingAround', 'walk'), within('gettingAround', GETTING_AROUND, 'transit'), null),
+  'cityExploration.q2': R(atLeast(7, 'famousSights'), atLeast(6, 'offTheBeatenPath', 'marketsStreetLife'), has('guidedWalks', 'true')),
+  'cityExploration.q3': R(range('cityPopulation', { zeroBelow: 1000, fullFrom: 5000 }), range('cityPopulation', { zeroBelow: 50, fullFrom: 300, fullTo: 5000, zeroAbove: 15000 }), range('cityPopulation', { fullTo: 250, zeroAbove: 1000 })),
+  'cityExploration.q4': R(null, has('daysItCanFill', '4to5', 'week', 'longer'), has('daysItCanFill', 'week', 'longer'), has('daysItCanFill', 'longer')),
+
+  // ---- Museums & Art ---- (25 Oct 2026; the first three answers read the biggest museum in hours)
+  'museumsArt.q1': R(null, range('biggestMuseumHours', { zeroBelow: 1, fullFrom: 3 }), range('biggestMuseumHours', { zeroBelow: 2, fullFrom: 6 }), atLeast(8, 'daysOfMuseums')),
+  'museumsArt.q2': R(atLeast(7, 'famousMuseums'), atLeast(7, 'quirkyMuseums'), null),
+  'museumsArt.q3': R(null, has('timedEntry', 'widely', 'some'), has('timedEntry', 'widely')),
+
+  // ---- Skiing & Snowboarding ---- (25 Oct 2026)
+  'skiingSnowboarding.q1': R(atLeast(6, 'beginnerFriendly'), atLeast(5, 'downhillResort'), atLeast(7, 'advancedTerrain')),
+  'skiingSnowboarding.q2': R(null, atLeast(4, 'apres'), atLeast(7, 'apres')),
+  'skiingSnowboarding.q3': R(null, atLeast(5, 'snowboardParks'), null),
 
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
@@ -213,6 +237,20 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'sunbathing.q2': 'Wetter than you want',
   'sunbathing.q3': 'Windier than you want',
   'sunbathing.q4': 'Less service than you want',
+  'architecture.q1': 'Not the era you want',
+  'architecture.q2': 'Not the kind of sights you want',
+  'architecture.q3': 'Less access inside',
+  'cityExploration.q1': 'Less walkable than you want',
+  'cityExploration.q2': 'Not how you like to explore',
+  'cityExploration.q3': 'Not the city size you want',
+  'cityExploration.q4': 'Not enough to fill your days',
+  'museumsArt.q1': 'Smaller museums than you want',
+  'museumsArt.q2': 'Not the museum mix you want',
+  'museumsArt.q3': 'Longer queues than you want',
+  'skiingSnowboarding.q1': 'Not suited to your level',
+  'skiingSnowboarding.q2': 'Less apres than you want',
+  'skiingSnowboarding.q3': 'Fewer snowboard options',
+  'sunbathing.q1': 'Not the heat you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',
