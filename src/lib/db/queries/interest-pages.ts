@@ -5,7 +5,7 @@ import { db } from '../client';
 import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
-import { SLIDERS, VISIBLE_SLIDERS } from '@/lib/scoring/constants';
+import { SLIDERS, VISIBLE_SLIDERS, INACTIVE_NOTES } from '@/lib/scoring/constants';
 import { INTEREST_ANCHORS } from '@/lib/scoring/anchors';
 import { loadAnchorOverrides } from '@/lib/scoring/anchorOverrides';
 import { isSliderNA } from '@/lib/scoring/destinations';
@@ -349,6 +349,8 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn, approvedBy: c.approvedBy, approvedAt: c.approvedAt ? c.approvedAt.toISOString() : null })),
     chipOverrides: overrideRows.map((o): ChipOverrideRow => ({ chipKey: o.chipKey, placeId: o.placeId, fit: o.fit, reason: o.reason, setBy: o.setBy, setAt: o.setAt.toISOString() })),
     ruleOverrides: Object.fromEntries(ruleRows.map((r) => [r.sectionKey, r.items])),
-    interestOptions: VISIBLE_SLIDERS.map((s) => ({ key: s.key, label: s.label, icon: s.icon, group: s.group })),
+    // Inactive interests stay out of the picker, except the one being looked at.
+    interestOptions: SLIDERS.filter((s) => !s.hidden || s.key === interestKey).map((s) => ({ key: s.key, label: s.hidden ? `${s.label} (inactive)` : s.label, icon: s.icon, group: s.group })),
+    inactive: slider.hidden ? { note: INACTIVE_NOTES[interestKey] ?? '' } : null,
   };
 }

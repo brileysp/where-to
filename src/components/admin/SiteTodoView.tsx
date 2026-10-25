@@ -13,7 +13,7 @@ const PRIORITY: Record<number, string> = { 1: 'High', 2: 'Normal', 3: 'Low' };
 const REPEAT_LABEL: Record<TodoRepeat, string> = { weekly: 'Every week', monthly: 'Every month' };
 
 type Chip = 'all' | 'site' | 'due';
-type Interest = { key: string; label: string };
+type Interest = { key: string; label: string; /** Hidden from travellers and from the admin lists by default. */ inactive?: boolean };
 type Draft = { interestKey: string; title: string; detail: string; status: InterestTodoStatus; source: string; priority: number; dueOn: string; repeatEvery: '' | TodoRepeat };
 const blank = (): Draft => ({ interestKey: SITE_TODO_KEY, title: '', detail: '', status: 'needs_you', source: '', priority: 2, dueOn: '', repeatEvery: '' });
 const fromRow = (t: SiteTodoRow): Draft => ({ interestKey: t.interestKey, title: t.title, detail: t.detail, status: t.status, source: t.source, priority: t.priority, dueOn: t.dueOn ?? '', repeatEvery: t.repeatEvery ?? '' });
@@ -28,7 +28,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
   const [form, setForm] = useState<{ id: string | null; draft: Draft } | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const label = useMemo(() => new Map([[SITE_TODO_KEY, 'Site-wide'], ...interests.map((i) => [i.key, i.label] as [string, string])]), [interests]);
+  const label = useMemo(() => new Map([[SITE_TODO_KEY, 'Site-wide'], ...interests.map((i) => [i.key, i.inactive ? `${i.label} (inactive)` : i.label] as [string, string])]), [interests]);
 
   const open = todos.filter(isOpen);
   const counts = {
@@ -87,7 +87,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
         ))}
         <select className="ip-select" value={scope} onChange={(e) => setScope(e.target.value)} aria-label="Show one interest only">
           <option value="">Any interest</option>
-          {withOpen.map((i) => <option key={i.key} value={i.key}>{i.label} ({i.n})</option>)}
+          {withOpen.map((i) => <option key={i.key} value={i.key}>{i.inactive ? `${i.label} (inactive)` : i.label} ({i.n})</option>)}
         </select>
         <span className="filter-label">Show</span>
         <select className="ip-select" value={status} onChange={(e) => setStatus(e.target.value as typeof status)} aria-label="Status filter">
@@ -109,7 +109,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
         <div className="ip-form">
           <label className="full">Title<input value={form.draft.title} onChange={(e) => set({ title: e.target.value })} maxLength={200} autoFocus /></label>
           <label className="full">Detail<textarea value={form.draft.detail} onChange={(e) => set({ detail: e.target.value })} maxLength={2000} /></label>
-          <label>Applies to<select value={form.draft.interestKey} onChange={(e) => set({ interestKey: e.target.value })}><option value={SITE_TODO_KEY}>Whole site</option>{interests.map((i) => <option key={i.key} value={i.key}>{i.label}</option>)}</select></label>
+          <label>Applies to<select value={form.draft.interestKey} onChange={(e) => set({ interestKey: e.target.value })}><option value={SITE_TODO_KEY}>Whole site</option>{interests.filter((i) => !i.inactive || i.key === form.draft.interestKey).map((i) => <option key={i.key} value={i.key}>{i.inactive ? `${i.label} (inactive)` : i.label}</option>)}</select></label>
           <label>Status<select value={form.draft.status} onChange={(e) => set({ status: e.target.value as InterestTodoStatus })}>{INTEREST_TODO_STATUSES.map((s) => <option key={s} value={s}>{STATUS[s]}</option>)}</select></label>
           <label>Priority<select value={form.draft.priority} onChange={(e) => set({ priority: Number(e.target.value) })}>{[1, 2, 3].map((n) => <option key={n} value={n}>{PRIORITY[n]}</option>)}</select></label>
           <label>Check on<input type="date" value={form.draft.dueOn} onChange={(e) => set({ dueOn: e.target.value })} /></label>

@@ -117,10 +117,24 @@ export const SLIDERS: Slider[] = [
   // and audience-tier weighting are untouched.
   { key: 'familyFun', label: 'Family Fun', icon: '👨‍👩‍👧', group: 'Relaxation & Leisure', formula: 'culture', audienceTier: 'popular', hidden: true },
   // Value — practical/logistical, not domain interests (see comment above)
-  { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist' },
-  { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist' },
+  // Inactive since 22 Oct 2026: replaced by the Crowds & prices peak or off peak scale (a trip setting). Kept stored, like nationalParks and familyFun,
+  // so personas and saved weights keep working; hidden from every pick and display surface and from the admin lists by default.
+  { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist', hidden: true },
+  { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist', hidden: true },
   { key: 'roadtrip', label: 'Road-Tripping', icon: '🚗', group: 'Value', formula: 'hiking', audienceTier: 'enthusiast' },
 ];
+
+/**
+ * Why each inactive (hidden) interest is inactive, shown in the admin next to its "Inactive" badge so every one reads the same way. Add a line here
+ * whenever an interest is set hidden; an inactive interest with no line shows "Inactive" with no reason.
+ */
+export const INACTIVE_NOTES: Record<string, string> = {
+  landscapePhotography: 'Folded into Scenic Landscapes as a chip (20 Oct 2026).',
+  nationalParks: 'A type of place, not something to weight (a place-type tag).',
+  familyFun: 'Hidden; not built as an experience.',
+  deals: 'Replaced by the Crowds & prices trip setting (22 Oct 2026).',
+  crowds: 'Replaced by the Crowds & prices trip setting (22 Oct 2026).',
+};
 
 // The list every admin/app screen that lists or lets someone pick an
 // interest should render from — SLIDERS itself stays the source of truth

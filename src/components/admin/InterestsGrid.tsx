@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
 import { InlineTextCell, InlineOptionalTextCell, InlineNumberCell, LabeledSelectCell, TriStateCell } from './cells';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
-import { SLIDER_GROUPS } from '@/lib/scoring/constants';
+import { SLIDER_GROUPS, INACTIVE_NOTES } from '@/lib/scoring/constants';
 
 export interface InterestRow {
   key: string;
@@ -50,12 +50,15 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
     setRows((rs) => rs.map((r) => (r.key === entityId ? { ...r, updatedAt } : r)));
   });
   const [domainFilter, setDomainFilter] = useState('');
+  // Inactive (hidden) interests stay out of the list unless asked for, like every other admin screen that lists interests.
+  const [showInactive, setShowInactive] = useState(false);
+  const inactiveCount = rows.filter((r) => r.hidden).length;
 
   function patchRow(key: string, patch: Partial<InterestRow>) {
     setRows((rs) => rs.map((r) => (r.key === key ? { ...r, ...patch } : r)));
   }
 
-  const visibleRows = useMemo(() => (domainFilter ? rows.filter((r) => r.group === domainFilter) : rows), [rows, domainFilter]);
+  const visibleRows = useMemo(() => rows.filter((r) => (showInactive || !r.hidden) && (!domainFilter || r.group === domainFilter)), [rows, domainFilter, showInactive]);
 
   const columns: GridColumn<InterestRow>[] = [
     {
@@ -72,7 +75,7 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
         />
       ),
     },
-    { key: 'label', label: 'Interest', sortable: true, sortValue: (r) => r.label, render: (r) => <div className="cell-inner"><Link href={`/admin/destinations/interests/${r.key}`} style={{ fontWeight: 600, color: 'var(--text)', textDecoration: 'none' }}>{r.label}</Link>{r.hidden && <span className="badge badge-moderate" title="Hidden from travellers">Hidden</span>}</div> },
+    { key: 'label', label: 'Interest', sortable: true, sortValue: (r) => r.label, render: (r) => <div className="cell-inner"><Link href={`/admin/destinations/interests/${r.key}`} style={{ fontWeight: 600, color: 'var(--text)', textDecoration: 'none' }}>{r.label}</Link>{r.hidden && <span className="badge badge-moderate" title={INACTIVE_NOTES[r.key] ?? 'Inactive: hidden from travellers'}>Inactive</span>}{r.hidden && INACTIVE_NOTES[r.key] && <span style={{ color: 'var(--text-faint)', fontSize: 11.5 }}>{INACTIVE_NOTES[r.key]}</span>}</div> },
     {
       key: 'labelEdit',
       label: 'Name (edit)',
@@ -130,8 +133,8 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
           ctx={{ entityType: 'interest', entityId: r.key, entityLabel: r.label, field: 'hidden', fieldLabel: 'Hidden from travellers', loadedUpdatedAt: r.updatedAt }}
           value={r.hiddenOverride === null ? null : !r.hiddenOverride}
           trueLabel="Shown"
-          falseLabel="Hidden"
-          nullLabel={`Built-in: ${r.builtIn.hidden ? 'hidden' : 'shown'}`}
+          falseLabel="Inactive"
+          nullLabel={`Built-in: ${r.builtIn.hidden ? 'inactive' : 'shown'}`}
           setLocal={(v) => patchRow(r.key, { hiddenOverride: v === null ? null : !v, hidden: v === null ? r.builtIn.hidden : !v })}
         />
       ),
@@ -239,9 +242,13 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
       searchText={(r) => `${r.label} ${r.shortName ?? r.autoShortName} ${r.key}`}
       searchPlaceholder="Search interest…"
       stickyFirstColumn={false}
-      footerNote={`${visibleRows.length} of ${rows.length} interests · same grid scales as more per-interest fields get added`}
+      footerNote={`${visibleRows.length} of ${rows.length} interests${!showInactive && inactiveCount ? ` · ${inactiveCount} inactive hidden` : ''} · same grid scales as more per-interest fields get added`}
       toolbarExtra={
         <>
+          <label className="filter-label" style={{ display: 'inline-flex', gap: 6, alignItems: 'center', marginRight: 10 }}>
+            <input type="checkbox" checked={showInactive} onChange={(e) => setShowInactive(e.target.checked)} />
+            Show inactive ({inactiveCount})
+          </label>
           <span className="filter-label">Domain</span>
           <select className="filter-select" value={domainFilter} onChange={(e) => setDomainFilter(e.target.value)}>
             <option value="">All domains</option>

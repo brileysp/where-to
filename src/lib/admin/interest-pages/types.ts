@@ -205,4 +205,6 @@ export interface InterestPageData {
   ruleOverrides: Record<string, unknown[]>;
   /** Every interest, for the picker at the top of the page. */
   interestOptions: Array<{ key: string; label: string; icon: string; group: string }>;
+  /** Set when the interest is inactive (hidden from travellers and from the admin lists by default); the note says why. */
+  inactive: { note: string } | null;
 }
