@@ -1,5 +1,5 @@
 {
- "method": "Zoos and aquariums within 100 km of the place centre (two bases for Tokyo & Kyoto), from Wikidata (zoo and aquarium classes) with visitors and animal counts from Wikidata, park infoboxes, Wikipedia text and web searches. A facility with a figure counts its yearly visitors; one without a figure but with at least 5 Wikipedia language editions counts a visitor estimate from that fame (capped at 1 million); the rest are listed as minor and not counted. Rating = 10 x square root of (total visitors / 6 million), at most 10; 2 if only minor facilities; 1 if none.",
+ "method": "Zoos and aquariums within 100 km of the place centre (two bases for Tokyo & Kyoto), from Wikidata (zoo and aquarium classes) with visitors and animal counts from Wikidata, park infoboxes, Wikipedia text and web searches. A facility with a figure counts its yearly visitors; one without a figure but with at least 5 Wikipedia language editions counts a visitor estimate from that fame (capped at 1 million); the rest are listed as minor and not counted. Rating = 10 x square root of (total visitors / 6 million), at most 10; 2 if only minor facilities; 1 if none. OWN-AREA RULE (owner, 26 Oct 2026): a facility counts only when it belongs to the place, not a neighbouring city or region. Limits by kind of place: city 35 km, region and coastal area 60 km, national park and wilderness area 40 km, state/province, island and country 100 km, never across a border or the water. Facilities beyond the limit are kept in the list with the reason and do not count.",
  "fit": {
   "a": 11.282721816312979,
   "b": 0.9407156938524219
@@ -24,7 +24,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "mauritius": {
    "name": "Mauritius",
@@ -59,7 +63,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "country",
+   "notCounted": []
   },
   "aruba": {
    "name": "Aruba",
@@ -80,7 +88,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "everglades": {
    "name": "Everglades National Park",
@@ -201,6 +213,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Zoo Miami",
+     "km": 55,
+     "reason": "55 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Miami Seaquarium",
+     "km": 82,
+     "reason": "82 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Jungle Island",
+     "km": 85,
+     "reason": "85 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Monkey Jungle",
+     "km": 51,
+     "reason": "51 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "panama": {
@@ -222,7 +259,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "ethiopia": {
    "name": "Ethiopia",
@@ -243,7 +284,11 @@
      "basis": "estimated from fame",
      "counted": 361040.4636911666
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "country",
+   "notCounted": []
   },
   "mendoza": {
    "name": "Mendoza",
@@ -264,7 +309,11 @@
      "basis": "figure",
      "counted": 200000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 200000,
+   "kind": "city",
+   "notCounted": []
   },
   "gbr": {
    "name": "Great Barrier Reef",
@@ -398,13 +447,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1150672,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "luangprabang": {
    "name": "Laos",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "london": {
    "name": "London",
@@ -962,6 +1019,61 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2213187,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Colchester Zoo",
+     "km": 77,
+     "reason": "77 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Whipsnade Zoo",
+     "km": 47,
+     "reason": "47 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Marwell Zoo",
+     "km": 98,
+     "reason": "98 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Port Lympne Wild Animal Park",
+     "km": 92,
+     "reason": "92 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Woburn Safari Park",
+     "km": 63,
+     "reason": "63 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Drusillas Zoo Park",
+     "km": 79,
+     "reason": "79 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Birdworld",
+     "km": 61,
+     "reason": "61 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Wildwood Discovery Park",
+     "km": 89,
+     "reason": "89 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "The Living Rainforest",
+     "km": 76,
+     "reason": "76 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Tilgate Nature Centre",
+     "km": 46,
+     "reason": "46 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "guatemala": {
@@ -997,13 +1109,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "country",
+   "notCounted": []
   },
   "bhutan": {
    "name": "Bhutan",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "athens": {
    "name": "Athens",
@@ -1024,7 +1144,11 @@
      "basis": "figure",
      "counted": 380000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 380000,
+   "kind": "city",
+   "notCounted": []
   },
   "istanbul": {
    "name": "Istanbul",
@@ -1089,7 +1213,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1000000,
+   "kind": "city",
+   "notCounted": []
   },
   "dubai": {
    "name": "Dubai",
@@ -1182,7 +1310,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 5722081,
+   "kind": "city",
+   "notCounted": []
   },
   "peruvian-amazon": {
    "name": "Peruvian Amazon",
@@ -1203,19 +1335,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "atacama": {
    "name": "Atacama Desert",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "morocco": {
    "name": "Marrakech & Atlas",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "thailand": {
    "name": "Phuket & the Andaman Coast",
@@ -1265,7 +1409,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "havana": {
    "name": "Cuba",
@@ -1301,7 +1449,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "colombian-andes": {
    "name": "Colombian Andes",
@@ -1322,13 +1474,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "turks-caicos": {
    "name": "Turks & Caicos",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "sedona": {
    "name": "Sedona",
@@ -1362,6 +1522,16 @@
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
+    }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Bearizona",
+     "km": 55,
+     "reason": "55 km from the centre, over the 35 km limit for a city"
     }
    ]
   },
@@ -1398,7 +1568,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "monterey-big-sur": {
    "name": "Monterey & Big Sur",
@@ -1434,7 +1608,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2000000,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "olympic": {
    "name": "Olympic National Park",
@@ -1558,6 +1736,26 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Woodland Park Zoo",
+     "km": 95,
+     "reason": "95 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Seattle Aquarium",
+     "km": 96,
+     "reason": "96 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Point Defiance Zoo & Aquarium",
+     "km": 98,
+     "reason": "98 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "andalucia": {
@@ -1608,6 +1806,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Zoobot\u00e1nico Jerez",
+     "km": 79,
+     "reason": "79 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "big-island": {
@@ -1629,7 +1837,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "chiapas": {
    "name": "Chiapas",
@@ -1650,13 +1862,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "rajaampat": {
    "name": "Raja Ampat",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "colombian-caribbean": {
    "name": "Colombian Caribbean",
@@ -1692,7 +1912,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "madeira": {
    "name": "Madeira",
@@ -1714,13 +1938,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "zimbabwe": {
    "name": "Victoria Falls & Hwange",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "madagascar": {
    "name": "Madagascar",
@@ -1783,7 +2015,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 627617,
+   "kind": "country",
+   "notCounted": []
   },
   "berlin": {
    "name": "Berlin",
@@ -2030,7 +2266,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 5478182,
+   "kind": "city",
+   "notCounted": []
   },
   "kenya": {
    "name": "Maasai Mara & Amboseli",
@@ -2050,6 +2290,16 @@
      "sl": 6,
      "basis": "estimated from fame",
      "counted": 428590.8737471597
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Giraffe Centre",
+     "km": 83,
+     "reason": "83 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -2144,6 +2394,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Cabarceno Natural Park",
+     "km": 75,
+     "reason": "75 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "fiji": {
@@ -2165,7 +2425,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "rome": {
    "name": "Rome",
@@ -2201,7 +2465,11 @@
      "basis": "figure",
      "counted": 400000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1180057,
+   "kind": "city",
+   "notCounted": []
   },
   "bordeaux": {
    "name": "Bordeaux",
@@ -2264,13 +2532,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "barbados": {
    "name": "Barbados",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "grandcanyon": {
    "name": "Grand Canyon",
@@ -2290,6 +2566,16 @@
      "sl": 2,
      "basis": "figure",
      "counted": 300000.0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Bearizona",
+     "km": 90,
+     "reason": "90 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -2312,6 +2598,16 @@
      "basis": "figure",
      "counted": 250000.0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Reptile Gardens",
+     "km": 41,
+     "reason": "41 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "milford-sound-fiordland": {
@@ -2333,7 +2629,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "rajasthan-golden-triangle": {
    "name": "Rajasthan & the Golden Triangle",
@@ -2354,19 +2654,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "komodo": {
    "name": "Komodo & Flores",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "denali-interior": {
    "name": "Denali & the Interior",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "buenosaires": {
    "name": "Buenos Aires",
@@ -2457,25 +2769,41 @@
      "basis": "left out: closed 2020",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1054050,
+   "kind": "city",
+   "notCounted": []
   },
   "southeast-alaska": {
    "name": "Southeast Alaska & the Inside Passage",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "los-cabos": {
    "name": "Los Cabos",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "oaxaca": {
    "name": "Oaxaca",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "lapland": {
    "name": "Finnish Lapland",
@@ -2495,6 +2823,16 @@
      "sl": 10,
      "basis": "figure",
      "counted": 100000.0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Ranua Wildlife Park",
+     "km": 71,
+     "reason": "71 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -2517,7 +2855,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "nepal": {
    "name": "Nepal",
@@ -2538,19 +2880,31 @@
      "basis": "figure",
      "counted": 1000000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1000000,
+   "kind": "country",
+   "notCounted": []
   },
   "rwanda": {
    "name": "Rwanda",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "ladakh": {
    "name": "Ladakh",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "bali": {
    "name": "Bali",
@@ -2641,7 +2995,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 681171,
+   "kind": "island",
+   "notCounted": []
   },
   "charleston-savannah": {
    "name": "Charleston & Savannah",
@@ -2678,7 +3036,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "srilanka": {
    "name": "Sri Lanka",
@@ -2727,7 +3089,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2258016,
+   "kind": "country",
+   "notCounted": []
   },
   "tokyo-kyoto": {
    "name": "Tokyo & Kyoto",
@@ -3778,6 +4144,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 17837168,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Himeji Central Park",
+     "km": 94,
+     "reason": "94 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Kamogawa Sea World",
+     "km": 70,
+     "reason": "70 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Kobe Animal Kingdom",
+     "km": 64,
+     "reason": "64 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Kobe Oji Zoo",
+     "km": 61,
+     "reason": "61 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "kaziranga": {
@@ -3799,19 +4190,37 @@
      "basis": "figure",
      "counted": 67367.0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Nagaland Zoological Park",
+     "km": 98,
+     "reason": "98 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "fjords": {
    "name": "Norwegian Fjords",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "kruger": {
    "name": "Kruger & Sabi Sands",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "great-smoky-mountains": {
    "name": "Great Smoky Mountains National Park",
@@ -3846,6 +4255,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Zoo Knoxville",
+     "km": 55,
+     "reason": "55 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "scottish-highlands-skye": {
@@ -3866,6 +4285,16 @@
      "sl": 7,
      "basis": "figure",
      "counted": 142000.0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Highland Wildlife Park",
+     "km": 65,
+     "reason": "65 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -3971,6 +4400,16 @@
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
+    }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Alpenzoo Innsbruck",
+     "km": 100,
+     "reason": "100 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -4093,13 +4532,27 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Blackpool Zoo",
+     "km": 72,
+     "reason": "72 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "falklands": {
    "name": "Falkland Islands",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "taiwan": {
    "name": "Taiwan",
@@ -4192,13 +4645,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 7,
+   "visitorsOwnArea": 3000000,
+   "kind": "country",
+   "notCounted": []
   },
   "antarctica": {
    "name": "Antarctic Peninsula",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "hongkong": {
    "name": "Hong Kong",
@@ -4277,13 +4738,27 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 7,
+   "visitorsOwnArea": 3093010,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Zhuhai Chimelong Ocean Kingdom",
+     "km": 70,
+     "reason": "70 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "zambia": {
    "name": "South Luangwa",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "st-andrews-fife": {
    "name": "St Andrews & Fife",
@@ -4416,6 +4891,16 @@
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
+    }
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1009849,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Blair Drummond Safari and Adventure Park",
+     "km": 79,
+     "reason": "79 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -4803,49 +5288,102 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Basel Zoo",
+     "km": 68,
+     "reason": "68 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Z\u00fcrich Zoo",
+     "km": 74,
+     "reason": "74 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Parc Zoologique et Botanique de Mulhouse",
+     "km": 70,
+     "reason": "70 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Knie's Kinderzoo",
+     "km": 98,
+     "reason": "98 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "palau": {
    "name": "Palau",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "yosemite": {
    "name": "Yosemite National Park",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "tierra-del-fuego": {
    "name": "Tierra del Fuego",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "aspen": {
    "name": "Aspen Snowmass",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "torres-del-paine": {
    "name": "Torres del Paine",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "chilean-lake-district": {
    "name": "Chilean Lake District",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "vietnam": {
    "name": "Vietnam",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "beijing": {
    "name": "Beijing & Great Wall",
@@ -4894,7 +5432,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 9,
+   "visitorsOwnArea": 5000000,
+   "kind": "city",
+   "notCounted": []
   },
   "lofoten": {
    "name": "Lofoten Islands",
@@ -4916,19 +5458,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "rioja": {
    "name": "Rioja",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "banff": {
    "name": "Banff & Jasper National Parks",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "nyc": {
    "name": "New York City",
@@ -5162,13 +5716,32 @@
      "basis": "left out: closed 1976",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 5983938,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Maritime Aquarium at Norwalk",
+     "km": 66,
+     "reason": "66 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Connecticut's Beardsley Zoo",
+     "km": 89,
+     "reason": "89 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "arches-canyonlands": {
    "name": "Arches & Canyonlands",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "provence": {
    "name": "Provence",
@@ -5303,13 +5876,32 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Parc zoologique de Montpellier",
+     "km": 97,
+     "reason": "97 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Exotic Garden and Zoo of Sanary-Bandol",
+     "km": 97,
+     "reason": "97 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "sicily": {
    "name": "Sicily",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "chicago": {
    "name": "Chicago",
@@ -5401,7 +5993,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 7368395,
+   "kind": "city",
+   "notCounted": []
   },
   "prague": {
    "name": "Prague",
@@ -5829,6 +6425,41 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 851600,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "\u00dast\u00ed nad Labem Zoo",
+     "km": 70,
+     "reason": "70 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "D\u011b\u010d\u00edn Zoo",
+     "km": 80,
+     "reason": "80 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Zoo Pilsen",
+     "km": 85,
+     "reason": "85 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Tierpark Zittau",
+     "km": 95,
+     "reason": "95 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Liberec Zoo",
+     "km": 90,
+     "reason": "90 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Chomutov Zoo",
+     "km": 85,
+     "reason": "85 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "mallorca": {
@@ -5879,7 +6510,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 922831,
+   "kind": "island",
+   "notCounted": []
   },
   "amalfi": {
    "name": "Amalfi Coast",
@@ -5900,13 +6535,21 @@
      "basis": "estimated from fame",
      "counted": 951052.4222107689
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 951052,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "namibia": {
    "name": "Namibia",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "okinawa": {
    "name": "Okinawa",
@@ -5971,19 +6614,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 8,
+   "visitorsOwnArea": 3500000,
+   "kind": "island",
+   "notCounted": []
   },
   "el-chalten": {
    "name": "El Chalt\u00e9n & El Calafate",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "churchill": {
    "name": "Churchill",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "seoul": {
    "name": "Seoul",
@@ -6062,7 +6717,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1693010,
+   "kind": "city",
+   "notCounted": []
   },
   "edinburgh": {
    "name": "Edinburgh",
@@ -6210,6 +6869,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1009849,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Blair Drummond Safari and Adventure Park",
+     "km": 58,
+     "reason": "58 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "belize": {
@@ -6245,19 +6914,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 60000,
+   "kind": "country",
+   "notCounted": []
   },
   "acadia": {
    "name": "Acadia National Park",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "sequoia-kings-canyon": {
    "name": "Sequoia & Kings Canyon",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "budapest": {
    "name": "Budapest",
@@ -6405,13 +7086,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1100000,
+   "kind": "city",
+   "notCounted": []
   },
   "svalbard": {
    "name": "Svalbard",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "rio": {
    "name": "Rio de Janeiro",
@@ -6447,13 +7136,21 @@
      "basis": "estimated from fame",
      "counted": 361040.4636911666
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 722081,
+   "kind": "city",
+   "notCounted": []
   },
   "guilin-yangshuo": {
    "name": "Guilin & Yangshuo",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "napa": {
    "name": "Napa & Sonoma",
@@ -6588,6 +7285,41 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "California Academy of Sciences",
+     "km": 81,
+     "reason": "81 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Oakland Zoo",
+     "km": 87,
+     "reason": "87 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Sacramento Zoo",
+     "km": 82,
+     "reason": "82 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Aquarium of the Bay",
+     "km": 77,
+     "reason": "77 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Woodward's Gardens",
+     "km": 81,
+     "reason": "81 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "San Francisco Zoo",
+     "km": 85,
+     "reason": "85 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "costa-rica": {
@@ -6721,13 +7453,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 428591,
+   "kind": "country",
+   "notCounted": []
   },
   "bend-crater-lake": {
    "name": "Bend & Crater Lake",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "kerala": {
    "name": "Kerala",
@@ -6748,7 +7488,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "chiang-mai": {
    "name": "Chiang Mai & Northern Thailand",
@@ -6797,6 +7541,16 @@
      "basis": "estimated from fame",
      "counted": 428590.8737471597
     }
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1315599,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Elephant Nature Park",
+     "km": 49,
+     "reason": "49 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "puerto-rico": {
@@ -6818,25 +7572,41 @@
      "basis": "left out: closed 2023",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "zion-bryce": {
    "name": "Zion & Bryce Canyon",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "kyrgyzstan": {
    "name": "Kyrgyzstan",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "egypt": {
    "name": "Red Sea & Nile",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "champagne": {
    "name": "Champagne",
@@ -6956,6 +7726,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Parc des F\u00e9lins",
+     "km": 82,
+     "reason": "82 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Zoo de Vendeuil",
+     "km": 88,
+     "reason": "88 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "cape-cod-islands": {
@@ -7034,6 +7819,21 @@
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
+    }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 87000,
+   "kind": "coastal_area",
+   "notCounted": [
+    {
+     "name": "Buttonwood Park Zoo",
+     "km": 63,
+     "reason": "63 km from the centre, over the 60 km limit for a coastal area"
+    },
+    {
+     "name": "Capron Park Zoo",
+     "km": 96,
+     "reason": "96 km from the centre, over the 60 km limit for a coastal area"
     }
    ]
   },
@@ -7127,7 +7927,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2036954,
+   "kind": "island",
+   "notCounted": []
   },
   "chamonix": {
    "name": "Chamonix & the French Alps",
@@ -7248,6 +8052,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 70506,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Zoo La Garenne",
+     "km": 79,
+     "reason": "79 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "piedmont": {
@@ -7326,6 +8140,16 @@
      "basis": "left out: closed 1987",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Aquarium of Genoa",
+     "km": 78,
+     "reason": "78 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "ireland": {
@@ -7362,13 +8186,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1276930,
+   "kind": "country",
+   "notCounted": []
   },
   "marlborough-abel-tasman": {
    "name": "Marlborough & Abel Tasman",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "new-orleans": {
    "name": "New Orleans",
@@ -7432,13 +8264,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1218222,
+   "kind": "city",
+   "notCounted": []
   },
   "pantanal": {
    "name": "Pantanal",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "vienna": {
    "name": "Vienna",
@@ -7629,6 +8469,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 7,
+   "visitorsOwnArea": 2865091,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Bratislava Zoo",
+     "km": 52,
+     "reason": "52 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Hodon\u00edn Zoo",
+     "km": 91,
+     "reason": "91 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "sardinia": {
@@ -7651,7 +8506,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "croatia": {
    "name": "Dalmatian Coast",
@@ -7673,13 +8532,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "greenland": {
    "name": "Greenland",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "nice-riviera": {
    "name": "Nice & the French Riviera",
@@ -7785,7 +8652,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1308575,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "yellowstone": {
    "name": "Yellowstone National Park",
@@ -7805,6 +8676,16 @@
      "sl": 3,
      "basis": "figure",
      "counted": 140000.0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Grizzly & Wolf Discovery Center",
+     "km": 48,
+     "reason": "48 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -7925,7 +8806,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1010000,
+   "kind": "country",
+   "notCounted": []
   },
   "whistler": {
    "name": "Vancouver & Whistler",
@@ -8034,6 +8919,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 693010,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Greater Vancouver Zoo",
+     "km": 50,
+     "reason": "50 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "tuscany": {
@@ -8141,6 +9036,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Collodi Butterfly House",
+     "km": 67,
+     "reason": "67 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "san-miguel-guanajuato": {
@@ -8161,6 +9066,16 @@
      "sl": 2,
      "basis": "figure",
      "counted": 600000.0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Zoo Le\u00f3n",
+     "km": 76,
+     "reason": "76 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -8301,7 +9216,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 961040,
+   "kind": "island",
+   "notCounted": []
   },
   "mexicocity": {
    "name": "Mexico City",
@@ -8449,7 +9368,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 5861040,
+   "kind": "city",
+   "notCounted": []
   },
   "maui": {
    "name": "Maui",
@@ -8471,7 +9394,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "bahamas": {
    "name": "Bahamas",
@@ -8506,7 +9433,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "country",
+   "notCounted": []
   },
   "lisbon": {
    "name": "Lisbon",
@@ -8600,25 +9531,41 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 1870000,
+   "kind": "city",
+   "notCounted": []
   },
   "borabora": {
    "name": "French Polynesia",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "azores": {
    "name": "Azores",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "maldives": {
    "name": "Maldives",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "douro-valley-porto": {
    "name": "Douro Valley & Porto",
@@ -8684,13 +9631,27 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Sea Life Porto",
+     "km": 74,
+     "reason": "74 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "mongolia": {
    "name": "Mongolia",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "belfast-giants-causeway": {
    "name": "Northern Ireland",
@@ -8739,6 +9700,21 @@
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
+    }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Belfast Zoo",
+     "km": 48,
+     "reason": "48 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Exploris",
+     "km": 88,
+     "reason": "88 km from the centre, over the 35 km limit for a city"
     }
    ]
   },
@@ -8849,13 +9825,32 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": [
+    {
+     "name": "Vancouver Aquarium",
+     "km": 98,
+     "reason": "on the mainland, across the water"
+    },
+    {
+     "name": "Greater Vancouver Zoo",
+     "km": 98,
+     "reason": "on the mainland, across the water"
+    }
    ]
   },
   "seychelles": {
    "name": "Seychelles",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "copenhagen": {
    "name": "Copenhagen",
@@ -9033,13 +10028,32 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2174888,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Sk\u00e5nes Djurpark",
+     "km": 68,
+     "reason": "68 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Crocodile Zoo",
+     "km": 100,
+     "reason": "100 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "uzbekistan": {
    "name": "Samarkand & Bukhara",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "cotswolds": {
    "name": "Cotswolds",
@@ -9496,13 +10510,67 @@
      "basis": "left out: closed 1992",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 456040,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Whipsnade Zoo",
+     "km": 90,
+     "reason": "90 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "West Midland Safari Park",
+     "km": 68,
+     "reason": "68 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Longleat Safari and Adventure Park",
+     "km": 77,
+     "reason": "77 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Twycross Zoo",
+     "km": 94,
+     "reason": "94 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Woburn Safari Park",
+     "km": 89,
+     "reason": "89 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Drayton Manor Theme Park",
+     "km": 87,
+     "reason": "87 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Dudley Zoo",
+     "km": 78,
+     "reason": "78 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Bristol Zoo Project",
+     "km": 62,
+     "reason": "62 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Noah's Ark Zoo Farm",
+     "km": 74,
+     "reason": "74 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "bagan": {
    "name": "Myanmar",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "paris": {
    "name": "Paris",
@@ -9836,6 +10904,31 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1549688,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Parc des F\u00e9lins",
+     "km": 48,
+     "reason": "48 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Ch\u00e2teau of Thoiry",
+     "km": 41,
+     "reason": "41 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Biotropica",
+     "km": 96,
+     "reason": "96 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "La Tani\u00e8re",
+     "km": 74,
+     "reason": "74 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "canaries": {
@@ -9943,7 +11036,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1693010,
+   "kind": "island",
+   "notCounted": []
   },
   "bavaria-munich": {
    "name": "Bavaria & Munich",
@@ -10217,6 +11314,16 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2258308,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Alpenzoo Innsbruck",
+     "km": 97,
+     "reason": "97 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "iceland": {
@@ -10238,7 +11345,11 @@
      "basis": "estimated from fame",
      "counted": 428590.8737471597
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 428591,
+   "kind": "country",
+   "notCounted": []
   },
   "hudson-valley": {
    "name": "Hudson Valley",
@@ -10344,13 +11455,37 @@
      "basis": "left out: closed 1976",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Bronx Zoo",
+     "km": 95,
+     "reason": "95 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Maritime Aquarium at Norwalk",
+     "km": 79,
+     "reason": "79 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Connecticut's Beardsley Zoo",
+     "km": 83,
+     "reason": "83 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "upper-peninsula": {
    "name": "Upper Peninsula",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "nova-scotia": {
    "name": "Nova Scotia",
@@ -10385,13 +11520,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "ghana": {
    "name": "Ghana",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "texas-hill-country": {
    "name": "Texas Hill Country",
@@ -10470,6 +11613,26 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "San Antonio Zoo",
+     "km": 97,
+     "reason": "97 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "SeaWorld San Antonio",
+     "km": 92,
+     "reason": "92 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Austin Zoo",
+     "km": 90,
+     "reason": "90 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "tasmania": {
@@ -10519,13 +11682,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "state_province",
+   "notCounted": []
   },
   "galapagos": {
    "name": "Gal\u00e1pagos Islands",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "cape-town": {
    "name": "Cape Town",
@@ -10617,7 +11788,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 600000,
+   "kind": "city",
+   "notCounted": []
   },
   "swissalps": {
    "name": "Zermatt & the Swiss Alps",
@@ -10708,6 +11883,26 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": [
+    {
+     "name": "Pombia Safari Park",
+     "km": 80,
+     "reason": "80 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "La Torbiera",
+     "km": 75,
+     "reason": "75 km from the centre, over the 60 km limit for a region"
+    },
+    {
+     "name": "Parc animalier de Merlet",
+     "km": 73,
+     "reason": "73 km from the centre, over the 60 km limit for a region"
+    }
    ]
   },
   "vermont": {
@@ -10729,7 +11924,11 @@
      "basis": "figure",
      "counted": 53000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 53000,
+   "kind": "state_province",
+   "notCounted": []
   },
   "quebec-city": {
    "name": "Quebec City & Montreal",
@@ -10779,19 +11978,31 @@
      "basis": "left out: closed 2006",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "uyuni": {
    "name": "Salar de Uyuni",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "punta-cana": {
    "name": "Dominican Republic",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "tbilisi-caucasus": {
    "name": "Tbilisi & the Caucasus",
@@ -10812,7 +12023,11 @@
      "basis": "estimated from fame",
      "counted": 1000000.0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1000000,
+   "kind": "region",
+   "notCounted": []
   },
   "bangkok": {
    "name": "Bangkok",
@@ -10947,6 +12162,21 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2112549,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Khao Kheow Open Zoo",
+     "km": 85,
+     "reason": "85 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Sriracha Tiger Zoo",
+     "km": 88,
+     "reason": "88 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "borneo": {
@@ -10968,7 +12198,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "queenstown": {
    "name": "Queenstown",
@@ -10989,7 +12223,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "jordan": {
    "name": "Petra & Wadi Rum",
@@ -11052,7 +12290,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "joshua-tree": {
    "name": "Palm Springs & Joshua Tree",
@@ -11087,7 +12329,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 500000,
+   "kind": "national_park",
+   "notCounted": []
   },
   "venice": {
    "name": "Venice",
@@ -11151,7 +12397,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "city",
+   "notCounted": []
   },
   "nicaragua": {
    "name": "Nicaragua",
@@ -11172,7 +12422,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "singapore": {
    "name": "Singapore",
@@ -11377,13 +12631,21 @@
      "basis": "left out: closed in 2016",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 10,
+   "visitorsOwnArea": 8112642,
+   "kind": "country",
+   "notCounted": []
   },
   "glacier-waterton": {
    "name": "Glacier & Waterton Lakes",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "redwood": {
    "name": "Redwood National and State Parks",
@@ -11418,31 +12680,57 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Great Cats World Park",
+     "km": 98,
+     "reason": "98 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "santorini": {
    "name": "Santorini & Cyclades",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "tanzania": {
    "name": "Northern Tanzania",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "death-valley": {
    "name": "Death Valley National Park",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "botswana": {
    "name": "Okavango Delta",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "wilderness_area",
+   "notCounted": []
   },
   "algarve": {
    "name": "Algarve",
@@ -11477,7 +12765,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "rocky-mountain": {
    "name": "Rocky Mountain National Park",
@@ -11526,13 +12818,32 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Denver Zoo",
+     "km": 90,
+     "reason": "90 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Downtown Aquarium, Denver",
+     "km": 87,
+     "reason": "87 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "faroe-islands": {
    "name": "Faroe Islands",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "snowdonia": {
    "name": "Wales",
@@ -11639,13 +12950,32 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 100000,
+   "kind": "national_park",
+   "notCounted": [
+    {
+     "name": "Chester Zoo",
+     "km": 82,
+     "reason": "82 km from the centre, over the 40 km limit for a national park"
+    },
+    {
+     "name": "Borth Wild Animal Kingdom",
+     "km": 65,
+     "reason": "65 km from the centre, over the 40 km limit for a national park"
+    }
    ]
   },
   "north-cascades": {
    "name": "North Cascades",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "cornwall": {
    "name": "Cornwall",
@@ -11808,25 +13138,47 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "coastal_area",
+   "notCounted": [
+    {
+     "name": "Dartmoor Zoological Park",
+     "km": 76,
+     "reason": "76 km from the centre, over the 60 km limit for a coastal area"
+    }
    ]
   },
   "papua-new-guinea": {
    "name": "Papua New Guinea",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "peru": {
    "name": "Cusco & Sacred Valley",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "uluru": {
    "name": "Uluru & the Outback",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "national_park",
+   "notCounted": []
   },
   "rivieramaya": {
    "name": "Riviera Maya",
@@ -11847,13 +13199,21 @@
      "basis": "left out: theme park",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "coastal_area",
+   "notCounted": []
   },
   "argentine-lake-district": {
    "name": "Argentine Lake District",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "region",
+   "notCounted": []
   },
   "sydney": {
    "name": "Sydney",
@@ -12044,13 +13404,37 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 9,
+   "visitorsOwnArea": 4985856,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Symbio Wildlife Park",
+     "km": 43,
+     "reason": "43 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Australian Reptile Park",
+     "km": 51,
+     "reason": "51 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "African Lion Safari",
+     "km": 56,
+     "reason": "56 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "palawan": {
    "name": "Palawan",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "island",
+   "notCounted": []
   },
   "puglia": {
    "name": "Puglia",
@@ -12071,13 +13455,21 @@
      "basis": "estimated from fame",
      "counted": 361040.4636911666
     }
-   ]
+   ],
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 361040,
+   "kind": "region",
+   "notCounted": []
   },
   "jamaica": {
    "name": "Jamaica",
    "rating": 1,
    "visitors": 0,
-   "facilities": []
+   "facilities": [],
+   "ratingOwnArea": 1,
+   "visitorsOwnArea": 0,
+   "kind": "country",
+   "notCounted": []
   },
   "amsterdam": {
    "name": "Amsterdam",
@@ -12766,6 +14158,76 @@
      "basis": "minor, not counted",
      "counted": 0
     }
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 1961791,
+   "kind": "city",
+   "notCounted": [
+    {
+     "name": "Diergaarde Blijdorp",
+     "km": 58,
+     "reason": "58 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Royal Burgers' Zoo",
+     "km": 79,
+     "reason": "79 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Apenheul Primate Park",
+     "km": 71,
+     "reason": "71 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "DierenPark Amersfoort",
+     "km": 39,
+     "reason": "39 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Safaripark Beekse Bergen",
+     "km": 96,
+     "reason": "96 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Dolfinarium Harderwijk",
+     "km": 49,
+     "reason": "49 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Ouwehands Dierenpark",
+     "km": 66,
+     "reason": "66 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Dierenpark De Oliemeulen",
+     "km": 90,
+     "reason": "90 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Plaswijckpark",
+     "km": 54,
+     "reason": "54 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Ecomare",
+     "km": 79,
+     "reason": "79 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Fort Kijkduin",
+     "km": 66,
+     "reason": "66 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "Oceanium",
+     "km": 58,
+     "reason": "58 km from the centre, over the 35 km limit for a city"
+    },
+    {
+     "name": "BestZoo",
+     "km": 100,
+     "reason": "100 km from the centre, over the 35 km limit for a city"
+    }
    ]
   },
   "barcelona": {
@@ -12831,7 +14293,11 @@
      "basis": "minor, not counted",
      "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2308307,
+   "kind": "city",
+   "notCounted": []
   }
  }
 }
