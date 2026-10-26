@@ -2,98 +2,98 @@
  "london": {
   "thrillRides": 7,
   "waterParks": 1,
-  "zoosAquariums": 8,
-  "daysOfParks": 6,
+  "zoosAquariums": 6,
+  "daysOfParks": 4,
   "parkHotels": "nearby",
   "evidence": {
-   "thrillRides": "17 operating coasters in reach (RCDB); 7 Extreme and 3 Thrill; points 11.5 = 8.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Hyperia 236 ft/80 mph; Stealth 205 ft/80 mph; Colossus 98 ft/45 mph",
-   "waterParks": "No water park with its own gate in reach",
-   "zoosAquariums": "4.3 million visitors a year across zoos and aquariums in reach gives 8 (10 x square root of visitors / 6 million, at most 10): London Zoo 1.21 million (Wikipedia infobox); Colchester Zoo 1.00 million (Wikipedia infobox); Whipsnade Zoo 0.92 million (Wikipedia infobox); Marwell Zoo 0.49 million (Wikipedia infobox); Drusillas Zoo Park 0.37 million (Wikipedia infobox); Wildwood Discovery Park 0.10 million (Wikipedia infobox); The Living Rainforest 0.10 million (Wikipedia infobox); Tilgate Nature Centre 0.07 million (Wikipedia infobox).",
-   "daysOfParks": "6 full-day gates in reach: Thorpe Park, Chessington World of Adventures, Legoland Windsor Resort, London Zoo, ZSL Whipsnade Zoo, Woburn Safari Park",
-   "parkHotels": "Chessington and Legoland Windsor have their own resort hotels; Thorpe Park does not; most visitors base in London and travel 45-75 minutes"
+   "thrillRides": "13 operating coasters in the place (RCDB; parks counted: Thorpe Park, Chessington World of Adventures); 7 Extreme and 3 Thrill; points 11.5 = 8.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Hyperia 236 ft/80 mph; Stealth 205 ft/80 mph; Colossus 98 ft/45 mph. Not counted, outside the place: Legoland Windsor (36 km).",
+   "waterParks": "No water park with its own gate in the place.",
+   "zoosAquariums": "2.2 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): London Zoo 1.21 million (Wikipedia infobox); Sea Life London Aquarium 1.00 million (Wikipedia infobox). Not counted, outside the place: Colchester Zoo (77 km), Whipsnade Zoo (47 km), Marwell Zoo (98 km), Port Lympne Wild Animal Park (92 km).",
+   "daysOfParks": "4 full-day gates in the place: Thorpe Park, Chessington World of Adventures, London Zoo, Sea Life London Aquarium.",
+   "parkHotels": "Chessington has its own resort hotel; Thorpe Park does not; most visitors base in London and travel 45 to 75 minutes."
   }
  },
  "dubai": {
-  "thrillRides": 8,
+  "thrillRides": 5,
   "waterParks": 10,
-  "zoosAquariums": 9,
-  "daysOfParks": 10,
+  "zoosAquariums": 10,
+  "daysOfParks": 5,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "21 operating coasters in reach (RCDB); 9 Extreme and 5 Thrill; points 13.5 = 11.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Turbo Track 210 ft/63 mph; Flying Aces 207 ft/75 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Aquaventure World (Atlantis) 2 M; also in reach: Yas Waterworld, Wild Wadi",
-   "zoosAquariums": "5.0 million visitors a year across zoos and aquariums in reach gives 9 (10 x square root of visitors / 6 million, at most 10): Dubai Aquarium and Underwater Zoo 5.00 million (web: Wikipedia and travel sites (about 5 million); no Emaar report found [low]). Named facilities without a figure, not counted: The Green Planet.",
-   "daysOfParks": "10 full-day gates in reach: Motiongate Dubai, IMG Worlds of Adventure, Legoland Dubai, Ferrari World Abu Dhabi, Warner Bros. World Abu Dhabi, Aquaventure World (Atlantis), Yas Waterworld, Dubai Aquarium and Underwater Zoo, SeaWorld Abu Dhabi, Dubai Safari Park",
-   "parkHotels": "Dubai Parks and Resorts has Lapita (Polynesian-themed) and Legoland Hotels; Atlantis, Ferrari World and Yas Island have park hotels"
+   "thrillRides": "14 operating coasters in the place (RCDB; parks counted: Motiongate, IMG Worlds of Adventure, Real Madrid World, Legoland Dubai); 6 Extreme and 3 Thrill; points 7.5 = 7.5 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Not counted, outside the place: Ferrari World Abu Dhabi (104 km), Warner Bros. World Abu Dhabi (104 km).",
+   "waterParks": "TEA attendance ranking of water parks (2024): Aquaventure World (Atlantis) 2 M; also in the place: Wild Wadi. Not counted, outside the place: Yas Waterworld (104 km).",
+   "zoosAquariums": "5.7 million visitors a year across the zoos and aquariums in the place gives 10 (10 x square root of visitors / 6 million, at most 10): Dubai Aquarium and Underwater Zoo 5.00 million (web: Wikipedia and travel sites; no operator report [low]); Dubai Butterfly Garden 0.36 million (estimated from how many Wikipedia languages cover it); Dubai Dolphinarium 0.36 million (estimated from how many Wikipedia languages cover it).",
+   "daysOfParks": "5 full-day gates in the place: Motiongate Dubai, IMG Worlds of Adventure, Legoland Dubai, Aquaventure World (Atlantis), Dubai Aquarium and Underwater Zoo.",
+   "parkHotels": "Dubai Parks and Resorts has the Lapita Hotel (Polynesian-themed) and the Legoland Hotel, and Atlantis has hotels at the Aquaventure gate; the Abu Dhabi parks no longer count."
   }
  },
  "tokyo-kyoto": {
   "thrillRides": 10,
   "waterParks": 6,
   "zoosAquariums": 10,
-  "daysOfParks": 11,
+  "daysOfParks": 14,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "38 operating coasters in reach (RCDB); 14 Extreme and 12 Thrill; points 29 = 20 (1 per Extreme, 0.5 per Thrill) + 7 major (150 ft, 65 mph or 5 inversions) + 2 record class (Steel Dragon 2000). Tallest: Steel Dragon 2000 318 ft/95 mph; Fujiyama 259 ft/81 mph; Eejanaika 249 ft/78 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Summerland (Tokyo) 0.895 M; no other water park gate in reach",
-   "zoosAquariums": "8.4 million visitors a year across zoos and aquariums in reach gives 10 (10 x square root of visitors / 6 million, at most 10): Yokohama Hakkeijima Sea Paradise 4.77 million (Wikipedia text); Zoorasia 1.22 million (Wikidata); Kyoto City Zoo 1.20 million (Wikidata); Nogeyama Zoo 0.68 million (Wikipedia infobox); Chiba Zoological Park 0.57 million (Wikipedia text). Named facilities without a figure, not counted: Ueno Zoo.",
-   "daysOfParks": "11 full-day gates in reach: Tokyo Disneyland, Tokyo DisneySea, Universal Studios Japan, Fuji-Q Highland, Nagashima Spa Land, Yomiuriland, Summerland (Tokyo), Osaka Aquarium Kaiyukan, Sunshine Aquarium, Ueno Zoo, Tama Zoological Park",
+   "thrillRides": "38 operating coasters in the place (RCDB; parks counted: Tokyo Disneyland, Tokyo DisneySea, Universal Studios Japan, Fuji-Q Highland, Nagashima Spa Land, Yomiuriland, Hirakata Park); 14 Extreme and 12 Thrill; points 29 = 20 (1 per Extreme, 0.5 per Thrill) + 7 major (150 ft, 65 mph or 5 inversions) + 2 record class (Steel Dragon 2000). Tallest: Steel Dragon 2000 318 ft/95 mph; Fujiyama 259 ft/81 mph; Eejanaika 249 ft/78 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Summerland (Tokyo) 0.895 M; no other water park gate in the place.",
+   "zoosAquariums": "17.8 million visitors a year across the zoos and aquariums in the place gives 10 (10 x square root of visitors / 6 million, at most 10): Osaka Aquarium Kaiyukan 2.50 million (Wikipedia infobox); Sunshine Aquarium 2.24 million (Wikipedia infobox); Tokyo Sea Life Park 2.00 million (Wikipedia infobox); Aqua Park Shinagawa 1.74 million (Wikipedia infobox); Sumida Aquarium 1.40 million (Wikipedia infobox); Zoorasia 1.22 million (Wikidata); Kyoto City Zoo 1.20 million (Wikidata); Ueno Zoo 1.00 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Himeji Central Park (94 km), Kamogawa Sea World (70 km), Kobe Animal Kingdom (64 km), Kobe Oji Zoo (61 km).",
+   "daysOfParks": "14 full-day gates in the place: Tokyo Disneyland, Tokyo DisneySea, Universal Studios Japan, Fuji-Q Highland, Nagashima Spa Land, Yomiuriland, Summerland (Tokyo), Osaka Aquarium Kaiyukan, Sunshine Aquarium, Tokyo Sea Life Park, Aqua Park Shinagawa, Sumida Aquarium, Zoorasia, Kyoto City Zoo, Ueno Zoo, Tama Zoological Park, Tenn\u014dji Zoo, Nogeyama Zoo, Iwatayama Monkey Park, Yokohama Hakkeijima Sea Paradise.",
    "parkHotels": "Tokyo Disney Resort has six hotels (three on-site Disney hotels, a hotel inside DisneySea); Universal Studios Japan has hotels at the gate; Fuji-Q has a resort hotel"
   }
  },
  "great-smoky-mountains": {
   "thrillRides": 5,
   "waterParks": 4,
-  "zoosAquariums": 3,
+  "zoosAquariums": 1,
   "daysOfParks": 2,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "11 operating coasters in reach (RCDB); 5 Extreme and 1 Thrill; points 7.5 = 5.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Tennessee Tornado 163 ft/63 mph; Lightning Rod 0 ft/73 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Dollywood's Splash Country 0.375 M; no other water park gate in reach",
-   "zoosAquariums": "0.6 million visitors a year across zoos and aquariums in reach gives 3 (10 x square root of visitors / 6 million, at most 10): Zoo Knoxville 0.58 million (Wikipedia infobox).",
-   "daysOfParks": "2 full-day gates in reach: Dollywood, Dollywood's Splash Country",
+   "thrillRides": "11 operating coasters in the place (RCDB; parks counted: Dollywood); 5 Extreme and 1 Thrill; points 7.5 = 5.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Tennessee Tornado 163 ft/63 mph; Lightning Rod 0 ft/73 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Dollywood's Splash Country 0.375 M; no other water park gate in the place.",
+   "zoosAquariums": "0.0 million visitors a year across the zoos and aquariums in the place gives 1 (10 x square root of visitors / 6 million, at most 10): only small facilities, not counted. Not counted, outside the place: Zoo Knoxville (55 km).",
+   "daysOfParks": "2 full-day gates in the place: Dollywood, Dollywood's Splash Country.",
    "parkHotels": "Dollywood has the DreamMore Resort and Spa; the Pigeon Forge and Gatlinburg strips have hundreds of hotels within minutes"
   }
  },
  "taiwan": {
   "thrillRides": 4,
   "waterParks": 2,
-  "zoosAquariums": 8,
+  "zoosAquariums": 7,
   "daysOfParks": 3,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "6 operating coasters in reach (RCDB); 3 Extreme and 1 Thrill; points 5.5 = 3.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Screaming Condor 185 ft/70 mph; Diving Machine G5 0 ft/68 mph",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Leofoo Water Park",
-   "zoosAquariums": "3.8 million visitors a year across zoos and aquariums in reach gives 8 (10 x square root of visitors / 6 million, at most 10): Taipei Zoo 3.00 million (web: National Taiwan University study, Taiwan Review (about 3 million; 5.5 million in 2001) [low, dated]); Green World Ecological Farm 0.80 million (Wikipedia infobox).",
-   "daysOfParks": "3 full-day gates in reach: Leofoo Village Theme Park, Janfusun Fancyworld, Taipei Zoo",
+   "thrillRides": "6 operating coasters in the place (RCDB; parks counted: Leofoo Village Theme Park, Janfusun Fancyworld); 3 Extreme and 1 Thrill; points 5.5 = 3.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Screaming Condor 185 ft/70 mph; Diving Machine G5 0 ft/68 mph.",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Leofoo Water Park.",
+   "zoosAquariums": "3.0 million visitors a year across the zoos and aquariums in the place gives 7 (10 x square root of visitors / 6 million, at most 10): Taipei Zoo 3.00 million (web: NTU study / Taiwan Review (about 3 million) [low, dated]).",
+   "daysOfParks": "3 full-day gates in the place: Leofoo Village Theme Park, Janfusun Fancyworld, Taipei Zoo.",
    "parkHotels": "Leofoo Village and Janfusun Fancyworld both have a hotel inside or beside the park"
   }
  },
  "hongkong": {
-  "thrillRides": 7,
-  "waterParks": 10,
-  "zoosAquariums": 10,
-  "daysOfParks": 6,
+  "thrillRides": 3,
+  "waterParks": 1,
+  "zoosAquariums": 7,
+  "daysOfParks": 3,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "14 operating coasters in reach (RCDB); 5 Extreme and 5 Thrill; points 10.5 = 7.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Circus Roller Coaster 197 ft/70 mph; Parrot Coaster 164 ft/67 mph; Sky Rocket 150 ft/62 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Chimelong Water Park (Guangzhou) 2.81 M; no other water park gate in reach",
-   "zoosAquariums": "12.6 million visitors a year across zoos and aquariums in reach gives 10 (10 x square root of visitors / 6 million, at most 10): Zhuhai Chimelong Ocean Kingdom 12.63 million (Wikidata).",
-   "daysOfParks": "6 full-day gates in reach: Hong Kong Disneyland, Ocean Park Hong Kong, Chimelong Ocean Kingdom (Zhuhai), Chimelong Paradise (Guangzhou), Chimelong Water Park (Guangzhou), Chimelong Safari Park (Guangzhou)",
-   "parkHotels": "Hong Kong Disneyland has three resort hotels; Ocean Park has the Marriott Ocean Park; Chimelong has hotels at both its Zhuhai and Guangzhou resorts"
+   "thrillRides": "5 operating coasters in the place (RCDB; parks counted: Hong Kong Disneyland, Ocean Park); 1 Extreme and 3 Thrill; points 2.5 = 2.5 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Not counted, outside the place: Chimelong Ocean Kingdom (70 km), Chimelong Paradise (115 km).",
+   "waterParks": "No water park with its own gate in the place. Not counted, outside the place: Chimelong Water Park (Guangzhou) (116 km).",
+   "zoosAquariums": "3.1 million visitors a year across the zoos and aquariums in the place gives 7 (10 x square root of visitors / 6 million, at most 10): Ocean Park Hong Kong 2.40 million (Wikipedia infobox); Hong Kong Zoological and Botanical Gardens 0.69 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Zhuhai Chimelong Ocean Kingdom (70 km).",
+   "daysOfParks": "3 full-day gates in the place: Hong Kong Disneyland, Ocean Park Hong Kong, Hong Kong Zoological and Botanical Gardens.",
+   "parkHotels": "Hong Kong Disneyland has three resort hotels and Ocean Park has the Marriott Ocean Park; the Chimelong parks in mainland China no longer count."
   }
  },
  "black-forest": {
   "thrillRides": 6,
   "waterParks": 7,
-  "zoosAquariums": 7,
-  "daysOfParks": 3,
+  "zoosAquariums": 2,
+  "daysOfParks": 2,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "14 operating coasters in reach (RCDB); 4 Extreme and 6 Thrill; points 9 = 7 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Silver Star 240 ft/79 mph; Voltron 107 ft/62 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Rulantica 1.23 M; no other water park gate in reach",
-   "zoosAquariums": "3.2 million visitors a year across zoos and aquariums in reach gives 7 (10 x square root of visitors / 6 million, at most 10): Basel Zoo 2.01 million (Wikidata); Z\u00fcrich Zoo 1.20 million (Wikidata).",
-   "daysOfParks": "3 full-day gates in reach: Europa-Park, Rulantica, Zoo Basel",
+   "thrillRides": "14 operating coasters in the place (RCDB; parks counted: Europa Park); 4 Extreme and 6 Thrill; points 9 = 7 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Silver Star 240 ft/79 mph; Voltron 107 ft/62 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Rulantica 1.23 M; no other water park gate in the place.",
+   "zoosAquariums": "0.0 million visitors a year across the zoos and aquariums in the place gives 2 (10 x square root of visitors / 6 million, at most 10): only small facilities, not counted. Not counted, outside the place: Basel Zoo (68 km), Z\u00fcrich Zoo (74 km), Parc Zoologique et Botanique de Mulhouse (70 km), Knie's Kinderzoo (98 km).",
+   "daysOfParks": "2 full-day gates in the place: Europa-Park, Rulantica.",
    "parkHotels": "Europa-Park has six themed 4-star hotels, a campground and the Rulantica water park resort inside the resort"
   }
  },
@@ -104,38 +104,38 @@
   "daysOfParks": 3,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "15 operating coasters in reach (RCDB); 6 Extreme and 3 Thrill; points 10.5 = 7.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Flight of the Himalayan Eagle Music Roller Coaster 158 ft/60 mph; Decepticoaster 122 ft/64 mph; Cupid Roller Coaster 0 ft/47 mph",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Beijing Happy Magic Water Cube",
-   "zoosAquariums": "5.0 million visitors a year across zoos and aquariums in reach gives 9 (10 x square root of visitors / 6 million, at most 10): Beijing Zoo 5.00 million (web: Wikipedia and Beijing tourism site (\"more than five million\") [low, dated]).",
-   "daysOfParks": "3 full-day gates in reach: Universal Beijing Resort, Beijing Happy Valley, Beijing Zoo",
+   "thrillRides": "15 operating coasters in the place (RCDB; parks counted: Universal Studios Beijing, Beijing Shijingshan Amusement Park, Happy Valley); 6 Extreme and 3 Thrill; points 10.5 = 7.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Flight of the Himalayan Eagle Music Roller Coaster 158 ft/60 mph; Decepticoaster 122 ft/64 mph; Cupid Roller Coaster 0 ft/47 mph.",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Beijing Happy Magic Water Cube.",
+   "zoosAquariums": "5.0 million visitors a year across the zoos and aquariums in the place gives 9 (10 x square root of visitors / 6 million, at most 10): Beijing Zoo 5.00 million (web: Wikipedia and Beijing tourism site (\"more than five million\") [low, dated]).",
+   "daysOfParks": "3 full-day gates in the place: Universal Beijing Resort, Beijing Happy Valley, Beijing Zoo.",
    "parkHotels": "Universal Beijing Resort has two on-site hotels (Universal Studios Hotel, Nuo Hotel); the other parks have none"
   }
  },
  "nyc": {
-  "thrillRides": 8,
-  "waterParks": 4,
-  "zoosAquariums": 8,
-  "daysOfParks": 3,
+  "thrillRides": 1,
+  "waterParks": 1,
+  "zoosAquariums": 10,
+  "daysOfParks": 5,
   "parkHotels": "city",
   "evidence": {
-   "thrillRides": "17 operating coasters in reach (RCDB); 8 Extreme and 3 Thrill; points 13.5 = 9.5 (1 per Extreme, 0.5 per Thrill) + 4 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Nitro 230 ft/80 mph; El Toro 181 ft/70 mph; Medusa 142 ft/61 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Six Flags Hurricane Harbor (Jackson NJ) 0.464 M; no other water park gate in reach",
-   "zoosAquariums": "4.3 million visitors a year across zoos and aquariums in reach gives 8 (10 x square root of visitors / 6 million, at most 10): Bronx Zoo 1.82 million (web: WCS Form 990 fiscal 2017-18 (Wikipedia says 2+ million) [medium]); Central Park Zoo 1.01 million (Wikipedia text); Turtle Back Zoo 0.98 million (Wikipedia infobox); Connecticut's Beardsley Zoo 0.28 million (Wikipedia infobox); Queens Zoo 0.20 million (web: Wikipedia (annual visitors) [low]).",
-   "daysOfParks": "3 full-day gates in reach: Six Flags Great Adventure, Six Flags Hurricane Harbor (Jackson NJ), Bronx Zoo",
+   "thrillRides": "3 operating coasters in the place (RCDB; parks counted: Deno's Wonder Wheel Amusement Park); 0 Extreme and 0 Thrill; points 0 = 0 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Not counted, outside the place: Six Flags Great Adventure (73 km).",
+   "waterParks": "No water park with its own gate in the place. Not counted, outside the place: Six Flags Hurricane Harbor (Jackson NJ) (74 km).",
+   "zoosAquariums": "6.0 million visitors a year across the zoos and aquariums in the place gives 10 (10 x square root of visitors / 6 million, at most 10): Bronx Zoo 1.82 million (web: WCS Form 990, fiscal 2017-18 (Wikipedia: 2+ million) [medium]); Central Park Zoo 1.01 million (web: Wikipedia: 1.01 million in 2007 [low, dated]); Turtle Back Zoo 0.98 million (Wikipedia infobox); Queens Zoo 0.63 million (estimated from how many Wikipedia languages cover it); Staten Island Zoo 0.56 million (estimated from how many Wikipedia languages cover it); Prospect Park Zoo 0.50 million (estimated from how many Wikipedia languages cover it); New York Aquarium 0.49 million (web: WCS Form 990, fiscal 2017-18 [medium]). Not counted, outside the place: Maritime Aquarium at Norwalk (66 km), Connecticut's Beardsley Zoo (89 km).",
+   "daysOfParks": "5 full-day gates in the place: Bronx Zoo, Central Park Zoo, Turtle Back Zoo, Queens Zoo, Staten Island Zoo.",
    "parkHotels": "Six Flags Great Adventure has a campground and cabins only; nearly everyone stays in the city and travels 90 minutes to New Jersey"
   }
  },
  "seoul": {
   "thrillRides": 5,
-  "waterParks": 8,
-  "zoosAquariums": null,
+  "waterParks": 7,
+  "zoosAquariums": 5,
   "daysOfParks": 5,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "13 operating coasters in reach (RCDB); 6 Extreme and 2 Thrill; points 8 = 7 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Monimo RUSH 184 ft/65 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Caribbean Bay (Everland) 1.151 M, Ocean World (Hongcheon) 0.947 M; no other water park gate in reach",
-   "zoosAquariums": "No annual visitor figure found for any zoo or aquarium in reach, so this is left blank rather than guessed.",
-   "daysOfParks": "5 full-day gates in reach: Lotte World, Everland (incl. Zootopia), Caribbean Bay (Everland), Ocean World (Hongcheon), Seoul Grand Park Zoo",
+   "thrillRides": "13 operating coasters in the place (RCDB; parks counted: Lotte World Adventure, Everland, Seoul Land); 6 Extreme and 2 Thrill; points 8 = 7 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Monimo RUSH 184 ft/65 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Caribbean Bay (Everland) 1.151 M; no other water park gate in the place. Not counted, outside the place: Ocean World (Hongcheon) (62 km).",
+   "zoosAquariums": "1.7 million visitors a year across the zoos and aquariums in the place gives 5 (10 x square root of visitors / 6 million, at most 10): 63 Seaworld 1.00 million (Wikipedia infobox); COEX Aquarium 0.69 million (estimated from how many Wikipedia languages cover it).",
+   "daysOfParks": "5 full-day gates in the place: Lotte World, Everland (incl. Zootopia), Caribbean Bay (Everland), 63 Seaworld, COEX Aquarium.",
    "parkHotels": "Lotte World has the Lotte Hotel World and Lotte World Tower hotel beside the park; Everland has the Hoamgak Hotel"
   }
  },
@@ -146,10 +146,10 @@
   "daysOfParks": 3,
   "parkHotels": "city",
   "evidence": {
-   "thrillRides": "14 operating coasters in reach (RCDB); 5 Extreme and 3 Thrill; points 8.5 = 6.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Superman el \u00daltimo Escape 220 ft/75 mph; Batman The Ride 109 ft/50 mph",
-   "waterParks": "No water park with its own gate in reach",
-   "zoosAquariums": "5.5 million visitors a year across zoos and aquariums in reach gives 10 (10 x square root of visitors / 6 million, at most 10): Chapultepec Zoo 5.50 million (Wikipedia infobox).",
-   "daysOfParks": "3 full-day gates in reach: Six Flags Mexico, Aztlan Parque Urbano, Chapultepec Zoo",
+   "thrillRides": "14 operating coasters in the place (RCDB; parks counted: Six Flags Mexico, Aztl\u00e1n Parque Urbano); 5 Extreme and 3 Thrill; points 8.5 = 6.5 (1 per Extreme, 0.5 per Thrill) + 2 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Superman el \u00daltimo Escape 220 ft/75 mph; Batman The Ride 109 ft/50 mph.",
+   "waterParks": "No water park with its own gate in the place.",
+   "zoosAquariums": "5.9 million visitors a year across the zoos and aquariums in the place gives 10 (10 x square root of visitors / 6 million, at most 10): Chapultepec Zoo 5.50 million (Wikipedia infobox); Zool\u00f3gico Los Coyotes 0.36 million (estimated from how many Wikipedia languages cover it).",
+   "daysOfParks": "3 full-day gates in the place: Six Flags Mexico, Aztlan Parque Urbano, Chapultepec Zoo.",
    "parkHotels": "Six Flags Mexico has no hotel; visitors base in the city and take an hour by car or taxi"
   }
  },
@@ -160,24 +160,24 @@
   "daysOfParks": 4,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "9 operating coasters in reach (RCDB); 1 Extreme and 4 Thrill; points 3 = 3 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: ",
-   "waterParks": "No water park with its own gate in reach",
-   "zoosAquariums": "2.4 million visitors a year across zoos and aquariums in reach gives 6 (10 x square root of visitors / 6 million, at most 10): Copenhagen Zoo 1.57 million (Wikidata); Den Bl\u00e5 Planet 0.60 million (web: Aquarium site: 6 million guests in its first 10 years (average, not a single year) [medium]); Sk\u00e5nes Djurpark 0.21 million (Wikipedia infobox); Crocodile Zoo 0.04 million (Wikipedia infobox).",
-   "daysOfParks": "4 full-day gates in reach: Tivoli Gardens, Bakken, Copenhagen Zoo, Den Blaa Planet",
+   "thrillRides": "9 operating coasters in the place (RCDB; parks counted: Tivoli Gardens, Bakken); 1 Extreme and 4 Thrill; points 3 = 3 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none).",
+   "waterParks": "No water park with its own gate in the place.",
+   "zoosAquariums": "2.2 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): Copenhagen Zoo 1.57 million (Wikidata); The Blue Planet 0.60 million (Wikidata). Not counted, outside the place: Sk\u00e5nes Djurpark (68 km), Crocodile Zoo (100 km).",
+   "daysOfParks": "4 full-day gates in the place: Tivoli Gardens, Bakken, Copenhagen Zoo, The Blue Planet.",
    "parkHotels": "Tivoli has the Tivoli Hotel beside the gardens; Bakken has none, and Copenhagen hotels are 10 to 25 minutes from both"
   }
  },
  "paris": {
   "thrillRides": 7,
   "waterParks": 2,
-  "zoosAquariums": 4,
-  "daysOfParks": 3,
+  "zoosAquariums": 5,
+  "daysOfParks": 5,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "15 operating coasters in reach (RCDB); 7 Extreme and 4 Thrill; points 12 = 9 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Toutatis 167 ft/66 mph; OzIris 131 ft/56 mph; Goudurix 118 ft/56 mph",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Aquaboulevard (Paris)",
-   "zoosAquariums": "1.0 million visitors a year across zoos and aquariums in reach gives 4 (10 x square root of visitors / 6 million, at most 10): Paris Zoological Park 0.52 million (Wikidata); M\u00e9nagerie du Jardin des Plantes 0.50 million (Wikipedia infobox).",
-   "daysOfParks": "3 full-day gates in reach: Disneyland Park, Walt Disney Studios Park, Parc Asterix",
+   "thrillRides": "15 operating coasters in the place (RCDB; parks counted: Disneyland Paris - Disneyland Park, Disneyland Paris - Disney Adventure World, Parc Ast\u00e9rix); 7 Extreme and 4 Thrill; points 12 = 9 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Toutatis 167 ft/66 mph; OzIris 131 ft/56 mph; Goudurix 118 ft/56 mph.",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Aquaboulevard (Paris).",
+   "zoosAquariums": "1.5 million visitors a year across the zoos and aquariums in the place gives 5 (10 x square root of visitors / 6 million, at most 10): Paris Zoological Park 0.52 million (Wikidata); M\u00e9nagerie du Jardin des Plantes 0.50 million (Wikipedia infobox); Centre de la mer et des eaux 0.36 million (estimated from how many Wikipedia languages cover it); Aquarium du palais de la Porte Dor\u00e9e 0.17 million (Wikidata). Not counted, outside the place: Parc des F\u00e9lins (48 km), Ch\u00e2teau of Thoiry (41 km), Biotropica (96 km), La Tani\u00e8re (74 km).",
+   "daysOfParks": "5 full-day gates in the place: Disneyland Park, Walt Disney Studios Park, Parc Asterix, Paris Zoological Park, M\u00e9nagerie du Jardin des Plantes.",
    "parkHotels": "Disneyland Paris has seven Disney hotels and six partner hotels; Parc Asterix has the Hotel des Trois Hiboux"
   }
  },
@@ -188,24 +188,24 @@
   "daysOfParks": 3,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "15 operating coasters in reach (RCDB); 3 Extreme and 2 Thrill; points 5 = 4 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Sky Wheel 152 ft/65 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Therme Erding 1.91 M; no other water park gate in reach",
-   "zoosAquariums": "1.9 million visitors a year across zoos and aquariums in reach gives 6 (10 x square root of visitors / 6 million, at most 10): Hellabrunn Zoo 1.90 million (Wikipedia infobox). Named facilities without a figure, not counted: Alpenzoo Innsbruck.",
-   "daysOfParks": "3 full-day gates in reach: Legoland Deutschland, Therme Erding, Hellabrunn Zoo",
+   "thrillRides": "15 operating coasters in the place (RCDB; parks counted: Legoland Deutschland, Skyline Park, Bayern-Park); 3 Extreme and 2 Thrill; points 5 = 4 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Sky Wheel 152 ft/65 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Therme Erding 1.91 M; no other water park gate in the place.",
+   "zoosAquariums": "2.3 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): Hellabrunn Zoo 1.90 million (Wikipedia infobox); Augsburg Zoo 0.36 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Alpenzoo Innsbruck (97 km).",
+   "daysOfParks": "3 full-day gates in the place: Legoland Deutschland, Therme Erding, Hellabrunn Zoo.",
    "parkHotels": "Legoland Germany has its own Feriendorf lodges and hotel; Therme Erding has a hotel; Munich hotels are 35-75 minutes from the parks"
   }
  },
  "bangkok": {
   "thrillRides": 2,
   "waterParks": 3,
-  "zoosAquariums": null,
+  "zoosAquariums": 6,
   "daysOfParks": 3,
   "parkHotels": "city",
   "evidence": {
-   "thrillRides": "3 operating coasters in reach (RCDB); 0 Extreme and 2 Thrill; points 1 = 1 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: ",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Siam Amazing Park (waterpark and rides)",
-   "zoosAquariums": "No annual visitor figure found for any zoo or aquarium in reach, so this is left blank rather than guessed. Named facilities without a figure: Khao Kheow Open Zoo, Samutprakarn Crocodile Farm and Zoo.",
-   "daysOfParks": "3 full-day gates in reach: Dream World, Siam Amazing Park (waterpark and rides), Safari World",
+   "thrillRides": "3 operating coasters in the place (RCDB; parks counted: Dream World, Siam Amazing Park); 0 Extreme and 2 Thrill; points 1 = 1 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none).",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Siam Amazing Park (waterpark and rides).",
+   "zoosAquariums": "2.1 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): Safari World 0.69 million (estimated from how many Wikipedia languages cover it); Bangkok Aquarium 0.50 million (estimated from how many Wikipedia languages cover it); Pata Zoo 0.50 million (estimated from how many Wikipedia languages cover it); Sea Life Bangkok Ocean World 0.43 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Khao Kheow Open Zoo (85 km), Sriracha Tiger Zoo (88 km).",
+   "daysOfParks": "3 full-day gates in the place: Dream World, Siam Amazing Park (waterpark and rides), Safari World.",
    "parkHotels": "Dream World and Siam Amazing Park have no hotels of their own; visitors stay in the city and take a taxi"
   }
  },
@@ -213,70 +213,70 @@
   "thrillRides": 3,
   "waterParks": 5,
   "zoosAquariums": 10,
-  "daysOfParks": 7,
+  "daysOfParks": 8,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "5 operating coasters in reach (RCDB); 2 Extreme and 0 Thrill; points 3 = 2 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Battlestar Galactica 140 ft/56 mph",
-   "waterParks": "TEA attendance ranking of water parks (2024): Adventure Cove Waterpark 0.65 M; also in reach: Wild Wild Wet",
-   "zoosAquariums": "6.4 million visitors a year across zoos and aquariums in reach gives 10 (10 x square root of visitors / 6 million, at most 10): Singapore Zoo 2.13 million (Wikipedia infobox); S.E.A. Aquarium (Singapore Oceanarium) 2.00 million (web: Resorts World Sentosa: 10 millionth visitor five years after opening (an average of about 2 million a year; one article implies more) [low]); Night Safari 1.32 million (Wikipedia infobox); River Wonders 0.97 million (Wikipedia infobox). Named facilities without a figure, not counted: Bird Paradise.",
-   "daysOfParks": "7 full-day gates in reach: Universal Studios Singapore, Adventure Cove Waterpark, Singapore Zoo, Night Safari, River Wonders, Bird Paradise, S.E.A. Aquarium",
+   "thrillRides": "5 operating coasters in the place (RCDB; parks counted: Universal Studios Singapore); 2 Extreme and 0 Thrill; points 3 = 2 (1 per Extreme, 0.5 per Thrill) + 1 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Battlestar Galactica 140 ft/56 mph.",
+   "waterParks": "TEA attendance ranking of water parks (2024): Adventure Cove Waterpark 0.65 M; also in the place: Wild Wild Wet.",
+   "zoosAquariums": "8.1 million visitors a year across the zoos and aquariums in the place gives 10 (10 x square root of visitors / 6 million, at most 10): Singapore Zoo 2.13 million (Wikipedia infobox); Singapore Oceanarium 2.00 million (web: 10 millionth visitor five years after opening (average) [low]); Night Safari 1.32 million (Wikipedia infobox); River Wonders 0.97 million (Wikipedia infobox); Jurong Bird Park 0.77 million (Wikipedia infobox); Johor Zoo 0.56 million (estimated from how many Wikipedia languages cover it); Bird Paradise 0.36 million (estimated from how many Wikipedia languages cover it).",
+   "daysOfParks": "8 full-day gates in the place: Universal Studios Singapore, Adventure Cove Waterpark, Singapore Zoo, Singapore Oceanarium, Night Safari, River Wonders, Jurong Bird Park, Johor Zoo.",
    "parkHotels": "Resorts World Sentosa has six hotels beside Universal Studios Singapore; Mandai Wildlife Reserve has the Mandai Rainforest Resort"
   }
  },
  "rivieramaya": {
   "thrillRides": 1,
-  "waterParks": 4,
-  "zoosAquariums": null,
-  "daysOfParks": 4,
+  "waterParks": 3,
+  "zoosAquariums": 1,
+  "daysOfParks": 3,
   "parkHotels": "onsite",
   "evidence": {
-   "thrillRides": "No coasters found in the database in reach.",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Xel-Ha, Wet n Wild Cancun",
-   "zoosAquariums": "No annual visitor figure found for any zoo or aquarium in reach, so this is left blank rather than guessed.",
-   "daysOfParks": "4 full-day gates in reach: Xcaret, Xplor, Xel-Ha, Wet n Wild Cancun",
+   "thrillRides": "No coaster parks that belong to the place.",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Xel-Ha. Not counted, outside the place: Wet n Wild Cancun (65 km).",
+   "zoosAquariums": "0.0 million visitors a year across the zoos and aquariums in the place gives 1 (10 x square root of visitors / 6 million, at most 10): only small facilities, not counted.",
+   "daysOfParks": "3 full-day gates in the place: Xcaret, Xplor, Xel-Ha.",
    "parkHotels": "Hotel Xcaret and Hotel Xcaret Arte sit inside the Xcaret family of parks; Xel-Ha has an all-inclusive resort at its gate"
   }
  },
  "sydney": {
   "thrillRides": 2,
   "waterParks": 3,
-  "zoosAquariums": 7,
-  "daysOfParks": 4,
+  "zoosAquariums": 9,
+  "daysOfParks": 5,
   "parkHotels": "city",
   "evidence": {
-   "thrillRides": "4 operating coasters in reach (RCDB); 1 Extreme and 1 Thrill; points 1.5 = 1.5 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: ",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: Wet n Wild Sydney",
-   "zoosAquariums": "2.5 million visitors a year across zoos and aquariums in reach gives 7 (10 x square root of visitors / 6 million, at most 10): Taronga Zoo 1.50 million (web: Taronga annual report, year to June 2010 (nearly 1.5 million) [low, dated]); Sydney Zoo 0.80 million (Wikipedia infobox); Australian Reptile Park 0.25 million (Wikipedia infobox).",
-   "daysOfParks": "4 full-day gates in reach: Taronga Zoo, Sea Life Sydney Aquarium, Sydney Zoo, Wet n Wild Sydney",
+   "thrillRides": "4 operating coasters in the place (RCDB; parks counted: Luna Park); 1 Extreme and 1 Thrill; points 1.5 = 1.5 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none).",
+   "waterParks": "No water park in the TEA top 20; own-gate water parks in the place: Wet n Wild Sydney.",
+   "zoosAquariums": "5.0 million visitors a year across the zoos and aquariums in the place gives 9 (10 x square root of visitors / 6 million, at most 10): Taronga Zoo 1.50 million (web: Taronga annual report, year to June 2010 [low, dated]); Sea Life Sydney Aquarium 1.20 million (Wikipedia infobox); Sydney Zoo 0.80 million (Wikipedia infobox); Featherdale Sydney Wildlife Park 0.56 million (estimated from how many Wikipedia languages cover it); Wild Life Sydney 0.50 million (estimated from how many Wikipedia languages cover it); Koala Park Sanctuary 0.43 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Symbio Wildlife Park (43 km), Australian Reptile Park (51 km), African Lion Safari (56 km).",
+   "daysOfParks": "5 full-day gates in the place: Wet n Wild Sydney, Taronga Zoo, Sea Life Sydney Aquarium, Sydney Zoo, Featherdale Sydney Wildlife Park.",
    "parkHotels": "Luna Park and the zoos have no hotels; everyone stays in the city and takes a ferry or train"
   }
  },
  "amsterdam": {
-  "thrillRides": 8,
+  "thrillRides": 1,
   "waterParks": 1,
-  "zoosAquariums": 10,
-  "daysOfParks": 6,
-  "parkHotels": "nearby",
+  "zoosAquariums": 6,
+  "daysOfParks": 2,
+  "parkHotels": null,
   "evidence": {
-   "thrillRides": "18 operating coasters in reach (RCDB); 10 Extreme and 3 Thrill; points 14.5 = 11.5 (1 per Extreme, 0.5 per Thrill) + 3 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Tallest: Goliath 154 ft/66 mph; Condor 102 ft/50 mph; YoY 95 ft/51 mph",
-   "waterParks": "No water park with its own gate in reach",
-   "zoosAquariums": "6.2 million visitors a year across zoos and aquariums in reach gives 10 (10 x square root of visitors / 6 million, at most 10): Diergaarde Blijdorp 1.50 million (Wikipedia infobox); Royal Burgers' Zoo 1.42 million (Wikipedia infobox); Natura Artis Magistra 1.40 million (Wikidata); DierenPark Amersfoort 0.80 million (Wikipedia infobox); Dolfinarium Harderwijk 0.59 million (Wikipedia infobox); Dierenpark De Oliemeulen 0.45 million (Wikipedia infobox).",
-   "daysOfParks": "6 full-day gates in reach: Efteling, Walibi Holland, Duinrell, Artis Royal Zoo, Royal Burgers' Zoo (Arnhem), Diergaarde Blijdorp (Rotterdam)",
-   "parkHotels": "Efteling and Walibi Holland have their own resort hotels or lodges; Amsterdam hotels are 45-90 minutes away"
+   "thrillRides": "No coaster parks that belong to the place. Not counted, outside the place: Efteling (81 km), Walibi Holland (59 km), Duinrell (43 km).",
+   "waterParks": "No water park with its own gate in the place.",
+   "zoosAquariums": "2.0 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): Natura Artis Magistra 1.40 million (Wikidata); Vogelpark Avifauna 0.56 million (estimated from how many Wikipedia languages cover it). Not counted, outside the place: Diergaarde Blijdorp (58 km), Royal Burgers' Zoo (79 km), Apenheul Primate Park (71 km), DierenPark Amersfoort (39 km).",
+   "daysOfParks": "2 full-day gates in the place: Natura Artis Magistra, Vogelpark Avifauna.",
+   "parkHotels": "No theme park in the place, so there is nothing to stay at."
   }
  },
  "barcelona": {
-  "thrillRides": 7,
-  "waterParks": 3,
+  "thrillRides": 2,
+  "waterParks": 1,
   "zoosAquariums": 6,
-  "daysOfParks": 4,
-  "parkHotels": "onsite",
+  "daysOfParks": 2,
+  "parkHotels": "city",
   "evidence": {
-   "thrillRides": "12 operating coasters in reach (RCDB); 4 Extreme and 4 Thrill; points 12 = 6 (1 per Extreme, 0.5 per Thrill) + 4 major (150 ft, 65 mph or 5 inversions) + 2 record class (Red Force). Tallest: Red Force 367 ft/112 mph; Shambhala 249 ft/83 mph; Dragon Khan 148 ft/65 mph",
-   "waterParks": "No water park in the TEA top 20; own-gate water parks in reach: PortAventura Caribe Aquatic Park",
-   "zoosAquariums": "2.3 million visitors a year across zoos and aquariums in reach gives 6 (10 x square root of visitors / 6 million, at most 10): L'Aqu\u00e0rium de Barcelona 1.50 million (web: Travel sites (1.5 to 2 million); no official count found [low]); Barcelona Zoo 0.81 million (Wikidata).",
-   "daysOfParks": "4 full-day gates in reach: PortAventura Park, Ferrari Land, PortAventura Caribe Aquatic Park, Barcelona Zoo",
-   "parkHotels": "PortAventura World has six hotels at the gates (including Hotel Gold River and Hotel Caribe); Tibidabo has none, and Barcelona is about 1 hour by train"
+   "thrillRides": "2 operating coasters in the place (RCDB; parks counted: Tibidabo); 0 Extreme and 1 Thrill; points 0.5 = 0.5 (1 per Extreme, 0.5 per Thrill) + 0 major (150 ft, 65 mph or 5 inversions) + 0 record class (none). Not counted, outside the place: PortAventura Park (91 km), Ferrari Land (92 km).",
+   "waterParks": "No water park with its own gate in the place. Not counted, outside the place: PortAventura Caribe Aquatic Park (91 km).",
+   "zoosAquariums": "2.3 million visitors a year across the zoos and aquariums in the place gives 6 (10 x square root of visitors / 6 million, at most 10): Aquarium Barcelona 1.50 million (web: travel sites (1.5 to 2 million); no official count [low]); Barcelona Zoo 0.81 million (Wikidata).",
+   "daysOfParks": "2 full-day gates in the place: Aquarium Barcelona, Barcelona Zoo.",
+   "parkHotels": "Tibidabo, the only park in Barcelona, has no hotel; PortAventura (with its six hotels) is in Tarragona and no longer counts."
   }
  }
 }
