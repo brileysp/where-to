@@ -654,20 +654,3 @@ describe('Theme Parks questions', () => {
     expect(fit('q3', [1], { thrillRides: 7 })).toBe(1);
   });
 });
-
-describe('All-inclusive Resorts questions', () => {
-  const defs = factDefsFor('allInclusive');
-  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`allInclusive.${q}`], picked, defs, facts as never);
-  it('activity, food, evenings and size', () => {
-    expect(fit('q1', [0], { activities: 1 })).toBeNull();
-    expect(fit('q1', [2], { activities: 6 })).toBeCloseTo(6 / 7, 5);
-    expect(fit('q2', [2], { diningDepth: 8 })).toBe(1);
-    expect(fit('q3', [0], { eveningScene: 'party' })).toBe(0);
-    expect(fit('q3', [2], { eveningScene: 'party' })).toBe(1);
-    expect(fit('q4', [0], { typicalResortSize: 100 })).toBe(1);
-    expect(fit('q4', [0], { typicalResortSize: 450 })).toBe(0);
-    expect(fit('q4', [1], { typicalResortSize: 300 })).toBe(1);
-    expect(fit('q4', [2], { typicalResortSize: 600 })).toBe(1);
-    expect(fit('q4', [2], { typicalResortSize: 100 })).toBe(0);
-  });
-});

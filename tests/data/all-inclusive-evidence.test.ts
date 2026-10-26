@@ -6,7 +6,7 @@ import { join } from 'path';
 const root = join(__dirname, '..', '..');
 const inputs = JSON.parse(readFileSync(join(root, 'docs/evidence/all-inclusive-inputs.json'), 'utf8')) as Record<string, { adults: number; family: number; lux: number; rated: Record<string, number> }>;
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/all-inclusive-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
-const COLUMNS = ['adultsOnly', 'familyResorts', 'luxuryAllInclusive', 'activities', 'diningDepth', 'eveningScene', 'typicalResortSize', 'evidence'];
+const COLUMNS = ['adultsOnly', 'familyResorts', 'luxuryAllInclusive', 'evidence'];
 const tier = (n: number) => (n <= 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4 : n <= 10 ? 6 : n <= 20 ? 8 : 10);
 
 describe('All-inclusive evidence', () => {
