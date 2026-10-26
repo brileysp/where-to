@@ -1,0 +1,381 @@
+{
+ "rule": "zoo, aquarium, theme park and water park within 100 km straight line of the place centre (two bases for Tokyo & Kyoto), with a yearly visitor figure of at least 1 million",
+ "candidates": [
+  {
+   "id": "vienna",
+   "name": "Vienna",
+   "flag": "",
+   "zoo": 6,
+   "water": 6,
+   "fac": [
+    [
+     "Wurstelprater",
+     6.6,
+     2,
+     "theme_park",
+     "Wikidata"
+    ],
+    [
+     "Sch\u00f6nbrunn Zoo",
+     2.0,
+     6,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "chicago",
+   "name": "Chicago",
+   "flag": "",
+   "zoo": 10,
+   "water": null,
+   "fac": [
+    [
+     "Lincoln Park Zoo",
+     3.42,
+     4,
+     "zoo",
+     "Wikipedia infobox"
+    ],
+    [
+     "Six Flags Great America",
+     3.04,
+     60,
+     "theme_park",
+     "Wikidata"
+    ],
+    [
+     "Brookfield Zoo",
+     2.0,
+     18,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "berlin",
+   "name": "Berlin",
+   "flag": "",
+   "zoo": 9,
+   "water": 7,
+   "fac": [
+    [
+     "Berlin Zoological Garden",
+     3.5,
+     4,
+     "zoo",
+     "Wikipedia infobox"
+    ],
+    [
+     "Tropical Islands",
+     1.25,
+     59,
+     "theme_park",
+     "Wikidata"
+    ],
+    [
+     "Tierpark Berlin",
+     1.22,
+     9,
+     "zoo",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "bahamas",
+   "name": "Bahamas",
+   "flag": "",
+   "zoo": null,
+   "water": 8,
+   "fac": [
+    [
+     "Aquaventure at Atlantis Paradise Island, Bahamas",
+     1.79,
+     6,
+     "water_park",
+     "TEA 2024 ranking"
+    ]
+   ]
+  },
+  {
+   "id": "buenosaires",
+   "name": "Buenos Aires",
+   "flag": "",
+   "zoo": null,
+   "water": null,
+   "fac": [
+    [
+     "Parque de la Costa",
+     1.7,
+     27,
+     "theme_park",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "ireland",
+   "name": "Ireland",
+   "flag": "",
+   "zoo": 5,
+   "water": null,
+   "fac": [
+    [
+     "Dublin Zoo",
+     1.28,
+     3,
+     "zoo",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "prague",
+   "name": "Prague",
+   "flag": "",
+   "zoo": 5,
+   "water": 7,
+   "fac": [
+    [
+     "Aquapalace Prague",
+     1.14,
+     12,
+     "water_park",
+     "TEA 2024 ranking"
+    ]
+   ]
+  },
+  {
+   "id": "nepal",
+   "name": "Nepal",
+   "flag": "",
+   "zoo": 4,
+   "water": null,
+   "fac": [
+    [
+     "Kathmandu Zoo",
+     1.0,
+     5,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "champagne",
+   "name": "Champagne",
+   "flag": "far: nearest is 88 km",
+   "zoo": null,
+   "water": null,
+   "fac": [
+    [
+     "Disneyland Paris",
+     10.4,
+     88,
+     "theme_park",
+     "Wikidata"
+    ],
+    [
+     "Disneyland Park",
+     10.21,
+     88,
+     "theme_park",
+     "Wikidata"
+    ],
+    [
+     "Disney Adventure World",
+     5.6,
+     89,
+     "theme_park",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "canaries",
+   "name": "Canary Islands",
+   "flag": "far: nearest is 75 km",
+   "zoo": null,
+   "water": 10,
+   "fac": [
+    [
+     "Aqualand Costa Adeje",
+     1.27,
+     75,
+     "water_park",
+     "TEA 2024 ranking"
+    ],
+    [
+     "Siam Park",
+     1.27,
+     75,
+     "water_park",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "cotswolds",
+   "name": "Cotswolds",
+   "flag": "far: nearest is 92 km",
+   "zoo": 7,
+   "water": null,
+   "fac": [
+    [
+     "Legoland Windsor",
+     2.26,
+     92,
+     "theme_park",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "snowdonia",
+   "name": "Wales",
+   "flag": "far: nearest is 82 km",
+   "zoo": 6,
+   "water": null,
+   "fac": [
+    [
+     "Chester Zoo",
+     1.97,
+     82,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "hudson-valley",
+   "name": "Hudson Valley",
+   "flag": "far: nearest is 95 km",
+   "zoo": 6,
+   "water": null,
+   "fac": [
+    [
+     "Bronx Zoo",
+     1.82,
+     95,
+     "zoo",
+     "web: WCS Form 990 fiscal 2017-18 (Wikipedia says 2+ million) [medium]"
+    ]
+   ]
+  },
+  {
+   "id": "rocky-mountain",
+   "name": "Rocky Mountain National Park",
+   "flag": "national park base",
+   "zoo": 5,
+   "water": null,
+   "fac": [
+    [
+     "Denver Zoo",
+     1.58,
+     90,
+     "zoo",
+     "Wikidata"
+    ]
+   ]
+  },
+  {
+   "id": "srilanka",
+   "name": "Sri Lanka",
+   "flag": "far: nearest is 98 km",
+   "zoo": 5,
+   "water": null,
+   "fac": [
+    [
+     "National Zoological Gardens of Sri Lanka",
+     1.5,
+     98,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "texas-hill-country",
+   "name": "Texas Hill Country",
+   "flag": "far: nearest is 97 km",
+   "zoo": 4,
+   "water": 8,
+   "fac": [
+    [
+     "San Antonio Zoo",
+     1.1,
+     97,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "colombian-andes",
+   "name": "Colombian Andes",
+   "flag": "far: nearest is 65 km",
+   "zoo": null,
+   "water": null,
+   "fac": [
+    [
+     "National Coffee Park",
+     1.05,
+     65,
+     "theme_park",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "everglades",
+   "name": "Everglades National Park",
+   "flag": "national park base",
+   "zoo": 4,
+   "water": null,
+   "fac": [
+    [
+     "Zoo Miami",
+     1.0,
+     56,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "olympic",
+   "name": "Olympic National Park",
+   "flag": "national park base",
+   "zoo": 5,
+   "water": null,
+   "fac": [
+    [
+     "Woodland Park Zoo",
+     1.0,
+     95,
+     "zoo",
+     "Wikipedia infobox"
+    ]
+   ]
+  },
+  {
+   "id": "nice-riviera",
+   "name": "Nice & the French Riviera",
+   "flag": "far: nearest is 74 km",
+   "zoo": 3,
+   "water": null,
+   "fac": [
+    [
+     "Q36698368",
+     1.0,
+     74,
+     "theme_park",
+     "Wikidata"
+    ]
+   ]
+  }
+ ]
+}

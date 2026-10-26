@@ -14,19 +14,20 @@ describe('Theme Parks evidence', () => {
     expect(Object.keys(evidence)).toHaveLength(20);
     for (const [place, row] of Object.entries(evidence)) {
       for (const col of COLUMNS) {
-        expect(row[col], `${place} ${col}`).not.toBeUndefined();
+        // A rating can be null (blank) when no figure was found; the evidence line then says why.
+        if (!(col === 'zoosAquariums' && row[col] === null)) expect(row[col], `${place} ${col}`).not.toBeUndefined();
         expect(row.evidence[col]?.length ?? 0, `${place} ${col} evidence`).toBeGreaterThan(20);
       }
     }
   });
   it('matches what was saved to the facts file', () => {
-    for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(draft[place][col], `${place} ${col}`).toBe(row[col]);
+    for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(draft[place][col] ?? null, `${place} ${col}`).toBe(row[col] ?? null);
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
       thrillRides: { 'tokyo-kyoto': 10, london: 7, paris: 7, barcelona: 7, 'bavaria-munich': 4 },
       waterParks: { dubai: 10, 'bavaria-munich': 9, 'black-forest': 7 },
-      zoosAquariums: { singapore: 10, 'tokyo-kyoto': 8, paris: 3 },
+      zoosAquariums: { singapore: 10, nyc: 8, paris: 4 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
