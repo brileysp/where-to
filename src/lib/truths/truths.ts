@@ -294,7 +294,7 @@ export const TRUTHS: Truth[] = [
     return noneOf(bad, 'water temperatures the matching cannot read');
   } },
   { id: 'F04', area: 'Facts', says: 'Every safari place has an odds entry for "Great herds" (the migration chip measures it).', check: (ctx) => noneOf(ctx.facts.filter((r) => r.interestKey === 'safari' && !r.facts.herds).map((r) => r.placeId), 'safari places without a Great herds entry'),
-    pending: 'Safari to-do: fill Great herds for the other 14 places (chip measures audit, item L5).' },
+    pending: 'Safari to-do: Great herds is filled for 15 of 17 places (28 Oct 2026, sources in docs/evidence/safari-great-herds-evidence.json); Nepal and Uganda stay blank until a herd-size source is found (chip measures audit, item L5).' },
   // ======================= Text =======================
   { id: 'T01', area: 'Text', says: 'Every bird we name is written in Title Case in the live text ("Atlantic Puffin", not "atlantic puffin").', check: (ctx) => {
     const bad: string[] = [];
