@@ -7,7 +7,7 @@ const root = join(__dirname, '..', '..');
 const ev = JSON.parse(readFileSync(join(root, 'docs/evidence/sailing-evidence.json'), 'utf8')) as Ev;
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/sailing-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
 const tier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4 : n <= 10 ? 6 : n <= 20 ? 8 : 10);
-const presence = (n: number) => (n === 0 ? 0 : n === 1 ? 7 : n <= 3 ? 8 : n <= 6 ? 9 : 10);
+const presence = (n: number) => (n === 0 ? 0 : n === 1 ? 6 : n === 2 ? 8 : 10);
 
 describe('Sailing evidence', () => {
   it('covers all 138 places and every draft has an evidence line per rating', () => {
@@ -40,7 +40,7 @@ describe('Sailing evidence', () => {
       for (const o of r.operators) { expect(o.url, p).toMatch(/^https:\/\//); expect(o.says.length, `${p} ${o.name}`).toBeGreaterThan(10); }
       if (r.operators.length > 0) expect(draft[p].evidence as string, p).toContain(r.operators[0].name);
       const n = r.operators.length;
-      if (n > 0) expect(r.expedition, p).toBe(n === 1 ? 3 : n <= 3 ? 6 : 9);
+      if (n > 0) expect(r.expedition, p).toBe(n === 1 ? 3 : n === 2 ? 6 : n === 3 ? 8 : 10);
       expect(draft[p].expeditionSailing, p).toBe(r.expedition);
     }
   });
@@ -53,9 +53,14 @@ describe('Sailing evidence', () => {
   it('keeps the checked anchors', () => {
     expect(draft['croatia'].shelteredIslandHopping).toBe(10);
     expect(draft['morocco'].shelteredIslandHopping).toBe(0);
-    expect(draft['sydney'].racingRegattas).toBe(8);
-    expect(draft['svalbard'].expeditionSailing).toBe(9);
-    expect(draft['antarctica'].expeditionSailing).toBe(9);
+    expect(draft['sydney'].racingRegattas).toBe(10);
+    expect(draft['barcelona'].racingRegattas).toBe(10);
+    expect(draft['nice-riviera'].racingRegattas).toBe(10);
+    expect(draft['north-island'].racingRegattas).toBe(10);
+    expect(draft['greenland'].expeditionSailing).toBe(10);
+    expect(draft['tierra-del-fuego'].expeditionSailing).toBe(10);
+    expect(draft['svalbard'].expeditionSailing).toBe(10);
+    expect(draft['antarctica'].expeditionSailing).toBe(10);
     expect(draft['croatia'].bareboatBase).toBe(true);
   });
 });

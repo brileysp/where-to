@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-type Ev = Record<string, { calm: number; lakes: number; paddle: number; paddle_sea: number; coast_km: number; sea: number; median_wave_m: number | null; whitewater: number | null; multi: number | null; type: string; rivers: Array<{ river: string; cls: string; outfitters: string }>; multi_operators: string[]; urls: string[]; water_temperature: string | null; glacial: boolean }>;
+type Ev = Record<string, { sea_lists?: string[]; calm: number; lakes: number; paddle: number; paddle_sea: number; coast_km: number; sea: number; median_wave_m: number | null; whitewater: number | null; multi: number | null; type: string; rivers: Array<{ river: string; cls: string; outfitters: string }>; multi_operators: string[]; urls: string[]; water_temperature: string | null; glacial: boolean }>;
 const root = join(__dirname, '..', '..');
 const ev = JSON.parse(readFileSync(join(root, 'docs/evidence/kayaking-rafting-evidence.json'), 'utf8')) as Ev;
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/kayaking-rafting-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
@@ -26,6 +26,8 @@ describe('Kayaking & Rafting evidence', () => {
       expect(draft[p].calmWaterPaddling, p).toBe(tier(r.lakes + r.paddle));
       let want = r.coast_km > 0 ? Math.floor((kmTier(r.coast_km) + tier(r.paddle_sea)) / 2 + 0.5) : 0;
       if (r.median_wave_m !== null && r.median_wave_m > 1.5) want = Math.max(0, want - 2);
+      const lists = r.sea_lists?.length ?? 0;
+      want = Math.max(want, lists >= 3 ? 10 : lists === 2 ? 9 : 0);
       expect(draft[p].seaKayaking, p).toBe(want);
     }
   });
@@ -65,5 +67,6 @@ describe('Kayaking & Rafting evidence', () => {
     expect(draft['tasmania'].multiDayRiverTrips).toBe(10);
     expect(draft['berlin'].calmWaterPaddling).toBe(10);
     expect(draft['iceland'].waterTemperature).toBe('glacial');
+    for (const p of ['croatia', 'vancouver-island', 'southeast-alaska', 'los-cabos', 'galapagos', 'greenland']) expect(draft[p].seaKayaking, p).toBe(10);
   });
 });

@@ -74,7 +74,7 @@
   "marinas": 31,
   "islands": 182,
   "sheltered": 10,
-  "regattas": 8,
+  "regattas": 10,
   "events": [
    "America's Cup 2000-2003 and 2021 - Auckland",
    "SailGP - Auckland",
@@ -106,7 +106,7 @@
   "sheltered": 0,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 8,
   "operators": [
    {
     "name": "Senja Phinisi",
@@ -185,8 +185,12 @@
   "marinas": 74,
   "islands": 1,
   "sheltered": 2,
-  "regattas": 0,
-  "events": [],
+  "regattas": 10,
+  "events": [
+   "SailGP - Saint-Tropez",
+   "Les Voiles de Saint-Tropez (Saint-Tropez) - Saint-Tropez",
+   "Giraglia Rolex Cup (Saint-Tropez start) (Saint-Tropez) - Saint-Tropez"
+  ],
   "expedition": 0,
   "operators": [],
   "sea": "swell",
@@ -200,7 +204,7 @@
   "sheltered": 3,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 8,
   "operators": [
    {
     "name": "Venture Sail Holidays",
@@ -321,7 +325,7 @@
   "marinas": 67,
   "islands": 7,
   "sheltered": 3,
-  "regattas": 8,
+  "regattas": 10,
   "events": [
    "Olympic sailing 2000 - Sydney",
    "SailGP - Sydney",
@@ -433,7 +437,7 @@
   "marinas": 28,
   "islands": 9,
   "sheltered": 5,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - Dubai"
   ],
@@ -450,7 +454,7 @@
   "sheltered": 2,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 8,
   "operators": [
    {
     "name": "Senja Phinisi",
@@ -492,7 +496,7 @@
   "sheltered": 4,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 10,
   "operators": [
    {
     "name": "Pelagic Expeditions",
@@ -508,6 +512,11 @@
     "name": "Another World Adventures",
     "says": "52-day Auckland to Ushuaia tall-ship voyage with a Cape Horn rounding attempt",
     "url": "https://www.anotherworldadventures.com/?p=8080"
+   },
+   {
+    "name": "Mzungu Expeditions",
+    "says": "motor-sailing yacht to the Chilean fjords and Cape Horn from Ushuaia",
+    "url": "https://www.mzunguexpeditions.com/tierradelfuego_2024_en"
    }
   ],
   "sea": "flat",
@@ -600,7 +609,7 @@
   "marinas": 20,
   "islands": 3,
   "sheltered": 5,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "Ocean Race 2017-18 stopover (Lisbon) - Lisbon"
   ],
@@ -667,8 +676,9 @@
   "marinas": 14,
   "islands": 1,
   "sheltered": 2,
-  "regattas": 8,
+  "regattas": 10,
   "events": [
+   "Olympic sailing 1992 - Barcelona",
    "America's Cup 2024 - Barcelona",
    "Barcelona World Race (start and finish) (Barcelona) - Barcelona"
   ],
@@ -683,7 +693,7 @@
   "marinas": 6,
   "islands": 2,
   "sheltered": 0,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "Ocean Race 2017-18 stopover (Cape Town) - Cape Town"
   ],
@@ -698,7 +708,7 @@
   "marinas": 49,
   "islands": 5,
   "sheltered": 5,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "Olympic sailing 2004 - Athens"
   ],
@@ -781,8 +791,11 @@
   "marinas": 51,
   "islands": 4,
   "sheltered": 5,
-  "regattas": 0,
-  "events": [],
+  "regattas": 8,
+  "events": [
+   "Olympic sailing 2024 - Marseille",
+   "SailGP - Marseille"
+  ],
   "expedition": 0,
   "operators": [],
   "sea": "swell",
@@ -846,7 +859,7 @@
   "marinas": 74,
   "islands": 6,
   "sheltered": 5,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - Copenhagen"
   ],
@@ -932,7 +945,7 @@
   "marinas": 17,
   "islands": 1,
   "sheltered": 2,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - Taranto"
   ],
@@ -949,7 +962,7 @@
   "sheltered": 2,
   "regattas": 0,
   "events": [],
-  "expedition": 9,
+  "expedition": 10,
   "operators": [
    {
     "name": "Pelagic Expeditions",
@@ -1096,7 +1109,7 @@
   "marinas": 157,
   "islands": 193,
   "sheltered": 10,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "Swiftsure International Yacht Race (Victoria BC) - Victoria BC"
   ],
@@ -1111,7 +1124,7 @@
   "marinas": 23,
   "islands": 170,
   "sheltered": 8,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - Halifax"
   ],
@@ -1126,7 +1139,7 @@
   "marinas": 19,
   "islands": 130,
   "sheltered": 8,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - Singapore"
   ],
@@ -1271,7 +1284,7 @@
   "marinas": 57,
   "islands": 272,
   "sheltered": 10,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "Olympic sailing 1996 - Savannah"
   ],
@@ -1286,7 +1299,7 @@
   "marinas": 111,
   "islands": 51,
   "sheltered": 10,
-  "regattas": 7,
+  "regattas": 6,
   "events": [
    "SailGP - New York City"
   ],
@@ -1332,7 +1345,7 @@
   "sheltered": 5,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 8,
   "operators": [
    {
     "name": "Venture Sail Holidays",
@@ -1632,7 +1645,7 @@
   "sheltered": 2,
   "regattas": 0,
   "events": [],
-  "expedition": 9,
+  "expedition": 10,
   "operators": [
    {
     "name": "Venture Sail Holidays",
@@ -1718,7 +1731,7 @@
   "sheltered": 2,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 10,
   "operators": [
    {
     "name": "Northern Sailing (Iceland)",
@@ -1734,6 +1747,16 @@
     "name": "Sailsquare",
     "says": "14-day voyage in Scoresby Sund on a 15 m yacht",
     "url": "https://www.sailsquare.com/en/xp/in-the-land-of-icebergs-discovering-scoresby-sund-fjord-in-greenland-PEHkiQB6"
+   },
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Valiente and Tecla voyages, Nuuk to Ilulissat and Ilulissat to Narsarsuaq",
+    "url": "https://venturesailholidays.com/voyages/greenland-guided-sailing-expedition/"
+   },
+   {
+    "name": "SeilNorge",
+    "says": "Expedition Greenland programme, Nuuk to Disko Bay",
+    "url": "https://seilnorge.no/?p=7717"
    }
   ],
   "sea": "swell",
@@ -1851,7 +1874,7 @@
   "sheltered": 2,
   "regattas": 0,
   "events": [],
-  "expedition": 6,
+  "expedition": 8,
   "operators": [
    {
     "name": "Venture Sail Holidays",

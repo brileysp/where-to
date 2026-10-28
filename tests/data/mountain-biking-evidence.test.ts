@@ -9,7 +9,9 @@ const draft = JSON.parse(readFileSync(join(root, 'scripts/data/mountain-biking-f
 const COLUMNS = ['trailGrades', 'easyFlowTrails', 'liftServedParks', 'bikepackingRoutes', 'bikeRental', 'eBikeRental', 'dayLengths'];
 const countTier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4 : n <= 10 ? 6 : n <= 20 ? 8 : 10);
 const kmTier = (k: number) => (k <= 0 ? 0 : k < 20 ? 2 : k < 50 ? 4 : k < 150 ? 6 : k <= 400 ? 8 : 10);
-const routeTier = (n: number) => (n === 0 ? 0 : n === 1 ? 3 : n <= 3 ? 5 : n <= 6 ? 7 : 9);
+const routeTier = (n: number) => (n === 0 ? 0 : n === 1 ? 7 : n <= 3 ? 8 : n <= 6 ? 9 : 10);
+const liftTier = (n: number) => (n === 0 ? 0 : n === 1 ? 4 : n <= 3 ? 6 : n <= 6 ? 8 : n <= 10 ? 9 : 10);
+const ebikeTier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 4 : n <= 6 ? 6 : n <= 10 ? 8 : 10);
 const num = (text: string, re: RegExp) => Number(re.exec(text)?.[1]);
 
 describe('Mountain Biking evidence', () => {
@@ -23,7 +25,8 @@ describe('Mountain Biking evidence', () => {
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
       easyFlowTrails: { swissalps: 10, tuscany: 10, whistler: 8, queenstown: 2 },
-      liftServedParks: { swissalps: 10, dolomites: 10, chamonix: 10, whistler: 4, 'arches-canyonlands': 0 },
+      liftServedParks: { swissalps: 10, dolomites: 10, chamonix: 10, whistler: 10, 'north-island': 10, 'quebec-city': 10, 'arches-canyonlands': 0 },
+      bikepackingRoutes: { banff: 10, 'arches-canyonlands': 10 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
@@ -31,10 +34,10 @@ describe('Mountain Biking evidence', () => {
     for (const [place, row] of Object.entries(evidence)) {
       const e = row.evidence;
       if (row.easyFlowTrails !== undefined) expect(row.easyFlowTrails, `${place} flow`).toBe(kmTier(num(e.easyFlowTrails, /^(\d+) km of easy/)));
-      if (row.bikepackingRoutes !== undefined) expect(row.bikepackingRoutes, `${place} routes`).toBe(routeTier(num(e.bikepackingRoutes, /^(\d+) mountain-bike route/)));
-      if (row.liftServedParks !== undefined) expect(row.liftServedParks, `${place} lifts`).toBe(e.liftServedParks.startsWith('No gondolas') ? 0 : countTier(num(e.liftServedParks, /^(\d+) lift\(s\)/)));
+      if (row.bikepackingRoutes !== undefined) expect(row.bikepackingRoutes, `${place} routes`).toBe(e.bikepackingRoutes.includes('iconic bikepacking') ? 10 : routeTier(num(e.bikepackingRoutes, /^(\d+) mountain-bike route/)));
+      if (row.liftServedParks !== undefined) expect(row.liftServedParks, `${place} lifts`).toBe(e.liftServedParks.includes('Crankworx') ? 10 : e.liftServedParks.startsWith('No gondolas') ? 0 : liftTier(num(e.liftServedParks, /^(\d+) lift\(s\)/)));
       if (row.bikeRental !== undefined) expect(row.bikeRental, `${place} rental`).toBe(countTier(num(e.bikeRental, /^(\d+) bike rental/)));
-      if (row.eBikeRental !== undefined) expect(row.eBikeRental, `${place} e-bike`).toBe(countTier(num(e.eBikeRental, /^(\d+) rental business/)));
+      if (row.eBikeRental !== undefined) expect(row.eBikeRental, `${place} e-bike`).toBe(ebikeTier(num(e.eBikeRental, /^(\d+) rental business/)));
     }
   });
   it('trail columns stay blank where under 20 km of trail is mapped, and say so', () => {
