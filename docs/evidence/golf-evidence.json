@@ -645,28 +645,6 @@
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
- "zimbabwe": {
-  "golfCourses": 2,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 3,
-  "courseKinds": [
-   "standard",
-   "championship"
-  ],
-  "thingsBeyondGolf": 8.3,
-  "evidence": {
-   "golfCourses": "2 golf courses in the place's area: 2 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "2 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Livingstone Golf Course, . Gives 3, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 1; championship = 90 ha or more, or a major or cup venue 1. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: landscapePhotography 9, scenicLandscapes 8, safari 8 = 8.3.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
  "madagascar": {
   "golfCourses": 2,
   "linksGolf": 0,
@@ -709,25 +687,6 @@
    "resortCourses": "6 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Golf-und-Land-Club Berlin-Wannsee, CaddyLog Golf, Par-golf-sportstätten Gmbh & Co. Golfplatz Seeburg Kg. Gives 4, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 2; standard = regulation courses 9; championship = 90 ha or more, or a major or cup venue 6. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: nightlife 10, museumsArt 9, historyArchaeology 8 = 9.0.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "kenya": {
-  "golfCourses": 0,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 0,
-  "courseKinds": [],
-  "thingsBeyondGolf": 9.7,
-  "evidence": {
-   "golfCourses": "0 golf courses in the place's area: 0 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 0; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: safari 10, luxuryHotels 10, wildlifeViewing 9 = 9.7.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -883,27 +842,6 @@
    "resortCourses": "1 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Hart Ranch Golf Club. Gives 2, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 1; standard = regulation courses 2; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: scenicLandscapes 8, nationalParks 8, campingBackcountry 8 = 8.0.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "rajasthan-golden-triangle": {
-  "golfCourses": 2,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 3,
-  "courseKinds": [
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.7,
-  "evidence": {
-   "golfCourses": "2 golf courses in the place's area: 0 mapped course areas, 2 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "2 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Rambagh Golf Course, Cambay Golf Resort. Gives 3, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 2; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: museumsArt 10, architecture 10, streetFood 9 = 9.7.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -1114,28 +1052,6 @@
    "resortCourses": "11 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. New Kuta Golf, Handara Golf & Resort Bali, Royale Jakarta Golf Club. Gives 8, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 1; standard = regulation courses 12; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: yogaRetreats 10, luxuryHotels 10, streetFood 9 = 9.7.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "charleston-savannah": {
-  "golfCourses": 72,
-  "linksGolf": 2,
-  "bucketListCourses": 0,
-  "scenicCourses": 8,
-  "resortCourses": 8,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 8.0,
-  "evidence": {
-   "golfCourses": "72 golf courses in the place's area: 54 mapped course areas, 14 courses known only as map points, 4 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "1 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Harbour Town Golf Links). Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "17 scenic course(s): 17 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. The Sea Pines Resort, Harbour Town Golf Links, Shipyard Golf Club. Gives 8, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "15 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Harbour Town Golf Links, Crosswinds Golf Club, Shipyard Golf Club. Gives 8, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 53; standard = regulation courses 19; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: architecture 9, fineDining 8, luxuryHotels 7 = 8.0.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -1549,28 +1465,6 @@
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
- "beijing": {
-  "golfCourses": 45,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 0,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.7,
-  "evidence": {
-   "golfCourses": "45 golf courses in the place's area: 44 mapped course areas, 0 courses known only as map points, 1 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 2; standard = regulation courses 43; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: museumsArt 10, architecture 10, streetFood 9 = 9.7.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
  "lofoten": {
   "golfCourses": 3,
   "linksGolf": 2,
@@ -1614,28 +1508,6 @@
    "resortCourses": "1 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Izki Golf. Gives 2, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 2; standard = regulation courses 5; championship = 90 ha or more, or a major or cup venue 2. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: wineSpirits 10, architecture 8, fineDining 7 = 8.3.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "banff": {
-  "golfCourses": 9,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 6,
-  "resortCourses": 3,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.0,
-  "evidence": {
-   "golfCourses": "9 golf courses in the place's area: 6 mapped course areas, 2 courses known only as map points, 1 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "9 scenic course(s): 0 within 1 km of the coast and 9 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. The Fairmont Banff Springs Golf Course, Canmore Golf Club, Silvertip. Gives 6, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "3 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Canmore Golf Club, Kananaskis Country Golf Course, Silvertip Golf Course. Gives 3, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 2; standard = regulation courses 7; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: skiingSnowboarding 9, nationalParks 9, campingBackcountry 9 = 9.0.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -2171,27 +2043,6 @@
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
- "zion-bryce": {
-  "golfCourses": 2,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 3,
-  "resortCourses": 0,
-  "courseKinds": [
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.0,
-  "evidence": {
-   "golfCourses": "2 golf courses in the place's area: 2 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "2 scenic course(s): 0 within 1 km of the coast and 2 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Thunderbird Golf Course, Cherokee Springs Golf & RV Resort. Gives 3, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 2; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: scenicLandscapes 9, nationalParks 9, landscapePhotography 9 = 9.0.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
  "egypt": {
   "golfCourses": 1,
   "linksGolf": 0,
@@ -2520,28 +2371,6 @@
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
- "whistler": {
-  "golfCourses": 55,
-  "linksGolf": 3,
-  "bucketListCourses": 0,
-  "scenicCourses": 8,
-  "resortCourses": 6,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.3,
-  "evidence": {
-   "golfCourses": "55 golf courses in the place's area: 47 mapped course areas, 8 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "2 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Kings Links Golf Course by the Sea, Cove Links). Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "15 scenic course(s): 15 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Seymour Golf and Country Club, Shaughnessy Golf Course, Quilchena Golf & Country Club. Gives 8, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "7 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Eaglequest Golf, Rupert Park Pitch & Putt, Kensington Pitch and Putt. Gives 6, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 15; standard = regulation courses 40; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: skiingSnowboarding 10, mountainBiking 10, scenicLandscapes 8 = 9.3.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
  "tuscany": {
   "golfCourses": 21,
   "linksGolf": 0,
@@ -2759,28 +2588,6 @@
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
- "douro-valley-porto": {
-  "golfCourses": 4,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 2,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 9.0,
-  "evidence": {
-   "golfCourses": "4 golf courses in the place's area: 3 mapped course areas, 1 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "1 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Vidago Palace Hotel Golf. Gives 2, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 1; standard = regulation courses 3; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: wineSpirits 10, scenicLandscapes 9, landscapePhotography 8 = 9.0.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
  "belfast-giants-causeway": {
   "golfCourses": 25,
   "linksGolf": 3,
@@ -2978,29 +2785,6 @@
    "resortCourses": "17 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Abama Golf, Golf del Sur, Amarilla Golf. Gives 8, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 3; standard = regulation courses 19; championship = 90 ha or more, or a major or cup venue 1. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: trailRunning 8, sunbathing 8, scenicLandscapes 8 = 8.0.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "bavaria-munich": {
-  "golfCourses": 73,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 8,
-  "courseKinds": [
-   "easy",
-   "standard",
-   "championship"
-  ],
-  "thingsBeyondGolf": 8.3,
-  "evidence": {
-   "golfCourses": "73 golf courses in the place's area: 55 mapped course areas, 18 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "16 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Golfclub München Eichenried, Golfplatz Feldafing, Tegernseer Golfclub Bad Wiessee. Gives 8, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 16; standard = regulation courses 43; championship = 90 ha or more, or a major or cup venue 14. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: festivals 10, architecture 8, streetFood 7 = 8.3.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -3241,28 +3025,6 @@
    "resortCourses": "21 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Fox Run Golf Club, Country Club of Vermont, Links at Lang Farm. Gives 10, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 69; standard = regulation courses 23; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: skiingSnowboarding 8, scenicLandscapes 7, roadtrip 7 = 7.3.",
-   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
-  }
- },
- "quebec-city": {
-  "golfCourses": 9,
-  "linksGolf": 0,
-  "bucketListCourses": 0,
-  "scenicCourses": 0,
-  "resortCourses": 0,
-  "courseKinds": [
-   "easy",
-   "standard"
-  ],
-  "thingsBeyondGolf": 7.7,
-  "evidence": {
-   "golfCourses": "9 golf courses in the place's area: 6 mapped course areas, 3 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
-   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
-   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
-   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
-   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 6; standard = regulation courses 3; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
-   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: architecture 9, whaleWatching 7, scenicLandscapes 7 = 7.7.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  },
@@ -3948,6 +3710,249 @@
    "resortCourses": "14 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Pitch & Putt Vallromanes, Real Club de Golf el Prat, Club de Golf Llavaneres. Gives 8, same tiers.",
    "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 8; standard = regulation courses 17; championship = 90 ha or more, or a major or cup venue 2. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
    "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: architecture 10, nightlife 9, museumsArt 9 = 9.3.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "zimbabwe": {
+  "golfCourses": 3,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 0,
+  "resortCourses": 3,
+  "courseKinds": [
+   "easy",
+   "standard",
+   "championship"
+  ],
+  "thingsBeyondGolf": 8.3,
+  "evidence": {
+   "golfCourses": "3 golf courses in the place's area: 3 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "2 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Livingstone Golf Course, . Gives 3, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 1; standard = regulation courses 1; championship = 90 ha or more, or a major or cup venue 1. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: landscapePhotography 9, scenicLandscapes 8, safari 8 = 8.3.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "kenya": {
+  "golfCourses": 0,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 0,
+  "resortCourses": 0,
+  "courseKinds": [],
+  "thingsBeyondGolf": 9.7,
+  "evidence": {
+   "golfCourses": "0 golf courses in the place's area: 0 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 0; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: safari 10, luxuryHotels 10, wildlifeViewing 9 = 9.7.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "rajasthan-golden-triangle": {
+  "golfCourses": 32,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 0,
+  "resortCourses": 8,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.7,
+  "evidence": {
+   "golfCourses": "32 golf courses in the place's area: 10 mapped course areas, 18 courses known only as map points, 4 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "14 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Rambagh Golf Course, Cambay Golf Resort, Tarudhan Valley Golf Course. Gives 8, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 10; standard = regulation courses 22; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: museumsArt 10, architecture 10, streetFood 9 = 9.7.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "charleston-savannah": {
+  "golfCourses": 119,
+  "linksGolf": 3,
+  "bucketListCourses": 4,
+  "scenicCourses": 10,
+  "resortCourses": 10,
+  "courseKinds": [
+   "easy",
+   "standard",
+   "championship"
+  ],
+  "thingsBeyondGolf": 8.0,
+  "evidence": {
+   "golfCourses": "119 golf courses in the place's area: 87 mapped course areas, 25 courses known only as map points, 7 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "3 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Harbour Town Golf Links, Wild Dunes - Links Course, Patriot Point Links on Charleston Harbor). Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "1 venue(s) in the place's area that hosted a men's major, a Ryder Cup, a Presidents Cup or Olympic golf in 1990-2025 (venue coordinates from the Wikipedia event pages, same venue merged within about 2 km); events held there: 2012 PGA Championship. Gives 4 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "22 scenic course(s): 22 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. The Sea Pines Resort, Harbour Town Golf Links, Shipyard Golf Club. Gives 10, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "27 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Harbour Town Golf Links, Crosswinds Golf Club, Shipyard Golf Club. Gives 10, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 83; standard = regulation courses 35; championship = 90 ha or more, or a major or cup venue 1. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: architecture 9, fineDining 8, luxuryHotels 7 = 8.0.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "beijing": {
+  "golfCourses": 51,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 0,
+  "resortCourses": 0,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.7,
+  "evidence": {
+   "golfCourses": "51 golf courses in the place's area: 50 mapped course areas, 0 courses known only as map points, 1 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 3; standard = regulation courses 48; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: museumsArt 10, architecture 10, streetFood 9 = 9.7.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "banff": {
+  "golfCourses": 10,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 6,
+  "resortCourses": 4,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.0,
+  "evidence": {
+   "golfCourses": "10 golf courses in the place's area: 6 mapped course areas, 3 courses known only as map points, 1 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "10 scenic course(s): 0 within 1 km of the coast and 10 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. The Fairmont Banff Springs Golf Course, Canmore Golf Club, Silvertip. Gives 6, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "4 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Canmore Golf Club, Kananaskis Country Golf Course, Silvertip Golf Course. Gives 4, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 2; standard = regulation courses 8; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: skiingSnowboarding 9, nationalParks 9, campingBackcountry 9 = 9.0.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "zion-bryce": {
+  "golfCourses": 7,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 4,
+  "resortCourses": 3,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.0,
+  "evidence": {
+   "golfCourses": "7 golf courses in the place's area: 5 mapped course areas, 2 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "5 scenic course(s): 0 within 1 km of the coast and 5 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Copper Rock Golf Course, Thunderbird Golf Course, Cherokee Springs Golf & RV Resort. Gives 4, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "2 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Sand Hollow Resort, The Back Nine Golf. Gives 3, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 1; standard = regulation courses 6; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: scenicLandscapes 9, nationalParks 9, landscapePhotography 9 = 9.0.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "whistler": {
+  "golfCourses": 60,
+  "linksGolf": 3,
+  "bucketListCourses": 0,
+  "scenicCourses": 8,
+  "resortCourses": 6,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.3,
+  "evidence": {
+   "golfCourses": "60 golf courses in the place's area: 52 mapped course areas, 8 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "2 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Kings Links Golf Course by the Sea, Cove Links). Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "15 scenic course(s): 15 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Seymour Golf and Country Club, Shaughnessy Golf Course, Quilchena Golf & Country Club. Gives 8, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "9 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Eaglequest Golf, Fairmont Chateau Whistler Golf Club, Rupert Park Pitch & Putt. Gives 6, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 16; standard = regulation courses 44; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: skiingSnowboarding 10, mountainBiking 10, scenicLandscapes 8 = 9.3.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "douro-valley-porto": {
+  "golfCourses": 14,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 3,
+  "resortCourses": 3,
+  "courseKinds": [
+   "easy",
+   "standard"
+  ],
+  "thingsBeyondGolf": 9.0,
+  "evidence": {
+   "golfCourses": "14 golf courses in the place's area: 11 mapped course areas, 3 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "2 scenic course(s): 2 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Estela Golf Club, Campo de Golfe de Miramar. Gives 3, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "3 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Estela Golf Club, Vidago Palace Hotel Golf, Golfe Quinta da Barca. Gives 3, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 8; standard = regulation courses 6; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: wineSpirits 10, scenicLandscapes 9, landscapePhotography 8 = 9.0.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "bavaria-munich": {
+  "golfCourses": 143,
+  "linksGolf": 0,
+  "bucketListCourses": 0,
+  "scenicCourses": 4,
+  "resortCourses": 10,
+  "courseKinds": [
+   "easy",
+   "standard",
+   "championship"
+  ],
+  "thingsBeyondGolf": 8.3,
+  "evidence": {
+   "golfCourses": "143 golf courses in the place's area: 110 mapped course areas, 26 courses known only as map points, 7 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "4 scenic course(s): 0 within 1 km of the coast and 4 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Golfclub Seefeld-Reith, Golfplatz Seefeld-Wildmoos, Golf And Lounges Leutasch. Gives 4, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "38 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Golfclub Zell am See - Kaprun - Saalbach-Hinterglemm, Golfclub München Eichenried, Golfanlage Eugendorf. Gives 10, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 37; standard = regulation courses 88; championship = 90 ha or more, or a major or cup venue 18. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: festivals 10, architecture 8, streetFood 7 = 8.3.",
+   "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
+  }
+ },
+ "quebec-city": {
+  "golfCourses": 117,
+  "linksGolf": 0,
+  "bucketListCourses": 4,
+  "scenicCourses": 10,
+  "resortCourses": 8,
+  "courseKinds": [
+   "easy",
+   "standard",
+   "championship"
+  ],
+  "thingsBeyondGolf": 7.7,
+  "evidence": {
+   "golfCourses": "117 golf courses in the place's area: 72 mapped course areas, 39 courses known only as map points, 6 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.",
+   "linksGolf": "0 links course(s): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bucketListCourses": "1 venue(s) in the place's area that hosted a men's major, a Ryder Cup, a Presidents Cup or Olympic golf in 1990-2025 (venue coordinates from the Wikipedia event pages, same venue merged within about 2 km); events held there: 2007 Presidents Cup. Gives 4 (none 0, 1 -> 4, 2 -> 6, 3-4 -> 8, 5 or more -> 10). Earlier venues and women's events are not counted.",
+   "scenicCourses": "24 scenic course(s): 24 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Club de Golf Royal Montreal, Club de Golf St-Raphaël, Elm Ridge Country Club. Gives 10, same tiers as links. Courses with a big elevation drop but a lower start are not counted.",
+   "resortCourses": "11 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Golf de la Faune, Club de Golf Boucherville, Mount Bruno Country Club. Gives 8, same tiers.",
+   "courseKinds": "Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 54; standard = regulation courses 60; championship = 90 ha or more, or a major or cup venue 3. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.",
+   "thingsBeyondGolf": "Average of the three highest other-interest scores for the place: architecture 9, whaleWatching 7, scenicLandscapes 7 = 7.7.",
    "teeTimeAccess": "Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages)."
   }
  }

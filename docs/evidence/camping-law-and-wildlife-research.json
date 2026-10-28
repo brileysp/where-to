@@ -365,6 +365,18 @@
    "conf": "low",
    "src": "https://www.hidmc.com/fr/blog-posts/camping-in-bhutans-wilderness-a-guide-for-adventure-seekers",
    "note": "All treks and camping must be arranged through licensed tour operators (single blog)."
+  },
+  "rocky-mountain": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/romo/planyourvisit/wild_guide.htm",
+   "note": "Overnight wilderness camping requires a Wilderness Permit (Wilderness Camping Guide)."
+  },
+  "tasmania": {
+   "value": "limited",
+   "conf": "medium",
+   "src": "https://parks.tas.gov.au/explore-our-parks/walls-of-jerusalem-national-park/walls-of-jerusalem-overnight-walker-camping",
+   "note": "Walls of Jerusalem: overnight walkers must camp only at three designated sites, registration required; Overland Track: tent platforms or huts, 34 walkers a day. General bush-camping rules outside these walks were not found."
   }
  },
  "dangerousWildlife": {
