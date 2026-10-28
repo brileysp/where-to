@@ -266,7 +266,7 @@ export const TRUTHS: Truth[] = [
     const p = ctx.places.find((x) => /red sea/i.test(x.name)); const f = p && ctx.facts.find((r) => r.placeId === p.id && r.interestKey === 'diving');
     const draw = (f?.facts.drawType as string[] | undefined) ?? [];
     return draw.includes('wrecks') ? pass : fail(`its dive draw is recorded as: ${draw.join(', ') || 'nothing'}`);
-  }, pending: 'Needs the "Wreck diving rating" column (chip measures audit, item C1). Today the chip reads only the main draw.' },
+  } },
 
   // ======================= Facts =======================
   { id: 'F01', area: 'Facts', says: 'Every stored fact is a legal value for its column: ratings 0 to 10, choices and lists from the allowed options.', check: (ctx) => {

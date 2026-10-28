@@ -1,0 +1,42 @@
+{
+ "what": "Wrecks added to the main dive draw (Diving What the draw is) where wrecks are a recognised draw in dive-guide sources. A 0-10 Wreck diving rating column was NOT built: free map data misses wartime wrecks (Palau shows 2) and counts differ by source.",
+ "places": {
+  "egypt": {
+   "addedDrawType": "wrecks",
+   "evidence": "Egyptian Red Sea wrecks named across dive publications: SS Thistlegorm, Rosalie Moller, Carnatic, Chrisoula K, Giannis D, Kimon M, Kingston, Dunraven and Salem Express.",
+   "sources": [
+    "https://www.divein.com/diving/destination/shipwrecks-in-egypt",
+    "https://divemagazine.com/destination-guides/egypt/egypt-wreck-dives"
+   ]
+  },
+  "palau": {
+   "addedDrawType": "wrecks",
+   "evidence": "More than 30 Japanese WWII wrecks (Fish n Fins) or 36 vessels plus aircraft (X-Ray Magazine); a ScubaDiving list names ten: Iro Maru, Chuyo Maru, Teshio Maru, Gozan, Ryuku Maru, Helmet Wreck, Bichu Maru, Amatsu Maru and others.",
+   "sources": [
+    "https://www.scubadiving.com/photos/ghost-fleet-operation-desecrate-one",
+    "https://fishnfins.com/index.php/dive-palau/dive-sites-palau/wreck-dives"
+   ]
+  },
+  "palawan": {
+   "addedDrawType": "wrecks",
+   "evidence": "Coron Bay: about ten Japanese ships sunk on 24 Sep 1944 are dive sites (Akitsushima, Irako, Okikawa Maru, Kogyo Maru, Olympia Maru, Kyokuzan Maru, Morazan, Terukaze Maru and gunboats).",
+   "sources": [
+    "https://www.divein.com/diving/destination/coron-bay-wrecks",
+    "https://divemagazine.com/scuba-diving-long-reads/wrecks-of-coron-bay-philippines"
+   ]
+  },
+  "jordan": {
+   "addedDrawType": "wrecks",
+   "evidence": "Aqaba: PADI lists 7 wreck dives among 18 sites (Cedar Pride, a Lockheed Tristar, the Underwater Military Museum of 19-21 vehicles, a C-130 and others); the Aqaba tourism booklet lists more.",
+   "sources": [
+    "https://www.padi.com/dive-sites/aqaba-2",
+    "https://divernet.com/scuba-diving/scuba-diving-in-jordan-and-aqaba-wrecks/"
+   ]
+  }
+ },
+ "notAdded": {
+  "gbr": "SS Yongala is a famous single wreck; the reef remains the draw.",
+  "bahamas": "No verified wreck list found.",
+  "papua-new-guinea": "Already recorded as reef and wrecks."
+ }
+}

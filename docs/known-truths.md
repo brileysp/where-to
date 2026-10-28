@@ -2,7 +2,7 @@
 
 Checked 2026-10-28. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
-**52 truths: 49 hold, 0 fail, 3 pending.** Pending means we know it does not hold yet and what will close it.
+**52 truths: 50 hold, 0 fail, 2 pending.** Pending means we know it does not hold yet and what will close it.
 
 ## Matching
 
@@ -55,7 +55,7 @@ Checked 2026-10-28. Each line is something that must always be true of Where To?
 | holds | P07: The Red Sea & Nile is among the ten best places for diving. |  |
 | holds | P09: The coast rule holds: a place scored for Surfing also has Beaches & Swimming switched on, and a place close enough to the ocean to have a surf or beach score is close enough to be considered for diving. It can be not applicable for murky water or no diving, but never for being "too far from the coast". (River and city swimming that has nothing to do with the ocean is not covered.) |  |
 | holds | P10: Every place has both its peak crowd intensity and its seasonal price swing set (Crowds & prices reads them separately). |  |
-| pending | P08: The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded). | Needs the "Wreck diving rating" column (chip measures audit, item C1). Today the chip reads only the main draw. |
+| holds | P08: The Red Sea & Nile counts as a wreck-diving destination (its famous wrecks are recorded). |  |
 
 ## Facts
 
@@ -64,7 +64,7 @@ Checked 2026-10-28. Each line is something that must always be true of Where To?
 | holds | F01: Every stored fact is a legal value for its column: ratings 0 to 10, choices and lists from the allowed options. |  |
 | holds | F02: No fact is stored under a column name that does not exist for its interest. |  |
 | holds | F03: Water temperatures for Diving and Surfing are written so a number can be read from them (for example "54-79 F"). |  |
-| pending | F04: Every safari place has an odds entry for "Great herds" (the migration chip measures it). | Safari to-do: fill Great herds for the other 14 places (chip measures audit, item L5). |
+| pending | F04: Every safari place has an odds entry for "Great herds" (the migration chip measures it). | Safari to-do: Great herds is filled for 15 of 17 places (28 Oct 2026, sources in docs/evidence/safari-great-herds-evidence.json); Nepal and Uganda stay blank until a herd-size source is found (chip measures audit, item L5). |
 
 ## Text
 
