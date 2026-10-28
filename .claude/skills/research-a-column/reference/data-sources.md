@@ -19,7 +19,8 @@ Run Python with a folder of installed packages: `pip install --target <folder> d
 - **Wikidata SPARQL** for zoos, aquariums and similar classes.
 - **GeoNames** `cities1000.zip` for towns of 1,000 or more.
 - **Natural Earth** 10 m coastline (coarse: not good enough for a 500 m test).
-- **Open-Meteo**: elevation (`api.open-meteo.com/v1/elevation`, 100 points per call), archive daily minimums (`archive-api.open-meteo.com`). It returns 429 if two jobs run at once; run one at a time. Grid elevation can be far above a valley.
+- **Open-Meteo**: elevation (`api.open-meteo.com/v1/elevation`, 100 points per call), archive daily minimums and means (`archive-api.open-meteo.com`). It returns 429 if two jobs run at once; run one at a time. Grid elevation can be far above a valley. **Limits (28 Oct 2026):** the marine API (`marine-api.open-meteo.com`, daily `wave_height_max`, `sea_surface_temperature_mean`) only has history from about 2021, so ask for 2022 onwards (older years come back null and cost calls); a long request counts as several calls, and about 250 ten-year marine requests used up the hourly then the daily limit (message "Daily API request limit exceeded", reset 00:00 UTC). The archive API has its own separate quota. A land point returns an error, so for island and inland places use the nearest marina or coast vertex as the sea point.
+- **GBIF occurrence search** (`api.gbif.org/v1/occurrence/search`, `geometry` as a WKT polygon, `taxonKey`, `facet=speciesKey`): presence only. A zero is meaningful only where a survey-effort check (for example all Carnivora records) is high.
 - **RCDB** and the TEA water park ranking for Theme Parks.
 
 ## Hand research
