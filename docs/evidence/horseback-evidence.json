@@ -1,0 +1,970 @@
+{
+ "mendoza": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [],
+  "lengths": [
+   "hours",
+   "day",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Rancho El Rosario",
+    "url": "https://magpie.travel/companies/rancho-el-rosario-horse-riding-holidays",
+    "says": "full-day ride with asado, 3 to 5 day expeditions and a cross of the Andes"
+   },
+   {
+    "name": "Destino Montana (day ride with asado)",
+    "url": "https://magpie.travel/products/3b1b961b-fe43-4e78-9a53-7b3055da0591",
+    "says": "about 3 hours with an open-fire asado"
+   }
+  ],
+  "note": "Experience requirements for the multi-day rides not found; one listing has a 90 kg weight limit."
+ },
+ "morocco": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Naturally Morocco",
+    "url": "https://www.naturallymorocco.co.uk/experiences/41-horse-trekking/",
+    "says": "coastal treks from half a day to a week; Atlantic Coast Trail 8 days; level moderate"
+   },
+   {
+    "name": "Unicorn Trails",
+    "url": "https://www.unicorntrails.com/FI/ridecategories/adventurerides/?p=24",
+    "says": "six-day Atlas and Agafay ride; all levels of rider, non-riders welcome"
+   }
+  ],
+  "note": ""
+ },
+ "andalucia": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Donana Pasodoble",
+    "url": "https://www.donana-rutas-caballo.com/en-gb/routes-and-prices",
+    "says": "basic routes need no experience (ages 12 to 65); private beach rides need an intermediate rider comfortable at all three gaits; the 3-day getaway is experienced riders only"
+   }
+  ],
+  "note": ""
+ },
+ "kenya": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident",
+   "expert"
+  ],
+  "lengths": [
+   "hours",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Ker & Downey Masai Mara on Horseback",
+    "url": "https://kerdowney.com/journeys/masai-mara-horseback/",
+    "says": "group departures age 14+ and an appropriate skill level"
+   },
+   {
+    "name": "Globetrotting (Will Rogers ride)",
+    "url": "https://www.globetrotting.com.au/horse-riding-holidays/the-maasai-mara-ride-kenya-starring-will-rogers",
+    "says": "guests must be experienced and comfortable at walk, trot, canter and gallop"
+   },
+   {
+    "name": "Chalo Africa Mara on Horseback",
+    "url": "https://chaloafrica.com/safari-tours/mara-on-horseback-8-day-safari-in-2024",
+    "says": "8-day safari, 4 to 7 hours riding a day"
+   },
+   {
+    "name": "Ride Kenya Mara stables",
+    "url": "https://masaimaraafrica.com/masai-mara-horse-riding-safari/",
+    "says": "2-hour guided rides from the stables"
+   }
+  ],
+  "note": "Riding is not allowed inside the main Maasai Mara Reserve; it is offered in the conservancies around it. No Amboseli operator found."
+ },
+ "badlands-black-hills": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": false,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "High Country Guest Ranch (Hill City)",
+    "url": "https://blackhillsbadlands.com/business/trail-rides-high-country-guest-ranch",
+    "says": "guided 1-hour trail rides designed for first-time riders; Black Hills National Forest permit"
+   },
+   {
+    "name": "Plenty Star (Custer area)",
+    "url": "https://americancowboy.com/travel-archive/horseback-black-hills-sd",
+    "says": "overnight rides and Old West cattle drives"
+   },
+   {
+    "name": "Sage Meadow Ranch (Hot Springs)",
+    "url": "https://www.travelsouthdakota.com/hot-springs/sage-meadow-ranch",
+    "says": "privately guided rides by reservation"
+   }
+  ],
+  "note": "No Badlands-specific operator found."
+ },
+ "ladakh": {
+  "found": false,
+  "note": "No horse-trek operator with details found; Dreamland Trek & Tour lists horse riding without details. Left blank."
+ },
+ "scottish-highlands-skye": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day"
+  ],
+  "operators": [
+   {
+    "name": "Isle of Skye Trekking Centre",
+    "url": "https://www.yumping.com/en/horse-riding/the-isle-of-skye-trekking-centre--e16404",
+    "says": "one-hour rides near Suladale"
+   },
+   {
+    "name": "Knoydart Pony Trekking",
+    "url": "https://www.yumping.com/en/horse-riding/knoydart-pony-trekking--e19706633",
+    "says": "all levels including complete beginners; half an hour to a full day, beach rides"
+   },
+   {
+    "name": "Mull Pony Trekking",
+    "url": "https://www.islesofscilly-travel.co.uk/?p=55290",
+    "says": "Highland ponies, beach and hill rides tailored to ability"
+   }
+  ],
+  "note": "No multi-day Highland pony trek operator found."
+ },
+ "torres-del-paine": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident",
+   "expert"
+  ],
+  "lengths": [
+   "hours",
+   "day",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Swoop Patagonia horse riding (6-day estancia ride)",
+    "url": "https://www.swoop-patagonia.com/chile/torres-del-paine/horse-riding/6-day-estancia",
+    "says": "multi-day estancia rides; 10-day ride intermediate to advanced, not for beginners; lodge-based short rides for all levels"
+   },
+   {
+    "name": "Equescapes Torres del Paine Trek",
+    "url": "https://equescapes.wetravel.com/trips/chile-patagonia-torres-del-paine-trek-equescapes-equestrian-adventures-44686018",
+    "says": "seven-day traverse with an overnight at a working estancia"
+   }
+  ],
+  "note": "Season about November to April."
+ },
+ "chilean-lake-district": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Antilco Horsetrekking (Pucon)",
+    "url": "https://antilco.com/Chilehorseback/RioBlancohorsebacktrail.html",
+    "says": "4-day Huerquehue and Rio Blanco trek with camping; horses matched to declared level"
+   },
+   {
+    "name": "Calafate Circuit, Futaleufu",
+    "url": "https://chile.tur.com/en/tour/circuito-calafate-25698",
+    "says": "one-hour ride for all experience levels"
+   }
+  ],
+  "note": "Rider level for the multi-day trek not stated by the operator; Puyehue not found."
+ },
+ "banff": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "day",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Warner Guiding & Outfitting (Banff)",
+    "url": "https://horseback.com/",
+    "says": "15 trips from easy rides to multi-day pack trips with tent camps and lodges; experience not necessary per the owner"
+   },
+   {
+    "name": "Banff Trail Riders",
+    "url": "https://thebanffblog.com/backcountry-horseback-riding-banff/",
+    "says": "multi-day backcountry rides with lodges"
+   },
+   {
+    "name": "Larry's Riding Stables (Jasper)",
+    "url": "https://www.travelalberta.com/listings/larrys-riding-stables-guiding-outfitters-4119",
+    "says": "guided trail rides and multi-day pack trips near Jasper"
+   }
+  ],
+  "note": "Ranch/cattle drive not found; ranch flag set only for the pack-trip lodges? No: left false below."
+ },
+ "provence": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Bergerie d Alivon (Camargue)",
+    "url": "https://wanderlog.com/place/details/217895/promenade-a-cheval-sheepfold-of-alivon-in-the-camargue",
+    "says": "two-hour trek for beginners and experienced riders"
+   },
+   {
+    "name": "Globetrotting Camargue Ride",
+    "url": "https://globetrotting.com.au/horse-riding-holidays/camargue-france",
+    "says": "four nights, intermediate to advanced"
+   },
+   {
+    "name": "Provenceweb gardian programme",
+    "url": "https://www.provenceweb.fr/13/promenade-rieges/ukexcursions.htm",
+    "says": "7-day programme with cattle work, not for beginners"
+   }
+  ],
+  "note": "Camargue is on the edge of the Provence area; beach riding stated in operator blogs but not verified on an official page."
+ },
+ "namibia": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "expert"
+  ],
+  "lengths": [
+   "day",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Namibia Horse Safari Company",
+    "url": "https://www.tourismupdate.com/article/experience-namibia-on-horseback",
+    "says": "300 km Namib ride, 10 days Sossusvlei to Swakopmund, and shorter rides; most demanding for experienced riders"
+   },
+   {
+    "name": "Desert Homestead (Sossusvlei)",
+    "url": "https://www.scottdunn.com/us/namibia/hotels/desert-homestead",
+    "says": "riding suitable for experienced riders as well as beginners under instructors; one and two day tours with a tent camp"
+   }
+  ],
+  "note": ""
+ },
+ "el-chalten": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": true,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Estancia Cristina day ride (El Calafate)",
+    "url": "https://www.civitatis.com/en/el-calafate/cristina-ranch-horse-ride/",
+    "says": "about six hours of riding with an English-speaking guide"
+   },
+   {
+    "name": "Nibepo Aike (Swoop Patagonia)",
+    "url": "https://www.swoop-patagonia.com/argentina/lake-district/hotels/huechahue",
+    "says": "two to four days of riding combined with hiking"
+   },
+   {
+    "name": "Estancia 25 de Mayo gaucho experience",
+    "url": "https://www.bluegreenadventures.com/?p=4814",
+    "says": "3-day private riding expedition to a gaucho hut"
+   },
+   {
+    "name": "Explora Veranadas ride",
+    "url": "https://www.explora.com/explorations/veranadas/",
+    "says": "full-day 29 km ride following the old gaucho route"
+   }
+  ],
+  "note": "Rider level requirements not stated on the pages found."
+ },
+ "kyrgyzstan": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "day",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Visit Kyrgyzstan horse riding",
+    "url": "https://visitkyrgyzstan.org/horse-riding",
+    "says": "Song-Kul treks; experience: no, beginners welcome, with a half-day ride suggested first"
+   },
+   {
+    "name": "Terra Montis Adventures 3-day Kyzart to Son Kul",
+    "url": "https://www.wetravel.com/trips/3-day-horseback-riding-tour-from-kyzart-to-son-kul-lake-terra-montis-adventures-4183564291",
+    "says": "3-day trek with yurt stays"
+   }
+  ],
+  "note": "Rides run about 4 to 6 hours a day; yurt camps close around October."
+ },
+ "egypt": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours"
+  ],
+  "operators": [
+   {
+    "name": "Hurghada desert and beach rides",
+    "url": "https://www.civitatis.com/en/hurghada/horseback-riding",
+    "says": "2 to 3 hour desert and beach rides with a horse swim; listings say suitable for beginners and experienced riders"
+   },
+   {
+    "name": "Sharm El Sheikh desert horse riding",
+    "url": "https://sunpyramidstours.com/tour/desert-horse-riding-in-sharm-el-sheikh",
+    "says": "Arabian horses for all skill levels"
+   }
+  ],
+  "note": "No Bedouin multi-day treks or Nile riding found."
+ },
+ "north-island": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Pakiri Beach Horse Rides",
+    "url": "https://rankers.co.nz/experiences/1812-Pakiri_Beach_Horse_Rides",
+    "says": "beach rides and 2, 3, 5 and 7 day treks"
+   },
+   {
+    "name": "River Valley Stables",
+    "url": "https://rivervalley.co.nz/adventure-activities/by-horse/multi-day-horse-trekking/",
+    "says": "multi-day horse trekking tours"
+   },
+   {
+    "name": "Blue Duck Station",
+    "url": "https://www.straytravel.com/travel-guide/new-zealand/destination-guide/blue-duck-station/horse-trekking/",
+    "says": "backcountry station with guided horse treks"
+   }
+  ],
+  "note": "Station stay: Blue Duck Station and River Valley are working or lodge-based properties; rider levels for the multi-day treks not stated in the results."
+ },
+ "ireland": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Point Pony Trekking (Connemara)",
+    "url": "https://www.galwaytourism.ie/things-to-do/horse-riding/point-pony-trekking-horse-riding-centre/",
+    "says": "daily one or two hour beach rides for all levels"
+   },
+   {
+    "name": "Connemara Equestrian Escapes",
+    "url": "https://www.galwaytourism.ie/?p=700",
+    "says": "3 to 7 day riding vacations; intermediate level recommended (comfortable at walk, trot and canter)"
+   },
+   {
+    "name": "Killarney Reeks Trail (Travelstride listing)",
+    "url": "https://app.travelstride.com/trip-list/ireland-horseback-riding-equestrian-trips",
+    "says": "group tour rated moderate"
+   }
+  ],
+  "note": ""
+ },
+ "yellowstone": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Montana Whitewater / Stermitz Ranch rides (Gardiner)",
+    "url": "https://www.montanawhitewater.com/horseback-riding/",
+    "says": "one-hour guided rides from the North Entrance"
+   },
+   {
+    "name": "Lone Mountain Ranch (Big Sky)",
+    "url": "https://lonemountainranch.com/summer/",
+    "says": "previous riding experience not required; wranglers teach beginners"
+   },
+   {
+    "name": "Parade Rest Guest Ranch",
+    "url": "https://destinationyellowstone.com/adventures/horseback-riding/",
+    "says": "closest Montana guest ranch to Yellowstone"
+   }
+  ],
+  "note": "Cattle drives and pack trips not found; ranch stay flag set from the guest and dude ranches (dude ranches typically a one-week minimum per Frommers)."
+ },
+ "douro-valley-porto": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day"
+  ],
+  "operators": [
+   {
+    "name": "Sunday Stories (Pinhao) Douro horseback and forest lunch with wine tasting",
+    "url": "https://www.expedia.com/things-to-do/douro-valley-horseback-riding-and-forest-lunch-with-wine-tasting.a50167307.activity-details",
+    "says": "2-hour ride with a wine estate visit"
+   },
+   {
+    "name": "NorthSoul Tours from Porto",
+    "url": "https://www.expedia.ca/things-to-do/a.a53146884.activity-details",
+    "says": "9-hour countryside horse riding day trip"
+   }
+  ],
+  "note": "No multi-day trek operator based in the Douro or Porto found; Unicorn Trails and Globetrotting rides found are elsewhere in Portugal."
+ },
+ "mongolia": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident",
+   "expert"
+  ],
+  "lengths": [
+   "day",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Globetrotting Khovsgol and Arhangay ride (19 days)",
+    "url": "https://www.globetrotting.com.au/horse-riding-holidays/19-day-khovsgol-ride-mongolia",
+    "says": "multi-week ride"
+   },
+   {
+    "name": "Tour2Mongolia central Mongolia horse riding",
+    "url": "https://tour2mongolia.com/tours/mongolia-horse-riding-10-days-tour",
+    "says": "4 to 5 hours a day; beginners welcome to ride or walk alongside"
+   },
+   {
+    "name": "Unicorn Trails Trans-Mongolia",
+    "url": "https://www.unicorntrails.com/andbeyond/mongolia/transmongolia/",
+    "says": "cantering across the plains, for experienced riders"
+   }
+  ],
+  "note": "Operators differ: some say beginners welcome, others experienced riders only."
+ },
+ "cotswolds": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Cotswold Trail Riding (Ongers Farm)",
+    "url": "https://www.soglos.com/business-profile/outdoors/cotswold-trail-riding-centre/10657",
+    "says": "guided rides for beginners and experienced riders"
+   },
+   {
+    "name": "Globetrotting The Cotswolds Ride",
+    "url": "https://www.globetrotting.com.au/horse-riding-holidays/the-cotswolds-ride-england",
+    "says": "6 to 7 nights, intermediate to advanced"
+   },
+   {
+    "name": "Stately Rides",
+    "url": "https://countrylife.co.uk/news/riding-holidays-in-the-cotswolds-29066",
+    "says": "2 to 5 day rides (2015 article; check)"
+   }
+  ],
+  "note": ""
+ },
+ "iceland": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Hestasport (Varmahlid)",
+    "url": "https://www.horsesoficeland.is/news/welcome-to-hestasport-",
+    "says": "one-hour beginner rides; 3-hour River Delta ride for experienced riders; multi-day holidays for all levels"
+   },
+   {
+    "name": "Helluland (Skagafjordur)",
+    "url": "https://www.visitskagafjordur.is/en-gb/afþreying",
+    "says": "rides for all levels from complete beginners"
+   }
+  ],
+  "note": ""
+ },
+ "texas-hill-country": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Dixie Dude Ranch (Bandera)",
+    "url": "https://www.tourtexas.com/accommodations/dixie-dude-ranch-bandera",
+    "says": "working stock ranch with longhorns; two free rides a day and occasional overnight rides"
+   },
+   {
+    "name": "Mayan Dude Ranch (Bandera)",
+    "url": "https://texastimetravel.com/directory/mayan-dude-ranch",
+    "says": "ideal for beginners; two rides a day"
+   },
+   {
+    "name": "Rancho Cortez (Bandera)",
+    "url": "https://www.traveltexas.com/things-to-do/western-experience/stay-at-a-ranch-in-texas/",
+    "says": "cattle roundups, trail rides; welcomes riders who have never ridden"
+   }
+  ],
+  "note": "A cattle drive proper was not found; ranch stays with cattle work were."
+ },
+ "vermont": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours"
+  ],
+  "operators": [
+   {
+    "name": "Chipman Stables (southern Vermont)",
+    "url": "https://newenglandwithlove.com/horseback-riding-in-vermont/",
+    "says": "trail rides for all ages and skill levels"
+   },
+   {
+    "name": "Horses for Hire (Peru, VT)",
+    "url": "https://newenglandwithlove.com/horseback-riding-in-vermont/",
+    "says": "private guided tours for all skill levels"
+   },
+   {
+    "name": "Green Mountain Horse Association",
+    "url": "https://www.morganhorse.com/upload/photos/page_1219_15_tmh_nov_dec2023_reflections_morgansinthe_mountains_small.pdf",
+    "says": "monthly trail rides and overnight stays for riders with their own horses"
+   }
+  ],
+  "note": "No guided multi-day trek found."
+ },
+ "queenstown": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day"
+  ],
+  "operators": [
+   {
+    "name": "High Country Horses (Glenorchy)",
+    "url": "https://www.experienceoz.com.au/en/queenstown/half-day-rees-river-horse-trek-from-glenorchy",
+    "says": "Rees River rides; 2.5 hours described as a perfect half-day trek for beginners and experienced riders"
+   },
+   {
+    "name": "Ben Lomond Horse Treks (Moke Lake)",
+    "url": "https://www.bookme.co.nz/things-to-do/queenstown/activity/scenic-horse-trek-45-min-ben-lomond-horse-treks/5985",
+    "says": "flat terrain, ideal for beginners"
+   }
+  ],
+  "note": "Destination Queenstown mentions full-day and multi-day rides but no multi-day operator was named."
+ },
+ "jordan": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "day",
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "JI Tours Petra and Wadi Rum horse riding (8d7n)",
+    "url": "https://jitours.com/en/tours/jordan/8d7n-horse-riding-in-petra-with-wadi-rum-experience",
+    "says": "multi-day Petra to Wadi Rum rides with camping"
+   },
+   {
+    "name": "Equitrekking: horse trekking in Wadi Rum",
+    "url": "https://equitrekking.com/articles/entry/horse_trekking_in_the_wadi_rum_in_jordan",
+    "says": "Wadi Rum trek; horses paired to riders abilities"
+   },
+   {
+    "name": "Unicorn Trails Wadi Rum Desert Trail",
+    "url": "https://www.unicorntrails.com/andbeyond/jordan/wadirumdeserttrail/",
+    "says": "multi-day desert ride"
+   }
+  ],
+  "note": "Formal experience requirements not stated on the pages found."
+ },
+ "glacier-waterton": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": true,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Swan Mountain Outfitters (Glacier National Park concession)",
+    "url": "https://www.nps.gov/glac/planyourvisit/horseback-rides.htm",
+    "says": "guided rides from one hour to all day at Many Glacier, Lake McDonald and Apgar; overnight pack trips from West Glacier; no experience necessary per Glacier Guides"
+   },
+   {
+    "name": "Bar W Ranch (Whitefish)",
+    "url": "https://glaciermt.com/listing/swan-mountain-outfitters",
+    "says": "dude ranch near the park"
+   }
+  ],
+  "note": "Waterton Lakes side not found."
+ },
+ "tanzania": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "confident",
+   "expert"
+  ],
+  "lengths": [
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Tanzania Horse Safaris (Arusha)",
+    "url": "https://aardvarksafaris.com/?p=27299",
+    "says": "rides starting about an hour from Arusha and Moshi"
+   },
+   {
+    "name": "Globetrotting Kilimanjaro Elephant Ride",
+    "url": "https://www.globetrotting.com.au/horse-riding-holidays/kilimanjaro-elephant-ride-tanzania/",
+    "says": "7 nights, intermediate to advanced"
+   },
+   {
+    "name": "Unicorn Trails Tanzania",
+    "url": "https://www.unicorntrails.com/africa/tanzania/",
+    "says": "Kilimanjaro-area rides; the elephant ride is not suitable for beginners"
+   }
+  ],
+  "note": ""
+ },
+ "botswana": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "expert"
+  ],
+  "lengths": [
+   "days",
+   "week"
+  ],
+  "operators": [
+   {
+    "name": "Okavango Horse Safaris",
+    "url": "https://www.tourismupdate.com/article/horse-safari-experience-launched-okavango-delta",
+    "says": "4 to 7 night riding safaris, original Botswana horse safari"
+   },
+   {
+    "name": "Ker & Downey Okavango Horse Safari",
+    "url": "https://kerdowney.com/journeys/okavango-horse-safari-by-ker-downey/",
+    "says": "10-day package with 5 riding days; requires advanced and experienced riders, 4 to 6 hours a day"
+   }
+  ],
+  "note": ""
+ },
+ "rocky-mountain": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day"
+  ],
+  "operators": [
+   {
+    "name": "Glacier Creek Stables (inside the park)",
+    "url": "https://www.nps.gov/romo/planyourvisit/horses.htm",
+    "says": "the only stable inside the park"
+   },
+   {
+    "name": "Jackson Stables (YMCA of the Rockies)",
+    "url": "https://www.ymcarockies.org/things-to-do/activities/estes-park-center/horseback-riding",
+    "says": "one-hour to all-day rides, every level of rider"
+   },
+   {
+    "name": "Winding River Resort (Grand Lake)",
+    "url": "https://www.destinationgranby.com/things-to-do/outdoor-and-recreation/horseback-riding/",
+    "says": "one or two hour rides through the park"
+   }
+  ],
+  "note": "No pack trip, cattle drive or guest ranch found for the park itself."
+ },
+ "snowdonia": {
+  "found": true,
+  "beach": true,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner",
+   "confident"
+  ],
+  "lengths": [
+   "hours",
+   "day",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Gwydyr Stables (Betws-y-Coed)",
+    "url": "https://wales.org/horse-riding-in-snowdonia/",
+    "says": "2 to 3 day trail rides with pub stops and B&B; aimed at beginners"
+   },
+   {
+    "name": "Snowdonia Riding Stables (Waunfawr)",
+    "url": "https://www.yumping.com/en/horse-riding/snowdonia-riding-stables--e19627074",
+    "says": "half and full day mountain rides; beginners instructed first"
+   },
+   {
+    "name": "Bwlchgwyn Farm (Mawddach Estuary)",
+    "url": "https://www.yumping.com/en/horse-riding/bwlchgwyn-farm--e16422",
+    "says": "beach rides for complete beginners and experienced riders; beach canters for more experienced riders"
+   }
+  ],
+  "note": ""
+ },
+ "north-cascades": {
+  "found": true,
+  "beach": false,
+  "ranch": false,
+  "trek": true,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "days"
+  ],
+  "operators": [
+   {
+    "name": "Alpine Meadows Pack Trips (Winthrop)",
+    "url": "https://app.advcollective.com/travel-guides/Winthrop/exploring-horseback-adventures-near-winthrop-washington",
+    "says": "multi-day alpine horse packing (listed in a generic travel guide; verify)"
+   },
+   {
+    "name": "Winthrop Horse Stables",
+    "url": "https://app.advcollective.com/travel-guides/Winthrop/exploring-horseback-adventures-near-winthrop-washington",
+    "says": "intro lessons and multi-hour rides"
+   },
+   {
+    "name": "NPS list of permitted guided services",
+    "url": "https://www.nps.gov/noca/planyourvisit/guided-services.htm",
+    "says": "the official list of companies permitted in the park complex"
+   }
+  ],
+  "note": "Beginner overnight trips not confirmed."
+ },
+ "uluru": {
+  "found": false,
+  "note": "Outback Horse Treks (Alice Springs) and Kings Creek Station run horse rides, but both are far outside the Uluru area (Alice Springs about 450 km, Kings Creek about 300 km). Nothing found inside the area. Left blank."
+ },
+ "argentine-lake-district": {
+  "found": true,
+  "beach": false,
+  "ranch": true,
+  "trek": false,
+  "levels": [
+   "beginner"
+  ],
+  "lengths": [
+   "hours",
+   "day"
+  ],
+  "operators": [
+   {
+    "name": "Estancia Huechahue (Junin de los Andes)",
+    "url": "https://www.swoop-patagonia.com/argentina/lake-district/hotels/huechahue",
+    "says": "estancia stay with riding; Swoop lists it for riders of all levels"
+   },
+   {
+    "name": "Cabalgatas Gumercindo (San Martin de los Andes)",
+    "url": "https://www.tur.com/en/san-martin-de-los-andes-160/cabalgata-de-montana-hasta-el-mirador-de-2-horas-2622",
+    "says": "2-hour mountain ride to a viewpoint and a 3-hour ride"
+   }
+  ],
+  "note": "A multi-day trek in the area was not confirmed."
+ }
+}

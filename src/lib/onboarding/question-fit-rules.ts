@@ -229,6 +229,10 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'campingBackcountry.q1': R(atLeast(5, 'campgrounds'), atLeast(4, 'campgrounds'), atLeast(5, 'howRemote'), atLeast(8, 'howRemote')),
   'campingBackcountry.q4': R(within('nightTemps', CAMP_NIGHTS, 'warm'), within('nightTemps', CAMP_NIGHTS, 'cool'), within('nightTemps', CAMP_NIGHTS, 'cold'), null),
 
+  // ---- Horseback Riding ---- (28 Oct 2026; question 2, local horse culture, stays unmapped until that column is researched; Never ridden and Beginner read the same level)
+  'horsebackRiding.q1': R(has('riderLevels', 'beginner'), has('riderLevels', 'beginner'), has('riderLevels', 'confident', 'expert'), has('riderLevels', 'expert')),
+  'horsebackRiding.q3': R(has('rideLengths', 'hours', 'day', 'days', 'week'), has('rideLengths', 'day', 'days', 'week'), has('rideLengths', 'days', 'week'), has('rideLengths', 'week')),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -356,6 +360,8 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'mountainBiking.q3': 'Not enough riding for that long',
   'campingBackcountry.q1': 'Not the remoteness you want',
   'campingBackcountry.q4': 'Colder than you want',
+  'horsebackRiding.q1': 'Not suited to your level',
+  'horsebackRiding.q3': 'Not the trip length you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

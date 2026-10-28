@@ -730,3 +730,28 @@ describe('Camping & Backcountry questions', () => {
     expect(QUESTION_FIT_RULES['campingBackcountry.q3']).toBeUndefined();
   });
 });
+
+describe('Horseback Riding questions', () => {
+  const defs = factDefsFor('horsebackRiding');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`horsebackRiding.${q}`], picked, defs, facts as never);
+  it('rider level: never ridden and beginner read the same level', () => {
+    expect(fit('q1', [0], { riderLevels: ['expert'] })).toBe(0);
+    expect(fit('q1', [0], { riderLevels: ['beginner', 'confident'] })).toBe(1);
+    expect(fit('q1', [1], { riderLevels: ['beginner'] })).toBe(1);
+    expect(fit('q1', [2], { riderLevels: ['beginner'] })).toBe(0);
+    expect(fit('q1', [2], { riderLevels: ['expert'] })).toBe(1);
+    expect(fit('q1', [3], { riderLevels: ['confident'] })).toBe(0);
+    expect(fit('q1', [3], { riderLevels: ['beginner', 'expert'] })).toBe(1);
+  });
+  it('trip length needs at least that much on offer', () => {
+    expect(fit('q3', [0], { rideLengths: ['week'] })).toBe(1);
+    expect(fit('q3', [1], { rideLengths: ['hours'] })).toBe(0);
+    expect(fit('q3', [2], { rideLengths: ['hours', 'day'] })).toBe(0);
+    expect(fit('q3', [2], { rideLengths: ['days'] })).toBe(1);
+    expect(fit('q3', [3], { rideLengths: ['hours', 'day', 'days'] })).toBe(0);
+    expect(fit('q3', [3], { rideLengths: ['week'] })).toBe(1);
+  });
+  it('local horse culture (question 2) is left unmapped', () => {
+    expect(QUESTION_FIT_RULES['horsebackRiding.q2']).toBeUndefined();
+  });
+});

@@ -96,6 +96,9 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['campingBackcountry', 'free-wild-camping-allowed', [{ column: 'wildCampingLaw', option: 'allowed' }]],
   ['campingBackcountry', 'car-camping', [{ column: 'campgrounds' }]],
   ['campingBackcountry', 'backpacking', [{ column: 'backcountry' }]],
+  ['horsebackRiding', 'beach-rides', [{ column: 'beachRides' }]],
+  ['horsebackRiding', 'ranch-stays-and-cattle-drives', [{ column: 'ranchStays' }]],
+  ['horsebackRiding', 'multi-day-treks', [{ column: 'multiDayTreks' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');

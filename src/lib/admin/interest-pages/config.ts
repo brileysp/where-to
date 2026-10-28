@@ -838,6 +838,22 @@ const CAMPING_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
 ];
 
+/**
+ * Horseback Riding (28 Oct 2026). Only 34 places, so every cell is hand research from operators' own pages (listing sites where an operator page was not found), with the operator
+ * and page named in the Evidence column. A tick means an operator was found for that kind of ride inside the place or its named regions; an unticked box means none was found, not that
+ * none exists. Operators differ on rider level, so the levels are the lowest level any operator accepts and the highest any rides at. Full working: docs/evidence/horseback-evidence.json.
+ */
+const HORSEBACK_FACTS: FactDef[] = [
+  tick('beachRides', 'Beach rides', 'An operator offers rides on a beach in the place (operator and page in the Evidence column). The Beach rides chip reads it.'),
+  tick('ranchStays', 'Ranch stays and cattle drives', 'A ranch, estancia or dude-ranch stay, or a cattle drive or cattle-work ride, is offered (operator and page in the Evidence column). The Ranch stays chip reads it.'),
+  tick('multiDayTreks', 'Multi-day treks', 'An operator runs a trek of two days or more, with camping or lodges (operator and page in the Evidence column). The Multi-day treks chip reads it.'),
+  { key: 'riderLevels', label: 'Rider levels served', type: 'multi', group: 'practical', options: [{ value: 'beginner', label: 'Beginner: no experience needed, or walk and trot' }, { value: 'confident', label: 'Confident: comfortable at the canter' }, { value: 'expert', label: 'Experienced: any terrain, long days' }], hint: 'The levels at least one operator in the place takes, from the operators\' own requirements. Operators do not tell "never ridden" apart from "beginner", so they are one level here. Question 1 reads it.' },
+  { key: 'rideLengths', label: 'Ride lengths on offer', type: 'multi', group: 'practical', options: [{ value: 'hours', label: 'A few hours' }, { value: 'day', label: 'A day' }, { value: 'days', label: 'A few days (2 to 6)' }, { value: 'week', label: 'A week or more' }], hint: 'The lengths at least one operator offers. Question 3 reads it.' },
+  rate('localHorseCulture', 'Local horse culture', 'NOT YET RESEARCHED. Signals of a living horse culture: UNESCO listings about riding or herding, native breeds, annual horse festivals. Left blank on purpose; question 2 stays unmapped until it is filled.'),
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'The operators found, with their pages. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the operators have been checked against their own pages. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -877,6 +893,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   golf: GOLF_FACTS,
   mountainBiking: MOUNTAIN_BIKING_FACTS,
   campingBackcountry: CAMPING_FACTS,
+  horsebackRiding: HORSEBACK_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {
