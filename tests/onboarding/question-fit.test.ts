@@ -755,3 +755,19 @@ describe('Horseback Riding questions', () => {
     expect(QUESTION_FIT_RULES['horsebackRiding.q2']).toBeUndefined();
   });
 });
+
+describe('Sailing questions', () => {
+  const defs = factDefsFor('sailing');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`sailing.${q}`], picked, defs, facts as never);
+  it('sea conditions: one step rougher than you can take loses half', () => {
+    expect(fit('q3', [0], { seaConditions: 'flat' })).toBe(1);
+    expect(fit('q3', [0], { seaConditions: 'swell' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [0], { seaConditions: 'open' })).toBe(0);
+    expect(fit('q3', [1], { seaConditions: 'swell' })).toBe(1);
+    expect(fit('q3', [1], { seaConditions: 'open' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { seaConditions: 'open' })).toBeNull();
+  });
+  it('who sails, trip length and experience are left unmapped (charter data is too thin)', () => {
+    for (const q of ['q1', 'q2', 'q4']) expect(QUESTION_FIT_RULES[`sailing.${q}`]).toBeUndefined();
+  });
+});

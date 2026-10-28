@@ -854,6 +854,21 @@ const HORSEBACK_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the operators have been checked against their own pages. The Evidence column is the working, not a check.' },
 ];
 
+/**
+ * Sailing (28 Oct 2026). Three ratings, one measured sea state and one tick, all worked out from published data; the Evidence column holds the working for every cell. Marinas and named islands come
+ * from OpenStreetMap through the QLever planet service, counted inside the place's own area. Sea state comes from the Open-Meteo marine record (daily maximum wave height, 2015-2024) at the place
+ * centre, or at the marina nearest the centre where the centre is on land. Races are from Wikipedia pages; expedition operators were found by search and each page was checked to load.
+ */
+const SAILING_FACTS: FactDef[] = [
+  rate('shelteredIslandHopping', 'Sheltered island hopping', 'Marinas inside the place (counts to rating: 0 is 0, 1 is 2, 2 to 3 is 3, 4 to 6 is 4, 7 to 10 is 6, 11 to 20 is 8, 21 or more is 10), held down by the named islands in the place (fewer than 3 allows at most 2, 3 to 9 at most 5, 10 or more no limit), and by 2 where fewer than 60% of days in the sailing months have waves under 1.25 m. Places with no sea are held to 2 because there are no sea islands to hop. Anchors: 10 Dalmatian Coast, 0 Marrakech & Atlas. The Sheltered island hopping chip reads it.'),
+  rate('racingRegattas', 'Racing and regattas', 'Number of sourced sailing events held inside the place: Olympic sailing venues 1996-2024, America\'s Cup hosts, SailGP host cities, the 2017-18 Ocean Race stopovers and a few major races (Sydney Hobart start, Copa del Rey, Trofeo Princesa Sofia, Swiftsure, Race to Mackinac, Barcelona World Race, China Sea Race). Presence-led scale, as for golf: none 0, 1 event gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10. Famous regattas without a Wikipedia page (Antigua Sailing Week, Heineken Regatta, BVI Spring Regatta) are not counted, and many are on islands that are not places here. The Racing and regattas chip reads it.'),
+  rate('expeditionSailing', 'Expedition sailing', 'Researched by hand for high-latitude and remote-water places: operators running sailing-vessel voyages in the place or its named regions, found by search on 28 Oct 2026 with the page named. None 0, one operator 3, two to three 6, four or more 9. Places that are not high-latitude or remote are 0 by the rule and were not researched. The Expedition sailing chip reads it.'),
+  { key: 'seaConditions', label: 'Sea conditions', type: 'choice', group: 'practical', options: [{ value: 'flat', label: 'Flat and sheltered (median wave under 0.5 m)' }, { value: 'swell', label: 'Some swell (0.5 to 1.5 m)' }, { value: 'open', label: 'Open water (over 1.5 m)' }], hint: 'Median of the daily maximum wave height in the sailing months (months scoring 7 or more on the sailing curve), Open-Meteo marine record 2015-2024, taken at the marina nearest the place centre where the centre is on land. Inland waters are set to flat. Blank where there is no sea record and no marina. Question 3 reads it.' },
+  tick('bareboatBase', 'Bareboat charter base (big operators)', 'A base of The Moorings or Sunsail is listed in the place on their own destination pages (named in the Evidence column). An untick means no base was found on those two lists, not that no charter exists; small local firms and Dream Yacht (page blocks automatic reading) are not read. No question reads it yet.'),
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -894,6 +909,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   mountainBiking: MOUNTAIN_BIKING_FACTS,
   campingBackcountry: CAMPING_FACTS,
   horsebackRiding: HORSEBACK_FACTS,
+  sailing: SAILING_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

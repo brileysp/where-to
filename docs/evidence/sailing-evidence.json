@@ -1,0 +1,2046 @@
+{
+ "croatia": {
+  "marinas": 78,
+  "islands": 13,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.29,
+  "calm_share": 0.976,
+  "bareboat_base": true
+ },
+ "bahamas": {
+  "marinas": 30,
+  "islands": 39,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.72,
+  "calm_share": 0.905,
+  "bareboat_base": true
+ },
+ "santorini": {
+  "marinas": 20,
+  "islands": 68,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.93,
+  "calm_share": 0.744,
+  "bareboat_base": false
+ },
+ "fiji": {
+  "marinas": 9,
+  "islands": 25,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 3,
+  "operators": [
+   {
+    "name": "Tui Tai Adventure Cruises",
+    "says": "sailing vessel out of Savusavu, seven-night northern Fiji itineraries (operator page looks 2016-17, check dates)",
+    "url": "https://www.tuitai.com"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 0.52,
+  "calm_share": 0.999,
+  "bareboat_base": false
+ },
+ "gbr": {
+  "marinas": 5,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.81,
+  "calm_share": 0.856,
+  "bareboat_base": false
+ },
+ "north-island": {
+  "marinas": 31,
+  "islands": 182,
+  "sheltered": 10,
+  "regattas": 8,
+  "events": [
+   "America's Cup 2000-2003 and 2021 - Auckland",
+   "SailGP - Auckland",
+   "Ocean Race 2017-18 stopover (Auckland) - Auckland"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.47,
+  "calm_share": 0.962,
+  "bareboat_base": false
+ },
+ "marlborough-abel-tasman": {
+  "marinas": 3,
+  "islands": 19,
+  "sheltered": 3,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.43,
+  "calm_share": 0.915,
+  "bareboat_base": false
+ },
+ "komodo": {
+  "marinas": 0,
+  "islands": 18,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Senja Phinisi",
+    "says": "private phinisi charter, Komodo May to September",
+    "url": "https://phinisitrip.com/?p=58521"
+   },
+   {
+    "name": "Amaya Explorer",
+    "says": "35 m phinisi for 16 guests, Komodo, Raja Ampat, Banda Sea",
+    "url": "https://www.zubludiving.com/resort/amaya-explorer"
+   },
+   {
+    "name": "Ombak Putih",
+    "says": "traditional phinisi schooner, Komodo and Raja Ampat",
+    "url": "https://phinisitrip.com/?p=15374"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.31,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "amalfi": {
+  "marinas": 49,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.4,
+  "calm_share": 0.878,
+  "bareboat_base": true
+ },
+ "venice": {
+  "marinas": 40,
+  "islands": 23,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.24,
+  "calm_share": 0.995,
+  "bareboat_base": false
+ },
+ "kerala": {
+  "marinas": 5,
+  "islands": 10,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.61,
+  "calm_share": 0.931,
+  "bareboat_base": false
+ },
+ "sardinia": {
+  "marinas": 40,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.48,
+  "calm_share": 0.817,
+  "bareboat_base": true
+ },
+ "nice-riviera": {
+  "marinas": 74,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.52,
+  "calm_share": 0.931,
+  "bareboat_base": false
+ },
+ "borabora": {
+  "marinas": 16,
+  "islands": 5,
+  "sheltered": 3,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Sea Dragon, Marquesas to Papeete through the Tuamotus",
+    "url": "https://venturesailholidays.com/voyages/sailing-the-tuamotu-archipelago-french-polynesia/SD210527"
+   },
+   {
+    "name": "Another World Adventures",
+    "says": "14-day crewed voyage on a 72 ft steel yacht from the Marquesas",
+    "url": "https://www.anotherworldadventures.com/?p=42593"
+   },
+   {
+    "name": "Yacht Warriors",
+    "says": "10-day crewed catamaran trip in the Tuamotus",
+    "url": "https://yachtwarriors.com/itineraries/french-polynesia-yacht-charter-tuamotus-10-days"
+   }
+  ],
+  "sea": "open",
+  "median_wave_m": 1.7,
+  "calm_share": 0.131,
+  "bareboat_base": true
+ },
+ "barbados": {
+  "marinas": 5,
+  "islands": 1,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.29,
+  "calm_share": 0.445,
+  "bareboat_base": false
+ },
+ "seychelles": {
+  "marinas": 3,
+  "islands": 9,
+  "sheltered": 1,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.34,
+  "calm_share": 0.445,
+  "bareboat_base": true
+ },
+ "turks-caicos": {
+  "marinas": 6,
+  "islands": 12,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.34,
+  "calm_share": 0.456,
+  "bareboat_base": false
+ },
+ "mauritius": {
+  "marinas": 7,
+  "islands": 8,
+  "sheltered": 3,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 2.6,
+  "calm_share": 0.004,
+  "bareboat_base": false
+ },
+ "palawan": {
+  "marinas": 0,
+  "islands": 3,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.7,
+  "calm_share": 0.896,
+  "bareboat_base": false
+ },
+ "colombian-caribbean": {
+  "marinas": 2,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.46,
+  "calm_share": 0.293,
+  "bareboat_base": false
+ },
+ "mallorca": {
+  "marinas": 43,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 8,
+  "events": [
+   "Trofeo Princesa Sofia (Palma) - Palma",
+   "Copa del Rey de vela (Palma) - Palma"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.54,
+  "calm_share": 0.887,
+  "bareboat_base": false
+ },
+ "sydney": {
+  "marinas": 67,
+  "islands": 7,
+  "sheltered": 3,
+  "regattas": 8,
+  "events": [
+   "Olympic sailing 2000 - Sydney",
+   "SailGP - Sydney",
+   "Rolex Sydney Hobart Yacht Race (start) (Sydney) - Sydney"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.22,
+  "calm_share": 0.524,
+  "bareboat_base": false
+ },
+ "thailand": {
+  "marinas": 8,
+  "islands": 32,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.33,
+  "calm_share": 1.0,
+  "bareboat_base": true
+ },
+ "galapagos": {
+  "marinas": 0,
+  "islands": 14,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Nemo II and Nemo III (Visit Galapagos listing)",
+    "says": "sailing catamarans, 8-day cruises",
+    "url": "https://visitgalapagos.travel/sailing-cruises"
+   },
+   {
+    "name": "Galapagos Experience (GreenGo listing)",
+    "says": "sailing yacht, 14 passengers, 7 nights",
+    "url": "https://www.greengotravel.com/galapagos-services/sailing-cruise/"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 0.83,
+  "calm_share": 0.941,
+  "bareboat_base": false
+ },
+ "southeast-alaska": {
+  "marinas": 1,
+  "islands": 25,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 3,
+  "operators": [
+   {
+    "name": "Sail Alaska (SV BOB, Getmyboat listing)",
+    "says": "1993 Catalina/Morgan 50 skippered trips from Juneau to Glacier Bay, Sitka, Petersburg",
+    "url": "https://getmyboat.com/trips/VKVq94Yb"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.04,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "fjords": {
+  "marinas": 19,
+  "islands": 9,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.02,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "aruba": {
+  "marinas": 5,
+  "islands": 2,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.22,
+  "calm_share": 0.589,
+  "bareboat_base": false
+ },
+ "panama": {
+  "marinas": 18,
+  "islands": 53,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.39,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "dubai": {
+  "marinas": 28,
+  "islands": 9,
+  "sheltered": 5,
+  "regattas": 7,
+  "events": [
+   "SailGP - Dubai"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.56,
+  "calm_share": 0.835,
+  "bareboat_base": false
+ },
+ "rajaampat": {
+  "marinas": 1,
+  "islands": 60,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Senja Phinisi",
+    "says": "private phinisi charter, Raja Ampat November to April",
+    "url": "https://phinisitrip.com/?p=58521"
+   },
+   {
+    "name": "Amaya Explorer",
+    "says": "35 m phinisi for 16 guests, Komodo, Raja Ampat, Banda Sea",
+    "url": "https://www.zubludiving.com/resort/amaya-explorer"
+   },
+   {
+    "name": "Ombak Putih",
+    "says": "traditional phinisi schooner, Komodo and Raja Ampat",
+    "url": "https://phinisitrip.com/?p=15374"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.18,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "palau": {
+  "marinas": 3,
+  "islands": 69,
+  "sheltered": 1,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.4,
+  "calm_share": 0.26,
+  "bareboat_base": false
+ },
+ "tierra-del-fuego": {
+  "marinas": 6,
+  "islands": 15,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Pelagic Expeditions",
+    "says": "Pelagic Australis, a 75 ft expedition sailing vessel, Beagle Channel and Cape Horn from Ushuaia",
+    "url": "https://www.pelagic.co.uk/pdfs/CapeHorn%202.pdf"
+   },
+   {
+    "name": "Bark Europa",
+    "says": "Cape to Cape voyage that rounds Cape Horn",
+    "url": "https://www.barkeuropa.com/en/logbook/start-our-cape-cape-adventure"
+   },
+   {
+    "name": "Another World Adventures",
+    "says": "52-day Auckland to Ushuaia tall-ship voyage with a Cape Horn rounding attempt",
+    "url": "https://www.anotherworldadventures.com/?p=8080"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.19,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "sicily": {
+  "marinas": 39,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.35,
+  "calm_share": 0.902,
+  "bareboat_base": true
+ },
+ "belize": {
+  "marinas": 9,
+  "islands": 87,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.6,
+  "calm_share": 0.998,
+  "bareboat_base": true
+ },
+ "rio": {
+  "marinas": 21,
+  "islands": 5,
+  "sheltered": 5,
+  "regattas": 8,
+  "events": [
+   "Olympic sailing 2016 - Rio de Janeiro",
+   "SailGP - Rio de Janeiro"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.94,
+  "calm_share": 0.784,
+  "bareboat_base": false
+ },
+ "egypt": {
+  "marinas": 1,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "cape-cod-islands": {
+  "marinas": 31,
+  "islands": 183,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.72,
+  "calm_share": 0.892,
+  "bareboat_base": false
+ },
+ "maui": {
+  "marinas": 4,
+  "islands": 5,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.7,
+  "calm_share": 0.987,
+  "bareboat_base": false
+ },
+ "lisbon": {
+  "marinas": 20,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 7,
+  "events": [
+   "Ocean Race 2017-18 stopover (Lisbon) - Lisbon"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.8,
+  "calm_share": 0.923,
+  "bareboat_base": false
+ },
+ "maldives": {
+  "marinas": 35,
+  "islands": 14,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.78,
+  "calm_share": 0.911,
+  "bareboat_base": false
+ },
+ "canaries": {
+  "marinas": 27,
+  "islands": 2,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.42,
+  "calm_share": 0.359,
+  "bareboat_base": false
+ },
+ "algarve": {
+  "marinas": 12,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.48,
+  "calm_share": 0.984,
+  "bareboat_base": false
+ },
+ "rivieramaya": {
+  "marinas": 8,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.71,
+  "calm_share": 0.962,
+  "bareboat_base": false
+ },
+ "barcelona": {
+  "marinas": 14,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 8,
+  "events": [
+   "America's Cup 2024 - Barcelona",
+   "Barcelona World Race (start and finish) (Barcelona) - Barcelona"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.64,
+  "calm_share": 0.907,
+  "bareboat_base": false
+ },
+ "cape-town": {
+  "marinas": 6,
+  "islands": 2,
+  "sheltered": 0,
+  "regattas": 7,
+  "events": [
+   "Ocean Race 2017-18 stopover (Cape Town) - Cape Town"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 2.22,
+  "calm_share": 0.04,
+  "bareboat_base": false
+ },
+ "athens": {
+  "marinas": 49,
+  "islands": 5,
+  "sheltered": 5,
+  "regattas": 7,
+  "events": [
+   "Olympic sailing 2004 - Athens"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.2,
+  "calm_share": 1.0,
+  "bareboat_base": true
+ },
+ "havana": {
+  "marinas": 9,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.18,
+  "calm_share": 0.561,
+  "bareboat_base": false
+ },
+ "los-cabos": {
+  "marinas": 2,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 1.52,
+  "calm_share": 0.218,
+  "bareboat_base": false
+ },
+ "bali": {
+  "marinas": 16,
+  "islands": 17,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.28,
+  "calm_share": 0.41,
+  "bareboat_base": false
+ },
+ "hongkong": {
+  "marinas": 19,
+  "islands": 34,
+  "sheltered": 8,
+  "regattas": 8,
+  "events": [
+   "Rolex China Sea Race (start) (Hong Kong) - Hong Kong",
+   "Ocean Race 2017-18 stopover (Hong Kong) - Hong Kong"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.84,
+  "calm_share": 0.908,
+  "bareboat_base": false
+ },
+ "vietnam": {
+  "marinas": 1,
+  "islands": 5,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.73,
+  "calm_share": 0.813,
+  "bareboat_base": false
+ },
+ "provence": {
+  "marinas": 51,
+  "islands": 4,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.58,
+  "calm_share": 0.964,
+  "bareboat_base": false
+ },
+ "okinawa": {
+  "marinas": 10,
+  "islands": 28,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.04,
+  "calm_share": 0.716,
+  "bareboat_base": false
+ },
+ "acadia": {
+  "marinas": 12,
+  "islands": 127,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.46,
+  "calm_share": 0.967,
+  "bareboat_base": false
+ },
+ "guilin-yangshuo": {
+  "marinas": 9,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "puerto-rico": {
+  "marinas": 16,
+  "islands": 41,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.94,
+  "calm_share": 0.782,
+  "bareboat_base": false
+ },
+ "copenhagen": {
+  "marinas": 74,
+  "islands": 6,
+  "sheltered": 5,
+  "regattas": 7,
+  "events": [
+   "SailGP - Copenhagen"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.36,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "tasmania": {
+  "marinas": 13,
+  "islands": 12,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.38,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "punta-cana": {
+  "marinas": 6,
+  "islands": 1,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 1.76,
+  "calm_share": 0.096,
+  "bareboat_base": false
+ },
+ "nicaragua": {
+  "marinas": 8,
+  "islands": 9,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.98,
+  "calm_share": 0.967,
+  "bareboat_base": false
+ },
+ "cornwall": {
+  "marinas": 9,
+  "islands": 10,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.1,
+  "calm_share": 0.513,
+  "bareboat_base": false
+ },
+ "papua-new-guinea": {
+  "marinas": 1,
+  "islands": 16,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 3,
+  "operators": [
+   {
+    "name": "Another World Adventures",
+    "says": "20-day Buka to Kavieng voyage on a 52 ft sailing yacht",
+    "url": "https://www.anotherworldadventures.com/unusual-adventure-holidays/sail-papua-new-guinea-expedition-2026/"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 1.46,
+  "calm_share": 0.272,
+  "bareboat_base": false
+ },
+ "puglia": {
+  "marinas": 17,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 7,
+  "events": [
+   "SailGP - Taranto"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.52,
+  "calm_share": 0.964,
+  "bareboat_base": false
+ },
+ "antarctica": {
+  "marinas": 1,
+  "islands": 12,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 9,
+  "operators": [
+   {
+    "name": "Pelagic Expeditions",
+    "says": "Antarctic Peninsula yacht expedition on a 77 ft ship (January 2026 departure)",
+    "url": "https://pelagic.co.uk/pdfs/2026_02_00_Antarctic_Ski_prospectus.pdf"
+   },
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Antarctica, South Georgia and Falklands on the tall ship Tecla, 22 Dec 2026",
+    "url": "https://venturesailholidays.com/?p=95302"
+   },
+   {
+    "name": "Mzungu Expeditions",
+    "says": "Antarctica 2026 programme on the sailing yacht J.R. Tolkien",
+    "url": "https://www.mzunguexpeditions.com/antarctica_2026_en"
+   },
+   {
+    "name": "Bark Europa",
+    "says": "Antarctic Peninsula expedition on the tall ship Europa",
+    "url": "https://www.barkeuropa.com/en/sail-antarctica-quiz"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.4,
+  "calm_share": 0.941,
+  "bareboat_base": false
+ },
+ "istanbul": {
+  "marinas": 21,
+  "islands": 5,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.31,
+  "calm_share": 0.993,
+  "bareboat_base": false
+ },
+ "big-island": {
+  "marinas": 5,
+  "islands": 1,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 1.78,
+  "calm_share": 0.036,
+  "bareboat_base": false
+ },
+ "madeira": {
+  "marinas": 11,
+  "islands": 4,
+  "sheltered": 3,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 1.6,
+  "calm_share": 0.174,
+  "bareboat_base": false
+ },
+ "srilanka": {
+  "marinas": 9,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.96,
+  "calm_share": 0.956,
+  "bareboat_base": false
+ },
+ "chilean-lake-district": {
+  "marinas": 5,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "lofoten": {
+  "marinas": 41,
+  "islands": 276,
+  "sheltered": 10,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Humla, fully crewed adventure yacht, 4- and 8-day Lofoten trips from Svolvaer",
+    "url": "https://venturesailholidays.com/?p=101376"
+   },
+   {
+    "name": "Rubicon 3 Adventure",
+    "says": "12-day Lofoten sailing trip",
+    "url": "https://www.rubicon3adventure.com/product-category/adventure-sailing-holidays/norway-iceland-the-arctic"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 0.66,
+  "calm_share": 0.815,
+  "bareboat_base": false
+ },
+ "costa-rica": {
+  "marinas": 13,
+  "islands": 13,
+  "sheltered": 8,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.02,
+  "calm_share": 0.886,
+  "bareboat_base": false
+ },
+ "azores": {
+  "marinas": 4,
+  "islands": 3,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 2.58,
+  "calm_share": 0.076,
+  "bareboat_base": false
+ },
+ "vancouver-island": {
+  "marinas": 157,
+  "islands": 193,
+  "sheltered": 10,
+  "regattas": 7,
+  "events": [
+   "Swiftsure International Yacht Race (Victoria BC) - Victoria BC"
+  ],
+  "expedition": null,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.54,
+  "calm_share": 0.942,
+  "bareboat_base": false
+ },
+ "nova-scotia": {
+  "marinas": 23,
+  "islands": 170,
+  "sheltered": 8,
+  "regattas": 7,
+  "events": [
+   "SailGP - Halifax"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.34,
+  "calm_share": 0.348,
+  "bareboat_base": false
+ },
+ "singapore": {
+  "marinas": 19,
+  "islands": 130,
+  "sheltered": 8,
+  "regattas": 7,
+  "events": [
+   "SailGP - Singapore"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.26,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "argentine-lake-district": {
+  "marinas": 13,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "jamaica": {
+  "marinas": 6,
+  "islands": 4,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.9,
+  "calm_share": 0.786,
+  "bareboat_base": false
+ },
+ "amsterdam": {
+  "marinas": 219,
+  "islands": 14,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "everglades": {
+  "marinas": 1,
+  "islands": 56,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.2,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "luangprabang": {
+  "marinas": 0,
+  "islands": 1,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "monterey-big-sur": {
+  "marinas": 2,
+  "islands": 3,
+  "sheltered": 1,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 2.42,
+  "calm_share": 0.022,
+  "bareboat_base": false
+ },
+ "zimbabwe": {
+  "marinas": 2,
+  "islands": 3,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "madagascar": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "basque-country": {
+  "marinas": 25,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.06,
+  "calm_share": 0.641,
+  "bareboat_base": false
+ },
+ "bordeaux": {
+  "marinas": 10,
+  "islands": 5,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "charleston-savannah": {
+  "marinas": 57,
+  "islands": 272,
+  "sheltered": 10,
+  "regattas": 7,
+  "events": [
+   "Olympic sailing 1996 - Savannah"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.76,
+  "calm_share": 0.907,
+  "bareboat_base": false
+ },
+ "nyc": {
+  "marinas": 111,
+  "islands": 51,
+  "sheltered": 10,
+  "regattas": 7,
+  "events": [
+   "SailGP - New York City"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.34,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "chicago": {
+  "marinas": 32,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 8,
+  "events": [
+   "SailGP - Chicago",
+   "Chicago Yacht Club Race to Mackinac (start) (Chicago) - Chicago"
+  ],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.59,
+  "calm_share": 0.975,
+  "bareboat_base": false
+ },
+ "tuscany": {
+  "marinas": 2,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.5,
+  "calm_share": 0.85,
+  "bareboat_base": false
+ },
+ "iceland": {
+  "marinas": 10,
+  "islands": 6,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "15-day Iceland to Scotland voyage on the expedition yacht Valiente",
+    "url": "https://venturesailholidays.com/voyages/sailing-adventure-iceland-to-scotland/"
+   },
+   {
+    "name": "SeilNorge",
+    "says": "two-week Iceland, Faroe Islands and Scotland voyage",
+    "url": "https://seilnorge.no/?p=6667"
+   },
+   {
+    "name": "Northern Sailing (Iceland)",
+    "says": "sailing expeditions from Iceland",
+    "url": "https://www.northsailing.is/sailing-expeditions/"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 0.84,
+  "calm_share": 0.79,
+  "bareboat_base": false
+ },
+ "upper-peninsula": {
+  "marinas": 4,
+  "islands": 6,
+  "sheltered": 4,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.54,
+  "calm_share": 0.879,
+  "bareboat_base": false
+ },
+ "ghana": {
+  "marinas": 3,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 1.0,
+  "calm_share": 0.878,
+  "bareboat_base": false
+ },
+ "borneo": {
+  "marinas": 2,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.36,
+  "calm_share": 0.96,
+  "bareboat_base": false
+ },
+ "queenstown": {
+  "marinas": 1,
+  "islands": 3,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "botswana": {
+  "marinas": 0,
+  "islands": 2,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "london": {
+  "marinas": 51,
+  "islands": 21,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "morocco": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "olympic": {
+  "marinas": 1,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.46,
+  "calm_share": 0.993,
+  "bareboat_base": false
+ },
+ "berlin": {
+  "marinas": 245,
+  "islands": 3,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "rome": {
+  "marinas": 11,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.52,
+  "calm_share": 0.831,
+  "bareboat_base": false
+ },
+ "milford-sound-fiordland": {
+  "marinas": 0,
+  "islands": 2,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "buenosaires": {
+  "marinas": 48,
+  "islands": 7,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.48,
+  "calm_share": 0.986,
+  "bareboat_base": false
+ },
+ "angkor": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "scottish-highlands-skye": {
+  "marinas": 7,
+  "islands": 21,
+  "sheltered": 6,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "St Kilda and Outer Hebrides voyages from Oban, Ullapool and Mallaig",
+    "url": "https://venturesailholidays.com/voyages/sail-st-kilda-and-outer-hebrides/"
+   },
+   {
+    "name": "Polaris-Reisen",
+    "says": "2026 Oban, St Kilda, Stornoway sailing trip",
+    "url": "https://app1.edoobox.com/en/HSSegel/Polaris-Reisen-2026/Tour.ed.e99e8c641044_9255569425.HEBRIDES%20%20ST%20KILDA%20-%20Oban%20St%20Kilda%20Stornoway"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.22,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "lake-district": {
+  "marinas": 12,
+  "islands": 3,
+  "sheltered": 5,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.75,
+  "calm_share": 0.732,
+  "bareboat_base": false
+ },
+ "taiwan": {
+  "marinas": 65,
+  "islands": 6,
+  "sheltered": 3,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "open",
+  "median_wave_m": 1.54,
+  "calm_share": 0.322,
+  "bareboat_base": false
+ },
+ "zambia": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "st-andrews-fife": {
+  "marinas": 18,
+  "islands": 2,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "swell",
+  "median_wave_m": 0.72,
+  "calm_share": 0.913,
+  "bareboat_base": false
+ },
+ "edinburgh": {
+  "marinas": 15,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": 0.26,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "budapest": {
+  "marinas": 25,
+  "islands": 4,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "svalbard": {
+  "marinas": 1,
+  "islands": 7,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 9,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Noorderlicht and Valiente voyages round Spitsbergen",
+    "url": "https://venturesailholidays.com/voyages/noorderlicht-sailing-holiday-norway-svalbard-arctic/"
+   },
+   {
+    "name": "SeilNorge",
+    "says": "12-day sail round Spitsbergen from Longyearbyen",
+    "url": "https://seilnorge.no/?p=5751"
+   },
+   {
+    "name": "Husky Sailing",
+    "says": "week-long sailing trips on the west coast of Spitsbergen (Visit Svalbard listing)",
+    "url": "https://en.visitsvalbard.com/visitor-information/activity-providers/husky-sailing"
+   },
+   {
+    "name": "Oceanwide Expeditions",
+    "says": "fly-and-sail voyage along Svalbard to Greenland on the schooner Rembrandt van Rijn",
+    "url": "https://www.toursontheweb.nl/en/cruise/oceanwide-spitsbergen-northeast-greenland-fly-sail-84927"
+   }
+  ],
+  "sea": "flat",
+  "median_wave_m": 0.24,
+  "calm_share": 1.0,
+  "bareboat_base": false
+ },
+ "napa": {
+  "marinas": 9,
+  "islands": 33,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "ireland": {
+  "marinas": 22,
+  "islands": 4,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "new-orleans": {
+  "marinas": 26,
+  "islands": 7,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "pantanal": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "greenland": {
+  "marinas": 1,
+  "islands": 16,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Northern Sailing (Iceland)",
+    "says": "week aboard a traditional sailing ship in Scoresby Sund",
+    "url": "https://www.northsailing.is/sailing-expeditions/"
+   },
+   {
+    "name": "Oceanwide Expeditions",
+    "says": "East Greenland, Scoresby Sund fly-and-sail on the schooner Rembrandt van Rijn",
+    "url": "https://oceanwide-expeditions.com/the-arctic/cruises/rvr15-25-east-greenland-scoresby-sund-iceland-aurora-borealis-fly-sail"
+   },
+   {
+    "name": "Sailsquare",
+    "says": "14-day voyage in Scoresby Sund on a 15 m yacht",
+    "url": "https://www.sailsquare.com/en/xp/in-the-land-of-icebergs-discovering-scoresby-sund-fjord-in-greenland-PEHkiQB6"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 0.8,
+  "calm_share": 0.844,
+  "bareboat_base": false
+ },
+ "douro-valley-porto": {
+  "marinas": 87,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "bagan": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "bavaria-munich": {
+  "marinas": 93,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "hudson-valley": {
+  "marinas": 32,
+  "islands": 21,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "vermont": {
+  "marinas": 41,
+  "islands": 13,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "bangkok": {
+  "marinas": 7,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "jordan": {
+  "marinas": 2,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "glacier-waterton": {
+  "marinas": 1,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "faroe-islands": {
+  "marinas": 5,
+  "islands": 24,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 6,
+  "operators": [
+   {
+    "name": "Venture Sail Holidays",
+    "says": "Sea Dragon, Torshavn to Oban via the Hebrides",
+    "url": "https://venturesailholidays.com/voyages/expedition-sailing-faroe-islands-scotland-sea-dragon/"
+   },
+   {
+    "name": "SeilNorge",
+    "says": "Iceland, Faroe Islands, Scotland voyage with a Faroe leg",
+    "url": "https://seilnorge.no/?p=6667"
+   },
+   {
+    "name": "Another World Adventures",
+    "says": "seven-day Faroe to Scotland route of about 450 nautical miles",
+    "url": "https://www.anotherworldadventures.com/?p=42511"
+   }
+  ],
+  "sea": "swell",
+  "median_wave_m": 1.2,
+  "calm_share": 0.55,
+  "bareboat_base": false
+ },
+ "guatemala": {
+  "marinas": 3,
+  "islands": 1,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "nepal": {
+  "marinas": 1,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "black-forest": {
+  "marinas": 28,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "bend-crater-lake": {
+  "marinas": 3,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "chiang-mai": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "belfast-giants-causeway": {
+  "marinas": 8,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "texas-hill-country": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "quebec-city": {
+  "marinas": 61,
+  "islands": 59,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "tbilisi-caucasus": {
+  "marinas": 1,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "badlands-black-hills": {
+  "marinas": 0,
+  "islands": 0,
+  "sheltered": 0,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": null,
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "lapland": {
+  "marinas": 5,
+  "islands": 4,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "great-smoky-mountains": {
+  "marinas": 2,
+  "islands": 13,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ },
+ "rocky-mountain": {
+  "marinas": 5,
+  "islands": 0,
+  "sheltered": 2,
+  "regattas": 0,
+  "events": [],
+  "expedition": 0,
+  "operators": [],
+  "sea": "flat",
+  "median_wave_m": null,
+  "calm_share": null,
+  "bareboat_base": false
+ }
+}

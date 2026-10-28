@@ -48,6 +48,7 @@ const DRESS_CODE = ['casual', 'smart', 'strict'];
 const HAGGLING = ['fixed', 'some', 'expected'];
 const GEAR_RULES_ORDER = ['none', 'some', 'many'];
 const CAMP_NIGHTS = ['warm', 'cool', 'cold', 'freezing'];
+const SEA_STATES = ['flat', 'swell', 'open'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
 export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
@@ -232,6 +233,7 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   // ---- Horseback Riding ---- (28 Oct 2026; question 2, local horse culture, stays unmapped until that column is researched; Never ridden and Beginner read the same level)
   'horsebackRiding.q1': R(has('riderLevels', 'beginner'), has('riderLevels', 'beginner'), has('riderLevels', 'confident', 'expert'), has('riderLevels', 'expert')),
   'horsebackRiding.q3': R(has('rideLengths', 'hours', 'day', 'days', 'week'), has('rideLengths', 'day', 'days', 'week'), has('rideLengths', 'days', 'week'), has('rideLengths', 'week')),
+  'sailing.q3': R(within('seaConditions', SEA_STATES, 'flat'), within('seaConditions', SEA_STATES, 'swell'), null),
 
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
@@ -362,6 +364,7 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'campingBackcountry.q4': 'Colder than you want',
   'horsebackRiding.q1': 'Not suited to your level',
   'horsebackRiding.q3': 'Not the trip length you want',
+  'sailing.q3': 'Rougher than you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',
