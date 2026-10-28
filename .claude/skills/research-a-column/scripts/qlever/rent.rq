@@ -1,0 +1,11 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?o ?name ?kind ?brand ?lat ?lon WHERE {
+  { ?o osmkey:amenity "bicycle_rental" . BIND("rental" AS ?kind) }
+  UNION { ?o osmkey:shop "bicycle" ; osmkey:service:bicycle:rental "yes" . BIND("shop" AS ?kind) }
+  UNION { ?o osmkey:shop "bicycle" ; osmkey:rental ?r . BIND("shop" AS ?kind) }
+  ?o geo:hasGeometry/geo:asWKT ?wkt .
+  OPTIONAL { ?o osmkey:name ?name } OPTIONAL { ?o osmkey:brand ?brand }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon)
+}

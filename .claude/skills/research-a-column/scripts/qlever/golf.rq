@@ -1,0 +1,8 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?o ?name ?access ?golf ?lat ?lon ?holes WHERE {
+  ?o osmkey:leisure "golf_course" ; geo:hasGeometry/geo:asWKT ?wkt .
+  OPTIONAL { ?o osmkey:name ?name } OPTIONAL { ?o osmkey:access ?access } OPTIONAL { ?o osmkey:golf ?golf } OPTIONAL { ?o osmkey:holes ?holes }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon)
+}

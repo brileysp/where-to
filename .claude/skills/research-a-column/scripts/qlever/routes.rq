@@ -1,0 +1,8 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?rel ?name ?ref ?network ?lat ?lon ?len WHERE {
+  ?rel osmkey:route "mtb" ; geo:hasGeometry/geo:asWKT ?wkt .
+  OPTIONAL { ?rel osmkey:name ?name } OPTIONAL { ?rel osmkey:ref ?ref } OPTIONAL { ?rel osmkey:network ?network }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon) BIND(geof:metricLength(?wkt) AS ?len)
+}

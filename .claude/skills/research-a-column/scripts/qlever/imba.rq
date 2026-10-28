@@ -1,0 +1,8 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?s ?lat ?lon ?len ?s2 WHERE {
+  ?way osmkey:mtb:scale:imba ?s ; geo:hasGeometry/geo:asWKT ?wkt .
+  OPTIONAL { ?way osmkey:mtb:scale ?s2 }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon) BIND(geof:metricLength(?wkt) AS ?len)
+}

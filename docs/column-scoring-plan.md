@@ -2,14 +2,9 @@
 
 Why: the owner caught the Theme Parks draft saying Paris and Tokyo were 10s for thrill rides in the column description and then scoring them 8, and a Singapore zoo below 10. Most column values so far are first drafts from general knowledge, with a "check the drafted columns" to-do. That is fine for a first pass and wrong for numbers a traveler's ranking depends on.
 
-## The method (for every rating column)
+## The method
 
-1. **Written anchors before any score.** Each rating column states what 10, 7, 4 and 1 mean and names the places that sit there. A description that says "10 = X" makes X a 10 with no exceptions. The anchors are on the proposal page and in the column hint.
-2. **A measurable source wherever one exists, and a formula, not a feeling.** Examples: theme parks from attendance rankings and the Roller Coaster Database (counts of tall, fast and record coasters); zoos and aquariums from the published top lists and species and visitor counts; Bortle class from light-pollution maps; certified dark-sky places from the International Dark-Sky Association list; climate from station normals. Ratings with no number behind them (spa culture, atmosphere) use ranked lists, guidebook consensus or two agreeing sources, never one.
-3. **One evidence line per cell.** A research file keeps, for each place and column, the source and the numbers used. The review page shows it next to the score so the owner can audit any cell.
-4. **No gaps.** A script lists every place and column with no evidence line, and the column is not called done while that list is not empty.
-5. **Automatic consistency checks.** Anchor places must meet their minimums; two columns that should move together (thrill rides and coasters over 200 feet) must not disagree; ranked sets must keep their order (Singapore zoo above any zoo it outranks). The checks run before anything is saved.
-6. **Outliers first in review.** The owner sees the cells where my score differs from the formula, then a sample, not 600 rows to read.
+Moved into the project skills so there is one copy: `.claude/skills/research-a-column/SKILL.md` (anchors, formulas, one evidence line per cell, no gaps, checks, outliers first, blank where thin, own-area rule) and `.claude/skills/wire-up-a-column/SKILL.md` (columns, seeding, chips, question rules, tests, notes). Edit those, not this file.
 
 ## Order
 

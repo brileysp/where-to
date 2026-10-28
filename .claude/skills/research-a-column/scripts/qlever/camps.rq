@@ -1,0 +1,11 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?o ?name ?back ?cs ?tents ?car ?fee ?lat ?lon WHERE {
+  ?o osmkey:tourism ?t ; geo:hasGeometry/geo:asWKT ?wkt .
+  FILTER(?t IN ("camp_site","wilderness_hut","caravan_site"))
+  OPTIONAL { ?o osmkey:name ?name } OPTIONAL { ?o osmkey:backcountry ?back } OPTIONAL { ?o osmkey:camp_site ?cs }
+  OPTIONAL { ?o osmkey:tents ?tents } OPTIONAL { ?o osmkey:caravans ?car } OPTIONAL { ?o osmkey:fee ?fee }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon)
+  BIND(?t AS ?tt)
+}
