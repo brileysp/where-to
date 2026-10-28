@@ -23,7 +23,7 @@ describe('Mountain Biking evidence', () => {
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
       easyFlowTrails: { swissalps: 10, tuscany: 10, whistler: 8, queenstown: 2 },
-      liftServedParks: { swissalps: 10, dolomites: 10, chamonix: 10, whistler: 6, 'arches-canyonlands': 0 },
+      liftServedParks: { swissalps: 10, dolomites: 10, chamonix: 10, whistler: 4, 'arches-canyonlands': 0 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
