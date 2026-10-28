@@ -27,7 +27,7 @@ describe('Theme Parks evidence', () => {
     const anchors: Record<string, Record<string, number>> = {
       thrillRides: { 'tokyo-kyoto': 10, london: 7, paris: 7, beijing: 7, 'bavaria-munich': 4, amsterdam: 1, nyc: 1 },
       waterParks: { dubai: 10, 'bavaria-munich': 9, 'black-forest': 7, seoul: 7 },
-      zoosAquariums: { singapore: 10, nyc: 10, hongkong: 7, taiwan: 7, paris: 5, 'black-forest': 2 },
+      zoosAquariums: { singapore: 10, 'tokyo-kyoto': 10, nyc: 9, hongkong: 9, taiwan: 7, barcelona: 7, paris: 4, dubai: 4, 'black-forest': 2 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });

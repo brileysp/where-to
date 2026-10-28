@@ -1,5 +1,5 @@
 {
- "method": "Zoos and aquariums within 100 km of the place centre (two bases for Tokyo & Kyoto), from Wikidata (zoo and aquarium classes) with visitors and animal counts from Wikidata, park infoboxes, Wikipedia text and web searches. A facility with a figure counts its yearly visitors; one without a figure but with at least 5 Wikipedia language editions counts a visitor estimate from that fame (capped at 1 million); the rest are listed as minor and not counted. Rating = 10 x square root of (total visitors / 6 million), at most 10; 2 if only minor facilities; 1 if none. OWN-AREA RULE (owner, 26 Oct 2026): a facility counts only when it belongs to the place, not a neighbouring city or region. Limits by kind of place: city 35 km, region and coastal area 60 km, national park and wilderness area 40 km, state/province, island and country 100 km, never across a border or the water. Facilities beyond the limit are kept in the list with the reason and do not count.",
+ "method": "Zoos and aquariums within 100 km of the place centre (two bases for Tokyo & Kyoto), from Wikidata (zoo and aquarium classes) with visitors and animal counts from Wikidata, park infoboxes, Wikipedia text and web searches. A facility with a figure counts its yearly visitors; one without a figure but with at least 5 Wikipedia language editions counts a visitor estimate from that fame (capped at 1 million); the rest are listed as minor and not counted. Rating = 10 x square root of (total visitors / 6 million), at most 10; 2 if only minor facilities; 1 if none. OWN-AREA RULE (owner, 26 Oct 2026): a facility counts only when it belongs to the place, not a neighbouring city or region. Limits by kind of place: city 35 km, region and coastal area 60 km, national park and wilderness area 40 km, state/province, island and country 100 km, never across a border or the water. Facilities beyond the limit are kept in the list with the reason and do not count. CHECKED 28 Oct 2026: figures for the facilities that drive the 20 Theme Parks places were checked against official or primary sources (Taronga and Taipei Zoo annual reports, Tokyo Statistical Yearbook, Mandai Wildlife Group, Hong Kong government, Ocean Park results). A facility with no figure and fewer than 10 Wikipedia language editions is no longer given an estimate; it is listed as minor and not counted.",
  "fit": {
   "a": 11.282721816312979,
   "b": 0.9407156938524219
@@ -33,22 +33,8 @@
   "mauritius": {
    "name": "Mauritius",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
-    {
-     "q": "Q3213460",
-     "name": "La Vanille Nature Park",
-     "km": 15,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
     {
      "q": "Q2940908",
      "name": "Casela World of Adventures",
@@ -62,10 +48,24 @@
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q3213460",
+     "name": "La Vanille Nature Park",
+     "km": 15,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -96,8 +96,8 @@
   },
   "everglades": {
    "name": "Everglades National Park",
-   "rating": 6,
-   "visitors": 2289631,
+   "rating": 5,
+   "visitors": 1500000,
    "facilities": [
     {
      "q": "Q3026688",
@@ -129,34 +129,6 @@
      "counted": 500000.0
     },
     {
-     "q": "Q2897205",
-     "name": "Jungle Island",
-     "km": 85,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q6900777",
-     "name": "Monkey Jungle",
-     "km": 51,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
      "q": "Q649904",
      "name": "Dolphin Research Center",
      "km": 71,
@@ -185,6 +157,20 @@
      "counted": 0
     },
     {
+     "q": "Q2897205",
+     "name": "Jungle Island",
+     "km": 85,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q126919382",
      "name": "Miami Beach Aquarium",
      "km": 87,
@@ -196,6 +182,20 @@
      "src": "",
      "animals": null,
      "sl": 0,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q6900777",
+     "name": "Monkey Jungle",
+     "km": 51,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -227,16 +227,6 @@
      "name": "Miami Seaquarium",
      "km": 82,
      "reason": "82 km from the centre, over the 40 km limit for a national park"
-    },
-    {
-     "name": "Jungle Island",
-     "km": 85,
-     "reason": "85 km from the centre, over the 40 km limit for a national park"
-    },
-    {
-     "name": "Monkey Jungle",
-     "km": 51,
-     "reason": "51 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -268,7 +258,7 @@
   "ethiopia": {
    "name": "Ethiopia",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q55603199",
@@ -281,12 +271,12 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -317,8 +307,8 @@
   },
   "gbr": {
    "name": "Great Barrier Reef",
-   "rating": 4,
-   "visitors": 1150672,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q4823915",
@@ -331,8 +321,22 @@
      "src": "",
      "animals": 1500.0,
      "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q51228751",
+     "name": "Birdworld Kuranda",
+     "km": 18,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q50822227",
@@ -346,8 +350,8 @@
      "src": "",
      "animals": 15000.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q5017723",
@@ -360,20 +364,6 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q51228751",
-     "name": "Birdworld Kuranda",
-     "km": 18,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -448,8 +438,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 1150672,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "coastal_area",
    "notCounted": []
   },
@@ -465,8 +455,8 @@
   },
   "london": {
    "name": "London",
-   "rating": 10,
-   "visitors": 6478404,
+   "rating": 9,
+   "visitors": 5260182,
    "facilities": [
     {
      "q": "Q270263",
@@ -540,34 +530,6 @@
      "counted": 488557.0
     },
     {
-     "q": "Q736873",
-     "name": "Port Lympne Wild Animal Park",
-     "km": 92,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 650.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q8028978",
-     "name": "Woburn Safari Park",
-     "km": 63,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
      "q": "Q5309411",
      "name": "Drusillas Zoo Park",
      "km": 79,
@@ -580,20 +542,6 @@
      "sl": 2,
      "basis": "figure",
      "counted": 370000.0
-    },
-    {
-     "q": "Q15199389",
-     "name": "Birdworld",
-     "km": 61,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1000.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q597498",
@@ -691,6 +639,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q15199389",
+     "name": "Birdworld",
+     "km": 61,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1000.0,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -845,6 +807,20 @@
      "src": "",
      "animals": null,
      "sl": 3,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q736873",
+     "name": "Port Lympne Wild Animal Park",
+     "km": 92,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 650.0,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -1018,6 +994,20 @@
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q8028978",
+     "name": "Woburn Safari Park",
+     "km": 63,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 6,
@@ -1040,24 +1030,9 @@
      "reason": "98 km from the centre, over the 35 km limit for a city"
     },
     {
-     "name": "Port Lympne Wild Animal Park",
-     "km": 92,
-     "reason": "92 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Woburn Safari Park",
-     "km": 63,
-     "reason": "63 km from the centre, over the 35 km limit for a city"
-    },
-    {
      "name": "Drusillas Zoo Park",
      "km": 79,
      "reason": "79 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Birdworld",
-     "km": 61,
-     "reason": "61 km from the centre, over the 35 km limit for a city"
     },
     {
      "name": "Wildwood Discovery Park",
@@ -1079,22 +1054,8 @@
   "guatemala": {
    "name": "Guatemala",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
-    {
-     "q": "Q15241081",
-     "name": "La Aurora Zoo",
-     "km": 4,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
     {
      "q": "Q4826122",
      "name": "Auto Safari Chapin",
@@ -1108,10 +1069,24 @@
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q15241081",
+     "name": "La Aurora Zoo",
+     "km": 4,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -1221,8 +1196,8 @@
   },
   "dubai": {
    "name": "Dubai",
-   "rating": 10,
-   "visitors": 5722081,
+   "rating": 4,
+   "visitors": 1200000,
    "facilities": [
     {
      "q": "Q4059427",
@@ -1232,12 +1207,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 5000000.0,
-     "src": "web: Wikipedia and travel sites; no operator report [low]",
+     "visitors": 1200000.0,
+     "src": "checked: management contractor Aquamarine: over 1.2 million a year in 2013-16 (the often-quoted 5 million has no source) [medium]",
      "animals": 33000.0,
      "sl": 6,
      "basis": "figure",
-     "counted": 5000000.0
+     "counted": 1200000.0
     },
     {
      "q": "Q110471376",
@@ -1250,8 +1225,8 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q2116901",
@@ -1264,8 +1239,8 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q5310637",
@@ -1311,8 +1286,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 10,
-   "visitorsOwnArea": 5722081,
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1200000,
    "kind": "city",
    "notCounted": []
   },
@@ -1956,8 +1931,8 @@
   },
   "madagascar": {
    "name": "Madagascar",
-   "rating": 3,
-   "visitors": 627617,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q7849674",
@@ -1970,8 +1945,8 @@
      "src": "",
      "animals": null,
      "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q125961779",
@@ -2016,8 +1991,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 627617,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -2274,8 +2249,8 @@
   },
   "kenya": {
    "name": "Maasai Mara & Amboseli",
-   "rating": 3,
-   "visitors": 428591,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q5564103",
@@ -2288,20 +2263,14 @@
      "src": "",
      "animals": null,
      "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 1,
    "visitorsOwnArea": 0,
    "kind": "national_park",
-   "notCounted": [
-    {
-     "name": "Giraffe Centre",
-     "km": 83,
-     "reason": "83 km from the centre, over the 40 km limit for a national park"
-    }
-   ]
+   "notCounted": []
   },
   "basque-country": {
    "name": "Basque Country",
@@ -2682,8 +2651,8 @@
   },
   "buenosaires": {
    "name": "Buenos Aires",
-   "rating": 4,
-   "visitors": 1054050,
+   "rating": 3,
+   "visitors": 693010,
    "facilities": [
     {
      "q": "Q134617498",
@@ -2710,8 +2679,8 @@
      "src": "",
      "animals": 2500.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q5927023",
@@ -2770,8 +2739,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 1054050,
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 693010,
    "kind": "city",
    "notCounted": []
   },
@@ -2908,23 +2877,9 @@
   },
   "bali": {
    "name": "Bali",
-   "rating": 3,
-   "visitors": 681171,
+   "rating": 2,
+   "visitors": 119380,
    "facilities": [
-    {
-     "q": "Q16744229",
-     "name": "Bali Bird Park",
-     "km": 12,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1300.0,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
     {
      "q": "Q4850846",
      "name": "Taman Safari Bali (Bali Safari)",
@@ -2952,6 +2907,20 @@
      "sl": 2,
      "basis": "figure",
      "counted": 56155.0
+    },
+    {
+     "q": "Q16744229",
+     "name": "Bali Bird Park",
+     "km": 12,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1300.0,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q30672224",
@@ -2996,8 +2965,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 681171,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 119380,
    "kind": "island",
    "notCounted": []
   },
@@ -3098,8 +3067,22 @@
   "tokyo-kyoto": {
    "name": "Tokyo & Kyoto",
    "rating": 10,
-   "visitors": 19756824,
+   "visitors": 19467000,
    "facilities": [
+    {
+     "q": "Q162722",
+     "name": "Ueno Zoo",
+     "km": 4,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 3840000.0,
+     "src": "checked: Tokyo Statistical Yearbook 2018: 3.84 million in fiscal 2016 (4.5 million in 2017 and 4.96 million in 2018 with the panda cub) (official) [high]",
+     "animals": 2600.0,
+     "sl": 26,
+     "basis": "figure",
+     "counted": 3840000.0
+    },
     {
      "q": "Q1191885",
      "name": "Osaka Aquarium Kaiyukan",
@@ -3131,21 +3114,6 @@
      "counted": 2240000.0
     },
     {
-     "q": "Q4925165",
-     "name": "Tokyo Sea Life Park",
-     "km": 9,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": 2000000.0,
-     "src": "Wikipedia infobox",
-     "animals": 85000.0,
-     "sl": 8,
-     "basis": "figure",
-     "counted": 2000000.0
-    },
-    {
      "q": "Q3055859",
      "name": "Aqua Park Shinagawa",
      "km": 7,
@@ -3161,6 +3129,20 @@
      "counted": 1740000.0
     },
     {
+     "q": "Q1054648",
+     "name": "Tenn\u014dji Zoo",
+     "km": 46,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 1700000.0,
+     "src": "checked: Osaka City medium-term plan: about 1.7 million a year, steady since fiscal 2017 [medium]",
+     "animals": null,
+     "sl": 11,
+     "basis": "figure",
+     "counted": 1700000.0
+    },
+    {
      "q": "Q8134074",
      "name": "Sumida Aquarium",
      "km": 5,
@@ -3172,6 +3154,21 @@
      "src": "Wikipedia infobox",
      "animals": 7000.0,
      "sl": 6,
+     "basis": "figure",
+     "counted": 1400000.0
+    },
+    {
+     "q": "Q4925165",
+     "name": "Tokyo Sea Life Park",
+     "km": 9,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": 1400000.0,
+     "src": "checked: Tokyo Statistical Yearbook 2018: 1.40 million in fiscal 2018, 1.37 to 1.48 million in 2016-18 (official; Wikipedia's 2.0 million is older) [high]",
+     "animals": 85000.0,
+     "sl": 8,
      "basis": "figure",
      "counted": 1400000.0
     },
@@ -3204,46 +3201,18 @@
      "counted": 1200000.0
     },
     {
-     "q": "Q162722",
-     "name": "Ueno Zoo",
-     "km": 4,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 2600.0,
-     "sl": 26,
-     "basis": "estimated from fame",
-     "counted": 1000000.0
-    },
-    {
      "q": "Q1413736",
      "name": "Tama Zoological Park",
      "km": 33,
      "kinds": [
       "zoo"
      ],
-     "visitors": null,
-     "src": "",
+     "visitors": 980000.0,
+     "src": "checked: Japanese Wikipedia infobox (Tokyo Zoological Park Society): 977,731 in fiscal 2017 [medium]",
      "animals": null,
      "sl": 11,
-     "basis": "estimated from fame",
-     "counted": 758015.8173695487
-    },
-    {
-     "q": "Q1054648",
-     "name": "Tenn\u014dji Zoo",
-     "km": 46,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 11,
-     "basis": "estimated from fame",
-     "counted": 758015.8173695487
+     "basis": "figure",
+     "counted": 980000.0
     },
     {
      "q": "Q861318",
@@ -3272,121 +3241,6 @@
      "sl": 5,
      "basis": "figure",
      "counted": 567000.0
-    },
-    {
-     "q": "Q15229013",
-     "name": "Iwatayama Monkey Park",
-     "km": 9,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
-     "q": "Q863153",
-     "name": "Yokohama Hakkeijima Sea Paradise",
-     "km": 40,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 120000.0,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
-     "q": "Q553044",
-     "name": "Kamogawa Sea World",
-     "km": 70,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
-     "q": "Q11375621",
-     "name": "Kyoto Aquarium",
-     "km": 3,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 15000.0,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
-     "q": "Q6424313",
-     "name": "Kobe Animal Kingdom",
-     "km": 64,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q11590062",
-     "name": "Kobe Oji Zoo",
-     "km": 61,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q10860225",
-     "name": "Inokashira Park Zoo",
-     "km": 18,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q11527526",
-     "name": "Tobu Zoo",
-     "km": 38,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q11636941",
@@ -3633,6 +3487,20 @@
      "counted": 0
     },
     {
+     "q": "Q10860225",
+     "name": "Inokashira Park Zoo",
+     "km": 18,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q21652473",
      "name": "Inub\u014dsaki Marine Park",
      "km": 99,
@@ -3648,6 +3516,20 @@
      "counted": 0
     },
     {
+     "q": "Q15229013",
+     "name": "Iwatayama Monkey Park",
+     "km": 9,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q11309982",
      "name": "Japan Snake Center",
      "km": 86,
@@ -3658,6 +3540,21 @@
      "src": "",
      "animals": null,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q553044",
+     "name": "Kamogawa Sea World",
+     "km": 70,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -3735,6 +3632,34 @@
      "counted": 0
     },
     {
+     "q": "Q6424313",
+     "name": "Kobe Animal Kingdom",
+     "km": 64,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q11590062",
+     "name": "Kobe Oji Zoo",
+     "km": 61,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q125228535",
      "name": "Kobe Suma Sea World",
      "km": 71,
@@ -3746,6 +3671,21 @@
      "src": "",
      "animals": null,
      "sl": 4,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q11375621",
+     "name": "Kyoto Aquarium",
+     "km": 3,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 15000.0,
+     "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -4044,6 +3984,20 @@
      "counted": 0
     },
     {
+     "q": "Q11527526",
+     "name": "Tobu Zoo",
+     "km": 38,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q56349389",
      "name": "Uda Animal Park",
      "km": 60,
@@ -4069,6 +4023,21 @@
      "src": "",
      "animals": null,
      "sl": 4,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q863153",
+     "name": "Yokohama Hakkeijima Sea Paradise",
+     "km": 40,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 120000.0,
+     "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -4146,28 +4115,13 @@
     }
    ],
    "ratingOwnArea": 10,
-   "visitorsOwnArea": 17837168,
+   "visitorsOwnArea": 18900000,
    "kind": "region",
    "notCounted": [
     {
      "name": "Himeji Central Park",
      "km": 94,
      "reason": "94 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Kamogawa Sea World",
-     "km": 70,
-     "reason": "70 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Kobe Animal Kingdom",
-     "km": 64,
-     "reason": "64 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Kobe Oji Zoo",
-     "km": 61,
-     "reason": "61 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -4415,8 +4369,8 @@
   },
   "lake-district": {
    "name": "Lake District",
-   "rating": 3,
-   "visitors": 495474,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q734260",
@@ -4429,8 +4383,8 @@
      "src": "",
      "animals": 1350.0,
      "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q5194933",
@@ -4536,13 +4490,7 @@
    "ratingOwnArea": 2,
    "visitorsOwnArea": 0,
    "kind": "national_park",
-   "notCounted": [
-    {
-     "name": "Blackpool Zoo",
-     "km": 72,
-     "reason": "72 km from the centre, over the 40 km limit for a national park"
-    }
-   ]
+   "notCounted": []
   },
   "falklands": {
    "name": "Falkland Islands",
@@ -4557,7 +4505,7 @@
   "taiwan": {
    "name": "Taiwan",
    "rating": 7,
-   "visitors": 3000000,
+   "visitors": 3030000,
    "facilities": [
     {
      "q": "Q591131",
@@ -4566,12 +4514,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3000000.0,
-     "src": "web: NTU study / Taiwan Review (about 3 million) [low, dated]",
+     "visitors": 3030000.0,
+     "src": "checked: Taipei Zoo 2023 annual report: \"visitors totalled 3.03 million\" (official) [high]",
      "animals": 2407.0,
      "sl": 16,
      "basis": "figure",
-     "counted": 3000000.0
+     "counted": 3030000.0
     },
     {
      "q": "Q11084009",
@@ -4647,7 +4595,7 @@
     }
    ],
    "ratingOwnArea": 7,
-   "visitorsOwnArea": 3000000,
+   "visitorsOwnArea": 3030000,
    "kind": "country",
    "notCounted": []
   },
@@ -4664,7 +4612,7 @@
   "hongkong": {
    "name": "Hong Kong",
    "rating": 10,
-   "visitors": 15721010,
+   "visitors": 17088000,
    "facilities": [
     {
      "q": "Q16258099",
@@ -4688,12 +4636,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 2400000.0,
-     "src": "Wikipedia infobox",
+     "visitors": 3460000.0,
+     "src": "checked: 3.46 million in 2024-25, up 10% (TVB News and South China Morning Post) [medium]",
      "animals": null,
      "sl": 12,
      "basis": "figure",
-     "counted": 2400000.0
+     "counted": 3460000.0
     },
     {
      "q": "Q220207",
@@ -4702,12 +4650,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": null,
-     "src": "",
+     "visitors": 1000000.0,
+     "src": "checked: Hong Kong government reply 2023: about 1.2 million before 2020 and about 1 million since; 0.85 million in 2016-18 [medium]",
      "animals": 700.0,
      "sl": 10,
-     "basis": "estimated from fame",
-     "counted": 693010.0288574611
+     "basis": "figure",
+     "counted": 1000000.0
     },
     {
      "q": "Q137970396",
@@ -4739,8 +4687,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 7,
-   "visitorsOwnArea": 3093010,
+   "ratingOwnArea": 9,
+   "visitorsOwnArea": 4460000,
    "kind": "city",
    "notCounted": [
     {
@@ -4762,8 +4710,8 @@
   },
   "st-andrews-fife": {
    "name": "St Andrews & Fife",
-   "rating": 5,
-   "visitors": 1409849,
+   "rating": 4,
+   "visitors": 1048809,
    "facilities": [
     {
      "q": "Q1284778",
@@ -4794,20 +4742,6 @@
      "counted": 400000.0
     },
     {
-     "q": "Q5250300",
-     "name": "Deep Sea World",
-     "km": 52,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
      "q": "Q56754439",
      "name": "Amazonia",
      "km": 98,
@@ -4832,6 +4766,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q5250300",
+     "name": "Deep Sea World",
+     "km": 52,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -4893,8 +4841,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 1009849,
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 648809,
    "kind": "region",
    "notCounted": [
     {
@@ -4906,8 +4854,8 @@
   },
   "black-forest": {
    "name": "Black Forest",
-   "rating": 8,
-   "visitors": 4002142,
+   "rating": 7,
+   "visitors": 3212511,
    "facilities": [
     {
      "q": "Q220009",
@@ -4936,34 +4884,6 @@
      "sl": 14,
      "basis": "figure",
      "counted": 1200000.0
-    },
-    {
-     "q": "Q220064",
-     "name": "Parc Zoologique et Botanique de Mulhouse",
-     "km": 70,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 900.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q688446",
-     "name": "Knie's Kinderzoo",
-     "km": 98,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 400.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q382304",
@@ -5064,6 +4984,20 @@
      "counted": 0
     },
     {
+     "q": "Q688446",
+     "name": "Knie's Kinderzoo",
+     "km": 98,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 400.0,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q2397999",
      "name": "La Montagne des singes",
      "km": 68,
@@ -5088,6 +5022,20 @@
      "src": "",
      "animals": null,
      "sl": 3,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q220064",
+     "name": "Parc Zoologique et Botanique de Mulhouse",
+     "km": 70,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 900.0,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -5302,16 +5250,6 @@
      "name": "Z\u00fcrich Zoo",
      "km": 74,
      "reason": "74 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Parc Zoologique et Botanique de Mulhouse",
-     "km": 70,
-     "reason": "70 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Knie's Kinderzoo",
-     "km": 98,
-     "reason": "98 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
@@ -5486,8 +5424,8 @@
   },
   "nyc": {
    "name": "New York City",
-   "rating": 10,
-   "visitors": 6763938,
+   "rating": 9,
+   "visitors": 5259056,
    "facilities": [
     {
      "q": "Q739792",
@@ -5510,12 +5448,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1010000.0,
-     "src": "web: Wikipedia: 1.01 million in 2007 [low, dated]",
+     "visitors": 990000.0,
+     "src": "checked: Wildlife Conservation Society filing (991,698); the zoo says nearly a million [medium]",
      "animals": null,
      "sl": 23,
      "basis": "figure",
-     "counted": 1010000.0
+     "counted": 990000.0
     },
     {
      "q": "Q7856369",
@@ -5532,34 +5470,6 @@
      "counted": 979056.0
     },
     {
-     "q": "Q901214",
-     "name": "Queens Zoo",
-     "km": 14,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
-    },
-    {
-     "q": "Q4193914",
-     "name": "Staten Island Zoo",
-     "km": 13,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1400.0,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
      "q": "Q6765784",
      "name": "Maritime Aquarium at Norwalk",
      "km": 66,
@@ -5573,20 +5483,6 @@
      "sl": 2,
      "basis": "figure",
      "counted": 500000.0
-    },
-    {
-     "q": "Q1058899",
-     "name": "Prospect Park Zoo",
-     "km": 6,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 864.0,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
     },
     {
      "q": "Q1060884",
@@ -5616,6 +5512,20 @@
      "sl": 4,
      "basis": "figure",
      "counted": 280000.0
+    },
+    {
+     "q": "Q901214",
+     "name": "Queens Zoo",
+     "km": 14,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 200000.0,
+     "src": "checked: Wikipedia: about 200,000 annual visitors [low]",
+     "animals": null,
+     "sl": 9,
+     "basis": "figure",
+     "counted": 200000.0
     },
     {
      "q": "Q34897344",
@@ -5657,6 +5567,20 @@
      "src": "",
      "animals": 200.0,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q1058899",
+     "name": "Prospect Park Zoo",
+     "km": 6,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 864.0,
+     "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -5703,6 +5627,20 @@
      "counted": 0
     },
     {
+     "q": "Q4193914",
+     "name": "Staten Island Zoo",
+     "km": 13,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1400.0,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q6312838",
      "name": "Warner Bros. Jungle Habitat",
      "km": 54,
@@ -5717,8 +5655,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 10,
-   "visitorsOwnArea": 5983938,
+   "ratingOwnArea": 9,
+   "visitorsOwnArea": 4479056,
    "kind": "city",
    "notCounted": [
     {
@@ -5745,23 +5683,9 @@
   },
   "provence": {
    "name": "Provence",
-   "rating": 3,
-   "visitors": 498591,
+   "rating": 2,
+   "visitors": 70000,
    "facilities": [
-    {
-     "q": "Q6465257",
-     "name": "Parc zoologique de Montpellier",
-     "km": 97,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 200.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
     {
      "q": "Q16645059",
      "name": "Exotic Garden and Zoo of Sanary-Bandol",
@@ -5833,6 +5757,20 @@
      "counted": 0
     },
     {
+     "q": "Q6465257",
+     "name": "Parc zoologique de Montpellier",
+     "km": 97,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 200.0,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q3290344",
      "name": "Planet Ocean Montpellier",
      "km": 95,
@@ -5881,11 +5819,6 @@
    "visitorsOwnArea": 0,
    "kind": "region",
    "notCounted": [
-    {
-     "name": "Parc zoologique de Montpellier",
-     "km": 97,
-     "reason": "97 km from the centre, over the 60 km limit for a region"
-    },
     {
      "name": "Exotic Garden and Zoo of Sanary-Bandol",
      "km": 97,
@@ -6001,8 +5934,8 @@
   },
   "prague": {
    "name": "Prague",
-   "rating": 7,
-   "visitors": 3088248,
+   "rating": 5,
+   "visitors": 1671000,
    "facilities": [
     {
      "q": "Q220086",
@@ -6019,34 +5952,6 @@
      "counted": 851600.0
     },
     {
-     "q": "Q8079417",
-     "name": "\u00dast\u00ed nad Labem Zoo",
-     "km": 70,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1500.0,
-     "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
-    },
-    {
-     "q": "Q10856999",
-     "name": "D\u011b\u010d\u00edn Zoo",
-     "km": 80,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 400.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
      "q": "Q2533994",
      "name": "Zoo Pilsen",
      "km": 85,
@@ -6059,20 +5964,6 @@
      "sl": 7,
      "basis": "figure",
      "counted": 372400.0
-    },
-    {
-     "q": "Q765055",
-     "name": "Tierpark Zittau",
-     "km": 95,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q2315180",
@@ -6141,6 +6032,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q10856999",
+     "name": "D\u011b\u010d\u00edn Zoo",
+     "km": 80,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 400.0,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -6328,6 +6233,20 @@
      "counted": 0
     },
     {
+     "q": "Q765055",
+     "name": "Tierpark Zittau",
+     "km": 95,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q42878518",
      "name": "Zoo Plasy",
      "km": 77,
@@ -6424,6 +6343,20 @@
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q8079417",
+     "name": "\u00dast\u00ed nad Labem Zoo",
+     "km": 70,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1500.0,
+     "sl": 9,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 4,
@@ -6431,24 +6364,9 @@
    "kind": "city",
    "notCounted": [
     {
-     "name": "\u00dast\u00ed nad Labem Zoo",
-     "km": 70,
-     "reason": "70 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "D\u011b\u010d\u00edn Zoo",
-     "km": 80,
-     "reason": "80 km from the centre, over the 35 km limit for a city"
-    },
-    {
      "name": "Zoo Pilsen",
      "km": 85,
      "reason": "85 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Tierpark Zittau",
-     "km": 95,
-     "reason": "95 km from the centre, over the 35 km limit for a city"
     },
     {
      "name": "Liberec Zoo",
@@ -6464,9 +6382,23 @@
   },
   "mallorca": {
    "name": "Mallorca",
-   "rating": 4,
-   "visitors": 922831,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
+    {
+     "q": "Q11769978",
+     "name": "Marineland Mallorca",
+     "km": 9,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
     {
      "q": "Q1656431",
      "name": "Palma Aquarium",
@@ -6479,22 +6411,8 @@
      "src": "",
      "animals": 8000.0,
      "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
-     "q": "Q11769978",
-     "name": "Marineland Mallorca",
-     "km": 9,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q123497225",
@@ -6511,8 +6429,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 922831,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "island",
    "notCounted": []
   },
@@ -6642,8 +6560,8 @@
   },
   "seoul": {
    "name": "Seoul",
-   "rating": 5,
-   "visitors": 1693010,
+   "rating": 6,
+   "visitors": 2000000,
    "facilities": [
     {
      "q": "Q4641942",
@@ -6668,12 +6586,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": null,
-     "src": "",
+     "visitors": 1000000.0,
+     "src": "checked: a travel site says over a million a year; no operator figure found [low]",
      "animals": 40000.0,
      "sl": 10,
-     "basis": "estimated from fame",
-     "counted": 693010.0288574611
+     "basis": "figure",
+     "counted": 1000000.0
     },
     {
      "q": "Q494673",
@@ -6718,15 +6636,15 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 5,
-   "visitorsOwnArea": 1693010,
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2000000,
    "kind": "city",
    "notCounted": []
   },
   "edinburgh": {
    "name": "Edinburgh",
-   "rating": 5,
-   "visitors": 1409849,
+   "rating": 4,
+   "visitors": 1048809,
    "facilities": [
     {
      "q": "Q1284778",
@@ -6755,20 +6673,6 @@
      "sl": 4,
      "basis": "figure",
      "counted": 400000.0
-    },
-    {
-     "q": "Q5250300",
-     "name": "Deep Sea World",
-     "km": 14,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q56754439",
@@ -6809,6 +6713,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q5250300",
+     "name": "Deep Sea World",
+     "km": 14,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -6870,8 +6788,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 1009849,
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 648809,
    "kind": "city",
    "notCounted": [
     {
@@ -7104,8 +7022,8 @@
   },
   "rio": {
    "name": "Rio de Janeiro",
-   "rating": 3,
-   "visitors": 722081,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q28679974",
@@ -7119,8 +7037,8 @@
      "src": "",
      "animals": 10000.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q10306230",
@@ -7133,12 +7051,12 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 722081,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "city",
    "notCounted": []
   },
@@ -7154,8 +7072,8 @@
   },
   "napa": {
    "name": "Napa & Sonoma",
-   "rating": 8,
-   "visitors": 3763658,
+   "rating": 7,
+   "visitors": 2775000,
    "facilities": [
     {
      "q": "Q965731",
@@ -7187,20 +7105,6 @@
      "counted": 975000.0
     },
     {
-     "q": "Q11705492",
-     "name": "Sacramento Zoo",
-     "km": 82,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 500.0,
-     "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
-    },
-    {
      "q": "Q4782760",
      "name": "Aquarium of the Bay",
      "km": 77,
@@ -7216,20 +7120,6 @@
      "counted": 600000.0
     },
     {
-     "q": "Q8033549",
-     "name": "Woodward's Gardens",
-     "km": 81,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
      "q": "Q1886334",
      "name": "San Francisco Zoo",
      "km": 85,
@@ -7242,6 +7132,20 @@
      "sl": 19,
      "basis": "figure",
      "counted": 200000.0
+    },
+    {
+     "q": "Q11705492",
+     "name": "Sacramento Zoo",
+     "km": 82,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 500.0,
+     "sl": 9,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q7398400",
@@ -7284,6 +7188,20 @@
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q8033549",
+     "name": "Woodward's Gardens",
+     "km": 81,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
@@ -7301,19 +7219,9 @@
      "reason": "87 km from the centre, over the 60 km limit for a region"
     },
     {
-     "name": "Sacramento Zoo",
-     "km": 82,
-     "reason": "82 km from the centre, over the 60 km limit for a region"
-    },
-    {
      "name": "Aquarium of the Bay",
      "km": 77,
      "reason": "77 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Woodward's Gardens",
-     "km": 81,
-     "reason": "81 km from the centre, over the 60 km limit for a region"
     },
     {
      "name": "San Francisco Zoo",
@@ -7324,23 +7232,9 @@
   },
   "costa-rica": {
    "name": "Costa Rica",
-   "rating": 3,
-   "visitors": 428591,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
-    {
-     "q": "Q6063251",
-     "name": "Parque Zool\u00f3gico Nacional Sim\u00f3n Bol\u00edvar",
-     "km": 1,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
     {
      "q": "Q28311035",
      "name": "Arenal Eco Zoo",
@@ -7412,6 +7306,20 @@
      "counted": 0
     },
     {
+     "q": "Q6063251",
+     "name": "Parque Zool\u00f3gico Nacional Sim\u00f3n Bol\u00edvar",
+     "km": 1,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q65553836",
      "name": "Q65553836",
      "km": 54,
@@ -7454,8 +7362,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 428591,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -7496,8 +7404,8 @@
   },
   "chiang-mai": {
    "name": "Chiang Mai & Northern Thailand",
-   "rating": 6,
-   "visitors": 1943216,
+   "rating": 4,
+   "visitors": 887009,
    "facilities": [
     {
      "q": "Q3034913",
@@ -7514,20 +7422,6 @@
      "counted": 887008.5769074942
     },
     {
-     "q": "Q5359345",
-     "name": "Elephant Nature Park",
-     "km": 49,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
-    },
-    {
      "q": "Q4036104",
      "name": "Chiang Mai Night Safari",
      "km": 8,
@@ -7538,20 +7432,28 @@
      "src": "",
      "animals": 400.0,
      "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    }
-   ],
-   "ratingOwnArea": 5,
-   "visitorsOwnArea": 1315599,
-   "kind": "city",
-   "notCounted": [
+     "basis": "minor, not counted",
+     "counted": 0
+    },
     {
+     "q": "Q5359345",
      "name": "Elephant Nature Park",
      "km": 49,
-     "reason": "49 km from the centre, over the 35 km limit for a city"
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 9,
+     "basis": "minor, not counted",
+     "counted": 0
     }
-   ]
+   ],
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 887009,
+   "kind": "city",
+   "notCounted": []
   },
   "puerto-rico": {
    "name": "Puerto Rico",
@@ -7610,23 +7512,9 @@
   },
   "champagne": {
    "name": "Champagne",
-   "rating": 3,
-   "visitors": 508591,
+   "rating": 2,
+   "visitors": 80000,
    "facilities": [
-    {
-     "q": "Q3364322",
-     "name": "Parc des F\u00e9lins",
-     "km": 82,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 140.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
     {
      "q": "Q17651567",
      "name": "Zoo de Vendeuil",
@@ -7666,6 +7554,20 @@
      "src": "",
      "animals": null,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q3364322",
+     "name": "Parc des F\u00e9lins",
+     "km": 82,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 140.0,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -7731,11 +7633,6 @@
    "visitorsOwnArea": 0,
    "kind": "region",
    "notCounted": [
-    {
-     "name": "Parc des F\u00e9lins",
-     "km": 82,
-     "reason": "82 km from the centre, over the 60 km limit for a region"
-    },
     {
      "name": "Zoo de Vendeuil",
      "km": 88,
@@ -7839,8 +7736,8 @@
   },
   "north-island": {
    "name": "North Island",
-   "rating": 6,
-   "visitors": 2036954,
+   "rating": 5,
+   "visitors": 1409337,
    "facilities": [
     {
      "q": "Q2665285",
@@ -7872,20 +7769,6 @@
      "counted": 693010.0288574611
     },
     {
-     "q": "Q3115846",
-     "name": "Hamilton Zoo",
-     "km": 88,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 400.0,
-     "sl": 9,
-     "basis": "estimated from fame",
-     "counted": 627617.0454021245
-    },
-    {
      "q": "Q122639402",
      "name": "Butterfly Creek",
      "km": 18,
@@ -7896,6 +7779,20 @@
      "src": "",
      "animals": null,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q3115846",
+     "name": "Hamilton Zoo",
+     "km": 88,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 400.0,
+     "sl": 9,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -7928,8 +7825,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 6,
-   "visitorsOwnArea": 2036954,
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1409337,
    "kind": "island",
    "notCounted": []
   },
@@ -8066,8 +7963,8 @@
   },
   "piedmont": {
    "name": "Piedmont",
-   "rating": 5,
-   "visitors": 1561040,
+   "rating": 4,
+   "visitors": 1200000,
    "facilities": [
     {
      "q": "Q623163",
@@ -8083,20 +7980,6 @@
      "sl": 16,
      "basis": "figure",
      "counted": 1200000.0
-    },
-    {
-     "q": "Q16383344",
-     "name": "Zoom di Cumiana",
-     "km": 55,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q19573583",
@@ -8139,10 +8022,24 @@
      "sl": 1,
      "basis": "left out: closed 1987",
      "counted": 0
+    },
+    {
+     "q": "Q16383344",
+     "name": "Zoom di Cumiana",
+     "km": 55,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "region",
    "notCounted": [
     {
@@ -8204,37 +8101,9 @@
   },
   "new-orleans": {
    "name": "New Orleans",
-   "rating": 5,
-   "visitors": 1218222,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
-    {
-     "q": "Q4820238",
-     "name": "Audubon Insectarium",
-     "km": 1,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q4820263",
-     "name": "Audubon Zoo",
-     "km": 7,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 2000.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
     {
      "q": "Q623162",
      "name": "Aquarium of the Americas",
@@ -8247,8 +8116,36 @@
      "src": "",
      "animals": 10000.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q4820238",
+     "name": "Audubon Insectarium",
+     "km": 1,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q4820263",
+     "name": "Audubon Zoo",
+     "km": 7,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 2000.0,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q97610122",
@@ -8265,8 +8162,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 5,
-   "visitorsOwnArea": 1218222,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "city",
    "notCounted": []
   },
@@ -8283,7 +8180,7 @@
   "vienna": {
    "name": "Vienna",
    "rating": 7,
-   "visitors": 3263556,
+   "visitors": 2834965,
    "facilities": [
     {
      "q": "Q752283",
@@ -8313,20 +8210,6 @@
      "sl": 10,
      "basis": "figure",
      "counted": 436500.0
-    },
-    {
-     "q": "Q1246454",
-     "name": "Schmetterlinghaus",
-     "km": 1,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
     },
     {
      "q": "Q220232",
@@ -8395,6 +8278,20 @@
      "src": "",
      "animals": null,
      "sl": 4,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q1246454",
+     "name": "Schmetterlinghaus",
+     "km": 1,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -8470,8 +8367,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 7,
-   "visitorsOwnArea": 2865091,
+   "ratingOwnArea": 6,
+   "visitorsOwnArea": 2436500,
    "kind": "city",
    "notCounted": [
     {
@@ -8814,8 +8711,8 @@
   },
   "whistler": {
    "name": "Vancouver & Whistler",
-   "rating": 4,
-   "visitors": 1054050,
+   "rating": 3,
+   "visitors": 693010,
    "facilities": [
     {
      "q": "Q185228",
@@ -8831,20 +8728,6 @@
      "sl": 10,
      "basis": "estimated from fame",
      "counted": 693010.0288574611
-    },
-    {
-     "q": "Q5600807",
-     "name": "Greater Vancouver Zoo",
-     "km": 50,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q135935461",
@@ -8871,6 +8754,20 @@
      "src": "",
      "animals": 100.0,
      "sl": 4,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q5600807",
+     "name": "Greater Vancouver Zoo",
+     "km": 50,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -8923,13 +8820,7 @@
    "ratingOwnArea": 3,
    "visitorsOwnArea": 693010,
    "kind": "city",
-   "notCounted": [
-    {
-     "name": "Greater Vancouver Zoo",
-     "km": 50,
-     "reason": "50 km from the centre, over the 35 km limit for a city"
-    }
-   ]
+   "notCounted": []
   },
   "tuscany": {
    "name": "Tuscany",
@@ -9081,24 +8972,9 @@
   },
   "hokkaido": {
    "name": "Hokkaido",
-   "rating": 4,
-   "visitors": 961040,
+   "rating": 3,
+   "visitors": 600000,
    "facilities": [
-    {
-     "q": "Q11405627",
-     "name": "Chitose Aquarium",
-     "km": 36,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
     {
      "q": "Q11261729",
      "name": "Otaru Aquarium",
@@ -9128,6 +9004,21 @@
      "sl": 3,
      "basis": "figure",
      "counted": 250000.0
+    },
+    {
+     "q": "Q11405627",
+     "name": "Chitose Aquarium",
+     "km": 36,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q11480658",
@@ -9217,15 +9108,15 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 4,
-   "visitorsOwnArea": 961040,
+   "ratingOwnArea": 3,
+   "visitorsOwnArea": 600000,
    "kind": "island",
    "notCounted": []
   },
   "mexicocity": {
    "name": "Mexico City",
-   "rating": 10,
-   "visitors": 5861040,
+   "rating": 9,
+   "visitors": 5000000,
    "facilities": [
     {
      "q": "Q3375717",
@@ -9234,26 +9125,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 5500000.0,
-     "src": "Wikipedia infobox",
+     "visitors": 5000000.0,
+     "src": "checked: Mexico City government statement at the zoo's 100th anniversary, July 2023: 5 million a year [medium]",
      "animals": 1930.0,
      "sl": 9,
      "basis": "figure",
-     "counted": 5500000.0
-    },
-    {
-     "q": "Q6171767",
-     "name": "Zool\u00f3gico Los Coyotes",
-     "km": 12,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "counted": 5000000.0
     },
     {
      "q": "Q17126827",
@@ -9355,6 +9232,20 @@
      "counted": 0
     },
     {
+     "q": "Q6171767",
+     "name": "Zool\u00f3gico Los Coyotes",
+     "km": 12,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q9097837",
      "name": "Zool\u00f3gico de San Juan de Arag\u00f3n",
      "km": 6,
@@ -9369,8 +9260,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 10,
-   "visitorsOwnArea": 5861040,
+   "ratingOwnArea": 9,
+   "visitorsOwnArea": 5000000,
    "kind": "city",
    "notCounted": []
   },
@@ -9403,7 +9294,7 @@
   "bahamas": {
    "name": "Bahamas",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q4025978",
@@ -9416,8 +9307,8 @@
      "src": "",
      "animals": 200.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q5289620",
@@ -9435,7 +9326,7 @@
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -9570,23 +9461,8 @@
   "douro-valley-porto": {
    "name": "Douro Valley & Porto",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
-    {
-     "q": "Q1439061",
-     "name": "Sea Life Porto",
-     "km": 74,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
     {
      "q": "Q1369770",
      "name": "Esta\u00e7\u00e3o Litoral da Aguda",
@@ -9618,6 +9494,21 @@
      "counted": 0
     },
     {
+     "q": "Q1439061",
+     "name": "Sea Life Porto",
+     "km": 74,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q9097813",
      "name": "Zoo de Lourosa",
      "km": 65,
@@ -9635,13 +9526,7 @@
    "ratingOwnArea": 1,
    "visitorsOwnArea": 0,
    "kind": "region",
-   "notCounted": [
-    {
-     "name": "Sea Life Porto",
-     "km": 74,
-     "reason": "74 km from the centre, over the 60 km limit for a region"
-    }
-   ]
+   "notCounted": []
   },
   "mongolia": {
    "name": "Mongolia",
@@ -9720,8 +9605,8 @@
   },
   "vancouver-island": {
    "name": "Vancouver Island",
-   "rating": 4,
-   "visitors": 1054050,
+   "rating": 3,
+   "visitors": 693010,
    "facilities": [
     {
      "q": "Q185228",
@@ -9737,20 +9622,6 @@
      "sl": 10,
      "basis": "estimated from fame",
      "counted": 693010.0288574611
-    },
-    {
-     "q": "Q5600807",
-     "name": "Greater Vancouver Zoo",
-     "km": 98,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q135935461",
@@ -9777,6 +9648,20 @@
      "src": "",
      "animals": 100.0,
      "sl": 4,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q5600807",
+     "name": "Greater Vancouver Zoo",
+     "km": 98,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -9832,11 +9717,6 @@
    "notCounted": [
     {
      "name": "Vancouver Aquarium",
-     "km": 98,
-     "reason": "on the mainland, across the water"
-    },
-    {
-     "name": "Greater Vancouver Zoo",
      "km": 98,
      "reason": "on the mainland, across the water"
     }
@@ -10057,8 +9937,8 @@
   },
   "cotswolds": {
    "name": "Cotswolds",
-   "rating": 9,
-   "visitors": 4499638,
+   "rating": 6,
+   "visitors": 2130744,
    "facilities": [
     {
      "q": "Q373187",
@@ -10087,90 +9967,6 @@
      "sl": 5,
      "basis": "figure",
      "counted": 750000.0
-    },
-    {
-     "q": "Q3364766",
-     "name": "Longleat Safari and Adventure Park",
-     "km": 77,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q2398233",
-     "name": "Twycross Zoo",
-     "km": 94,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 500.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q8028978",
-     "name": "Woburn Safari Park",
-     "km": 89,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q5175494",
-     "name": "Cotswold Wildlife Park",
-     "km": 15,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1500.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q3039179",
-     "name": "Drayton Manor Theme Park",
-     "km": 87,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q5312027",
-     "name": "Dudley Zoo",
-     "km": 78,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1500.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q6979418",
@@ -10313,6 +10109,20 @@
      "counted": 0
     },
     {
+     "q": "Q5175494",
+     "name": "Cotswold Wildlife Park",
+     "km": 15,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1500.0,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q104842729",
      "name": "Coventry Zoo",
      "km": 67,
@@ -10337,6 +10147,34 @@
      "src": "",
      "animals": null,
      "sl": 3,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q3039179",
+     "name": "Drayton Manor Theme Park",
+     "km": 87,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q5312027",
+     "name": "Dudley Zoo",
+     "km": 78,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1500.0,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -10379,6 +10217,20 @@
      "src": "",
      "animals": null,
      "sl": 3,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q3364766",
+     "name": "Longleat Safari and Adventure Park",
+     "km": 77,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -10497,6 +10349,20 @@
      "counted": 0
     },
     {
+     "q": "Q2398233",
+     "name": "Twycross Zoo",
+     "km": 94,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 500.0,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q8024695",
      "name": "Windsor Safari Park",
      "km": 92,
@@ -10509,10 +10375,24 @@
      "sl": 2,
      "basis": "left out: closed 1992",
      "counted": 0
+    },
+    {
+     "q": "Q8028978",
+     "name": "Woburn Safari Park",
+     "km": 89,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 456040,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 95000,
    "kind": "region",
    "notCounted": [
     {
@@ -10524,31 +10404,6 @@
      "name": "West Midland Safari Park",
      "km": 68,
      "reason": "68 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Longleat Safari and Adventure Park",
-     "km": 77,
-     "reason": "77 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Twycross Zoo",
-     "km": 94,
-     "reason": "94 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Woburn Safari Park",
-     "km": 89,
-     "reason": "89 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Drayton Manor Theme Park",
-     "km": 87,
-     "reason": "87 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "Dudley Zoo",
-     "km": 78,
-     "reason": "78 km from the centre, over the 60 km limit for a region"
     },
     {
      "name": "Bristol Zoo Project",
@@ -10574,8 +10429,8 @@
   },
   "paris": {
    "name": "Paris",
-   "rating": 7,
-   "visitors": 2674320,
+   "rating": 5,
+   "visitors": 1523648,
    "facilities": [
     {
      "q": "Q1969385",
@@ -10604,49 +10459,6 @@
      "sl": 11,
      "basis": "figure",
      "counted": 500000.0
-    },
-    {
-     "q": "Q3364322",
-     "name": "Parc des F\u00e9lins",
-     "km": 48,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 140.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q2945366",
-     "name": "Centre de la mer et des eaux",
-     "km": 2,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q2970796",
-     "name": "Ch\u00e2teau of Thoiry",
-     "km": 41,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1000.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q86733283",
@@ -10721,6 +10533,21 @@
      "counted": 0
     },
     {
+     "q": "Q2945366",
+     "name": "Centre de la mer et des eaux",
+     "km": 2,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q20971804",
      "name": "Cheptainville Zoo",
      "km": 35,
@@ -10731,6 +10558,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q2970796",
+     "name": "Ch\u00e2teau of Thoiry",
+     "km": 41,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1000.0,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -10787,6 +10628,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q3364322",
+     "name": "Parc des F\u00e9lins",
+     "km": 48,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 140.0,
+     "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -10905,20 +10760,10 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 5,
-   "visitorsOwnArea": 1549688,
+   "ratingOwnArea": 4,
+   "visitorsOwnArea": 1188648,
    "kind": "city",
    "notCounted": [
-    {
-     "name": "Parc des F\u00e9lins",
-     "km": 48,
-     "reason": "48 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Ch\u00e2teau of Thoiry",
-     "km": 41,
-     "reason": "41 km from the centre, over the 35 km limit for a city"
-    },
     {
      "name": "Biotropica",
      "km": 96,
@@ -11045,7 +10890,7 @@
   "bavaria-munich": {
    "name": "Bavaria & Munich",
    "rating": 7,
-   "visitors": 3258308,
+   "visitors": 2897268,
    "facilities": [
     {
      "q": "Q264691",
@@ -11076,20 +10921,6 @@
      "counted": 1000000.0
     },
     {
-     "q": "Q220004",
-     "name": "Augsburg Zoo",
-     "km": 54,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 1245.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
      "q": "Q119173036",
      "name": "Allg\u00e4uer Schmetterling Erlebniswelt",
      "km": 97,
@@ -11100,6 +10931,20 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q220004",
+     "name": "Augsburg Zoo",
+     "km": 54,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 1245.0,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -11316,7 +11161,7 @@
     }
    ],
    "ratingOwnArea": 6,
-   "visitorsOwnArea": 2258308,
+   "visitorsOwnArea": 1897268,
    "kind": "region",
    "notCounted": [
     {
@@ -11328,8 +11173,8 @@
   },
   "iceland": {
    "name": "Iceland",
-   "rating": 3,
-   "visitors": 428591,
+   "rating": 2,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q1422518",
@@ -11342,12 +11187,12 @@
      "src": "",
      "animals": null,
      "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
-   "ratingOwnArea": 3,
-   "visitorsOwnArea": 428591,
+   "ratingOwnArea": 2,
+   "visitorsOwnArea": 0,
    "kind": "country",
    "notCounted": []
   },
@@ -11538,8 +11383,8 @@
   },
   "texas-hill-country": {
    "name": "Texas Hill Country",
-   "rating": 6,
-   "visitors": 1827474,
+   "rating": 5,
+   "visitors": 1332000,
    "facilities": [
     {
      "q": "Q8214801",
@@ -11554,21 +11399,6 @@
      "sl": 9,
      "basis": "figure",
      "counted": 1100000.0
-    },
-    {
-     "q": "Q567864",
-     "name": "SeaWorld San Antonio",
-     "km": 92,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
     },
     {
      "q": "Q4823341",
@@ -11612,6 +11442,21 @@
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q567864",
+     "name": "SeaWorld San Antonio",
+     "km": 92,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 7,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 1,
@@ -11622,11 +11467,6 @@
      "name": "San Antonio Zoo",
      "km": 97,
      "reason": "97 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "SeaWorld San Antonio",
-     "km": 92,
-     "reason": "92 km from the centre, over the 60 km limit for a region"
     },
     {
      "name": "Austin Zoo",
@@ -11796,8 +11636,8 @@
   },
   "swissalps": {
    "name": "Zermatt & the Swiss Alps",
-   "rating": 5,
-   "visitors": 1632297,
+   "rating": 4,
+   "visitors": 1070506,
    "facilities": [
     {
      "q": "Q15503298",
@@ -11814,20 +11654,6 @@
      "counted": 1000000.0
     },
     {
-     "q": "Q3213172",
-     "name": "La Torbiera",
-     "km": 75,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
      "q": "Q3363937",
      "name": "Parc animalier de Merlet",
      "km": 73,
@@ -11840,6 +11666,20 @@
      "sl": 3,
      "basis": "figure",
      "counted": 70506.0
+    },
+    {
+     "q": "Q3213172",
+     "name": "La Torbiera",
+     "km": 75,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q107434467",
@@ -11892,11 +11732,6 @@
      "name": "Pombia Safari Park",
      "km": 80,
      "reason": "80 km from the centre, over the 60 km limit for a region"
-    },
-    {
-     "name": "La Torbiera",
-     "km": 75,
-     "reason": "75 km from the centre, over the 60 km limit for a region"
     },
     {
      "name": "Parc animalier de Merlet",
@@ -12031,8 +11866,8 @@
   },
   "bangkok": {
    "name": "Bangkok",
-   "rating": 7,
-   "visitors": 3102931,
+   "rating": 6,
+   "visitors": 2500000,
    "facilities": [
     {
      "q": "Q2033070",
@@ -12041,26 +11876,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": null,
-     "src": "",
+     "visitors": 2500000.0,
+     "src": "checked: about 84 million visitors since opening in 1988 (Samsung C&T 2021), an average of about 2.5 million a year; no yearly figure published [low]",
      "animals": null,
      "sl": 10,
-     "basis": "estimated from fame",
-     "counted": 693010.0288574611
-    },
-    {
-     "q": "Q3576017",
-     "name": "Khao Kheow Open Zoo",
-     "km": 85,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 8000.0,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
+     "basis": "figure",
+     "counted": 2500000.0
     },
     {
      "q": "Q546844",
@@ -12074,51 +11895,8 @@
      "src": "",
      "animals": null,
      "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
-     "q": "Q13022377",
-     "name": "Pata Zoo",
-     "km": 2,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
-     "q": "Q6636970",
-     "name": "Sea Life Bangkok Ocean World",
-     "km": 4,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q4923810",
-     "name": "Sriracha Tiger Zoo",
-     "km": 88,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
+     "basis": "minor, not counted",
+     "counted": 0
     },
     {
      "q": "Q1267646",
@@ -12132,6 +11910,20 @@
      "animals": 2218.0,
      "sl": 15,
      "basis": "left out: closed in 2018",
+     "counted": 0
+    },
+    {
+     "q": "Q3576017",
+     "name": "Khao Kheow Open Zoo",
+     "km": 85,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 8000.0,
+     "sl": 8,
+     "basis": "minor, not counted",
      "counted": 0
     },
     {
@@ -12149,6 +11941,20 @@
      "counted": 0
     },
     {
+     "q": "Q13022377",
+     "name": "Pata Zoo",
+     "km": 2,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 7,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q48797664",
      "name": "Samphran Elephant Ground & Zoo",
      "km": 27,
@@ -12161,23 +11967,41 @@
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q6636970",
+     "name": "Sea Life Bangkok Ocean World",
+     "km": 4,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q4923810",
+     "name": "Sriracha Tiger Zoo",
+     "km": 88,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 6,
-   "visitorsOwnArea": 2112549,
+   "visitorsOwnArea": 2500000,
    "kind": "city",
-   "notCounted": [
-    {
-     "name": "Khao Kheow Open Zoo",
-     "km": 85,
-     "reason": "85 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Sriracha Tiger Zoo",
-     "km": 88,
-     "reason": "88 km from the centre, over the 35 km limit for a city"
-    }
-   ]
+   "notCounted": []
   },
   "borneo": {
    "name": "Malaysian Borneo",
@@ -12431,21 +12255,21 @@
   "singapore": {
    "name": "Singapore",
    "rating": 10,
-   "visitors": 8112642,
+   "visitors": 6430000,
    "facilities": [
     {
      "q": "Q2709506",
-     "name": "Singapore Zoo",
+     "name": "Mandai Wildlife Reserve (Singapore Zoo, Night Safari, River Wonders, Bird Paradise)",
      "km": 7,
      "kinds": [
       "zoo"
      ],
-     "visitors": 2132270.0,
-     "src": "Wikipedia infobox",
+     "visitors": 4430000.0,
+     "src": "checked: Mandai Wildlife Group: 4.43 million visitors across its four parks in the year to March 2024 (official), counted as one [high]",
      "animals": 2530.0,
      "sl": 27,
      "basis": "figure",
-     "counted": 2132270.0
+     "counted": 4430000.0
     },
     {
      "q": "Q55756195",
@@ -12463,62 +12287,6 @@
      "counted": 2000000.0
     },
     {
-     "q": "Q2234723",
-     "name": "Night Safari",
-     "km": 7,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": 1321718.0,
-     "src": "Wikipedia infobox",
-     "animals": 900.0,
-     "sl": 12,
-     "basis": "figure",
-     "counted": 1321718.0
-    },
-    {
-     "q": "Q7337785",
-     "name": "River Wonders",
-     "km": 7,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": 966890.0,
-     "src": "Wikipedia infobox",
-     "animals": 11000.0,
-     "sl": 8,
-     "basis": "figure",
-     "counted": 966890.0
-    },
-    {
-     "q": "Q1547682",
-     "name": "Jurong Bird Park",
-     "km": 13,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": 768933.0,
-     "src": "Wikipedia infobox",
-     "animals": 5000.0,
-     "sl": 24,
-     "basis": "figure",
-     "counted": 768933.0
-    },
-    {
-     "q": "Q28219616",
-     "name": "Johor Zoo",
-     "km": 14,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
      "q": "Q113800717",
      "name": "Bird Paradise",
      "km": 8,
@@ -12529,8 +12297,8 @@
      "src": "",
      "animals": 3500.0,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "left out: counted inside the Mandai total",
+     "counted": 0
     },
     {
      "q": "Q95709237",
@@ -12558,6 +12326,34 @@
      "animals": null,
      "sl": 0,
      "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q28219616",
+     "name": "Johor Zoo",
+     "km": 14,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 8,
+     "basis": "left out: in Malaysia, across the border",
+     "counted": 0
+    },
+    {
+     "q": "Q1547682",
+     "name": "Jurong Bird Park",
+     "km": 13,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 768933.0,
+     "src": "Wikipedia infobox",
+     "animals": 5000.0,
+     "sl": 24,
+     "basis": "left out: closed in 2023 (replaced by Bird Paradise)",
      "counted": 0
     },
     {
@@ -12589,6 +12385,20 @@
      "counted": 0
     },
     {
+     "q": "Q2234723",
+     "name": "Night Safari",
+     "km": 7,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 1321718.0,
+     "src": "Wikipedia infobox",
+     "animals": 900.0,
+     "sl": 12,
+     "basis": "left out: counted inside the Mandai total",
+     "counted": 0
+    },
+    {
      "q": "Q115959798",
      "name": "Punggol Zoo",
      "km": 12,
@@ -12617,6 +12427,20 @@
      "counted": 0
     },
     {
+     "q": "Q7337785",
+     "name": "River Wonders",
+     "km": 7,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": 966890.0,
+     "src": "Wikipedia infobox",
+     "animals": 11000.0,
+     "sl": 8,
+     "basis": "left out: counted inside the Mandai total",
+     "counted": 0
+    },
+    {
      "q": "Q2125883",
      "name": "Underwater World, Singapore",
      "km": 10,
@@ -12633,7 +12457,7 @@
     }
    ],
    "ratingOwnArea": 10,
-   "visitorsOwnArea": 8112642,
+   "visitorsOwnArea": 6430000,
    "kind": "country",
    "notCounted": []
   },
@@ -12773,8 +12597,8 @@
   },
   "rocky-mountain": {
    "name": "Rocky Mountain National Park",
-   "rating": 6,
-   "visitors": 2011159,
+   "rating": 5,
+   "visitors": 1582568,
    "facilities": [
     {
      "q": "Q581344",
@@ -12791,20 +12615,6 @@
      "counted": 1582568.0
     },
     {
-     "q": "Q3023370",
-     "name": "Downtown Aquarium, Denver",
-     "km": 87,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 5000.0,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
      "q": "Q5002947",
      "name": "Butterfly Pavilion",
      "km": 73,
@@ -12817,6 +12627,20 @@
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
+    },
+    {
+     "q": "Q3023370",
+     "name": "Downtown Aquarium, Denver",
+     "km": 87,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 5000.0,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 1,
@@ -12827,11 +12651,6 @@
      "name": "Denver Zoo",
      "km": 90,
      "reason": "90 km from the centre, over the 40 km limit for a national park"
-    },
-    {
-     "name": "Downtown Aquarium, Denver",
-     "km": 87,
-     "reason": "87 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -12848,7 +12667,7 @@
   "snowdonia": {
    "name": "Wales",
    "rating": 6,
-   "visitors": 2432218,
+   "visitors": 2071178,
    "facilities": [
     {
      "q": "Q3139243",
@@ -12863,20 +12682,6 @@
      "sl": 15,
      "basis": "figure",
      "counted": 1971178.0
-    },
-    {
-     "q": "Q4946742",
-     "name": "Borth Wild Animal Kingdom",
-     "km": 65,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 400.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q4763399",
@@ -12905,6 +12710,20 @@
      "src": "",
      "animals": null,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q4946742",
+     "name": "Borth Wild Animal Kingdom",
+     "km": 65,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 400.0,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -12959,11 +12778,6 @@
      "name": "Chester Zoo",
      "km": 82,
      "reason": "82 km from the centre, over the 40 km limit for a national park"
-    },
-    {
-     "name": "Borth Wild Animal Kingdom",
-     "km": 65,
-     "reason": "65 km from the centre, over the 40 km limit for a national park"
     }
    ]
   },
@@ -12979,23 +12793,9 @@
   },
   "cornwall": {
    "name": "Cornwall",
-   "rating": 3,
-   "visitors": 441040,
+   "rating": 2,
+   "visitors": 80000,
    "facilities": [
-    {
-     "q": "Q2543184",
-     "name": "Newquay Zoo",
-     "km": 16,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": 993.0,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
     {
      "q": "Q5225654",
      "name": "Dartmoor Zoological Park",
@@ -13096,6 +12896,20 @@
      "counted": 0
     },
     {
+     "q": "Q2543184",
+     "name": "Newquay Zoo",
+     "km": 16,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": 993.0,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q12065270",
      "name": "Paradise Park",
      "km": 29,
@@ -13140,7 +12954,7 @@
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "coastal_area",
    "notCounted": [
     {
@@ -13217,8 +13031,8 @@
   },
   "sydney": {
    "name": "Sydney",
-   "rating": 10,
-   "visitors": 5796896,
+   "rating": 8,
+   "visitors": 3950000,
    "facilities": [
     {
      "q": "Q1064813",
@@ -13228,7 +13042,7 @@
       "zoo"
      ],
      "visitors": 1500000.0,
-     "src": "web: Taronga annual report, year to June 2010 [low, dated]",
+     "src": "checked: Taronga annual report 2023-24: \"welcoming more than 1.5 million guests\" (official) [high]",
      "animals": 5000.0,
      "sl": 25,
      "basis": "figure",
@@ -13262,62 +13076,6 @@
      "sl": 4,
      "basis": "figure",
      "counted": 800000.0
-    },
-    {
-     "q": "Q5439615",
-     "name": "Featherdale Sydney Wildlife Park",
-     "km": 32,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
-     "q": "Q8000710",
-     "name": "Wild Life Sydney",
-     "km": 1,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
-     "q": "Q6424208",
-     "name": "Koala Park Sanctuary",
-     "km": 21,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q7661113",
-     "name": "Symbio Wildlife Park",
-     "km": 43,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q4273332",
@@ -13362,6 +13120,34 @@
      "counted": 0
     },
     {
+     "q": "Q5439615",
+     "name": "Featherdale Sydney Wildlife Park",
+     "km": 32,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q6424208",
+     "name": "Koala Park Sanctuary",
+     "km": 21,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q6750618",
      "name": "Manly Sea Life Sanctuary",
      "km": 10,
@@ -13373,6 +13159,20 @@
      "src": "",
      "animals": null,
      "sl": 2,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q7661113",
+     "name": "Symbio Wildlife Park",
+     "km": 43,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -13391,6 +13191,20 @@
      "counted": 0
     },
     {
+     "q": "Q8000710",
+     "name": "Wild Life Sydney",
+     "km": 1,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 7,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q135004110",
      "name": "Zambi Wildlife Retreat",
      "km": 50,
@@ -13405,15 +13219,10 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 9,
-   "visitorsOwnArea": 4985856,
+   "ratingOwnArea": 8,
+   "visitorsOwnArea": 3500000,
    "kind": "city",
    "notCounted": [
-    {
-     "name": "Symbio Wildlife Park",
-     "km": 43,
-     "reason": "43 km from the centre, over the 35 km limit for a city"
-    },
     {
      "name": "Australian Reptile Park",
      "km": 51,
@@ -13439,7 +13248,7 @@
   "puglia": {
    "name": "Puglia",
    "rating": 2,
-   "visitors": 361040,
+   "visitors": 0,
    "facilities": [
     {
      "q": "Q3576064",
@@ -13452,12 +13261,12 @@
      "src": "",
      "animals": null,
      "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
+     "basis": "minor, not counted",
+     "counted": 0
     }
    ],
    "ratingOwnArea": 2,
-   "visitorsOwnArea": 361040,
+   "visitorsOwnArea": 0,
    "kind": "region",
    "notCounted": []
   },
@@ -13474,7 +13283,7 @@
   "amsterdam": {
    "name": "Amsterdam",
    "rating": 10,
-   "visitors": 10439924,
+   "visitors": 8231988,
    "facilities": [
     {
      "q": "Q18775796",
@@ -13577,35 +13386,6 @@
      "counted": 586300.0
     },
     {
-     "q": "Q840700",
-     "name": "Vogelpark Avifauna",
-     "km": 31,
-     "kinds": [
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 8,
-     "basis": "estimated from fame",
-     "counted": 561790.9637261878
-    },
-    {
-     "q": "Q2376025",
-     "name": "Ouwehands Dierenpark",
-     "km": 66,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 7,
-     "basis": "estimated from fame",
-     "counted": 495473.9371891642
-    },
-    {
      "q": "Q2610997",
      "name": "Dierenpark De Oliemeulen",
      "km": 90,
@@ -13632,51 +13412,6 @@
      "sl": 4,
      "basis": "figure",
      "counted": 440000.0
-    },
-    {
-     "q": "Q1282056",
-     "name": "Ecomare",
-     "km": 79,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 6,
-     "basis": "estimated from fame",
-     "counted": 428590.8737471597
-    },
-    {
-     "q": "Q1438590",
-     "name": "Fort Kijkduin",
-     "km": 66,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
-    },
-    {
-     "q": "Q2214161",
-     "name": "Oceanium",
-     "km": 58,
-     "kinds": [
-      "aquarium",
-      "zoo"
-     ],
-     "visitors": null,
-     "src": "",
-     "animals": null,
-     "sl": 5,
-     "basis": "estimated from fame",
-     "counted": 361040.4636911666
     },
     {
      "q": "Q4320820",
@@ -13849,6 +13584,21 @@
      "counted": 0
     },
     {
+     "q": "Q1282056",
+     "name": "Ecomare",
+     "km": 79,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 6,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q20671742",
      "name": "Eureka Orchidee\u00ebn en Vogelbush",
      "km": 81,
@@ -13873,6 +13623,21 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q1438590",
+     "name": "Fort Kijkduin",
+     "km": 66,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -13943,6 +13708,36 @@
      "src": "",
      "animals": null,
      "sl": 1,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q2214161",
+     "name": "Oceanium",
+     "km": 58,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 5,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
+     "q": "Q2376025",
+     "name": "Ouwehands Dierenpark",
+     "km": 66,
+     "kinds": [
+      "aquarium",
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
     },
@@ -14144,6 +13939,20 @@
      "counted": 0
     },
     {
+     "q": "Q840700",
+     "name": "Vogelpark Avifauna",
+     "km": 31,
+     "kinds": [
+      "zoo"
+     ],
+     "visitors": null,
+     "src": "",
+     "animals": null,
+     "sl": 8,
+     "basis": "minor, not counted",
+     "counted": 0
+    },
+    {
      "q": "Q2582633",
      "name": "Zee Aquarium Bergen aan Zee",
      "km": 37,
@@ -14159,8 +13968,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 6,
-   "visitorsOwnArea": 1961791,
+   "ratingOwnArea": 5,
+   "visitorsOwnArea": 1400000,
    "kind": "city",
    "notCounted": [
     {
@@ -14194,11 +14003,6 @@
      "reason": "49 km from the centre, over the 35 km limit for a city"
     },
     {
-     "name": "Ouwehands Dierenpark",
-     "km": 66,
-     "reason": "66 km from the centre, over the 35 km limit for a city"
-    },
-    {
      "name": "Dierenpark De Oliemeulen",
      "km": 90,
      "reason": "90 km from the centre, over the 35 km limit for a city"
@@ -14209,21 +14013,6 @@
      "reason": "54 km from the centre, over the 35 km limit for a city"
     },
     {
-     "name": "Ecomare",
-     "km": 79,
-     "reason": "79 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Fort Kijkduin",
-     "km": 66,
-     "reason": "66 km from the centre, over the 35 km limit for a city"
-    },
-    {
-     "name": "Oceanium",
-     "km": 58,
-     "reason": "58 km from the centre, over the 35 km limit for a city"
-    },
-    {
      "name": "BestZoo",
      "km": 100,
      "reason": "100 km from the centre, over the 35 km limit for a city"
@@ -14232,8 +14021,8 @@
   },
   "barcelona": {
    "name": "Barcelona",
-   "rating": 6,
-   "visitors": 2308307,
+   "rating": 7,
+   "visitors": 2608307,
    "facilities": [
     {
      "q": "Q1200948",
@@ -14243,12 +14032,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1500000.0,
-     "src": "web: travel sites (1.5 to 2 million); no official count [low]",
+     "visitors": 1800000.0,
+     "src": "web: Aspro Parks via Spanish Wikipedia: over 40 million visitors since 1995, about 1.8 million a year and the city's fourth most visited attraction [medium]",
      "animals": 11000.0,
      "sl": 21,
      "basis": "figure",
-     "counted": 1500000.0
+     "counted": 1800000.0
     },
     {
      "q": "Q220013",
@@ -14294,8 +14083,8 @@
      "counted": 0
     }
    ],
-   "ratingOwnArea": 6,
-   "visitorsOwnArea": 2308307,
+   "ratingOwnArea": 7,
+   "visitorsOwnArea": 2608307,
    "kind": "city",
    "notCounted": []
   }
