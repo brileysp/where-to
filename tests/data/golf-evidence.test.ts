@@ -8,8 +8,9 @@ const root = join(__dirname, '..', '..');
 const evidence = JSON.parse(readFileSync(join(root, 'docs/evidence/golf-evidence.json'), 'utf8')) as Record<string, Row>;
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/golf-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
 const COLUMNS = ['golfCourses', 'linksGolf', 'bucketListCourses', 'scenicCourses', 'resortCourses', 'courseKinds', 'teeTimeAccess', 'thingsBeyondGolf'];
-const countTier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4 : n <= 10 ? 6 : n <= 20 ? 8 : 10);
-const bucketTier = (n: number) => (n === 0 ? 0 : n === 1 ? 4 : n === 2 ? 6 : n <= 4 ? 8 : 10);
+// Presence-led scale (owner, 28 Oct 2026): one great course can be the reason for the trip.
+const presTier = (n: number) => (n === 0 ? 0 : n === 1 ? 7 : n <= 3 ? 8 : n <= 6 ? 9 : 10);
+const bucketTier = (n: number) => (n === 0 ? 0 : n === 1 ? 9 : 10);
 const num = (text: string, re: RegExp) => Number(re.exec(text)?.[1]);
 
 describe('Golf evidence', () => {
@@ -22,8 +23,8 @@ describe('Golf evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      linksGolf: { 'st-andrews-fife': 8, 'monterey-big-sur': 6, edinburgh: 6, ireland: 4, amsterdam: 0 },
-      bucketListCourses: { 'st-andrews-fife': 8, nyc: 8, rome: 4, paris: 4, algarve: 0 },
+      linksGolf: { 'st-andrews-fife': 10, 'monterey-big-sur': 10, ireland: 9, nyc: 8, amsterdam: 0 },
+      bucketListCourses: { 'st-andrews-fife': 10, nyc: 10, rome: 9, paris: 9, algarve: 0 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
@@ -31,9 +32,9 @@ describe('Golf evidence', () => {
     for (const [place, row] of Object.entries(evidence)) {
       const e = row.evidence;
       expect(row.golfCourses, place).toBe(num(e.golfCourses, /^(\d+) golf courses/));
-      expect(row.linksGolf, `${place} links`).toBe(countTier(num(e.linksGolf, /^(\d+) links course/)));
-      expect(row.scenicCourses, `${place} scenic`).toBe(countTier(num(e.scenicCourses, /^(\d+) scenic course/)));
-      expect(row.resortCourses, `${place} resort`).toBe(countTier(num(e.resortCourses, /^(\d+) full-size course/)));
+      expect(row.linksGolf, `${place} links`).toBe(Math.max(presTier(num(e.linksGolf, /^(\d+) links course/)), num(e.linksGolf, /of which (\d+) on Wikipedia/) > 0 ? 9 : 0));
+      expect(row.scenicCourses, `${place} scenic`).toBe(presTier(num(e.scenicCourses, /^(\d+) scenic course/)));
+      expect(row.resortCourses, `${place} resort`).toBe(presTier(num(e.resortCourses, /^(\d+) full-size course/)));
       expect(row.bucketListCourses, `${place} bucket list`).toBe(bucketTier(num(e.bucketListCourses, /^(\d+) venue/)));
     }
   });
