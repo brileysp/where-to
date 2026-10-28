@@ -654,3 +654,79 @@ describe('Theme Parks questions', () => {
     expect(fit('q3', [1], { thrillRides: 7 })).toBe(1);
   });
 });
+
+describe('Golf questions', () => {
+  const defs = factDefsFor('golf');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`golf.${q}`], picked, defs, facts as never);
+  it('skill reads the course kinds the place has', () => {
+    expect(fit('q1', [0], { courseKinds: ['championship'] })).toBe(0);
+    expect(fit('q1', [0], { courseKinds: ['easy'] })).toBe(1);
+    expect(fit('q1', [1], { courseKinds: ['easy'] })).toBe(0);
+    expect(fit('q1', [1], { courseKinds: ['standard'] })).toBe(1);
+    expect(fit('q1', [2], { courseKinds: ['standard'] })).toBe(0);
+    expect(fit('q1', [2], { courseKinds: ['easy', 'championship'] })).toBe(1);
+  });
+  it('how much of the trip is golf', () => {
+    expect(fit('q4', [0], { golfCourses: 1 })).toBe(0);
+    expect(fit('q4', [0], { golfCourses: 6 })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [0], { golfCourses: 40 })).toBe(1);
+    expect(fit('q4', [1], { golfCourses: 1 })).toBeNull();
+    expect(fit('q4', [2], { thingsBeyondGolf: 3 })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [2], { thingsBeyondGolf: 9 })).toBe(1);
+  });
+  it('walk or ride and tee time are left unmapped', () => {
+    expect(QUESTION_FIT_RULES['golf.q2']).toBeUndefined();
+    expect(QUESTION_FIT_RULES['golf.q3']).toBeUndefined();
+  });
+});
+
+describe('Mountain Biking questions', () => {
+  const defs = factDefsFor('mountainBiking');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`mountainBiking.${q}`], picked, defs, facts as never);
+  it('riding level reads the grades that have trail', () => {
+    expect(fit('q1', [0], { trailGrades: ['black', 'expert'] })).toBe(0);
+    expect(fit('q1', [0], { trailGrades: ['green'] })).toBe(1);
+    expect(fit('q1', [1], { trailGrades: ['intermediate'] })).toBe(1);
+    expect(fit('q1', [2], { trailGrades: ['green', 'intermediate'] })).toBe(0);
+    expect(fit('q1', [3], { trailGrades: ['expert'] })).toBe(1);
+  });
+  it('rent, bring or e-bike', () => {
+    expect(fit('q2', [0], { bikeRental: 2 })).toBeCloseTo(0.5, 5);
+    expect(fit('q2', [0], { bikeRental: 6 })).toBe(1);
+    expect(fit('q2', [1], { bikeRental: 0 })).toBeNull();
+    expect(fit('q2', [2], { eBikeRental: 0 })).toBe(0);
+    expect(fit('q2', [2], { eBikeRental: 4 })).toBe(1);
+  });
+  it('day length needs at least that much riding', () => {
+    expect(fit('q3', [0], { dayLengths: ['couple'] })).toBe(1);
+    expect(fit('q3', [1], { dayLengths: ['couple'] })).toBe(0);
+    expect(fit('q3', [1], { dayLengths: ['couple', 'half', 'full'] })).toBe(1);
+    expect(fit('q3', [2], { dayLengths: ['couple', 'half'] })).toBe(0);
+    expect(fit('q3', [3], { dayLengths: ['couple', 'half', 'full', 'multi'] })).toBe(1);
+  });
+});
+
+describe('Camping & Backcountry questions', () => {
+  const defs = factDefsFor('campingBackcountry');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`campingBackcountry.${q}`], picked, defs, facts as never);
+  it('how remote', () => {
+    expect(fit('q1', [0], { campgrounds: 4 })).toBeCloseTo(0.8, 5);
+    expect(fit('q1', [0], { campgrounds: 8 })).toBe(1);
+    expect(fit('q1', [2], { howRemote: 2.5 })).toBeCloseTo(0.5, 5);
+    expect(fit('q1', [2], { howRemote: 7 })).toBe(1);
+    expect(fit('q1', [3], { howRemote: 10 })).toBe(1);
+    expect(fit('q1', [3], { howRemote: 4 })).toBeCloseTo(0.5, 5);
+  });
+  it('how cold you will sleep', () => {
+    expect(fit('q4', [0], { nightTemps: 'warm' })).toBe(1);
+    expect(fit('q4', [0], { nightTemps: 'cool' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [0], { nightTemps: 'cold' })).toBe(0);
+    expect(fit('q4', [1], { nightTemps: 'cool' })).toBe(1);
+    expect(fit('q4', [2], { nightTemps: 'freezing' })).toBeCloseTo(0.5, 5);
+    expect(fit('q4', [3], { nightTemps: 'freezing' })).toBeNull();
+  });
+  it('gear and wildlife are left unmapped', () => {
+    expect(QUESTION_FIT_RULES['campingBackcountry.q2']).toBeUndefined();
+    expect(QUESTION_FIT_RULES['campingBackcountry.q3']).toBeUndefined();
+  });
+});

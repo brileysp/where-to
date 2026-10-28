@@ -784,6 +784,60 @@ const ALL_INCLUSIVE_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the counts have been checked against the resorts\' own sites. The Evidence column is the working, not a check.' },
 ];
 
+/**
+ * Golf (28 Oct 2026). Built by the column-scoring method (docs/column-scoring-plan.md): every rating is a stated formula on published data and the Evidence column keeps one
+ * line per cell. Courses come from Overture Maps (course areas and places) and OpenStreetMap, merged and cleaned (driving ranges, putting greens, par-3 and indoor golf removed),
+ * inside the place's own area (city 35 km, region 60, national park 40, state, island and country 100; Tokyo & Kyoto 120 km from two bases). Counts to ratings: none 0,
+ * 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Full working: docs/evidence/golf-evidence.json.
+ */
+const GOLF_FACTS: FactDef[] = [
+  { key: 'golfCourses', label: 'Golf courses', type: 'int', group: 'data', hint: 'How many golf courses lie inside the place\'s own area, counted from Overture Maps and OpenStreetMap with driving ranges, putting greens, par-3, pitch-and-putt, indoor and park golf removed and near-duplicates merged. Mapping is thinner in some countries, so a low figure there can undercount. Question 4 (golf all day) reads it.' },
+  rate('linksGolf', 'Links golf', 'Number of seaside links courses: within 1 km of the coast (Natural Earth 10 m coastline) and either named "Links" or on Wikipedia\'s List of links golf courses. Count to rating: none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Anchors: 8 St Andrews & Fife, 6 Monterey & Big Sur and Edinburgh, 4 Ireland, 0 Amsterdam.'),
+  rate('bucketListCourses', 'Bucket-list courses', 'Number of venues in the place that hosted a men\'s major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf in 1990-2025 (venue coordinates from the Wikipedia event pages, one venue merged within about 2 km). Count to rating: none 0, 1 gives 4, 2 gives 6, 3-4 gives 8, 5 or more gives 10. Anchors: 8 St Andrews & Fife and New York City, 4 Rome and Paris, 0 Algarve.'),
+  rate('scenicCourses', 'Scenic coastal and mountain courses', 'Number of courses within 1 km of the coast or on land at 1,000 m or higher (Open-Meteo elevation at the course centre), same count tiers as Links golf. Courses with a big drop but a lower start are not counted, and the coast is Natural Earth\'s 10 m line, so a 500 m cut would shift a few.'),
+  rate('resortCourses', 'Resort and stay-and-play courses', 'Number of full-size courses (40 ha or more, or 18 or more mapped greens) with a hotel, resort or lodge within 1 km (Overture Maps places), same count tiers as Links golf.'),
+  { key: 'courseKinds', label: 'Course kinds', type: 'multi', group: 'practical', options: [{ value: 'easy', label: 'Easy: short or 9-hole courses' }, { value: 'standard', label: 'Standard regulation courses' }, { value: 'championship', label: 'Championship courses' }], hint: 'Which kinds the place has: easy = under 40 ha or fewer than 18 greens, standard = regulation, championship = 90 ha or more, or a major or cup venue. Where the area is not mapped (much of Japan) the number of mapped greens is used. Question 1 reads it.' },
+  { key: 'teeTimeAccess', label: 'Tee-time access', type: 'choice', group: 'practical', options: [{ value: 'walkOn', label: 'Walk-on or a day ahead' }, { value: 'weeks', label: 'Book days to weeks ahead' }, { value: 'months', label: 'Months ahead for the famous courses' }], hint: 'How far ahead a visitor has to book the place\'s famous course, from the club\'s own booking rules. Only the six places with a researched famous course are filled; the rest are blank because no dataset exists. Question 3 reads it.' },
+  rate('thingsBeyondGolf', 'Things beyond golf', 'The average of the place\'s three highest scores in other interests (excluding golf and any N/A interest), so a golf trip has plenty else to do. Question 4 reads it.'),
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
+/**
+ * Mountain Biking (28 Oct 2026). Trails come from OpenStreetMap through the QLever planet service (mtb:scale, and mtb:scale:imba where mtb:scale is missing), measured inside the
+ * place's own area (same radii as Golf). Grades: 0-1 green, 2-3 intermediate, 4 black, 5-6 expert (imba 0-1 green, 2 intermediate, 3 black, 4-5 expert); a grade counts when at
+ * least 5 km is mapped. Where under 20 km of graded trail is mapped the trail columns stay blank, because thin mapping does not prove there are no trails.
+ * Full working: docs/evidence/mountain-biking-evidence.json.
+ */
+const MOUNTAIN_BIKING_FACTS: FactDef[] = [
+  { key: 'trailGrades', label: 'Trail grades', type: 'multi', group: 'trails', options: [{ value: 'green', label: 'Green: easy' }, { value: 'intermediate', label: 'Intermediate: blue and red' }, { value: 'black', label: 'Black: advanced' }, { value: 'expert', label: 'Expert: big features' }], hint: 'Grades with at least 5 km of trail mapped in the place\'s area (OpenStreetMap mtb:scale). Question 1 reads it.' },
+  rate('easyFlowTrails', 'Easy flow trails', 'Kilometres of green (mtb:scale 0-1) trail mapped in the area: under 20 km gives 2, 20-50 gives 4, 50-150 gives 6, 150-400 gives 8, over 400 gives 10. Grades are tagged more in some countries than others. Anchors: 10 Swiss Alps and Tuscany, 6 Whistler, 2 Queenstown.'),
+  rate('liftServedParks', 'Lift-served bike parks', 'Number of gondolas, chairlifts and cable cars open to bikes: those tagged for bikes on the map plus resort bike parks checked by hand on the resort\'s own page. None 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Blank where lifts are mapped but none is known to carry bikes. Anchors: 10 Swiss Alps, Dolomites and Chamonix, 4 Whistler, 0 Arches & Canyonlands.'),
+  rate('bikepackingRoutes', 'Bikepacking routes', 'Number of mountain-bike route relations of 150 km or more in the area (OpenStreetMap route=mtb): none 0, 1 gives 3, 2-3 gives 5, 4-6 gives 7, 7 or more gives 9.'),
+  rate('bikeRental', 'Bike rental', 'Number of bike rental businesses in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent or hire; bike-share docking stations removed): none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Question 2 reads it.'),
+  rate('eBikeRental', 'E-bike rental', 'Number of those rental businesses whose name or listing says e-bike, electric or pedelec, same tiers. Shops that rent e-bikes without saying so are not seen, so this can undercount. Question 2 reads it.'),
+  { key: 'dayLengths', label: 'Day lengths', type: 'multi', group: 'practical', options: [{ value: 'couple', label: 'A couple of hours' }, { value: 'half', label: 'Half a day' }, { value: 'full', label: 'Full days' }, { value: 'multi', label: 'Multi-day' }], hint: 'From the kilometres of graded trail mapped: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of network. Question 3 reads it.' },
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
+/**
+ * Camping & Backcountry (28 Oct 2026). Sites come from Overture Maps (campgrounds, RV parks, camp-site areas) and OpenStreetMap (tourism=camp_site), merged within about 300 m, inside
+ * the place's own area. Under 10 mapped sites the site columns stay blank (thin mapping). Wild camping law and dangerous wildlife were researched by hand from park-authority and
+ * government pages, one source per place, blank where no reliable source was found (docs/evidence/camping-law-and-wildlife-research.json). Full working: docs/evidence/camping-evidence.json.
+ */
+const CAMPING_FACTS: FactDef[] = [
+  rate('campgrounds', 'Campgrounds', 'Number of distinct campgrounds, caravan sites and camp sites in the area: under 20 gives 4, 20-39 gives 5, 40-79 gives 6, 80-149 gives 7, 150-299 gives 8, 300-599 gives 9, 600 or more gives 10. Blank under 10 sites. Anchors: 10 Taiwan, Cornwall and Vancouver Island, 8 Yellowstone, 4 Atacama.'),
+  rate('backcountry', 'Backcountry camping', 'Number of backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes): none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Blank where none is mapped, because mapping habit varies by country and a blank does not rule out walk-in camping.'),
+  rate('glamping', 'Glamping', 'Number of glamping-style places found by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd\'s hut) among campgrounds, cabins and lodges: none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Names in other languages are missed.'),
+  { key: 'wildCampingLaw', label: 'Wild camping law', type: 'choice', group: 'practical', options: [{ value: 'allowed', label: 'Allowed on most open land' }, { value: 'limited', label: 'Permit, zone or some land only' }, { value: 'not_allowed', label: 'Designated sites or landowner permission only' }], hint: 'Researched by hand from park-authority and government pages, one source per place in the Evidence column. Allowed = most open or public land can be camped on without a permit; limited = a permit, a zone, or only some kinds of land; not allowed = designated campsites or landowner permission only. Blank where no reliable source was found. The Free wild camping chip reads it.' },
+  rate('howRemote', 'How remote', 'How far the farthest-flung tenth of the mapped camp sites are from the nearest town or village of 1,000 people or more (GeoNames), straight-line: under 3 km gives 1, 3-8 gives 3, 8-15 gives 5, 15-30 gives 7, 30-60 gives 9, over 60 gives 10. Needs 10 or more mapped sites. Question 1 reads it.'),
+  { key: 'nightTemps', label: 'Night temperatures', type: 'choice', group: 'practical', options: [{ value: 'warm', label: 'Warm: 15 C or more' }, { value: 'cool', label: 'Cool: 5 to 15 C' }, { value: 'cold', label: 'Cold: 0 to 5 C' }, { value: 'freezing', label: 'Freezing: below 0 C' }], hint: 'The average overnight low across the (up to) four mildest of the place\'s best camping months, from Open-Meteo 2015-2024 daily minimums at the place\'s centre. The model\'s grid elevation can sit well above the valley campsites, so mountain places may read colder than their camps. Question 4 reads it.' },
+  { key: 'dangerousWildlife', label: 'Dangerous wildlife', type: 'choice', group: 'practical', options: [{ value: 'none', label: 'None that changes how you camp' }, { value: 'bearRules', label: 'Bears or big cats: food-storage rules' }, { value: 'bigGame', label: 'Lions, elephants, polar bears: camping is guarded or guided' }], hint: 'Researched by hand from park-authority pages, one source per place in the Evidence column. Only places with a park-authority page on camping wildlife are filled; the rest are blank. Question 3 reads it.' },
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -820,6 +874,9 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   traditionalCrafts: TRADITIONAL_CRAFTS_FACTS,
   themeParks: THEME_PARKS_FACTS,
   allInclusive: ALL_INCLUSIVE_FACTS,
+  golf: GOLF_FACTS,
+  mountainBiking: MOUNTAIN_BIKING_FACTS,
+  campingBackcountry: CAMPING_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

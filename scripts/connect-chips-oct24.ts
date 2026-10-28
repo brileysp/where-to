@@ -85,6 +85,17 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['allInclusive', 'adults-only', [{ column: 'adultsOnly' }]],
   ['allInclusive', 'family-resorts', [{ column: 'familyResorts' }]],
   ['allInclusive', 'luxury-all-inclusive', [{ column: 'luxuryAllInclusive' }]],
+  ['golf', 'links-golf', [{ column: 'linksGolf' }]],
+  ['golf', 'resort-courses', [{ column: 'resortCourses' }]],
+  ['golf', 'scenic-coastal-and-mountain-courses', [{ column: 'scenicCourses' }]],
+  ['golf', 'bucket-list-courses', [{ column: 'bucketListCourses' }]],
+  ['mountainBiking', 'lift-served-downhill-parks', [{ column: 'liftServedParks' }]],
+  ['mountainBiking', 'bikepacking', [{ column: 'bikepackingRoutes' }]],
+  ['mountainBiking', 'easy-flow-trails', [{ column: 'easyFlowTrails' }]],
+  ['campingBackcountry', 'glamping', [{ column: 'glamping' }]],
+  ['campingBackcountry', 'free-wild-camping-allowed', [{ column: 'wildCampingLaw', option: 'allowed' }]],
+  ['campingBackcountry', 'car-camping', [{ column: 'campgrounds' }]],
+  ['campingBackcountry', 'backpacking', [{ column: 'backcountry' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');

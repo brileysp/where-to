@@ -47,6 +47,7 @@ const LATE_NIGHTS = ['allNight', 'late', 'early'];
 const DRESS_CODE = ['casual', 'smart', 'strict'];
 const HAGGLING = ['fixed', 'some', 'expected'];
 const GEAR_RULES_ORDER = ['none', 'some', 'many'];
+const CAMP_NIGHTS = ['warm', 'cool', 'cold', 'freezing'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
 export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
@@ -219,6 +220,15 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'themeParks.q2': R(has('parkHotels', 'onsite'), has('parkHotels', 'onsite', 'nearby'), null),
   'themeParks.q3': R(null, atLeast(4, 'thrillRides'), atLeast(8, 'thrillRides')),
 
+  // ---- Golf, Mountain Biking, Camping & Backcountry ---- (28 Oct 2026; golf q2 walk-or-ride, golf q3 tee time (Tee-time access is filled for 6 of 182 places), camping q2 gear and camping q3 wildlife (Dangerous wildlife is filled for 18 of 94) stay unmapped until their columns are filled)
+  'golf.q1': R(has('courseKinds', 'easy', 'standard'), has('courseKinds', 'standard', 'championship'), has('courseKinds', 'championship')),
+  'golf.q4': R(range('golfCourses', { zeroBelow: 2, fullFrom: 10 }), null, atLeast(6, 'thingsBeyondGolf')),
+  'mountainBiking.q1': R(has('trailGrades', 'green'), has('trailGrades', 'intermediate'), has('trailGrades', 'black'), has('trailGrades', 'expert')),
+  'mountainBiking.q2': R(atLeast(4, 'bikeRental'), null, atLeast(3, 'eBikeRental')),
+  'mountainBiking.q3': R(has('dayLengths', 'couple', 'half', 'full', 'multi'), has('dayLengths', 'half', 'full', 'multi'), has('dayLengths', 'full', 'multi'), has('dayLengths', 'multi')),
+  'campingBackcountry.q1': R(atLeast(5, 'campgrounds'), atLeast(4, 'campgrounds'), atLeast(5, 'howRemote'), atLeast(8, 'howRemote')),
+  'campingBackcountry.q4': R(within('nightTemps', CAMP_NIGHTS, 'warm'), within('nightTemps', CAMP_NIGHTS, 'cool'), within('nightTemps', CAMP_NIGHTS, 'cold'), null),
+
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
   'surfing.q2': R(has('waveDirection', 'lefts', 'both'), has('waveDirection', 'rights', 'both'), null),
@@ -339,6 +349,13 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'themeParks.q1': 'Not enough parks for that long',
   'themeParks.q2': 'No hotel at the parks',
   'themeParks.q3': 'Fewer big rides than you want',
+  'golf.q1': 'Not the courses for your level',
+  'golf.q4': 'Not the golf you want',
+  'mountainBiking.q1': 'Not suited to your level',
+  'mountainBiking.q2': 'Hard to rent the bike you want',
+  'mountainBiking.q3': 'Not enough riding for that long',
+  'campingBackcountry.q1': 'Not the remoteness you want',
+  'campingBackcountry.q4': 'Colder than you want',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',
