@@ -99,13 +99,14 @@
   "backcountry": 4,
   "howRemote": 7,
   "nightTemps": "cool",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "90 distinct campgrounds, caravan sites and camp sites in the place's area (22 from Overture Maps places, 62 from OpenStreetMap, 6 mapped camp-site areas; duplicates within about 300 m merged). Gives 7 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "7 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Luna Glamping & Hotels, Birdglamping Aviturismo Los Arboles, Glamping El Color de Mis Rêves. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "6 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Camp 4100m, camp 4300m, Latas 4600m. Gives 4, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 90 mapped sites, the farthest-flung tenth are 24.5 km or more from the nearest town or village of 1,000 people or more (median 6.8 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Jun, Dec, from the place's camping score) is 10.3 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 2116 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): Parques Nacionales Naturales: camping only in zones set by each park's ecotourism plan (Chingaza, Los Nevados); some parks are closed to ecotourism. Source: https://www.parquesnacionales.gov.co/nuestros-parques/pnn-chingaza/",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -182,13 +183,14 @@
   "glamping": 2,
   "howRemote": 9,
   "nightTemps": "warm",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "42 distinct campgrounds, caravan sites and camp sites in the place's area (10 from Overture Maps places, 26 from OpenStreetMap, 6 mapped camp-site areas; duplicates within about 300 m merged). Gives 6 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "1 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Glamping Safari. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "Left blank: no backcountry camp site is mapped (OpenStreetMap). That is a mapping habit, not proof there are none.",
    "howRemote": "For the 42 mapped sites, the farthest-flung tenth are 42.9 km or more from the nearest town or village of 1,000 people or more (median 25.6 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 25.1 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 9 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): Tayrona: camping zones are delimited; fires only in authorized zones. Source: https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -231,13 +233,14 @@
   "backcountry": 2,
   "howRemote": 10,
   "nightTemps": "warm",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "125 distinct campgrounds, caravan sites and camp sites in the place's area (25 from Overture Maps places, 95 from OpenStreetMap, 5 mapped camp-site areas; duplicates within about 300 m merged). Gives 7 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "5 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Kenzan Mara Tented Camp, Siana Springs Tented Camp, andBeyond Kichwa Tembo Tented Camp. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "1 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Chui Campsite. Gives 2, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 125 mapped sites, the farthest-flung tenth are 63.6 km or more from the nearest town or village of 1,000 people or more (median 36.5 km; GeoNames). Gives 10 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Sep, Oct, from the place's camping score) is 15.5 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 1645 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): KWS parks: visitors must leave between 6 pm and 6 am unless camping overnight, and camp at public or special campsites. Maasai Mara is county-managed and was not verified. Source: https://kws.go.ke/faqs/",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -436,6 +439,7 @@
   "howRemote": 7,
   "nightTemps": "cool",
   "wildCampingLaw": "limited",
+  "dangerousWildlife": "bearRules",
   "evidence": {
    "campgrounds": "339 distinct campgrounds, caravan sites and camp sites in the place's area (208 from Overture Maps places, 118 from OpenStreetMap, 13 mapped camp-site areas; duplicates within about 300 m merged). Gives 9 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "9 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Stargazer Glamping, Creekhaven Rv Park And Glamping, Tennessee Teepee Cabin Rental. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
@@ -443,7 +447,7 @@
    "howRemote": "For the 339 mapped sites, the farthest-flung tenth are 22.7 km or more from the nearest town or village of 1,000 people or more (median 11.3 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Apr, May, Sep, Oct, from the place's camping score) is 8.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 1291 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): A permit and advance reservation are required for all backcountry camping; designated sites, 3 nights maximum. Source: https://www.nps.gov/grsm/planyourvisit/backcountry-camping.htm",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "bearRules (high confidence): Backpackers must hang all food and scented items on the bear cable system at each campsite or shelter; canisters not required. Source: https://www.nps.gov/grsm/planyourvisit/backcountry-camping.htm"
   }
  },
  "scottish-highlands-skye": {
@@ -601,13 +605,14 @@
   "backcountry": 8,
   "howRemote": 7,
   "nightTemps": "cool",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "192 distinct campgrounds, caravan sites and camp sites in the place's area (106 from Overture Maps places, 80 from OpenStreetMap, 6 mapped camp-site areas; duplicates within about 300 m merged). Gives 8 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "3 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Glamping Pucón, RIVER LODGE tree house retreat, Volcano Domes. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "11 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Lago Toro camp site, Laguna Blanca, Laguna Azul. Gives 8, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 192 mapped sites, the farthest-flung tenth are 28.4 km or more from the nearest town or village of 1,000 people or more (median 16.4 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 10.2 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 338 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): CONAF prohibits staying overnight, camping or lighting fires outside enabled or authorized places in its parks; private land not covered. Source: https://www.conaf.cl/parques-nacionales/nuestros-parques/uso-publico/",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -702,18 +707,20 @@
   "backcountry": 8,
   "howRemote": 7,
   "nightTemps": "cool",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "57 distinct campgrounds, caravan sites and camp sites in the place's area (6 from Overture Maps places, 47 from OpenStreetMap, 4 mapped camp-site areas; duplicates within about 300 m merged). Gives 6 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "1 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Patagonia Eco Domes. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "18 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Campamento Escaladores, La Playita, Camp. Bahía de Hornos. Gives 8, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 57 mapped sites, the farthest-flung tenth are 26.8 km or more from the nearest town or village of 1,000 people or more (median 10.8 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 6.3 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 406 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): Los Glaciares: camping in the park's enabled sites only (one free site, El Huala, and organized campgrounds); registration needed in winter. Source: https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/alojamiento",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
  "churchill": {
   "nightTemps": "cool",
+  "dangerousWildlife": "bigGame",
   "evidence": {
    "campgrounds": "Left blank: only 0 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
    "glamping": "Left blank: only 0 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
@@ -721,7 +728,7 @@
    "howRemote": "Left blank: only 0 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 7.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 10 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "bigGame (medium confidence): Parks Canada (Wapusk National Park, Churchill area): safety in polar bear country; firearms unlawful for visitors in national parks, hire a guide or bear monitor. Source: https://parks.canada.ca/pn-np/mb/wapusk/securite-safety/ours-bear"
   }
  },
  "acadia": {
@@ -781,13 +788,14 @@
   "backcountry": 4,
   "howRemote": 7,
   "nightTemps": "warm",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "174 distinct campgrounds, caravan sites and camp sites in the place's area (117 from Overture Maps places, 50 from OpenStreetMap, 7 mapped camp-site areas; duplicates within about 300 m merged). Gives 8 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "6 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Las Colinas Glamping, Glamping la Finca, Glamping Alto Los Leones. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "4 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Rafiki Lodge Camp Ground, Copete de Pepe, Glamping Alto Los Leones. Gives 4, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 174 mapped sites, the farthest-flung tenth are 17.5 km or more from the nearest town or village of 1,000 people or more (median 6.4 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 16.1 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 1161 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): SINAC: camping areas in the national parks (Corcovado: Sirena and San Pedrillo; Chirripó: Albergue Urán) by advance reservation only. Source: https://www.sinac.go.cr/EN-US/ac/acosa/pnc/Pages/default.aspx",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -829,13 +837,14 @@
   "backcountry": 10,
   "howRemote": 9,
   "nightTemps": "cool",
+  "wildCampingLaw": "limited",
   "evidence": {
    "campgrounds": "231 distinct campgrounds, caravan sites and camp sites in the place's area (77 from Overture Maps places, 116 from OpenStreetMap, 38 mapped camp-site areas; duplicates within about 300 m merged). Gives 8 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "7 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Zion Glamping Adventures, Yurt Overlook #6, Spruce Yurt. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "56 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Zion Scenic Byway Dispersed Camping, Swamp Canyon (Food Prep Only), Right Fork Swamp Canyon (Food Prep Only). Gives 10, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 231 mapped sites, the farthest-flung tenth are 38.0 km or more from the nearest town or village of 1,000 people or more (median 22.7 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 8.7 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 2668 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "limited (high confidence): Zion: a wilderness permit is required for all overnight backpacking trips. Source: https://www.nps.gov/zion/planyourvisit/backpackinginfo.htm",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -954,6 +963,7 @@
  "greenland": {
   "nightTemps": "cold",
   "wildCampingLaw": "allowed",
+  "dangerousWildlife": "bigGame",
   "evidence": {
    "campgrounds": "Left blank: only 8 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
    "glamping": "Left blank: only 8 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
@@ -961,7 +971,7 @@
    "howRemote": "Left blank: only 8 campground(s) mapped in the area, too few to rate; the real number is almost certainly higher (thin map data).",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, from the place's camping score) is 4.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 41 m grid elevation): cold (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "allowed (low confidence): Wild camping generally allowed outside populated areas except protected areas and historical sites. Source: single non-official source",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "bigGame (high confidence): Government of Greenland guidelines: in areas with frequent polar bear sightings carry a rifle of .30-06 or larger and keep a polar bear guard or warning system when camping. Source: https://visitgreenland.com/wp-content/uploads/2025/06/Final-Guidelines-for-encounters-with-polar-bears.pdf"
   }
  },
  "yellowstone": {
@@ -1166,13 +1176,14 @@
   "glamping": 3,
   "howRemote": 5,
   "nightTemps": "warm",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "28 distinct campgrounds, caravan sites and camp sites in the place's area (11 from Overture Maps places, 13 from OpenStreetMap, 4 mapped camp-site areas; duplicates within about 300 m merged). Gives 5 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "3 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Orange Kloof Tented Camp, Old Silvermine tented camp, Kommetjie tented camp. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "Left blank: no backcountry camp site is mapped (OpenStreetMap). That is a mapping habit, not proof there are none.",
    "howRemote": "For the 28 mapped sites, the farthest-flung tenth are 8.5 km or more from the nearest town or village of 1,000 people or more (median 3.5 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 16.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 24 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): SANParks: guests may only stay at a booked, recognised overnight facility; Table Mountain overnight trails are guided or in booked huts and tented camps. Source: https://www.sanparks.org/travel/plan/useful-information/rules-regulations",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -1199,13 +1210,14 @@
   "backcountry": 10,
   "howRemote": 7,
   "nightTemps": "cool",
+  "wildCampingLaw": "allowed",
   "evidence": {
    "campgrounds": "532 distinct campgrounds, caravan sites and camp sites in the place's area (320 from Overture Maps places, 143 from OpenStreetMap, 69 mapped camp-site areas; duplicates within about 300 m merged). Gives 9 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "3 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Bonnie Doon Glamping, Winter River Glampground, Quaint Glamping. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "72 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Overflow Campsite 26, Campsite 2, Campsite 25. Gives 10, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 532 mapped sites, the farthest-flung tenth are 17.4 km or more from the nearest town or village of 1,000 people or more (median 8.5 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 13.7 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 164 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "allowed (medium confidence): Green Mountain National Forest: dispersed camping allowed in most locations unless a closure order applies; 14 days in any 30; 200 ft from trails, roads and water. State and private land not covered. Source: https://www.fs.usda.gov/r09/gmfl/recreation/camping-cabins",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -1263,13 +1275,14 @@
   "backcountry": 10,
   "howRemote": 9,
   "nightTemps": "cool",
+  "wildCampingLaw": "limited",
   "evidence": {
    "campgrounds": "325 distinct campgrounds, caravan sites and camp sites in the place's area (63 from Overture Maps places, 232 from OpenStreetMap, 30 mapped camp-site areas; duplicates within about 300 m merged). Gives 9 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "0 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "28 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Huge Boulder Wild Camp, Wild Camp, Wild Camp. Gives 10, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 325 mapped sites, the farthest-flung tenth are 36.2 km or more from the nearest town or village of 1,000 people or more (median 23.5 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Mar, Apr, May, Oct, from the place's camping score) is 14.2 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 865 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "limited (low confidence): Wadi Rum: wild campsites without facilities exist but access to the reserve is through a guide and a local 4x4; Petra not found. Source: https://en.visitjordan.com/whattodo/eco-adventure",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },
@@ -1315,6 +1328,7 @@
   "howRemote": 9,
   "nightTemps": "cool",
   "wildCampingLaw": "limited",
+  "dangerousWildlife": "bearRules",
   "evidence": {
    "campgrounds": "70 distinct campgrounds, caravan sites and camp sites in the place's area (27 from Overture Maps places, 34 from OpenStreetMap, 9 mapped camp-site areas; duplicates within about 300 m merged). Gives 6 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "0 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
@@ -1322,7 +1336,7 @@
    "howRemote": "For the 70 mapped sites, the farthest-flung tenth are 33.9 km or more from the nearest town or village of 1,000 people or more (median 17.7 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 10.7 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 444 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): A free permit is required for all backcountry camping; camping without one is prohibited. Source: https://www.nps.gov/redw/planyourvisit/backcountrypermits.htm",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "bearRules (high confidence): Black bears: food in a locker, vehicle, bear-resistant container or hung 10 ft up; designated backcountry sites have lockers. Source: https://www.nps.gov/redw/learn/nature/bears-and-food.htm"
   }
  },
  "tanzania": {
@@ -1377,6 +1391,7 @@
   "howRemote": 9,
   "nightTemps": "cold",
   "wildCampingLaw": "limited",
+  "dangerousWildlife": "bearRules",
   "evidence": {
    "campgrounds": "275 distinct campgrounds, caravan sites and camp sites in the place's area (66 from Overture Maps places, 173 from OpenStreetMap, 36 mapped camp-site areas; duplicates within about 300 m merged). Gives 8 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "1 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Upper Montgomery Pass Yurt. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
@@ -1384,7 +1399,7 @@
    "howRemote": "For the 275 mapped sites, the farthest-flung tenth are 37.1 km or more from the nearest town or village of 1,000 people or more (median 18.8 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 4.1 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 2946 m grid elevation): cold (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): Overnight wilderness camping requires a Wilderness Permit (Wilderness Camping Guide). Source: https://www.nps.gov/romo/planyourvisit/wild_guide.htm",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "bearRules (high confidence): Bear canisters required for all wilderness overnights 1 Apr to 31 Oct below tree line; keep the canister 200 ft from camp. Source: https://www.nps.gov/romo/planyourvisit/wilderness-overnight-backpacking.htm"
   }
  },
  "faroe-islands": {
@@ -1424,6 +1439,7 @@
   "backcountry": 10,
   "howRemote": 10,
   "nightTemps": "cool",
+  "wildCampingLaw": "limited",
   "dangerousWildlife": "bearRules",
   "evidence": {
    "campgrounds": "166 distinct campgrounds, caravan sites and camp sites in the place's area (12 from Overture Maps places, 128 from OpenStreetMap, 26 mapped camp-site areas; duplicates within about 300 m merged). Gives 8 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
@@ -1431,7 +1447,7 @@
    "backcountry": "92 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Boston Basin Low Camp, Boston Basin High Camp, Hannegan Camp. Gives 10, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 166 mapped sites, the farthest-flung tenth are 75.2 km or more from the nearest town or village of 1,000 people or more (median 61.6 km; GeoNames). Gives 10 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 12.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 367 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "limited (high confidence): Permits required year round for all overnight stays in the backcountry; camping only at designated camps and cross-country zones, no dispersed camping. Source: https://www.nps.gov/noca/planyourvisit/permits.htm",
    "dangerousWildlife": "bearRules (high confidence): Approved canister required at 9 backcountry camps and 6 zones 1 Jun-15 Nov. Source: https://www.nps.gov/noca/planyourvisit/food-storage-requirements.htm"
   }
  },
@@ -1486,13 +1502,14 @@
   "backcountry": 10,
   "howRemote": 9,
   "nightTemps": "cool",
+  "wildCampingLaw": "not_allowed",
   "evidence": {
    "campgrounds": "130 distinct campgrounds, caravan sites and camp sites in the place's area (46 from Overture Maps places, 73 from OpenStreetMap, 11 mapped camp-site areas; duplicates within about 300 m merged). Gives 7 (under 20 -> 4, 20-39 -> 5, 40-79 -> 6, 80-149 -> 7, 150-299 -> 8, 300-599 -> 9, 600 or more -> 10).",
    "glamping": "1 glamping-style place(s) by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd's hut), e.g. Glamping Patagonia Inspira. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10). Names in other languages are missed, so this can undercount.",
    "backcountry": "32 backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes), e.g. Camping Libre, Los Cesares, Campamento Río Frias Superior. Gives 10, same tiers. How much is mapped differs by country, so a blank or low figure does not rule out walk-in camping.",
    "howRemote": "For the 130 mapped sites, the farthest-flung tenth are 40.2 km or more from the nearest town or village of 1,000 people or more (median 18.9 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 8.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 870 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
-   "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
+   "wildCampingLaw": "not allowed (medium confidence): National parks (Nahuel Huapi, Lanín): camp only where permitted; camping or fire outside enabled sites is fined. Source: https://www.argentina.gob.ar/noticias/recomendaciones-de-verano-para-visitar-los-parques-nacionales",
    "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
   }
  },

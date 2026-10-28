@@ -377,6 +377,78 @@
    "conf": "medium",
    "src": "https://parks.tas.gov.au/explore-our-parks/walls-of-jerusalem-national-park/walls-of-jerusalem-overnight-walker-camping",
    "note": "Walls of Jerusalem: overnight walkers must camp only at three designated sites, registration required; Overland Track: tent platforms or huts, 34 walkers a day. General bush-camping rules outside these walks were not found."
+  },
+  "vermont": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://www.fs.usda.gov/r09/gmfl/recreation/camping-cabins",
+   "note": "Green Mountain National Forest: dispersed camping allowed in most locations unless a closure order applies; 14 days in any 30; 200 ft from trails, roads and water. State and private land not covered."
+  },
+  "zion-bryce": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/zion/planyourvisit/backpackinginfo.htm",
+   "note": "Zion: a wilderness permit is required for all overnight backpacking trips."
+  },
+  "north-cascades": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/noca/planyourvisit/permits.htm",
+   "note": "Permits required year round for all overnight stays in the backcountry; camping only at designated camps and cross-country zones, no dispersed camping."
+  },
+  "el-chalten": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/alojamiento",
+   "note": "Los Glaciares: camping in the park's enabled sites only (one free site, El Huala, and organized campgrounds); registration needed in winter."
+  },
+  "argentine-lake-district": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.argentina.gob.ar/noticias/recomendaciones-de-verano-para-visitar-los-parques-nacionales",
+   "note": "National parks (Nahuel Huapi, Lanín): camp only where permitted; camping or fire outside enabled sites is fined."
+  },
+  "chilean-lake-district": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.conaf.cl/parques-nacionales/nuestros-parques/uso-publico/",
+   "note": "CONAF prohibits staying overnight, camping or lighting fires outside enabled or authorized places in its parks; private land not covered."
+  },
+  "cape-town": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.sanparks.org/travel/plan/useful-information/rules-regulations",
+   "note": "SANParks: guests may only stay at a booked, recognised overnight facility; Table Mountain overnight trails are guided or in booked huts and tented camps."
+  },
+  "kenya": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://kws.go.ke/faqs/",
+   "note": "KWS parks: visitors must leave between 6 pm and 6 am unless camping overnight, and camp at public or special campsites. Maasai Mara is county-managed and was not verified."
+  },
+  "costa-rica": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.sinac.go.cr/EN-US/ac/acosa/pnc/Pages/default.aspx",
+   "note": "SINAC: camping areas in the national parks (Corcovado: Sirena and San Pedrillo; Chirripó: Albergue Urán) by advance reservation only."
+  },
+  "colombian-andes": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-chingaza/",
+   "note": "Parques Nacionales Naturales: camping only in zones set by each park's ecotourism plan (Chingaza, Los Nevados); some parks are closed to ecotourism."
+  },
+  "colombian-caribbean": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
+   "note": "Tayrona: camping zones are delimited; fires only in authorized zones."
+  },
+  "jordan": {
+   "value": "limited",
+   "conf": "low",
+   "src": "https://en.visitjordan.com/whattodo/eco-adventure",
+   "note": "Wadi Rum: wild campsites without facilities exist but access to the reserve is through a guide and a local 4x4; Petra not found."
   }
  },
  "dangerousWildlife": {
@@ -487,6 +559,36 @@
    "conf": "low",
    "src": "https://www.sanparks.org/parks/kruger/useful-information/vital-information",
    "note": "Lions, elephants, leopards; camps fenced and stays only in booked camps."
+  },
+  "rocky-mountain": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/romo/planyourvisit/wilderness-overnight-backpacking.htm",
+   "note": "Bear canisters required for all wilderness overnights 1 Apr to 31 Oct below tree line; keep the canister 200 ft from camp."
+  },
+  "great-smoky-mountains": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/grsm/planyourvisit/backcountry-camping.htm",
+   "note": "Backpackers must hang all food and scented items on the bear cable system at each campsite or shelter; canisters not required."
+  },
+  "redwood": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/redw/learn/nature/bears-and-food.htm",
+   "note": "Black bears: food in a locker, vehicle, bear-resistant container or hung 10 ft up; designated backcountry sites have lockers."
+  },
+  "greenland": {
+   "value": "bigGame",
+   "conf": "high",
+   "src": "https://visitgreenland.com/wp-content/uploads/2025/06/Final-Guidelines-for-encounters-with-polar-bears.pdf",
+   "note": "Government of Greenland guidelines: in areas with frequent polar bear sightings carry a rifle of .30-06 or larger and keep a polar bear guard or warning system when camping."
+  },
+  "churchill": {
+   "value": "bigGame",
+   "conf": "medium",
+   "src": "https://parks.canada.ca/pn-np/mb/wapusk/securite-safety/ours-bear",
+   "note": "Parks Canada (Wapusk National Park, Churchill area): safety in polar bear country; firearms unlawful for visitors in national parks, hire a guide or bear monitor."
   }
  },
  "definitions": {
