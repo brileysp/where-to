@@ -734,14 +734,13 @@ describe('Camping & Backcountry questions', () => {
 describe('Horseback Riding questions', () => {
   const defs = factDefsFor('horsebackRiding');
   const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`horsebackRiding.${q}`], picked, defs, facts as never);
-  it('rider level: never ridden and beginner read the same level', () => {
+  it('rider level: three answers, the old never-ridden answer was merged into beginner', () => {
     expect(fit('q1', [0], { riderLevels: ['expert'] })).toBe(0);
     expect(fit('q1', [0], { riderLevels: ['beginner', 'confident'] })).toBe(1);
-    expect(fit('q1', [1], { riderLevels: ['beginner'] })).toBe(1);
-    expect(fit('q1', [2], { riderLevels: ['beginner'] })).toBe(0);
-    expect(fit('q1', [2], { riderLevels: ['expert'] })).toBe(1);
-    expect(fit('q1', [3], { riderLevels: ['confident'] })).toBe(0);
-    expect(fit('q1', [3], { riderLevels: ['beginner', 'expert'] })).toBe(1);
+    expect(fit('q1', [1], { riderLevels: ['beginner'] })).toBe(0);
+    expect(fit('q1', [1], { riderLevels: ['expert'] })).toBe(1);
+    expect(fit('q1', [2], { riderLevels: ['confident'] })).toBe(0);
+    expect(fit('q1', [2], { riderLevels: ['beginner', 'expert'] })).toBe(1);
   });
   it('trip length needs at least that much on offer', () => {
     expect(fit('q3', [0], { rideLengths: ['week'] })).toBe(1);
@@ -769,5 +768,40 @@ describe('Sailing questions', () => {
   });
   it('who sails, trip length and experience are left unmapped (charter data is too thin)', () => {
     for (const q of ['q1', 'q2', 'q4']) expect(QUESTION_FIT_RULES[`sailing.${q}`]).toBeUndefined();
+  });
+});
+
+describe('Kayaking & Rafting questions', () => {
+  const defs = factDefsFor('kayakingRafting');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`kayakingRafting.${q}`], picked, defs, facts as never);
+  it('how wild: gentle float needs calm water or class I-II; the harder answers need those classes', () => {
+    expect(fit('q1', [0], { calmWaterPaddling: 4 })).toBe(1);
+    expect(fit('q1', [0], { calmWaterPaddling: 2, whitewaterClasses: ['none'] })).toBeCloseTo(2 / 3, 5);
+    expect(fit('q1', [0], { calmWaterPaddling: 0, whitewaterClasses: ['none'] })).toBe(0);
+    expect(fit('q1', [0], { calmWaterPaddling: 0, whitewaterClasses: ['ii'] })).toBe(1);
+    expect(fit('q1', [1], { whitewaterClasses: ['iii'] })).toBe(1);
+    expect(fit('q1', [1], { whitewaterClasses: ['none'] })).toBe(0);
+    expect(fit('q1', [2], { whitewaterClasses: ['iii'] })).toBe(0);
+    expect(fit('q1', [2], { whitewaterClasses: ['iv'] })).toBe(1);
+    expect(fit('q1', [3], { whitewaterClasses: ['iv'] })).toBe(0);
+    expect(fit('q1', [3], { whitewaterClasses: ['iii', 'v'] })).toBe(1);
+  });
+  it('how cold: one step colder than you accept loses half, two steps lose all', () => {
+    expect(fit('q3', [0], { waterTemperature: 'warm' })).toBe(1);
+    expect(fit('q3', [0], { waterTemperature: 'cool' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [0], { waterTemperature: 'glacial' })).toBe(0);
+    expect(fit('q3', [1], { waterTemperature: 'cool' })).toBe(1);
+    expect(fit('q3', [1], { waterTemperature: 'glacial' })).toBeCloseTo(0.5, 5);
+    expect(fit('q3', [2], { waterTemperature: 'glacial' })).toBeNull();
+  });
+  it('experience: never paddled needs the never level, a little accepts never or little', () => {
+    expect(fit('q4', [0], { skillLevels: ['little', 'experienced'] })).toBe(0);
+    expect(fit('q4', [0], { skillLevels: ['never'] })).toBe(1);
+    expect(fit('q4', [1], { skillLevels: ['little'] })).toBe(1);
+    expect(fit('q4', [1], { skillLevels: ['experienced'] })).toBe(0);
+    expect(fit('q4', [2], { skillLevels: ['experienced'] })).toBeNull();
+  });
+  it('guided or self-guided (question 2) is left unmapped', () => {
+    expect(QUESTION_FIT_RULES['kayakingRafting.q2']).toBeUndefined();
   });
 });

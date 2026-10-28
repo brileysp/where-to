@@ -90,8 +90,9 @@
    "howRemote": "For the 45 mapped sites, the farthest-flung tenth are 32.2 km or more from the nearest town or village of 1,000 people or more (median 9.6 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Apr, May, Sep, Oct, from the place's camping score) is 15.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 458 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 255 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "colombian-andes": {
   "campgrounds": 7,
@@ -175,8 +176,9 @@
    "howRemote": "For the 36 mapped sites, the farthest-flung tenth are 20.8 km or more from the nearest town or village of 1,000 people or more (median 8.7 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 8.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 2480 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): All state and county camping is at designated campgrounds with a permit; Hawaii Volcanoes National Park has its own system. Source: https://dlnr.hawaii.gov/dsp/?p=177",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 1,428 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "colombian-caribbean": {
   "campgrounds": 6,
@@ -208,8 +210,9 @@
    "howRemote": "For the 36 mapped sites, the farthest-flung tenth are 6.3 km or more from the nearest town or village of 1,000 people or more (median 4.6 km; GeoNames). Gives 3 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jul, Aug, Sep, Oct, from the place's camping score) is 19.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 39 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): Wild camping forbidden; camping only at sites licensed by the forestry institute. Source: https://thisismadeiraisland.com/news/tourist-caught-illegally-camping-on-vereda-dos-balcoes-trail-in-madeira",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 143 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "zimbabwe": {
   "campgrounds": 6,
@@ -289,8 +292,9 @@
    "howRemote": "For the 38 mapped sites, the farthest-flung tenth are 72.3 km or more from the nearest town or village of 1,000 people or more (median 51.0 km; GeoNames). Gives 10 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 11.4 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 61 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): Fiordland: check DOC restricted areas; campsites and Great Walk huts by booking. Source: https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 445 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "denali-interior": {
   "nightTemps": "cool",
@@ -464,8 +468,9 @@
    "howRemote": "For the 140 mapped sites, the farthest-flung tenth are 42.7 km or more from the nearest town or village of 1,000 people or more (median 17.4 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 5.5 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 813 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "allowed (high confidence): Land Reform (Scotland) Act 2003 and the Scottish Outdoor Access Code allow responsible wild camping (not vehicles). Source: https://www.outdooraccess-scotland.scot/",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 12,514 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "dolomites": {
   "campgrounds": 9,
@@ -497,8 +502,9 @@
    "howRemote": "For the 437 mapped sites, the farthest-flung tenth are 11.3 km or more from the nearest town or village of 1,000 people or more (median 5.7 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 8.6 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 535 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (high confidence): No right to wild camp in England; tolerated in high fells with the landowner's tolerance, not a right. Source: https://en.wikipedia.org/wiki/Wild_camping",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 5,701 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "taiwan": {
   "campgrounds": 10,
@@ -562,8 +568,9 @@
    "howRemote": "For the 63 mapped sites, the farthest-flung tenth are 21.1 km or more from the nearest town or village of 1,000 people or more (median 12.8 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 4.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 52 m grid elevation): cold (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 1,916 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "aspen": {
   "campgrounds": 7,
@@ -879,8 +886,9 @@
    "howRemote": "For the 292 mapped sites, the farthest-flung tenth are 15.6 km or more from the nearest town or village of 1,000 people or more (median 5.0 km; GeoNames). Gives 7 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 15.3 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 96 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): Freedom camping allowed on public conservation land unless listed prohibited or restricted; council bylaws restrict it. Source: https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 650 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "chamonix": {
   "campgrounds": 8,
@@ -913,8 +921,9 @@
    "howRemote": "For the 168 mapped sites, the farthest-flung tenth are 10.0 km or more from the nearest town or village of 1,000 people or more (median 4.0 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (May, Jun, Sep, Oct, from the place's camping score) is 10.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 11 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): Most land is private and needs permission; county by-laws and park rules apply. Source: https://www.npws.ie/",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 13,591 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "marlborough-abel-tasman": {
   "campgrounds": 7,
@@ -929,8 +938,9 @@
    "howRemote": "For the 133 mapped sites, the farthest-flung tenth are 33.2 km or more from the nearest town or village of 1,000 people or more (median 16.9 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 12.1 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 58 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): Freedom camping allowed on public conservation land unless listed prohibited or restricted; Abel Tasman huts and campsites by booking. Source: https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 430 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "pantanal": {
   "nightTemps": "warm",
@@ -1036,8 +1046,9 @@
    "howRemote": "For the 26 mapped sites, the farthest-flung tenth are 13.4 km or more from the nearest town or village of 1,000 people or more (median 4.7 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 19.6 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 653 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): Public camping on Maui needs advance reservations or permits at designated sites (state parks, Haleakala National Park, County of Maui). Source: https://dlnr.hawaii.gov/dsp/?p=177",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 1,220 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "azores": {
   "campgrounds": 4,
@@ -1051,8 +1062,9 @@
    "howRemote": "For the 18 mapped sites, the farthest-flung tenth are 8.5 km or more from the nearest town or village of 1,000 people or more (median 2.1 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 20.9 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 0 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (low confidence): Camping only at designated campsites; wild camping generally only with approval (single secondary source). Source: https://www.wandernundmehr.at/faq/wo-darf-man-auf-madeira-campen",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 2,528 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "mongolia": {
   "campgrounds": 8,
@@ -1102,8 +1114,9 @@
    "howRemote": "For the 134 mapped sites, the farthest-flung tenth are 7.2 km or more from the nearest town or village of 1,000 people or more (median 3.8 km; GeoNames). Gives 3 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jul, Aug, Sep, Oct, from the place's camping score) is 21.9 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 0 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): Teide: camping not permitted anywhere in the park; bivouac above 2,500 m with permit; elsewhere only authorised camping zones. Source: https://tenerifeon.es/en/general-information/information-and-good-practice-in-nature/bivouacking-in-tenerife",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 221 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "iceland": {
   "campgrounds": 7,
@@ -1118,8 +1131,9 @@
    "howRemote": "For the 91 mapped sites, the farthest-flung tenth are 45.2 km or more from the nearest town or village of 1,000 people or more (median 16.0 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, from the place's camping score) is 7.8 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 0 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (high confidence): Small tents allowed one night on uncultivated land unless posted; in national parks and many protected areas only at designated sites; vehicles prohibited. Source: https://ust.is/english/visiting-iceland/travel-information/where-can-you-camp",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 1,072 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "upper-peninsula": {
   "campgrounds": 6,
@@ -1168,8 +1182,9 @@
    "howRemote": "For the 168 mapped sites, the farthest-flung tenth are 59.2 km or more from the nearest town or village of 1,000 people or more (median 36.8 km; GeoNames). Gives 9 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Feb, Mar, Dec, from the place's camping score) is 11.9 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 17 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "limited (medium confidence): Walls of Jerusalem: overnight walkers must camp only at three designated sites, registration required; Overland Track: tent platforms or huts, 34 walkers a day. General bush-camping rules outside these walks were not found. Source: https://parks.tas.gov.au/explore-our-parks/walls-of-jerusalem-national-park/walls-of-jerusalem-overnight-walker-camping",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 1,000 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "cape-town": {
   "campgrounds": 5,
@@ -1430,8 +1445,9 @@
    "howRemote": "For the 568 mapped sites, the farthest-flung tenth are 8.0 km or more from the nearest town or village of 1,000 people or more (median 3.4 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jun, Jul, Aug, Sep, from the place's camping score) is 5.9 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 973 m grid elevation): cool (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "not allowed (medium confidence): No right to wild camp in Wales; tolerated at high level, not a right. Source: https://en.wikipedia.org/wiki/Wild_camping",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
-  }
+   "dangerousWildlife": "none (medium confidence): no record of any of those animals inside the place's area, while 8,878 records of carnivores (the survey-effort check) show the area is surveyed. A record count cannot prove an absence, and snakes, cassowaries and other local hazards are not in the check. Source: GBIF occurrence search (https://api.gbif.org/v1/occurrence/search), human and machine observations 2000-2026, 12 taxa that change how you camp: bears (Ursidae), lion, leopard, tiger, jaguar, snow leopard, puma, crocodilians, elephants, hippopotamus, Cape buffalo and rhinoceroses"
+  },
+  "dangerousWildlife": "none"
  },
  "north-cascades": {
   "campgrounds": 8,
@@ -1525,7 +1541,7 @@
    "howRemote": "For the 18 mapped sites, the farthest-flung tenth are 11.3 km or more from the nearest town or village of 1,000 people or more (median 6.4 km; GeoNames). Gives 5 (under 3 km -> 1, 3-8 -> 3, 8-15 -> 5, 15-30 -> 7, 30-60 -> 9, over 60 -> 10). This is straight-line distance to a settlement, not road distance.",
    "nightTemps": "Average overnight low across the (up to) four mildest of the best camping months (Jan, Apr, Nov, Dec, from the place's camping score) is 25.0 C (Open-Meteo 2015-2024 daily minimums at the place's centre, 6 m grid elevation): warm (warm 15 C or more, cool 5-15, cold 0-5, freezing below 0).",
    "wildCampingLaw": "Left blank: no reliable official source found for this place's rules.",
-   "dangerousWildlife": "Left blank: no park-authority page on camping wildlife found for this place."
+   "dangerousWildlife": "Left blank: GBIF holds no record of the dangerous animals inside the area, but saltwater crocodiles are known on Palawan, so a record count is not trusted here. Needs a park-authority page."
   }
  }
 }

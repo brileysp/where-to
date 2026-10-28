@@ -1,0 +1,3913 @@
+{
+ "grandcanyon": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Colorado River through the Grand Canyon",
+    "cls": "IV",
+    "outfitters": "16 outfitters authorised by Grand Canyon National Park"
+   }
+  ],
+  "multi_operators": [
+   "16 commercial concessioners authorised by Grand Canyon National Park (trips of 1 to 25 days)"
+  ],
+  "urls": [
+   "https://www.nps.gov/grca/planyourvisit/permitsandreservations.htm",
+   "https://www.oars.com/blog/how-to-raft-the-grand-canyon"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "marlborough-abel-tasman": {
+  "calm": 4,
+  "lakes": 0,
+  "paddle": 4,
+  "paddle_sea": 4,
+  "coast_km": 320,
+  "sea": 6,
+  "median_wave_m": 0.52,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Buller Gorge (Murchison, Westport)",
+    "cls": "IV",
+    "outfitters": "Wild Rivers Rafting, Ultimate Descents, Rivers (rivers.co.nz)"
+   }
+  ],
+  "multi_operators": [
+   "Rivers (3-day Buller rafting and glamping, October to April)"
+  ],
+  "urls": [
+   "https://www.nelsontasman.nz/explore/things-to-do/adventure-and-adrenaline/white-water-rafting-and-jet-boating/",
+   "https://rivers.co.nz/expeditions/3-day-buller"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "zimbabwe": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 7,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Zambezi below Victoria Falls (Batoka Gorge)",
+    "cls": "V",
+    "outfitters": "Safpar, Shearwater, Zambezi Rafting, Bundu Adventures, Wild Horizons"
+   }
+  ],
+  "multi_operators": [
+   "Safpar (3-night, 3.5-day trip)",
+   "other Victoria Falls outfitters offering trips up to 5 days (afktravel and Magpie guides)"
+  ],
+  "urls": [
+   "https://safpar.com/activity/white-water-rafting/",
+   "https://afktravel.com/90633/travel-tip-of-the-day-how-to-raft-the-zambezi-at-victoria-falls/",
+   "https://wildhorizons.co.za/experiences/white-water-rafting/"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "zambia": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "nepal": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 10,
+  "multi": 7,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Trisuli",
+    "cls": "IV",
+    "outfitters": "Third Rock Adventures, HiDMC, Hop Nepal"
+   },
+   {
+    "river": "Bhote Koshi",
+    "cls": "V",
+    "outfitters": "Third Rock Adventures, HiDMC"
+   },
+   {
+    "river": "Seti",
+    "cls": "III",
+    "outfitters": "HiDMC, Hop Nepal"
+   },
+   {
+    "river": "Karnali",
+    "cls": "V",
+    "outfitters": "Wild Yak Expeditions, HiDMC"
+   },
+   {
+    "river": "Sun Koshi",
+    "cls": "V",
+    "outfitters": "Third Rock Adventures, HiDMC"
+   },
+   {
+    "river": "Kali Gandaki",
+    "cls": "III",
+    "outfitters": "HiDMC"
+   }
+  ],
+  "multi_operators": [
+   "Sun Koshi, 8 to 10 days (HiDMC guide)",
+   "Karnali wilderness expeditions (Wild Yak Expeditions)",
+   "Seti and Kali Gandaki multi-day trips (Hop Nepal guide)"
+  ],
+  "urls": [
+   "https://www.hidmc.com/blog-posts/nepal-white-water-rafting-guide---best-rivers-2025",
+   "https://www.thirdrockadventures.com/blog/white-water-rafting-in-nepal",
+   "https://hopnepal.com/blog/river-rafting-in-nepal",
+   "https://wildyakexpeditions.com/?p=30054"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "uganda": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "White Nile at Jinja (Bujagali to Itanda)",
+    "cls": "V",
+    "outfitters": "Adrift (since 1996) and other Jinja operators"
+   }
+  ],
+  "multi_operators": [
+   "Early Trails Expedition (2-day whitewater trip from Jinja; a tour packager)"
+  ],
+  "urls": [
+   "https://www.audleytravel.com/ie/uganda/things-to-do/whitewater-rafting-at-jinja",
+   "https://www.earlytrailsexpedition.com/tour/2-days-whitewater-rafting-jinja/"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "costa-rica": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 352,
+  "sea": 4,
+  "median_wave_m": 1.31,
+  "whitewater": 8,
+  "multi": 7,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Pacuare River",
+    "cls": "IV",
+    "outfitters": "Pacuare Lodge, Rios Tropicales, Exploradores Outdoors"
+   },
+   {
+    "river": "Sarapiqui River",
+    "cls": "IV",
+    "outfitters": "Sarapiqui Outdoor Center, Pura Vida Rafting"
+   }
+  ],
+  "multi_operators": [
+   "Pacuare Lodge (rafting-to-lodge, lodges reachable only by boat)",
+   "Rios Tropicales (two to four day trips)",
+   "Exploradores Outdoors (2-day Pacuare trip with a night at Pacuare River Lodge)"
+  ],
+  "urls": [
+   "https://www.pacuarelodge.com/rafting",
+   "https://exploradoresoutdoorscr.rezdy.com/235062/pacuare-2-day-trip",
+   "https://costarica.org/rivers/pacuare/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "ecuadorian-andes": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Quijos River (Baeza)",
+    "cls": "IV",
+    "outfitters": "Barefoot Expeditions"
+   },
+   {
+    "river": "Jondachi-Hollin (Tena)",
+    "cls": "IV",
+    "outfitters": "Barefoot Expeditions"
+   }
+  ],
+  "multi_operators": [
+   "Barefoot Expeditions (3-day Jatunyacu, Misahualli and Jondachi trip; Upano multi-day from Macas)"
+  ],
+  "urls": [
+   "https://www.barefootexpeditions.com/tour-category/rafting/",
+   "https://www.andeantrails.co.uk/activity-destination/rafting-kayaking-ecuador/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "queenstown": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Shotover River (Skippers Canyon)",
+    "cls": "V",
+    "outfitters": "Challenge Rafting"
+   },
+   {
+    "river": "Kawarau River",
+    "cls": "III",
+    "outfitters": "RealNZ (Jet2Raft), Challenge Rafting"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.realnz.com/en/blog/jet-boating-in-queenstown/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "north-island": {
+  "calm": 8,
+  "lakes": 8,
+  "paddle": 7,
+  "paddle_sea": 6,
+  "coast_km": 1476,
+  "sea": 7,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Kaituna River (Okere Falls, Rotorua)",
+    "cls": "V",
+    "outfitters": "Rotorua Rafting, Kaitiaki Adventures, Kaituna Cascades"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.newzealand.com.au/tours/kaituna-river-grade-5-white-water-rafting",
+   "https://rotoruanz.com/things-to-do/eco-tours/raft-the-kaituna-river"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "bali": {
+  "calm": 6,
+  "lakes": 4,
+  "paddle": 3,
+  "paddle_sea": 2,
+  "coast_km": 732,
+  "sea": 5,
+  "median_wave_m": 1.68,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Ayung River",
+    "cls": "III",
+    "outfitters": "operators listed on indonesia.travel and Ocean Earth Travels"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://indonesia.travel/uk/en/travel-ideas/5-reasons-travelers-love-white-water-rafting-at-ayung-river-in-ubud",
+   "https://www.oceanearthtravels.com/tour-packages/rafting-ayung-river-ubud"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "colombian-andes": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Suarez River (San Gil)",
+    "cls": "V",
+    "outfitters": "Colombia Rafting Expeditions, Cacique Xtremo, Exploradores Colombia"
+   },
+   {
+    "river": "Fonce River (San Gil)",
+    "cls": "III",
+    "outfitters": "Exploradores Colombia"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://exploradorescolombia.rezdy.com/337425/suarez-river-rafting-class-v",
+   "https://www.frommers.com/destinations/san-gil/best-outdoor-adventures/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "provence": {
+  "calm": 8,
+  "lakes": 1,
+  "paddle": 11,
+  "paddle_sea": 3,
+  "coast_km": 194,
+  "sea": 6,
+  "median_wave_m": 0.76,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Gorges du Verdon",
+    "cls": "III",
+    "outfitters": "Aboard Rafting, Buena Vista Rafting Verdon"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.manawa.com/es/articles/top-5-rivers-in-france-for-hydrospeed"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "belize": {
+  "calm": 10,
+  "lakes": 21,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 370,
+  "sea": 4,
+  "median_wave_m": 0.5,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "kerala": {
+  "calm": 10,
+  "lakes": 29,
+  "paddle": 2,
+  "paddle_sea": 1,
+  "coast_km": 507,
+  "sea": 6,
+  "median_wave_m": 0.61,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "puerto-rico": {
+  "calm": 8,
+  "lakes": 12,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 530,
+  "sea": 5,
+  "median_wave_m": 0.89,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "southeast-alaska": {
+  "calm": 8,
+  "lakes": 11,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 1093,
+  "sea": 5,
+  "median_wave_m": 0.06,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "botswana": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "los-cabos": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 137,
+  "sea": 3,
+  "median_wave_m": 1.28,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "milford-sound-fiordland": {
+  "calm": 6,
+  "lakes": 9,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 152,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "vancouver-island": {
+  "calm": 10,
+  "lakes": 21,
+  "paddle": 10,
+  "paddle_sea": 9,
+  "coast_km": 1997,
+  "sea": 8,
+  "median_wave_m": 0.53,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "fjords": {
+  "calm": 10,
+  "lakes": 67,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 607,
+  "sea": 5,
+  "median_wave_m": 0.02,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Strandaelva and Raundalselva (Voss)",
+    "cls": "IV",
+    "outfitters": "Voss Active"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://visitvoss.no/en/class-4-white-water-rafting-voss-active",
+   "https://www.fjordnorway.com/en/see-and-do/white-water-rafting-class-4"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "panama": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 757,
+  "sea": 5,
+  "median_wave_m": 0.39,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Chiriqui Viejo (Boquete)",
+    "cls": "III",
+    "outfitters": "Boquete Outdoor Adventures"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.aaa.com/tripcanvas/thing-to-do/river-rafting-on-the-chiriqui-viejo-river-2-person-minimum-53688P2",
+   "https://bestregardsfromfar.com/2016/03/03/white-water-rafting-chiriqui-panama/"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "guatemala": {
+  "calm": 6,
+  "lakes": 7,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 89,
+  "sea": 3,
+  "median_wave_m": 1.15,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Cahabon River (Lanquin)",
+    "cls": "IV",
+    "outfitters": "tours from Lanquin; no outfitter named in the results"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://mayanwhitewater.com/rivers/guatemala/cahabon-semuc.html",
+   "https://tropicanahostel.com/exploring-cahabon-river-guatemalas-adventure-paradise/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "thailand": {
+  "calm": 6,
+  "lakes": 0,
+  "paddle": 8,
+  "paddle_sea": 5,
+  "coast_km": 420,
+  "sea": 7,
+  "median_wave_m": 0.35,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "turks-caicos": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 480,
+  "sea": 5,
+  "median_wave_m": 1.34,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "monterey-big-sur": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 162,
+  "sea": 2,
+  "median_wave_m": 2.19,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "big-island": {
+  "calm": 3,
+  "lakes": 0,
+  "paddle": 3,
+  "paddle_sea": 3,
+  "coast_km": 462,
+  "sea": 5,
+  "median_wave_m": 1.62,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "fiji": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 655,
+  "sea": 5,
+  "median_wave_m": 0.31,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Upper Navua Gorge",
+    "cls": "III",
+    "outfitters": "Rivers Fiji (the only operator)"
+   },
+   {
+    "river": "Lower Navua",
+    "cls": "II",
+    "outfitters": "Rivers Fiji"
+   }
+  ],
+  "multi_operators": [
+   "Rivers Fiji (some sources describe a two-day Upper Navua trip)"
+  ],
+  "urls": [
+   "https://www.oars.com/?p=46122",
+   "https://www.traveller.com.au/fijis-bestkept-secret-rafting-down-the-upper-navua-river-through-viti-levu-island-ggvz9t"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "charleston-savannah": {
+  "calm": 4,
+  "lakes": 0,
+  "paddle": 4,
+  "paddle_sea": 1,
+  "coast_km": 612,
+  "sea": 6,
+  "median_wave_m": 0.68,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "lake-district": {
+  "calm": 8,
+  "lakes": 10,
+  "paddle": 7,
+  "paddle_sea": 0,
+  "coast_km": 165,
+  "sea": 4,
+  "median_wave_m": 0.7,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "palau": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 242,
+  "sea": 4,
+  "median_wave_m": 1.4,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "chilean-lake-district": {
+  "calm": 8,
+  "lakes": 14,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Upper Trancura (Pucon)",
+    "cls": "IV",
+    "outfitters": "Nomades and other Pucon operators"
+   },
+   {
+    "river": "Lower Trancura (Pucon)",
+    "cls": "III",
+    "outfitters": "Nomades and other Pucon operators"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://en.wikipedia.org/wiki/Trancura_River",
+   "https://www.nomades.com/en/pucon/trancura-bajo-whitewater-rafting-id185"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "vietnam": {
+  "calm": 8,
+  "lakes": 20,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 445,
+  "sea": 5,
+  "median_wave_m": 0.73,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "lofoten": {
+  "calm": 10,
+  "lakes": 104,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 2977,
+  "sea": 5,
+  "median_wave_m": 0.66,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "arches-canyonlands": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Cataract Canyon (Colorado River)",
+    "cls": "V",
+    "outfitters": "outfitters licensed for Canyonlands; NPS lists guided half-day to week-long trips"
+   },
+   {
+    "river": "Westwater Canyon",
+    "cls": "IV",
+    "outfitters": "BLM permit river"
+   }
+  ],
+  "multi_operators": [
+   "outfitters licensed by Canyonlands National Park (NPS lists trips up to a week); Cataract Canyon is 3 days guided"
+  ],
+  "urls": [
+   "https://www.nps.gov/thingstodo/boating-in-canyonlands.htm",
+   "https://www.recreation.gov/permits/621748"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "mallorca": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 358,
+  "sea": 5,
+  "median_wave_m": 0.46,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "amalfi": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 219,
+  "sea": 5,
+  "median_wave_m": 0.26,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "okinawa": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 397,
+  "sea": 4,
+  "median_wave_m": 1.04,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "chiang-mai": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Mae Taeng River (Kuet Chang)",
+    "cls": "IV",
+    "outfitters": "operators on Magpie and Trazy"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.trazy.com/experience/detail/chiang-mai-rafting-mae-taeng-river",
+   "https://www.lovethailand.org/travel/en/1-Chiang-Mai/16014-Mae-Taeng-River-Rafting.html"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "cape-cod-islands": {
+  "calm": 6,
+  "lakes": 7,
+  "paddle": 3,
+  "paddle_sea": 3,
+  "coast_km": 652,
+  "sea": 7,
+  "median_wave_m": 0.72,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "sardinia": {
+  "calm": 8,
+  "lakes": 15,
+  "paddle": 3,
+  "paddle_sea": 3,
+  "coast_km": 545,
+  "sea": 7,
+  "median_wave_m": 0.64,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "hokkaido": {
+  "calm": 6,
+  "lakes": 9,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 486,
+  "sea": 5,
+  "median_wave_m": 0.43,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Shiribetsu River (Niseko)",
+    "cls": "III",
+    "outfitters": "Niseko Adventure Centre, Hanazono Niseko Resort"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://hanazononiseko.com/en/summer/activities/rafting"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "maui": {
+  "calm": 3,
+  "lakes": 0,
+  "paddle": 3,
+  "paddle_sea": 3,
+  "coast_km": 514,
+  "sea": 7,
+  "median_wave_m": 0.7,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "bahamas": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 586,
+  "sea": 5,
+  "median_wave_m": 0.82,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "borabora": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 214,
+  "sea": 2,
+  "median_wave_m": 1.73,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "copenhagen": {
+  "calm": 10,
+  "lakes": 6,
+  "paddle": 19,
+  "paddle_sea": 10,
+  "coast_km": 244,
+  "sea": 7,
+  "median_wave_m": 0.35,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "canaries": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 398,
+  "sea": 5,
+  "median_wave_m": 1.22,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "iceland": {
+  "calm": 10,
+  "lakes": 25,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 901,
+  "sea": 5,
+  "median_wave_m": 0.84,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Hvita (Gullfoss Canyon)",
+    "cls": "II",
+    "outfitters": "Arctic Adventures"
+   },
+   {
+    "river": "Austari-Jokulsa, the East glacial river",
+    "cls": "IV",
+    "outfitters": "Viking Rafting, Bakkaflot"
+   },
+   {
+    "river": "Vestari-Jokulsa, the West glacial river",
+    "cls": "II",
+    "outfitters": "Viking Rafting, Bakkaflot"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://guidetoiceland.is/travel-info/river-rafting-in-iceland",
+   "https://adventures.is/iceland/day-tours/rafting/",
+   "https://www.northiceland.is/en/what-to-see-do/activities/river-rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": true
+ },
+ "tasmania": {
+  "calm": 8,
+  "lakes": 15,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 955,
+  "sea": 5,
+  "median_wave_m": 0.38,
+  "whitewater": 7,
+  "multi": 10,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Franklin River",
+    "cls": "IV",
+    "outfitters": "Franklin River Rafting, Water by Nature, Tasmanian Expeditions, World Expeditions"
+   }
+  ],
+  "multi_operators": [
+   "Franklin River Rafting (9-day and 11-day expeditions)",
+   "Water by Nature (6 or 7 day Upper Franklin)",
+   "Tasmanian Expeditions",
+   "World Expeditions (8 days rafting)"
+  ],
+  "urls": [
+   "https://worldexpeditions.com/Australia/Raft-Canoe-Kayak/Franklin-River-and-Frenchmans-Cap",
+   "https://www.discovertasmania.com.au/what-to-do/outdoors-and-adventure/rafting"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "cape-town": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 128,
+  "sea": 2,
+  "median_wave_m": 2.2,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "nicaragua": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 197,
+  "sea": 4,
+  "median_wave_m": 1.08,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "algarve": {
+  "calm": 6,
+  "lakes": 5,
+  "paddle": 3,
+  "paddle_sea": 3,
+  "coast_km": 210,
+  "sea": 6,
+  "median_wave_m": 0.48,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "snowdonia": {
+  "calm": 6,
+  "lakes": 6,
+  "paddle": 2,
+  "paddle_sea": 1,
+  "coast_km": 272,
+  "sea": 5,
+  "median_wave_m": 0.6,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Tryweryn (Bala)",
+    "cls": "IV",
+    "outfitters": "National White Water Centre"
+   },
+   {
+    "river": "Dee (Llangollen)",
+    "cls": "IV",
+    "outfitters": "Whitewater Active, Ty Nant Outdoors"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.nationalwhitewatercentre.co.uk/whitewater-rafting-faqs",
+   "https://wales.org/white-water-rafting-in-wales/"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "peru": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 10,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Urubamba River",
+    "cls": "IV",
+    "outfitters": "Amazonas Explorer, Apumayo, Eric Adventures"
+   },
+   {
+    "river": "Apurimac River",
+    "cls": "V",
+    "outfitters": "Amazonas Explorer, Apumayo, Eric Adventures"
+   }
+  ],
+  "multi_operators": [
+   "Amazonas Explorer (multi-day Apurimac and Urubamba)",
+   "Apumayo (regular Apurimac trips)",
+   "Eric Adventures (regular Apurimac trips)",
+   "Sierra Rios (10-18 day Urubamba expedition)"
+  ],
+  "urls": [
+   "https://www.tribes.co.uk/experiences/white-water-rafting-in-peru/",
+   "https://www.theonlyperuguide.com/peru-guide/adventure-activities/white-water-rafting/multi-day-rafting-tours/",
+   "https://sierrarios.org/GuidedTrips/RaftTripInfo_Urubamba2.html"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "rivieramaya": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 230,
+  "sea": 4,
+  "median_wave_m": 0.71,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "sydney": {
+  "calm": 8,
+  "lakes": 1,
+  "paddle": 11,
+  "paddle_sea": 4,
+  "coast_km": 157,
+  "sea": 6,
+  "median_wave_m": 1.27,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "palawan": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 533,
+  "sea": 5,
+  "median_wave_m": 0.78,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "amsterdam": {
+  "calm": 10,
+  "lakes": 21,
+  "paddle": 31,
+  "paddle_sea": 0,
+  "coast_km": 56,
+  "sea": 3,
+  "median_wave_m": 0.83,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "everglades": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 223,
+  "sea": 4,
+  "median_wave_m": 0.2,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "peruvian-amazon": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "croatia": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 536,
+  "sea": 6,
+  "median_wave_m": 0.26,
+  "whitewater": 4,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Cetina River (Omis)",
+    "cls": "II",
+    "outfitters": "Croatia Rafting Omis, Rafting Pinta, Rafting Pirate"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.manawa.com/en-GB/activity/croatia/omis/rafting/rafting-adventure-on-the-cetina-river-near-omis/17559",
+   "https://www.checkyeti.com/en/d/963/6846"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "lapland": {
+  "calm": 10,
+  "lakes": 69,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "great-smoky-mountains": {
+  "calm": 4,
+  "lakes": 1,
+  "paddle": 5,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Nantahala River",
+    "cls": "III",
+    "outfitters": "Nantahala Outdoor Center, Carolina Outfitters"
+   },
+   {
+    "river": "Upper Pigeon River (Gatlinburg)",
+    "cls": "IV",
+    "outfitters": "Nantahala Outdoor Center"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://noc.com/wp-content/uploads/2026/02/NOC_SERaftingBrochure_2026.pdf",
+   "https://www.margaritavilleresorts.com/margaritaville-resort-gatlinburg/destination-guide/activities/whitewater-rafting"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "scottish-highlands-skye": {
+  "calm": 10,
+  "lakes": 26,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 463,
+  "sea": 5,
+  "median_wave_m": 0.14,
+  "whitewater": 9,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "River Findhorn",
+    "cls": "IV",
+    "outfitters": "Active Outdoor Pursuits"
+   },
+   {
+    "river": "River Tay (Aberfeldy)",
+    "cls": "III",
+    "outfitters": "Active Outdoor Pursuits, Splash"
+   },
+   {
+    "river": "River Spey",
+    "cls": "II",
+    "outfitters": "Active Outdoor Pursuits"
+   },
+   {
+    "river": "River Garry (Fort William)",
+    "cls": "III",
+    "outfitters": "operators on Manawa"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.activeoutdoorpursuits.com/activities/white-water-rafting/",
+   "https://www.visitscotland.com/things-to-do/outdoor-activities/watersports/white-water-rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "antarctica": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 313,
+  "sea": 4,
+  "median_wave_m": 0.4,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "aspen": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Slaughterhouse Canyon, Roaring Fork River",
+    "cls": "IV",
+    "outfitters": "Aspen Whitewater Rafting, Blazing Adventures"
+   },
+   {
+    "river": "Upper Roaring Fork (Woody Creek, Toothache)",
+    "cls": "III",
+    "outfitters": "Elk Mountain Expeditions"
+   },
+   {
+    "river": "Shoshone and Glenwood Canyon, Colorado River",
+    "cls": "IV",
+    "outfitters": ""
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.americanwhitewater.org/content/River/view/river-detail/2138/main"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "torres-del-paine": {
+  "calm": 8,
+  "lakes": 14,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "banff": {
+  "calm": 8,
+  "lakes": 15,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Kicking Horse River",
+    "cls": "IV",
+    "outfitters": "Hydra River Guides"
+   },
+   {
+    "river": "Athabasca River",
+    "cls": "II",
+    "outfitters": "Jasper Rafting Adventures, Maligne Adventures"
+   },
+   {
+    "river": "Sunwapta River",
+    "cls": "III",
+    "outfitters": "Maligne Adventures"
+   },
+   {
+    "river": "Fraser River",
+    "cls": "III",
+    "outfitters": "Maligne Adventures"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.todocanada.ca/places-to-go-guided-whitewater-rafting-in-alberta/amp/",
+   "https://www.jasper.travel/directory/maligne-rafting-adventures/"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "chicago": {
+  "calm": 6,
+  "lakes": 3,
+  "paddle": 6,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "acadia": {
+  "calm": 8,
+  "lakes": 10,
+  "paddle": 3,
+  "paddle_sea": 1,
+  "coast_km": 451,
+  "sea": 6,
+  "median_wave_m": 0.66,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "guilin-yangshuo": {
+  "calm": 6,
+  "lakes": 8,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "bend-crater-lake": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Deschutes River, Big Eddy (Bend and Sunriver)",
+    "cls": "III",
+    "outfitters": "Ouzel Outfitters, River Drifters, Sun Country Tours"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://visitbend.com/journal/deschutes-river-rafting-ouzel-outfitters/",
+   "https://visitcentraloregon.com/things-to-do/activities/summer/white-water-rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "kyrgyzstan": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Chu River (Bishkek)",
+    "cls": "III",
+    "outfitters": "Kyrgyz Guided Tours"
+   },
+   {
+    "river": "Chon-Kemin",
+    "cls": "III",
+    "outfitters": "OrexCA"
+   },
+   {
+    "river": "Kekemeren",
+    "cls": "V",
+    "outfitters": "outfitters with multi-day programmes"
+   }
+  ],
+  "multi_operators": [
+   "an outfitter offering multi-day Kekemeren programmes (Nomadsland page)"
+  ],
+  "urls": [
+   "https://too.kg/en/rafting-in-kyrgyzstan/",
+   "https://blueprint.nomadsland.travel/en/pages/ride-rapids-kyrgyzstans-thrilling-waterways",
+   "https://orexca.com/kyrgyzstan/tours/chon-kemin-rafting-tour.htm"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "chamonix": {
+  "calm": 4,
+  "lakes": 3,
+  "paddle": 3,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Arve (Chamonix)",
+    "cls": "III",
+    "outfitters": "SessionRaft, Mont Blanc Rafting"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.manawa.com/en-GB/search-by-sport-and-spot/water/rafting/chamonix-mont-blanc/122-1182-1891",
+   "https://vvanat.fr/blog/rafting-chamonix-mont-blanc/"
+  ],
+  "water_temperature": "glacial",
+  "glacial": true
+ },
+ "ireland": {
+  "calm": 8,
+  "lakes": 12,
+  "paddle": 8,
+  "paddle_sea": 1,
+  "coast_km": 308,
+  "sea": 5,
+  "median_wave_m": 0.78,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "River Liffey (Dublin)",
+    "cls": "?",
+    "outfitters": "Rafting.ie"
+   },
+   {
+    "river": "River Barrow",
+    "cls": "?",
+    "outfitters": "Go-With-The-Flow River Adventures"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.discoverireland.ie/activities-adventure/rafting-ie/78741",
+   "https://carlowtourism.com/outdoor-activities/go-with-the-flow-river-adventures/"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "whistler": {
+  "calm": 8,
+  "lakes": 12,
+  "paddle": 5,
+  "paddle_sea": 3,
+  "coast_km": 291,
+  "sea": 6,
+  "median_wave_m": 0.32,
+  "whitewater": 9,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Elaho River",
+    "cls": "IV",
+    "outfitters": "Canadian Outback Rafting"
+   },
+   {
+    "river": "Squamish River",
+    "cls": "III",
+    "outfitters": "Canadian Outback Rafting"
+   },
+   {
+    "river": "Cheakamus River",
+    "cls": "III",
+    "outfitters": "Canadian Outback Rafting"
+   },
+   {
+    "river": "Green River",
+    "cls": "III",
+    "outfitters": "Wedge Rafting, The Adventure Group"
+   }
+  ],
+  "multi_operators": [
+   "a 2-day Elaho trip (class III and IV) is listed (Squamish Whitewater listing)"
+  ],
+  "urls": [
+   "https://www.exploresquamish.com/explore/whitewater-rafting",
+   "https://britishcolumbia.com/things-to-do-and-see/recreation/vancouver-coast-mountains/whistler-sea-to-sky/river-whitewater-rafting/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "azores": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 266,
+  "sea": 2,
+  "median_wave_m": 1.82,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "upper-peninsula": {
+  "calm": 8,
+  "lakes": 18,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "nova-scotia": {
+  "calm": 10,
+  "lakes": 119,
+  "paddle": 6,
+  "paddle_sea": 4,
+  "coast_km": 860,
+  "sea": 7,
+  "median_wave_m": 1.34,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [
+   "https://www.shubenacadiecanal.ca/rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "texas-hill-country": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "galapagos": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 529,
+  "sea": 5,
+  "median_wave_m": 1.12,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "swissalps": {
+  "calm": 8,
+  "lakes": 6,
+  "paddle": 8,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 9,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Lutschine (Interlaken)",
+    "cls": "IV",
+    "outfitters": "Outdoor Switzerland AG, Valrafting"
+   },
+   {
+    "river": "Vorderrhein, Rhine Gorge (Ilanz)",
+    "cls": "III",
+    "outfitters": "Swiss River Adventures"
+   },
+   {
+    "river": "Vispa (Zermatt)",
+    "cls": "III",
+    "outfitters": "Valrafting"
+   },
+   {
+    "river": "Saane (Gstaad)",
+    "cls": "III",
+    "outfitters": "Saanen operators listed on swissactivities"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://shop.interlaken.ch/en/products/river-rafting-luetschine",
+   "https://switzerlanding.com/rafting/",
+   "https://www.swissactivities.com/en-ch/bern-region/bernese-oberland/interlaken/rafting/"
+  ],
+  "water_temperature": "glacial",
+  "glacial": true
+ },
+ "vermont": {
+  "calm": 10,
+  "lakes": 43,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "West River",
+    "cls": "III",
+    "outfitters": "Crab Apple Whitewater, Berkshire Whitewater"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://northeastexplorer.com/whitewater-rafting-northeast-guide/",
+   "https://www.outdoors.org/?p=820"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "borneo": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 431,
+  "sea": 5,
+  "median_wave_m": 0.34,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Padas River (Tenom, Sabah)",
+    "cls": "IV",
+    "outfitters": "Riverbug (Traverse Tours), Borneo Eco Tours, Amazing Borneo, Sticky Rice Travel"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://sabahtourism.com/destination/padas-river-white-water-rafting/",
+   "https://www.amazingborneo.com/index.php/package/white-water-rafting-padas-grade-3-4"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "glacier-waterton": {
+  "calm": 8,
+  "lakes": 17,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Middle Fork of the Flathead (lower)",
+    "cls": "III",
+    "outfitters": "Glacier Raft Company, Wild River Adventures"
+   },
+   {
+    "river": "Upper Middle Fork of the Flathead",
+    "cls": "IV",
+    "outfitters": "Glacier Raft Company (the only company permitted)"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.glacierparkcollection.com/activities/glacier-raft-co/faqs/",
+   "https://www.americanwhitewater.org/content/River/view/river-detail/3775/main"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "rocky-mountain": {
+  "calm": 6,
+  "lakes": 7,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Cache la Poudre River",
+    "cls": "IV",
+    "outfitters": "Rocky Mountain Adventures, Rapid Transit Rafting, A Wanderlust Adventure"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://estes-park.com/listings/rocky-mountain-adventures/",
+   "https://rapidtransitrafting.rezdy.com/250342/cache-la-poudre-river-half-day-rafting-trip"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "faroe-islands": {
+  "calm": 4,
+  "lakes": 3,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 733,
+  "sea": 6,
+  "median_wave_m": 1.12,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "cornwall": {
+  "calm": 4,
+  "lakes": 1,
+  "paddle": 3,
+  "paddle_sea": 2,
+  "coast_km": 337,
+  "sea": 6,
+  "median_wave_m": 1.1,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "argentine-lake-district": {
+  "calm": 8,
+  "lakes": 14,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Manso River (Bariloche)",
+    "cls": "IV",
+    "outfitters": "Bariloche operators listed on Magpie and Civitatis"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://barilocheturismo.gob.ar/en/rafting",
+   "https://magpie.travel/things-to-do/manso-river-rafting-adventure/4c11fe3e-0048-4676-ae55-9c94c9b43cf3"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "mauritius": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 186,
+  "sea": 2,
+  "median_wave_m": 2.52,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "luangprabang": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Nam Ou (whitewater kayak day trips)",
+    "cls": "?",
+    "outfitters": "Tiger Trail Travel, Laos Adventures, Discover Laos"
+   }
+  ],
+  "multi_operators": [
+   "Laos Adventures (8-day Nam Ou kayaking and camping, Muang Khua to Nong Khiaw)"
+  ],
+  "urls": [
+   "https://discoverlaos.today/tour/1-day-nam-ou-river-whitewater-kayaking-explorer",
+   "https://internal.laos-adventures.com/?p=503"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "bhutan": {
+  "calm": 8,
+  "lakes": 12,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Pho Chhu (Punakha)",
+    "cls": "IV",
+    "outfitters": "HiDMC, MyBhutan"
+   },
+   {
+    "river": "Mo Chhu (Punakha)",
+    "cls": "IV",
+    "outfitters": "Truly Bhutan Rafting Service, HiDMC"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.whitewaterguidebook.com/bhutan",
+   "https://trulybhutan.com/bhutan-tour-by-theme/bhutan-river-adventures",
+   "https://mybhutan.com/explorer/activities/pho-chhu-white-water-rafting-and-kayaking"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "olympic": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 27,
+  "sea": 2,
+  "median_wave_m": 0.4,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "rajaampat": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 1154,
+  "sea": 5,
+  "median_wave_m": 0.22,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "colombian-caribbean": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 267,
+  "sea": 4,
+  "median_wave_m": 1.46,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "madeira": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 188,
+  "sea": 3,
+  "median_wave_m": 1.6,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "berlin": {
+  "calm": 10,
+  "lakes": 20,
+  "paddle": 34,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "barbados": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 90,
+  "sea": 3,
+  "median_wave_m": 1.3,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "komodo": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 712,
+  "sea": 5,
+  "median_wave_m": 0.24,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "denali-interior": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Nenana River canyon (Healy)",
+    "cls": "IV",
+    "outfitters": "Denali Raft Adventures, New Wave Adventures, Nenana Raft Adventures"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.americanwhitewater.org/content/River/view/river-detail/39/main",
+   "https://www.travelalaska.com/denali-national-park/adventure/kayaking-rafting-water-sports/denali-raft-adventures-inc"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "buenosaires": {
+  "calm": 3,
+  "lakes": 0,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 76,
+  "sea": 3,
+  "median_wave_m": 0.48,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "ladakh": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 7,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Zanskar River (Chilling to Nimmoo)",
+    "cls": "IV",
+    "outfitters": "Aquaterra Adventures, Team4Adventure"
+   },
+   {
+    "river": "Indus River (below Nimmoo)",
+    "cls": "III",
+    "outfitters": "Waterbynature, Aquaterra Adventures"
+   }
+  ],
+  "multi_operators": [
+   "Aquaterra Adventures (9 to 12 day Zanskar expedition)",
+   "Team4Adventure (Zanskar rafting expedition)",
+   "Waterbynature (Zanskar river rafting)"
+  ],
+  "urls": [
+   "https://aquaterra.in/zanskar-river-rafting-expedition-ladakh/",
+   "https://team4adventure.com/zanskar-rafting-expedition",
+   "https://www.waterbynature.com/india/zanskar-river-rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "srilanka": {
+  "calm": 10,
+  "lakes": 58,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 108,
+  "sea": 3,
+  "median_wave_m": 0.96,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Kelani River (Kitulgala)",
+    "cls": "III",
+    "outfitters": "Rafting Club Kitulgala, Rafting Team 39"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.hidmc.com/blog-posts/white-water-rafting-in-kitulgala",
+   "https://theabroadguide.com/?p=831663"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "taiwan": {
+  "calm": 6,
+  "lakes": 7,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 329,
+  "sea": 3,
+  "median_wave_m": 1.58,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Xiuguluan River (Ruisui to Changhong Bridge)",
+    "cls": "?",
+    "outfitters": "operators on Klook and KKday; licensed operators listed by the East Coast National Scenic Area"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.klook.com/activity/696-hsiukuluan-river-rafting-hualien/",
+   "https://en.wikipedia.org/wiki/Xiuguluan_River"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "hongkong": {
+  "calm": 8,
+  "lakes": 5,
+  "paddle": 6,
+  "paddle_sea": 6,
+  "coast_km": 500,
+  "sea": 7,
+  "median_wave_m": 0.64,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "yosemite": {
+  "calm": 6,
+  "lakes": 7,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Merced River below El Portal",
+    "cls": "IV",
+    "outfitters": "Zephyr Whitewater Expeditions, OARS, Sierra Mac River Trips"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.yosemite.com/things-to-do/adventure-activities/zephyr-whitewater-expeditions/",
+   "https://www.oars.com/before-you-go/merced-river-rafting"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "tierra-del-fuego": {
+  "calm": 6,
+  "lakes": 8,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 657,
+  "sea": 5,
+  "median_wave_m": 0.18,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": null,
+  "glacial": false
+ },
+ "sicily": {
+  "calm": 6,
+  "lakes": 8,
+  "paddle": 2,
+  "paddle_sea": 2,
+  "coast_km": 391,
+  "sea": 6,
+  "median_wave_m": 0.27,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "prague": {
+  "calm": 8,
+  "lakes": 1,
+  "paddle": 10,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "svalbard": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 269,
+  "sea": 4,
+  "median_wave_m": 0.24,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "pantanal": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "greenland": {
+  "calm": 8,
+  "lakes": 12,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 493,
+  "sea": 6,
+  "median_wave_m": 0.8,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "nice-riviera": {
+  "calm": 6,
+  "lakes": 1,
+  "paddle": 7,
+  "paddle_sea": 3,
+  "coast_km": 150,
+  "sea": 6,
+  "median_wave_m": 0.36,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "maldives": {
+  "calm": 4,
+  "lakes": 0,
+  "paddle": 4,
+  "paddle_sea": 2,
+  "coast_km": 107,
+  "sea": 5,
+  "median_wave_m": 0.78,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "seychelles": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 216,
+  "sea": 4,
+  "median_wave_m": 1.18,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "quebec-city": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 2,
+  "paddle_sea": 2,
+  "coast_km": 567,
+  "sea": 7,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Lachine Rapids (Montreal)",
+    "cls": "V",
+    "outfitters": "Rafting Montreal, Club Raft"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.mtl.org/fr/quoi-faire/activites/rafting-montreal",
+   "https://www.lonelyplanet.com/points-of-interest/rafting-montreal/1106378",
+   "https://www.americanwhitewater.org/content/River/view/river-detail/3958/main"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "punta-cana": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 218,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Yaque del Norte (Jarabacoa)",
+    "cls": "III",
+    "outfitters": "Rancho Baiguate, Jaraventura"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.civitatis.com/en/jarabacoa/rafting-yaque-norte-river"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "venice": {
+  "calm": 4,
+  "lakes": 0,
+  "paddle": 4,
+  "paddle_sea": 2,
+  "coast_km": 221,
+  "sea": 6,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "santorini": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 714,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "jamaica": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 525,
+  "sea": 6,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "aruba": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 314,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "mendoza": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Mendoza River (Potrerillos)",
+    "cls": "III",
+    "outfitters": "Potrerillos Explorer Rafting, Argentina Rafting"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.civitatis.com/en/mendoza/mendoza-river-rafting",
+   "https://magpie.travel/things-to-do/mendoza-river-rafting-adventure/2bf0a907-430e-44ed-aa92-92ee0c281665"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "gbr": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 174,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Barron River (Cairns)",
+    "cls": "III",
+    "outfitters": "Raging Thunder Adventures and other Cairns operators"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://tropicalnorthqueensland.org.au/listing/product/raging-thunder-adventures/",
+   "https://www.airnewzealand.co.nz/activity-deals/cairns-port-douglas/activity/barron-river-rafting-excludes-$30pp-pay-on-board-levy/4555"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "london": {
+  "calm": 10,
+  "lakes": 8,
+  "paddle": 15,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "dubai": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 100,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "havana": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 73,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "chiapas": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 8,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Rio Lacanja",
+    "cls": "IV",
+    "outfitters": "Sierra Rios, tours from Palenque and San Cristobal"
+   },
+   {
+    "river": "Rio Usumacinta",
+    "cls": "III",
+    "outfitters": "Sierra Rios"
+   }
+  ],
+  "multi_operators": [
+   "Sierra Rios (7-day Lacanja class III-IV; Usumacinta expedition from Palenque)"
+  ],
+  "urls": [
+   "https://sierrarios.org/GuidedTrips/RaftTripInfo_Lacanja.html",
+   "https://www.sierrarios.org/GuidedTrips/RaftTripInfo_Usumacinta.html"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "basque-country": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 163,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "bordeaux": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 79,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "rwanda": {
+  "calm": 10,
+  "lakes": 37,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "black-forest": {
+  "calm": 6,
+  "lakes": 2,
+  "paddle": 8,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [
+   "https://www.visit-bw.com/en/tips-and-stories/5-highlights-in-the-kinzigtal-valley",
+   "https://en.wikipedia.org/wiki/Kinzig_(Rhine)"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "nyc": {
+  "calm": 8,
+  "lakes": 2,
+  "paddle": 9,
+  "paddle_sea": 6,
+  "coast_km": 474,
+  "sea": 7,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "el-chalten": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Rio de las Vueltas",
+    "cls": "III",
+    "outfitters": "Comarka Rafting and Kayak, Fitz Roy Rafting"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://elchalten.com/v4/en/comarka-rafting-de-las-vueltas-river-el-chalten.php",
+   "https://www.interpatagonia.com/elchalten/rafting-rio-de-las-vueltas.html"
+  ],
+  "water_temperature": "glacial",
+  "glacial": true
+ },
+ "churchill": {
+  "calm": 6,
+  "lakes": 9,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 183,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "seoul": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 79,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "edinburgh": {
+  "calm": 4,
+  "lakes": 3,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 145,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "budapest": {
+  "calm": 8,
+  "lakes": 1,
+  "paddle": 15,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "rio": {
+  "calm": 6,
+  "lakes": 2,
+  "paddle": 5,
+  "paddle_sea": 4,
+  "coast_km": 173,
+  "sea": 6,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "napa": {
+  "calm": 6,
+  "lakes": 6,
+  "paddle": 3,
+  "paddle_sea": 1,
+  "coast_km": 221,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "egypt": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "new-orleans": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 113,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "vienna": {
+  "calm": 6,
+  "lakes": 0,
+  "paddle": 8,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "yellowstone": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Yellowstone River, Gardiner run and Yankee Jim Canyon",
+    "cls": "III",
+    "outfitters": "Yellowstone Raft Company, Paradise Adventure Company, Wild West Rafting"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://visitmt.com/listing/yellowstone-raft-company-2962",
+   "https://www.visitgardinermt.com/directory-item/wild-west-rafting/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "lisbon": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 255,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "douro-valley-porto": {
+  "calm": 10,
+  "lakes": 13,
+  "paddle": 11,
+  "paddle_sea": 3,
+  "coast_km": 201,
+  "sea": 6,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "belfast-giants-causeway": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 63,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "bavaria-munich": {
+  "calm": 10,
+  "lakes": 49,
+  "paddle": 29,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 4,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Loisach (Wolfratshausen)",
+    "cls": "II",
+    "outfitters": "Flossfahrt and Isarfloss Angermeier operators"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://munich.travel/en/topics/excursions/river-rafting-isar",
+   "https://www.manawa.com/en-GB/search-by-sport-and-spot/water/rafting/lechtal/122-1182-2956"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "hudson-valley": {
+  "calm": 10,
+  "lakes": 35,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 39,
+  "sea": 2,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "singapore": {
+  "calm": 10,
+  "lakes": 24,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 1253,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "redwood": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 85,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Smith River",
+    "cls": "III",
+    "outfitters": "Redwood Rides"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.c-w-r.com/rivers/smith.html",
+   "https://redwoodparksconservancy.org/ranger-led-kayak-tours/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "north-cascades": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 6,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Skagit River (Goodell Creek to Sauk River)",
+    "cls": "III",
+    "outfitters": "Blue Sky Outfitters, Action Rafting, Osprey Rafting, River Recreation"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://seattlemag.com/travel-outdoors/washingtons-best-rafting-rivers/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "papua-new-guinea": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 303,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "puglia": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 2,
+  "paddle_sea": 2,
+  "coast_km": 227,
+  "sea": 6,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "barcelona": {
+  "calm": 2,
+  "lakes": 0,
+  "paddle": 1,
+  "paddle_sea": 1,
+  "coast_km": 66,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "ethiopia": {
+  "calm": 6,
+  "lakes": 9,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Omo River",
+    "cls": "?",
+    "outfitters": "Remote River Expeditions"
+   }
+  ],
+  "multi_operators": [
+   "Remote River Expeditions (14-day upper Omo trip)"
+  ],
+  "urls": [
+   "https://www.remoterivers.com/en/docs/ethiopia-omo-river-trip.php",
+   "https://en.wikipedia.org/wiki/Omo_River"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "athens": {
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 247,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "istanbul": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 181,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "morocco": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Ahansal River (Ouzoud, High Atlas)",
+    "cls": "III",
+    "outfitters": "Water by Nature, Morocco Rafting, Naturally Morocco"
+   },
+   {
+    "river": "Ourika River",
+    "cls": "?",
+    "outfitters": "Morocco Rafting"
+   }
+  ],
+  "multi_operators": [
+   "Water by Nature (8-day Ahansal trip, class III)"
+  ],
+  "urls": [
+   "https://www.waterbynature.com/morocco/hidden-morocco-rafting.html",
+   "https://www.naturallymorocco.co.uk/experiences/48-whitewater-rafting/",
+   "https://afktravel.com/111418/how-to-go-rafting-in-the-atlas-mountains/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "andalucia": {
+  "calm": 8,
+  "lakes": 13,
+  "paddle": 3,
+  "paddle_sea": 0,
+  "coast_km": 24,
+  "sea": 2,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Genil River (Benameji to Palenciana, Cuevas Bajas)",
+    "cls": "III",
+    "outfitters": "Sulayr Aventura, Salta Rios"
+   },
+   {
+    "river": "Guadalfeo River (Orgiva)",
+    "cls": "?",
+    "outfitters": "Sulayr Aventura"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.andalucia.org/en/las-gabias-sports-sulayr-aventura",
+   "https://andalucia.org/en/white-water-rafting"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "madagascar": {
+  "calm": 4,
+  "lakes": 5,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "badlands-black-hills": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "st-andrews-fife": {
+  "calm": 4,
+  "lakes": 3,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 339,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "namibia": {
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 4,
+  "multi": 7,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Orange River on the South Africa-Namibia border (Ai-Ais, Richtersveld)",
+    "cls": "II",
+    "outfitters": "Felix Unite, Orange River Rafting, Umkulu Adventures (South African operators)"
+   }
+  ],
+  "multi_operators": [
+   "Felix Unite",
+   "Orange River Rafting",
+   "Umkulu Adventures"
+  ],
+  "urls": [
+   "https://africanoverlandtours.com/blog/the-orange-river/",
+   "https://afktravel.com/69726/rolling-river-orange-river-rafting-trip/"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "sequoia-kings-canyon": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "pakistan": {
+  "calm": 10,
+  "lakes": 22,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 4,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Indus River, Skardu to Gilgit (Rondu Gorge)",
+    "cls": "?",
+    "outfitters": "Apricot Tours (kayak and canoe expedition), Hunza Guides Pakistan"
+   }
+  ],
+  "multi_operators": [
+   "Apricot Tours (7 to 9 day Skardu to Gilgit kayak expedition)"
+  ],
+  "urls": [
+   "https://www.apricottours.pk/tours/indus-kayak-and-canoe-expedition/",
+   "https://hunzaguidespakistan.com/?p=1214"
+  ],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "tuscany": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 20,
+  "sea": 2,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "mexicocity": {
+  "calm": 3,
+  "lakes": 3,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "mongolia": {
+  "calm": 2,
+  "lakes": 1,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "paris": {
+  "calm": 8,
+  "lakes": 1,
+  "paddle": 14,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "ghana": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 215,
+  "sea": 4,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "tbilisi-caucasus": {
+  "calm": 6,
+  "lakes": 6,
+  "paddle": 1,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 4,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Pshavi Aragvi",
+    "cls": "II",
+    "outfitters": "Georgian Holidays, Georgia Insight tours"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.georgianholidays.com/tour/adventure-and-trekking-tours/rafting-and-adventure-park-tour",
+   "https://www.georgia-insight.eu/print-reise/rafting-aragwi?pdf=1623"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "bangkok": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 55,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
+ },
+ "tanzania": {
+  "calm": 3,
+  "lakes": 2,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "dolomites": {
+  "calm": 6,
+  "lakes": 4,
+  "paddle": 4,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Noce River (Val di Sole)",
+    "cls": "IV",
+    "outfitters": "Ursus Adventures, TrentinoWild, Extreme Waves Val di Sole"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://www.trentino.com/en/leisure-activities/rafting/rafting-in-the-val-di-sole",
+   "https://www.visittrentino.info/en/articles/summer-mountain-holidays/rafting-val-di-sole"
+  ],
+  "water_temperature": "glacial",
+  "glacial": false
+ },
+ "falklands": {
+  "calm": 0,
+  "lakes": 0,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 823,
+  "sea": 5,
+  "median_wave_m": null,
+  "whitewater": 0,
+  "multi": 0,
+  "type": "zero",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "rioja": {
+  "calm": 4,
+  "lakes": 6,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "champagne": {
+  "calm": 3,
+  "lakes": 0,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "piedmont": {
+  "calm": 4,
+  "lakes": 0,
+  "paddle": 4,
+  "paddle_sea": 0,
+  "coast_km": 29,
+  "sea": 2,
+  "median_wave_m": null,
+  "whitewater": 7,
+  "multi": 0,
+  "type": "researched",
+  "rivers": [
+   {
+    "river": "Sesia River (Balmuccia to Varallo)",
+    "cls": "IV",
+    "outfitters": "Checkyeti base in Vocca, Accadueo, Freedome, Monrosa Canoe and Rafting Center"
+   }
+  ],
+  "multi_operators": [],
+  "urls": [
+   "https://freedome.it/en/rafting/river-sesia/",
+   "https://www.checkyeti.com/en/d/926/7655"
+  ],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "cotswolds": {
+  "calm": 8,
+  "lakes": 2,
+  "paddle": 10,
+  "paddle_sea": 0,
+  "coast_km": 54,
+  "sea": 3,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "glacial",
+  "glacial": false
+ }
+}

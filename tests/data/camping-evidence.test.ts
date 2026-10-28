@@ -68,3 +68,20 @@ describe('Camping evidence', () => {
     for (const [place, want] of Object.entries(law)) expect(evidence[place].wildCampingLaw, place).toBe(want);
   });
 });
+
+describe('Camping wildlife: none from GBIF records', () => {
+  const gbif = JSON.parse(readFileSync(join(root, 'docs/evidence/camping-wildlife-gbif-records.json'), 'utf8')) as Record<string, { total: number; coverage_carnivores: number }>;
+  it('every place set to none by records has zero records of the 12 taxa and 100 or more carnivore records', () => {
+    for (const [place, row] of Object.entries(evidence)) {
+      if (row.dangerousWildlife !== 'none') continue;
+      expect(research.dangerousWildlife[place]?.src, place).toBe('https://api.gbif.org/v1/occurrence/search');
+      expect(gbif[place].total, place).toBe(0);
+      expect(gbif[place].coverage_carnivores, place).toBeGreaterThanOrEqual(100);
+      expect(row.evidence.dangerousWildlife, place).toContain('Source: GBIF');
+    }
+  });
+  it('Palawan stays blank because saltwater crocodiles are known there', () => {
+    expect(draft['palawan'].dangerousWildlife).toBeUndefined();
+    expect(evidence['palawan'].evidence.dangerousWildlife).toContain('saltwater crocodiles');
+  });
+});
