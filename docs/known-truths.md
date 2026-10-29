@@ -2,7 +2,7 @@
 
 Checked 2026-10-29. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
-**52 truths: 50 hold, 0 fail, 2 pending.** Pending means we know it does not hold yet and what will close it.
+**52 truths: 51 hold, 0 fail, 1 pending.** Pending means we know it does not hold yet and what will close it.
 
 ## Matching
 
@@ -35,7 +35,7 @@ Checked 2026-10-29. Each line is something that must always be true of Where To?
 | holds | C08: Every question's column rule has exactly one entry per answer, so a reworded or reordered answer list cannot silently shift the checks. |  |
 | holds | C09: No question lets a traveler pick more answers than it has. |  |
 | holds | C10: Every link between a chip and a question joins a chip and a question of the same interest that both exist. |  |
-| pending | C11: No question can be stranded: every question that chips open has at least one live chip that opens it. | Many chips are drafts waiting on columns (127 of 180 have no measure). Closes as the chip measures audit is built. |
+| holds | C11: No question can be stranded: every question that chips open has at least one live chip that opens it. |  |
 | holds | C12: Every question that is checked against place columns has a short reason-chip message (40 characters or less). |  |
 | holds | C13: Every question's column rule reads columns that really exist for its interest. |  |
 | holds | C14: No answer is checked against a rating or choice column that is mostly blank (at least 70% of the interest's places have a value). |  |

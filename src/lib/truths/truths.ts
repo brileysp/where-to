@@ -172,7 +172,7 @@ export const TRUTHS: Truth[] = [
       for (const q of questionsWaitingOnDrafts(qs, ctx.chips.filter((c) => c.interestKey === ik).map((c) => ({ key: c.chipKey, live: c.status === 'live' })))) bad.push(`${ik} ${q.key}`);
     }
     return noneOf(bad, 'questions waiting only on draft chips');
-  }, pending: 'Many chips are drafts waiting on columns (127 of 180 have no measure). Closes as the chip measures audit is built.' },
+  } },
   { id: 'C12', area: 'Chips and questions', says: 'Every question that is checked against place columns has a short reason-chip message (40 characters or less).', check: (ctx) => noneOf(ctx.questions.filter((q) => q.fitRule && (q.missMessage.trim() === '' || q.missMessage.length > 40)).map((q) => KEY(q.interestKey, q.questionKey)), 'questions with a missing or long message') },
   { id: 'C13', area: 'Chips and questions', says: 'Every question\'s column rule reads columns that really exist for its interest.', check: (ctx) => {
     const bad: string[] = [];
