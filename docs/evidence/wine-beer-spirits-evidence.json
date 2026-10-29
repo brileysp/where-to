@@ -823,11 +823,11 @@
   "raw": {
    "area": 0.0,
    "wineries": [
-    0,
-    0
+    8,
+    8
    ],
-   "breweries": 0,
-   "distilleries": 0,
+   "breweries": 5,
+   "distilleries": 1,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -836,10 +836,10 @@
    "wdSake": []
   },
   "values": {
-   "wineRegion": 0,
-   "beerCulture": 0,
+   "wineRegion": 2,
+   "beerCulture": 4,
    "whiskyCulture": 0,
-   "otherSpirits": 0
+   "otherSpirits": 2
   }
  },
  "tierra-del-fuego": {
@@ -968,8 +968,8 @@
     0,
     0
    ],
-   "breweries": 6,
-   "distilleries": 2,
+   "breweries": 9,
+   "distilleries": 3,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],

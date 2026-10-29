@@ -428,9 +428,9 @@
   "max_km": 73,
   "coastal": 0,
   "huts": 4,
-  "relief_m": 1613.0,
+  "relief_m": 1666.0,
   "high_m": 1987.0,
-  "low_m": 374.0,
+  "low_m": 321.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -667,9 +667,9 @@
   "max_km": 116,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 2741.0,
+  "relief_m": 3312.0,
   "high_m": 3950.0,
-  "low_m": 1209.0,
+  "low_m": 638.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -728,10 +728,10 @@
   "max_km": 93,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 2481.0,
+  "relief_m": 2495.0,
   "high_m": 2495.0,
-  "low_m": 14.0,
-  "has_coast": false,
+  "low_m": 0,
+  "has_coast": true,
   "races": [],
   "values": {
    "trailDistances": [
@@ -819,7 +819,7 @@
   "r80": 0,
   "max_km": 69,
   "coastal": 0,
-  "huts": 41,
+  "huts": 42,
   "relief_m": 2606.0,
   "high_m": 3669.0,
   "low_m": 1063.0,
@@ -850,9 +850,9 @@
   "max_km": 281,
   "coastal": 0,
   "huts": 9,
-  "relief_m": 1264.0,
+  "relief_m": 1263.0,
   "high_m": 2460.0,
-  "low_m": 1196.0,
+  "low_m": 1197.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -949,9 +949,9 @@
   "max_km": 410,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 3852.0,
+  "relief_m": 4154.0,
   "high_m": 4340.0,
-  "low_m": 488.0,
+  "low_m": 186.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1053,10 +1053,10 @@
   "r80": 1,
   "max_km": 116,
   "coastal": 0,
-  "huts": 3,
-  "relief_m": 1544.0,
+  "huts": 5,
+  "relief_m": 1553.0,
   "high_m": 2772.0,
-  "low_m": 1228.0,
+  "low_m": 1219.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1256,10 +1256,10 @@
   "r80": 0,
   "max_km": 17,
   "coastal": 0,
-  "huts": 0,
-  "relief_m": 1551.0,
+  "huts": 1,
+  "relief_m": 1487.0,
   "high_m": 3435.0,
-  "low_m": 1884.0,
+  "low_m": 1948.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1268,10 +1268,9 @@
    ],
    "trailClimbing": [
     "flat",
-    "up3000",
-    "big6500"
+    "up3000"
    ],
-   "mountainTrailRunning": 9,
+   "mountainTrailRunning": 7,
    "coastalIslandTrails": 0
   },
   "thin": false
@@ -1753,9 +1752,9 @@
   "max_km": 159,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 3266.0,
+  "relief_m": 3269.0,
   "high_m": 3273.0,
-  "low_m": 7.0,
+  "low_m": 4.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1809,9 +1808,9 @@
   "max_km": 64,
   "coastal": 0,
   "huts": 2,
-  "relief_m": 1799.0,
+  "relief_m": 1804.0,
   "high_m": 4318.0,
-  "low_m": 2519.0,
+  "low_m": 2514.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1901,9 +1900,9 @@
   "max_km": 1472,
   "coastal": 0,
   "huts": 5,
-  "relief_m": 2553.0,
+  "relief_m": 2332.0,
   "high_m": 2755.0,
-  "low_m": 202.0,
+  "low_m": 423.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1918,7 +1917,7 @@
     "up3000",
     "big6500"
    ],
-   "mountainTrailRunning": 10,
+   "mountainTrailRunning": 9,
    "coastalIslandTrails": 0
   },
   "thin": false
