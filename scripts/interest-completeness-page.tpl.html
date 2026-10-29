@@ -1,0 +1,120 @@
+<meta charset="utf-8">
+<title>Interest Completeness</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ef;--card:#fffdf9;--fg:#24231f;--muted:#6c6a61;--line:#e4dfd3;--head:#efeae0;--ok:#2d7a52;--ok-bg:#dff0e6;--part:#a66a14;--part-bg:#f8ecd2;--none:#c9c4b6;--accent:#7a5a14;--bar:#2d7a52;--barbg:#e4dfd3;--warn:#b0492c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17161a;--card:#201f24;--fg:#ece9e2;--muted:#a09d94;--line:#34323a;--head:#2a2830;--ok:#7fd0a1;--ok-bg:#1f3a2c;--part:#e8b866;--part-bg:#3b3019;--none:#4a4750;--accent:#e5c569;--bar:#7fd0a1;--barbg:#34323a;--warn:#f08a6a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17161a;--card:#201f24;--fg:#ece9e2;--muted:#a09d94;--line:#34323a;--head:#2a2830;--ok:#7fd0a1;--ok-bg:#1f3a2c;--part:#e8b866;--part-bg:#3b3019;--none:#4a4750;--accent:#e5c569;--bar:#7fd0a1;--barbg:#34323a;--warn:#f08a6a;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:14px/1.5 Inter,system-ui,sans-serif;padding-block:24px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1500px;margin:0 auto}
+h1{font:600 28px/1.15 Fraunces,Georgia,serif;margin:0 0 6px}
+.lead{color:var(--muted);max-width:75ch;margin:0 0 14px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sort{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.sort button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:5px 12px;font:500 13px Inter,sans-serif;cursor:pointer}
+.sort button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.tw{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);max-height:80vh}
+table{border-collapse:separate;border-spacing:0;min-width:1250px;width:100%}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle;white-space:nowrap}
+thead th{position:sticky;background:var(--head);z-index:3;font-weight:600;font-size:12px}
+thead tr.g th{top:0;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;font-size:11px;border-left:1px solid var(--line)}
+thead tr.s th{top:29px;white-space:normal;line-height:1.2;min-width:74px;max-width:92px;border-left:1px solid var(--line)}
+td.name,th.name{position:sticky;left:0;text-align:left;background:var(--card);z-index:2;min-width:210px;border-right:1px solid var(--line)}
+thead th.name{background:var(--head);z-index:4}
+td.name .l{font-weight:600}
+td.name .m{font-size:11.5px;color:var(--muted)}
+td.sc{min-width:130px}
+.pb{display:flex;align-items:center;gap:6px}
+.pb i{display:block;height:7px;border-radius:4px;background:var(--barbg);flex:1;min-width:60px;overflow:hidden}
+.pb i b{display:block;height:100%;background:var(--bar)}
+.pb span{font-size:12px;font-weight:600;min-width:34px;text-align:right}
+td.c{border-left:1px solid var(--line)}
+.ck{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--ok-bg);color:var(--ok);font-weight:700;font-size:14px}
+.pt{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:22px;padding:0 6px;border-radius:11px;background:var(--part-bg);color:var(--part);font-weight:600;font-size:11.5px}
+.no{color:var(--none);font-size:14px}
+.na{color:var(--muted);font-size:12px}
+.sub{display:block;font-size:10.5px;color:var(--muted);margin-top:1px}
+td.todo{min-width:70px}
+td.todo b{color:var(--warn)}
+tfoot td{position:sticky;bottom:0;background:var(--head);font-weight:600;font-size:12px;z-index:3}
+tfoot td.name{z-index:4;background:var(--head)}
+.notes{margin:16px 0 0;color:var(--muted);font-size:13px;max-width:100ch}
+.notes li{margin:0 0 4px}
+</style>
+<div class="wrap">
+<h1>Interest completeness</h1>
+<p class="lead">One row per interest, one column per main step, read from the live database on <span id="asof"></span>. Most complete at the top. A tick means the step is done for the interest; an amber pill shows how much is done; a faint dot means not started. Hover or long-press a cell for the exact numbers.</p>
+<div class="bar">
+  <div class="legend"><span><span class="ck">✓</span> done</span><span><span class="pt">63%</span> part done</span><span><span class="no">·</span> not started</span><span><span class="na">n/a</span> nothing to do</span></div>
+  <div class="sort" role="group" aria-label="Sort"><button type="button" data-s="done" aria-pressed="true">Most to least complete</button><button type="button" data-s="name" aria-pressed="false">A to Z</button><button type="button" data-s="todos" aria-pressed="false">Most open to-dos</button></div>
+</div>
+<div class="tw"><table id="t"></table></div>
+<ul class="notes">
+<li><b>How "done" is decided.</b> Scores: every applicable place has one. Month curves: 90% of places have a hand-authored curve. Columns filled: 90% of places have a quarter or more of the cells filled, or are marked source-checked. Source-checked: 90% of places marked. Text written: 90% of places have a Gemini overview and months. Fact-checked: every risky sentence checked. Expert review: at least one review by a person (Claude's own notes do not count).</li>
+<li><b>Pass finished</b> is bookkeeping: a pass is closed by hand once its run is done. Seventeen old passes were closed on 28 October after checking that no staged text was newer than the live text, so nothing was waiting to be applied.</li>
+<li><b>Answers mapped</b> shows partial when some questions are deliberately left unmapped (no data to read), so a full tick is not always the goal.</li>
+<li>Interests with no columns yet (Landscape Photography, National Parks) show their chips and questions only. Road-Tripping (not an interest, just a way to see a place) and three internal sliders (Family Fun, Low-Season Deals, Avoiding Crowds) are left out.</li>
+</ul>
+</div>
+<script>
+const DATA=__DATA__;
+const ASOF="__ASOF__";
+const STEPS=[
+ {g:'Scores and scope',k:'scores',l:'Scores set',f:r=>frac(r.scored,r.applicable,0.95,'places with a score')},
+ {g:'Scores and scope',k:'curves',l:'Month curves authored',f:r=>frac(r.curve,r.applicable,0.9,'places with a hand-authored curve')},
+ {g:'Scores and scope',k:'na',l:'N/A reasons stored',f:r=>r.na===0?{t:'na'}:frac(r.naReason,r.na,1,'N/A places with a stored reason')},
+ {g:'Interest columns',k:'designed',l:'Columns designed',f:r=>r.defs>0?{t:'done',tip:r.defs+' columns on the interest page'}:{t:'none',tip:'No columns built yet'}},
+ {g:'Interest columns',k:'filled',l:'Columns filled',f:r=>r.defs?frac(r.placesFilled,r.applicable,0.9,'places with their columns filled'):{t:'none',tip:'No columns'}},
+ {g:'Interest columns',k:'checked',l:'Source-checked',f:r=>r.defs?frac(r.checked,r.applicable,0.9,'places marked source-checked'):{t:'none',tip:'No columns'}},
+ {g:'Chips and questions',k:'chipA',l:'Chips approved',f:r=>r.chips?frac(r.chipsApproved,r.chips,1,'chips approved'):{t:'none',tip:'No chips'}},
+ {g:'Chips and questions',k:'chipL',l:'Chips live',f:r=>r.chips?frac(r.chipsLive,r.chips,1,'chips live'):{t:'none',tip:'No chips'}},
+ {g:'Chips and questions',k:'qA',l:'Questions approved',f:r=>r.qs?frac(r.qsApproved,r.qs,1,'questions approved'):{t:'none',tip:'No questions'}},
+ {g:'Chips and questions',k:'qM',l:'Answers mapped to columns',f:r=>r.qs?frac(r.qsMapped,r.qs,1,'questions mapped to columns (some are left unmapped on purpose)'):{t:'none',tip:'No questions'}},
+ {g:'Gemini text',k:'text',l:'Text written',f:r=>frac(r.text,r.applicable,0.9,'places with a Gemini overview')},
+ {g:'Gemini text',k:'pass',l:'Pass finished',f:r=>r.passes?(r.passesFinished===r.passes?{t:'done',tip:r.passes+' passes, all finished'}:{t:'part',p:r.passesFinished/r.passes,tip:r.passesFinished+' of '+r.passes+' passes finished (one still open)'}):{t:'none',tip:'No Gemini pass recorded'}},
+ {g:'Gemini text',k:'fact',l:'Fact-checked',f:r=>r.fcTotal?(r.fcUnchecked===0&&r.fcWrong===0?{t:'done',tip:r.fcTotal+' risky sentences, all checked'}:{t:'part',p:r.fcOk/r.fcTotal,tip:r.fcOk+' of '+r.fcTotal+' risky sentences checked'+(r.fcWrong?', '+r.fcWrong+' marked wrong':'')}):{t:'none',tip:'No fact-checks recorded'}},
+ {g:'Review',k:'expert',l:'Expert review',f:r=>r.humanNames>0?{t:'done',tip:r.humanNames+' reviewer(s) who are people; '+r.reviewsAi+' AI note(s) not counted'}:{t:'none',tip:'No review by a person yet ('+r.reviewsAi+' AI note(s) not counted)'}},
+];
+function frac(n,d,need,what){
+  if(!d) return {t:'none',tip:'Nothing to count'};
+  const p=n/d, tip=n+' of '+d+' '+what;
+  return p>=need?{t:'done',tip}:(n>0?{t:'part',p,tip}:{t:'none',tip});
+}
+DATA.forEach(r=>{
+  r.res=STEPS.map(s=>s.f(r));
+  const used=r.res.filter(x=>x.t!=='na');
+  r.score=used.reduce((a,x)=>a+(x.t==='done'?1:x.t==='part'?x.p*0.999:0),0)/used.length;
+  r.doneN=r.res.filter(x=>x.t==='done').length; r.usedN=used.length;
+});
+const root=document.getElementById('t'); document.getElementById('asof').textContent=ASOF;
+function render(mode){
+  const rows=[...DATA];
+  if(mode==='name') rows.sort((a,b)=>a.label.localeCompare(b.label));
+  else if(mode==='todos') rows.sort((a,b)=>b.todosOpen-a.todosOpen||b.score-a.score);
+  else rows.sort((a,b)=>b.score-a.score||b.doneN-a.doneN||a.label.localeCompare(b.label));
+  const groups=[]; STEPS.forEach(s=>{const l=groups[groups.length-1]; if(l&&l.g===s.g) l.n++; else groups.push({g:s.g,n:1});});
+  let h='<thead><tr class="g"><th class="name" rowspan="2">Interest</th><th rowspan="2" class="sc">Overall</th>'+groups.map(g=>`<th colspan="${g.n}">${g.g}</th>`).join('')+'<th rowspan="2">Open to-dos</th></tr><tr class="s">'+STEPS.map(s=>`<th>${s.l}</th>`).join('')+'</tr></thead><tbody>';
+  rows.forEach(r=>{
+    h+=`<tr><td class="name"><div class="l">${r.icon} ${r.label}</div><div class="m">${r.applicable} places${r.na?` · ${r.na} N/A`:''}</div></td>`;
+    h+=`<td class="sc"><div class="pb" title="${r.doneN} of ${r.usedN} steps fully done"><i><b style="width:${Math.round(r.score*100)}%"></b></i><span>${Math.round(r.score*100)}%</span></div></td>`;
+    r.res.forEach(x=>{
+      let c;
+      if(x.t==='done') c='<span class="ck">✓</span>';
+      else if(x.t==='part') c=`<span class="pt">${Math.round(x.p*100)}%</span>`;
+      else if(x.t==='na') c='<span class="na">n/a</span>';
+      else c='<span class="no">·</span>';
+      h+=`<td class="c" title="${(x.tip||'').replace(/"/g,'&quot;')}">${c}</td>`;
+    });
+    h+=`<td class="c todo" title="${r.needsYou} waiting on you">${r.todosOpen?`${r.todosOpen}${r.needsYou?`<span class="sub"><b>${r.needsYou}</b> need you</span>`:''}`:'<span class="no">·</span>'}</td></tr>`;
+  });
+  h+='</tbody><tfoot><tr><td class="name">Interests done</td><td></td>'+STEPS.map((s,i)=>`<td class="c">${DATA.filter(r=>r.res[i].t==='done').length}</td>`).join('')+`<td class="c">${DATA.reduce((a,r)=>a+r.todosOpen,0)}</td></tr></tfoot>`;
+  root.innerHTML=h;
+}
+document.querySelectorAll('.sort button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.sort button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render(b.dataset.s);}));
+render('done');
+</script>
