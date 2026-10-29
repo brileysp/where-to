@@ -20,7 +20,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   if (cmd === 'onboarding' && (arg === 'on' || arg === 'off')) { values.onboardingV2 = arg === 'on' ? 1 : 0; await save(); }
   else if (cmd === 'preview-code') { values.previewCode = 100000 + Math.floor(Math.random() * 900000); await save(); }
   else if (cmd !== 'status') { console.log('Usage: status | onboarding on|off | preview-code'); process.exit(1); }
-  console.log(`New onboarding: ${values.onboardingV2 === 1 ? 'ON for everyone' : 'off'}`);
+  console.log(`New onboarding: ${values.onboardingV2 === 0 ? 'off (kill switch set)' : 'ON for everyone'}`);
   console.log(values.previewCode ? `Preview address: /onboarding-v2?preview=${values.previewCode}` : 'No preview code yet');
   process.exit(0);
 })().catch((e) => { console.log('ERR', e.cause?.message ?? e.stack); process.exit(1); });
