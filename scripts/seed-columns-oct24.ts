@@ -31,6 +31,8 @@ const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.sl
     for (const [key, v] of Object.entries(d)) {
       const def = defs.find((x) => x.key === key);
       if (!def) { problems.push(`${id}: unknown column ${key}`); continue; }
+      // 29 Oct 2026: a null in the file clears the cell, but only for columns named in --overwrite (a rebuild that found nothing where it once found something).
+      if (v === null && overwrite.has(key)) { if (!empty(have[key])) { delete next[key]; added++; } continue; }
       const parsed = parseFact(def, v);
       if (!parsed.ok) { problems.push(`${id}: bad ${key} (${parsed.message})`); continue; }
       if ((empty(have[key]) || overwrite.has(key)) && !empty(parsed.value) && JSON.stringify(have[key]) !== JSON.stringify(parsed.value)) { next[key] = parsed.value; added++; }

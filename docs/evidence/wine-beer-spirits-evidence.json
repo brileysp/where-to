@@ -171,11 +171,11 @@
   "raw": {
    "area": 0.1,
    "wineries": [
-    1,
+    6,
     0
    ],
-   "breweries": 0,
-   "distilleries": 0,
+   "breweries": 2,
+   "distilleries": 1,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -185,9 +185,9 @@
   },
   "values": {
    "wineRegion": 0,
-   "beerCulture": 0,
+   "beerCulture": 4,
    "whiskyCulture": 0,
-   "otherSpirits": 0
+   "otherSpirits": 2
   }
  },
  "morocco": {
@@ -968,8 +968,8 @@
     0,
     0
    ],
-   "breweries": 8,
-   "distilleries": 3,
+   "breweries": 6,
+   "distilleries": 2,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -1322,11 +1322,11 @@
   "raw": {
    "area": 0.0,
    "wineries": [
-    0,
-    0
+    10,
+    9
    ],
-   "breweries": 3,
-   "distilleries": 0,
+   "breweries": 57,
+   "distilleries": 7,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -1335,10 +1335,10 @@
    "wdSake": []
   },
   "values": {
-   "wineRegion": 0,
-   "beerCulture": 4,
+   "wineRegion": 2,
+   "beerCulture": 7,
    "whiskyCulture": 0,
-   "otherSpirits": 0
+   "otherSpirits": 5
   }
  },
  "champagne": {
@@ -2436,10 +2436,10 @@
   "raw": {
    "area": 0.0,
    "wineries": [
-    5,
-    5
+    1,
+    1
    ],
-   "breweries": 0,
+   "breweries": 2,
    "distilleries": 0,
    "whiskyNames": 0,
    "wdWine": [],
@@ -2449,8 +2449,8 @@
    "wdSake": []
   },
   "values": {
-   "wineRegion": 2,
-   "beerCulture": 0,
+   "wineRegion": 0,
+   "beerCulture": 4,
    "whiskyCulture": 0,
    "otherSpirits": 0
   }
