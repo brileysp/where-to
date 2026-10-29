@@ -22,6 +22,10 @@ export const toggleInList = (list: string[], key: string): string[] => (list.inc
 
 export type Bands = Record<string, string[]>;
 export const bandDims = () => BAND_DIMENSIONS;
+
+/** The names the trip screens show for the band groups: weather is called Climate there, and budget is Budget & comfort. */
+const BAND_TITLES: Record<string, string> = { budget: 'Budget & comfort', weather: 'Climate' };
+export const bandTitle = (d: { key: string; label: string }): string => BAND_TITLES[d.key] ?? d.label;
 const bandKeys = (dim: string): string[] => BAND_DIMENSIONS.find((d) => d.key === dim)?.bands.map((b) => b.key) ?? [];
 
 /** Nothing narrowed: every band of the dimension is selected. */
@@ -73,7 +77,6 @@ export const CARE_ITEMS: CareItem[] = [
   { key: 'food', icon: '🥗', name: 'Food needs', detail: 'Vegetarian, halal, gluten-free', question: 'Needs', options: [['veg', 'Vegetarian'], ['vegan', 'Vegan'], ['gf', 'Gluten-free'], ['halal', 'Halal'], ['kosher', 'Kosher']], multi: true, firm: 'Rule out places with few options', lasting: true },
   { key: 'lang', icon: '🗣️', name: 'Language', detail: 'How easy it is to get by', question: 'I need', options: [['en', 'English to work'], ['es', 'Spanish'], ['pt', 'Portuguese'], ['it', 'Italian'], ['ja', 'Japanese']], multi: true, firm: 'Rule out places where English is hard', lasting: true },
   { key: 'how', icon: '🧭', name: 'How you travel', detail: 'Road trip, tour, cruise', question: 'I like', options: [['road', 'Road trip'], ['tour', 'Guided tour'], ['cruise', 'Cruise'], ['base', 'One base, day trips']], multi: true, lasting: true },
-  { key: 'deals', icon: '💸', name: 'Deals', detail: 'Cheaper off-peak travel', options: [['off', 'Show me the low-season value']], multi: false, trip: true },
 ];
 
 export type CareState = Record<string, { o: string[]; firm: boolean }>;
@@ -160,10 +163,18 @@ export function removePick(care: CareState, bands: Bands, pick: CarePick): { car
 }
 
 
-/** The one chip a "What else matters" row shows: what is picked, or "No preference" when nothing is. Every item reads the same way. */
+/**
+ * The one short chip a closed "What else matters" row shows, always one line: "No preference", the one thing picked, or "2 of 5 selected".
+ * It never lists several choices, so a row does not grow as the traveler ticks more.
+ */
 export function careRowSummary(c: CareItem, care: CareState, bands: Bands): string {
-  if (c.band) return isNarrowed(bands, c.key) ? bands[c.key].map((b) => bandLabel(c.key, b)).join(', ') : 'No preference';
+  if (c.band) {
+    if (!isNarrowed(bands, c.key)) return 'No preference';
+    const set = bands[c.key];
+    return set.length === 1 ? bandLabel(c.key, set[0]) : `${set.length} of ${bandKeys(c.key).length} selected`;
+  }
   const v = care[c.key];
   if (!v || !v.o.length) return 'No preference';
-  return `${v.o.map((o) => optLabel(c, o)).join(', ')}${v.firm ? ' · must' : ''}`;
+  if (v.o.length > 1) return `${v.o.length} of ${c.options?.length ?? v.o.length} selected`;
+  return `${optLabel(c, v.o[0])}${v.firm ? ' · must' : ''}`;
 }

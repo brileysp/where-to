@@ -10,7 +10,8 @@ import { MONTH_NAMES } from '@/lib/scoring/constants';
 import { ForYouTab } from './ForYouTab';
 import { AboutTab } from './AboutTab';
 import { CostsTab } from './CostsTab';
-import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import type { ScoredDestination } from '@/lib/scoring/types';
 
 type DetailTab = 'foryou' | 'about' | 'costs';
@@ -39,6 +40,9 @@ export function DestinationDetailSheet({
   favorited,
   onToggleFavorited,
   onClose,
+  factors,
+  notes,
+  interestKeys,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -55,6 +59,11 @@ export function DestinationDetailSheet({
   favorited: boolean;
   onToggleFavorited: () => void;
   onClose: () => void;
+  /** What the traveler's chips and answers keep of each place's score (onboarding's live questions), and this place's reasons. */
+  factors?: InterestFactors;
+  notes?: Record<string, PlaceNote>;
+  /** Show exactly these interests as chips (the ones the traveler picked). */
+  interestKeys?: string[];
 }) {
   // The ranked list carries scores only; this place's text (overview, monthly blurbs, cost notes) is fetched now and merged in.
   const { detail, loading: detailLoading } = usePlaceDetail(dest.id);
@@ -145,8 +154,12 @@ export function DestinationDetailSheet({
           <span className="detail-sheet-month-group">
             <MonthChip month={previewIdx + 1} onChangeMonth={(m) => setPreviewIdx(m - 1)} />
             {previewIdx !== monthIdx && (
-              <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)}>
-                Back to {MONTH_NAMES[monthIdx]}
+              <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)} aria-label={`Back to ${MONTH_NAMES[monthIdx]}`}>
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 7.5a5 5 0 1 1 1.6 3.7" />
+                  <path d="M3 3.2v4.3h4.3" />
+                </svg>
+                {MONTH_NAMES[monthIdx]}
               </button>
             )}
           </span>
@@ -207,6 +220,9 @@ export function DestinationDetailSheet({
               onChangeMonth={setPreviewIdx}
               selectedCategory={selectedCategory}
               onSelectCategory={setSelectedCategory}
+              factors={factors}
+              notes={notes}
+              interestKeys={interestKeys}
             />
           </div>
           <div className={`detail-tab-panel${tab === 'about' ? ' active' : ''}`} aria-hidden={tab !== 'about'}>

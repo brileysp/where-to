@@ -1,0 +1,11 @@
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+SELECT ?way ?type ?name ?bike ?bike2 ?lat ?lon ?len WHERE {
+  ?way osmkey:aerialway ?type ; geo:hasGeometry/geo:asWKT ?wkt .
+  FILTER(?type IN ("gondola","chair_lift","cable_car","mixed_lift","magic_carpet","drag_lift","t-bar","j-bar","platter","rope_tow","zip_line"))
+  OPTIONAL { ?way osmkey:name ?name }
+  OPTIONAL { ?way osmkey:bicycle ?bike }
+  OPTIONAL { ?way osmkey:aerialway:bicycle ?bike2 }
+  BIND(geof:centroid(?wkt) AS ?c) BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon) BIND(geof:metricLength(?wkt) AS ?len)
+}

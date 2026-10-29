@@ -1,3 +1,4 @@
+import { birdCaseProblems, SPECIES_CASE_INTERESTS } from '@/lib/text/species-case';
 import { hasCelsius } from '../text/temperature';
 import { hasMeters } from '../text/length';
 import { oldNameIssues } from './renamed-places';
@@ -304,6 +305,12 @@ export function validateContent(rawOutput: GenerationOutput, interestKey: string
   const allText = [rawOutput.overview, ...rawOutput.monthly.map((m) => m.text)];
   if (allText.some((t) => !emphasisIsBalanced(t))) {
     issues.push({ layer: 'content', severity: 'reject', message: 'A species-name marker (**) is unbalanced, empty or nested. Each marked name needs one ** before and one after.' });
+  }
+  // Bird names are Title Case (owner rule 19 Oct 2026). Only birds on the known list are checked.
+  if (SPECIES_CASE_INTERESTS.has(interestKey)) {
+    const seen = new Set<string>();
+    for (const t of allText) for (const p of birdCaseProblems(t)) seen.add(`"${p.found}" should be "${p.expected}"`);
+    if (seen.size) issues.push({ layer: 'content', severity: 'reject', message: `Bird names need Title Case: ${[...seen].slice(0, 6).join('; ')}${seen.size > 6 ? ` (and ${seen.size - 6} more)` : ''}.` });
   }
   const output: GenerationOutput = { ...rawOutput, overview: stripEmphasis(rawOutput.overview), monthly: rawOutput.monthly.map((m) => ({ ...m, text: stripEmphasis(m.text) })) };
   const { monthly, overview } = output;

@@ -28,6 +28,7 @@ function makeDestination(overrides: Partial<ScoredDestination> = {}): ScoredDest
     peak: [],
     low: [],
     peakIntensity: null,
+    priceSwing: null,
     crowdBaseline: null,
     hotSeverity: null,
     coldSeverity: null,
@@ -862,5 +863,30 @@ describe('scoreForMonth — neutral interests do not decide a match', () => {
     const a = dest(9, 0);
     const b = dest(9, 10);
     expect(scoreForMonth(a, persona, 0, bands)).toBeCloseTo(scoreForMonth(b, persona, 0, bands), 8);
+  });
+});
+
+describe('scoreForMonth with interest factors (chips and answers)', () => {
+  const dest = makeDestination({ monthly: { ...Object.fromEntries(SLIDERS.map((s) => [s.key, new Array(12).fill(0)])), hiking: new Array(12).fill(9), diving: new Array(12).fill(9) } });
+  const weights = { hiking: 9, diving: 9 };
+  it('changes nothing with no factors, or factors of 1', () => {
+    const base = scoreForMonth(dest, weights, 0, {});
+    expect(scoreForMonth(dest, weights, 0, {}, undefined, {})).toBe(base);
+    expect(scoreForMonth(dest, weights, 0, {}, undefined, { 'test-dest': { hiking: 1 } })).toBe(base);
+    expect(scoreForMonth(dest, weights, 0, {}, undefined, { 'other-place': { hiking: 0.3 } })).toBe(base);
+  });
+  it('lowers the place when one of its interests keeps less, and lowers it more the less it keeps', () => {
+    const base = scoreForMonth(dest, weights, 0, {});
+    const half = scoreForMonth(dest, weights, 0, {}, undefined, { 'test-dest': { hiking: 0.65 } });
+    const floor = scoreForMonth(dest, weights, 0, {}, undefined, { 'test-dest': { hiking: 0.3 } });
+    expect(half).toBeLessThan(base);
+    expect(floor).toBeLessThan(half);
+  });
+  it('barely moves the place when the interest it lowers is one the traveler cares little about', () => {
+    const w = { hiking: 10, diving: 3 };
+    const base = scoreForMonth(dest, w, 0, {});
+    const lowDiving = scoreForMonth(dest, w, 0, {}, undefined, { 'test-dest': { diving: 0.3 } });
+    const lowHiking = scoreForMonth(dest, w, 0, {}, undefined, { 'test-dest': { hiking: 0.3 } });
+    expect(base - lowDiving).toBeLessThan(base - lowHiking);
   });
 });

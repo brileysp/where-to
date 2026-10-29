@@ -1,0 +1,717 @@
+{
+ "tokyo-kyoto": {
+  "n": 8,
+  "o": true,
+  "g": true,
+  "b": [
+   "gendered",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "k": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "s": "Kinosaki Onsen (seven public bathhouses in one walkable town, since 720 CE); ryokan with private spring baths (onsen)"
+ },
+ "costa-rica": {
+  "n": 7,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [],
+  "k": [],
+  "s": "Arenal Volcano hot springs around La Fortuna, several separate properties, river-fed thermal pools (geothermal spa)"
+ },
+ "azores": {
+  "n": 7,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [],
+  "k": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "s": "Terra Nostra Park iron-rich thermal pool in Furnas, since 1780 (geothermal spa); volcanic steam vents used for the Cozido das Furnas stew"
+ },
+ "ecuadorian-andes": {
+  "n": 8,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [],
+  "k": [
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct",
+   "nov",
+   "dec"
+  ],
+  "s": "Termas de Papallacta, about 90 minutes from Quito at 10,660 ft (geothermal spa and natural pools)"
+ },
+ "chilean-lake-district": {
+  "n": 9,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "jun",
+   "jul",
+   "aug"
+  ],
+  "k": [
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct"
+  ],
+  "s": "Termas Geométricas near Pucón, 17 slate-lined pools fed by more than 60 natural springs (natural outdoor pools)"
+ },
+ "budapest": {
+  "n": 2,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "gendered"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "s": "Széchenyi (one of Europe's largest bath complexes, outdoor pools open through winter since 1963); Rudás and Király, Ottoman-era baths from the 1500s (geothermal spa)"
+ },
+ "north-island": {
+  "n": 7,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [],
+  "k": [
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct"
+  ],
+  "s": "Rotorua's Polynesian Spa, including the Priest's Bath (since the 1870s-80s) (geothermal spa); natural geothermal creeks nearby"
+ },
+ "iceland": {
+  "n": 9,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct",
+   "nov",
+   "dec"
+  ],
+  "s": "Blue Lagoon and other geothermal lagoons (geothermal spa); the Secret Lagoon and river pools such as Reykjadalur (natural outdoor pools)"
+ },
+ "taiwan": {
+  "n": 6,
+  "o": true,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [],
+  "k": [
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "s": "Beitou, reachable by MRT from Taipei; Jiaoxi's outdoor springs in Yilan (onsen style)"
+ },
+ "banff": {
+  "n": 6,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "apr",
+   "may",
+   "jun",
+   "sep",
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "s": "Banff Upper Hot Springs on Sulphur Mountain, the highest hot spring in Canada, 100-104 F year-round, whose 1883 discovery led to the first national park"
+ },
+ "tuscany": {
+  "n": 8,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle"
+  ],
+  "c": [],
+  "k": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "s": "Saturnia's free natural sulphur pools, Cascate del Mulino, a constant 99 F year-round (natural pools); the Terme di Saturnia resort (geothermal spa)"
+ },
+ "hokkaido": {
+  "n": 9,
+  "o": true,
+  "g": true,
+  "b": [
+   "gendered",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Rotenburo outdoor baths steaming in real snow; Noboribetsu's large onsen town (onsen and geothermal spa)"
+ },
+ "tbilisi-caucasus": {
+  "n": 1,
+  "o": false,
+  "g": false,
+  "b": [
+   "gendered",
+   "private"
+  ],
+  "h": [
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "k": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "s": "Abanotubani's domed brick bathhouses over natural sulfur springs, a founding legend dating to the 5th century (indoor baths, open year-round)"
+ },
+ "atacama": {
+  "n": 8,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle"
+  ],
+  "c": [
+   "jun",
+   "jul"
+  ],
+  "k": [
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep"
+  ],
+  "s": "Termas de Puritama, eight geothermal pools in a canyon outside San Pedro de Atacama, long sacred to the Atacameño people (natural pools)"
+ },
+ "aspen": {
+  "n": 8,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Penny Hot Springs, a roadside soak on the Crystal River about 45 minutes away; Conundrum Hot Springs, an 8.5-mile backcountry hike needing an overnight permit (natural pools)"
+ },
+ "yellowstone": {
+  "n": 3,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Chico Hot Springs, a working resort 30-40 minutes outside the park's north entrance in Montana (geothermal spa); the Boiling River inside the park has been closed since the 2022 floods"
+ },
+ "swissalps": {
+  "n": 4,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "gendered"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Leukerbad, the largest thermal resort in the Alps, used since Roman times; outdoor pools ringed by snow-capped peaks (geothermal spa)"
+ },
+ "queenstown": {
+  "n": 2,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "jun",
+   "jul",
+   "aug"
+  ],
+  "k": [
+   "apr",
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct"
+  ],
+  "s": "Onsen Hot Pools on the Shotover (heated, treated water, not a natural spring); the nearest natural hot spring is Hanmer Springs, about four hours away"
+ },
+ "peru": {
+  "n": 6,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [],
+  "k": [
+   "jun",
+   "jul",
+   "aug"
+  ],
+  "s": "Aguas Calientes at the base of Machu Picchu; Cocalmayo on the Salkantay route; La Calera in Colca Canyon, fed by the Cotallaulli volcano (a stopover, not a reason to plan a trip)"
+ },
+ "argentine-lake-district": {
+  "n": 5,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "jun",
+   "jul",
+   "aug"
+  ],
+  "k": [
+   "apr",
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct"
+  ],
+  "s": "Termas de Copahue near the Chilean border, recognized by the WHO for its sulphuric mud and thermal treatments; the access road is closed by snow from about May to November"
+ },
+ "dolomites": {
+  "n": 5,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Terme Dolomia in Val di Fassa, Trentino's only sulphur spring (first documented 1493); Bagni Vecchi di Bormio, a 1,000-year-old pool built into a Roman tunnel"
+ },
+ "kyrgyzstan": {
+  "n": 7,
+  "o": false,
+  "g": false,
+  "b": [
+   "private"
+  ],
+  "h": [
+   "hot",
+   "veryHot"
+  ],
+  "c": [],
+  "k": [
+   "jun",
+   "jul",
+   "aug",
+   "sep"
+  ],
+  "s": "Altyn Arashan ('Golden Spa') near Karakol, rich in radon and hydrogen sulfide, nearly every guesthouse with its own pool; reachable only June to September"
+ },
+ "chamonix": {
+  "n": 4,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Les Thermes de Saint-Gervais, natural spring water at about 102 F, bathing there since at least the 14th century (Chamonix's own spa uses heated water, not a spring)"
+ },
+ "uyuni": {
+  "n": 8,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle",
+   "hot"
+  ],
+  "c": [
+   "may",
+   "jun",
+   "jul",
+   "aug"
+  ],
+  "k": [
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may",
+   "jun",
+   "jul",
+   "aug",
+   "sep",
+   "oct",
+   "nov",
+   "dec"
+  ],
+  "s": "Termas de Polques beside Laguna Salada near the Salvador Dali Desert geysers, over 14,110 ft, a fixed stop on the multi-day 4x4 tours (natural pools)"
+ },
+ "jordan": {
+  "n": 7,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "hot",
+   "veryHot"
+  ],
+  "c": [],
+  "k": [
+   "dec",
+   "jan",
+   "feb"
+  ],
+  "s": "Ma'in Hot Springs between Madaba and the Dead Sea, a waterfall cascading into natural thermal pools Herod the Great reportedly used; summers top 104 F"
+ },
+ "rocky-mountain": {
+  "n": 4,
+  "o": false,
+  "g": true,
+  "b": [
+   "swimsuit",
+   "private"
+  ],
+  "h": [
+   "gentle",
+   "hot",
+   "veryHot"
+  ],
+  "c": [
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr"
+  ],
+  "k": [
+   "oct",
+   "nov",
+   "dec",
+   "jan",
+   "feb",
+   "mar",
+   "apr",
+   "may"
+  ],
+  "s": "Hot Sulphur Springs Resort, about 30 minutes from the park's west entrance near Grand Lake (there is no hot spring inside the park)"
+ },
+ "greenland": {
+  "n": 8,
+  "o": false,
+  "g": false,
+  "b": [
+   "swimsuit"
+  ],
+  "h": [
+   "gentle"
+  ],
+  "c": [],
+  "k": [
+   "jun",
+   "jul",
+   "aug",
+   "sep"
+  ],
+  "s": "Uunartoq's hot spring on an uninhabited island in South Greenland, used since Norse settlers about 1,000 years ago; reachable only by organized boat tour June to September (natural pool)"
+ }
+}

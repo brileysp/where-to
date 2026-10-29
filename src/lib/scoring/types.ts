@@ -51,7 +51,7 @@ export interface BandDimension {
   bands: Band[];
 }
 
-export type PeakIntensity = 'mild' | 'moderate' | 'extreme';
+export type PeakIntensity = 'mild' | 'moderate' | 'high' | 'extreme';
 export type CrowdBaseline = 'low' | 'high';
 
 export interface SpecialSeason {
@@ -132,6 +132,8 @@ export interface ScoringDestination {
   peak: number[];
   low: number[];
   peakIntensity: PeakIntensity | null;
+  /** How much prices swing between peak and low season; separate from the crowds in peakIntensity. */
+  priceSwing: PeakIntensity | null;
   crowdBaseline: CrowdBaseline | null;
   // How severe this destination's hot/cold/wet flags genuinely are, in the
   // months they're set — see the Severity doc comment. Null = not yet

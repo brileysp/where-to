@@ -44,7 +44,7 @@ export function CostsTab({ dest }: { dest: ScoredDestination }) {
 
       <div className="detail-card">
         <div className="price-list">
-          {dest.costItems.map((item, i) => (
+          {[...dest.costItems].sort((a, b) => a.price - b.price).map((item, i) => (
             <div className="price-row" key={i}>
               <span className="price-item">
                 <span className="price-icon">{item.emoji || costItemIcon(item.label)}</span>

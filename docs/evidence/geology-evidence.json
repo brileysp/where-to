@@ -1,0 +1,3090 @@
+{
+ "ethiopia": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Erta Ale",
+     "pages": 48,
+     "unesco": false
+    },
+    {
+     "label": "Hayli Gubbi",
+     "pages": 29,
+     "unesco": false
+    },
+    {
+     "label": "Adwa",
+     "pages": 18,
+     "unesco": false
+    },
+    {
+     "label": "Mount Ayalu",
+     "pages": 17,
+     "unesco": false
+    },
+    {
+     "label": "Borawli",
+     "pages": 16,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Sof Omar Caves",
+     "pages": 15,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 1,
+  "caveEntrances": 15,
+  "geothermalPoints": 13,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 1,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 8,
+   "glaciersIce": 2,
+   "cavesKarst": 6,
+   "tectonicLandscapes": 2
+  }
+ },
+ "mendoza": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0
+  }
+ },
+ "guatemala": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Volcán de Fuego",
+     "pages": 49,
+     "unesco": false
+    },
+    {
+     "label": "Volcán Tajumulco",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Santa María",
+     "pages": 37,
+     "unesco": false
+    },
+    {
+     "label": "Pacaya",
+     "pages": 36,
+     "unesco": false
+    },
+    {
+     "label": "Acatenango",
+     "pages": 31,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Naj Tunich",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Candelaria Caves",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Grutas de Lanquín",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "tectonicLandscapes": [
+    {
+     "label": "Motagua Fault",
+     "pages": 5,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 24,
+  "geothermalPoints": 2,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 3,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "tectonicLandscapes": 2
+  }
+ },
+ "atacama": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Licancabur",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Sairecabur",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Juriques",
+     "pages": 14,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 2,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 3
+  }
+ },
+ "morocco": {
+  "wikidata": {},
+  "glacierPolygons": 2,
+  "caveEntrances": 8,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 3,
+   "cavesKarst": 6
+  }
+ },
+ "sedona": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Bell Rock",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 4,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 4,
+   "rockFormations": 4
+  }
+ },
+ "ecuadorian-andes": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Cotopaxi volcano",
+     "pages": 65,
+     "unesco": false
+    },
+    {
+     "label": "Cayambe",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Pichincha Volcano",
+     "pages": 35,
+     "unesco": false
+    },
+    {
+     "label": "Antisana volcano",
+     "pages": 31,
+     "unesco": false
+    },
+    {
+     "label": "Illinizas",
+     "pages": 30,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 3,
+  "caveEntrances": 3,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 0,
+   "glaciersIce": 3,
+   "cavesKarst": 3
+  }
+ },
+ "monterey-big-sur": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Monterey Canyon",
+     "pages": 10,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 1,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 2,
+   "rockFormations": 4
+  }
+ },
+ "big-island": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mauna Kea",
+     "pages": 87,
+     "unesco": false
+    },
+    {
+     "label": "Mauna Loa",
+     "pages": 78,
+     "unesco": false
+    },
+    {
+     "label": "Kīlauea",
+     "pages": 65,
+     "unesco": true
+    },
+    {
+     "label": "Hualālai",
+     "pages": 24,
+     "unesco": false
+    },
+    {
+     "label": "Kohala",
+     "pages": 18,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Sulphur Banks",
+     "pages": 3,
+     "unesco": true
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Kazumura Cave",
+     "pages": 8,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 16,
+  "geothermalPoints": 3,
+  "osmGeological": {
+   "volcanic_lava_tube": 11,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Hawaiʻi Volcanoes National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 8,
+   "glaciersIce": 0,
+   "cavesKarst": 8,
+   "unescoGeology": true
+  }
+ },
+ "rajaampat": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 7,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ },
+ "grandcanyon": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Grand Canyon",
+     "pages": 116,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 2,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Grand Canyon National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 3,
+   "rockFormations": 10,
+   "unescoGeology": true
+  }
+ },
+ "badlands-black-hills": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0
+  }
+ },
+ "milford-sound-fiordland": {
+  "wikidata": {},
+  "glacierPolygons": 529,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6
+  }
+ },
+ "komodo": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Keli Mutubuurai",
+     "pages": 35,
+     "unesco": false
+    },
+    {
+     "label": "Lewotobi",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Rokatenda",
+     "pages": 21,
+     "unesco": false
+    },
+    {
+     "label": "Keli Ebulobo",
+     "pages": 16,
+     "unesco": false
+    },
+    {
+     "label": "Mount Egon",
+     "pages": 15,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Liang Bua",
+     "pages": 16,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 10,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ },
+ "denali-interior": {
+  "wikidata": {},
+  "glacierPolygons": 249,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6
+  }
+ },
+ "rwanda": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Karisimbi",
+     "pages": 42,
+     "unesco": false
+    },
+    {
+     "label": "Mount Sabyinyo",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Mount Bisoke",
+     "pages": 23,
+     "unesco": false
+    },
+    {
+     "label": "Mount Mikeno",
+     "pages": 20,
+     "unesco": false
+    },
+    {
+     "label": "Mount Gahinga",
+     "pages": 18,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 6,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 4
+  }
+ },
+ "bali": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Agung",
+     "pages": 58,
+     "unesco": true
+    },
+    {
+     "label": "Mount Batur",
+     "pages": 31,
+     "unesco": true
+    },
+    {
+     "label": "Bratan",
+     "pages": 14,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Pura Goa Lawah",
+     "pages": 15,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 14,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Batur UNESCO Global Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 8,
+   "unescoGeology": true
+  }
+ },
+ "tokyo-kyoto": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Fuji",
+     "pages": 146,
+     "unesco": false
+    },
+    {
+     "label": "Mount Akagi",
+     "pages": 23,
+     "unesco": false
+    },
+    {
+     "label": "Mount Amagi",
+     "pages": 20,
+     "unesco": true
+    },
+    {
+     "label": "Mount Mihara",
+     "pages": 18,
+     "unesco": false
+    },
+    {
+     "label": "Mount Hakone",
+     "pages": 18,
+     "unesco": false
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Narusawa Ice Cave",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Narusawa Ice Cave",
+     "pages": 8,
+     "unesco": false
+    },
+    {
+     "label": "Fugaku Wind Cave",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Sagami Trough",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "tectonicLandscapes": [
+    {
+     "label": "Nojima Fault",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Neodani Fault",
+     "pages": 6,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 163,
+  "geothermalPoints": 2,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Izu Peninsula Geopark",
+   "San'in Kaigan Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 3,
+   "glaciersIce": 4,
+   "cavesKarst": 6,
+   "rockFormations": 4,
+   "tectonicLandscapes": 4,
+   "unescoGeology": true
+  }
+ },
+ "fjords": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Hardangerjøkulen",
+     "pages": 18,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 208,
+  "caveEntrances": 4,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 4
+  }
+ },
+ "great-smoky-mountains": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Great Smoky Mountains National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "unescoGeology": true
+  }
+ },
+ "scottish-highlands-skye": {
+  "wikidata": {
+   "tectonicLandscapes": [
+    {
+     "label": "Great Glen Fault",
+     "pages": 5,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 85,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 1,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6,
+   "tectonicLandscapes": 2
+  }
+ },
+ "dolomites": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Marmolada Glacier",
+     "pages": 12,
+     "unesco": false
+    },
+    {
+     "label": "Eiskar Glacier",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "earth pyramids of Ritten",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 242,
+  "caveEntrances": 455,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 9,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 7,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "fossilsDinosaurs": 6,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "taiwan": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Tatun Volcano Group",
+     "pages": 13,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 1,
+  "caveEntrances": 173,
+  "geothermalPoints": 2,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 1,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 4,
+   "geothermalFeatures": 3,
+   "glaciersIce": 2,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6
+  }
+ },
+ "yosemite": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Half Dome",
+     "pages": 35,
+     "unesco": true
+    },
+    {
+     "label": "Glacier Point",
+     "pages": 11,
+     "unesco": true
+    },
+    {
+     "label": "Sentinel Dome",
+     "pages": 10,
+     "unesco": true
+    },
+    {
+     "label": "Lembert Dome",
+     "pages": 8,
+     "unesco": true
+    },
+    {
+     "label": "North Dome",
+     "pages": 8,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 37,
+  "caveEntrances": 1,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Yosemite National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 2,
+   "rockFormations": 9,
+   "unescoGeology": true
+  }
+ },
+ "tierra-del-fuego": {
+  "wikidata": {},
+  "glacierPolygons": 228,
+  "caveEntrances": 1,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 2
+  }
+ },
+ "torres-del-paine": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Grey Glacier",
+     "pages": 12,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 39,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6
+  }
+ },
+ "chilean-lake-district": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Villarrica Volcano",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Quetrupillán",
+     "pages": 16,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 6,
+  "caveEntrances": 2,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 0,
+   "glaciersIce": 4,
+   "cavesKarst": 3
+  }
+ },
+ "vietnam": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Son Doong Cave",
+     "pages": 83,
+     "unesco": true
+    },
+    {
+     "label": "Thien Duong Cave",
+     "pages": 67,
+     "unesco": true
+    },
+    {
+     "label": "Hang Én (swift cave)",
+     "pages": 13,
+     "unesco": true
+    },
+    {
+     "label": "Tam Cốc-Bích Động",
+     "pages": 12,
+     "unesco": true
+    },
+    {
+     "label": "Phong Nha Cave",
+     "pages": 9,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 256,
+  "geothermalPoints": 2,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Tràng An",
+   "Ha Long Bay",
+   "Phong Nha–Ke Bang National Park"
+  ],
+  "geoparks": [
+   "Dong Van Karst Plateau UNESCO Global Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 3,
+   "glaciersIce": 0,
+   "cavesKarst": 10,
+   "unescoGeology": true
+  }
+ },
+ "lofoten": {
+  "wikidata": {},
+  "glacierPolygons": 30,
+  "caveEntrances": 4,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 4
+  }
+ },
+ "banff": {
+  "wikidata": {},
+  "glacierPolygons": 234,
+  "caveEntrances": 4,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 4
+  }
+ },
+ "arches-canyonlands": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "False Kiva",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Delicate Arch",
+     "pages": 17,
+     "unesco": false
+    },
+    {
+     "label": "Landscape Arch",
+     "pages": 12,
+     "unesco": false
+    },
+    {
+     "label": "Double Arch",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 10,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 1,
+   "palaeontological_site": 2,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "sicily": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Etna",
+     "pages": 125,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Ear of Dionysius",
+     "pages": 21,
+     "unesco": false
+    },
+    {
+     "label": "Grotta dell'Addaura",
+     "pages": 14,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Gole dell'Alcantara",
+     "pages": 10,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 639,
+  "geothermalPoints": 1,
+  "osmGeological": {
+   "volcanic_lava_tube": 3,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 16,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Madonie Regional Natural Park",
+   "Rocca di Cerere Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 2,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 6,
+   "cavesKarst": 6,
+   "rockFormations": 4,
+   "unescoGeology": true
+  }
+ },
+ "amalfi": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Vesuvius",
+     "pages": 136,
+     "unesco": false
+    },
+    {
+     "label": "Phlegraean Fields",
+     "pages": 75,
+     "unesco": false
+    },
+    {
+     "label": "Mount Somma",
+     "pages": 14,
+     "unesco": false
+    },
+    {
+     "label": "Mount Barbaro",
+     "pages": 11,
+     "unesco": false
+    },
+    {
+     "label": "Agnano",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Blue Grotto",
+     "pages": 39,
+     "unesco": false
+    },
+    {
+     "label": "Cave of Dogs",
+     "pages": 17,
+     "unesco": false
+    },
+    {
+     "label": "Grotta di Matromania",
+     "pages": 8,
+     "unesco": false
+    },
+    {
+     "label": "Grotta dello Smeraldo",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Arco Naturale",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 1,
+  "caveEntrances": 171,
+  "geothermalPoints": 10,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 6,
+   "glaciersIce": 2,
+   "cavesKarst": 8,
+   "rockFormations": 4
+  }
+ },
+ "namibia": {
+  "wikidata": {
+   "fossilsDinosaurs": [
+    {
+     "label": "Footprints of Dinosaurs",
+     "pages": 3,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Drachenhauchloch",
+     "pages": 18,
+     "unesco": false
+    },
+    {
+     "label": "The White Lady",
+     "pages": 14,
+     "unesco": false
+    },
+    {
+     "label": "Apollo 11 Cave",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Roter Kamm crater",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 10,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 1,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6,
+   "rockFormations": 4
+  }
+ },
+ "el-chalten": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Viedma",
+     "pages": 18,
+     "unesco": false
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Southern Patagonian Ice Field",
+     "pages": 26,
+     "unesco": false
+    },
+    {
+     "label": "Viedma Glacier",
+     "pages": 13,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 100,
+  "caveEntrances": 3,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 6,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 3
+  }
+ },
+ "sequoia-kings-canyon": {
+  "wikidata": {},
+  "glacierPolygons": 92,
+  "caveEntrances": 2,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 3
+  }
+ },
+ "svalbard": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Nordenskiöld Glacier",
+     "pages": 9,
+     "unesco": false
+    },
+    {
+     "label": "Kronebreen",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 734,
+  "caveEntrances": 3,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 3
+  }
+ },
+ "guilin-yangshuo": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "South China Karst",
+     "pages": 33,
+     "unesco": true
+    },
+    {
+     "label": "Reed Flute Cave",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Moon Hill",
+     "pages": 10,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 83,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "South China Karst"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 8,
+   "rockFormations": 8,
+   "unescoGeology": true
+  }
+ },
+ "costa-rica": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Irazú Volcano",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Poás Volcano",
+     "pages": 32,
+     "unesco": false
+    },
+    {
+     "label": "Turrialba",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Rincón de la Vieja Volcano",
+     "pages": 25,
+     "unesco": false
+    },
+    {
+     "label": "Volcán Tenorio",
+     "pages": 16,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 12,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Talamanca Range-La Amistad Reserves"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "unescoGeology": true
+  }
+ },
+ "kerala": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Edakkal Caves",
+     "pages": 13,
+     "unesco": false
+    }
+   ],
+   "tectonicLandscapes": [
+    {
+     "label": "Vilangan Hills",
+     "pages": 6,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 10,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "tectonicLandscapes": 2
+  }
+ },
+ "zion-bryce": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Kolob Arch",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "The Narrows",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 9,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 2,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6,
+   "rockFormations": 4
+  }
+ },
+ "kyrgyzstan": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Engilchek Glacier",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Lednik Petrova",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "fossilsDinosaurs": [
+    {
+     "label": "Obi-Rakhmat Grotto",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Kan-i-Gut cave",
+     "pages": 9,
+     "unesco": false
+    },
+    {
+     "label": "Q20628994",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Boom Gorge",
+     "pages": 17,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 5600,
+  "caveEntrances": 40,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "fossilsDinosaurs": 4,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "north-island": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Ruapehu",
+     "pages": 52,
+     "unesco": true
+    },
+    {
+     "label": "Taranaki Maunga",
+     "pages": 40,
+     "unesco": false
+    },
+    {
+     "label": "Taupō Volcano",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Rotorua Caldera",
+     "pages": 11,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Waimangu Geyser",
+     "pages": 20,
+     "unesco": false
+    },
+    {
+     "label": "Pōhutu Geyser",
+     "pages": 8,
+     "unesco": false
+    },
+    {
+     "label": "Lady Knox Geyser",
+     "pages": 6,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Waitomo Caves",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Waitomo Glowworm Caves",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 26,
+  "caveEntrances": 131,
+  "geothermalPoints": 228,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Tongariro National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 10,
+   "glaciersIce": 6,
+   "cavesKarst": 6,
+   "unescoGeology": true
+  }
+ },
+ "croatia": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Grapčeva cave",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 182,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 1,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6
+  }
+ },
+ "greenland": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Jakobshavn Glacier",
+     "pages": 24,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 4263,
+  "caveEntrances": 30,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 1,
+   "palaeontological_site": 1,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6,
+   "rockFormations": 2
+  }
+ },
+ "yellowstone": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Yellowstone volcano",
+     "pages": 37,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Old Faithful",
+     "pages": 34,
+     "unesco": false
+    },
+    {
+     "label": "Steamboat Geyser",
+     "pages": 13,
+     "unesco": true
+    },
+    {
+     "label": "Castle Geyser",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Grand Geyser",
+     "pages": 9,
+     "unesco": false
+    },
+    {
+     "label": "Giant Geyser",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Grand Canyon of the Yellowstone",
+     "pages": 10,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 1316,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Yellowstone National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 10,
+   "glaciersIce": 0,
+   "rockFormations": 8,
+   "unescoGeology": true
+  }
+ },
+ "pakistan": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Koh-i-Sultan",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Chandragup",
+     "pages": 6,
+     "unesco": false
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Baltoro Glacier",
+     "pages": 32,
+     "unesco": false
+    },
+    {
+     "label": "Biafo Glacier",
+     "pages": 22,
+     "unesco": false
+    },
+    {
+     "label": "Hispar Glacier",
+     "pages": 17,
+     "unesco": false
+    },
+    {
+     "label": "Concordia",
+     "pages": 14,
+     "unesco": false
+    },
+    {
+     "label": "Godwin-Austen Glacier",
+     "pages": 11,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Lahoot Lamakan",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Trango Towers",
+     "pages": 28,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 6916,
+  "caveEntrances": 9,
+  "geothermalPoints": 3,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 4,
+   "geothermalFeatures": 3,
+   "glaciersIce": 9,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "hokkaido": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Yōtei",
+     "pages": 29,
+     "unesco": false
+    },
+    {
+     "label": "Asahi-dake",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Mount Tokachi",
+     "pages": 25,
+     "unesco": false
+    },
+    {
+     "label": "Daisetsuzan Volcanic Group",
+     "pages": 25,
+     "unesco": false
+    },
+    {
+     "label": "Mount Rishiri",
+     "pages": 23,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 4,
+  "geothermalPoints": 12,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Mount Apoi Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 8,
+   "glaciersIce": 0,
+   "cavesKarst": 4,
+   "unescoGeology": true
+  }
+ },
+ "maui": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Haleakalā",
+     "pages": 42,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 9,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ },
+ "azores": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Pico",
+     "pages": 42,
+     "unesco": false
+    },
+    {
+     "label": "Capelinhos",
+     "pages": 20,
+     "unesco": false
+    },
+    {
+     "label": "Água de Pau",
+     "pages": 13,
+     "unesco": false
+    },
+    {
+     "label": "Sete Cidades Massif",
+     "pages": 12,
+     "unesco": false
+    },
+    {
+     "label": "Serra de Santa Bárbara",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Gruta das Torres",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 1,
+  "caveEntrances": 39,
+  "geothermalPoints": 3,
+  "osmGeological": {
+   "volcanic_lava_tube": 1,
+   "fault": 2,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 3,
+   "glaciersIce": 2,
+   "cavesKarst": 6,
+   "tectonicLandscapes": 3
+  }
+ },
+ "mongolia": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Dariganga Volcanic Field",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Potanin Glacier",
+     "pages": 17,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Yolyn Am",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 320,
+  "caveEntrances": 12,
+  "geothermalPoints": 2,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 1,
+   "palaeontological_site": 2,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 4,
+   "geothermalFeatures": 3,
+   "glaciersIce": 6,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6,
+   "rockFormations": 4
+  }
+ },
+ "belfast-giants-causeway": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 44,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 4,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 3,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6
+  }
+ },
+ "canaries": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Teide",
+     "pages": 105,
+     "unesco": false
+    },
+    {
+     "label": "Cumbre Vieja",
+     "pages": 34,
+     "unesco": false
+    },
+    {
+     "label": "Teneguía",
+     "pages": 20,
+     "unesco": false
+    },
+    {
+     "label": "Pico viejo",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Bandama Caldera",
+     "pages": 13,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Cueva de los Verdes",
+     "pages": 22,
+     "unesco": true
+    },
+    {
+     "label": "Cueva del Viento",
+     "pages": 13,
+     "unesco": false
+    },
+    {
+     "label": "Jameos del Agua",
+     "pages": 9,
+     "unesco": true
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Famara",
+     "pages": 10,
+     "unesco": true
+    },
+    {
+     "label": "Roque de Garachico",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 492,
+  "geothermalPoints": 1,
+  "osmGeological": {
+   "volcanic_lava_tube": 19,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 12,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Lanzarote and Chinijo Islands"
+  ],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 2,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 6,
+   "cavesKarst": 8,
+   "rockFormations": 8,
+   "unescoGeology": true
+  }
+ },
+ "iceland": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Hekla",
+     "pages": 62,
+     "unesco": false
+    },
+    {
+     "label": "Katla",
+     "pages": 48,
+     "unesco": false
+    },
+    {
+     "label": "Snæfellsjökull",
+     "pages": 47,
+     "unesco": false
+    },
+    {
+     "label": "Askja",
+     "pages": 40,
+     "unesco": false
+    },
+    {
+     "label": "Eldfell",
+     "pages": 38,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Strokkur",
+     "pages": 40,
+     "unesco": false
+    },
+    {
+     "label": "Great Geysir",
+     "pages": 37,
+     "unesco": false
+    },
+    {
+     "label": "Seltún",
+     "pages": 4,
+     "unesco": true
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Eyjafjallajökull",
+     "pages": 76,
+     "unesco": false
+    },
+    {
+     "label": "Vatnajökull",
+     "pages": 61,
+     "unesco": true
+    },
+    {
+     "label": "Snæfellsjökull",
+     "pages": 47,
+     "unesco": false
+    },
+    {
+     "label": "Mýrdalsjökull",
+     "pages": 38,
+     "unesco": false
+    },
+    {
+     "label": "Öræfajökull",
+     "pages": 37,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Surtshellir",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Grjótagjá",
+     "pages": 13,
+     "unesco": false
+    },
+    {
+     "label": "Víðgelmir",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Thingvellir National Park",
+     "pages": 62,
+     "unesco": false
+    },
+    {
+     "label": "Eldgjá",
+     "pages": 29,
+     "unesco": false
+    },
+    {
+     "label": "Haukadalur",
+     "pages": 24,
+     "unesco": false
+    },
+    {
+     "label": "Dyrhólaey",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Krýsuvík",
+     "pages": 16,
+     "unesco": true
+    }
+   ],
+   "tectonicLandscapes": [
+    {
+     "label": "Silfra",
+     "pages": 16,
+     "unesco": false
+    },
+    {
+     "label": "Almannagjá",
+     "pages": 6,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 314,
+  "caveEntrances": 89,
+  "geothermalPoints": 15,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 1,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Vatnajökull National Park"
+  ],
+  "geoparks": [
+   "Reykjanes"
+  ],
+  "values": {
+   "volcanicLandscapes": 10,
+   "geothermalFeatures": 8,
+   "glaciersIce": 10,
+   "cavesKarst": 6,
+   "rockFormations": 10,
+   "tectonicLandscapes": 6,
+   "unescoGeology": true
+  }
+ },
+ "cape-town": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 55,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ },
+ "uyuni": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0
+  }
+ },
+ "tbilisi-caucasus": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Pankisi Gorge",
+     "pages": 27,
+     "unesco": false
+    },
+    {
+     "label": "Tsalka Canyon",
+     "pages": 12,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 22,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "jordan": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Sanctuary of Agios Lot",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Ein Avdat",
+     "pages": 18,
+     "unesco": false
+    },
+    {
+     "label": "Siq",
+     "pages": 18,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 46,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 4,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 4,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "joshua-tree": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0
+  }
+ },
+ "nicaragua": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Momotombo",
+     "pages": 35,
+     "unesco": false
+    },
+    {
+     "label": "Concepción",
+     "pages": 31,
+     "unesco": false
+    },
+    {
+     "label": "Maderas",
+     "pages": 29,
+     "unesco": false
+    },
+    {
+     "label": "Volcán San Cristóbal",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Telica",
+     "pages": 23,
+     "unesco": false
+    }
+   ],
+   "geothermalFeatures": [
+    {
+     "label": "Hervideros de San Jacinto",
+     "pages": 3,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 4,
+  "geothermalPoints": 1,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 1,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Río Coco UNESCO Global Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 2,
+   "glaciersIce": 0,
+   "cavesKarst": 4,
+   "rockFormations": 2,
+   "unescoGeology": true
+  }
+ },
+ "glacier-waterton": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Grinnell Glacier",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 573,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6
+  }
+ },
+ "santorini": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Santorini caldera",
+     "pages": 31,
+     "unesco": false
+    },
+    {
+     "label": "Nea Kameni",
+     "pages": 25,
+     "unesco": false
+    },
+    {
+     "label": "Palea Kameni",
+     "pages": 17,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 54,
+  "geothermalPoints": 1,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 2,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ },
+ "tanzania": {
+  "wikidata": {},
+  "glacierPolygons": 0,
+  "caveEntrances": 1,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 2
+  }
+ },
+ "death-valley": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Death Valley",
+     "pages": 79,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "rockFormations": 9
+  }
+ },
+ "faroe-islands": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Beinisvørð",
+     "pages": 18,
+     "unesco": false
+    },
+    {
+     "label": "Risin og Kellingin",
+     "pages": 11,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 38,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "rockFormations": 6
+  }
+ },
+ "north-cascades": {
+  "wikidata": {},
+  "glacierPolygons": 694,
+  "caveEntrances": 1,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 2
+  }
+ },
+ "peru": {
+  "wikidata": {},
+  "glacierPolygons": 42,
+  "caveEntrances": 4,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "cavesKarst": 4
+  }
+ },
+ "uluru": {
+  "wikidata": {
+   "rockFormations": [
+    {
+     "label": "Uluru",
+     "pages": 94,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 6,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [
+   "Uluṟu-Kata Tjuṯa National Park"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 4,
+   "rockFormations": 9,
+   "unescoGeology": true
+  }
+ },
+ "palawan": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Tabon Caves",
+     "pages": 18,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 16,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "hoodoo": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "meteor_crater": 0,
+   "palaeontological_site": 0,
+   "giants_kettle": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6
+  }
+ }
+}

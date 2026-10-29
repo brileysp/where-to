@@ -1,0 +1,1 @@
+ALTER TYPE "public"."peak_intensity" ADD VALUE 'high' BEFORE 'extreme';

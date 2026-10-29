@@ -1,0 +1,1662 @@
+{
+ "uganda": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 7,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "mauritius": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 6,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "morocco": {
+  "boutiqueHotels": 8,
+  "grandHotels": 7,
+  "remoteLodges": 5,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "castleSuite"
+  ]
+ },
+ "aruba": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 1,
+  "hotelIsDestination": 3,
+  "privateVillas": "some"
+ },
+ "everglades": {
+  "boutiqueHotels": 0,
+  "grandHotels": 0,
+  "remoteLodges": 2,
+  "hotelIsDestination": 1,
+  "privateVillas": "few"
+ },
+ "panama": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "ethiopia": {
+  "boutiqueHotels": 2,
+  "grandHotels": 2,
+  "remoteLodges": 3,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "mendoza": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "gbr": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "luangprabang": {
+  "boutiqueHotels": 7,
+  "grandHotels": 6,
+  "remoteLodges": 4,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "london": {
+  "boutiqueHotels": 8,
+  "grandHotels": 10,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "castleSuite"
+  ]
+ },
+ "guatemala": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "bhutan": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 9,
+  "hotelIsDestination": 8,
+  "privateVillas": "few"
+ },
+ "athens": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "istanbul": {
+  "boutiqueHotels": 7,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "castleSuite"
+  ]
+ },
+ "dubai": {
+  "boutiqueHotels": 5,
+  "grandHotels": 7,
+  "remoteLodges": 2,
+  "hotelIsDestination": 9,
+  "privateVillas": "some",
+  "stayTypes": [
+   "penthouse",
+   "villaPool"
+  ]
+ },
+ "peruvian-amazon": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 8,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "atacama": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 7,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "thailand": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 6,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "havana": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "colombian-andes": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 4,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "turks-caicos": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 7,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "sedona": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 6,
+  "hotelIsDestination": 8,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "ecuadorian-andes": {
+  "boutiqueHotels": 5,
+  "grandHotels": 6,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "monterey-big-sur": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 7,
+  "hotelIsDestination": 8,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "olympic": {
+  "boutiqueHotels": 2,
+  "grandHotels": 4,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "andalucia": {
+  "boutiqueHotels": 6,
+  "grandHotels": 8,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "some",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "big-island": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 6,
+  "hotelIsDestination": 7,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "chiapas": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "rajaampat": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 8,
+  "hotelIsDestination": 8,
+  "privateVillas": "few"
+ },
+ "colombian-caribbean": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "madeira": {
+  "boutiqueHotels": 5,
+  "grandHotels": 7,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "zimbabwe": {
+  "boutiqueHotels": 2,
+  "grandHotels": 5,
+  "remoteLodges": 8,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "madagascar": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "berlin": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 2,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "kenya": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 10,
+  "hotelIsDestination": 10,
+  "privateVillas": "few",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "basque-country": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "fiji": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 9,
+  "hotelIsDestination": 9,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "rome": {
+  "boutiqueHotels": 6,
+  "grandHotels": 9,
+  "remoteLodges": 0,
+  "hotelIsDestination": 4,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "castleSuite"
+  ]
+ },
+ "bordeaux": {
+  "boutiqueHotels": 7,
+  "grandHotels": 7,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "some",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "barbados": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 5,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "grandcanyon": {
+  "boutiqueHotels": 1,
+  "grandHotels": 4,
+  "remoteLodges": 2,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "badlands-black-hills": {
+  "boutiqueHotels": 0,
+  "grandHotels": 1,
+  "remoteLodges": 1,
+  "hotelIsDestination": 1,
+  "privateVillas": "few"
+ },
+ "milford-sound-fiordland": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "rajasthan-golden-triangle": {
+  "boutiqueHotels": 7,
+  "grandHotels": 10,
+  "remoteLodges": 3,
+  "hotelIsDestination": 9,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "komodo": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 6,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "denali-interior": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "buenosaires": {
+  "boutiqueHotels": 7,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "southeast-alaska": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 6,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "los-cabos": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "oaxaca": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "lapland": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 5,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "angkor": {
+  "boutiqueHotels": 7,
+  "grandHotels": 7,
+  "remoteLodges": 2,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "nepal": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "rwanda": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 9,
+  "hotelIsDestination": 9,
+  "privateVillas": "few"
+ },
+ "ladakh": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "bali": {
+  "boutiqueHotels": 8,
+  "grandHotels": 5,
+  "remoteLodges": 6,
+  "hotelIsDestination": 9,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "charleston-savannah": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some"
+ },
+ "srilanka": {
+  "boutiqueHotels": 7,
+  "grandHotels": 5,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "kaziranga": {
+  "boutiqueHotels": 1,
+  "grandHotels": 2,
+  "remoteLodges": 6,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "tokyo-kyoto": {
+  "boutiqueHotels": 9,
+  "grandHotels": 7,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "fjords": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "kruger": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 10,
+  "hotelIsDestination": 9,
+  "privateVillas": "few"
+ },
+ "great-smoky-mountains": {
+  "boutiqueHotels": 1,
+  "grandHotels": 2,
+  "remoteLodges": 2,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "scottish-highlands-skye": {
+  "boutiqueHotels": 5,
+  "grandHotels": 6,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "dolomites": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "some"
+ },
+ "lake-district": {
+  "boutiqueHotels": 4,
+  "grandHotels": 4,
+  "remoteLodges": 2,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "falklands": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "taiwan": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 0,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "antarctica": {
+  "boutiqueHotels": 0,
+  "grandHotels": 0,
+  "remoteLodges": 8,
+  "hotelIsDestination": 9,
+  "privateVillas": "few"
+ },
+ "hongkong": {
+  "boutiqueHotels": 6,
+  "grandHotels": 7,
+  "remoteLodges": 0,
+  "hotelIsDestination": 4,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "zambia": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 9,
+  "hotelIsDestination": 8,
+  "privateVillas": "few"
+ },
+ "st-andrews-fife": {
+  "boutiqueHotels": 3,
+  "grandHotels": 6,
+  "remoteLodges": 1,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "black-forest": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some"
+ },
+ "palau": {
+  "boutiqueHotels": 2,
+  "grandHotels": 0,
+  "remoteLodges": 6,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "yosemite": {
+  "boutiqueHotels": 1,
+  "grandHotels": 4,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "tierra-del-fuego": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "aspen": {
+  "boutiqueHotels": 4,
+  "grandHotels": 5,
+  "remoteLodges": 5,
+  "hotelIsDestination": 8,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "torres-del-paine": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 8,
+  "hotelIsDestination": 8,
+  "privateVillas": "few"
+ },
+ "chilean-lake-district": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 6,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "vietnam": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "beijing": {
+  "boutiqueHotels": 4,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "lofoten": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "rioja": {
+  "boutiqueHotels": 5,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "banff": {
+  "boutiqueHotels": 3,
+  "grandHotels": 8,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "nyc": {
+  "boutiqueHotels": 8,
+  "grandHotels": 9,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "arches-canyonlands": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 4,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "provence": {
+  "boutiqueHotels": 8,
+  "grandHotels": 7,
+  "remoteLodges": 1,
+  "hotelIsDestination": 6,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "castleSuite"
+  ]
+ },
+ "sicily": {
+  "boutiqueHotels": 7,
+  "grandHotels": 7,
+  "remoteLodges": 1,
+  "hotelIsDestination": 6,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "castleSuite"
+  ]
+ },
+ "chicago": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "prague": {
+  "boutiqueHotels": 6,
+  "grandHotels": 7,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "mallorca": {
+  "boutiqueHotels": 7,
+  "grandHotels": 6,
+  "remoteLodges": 3,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "amalfi": {
+  "boutiqueHotels": 8,
+  "grandHotels": 8,
+  "remoteLodges": 2,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "namibia": {
+  "boutiqueHotels": 2,
+  "grandHotels": 2,
+  "remoteLodges": 8,
+  "hotelIsDestination": 8,
+  "privateVillas": "few"
+ },
+ "okinawa": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "el-chalten": {
+  "boutiqueHotels": 2,
+  "grandHotels": 0,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "churchill": {
+  "boutiqueHotels": 0,
+  "grandHotels": 0,
+  "remoteLodges": 4,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "seoul": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 2,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "edinburgh": {
+  "boutiqueHotels": 6,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "belize": {
+  "boutiqueHotels": 3,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "acadia": {
+  "boutiqueHotels": 1,
+  "grandHotels": 2,
+  "remoteLodges": 1,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "sequoia-kings-canyon": {
+  "boutiqueHotels": 0,
+  "grandHotels": 2,
+  "remoteLodges": 2,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "budapest": {
+  "boutiqueHotels": 5,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "svalbard": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "rio": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "guilin-yangshuo": {
+  "boutiqueHotels": 7,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "napa": {
+  "boutiqueHotels": 7,
+  "grandHotels": 6,
+  "remoteLodges": 2,
+  "hotelIsDestination": 8,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "costa-rica": {
+  "boutiqueHotels": 4,
+  "grandHotels": 2,
+  "remoteLodges": 8,
+  "hotelIsDestination": 6,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "bend-crater-lake": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "kerala": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 3,
+  "hotelIsDestination": 6,
+  "privateVillas": "some"
+ },
+ "chiang-mai": {
+  "boutiqueHotels": 7,
+  "grandHotels": 5,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "puerto-rico": {
+  "boutiqueHotels": 4,
+  "grandHotels": 5,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "zion-bryce": {
+  "boutiqueHotels": 2,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "kyrgyzstan": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 3,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "egypt": {
+  "boutiqueHotels": 3,
+  "grandHotels": 8,
+  "remoteLodges": 3,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "champagne": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "cape-cod-islands": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 1,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "north-island": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 7,
+  "hotelIsDestination": 6,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "chamonix": {
+  "boutiqueHotels": 4,
+  "grandHotels": 4,
+  "remoteLodges": 3,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "piedmont": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "some"
+ },
+ "ireland": {
+  "boutiqueHotels": 4,
+  "grandHotels": 8,
+  "remoteLodges": 3,
+  "hotelIsDestination": 6,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "marlborough-abel-tasman": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "new-orleans": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "pantanal": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 6,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "vienna": {
+  "boutiqueHotels": 5,
+  "grandHotels": 9,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "sardinia": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "croatia": {
+  "boutiqueHotels": 5,
+  "grandHotels": 4,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "greenland": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "nice-riviera": {
+  "boutiqueHotels": 6,
+  "grandHotels": 9,
+  "remoteLodges": 1,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "penthouse",
+   "villaPool"
+  ]
+ },
+ "yellowstone": {
+  "boutiqueHotels": 1,
+  "grandHotels": 6,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "pakistan": {
+  "boutiqueHotels": 1,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "whistler": {
+  "boutiqueHotels": 4,
+  "grandHotels": 5,
+  "remoteLodges": 4,
+  "hotelIsDestination": 6,
+  "privateVillas": "some"
+ },
+ "tuscany": {
+  "boutiqueHotels": 7,
+  "grandHotels": 8,
+  "remoteLodges": 3,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "castleSuite"
+  ]
+ },
+ "san-miguel-guanajuato": {
+  "boutiqueHotels": 8,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "hokkaido": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "mexicocity": {
+  "boutiqueHotels": 7,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "maui": {
+  "boutiqueHotels": 4,
+  "grandHotels": 5,
+  "remoteLodges": 4,
+  "hotelIsDestination": 8,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "bahamas": {
+  "boutiqueHotels": 3,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "lisbon": {
+  "boutiqueHotels": 8,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some"
+ },
+ "borabora": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 8,
+  "hotelIsDestination": 10,
+  "privateVillas": "few",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "azores": {
+  "boutiqueHotels": 3,
+  "grandHotels": 1,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "maldives": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 9,
+  "hotelIsDestination": 10,
+  "privateVillas": "few",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "douro-valley-porto": {
+  "boutiqueHotels": 6,
+  "grandHotels": 5,
+  "remoteLodges": 2,
+  "hotelIsDestination": 6,
+  "privateVillas": "some"
+ },
+ "mongolia": {
+  "boutiqueHotels": 2,
+  "grandHotels": 0,
+  "remoteLodges": 6,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "belfast-giants-causeway": {
+  "boutiqueHotels": 3,
+  "grandHotels": 5,
+  "remoteLodges": 1,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "vancouver-island": {
+  "boutiqueHotels": 5,
+  "grandHotels": 5,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "seychelles": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 7,
+  "hotelIsDestination": 9,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "copenhagen": {
+  "boutiqueHotels": 7,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "uzbekistan": {
+  "boutiqueHotels": 3,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "cotswolds": {
+  "boutiqueHotels": 6,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "some",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "bagan": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 3,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "paris": {
+  "boutiqueHotels": 9,
+  "grandHotels": 10,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "castleSuite"
+  ]
+ },
+ "canaries": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 1,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "bavaria-munich": {
+  "boutiqueHotels": 4,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "iceland": {
+  "boutiqueHotels": 4,
+  "grandHotels": 2,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "hudson-valley": {
+  "boutiqueHotels": 6,
+  "grandHotels": 4,
+  "remoteLodges": 0,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "upper-peninsula": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 2,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "nova-scotia": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "ghana": {
+  "boutiqueHotels": 3,
+  "grandHotels": 2,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "texas-hill-country": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "tasmania": {
+  "boutiqueHotels": 5,
+  "grandHotels": 2,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "galapagos": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 6,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "cape-town": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 4,
+  "hotelIsDestination": 6,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "penthouse"
+  ]
+ },
+ "swissalps": {
+  "boutiqueHotels": 5,
+  "grandHotels": 8,
+  "remoteLodges": 4,
+  "hotelIsDestination": 8,
+  "privateVillas": "some"
+ },
+ "vermont": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "quebec-city": {
+  "boutiqueHotels": 7,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "uyuni": {
+  "boutiqueHotels": 2,
+  "grandHotels": 0,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "punta-cana": {
+  "boutiqueHotels": 2,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "tbilisi-caucasus": {
+  "boutiqueHotels": 6,
+  "grandHotels": 3,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "bangkok": {
+  "boutiqueHotels": 5,
+  "grandHotels": 8,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "borneo": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 6,
+  "hotelIsDestination": 6,
+  "privateVillas": "few"
+ },
+ "queenstown": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 7,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "jordan": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 4,
+  "hotelIsDestination": 5,
+  "privateVillas": "few"
+ },
+ "joshua-tree": {
+  "boutiqueHotels": 5,
+  "grandHotels": 2,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "venice": {
+  "boutiqueHotels": 6,
+  "grandHotels": 10,
+  "remoteLodges": 0,
+  "hotelIsDestination": 5,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "castleSuite"
+  ]
+ },
+ "nicaragua": {
+  "boutiqueHotels": 5,
+  "grandHotels": 2,
+  "remoteLodges": 4,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "singapore": {
+  "boutiqueHotels": 6,
+  "grandHotels": 9,
+  "remoteLodges": 0,
+  "hotelIsDestination": 6,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse",
+   "villaPool"
+  ]
+ },
+ "glacier-waterton": {
+  "boutiqueHotels": 2,
+  "grandHotels": 5,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "redwood": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 2,
+  "hotelIsDestination": 2,
+  "privateVillas": "few"
+ },
+ "santorini": {
+  "boutiqueHotels": 8,
+  "grandHotels": 5,
+  "remoteLodges": 2,
+  "hotelIsDestination": 7,
+  "privateVillas": "some",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "tanzania": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 10,
+  "hotelIsDestination": 10,
+  "privateVillas": "few",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "death-valley": {
+  "boutiqueHotels": 1,
+  "grandHotels": 3,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "botswana": {
+  "boutiqueHotels": 2,
+  "grandHotels": 2,
+  "remoteLodges": 10,
+  "hotelIsDestination": 10,
+  "privateVillas": "few"
+ },
+ "algarve": {
+  "boutiqueHotels": 4,
+  "grandHotels": 4,
+  "remoteLodges": 2,
+  "hotelIsDestination": 5,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "rocky-mountain": {
+  "boutiqueHotels": 1,
+  "grandHotels": 4,
+  "remoteLodges": 2,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "faroe-islands": {
+  "boutiqueHotels": 3,
+  "grandHotels": 1,
+  "remoteLodges": 3,
+  "hotelIsDestination": 4,
+  "privateVillas": "few"
+ },
+ "snowdonia": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "north-cascades": {
+  "boutiqueHotels": 1,
+  "grandHotels": 1,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "cornwall": {
+  "boutiqueHotels": 5,
+  "grandHotels": 3,
+  "remoteLodges": 2,
+  "hotelIsDestination": 4,
+  "privateVillas": "some"
+ },
+ "papua-new-guinea": {
+  "boutiqueHotels": 1,
+  "grandHotels": 0,
+  "remoteLodges": 3,
+  "hotelIsDestination": 3,
+  "privateVillas": "few"
+ },
+ "peru": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 5,
+  "hotelIsDestination": 6,
+  "privateVillas": "few",
+  "stayTypes": [
+   "castleSuite"
+  ]
+ },
+ "uluru": {
+  "boutiqueHotels": 2,
+  "grandHotels": 1,
+  "remoteLodges": 5,
+  "hotelIsDestination": 7,
+  "privateVillas": "few"
+ },
+ "rivieramaya": {
+  "boutiqueHotels": 5,
+  "grandHotels": 2,
+  "remoteLodges": 2,
+  "hotelIsDestination": 7,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "argentine-lake-district": {
+  "boutiqueHotels": 4,
+  "grandHotels": 3,
+  "remoteLodges": 5,
+  "hotelIsDestination": 5,
+  "privateVillas": "some"
+ },
+ "sydney": {
+  "boutiqueHotels": 5,
+  "grandHotels": 6,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "some",
+  "stayTypes": [
+   "penthouse",
+   "villaPool"
+  ]
+ },
+ "palawan": {
+  "boutiqueHotels": 4,
+  "grandHotels": 0,
+  "remoteLodges": 7,
+  "hotelIsDestination": 8,
+  "privateVillas": "few",
+  "stayTypes": [
+   "villaPool",
+   "overwater"
+  ]
+ },
+ "puglia": {
+  "boutiqueHotels": 6,
+  "grandHotels": 6,
+  "remoteLodges": 1,
+  "hotelIsDestination": 6,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool",
+   "castleSuite"
+  ]
+ },
+ "jamaica": {
+  "boutiqueHotels": 3,
+  "grandHotels": 3,
+  "remoteLodges": 3,
+  "hotelIsDestination": 6,
+  "privateVillas": "plentiful",
+  "stayTypes": [
+   "villaPool"
+  ]
+ },
+ "amsterdam": {
+  "boutiqueHotels": 7,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ },
+ "barcelona": {
+  "boutiqueHotels": 7,
+  "grandHotels": 5,
+  "remoteLodges": 0,
+  "hotelIsDestination": 3,
+  "privateVillas": "few",
+  "stayTypes": [
+   "penthouse"
+  ]
+ }
+}

@@ -18,6 +18,7 @@ import {
   type AnyPgColumn,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
+import type { QuestionFitRule } from '../onboarding/question-fit';
 
 // ---- Enums -----------------------------------------------------------------
 
@@ -30,7 +31,7 @@ export const climateEnum = pgEnum('climate', [
   'polar',
 ]);
 
-export const peakIntensityEnum = pgEnum('peak_intensity', ['mild', 'moderate', 'extreme']);
+export const peakIntensityEnum = pgEnum('peak_intensity', ['mild', 'moderate', 'high', 'extreme']);
 
 export const crowdBaselineEnum = pgEnum('crowd_baseline', ['low', 'high']);
 
@@ -141,6 +142,8 @@ export const places = pgTable(
       .$type<Record<string, { label: string; weight: number; months: Record<string, number> }[]>>(),
 
     peakIntensity: peakIntensityEnum('peak_intensity'),
+    /** How much prices swing between the peak and low seasons (mild, moderate, extreme), separate from the crowds in peakIntensity: a safari lodge can have few crowds and wildly seasonal rates. */
+    priceSwing: peakIntensityEnum('price_swing'),
     crowdBaseline: crowdBaselineEnum('crowd_baseline'),
     hotSeverity: severityEnum('hot_severity'),
     coldSeverity: severityEnum('cold_severity'),
@@ -592,6 +595,31 @@ export const userTravelProfiles = pgTable('user_travel_profiles', {
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * A traveler's saved trips, so they can plan more than one at once. Each holds what must be set per trip (month, year, length, continents) and
+ * only the choices that differ from the traveler's profile defaults (`overrides`: who, bands, what matters, longest flight). Interests, Travel DNA
+ * and where they live stay in user_travel_profiles. The most recently updated trip is the active one. Shape: src/lib/onboarding/trips.ts.
+ */
+export const userTrips = pgTable(
+  'user_trips',
+  {
+    id: uuid('id').primaryKey(),
+    userId: uuid('user_id').notNull(),
+    name: text('name').notNull(),
+    nameAuto: boolean('name_auto').notNull().default(true),
+    month: integer('month'),
+    week: integer('week').notNull().default(0),
+    year: integer('year'),
+    yearAuto: boolean('year_auto').notNull().default(true),
+    length: text('length'),
+    continents: jsonb('continents').notNull().default([]).$type<string[]>(),
+    overrides: jsonb('overrides').notNull().default({}),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('user_trips_user_idx').on(table.userId, table.updatedAt)],
+);
+
 export const userSavedProfiles = pgTable('user_saved_profiles', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').notNull(),
@@ -1020,6 +1048,8 @@ export const interestQuestions = pgTable(
     note: text('note').notNull().default(''),
     /** Short text for the reason chip when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
     missMessage: text('miss_message').notNull().default(''),
+    /** How a place's columns answer this question: one check per answer option (see src/lib/onboarding/question-fit.ts). Null = not mapped to columns yet. */
+    fitRule: jsonb('fit_rule').$type<QuestionFitRule | null>(),
     approvedBy: text('approved_by').notNull().default(''),
     approvedAt: timestamp('approved_at', { withTimezone: true }),
     updatedBy: text('updated_by').notNull().default(''),

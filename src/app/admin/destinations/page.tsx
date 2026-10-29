@@ -18,6 +18,7 @@ export default async function AdminDestinationsPage({ searchParams }: { searchPa
     about: d.about,
     monthlyWeather: d.monthlyWeather,
     peakIntensity: d.peakIntensity,
+    priceSwing: d.priceSwing,
     hotSeverity: d.hotSeverity,
     coldSeverity: d.coldSeverity,
     wetSeverity: d.wetSeverity,

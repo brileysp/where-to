@@ -1,4 +1,9 @@
-.mt-wrap { padding: 20px 24px 60px; max-width: 980px; display: flex; flex-direction: column; gap: 16px; }
+/* The admin shell does not scroll; each page owns its own scrolling (like .ip-wrap on the interest page). */
+.mt-wrap { flex: 1; min-width: 0; overflow: auto; padding: 20px 24px 60px; display: flex; flex-direction: column; gap: 16px; font-size: 13px; }
+.mt-wrap > * { max-width: 1180px; flex-shrink: 0; }
+.mt-wrap p { font-size: 13px; line-height: 1.5; }
+.mt-wrap h2 { font-size: 16px; }
+.mt-wrap h3 { font-size: 15px; }
 .mt-card { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 9px; padding: 14px 16px; }
 .mt-card h2 { margin: 0 0 4px; font-size: 16px; }
 .mt-faint { color: var(--text-faint); }

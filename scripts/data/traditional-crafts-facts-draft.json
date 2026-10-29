@@ -1,0 +1,423 @@
+{
+ "panama": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 5
+ },
+ "ethiopia": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 3
+ },
+ "luangprabang": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "guatemala": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "bhutan": {
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 5
+ },
+ "istanbul": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 9
+ },
+ "morocco": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "colombian-andes": {
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "ecuadorian-andes": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "chiapas": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 5
+ },
+ "madagascar": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 3
+ },
+ "rajasthan-golden-triangle": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "oaxaca": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 7
+ },
+ "lapland": {
+  "courseLengths": [
+   "short"
+  ],
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 7
+ },
+ "angkor": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 5
+ },
+ "nepal": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 7
+ },
+ "rwanda": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 3
+ },
+ "ladakh": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 4
+ },
+ "bali": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 9
+ },
+ "tokyo-kyoto": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 9
+ },
+ "scottish-highlands-skye": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "palau": {
+  "craftSettings": [],
+  "seriousPieces": 3
+ },
+ "vietnam": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 7
+ },
+ "seoul": {
+  "courseLengths": [
+   "short"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "kerala": {
+  "courseLengths": [
+   "short"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets"
+  ],
+  "seriousPieces": 6
+ },
+ "chiang-mai": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 9
+ },
+ "egypt": {
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "north-island": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "ireland": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "san-miguel-guanajuato": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "douro-valley-porto": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 7
+ },
+ "mongolia": {
+  "craftSettings": [
+   "village",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 4
+ },
+ "uzbekistan": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 6
+ },
+ "bagan": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 4
+ },
+ "ghana": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 5
+ },
+ "uyuni": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 3
+ },
+ "borneo": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 4
+ },
+ "venice": {
+  "courseLengths": [
+   "short",
+   "multiDay"
+  ],
+  "craftSettings": [
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 8
+ },
+ "papua-new-guinea": {
+  "craftSettings": [
+   "village",
+   "markets"
+  ],
+  "seriousPieces": 3
+ },
+ "peru": {
+  "courseLengths": [
+   "short",
+   "multiDay",
+   "apprenticeship"
+  ],
+  "craftSettings": [
+   "village",
+   "studios",
+   "markets",
+   "museums"
+  ],
+  "seriousPieces": 7
+ }
+}

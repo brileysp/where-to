@@ -3,22 +3,24 @@
 import { useEffect, useRef, useState } from 'react';
 
 const SEEN_KEY = 'whereto:resort-demo-seen';
+/** The same walkthrough inside the new onboarding keeps its own flag, so having seen it on the results page does not hide it there. */
+export const ONBOARDING_SEEN_KEY = 'whereto:onboarding-resort-seen';
 
 export function prefersReducedMotion(): boolean {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-function markSeen() {
+function markSeen(key: string) {
   try {
-    window.localStorage.setItem(SEEN_KEY, '1');
+    window.localStorage.setItem(key, '1');
   } catch {
     // Storage blocked (private mode) — the demo may replay next visit, which beats throwing.
   }
 }
 
-function alreadySeen(): boolean {
+function alreadySeen(key: string): boolean {
   try {
-    return window.localStorage.getItem(SEEN_KEY) === '1';
+    return window.localStorage.getItem(key) === '1';
   } catch {
     return false;
   }
@@ -38,6 +40,8 @@ interface Args {
   cardRefs: React.RefObject<Map<string, HTMLElement>>;
   /** Result ids in the order they are currently displayed. */
   rowIds: () => string[];
+  /** Where "already shown" is remembered. Default: the results page's own flag. */
+  seenKey?: string;
 }
 
 export interface DemoCursor {
@@ -56,7 +60,7 @@ const REVEAL_ROWS = 8;
  * re-sort animation plays for real, and finally the list returns to the
  * user's own ranking. Plays once per browser; any tap ends it early.
  */
-export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowRef, chipEls, cardRefs, rowIds }: Args) {
+export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowRef, chipEls, cardRefs, rowIds, seenKey = SEEN_KEY }: Args) {
   const [calloutVisible, setCalloutVisible] = useState(false);
   const [cursor, setCursor] = useState<DemoCursor>(HIDDEN_CURSOR);
   const [chipRowInView, setChipRowInView] = useState(false);
@@ -80,7 +84,7 @@ export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowR
 
   useEffect(() => {
     if (!ready || !chipRowInView || finished.current) return;
-    if (alreadySeen() || prefersReducedMotion() || latest.current.chipKeys.length === 0) return;
+    if (alreadySeen(seenKey) || prefersReducedMotion() || latest.current.chipKeys.length === 0) return;
 
     const keys = latest.current.chipKeys.slice(0, 2);
     const timers: ReturnType<typeof setTimeout>[] = [];
@@ -151,7 +155,7 @@ export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowR
       latest.current.pinChip(null);
       pinnedByDemo = false;
       finished.current = true;
-      markSeen();
+      markSeen(seenKey);
       document.removeEventListener('pointerdown', onPointerDown, true);
     }, endAt + 450);
 
@@ -176,7 +180,7 @@ export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowR
       const onChip = e.target instanceof Element && e.target.closest('.quick-chip');
       stop(!onChip);
       finished.current = true;
-      markSeen();
+      markSeen(seenKey);
       document.removeEventListener('pointerdown', onPointerDown, true);
     };
     document.addEventListener('pointerdown', onPointerDown, true);
@@ -185,7 +189,7 @@ export function useResortDemo({ ready, chipKeys, pinChip, containerRef, chipRowR
       document.removeEventListener('pointerdown', onPointerDown, true);
       stop(true);
     };
-  }, [ready, chipRowInView, chipEls, cardRefs, containerRef]);
+  }, [ready, chipRowInView, chipEls, cardRefs, containerRef, seenKey]);
 
   return { calloutVisible, cursor };
 }

@@ -42,9 +42,10 @@ describe('the other "what else matters" items', () => {
     expect(c).toEqual({});
   });
   it('single-choice items hold one option', () => {
-    const c = toggleCareOption({}, item('deals'), 'off');
-    expect(c.deals.o).toEqual(['off']);
-    expect(toggleCareOption(c, item('deals'), 'off')).toEqual({});
+    const one = { key: 'one', icon: '1', name: 'One', detail: '', options: [['a', 'A'], ['b', 'B']] as Array<[string, string]>, multi: false };
+    const c = toggleCareOption(toggleCareOption({}, one, 'a'), one, 'b');
+    expect(c.one.o).toEqual(['b']);
+    expect(toggleCareOption(c, one, 'b')).toEqual({});
   });
   it('the must-have switch only sticks to an item that exists, and Clear removes it', () => {
     expect(setCareFirm({}, 'kids', true)).toEqual({});
@@ -54,7 +55,7 @@ describe('the other "what else matters" items', () => {
   });
   it('the Travel DNA path asks only the lasting items', () => {
     expect(careItemsFor('dna').map((c) => c.key)).toEqual(['food', 'lang', 'how']);
-    expect(careItemsFor('trip').length).toBe(7);
+    expect(careItemsFor('trip').length).toBe(6);
     // Step-free access and avoiding crowds were dropped: they repeat physical demand and social vibe.
     expect(careItemsFor('trip').map((c) => c.name)).not.toContain('Avoiding crowds');
     expect(careItemsFor('trip').map((c) => c.name)).not.toContain('Step-free access');

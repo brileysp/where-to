@@ -1,0 +1,689 @@
+{
+ "wildCampingLaw": {
+  "yellowstone": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://home.nps.gov/yell/planyourvisit/backcountrysafety.htm",
+   "note": "Anyone staying at a backcountry campsite in Yellowstone must get a backcountry use permit."
+  },
+  "grandcanyon": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm",
+   "note": "Overnight camping outside the developed rim campgrounds needs a backcountry permit (Recreation.gov)."
+  },
+  "olympic": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/olym/planyourvisit/wilderness-regulations.htm",
+   "note": "Permits are required year-round for all overnight wilderness camping; no walk-up permits."
+  },
+  "great-smoky-mountains": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/grsm/planyourvisit/backcountry-camping.htm",
+   "note": "A permit and advance reservation are required for all backcountry camping; designated sites, 3 nights maximum."
+  },
+  "yosemite": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/yose/planyourvisit/wildregs.htm",
+   "note": "\"A wilderness permit is required for all overnight wilderness use.\""
+  },
+  "sequoia-kings-canyon": {
+   "value": "limited",
+   "conf": "medium",
+   "src": "https://www.nps.gov/seki/planyourvisit/wilderness_permits.htm",
+   "note": "Wilderness permits are free and self-issued outside the quota season, reserved and fee-based during it."
+  },
+  "arches-canyonlands": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/cany/planyourvisit/backcountry-camping.htm",
+   "note": "All backcountry camping in Canyonlands requires a permit; Arches limits it to four designated backpacking sites with a permit."
+  },
+  "everglades": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.recreation.gov/camping/poi/4675314",
+   "note": "A permit with dates and campsites is required to camp in the wilderness area (Recreation.gov)."
+  },
+  "denali-interior": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/dena/planyourvisit/backcountry.htm",
+   "note": "Free backcountry permit required for overnight trips; 87 units, 42 with nightly quotas."
+  },
+  "joshua-tree": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/jotr/planyourvisit/backpacking.htm",
+   "note": "A permit is required for all overnight stays in the backcountry."
+  },
+  "death-valley": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/deva/planyourvisit/wilderness-permits.htm",
+   "note": "Backcountry permits required for some locations (roadside camping on named roads, Cottonwood-Marble), voluntary elsewhere."
+  },
+  "redwood": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/redw/planyourvisit/backcountrypermits.htm",
+   "note": "A free permit is required for all backcountry camping; camping without one is prohibited."
+  },
+  "acadia": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://www.nps.gov/acad/planyourvisit/camping.htm",
+   "note": "\"There is no backcountry camping, out-of-bounds camping, overnight parking, or winter camping allowed anywhere in Acadia.\""
+  },
+  "badlands-black-hills": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://www.nps.gov/thingstodo/backcountry-camping-badl.htm",
+   "note": "Badlands: backcountry camping anywhere in the park, no permit, out of sight and half a mile from roads and trails. Black Hills National Forest allows dispersed camping, 14 days in any 60."
+  },
+  "sedona": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd1116620.pdf",
+   "note": "Coconino National Forest allows dispersed camping, 14 days in a 30-day period (older Forest Service document; confirm current order)."
+  },
+  "aspen": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://www.fs.usda.gov/r02/whiteriver/recreation/camping-cabins",
+   "note": "White River National Forest: dispersed camping allowed, maximum 14 days in a 30-day period; some zones designated sites only."
+  },
+  "bend-crater-lake": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://www.fs.usda.gov/r06/deschutes/alerts/deschutes-14-day-camping-order",
+   "note": "Deschutes National Forest: dispersed camping with a 14-day limit; some areas designated dispersed sites only. Crater Lake National Park needs a permit."
+  },
+  "upper-peninsula": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://fs.usda.gov/r09/ottawa/alerts/occupancy-and-use-forest-order-09-07-21-04",
+   "note": "Ottawa and Hiawatha National Forests open to dispersed camping outside developed sites, 16-day limit."
+  },
+  "southeast-alaska": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://www.fs.usda.gov/r10/animals-plants/animals/bears-alaska",
+   "note": "Tongass National Forest: dispersed camping allowed unless a forest order says otherwise (general Forest Service rule); local closure orders apply."
+  },
+  "big-island": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://dlnr.hawaii.gov/dsp/?p=177",
+   "note": "All state and county camping is at designated campgrounds with a permit; Hawaii Volcanoes National Park has its own system."
+  },
+  "maui": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://dlnr.hawaii.gov/dsp/?p=177",
+   "note": "Public camping on Maui needs advance reservations or permits at designated sites (state parks, Haleakala National Park, County of Maui)."
+  },
+  "banff": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://parks.canada.ca/pn-np/ab/banff/activ/arrierepays-backcountry",
+   "note": "Backcountry camping by permit, at designated sites or in random-camping areas at least 5 km from trailheads and campgrounds."
+  },
+  "glacier-waterton": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.parks.canada.ca/pn-np/ab/waterton/activ/camping/arrierepays-wilderness-camping",
+   "note": "Waterton Lakes: backcountry camping by permit at designated sites."
+  },
+  "vancouver-island": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://trailsbc.ca/travel-tips/camping-trail/",
+   "note": "\"Any person may camp on Crown land for up to 14 consecutive calendar days.\" Provincial and national parks (West Coast Trail, Pacific Rim) need permits and designated sites."
+  },
+  "fjords": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://www.visitnorway.com/things-to-do/outdoor-activities/right-to-roam/",
+   "note": "Norway's right to roam: tent at least 150 m from inhabited houses on uncultivated land; some areas have local rules."
+  },
+  "lofoten": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://www.visitnorway.com/things-to-do/outdoor-activities/right-to-roam/",
+   "note": "Norway's right to roam applies; popular areas in Lofoten have their own local rules."
+  },
+  "iceland": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://ust.is/english/visiting-iceland/travel-information/where-can-you-camp",
+   "note": "Small tents allowed one night on uncultivated land unless posted; in national parks and many protected areas only at designated sites; vehicles prohibited."
+  },
+  "scottish-highlands-skye": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://www.outdooraccess-scotland.scot/",
+   "note": "Land Reform (Scotland) Act 2003 and the Scottish Outdoor Access Code allow responsible wild camping (not vehicles)."
+  },
+  "lake-district": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://en.wikipedia.org/wiki/Wild_camping",
+   "note": "No right to wild camp in England; tolerated in high fells with the landowner's tolerance, not a right."
+  },
+  "snowdonia": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://en.wikipedia.org/wiki/Wild_camping",
+   "note": "No right to wild camp in Wales; tolerated at high level, not a right."
+  },
+  "cornwall": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://en.wikipedia.org/wiki/Wild_camping",
+   "note": "No right to wild camp in England; landowner permission needed."
+  },
+  "ireland": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.npws.ie/",
+   "note": "Most land is private and needs permission; county by-laws and park rules apply."
+  },
+  "lapland": {
+   "value": "allowed",
+   "conf": "high",
+   "src": "https://www.outdoors.fi/",
+   "note": "Finland's everyman's rights allow temporary camping in the countryside, except in national parks and protected areas where it is at designated spots."
+  },
+  "svalbard": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.sysselmesteren.no/en/",
+   "note": "Tents for tourism require the Governor's permission; polar bear protection required."
+  },
+  "greenland": {
+   "value": "allowed",
+   "conf": "low",
+   "src": "single non-official source",
+   "note": "Wild camping generally allowed outside populated areas except protected areas and historical sites."
+  },
+  "faroe-islands": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.visitfaroeislands.com/",
+   "note": "Wild camping is not allowed; designated campsites only."
+  },
+  "north-island": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
+   "note": "Freedom camping allowed on public conservation land unless listed prohibited or restricted; council bylaws restrict it."
+  },
+  "marlborough-abel-tasman": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
+   "note": "Freedom camping allowed on public conservation land unless listed prohibited or restricted; Abel Tasman huts and campsites by booking."
+  },
+  "milford-sound-fiordland": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
+   "note": "Fiordland: check DOC restricted areas; campsites and Great Walk huts by booking."
+  },
+  "queenstown": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.doc.govt.nz/parks-and-recreation/things-to-do/camping/freedom-camping/",
+   "note": "Council bylaws restrict freedom camping and fines are issued; DOC land rules apply."
+  },
+  "croatia": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://total-croatia-news.com/blog/camping-in-croatia/",
+   "note": "Camping outside registered campsites is banned nationwide; fines."
+  },
+  "dolomites": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.dolomites.org/accommodation/camping/",
+   "note": "Wild camping with a tent is prohibited in South Tyrol and the Italian Dolomites; campsites or landowner permission only."
+  },
+  "swissalps": {
+   "value": "limited",
+   "conf": "medium",
+   "src": "https://www.myswissalps.com/accommodation/camping/wild/",
+   "note": "Rules set by canton and municipality; often allowed only above the treeline; banned in the Swiss National Park and reserves."
+  },
+  "chamonix": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://francetoday.com/accommodation/wild-camping-in-france-the-official-rules-and-whats-actually-allowed/",
+   "note": "Wild camping illegal in France; bivouac permitted in some parks with hour and distance limits."
+  },
+  "provence": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://francetoday.com/accommodation/wild-camping-in-france-the-official-rules-and-whats-actually-allowed/",
+   "note": "Wild camping illegal in France; the Calanques and Port-Cros ban bivouac entirely."
+  },
+  "madeira": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://thisismadeiraisland.com/news/tourist-caught-illegally-camping-on-vereda-dos-balcoes-trail-in-madeira",
+   "note": "Wild camping forbidden; camping only at sites licensed by the forestry institute."
+  },
+  "azores": {
+   "value": "not_allowed",
+   "conf": "low",
+   "src": "https://www.wandernundmehr.at/faq/wo-darf-man-auf-madeira-campen",
+   "note": "Camping only at designated campsites; wild camping generally only with approval (single secondary source)."
+  },
+  "canaries": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://tenerifeon.es/en/general-information/information-and-good-practice-in-nature/bivouacking-in-tenerife",
+   "note": "Teide: camping not permitted anywhere in the park; bivouac above 2,500 m with permit; elsewhere only authorised camping zones."
+  },
+  "kruger": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://www.sanparks.org/parks/kruger/useful-information/vital-information",
+   "note": "Overnight visitors may only stay at a booked and recognised overnight facility."
+  },
+  "zambia": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://leap.unep.org/en/countries/zm/national-legislation/national-parks-and-wildlife-camping-sites-regulations-cap-201",
+   "note": "No camping in a national park except at a site approved by the Director."
+  },
+  "botswana": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://botswanatourism.co.bw/travel-info/self-drive-camping",
+   "note": "Camping is only permitted in designated campsites."
+  },
+  "uganda": {
+   "value": "not_allowed",
+   "conf": "low",
+   "src": "tour-operator blog",
+   "note": "Wild camping uncommon and not allowed; UWA permit route for a private pitch."
+  },
+  "namibia": {
+   "value": "not_allowed",
+   "conf": "low",
+   "src": "https://www.nwr.com.na/resorts/olifantsrus-camp",
+   "note": "Etosha: bush camping not permitted, in-park campsites only; rest of Namibia not researched."
+  },
+  "mongolia": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://meanwhileinmongolia.com/camping-tips/",
+   "note": "Wild camping allowed almost everywhere; fires banned in national parks (travel site)."
+  },
+  "kyrgyzstan": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://visitkyrgyzstan.org/camping",
+   "note": "Wild camping on public land legal and accepted; respect parks, fences and border zones."
+  },
+  "tbilisi-caucasus": {
+   "value": "allowed",
+   "conf": "low",
+   "src": "https://lr.us.psf.lt/r/WildCampingAndHiking/wiki/wildcampingstatus",
+   "note": "Listed as legal on a community wiki."
+  },
+  "hokkaido": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://hokkaidowilds.org/backcountry-ski-national-parks-hokkaido",
+   "note": "Tents only in designated areas in national parks; wild camping tolerated elsewhere, not in law."
+  },
+  "taiwan": {
+   "value": "limited",
+   "conf": "medium",
+   "src": "https://hike.taiwan.gov.tw/en/notice_a2.aspx",
+   "note": "National park entry permit plus police mountain-entry permit for restricted mountain areas; designated cabins and campgrounds."
+  },
+  "uluru": {
+   "value": "not_allowed",
+   "conf": "high",
+   "src": "https://parksaustralia.gov.au/uluru/stay/camping",
+   "note": "\"There is nowhere to camp in the national park\"; the campground is at Yulara."
+  },
+  "torres-del-paine": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.switchbacktravel.com/patagonia/camping-torres-del-paine",
+   "note": "Camping only at allocated campsites; CONAF expels people camping elsewhere."
+  },
+  "bhutan": {
+   "value": "limited",
+   "conf": "low",
+   "src": "https://www.hidmc.com/fr/blog-posts/camping-in-bhutans-wilderness-a-guide-for-adventure-seekers",
+   "note": "All treks and camping must be arranged through licensed tour operators (single blog)."
+  },
+  "rocky-mountain": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/romo/planyourvisit/wild_guide.htm",
+   "note": "Overnight wilderness camping requires a Wilderness Permit (Wilderness Camping Guide)."
+  },
+  "tasmania": {
+   "value": "limited",
+   "conf": "medium",
+   "src": "https://parks.tas.gov.au/explore-our-parks/walls-of-jerusalem-national-park/walls-of-jerusalem-overnight-walker-camping",
+   "note": "Walls of Jerusalem: overnight walkers must camp only at three designated sites, registration required; Overland Track: tent platforms or huts, 34 walkers a day. General bush-camping rules outside these walks were not found."
+  },
+  "vermont": {
+   "value": "allowed",
+   "conf": "medium",
+   "src": "https://www.fs.usda.gov/r09/gmfl/recreation/camping-cabins",
+   "note": "Green Mountain National Forest: dispersed camping allowed in most locations unless a closure order applies; 14 days in any 30; 200 ft from trails, roads and water. State and private land not covered."
+  },
+  "zion-bryce": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/zion/planyourvisit/backpackinginfo.htm",
+   "note": "Zion: a wilderness permit is required for all overnight backpacking trips."
+  },
+  "north-cascades": {
+   "value": "limited",
+   "conf": "high",
+   "src": "https://www.nps.gov/noca/planyourvisit/permits.htm",
+   "note": "Permits required year round for all overnight stays in the backcountry; camping only at designated camps and cross-country zones, no dispersed camping."
+  },
+  "el-chalten": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares/alojamiento",
+   "note": "Los Glaciares: camping in the park's enabled sites only (one free site, El Huala, and organized campgrounds); registration needed in winter."
+  },
+  "argentine-lake-district": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.argentina.gob.ar/noticias/recomendaciones-de-verano-para-visitar-los-parques-nacionales",
+   "note": "National parks (Nahuel Huapi, Lanín): camp only where permitted; camping or fire outside enabled sites is fined."
+  },
+  "chilean-lake-district": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.conaf.cl/parques-nacionales/nuestros-parques/uso-publico/",
+   "note": "CONAF prohibits staying overnight, camping or lighting fires outside enabled or authorized places in its parks; private land not covered."
+  },
+  "cape-town": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.sanparks.org/travel/plan/useful-information/rules-regulations",
+   "note": "SANParks: guests may only stay at a booked, recognised overnight facility; Table Mountain overnight trails are guided or in booked huts and tented camps."
+  },
+  "kenya": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://kws.go.ke/faqs/",
+   "note": "KWS parks: visitors must leave between 6 pm and 6 am unless camping overnight, and camp at public or special campsites. Maasai Mara is county-managed and was not verified."
+  },
+  "costa-rica": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.sinac.go.cr/EN-US/ac/acosa/pnc/Pages/default.aspx",
+   "note": "SINAC: camping areas in the national parks (Corcovado: Sirena and San Pedrillo; Chirripó: Albergue Urán) by advance reservation only."
+  },
+  "colombian-andes": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-chingaza/",
+   "note": "Parques Nacionales Naturales: camping only in zones set by each park's ecotourism plan (Chingaza, Los Nevados); some parks are closed to ecotourism."
+  },
+  "colombian-caribbean": {
+   "value": "not_allowed",
+   "conf": "medium",
+   "src": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-tayrona/",
+   "note": "Tayrona: camping zones are delimited; fires only in authorized zones."
+  },
+  "jordan": {
+   "value": "limited",
+   "conf": "low",
+   "src": "https://en.visitjordan.com/whattodo/eco-adventure",
+   "note": "Wadi Rum: wild campsites without facilities exist but access to the reserve is through a guide and a local 4x4; Petra not found."
+  }
+ },
+ "dangerousWildlife": {
+  "yellowstone": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://home.nps.gov/yell/planyourvisit/backcountrysafety.htm",
+   "note": "Hard-sided IGBC-certified containers or hang food; carry bear spray; backcountry permit."
+  },
+  "denali-interior": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/dena/planyourvisit/backcountry.htm",
+   "note": "Bear-resistant food containers required 15 Apr to 30 Sep."
+  },
+  "yosemite": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/yose/planyourvisit/bearcanisters.htm",
+   "note": "Bear-resistant canisters required for food in all Yosemite Wilderness; hanging food illegal."
+  },
+  "sequoia-kings-canyon": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/seki/planyourvisit/bear_bc.htm",
+   "note": "Canisters required in named areas May-Oct; recommended elsewhere."
+  },
+  "olympic": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/olym/planyourvisit/wilderness-food-storage.htm",
+   "note": "Canisters required in all wilderness areas."
+  },
+  "north-cascades": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/noca/planyourvisit/food-storage-requirements.htm",
+   "note": "Approved canister required at 9 backcountry camps and 6 zones 1 Jun-15 Nov."
+  },
+  "banff": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://parks.canada.ca/pn-np/ab/banff/activ/arrierepays-backcountry",
+   "note": "IGBC bear-resistant containers mandatory 1 Apr-15 Nov (Banff, Yoho, Kootenay, Jasper)."
+  },
+  "glacier-waterton": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://parks.canada.ca/pn-np/ab/waterton/securite-safety/faune-wildlife",
+   "note": "Stay 100 m from bears, cougars and wolves; carry bear spray; campground storage bins."
+  },
+  "southeast-alaska": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.fs.usda.gov/r10/animals-plants/animals/bears-alaska",
+   "note": "Brown bears: secure food in bear-proof containers, carry EPA-registered bear spray."
+  },
+  "vancouver-island": {
+   "value": "bearRules",
+   "conf": "medium",
+   "src": "https://parks.canada.ca/pn-np/bc/pacificrim/nature/faune-wildlife/prudent-wary",
+   "note": "Pacific Rim: carry bear spray; cougars; BC Parks closed a campground in 2023 after a food-conditioned bear."
+  },
+  "hokkaido": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.pref.hokkaido.lg.jp/ks/skn/higuma/english.html",
+   "note": "Brown bears can be met almost anywhere in the wild in Hokkaido; feeding banned."
+  },
+  "torres-del-paine": {
+   "value": "bearRules",
+   "conf": "medium",
+   "src": "https://chile.travel/en/blog/puma-sighting-in-chile-everything-you-must-know-for-a-wild-expedition/",
+   "note": "Pumas: keep 50 m away, store food securely; cameras at campsites."
+  },
+  "svalbard": {
+   "value": "bigGame",
+   "conf": "high",
+   "src": "https://sysselmesteren.no/en/news/2024/05/revised-guidelines-for-firearms-for-polar-bear-protection",
+   "note": "Anyone outside settlements must carry means of scaring polar bears; Governor recommends firearms."
+  },
+  "botswana": {
+   "value": "bigGame",
+   "conf": "medium",
+   "src": "https://expeditionportal.com/amongst-predators-camp-safely-in-unfenced-campsites-around-africa/",
+   "note": "Moremi South Gate, Xakanaxa and Ihaha campsites are unfenced; lion, elephant and hyena incidents reported."
+  },
+  "zambia": {
+   "value": "bigGame",
+   "conf": "low",
+   "src": "https://expeditionportal.com/amongst-predators-camp-safely-in-unfenced-campsites-around-africa/",
+   "note": "Unfenced campsites in Zambian parks; operator sources only."
+  },
+  "tanzania": {
+   "value": "bigGame",
+   "conf": "low",
+   "src": "tour-operator pages",
+   "note": "Serengeti and Ngorongoro public campsites are open sites where wildlife can wander in."
+  },
+  "uganda": {
+   "value": "bigGame",
+   "conf": "low",
+   "src": "tour-operator pages",
+   "note": "Elephants and lions near camps in Murchison Falls; operator sources only."
+  },
+  "kruger": {
+   "value": "bigGame",
+   "conf": "low",
+   "src": "https://www.sanparks.org/parks/kruger/useful-information/vital-information",
+   "note": "Lions, elephants, leopards; camps fenced and stays only in booked camps."
+  },
+  "rocky-mountain": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/romo/planyourvisit/wilderness-overnight-backpacking.htm",
+   "note": "Bear canisters required for all wilderness overnights 1 Apr to 31 Oct below tree line; keep the canister 200 ft from camp."
+  },
+  "great-smoky-mountains": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/grsm/planyourvisit/backcountry-camping.htm",
+   "note": "Backpackers must hang all food and scented items on the bear cable system at each campsite or shelter; canisters not required."
+  },
+  "redwood": {
+   "value": "bearRules",
+   "conf": "high",
+   "src": "https://www.nps.gov/redw/learn/nature/bears-and-food.htm",
+   "note": "Black bears: food in a locker, vehicle, bear-resistant container or hung 10 ft up; designated backcountry sites have lockers."
+  },
+  "greenland": {
+   "value": "bigGame",
+   "conf": "high",
+   "src": "https://visitgreenland.com/wp-content/uploads/2025/06/Final-Guidelines-for-encounters-with-polar-bears.pdf",
+   "note": "Government of Greenland guidelines: in areas with frequent polar bear sightings carry a rifle of .30-06 or larger and keep a polar bear guard or warning system when camping."
+  },
+  "churchill": {
+   "value": "bigGame",
+   "conf": "medium",
+   "src": "https://parks.canada.ca/pn-np/mb/wapusk/securite-safety/ours-bear",
+   "note": "Parks Canada (Wapusk National Park, Churchill area): safety in polar bear country; firearms unlawful for visitors in national parks, hire a guide or bear monitor."
+  },
+  "morocco": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 255 carnivore records as the survey check."
+  },
+  "big-island": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 1428 carnivore records as the survey check."
+  },
+  "madeira": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 143 carnivore records as the survey check."
+  },
+  "milford-sound-fiordland": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 445 carnivore records as the survey check."
+  },
+  "scottish-highlands-skye": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 12514 carnivore records as the survey check."
+  },
+  "lake-district": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 5701 carnivore records as the survey check."
+  },
+  "tierra-del-fuego": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 1916 carnivore records as the survey check."
+  },
+  "north-island": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 650 carnivore records as the survey check."
+  },
+  "marlborough-abel-tasman": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 430 carnivore records as the survey check."
+  },
+  "maui": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 1220 carnivore records as the survey check."
+  },
+  "azores": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 2528 carnivore records as the survey check."
+  },
+  "canaries": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 221 carnivore records as the survey check."
+  },
+  "iceland": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 1072 carnivore records as the survey check."
+  },
+  "tasmania": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 1000 carnivore records as the survey check."
+  },
+  "snowdonia": {
+   "value": "none",
+   "conf": "medium",
+   "src": "https://api.gbif.org/v1/occurrence/search",
+   "note": "GBIF: 0 records of the 12 taxa; 8878 carnivore records as the survey check."
+  }
+ },
+ "definitions": {
+  "allowed": "most open or public land can be camped on without a permit",
+  "limited": "a permit, a zone, or only some kinds of land",
+  "not_allowed": "designated campsites or landowner permission only"
+ }
+}

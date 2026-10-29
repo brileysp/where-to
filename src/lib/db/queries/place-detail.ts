@@ -21,7 +21,8 @@ export async function getPlaceDetailText(id: string): Promise<PlaceDetailText | 
     overview: r.overview,
     costOverview: r.costOverview,
     // Strip the admin-only edit-tracking fields (editor email etc.) so they never reach the public payload.
-    costItems: r.costItems.map(({ label, price, unit, emoji }) => ({ label, price, unit, ...(emoji ? { emoji } : {}) })),
+    // Cheapest first, always (the order the admin saved them in does not matter).
+    costItems: r.costItems.map(({ label, price, unit, emoji }) => ({ label, price, unit, ...(emoji ? { emoji } : {}) })).sort((a, b) => a.price - b.price),
     monthlyWeather: r.monthlyWeather,
     specialSeasons: r.specialSeasons,
     sliderOverview: r.sliderOverview,

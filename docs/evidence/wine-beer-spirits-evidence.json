@@ -1,0 +1,2717 @@
+{
+ "mauritius": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    6,
+    2
+   ],
+   "breweries": 5,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "mendoza": {
+  "raw": {
+   "area": 111.66,
+   "wineries": [
+    319,
+    225
+   ],
+   "breweries": 8,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3,
+   "celebratedReds": "Malbec (the region's most important planting; Argentina's most highly rated Malbec comes from Mendoza's high-altitude wine regions)",
+   "celebratedWhites": "Chardonnay (named as a premium white in the Uco Valley)"
+  }
+ },
+ "gbr": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    4,
+    4
+   ],
+   "breweries": 8,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "london": {
+  "raw": {
+   "area": 3.92,
+   "wineries": [
+    131,
+    113
+   ],
+   "breweries": 242,
+   "distilleries": 75,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [
+    "Fuller's Brewery"
+   ],
+   "wdWhisky": [],
+   "wdOther": [
+    "Sipsmith"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 10,
+   "whiskyCulture": 2,
+   "otherSpirits": 8,
+   "spiritKinds": "Gin (London gin is a style, not a place of origin; over half of London's 18th-century drinking shops were gin shops)"
+  }
+ },
+ "athens": {
+  "raw": {
+   "area": 0.42,
+   "wineries": [
+    77,
+    55
+   ],
+   "breweries": 14,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "istanbul": {
+  "raw": {
+   "area": 0.01,
+   "wineries": [
+    57,
+    8
+   ],
+   "breweries": 3,
+   "distilleries": 9,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "dubai": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "atacama": {
+  "raw": {
+   "area": 0.1,
+   "wineries": [
+    1,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "morocco": {
+  "raw": {
+   "area": 0.57,
+   "wineries": [
+    1,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "colombian-andes": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    10,
+    3
+   ],
+   "breweries": 3,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "sedona": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    40,
+    35
+   ],
+   "breweries": 6,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "monterey-big-sur": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    129,
+    120
+   ],
+   "breweries": 13,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 0,
+   "celebratedReds": "Cabernet Sauvignon (the county's second largest varietal)",
+   "celebratedWhites": "Chardonnay (prized by winemakers throughout the state)"
+  }
+ },
+ "andalucia": {
+  "raw": {
+   "area": 5.66,
+   "wineries": [
+    94,
+    48
+   ],
+   "breweries": 40,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "big-island": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    3,
+    2
+   ],
+   "breweries": 11,
+   "distilleries": 4,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 4
+  }
+ },
+ "chiapas": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    12,
+    1
+   ],
+   "breweries": 3,
+   "distilleries": 5,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "colombian-caribbean": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 2,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "madeira": {
+  "raw": {
+   "area": 0.36,
+   "wineries": [
+    16,
+    12
+   ],
+   "breweries": 5,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "berlin": {
+  "raw": {
+   "area": 0.04,
+   "wineries": [
+    58,
+    43
+   ],
+   "breweries": 75,
+   "distilleries": 17,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "basque-country": {
+  "raw": {
+   "area": 6.24,
+   "wineries": [
+    136,
+    78
+   ],
+   "breweries": 42,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 2,
+   "celebratedReds": "Hondarribi Beltza (the red grape of Getaria and Biscay txakoli)",
+   "celebratedWhites": "Txakoli, a slightly sparkling dry white from Hondarribi Zuri (Getaria, Biscay, Alava)"
+  }
+ },
+ "rome": {
+  "raw": {
+   "area": 16.71,
+   "wineries": [
+    257,
+    170
+   ],
+   "breweries": 53,
+   "distilleries": 13,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "bordeaux": {
+  "raw": {
+   "area": 809.64,
+   "wineries": [
+    1753,
+    1234
+   ],
+   "breweries": 40,
+   "distilleries": 11,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Pessac-Léognan",
+    "Château Haut-Brion",
+    "Château Margaux",
+    "Château Ausone",
+    "Château Cheval Blanc"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Saint-Emilion and Pomerol (the two most famous right-bank appellations); Medoc and Graves, home of the five First Growths",
+   "celebratedWhites": "Sauternes (some of the world's most famous sweet wines); dry whites from Graves"
+  }
+ },
+ "barbados": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    2,
+    1
+   ],
+   "breweries": 1,
+   "distilleries": 8,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [
+    "West Indies Rum Distillery",
+    "St. Nicholas Abbey"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 2,
+   "whiskyCulture": 0,
+   "otherSpirits": 9,
+   "spiritKinds": "Rum (Mount Gay claims to be the world's oldest active rum company; the first recorded rum production took place in Barbados)"
+  }
+ },
+ "buenosaires": {
+  "raw": {
+   "area": 0.03,
+   "wineries": [
+    54,
+    37
+   ],
+   "breweries": 86,
+   "distilleries": 5,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "los-cabos": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    6,
+    1
+   ],
+   "breweries": 5,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "oaxaca": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    14,
+    3
+   ],
+   "breweries": 18,
+   "distilleries": 80,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 10,
+   "spiritKinds": "Mezcal, from agave (some 90 percent of Mexican mezcal comes from Oaxaca)"
+  }
+ },
+ "charleston-savannah": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    13,
+    10
+   ],
+   "breweries": 70,
+   "distilleries": 24,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "tokyo-kyoto": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    324,
+    193
+   ],
+   "breweries": 629,
+   "distilleries": 80,
+   "whiskyNames": 5,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Fuji Gotemba distillery",
+    "Yamazaki distillery"
+   ],
+   "wdOther": [
+    "Chichibu distillery",
+    "Chita distillery"
+   ],
+   "wdSake": [
+    "Nakano Sake Brewery",
+    "Akashi Sake Brewery",
+    "Yoshino Shuzo",
+    "Ibaraki Sake Brewing",
+    "Tomita Shuzo"
+   ]
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 8,
+   "whiskyCulture": 9,
+   "otherSpirits": 8,
+   "sakeTraditional": 7,
+   "celebratedReds": "Muscat Bailey A (a red grape widely used in Japan)",
+   "celebratedWhites": "Koshu (a white grape grown primarily in Yamanashi Prefecture)",
+   "spiritKinds": "Japanese whisky (Yamazaki, between Osaka and Kyoto); sake (Fushimi, near Kyoto)"
+  }
+ },
+ "scottish-highlands-skye": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    1
+   ],
+   "breweries": 6,
+   "distilleries": 19,
+   "whiskyNames": 7,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Torabhaig",
+    "Glen Ord Distillery",
+    "Glen Albyn",
+    "Glenlochy distillery",
+    "Ben Nevis distillery"
+   ],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 7,
+   "otherSpirits": 5,
+   "spiritKinds": "Scotch whisky: Highlands and Islands styles, with Talisker named as the Skye distillery"
+  }
+ },
+ "dolomites": {
+  "raw": {
+   "area": 15.12,
+   "wineries": [
+    84,
+    70
+   ],
+   "breweries": 41,
+   "distilleries": 13,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Schiava and Lagrein (the two indigenous reds)",
+   "celebratedWhites": "Pinot Grigio, Gewurztraminer, Pinot Bianco and Chardonnay (the most common)"
+  }
+ },
+ "hongkong": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    25,
+    18
+   ],
+   "breweries": 30,
+   "distilleries": 9,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "st-andrews-fife": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    7,
+    5
+   ],
+   "breweries": 63,
+   "distilleries": 81,
+   "whiskyNames": 6,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Glencadam distillery",
+    "Bonnington",
+    "Arbikie distillery",
+    "Lindores Abbey distillery",
+    "Holyrood Distillery"
+   ],
+   "wdOther": [
+    "Port of Leith distillery"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 7,
+   "whiskyCulture": 10,
+   "otherSpirits": 8,
+   "spiritKinds": "Scotch whisky: the Lowlands entry names the Kingdom of Fife and lists Eden Mill, Kingsbarns and Daftmill (the article does not give their locations)"
+  }
+ },
+ "black-forest": {
+  "raw": {
+   "area": 194.29,
+   "wineries": [
+    494,
+    411
+   ],
+   "breweries": 99,
+   "distilleries": 66,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Spatburgunder (Pinot Noir, 36.8 percent of Baden's vineyards)",
+   "celebratedWhites": "Muller-Thurgau (most area), Grauer Burgunder and Riesling; Gutedel from the Markgraflerland",
+   "spiritKinds": "Kirschwasser (cherry brandy believed to have originated in the Black Forest)"
+  }
+ },
+ "palau": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "yosemite": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "tierra-del-fuego": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "aspen": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    2,
+    1
+   ],
+   "breweries": 4,
+   "distilleries": 2,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "chilean-lake-district": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    1
+   ],
+   "breweries": 8,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "beijing": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    3,
+    0
+   ],
+   "breweries": 15,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "rioja": {
+  "raw": {
+   "area": 932.78,
+   "wineries": [
+    745,
+    565
+   ],
+   "breweries": 11,
+   "distilleries": 4,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Rioja"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 4,
+   "celebratedReds": "Tempranillo (87.7 percent of red plantings), Garnacha, Graciano, Mazuelo",
+   "celebratedWhites": "Viura (69.2 percent of white plantings), Malvasia, Garnacha Blanca"
+  }
+ },
+ "banff": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 8,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "nyc": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    74,
+    53
+   ],
+   "breweries": 156,
+   "distilleries": 37,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [
+    "Brooklyn Brewery"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 10,
+   "whiskyCulture": 2,
+   "otherSpirits": 6
+  }
+ },
+ "provence": {
+  "raw": {
+   "area": 1410.12,
+   "wineries": [
+    1372,
+    1009
+   ],
+   "breweries": 79,
+   "distilleries": 34,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Bandol (one of the most internationally recognized wines of Provence; about 70 percent red)",
+   "celebratedWhites": "Cassis (the appellation specializing in white wine)",
+   "celebratedOtherWines": "Rose (more than half of Provencal production)",
+   "spiritKinds": "Pastis (popular especially around Marseille)"
+  }
+ },
+ "sicily": {
+  "raw": {
+   "area": 158.47,
+   "wineries": [
+    830,
+    615
+   ],
+   "breweries": 72,
+   "distilleries": 49,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 7,
+   "whiskyCulture": 2,
+   "otherSpirits": 6,
+   "celebratedReds": "Nero d'Avola, Nerello Mascalese and Perricone (the red grapes of Marsala Rubino)",
+   "celebratedWhites": "Grillo, Inzolia and Catarratto (the white grapes of Marsala)",
+   "celebratedOtherWines": "Marsala (fortified wine, dry or sweet); Passito di Pantelleria (raisin wine)"
+  }
+ },
+ "chicago": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    36,
+    27
+   ],
+   "breweries": 176,
+   "distilleries": 22,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "Goose Island Brewery"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 10,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "prague": {
+  "raw": {
+   "area": 3.25,
+   "wineries": [
+    85,
+    49
+   ],
+   "breweries": 103,
+   "distilleries": 10,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "U Fleků"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 9,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "mallorca": {
+  "raw": {
+   "area": 20.63,
+   "wineries": [
+    156,
+    123
+   ],
+   "breweries": 16,
+   "distilleries": 6,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "amalfi": {
+  "raw": {
+   "area": 13.8,
+   "wineries": [
+    558,
+    409
+   ],
+   "breweries": 69,
+   "distilleries": 75,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Taurasi DOCG and Falerno del Massico (Aglianico wines of Campania)",
+   "celebratedWhites": "Greco di Tufo (the famous white of Campania)",
+   "spiritKinds": "Limoncello (the article says it was first made on the Amalfi coast)"
+  }
+ },
+ "seoul": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    12,
+    2
+   ],
+   "breweries": 47,
+   "distilleries": 6,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 2,
+   "otherSpirits": 5
+  }
+ },
+ "edinburgh": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    6,
+    3
+   ],
+   "breweries": 47,
+   "distilleries": 57,
+   "whiskyNames": 9,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Bonnington",
+    "Holyrood Distillery",
+    "Falkirk distillery",
+    "Glenkinchie distillery",
+    "Cameronbridge distillery"
+   ],
+   "wdOther": [
+    "Port of Leith distillery",
+    "Starlaw distillery"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 9,
+   "otherSpirits": 8,
+   "spiritKinds": "Scotch whisky: the Lowlands entry covers Edinburgh and the Lothians"
+  }
+ },
+ "budapest": {
+  "raw": {
+   "area": 29.63,
+   "wineries": [
+    143,
+    92
+   ],
+   "breweries": 38,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "Dreher Breweries"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 8,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedWhites": "Etyek-Buda (fresh white wines with considerable acidity)",
+   "spiritKinds": "Palinka, a Hungarian fruit brandy with EU protected status (made across Hungary)"
+  }
+ },
+ "svalbard": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 1,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 2,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "rio": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    10,
+    5
+   ],
+   "breweries": 75,
+   "distilleries": 5,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "napa": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    2600,
+    2249
+   ],
+   "breweries": 100,
+   "distilleries": 25,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Napa Valley AVA",
+    "Castello di Amorosa"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Cabernet Sauvignon (ranked first at the 1976 Paris tasting)",
+   "celebratedWhites": "Chardonnay (named with Cabernet in the same account)"
+  }
+ },
+ "bend-crater-lake": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 3,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "champagne": {
+  "raw": {
+   "area": 442.56,
+   "wineries": [
+    2594,
+    1708
+   ],
+   "breweries": 39,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Champagne",
+    "Taittinger",
+    "Pommery"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Pinot Noir (the most planted grape in the Aube) and Pinot Meunier (dominant in the Vallee de la Marne)",
+   "celebratedWhites": "Chardonnay (the Cote des Blancs is almost entirely Chardonnay)",
+   "celebratedOtherWines": "Champagne (the sparkling white wine that bears the region's name); Rose des Riceys; Coteaux Champenois (still wines)"
+  }
+ },
+ "cape-cod-islands": {
+  "raw": {
+   "area": 0.01,
+   "wineries": [
+    31,
+    25
+   ],
+   "breweries": 33,
+   "distilleries": 6,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "north-island": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    223,
+    199
+   ],
+   "breweries": 98,
+   "distilleries": 35,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Merlot and Syrah (Hawke's Bay is best known for them); Pinot Noir (Wairarapa)",
+   "celebratedWhites": "Chardonnay, Sauvignon Blanc and Viognier (Hawke's Bay)"
+  }
+ },
+ "chamonix": {
+  "raw": {
+   "area": 9.62,
+   "wineries": [
+    52,
+    36
+   ],
+   "breweries": 18,
+   "distilleries": 11,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "spiritKinds": "Genepi, a herbal liqueur of the Alps made in Savoy and the Aosta Valley"
+  }
+ },
+ "piedmont": {
+  "raw": {
+   "area": 285.2,
+   "wineries": [
+    1871,
+    1460
+   ],
+   "breweries": 85,
+   "distilleries": 76,
+   "whiskyNames": 0,
+   "wdWine": [
+    "The Vineyard Landscape of Piedmont: Langhe-Roero and Monferrato",
+    "Langhe",
+    "Montferrat",
+    "Roero"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Barolo and Barbaresco, both from Nebbiolo (the best-known wines of the region)",
+   "celebratedWhites": "Moscato (the most prominent white); Gavi",
+   "spiritKinds": "Vermouth (modern vermouth first produced in Turin in the 18th century; Carpano and Cinzano)"
+  }
+ },
+ "ireland": {
+  "raw": {
+   "area": 0.13,
+   "wineries": [
+    11,
+    9
+   ],
+   "breweries": 100,
+   "distilleries": 73,
+   "whiskyNames": 13,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Jameson",
+    "Teeling Distillery",
+    "Tullamore Distillery",
+    "Roe & Co Distillery",
+    "Kilbeggan Distillery"
+   ],
+   "wdOther": [
+    "Old Midleton Distillery",
+    "Old Tullamore Distillery",
+    "Dingle Distillery",
+    "Thomas Street Distillery",
+    "Marrowbone Lane Distillery"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 7,
+   "whiskyCulture": 10,
+   "otherSpirits": 8,
+   "spiritKinds": "Irish whiskey (single pot still, single malt, grain); poitin; gin"
+  }
+ },
+ "marlborough-abel-tasman": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    34,
+    31
+   ],
+   "breweries": 6,
+   "distilleries": 4,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 4
+  }
+ },
+ "new-orleans": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    0
+   ],
+   "breweries": 22,
+   "distilleries": 12,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "vienna": {
+  "raw": {
+   "area": 67.79,
+   "wineries": [
+    636,
+    484
+   ],
+   "breweries": 74,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "Q672384"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 9,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedWhites": "Gemischter Satz (field blends common in Vienna, drunk young in heurigen taverns)"
+  }
+ },
+ "sardinia": {
+  "raw": {
+   "area": 45.1,
+   "wineries": [
+    371,
+    267
+   ],
+   "breweries": 53,
+   "distilleries": 32,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "Birra Ichnusa"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 9,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "croatia": {
+  "raw": {
+   "area": 18.86,
+   "wineries": [
+    65,
+    39
+   ],
+   "breweries": 7,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "nice-riviera": {
+  "raw": {
+   "area": 14.23,
+   "wineries": [
+    123,
+    95
+   ],
+   "breweries": 46,
+   "distilleries": 18,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedWhites": "Bellet: Vermentino (called Rolle in France) is the major white"
+  }
+ },
+ "whistler": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    44,
+    39
+   ],
+   "breweries": 105,
+   "distilleries": 17,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "tuscany": {
+  "raw": {
+   "area": 380.98,
+   "wineries": [
+    1594,
+    1266
+   ],
+   "breweries": 61,
+   "distilleries": 24,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Chianti"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6,
+   "celebratedReds": "Chianti; Brunello di Montalcino; Vino Nobile di Montepulciano; the Super Tuscans",
+   "celebratedWhites": "Vernaccia di San Gimignano (the first wine to receive a DOC)"
+  }
+ },
+ "san-miguel-guanajuato": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    42,
+    28
+   ],
+   "breweries": 17,
+   "distilleries": 4,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 4
+  }
+ },
+ "hokkaido": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    73,
+    56
+   ],
+   "breweries": 54,
+   "distilleries": 14,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [
+    "Kenten",
+    "Yoichi distillery"
+   ],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 7,
+   "whiskyCulture": 6,
+   "otherSpirits": 5,
+   "spiritKinds": "Japanese whisky (Yoichi, on Hokkaido; Akkeshi)"
+  }
+ },
+ "mexicocity": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    117,
+    32
+   ],
+   "breweries": 109,
+   "distilleries": 23,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "maui": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    4,
+    4
+   ],
+   "breweries": 12,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "lisbon": {
+  "raw": {
+   "area": 54.83,
+   "wineries": [
+    70,
+    46
+   ],
+   "breweries": 36,
+   "distilleries": 2,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 3,
+   "celebratedReds": "Colares (deep-coloured, full-bodied reds from Ramisco, near Sintra)"
+  }
+ },
+ "azores": {
+  "raw": {
+   "area": 5.01,
+   "wineries": [
+    17,
+    11
+   ],
+   "breweries": 5,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Landscape of the Pico Island Vineyard Culture"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 0,
+   "celebratedWhites": "Verdelho (Pico's famous verdelho wine, widely appreciated for two centuries)"
+  }
+ },
+ "maldives": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "douro-valley-porto": {
+  "raw": {
+   "area": 694.55,
+   "wineries": [
+    374,
+    261
+   ],
+   "breweries": 37,
+   "distilleries": 6,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Região Demarcada do Douro (RDD)",
+    "Alto Douro Wine Region"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 10,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedOtherWines": "Port (Ruby and Tawny red ports; white ports); Barca Velha is named as a Douro table wine"
+  }
+ },
+ "vancouver-island": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    45,
+    41
+   ],
+   "breweries": 53,
+   "distilleries": 26,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "copenhagen": {
+  "raw": {
+   "area": 0.12,
+   "wineries": [
+    57,
+    44
+   ],
+   "breweries": 107,
+   "distilleries": 18,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "uzbekistan": {
+  "raw": {
+   "area": 0.01,
+   "wineries": [
+    1,
+    1
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "cotswolds": {
+  "raw": {
+   "area": 3.12,
+   "wineries": [
+    46,
+    40
+   ],
+   "breweries": 150,
+   "distilleries": 42,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [
+    "The Cotswolds Distillery"
+   ],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 8,
+   "whiskyCulture": 2,
+   "otherSpirits": 8
+  }
+ },
+ "paris": {
+  "raw": {
+   "area": 0.72,
+   "wineries": [
+    149,
+    98
+   ],
+   "breweries": 136,
+   "distilleries": 18,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "canaries": {
+  "raw": {
+   "area": 39.89,
+   "wineries": [
+    294,
+    174
+   ],
+   "breweries": 33,
+   "distilleries": 4,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Orotava Valley",
+    "La Geria"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 4,
+   "celebratedReds": "Listan Negro (authorised red grape, Tacoronte-Acentejo)",
+   "celebratedWhites": "Listan Blanco, Malvasia Volcanica and Malvasia Aromatica (authorised white grapes, Tacoronte-Acentejo)"
+  }
+ },
+ "bavaria-munich": {
+  "raw": {
+   "area": 0.16,
+   "wineries": [
+    115,
+    101
+   ],
+   "breweries": 307,
+   "distilleries": 94,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [
+    "Bavarian State Brewery Weihenstephan",
+    "Scheyern Abbey"
+   ],
+   "wdWhisky": [
+    "Slyrs Distillery"
+   ],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 10,
+   "whiskyCulture": 6,
+   "otherSpirits": 6
+  }
+ },
+ "hudson-valley": {
+  "raw": {
+   "area": 0.61,
+   "wineries": [
+    62,
+    58
+   ],
+   "breweries": 91,
+   "distilleries": 33,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 7,
+   "whiskyCulture": 2,
+   "otherSpirits": 6
+  }
+ },
+ "upper-peninsula": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    0
+   ],
+   "breweries": 13,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "nova-scotia": {
+  "raw": {
+   "area": 0.9,
+   "wineries": [
+    48,
+    38
+   ],
+   "breweries": 80,
+   "distilleries": 28,
+   "whiskyNames": 2,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 7,
+   "whiskyCulture": 3,
+   "otherSpirits": 6
+  }
+ },
+ "texas-hill-country": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    189,
+    179
+   ],
+   "breweries": 26,
+   "distilleries": 14,
+   "whiskyNames": 2,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 3,
+   "otherSpirits": 5
+  }
+ },
+ "tasmania": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    199,
+    164
+   ],
+   "breweries": 48,
+   "distilleries": 76,
+   "whiskyNames": 6,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 5,
+   "otherSpirits": 6,
+   "celebratedReds": "Pinot Noir (44 percent of plantings)",
+   "celebratedWhites": "Chardonnay (23 percent) and Sauvignon Blanc (12 percent); Riesling in smaller plantings",
+   "celebratedOtherWines": "Sparkling wine (the cool climate suits it)",
+   "spiritKinds": "Tasmanian whisky (Lark, Sullivans Cove, Hellyers Road)"
+  }
+ },
+ "cape-town": {
+  "raw": {
+   "area": 98.76,
+   "wineries": [
+    148,
+    120
+   ],
+   "breweries": 40,
+   "distilleries": 16,
+   "whiskyNames": 0,
+   "wdWine": [
+    "Groot Constantia"
+   ],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedOtherWines": "Vin de Constance (a sweet dessert wine exported in large amounts before the twentieth century); the article names the Constantia wine farms Groot Constantia, Steenberg, Buitenverwachting, Klein Constantia and Constantia Uitsig"
+  }
+ },
+ "swissalps": {
+  "raw": {
+   "area": 75.01,
+   "wineries": [
+    342,
+    262
+   ],
+   "breweries": 51,
+   "distilleries": 16,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Pinot Noir (about 30 percent of Swiss vineyard area)",
+   "celebratedWhites": "Chasselas (about 27 percent of Swiss vineyard area)",
+   "celebratedOtherWines": "Vin des glaciers (made from Reze in the Valais)"
+  }
+ },
+ "vermont": {
+  "raw": {
+   "area": 0.08,
+   "wineries": [
+    65,
+    55
+   ],
+   "breweries": 111,
+   "distilleries": 35,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "quebec-city": {
+  "raw": {
+   "area": 0.14,
+   "wineries": [
+    56,
+    47
+   ],
+   "breweries": 117,
+   "distilleries": 24,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "tbilisi-caucasus": {
+  "raw": {
+   "area": 3.76,
+   "wineries": [
+    157,
+    83
+   ],
+   "breweries": 10,
+   "distilleries": 13,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Saperavi; Mukuzani (considered the best of the Georgian dry reds)",
+   "celebratedWhites": "Tsinandali (one of the best-known white wines); Rkatsiteli (the most important white grape)"
+  }
+ },
+ "queenstown": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    31,
+    22
+   ],
+   "breweries": 6,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "jordan": {
+  "raw": {
+   "area": 1.35,
+   "wineries": [
+    8,
+    7
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "venice": {
+  "raw": {
+   "area": 53.5,
+   "wineries": [
+    228,
+    148
+   ],
+   "breweries": 43,
+   "distilleries": 10,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 6,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Amarone; Valpolicella; Bardolino",
+   "celebratedWhites": "Soave; Prosecco"
+  }
+ },
+ "nicaragua": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    7,
+    2
+   ],
+   "breweries": 2,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "singapore": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    14,
+    10
+   ],
+   "breweries": 28,
+   "distilleries": 13,
+   "whiskyNames": 2,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 6,
+   "whiskyCulture": 3,
+   "otherSpirits": 5
+  }
+ },
+ "redwood": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    5,
+    5
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "santorini": {
+  "raw": {
+   "area": 0.59,
+   "wineries": [
+    45,
+    39
+   ],
+   "breweries": 8,
+   "distilleries": 3,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 3
+  }
+ },
+ "algarve": {
+  "raw": {
+   "area": 9.04,
+   "wineries": [
+    23,
+    17
+   ],
+   "breweries": 7,
+   "distilleries": 5,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 4,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "cornwall": {
+  "raw": {
+   "area": 0.34,
+   "wineries": [
+    15,
+    14
+   ],
+   "breweries": 50,
+   "distilleries": 20,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "peru": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    2,
+    2
+   ],
+   "breweries": 5,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "uluru": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    0,
+    0
+   ],
+   "breweries": 0,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 0,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "rivieramaya": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    11,
+    1
+   ],
+   "breweries": 8,
+   "distilleries": 7,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 5
+  }
+ },
+ "argentine-lake-district": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    1,
+    1
+   ],
+   "breweries": 11,
+   "distilleries": 0,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 0
+  }
+ },
+ "sydney": {
+  "raw": {
+   "area": 0.0,
+   "wineries": [
+    36,
+    32
+   ],
+   "breweries": 85,
+   "distilleries": 29,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 7,
+   "whiskyCulture": 0,
+   "otherSpirits": 6
+  }
+ },
+ "puglia": {
+  "raw": {
+   "area": 13.73,
+   "wineries": [
+    277,
+    206
+   ],
+   "breweries": 30,
+   "distilleries": 10,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 6,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedReds": "Primitivo (best known as Zinfandel; Primitivo di Manduria is made in Apulia)"
+  }
+ },
+ "amsterdam": {
+  "raw": {
+   "area": 0.07,
+   "wineries": [
+    74,
+    55
+   ],
+   "breweries": 185,
+   "distilleries": 37,
+   "whiskyNames": 1,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 0,
+   "beerCulture": 8,
+   "whiskyCulture": 2,
+   "otherSpirits": 6,
+   "spiritKinds": "Genever (made in Amsterdam by The Stillery, Van Wees and Wynand Fockink)"
+  }
+ },
+ "barcelona": {
+  "raw": {
+   "area": 68.25,
+   "wineries": [
+    443,
+    242
+   ],
+   "breweries": 80,
+   "distilleries": 15,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [
+    "Els Quatre Gats"
+   ],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 8,
+   "beerCulture": 9,
+   "whiskyCulture": 0,
+   "otherSpirits": 5,
+   "celebratedWhites": "Xarel-lo, Macabeo and Parellada (the dominant Penedes whites)",
+   "celebratedOtherWines": "Cava (Penedes is better known for it)"
+  }
+ }
+}

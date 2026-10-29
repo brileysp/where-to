@@ -188,6 +188,10 @@ function QuestionEditor({ q, busy, chips, columnsToPick, onSetWhen, onSave, onAp
         </div>
       )}
       <div className="ip-faint">Changing this takes back the approval, the same as changing the wording. The last chip cannot be unticked here; choose Always instead.</div>
+      <div className="ip-faint">How a place is checked, per answer (changing the number of answers removes this)</div>
+      {q.fitSummary.length > 0
+        ? <ul className="ip-faint" style={{ margin: '2px 0 6px', paddingLeft: 18 }}>{q.fitSummary.map((line, i) => <li key={i}>{line}</li>)}</ul>
+        : <div className="ip-faint"><i className="new">not mapped to columns yet</i></div>}
       <label className="ip-faint">How the answer is used (a note)</label>
       <input className="ip-ch-name" style={{ width: '100%' }} value={note} maxLength={300} onChange={(e) => setNote(e.target.value)} />
       <label className="ip-faint">Reason chip when this answer knocks a place down, e.g. &ldquo;Water colder than your limit&rdquo; (blank = no chip)</label>

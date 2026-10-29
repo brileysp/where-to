@@ -116,6 +116,7 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       costOverview: zodField(z.string().trim().nullable()),
       costItems: zodField(z.array(costItemSchema)),
       peakIntensity: zodField(nullableEnum(peakIntensityEnum.enumValues)),
+      priceSwing: zodField(nullableEnum(peakIntensityEnum.enumValues)),
       crowdBaseline: zodField(nullableEnum(crowdBaselineEnum.enumValues)),
       hotSeverity: zodField(nullableEnum(severityEnum.enumValues)),
       coldSeverity: zodField(nullableEnum(severityEnum.enumValues)),

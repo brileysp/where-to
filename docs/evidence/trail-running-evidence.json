@@ -1,0 +1,2007 @@
+{
+ "ethiopia": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 31,
+  "relief_m": 4264.0,
+  "high_m": 4497.0,
+  "low_m": 233.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "bhutan": {
+  "routes": 17,
+  "r20": 14,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 337,
+  "coastal": 0,
+  "huts": 20,
+  "relief_m": 7378.0,
+  "high_m": 7490.0,
+  "low_m": 112.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "atacama": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 2763.0,
+  "high_m": 5072.0,
+  "low_m": 2309.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "morocco": {
+  "routes": 1,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 12,
+  "coastal": 0,
+  "huts": 13,
+  "relief_m": 3819.0,
+  "high_m": 4149.0,
+  "low_m": 330.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "colombian-andes": {
+  "routes": 4,
+  "r20": 2,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 51,
+  "coastal": 0,
+  "huts": 50,
+  "relief_m": 4311.0,
+  "high_m": 5215.0,
+  "low_m": 904.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "sedona": {
+  "routes": 6,
+  "r20": 1,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 24,
+  "coastal": 0,
+  "huts": 2,
+  "relief_m": 1628.0,
+  "high_m": 2585.0,
+  "low_m": 957.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Flagstaff Sky Peaks",
+    "series": "Golden Trail World Series",
+    "host": "Flagstaff, Arizona (about 45 km from Sedona)"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "ecuadorian-andes": {
+  "routes": 2,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 17,
+  "coastal": 0,
+  "huts": 33,
+  "relief_m": 3814.0,
+  "high_m": 4787.0,
+  "low_m": 973.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Quito Trail by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Quito"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "raceHost": true
+  },
+  "thin": true
+ },
+ "olympic": {
+  "routes": 21,
+  "r20": 9,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 213,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 2367.0,
+  "high_m": 2367.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "andalucia": {
+  "routes": 3,
+  "r20": 1,
+  "r40": 1,
+  "r80": 1,
+  "max_km": 213,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 220.0,
+  "high_m": 220.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat"
+   ],
+   "mountainTrailRunning": 1,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "madeira": {
+  "routes": 22,
+  "r20": 7,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 40,
+  "coastal": 2,
+  "huts": 0,
+  "relief_m": 1832.0,
+  "high_m": 1832.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "The Madeira Ocean Trails",
+    "series": "Golden Trail World Series",
+    "host": "Madeira"
+   },
+   {
+    "race": "Madeira Skyrace",
+    "series": "Skyrunner World Series 2019",
+    "host": "Madeira"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 3,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "milford-sound-fiordland": {
+  "routes": 5,
+  "r20": 5,
+  "r40": 2,
+  "r80": 0,
+  "max_km": 58,
+  "coastal": 0,
+  "huts": 52,
+  "relief_m": 2742.0,
+  "high_m": 2742.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "nepal": {
+  "routes": 93,
+  "r20": 74,
+  "r40": 43,
+  "r80": 12,
+  "max_km": 239,
+  "coastal": 0,
+  "huts": 180,
+  "relief_m": 8540.0,
+  "high_m": 8600.0,
+  "low_m": 60.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "ladakh": {
+  "routes": 102,
+  "r20": 66,
+  "r40": 27,
+  "r80": 6,
+  "max_km": 173,
+  "coastal": 0,
+  "huts": 9,
+  "relief_m": 4657.0,
+  "high_m": 7604.0,
+  "low_m": 2947.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "fjords": {
+  "routes": 102,
+  "r20": 17,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 32,
+  "coastal": 6,
+  "huts": 46,
+  "relief_m": 1929.0,
+  "high_m": 1929.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Stranda Fjord Trail Race",
+    "series": "Golden Trail World Series",
+    "host": "Stranda"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 4,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "great-smoky-mountains": {
+  "routes": 9,
+  "r20": 4,
+  "r40": 2,
+  "r80": 0,
+  "max_km": 73,
+  "coastal": 0,
+  "huts": 4,
+  "relief_m": 1446.0,
+  "high_m": 1987.0,
+  "low_m": 541.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "scottish-highlands-skye": {
+  "routes": 30,
+  "r20": 16,
+  "r40": 8,
+  "r80": 5,
+  "max_km": 125,
+  "coastal": 4,
+  "huts": 49,
+  "relief_m": 1286.0,
+  "high_m": 1286.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Ring of Steall",
+    "series": "Golden Trail National Series",
+    "host": "Glen Nevis"
+   },
+   {
+    "race": "Salomon Ben Nevis Ultra",
+    "series": "Skyrunner World Series 2017",
+    "host": "Fort William"
+   },
+   {
+    "race": "Salomon Glen Coe Skyline",
+    "series": "Skyrunner World Series 2017",
+    "host": "Glen Coe"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 4,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "dolomites": {
+  "routes": 516,
+  "r20": 87,
+  "r40": 17,
+  "r80": 11,
+  "max_km": 556,
+  "coastal": 0,
+  "huts": 611,
+  "relief_m": 3187.0,
+  "high_m": 3468.0,
+  "low_m": 281.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Lavaredo Ultra Trail by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Cortina d'Ampezzo"
+   },
+   {
+    "race": "Ledro Sky Trentino",
+    "series": "Golden Trail World Series",
+    "host": "Trentino"
+   },
+   {
+    "race": "DoloMyths Run Sky Race",
+    "series": "Golden Trail National Series",
+    "host": "Dolomites"
+   },
+   {
+    "race": "Dolomites SkyRace",
+    "series": "Skyrunner World Series 2017",
+    "host": "Dolomites"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "lake-district": {
+  "routes": 22,
+  "r20": 12,
+  "r40": 6,
+  "r80": 3,
+  "max_km": 137,
+  "coastal": 7,
+  "huts": 19,
+  "relief_m": 874.0,
+  "high_m": 874.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Scafell Pike Trail Marathon",
+    "series": "Golden Trail National Series",
+    "host": "Scafell Pike"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 5,
+   "coastalIslandTrails": 6,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "taiwan": {
+  "routes": 94,
+  "r20": 58,
+  "r40": 29,
+  "r80": 9,
+  "max_km": 241,
+  "coastal": 10,
+  "huts": 113,
+  "relief_m": 3861.0,
+  "high_m": 3861.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Xtrail Kenting by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Kenting National Park"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 6,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "hongkong": {
+  "routes": 29,
+  "r20": 3,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 45,
+  "coastal": 16,
+  "huts": 0,
+  "relief_m": 937.0,
+  "high_m": 937.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "TransLantau by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Lantau Island"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 5,
+   "coastalIslandTrails": 8,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "yosemite": {
+  "routes": 16,
+  "r20": 6,
+  "r40": 4,
+  "r80": 1,
+  "max_km": 116,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 3295.0,
+  "high_m": 3954.0,
+  "low_m": 659.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "aspen": {
+  "routes": 4,
+  "r20": 3,
+  "r40": 1,
+  "r80": 1,
+  "max_km": 148,
+  "coastal": 0,
+  "huts": 16,
+  "relief_m": 1924.0,
+  "high_m": 4375.0,
+  "low_m": 2451.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "torres-del-paine": {
+  "routes": 2,
+  "r20": 2,
+  "r40": 2,
+  "r80": 1,
+  "max_km": 93,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 2710.0,
+  "high_m": 2719.0,
+  "low_m": 9.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "chilean-lake-district": {
+  "routes": 6,
+  "r20": 5,
+  "r40": 4,
+  "r80": 1,
+  "max_km": 804,
+  "coastal": 0,
+  "huts": 4,
+  "relief_m": 2340.0,
+  "high_m": 2407.0,
+  "low_m": 67.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Torrencial Chile by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Valdivian temperate forests"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "lofoten": {
+  "routes": 19,
+  "r20": 2,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 22,
+  "coastal": 12,
+  "huts": 24,
+  "relief_m": 1229.0,
+  "high_m": 1229.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 8
+  },
+  "thin": false
+ },
+ "banff": {
+  "routes": 10,
+  "r20": 6,
+  "r40": 4,
+  "r80": 0,
+  "max_km": 69,
+  "coastal": 0,
+  "huts": 24,
+  "relief_m": 2441.0,
+  "high_m": 3465.0,
+  "low_m": 1024.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "arches-canyonlands": {
+  "routes": 1,
+  "r20": 1,
+  "r40": 1,
+  "r80": 1,
+  "max_km": 178,
+  "coastal": 0,
+  "huts": 12,
+  "relief_m": 2629.0,
+  "high_m": 3847.0,
+  "low_m": 1218.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "hutToHutRuns": true
+  },
+  "thin": true
+ },
+ "provence": {
+  "routes": 83,
+  "r20": 23,
+  "r40": 10,
+  "r80": 4,
+  "max_km": 335,
+  "coastal": 13,
+  "huts": 14,
+  "relief_m": 1899.0,
+  "high_m": 1899.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Grand Raid Ventoux by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Mont Ventoux"
+   },
+   {
+    "race": "Trail du Ventoux",
+    "series": "Golden Trail National Series",
+    "host": "Mont Ventoux"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 8,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "el-chalten": {
+  "routes": 4,
+  "r20": 2,
+  "r40": 2,
+  "r80": 0,
+  "max_km": 80,
+  "coastal": 0,
+  "huts": 6,
+  "relief_m": 2657.0,
+  "high_m": 2836.0,
+  "low_m": 179.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "sequoia-kings-canyon": {
+  "routes": 41,
+  "r20": 9,
+  "r40": 4,
+  "r80": 1,
+  "max_km": 251,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 4123.0,
+  "high_m": 4340.0,
+  "low_m": 217.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "rio": {
+  "routes": 1,
+  "r20": 1,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 68,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 1005.0,
+  "high_m": 1005.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ]
+  },
+  "thin": true
+ },
+ "costa-rica": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 60,
+  "relief_m": 3765.0,
+  "high_m": 3765.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "bend-crater-lake": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 928.0,
+  "high_m": 2233.0,
+  "low_m": 1305.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ]
+  },
+  "thin": true
+ },
+ "zion-bryce": {
+  "routes": 17,
+  "r20": 6,
+  "r40": 3,
+  "r80": 2,
+  "max_km": 116,
+  "coastal": 0,
+  "huts": 24,
+  "relief_m": 2339.0,
+  "high_m": 3224.0,
+  "low_m": 885.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "kyrgyzstan": {
+  "routes": 67,
+  "r20": 47,
+  "r40": 17,
+  "r80": 0,
+  "max_km": 73,
+  "coastal": 0,
+  "huts": 63,
+  "relief_m": 6618.0,
+  "high_m": 7269.0,
+  "low_m": 651.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "north-island": {
+  "routes": 121,
+  "r20": 61,
+  "r40": 22,
+  "r80": 7,
+  "max_km": 150,
+  "coastal": 27,
+  "huts": 518,
+  "relief_m": 2748.0,
+  "high_m": 2748.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Tarawera by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Rotorua"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 10,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "chamonix": {
+  "routes": 120,
+  "r20": 21,
+  "r40": 12,
+  "r80": 8,
+  "max_km": 166,
+  "coastal": 0,
+  "huts": 163,
+  "relief_m": 3960.0,
+  "high_m": 4718.0,
+  "low_m": 758.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "UTMB Mont-Blanc (Finals)",
+    "series": "UTMB World Series 2026",
+    "host": "Chamonix"
+   },
+   {
+    "race": "Marathon du Mont Blanc",
+    "series": "Golden Trail World Series",
+    "host": "Chamonix"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "marlborough-abel-tasman": {
+  "routes": 9,
+  "r20": 7,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 196,
+  "coastal": 3,
+  "huts": 67,
+  "relief_m": 1822.0,
+  "high_m": 1822.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 3,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "greenland": {
+  "routes": 14,
+  "r20": 10,
+  "r40": 6,
+  "r80": 2,
+  "max_km": 196,
+  "coastal": 6,
+  "huts": 82,
+  "relief_m": 3662.0,
+  "high_m": 3662.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 4,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "yellowstone": {
+  "routes": 3,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 17,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 1116.0,
+  "high_m": 3252.0,
+  "low_m": 2136.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "pakistan": {
+  "routes": 5,
+  "r20": 4,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 45,
+  "coastal": 0,
+  "huts": 159,
+  "relief_m": 8518.0,
+  "high_m": 8518.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "whistler": {
+  "routes": 12,
+  "r20": 7,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 86,
+  "coastal": 4,
+  "huts": 22,
+  "relief_m": 2846.0,
+  "high_m": 2846.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Ultra Trail Whistler by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Whistler"
+   },
+   {
+    "race": "Whistler Alpine Meadows",
+    "series": "Golden Trail National Series",
+    "host": "Whistler"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 4,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "hokkaido": {
+  "routes": 10,
+  "r20": 3,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 27,
+  "coastal": 0,
+  "huts": 35,
+  "relief_m": 2213.0,
+  "high_m": 2213.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "azores": {
+  "routes": 33,
+  "r20": 13,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 38,
+  "coastal": 20,
+  "huts": 6,
+  "relief_m": 1224.0,
+  "high_m": 1224.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 8
+  },
+  "thin": false
+ },
+ "vancouver-island": {
+  "routes": 21,
+  "r20": 7,
+  "r40": 4,
+  "r80": 3,
+  "max_km": 742,
+  "coastal": 6,
+  "huts": 16,
+  "relief_m": 2069.0,
+  "high_m": 2069.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 4,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "canaries": {
+  "routes": 177,
+  "r20": 41,
+  "r40": 11,
+  "r80": 4,
+  "max_km": 155,
+  "coastal": 45,
+  "huts": 19,
+  "relief_m": 3100.0,
+  "high_m": 3100.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Tenerife Bluetrail by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Tenerife"
+   },
+   {
+    "race": "Transvulcania Ultramarathon",
+    "series": "Skyrunner World Series 2019",
+    "host": "La Palma"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 10,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "iceland": {
+  "routes": 30,
+  "r20": 7,
+  "r40": 5,
+  "r80": 0,
+  "max_km": 66,
+  "coastal": 3,
+  "huts": 141,
+  "relief_m": 1997.0,
+  "high_m": 1997.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 3,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "tasmania": {
+  "routes": 9,
+  "r20": 3,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 91,
+  "coastal": 3,
+  "huts": 49,
+  "relief_m": 1555.0,
+  "high_m": 1555.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 3,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "cape-town": {
+  "routes": 4,
+  "r20": 1,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 20,
+  "coastal": 1,
+  "huts": 6,
+  "relief_m": 1078.0,
+  "high_m": 1078.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 2
+  },
+  "thin": false
+ },
+ "swissalps": {
+  "routes": 396,
+  "r20": 68,
+  "r40": 18,
+  "r80": 11,
+  "max_km": 231,
+  "coastal": 0,
+  "huts": 410,
+  "relief_m": 4245.0,
+  "high_m": 4528.0,
+  "low_m": 283.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Trail Verbier St-Bernard by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Verbier"
+   },
+   {
+    "race": "Eiger Ultra-Trail by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Grindelwald"
+   },
+   {
+    "race": "Wildstrubel by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Crans-Montana, Kandersteg and Adelboden"
+   },
+   {
+    "race": "Sierre-Zinal",
+    "series": "Golden Trail World Series",
+    "host": "Valais"
+   },
+   {
+    "race": "Zermatt Marathon",
+    "series": "Golden Trail National Series",
+    "host": "Zermatt"
+   },
+   {
+    "race": "Matterhorn Ultraks",
+    "series": "Skyrunner World Series 2019",
+    "host": "Zermatt"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "vermont": {
+  "routes": 13,
+  "r20": 8,
+  "r40": 6,
+  "r80": 3,
+  "max_km": 401,
+  "coastal": 0,
+  "huts": 24,
+  "relief_m": 1279.0,
+  "high_m": 1306.0,
+  "low_m": 27.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "tbilisi-caucasus": {
+  "routes": 8,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 18,
+  "coastal": 0,
+  "huts": 8,
+  "relief_m": 2066.0,
+  "high_m": 2323.0,
+  "low_m": 257.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "queenstown": {
+  "routes": 4,
+  "r20": 3,
+  "r40": 1,
+  "r80": 1,
+  "max_km": 313,
+  "coastal": 0,
+  "huts": 79,
+  "relief_m": 1952.0,
+  "high_m": 2262.0,
+  "low_m": 310.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "jordan": {
+  "routes": 104,
+  "r20": 34,
+  "r40": 3,
+  "r80": 1,
+  "max_km": 125,
+  "coastal": 0,
+  "huts": 3,
+  "relief_m": 1713.0,
+  "high_m": 1713.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "joshua-tree": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 1812.0,
+  "high_m": 1763.0,
+  "low_m": -49.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "glacier-waterton": {
+  "routes": 11,
+  "r20": 9,
+  "r40": 2,
+  "r80": 0,
+  "max_km": 48,
+  "coastal": 0,
+  "huts": 7,
+  "relief_m": 2102.0,
+  "high_m": 3045.0,
+  "low_m": 943.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "rocky-mountain": {
+  "routes": 8,
+  "r20": 3,
+  "r40": 1,
+  "r80": 0,
+  "max_km": 64,
+  "coastal": 0,
+  "huts": 4,
+  "relief_m": 2489.0,
+  "high_m": 4318.0,
+  "low_m": 1829.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "faroe-islands": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 1,
+  "relief_m": 835.0,
+  "high_m": 835.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ]
+  },
+  "thin": true
+ },
+ "snowdonia": {
+  "routes": 64,
+  "r20": 39,
+  "r40": 26,
+  "r80": 19,
+  "max_km": 482,
+  "coastal": 7,
+  "huts": 35,
+  "relief_m": 1058.0,
+  "high_m": 1058.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Ultra-Trail Snowdonia by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Llanberis"
+   },
+   {
+    "race": "Trail Marathon Wales",
+    "series": "Golden Trail National Series",
+    "host": "Wales"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000"
+   ],
+   "mountainTrailRunning": 7,
+   "coastalIslandTrails": 6,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ },
+ "north-cascades": {
+  "routes": 36,
+  "r20": 20,
+  "r40": 5,
+  "r80": 2,
+  "max_km": 1472,
+  "coastal": 0,
+  "huts": 4,
+  "relief_m": 2653.0,
+  "high_m": 2755.0,
+  "low_m": 102.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12",
+    "m30"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0
+  },
+  "thin": false
+ },
+ "cornwall": {
+  "routes": 31,
+  "r20": 15,
+  "r40": 2,
+  "r80": 0,
+  "max_km": 64,
+  "coastal": 26,
+  "huts": 1,
+  "relief_m": 197.0,
+  "high_m": 197.0,
+  "low_m": 0,
+  "has_coast": true,
+  "races": [
+   {
+    "race": "Arc of Attrition by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Cornwall"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat"
+   ],
+   "mountainTrailRunning": 1,
+   "coastalIslandTrails": 10,
+   "raceHost": true
+  },
+  "thin": false
+ },
+ "peru": {
+  "routes": 0,
+  "r20": 0,
+  "r40": 0,
+  "r80": 0,
+  "max_km": 0,
+  "coastal": 0,
+  "huts": 0,
+  "relief_m": 3175.0,
+  "high_m": 5754.0,
+  "low_m": 2579.0,
+  "has_coast": false,
+  "races": [],
+  "values": {
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ]
+  },
+  "thin": true
+ },
+ "argentine-lake-district": {
+  "routes": 6,
+  "r20": 5,
+  "r40": 3,
+  "r80": 0,
+  "max_km": 73,
+  "coastal": 0,
+  "huts": 15,
+  "relief_m": 2823.0,
+  "high_m": 3229.0,
+  "low_m": 406.0,
+  "has_coast": false,
+  "races": [
+   {
+    "race": "Bariloche by UTMB",
+    "series": "UTMB World Series 2026",
+    "host": "Bariloche"
+   }
+  ],
+  "values": {
+   "trailDistances": [
+    "m3",
+    "m6",
+    "m12"
+   ],
+   "trailClimbing": [
+    "flat",
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 10,
+   "coastalIslandTrails": 0,
+   "raceHost": true,
+   "hutToHutRuns": true
+  },
+  "thin": false
+ }
+}

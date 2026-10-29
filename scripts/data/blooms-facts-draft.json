@@ -1,0 +1,929 @@
+{
+ "olympic": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 3,
+  "m": 8,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Hurricane Ridge subalpine meadows (lupine, avalanche lily, paintbrush; July to August, timing shifts with snowpack)"
+ },
+ "madeira": {
+  "t": 0,
+  "d": 0,
+  "f": 6,
+  "c": 0,
+  "m": 6,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": true,
+  "g": "Madeira Flower Festival (spring); endemic flora along the levada walks"
+ },
+ "azores": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 7,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Hydrangea hedges (Faial, the 'Blue Island', and roadsides across the islands; summer)"
+ },
+ "cape-town": {
+  "t": 0,
+  "d": 9,
+  "f": 0,
+  "c": 0,
+  "m": 6,
+  "w": 0,
+  "r": "rainDependent",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Namaqualand daisy carpets (mid-August to mid-September, rain-dependent); fynbos and protea (year-round, Kirstenbosch)"
+ },
+ "glacier-waterton": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 8,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Alpine meadows: glacier lilies, beargrass and paintbrush at Logan Pass, Hidden Lake and Highline (summer); beargrass mass bloom every 5 to 7 years"
+ },
+ "rocky-mountain": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 6,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Alpine tundra wildflowers (a short window in July and early August); aspen gold (second half of September)"
+ },
+ "north-cascades": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Alpine meadow flowers (glacier lilies, lupine, paintbrush; July to August); golden larches (early to mid October)"
+ },
+ "swissalps": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 8,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Alpine meadow flowers (June to August); golden larches (mid to late October, Engadin); vineyard color around Lake Geneva (late October to November)"
+ },
+ "lake-district": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 0,
+  "w": 8,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Ullswater daffodils (March to April); autumn woodland color (late October to early November)",
+  "c": 6
+ },
+ "scottish-highlands-skye": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 0,
+  "w": 8,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Heather bloom turning the hillsides purple (August); autumn color in the glens (mid-October to early November)",
+  "c": 7
+ },
+ "cotswolds": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 0,
+  "w": 6,
+  "r": "shifts",
+  "s": [
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Bluebell woods (a few weeks in late April to May)",
+  "c": 5
+ },
+ "canaries": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Tajinaste rojo red flower spikes in Teide National Park (May to June); spring endemic flora across the islands"
+ },
+ "iceland": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 7,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Nootka lupine carpets (late June to July)"
+ },
+ "ethiopia": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 4,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Meskel daisy (Adey Abeba) in highland fields (September, tied to the Meskel festival)"
+ },
+ "bhutan": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 0,
+  "w": 8,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": true,
+  "g": "Rhododendron on the Dochula and Chele La passes (April to May; lower slopes first)"
+ },
+ "lapland": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 2,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Cloudberry flowers and tundra blooms across the fells (June to July), a minor detail"
+ },
+ "nepal": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 0,
+  "w": 9,
+  "r": "shifts",
+  "s": [
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Rhododendron forests of Ghorepani and Poon Hill (mid-March to mid-April, peak early to mid April)"
+ },
+ "istanbul": {
+  "t": 0,
+  "d": 0,
+  "f": 8,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy"
+  ],
+  "k": "festival",
+  "e": true,
+  "g": "Istanbul Tulip Festival, 30 million bulbs with Emirgan Park the centerpiece (about a 10-day peak in mid-April)"
+ },
+ "badlands-black-hills": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 3,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Prairie wildflowers across the grasslands (early summer), modest"
+ },
+ "santorini": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 2,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Scattered spring color on the caldera slopes, minor"
+ },
+ "mallorca": {
+  "t": 6,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": true,
+  "g": "Almond blossom, the 'snow of Mallorca' (late January into February, two to three weeks; fair in Son Servera)"
+ },
+ "great-smoky-mountains": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 9,
+  "m": 4,
+  "w": 8,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": true,
+  "g": "Spring Wildflower Pilgrimage (trillium, phlox, lady's slipper; April to early May); fall color (late September on the ridges to early November in the valleys, peak mid to late October)"
+ },
+ "tuscany": {
+  "t": 0,
+  "d": 0,
+  "f": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Red poppies in the Val d'Orcia wheat fields (May); sunflower fields (July)"
+ },
+ "provence": {
+  "t": 0,
+  "d": 0,
+  "f": 10,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": true,
+  "g": "Valensole lavender fields (late June into the first ten days of July; festival on the third Sunday of July)"
+ },
+ "douro-valley-porto": {
+  "t": 6,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": true,
+  "g": "Almond Blossom Route through the terraced vineyards (late February to early March, two to three weeks); vineyard autumn color (late October to mid-November)"
+ },
+ "tokyo-kyoto": {
+  "t": 10,
+  "d": 0,
+  "f": 1,
+  "c": 9,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy"
+  ],
+  "k": "festival",
+  "e": true,
+  "g": "Sakura (cherry blossom, late March to mid April, peak week forecast only a few weeks out); momiji autumn leaves (Kyoto mid-November to early December, Tokyo late November to early December)"
+ },
+ "dolomites": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 9,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Alpe di Siusi meadow flowers (June to July, higher trails to early August); golden larches (mid-October to early November)"
+ },
+ "napa": {
+  "t": 0,
+  "d": 0,
+  "f": 6,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road"
+  ],
+  "k": "quiet",
+  "e": true,
+  "g": "Mustard between the vine rows (mid-February peak; Mustard Celebration through late March); vineyard autumn color (late October to mid-November)"
+ },
+ "texas-hill-country": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 9,
+  "w": 0,
+  "r": "rainDependent",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Bluebonnets and spring wildflowers (late March to mid-April; thinner after a dry fall and winter)",
+  "c": 5
+ },
+ "north-island": {
+  "t": 5,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Pohutukawa, the New Zealand 'Christmas tree', in red bloom (December)"
+ },
+ "hokkaido": {
+  "t": 0,
+  "d": 0,
+  "f": 9,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "festival",
+  "e": false,
+  "g": "Furano lavender fields (a two-to-three-week window in July, most reliably about July 10 to 25); autumn leaves (Daisetsuzan late September, Sapporo late October to early November)"
+ },
+ "namibia": {
+  "t": 0,
+  "d": 6,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "rainDependent",
+  "s": [
+   "road"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Desert bloom in the arid south after a wet winter (about August to September, rain-dependent)"
+ },
+ "seoul": {
+  "t": 9,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy"
+  ],
+  "k": "festival",
+  "e": true,
+  "g": "Yeouido Spring Flower Festival cherry blossoms (first half of April); autumn leaves (late October to mid-November, ginkgo first, then maples)"
+ },
+ "kyrgyzstan": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "m": 6,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "road",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Alpine meadow flowers around Song-Kol and Jyrgalan (July to August)"
+ },
+ "tasmania": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 6,
+  "m": 6,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Spring wildflowers (waratahs, flannel flowers, alpine endemics; October to December); fagus autumn color around Cradle Mountain (late April)"
+ },
+ "ladakh": {
+  "t": 7,
+  "d": 0,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "quiet",
+  "e": true,
+  "g": "Apricot blossom in the Nubra and Sham valleys (first half of April; Apricot Blossom Festival)"
+ },
+ "joshua-tree": {
+  "t": 0,
+  "d": 6,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "rainDependent",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Spring desert bloom (March to April); genuine superblooms are rare"
+ },
+ "death-valley": {
+  "t": 0,
+  "d": 9,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "rare",
+  "s": [
+   "road",
+   "easy"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Lower-elevation wildflowers (February to April); true superblooms only in 1998, 2005, 2016 and 2026"
+ },
+ "amsterdam": {
+  "t": 0,
+  "d": 0,
+  "f": 10,
+  "m": 0,
+  "w": 0,
+  "r": "dependable",
+  "s": [
+   "easy"
+  ],
+  "k": "festival",
+  "e": true,
+  "g": "Keukenhof, open about eight weeks each spring with seven million bulbs, tulips peaking in mid-April"
+ },
+ "atacama": {
+  "t": 0,
+  "d": 10,
+  "f": 0,
+  "c": 0,
+  "m": 0,
+  "w": 0,
+  "r": "rare",
+  "s": [
+   "road"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Desierto Florido: a few weeks, roughly once every 5 to 7 years after an unusually wet winter"
+ },
+ "vermont": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 10,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Fall foliage across sugar maple hills and villages (late September in the Northeast Kingdom, peak first half of October in the north and center, mid to late October in the south)"
+ },
+ "hudson-valley": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Catskills and Hudson Valley foliage (Catskills peak around the second week of October, lower valley through late October)"
+ },
+ "acadia": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Fall foliage on Cadillac Mountain, the carriage roads and Jordan Pond (late September to late October, peak mid-October)"
+ },
+ "quebec-city": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 9,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Fall foliage in the Laurentians, Eastern Townships and Charlevoix (late September in the Laurentians, mid-October around Quebec City)"
+ },
+ "nova-scotia": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Fall foliage on the Cabot Trail and Cape Breton Highlands (first half of October; Celtic Colours festival timed to it)"
+ },
+ "upper-peninsula": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Fall foliage along Lake Superior, the Keweenaw and Pictured Rocks (late September in the Keweenaw to mid-October farther east)"
+ },
+ "banff": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "festival",
+  "e": false,
+  "g": "Golden larches at Larch Valley, Sentinel Pass and Healy Pass (second half of September); alpine wildflowers at Sunshine Meadows (July to August)"
+ },
+ "aspen": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 9,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Aspen gold at the Maroon Bells, Independence Pass and Kebler Pass (about September 20 to October 1); wildflowers in the Maroon Bells meadows (July)"
+ },
+ "denali-interior": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 5,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Tundra fall color (mid-August in the high country to mid-September in the lower forests); tundra wildflowers (June to July)"
+ },
+ "black-forest": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Beech and larch autumn color across the Black Forest (late September at altitude to late October in the valleys, peak first half of October)"
+ },
+ "bavaria-munich": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 6,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Golden larches and beech in the Bavarian Alps and Berchtesgaden, and autumn in the Englischer Garten (October)"
+ },
+ "chamonix": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 6,
+  "m": 7,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": false,
+  "g": "Alpine flowers on the Grand Balcon and Aiguilles Rouges (July); golden larches (October)"
+ },
+ "torres-del-paine": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Lenga and ñire autumn color (April)"
+ },
+ "el-chalten": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Ñire and lenga autumn color around Mount Fitz Roy (late March to mid April)"
+ },
+ "argentine-lake-district": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Lenga and ñire autumn color on the Seven Lakes Road and Circuito Chico (April to early May)"
+ },
+ "chilean-lake-district": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 6,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "hike"
+  ],
+  "k": "quiet",
+  "e": false,
+  "g": "Lenga, coigue and roble autumn color around Pucon and Huerquehue (April to May)"
+ },
+ "queenstown": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 8,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "road",
+   "easy",
+   "hike"
+  ],
+  "k": "beatable",
+  "e": true,
+  "g": "Autumn colors in Arrowtown, the Shotover River and Lake Hayes (late April to early May; Arrowtown Autumn Festival)"
+ },
+ "beijing": {
+  "t": 0,
+  "d": 0,
+  "f": 0,
+  "c": 7,
+  "m": 0,
+  "w": 0,
+  "r": "shifts",
+  "s": [
+   "easy",
+   "hike"
+  ],
+  "k": "festival",
+  "e": true,
+  "g": "Fragrant Hills red leaves (late October to early November; Red Leaf Festival from mid-October)"
+ }
+}

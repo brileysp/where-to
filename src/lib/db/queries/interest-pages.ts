@@ -5,11 +5,12 @@ import { db } from '../client';
 import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
-import { SLIDERS, VISIBLE_SLIDERS } from '@/lib/scoring/constants';
+import { SLIDERS, VISIBLE_SLIDERS, INACTIVE_NOTES } from '@/lib/scoring/constants';
 import { INTEREST_ANCHORS } from '@/lib/scoring/anchors';
 import { loadAnchorOverrides } from '@/lib/scoring/anchorOverrides';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import { factDefsFor, RULES_TAB_KEYS } from '@/lib/admin/interest-pages/config';
+import { describeQuestionRule } from '@/lib/onboarding/question-fit';
 import { PLACE_TYPE_BY_ID } from '@/lib/admin/interest-pages/place-types';
 import { computeCompleteness, type Completeness, type PlaceInput } from '@/lib/admin/interest-pages/completeness';
 import type { AuthoringBatchRow, AuthoringPassRow, ChipOverrideRow, ChipRow, IdeaRow, InterestPageData, InterestPlaceRow, NaReasonInfo, PlaceStatus, QuestionRow, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
@@ -344,10 +345,12 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     ideas: ideaRows.map(toIdea),
     completeness: completenessMap[interestKey],
     passes: passRows,
-    questions: questionRows.map((r): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, whenChips: questionChipRows.filter((x) => x.questionKey === r.questionKey && !x.suggested).map((x) => x.chipKey).sort(), suggestedChips: questionChipRows.filter((x) => x.questionKey === r.questionKey && x.suggested).map((x) => x.chipKey).sort(), approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null })),
+    questions: questionRows.map((r): QuestionRow => ({ key: r.questionKey, order: r.sortOrder, text: r.text, options: r.options, maxPicks: r.maxPicks, kind: r.kind, columns: r.columns, note: r.note, missMessage: r.missMessage, fitSummary: describeQuestionRule(r.fitRule ?? null, r.options, factDefsFor(r.interestKey)), whenChips: questionChipRows.filter((x) => x.questionKey === r.questionKey && !x.suggested).map((x) => x.chipKey).sort(), suggestedChips: questionChipRows.filter((x) => x.questionKey === r.questionKey && x.suggested).map((x) => x.chipKey).sort(), approvedBy: r.approvedBy, approvedAt: r.approvedAt ? r.approvedAt.toISOString() : null })),
     chips: chipRows.map((c): ChipRow => ({ key: c.chipKey, label: c.label, order: c.sortOrder, status: c.status, drivers: c.drivers, needsColumn: c.needsColumn, approvedBy: c.approvedBy, approvedAt: c.approvedAt ? c.approvedAt.toISOString() : null })),
     chipOverrides: overrideRows.map((o): ChipOverrideRow => ({ chipKey: o.chipKey, placeId: o.placeId, fit: o.fit, reason: o.reason, setBy: o.setBy, setAt: o.setAt.toISOString() })),
     ruleOverrides: Object.fromEntries(ruleRows.map((r) => [r.sectionKey, r.items])),
-    interestOptions: VISIBLE_SLIDERS.map((s) => ({ key: s.key, label: s.label, icon: s.icon, group: s.group })),
+    // Inactive interests stay out of the picker, except the one being looked at.
+    interestOptions: SLIDERS.filter((s) => !s.hidden || s.key === interestKey).map((s) => ({ key: s.key, label: s.hidden ? `${s.label} (inactive)` : s.label, icon: s.icon, group: s.group })),
+    inactive: slider.hidden ? { note: INACTIVE_NOTES[interestKey] ?? '' } : null,
   };
 }

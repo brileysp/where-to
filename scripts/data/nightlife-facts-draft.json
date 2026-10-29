@@ -1,0 +1,862 @@
+{
+ "uganda": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "mauritius": {
+  "lateNights": "early",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "aruba": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "panama": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "ethiopia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "mendoza": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "gbr": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "luangprabang": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "london": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "guatemala": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "bhutan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "athens": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 5
+ },
+ "istanbul": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 8
+ },
+ "dubai": {
+  "lateNights": "late",
+  "dressCode": "strict",
+  "quietBars": 9
+ },
+ "peruvian-amazon": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "atacama": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "morocco": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "thailand": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "havana": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "colombian-andes": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "turks-caicos": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "sedona": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "ecuadorian-andes": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "monterey-big-sur": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "andalucia": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "big-island": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "chiapas": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "colombian-caribbean": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 5
+ },
+ "madeira": {
+  "lateNights": "early",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "zimbabwe": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "madagascar": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "berlin": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "kenya": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "basque-country": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "fiji": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "rome": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 7
+ },
+ "bordeaux": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "barbados": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "badlands-black-hills": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "rajasthan-golden-triangle": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "komodo": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "denali-interior": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "buenosaires": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 7
+ },
+ "southeast-alaska": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "los-cabos": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 4
+ },
+ "oaxaca": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "lapland": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "angkor": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "nepal": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "rwanda": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "bali": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "charleston-savannah": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "srilanka": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "tokyo-kyoto": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 10
+ },
+ "fjords": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "great-smoky-mountains": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "scottish-highlands-skye": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "dolomites": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "lake-district": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "taiwan": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "hongkong": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "zambia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "st-andrews-fife": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "black-forest": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "palau": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "tierra-del-fuego": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "aspen": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 7
+ },
+ "chilean-lake-district": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "vietnam": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "beijing": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "lofoten": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "rioja": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "banff": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "nyc": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "arches-canyonlands": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "provence": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "sicily": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "chicago": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 8
+ },
+ "prague": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "mallorca": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "amalfi": {
+  "lateNights": "early",
+  "dressCode": "smart",
+  "quietBars": 5
+ },
+ "namibia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "okinawa": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "el-chalten": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "seoul": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "edinburgh": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "belize": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "acadia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "budapest": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "svalbard": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "rio": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "guilin-yangshuo": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "napa": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "costa-rica": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "bend-crater-lake": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "kerala": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "chiang-mai": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "puerto-rico": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "kyrgyzstan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "egypt": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "champagne": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "cape-cod-islands": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "north-island": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "chamonix": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "piedmont": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "ireland": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "marlborough-abel-tasman": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "new-orleans": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "vienna": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 8
+ },
+ "sardinia": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "croatia": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "greenland": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "nice-riviera": {
+  "lateNights": "late",
+  "dressCode": "strict",
+  "quietBars": 9
+ },
+ "whistler": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "tuscany": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "san-miguel-guanajuato": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "hokkaido": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "mexicocity": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 8
+ },
+ "maui": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "bahamas": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "lisbon": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "borabora": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "azores": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "maldives": {
+  "lateNights": "early",
+  "dressCode": "smart",
+  "quietBars": 3
+ },
+ "douro-valley-porto": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "mongolia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "belfast-giants-causeway": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "vancouver-island": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "seychelles": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "copenhagen": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "uzbekistan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "cotswolds": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "bagan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "paris": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "canaries": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "bavaria-munich": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "iceland": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 8
+ },
+ "hudson-valley": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "upper-peninsula": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "nova-scotia": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "ghana": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "texas-hill-country": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "tasmania": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "cape-town": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 8
+ },
+ "swissalps": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "vermont": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "quebec-city": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "punta-cana": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "tbilisi-caucasus": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "bangkok": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "borneo": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "queenstown": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 7
+ },
+ "jordan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "joshua-tree": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "venice": {
+  "lateNights": "early",
+  "dressCode": "smart",
+  "quietBars": 5
+ },
+ "nicaragua": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "singapore": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "santorini": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 6
+ },
+ "tanzania": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "algarve": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 4
+ },
+ "faroe-islands": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 5
+ },
+ "snowdonia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "cornwall": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 6
+ },
+ "peru": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "rivieramaya": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 5
+ },
+ "argentine-lake-district": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "sydney": {
+  "lateNights": "late",
+  "dressCode": "smart",
+  "quietBars": 9
+ },
+ "palawan": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "puglia": {
+  "lateNights": "early",
+  "dressCode": "casual",
+  "quietBars": 4
+ },
+ "jamaica": {
+  "lateNights": "late",
+  "dressCode": "casual",
+  "quietBars": 3
+ },
+ "amsterdam": {
+  "lateNights": "allNight",
+  "dressCode": "casual",
+  "quietBars": 9
+ },
+ "barcelona": {
+  "lateNights": "allNight",
+  "dressCode": "smart",
+  "quietBars": 8
+ }
+}

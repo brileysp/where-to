@@ -1,6 +1,9 @@
 import { airportByCode } from './airports';
-import { CARE_ITEMS, COMPANIONS, careRowSummary, isNarrowed, bandDims, type Bands, type CareState } from './care';
+import { CARE_ITEMS, COMPANIONS, bandTitle, careRowSummary, isNarrowed, bandDims, type Bands, type CareState } from './care';
 import { VIBES } from './vibes';
+import { originLabel } from './origin';
+import { allRegions, REGION_KEYS, REGION_LABELS, type RegionKey } from './regions';
+import { TRIP_LENGTHS, type TripLength } from './trip-length';
 
 /**
  * The cards on the Travel DNA page other than interests (docs/onboarding-v2/SPEC.md 4.11 and 6). Each row says where it is listed (`sec`),
@@ -26,16 +29,31 @@ export interface RowContext {
   care: CareState;
   who: string[];
   home: string | null;
+  homeCountry?: string | null;
+  homeSub?: string | null;
   vibes: string[];
   /** Taste-card swipes plus sharpen answers. */
   answerCount: number;
   month: number | null;
   week: number;
+  length?: TripLength | null;
+  continents?: readonly RegionKey[];
   maxHours: number;
 }
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const bandLabel = (dim: string, band: string) => bandDims().find((d) => d.key === dim)?.bands.find((b) => b.key === band)?.label ?? band;
+
+/** "Mar · week 2 · 1 week · Europe, Africa": the dates, how long, and the continents left in. */
+export function tripSummary(c: { month: number | null; week: number; length?: TripLength | null; continents?: readonly RegionKey[] }): string {
+  const parts: string[] = [];
+  if (c.month != null) parts.push(MONTH_NAMES[c.month] + (c.week ? ` · week ${c.week}` : ''));
+  const len = TRIP_LENGTHS.find((l) => l.key === c.length);
+  if (len) parts.push(len.label.toLowerCase());
+  const on = c.continents ?? [];
+  if (!allRegions(on)) parts.push(REGION_KEYS.filter((k) => on.includes(k)).map((k) => REGION_LABELS[k]).join(', '));
+  return parts.join(' · ') || 'Any time, anywhere';
+}
 
 export const homeLabel = (code: string | null): string => {
   const a = airportByCode(code);
@@ -53,7 +71,7 @@ export function dnaRows(c: RowContext): DnaRow[] {
       // Weather is a Travel DNA default only in the Travel DNA path; in a trip it stays with the trip.
       def: d.key === 'weather' ? c.dnaMode : true,
       icon: d.icon,
-      title: d.label,
+      title: bandTitle(d),
       summary: isNarrowed(c.bands, d.key) ? c.bands[d.key].map((b) => bandLabel(d.key, b)).join(', ') : 'No preference',
     });
   }
@@ -78,10 +96,10 @@ export function dnaRows(c: RowContext): DnaRow[] {
     title: c.dnaMode ? 'Who you usually travel with' : 'Who is going this time',
     summary: c.who.length ? c.who.map((k) => COMPANIONS.find((x) => x.key === k)?.label ?? k).join(', ') : 'Not set',
   });
-  rows.push({ key: 'origin', sec: 'who', def: true, icon: '🏠', title: 'Home airport', summary: homeLabel(c.home) });
+  rows.push({ key: 'origin', sec: 'who', def: true, icon: '🏠', title: 'Where you live', summary: originLabel({ airport: c.home, country: c.homeCountry, sub: c.homeSub }) });
   if (c.vibes.length) rows.push({ key: 'vibes', sec: 'taste', def: true, icon: '🖼️', title: 'Photo picks', summary: c.vibes.map((v) => VIBES.find((x) => x.key === v)?.label ?? v).join(', ') });
   if (c.answerCount > 0) rows.push({ key: 'ans', sec: 'taste', def: true, icon: '🎚️', title: 'Your answers and swipes', summary: `${c.answerCount} answers saved` });
-  if (c.month != null) rows.push({ key: 'when', sec: 'trip', def: false, icon: '🗓️', title: 'Dates', summary: MONTH_NAMES[c.month] + (c.week ? ` · week ${c.week}` : '') });
+  if (c.month != null || c.length || !allRegions(c.continents ?? [])) rows.push({ key: 'when', sec: 'trip', def: false, icon: '🗓️', title: 'Dates, length and places', summary: tripSummary(c) });
   if (c.maxHours) rows.push({ key: 'limits', sec: 'trip', def: false, icon: '✈️', title: 'Flight limits', summary: `From ${c.home ?? 'home'} · under ${c.maxHours}h` });
   return rows;
 }
@@ -95,9 +113,9 @@ export function rowHasChoices(key: string, c: RowContext & { subs: Record<string
   if (key.startsWith('b_')) return isNarrowed(c.bands, key.slice(2));
   if (key.startsWith('c_')) return !!c.care[key.slice(2)]?.o.length;
   if (key === 'who') return c.who.length > 0;
-  if (key === 'origin') return !!c.home;
+  if (key === 'origin') return !!c.home || !!c.homeCountry;
   if (key === 'vibes') return c.vibes.length > 0;
-  if (key === 'when') return c.month != null;
+  if (key === 'when') return c.month != null || !!c.length || !allRegions(c.continents ?? []);
   if (key === 'limits') return c.maxHours > 0;
   return false;
 }

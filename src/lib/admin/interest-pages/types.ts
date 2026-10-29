@@ -170,6 +170,8 @@ export interface QuestionRow {
   note: string;
   /** Short reason-chip text for when this answer knocks a place down ("Water colder than your limit"). Empty = no chip for this question. */
   missMessage: string;
+  /** How a place's columns answer each option, in plain words, one line per answer. Empty = not mapped to columns yet. */
+  fitSummary: string[];
   /** Keys of the interest's chips that open this question: it is asked only when at least one is ticked. Empty = asked of everyone who picks the interest. */
   whenChips: string[];
   /** Chips Claude proposed to open this question that the owner has not accepted yet. They change nothing until accepted. */
@@ -203,4 +205,6 @@ export interface InterestPageData {
   ruleOverrides: Record<string, unknown[]>;
   /** Every interest, for the picker at the top of the page. */
   interestOptions: Array<{ key: string; label: string; icon: string; group: string }>;
+  /** Set when the interest is inactive (hidden from travellers and from the admin lists by default); the note says why. */
+  inactive: { note: string } | null;
 }

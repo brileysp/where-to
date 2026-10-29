@@ -1,0 +1,63 @@
+{
+  "note": "Removed 22 Oct 2026 at the owner's request: malaria belongs to the future health and safety section, not to the Safari score.",
+  "question": {
+    "interestKey": "safari",
+    "questionKey": "q3",
+    "sortOrder": 3,
+    "text": "How do you feel about malaria precautions?",
+    "options": [
+      "I want to avoid malaria areas",
+      "Fine with precautions and the right season",
+      "No concern"
+    ],
+    "maxPicks": 1,
+    "kind": "limit",
+    "columns": [
+      "malaria"
+    ],
+    "note": "Malaria.",
+    "missMessage": "Malaria risk",
+    "fitRule": {
+      "answers": [
+        {
+          "mode": "all",
+          "checks": [
+            {
+              "type": "within",
+              "order": [
+                "none",
+                "low",
+                "seasonal",
+                "high"
+              ],
+              "column": "malaria",
+              "allowed": "low"
+            }
+          ]
+        },
+        {
+          "mode": "all",
+          "checks": [
+            {
+              "type": "within",
+              "order": [
+                "none",
+                "low",
+                "seasonal",
+                "high"
+              ],
+              "column": "malaria",
+              "allowed": "seasonal"
+            }
+          ]
+        },
+        null
+      ]
+    },
+    "approvedBy": "brileysp@gmail.com (selected in chat 17 Oct 2026; recorded by Claude on 19 Oct)",
+    "approvedAt": "2026-10-17T12:00:00.000Z",
+    "updatedBy": "Claude (moved from QUESTIONS.md, 19 Oct 2026)",
+    "updatedAt": "2026-10-20T03:19:17.825Z"
+  },
+  "links": []
+}

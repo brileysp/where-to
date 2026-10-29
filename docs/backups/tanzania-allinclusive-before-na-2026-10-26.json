@@ -1,0 +1,35 @@
+{
+ "curve": {
+  "anchors": [
+   {
+    "month": 1,
+    "value": 5,
+    "steepness": 1
+   },
+   {
+    "month": 2,
+    "value": 5,
+    "steepness": 2
+   },
+   {
+    "month": 3,
+    "value": 3,
+    "steepness": 2
+   },
+   {
+    "month": 5,
+    "value": 3,
+    "steepness": 1
+   },
+   {
+    "month": 6,
+    "value": 5,
+    "steepness": 2
+   }
+  ]
+ },
+ "overview": null,
+ "monthly": null,
+ "overrides": null,
+ "authored": true
+}

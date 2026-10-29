@@ -40,7 +40,7 @@ describe('matching one interest', () => {
     expect(matchInterest({ ticked: [chip('X', null)], chipsOffered: 4, answers: [limit(null), lean(null)] }).factor).toBe(1);
   });
   it('lets one Limit miss decide a place and Lean misses add up slowly', () => {
-    expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [limit(0)] }).factor).toBe(0.5);
+    expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [limit(0)] }).factor).toBe(0.65);
     expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [lean(0), lean(0), lean(0)] }).factor).toBeCloseTo(0.85 ** 3);
   });
   it('never goes below the floor however much is missed', () => {
@@ -54,7 +54,7 @@ describe('matching one interest', () => {
   });
   it('gives no chip to a question with no message, though it still lowers the score', () => {
     const r = matchInterest({ ticked: [], chipsOffered: 4, answers: [limit(0, '')] });
-    expect(r.factor).toBe(0.5);
+    expect(r.factor).toBe(0.65);
     expect(r.reasons).toEqual([]);
   });
   it('follows the settings it is given', () => {

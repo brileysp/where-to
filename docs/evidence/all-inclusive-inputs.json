@@ -1,0 +1,377 @@
+{
+ "jamaica": {
+  "adults": 15,
+  "family": 12,
+  "lux": 10,
+  "act": 8,
+  "dine": 7,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Sandals (six adults-only resorts), Secrets, Breathless, Excellence Oyster Bay, Beaches Negril and Ocho Rios, Royalton Blue Waters, Hyatt Ziva/Zilara Rose Hall",
+  "rated": {
+   "adultsOnly": 8,
+   "familyResorts": 8,
+   "luxuryAllInclusive": 6
+  }
+ },
+ "rivieramaya": {
+  "adults": 25,
+  "family": 40,
+  "lux": 15,
+  "act": 8,
+  "dine": 8,
+  "eve": "shows",
+  "rooms": 500,
+  "ex": "Secrets, Breathless, Excellence, Zoetry, Hideaway at Royalton, Hyatt Ziva, Hard Rock, Moon Palace, Grand Palladium, Barcelo Maya, Iberostar",
+  "rated": {
+   "adultsOnly": 10,
+   "familyResorts": 10,
+   "luxuryAllInclusive": 8
+  }
+ },
+ "punta-cana": {
+  "adults": 18,
+  "family": 40,
+  "lux": 12,
+  "act": 8,
+  "dine": 7,
+  "eve": "party",
+  "rooms": 600,
+  "ex": "Excellence, Secrets Cap Cana, Breathless, Zoetry Agua, Royalton, Hyatt Ziva, Hard Rock, Dreams, Barcelo Bavaro, Riu, Iberostar, Be Live",
+  "rated": {
+   "adultsOnly": 8,
+   "familyResorts": 10,
+   "luxuryAllInclusive": 8
+  }
+ },
+ "los-cabos": {
+  "adults": 8,
+  "family": 8,
+  "lux": 8,
+  "act": 7,
+  "dine": 8,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Secrets Puerto Los Cabos, Breathless Cabo, Dreams Los Cabos, Hyatt Ziva Los Cabos, Riu Palace, Pueblo Bonito, Grand Fiesta Americana",
+  "rated": {
+   "adultsOnly": 6,
+   "familyResorts": 6,
+   "luxuryAllInclusive": 6
+  }
+ },
+ "bahamas": {
+  "adults": 4,
+  "family": 5,
+  "lux": 5,
+  "act": 7,
+  "dine": 7,
+  "eve": "shows",
+  "rooms": 400,
+  "ex": "Sandals Royal Bahamian and Emerald Bay (Exuma), Breezes, Riu Palace Paradise Island, Baha Mar (not all-inclusive)",
+  "rated": {
+   "adultsOnly": 4,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 4
+  }
+ },
+ "barbados": {
+  "adults": 3,
+  "family": 4,
+  "lux": 4,
+  "act": 6,
+  "dine": 7,
+  "eve": "shows",
+  "rooms": 250,
+  "ex": "Sandals Barbados and Royal Barbados, Turtle Beach, Almond Beach",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 4
+  }
+ },
+ "turks-caicos": {
+  "adults": 2,
+  "family": 3,
+  "lux": 3,
+  "act": 6,
+  "dine": 8,
+  "eve": "quiet",
+  "rooms": 250,
+  "ex": "Beaches Turks and Caicos, Club Med Turkoise, Ocean Club West",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 3,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "aruba": {
+  "adults": 3,
+  "family": 6,
+  "lux": 2,
+  "act": 7,
+  "dine": 6,
+  "eve": "shows",
+  "rooms": 400,
+  "ex": "Riu Palace Antillas (adults-only), Riu Palace Aruba, Divi Aruba All Inclusive, Occidental, Hilton (packages)",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "canaries": {
+  "adults": 12,
+  "family": 40,
+  "lux": 3,
+  "act": 7,
+  "dine": 5,
+  "eve": "shows",
+  "rooms": 450,
+  "ex": "Many adults-only and family 4-star hotels in Tenerife, Gran Canaria and Fuerteventura (Riu, Iberostar, Lopesan, Barcelo, H10)",
+  "rated": {
+   "adultsOnly": 8,
+   "familyResorts": 10,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "mallorca": {
+  "adults": 15,
+  "family": 25,
+  "lux": 3,
+  "act": 6,
+  "dine": 5,
+  "eve": "shows",
+  "rooms": 350,
+  "ex": "Alcudia, Cala Millor, Cala d'Or and Playa de Muro adults-only and family all-inclusive hotels (Iberostar, Riu, Zafiro, Viva)",
+  "rated": {
+   "adultsOnly": 8,
+   "familyResorts": 10,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "algarve": {
+  "adults": 4,
+  "family": 20,
+  "lux": 2,
+  "act": 6,
+  "dine": 5,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Vilamoura and Albufeira all-inclusive hotels (Vila Gale, Pestana, Dom Pedro), golf resorts",
+  "rated": {
+   "adultsOnly": 4,
+   "familyResorts": 8,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "egypt": {
+  "adults": 8,
+  "family": 40,
+  "lux": 6,
+  "act": 8,
+  "dine": 6,
+  "eve": "shows",
+  "rooms": 450,
+  "ex": "Sharm el-Sheikh and Hurghada all-inclusive resorts (Rixos, Steigenberger, Jaz, Sunrise, Titanic)",
+  "rated": {
+   "adultsOnly": 6,
+   "familyResorts": 10,
+   "luxuryAllInclusive": 4
+  }
+ },
+ "mauritius": {
+  "adults": 6,
+  "family": 12,
+  "lux": 12,
+  "act": 9,
+  "dine": 8,
+  "eve": "quiet",
+  "rooms": 250,
+  "ex": "Beachcomber, Lux, Constance, Paradise Cove (adults-only), Shandrani, Veranda, Sugar Beach (all-inclusive is the norm)",
+  "rated": {
+   "adultsOnly": 4,
+   "familyResorts": 8,
+   "luxuryAllInclusive": 8
+  }
+ },
+ "maldives": {
+  "adults": 8,
+  "family": 6,
+  "lux": 40,
+  "act": 6,
+  "dine": 8,
+  "eve": "quiet",
+  "rooms": 100,
+  "ex": "Island resorts that are full-board or all-inclusive: Hideaway Beach (adults-only), Kuredu, Sun Siyam, Constance Halaveli, Soneva, Cocoon",
+  "rated": {
+   "adultsOnly": 6,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 10
+  }
+ },
+ "fiji": {
+  "adults": 4,
+  "family": 5,
+  "lux": 3,
+  "act": 7,
+  "dine": 6,
+  "eve": "quiet",
+  "rooms": 150,
+  "ex": "Likuliku Lagoon (adults-only), Tokoriki, Fiji Marriott, Outrigger Beach, Yasawa island resorts",
+  "rated": {
+   "adultsOnly": 4,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "seychelles": {
+  "adults": 1,
+  "family": 1,
+  "lux": 3,
+  "act": 4,
+  "dine": 7,
+  "eve": "quiet",
+  "rooms": 80,
+  "ex": "Constance Ephelia and Lemuria, Kempinski (full board), few true all-inclusive resorts",
+  "rated": {
+   "adultsOnly": 2,
+   "familyResorts": 2,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "borabora": {
+  "adults": 2,
+  "family": 1,
+  "lux": 3,
+  "act": 4,
+  "dine": 7,
+  "eve": "quiet",
+  "rooms": 90,
+  "ex": "Overwater resorts sell all-inclusive packages rather than being all-inclusive resorts (Bora Bora Pearl Beach, Club Med Moorea)",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 2,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "colombian-caribbean": {
+  "adults": 3,
+  "family": 6,
+  "lux": 2,
+  "act": 5,
+  "dine": 5,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Decameron Cartagena, Baru and San Andres, Hotel Las Americas",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "panama": {
+  "adults": 1,
+  "family": 4,
+  "lux": 1,
+  "act": 5,
+  "dine": 5,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Playa Blanca, Buenaventura, Decameron Panama",
+  "rated": {
+   "adultsOnly": 2,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 2
+  }
+ },
+ "puerto-rico": {
+  "adults": 1,
+  "family": 2,
+  "lux": 1,
+  "act": 6,
+  "dine": 6,
+  "eve": "shows",
+  "rooms": 300,
+  "ex": "Few all-inclusives: El Conquistador, Royal Isabela (packages)",
+  "rated": {
+   "adultsOnly": 2,
+   "familyResorts": 3,
+   "luxuryAllInclusive": 2
+  }
+ },
+ "thailand": {
+  "adults": 2,
+  "family": 6,
+  "lux": 3,
+  "act": 6,
+  "dine": 6,
+  "eve": "shows",
+  "rooms": 250,
+  "ex": "Phuket and Khao Lak all-inclusive packages (Club Med Phuket, Dusit Thani Krabi, Katathani)",
+  "rated": {
+   "adultsOnly": 3,
+   "familyResorts": 4,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "bali": {
+  "adults": 1,
+  "family": 3,
+  "lux": 2,
+  "act": 5,
+  "dine": 7,
+  "eve": "shows",
+  "rooms": 250,
+  "ex": "Nusa Dua all-inclusive resorts (Club Med Bali, Hard Rock Bali, Grand Mirage)",
+  "rated": {
+   "adultsOnly": 2,
+   "familyResorts": 3,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "okinawa": {
+  "adults": 0,
+  "family": 0,
+  "lux": 2,
+  "act": 4,
+  "dine": 6,
+  "eve": "quiet",
+  "rooms": 250,
+  "ex": "Resort hotels sell all-inclusive packages (Club Med Kabira, Hilton Okinawa Chatan)",
+  "rated": {
+   "adultsOnly": 0,
+   "familyResorts": 0,
+   "luxuryAllInclusive": 3
+  }
+ },
+ "belize": {
+  "adults": 1,
+  "family": 2,
+  "lux": 1,
+  "act": 5,
+  "dine": 5,
+  "eve": "quiet",
+  "rooms": 80,
+  "ex": "Small island and jungle lodges with all-inclusive rates (Hamanasi, Placencia packages)",
+  "rated": {
+   "adultsOnly": 2,
+   "familyResorts": 3,
+   "luxuryAllInclusive": 2
+  }
+ },
+ "tanzania": {
+  "adults": 0,
+  "family": 0,
+  "lux": 0,
+  "act": 2,
+  "dine": 6,
+  "eve": "quiet",
+  "rooms": 30,
+  "ex": "Safari lodges priced all-inclusive; excluded by the definition (the stay is excursions, not the property)",
+  "rated": {
+   "adultsOnly": 0,
+   "familyResorts": 0,
+   "luxuryAllInclusive": 0
+  }
+ }
+}

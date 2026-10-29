@@ -59,6 +59,7 @@ export function toScoringPlace(row: ScoringRow): ScoringDestination {
     peak: row.peakMonths,
     low: row.lowMonths,
     peakIntensity: row.peakIntensity,
+    priceSwing: row.priceSwing,
     crowdBaseline: row.crowdBaseline,
     hotSeverity: row.hotSeverity,
     coldSeverity: row.coldSeverity,

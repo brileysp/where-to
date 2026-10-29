@@ -101,6 +101,7 @@ export function InterestPage({ data }: { data: InterestPageData }) {
       <div className="ip-crumbs">
         <Link href="/admin/destinations/interests">Interests</Link> › {data.group} › {data.label}
       </div>
+      {data.inactive && <div className="ip-note" style={{ margin: '8px 0', padding: '8px 12px', border: '1px solid var(--border, #ddd)', borderRadius: 8 }}><b>Inactive.</b> {data.inactive.note || 'Hidden from travellers and from the admin lists by default.'} Its data is kept and still scored.</div>}
       <div className="ip-stickybar">
         <h1 className="ip-title">
             <select className="ip-picker" aria-label="Switch interest" value={data.key} onChange={(e) => router.push(`/admin/destinations/interests/${e.target.value}`)}>
@@ -111,6 +112,7 @@ export function InterestPage({ data }: { data: InterestPageData }) {
               ))}
             </select>
             <span className="ip-chip dim ip-mono">{data.key}</span>
+            {data.inactive && <span className="ip-chip warn" title={data.inactive.note || 'Inactive: hidden from travellers'}>Inactive</span>}
             {data.audienceTier && <span className="ip-chip info">{data.audienceTier} audience</span>}
             {data.directive && <span className="ip-chip good ip-mono">{data.directive.replace('prompts/', '').replace('.md', '')}</span>}
         </h1>

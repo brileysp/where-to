@@ -1,0 +1,602 @@
+{
+ "mendoza": {
+  "downhillResort": 6,
+  "offPiste": 5,
+  "crossCountry": 1,
+  "heliCat": true,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 5,
+  "apres": 3,
+  "snowboardParks": 5
+ },
+ "atacama": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 0,
+  "heliCat": false,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 0,
+  "apres": 1,
+  "snowboardParks": 0
+ },
+ "olympic": {
+  "downhillResort": 3,
+  "offPiste": 5,
+  "crossCountry": 3,
+  "heliCat": false,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 3,
+  "apres": 1,
+  "snowboardParks": 3
+ },
+ "big-island": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 0,
+  "heliCat": false,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 1,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "grandcanyon": {
+  "downhillResort": 1,
+  "offPiste": 1,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 1,
+  "advancedTerrain": 1,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "badlands-black-hills": {
+  "downhillResort": 3,
+  "offPiste": 1,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 2,
+  "apres": 1,
+  "snowboardParks": 2
+ },
+ "denali-interior": {
+  "downhillResort": 2,
+  "offPiste": 6,
+  "crossCountry": 5,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 4,
+  "apres": 1,
+  "snowboardParks": 3
+ },
+ "lapland": {
+  "downhillResort": 5,
+  "offPiste": 2,
+  "crossCountry": 9,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 3,
+  "apres": 5,
+  "snowboardParks": 4
+ },
+ "tokyo-kyoto": {
+  "downhillResort": 2,
+  "offPiste": 1,
+  "crossCountry": 0,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 1
+ },
+ "fjords": {
+  "downhillResort": 4,
+  "offPiste": 7,
+  "crossCountry": 8,
+  "heliCat": false,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 5,
+  "apres": 3,
+  "snowboardParks": 4
+ },
+ "scottish-highlands-skye": {
+  "downhillResort": 4,
+  "offPiste": 5,
+  "crossCountry": 5,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 4,
+  "apres": 4,
+  "snowboardParks": 4
+ },
+ "dolomites": {
+  "downhillResort": 10,
+  "offPiste": 5,
+  "crossCountry": 8,
+  "heliCat": false,
+  "beginnerFriendly": 8,
+  "advancedTerrain": 7,
+  "apres": 8,
+  "snowboardParks": 7
+ },
+ "black-forest": {
+  "downhillResort": 3,
+  "offPiste": 1,
+  "crossCountry": 9,
+  "heliCat": false,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 2,
+  "apres": 3,
+  "snowboardParks": 3
+ },
+ "yosemite": {
+  "downhillResort": 2,
+  "offPiste": 3,
+  "crossCountry": 4,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 2,
+  "apres": 1,
+  "snowboardParks": 2
+ },
+ "tierra-del-fuego": {
+  "downhillResort": 3,
+  "offPiste": 3,
+  "crossCountry": 5,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 3,
+  "apres": 2,
+  "snowboardParks": 2
+ },
+ "aspen": {
+  "downhillResort": 9,
+  "offPiste": 7,
+  "crossCountry": 5,
+  "heliCat": true,
+  "beginnerFriendly": 7,
+  "advancedTerrain": 9,
+  "apres": 7,
+  "snowboardParks": 8
+ },
+ "chilean-lake-district": {
+  "downhillResort": 5,
+  "offPiste": 5,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 5,
+  "apres": 3,
+  "snowboardParks": 4
+ },
+ "beijing": {
+  "downhillResort": 4,
+  "offPiste": 1,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 2,
+  "apres": 2,
+  "snowboardParks": 5
+ },
+ "lofoten": {
+  "downhillResort": 1,
+  "offPiste": 9,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 1,
+  "advancedTerrain": 7,
+  "apres": 2,
+  "snowboardParks": 1
+ },
+ "rioja": {
+  "downhillResort": 1,
+  "offPiste": 1,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 1
+ },
+ "banff": {
+  "downhillResort": 8,
+  "offPiste": 8,
+  "crossCountry": 8,
+  "heliCat": true,
+  "beginnerFriendly": 7,
+  "advancedTerrain": 8,
+  "apres": 6,
+  "snowboardParks": 6
+ },
+ "nyc": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "sicily": {
+  "downhillResort": 2,
+  "offPiste": 2,
+  "crossCountry": 0,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 1
+ },
+ "chicago": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 2
+ },
+ "prague": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 4,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "churchill": {
+  "downhillResort": 0,
+  "offPiste": 0,
+  "crossCountry": 6,
+  "heliCat": false,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "seoul": {
+  "downhillResort": 4,
+  "offPiste": 1,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 3,
+  "apres": 3,
+  "snowboardParks": 7
+ },
+ "acadia": {
+  "downhillResort": 1,
+  "offPiste": 1,
+  "crossCountry": 6,
+  "heliCat": false,
+  "beginnerFriendly": 1,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "sequoia-kings-canyon": {
+  "downhillResort": 2,
+  "offPiste": 5,
+  "crossCountry": 3,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 3,
+  "apres": 0,
+  "snowboardParks": 2
+ },
+ "budapest": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "svalbard": {
+  "downhillResort": 0,
+  "offPiste": 6,
+  "crossCountry": 0,
+  "heliCat": false,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 3,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "bend-crater-lake": {
+  "downhillResort": 6,
+  "offPiste": 6,
+  "crossCountry": 7,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 6,
+  "apres": 5,
+  "snowboardParks": 7
+ },
+ "zion-bryce": {
+  "downhillResort": 1,
+  "offPiste": 1,
+  "crossCountry": 3,
+  "heliCat": false,
+  "beginnerFriendly": 1,
+  "advancedTerrain": 1,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "kyrgyzstan": {
+  "downhillResort": 4,
+  "offPiste": 8,
+  "crossCountry": 2,
+  "heliCat": true,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 6,
+  "apres": 2,
+  "snowboardParks": 3
+ },
+ "north-island": {
+  "downhillResort": 3,
+  "offPiste": 2,
+  "crossCountry": 1,
+  "heliCat": false,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 2,
+  "apres": 2,
+  "snowboardParks": 3
+ },
+ "chamonix": {
+  "downhillResort": 10,
+  "offPiste": 10,
+  "crossCountry": 8,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 10,
+  "apres": 9,
+  "snowboardParks": 7
+ },
+ "piedmont": {
+  "downhillResort": 7,
+  "offPiste": 6,
+  "crossCountry": 3,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 6,
+  "apres": 5,
+  "snowboardParks": 5
+ },
+ "vienna": {
+  "downhillResort": 2,
+  "offPiste": 1,
+  "crossCountry": 3,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 1,
+  "apres": 2,
+  "snowboardParks": 2
+ },
+ "greenland": {
+  "downhillResort": 0,
+  "offPiste": 5,
+  "crossCountry": 2,
+  "heliCat": true,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 2,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "yellowstone": {
+  "downhillResort": 2,
+  "offPiste": 5,
+  "crossCountry": 8,
+  "heliCat": false,
+  "beginnerFriendly": 1,
+  "advancedTerrain": 3,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "whistler": {
+  "downhillResort": 10,
+  "offPiste": 8,
+  "crossCountry": 6,
+  "heliCat": true,
+  "beginnerFriendly": 8,
+  "advancedTerrain": 8,
+  "apres": 9,
+  "snowboardParks": 9
+ },
+ "hokkaido": {
+  "downhillResort": 8,
+  "offPiste": 9,
+  "crossCountry": 6,
+  "heliCat": true,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 8,
+  "apres": 5,
+  "snowboardParks": 8
+ },
+ "mongolia": {
+  "downhillResort": 0,
+  "offPiste": 1,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 0,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 0
+ },
+ "vancouver-island": {
+  "downhillResort": 3,
+  "offPiste": 4,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 3,
+  "apres": 2,
+  "snowboardParks": 3
+ },
+ "bavaria-munich": {
+  "downhillResort": 7,
+  "offPiste": 3,
+  "crossCountry": 9,
+  "heliCat": false,
+  "beginnerFriendly": 7,
+  "advancedTerrain": 6,
+  "apres": 7,
+  "snowboardParks": 6
+ },
+ "iceland": {
+  "downhillResort": 3,
+  "offPiste": 6,
+  "crossCountry": 3,
+  "heliCat": true,
+  "beginnerFriendly": 4,
+  "advancedTerrain": 5,
+  "apres": 3,
+  "snowboardParks": 3
+ },
+ "hudson-valley": {
+  "downhillResort": 2,
+  "offPiste": 0,
+  "crossCountry": 4,
+  "heliCat": false,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 3
+ },
+ "upper-peninsula": {
+  "downhillResort": 2,
+  "offPiste": 0,
+  "crossCountry": 8,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 2
+ },
+ "nova-scotia": {
+  "downhillResort": 1,
+  "offPiste": 0,
+  "crossCountry": 5,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 0,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "tasmania": {
+  "downhillResort": 1,
+  "offPiste": 2,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 1,
+  "apres": 0,
+  "snowboardParks": 1
+ },
+ "swissalps": {
+  "downhillResort": 10,
+  "offPiste": 10,
+  "crossCountry": 9,
+  "heliCat": true,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 10,
+  "apres": 10,
+  "snowboardParks": 8
+ },
+ "vermont": {
+  "downhillResort": 8,
+  "offPiste": 4,
+  "crossCountry": 9,
+  "heliCat": false,
+  "beginnerFriendly": 7,
+  "advancedTerrain": 6,
+  "apres": 7,
+  "snowboardParks": 7
+ },
+ "quebec-city": {
+  "downhillResort": 5,
+  "offPiste": 1,
+  "crossCountry": 7,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 3,
+  "apres": 5,
+  "snowboardParks": 5
+ },
+ "tbilisi-caucasus": {
+  "downhillResort": 6,
+  "offPiste": 8,
+  "crossCountry": 4,
+  "heliCat": true,
+  "beginnerFriendly": 5,
+  "advancedTerrain": 6,
+  "apres": 4,
+  "snowboardParks": 5
+ },
+ "queenstown": {
+  "downhillResort": 8,
+  "offPiste": 7,
+  "crossCountry": 3,
+  "heliCat": true,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 7,
+  "apres": 7,
+  "snowboardParks": 7
+ },
+ "glacier-waterton": {
+  "downhillResort": 4,
+  "offPiste": 7,
+  "crossCountry": 6,
+  "heliCat": true,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 5,
+  "apres": 2,
+  "snowboardParks": 3
+ },
+ "rocky-mountain": {
+  "downhillResort": 3,
+  "offPiste": 5,
+  "crossCountry": 7,
+  "heliCat": false,
+  "beginnerFriendly": 3,
+  "advancedTerrain": 4,
+  "apres": 2,
+  "snowboardParks": 3
+ },
+ "snowdonia": {
+  "downhillResort": 1,
+  "offPiste": 1,
+  "crossCountry": 2,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 1,
+  "apres": 1,
+  "snowboardParks": 1
+ },
+ "north-cascades": {
+  "downhillResort": 3,
+  "offPiste": 7,
+  "crossCountry": 4,
+  "heliCat": false,
+  "beginnerFriendly": 2,
+  "advancedTerrain": 5,
+  "apres": 1,
+  "snowboardParks": 2
+ },
+ "argentine-lake-district": {
+  "downhillResort": 7,
+  "offPiste": 6,
+  "crossCountry": 4,
+  "heliCat": false,
+  "beginnerFriendly": 6,
+  "advancedTerrain": 7,
+  "apres": 6,
+  "snowboardParks": 7
+ }
+}

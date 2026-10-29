@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   // Lets phones/other devices on the LAN load dev-mode JS chunks and HMR —
   // without this, Next silently blocks them and the page renders but never
   // hydrates (buttons render but do nothing).
-  allowedDevOrigins: ["192.168.4.58", "192.168.4.68", "*.trycloudflare.com"],
+  allowedDevOrigins: ["192.168.4.58", "192.168.4.68", "192.168.4.91", "*.trycloudflare.com"],
   // The admin interest pages look in prompts/ for the newest directive file;
   // ship the folder with the admin routes so the hosted version finds it too.
   outputFileTracingIncludes: {

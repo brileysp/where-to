@@ -1,14 +1,16 @@
 import { useUnitText } from '@/components/UnitsProvider';
 import { useEffect, useRef, useState } from 'react';
-import { MONTH_NAMES, MONTH_SHORT } from '@/lib/scoring/constants';
+import { MONTH_NAMES, MONTH_SHORT, SLIDERS } from '@/lib/scoring/constants';
 import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore } from '@/lib/scoring/rank';
-import type { SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import { topInterestChips } from '@/lib/scoring/breakdown';
 import { matchAdjustments } from '@/lib/scoring/matchExplainer';
 import type { MatchAdjustment } from '@/lib/scoring/matchExplainer';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { InterestChip, shortInterestLabel } from './InterestChip';
+import { CollapsibleBlurb } from './CollapsibleBlurb';
 import { prefersReducedMotion } from './useResortDemo';
 import { splitEmphasis } from '@/lib/text/emphasis';
 
@@ -56,6 +58,9 @@ export function ForYouTab({
   onChangeMonth,
   selectedCategory,
   onSelectCategory,
+  factors,
+  notes,
+  interestKeys,
 }: {
   dest: ScoredDestination;
   weights: Record<string, number>;
@@ -70,6 +75,12 @@ export function ForYouTab({
   /** null selects "My Interests" — the combined view, not "nothing chosen yet". */
   selectedCategory: string | null;
   onSelectCategory: (key: string | null) => void;
+  /** What the traveler's chips and answers keep of this place's score, by interest (onboarding's live questions). Missing = nothing changes. */
+  factors?: InterestFactors;
+  /** This place's reasons and matches by interest, for the notes under the chips. */
+  notes?: Record<string, PlaceNote>;
+  /** Show exactly these interests as chips (the ones the traveler picked) instead of working them out from the weights. */
+  interestKeys?: string[];
 }) {
   // Runs once per place-card open: this component remounts fresh every time
   // (DestinationDetailSheet keys the whole sheet by destination id), so a
@@ -108,12 +119,14 @@ export function ForYouTab({
     onChangeMonth(idx);
   }
 
-  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles);
+  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles, factors);
+  const placeFactor = (key: string) => factors?.[dest.id]?.[key] ?? 1;
 
-  const chips = topInterestChips(weights).map((slider) => ({
+  const chipSliders = interestKeys ? interestKeys.flatMap((k) => SLIDERS.filter((x) => x.key === k)) : topInterestChips(weights);
+  const chips = chipSliders.map((slider) => ({
     slider,
     isNA: isSliderNA(dest, slider.key),
-    score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles),
+    score: styleAdjustedScore(dest, slider.key, previewIdx, selectedStyles) * placeFactor(slider.key),
   }));
   const isDnaSelected = selectedCategory === null;
   const selectedChip = isDnaSelected ? null : (chips.find((c) => c.slider.key === selectedCategory) ?? null);
@@ -151,7 +164,7 @@ export function ForYouTab({
 
           {stage >= 3 &&
             (isDnaSelected ? (
-              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
+              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} notes={notes} emojiOverrides={emojiOverrides} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
             ) : (
               selectedChip && (
                 <InterestDetail
@@ -159,6 +172,8 @@ export function ForYouTab({
                   row={selectedChip}
                   icon={emojiOverrides[selectedChip.slider.key] ?? selectedChip.slider.icon}
                   shortName={shortInterestLabel(selectedChip.slider.label, shortNames[selectedChip.slider.key])}
+                  notes={notes?.[selectedChip.slider.key] ? { [selectedChip.slider.key]: notes[selectedChip.slider.key] } : undefined}
+                  emojiOverrides={emojiOverrides}
                   previewIdx={previewIdx}
                   onChangeMonth={handleChangeMonth}
                 />
@@ -182,6 +197,9 @@ function DnaDetail({
   weights,
   bands,
   selectedStyles,
+  factors,
+  notes,
+  emojiOverrides,
   previewIdx,
   onChangeMonth,
 }: {
@@ -189,10 +207,13 @@ function DnaDetail({
   weights: Record<string, number>;
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
+  factors?: InterestFactors;
+  notes?: Record<string, PlaceNote>;
+  emojiOverrides: Record<string, string>;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
-  const months = Array.from({ length: 12 }, (_, i) => scoreForMonth(dest, weights, i, bands, selectedStyles));
+  const months = Array.from({ length: 12 }, (_, i) => scoreForMonth(dest, weights, i, bands, selectedStyles, factors));
   const score = months[previewIdx];
   const quality = matchLabel(score);
   const badReasons = matchAdjustments(dest, previewIdx, bands).filter((a) => a.tone === 'bad');
@@ -209,7 +230,6 @@ function DnaDetail({
         </span>
         My Interests
       </div>
-      <p className="dna-sentence">{sentence}</p>
       <p className="dna-hint">Tap any interest above to learn more.</p>
       <p className="dna-hint">Tap any month on the chart below to see how it compares.</p>
       <div className="detail-section-title interest-detail-months-title">Combined match by month · Tap to compare</div>
@@ -243,6 +263,8 @@ function DnaDetail({
           <div className={`month-detail-score score-${quality.cls}`}>{score.toFixed(1)}</div>
         </div>
       </div>
+      <p className="dna-sentence">{sentence}</p>
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={(key) => dest.monthly[key]?.[previewIdx] ?? null} />}
     </div>
   );
 }
@@ -252,10 +274,14 @@ function InterestDetail({
   row,
   icon,
   shortName,
+  notes,
+  emojiOverrides,
   previewIdx,
   onChangeMonth,
 }: {
   dest: ScoredDestination;
+  notes?: Record<string, PlaceNote>;
+  emojiOverrides: Record<string, string>;
   row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
   /** Resolved icon (admin override already applied) — don't read row.slider.icon directly here. */
   icon: string;
@@ -287,7 +313,7 @@ function InterestDetail({
   return (
     <div className="interest-detail">
       {heading}
-      {placeBlurb && <p className="interest-place-blurb"><EmphasisText text={placeBlurb} /></p>}
+      {placeBlurb && <CollapsibleBlurb className="interest-place-blurb"><EmphasisText text={placeBlurb} /></CollapsibleBlurb>}
       <div className="detail-section-title interest-detail-months-title">{shortName} by month · Tap to compare</div>
       <div className="months-chart">
         {dest.monthly[slider.key].map((_, i) => {
@@ -329,6 +355,7 @@ function InterestDetail({
         </div>
         {monthBlurb && <p className="card-monthly-blurb"><EmphasisText text={monthBlurb} /></p>}
       </div>
+      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={() => score} />}
     </div>
   );
 }
@@ -348,5 +375,35 @@ function EmphasisText({ text }: { text: string }) {
         ),
       )}
     </>
+  );
+}
+
+/**
+ * Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. A match is good news only
+ * when the month itself is workable, so "Matches" notes are left out for an interest that scores under 6 in the month shown (the drops stay).
+ */
+const MATCH_NOTE_MIN_SCORE = 6;
+function MatchNotes({ notes, emojiOverrides, monthScore }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string>; monthScore: (interest: string) => number | null }) {
+  const slider = (key: string) => SLIDERS.find((x) => x.key === key);
+  const rows = Object.entries(notes)
+    .map(([key, n]) => {
+      const s = monthScore(key);
+      return [key, s !== null && s < MATCH_NOTE_MIN_SCORE ? { ...n, matches: [] } : n] as const;
+    })
+    .filter(([, n]) => n.reasons.length > 0 || n.matches.length > 0);
+  if (!rows.length) return null;
+  return (
+    <div className="match-notes">
+      <div className="detail-section-title">From your picks and answers</div>
+      <div className="match-note-row">
+        {rows.flatMap(([key, n]) => {
+          const icon = emojiOverrides[key] ?? slider(key)?.icon ?? '';
+          return [
+            ...n.reasons.map((r) => <span key={`${key}-${r.message}`} className="match-reason">{icon} {r.message}</span>),
+            ...n.matches.map((m) => <span key={`${key}-m-${m}`} className="match-ok">{icon} Matches: {m}</span>),
+          ];
+        })}
+      </div>
+    </div>
   );
 }

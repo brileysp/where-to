@@ -18,7 +18,7 @@ export type DetailTextKey = (typeof DETAIL_TEXT_KEYS)[number];
 export const LIST_COLUMN_KEYS = [
   'id', 'isPublished', 'isPrimaryDestination', 'updatedAt',
   'name', 'region', 'emoji', 'climate', 'costMin', 'costMax', 'baseScores', 'budgetBands', 'vibeBands', 'physicalBands',
-  'dryMonths', 'wetMonths', 'hotMonths', 'coldMonths', 'peakMonths', 'lowMonths', 'peakIntensity', 'crowdBaseline',
+  'dryMonths', 'wetMonths', 'hotMonths', 'coldMonths', 'peakMonths', 'lowMonths', 'peakIntensity', 'priceSwing', 'crowdBaseline',
   'hotSeverity', 'coldSeverity', 'wetSeverity', 'seasonalHazards', 'wildlifePeakMonths', 'wildlifeClosedMonths', 'birdingPeakMonths',
   'hikingBestMonths', 'hikingWorstMonths', 'inaccessibleMonths', 'swimHazardMonths', 'noSnowMonths', 'sliderCaps', 'sliderEvents',
   'shopClosures', 'naSliders', 'gated', 'gatedInterests', 'searchAliases', 'activityStyleTiers', 'signatureTier', 'scoreOverrides', 'sliderCurves',

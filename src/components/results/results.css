@@ -1099,7 +1099,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 86vh;
+  /* Always the same height, almost to the top: it used to be as tall as the content, so it came up to a different height for every place. */
+  height: calc(100vh - 52px);
+  height: calc(100dvh - max(52px, env(safe-area-inset-top, 0px) + 12px));
+  max-height: none;
   background: var(--bg-card);
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.3);
@@ -1125,6 +1128,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: min(560px, 90vw);
+    height: min(80vh, 760px);
     max-height: 80vh;
     border-radius: 20px;
     animation: detailFadeIn 0.2s ease;
@@ -1891,8 +1895,13 @@
 .filter-link.empty,
 .filter-link:disabled {
   color: var(--text-faint);
-  opacity: 1;
+  /* Nothing to hide or show yet: clearly dimmed, so it reads as unavailable and not as a quiet link. */
+  opacity: 0.4;
   cursor: default;
+}
+.filter-link.empty .filter-icon,
+.filter-link:disabled .filter-icon {
+  opacity: 0.7;
 }
 
 /* Icon trails the label and carries the "is this on" color — with both
@@ -2471,16 +2480,24 @@
 }
 
 .detail-sheet-month-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   border: none;
   background: none;
-  padding: 2px 0;
+  padding: 3px 6px;
+  border-radius: 999px;
   font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-faint);
   cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.detail-sheet-month-reset:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 /* Species names marked in authored blurbs: semibold and a touch darker (option 1, chosen Oct 2026). */
@@ -2488,3 +2505,22 @@
   font-weight: 600;
   color: var(--text);
 }
+
+/* Why a place moved after the traveler's chips and answers (onboarding's live questions) */
+.match-notes { margin-bottom: 10px; }
+.match-note-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.match-reason, .match-ok { font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
+.match-reason { color: var(--poor); background: color-mix(in srgb, var(--poor) 14%, transparent); }
+.match-ok { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
+
+/* Collapsed blurbs: two and a half lines, the half line fading out so the third line is plainly there, "Read more" to open. */
+.cb-text.cb-clip { overflow: hidden; cursor: pointer; transition: max-height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.cb-text.cb-fade {
+  /* Solid for the first two lines, then the top half of the third fades toward (not quite to) nothing, so it reads as a line that goes on. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
+}
+.cb-more { display: inline-flex; align-items: center; gap: 4px; margin: -8px 0 12px; border: none; background: none; padding: 2px 0; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--accent); cursor: pointer; }
+.cb-more svg { width: 12px; height: 12px; transition: transform 0.25s; }
+.cb-more[aria-expanded='true'] svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .cb-text.cb-clip, .cb-more svg { transition: none; } }

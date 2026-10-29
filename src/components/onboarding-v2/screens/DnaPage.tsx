@@ -8,7 +8,11 @@ import { LEVEL_LABELS, LEVEL_ORDER, topCount, type Levels } from '@/lib/onboardi
 import { getOnboardingSettings, type InterestLevelId } from '@/lib/onboarding/settings';
 import { VIBES } from '@/lib/onboarding/vibes';
 import type { FlowData } from '../FlowData';
-import { HomePicker } from '../HomePicker';
+import { HomeLocation, type HomeBundle } from '../HomeLocation';
+import { ContinentPicker } from '../live/ContinentPicker';
+import { LengthPicker } from '../live/LengthPicker';
+import type { TripLength } from '@/lib/onboarding/trip-length';
+import type { RegionKey } from '@/lib/onboarding/regions';
 import { useFlip } from '../useFlip';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -45,8 +49,11 @@ export interface DnaPageProps {
   onCareOption: (item: CareItem, option: string) => void;
   onCareFirm: (key: string, firm: boolean) => void;
   onWho: (key: string) => void;
-  onPickHome: (code: string) => void;
-  onClearHome: () => void;
+  loc: HomeBundle;
+  length: TripLength | null;
+  continents: RegionKey[];
+  onLength: (l: TripLength | null) => void;
+  onContinents: (next: RegionKey[]) => void;
   onMaxHours: (h: number) => void;
   onNeedHome: () => void;
   onVibe: (key: string) => void;
@@ -186,7 +193,7 @@ export function DnaPage(p: DnaPageProps) {
           ))}
         </div>
       );
-    if (k === 'origin') return <HomePicker home={p.home} onPick={p.onPickHome} onClear={p.onClearHome} />;
+    if (k === 'origin') return <HomeLocation {...p.loc} />;
     if (k === 'vibes')
       return (
         <div className="ob2-otp">
@@ -199,21 +206,27 @@ export function DnaPage(p: DnaPageProps) {
       );
     if (k === 'when')
       return (
-        <div className="ob2-otp">
-          {MONTHS.map((m, j) => (
-            <button key={m} type="button" className={`ob2-opill ${p.month === j ? 'on' : ''}`} aria-pressed={p.month === j} onClick={() => p.onMonth(j)}>
-              {m}
-            </button>
-          ))}
-        </div>
+        <>
+          <div className="ob2-otp">
+            {MONTHS.map((m, j) => (
+              <button key={m} type="button" className={`ob2-opill ${p.month === j ? 'on' : ''}`} aria-pressed={p.month === j} onClick={() => p.onMonth(j)}>
+                {m}
+              </button>
+            ))}
+          </div>
+          <div className="ob2-lbl">How long</div>
+          <LengthPicker value={p.length} onChange={p.onLength} variant="ob2" />
+          <div className="ob2-lbl">Continents</div>
+          <ContinentPicker on={p.continents} onChange={p.onContinents} />
+        </>
       );
     if (k === 'limits')
       return (
         <>
-          <HomePicker home={p.home} onPick={p.onPickHome} onClear={p.onClearHome} />
+          <HomeLocation {...p.loc} />
           <div className="ob2-otp">
             {settings.flightHourLimits.map((h) => (
-              <button key={h} type="button" className={`ob2-opill ${p.maxHours === h ? 'on' : ''}`} aria-pressed={p.maxHours === h} onClick={() => (p.home ? p.onMaxHours(h) : p.onNeedHome())}>
+              <button key={h} type="button" className={`ob2-opill ${p.maxHours === h ? 'on' : ''}`} aria-pressed={p.maxHours === h} onClick={() => (p.home || p.loc.country ? p.onMaxHours(h) : p.onNeedHome())}>
                 {h === 0 ? 'No limit' : `${h} hours`}
               </button>
             ))}

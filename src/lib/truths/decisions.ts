@@ -1,0 +1,55 @@
+// Chips the owner rejected or left undecided on 20-21 Oct 2026. They must never exist in the admin again (docs/matching-model.md; memory: unselected stays gone).
+// [interest key, chip key, label, what the owner decided]
+export const UNSELECTED_CHIPS: ReadonlyArray<readonly [string, string, string, 'rejected' | 'undecided']> = [
+  ["wildlifeViewing", "large-herbivores", "Large herbivores", "rejected"],
+  ["wildlifeViewing", "easy-close-up-viewing", "Easy, close-up viewing", "rejected"],
+  ["safari", "big-cats", "Big cats", "rejected"],
+  ["safari", "wild-dogs", "Wild dogs", "rejected"],
+  ["safari", "private-reserves-fewer-vehicles", "Private reserves, fewer vehicles", "rejected"],
+  ["whaleWatching", "swim-with-whales", "Swim with whales", "rejected"],
+  ["whaleWatching", "from-shore", "From shore", "rejected"],
+  ["scenicLandscapes", "villages-and-countryside", "Villages and countryside", "rejected"],
+  ["stargazing", "observatories-and-telescope-nights", "Observatories and star parties", "rejected"],
+  ["stargazing", "eclipses-and-meteor-showers", "Eclipses and meteor showers", "rejected"],
+  ["auroraChasing", "cosy-lodges-and-glass-igloos", "Cosy lodges and glass igloos", "undecided"],
+  ["auroraChasing", "dark-wilderness-viewing", "Dark wilderness viewing", "undecided"],
+  ["geologyVolcanoes", "canyons-and-layered-rock", "Canyons and layered rock", "rejected"],
+  ["wildflowerBlooms", "alpine-meadows", "Alpine meadows", "rejected"],
+  ["wildflowerBlooms", "rare-and-endemic-flora", "Rare and endemic flora", "undecided"],
+  ["hiking", "walk-up-summits", "Walk-up summits", "undecided"],
+  ["mountaineering", "learn-to-climb", "Learn to climb", "rejected"],
+  ["cyclingRoad", "easy-flat-rides", "Easy flat rides", "rejected"],
+  ["mountainBiking", "cross-country-trails", "Cross-country trails", "rejected"],
+  ["surfing", "learn-to-surf", "Learn to surf", "rejected"],
+  ["surfing", "remote-surf-trips", "Remote surf trips", "rejected"],
+  ["diving", "caves-and-cenotes", "Caves and cenotes", "rejected"],
+  ["diving", "big-animals", "Big animals", "rejected"],
+  ["diving", "liveaboards", "Liveaboards", "rejected"],
+  ["sailing", "day-sails", "Day sails", "rejected"],
+  ["sailing", "bareboat-charter", "Bareboat charter", "rejected"],
+  ["sailing", "crewed-yacht", "Crewed yacht", "rejected"],
+  ["sailing", "learn-to-sail", "Learn to sail", "rejected"],
+  ["sailing", "open-water-and-passage-sailing", "Open-water and passage sailing", "rejected"],
+  ["sailing", "classic-and-tall-ships", "Classic and tall ships", "undecided"],
+  ["adventureSports", "canyoning", "Canyoning", "rejected"],
+  ["adventureSports", "caving", "Caving", "rejected"],
+  ["golf", "many-courses-close-together", "Many courses close together", "rejected"],
+  ["horsebackRiding", "inn-to-inn-rides", "Inn-to-inn rides", "rejected"],
+  ["horsebackRiding", "riding-holidays-with-lessons", "Riding with lessons and camps", "rejected"],
+  ["trailRunning", "running-camps-and-retreats", "Running camps and retreats", "rejected"],
+  ["indigenousCultures", "cultural-centres-and-museums", "Cultural centers and museums", "undecided"],
+  ["traditionalCrafts", "hands-on-workshops", "Hands-on workshops", "rejected"],
+  ["wineSpirits", "vineyard-stays", "Vineyard stays", "undecided"],
+  ["luxuryHotels", "ultra-luxury-lodges", "Ultra-luxury lodges", "rejected"],
+  ["spaWellness", "nordic-sauna-and-cold-plunge", "Nordic sauna and cold plunge", "undecided"],
+  ["hotSprings", "hike-in-wilderness-springs", "Hike-in wilderness springs", "undecided"],
+  ["yogaRetreats", "surf-and-yoga", "Surf and yoga", "undecided"],
+  ["themeParks", "big-theme-parks", "Big theme parks", "undecided"],
+  ["shopping", "outlets-and-bargains", "Outlets and bargains", "rejected"],
+];
+
+// Answers the owner removed from a question, by interest and question key.
+export const REMOVED_ANSWERS: ReadonlyArray<readonly [string, string, string]> = [['safari', 'q1', 'Hippo and giraffe']];
+
+// Interests that no longer exist; no place, preference or setting may mention them.
+export const REMOVED_INTERESTS: readonly string[] = ['spectatorSports'];

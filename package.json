@@ -28,7 +28,8 @@
     "db:smooth:curves": "tsx scripts/smooth-curves.ts",
     "gemini:author": "tsx scripts/gemini-author-batch.ts",
     "pipeline:diff": "tsx scripts/pipeline-diff.ts",
-    "pipeline:apply": "tsx scripts/pipeline-apply.ts"
+    "pipeline:apply": "tsx scripts/pipeline-apply.ts",
+    "truths": "PLACE_ROWS_SNAPSHOT=1 tsx scripts/check-truths.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.5",

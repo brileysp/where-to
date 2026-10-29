@@ -18,6 +18,7 @@ export interface PlaceRow {
   about: string; // mockup's "Seasons overview" column
   monthlyWeather: (string | null)[] | null;
   peakIntensity: string | null;
+  priceSwing: string | null;
   hotSeverity: string | null;
   coldSeverity: string | null;
   wetSeverity: string | null;
@@ -225,15 +226,29 @@ export function PlacesGrid({ initialRows, showRetired }: { initialRows: PlaceRow
     },
     {
       key: 'peakIntensity',
-      label: 'Peak intensity',
+      label: 'Peak crowd intensity',
       sortable: true,
       sortValue: (r) => r.peakIntensity ?? '',
       render: (r) => (
         <InlineSelectCell
-          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'peakIntensity', fieldLabel: 'Peak intensity', loadedUpdatedAt: r.updatedAt }}
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'peakIntensity', fieldLabel: 'Peak crowd intensity', loadedUpdatedAt: r.updatedAt }}
           value={r.peakIntensity}
-          options={['mild', 'moderate', 'extreme']}
+          options={['mild', 'moderate', 'high', 'extreme']}
           setLocal={(v) => patchRow(r.id, { peakIntensity: v })}
+        />
+      ),
+    },
+    {
+      key: 'priceSwing',
+      label: 'Seasonal price swing',
+      sortable: true,
+      sortValue: (r) => r.priceSwing ?? '',
+      render: (r) => (
+        <InlineSelectCell
+          ctx={{ entityType: 'destination', entityId: r.id, entityLabel: r.name, field: 'priceSwing', fieldLabel: 'Seasonal price swing', loadedUpdatedAt: r.updatedAt }}
+          value={r.priceSwing}
+          options={['mild', 'moderate', 'high', 'extreme']}
+          setLocal={(v) => patchRow(r.id, { priceSwing: v })}
         />
       ),
     },

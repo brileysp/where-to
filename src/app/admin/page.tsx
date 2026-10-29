@@ -32,8 +32,7 @@ export default async function AdminHomePage() {
           <Link href="/admin/destinations/interests">Interests</Link> — per-slider emoji overrides, plus a page for each interest with its rules, outstanding items, future places, per-place data and expert reviews.
         </li>
         <li>
-          <Link href="/admin/destinations/seasonal-flags">Seasonal Flags</Link> — which months are dry/wet/hot/cold/
-          peak/low and other seasonal flags, per destination.
+          <Link href="/admin/destinations/question-links">Question links</Link> — which chips open which onboarding questions: only the proposed links, to accept or dismiss. <Link href="/admin/destinations/matching">Matching</Link> — the numbers for how a traveler&apos;s picks lower a place&apos;s score.
         </li>
         <li>
           <Link href="/admin/cards">Cards</Link> — Travel DNA experience cards.

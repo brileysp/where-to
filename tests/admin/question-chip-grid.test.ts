@@ -10,7 +10,7 @@ vi.mock('@/app/admin/destinations/interests/[key]/question-actions', () => ({
 }));
 
 const chip = (key: string, label: string, order: number, status: 'live' | 'draft' = 'draft'): ChipRow => ({ key, label, order, status, drivers: [], needsColumn: '', approvedBy: 'x', approvedAt: '2026-10-21T00:00:00Z' });
-const q = (key: string, text: string, order: number, whenChips: string[], suggestedChips: string[], kind: 'lean' | 'limit' = 'lean'): QuestionRow => ({ key, order, text, options: ['a', 'b'], maxPicks: 1, kind, columns: [], note: '', missMessage: '', whenChips, suggestedChips, approvedBy: 'x', approvedAt: '2026-10-21T00:00:00Z' });
+const q = (key: string, text: string, order: number, whenChips: string[], suggestedChips: string[], kind: 'lean' | 'limit' = 'lean'): QuestionRow => ({ key, order, text, options: ['a', 'b'], maxPicks: 1, kind, columns: [], note: '', missMessage: '', fitSummary: [], whenChips, suggestedChips, approvedBy: 'x', approvedAt: '2026-10-21T00:00:00Z' });
 
 describe('the question and chip grid', () => {
   it('draws one row per question and one column per chip, with solid, suggested and empty cells', async () => {

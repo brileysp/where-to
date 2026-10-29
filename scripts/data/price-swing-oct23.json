@@ -1,0 +1,2594 @@
+[
+ {
+  "id": "mauritius",
+  "name": "Mauritius",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Rough Guides: low season (May-Sep) 30-50% cheaper than high (Nov-Mar), peaks at Christmas/New Year and Easter. KAYAK cheapest month 28-40% below average. Outrigger: beachfront 40-60% more than shoulder in Jul-Aug peak.",
+  "peak": [
+   12,
+   1,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "mallorca",
+  "name": "Mallorca",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Cost guides 20-80% off-peak discount (50-80% one source); Momondo May up to 53% below peak; blog about half of summer rate. Sources disagree; three of five say 45% or more. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "oaxaca",
+  "name": "Oaxaca",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Aggregators contradict each other (cheapest month varies: Aug, Dec, Jan, Mar; 40-80% drops). Oyster: the real discount is smaller except around Day of the Dead. Treated as moderate, weak evidence.",
+  "peak": [
+   10,
+   11
+  ]
+ },
+ {
+  "id": "ethiopia",
+  "name": "Ethiopia",
+  "old": "mild",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "SafariFind tour listings: low season only about 10% cheaper; hotels triple only around festivals (Meskel, Timkat).",
+  "peak": [
+   10,
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "mendoza",
+  "name": "Mendoza",
+  "old": "mild",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Frommer's: hotel rates often discounted 15-20% in the off season (peak Nov-Mar and July). Aggregator pages claim 28-49% but are unreliable.",
+  "peak": [
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "banff",
+  "name": "Banff & Jasper National Parks",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Summer vs winter budget hotels CAD 325-750 vs 120-180; Fairmont Banff Springs $289 vs $650+ in July; shoulder seasons 30-40% below summer; Christmas rivals summer. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "gbr",
+  "name": "Great Barrier Reef",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Cairns aggregators disagree on months (low Jan-Mar or Sep; high Jun-Aug); gap about 40-46% in two Kayak pages, others unclear.",
+  "peak": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "bhutan",
+  "name": "Bhutan",
+  "old": "mild",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Sustainable Development Fee is a flat US$100 per person per night all year (to 31 Aug 2027); no seasonal rates found; tour operators price by package.",
+  "peak": [
+   3,
+   4,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "angkor",
+  "name": "Cambodia",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Exotravel tour: high season $524 vs green season $327 (37% savings). Hotels.com monthly averages conflict (October pricey). Weak evidence.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "uganda",
+  "name": "Uganda",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "rate-card",
+  "note": "Lodge rate sheets, low vs high: Clouds $395/$610 (35%), Mount Gahinga $135/$180 (25%), Bwindi Lodge $188/$250 (25%), Mahogany Springs 17%, Nkuringo 23%. Gorilla permit $600 vs $800 (25%).",
+  "peak": [
+   6,
+   7,
+   8,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "guatemala",
+  "name": "Guatemala",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "No sourced figure. Antigua spikes at Christmas and Holy Week; the rest of the year is fairly flat.",
+  "peak": [
+   12,
+   1,
+   3
+  ]
+ },
+ {
+  "id": "peruvian-amazon",
+  "name": "Peruvian Amazon",
+  "old": "mild",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Lodge rate sheets: Treehouse Lodge about 22% between seasons; Tambopata discounts of 25-35% are promotional.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "atacama",
+  "name": "Atacama Desert",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo: Nov high, Mar low; Hotels.com peso page shows October nearly double September; no stated percentage. Weak evidence.",
+  "peak": [
+   7,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "chiapas",
+  "name": "Chiapas",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Hotels.com monthly averages swing about 2x, but they conflict across currencies; Kayak gives no seasonal breakdown. Weak evidence, kept mild.",
+  "peak": [
+   12,
+   1,
+   7
+  ]
+ },
+ {
+  "id": "great-smoky-mountains",
+  "name": "Great Smoky Mountains National Park",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com snapshot: Gatlinburg October about $204 vs January about $101 (about 50%); undated, one source.",
+  "peak": [
+   7,
+   10
+  ]
+ },
+ {
+  "id": "lapland",
+  "name": "Finnish Lapland",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Expedia price trend: December $542 vs June-August about $133 (4x); Yle: Rovaniemi December average about EUR 350; other sources 50-150% above summer; hotels near sold out in December. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   12
+  ]
+ },
+ {
+  "id": "nepal",
+  "name": "Nepal",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Guide: monsoon Kathmandu hotels about 20% cheaper; Rough Guides: up to 50% only by haggling in quiet times. Trekking lodges are very cheap and flat; no firm figure.",
+  "peak": [
+   10,
+   11
+  ]
+ },
+ {
+  "id": "amalfi",
+  "name": "Amalfi Coast",
+  "old": "extreme",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com: July $739, Aug $665 vs Nov $348 (about 90-110% more). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "torres-del-paine",
+  "name": "Torres del Paine",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "none",
+  "note": "No monthly price or visitor figures found; owner stayed late December and found it empty. Capped campsite and refugio places limit crowding; lodges priced by season but no figure found.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "lake-district",
+  "name": "Lake District",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak resorts 22% below / 29% above average; Windermere Momondo 42% / 21%; school half-terms spike prices (Ambleside Feb half-term GBP 93 vs 59, 58%).",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "olympic",
+  "name": "Olympic National Park",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Port Angeles: Kayak January $99 vs August $346 (about 70%); Momondo 38-41% below high season. Town-wide averages, not park lodges.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "big-island",
+  "name": "Big Island",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Fall rates about 15-40% below mid-December to March peak (2006 CNN Money resort example $329 vs $579; state ADR fell 12.8% Aug to Sep 2025).",
+  "peak": [
+   6,
+   7,
+   12
+  ]
+ },
+ {
+  "id": "okinawa",
+  "name": "Okinawa",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "Japanese travel guides: summer and Golden Week about 20,000 yen vs about 10,000 yen in winter (half); mid-range hotels about half of peak. ADR rose 20% June to July to 33,200 yen in August. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "madeira",
+  "name": "Madeira",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo island-wide: low season 42% below average, high season 47% above; Machico and Ribeira Brava about 28% below peak.",
+  "peak": [
+   7,
+   8,
+   12
+  ]
+ },
+ {
+  "id": "andalucia",
+  "name": "Andalucía",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Amimir: Malaga January $124 vs September $213 (about 40%); Kayak Andalusia percentages not comparable.",
+  "peak": [
+   4
+  ]
+ },
+ {
+  "id": "churchill",
+  "name": "Churchill",
+  "old": "extreme",
+  "new": "high",
+  "basis": "none",
+  "note": "Unchanged from before: no price figures for other months found. Polar bear tours run only Oct-Nov at US$6,900-9,900 per person; beluga trips run Jul-Aug. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   10,
+   11
+  ]
+ },
+ {
+  "id": "madagascar",
+  "name": "Madagascar",
+  "old": "mild",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Rough Guides: high season (Jul-Aug, Christmas) typically 10-30% more; many hotels discount Jan-Mar. KAYAK resort pages claim larger swings but are inconsistent.",
+  "peak": [
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "black-forest",
+  "name": "Black Forest",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: one hotel rate sheet (Todtnauberg) shows low season about 41% below peak but its season labels are unclear. No regional figure found.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "panama",
+  "name": "Panama",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Lonely Planet: wet season rates 10-30% below high season (Dec-Apr); Relo Firm: 30-40%; Amimir Panama City January $270 vs October $142.",
+  "peak": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "fiji",
+  "name": "Fiji",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Outrigger: peak-season resort rates 20-40% above wet season; Kayak Nadi 34-40% drop in cheapest month; Momondo 42%.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "basque-country",
+  "name": "Basque Country",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Hotels.com San Sebastian monthly averages: Jun-Aug about $168 vs Nov-Jan $153-161 (5-10%); one source.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "acadia",
+  "name": "Acadia National Park",
+  "old": "extreme",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Travorio Bar Harbor: 3-star $220 summer, $160 autumn, $90 winter (winter about 59% below); 4-star $350/$260/$140; Momondo: January up to 60% below high season. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "bordeaux",
+  "name": "Bordeaux",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Momondo pages: cheapest month 22-42% below peak months (\"up to\" figures, inconsistent months); Hotels.com city centre February cheapest at about $141. Wine region not covered.",
+  "peak": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "barbados",
+  "name": "Barbados",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Fodor's: rates may be about twice as high in season (15 Dec-15 Apr); Lorenzigo: tourist-zone hotels 30-60% above low season, Holetown $350 in Feb vs $140-250 off-season; KAYAK 46-56% swings. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "grandcanyon",
+  "name": "Grand Canyon",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "National Parks Traveler: South Rim rooms as much as 30% cheaper in winter; Xanterra Winter Value Rate $78-94 vs summer $78-139 (2007-08). Dated.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "aruba",
+  "name": "Aruba",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Lorenzigo: summer 30-40% cheaper than Dec-Mar peak; KAYAK 27%; Momondo 30-43%; mid-range Palm Beach $250-350 in summer vs $500+ in February.",
+  "peak": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "tokyo-kyoto",
+  "name": "Tokyo & Kyoto",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: cherry blossom premium 20-50% at mid-range hotels; Tokyo Marriott $250-300 peak vs $150-200 off-peak; blogs claim 2-3x at peak weeks. Unsourced.",
+  "peak": [
+   3,
+   4,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "rajasthan-golden-triangle",
+  "name": "Rajasthan & the Golden Triangle",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo: cheapest month (May-Jun, Oct or Dec depending on page) up to 60-85% below peak months (best-case figures). Winter is peak, monsoon discounted. No stated typical figure.",
+  "peak": [
+   11,
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "southeast-alaska",
+  "name": "Southeast Alaska & the Inside Passage",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guide: May and September shoulder prices 20-30% lower than the summer peak (cruises); no lodge figure.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "komodo",
+  "name": "Komodo & Flores",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: seasons known (high May-Sep, shoulder Apr and Oct, low Jan-Mar) but no operator rate sheet comparison found. Liveaboards US$180-700+ per day.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "buenosaires",
+  "name": "Buenos Aires",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo hotels: low season 20-62% cheaper depending on page (rentals 77%, airport area 59% are outliers); Hotels.com monthly averages $53-74.",
+  "peak": [
+   12,
+   1
+  ]
+ },
+ {
+  "id": "los-cabos",
+  "name": "Los Cabos",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "news",
+  "note": "Mexico News Daily 2024 data: June 23%, July 24%, August 33% below the March average ($553); Sept $389 at 54% occupancy vs $517 December. Luxury resorts claimed more than 50% by a blog.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "morocco",
+  "name": "Marrakech & Atlas",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak riad: August 35% below normal, May 28% above; Hotels.com Marrakech averages conflict across pages (cheapest month varies). Weak evidence.",
+  "peak": [
+   3,
+   4,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "milford-sound-fiordland",
+  "name": "Milford Sound & Fiordland",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Te Anau rate sheets: ASURE Explorer high season $159-394 vs low $144-374 (5-9% lower); Lakefront Lodge $295-355 vs $195-265 (25-34% lower). Two properties only.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "svalbard",
+  "name": "Svalbard",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com Longyearbyen: January $156 vs July $295 (about 47% lower); Kayak cheapest month 47-49% below (Oct), peak March-May. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   3,
+   4,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "seychelles",
+  "name": "Seychelles",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak pages: cheapest month 21-59% below average (typically 28-34%); peak months 14-86% above; Momondo Hilton Labriz 57% decrease in June. Pages inconsistent.",
+  "peak": [
+   12,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "rwanda",
+  "name": "Rwanda",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "official",
+  "note": "Rwanda Development Board: 30% gorilla permit discount from November to May with conditions (US$1,050 vs US$1,500). No lodge rate comparison found.",
+  "peak": [
+   6,
+   7,
+   8,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "beijing",
+  "name": "Beijing & Great Wall",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Jetsetter Alerts: winter up to 50% below peak; Viatravelers: summer up to 30% above average, winter about 20% below; Momondo 45-63% (outliers). Chinese New Year the winter exception.",
+  "peak": [
+   5,
+   10
+  ]
+ },
+ {
+  "id": "bali",
+  "name": "Bali",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Bali property guides: peak (Jul-Aug, Christmas) villas +20-50% vs low -30-40%; travel guide 30-50% more in July-August than March; Kayak 75% is an outlier.",
+  "peak": [
+   6,
+   7,
+   8,
+   12
+  ]
+ },
+ {
+  "id": "dolomites",
+  "name": "Dolomites",
+  "old": "extreme",
+  "new": "high",
+  "basis": "rate-card",
+  "note": "Parkhotel Sole Paradiso (Innichen): winter peak double EUR 179 vs 101 low (77%), summer peak 171 vs 102 (68%); Hotel Royal (Sexten) only 18% (130 vs 110). Guides 30-70%. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8,
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "charleston-savannah",
+  "name": "Charleston & Savannah",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "data",
+  "note": "Engine hotel data for Charleston: cheapest month January $123, peak May $208, a 41% swing between cheapest and priciest months. Savannah: rentals about 55% lower in February (rentals, not hotels).",
+  "peak": [
+   3,
+   4,
+   10
+  ]
+ },
+ {
+  "id": "dubai",
+  "name": "Dubai",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Wego: June about $106 vs December about $256; PriceLabs rentals June about 42% below December; UAE guide: peak 30-50% above summer. STR says Jan-Mar are the peak. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "kaziranga",
+  "name": "Assam & Northeast India",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: no published monsoon vs season room rates; the park mostly shuts May-October so demand, not price, drives the season. Assam tourism tariff is quoted for Nov-Apr only.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "fjords",
+  "name": "Norwegian Fjords",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: no percentage found. Summer (Jun-Aug) is the peak with quieter Sept and winter; HotelsCombined snapshots too inconsistent to use.",
+  "peak": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "kruger",
+  "name": "Kruger & Sabi Sands",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "rate-card",
+  "note": "Ulusaba Rock Lodge (Sabi Sands): R16,000 (Nov-Dec) vs R17,400 (Jun-Sep) per person (about 8%); trade article: some Sabi Sands lodges flat all year; operators claim 15-40% green-season discounts. Kruger rest camps priced separately.",
+  "peak": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "napa",
+  "name": "Napa & Sonoma",
+  "old": "extreme",
+  "new": "high",
+  "basis": "none",
+  "note": "Unchanged: direction only (peak July-October, lowest December-February per an HVS overview from 2001 data); no current percentage found. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "sedona",
+  "name": "Sedona",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Travorio: 3-star spring $200, summer $140, autumn $210 (summer about 30% lower); 4-star $320/$230/$340. Source low quality.",
+  "peak": [
+   3,
+   4,
+   10
+  ]
+ },
+ {
+  "id": "taiwan",
+  "name": "Taiwan",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Guide: summer 15-25% below October-November peak; Kayak Taipei boutique August 26% drop; Tripbase winter 20% lower.",
+  "peak": [
+   10,
+   11
+  ]
+ },
+ {
+  "id": "falklands",
+  "name": "Falkland Islands",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: no published lodge tariffs by season found; lodges open Oct-Mar and some close in winter; Kayak monthly averages contradict each other.",
+  "peak": [
+   12,
+   1
+  ]
+ },
+ {
+  "id": "hongkong",
+  "name": "Hong Kong",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Hong Kong Island: Jul $211, Aug $219, Sep $231, Oct $257, Nov $258 (October-November 17-22% above July-August, about 45% above June $177); Kayak pages inconsistent.",
+  "peak": [
+   10,
+   11,
+   12
+  ]
+ },
+ {
+  "id": "antarctica",
+  "name": "Antarctic Peninsula",
+  "old": "extreme",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Cruise Critic, Adventuresmith, Adventure-Life: Nov and March cruises cheapest; mid-Dec to Feb spike; ship and route matter more than month. Early-booking deals up to 35% are marketing. Set mild-moderate; no hard monthly table.",
+  "peak": [
+   12,
+   1
+  ]
+ },
+ {
+  "id": "zambia",
+  "name": "South Luangwa",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "rate-card",
+  "note": "South Luangwa operator table: green season $385 vs $545 peak (about 29%, 2017 rates); another lodge only 6% lower; safari sites claim 30-50%.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "luangprabang",
+  "name": "Laos",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak: September low season (52% below average weeknight), April high; Hotels.com also September cheapest; Momondo says March. Weak evidence.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "havana",
+  "name": "Cuba",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Lonely Planet: high season Nov-Mar, up to 25% more at Christmas and New Year; July-August spike mostly affects cheaper hotels. Summer discount not quantified.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "yosemite",
+  "name": "Yosemite National Park",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "National Parks Traveler: Yosemite Lodge off-season about $150 vs peak summer about $218 (about 31%); Ahwahnee winter promotions $199 vs nearly $600 at times (promotional).",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "palau",
+  "name": "Palau",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Palau Royal Resort 2024: low season $264 vs $324 high (18%); Palau Pacific Resort (2016-17) $330 vs $430 (23%). Kayak 81% is an outlier.",
+  "peak": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "srilanka",
+  "name": "Sri Lanka",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo: low season (May) 43% below, high season (Nov) 36% above; Kayak 18-65%; pages disagree on months. Weak evidence.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "rajaampat",
+  "name": "Raja Ampat",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Liveaboard prices are generally fixed through the year; homestay walk-in rates fixed; accommodation can be higher Oct-May and on Indonesian holidays. Discounts of 12-36% on single trips.",
+  "peak": [
+   10,
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "tierra-del-fuego",
+  "name": "Tierra del Fuego",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: Hotels.com and Kayak name cheapest months (Aug or Oct) but give no usable percentage; Ushuaia high season Nov-Mar and the Antarctic cruise window.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "aspen",
+  "name": "Aspen Snowmass",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Travorio 3-star averages: winter $400, summer $320, spring $180, autumn $160 (4-star $900 / $600 / $320 / $290); Frommer's: many places close in spring and fall and off-season rates are the lowest of the year. Single-source table. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   12,
+   1,
+   2,
+   7
+  ]
+ },
+ {
+  "id": "bend-crater-lake",
+  "name": "Bend & Crater Lake",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com Bend: August $270, July $268, June $249 vs January $123, February $127 (summer about 2.2x winter). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "vietnam",
+  "name": "Vietnam",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo Hanoi: cheapest month up to 29% below peak (UK page; Canadian page claims 73%); Hotels.com Hoi An January $39 vs August $74 (47% lower).",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "chilean-lake-district",
+  "name": "Chilean Lake District",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Frommer's: Pucon off-season lodging drops almost 50% (high season Nov-Feb); Hotels.com Puerto Varas averages show no clear summer peak.",
+  "peak": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "lofoten",
+  "name": "Lofoten Islands",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Switchback Travel: rorbuer at least 25% cheaper outside summer; Norway Explained: June-August highest, winter varies and can be pricey for aurora trips.",
+  "peak": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "rioja",
+  "name": "Rioja",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Logrono: September-October averages 31-51% above January-February depending on currency page; harvest is September-October.",
+  "peak": [
+   9,
+   10
+  ]
+ },
+ {
+  "id": "colombian-caribbean",
+  "name": "Colombian Caribbean",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com Cartagena Centro: December about 50% above February (GBP 289 vs 193); Kayak (AED) December 5,003 vs March 1,747. December premium 50% to well over 100%. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "chiang-mai",
+  "name": "Chiang Mai & Northern Thailand",
+  "old": "mild",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com: December $142 and November $131 vs March $67 and February $69 (about 53% lower in March); Momondo UK: December high, June about 53% lower. Pages disagree on exact months. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "provence",
+  "name": "Provence",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Ranking only: cheapest in winter (some rural hotels closed), most expensive July-August; one site says prices drop 30% from summer in September-October.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "maldives",
+  "name": "Maldives",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Guides: peak (Dec-Apr) 30-50% above May-Nov for the same villa; Outrigger: June-August 40-50% below peak, September-November up to 60% below; Christmas-New Year 30-50% above standard peak. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "badlands-black-hills",
+  "name": "Badlands & Black Hills",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: direction only (summer peak, Sturgis rally in August, lowest prices November-April, some places close for winter); no percentage found.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "prague",
+  "name": "Prague",
+  "old": "moderate",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Hotels.com Prague districts: January $83, July $158, December $292 (January 47% below July, 72% below December); Prague 19: January $67 vs May $193. District pages, one source. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   6,
+   7,
+   8,
+   12
+  ]
+ },
+ {
+  "id": "borabora",
+  "name": "French Polynesia",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: low-season rates 20-30% lower (yacht broker 15-25%); luxury overwater bungalows over $1,000 peak vs $400-600 shoulder; some claim 50-100% luxury markups.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "namibia",
+  "name": "Namibia",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "rate-card",
+  "note": "Etosha rest camps 2024: Halali N$1,380 low vs N$1,890 high (27%); Namutoni 28%; Natural Selection rack rates: green season 17-27% below high season.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "bagan",
+  "name": "Myanmar",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Pages conflict; Travelfish: rainy-season low season with big jumps in high season; Momondo Myanmar 62% decrease / 84% increase; Kayak Bagan View Hotel 63% drop. Weak evidence.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "el-chalten",
+  "name": "El Chaltén & El Calafate",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Hotels.com El Calafate monthly averages: Jan-Feb about 23% above Jun-Aug on the USD page (7% to 39% on other currency pages). No El Chalten series.",
+  "peak": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "egypt",
+  "name": "Red Sea & Nile",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "Nile cruise agencies: winter fares 40-60% above summer (or summer 30-50% below); luxury ships about $400 a night low season vs $1,500+ at Christmas. Red Sea hotel rates not found. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "seoul",
+  "name": "Seoul",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: peak periods (cherry blossom and autumn foliage) 1.5-2x higher; Myeongdong and Hongdae spike 40-80% vs low season; winter cheapest outside holidays; Momondo up to 65-68% lower in November.",
+  "peak": [
+   4,
+   10
+  ]
+ },
+ {
+  "id": "edinburgh",
+  "name": "Edinburgh",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "data",
+  "note": "Edinburgh Tourism: August Festival accommodation 2-3x October or April; trivago July to August +35% and KAYAK +38% (observed); 4-star central GBP 280-550 in August vs 70-120 off-peak winter. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   8,
+   12
+  ]
+ },
+ {
+  "id": "london",
+  "name": "London",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com London City Centre: Dec $427, Jan $220, Feb $214, Jun $337, Jul $376, Aug $326 (summer about 60% above Jan-Feb, December about 97% above). Cheapest-month labels unreliable.",
+  "peak": [
+   6,
+   7,
+   8,
+   12
+  ]
+ },
+ {
+  "id": "belize",
+  "name": "Belize",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Belize.com: most hotels drop rates 20-40% off-season (after Easter to mid-November); Fleewinter: high-season rates up to 50% higher; Kayak 35% drop in cheapest month.",
+  "peak": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "budapest",
+  "name": "Budapest",
+  "old": "mild",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Guides: winter 20-30% cheaper than summer (one says up to 50%); Frommer's: some hotels discount up to 30%, others nothing; busiest July-August, New Year, Advent weekends.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "zimbabwe",
+  "name": "Victoria Falls & Hwange",
+  "old": "extreme",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Package listings (SafariFind, Africa Geographic): low season (Nov-May) about 15% cheaper than high (Jun-Oct) on three packages; lodge nightly rates said to be reduced in the green season, no percentage.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "sequoia-kings-canyon",
+  "name": "Sequoia & Kings Canyon",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak Three Rivers: March $141 vs July $276 (about 49% lower); park lodges John Muir $210-417, Wuksachi $376-503 by season. One source.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "bahamas",
+  "name": "Bahamas",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "AARP: lowest rates up to 60% off in Sept-Oct; Lonely Planet: can dip below 50% of peak; Momondo 21-27% expected decrease; one site $430 Dec vs $230 May. Best-case claims vs aggregators.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "rio",
+  "name": "Rio de Janeiro",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Lorenzigo: Copacabana/Ipanema/Leblon peak $115-230 vs $65-135 shoulder/low (70-77% more); last week of December can triple; Carnival and New Year 5-6x per Gringo-Rio; CoStar: record Carnival rates in 2026. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "guilin-yangshuo",
+  "name": "Guilin & Yangshuo",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: no usable figures; Momondo pages contradict each other (January 67-89% cheaper, October 91% cheaper); Golden Week and summer premiums not found.",
+  "peak": [
+   7,
+   8,
+   10
+  ]
+ },
+ {
+  "id": "cape-cod-islands",
+  "name": "Cape Cod & the Islands",
+  "old": "extreme",
+  "new": "high",
+  "basis": "none",
+  "note": "Unchanged: search found only dated or weak figures (off-season 25-35% lower per a 1982 article; rentals about 50% lower in November; late-August 10%). Many hotels close after Labor Day. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "costa-rica",
+  "name": "Costa Rica",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: green season hotel rates 30-50% lower (Travelvient, Geography Worlds), 20-40% (Destination.com, Vamos); December 22 to January 5 is the most expensive window.",
+  "peak": [
+   12,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "kerala",
+  "name": "Kerala",
+  "old": "moderate",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Iris Holidays: five-star resorts 40-60% below peak in the off-season (April-September); HappyFares: five-star Rs 4,000-7,000 vs Rs 15,000+ in winter peak (53-73% lower). Marketing sources. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "zion-bryce",
+  "name": "Zion & Bryce Canyon",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "2026 guide: Springdale basic motels about $140 off-season to $400+ riverfront in summer; peak Memorial Day to Labor Day; winter best rates. No measured percentage.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "puerto-rico",
+  "name": "Puerto Rico",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Puerto Rico guide: many resorts cut rates 25-50% in the May-November low season; shoulder 15-25%; Frommer's: winter rates higher at most properties.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "kyrgyzstan",
+  "name": "Kyrgyzstan",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: July-August highest prices but no percentage found; luxury yurt camps $80-250 a night June-September; shoulder and winter cheaper (winter trekking closed).",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "champagne",
+  "name": "Champagne",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Amimir Reims: September $136 vs January $95 / December $82 (about 30-40%); HotelsCombined Epernay: February GBP 84 vs August GBP 342.",
+  "peak": [
+   8,
+   9
+  ]
+ },
+ {
+  "id": "chamonix",
+  "name": "Chamonix & the French Alps",
+  "old": "extreme",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Kayak: May cheapest (37% drop), February most expensive (24% rise); Amimir: November $106 vs August $322; two-season resort (winter ski, summer alpinism). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8,
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "north-island",
+  "name": "North Island",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Top of the Bay (Paihia): high season NZ$219-399 vs low NZ$194-364 (about 10%); trivago nationwide NZ$154 (Jul) vs NZ$190 (Feb) (about 19%, 2015).",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "piedmont",
+  "name": "Piedmont",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: no hotel percentages found; Alba white truffle fair runs every weekend 10 Oct-6 Dec 2026, so late-October and early-November weekends are busiest.",
+  "peak": [
+   10,
+   11
+  ]
+ },
+ {
+  "id": "marlborough-abel-tasman",
+  "name": "Marlborough & Abel Tasman",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "newzealand.com listings: Blenheim B&B high NZ$355-375 vs low 285-295 (about 20%); The Barn (Marahau) about 14%; Domu Retreat luxury about 6%; DOC hut fees 24-38% lower in winter.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "new-orleans",
+  "name": "New Orleans",
+  "old": "extreme",
+  "new": "high",
+  "basis": "data",
+  "note": "Engine hotel data: August $124 (28% below the $173 average), February $231 (34% above), a 46% swing between cheapest and priciest months; Mardi Gras week claims of 300% are unsupported. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "pantanal",
+  "name": "Pantanal",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: the one lodge table found compares weekdays with weekends/holidays, not seasons; Kayak rental pages 29-50% are not lodges. Dry season (Jul-Oct) is the peak.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "sardinia",
+  "name": "Sardinia",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Lorenzigo: August 250-300% above the same room in May or October; Kayak: August about 3.9x May; Skyscanner NL: August about 87% above May; September 25-30% below August. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "sicily",
+  "name": "Sicily",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Blogger: hotels up to 50% cheaper November-March; Hotels.com Castiglione di Sicilia: August GBP 73 vs December 70 (almost no gap there). Island-wide figure not found.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "croatia",
+  "name": "Dalmatian Coast",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Amimir Dubrovnik: July $405 vs December $144 (about 65% lower); Hotels.com Dubrovnik July GBP 242 vs November 108 (55%); Kayak Croatia cheapest month 49-55% below. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "greenland",
+  "name": "Greenland",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: qualitative only (July most expensive; shoulder seasons Apr-May and Sep-Oct and winter cheaper); no percentage found.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "nice-riviera",
+  "name": "Nice & the French Riviera",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Hotels.com Nice City Centre: July $284, August $271 vs January $96, February $107 (about 170-195% more); guide: 50-100% above low season (3-star EUR 90 in January vs 180 in August). [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "pakistan",
+  "name": "Pakistan",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: peak season May-September said to raise hotel prices, no percentage found; tour operators sell fixed-price departures year-round.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "tuscany",
+  "name": "Tuscany",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "2026 budget guide: peak summer weeks raise hotel rates 10-30% vs off-season; Kayak rentals: March 43% below July. Agriturismo-specific figure not found.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "rome",
+  "name": "Rome",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com Rome City Centre: January $150, February $167 vs July $276, June $289, October $322 (winter 40-48% below summer, 53% below October); citywide page similar ($131 January vs $252 June). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "san-miguel-guanajuato",
+  "name": "San Miguel de Allende & Guanajuato",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com San Miguel de Allende (USD): January $184, November $305, December $276 (January about 40% below November); the CAD page shows a different pattern.",
+  "peak": [
+   10,
+   12
+  ]
+ },
+ {
+  "id": "maui",
+  "name": "Maui",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "data",
+  "note": "HTA/Maui News reports: Maui County ADR $734 in December 2022, $536 in September 2022, $543 in February 2024, $404 in July 2018 (different years; December about 37% above September). No clean 12-month series.",
+  "peak": [
+   12,
+   1,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "mexicocity",
+  "name": "Mexico City",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Momondo Mexico City: 18% to 52% (page-dependent) between cheapest and peak months; Culture Trip: Jul-Oct hotels cut prices up to 40% across Mexico. A business city, so flatter than resorts.",
+  "peak": [
+   12,
+   1
+  ]
+ },
+ {
+  "id": "istanbul",
+  "name": "Istanbul",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: winter 30-50% discounts; summer 40-60% above shoulder; Sultanahmet mid-range $70-120 spring vs $120-200 high summer; shifting dates a week can change the price 30%.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "colombian-andes",
+  "name": "Colombian Andes",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Medellin: December about GBP 182 vs March about GBP 58 (68% lower); Kayak Colombia: December about 27% above average, cheapest month 4-18% below.",
+  "peak": [
+   12,
+   1
+  ]
+ },
+ {
+  "id": "denali-interior",
+  "name": "Denali & the Interior",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "National Parks Traveler (about 2007): Denali lodging May-June 31-60% below peak rates; trip-budget site multipliers 1.55 high season vs 0.9 shoulder; short season (May 20 to mid-September). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "azores",
+  "name": "Azores",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "ferienhausmiete.de: January EUR 81 vs August EUR 143 (about 43% lower); Momondo Ponta Delgada: November up to 47% below August; blog 30-40%.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "lisbon",
+  "name": "Lisbon",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Aggregators: winter 18-25% cheaper than July (Hotels.com, Skyscanner); blogs 45-68% for boutique hotels (a $250 July room for $80-100 in January).",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "douro-valley-porto",
+  "name": "Douro Valley & Porto",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Portoalities: harvest (Sep-Oct) is the most expensive season; hotels sometimes discount up to 30% in the mid-January to February low season (a maximum, from one operator).",
+  "peak": [
+   9,
+   10
+  ]
+ },
+ {
+  "id": "ecuadorian-andes",
+  "name": "Ecuadorian Andes",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Quito: January $66 vs November $138 (about 52% between cheapest and priciest); Momondo claims 83-86% but months conflict by page.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "mongolia",
+  "name": "Mongolia",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: Naadam (July 10-12) can double Ulaanbaatar hotel rates for a few days; ger camp price lists show no seasonal percentage; basic camps from $30 a night.",
+  "peak": [
+   7
+  ]
+ },
+ {
+  "id": "ireland",
+  "name": "Ireland",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "2026 Dublin guide: peak summer rates often double January-February (3-star centre EUR 220 in July vs 75-90 in late January); Kerry figures not found. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "belfast-giants-causeway",
+  "name": "Northern Ireland",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: shoulder seasons said to give lower rates, winter packages from GBP 218 a night at Bayview; no percentage found.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "thailand",
+  "name": "Phuket & the Andaman Coast",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Phuket101: peak hotel prices 30-50% above low season; luxury villa guides 30-50%; rental company 20-30%; Palm Garden Resort rate sheet only about 10%; Christmas-New Year 2-3x normal.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "scottish-highlands-skye",
+  "name": "Scottish Highlands & Isle of Skye",
+  "old": "moderate",
+  "new": "high",
+  "basis": "anecdote",
+  "note": "One traveller: summer accommodation prices in Portree more than double winter; Momondo hostels: September cheapest, August priciest. No data series found. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "vancouver-island",
+  "name": "Vancouver Island",
+  "old": "moderate",
+  "new": "high",
+  "basis": "rate-card",
+  "note": "Tofino: Long Beach Lodge $659 and Tin Wis $649 midweek in July 2025, Wickaninnish Inn $980; Wick Inn winter Sun-Thu $540 vs $640 in April-May; Travelzoo resort deals up to 33% off. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "st-andrews-fife",
+  "name": "St Andrews & Fife",
+  "old": "moderate",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Links Magazine: Rusacks Hotel mid-January about $125 vs about $450 in mid-summer (72% lower); University of St Andrews: Open week prices about 2.5x normal, many providers 5-10x. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "everglades",
+  "name": "Everglades National Park",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Cheaphotels.org 2022 survey: southern Florida summer rates much cheaper, some drops above 50% (Miami Beach about 65% below February); Key West off-peak up to 50% (unsourced). No Everglades figure.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "copenhagen",
+  "name": "Copenhagen",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Amimir: January $135 (or $151) vs June $311 (or $348), about 57% lower in winter; guide: winter 40-50% below summer (budget $128 down to $69-79). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "uzbekistan",
+  "name": "Samarkand & Bukhara",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Amimir Samarkand: May $131 or September $136 vs July $80-93; Hotels.com: April/October about $147-148 vs July $98 (40-50% above summer). Spring and autumn are the peak; summer heat and winter cheaper.",
+  "peak": [
+   4,
+   5,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "cotswolds",
+  "name": "Cotswolds",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: no summer vs winter rates found; hotel special offers are promotional only.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "vienna",
+  "name": "Vienna",
+  "old": "moderate",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Hotels.com Vienna: December $285 vs January $127 and February $128 (55% lower) and summer about $207 (January 38% lower); one dataset. A guide claims 30-40% winter drops excluding Christmas weeks. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   12
+  ]
+ },
+ {
+  "id": "paris",
+  "name": "Paris",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "data",
+  "note": "CoStar/STR: Paris hotel ADR EUR 356 in January 2025 (record January) and EUR 352 in March 2026; AirDNA seasonality score 86 of 100 (steady demand). Event weeks spike, the year is flat.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "bavaria-munich",
+  "name": "Bavaria & Munich",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "data",
+  "note": "SiteMinder 2024: Oktoberfest room rates averaged EUR 416, 59% above the autumn average (261) and 138% above the year-to-date average (175); Lighthouse 2025: peak midweek EUR 415, 153% above annual average; individual hotels up to 6x. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   9,
+   10,
+   12
+  ]
+ },
+ {
+  "id": "ladakh",
+  "name": "Ladakh",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Blog (2026): moderate double rooms Rs 1,500-4,000 at peak vs Rs 1,000-2,500 in shoulder months (about 33-38% lower); some hotels charge more in winter for heating. Booking-site percentages conflict.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "canaries",
+  "name": "Canary Islands",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Blog: high season (December-April and June-August) can raise prices 30-50%; Adeje resort hotels over EUR 200 in winter; two peaks leave only a short low season.",
+  "peak": [
+   12,
+   1,
+   2,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "nyc",
+  "name": "New York City",
+  "old": "moderate",
+  "new": "extreme",
+  "basis": "data",
+  "note": "Engine (May 2024-April 2026 par rates): January $196, February $202, December $541 (December about 175% above January); NYC & Company 2018 ADR: December $348 vs January $207; GSA caps December $342 vs $179. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   12,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "iceland",
+  "name": "Iceland",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Guides: off-season 20-30% below peak (up to 50%); Reykjavik hotels (about 2014): January $180 vs July $311, $74 vs $248, $239 vs $319; some hotels close in winter. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "hudson-valley",
+  "name": "Hudson Valley",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Houfy (rental platform): October 30-40% above summer and winter 30-40% below summer (roughly 2x); luxury Saugerties hotel $425 summer to $600+ in peak fall. Commercial source; Hotels.com figures found were for Hudson, Florida.",
+  "peak": [
+   10
+  ]
+ },
+ {
+  "id": "berlin",
+  "name": "Berlin",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Hotels.com Berlin (AUD): July $175 vs January $161 (about 8% lower); a 2010 article claimed up to 50% winter cuts (anecdotal); trade fairs and New Year spike winter prices.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "chicago",
+  "name": "Chicago",
+  "old": "moderate",
+  "new": "high",
+  "basis": "data",
+  "note": "Engine (par rates May 2024-April 2026): January $127 to June $319; June-August about $291 vs December-February about $140 (summer about 108% higher); GSA caps June $234 vs $142 winter; Hotels.com July $220 vs January $126. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "yellowstone",
+  "name": "Yellowstone National Park",
+  "old": "moderate",
+  "new": "high",
+  "basis": "news",
+  "note": "National Parks Traveler (2018): mid-summer West Yellowstone rooms $278-359 vs early October $151-187 (about 45-48% lower). Dated; winter figures not found. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "nova-scotia",
+  "name": "Nova Scotia",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: no percentage found; Cape Breton hotels $61-280 (average $102); cheapest windows mid-May to mid-July and mid-August to early December per a cost guide.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "upper-peninsula",
+  "name": "Upper Peninsula",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: no percentage found. Mackinac Island is open roughly May-October and most hotels close in winter; spring and fall cheaper in Mackinaw City.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "kenya",
+  "name": "Maasai Mara & Amboseli",
+  "old": "extreme",
+  "new": "high",
+  "basis": "rate-card",
+  "note": "Elewana Sand River Mara: high (Jul-Oct) $920 vs green season (Apr-May) $656 per person (29%); Mahali Mzuri $995 vs $590 (41%); park fee $200 per day high season vs $100 low season. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8,
+   9,
+   10,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "ghana",
+  "name": "Ghana",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: aggregator pages contradict each other on which months are cheap (Nov, Apr, Aug, Sep, Feb); no usable seasonal percentage.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "arches-canyonlands",
+  "name": "Arches & Canyonlands",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "Frommer's: Moab rates highest March-October, up to half off in winter; 2021 Grand County lodging cap $167 (Mar-Sep) vs $96 (Nov-Feb), 42% lower; Kayak snapshot January $97 vs April $339. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   4,
+   5,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "whistler",
+  "name": "Vancouver & Whistler",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Whistler lodging blog (2022): Hilton $199 shoulder vs $749 high (73%), Fairmont $399 vs $749 (47%), Westin $259 vs $439 (41%); 2026 guide: shoulder CAD 200-395 vs winter peak 340-750. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "texas-hill-country",
+  "name": "Texas Hill Country",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Kayak Fredericksburg: April about $216 (most expensive) vs June about $150; weekday vs weekend swings (Friday $263 vs Sunday $120) matter more than season; spring wildflower weekends not separately priced.",
+  "peak": [
+   3,
+   4,
+   10
+  ]
+ },
+ {
+  "id": "athens",
+  "name": "Athens",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "data",
+  "note": "Trivago (via To Vima): June EUR 206 (peak) vs February EUR 115 (low), about 44% lower; Travel Off Path: summer $170-193 vs winter $106-110 (37-44%).",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "tasmania",
+  "name": "Tasmania",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Hobart (Tolmans Hill): December $211 vs July $129 (about 39% lower); Hobart CBD flat; guide: up to 50% off outside summer; Airbnb pricing guide multipliers 2-3x summer vs 0.7-0.9 winter.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "galapagos",
+  "name": "Galápagos Islands",
+  "old": "mild",
+  "new": "mild",
+  "basis": "guide",
+  "note": "Guides: difference between seasons is not as great as in other destinations; September-October can be cheaper; some yachts charge the same all year. Unchanged.",
+  "peak": [
+   6,
+   7,
+   8,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "cape-town",
+  "name": "Cape Town",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Cape Town: Dec-Jan about 15% above Jun-Jul on the USD page, 67% (CAD), 97% (SGD), 3% (IDR); pages conflict.",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "swissalps",
+  "name": "Zermatt & the Swiss Alps",
+  "old": "extreme",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Amimir Zermatt: January $441, September $416, May $339, October $245, November $232 (January about 90% above November); winter and mid-summer peaks, shoulder in spring and autumn. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8,
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "hokkaido",
+  "name": "Hokkaido",
+  "old": "extreme",
+  "new": "high",
+  "basis": "data",
+  "note": "Hotel-data article (Niseko, Kutchan Town): January-February 2026 average room rate about 123,000 yen vs July-August about 58,000 yen (about 53% lower); winter is the peak, summer the trough. Sapporo flatter. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   1,
+   2,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "turks-caicos",
+  "name": "Turks & Caicos",
+  "old": "extreme",
+  "new": "high",
+  "basis": "official",
+  "note": "VisitTCI (tourism board): December-April rates at least 30-50% higher; villa guide 40-60% (example $3,000 in October vs $4,800-5,200 in February); Kayak August 44% below December. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "vermont",
+  "name": "Vermont",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Houfy: October weekends 30-40% above summer; ShopBack: New England peak-weekend surcharge 40-70% over shoulder; hotels at or over 90% capacity in foliage season; mud season (Mar-Apr) cheapest.",
+  "peak": [
+   10,
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "quebec-city",
+  "name": "Quebec City & Montreal",
+  "old": "moderate",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Amimir Quebec City: August $273 (or $239) vs May $217 (or $190), about 26% gap; Frommer's: busy in summer and Christmas to Carnaval, slashed rates when slow.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "punta-cana",
+  "name": "Dominican Republic",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak Punta Cana resorts: cheapest month 41% (US page) or 52% (CA page) below; travel blog: entry-level all-inclusive from $75 low season vs $100 high season (about 25%); Christmas and New Year can be doubled.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "uyuni",
+  "name": "Salar de Uyuni",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: Kayak 30% (one guesthouse) vs Momondo 66%; MileHacker says tour prices are generally fixed; high season July-September.",
+  "peak": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "tbilisi-caucasus",
+  "name": "Tbilisi & the Caucasus",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: Momondo February up to 48% lower; other aggregators disagree on cheapest month; MileHacker low season December-March, high May-June and September-October.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "bangkok",
+  "name": "Bangkok",
+  "old": "mild",
+  "new": "mild",
+  "basis": "aggregator",
+  "note": "Momondo Bangkok citywide: cheapest June 15% below, December 27% above (hostels 58-64%); Hotels.com cheapest month February or September. A city with a mild seasonal swing.",
+  "peak": [
+   11,
+   12,
+   1
+  ]
+ },
+ {
+  "id": "borneo",
+  "name": "Malaysian Borneo",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Kota Kinabalu: July about $97 and August $99 vs February about $45 (115-120% above); other currency pages differ; Momondo up to 75% lower in May.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "queenstown",
+  "name": "Queenstown",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: shoulder season 20-30% below peak, up to 50% off; Airbnb guide multipliers winter 2-3x, summer 1.5-2x, shoulder 1.0-1.3x. Two peaks (ski winter, summer).",
+  "peak": [
+   12,
+   1,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "jordan",
+  "name": "Petra & Wadi Rum",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Hotels.com Wadi Rum (EUR): June 280 and July 254 vs January 84; other currency pages disagree; Petra snapshots too scattered. Jordan peaks in spring and autumn.",
+  "peak": [
+   3,
+   4,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "joshua-tree",
+  "name": "Palm Springs & Joshua Tree",
+  "old": "extreme",
+  "new": "high",
+  "basis": "data",
+  "note": "Engine (Palm Springs, par rates May 2024-April 2026): August about $158 vs March $369 (about 57% lower); Fodor's: 50% cheaper in summer and fall; Meetings Today: 30-60% less in summer. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "venice",
+  "name": "Venice",
+  "old": "extreme",
+  "new": "high",
+  "basis": "guide",
+  "note": "Guides: winter hotel rates 30-50% below summer (Hilton $236 Jan-Mar vs $389 June); Carnival pushes prices back up (EUR 70 in the low season vs EUR 360 during Carnival). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "nicaragua",
+  "name": "Nicaragua",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: iExplore says rates are the same year round; a weak source says tourist areas halve rates; no usable figure.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "monterey-big-sur",
+  "name": "Monterey & Big Sur",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Travorio Monterey: 3-star summer $185, autumn $145, spring $135 (4-star $270 / $210 / $195); winter row truncated; Airbnb-style data (AirROI/Rabbu) show a summer peak and January low. No Visit Monterey figure.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "singapore",
+  "name": "Singapore",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Kayak boutique: cheapest month 35% below, priciest 33% above; Momondo city-wide 14-18%; Hotels.com February $146 vs October $262; wholesale site: events (F1, Chinese New Year, year-end) 30-50% above low season.",
+  "peak": [
+   12,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "glacier-waterton",
+  "name": "Glacier & Waterton Lakes",
+  "old": "moderate",
+  "new": "high",
+  "basis": "news",
+  "note": "National Parks Traveler: Glacier in-park lodges $338-756 a night depending on month and day (Lake McDonald Lodge $188-309); season is short and lodges close in winter; Kayak Waterton November $82 vs September $434. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "redwood",
+  "name": "Redwood National and State Parks",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Momondo Eureka: June 31% or August 36% below peak (pages disagree on months); no Crescent City or park figure.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "tanzania",
+  "name": "Northern Tanzania",
+  "old": "extreme",
+  "new": "high",
+  "basis": "rate-card",
+  "note": "Serena Serengeti 2024: Apr-May $344, Jul-Oct $479, Jan $648 (green season 28-47% cheaper). Lemala camps low/high 44-46% below high. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8,
+   9,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "santorini",
+  "name": "Santorini & Cyclades",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Guide: November-March open hotels about 40% of peak prices (many close); spring shoulder up to 40% below July-August; Oia caldera rooms EUR 300-500 in summer. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "death-valley",
+  "name": "Death Valley National Park",
+  "old": "mild",
+  "new": "mild",
+  "basis": "rate-card",
+  "note": "Furnace Creek Ranch (2012): lodge rooms $188-219 through April vs $167-193 May-October (11-17% lower); the Inn at Furnace Creek closes in summer; spring break rates higher.",
+  "peak": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "botswana",
+  "name": "Okavango Delta",
+  "old": "extreme",
+  "new": "high",
+  "basis": "rate-card",
+  "note": "Natural Selection 2024 rack rates (Okavango): green season (10 Jan-31 Mar) $960 or $864 vs peak (1 Jul-31 Aug) $1,840 or $1,748 per person per night, 42-51% lower. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "rocky-mountain",
+  "name": "Rocky Mountain National Park",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Estes Park: Frommer's Travelodge $119-149 summer vs $75-110 rest of year (about 26-33%), Best Western $109-299 vs $79-199; page claims off-season up to 50% lower; Momondo November 36% below; July occupancy 89.8%.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "algarve",
+  "name": "Algarve",
+  "old": "extreme",
+  "new": "extreme",
+  "basis": "guide",
+  "note": "Guides: July-August about 60% higher than Nov-Mar; EUR 200 in August vs EUR 60-80 in January; Telegraph: Martinhal townhouse GBP 125 in February vs GBP 501 in August (school-break example); Lonely Planet: April/October about 50% less. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "faroe-islands",
+  "name": "Faroe Islands",
+  "old": "moderate",
+  "new": "extreme",
+  "basis": "aggregator",
+  "note": "Kayak Faroe Islands (several currencies): June or July priced 127% to 247% above the January or February low; stated swings 40-60%. Small supply, so prices spike in summer. [Split 23 Oct 2026: extreme, about 60% or more cheaper in the low season, or event spikes of 2.5x and up.]",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "snowdonia",
+  "name": "Wales",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Cottage guide: 2-bed cottage GBP 600-1,200 a week in July-August vs 250-500 in winter (about 58% lower); hotels not compared. Hotel seasonality likely milder than cottages.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "cornwall",
+  "name": "Cornwall",
+  "old": "extreme",
+  "new": "high",
+  "basis": "data",
+  "note": "Which? price tracking: October half-term 23% cheaper than August on average across England, 30-39% in Cornwall (up to 77% on some cottages); a Cornish winter-let blog: one week costs about half the July-August price. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "north-cascades",
+  "name": "North Cascades",
+  "old": "mild",
+  "new": "mild",
+  "basis": "none",
+  "note": "Unchanged: no summer vs winter percentage found; Methow Valley (Winthrop/Mazama) markets both winter Nordic skiing and summer hiking.",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "peru",
+  "name": "Cusco & Sacred Valley",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Frommer's Cusco: low season (Nov-Apr) mid-range and backpacker rates drop as much as 50%; high season is the dry season (Jun-Aug); Machu Picchu tour prices only slightly higher in the dry season.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "papua-new-guinea",
+  "name": "Papua New Guinea",
+  "old": "mild",
+  "new": "moderate",
+  "basis": "aggregator",
+  "note": "Kayak PNG: June cheapest at $118 vs December $184 on the USD page (about 36%); other currency pages show 19-46% drops in the cheapest month.",
+  "peak": [
+   8,
+   9
+  ]
+ },
+ {
+  "id": "uluru",
+  "name": "Uluru & the Outback",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: June-July peak sold out 6-12 months ahead; only a 2013 rate cut story found (up to 25% high season, 14% low); no current seasonal percentage.",
+  "peak": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "argentine-lake-district",
+  "name": "Argentine Lake District",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: Bariloche calendar has two peaks (January-February and July-August); Trivago 2017: Bariloche July rate +114% vs June; no January vs low-season percentage found.",
+  "peak": [
+   1,
+   2,
+   7
+  ]
+ },
+ {
+  "id": "rivieramaya",
+  "name": "Riviera Maya",
+  "old": "extreme",
+  "new": "high",
+  "basis": "aggregator",
+  "note": "Kayak Playa del Carmen resorts: October $436 vs March $1,127 (about 60% lower); other pages: July 38-41% drop vs December +12-45%; high season mid-December through Easter. [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "palawan",
+  "name": "Palawan",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "none",
+  "note": "Unchanged: Momondo El Nido (69%) and Coron (26% or 67%) pages disagree; September cheapest in Coron. No usable figure.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "sydney",
+  "name": "Sydney",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Sydney Tourism guide: peak-season hotel rates 30-150% above off-peak; late-Dec to mid-Jan can cost 50% more than a mid-May or August week; NYE week 2-3x normal. Hotels.com contradicts it (January cheapest).",
+  "peak": [
+   12,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "puglia",
+  "name": "Puglia",
+  "old": "extreme",
+  "new": "high",
+  "basis": "none",
+  "note": "Unchanged by analogy with Sicily and Sardinia: no Puglia percentage found (masseria High season is July-August; November rooms about $74-76). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   7,
+   8
+  ]
+ },
+ {
+  "id": "jamaica",
+  "name": "Jamaica",
+  "old": "extreme",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Frommer's/Oyster/Excellence Collection: low-season rates up to 40% lower (20-60% mid-April to mid-December); peak January-March rooms can exceed $700; luxury drops more than budget.",
+  "peak": [
+   12,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "amsterdam",
+  "name": "Amsterdam",
+  "old": "moderate",
+  "new": "high",
+  "basis": "guide",
+  "note": "Amsterdam Tourism pages: November-February mid-range EUR 100-180 (February EUR 100-140); April EUR 200-300 (tulips, King's Day); June-August EUR 180-350+; events add 20-50% (King's Day weekend 2-3x). [Split 23 Oct 2026: high, about 45-60% cheaper in the low season.]",
+  "peak": [
+   4,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "barcelona",
+  "name": "Barcelona",
+  "old": "moderate",
+  "new": "moderate",
+  "basis": "guide",
+  "note": "Guides: 3-star EUR 80-120 winter vs EUR 180-260 July-August (high season 40-60% above); Booking.com 2023: up to 40% above off-peak; another guide winter 30-50% cheaper.",
+  "peak": [
+   7,
+   8
+  ]
+ }
+]
