@@ -888,6 +888,23 @@ const KAYAKING_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
 ];
 
+/**
+ * Trail Running (29 Oct 2026). Routes and huts come from OpenStreetMap through the QLever planet service (hiking and foot route relations of 10 km or more, with long trails often mapped in sections; alpine and
+ * wilderness huts), counted inside the place (a circle for cities, regions and parks, the whole outline for a place named for a whole country, island or state). Relief is the highest point minus the lowest:
+ * the highest of the tallest mapped summits and a grid, heights from the Open-Meteo elevation grid. Races are the UTMB World Series 2026, Golden Trail Series and Skyrunner World Series lists on Wikipedia.
+ * Where fewer than 3 routes of 10 km or more are mapped the rating and tick columns are blank, not low (a thin map is not a lack of trails). Question 3's guided and group answer has no column.
+ */
+const TRAIL_RUNNING_FACTS: FactDef[] = [
+  { key: 'trailDistances', label: 'Distances available', type: 'multi', group: 'practical', options: [{ value: 'm3', label: '3 to 6 miles' }, { value: 'm6', label: '6 to 12 miles' }, { value: 'm12', label: '12 to 25 miles' }, { value: 'm30', label: '30 miles and beyond' }], hint: 'From hiking route relations of 10 km or more in the place (map data): 3-6 miles wherever any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more. Long trails are often mapped in sections, and route mapping is thin in much of Asia and Africa, so a blank there is not none. Question 1 reads it.' },
+  { key: 'trailClimbing', label: 'Climbing available', type: 'multi', group: 'practical', options: [{ value: 'flat', label: 'Flat to rolling' }, { value: 'up3000', label: 'Up to 3,000 ft a day' }, { value: 'big6500', label: 'Big days, 6,500 ft or more' }], hint: 'From the relief of the place (highest point minus lowest, heights from the Open-Meteo elevation grid; the lowest is sea level where the place has a coastline): flat to rolling always, up to 3,000 ft from 600 m of relief, 6,500 ft or more from 1,500 m. Relief is across the whole area, so a place can have the climb without a trail up it. Question 2 reads it.' },
+  rate('mountainTrailRunning', 'Mountain trail running', 'Relief tiers: under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 m or more is 10. Blank where fewer than 3 routes of 10 km or more are mapped. Relief says mountains exist, not that they are runnable, and 20 places reach the top tier. Anchors: 10 Nepal and the Swiss Alps, 5 Lake District, 1 Cornwall. The Mountain trail running chip reads it.'),
+  rate('coastalIslandTrails', 'Coastal and island trails', 'Routes of 10 km or more whose middle lies within 3 km of the coast (Natural Earth 10 m coastline), counts to rating: 0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10. Blank where fewer than 3 routes are mapped. The middle of a long route can be far from the sea even if one end is on the shore. Anchors: 10 Cornwall, Canary Islands and North Island. The Coastal and island trails chip reads it.'),
+  tick('raceHost', 'Races and ultras', 'The place hosts an event on the UTMB World Series 2026 list, the Golden Trail Series (world and national) or the Skyrunner World Series calendars, as on Wikipedia (races named in the Evidence column). A place with a good local race that is on no list is not ticked. The Races and ultras chip reads it, and so does the "A race or event" answer of question 3.'),
+  tick('hutToHutRuns', 'Hut-to-hut and multi-day runs', 'Eight or more alpine or wilderness huts mapped in the place (OpenStreetMap tourism=alpine_hut or wilderness_hut) and a hiking route of 50 km or more. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere, so an unticked box is not none. The Hut-to-hut chip reads it.'),
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the source, the figures and the working. Kept so any cell can be audited.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
 const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   birding: [...BIRDING_FACTS, ...GEMINI_NOTE_FACTS],
   safari: [...SAFARI_FACTS, ...GEMINI_NOTE_FACTS],
@@ -930,6 +947,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   horsebackRiding: HORSEBACK_FACTS,
   sailing: SAILING_FACTS,
   kayakingRafting: KAYAKING_FACTS,
+  trailRunning: TRAIL_RUNNING_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

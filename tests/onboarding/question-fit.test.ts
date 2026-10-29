@@ -809,3 +809,26 @@ describe('Kayaking & Rafting questions', () => {
     expect(QUESTION_FIT_RULES['kayakingRafting.q2']).toBeUndefined();
   });
 });
+
+describe('Trail Running questions', () => {
+  const defs = factDefsFor('trailRunning');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`trailRunning.${q}`], picked, defs, facts as never);
+  it('distance needs at least that long a route', () => {
+    expect(fit('q1', [0], { trailDistances: ['m3'] })).toBe(1);
+    expect(fit('q1', [1], { trailDistances: ['m3'] })).toBe(0);
+    expect(fit('q1', [1], { trailDistances: ['m3', 'm12'] })).toBe(1);
+    expect(fit('q1', [2], { trailDistances: ['m3', 'm6'] })).toBe(0);
+    expect(fit('q1', [3], { trailDistances: ['m3', 'm6', 'm12', 'm30'] })).toBe(1);
+  });
+  it('climbing needs the relief for that day', () => {
+    expect(fit('q2', [0], { trailClimbing: ['flat'] })).toBe(1);
+    expect(fit('q2', [1], { trailClimbing: ['flat'] })).toBe(0);
+    expect(fit('q2', [2], { trailClimbing: ['flat', 'up3000', 'big6500'] })).toBe(1);
+  });
+  it('only the race answer reads a column', () => {
+    expect(fit('q3', [0], { raceHost: false })).toBeNull();
+    expect(fit('q3', [1], { raceHost: false })).toBeNull();
+    expect(fit('q3', [2], { raceHost: true })).toBe(1);
+    expect(fit('q3', [2], { raceHost: false })).toBe(0);
+  });
+});

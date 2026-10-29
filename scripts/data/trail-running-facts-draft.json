@@ -1,0 +1,994 @@
+{
+ "ethiopia": {
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 4,264 m: highest point 4,497 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 233 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 4,264 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 31 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "bhutan": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 17 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 14 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 337 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 7,378 m: highest point 7,490 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 112 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 7,378 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 17 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 17 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 20 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 337 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "atacama": {
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,763 m: highest point 5,072 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 2,309 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 2,763 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "morocco": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 1 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 12 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,819 m: highest point 4,149 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 330 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust (relief 3,819 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 13 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 12 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "colombian-andes": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 4 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 2 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 51 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 4,311 m: highest point 5,215 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 904 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 4,311 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 4 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 4 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 50 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 51 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "sedona": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "evidence": "Distances available: 6 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 1 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 24 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,628 m: highest point 2,585 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 957 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,628 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 6 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 6 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Flagstaff Sky Peaks (Golden Trail World Series, Flagstaff, Arizona (about 45 km from Sedona)). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 2 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 24 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "ecuadorian-andes": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "raceHost": true,
+  "evidence": "Distances available: 2 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 17 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,814 m: highest point 4,787 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 973 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 2 hiking route(s) of 10 km or more are mapped, too few to trust (relief 3,814 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 2 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: Hosts Quito Trail by UTMB (UTMB World Series 2026, Quito). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 33 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 17 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "olympic": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 21 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 9 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 213 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,367 m: highest point 2,367 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,367 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 21 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 21 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 213 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "andalucia": {
+  "trailDistances": [
+   "m3",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat"
+  ],
+  "mountainTrailRunning": 1,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 3 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 1 of 20 km or more, 1 of 40 km or more, 1 of 80 km or more; the longest is 213 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 220 m: highest point 220 m (the highest of the 0 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 220 m gives 1 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 3 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 3 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 213 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "madeira": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 3,
+  "raceHost": true,
+  "evidence": "Distances available: 22 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 7 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 40 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,832 m: highest point 1,832 m (the highest of the 8 tallest mapped summits and a 4-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,832 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 22 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 2 of the 22 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 3 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts The Madeira Ocean Trails (Golden Trail World Series, Madeira); Madeira Skyrace (Skyrunner World Series 2019, Madeira). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/Skyrunner_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 40 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "milford-sound-fiordland": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 5 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 5 of 20 km or more, 2 of 40 km or more, 0 of 80 km or more; the longest is 58 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,742 m: highest point 2,742 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,742 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 5 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 5 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 52 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 58 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "nepal": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 93 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 74 of 20 km or more, 43 of 40 km or more, 12 of 80 km or more; the longest is 239 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 8,540 m: highest point 8,600 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 60 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 8,540 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 93 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 93 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 180 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 239 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "ladakh": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 102 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 66 of 20 km or more, 27 of 40 km or more, 6 of 80 km or more; the longest is 173 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 4,657 m: highest point 7,604 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 2,947 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 4,657 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 102 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 102 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 9 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 173 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "fjords": {
+  "trailDistances": [
+   "m3",
+   "m6"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 4,
+  "raceHost": true,
+  "evidence": "Distances available: 102 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 17 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 32 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,929 m: highest point 1,929 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,929 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 102 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 6 of the 102 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Stranda Fjord Trail Race (Golden Trail World Series, Stranda). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 46 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 32 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "great-smoky-mountains": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 9 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 4 of 20 km or more, 2 of 40 km or more, 0 of 80 km or more; the longest is 73 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,446 m: highest point 1,987 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 541 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,446 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 9 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 9 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 4 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 73 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "scottish-highlands-skye": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 4,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 30 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 16 of 20 km or more, 8 of 40 km or more, 5 of 80 km or more; the longest is 125 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,286 m: highest point 1,286 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,286 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 30 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 4 of the 30 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Ring of Steall (Golden Trail National Series, Glen Nevis); Salomon Ben Nevis Ultra (Skyrunner World Series 2017, Fort William); Salomon Glen Coe Skyline (Skyrunner World Series 2017, Glen Coe). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/Skyrunner_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 49 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 125 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "dolomites": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 516 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 87 of 20 km or more, 17 of 40 km or more, 11 of 80 km or more; the longest is 556 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,187 m: highest point 3,468 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 281 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,187 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 516 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 516 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Lavaredo Ultra Trail by UTMB (UTMB World Series 2026, Cortina d'Ampezzo); Ledro Sky Trentino (Golden Trail World Series, Trentino); DoloMyths Run Sky Race (Golden Trail National Series, Dolomites); Dolomites SkyRace (Skyrunner World Series 2017, Dolomites). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/Skyrunner_World_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 611 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 556 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "lake-district": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 5,
+  "coastalIslandTrails": 6,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 22 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 12 of 20 km or more, 6 of 40 km or more, 3 of 80 km or more; the longest is 137 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 874 m: highest point 874 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 874 m gives 5 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 22 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 7 of the 22 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 6 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Scafell Pike Trail Marathon (Golden Trail National Series, Scafell Pike). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 19 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 137 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "taiwan": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 6,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 94 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 58 of 20 km or more, 29 of 40 km or more, 9 of 80 km or more; the longest is 241 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,861 m: highest point 3,861 m (the highest of the 8 tallest mapped summits and a 48-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,861 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 94 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 10 of the 94 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 6 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Xtrail Kenting by UTMB (UTMB World Series 2026, Kenting National Park). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 113 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 241 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "hongkong": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 5,
+  "coastalIslandTrails": 8,
+  "raceHost": true,
+  "evidence": "Distances available: 29 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 45 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 937 m: highest point 937 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 937 m gives 5 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 29 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 16 of the 29 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts TransLantau by UTMB (UTMB World Series 2026, Lantau Island). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 45 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "yosemite": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 16 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 6 of 20 km or more, 4 of 40 km or more, 1 of 80 km or more; the longest is 116 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,295 m: highest point 3,954 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 659 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,295 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 16 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 16 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 116 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "aspen": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 4 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 1 of 40 km or more, 1 of 80 km or more; the longest is 148 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,924 m: highest point 4,375 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 2,451 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,924 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 4 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 4 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 16 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 148 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "torres-del-paine": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 2 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 2 of 20 km or more, 2 of 40 km or more, 1 of 80 km or more; the longest is 93 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,710 m: highest point 2,719 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 9 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 2 hiking route(s) of 10 km or more are mapped, too few to trust (relief 2,710 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 2 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 93 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "chilean-lake-district": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "evidence": "Distances available: 6 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 5 of 20 km or more, 4 of 40 km or more, 1 of 80 km or more; the longest is 804 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,340 m: highest point 2,407 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 67 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,340 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 6 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 6 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Torrencial Chile by UTMB (UTMB World Series 2026, Valdivian temperate forests). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 4 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 804 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "lofoten": {
+  "trailDistances": [
+   "m3",
+   "m6"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 8,
+  "evidence": "Distances available: 19 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 2 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 22 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,229 m: highest point 1,229 m (the highest of the 8 tallest mapped summits and a 37-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,229 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 19 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 12 of the 19 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 24 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 22 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "banff": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 10 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 6 of 20 km or more, 4 of 40 km or more, 0 of 80 km or more; the longest is 69 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,441 m: highest point 3,465 m (the highest of the 8 tallest mapped summits and a 25-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 1,024 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,441 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 10 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 10 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 24 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 69 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "arches-canyonlands": {
+  "trailDistances": [
+   "m3",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 1 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 1 of 20 km or more, 1 of 40 km or more, 1 of 80 km or more; the longest is 178 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,629 m: highest point 3,847 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 1,218 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust (relief 2,629 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 12 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 178 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "provence": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 8,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 83 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 23 of 20 km or more, 10 of 40 km or more, 4 of 80 km or more; the longest is 335 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,899 m: highest point 1,899 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,899 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 83 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 13 of the 83 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Grand Raid Ventoux by UTMB (UTMB World Series 2026, Mont Ventoux); Trail du Ventoux (Golden Trail National Series, Mont Ventoux). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 14 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 335 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "el-chalten": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 4 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 2 of 20 km or more, 2 of 40 km or more, 0 of 80 km or more; the longest is 80 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,657 m: highest point 2,836 m (the highest of the 8 tallest mapped summits and a 48-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 179 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,657 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 4 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 4 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 6 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 80 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "sequoia-kings-canyon": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 41 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 9 of 20 km or more, 4 of 40 km or more, 1 of 80 km or more; the longest is 251 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 4,123 m: highest point 4,340 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 217 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 4,123 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 41 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 41 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 251 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "rio": {
+  "trailDistances": [
+   "m3",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "evidence": "Distances available: 1 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 1 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 68 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,005 m: highest point 1,005 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust (relief 1,005 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 1 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 68 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "costa-rica": {
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,765 m: highest point 3,765 m (the highest of the 8 tallest mapped summits and a 32-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 3,765 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 60 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "bend-crater-lake": {
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 928 m: highest point 2,233 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 1,305 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 928 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "zion-bryce": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 17 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 6 of 20 km or more, 3 of 40 km or more, 2 of 80 km or more; the longest is 116 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,339 m: highest point 3,224 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 885 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,339 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 17 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 17 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 24 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 116 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "kyrgyzstan": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 67 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 47 of 20 km or more, 17 of 40 km or more, 0 of 80 km or more; the longest is 73 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 6,618 m: highest point 7,269 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 651 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 6,618 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 67 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 67 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 63 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 73 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "north-island": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 10,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 121 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 61 of 20 km or more, 22 of 40 km or more, 7 of 80 km or more; the longest is 150 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,748 m: highest point 2,748 m (the highest of the 8 tallest mapped summits and a 50-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,748 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 121 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 27 of the 121 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Tarawera by UTMB (UTMB World Series 2026, Rotorua). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 518 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 150 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "chamonix": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 120 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 21 of 20 km or more, 12 of 40 km or more, 8 of 80 km or more; the longest is 166 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,960 m: highest point 4,718 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 758 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,960 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 120 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 120 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts UTMB Mont-Blanc (Finals) (UTMB World Series 2026, Chamonix); Marathon du Mont Blanc (Golden Trail World Series, Chamonix). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 163 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 166 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "marlborough-abel-tasman": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 3,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 9 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 7 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 196 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,822 m: highest point 1,822 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,822 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 9 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 3 of the 9 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 3 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 67 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 196 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "greenland": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 4,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 14 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 10 of 20 km or more, 6 of 40 km or more, 2 of 80 km or more; the longest is 196 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,662 m: highest point 3,662 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,662 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 14 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 6 of the 14 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 82 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 196 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "yellowstone": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 3 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 17 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,116 m: highest point 3,252 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 2,136 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,116 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 3 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 3 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 17 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "pakistan": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 5 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 4 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 45 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 8,518 m: highest point 8,518 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 8,518 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 5 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 5 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 159 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 45 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "whistler": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 4,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 12 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 7 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 86 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,846 m: highest point 2,846 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,846 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 12 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 4 of the 12 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Ultra Trail Whistler by UTMB (UTMB World Series 2026, Whistler); Whistler Alpine Meadows (Golden Trail National Series, Whistler). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 22 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 86 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "hokkaido": {
+  "trailDistances": [
+   "m3",
+   "m6"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 10 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 27 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,213 m: highest point 2,213 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,213 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 10 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 10 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 35 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 27 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "azores": {
+  "trailDistances": [
+   "m3",
+   "m6"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 8,
+  "evidence": "Distances available: 33 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 13 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 38 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,224 m: highest point 1,224 m (the highest of the 8 tallest mapped summits and a 2-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,224 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 33 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 20 of the 33 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 6 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 38 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "vancouver-island": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 4,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 21 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 7 of 20 km or more, 4 of 40 km or more, 3 of 80 km or more; the longest is 742 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,069 m: highest point 2,069 m (the highest of the 8 tallest mapped summits and a 56-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,069 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 21 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 6 of the 21 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 16 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 742 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "canaries": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 10,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 177 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 41 of 20 km or more, 11 of 40 km or more, 4 of 80 km or more; the longest is 155 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,100 m: highest point 3,100 m (the highest of the 8 tallest mapped summits and a 14-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 3,100 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 177 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 45 of the 177 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Tenerife Bluetrail by UTMB (UTMB World Series 2026, Tenerife); Transvulcania Ultramarathon (Skyrunner World Series 2019, La Palma). Sources: https://en.wikipedia.org/wiki/Skyrunner_World_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 19 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 155 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "iceland": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 3,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 30 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 7 of 20 km or more, 5 of 40 km or more, 0 of 80 km or more; the longest is 66 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,997 m: highest point 1,997 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,997 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 30 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 3 of the 30 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 3 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 141 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 66 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "tasmania": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 3,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 9 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 91 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,555 m: highest point 1,555 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,555 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 9 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 3 of the 9 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 3 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 49 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 91 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "cape-town": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 2,
+  "evidence": "Distances available: 4 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 1 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 20 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,078 m: highest point 1,078 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,078 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 4 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 1 of the 4 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 2 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 6 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 20 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "swissalps": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 396 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 68 of 20 km or more, 18 of 40 km or more, 11 of 80 km or more; the longest is 231 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 4,245 m: highest point 4,528 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 283 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 4,245 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 396 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 396 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Trail Verbier St-Bernard by UTMB (UTMB World Series 2026, Verbier); Eiger Ultra-Trail by UTMB (UTMB World Series 2026, Grindelwald); Wildstrubel by UTMB (UTMB World Series 2026, Crans-Montana, Kandersteg and Adelboden); Sierre-Zinal (Golden Trail World Series, Valais); Zermatt Marathon (Golden Trail National Series, Zermatt); Matterhorn Ultraks (Skyrunner World Series 2019, Zermatt). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/Skyrunner_World_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 410 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 231 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "vermont": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 13 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 8 of 20 km or more, 6 of 40 km or more, 3 of 80 km or more; the longest is 401 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,279 m: highest point 1,306 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 27 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,279 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 13 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 13 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 24 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 401 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "tbilisi-caucasus": {
+  "trailDistances": [
+   "m3"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 8 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 18 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,066 m: highest point 2,323 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 257 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,066 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 8 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 8 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 8 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 18 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "queenstown": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 4 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 1 of 40 km or more, 1 of 80 km or more; the longest is 313 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,952 m: highest point 2,262 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 310 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,952 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 4 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 4 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 79 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 313 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "jordan": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 104 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 34 of 20 km or more, 3 of 40 km or more, 1 of 80 km or more; the longest is 125 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,713 m: highest point 1,713 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,713 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 104 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 104 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 3 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 125 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "joshua-tree": {
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,812 m: highest point 1,763 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest -49 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 1,812 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "glacier-waterton": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 11 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 9 of 20 km or more, 2 of 40 km or more, 0 of 80 km or more; the longest is 48 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,102 m: highest point 3,045 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 943 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,102 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 11 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 11 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 7 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 48 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "rocky-mountain": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 9,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 8 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 3 of 20 km or more, 1 of 40 km or more, 0 of 80 km or more; the longest is 64 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,489 m: highest point 4,318 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 1,829 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,489 m gives 9 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 8 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 8 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 4 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 64 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "faroe-islands": {
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 835 m: highest point 835 m (the highest of the 8 tallest mapped summits and a 54-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 835 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "snowdonia": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000"
+  ],
+  "mountainTrailRunning": 7,
+  "coastalIslandTrails": 6,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 64 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 39 of 20 km or more, 26 of 40 km or more, 19 of 80 km or more; the longest is 482 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 1,058 m: highest point 1,058 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 1,058 m gives 7 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 64 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 7 of the 64 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 6 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Ultra-Trail Snowdonia by UTMB (UTMB World Series 2026, Llanberis); Trail Marathon Wales (Golden Trail National Series, Wales). Sources: https://en.wikipedia.org/wiki/Golden_Trail_Series, https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 35 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 482 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "north-cascades": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12",
+   "m30"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "evidence": "Distances available: 36 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 20 of 20 km or more, 5 of 40 km or more, 2 of 80 km or more; the longest is 1472 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles, 30 miles and beyond. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,653 m: highest point 2,755 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 102 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,653 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 36 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 36 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 4 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 1472 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "cornwall": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat"
+  ],
+  "mountainTrailRunning": 1,
+  "coastalIslandTrails": 10,
+  "raceHost": true,
+  "evidence": "Distances available: 31 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 15 of 20 km or more, 2 of 40 km or more, 0 of 80 km or more; the longest is 64 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 197 m: highest point 197 m (the highest of the 0 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 0 m (sea level, since the place has a coastline). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 197 m gives 1 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 31 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 26 of the 31 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Arc of Attrition by UTMB (UTMB World Series 2026, Cornwall). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 1 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 64 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "peru": {
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "evidence": "Distances available: 0 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 0 of 20 km or more, 0 of 40 km or more, 0 of 80 km or more; the longest is 0 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives nothing (left blank: no route of 10 km mapped, which in thinly mapped places means the map is thin, not that there are no trails). Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 3,175 m: highest point 5,754 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 2,579 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust (relief 3,175 m); a thin map is not a lack of trails.\nCoastal and island trails: Left blank: only 0 hiking route(s) of 10 km or more are mapped, too few to trust.\nRaces and ultras: No event on the UTMB World Series 2026, Golden Trail Series or Skyrunner World Series lists (as on Wikipedia) is held in this place, so the box is not ticked. A good local race that is on no list is missed.\nHut-to-hut running: 0 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 0 km: ticked only with 8 or more huts and a route of 50 km or more, so not ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ },
+ "argentine-lake-district": {
+  "trailDistances": [
+   "m3",
+   "m6",
+   "m12"
+  ],
+  "trailClimbing": [
+   "flat",
+   "up3000",
+   "big6500"
+  ],
+  "mountainTrailRunning": 10,
+  "coastalIslandTrails": 0,
+  "raceHost": true,
+  "hutToHutRuns": true,
+  "evidence": "Distances available: 6 hiking route relation(s) of 10 km or more in the place (OpenStreetMap route=hiking or foot; 5 of 20 km or more, 3 of 40 km or more, 0 of 80 km or more; the longest is 73 km). 3-6 miles if any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more: gives 3-6 miles, 6-12 miles, 12-25 miles. Long trails are often mapped in sections, so the count of routes runs high.\nClimbing available: Relief 2,823 m: highest point 3,229 m (the highest of the 8 tallest mapped summits and a 60-point grid, heights from the Open-Meteo elevation grid, OpenStreetMap summits for the candidates) minus lowest 406 m (the lowest point of the grid). Flat to rolling always; up to 3,000 ft from 600 m of relief; 6,500 ft or more from 1,500 m: gives flat to rolling, up to 3,000 ft, big days of 6,500 ft or more. Relief is across the whole area, so a place can have the climb without a trail up it.\nMountain trail running: Relief 2,823 m gives 10 (under 300 m is 1, 300-600 is 3, 600-1,000 is 5, 1,000-1,500 is 7, 1,500-2,500 is 9, 2,500 or more is 10), with 6 routes of 10 km or more mapped. Relief says mountains exist, not that they are runnable.\nCoastal and island trails: 0 of the 6 routes of 10 km or more have their middle within 3 km of the coast (Natural Earth 10 m coastline) gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10). The middle of a long route can be far from the sea even if one end is on the shore.\nRaces and ultras: Hosts Bariloche by UTMB (UTMB World Series 2026, Bariloche). Sources: https://en.wikipedia.org/wiki/UTMB_World_Series. Ticked when an event is on the UTMB World Series 2026 list, the Golden Trail Series or the Skyrunner World Series calendars (as on Wikipedia); a place with a good local race on no list is not ticked.\nHut-to-hut running: 15 huts mapped (OpenStreetMap tourism=alpine_hut or wilderness_hut) and the longest hiking route is 73 km: ticked only with 8 or more huts and a route of 50 km or more, so ticked. Hut tagging is strong in the Alps and Scandinavia and weak elsewhere.",
+  "drawSourceChecked": false
+ }
+}

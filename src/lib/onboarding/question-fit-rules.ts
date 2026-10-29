@@ -239,6 +239,9 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'kayakingRafting.q1': R(any(kAtLeast(3, 'calmWaterPaddling'), kHas('whitewaterClasses', 'ii')), has('whitewaterClasses', 'ii', 'iii', 'iv', 'v'), has('whitewaterClasses', 'iv', 'v'), has('whitewaterClasses', 'v')),
   'kayakingRafting.q3': R(within('waterTemperature', WATER_TEMPS, 'warm'), within('waterTemperature', WATER_TEMPS, 'cool'), null),
   'kayakingRafting.q4': R(has('skillLevels', 'never'), has('skillLevels', 'never', 'little'), null),
+  'trailRunning.q1': R(has('trailDistances', 'm3', 'm6', 'm12', 'm30'), has('trailDistances', 'm6', 'm12', 'm30'), has('trailDistances', 'm12', 'm30'), has('trailDistances', 'm30')),
+  'trailRunning.q2': R(has('trailClimbing', 'flat', 'up3000', 'big6500'), has('trailClimbing', 'up3000', 'big6500'), has('trailClimbing', 'big6500')),
+  'trailRunning.q3': R(null, null, has('raceHost', 'true')),
 
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
@@ -374,6 +377,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'kayakingRafting.q1': 'Not the rapids you want',
   'kayakingRafting.q3': 'Colder than you want',
   'kayakingRafting.q4': 'Not suited to your experience',
+  'trailRunning.q1': 'Not the distance you want',
+  'trailRunning.q2': 'Not the climbing you want',
+  'trailRunning.q3': 'No race held here',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',

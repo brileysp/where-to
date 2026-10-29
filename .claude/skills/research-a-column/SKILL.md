@@ -22,7 +22,7 @@ Read `docs/matching-model.md` once if you have not seen how columns feed chips a
 ## 2. Which places and where "inside the place" ends
 
 - Use `scripts/dump-places-geo.ts` to write `places.json` and `lat.json` (see data-sources.md). Skip places where the interest is N/A (`naSliders`).
-- **Own-area rule (owner, 26 Oct 2026):** a facility counts only if it belongs to the place. Radius from the centre point by place type: city 35 km, region and coastal area 60, national park and wilderness area 40, state, island and country 100. Never across a border or water.
+- **Own-area rule (owner, 26 Oct 2026):** a facility counts only if it belongs to the place. Radius from the centre point by place type: city 35 km, region and coastal area 60, national park and wilderness area 40. **A place named for a whole country, island or state counts everything inside its outline** (owner, 28 Oct 2026: a circle makes no sense for Nepal; outlines from Natural Earth, see `scripts/geo.py` WHOLE; 73 places; Marrakech & Atlas, Red Sea & Nile and Petra & Wadi Rum keep a circle). Never across a border or water.
 - **Named second hubs:** when a place's name lists another location outside that radius (Vancouver & Whistler, Banff & Jasper, Quebec City & Montreal), add it as an extra base (`BASES` in `scripts/geo.py`), as for Tokyo & Kyoto (120 km from two bases) and Taiwan (a whole country). Flag it to the owner; this was a question to them, not a silent choice.
 - Look at the place's name, not just its centre point: several centres are midpoints in empty country.
 

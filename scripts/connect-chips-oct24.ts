@@ -106,6 +106,10 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['kayakingRafting', 'sea-kayaking', [{ column: 'seaKayaking' }]],
   ['kayakingRafting', 'calm-water-paddling', [{ column: 'calmWaterPaddling' }]],
   ['kayakingRafting', 'multi-day-river-trips', [{ column: 'multiDayRiverTrips' }]],
+  ['trailRunning', 'coastal-and-island-trails', [{ column: 'coastalIslandTrails' }]],
+  ['trailRunning', 'mountain-trail-running', [{ column: 'mountainTrailRunning' }]],
+  ['trailRunning', 'ultra-distances-and-races', [{ column: 'raceHost' }]],
+  ['trailRunning', 'hut-to-hut-running', [{ column: 'hutToHutRuns' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');
