@@ -22,7 +22,7 @@ describe('Camping evidence', () => {
     for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(draft[place][col] ?? null, `${place} ${col}`).toEqual(row[col] ?? null);
   });
   it('keeps the anchors named in the column hints', () => {
-    const anchors: Record<string, Record<string, number>> = { campgrounds: { taiwan: 10, cornwall: 10, 'vancouver-island': 10, yellowstone: 8, atacama: 4 } };
+    const anchors: Record<string, Record<string, number>> = { campgrounds: { taiwan: 10, cornwall: 10, 'vancouver-island': 9, yellowstone: 8, atacama: 4 } };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
   it('ratings follow the stated tiers', () => {

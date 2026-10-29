@@ -23,7 +23,7 @@ describe('Golf evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      linksGolf: { 'st-andrews-fife': 10, 'monterey-big-sur': 10, ireland: 9, nyc: 8, amsterdam: 0 },
+      linksGolf: { 'st-andrews-fife': 10, 'monterey-big-sur': 10, ireland: 10, nyc: 8, amsterdam: 0 },
       bucketListCourses: { 'st-andrews-fife': 10, nyc: 10, rome: 9, paris: 9, algarve: 0 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);

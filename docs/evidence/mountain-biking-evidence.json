@@ -11,15 +11,14 @@
    "couple",
    "half"
   ],
-  "liftServedParks": 0,
   "bikeRental": 2,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 20 km easy (green), 23 km intermediate, 6 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "20 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 26 km easy (green), 25 km intermediate, 7 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "26 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "49 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
+   "dayLengths": "60 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
    "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. FABIO. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
@@ -27,10 +26,10 @@
  "ethiopia": {
   "liftServedParks": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "trailGrades": "Left blank: only 11 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "easyFlowTrails": "Left blank: only 11 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "bikepackingRoutes": "Left blank: only 11 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "dayLengths": "Left blank: only 11 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing.",
    "eBikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing."
@@ -63,26 +62,37 @@
   }
  },
  "guatemala": {
+  "trailGrades": [
+   "green",
+   "intermediate"
+  ],
+  "easyFlowTrails": 6,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half"
+  ],
   "liftServedParks": 0,
   "bikeRental": 3,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 1 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 1 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 1 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 1 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 108 km easy (green), 8 km intermediate, 0 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "108 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
+   "dayLengths": "116 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "2 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Monkey Bike Shop, Old Town Outfitters. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "bhutan": {
+  "liftServedParks": 0,
   "evidence": {
    "trailGrades": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "easyFlowTrails": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "bikepackingRoutes": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "dayLengths": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing.",
    "eBikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing."
   }
@@ -302,14 +312,25 @@
   }
  },
  "madagascar": {
+  "trailGrades": [
+   "green",
+   "intermediate"
+  ],
+  "easyFlowTrails": 4,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple"
+  ],
+  "bikeRental": 0,
+  "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 3 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 3 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 3 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 3 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 24 km easy (green), 6 km intermediate, 0 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "24 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
+   "dayLengths": "31 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple.",
    "liftServedParks": "Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing.",
-   "eBikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing."
+   "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "basque-country": {
@@ -442,23 +463,26 @@
  "nepal": {
   "trailGrades": [
    "green",
-   "intermediate"
+   "intermediate",
+   "black",
+   "expert"
   ],
-  "easyFlowTrails": 4,
+  "easyFlowTrails": 8,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
-   "half"
+   "half",
+   "full"
   ],
-  "bikeRental": 6,
+  "bikeRental": 8,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 25 km easy (green), 52 km intermediate, 3 km black, 4 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "25 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 157 km easy (green), 112 km intermediate, 14 km black, 8 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "157 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "83 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "Left blank: 4 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "9 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. New K. L. Cycle Workshop, The Bike Farm Nepal, Mountain Cycle Express. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "dayLengths": "290 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
+   "liftServedParks": "Left blank: 8 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "14 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. New K. L. Cycle Workshop, Surya Saan Cycle Store, Thakuri Bicycle. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -517,10 +541,10 @@
   "bikeRental": 4,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 13 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 13 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 13 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 13 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "trailGrades": "Left blank: only 16 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "easyFlowTrails": "Left blank: only 16 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "bikepackingRoutes": "Left blank: only 16 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "dayLengths": "Left blank: only 16 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "5 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Spinner, The Cycle House | Premium Bike Rentals Sri Lanka, Travellogic.lk-Bike Rental and Camping Gear Provider Sri lanka. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
@@ -659,24 +683,25 @@
   "trailGrades": [
    "green",
    "intermediate",
+   "black",
    "expert"
   ],
-  "easyFlowTrails": 2,
+  "easyFlowTrails": 4,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
    "half"
   ],
   "bikeRental": 10,
-  "eBikeRental": 0,
+  "eBikeRental": 2,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, expert. Mapped length by grade within the place's area: 12 km easy (green), 17 km intermediate, 4 km black, 10 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "12 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 39 km easy (green), 20 km intermediate, 6 km black, 16 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "39 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "43 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "Left blank: 3 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "27 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. 馬修單車, 迴龍自行車行, 波斯灣捷安特出租. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "dayLengths": "82 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "liftServedParks": "Left blank: 6 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "87 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. 馬修單車, 迴龍自行車行, 波斯灣捷安特出租. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (阿度的店-台東光明店 |電輔車|租車|導覽| Ado E-bike rental（旅人驛站鐵花文創二館旁）). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "hongkong": {
@@ -808,16 +833,16 @@
   }
  },
  "vietnam": {
-  "bikeRental": 4,
-  "eBikeRental": 0,
+  "bikeRental": 8,
+  "eBikeRental": 2,
   "evidence": {
-   "trailGrades": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "Left blank: 6 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "5 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Da Nang Bike Hub, Nam Thanh, TA BIKE. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "trailGrades": "Left blank: only 12 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "easyFlowTrails": "Left blank: only 12 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "bikepackingRoutes": "Left blank: only 12 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "dayLengths": "Left blank: only 12 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "liftServedParks": "Left blank: 31 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "13 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Da Nang Bike Hub, Nam Thanh, TA BIKE. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (Electric Smiles E-Bike Tours and Rental). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "beijing": {
@@ -838,21 +863,22 @@
    "green",
    "intermediate"
   ],
-  "easyFlowTrails": 8,
+  "easyFlowTrails": 6,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
    "half",
    "full"
   ],
+  "liftServedParks": 0,
   "bikeRental": 2,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 186 km easy (green), 70 km intermediate, 2 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "186 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 146 km easy (green), 75 km intermediate, 4 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "146 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "259 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
-   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "dayLengths": "226 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
+   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Ballstad Bicycle Rental. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
@@ -980,16 +1006,16 @@
    "full",
    "multi"
   ],
-  "bikeRental": 8,
-  "eBikeRental": 4,
+  "bikeRental": 10,
+  "eBikeRental": 6,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 800 km easy (green), 280 km intermediate, 22 km black, 15 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "800 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 1011 km easy (green), 400 km intermediate, 27 km black, 17 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "1011 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "1117 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
-   "liftServedParks": "Left blank: 5 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "16 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Sicily Cycling Club, Privitera Bike, In sella. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "2 rental business(es) whose name or listing says e-bike, electric or pedelec (Electrical Bike Ibleo, Corleone Rent e-Bike). Gives 4 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "dayLengths": "1455 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
+   "liftServedParks": "Left blank: 7 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "41 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Sicily Cycling Club, Privitera Bike, In sella. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "4 rental business(es) whose name or listing says e-bike, electric or pedelec (E-mtb Rental, Electrical Bike Ibleo, Corleone Rent e-Bike). Gives 6 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "mallorca": {
@@ -1048,27 +1074,27 @@
    "intermediate",
    "black"
   ],
-  "easyFlowTrails": 4,
+  "easyFlowTrails": 6,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
-   "half"
+   "half",
+   "full"
   ],
   "liftServedParks": 0,
   "bikeRental": 0,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 37 km easy (green), 36 km intermediate, 6 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "37 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 97 km easy (green), 36 km intermediate, 6 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "97 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "79 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "dayLengths": "139 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "okinawa": {
-  "liftServedParks": 0,
   "bikeRental": 4,
   "eBikeRental": 2,
   "evidence": {
@@ -1076,8 +1102,8 @@
    "easyFlowTrails": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "bikepackingRoutes": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
    "dayLengths": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
-   "bikeRental": "4 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. ヤンバルサイクル, 沖縄輪業 2号店, Electric assist bicycle sales & rental store. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "6 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. ヤンバルサイクル, 沖縄輪業 2号店, Fat Bike Rental Taketomi island. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (Electric assist bicycle sales & rental store). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -1255,20 +1281,21 @@
    "green",
    "intermediate"
   ],
-  "easyFlowTrails": 2,
+  "easyFlowTrails": 4,
   "bikepackingRoutes": 0,
   "dayLengths": [
-   "couple"
+   "couple",
+   "half"
   ],
-  "bikeRental": 0,
+  "bikeRental": 2,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 19 km easy (green), 14 km intermediate, 1 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "19 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 23 km easy (green), 21 km intermediate, 1 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "23 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "35 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple.",
+   "dayLengths": "45 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
    "liftServedParks": "Left blank: 6 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Santateresamtb. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -1298,17 +1325,16 @@
   }
  },
  "kerala": {
-  "liftServedParks": 0,
-  "bikeRental": 3,
-  "eBikeRental": 0,
+  "bikeRental": 4,
+  "eBikeRental": 2,
   "evidence": {
-   "trailGrades": "Left blank: only 2 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 2 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 2 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 2 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
-   "bikeRental": "2 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Alleppey Bike Rentals, Gokulam Bike Hire. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "trailGrades": "Left blank: only 19 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "easyFlowTrails": "Left blank: only 19 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "bikepackingRoutes": "Left blank: only 19 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "dayLengths": "Left blank: only 19 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "liftServedParks": "Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "5 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Trivandrum Motorcycle Rental, Electric Cycle, Alleppey Bike Rentals. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (Electric Cycle). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "chiang-mai": {
@@ -1388,14 +1414,25 @@
   }
  },
  "kyrgyzstan": {
+  "trailGrades": [
+   "green",
+   "intermediate",
+   "expert"
+  ],
+  "easyFlowTrails": 4,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half"
+  ],
   "bikeRental": 2,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 15 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 15 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 15 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 15 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "Left blank: 16 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, expert. Mapped length by grade within the place's area: 40 km easy (green), 17 km intermediate, 3 km black, 8 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "40 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
+   "dayLengths": "69 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "liftServedParks": "Left blank: 27 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
    "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Экстремал. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
@@ -1404,24 +1441,27 @@
   "trailGrades": [
    "green",
    "intermediate",
-   "black"
+   "black",
+   "expert"
   ],
-  "easyFlowTrails": 2,
+  "easyFlowTrails": 8,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
-   "half"
+   "half",
+   "full",
+   "multi"
   ],
-  "bikeRental": 6,
-  "eBikeRental": 4,
+  "bikeRental": 8,
+  "eBikeRental": 6,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 15 km easy (green), 21 km intermediate, 12 km black, 1 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "15 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 193 km easy (green), 279 km intermediate, 101 km black, 34 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "193 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "49 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "dayLengths": "606 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
    "liftServedParks": "Crankworx, the premier mountain-bike festival, is held at Rotorua, a Crankworx World Tour stop (Wikipedia: Crankworx), one of the few world-class lift-served bike parks, so the rating is 10 whatever the lift count.",
-   "bikeRental": "9 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Jolly Bikes, Whangamata Cycles, Clycycles. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "2 rental business(es) whose name or listing says e-bike, electric or pedelec (Bionic Electric Bikes, HireBikes). Gives 4 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "bikeRental": "20 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Paihia Mountain Bikes, Jolly Bikes, Whangamata Cycles. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "5 rental business(es) whose name or listing says e-bike, electric or pedelec (Bionic Electric Bikes, Kapiti E-Bike Hire, E-Bike Shed Sales & Hire). Gives 6 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   },
   "liftServedParks": 10
  },
@@ -1490,19 +1530,19 @@
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
-   "half"
+   "half",
+   "full"
   ],
-  "liftServedParks": 0,
-  "bikeRental": 6,
-  "eBikeRental": 0,
+  "bikeRental": 10,
+  "eBikeRental": 4,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 68 km easy (green), 39 km intermediate, 1 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "68 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 106 km easy (green), 62 km intermediate, 3 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "106 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "107 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
-   "bikeRental": "10 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. On Yer Bike Hire Shop, Belfield Bike Shop, Cycleplus. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "dayLengths": "170 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
+   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "52 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Clifden Bike Shop, On Yer Bike Hire Shop, Paddy's Bike Shop. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "3 rental business(es) whose name or listing says e-bike, electric or pedelec (E-Whizz Electric Bike Tours, Electric Bike Trails Ltd, Donegal E-bikes). Gives 4 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "marlborough-abel-tasman": {
@@ -1570,16 +1610,16 @@
    "full",
    "multi"
   ],
-  "bikeRental": 8,
+  "bikeRental": 10,
   "eBikeRental": 10,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 664 km easy (green), 732 km intermediate, 27 km black, 10 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "664 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 818 km easy (green), 831 km intermediate, 37 km black, 18 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "818 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "1 mountain-bike route relation(s) of 150 km or more in the area: MyLand (293 km) gives 7 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "1433 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
+   "dayLengths": "1704 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
    "liftServedParks": "Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "19 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Cuccu Mario, SardiniaCycling, Easycletta - Electric Bike Rental And Tours. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "11 rental business(es) whose name or listing says e-bike, electric or pedelec (Easycletta - Electric Bike Rental And Tours, Raggi di Sardegna Rent a Bike E-Bike & Tour, Barbagia Rent E-Bike). Gives 10 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "bikeRental": "23 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Cuccu Mario, SardiniaCycling, Easycletta - Electric Bike Rental And Tours. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "12 rental business(es) whose name or listing says e-bike, electric or pedelec (Easycletta - Electric Bike Rental And Tours, Noleggio E-bike Pados Bike, Raggi di Sardegna Rent a Bike E-Bike & Tour). Gives 10 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "croatia": {
@@ -1636,14 +1676,27 @@
   }
  },
  "pakistan": {
+  "trailGrades": [
+   "green",
+   "black",
+   "expert"
+  ],
+  "easyFlowTrails": 4,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half"
+  ],
+  "bikeRental": 0,
+  "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 0 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "liftServedParks": "Left blank: 5 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing.",
-   "eBikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing."
+   "trailGrades": "Trail grades with at least 5 km mapped: green, black, expert. Mapped length by grade within the place's area: 24 km easy (green), 0 km intermediate, 22 km black, 16 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "24 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
+   "dayLengths": "61 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "liftServedParks": "Left blank: 8 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "whistler": {
@@ -1738,7 +1791,7 @@
    "couple"
   ],
   "liftServedParks": 6,
-  "bikeRental": 2,
+  "bikeRental": 4,
   "eBikeRental": 0,
   "evidence": {
    "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 17 km easy (green), 14 km intermediate, 8 km black, 1 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
@@ -1746,7 +1799,7 @@
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
    "dayLengths": "40 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple.",
    "liftServedParks": "2 lift(s) open to bikes (0 tagged on the map; hand-checked: Niseko Tokyu Grand Hirafu summer Ace Gondola with a mountain bike park (en.grand-hirafu.jp) and the Hanazono Skyline bike park (hanazononiseko.com)). Gives 6 (none 0, 1 lift 4, 2-3 6, 4-6 8, 7-10 9, 11 or more 10; presence-led, owner 28 Oct 2026).",
-   "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. ノースバイシクル北海道. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "bikeRental": "4 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. ノースバイシクル北海道, バイシクルショップサイトウ, 佐々木自転車レンタルサイクル商会. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -1816,15 +1869,26 @@
   }
  },
  "azores": {
+  "trailGrades": [
+   "green",
+   "intermediate"
+  ],
+  "easyFlowTrails": 2,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple"
+  ],
   "liftServedParks": 0,
+  "bikeRental": 3,
+  "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Left blank: only 4 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "easyFlowTrails": "Left blank: only 4 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "bikepackingRoutes": "Left blank: only 4 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
-   "dayLengths": "Left blank: only 4 km of graded trail is mapped in the area, too little to say the trails are missing (OpenStreetMap coverage is thin here).",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 14 km easy (green), 18 km intermediate, 1 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "14 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
+   "dayLengths": "33 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple.",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
-   "bikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing.",
-   "eBikeRental": "Left blank: no rental found and little else mapped, so the data may simply be missing."
+   "bikeRental": "3 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Azores Bike Shop, Bicicletaria Azores, Rent a Bike Azores. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "douro-valley-porto": {
@@ -1857,7 +1921,8 @@
  },
  "mongolia": {
   "trailGrades": [
-   "intermediate"
+   "intermediate",
+   "black"
   ],
   "easyFlowTrails": 0,
   "bikepackingRoutes": 0,
@@ -1868,10 +1933,10 @@
   "bikeRental": 0,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: intermediate. Mapped length by grade within the place's area: 0 km easy (green), 68 km intermediate, 0 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "trailGrades": "Trail grades with at least 5 km mapped: intermediate, black. Mapped length by grade within the place's area: 0 km easy (green), 68 km intermediate, 11 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
    "easyFlowTrails": "0 km of easy (green) trail mapped in the place's area gives 0 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "68 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "dayLengths": "79 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
    "liftServedParks": "Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
    "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
@@ -1896,23 +1961,23 @@
    "black",
    "expert"
   ],
-  "easyFlowTrails": 8,
+  "easyFlowTrails": 6,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
    "half",
    "full"
   ],
-  "bikeRental": 10,
-  "eBikeRental": 4,
+  "bikeRental": 4,
+  "eBikeRental": 2,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 169 km easy (green), 193 km intermediate, 46 km black, 10 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "169 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 116 km easy (green), 212 km intermediate, 69 km black, 38 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "116 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "418 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
-   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "25 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Trek Bicycle Store, Meat Machine Cycles, Cycle San Juan. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "3 rental business(es) whose name or listing says e-bike, electric or pedelec (Bee's Knees eBike Tours and Rentals, Discover E-Bike, Elwha eBike Adventures). Gives 4 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "dayLengths": "435 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
+   "liftServedParks": "Left blank: 8 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "5 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Trek Bicycle Store, Cycle BC Rentals, Pedal Your World. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (Max's eBikes). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "cotswolds": {
@@ -1955,7 +2020,8 @@
   "trailGrades": [
    "green",
    "intermediate",
-   "black"
+   "black",
+   "expert"
   ],
   "easyFlowTrails": 10,
   "bikepackingRoutes": 0,
@@ -1966,15 +2032,15 @@
    "multi"
   ],
   "bikeRental": 10,
-  "eBikeRental": 8,
+  "eBikeRental": 10,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 801 km easy (green), 416 km intermediate, 23 km black, 4 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "801 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 1509 km easy (green), 880 km intermediate, 70 km black, 27 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "1509 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "1244 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
+   "dayLengths": "2487 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
    "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "37 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Ekib Gran Canaria, Vadebicis Telde, Teide Bike. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "8 rental business(es) whose name or listing says e-bike, electric or pedelec (Vadebicis Telde, rent electric bike, Canarielectricdrive). Gives 8 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "bikeRental": "87 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Ekib Gran Canaria, Fabulous MTB, Segura Sports Lanzarote. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "15 rental business(es) whose name or listing says e-bike, electric or pedelec (Vadebicis Telde, rent electric bike, Tazacorte E-bike). Gives 10 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "bavaria-munich": {
@@ -2016,15 +2082,15 @@
    "couple",
    "half"
   ],
-  "bikeRental": 2,
+  "bikeRental": 3,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 37 km easy (green), 22 km intermediate, 2 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "37 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 40 km easy (green), 32 km intermediate, 2 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "40 km of easy (green) trail mapped in the place's area gives 4 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "62 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "Left blank: 4 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "1 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Reiðhjólaverslun og -verkstæði Axels. Gives 2 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "dayLengths": "75 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
+   "liftServedParks": "Left blank: 6 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "2 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Reiðhjólaverslun og -verkstæði Axels, Hike & Bike. Gives 3 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -2082,24 +2148,26 @@
  "nova-scotia": {
   "trailGrades": [
    "green",
-   "intermediate"
+   "intermediate",
+   "black"
   ],
-  "easyFlowTrails": 6,
+  "easyFlowTrails": 8,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
-   "half"
+   "half",
+   "full"
   ],
   "bikeRental": 6,
-  "eBikeRental": 2,
+  "eBikeRental": 4,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 68 km easy (green), 34 km intermediate, 4 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "68 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 204 km easy (green), 85 km intermediate, 11 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "204 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "106 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
-   "liftServedParks": "Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
-   "bikeRental": "7 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Dal/King's Bike Centre, Banks Bikes, Scotia Cycle. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
-   "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (BMG eBikes). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+   "dayLengths": "301 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
+   "liftServedParks": "Left blank: 5 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "8 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Dal/King's Bike Centre, Banks Bikes, Scotia Cycle. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "eBikeRental": "2 rental business(es) whose name or listing says e-bike, electric or pedelec (BMG eBikes, Inverness Adventures E-Bike Rentals). Gives 4 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
  "ghana": {
@@ -2118,25 +2186,26 @@
   "trailGrades": [
    "green",
    "intermediate",
-   "black"
+   "black",
+   "expert"
   ],
-  "easyFlowTrails": 6,
+  "easyFlowTrails": 8,
   "bikepackingRoutes": 0,
   "dayLengths": [
    "couple",
    "half",
-   "full"
+   "full",
+   "multi"
   ],
-  "liftServedParks": 0,
-  "bikeRental": 4,
+  "bikeRental": 6,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 61 km easy (green), 62 km intermediate, 6 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "61 km of easy (green) trail mapped in the place's area gives 6 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 210 km easy (green), 380 km intermediate, 36 km black, 8 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "210 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "131 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.",
-   "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
-   "bikeRental": "4 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Ride Bellerive, Roll Cycles, Cygnet Cycles Bike Hire. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
+   "dayLengths": "635 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
+   "liftServedParks": "Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.",
+   "bikeRental": "9 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Ride Bellerive, Roll Cycles, Ulverstone Bicycles. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
   }
  },
@@ -2210,10 +2279,10 @@
   "bikeRental": 6,
   "eBikeRental": 2,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 384 km easy (green), 436 km intermediate, 180 km black, 28 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "384 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 295 km easy (green), 408 km intermediate, 177 km black, 25 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "295 km of easy (green) trail mapped in the place's area gives 8 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "1 mountain-bike route relation(s) of 150 km or more in the area: MTB Burke Area (184 km) gives 7 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "1028 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
+   "dayLengths": "905 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.",
    "liftServedParks": "3 lift(s) open to bikes (3 tagged on the map; K-1 Express Gondola, Ramshead Express Quad, Snowshed Express Quad). Gives 6 (none 0, 1 lift 4, 2-3 6, 4-6 8, 7-10 9, 11 or more 10; presence-led, owner 28 Oct 2026).",
    "bikeRental": "7 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Porcupine Bikes, Northstar Sports, Vermont Bicycle Shop. Gives 6 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "1 rental business(es) whose name or listing says e-bike, electric or pedelec (Burlington Segways and Electric Bikes). Gives 2 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
@@ -2330,21 +2399,23 @@
   "trailGrades": [
    "green",
    "intermediate",
-   "black"
+   "black",
+   "expert"
   ],
   "easyFlowTrails": 2,
   "bikepackingRoutes": 0,
   "dayLengths": [
-   "couple"
+   "couple",
+   "half"
   ],
   "liftServedParks": 0,
   "bikeRental": 0,
   "eBikeRental": 0,
   "evidence": {
-   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 8 km easy (green), 6 km intermediate, 6 km black, 0 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
-   "easyFlowTrails": "8 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
+   "trailGrades": "Trail grades with at least 5 km mapped: green, intermediate, black, expert. Mapped length by grade within the place's area: 19 km easy (green), 9 km intermediate, 6 km black, 10 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.",
+   "easyFlowTrails": "19 km of easy (green) trail mapped in the place's area gives 2 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.",
    "bikepackingRoutes": "0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 7, 2-3 8, 4-6 9, 7 or more 10; presence-led, owner 28 Oct 2026). Source: OpenStreetMap route=mtb relations.",
-   "dayLengths": "21 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple.",
+   "dayLengths": "44 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half.",
    "liftServedParks": "No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.",
    "bikeRental": "0 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed). Gives 0 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).",
    "eBikeRental": "0 rental business(es) whose name or listing says e-bike, electric or pedelec. Gives 0 (none 0, 1 -> 2, 2-3 -> 4, 4-6 -> 6, 7-10 -> 8, 11 or more -> 10: no place reaches 21, so the top tier was lowered, owner 28 Oct 2026). Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
