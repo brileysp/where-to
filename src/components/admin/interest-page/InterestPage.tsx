@@ -16,6 +16,7 @@ import { ReferenceSitesSection } from './ReferenceSitesSection';
 import { AuthoringSection } from './AuthoringSection';
 import { ChipsSection } from './ChipsSection';
 import { QuestionsSection } from './QuestionsSection';
+import { PlanningCard } from './PlanningCard';
 
 type Tab = 'rules' | 'todo' | 'ideas' | 'data' | 'reviews' | 'authoring' | 'chips';
 const TABS: Tab[] = ['data', 'todo', 'ideas', 'rules', 'reviews', 'authoring', 'chips'];
@@ -130,6 +131,8 @@ export function InterestPage({ data }: { data: InterestPageData }) {
           {counts.na > 0 && <div className="ip-tile"><b>{counts.na}</b><span>N/A</span></div>}
         </div>
       </div>
+
+      <PlanningCard data={data} places={places} />
 
       <Completeness c={data.completeness} openItems={counts.open} go={go} />
 

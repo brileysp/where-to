@@ -23,7 +23,7 @@ const input = z.object({
   source: z.string().trim().max(200),
   priority: z.number().int().min(1).max(3),
   dueOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Use a real date').refine((s) => !Number.isNaN(Date.parse(s)), 'Not a real date').nullable(),
-  repeatEvery: z.enum(['weekly', 'monthly']).nullable(),
+  repeatEvery: z.enum(['weekly', 'monthly', 'quarterly', 'annually']).nullable(),
 });
 export type SiteTodoInput = z.input<typeof input>;
 

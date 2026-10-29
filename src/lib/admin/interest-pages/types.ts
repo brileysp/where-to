@@ -2,6 +2,7 @@ import type { InterestChipDriver, InterestChipStatus, InterestFactValue, Interes
 import type { FactDef } from './config';
 import type { Completeness } from './completeness';
 import type { PlaceType } from './place-types';
+import type { InterestPlanningNotes } from '@/lib/db/schema';
 
 export type PlaceStatus = 'live' | 'staged' | 'none' | 'na';
 
@@ -74,7 +75,7 @@ export interface TodoRow {
   priority: number;
   /** "Check on" date (YYYY-MM-DD), or null. */
   dueOn: string | null;
-  repeatEvery: 'weekly' | 'monthly' | null;
+  repeatEvery: 'weekly' | 'monthly' | 'quarterly' | 'annually' | null;
   createdAt: string;
   doneAt: string | null;
 }
@@ -207,4 +208,6 @@ export interface InterestPageData {
   interestOptions: Array<{ key: string; label: string; icon: string; group: string }>;
   /** Set when the interest is inactive (hidden from travellers and from the admin lists by default); the note says why. */
   inactive: { note: string } | null;
+  /** The four planning scores and their notes (see src/lib/scoring/planning.ts), with the check-on date of the open repeating review. */
+  planning: { seasonalVariance: number | null; evergreen: number | null; stakes: number | null; refreshEffort: number | null; notes: InterestPlanningNotes; updatedAt: string; nextReviewOn: string | null };
 }

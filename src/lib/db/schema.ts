@@ -684,8 +684,32 @@ export const interestMeta = pgTable('interest_meta', {
   audienceTier: text('audience_tier'),
   /** Position in the picker; lower first. Null = the code's own order. */
   sortOrder: integer('sort_order'),
+  // Planning scores (29 Oct 2026), each 1-10, null = not set yet. See src/lib/scoring/planning.ts for what the numbers mean.
+  // seasonalVariance sets how much seasonal-blurb effort the interest gets; evergreen sets the review cadence; stakes is the cost of a
+  // wrong fact; refreshEffort is how much human time one refresh costs. None of them is read by the scoring engine.
+  seasonalVariance: smallint('seasonal_variance'),
+  evergreen: smallint('evergreen'),
+  stakes: smallint('stakes'),
+  refreshEffort: smallint('refresh_effort'),
+  /** The reasons behind the four scores, what goes stale first, and who set and approved each one. */
+  planningNotes: jsonb('planning_notes').$type<InterestPlanningNotes>(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 });
+
+export interface InterestPlanningNotes {
+  seasonalWhy?: string;
+  evergreenWhy?: string;
+  /** What goes stale first, in plain words; becomes the title of the repeating review. */
+  staleFirst?: string;
+  /** What should trigger a check before the next scheduled review. */
+  reviewTrigger?: string;
+  stakesWhy?: string;
+  refreshWhy?: string;
+  /** Who proposed the numbers and when, e.g. "Claude, 29 Oct 2026". */
+  proposedBy?: string;
+  /** Per score: the owner's approval (name, date, where). A score with no entry is proposed, not approved. */
+  approved?: Partial<Record<'seasonalVariance' | 'evergreen' | 'stakes' | 'refreshEffort', { by: string; at: string; via?: string }>>;
+}
 
 /**
  * Site-wide settings the owner can change in the admin without a deploy, one row per group (key 'matching' holds the personalization numbers,
@@ -881,8 +905,8 @@ export const interestTodos = pgTable(
     priority: integer('priority').notNull().default(2),
     // "Check on" date for the To do tab. Open items past it show as overdue. Null = no date.
     dueOn: date('due_on', { mode: 'string' }),
-    // 'weekly' or 'monthly': marking the item done creates the next one on its next date. Null = one-off.
-    repeatEvery: text('repeat_every').$type<'weekly' | 'monthly'>(),
+    // 'weekly', 'monthly', 'quarterly' or 'annually': marking the item done creates the next one on its next date. Null = one-off.
+    repeatEvery: text('repeat_every').$type<'weekly' | 'monthly' | 'quarterly' | 'annually'>(),
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
     doneAt: timestamp('done_at', { withTimezone: true }),

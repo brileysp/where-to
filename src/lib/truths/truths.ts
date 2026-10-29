@@ -10,6 +10,8 @@ import { pickerInterests } from '@/lib/onboarding/interests';
 import { birdCaseProblems, SPECIES_CASE_INTERESTS } from '@/lib/text/species-case';
 import { retiredBirdNames } from '@/lib/text/retired-bird-names';
 import { emphasisIsBalanced } from '@/lib/text/emphasis';
+import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
+import { CADENCE_TODO_SOURCE, PLANNING_KEYS, PLANNING_LABELS, isPlanningScore, reviewCadence } from '@/lib/scoring/planning';
 import type { TruthContext } from './context';
 import { REMOVED_ANSWERS, REMOVED_INTERESTS, UNSELECTED_CHIPS } from './decisions';
 
@@ -335,6 +337,26 @@ export const TRUTHS: Truth[] = [
     const bad: string[] = [];
     for (const [id, rule] of Object.entries(QUESTION_FIT_RULES)) { const [ik, qk] = id.split('.'); const q = ctx.questions.find((x) => x.interestKey === ik && x.questionKey === qk); if (!q?.fitRule) bad.push(`${id}: not saved`); else if (canon(q.fitRule) !== canon(rule)) bad.push(`${id}: differs`); }
     return noneOf(bad, 'rules that differ between code and admin');
+  } },
+  { id: 'A05', area: 'Admin', says: 'Every interest has all four planning scores (seasonal variance, evergreen, stakes, refresh effort), each a whole number from 1 to 10.', check: (ctx) => {
+    const bad: string[] = [];
+    for (const s of VISIBLE_SLIDERS.filter((x) => x.key !== 'roadtrip')) { // Road-Tripping is a way to see a place, not an interest
+      const p = ctx.planning.find((x) => x.key === s.key);
+      for (const k of PLANNING_KEYS) if (!isPlanningScore(p?.[k])) bad.push(`${s.label}: ${PLANNING_LABELS[k].label}`);
+    }
+    return noneOf(bad, 'planning scores missing or out of range');
+  } },
+  { id: 'A06', area: 'Admin', says: 'Every interest reviewed monthly, quarterly or annually (by its Evergreen score) has an open repeating review to-do with the same cadence.', check: (ctx) => {
+    const bad: string[] = [];
+    for (const s of VISIBLE_SLIDERS.filter((x) => x.key !== 'roadtrip')) {
+      const p = ctx.planning.find((x) => x.key === s.key);
+      if (!isPlanningScore(p?.evergreen)) continue;
+      const cadence = reviewCadence(p.evergreen);
+      const open = ctx.todos.filter((t) => t.interestKey === s.key && t.source === CADENCE_TODO_SOURCE && t.status !== 'done');
+      if (open.length !== 1) bad.push(`${s.label}: ${open.length} open review to-dos`);
+      else if (open[0].repeatEvery !== cadence) bad.push(`${s.label}: review repeats ${open[0].repeatEvery ?? 'never'}, cadence is ${cadence}`);
+    }
+    return noneOf(bad, 'interests whose review to-do is missing or on the wrong cadence');
   } },
 ];
 

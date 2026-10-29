@@ -2,10 +2,11 @@ import { eq, desc, inArray, sql } from 'drizzle-orm';
 import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { db } from '../client';
-import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips } from '../schema';
+import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips, interestMeta } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
 import { SLIDERS, VISIBLE_SLIDERS, INACTIVE_NOTES } from '@/lib/scoring/constants';
+import { CADENCE_TODO_SOURCE } from '@/lib/scoring/planning';
 import { INTEREST_ANCHORS } from '@/lib/scoring/anchors';
 import { loadAnchorOverrides } from '@/lib/scoring/anchorOverrides';
 import { isSliderNA } from '@/lib/scoring/destinations';
@@ -234,6 +235,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     db.select().from(interestQuestionChips).where(eq(interestQuestionChips.interestKey, interestKey)),
   ]);
   const completenessMap = await getInterestCompleteness([interestKey], new Map(scored.map((d) => [d.id, d])));
+  const [metaRow] = await db.select().from(interestMeta).where(eq(interestMeta.key, interestKey));
 
   // Staged = a valid generation that was never applied and is newer than the last applied one.
   const lastApplied = new Map<string, number>();
@@ -352,5 +354,14 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     // Inactive interests stay out of the picker, except the one being looked at.
     interestOptions: SLIDERS.filter((s) => !s.hidden || s.key === interestKey).map((s) => ({ key: s.key, label: s.hidden ? `${s.label} (inactive)` : s.label, icon: s.icon, group: s.group })),
     inactive: slider.hidden ? { note: INACTIVE_NOTES[interestKey] ?? '' } : null,
+    planning: {
+      seasonalVariance: metaRow?.seasonalVariance ?? null,
+      evergreen: metaRow?.evergreen ?? null,
+      stakes: metaRow?.stakes ?? null,
+      refreshEffort: metaRow?.refreshEffort ?? null,
+      notes: metaRow?.planningNotes ?? {},
+      updatedAt: (metaRow?.updatedAt ?? new Date()).toISOString(),
+      nextReviewOn: todoRows.filter((t) => t.source === CADENCE_TODO_SOURCE && t.status !== 'done' && t.dueOn).map((t) => t.dueOn as string).sort()[0] ?? null,
+    },
   };
 }

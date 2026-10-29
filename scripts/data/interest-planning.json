@@ -1,0 +1,613 @@
+{
+ "wildlifeViewing": {
+  "seasonalVariance": 6,
+  "evergreen": 6,
+  "stakes": 4,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Migrations, calving and dry-season waterhole viewing, but many places have wildlife all year",
+   "staleFirst": "Park rules, operators and fees",
+   "reviewTrigger": "A park closes or bans an activity",
+   "stakesWhy": "Dangerous-animal advice and park rules matter, but most trips are low risk; a wrong guess mostly wastes a day.",
+   "refreshWhy": "Gemini-written overviews and 12 monthly blurbs for 200 places, with every risky claim fact-checked (333 checked claims). A refresh means regenerating and re-checking."
+  }
+ },
+ "birding": {
+  "seasonalVariance": 7,
+  "evergreen": 7,
+  "stakes": 3,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Migration and breeding peaks",
+   "staleFirst": "Species names (eBird renames each autumn) and hotspot access",
+   "reviewTrigger": "The yearly eBird taxonomy update",
+   "stakesWhy": "A wrong hotspot or season wastes a trip but rarely harms anyone; the one rule column is \"Guide needed?\".",
+   "refreshWhy": "200 places with bird lists and a name pass against eBird. A refresh means regenerating text and re-checking about 1,100 claims."
+  }
+ },
+ "safari": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 7,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Dry season concentrates game, wet season closes roads, migrations have dates",
+   "staleFirst": "Park fees, concession and camp changes, road closures",
+   "reviewTrigger": "New fee rules or a lodge closing",
+   "stakesWhy": "Dangerous wildlife, park fees and lodge bookings: a wrong park or season costs thousands, and big-game advice is a safety matter.",
+   "refreshWhy": "17 places with Gemini text and fact-check plus a hand-built great-herds evidence file."
+  }
+ },
+ "whaleWatching": {
+  "seasonalVariance": 9,
+  "evergreen": 6,
+  "stakes": 4,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Each species is present only some months",
+   "staleFirst": "Operators, vessel rules, shifting season dates",
+   "reviewTrigger": "New whale-watching regulations",
+   "stakesWhy": "Seasickness and operator rules; a wrong season wastes an expensive trip but is safe.",
+   "refreshWhy": "123 places with Gemini text, a source check against whale-watching sites, and stored N/A reasons."
+  }
+ },
+ "scenicLandscapes": {
+  "seasonalVariance": 6,
+  "evergreen": 9,
+  "stakes": 3,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Snow, foliage and haze change views; many places stay scenic all year",
+   "staleFirst": "Viewpoint and road access (closures belong to advisories)",
+   "reviewTrigger": "A landmark collapses or is closed for good",
+   "stakesWhy": "A wrong view or a closed road wastes a day; low harm.",
+   "refreshWhy": "200 places of judged 0 to 10 ratings with named anchors; each needs re-judging by a person."
+  }
+ },
+ "campingBackcountry": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 7,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Snow, fire season and weather decide whether camping is possible",
+   "staleFirst": "Permit and reservation systems, fire bans, campground closures",
+   "reviewTrigger": "A new permit lottery",
+   "stakesWhy": "Carries the Wild camping law and Dangerous wildlife columns: a wrong law means a fine or being moved on, and wrong bear or big-game advice is a safety risk.",
+   "refreshWhy": "Counts re-pull by script (OpenStreetMap, Overture). Wild-camping law and dangerous wildlife were researched by hand for 75 and 23 places."
+  }
+ },
+ "stargazing": {
+  "seasonalVariance": 5,
+  "evergreen": 8,
+  "stakes": 2,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Milky Way season and clear-sky months, though dark nights exist all year",
+   "staleFirst": "Light pollution creep and dark-sky designations",
+   "reviewTrigger": "A new dark-sky reserve",
+   "stakesWhy": "A cloudy or bright night is the worst outcome.",
+   "refreshWhy": "Dark-sky certification and darkness class can be looked up; clear-sky and photography ratings are judged for 200 places."
+  }
+ },
+ "auroraChasing": {
+  "seasonalVariance": 10,
+  "evergreen": 6,
+  "stakes": 5,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Needs long dark nights, so only a few months at each place",
+   "staleFirst": "Solar cycle outlook, tour operators, light pollution",
+   "reviewTrigger": "Solar maximum announcements",
+   "stakesWhy": "Tours are expensive and the window is short, so a wrong season or place wastes a once-in-a-trip chance; no safety risk beyond cold.",
+   "refreshWhy": "22 places with seeded facts and judged strength; the solar-cycle outlook is re-assessed by hand."
+  }
+ },
+ "geologyVolcanoes": {
+  "seasonalVariance": 6,
+  "evergreen": 9,
+  "stakes": 5,
+  "refreshEffort": 3,
+  "notes": {
+   "seasonalWhy": "Snow closes roads and trails; eruptions are not seasonal",
+   "staleFirst": "Volcano activity and access (alerts belong to advisories)",
+   "reviewTrigger": "An eruption that changes a landscape",
+   "stakesWhy": "Active volcanoes, geothermal areas and caves can hurt people. Alerts belong to advisories, but wrong access advice still matters.",
+   "refreshWhy": "Wikidata, OpenStreetMap and Overture scripts rebuild all eight parts; only the UNESCO and geopark lists need a yearly look."
+  }
+ },
+ "wildflowerBlooms": {
+  "seasonalVariance": 10,
+  "evergreen": 8,
+  "stakes": 3,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "A bloom or colour peak lasts weeks",
+   "staleFirst": "Peak timing, which drifts with climate",
+   "reviewTrigger": "An unusual bloom year",
+   "stakesWhy": "Missing a bloom wastes a trip but harms no one.",
+   "refreshWhy": "58 places with bloom and colour ratings from sources by hand plus Gemini text."
+  }
+ },
+ "hiking": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 7,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Snow-free windows, hut opening dates, heat and monsoon",
+   "staleFirst": "Trail closures, hut and permit rules",
+   "reviewTrigger": "A permit system starts",
+   "stakesWhy": "Altitude, booking-ahead and permit columns: a wrong permit rule can mean being turned away, and a wrong difficulty can injure.",
+   "refreshWhy": "200 places, 16 columns and the biggest fact-check load (2,433 claims); permits and trail rules are by hand."
+  }
+ },
+ "mountaineering": {
+  "seasonalVariance": 9,
+  "evergreen": 5,
+  "stakes": 9,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Climbing seasons are short and weather-windowed",
+   "staleFirst": "Permit regimes and fees, route changes, glacier retreat",
+   "reviewTrigger": "New fees or a closed peak",
+   "stakesWhy": "Climbing levels, guide rules, permits and planning-ahead: bad advice can cost a life or an expedition fee.",
+   "refreshWhy": "73 places with routes, permits and levels researched by hand."
+  }
+ },
+ "cyclingRoad": {
+  "seasonalVariance": 8,
+  "evergreen": 7,
+  "stakes": 4,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Heat, snow and wind; mountain passes close",
+   "staleFirst": "Routes, events and pass closures",
+   "reviewTrigger": "A major route is closed or reopened",
+   "stakesWhy": "Ride levels and road safety; moderate.",
+   "refreshWhy": "196 places with judged ratings and iconic climbs counted by hand."
+  }
+ },
+ "mountainBiking": {
+  "seasonalVariance": 9,
+  "evergreen": 6,
+  "stakes": 5,
+  "refreshEffort": 4,
+  "notes": {
+   "seasonalWhy": "Snow cover, and bike-park lifts run for one summer season",
+   "staleFirst": "Trail closures and lift operations",
+   "reviewTrigger": "A bike park opens or closes",
+   "stakesWhy": "Trail grades and lift access; a wrong grade can mean injury.",
+   "refreshWhy": "OpenStreetMap trails, lifts and rentals rebuild by script; lift-served parks were checked by hand for 8 places."
+  }
+ },
+ "skiingSnowboarding": {
+  "seasonalVariance": 10,
+  "evergreen": 5,
+  "stakes": 6,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "No snow, no skiing",
+   "staleFirst": "Resort ownership, lifts and pass networks change every season",
+   "reviewTrigger": "A resort closes or merges",
+   "stakesWhy": "Resorts, passes and snow reliability are expensive, and terrain level and avalanche conditions matter.",
+   "refreshWhy": "60 places with ski-area facts and judged ratings, partly from resort lists."
+  }
+ },
+ "surfing": {
+  "seasonalVariance": 8,
+  "evergreen": 8,
+  "stakes": 7,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Swell seasons and winds",
+   "staleFirst": "Breaks are stable; schools and access change slowly",
+   "reviewTrigger": "A break is closed or built over",
+   "stakesWhy": "Main hazards and permits-or-limits columns: wrong break level or hazard advice can injure.",
+   "refreshWhy": "102 places. Wave records are scripted, but breaks, hazards and permits are hand-researched, with Gemini text and a source check."
+  }
+ },
+ "diving": {
+  "seasonalVariance": 6,
+  "evergreen": 6,
+  "stakes": 8,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Visibility, water temperature and marine-life seasons; many places dive all year",
+   "staleFirst": "Operators, marine-park rules, wreck access",
+   "reviewTrigger": "A marine park changes its rules",
+   "stakesWhy": "Certification needed and Current columns: wrong depth, current or certification advice is a safety issue.",
+   "refreshWhy": "114 places of Gemini text, wreck and animal evidence, and source checks."
+  }
+ },
+ "windSports": {
+  "seasonalVariance": 8,
+  "evergreen": 6,
+  "stakes": 6,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Wind seasons",
+   "staleFirst": "Spot rules and schools",
+   "reviewTrigger": "A spot is banned or restricted",
+   "stakesWhy": "Levels served and rules and restrictions: a wrong level or a banned spot.",
+   "refreshWhy": "41 places. Wind records re-pull by script; spots, rules and schools are by hand."
+  }
+ },
+ "sailing": {
+  "seasonalVariance": 7,
+  "evergreen": 6,
+  "stakes": 6,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Wind and storm seasons",
+   "staleFirst": "Charter bases and harbour rules",
+   "reviewTrigger": "A charter company leaves a base",
+   "stakesWhy": "Charter licence rules and sea conditions; moderate to high.",
+   "refreshWhy": "OpenStreetMap marinas re-pull by script; regattas and expedition operators were researched by hand, bareboat bases read from two charter sites."
+  }
+ },
+ "kayakingRafting": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 8,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Snowmelt and rainfall set river flows",
+   "staleFirst": "Outfitters, river permits, closures",
+   "reviewTrigger": "A river permit changes",
+   "stakesWhy": "Whitewater classes, skill levels served and guide requirements: a wrong class puts beginners in dangerous water.",
+   "refreshWhy": "Map counts rebuild by script; whitewater rivers, classes and multi-day trips were searched by hand for 67 places."
+  }
+ },
+ "adventureSports": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 7,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Weather limits most activities",
+   "staleFirst": "Operators and safety rules (an accident can change rules fast)",
+   "reviewTrigger": "A ban after an accident",
+   "stakesWhy": "Effort levels and private trips: operators and safety rules for bungee, paragliding and the like.",
+   "refreshWhy": "200 places of judged ratings across seven columns."
+  }
+ },
+ "golf": {
+  "seasonalVariance": 8,
+  "evergreen": 6,
+  "stakes": 2,
+  "refreshEffort": 3,
+  "notes": {
+   "seasonalWhy": "Closed or unplayable through winter in much of the world",
+   "staleFirst": "Courses opening and closing, fees",
+   "reviewTrigger": "A famous course closes or opens to visitors",
+   "stakesWhy": "A wrong tee-time rule wastes an afternoon; no risk.",
+   "refreshWhy": "Courses, links, scenic and bucket-list venues rebuild by script; only tee-time rules (6 places) are by hand."
+  }
+ },
+ "fishing": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 6,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Runs and open seasons",
+   "staleFirst": "Permits, catch-and-release and guide rules, closed seasons",
+   "reviewTrigger": "A rule change in a major fishery",
+   "stakesWhy": "Catch-and-release and guide rules: a wrong rule means fines or a banned fishery, while the fishing itself is low risk.",
+   "refreshWhy": "GBIF species and Overture businesses rebuild by script; catch-and-release and guide rules were researched by hand for 26 and 10 places."
+  }
+ },
+ "horsebackRiding": {
+  "seasonalVariance": 8,
+  "evergreen": 5,
+  "stakes": 5,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Weather and ground conditions",
+   "staleFirst": "Operators",
+   "reviewTrigger": "A major ranch or outfitter closes",
+   "stakesWhy": "Rider levels served; a mismatch can injure.",
+   "refreshWhy": "34 places with hand evidence files for operators and horse culture."
+  }
+ },
+ "trailRunning": {
+  "seasonalVariance": 8,
+  "evergreen": 7,
+  "stakes": 5,
+  "refreshEffort": 3,
+  "notes": {
+   "seasonalWhy": "Snow-free windows and heat",
+   "staleFirst": "Race dates, which are set a year ahead",
+   "reviewTrigger": "A famous race is cancelled",
+   "stakesWhy": "Remote terrain and relief; a wrong difficulty can strand someone.",
+   "refreshWhy": "OpenStreetMap trails and huts plus elevation rebuild by script; race lists come from Wikipedia."
+  }
+ },
+ "historyArchaeology": {
+  "seasonalVariance": 3,
+  "evergreen": 8,
+  "stakes": 3,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Mostly open all year; some sites close or flood seasonally",
+   "staleFirst": "Closures for restoration, new excavations opening",
+   "reviewTrigger": "A site closes or reopens",
+   "stakesWhy": "Closed or changed sites waste a visit; low harm.",
+   "refreshWhy": "89 places of judged ratings; UNESCO lists help, but each place is assessed by hand."
+  }
+ },
+ "museumsArt": {
+  "seasonalVariance": 2,
+  "evergreen": 7,
+  "stakes": 2,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Indoors; the exceptions are places whose museums close for winter",
+   "staleFirst": "Renovation closures and major reopenings",
+   "reviewTrigger": "A flagship museum closes for years",
+   "stakesWhy": "A closed museum wastes an hour.",
+   "refreshWhy": "168 places by 9 judged columns, including museum hours and days."
+  }
+ },
+ "architecture": {
+  "seasonalVariance": 2,
+  "evergreen": 8,
+  "stakes": 2,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Buildings do not change with the seasons",
+   "staleFirst": "New landmarks, closures for restoration",
+   "reviewTrigger": "A landmark opens or is lost",
+   "stakesWhy": "A lost landmark wastes a detour.",
+   "refreshWhy": "165 places by 7 judged columns."
+  }
+ },
+ "cityExploration": {
+  "seasonalVariance": 3,
+  "evergreen": 6,
+  "stakes": 3,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Weather matters, the scene does not close",
+   "staleFirst": "Neighbourhood scene, transport changes",
+   "reviewTrigger": "A major event or policy changes a city",
+   "stakesWhy": "Neighbourhood advice that is out of date wastes time, with some safety overlap.",
+   "refreshWhy": "119 places of judged ratings."
+  }
+ },
+ "indigenousCultures": {
+  "seasonalVariance": 4,
+  "evergreen": 5,
+  "stakes": 7,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Ceremony and harvest calendars; some communities host seasonally",
+   "staleFirst": "Community-led offerings and visitor rules",
+   "reviewTrigger": "A community changes who may visit",
+   "stakesWhy": "Visiting a community without consent, or paying a non-community operator, causes cultural harm and sends money to the wrong people. The Indigenous-led tick must be right.",
+   "refreshWhy": "61 places researched by hand; each community-led claim needs its own source."
+  }
+ },
+ "religiousSites": {
+  "seasonalVariance": 3,
+  "evergreen": 8,
+  "stakes": 5,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Festivals and pilgrimage seasons",
+   "staleFirst": "Access and dress rules, restoration closures",
+   "reviewTrigger": "A site restricts visitors",
+   "stakesWhy": "Site rules such as dress, behaviour and access: wrong advice can offend or mean being refused entry.",
+   "refreshWhy": "88 places judged, with site rules researched by hand."
+  }
+ },
+ "festivals": {
+  "seasonalVariance": 7,
+  "evergreen": 3,
+  "stakes": 6,
+  "refreshEffort": 9,
+  "notes": {
+   "seasonalWhy": "Events are dated",
+   "staleFirst": "Dates, lineups and cancellations",
+   "reviewTrigger": "A festival is cancelled or moved",
+   "stakesWhy": "Dates drive whole trips: a wrong date wastes flights and hotels.",
+   "refreshWhy": "176 places where dates, headliners and booking-ahead change every year and are checked by hand."
+  }
+ },
+ "traditionalCrafts": {
+  "seasonalVariance": 3,
+  "evergreen": 8,
+  "stakes": 3,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Workshops mostly run all year",
+   "staleFirst": "Workshops and markets",
+   "reviewTrigger": "A craft village closes to visitors",
+   "stakesWhy": "A closed workshop wastes a trip to a village.",
+   "refreshWhy": "40 places researched by hand."
+  }
+ },
+ "streetFood": {
+  "seasonalVariance": 2,
+  "evergreen": 5,
+  "stakes": 5,
+  "refreshEffort": 9,
+  "notes": {
+   "seasonalWhy": "Markets run all year",
+   "staleFirst": "Vendors and market days",
+   "reviewTrigger": "A market is moved or closed",
+   "stakesWhy": "Carries an Illness risk column: a wrong call can make someone ill.",
+   "refreshWhy": "198 places by 9 columns; vendors and markets change, so it is by hand."
+  }
+ },
+ "fineDining": {
+  "seasonalVariance": 2,
+  "evergreen": 3,
+  "stakes": 4,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Exceptions are resort towns where restaurants close for a season",
+   "staleFirst": "Restaurants opening and closing; the star lists change every year",
+   "reviewTrigger": "A new guide edition",
+   "stakesWhy": "Booking-ahead and price advice: a wrong answer loses a table or blows a budget; no safety risk.",
+   "refreshWhy": "199 places. Michelin counts are re-read from the guide; the other columns are judged, and price and booking are by hand."
+  }
+ },
+ "wineSpirits": {
+  "seasonalVariance": 4,
+  "evergreen": 6,
+  "stakes": 3,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Harvest and tasting seasons",
+   "staleFirst": "Producers opening and closing, tasting-room rules",
+   "reviewTrigger": "A famous producer closes to visitors",
+   "stakesWhy": "A wrong producer or opening hours wastes an afternoon.",
+   "refreshWhy": "Overture and Wikidata rebuild the five ratings; celebrated wines and spirits were read from Wikipedia for 12 to 26 places."
+  }
+ },
+ "coffeeTea": {
+  "seasonalVariance": 2,
+  "evergreen": 4,
+  "stakes": 2,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Cafés run all year",
+   "staleFirst": "Cafés opening and closing",
+   "reviewTrigger": "A scene shifts neighbourhood",
+   "stakesWhy": "A closed café wastes ten minutes.",
+   "refreshWhy": "117 places judged."
+  }
+ },
+ "beachesSwimming": {
+  "seasonalVariance": 7,
+  "evergreen": 9,
+  "stakes": 6,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Sea temperature and weather decide the swimming months",
+   "staleFirst": "Water quality, erosion and jellyfish or sargassum years",
+   "reviewTrigger": "A beach is closed or lost",
+   "stakesWhy": "Swim-hazard months, water clarity and calm-water columns: wrong calm-water advice can put swimmers at risk from rips and jellyfish.",
+   "refreshWhy": "125 places by 13 columns of judged ratings and hazard months, with Gemini text for 105."
+  }
+ },
+ "sunbathing": {
+  "seasonalVariance": 8,
+  "evergreen": 9,
+  "stakes": 3,
+  "refreshEffort": 5,
+  "notes": {
+   "seasonalWhy": "Sun and warmth",
+   "staleFirst": "Little; beach access and fees",
+   "reviewTrigger": "A beach is closed",
+   "stakesWhy": "Sun exposure is the only risk.",
+   "refreshWhy": "199 places, six columns, judgement plus climate numbers."
+  }
+ },
+ "luxuryHotels": {
+  "seasonalVariance": 3,
+  "evergreen": 3,
+  "stakes": 5,
+  "refreshEffort": 9,
+  "notes": {
+   "seasonalWhy": "Rates move with season; few hotels shut, apart from seasonal lodges",
+   "staleFirst": "Hotels opening, closing and changing brand",
+   "reviewTrigger": "A major hotel opens or closes",
+   "stakesWhy": "High-ticket bookings: a wrong hotel claim costs thousands; no safety risk.",
+   "refreshWhy": "200 places; hotels open and close, and there is no free list to re-pull."
+  }
+ },
+ "allInclusive": {
+  "seasonalVariance": 3,
+  "evergreen": 4,
+  "stakes": 5,
+  "refreshEffort": 7,
+  "notes": {
+   "seasonalWhy": "Resorts mostly run all year",
+   "staleFirst": "Resorts opening, closing and changing brand",
+   "reviewTrigger": "A brand exits a destination",
+   "stakesWhy": "Large prepaid packages: wrong inclusions cost real money.",
+   "refreshWhy": "24 places. Resort counts were from memory, and the judged columns need the chains' own pages."
+  }
+ },
+ "spaWellness": {
+  "seasonalVariance": 3,
+  "evergreen": 5,
+  "stakes": 3,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Indoors and mostly all year",
+   "staleFirst": "Spas opening and closing",
+   "reviewTrigger": "A flagship spa closes",
+   "stakesWhy": "A closed spa wastes a booking.",
+   "refreshWhy": "199 places judged."
+  }
+ },
+ "hotSprings": {
+  "seasonalVariance": 5,
+  "evergreen": 6,
+  "stakes": 5,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Best in cold months, open all year",
+   "staleFirst": "Facilities, fees and closures",
+   "reviewTrigger": "A facility closes or a spring changes",
+   "stakesWhy": "Some springs are scalding or closed, and fees vary; moderate.",
+   "refreshWhy": "27 places with seeded facts and 11 columns, Gemini text for 27."
+  }
+ },
+ "yogaRetreats": {
+  "seasonalVariance": 3,
+  "evergreen": 5,
+  "stakes": 5,
+  "refreshEffort": 6,
+  "notes": {
+   "seasonalWhy": "Retreat calendars cluster in some months",
+   "staleFirst": "Retreat centres opening and closing",
+   "reviewTrigger": "A major centre closes",
+   "stakesWhy": "Deposits and week-long commitments, and a practice-level mismatch.",
+   "refreshWhy": "20 places researched by hand from retreat directories."
+  }
+ },
+ "themeParks": {
+  "seasonalVariance": 5,
+  "evergreen": 4,
+  "stakes": 4,
+  "refreshEffort": 3,
+  "notes": {
+   "seasonalWhy": "Seasonal operation and weather",
+   "staleFirst": "New rides, closures, ticket rules",
+   "reviewTrigger": "A park opens or closes",
+   "stakesWhy": "Ticket prices and ride closures; low safety.",
+   "refreshWhy": "20 places whose ratings come from stated formulas on RCDB, the TEA water-park list and Wikidata zoo visitors."
+  }
+ },
+ "nightlife": {
+  "seasonalVariance": 3,
+  "evergreen": 3,
+  "stakes": 4,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Resort-town exceptions",
+   "staleFirst": "Venues opening and closing",
+   "reviewTrigger": "A scene collapses or opens up",
+   "stakesWhy": "District safety and scams; moderate.",
+   "refreshWhy": "172 places judged."
+  }
+ },
+ "shopping": {
+  "seasonalVariance": 2,
+  "evergreen": 4,
+  "stakes": 2,
+  "refreshEffort": 8,
+  "notes": {
+   "seasonalWhy": "Markets and malls run all year; sales seasons are a small swing",
+   "staleFirst": "Stores and markets, tax-free rules",
+   "reviewTrigger": "A tax-refund rule change",
+   "stakesWhy": "A closed shop or tax rule costs a little money.",
+   "refreshWhy": "189 places judged."
+  }
+ }
+}

@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { NaToggle } from '../NaToggle';
 import { OverviewCell, MonthlyCell, StagedButtons } from './InterestTextCells';
 import { PLACE_TYPES, type PlaceType } from '@/lib/admin/interest-pages/place-types';
+import { placeSwingFlags } from '@/lib/scoring/planning';
 
 const STATUS_CHIP: Record<PlaceStatus, { label: string; tone: string }> = {
   live: { label: 'Live', tone: 'good' },
@@ -38,6 +39,7 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
     return m;
   }, [reviews]);
 
+  const swingFlags = useMemo(() => placeSwingFlags(places), [places]);
   const rows = useMemo(() => places.filter((p) => (!status || (status === 'active' ? p.status !== 'na' : p.status === status)) && (!placeType || p.placeType === placeType)), [places, status, placeType]);
 
   const columns: GridColumn<InterestPlaceRow>[] = [
@@ -45,6 +47,23 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
     { key: 'region', label: 'Region', sortable: true, sortValue: (p) => p.region, render: (p) => <div className="cell-inner ip-muted">{p.region}</div> },
     { key: 'peak', label: 'Peak', sortable: true, align: 'right', sortValue: (p) => peakOf(p), render: (p) => <div className="cell-inner ip-mono" style={{ justifyContent: 'flex-end', fontWeight: 700 }}>{p.status === 'na' ? '—' : peakOf(p).toFixed(1)}</div> },
     { key: 'season', label: 'Season', render: (p) => <div className="cell-inner">{p.status === 'na' ? null : <Spark monthly={p.monthly} />}</div> },
+    {
+      key: 'swing',
+      label: 'Swing',
+      sortable: true,
+      align: 'right',
+      sortValue: (p) => swingFlags.get(p.id)?.swing ?? -1,
+      render: (p) => {
+        const f = swingFlags.get(p.id);
+        if (!f) return <div className="cell-inner ip-faint" style={{ justifyContent: 'flex-end' }}>—</div>;
+        return (
+          <div className="cell-inner ip-mono" style={{ justifyContent: 'flex-end', gap: 6 }} title={`Best month minus worst month: ${f.swing.toFixed(1)} points. The interest's usual swing is ${f.norm.toFixed(1)}.`}>
+            {f.swing.toFixed(1)}
+            {f.exception && <span className="ip-chip warn">{f.diff > 0 ? 'more seasonal' : 'flatter'}</span>}
+          </div>
+        );
+      },
+    },
     {
       key: 'status',
       label: 'Status',
@@ -134,7 +153,7 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
     sortValue: (p) => p.naReason?.reason ?? '',
     render: (p) => <div className="cell-inner ip-nareason-cell">{p.naReason?.reason ?? <span className="ip-faint">No reason recorded</span>}</div>,
   };
-  const shownColumns = status === 'na' ? [columns[0], columns[1], naReasonColumn, ...columns.slice(4)] : columns;
+  const shownColumns = status === 'na' ? [columns[0], columns[1], naReasonColumn, ...columns.slice(5)] : columns;
 
   const groupsPresent = [...new Set(defs.map((d) => d.group))];
 

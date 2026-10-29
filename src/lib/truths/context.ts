@@ -60,6 +60,18 @@ export interface TruthTodo {
   id: string;
   status: string;
   doneAt: Date | string | null;
+  interestKey?: string;
+  source?: string;
+  repeatEvery?: string | null;
+}
+
+/** One interest's planning scores (interest_meta). */
+export interface TruthPlanning {
+  key: string;
+  seasonalVariance: number | null;
+  evergreen: number | null;
+  stakes: number | null;
+  refreshEffort: number | null;
 }
 
 export interface TruthContext {
@@ -69,8 +81,9 @@ export interface TruthContext {
   facts: TruthFactRow[];
   places: TruthPlace[];
   todos: TruthTodo[];
+  planning: TruthPlanning[];
   /** The matching numbers saved in the admin (only what was changed). */
   matchOverride: unknown;
 }
 
-export const emptyContext = (): TruthContext => ({ chips: [], questions: [], links: [], facts: [], places: [], todos: [], matchOverride: null });
+export const emptyContext = (): TruthContext => ({ chips: [], questions: [], links: [], facts: [], places: [], todos: [], planning: [], matchOverride: null });

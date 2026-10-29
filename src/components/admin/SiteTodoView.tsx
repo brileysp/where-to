@@ -10,7 +10,7 @@ import '@/components/admin/interest-page/interest-page.css';
 
 const STATUS: Record<InterestTodoStatus, string> = { needs_you: 'Needs you', ready_for_claude: 'Ready for Claude', waiting: 'Waiting', idea: 'Idea', done: 'Done' };
 const PRIORITY: Record<number, string> = { 1: 'High', 2: 'Normal', 3: 'Low' };
-const REPEAT_LABEL: Record<TodoRepeat, string> = { weekly: 'Every week', monthly: 'Every month' };
+const REPEAT_LABEL: Record<TodoRepeat, string> = { weekly: 'Every week', monthly: 'Every month', quarterly: 'Every quarter', annually: 'Every year' };
 
 type Chip = 'all' | 'site' | 'due';
 type Interest = { key: string; label: string; /** Hidden from travellers and from the admin lists by default. */ inactive?: boolean };
@@ -113,7 +113,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
           <label>Status<select value={form.draft.status} onChange={(e) => set({ status: e.target.value as InterestTodoStatus })}>{INTEREST_TODO_STATUSES.map((s) => <option key={s} value={s}>{STATUS[s]}</option>)}</select></label>
           <label>Priority<select value={form.draft.priority} onChange={(e) => set({ priority: Number(e.target.value) })}>{[1, 2, 3].map((n) => <option key={n} value={n}>{PRIORITY[n]}</option>)}</select></label>
           <label>Check on<input type="date" value={form.draft.dueOn} onChange={(e) => set({ dueOn: e.target.value })} /></label>
-          <label>Repeat<select value={form.draft.repeatEvery} onChange={(e) => set({ repeatEvery: e.target.value as '' | TodoRepeat })}><option value="">Never</option>{(['weekly', 'monthly'] as TodoRepeat[]).map((r) => <option key={r} value={r}>{REPEAT_LABEL[r]}</option>)}</select></label>
+          <label>Repeat<select value={form.draft.repeatEvery} onChange={(e) => set({ repeatEvery: e.target.value as '' | TodoRepeat })}><option value="">Never</option>{(['weekly', 'monthly', 'quarterly', 'annually'] as TodoRepeat[]).map((r) => <option key={r} value={r}>{REPEAT_LABEL[r]}</option>)}</select></label>
           <label className="full">Where it came from<input value={form.draft.source} onChange={(e) => set({ source: e.target.value })} maxLength={200} placeholder="e.g. Usage page, 14 Oct 2026" /></label>
           <div className="btns full"><button className="btn btn-primary" disabled={busy || !form.draft.title.trim()} onClick={save}>{form.id ? 'Save changes' : 'Save item'}</button><button className="btn" onClick={() => setForm(null)}>Cancel</button></div>
         </div>
@@ -136,7 +136,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
                     <b>{t.title}</b>
                     {t.placeId && <span className="ip-chip info" style={{ marginLeft: 6 }}>{placeNames[t.placeId] ?? t.placeId}{t.closeOnApply ? ' · auto-close' : ''}</span>}
                     {t.detail && <div className="ip-muted">{t.detail}</div>}
-                    {t.repeatEvery && isOpen(t) && <div className="ip-faint">Repeats {t.repeatEvery === 'weekly' ? 'every week' : 'every month'}</div>}
+                    {t.repeatEvery && isOpen(t) && <div className="ip-faint">Repeats {REPEAT_LABEL[t.repeatEvery].toLowerCase()}</div>}
                   </td>
                   <td className="ip-mono" style={{ whiteSpace: 'nowrap' }}>
                     {t.dueOn ? <>{t.dueOn}{info && <div style={{ fontSize: 11.5, fontWeight: 600, color: info.tone === 'over' ? 'var(--bad)' : info.tone === 'soon' ? 'var(--warn)' : 'var(--text-faint)' }}>{info.text}</div>}</> : <span className="ip-faint">none</span>}

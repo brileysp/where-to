@@ -6,6 +6,9 @@ import { AdminDataGrid, type GridColumn } from './AdminDataGrid';
 import { InlineTextCell, InlineOptionalTextCell, InlineNumberCell, LabeledSelectCell, TriStateCell } from './cells';
 import { useUpdatedAtSync } from './useUpdatedAtSync';
 import { SLIDER_GROUPS, INACTIVE_NOTES } from '@/lib/scoring/constants';
+import { PlanningScoreCell } from './PlanningCells';
+import { PLANNING_LABELS, type PlanningKey } from '@/lib/scoring/planning';
+import { daysUntil, todayIso } from '@/lib/admin/todo-dates';
 
 export interface InterestRow {
   key: string;
@@ -38,6 +41,13 @@ export interface InterestRow {
   completeness: number;
   /** Most recent Gemini authoring pass: finished date (ISO) or null while in progress; undefined when none recorded. */
   lastPass?: { finishedAt: string | null; label: string };
+  /** Planning scores, 1 to 10; null = not set yet. */
+  seasonalVariance: number | null;
+  evergreen: number | null;
+  stakes: number | null;
+  refreshEffort: number | null;
+  /** The open repeating review to-do made from this interest's cadence: its check-on date. Null when there is none. */
+  nextReviewOn: string | null;
 }
 
 const bandColor = (n: number) => (n < 50 ? 'var(--bad, #a8452a)' : n < 80 ? 'var(--warn, #a0731a)' : 'var(--good, #2b7d4f)');
@@ -154,6 +164,29 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
           width={150}
         />
       ),
+    },
+    ...(['seasonalVariance', 'evergreen', 'stakes', 'refreshEffort'] as PlanningKey[]).map((k): GridColumn<InterestRow> => ({
+      key: k,
+      label: PLANNING_LABELS[k].label,
+      sortable: true,
+      sortValue: (r) => r[k] ?? -1,
+      render: (r) => <PlanningScoreCell entityKey={r.key} entityLabel={r.label} loadedUpdatedAt={r.updatedAt} field={k} value={r[k]} setLocal={(v) => patchRow(r.key, { [k]: v } as Partial<InterestRow>)} />,
+    })),
+    {
+      key: 'nextReview',
+      label: 'Next review',
+      sortable: true,
+      sortValue: (r) => r.nextReviewOn ?? '9999',
+      render: (r) => {
+        if (!r.nextReviewOn) return <div className="cell-inner" style={{ color: 'var(--text-faint)', fontSize: 12 }}>no review scheduled</div>;
+        const d = daysUntil(r.nextReviewOn, todayIso());
+        return (
+          <div className="cell-inner" style={{ fontSize: 12, gap: 6 }}>
+            {new Date(`${r.nextReviewOn}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}
+            {d < 0 && <span style={{ color: 'var(--bad, #a8452a)', fontWeight: 600 }}>overdue</span>}
+          </div>
+        );
+      },
     },
     {
       key: 'order',

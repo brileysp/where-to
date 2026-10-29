@@ -4,9 +4,10 @@ import { SLIDERS } from '@/lib/scoring/constants';
 import { builtInSlider } from '@/lib/scoring/overrides';
 import { shortInterestLabel } from '@/lib/scoring/shortName';
 import { InterestsGrid, type InterestRow } from '@/components/admin/InterestsGrid';
+import { getNextReviewByInterest } from '@/lib/db/queries/admin-interests';
 
 export default async function AdminInterestsPage() {
-  const [metaRows, coverage, completeness, lastPasses] = await Promise.all([listInterestMetaForAdmin(), getInterestCoverage(), getAllInterestCompleteness(), getLastPassFinishedByInterest()]);
+  const [metaRows, coverage, completeness, lastPasses, nextReviews] = await Promise.all([listInterestMetaForAdmin(), getInterestCoverage(), getAllInterestCompleteness(), getLastPassFinishedByInterest(), getNextReviewByInterest()]);
   const metaByKey = new Map(metaRows.map((r) => [r.key, r]));
 
   // Every interest, hidden ones included, so a hidden interest can be shown again from here.
@@ -34,6 +35,11 @@ export default async function AdminInterestsPage() {
       total: coverage[s.key]?.total ?? 0,
       completeness: completeness[s.key]?.score ?? 0,
       lastPass: lastPasses[s.key],
+      seasonalVariance: meta?.seasonalVariance ?? null,
+      evergreen: meta?.evergreen ?? null,
+      stakes: meta?.stakes ?? null,
+      refreshEffort: meta?.refreshEffort ?? null,
+      nextReviewOn: nextReviews[s.key] ?? null,
     };
   });
 
