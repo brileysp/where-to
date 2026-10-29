@@ -39,7 +39,7 @@ export const SLIDERS: Slider[] = [
   // built on the aurora; it has outgrown the 0.15 bucket it shared with
   // birding and trail running.
   { key: 'auroraChasing', label: 'Northern Lights / Aurora', icon: '🌌', group: 'Nature & Wildlife', formula: 'culture', audienceTier: 'enthusiast' },
-  { key: 'geologyVolcanoes', label: 'Geology & Volcanoes', icon: '🌋', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'enthusiast' },
+  { key: 'geologyVolcanoes', label: 'Geology', icon: '🌋', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'enthusiast' },
   { key: 'wildflowerBlooms', label: 'Blooms and Fall Colors', icon: '🌸', group: 'Nature & Wildlife', formula: 'wildlife', audienceTier: 'specialist' },
   // Sports & Recreation
   { key: 'hiking', label: 'Hiking & Trekking', icon: '🥾', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'popular' },
@@ -88,7 +88,7 @@ export const SLIDERS: Slider[] = [
   // a 2.5x gap between two halves of the same motivation. San Sebastian,
   // Copenhagen, Lyon and Modena are destinations BECAUSE of the restaurants.
   { key: 'fineDining', label: 'Fine Dining', icon: '🍽️', group: 'Culture & Discovery', formula: 'food', audienceTier: 'popular' },
-  { key: 'wineSpirits', label: 'Wine & Spirits Tasting', icon: '🍷', group: 'Culture & Discovery', formula: 'food', audienceTier: 'enthusiast' },
+  { key: 'wineSpirits', label: 'Wine, Beer & Spirits', icon: '🍷', group: 'Culture & Discovery', formula: 'food', audienceTier: 'enthusiast' },
   { key: 'coffeeTea', label: 'Specialty Coffee & Tea', icon: '☕', group: 'Culture & Discovery', formula: 'food', audienceTier: 'specialist' },
   // Relaxation & Leisure
   { key: 'beachesSwimming', label: 'Beaches & Swimming', icon: '🏖️', group: 'Relaxation & Leisure', formula: 'swim', audienceTier: 'iconic' },

@@ -242,6 +242,11 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'trailRunning.q1': R(has('trailDistances', 'm3', 'm6', 'm12', 'm30'), has('trailDistances', 'm6', 'm12', 'm30'), has('trailDistances', 'm12', 'm30'), has('trailDistances', 'm30')),
   'trailRunning.q2': R(has('trailClimbing', 'flat', 'up3000', 'big6500'), has('trailClimbing', 'up3000', 'big6500'), has('trailClimbing', 'big6500')),
   'trailRunning.q3': R(null, null, has('raceHost', 'true')),
+  // ---- Yoga Retreats ---- (28 Oct 2026; every list column is hand-researched, a blank list is unknown and asks nothing)
+  'yogaRetreats.q1': R(has('practiceLevels', 'beginner'), has('practiceLevels', 'regular'), has('practiceLevels', 'teacher')),
+  'yogaRetreats.q2': R(has('retreatStructure', 'full'), has('retreatStructure', 'balanced'), has('retreatStructure', 'free')),
+  'yogaRetreats.q3': R(has('yogaStyles', 'gentle'), has('yogaStyles', 'vinyasa'), has('yogaStyles', 'hathaAshtanga'), null),
+  'yogaRetreats.q4': R(has('retreatLengths', 'weekend'), has('retreatLengths', 'week'), has('retreatLengths', 'twoweeks')),
   // ---- Fishing ---- (28 Oct 2026; q5 and q6 read the worked-out methods and access lists; q1 and q3 have too few hand-researched places to be read, q2 and q4 are unmapped)
   'fishing.q5': R(has('fishingMethods', 'fly'), has('fishingMethods', 'lures'), has('fishingMethods', 'bait'), has('fishingMethods', 'trolling')),
   'fishing.q6': R(has('fishingAccess', 'boat'), has('fishingAccess', 'wading'), has('fishingAccess', 'shore')),
@@ -383,6 +388,10 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'trailRunning.q1': 'Not the distance you want',
   'trailRunning.q2': 'Not the climbing you want',
   'trailRunning.q3': 'No race held here',
+  'yogaRetreats.q1': 'Not for your level',
+  'yogaRetreats.q2': 'Not the structure you want',
+  'yogaRetreats.q3': 'Not the style you want',
+  'yogaRetreats.q4': 'Not the length you want',
   'fishing.q5': 'Not suited to your tackle',
   'fishing.q6': 'Not where you want to fish from',
   'surfing.q1': 'Not suited to your level',

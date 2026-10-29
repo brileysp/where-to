@@ -909,6 +909,18 @@ const FISHING_FACTS: FactDef[] = [
   { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
 ];
 
+const YOGA_RETREATS_FACTS: FactDef[] = [
+  tick('yogaRetreat', 'Yoga retreats', 'A named retreat operator in the place with programmes of three days or more, found on its own page or a retreat directory (operators and page in the Evidence column). Business listings count studios, not retreats, so this was researched by hand for all 20 places. Blank is not ticked. The Yoga retreats chip reads it.'),
+  tick('detoxRetreat', 'Detox retreats', 'A named operator offering a cleanse, fasting or Ayurvedic (for example panchakarma) programme in the place, operator and page in the Evidence column. Blank where none was found. The Detox retreats chip reads it.'),
+  tick('meditationRetreat', 'Meditation and silent retreats', 'A Vipassana centre in the place on the dhamma.org directory, or a named silent-retreat operator. Blank where neither was found. The Meditation and silent retreats chip reads it.'),
+  { key: 'practiceLevels', label: 'Practice levels served', type: 'multi', group: 'practical', options: [{ value: 'beginner', label: 'Beginner' }, { value: 'regular', label: 'Regular practitioner' }, { value: 'teacher', label: 'Teacher level' }], hint: 'Levels the operators found accept, from their own listings: "all levels" counts as beginner and regular; teacher level is a teacher training offered in the place. Question 1 reads it.' },
+  { key: 'retreatStructure', label: 'Structure', type: 'multi', group: 'practical', options: [{ value: 'full', label: 'Classes all day' }, { value: 'balanced', label: 'Morning and evening, free time between' }, { value: 'free', label: 'Mostly free time' }], hint: 'From operators\' published timetables. Filled only where a timetable was found, so most places are blank (a blank is unknown, not none). Question 2 reads it.' },
+  { key: 'yogaStyles', label: 'Styles taught', type: 'multi', group: 'practical', options: [{ value: 'gentle', label: 'Gentle and restorative' }, { value: 'vinyasa', label: 'Vinyasa' }, { value: 'hathaAshtanga', label: 'Ashtanga and Hatha' }], hint: 'Styles named in the listings found. Blank where the listings name none. Question 3 reads it.' },
+  { key: 'retreatLengths', label: 'Retreat lengths', type: 'multi', group: 'practical', options: [{ value: 'weekend', label: 'A weekend (up to 3 days)' }, { value: 'week', label: 'A week (4 to 12 days)' }, { value: 'twoweeks', label: 'Two weeks or more (13 days and over)' }], hint: 'Lengths of the retreats and programmes found. Question 4 reads it.' },
+  { key: 'evidence', label: 'Evidence', type: 'text', group: 'draw', wide: true, maxLength: 4000, hint: 'One line per column: the operators, the page and what it says. Researched by hand from retreat directories and operator pages on 28 Oct 2026; listings change, so dates are not kept.' },
+  { key: 'drawSourceChecked', label: 'Source-checked', type: 'bool', group: 'draw', hint: 'Set only when the figures have been checked against their sources. The Evidence column is the working, not a check.' },
+];
+
 const TRAIL_RUNNING_FACTS: FactDef[] = [
   { key: 'trailDistances', label: 'Distances available', type: 'multi', group: 'practical', options: [{ value: 'm3', label: '3 to 6 miles' }, { value: 'm6', label: '6 to 12 miles' }, { value: 'm12', label: '12 to 25 miles' }, { value: 'm30', label: '30 miles and beyond' }], hint: 'From hiking route relations of 10 km or more in the place (map data): 3-6 miles wherever any route exists, 6-12 from two routes of 20 km or more, 12-25 from a route of 40 km or more, 30 and beyond from a route of 80 km or more. Long trails are often mapped in sections, and route mapping is thin in much of Asia and Africa, so a blank there is not none. Question 1 reads it.' },
   { key: 'trailClimbing', label: 'Climbing available', type: 'multi', group: 'practical', options: [{ value: 'flat', label: 'Flat to rolling' }, { value: 'up3000', label: 'Up to 3,000 ft a day' }, { value: 'big6500', label: 'Big days, 6,500 ft or more' }], hint: 'From the relief of the place (highest point minus lowest, heights from the Open-Meteo elevation grid; the lowest is sea level where the place has a coastline): flat to rolling always, up to 3,000 ft from 600 m of relief, 6,500 ft or more from 1,500 m. Relief is across the whole area, so a place can have the climb without a trail up it. Question 2 reads it.' },
@@ -964,6 +976,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   kayakingRafting: KAYAKING_FACTS,
   trailRunning: TRAIL_RUNNING_FACTS,
   fishing: FISHING_FACTS,
+  yogaRetreats: YOGA_RETREATS_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {
