@@ -720,9 +720,9 @@
   "bareboat_base": true
  },
  "havana": {
-  "marinas": 9,
-  "islands": 0,
-  "sheltered": 0,
+  "marinas": 66,
+  "islands": 76,
+  "sheltered": 8,
   "regattas": 0,
   "events": [],
   "expedition": 0,
@@ -884,9 +884,9 @@
   "bareboat_base": false
  },
  "punta-cana": {
-  "marinas": 6,
-  "islands": 1,
-  "sheltered": 0,
+  "marinas": 25,
+  "islands": 6,
+  "sheltered": 3,
   "regattas": 0,
   "events": [],
   "expedition": 0,
@@ -1203,14 +1203,14 @@
   "bareboat_base": false
  },
  "luangprabang": {
-  "marinas": 0,
-  "islands": 1,
-  "sheltered": 0,
+  "marinas": 10,
+  "islands": 7,
+  "sheltered": 2,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
+  "sea": "flat",
   "median_wave_m": null,
   "calm_share": null,
   "bareboat_base": false
@@ -1641,7 +1641,7 @@
  },
  "svalbard": {
   "marinas": 1,
-  "islands": 7,
+  "islands": 192,
   "sheltered": 2,
   "regattas": 0,
   "events": [],
@@ -1726,9 +1726,9 @@
   "bareboat_base": false
  },
  "greenland": {
-  "marinas": 1,
-  "islands": 16,
-  "sheltered": 2,
+  "marinas": 23,
+  "islands": 376,
+  "sheltered": 10,
   "regattas": 0,
   "events": [],
   "expedition": 10,
@@ -1778,16 +1778,16 @@
   "bareboat_base": false
  },
  "bagan": {
-  "marinas": 0,
-  "islands": 0,
-  "sheltered": 0,
+  "marinas": 33,
+  "islands": 52,
+  "sheltered": 10,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
-  "median_wave_m": null,
-  "calm_share": null,
+  "sea": "flat",
+  "median_wave_m": 0.14,
+  "calm_share": 1.0,
   "bareboat_base": false
  },
  "bavaria-munich": {
@@ -1963,9 +1963,9 @@
   "bareboat_base": false
  },
  "belfast-giants-causeway": {
-  "marinas": 8,
-  "islands": 0,
-  "sheltered": 2,
+  "marinas": 64,
+  "islands": 148,
+  "sheltered": 10,
   "regattas": 0,
   "events": [],
   "expedition": 0,
@@ -2028,8 +2028,8 @@
   "bareboat_base": false
  },
  "lapland": {
-  "marinas": 5,
-  "islands": 4,
+  "marinas": 60,
+  "islands": 99,
   "sheltered": 2,
   "regattas": 0,
   "events": [],

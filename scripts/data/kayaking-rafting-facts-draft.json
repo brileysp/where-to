@@ -748,8 +748,8 @@
   "drawSourceChecked": false
  },
  "snowdonia": {
-  "calmWaterPaddling": 6,
-  "seaKayaking": 5,
+  "calmWaterPaddling": 10,
+  "seaKayaking": 6,
   "whitewaterRafting": 8,
   "multiDayRiverTrips": 0,
   "whitewaterClasses": [
@@ -760,7 +760,7 @@
    "never",
    "experienced"
   ],
-  "evidence": "Calm-water paddling: 6 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Llyn Trawsfynydd (5 km2), Llyn Tegid (4 km2) plus 2 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 8, which gives 6 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 272 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 8; 1 kayak or canoe rental points within 3 km of the coast gives 2; average 5. Median daily maximum wave in the paddling months 0.60 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater: 2 commercially run river(s) or section(s) found by search on 28 Oct 2026: Tryweryn (Bala) (class IV; National White Water Centre); Dee (Llangollen) (class IV; Whitewater Active, Ty Nant Outdoors); hardest class found IV gives 8 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). The place is Wales as a whole. The Dee is only run when the flow is high enough, mostly in autumn. Grades are from wales.org and not confirmed by the centre. Pages: https://www.nationalwhitewatercentre.co.uk/whitewater-rafting-faqs, https://wales.org/white-water-rafting-in-wales/.\nWater temperature: glacial (mean air temperature 5.8 C in the paddling months (Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: never, experienced (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "evidence": "Calm-water paddling: 18 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Llyn Trawsfynydd (5 km2), Llyn Efyrnwy / Lake Vyrnwy (4 km2) plus 9 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 27, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 1021 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 1 kayak or canoe rental points within 3 km of the coast gives 2; average 6. Median daily maximum wave in the paddling months 0.60 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater: 2 commercially run river(s) or section(s) found by search on 28 Oct 2026: Tryweryn (Bala) (class IV; National White Water Centre); Dee (Llangollen) (class IV; Whitewater Active, Ty Nant Outdoors); hardest class found IV gives 8 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). The place is Wales as a whole. The Dee is only run when the flow is high enough, mostly in autumn. Grades are from wales.org and not confirmed by the centre. Pages: https://www.nationalwhitewatercentre.co.uk/whitewater-rafting-faqs, https://wales.org/white-water-rafting-in-wales/.\nWater temperature: glacial (mean air temperature 5.8 C in the paddling months (Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: never, experienced (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "peru": {
@@ -869,7 +869,7 @@
  },
  "lapland": {
   "calmWaterPaddling": 10,
-  "seaKayaking": 0,
+  "seaKayaking": 3,
   "whitewaterRafting": 0,
   "multiDayRiverTrips": 0,
   "whitewaterClasses": [
@@ -879,7 +879,7 @@
   "skillLevels": [
    "never"
   ],
-  "evidence": "Calm-water paddling: 69 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Iso-Vietonen (28 km2), Raanuj\u00e4rvi (25 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 69, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: no coastline inside the area, so 0.\nWhitewater: searched, no commercial whitewater river found. Searched: the main Finnish whitewater (Kitkajoki, class III waterfall, Ruka operators) is in Kuusamo, about 190 km from Rovaniemi and outside the place; no class-rated whitewater was found on the Kemijoki or Ounasjoki. Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). Pages: https://www.ruka.fi/en/experiences/water-activities/rafting, https://www.visitrovaniemi.fi/main-activity-category/river-cruises/see-do/activities/river-cruises-rafting-boating/.\nWater temperature: glacial (mean air temperature 7.0 C in the paddling months (Apr, May, Jun), Open-Meteo archive 2019-2024, as an upper bound for the water (lake water)).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "evidence": "Calm-water paddling: 389 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Inarij\u00e4rvi (1092 km2), Lokan tekoj\u00e4rvi (333 km2) plus 5 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 394, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 115 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 6; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 3. No wave record was available at the coast points tried, so no wave reduction is applied.\nWhitewater: searched, no commercial whitewater river found. Searched: the main Finnish whitewater (Kitkajoki, class III waterfall, Ruka operators) is in Kuusamo, about 190 km from Rovaniemi and outside the place; no class-rated whitewater was found on the Kemijoki or Ounasjoki. Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). Pages: https://www.ruka.fi/en/experiences/water-activities/rafting, https://www.visitrovaniemi.fi/main-activity-category/river-cruises/see-do/activities/river-cruises-rafting-boating/.\nWater temperature: glacial (median sea surface temperature 1.6 C in the paddling months (Apr, May, Jun), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "great-smoky-mountains": {
@@ -1302,12 +1302,15 @@
   "drawSourceChecked": false
  },
  "luangprabang": {
-  "calmWaterPaddling": 2,
+  "calmWaterPaddling": 10,
   "seaKayaking": 0,
   "whitewaterRafting": 7,
   "multiDayRiverTrips": 4,
   "waterTemperature": "warm",
-  "evidence": "Calm-water paddling: 1 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Nam Khan 3 Reservoir (5 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 1, which gives 2 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: no coastline inside the area, so 0.\nWhitewater: 1 commercially run river(s) or section(s) found by search on 28 Oct 2026: Nam Ou (whitewater kayak day trips) (class unknown; Tiger Trail Travel, Laos Adventures, Discover Laos); hardest class found not stated gives 7 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 1 operator(s) found: Laos Adventures (8-day Nam Ou kayaking and camping, Muang Khua to Nong Khiaw) gives 4 (none 0, one 4, two or three 7, four or more 10). Mostly easy scenic paddling in the dry season; Discover Laos lists a whitewater kayak day; class not given. Pages: https://discoverlaos.today/tour/1-day-nam-ou-river-whitewater-kayaking-explorer, https://internal.laos-adventures.com/?p=503.\nWater temperature: warm (mean air temperature 23.3 C in the paddling months (Jan, Feb, Nov), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: left blank, no calm water to speak of and no river classes known.",
+  "skillLevels": [
+   "never"
+  ],
+  "evidence": "Calm-water paddling: 41 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example \u0ec0\u0e82\u0eb7\u0ec8\u0ead\u0e99\u0e99\u0ec9\u0eb3\u0e87\u0eb7\u0ec8\u0ea1 (462 km2), Nam Theun 2 (393 km2) plus 1 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 42, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: no coastline inside the area, so 0.\nWhitewater: 1 commercially run river(s) or section(s) found by search on 28 Oct 2026: Nam Ou (whitewater kayak day trips) (class unknown; Tiger Trail Travel, Laos Adventures, Discover Laos); hardest class found not stated gives 7 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 1 operator(s) found: Laos Adventures (8-day Nam Ou kayaking and camping, Muang Khua to Nong Khiaw) gives 4 (none 0, one 4, two or three 7, four or more 10). Mostly easy scenic paddling in the dry season; Discover Laos lists a whitewater kayak day; class not given. Pages: https://discoverlaos.today/tour/1-day-nam-ou-river-whitewater-kayaking-explorer, https://internal.laos-adventures.com/?p=503.\nWater temperature: warm (mean air temperature 23.3 C in the paddling months (Jan, Feb, Nov), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "bhutan": {
@@ -1558,15 +1561,18 @@
   "drawSourceChecked": false
  },
  "svalbard": {
-  "calmWaterPaddling": 2,
-  "seaKayaking": 4,
+  "calmWaterPaddling": 8,
+  "seaKayaking": 5,
   "whitewaterRafting": 0,
   "multiDayRiverTrips": 0,
   "whitewaterClasses": [
    "none"
   ],
   "waterTemperature": "glacial",
-  "evidence": "Calm-water paddling: 1 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Isdammen (1 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 1, which gives 2 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 269 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 8; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 4. Median daily maximum wave in the paddling months 0.24 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater and multi-day: 0 by rule, polar waters; not searched.\nWater temperature: glacial (median sea surface temperature 0.3 C in the paddling months (Apr, May, Jun), Open-Meteo marine record).\nSkill levels: left blank, no calm water to speak of and no river classes known.",
+  "skillLevels": [
+   "never"
+  ],
+  "evidence": "Calm-water paddling: 19 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example unnamed (8 km2), unnamed (5 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 19, which gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 5618 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 5. Median daily maximum wave in the paddling months 0.24 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater and multi-day: 0 by rule, polar waters; not searched.\nWater temperature: glacial (median sea surface temperature 0.3 C in the paddling months (Apr, May, Jun), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "pantanal": {
@@ -1580,7 +1586,7 @@
   "drawSourceChecked": false
  },
  "greenland": {
-  "calmWaterPaddling": 8,
+  "calmWaterPaddling": 10,
   "seaKayaking": 10,
   "whitewaterRafting": 0,
   "multiDayRiverTrips": 0,
@@ -1591,7 +1597,7 @@
   "skillLevels": [
    "never"
   ],
-  "evidence": "Calm-water paddling: 12 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Natsilik Paarlersuaq (15 km2), Saarlup Tasersua (12 km2) plus 1 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 13, which gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 493 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 1 kayak or canoe rental points within 3 km of the coast gives 2; average 6. Median daily maximum wave in the paddling months 0.80 m (Open-Meteo marine record, history from about 2021), no reduction. Named among the best sea-kayaking destinations by 3 of 6 published lists (oars, seakayakadventures, manawa), which gives a floor of 10 (3 or more lists 10, 2 lists 9); the score was 6.\nWhitewater and multi-day: 0 by rule, polar waters; not searched.\nWater temperature: glacial (median sea surface temperature 2.3 C in the paddling months (May, Jun, Jul), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "evidence": "Calm-water paddling: 703 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Romer S\u00f8 (124 km2), Tasersuaq (120 km2) plus 1 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 704, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 43719 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 1 kayak or canoe rental points within 3 km of the coast gives 2; average 6. Median daily maximum wave in the paddling months 0.80 m (Open-Meteo marine record, history from about 2021), no reduction. Named among the best sea-kayaking destinations by 3 of 6 published lists (oars, seakayakadventures, manawa), which gives a floor of 10 (3 or more lists 10, 2 lists 9); the score was 6.\nWhitewater and multi-day: 0 by rule, polar waters; not searched.\nWater temperature: glacial (median sea surface temperature 2.3 C in the paddling months (May, Jun, Jul), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "nice-riviera": {
@@ -1653,8 +1659,8 @@
   "drawSourceChecked": false
  },
  "punta-cana": {
-  "calmWaterPaddling": 0,
-  "seaKayaking": 2,
+  "calmWaterPaddling": 8,
+  "seaKayaking": 3,
   "whitewaterRafting": 6,
   "multiDayRiverTrips": 0,
   "whitewaterClasses": [
@@ -1662,9 +1668,10 @@
   ],
   "waterTemperature": "warm",
   "skillLevels": [
+   "never",
    "little"
   ],
-  "evidence": "Calm-water paddling: 0 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 0, which gives 0 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 218 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 8; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 2. Minus 2 because the median daily maximum wave in the paddling months is 1.76 m (Open-Meteo marine record, history from about 2021), over 1.5 m.\nWhitewater: 1 commercially run river(s) or section(s) found by search on 28 Oct 2026: Yaque del Norte (Jarabacoa) (class III; Rancho Baiguate, Jaraventura); hardest class found III gives 6 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). Jarabacoa is inland; the place is named for the Dominican Republic, so the whole country counts. Listings range from II-III+ to III-IV. Pages: https://www.civitatis.com/en/jarabacoa/rafting-yaque-norte-river.\nWater temperature: warm (mean air temperature 25.0 C in the paddling months (Jan, Feb, Mar), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: little (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "evidence": "Calm-water paddling: 13 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Lago Enriquillo (334 km2), \u00c9tang Saum\u00e2tre (126 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 13, which gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 1300 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 3. Minus 2 because the median daily maximum wave in the paddling months is 1.76 m (Open-Meteo marine record, history from about 2021), over 1.5 m.\nWhitewater: 1 commercially run river(s) or section(s) found by search on 28 Oct 2026: Yaque del Norte (Jarabacoa) (class III; Rancho Baiguate, Jaraventura); hardest class found III gives 6 (none 0, 1 river gives 7, 2-3 give 8, 4-6 give 9, 7 or more give 10; class I-II minus 3, III minus 1, IV no change, V plus 1). Multi-day: 0 operator(s) found gives 0 (none 0, one 4, two or three 7, four or more 10). Jarabacoa is inland; the place is named for the Dominican Republic, so the whole country counts. Listings range from II-III+ to III-IV. Pages: https://www.civitatis.com/en/jarabacoa/rafting-yaque-norte-river.\nWater temperature: warm (mean air temperature 25.0 C in the paddling months (Jan, Feb, Mar), Open-Meteo archive 2019-2024, used as an upper bound for river water).\nSkill levels: never, little (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "venice": {
@@ -1776,7 +1783,7 @@
   "drawSourceChecked": false
  },
  "havana": {
-  "calmWaterPaddling": 4,
+  "calmWaterPaddling": 10,
   "seaKayaking": 9,
   "whitewaterRafting": 0,
   "multiDayRiverTrips": 0,
@@ -1787,7 +1794,7 @@
   "skillLevels": [
    "never"
   ],
-  "evidence": "Calm-water paddling: 4 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Embalse Ej\u00e9rcito Rebelde (3 km2), Maur\u00edn (3 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 4, which gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 73 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 6; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 3. Median daily maximum wave in the paddling months 1.18 m (Open-Meteo marine record, history from about 2021), no reduction. Named among the best sea-kayaking destinations by 2 of 6 published lists (unbound, seakayakadventures), which gives a floor of 9 (3 or more lists 10, 2 lists 9); the score was 3.\nWhitewater and multi-day: 0 by rule, a city with no whitewater river inside its own area; not searched.\nWater temperature: warm (median sea surface temperature 26.6 C in the paddling months (Jan, Feb, Mar), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "evidence": "Calm-water paddling: 65 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Embalse Zaza (60 km2), Embalse Alacranes (58 km2) plus 2 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 67, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 5747 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 2 kayak or canoe rental points within 3 km of the coast gives 3; average 7. Median daily maximum wave in the paddling months 1.18 m (Open-Meteo marine record, history from about 2021), no reduction. Named among the best sea-kayaking destinations by 2 of 6 published lists (unbound, seakayakadventures), which gives a floor of 9 (3 or more lists 10, 2 lists 9); the score was 7.\nWhitewater and multi-day: 0 by rule, a city with no whitewater river inside its own area; not searched.\nWater temperature: warm (median sea surface temperature 26.6 C in the paddling months (Jan, Feb, Mar), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "chiapas": {
@@ -2053,15 +2060,18 @@
   "drawSourceChecked": false
  },
  "belfast-giants-causeway": {
-  "calmWaterPaddling": 2,
-  "seaKayaking": 1,
+  "calmWaterPaddling": 8,
+  "seaKayaking": 3,
   "whitewaterRafting": 0,
   "multiDayRiverTrips": 0,
   "whitewaterClasses": [
    "none"
   ],
   "waterTemperature": "glacial",
-  "evidence": "Calm-water paddling: 1 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Lough Beg (5 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 1, which gives 2 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 63 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 6; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 1. Minus 2 because the median daily maximum wave in the paddling months is 2.58 m (Open-Meteo marine record, history from about 2021), over 1.5 m.\nWhitewater and multi-day: 0 by rule, a city with no whitewater river inside its own area; not searched.\nWater temperature: glacial (median sea surface temperature 8.7 C in the paddling months (Jan, Feb, Mar), Open-Meteo marine record).\nSkill levels: left blank, no calm water to speak of and no river classes known.",
+  "skillLevels": [
+   "never"
+  ],
+  "evidence": "Calm-water paddling: 12 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Lough Neagh (379 km2), Lower Lough Erne (100 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 12, which gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 488 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 3. Minus 2 because the median daily maximum wave in the paddling months is 2.58 m (Open-Meteo marine record, history from about 2021), over 1.5 m.\nWhitewater and multi-day: 0 by rule, a city with no whitewater river inside its own area; not searched.\nWater temperature: glacial (median sea surface temperature 8.7 C in the paddling months (Jan, Feb, Mar), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
  },
  "bavaria-munich": {
