@@ -110,6 +110,11 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['trailRunning', 'mountain-trail-running', [{ column: 'mountainTrailRunning' }]],
   ['trailRunning', 'ultra-distances-and-races', [{ column: 'raceHost' }]],
   ['trailRunning', 'hut-to-hut-running', [{ column: 'hutToHutRuns' }]],
+  ['fishing', 'big-ocean-game-fish', [{ column: 'bigGameFish' }]],
+  ['fishing', 'flats-fish', [{ column: 'flatsFish' }]],
+  ['fishing', 'trout-and-char', [{ column: 'troutChar' }]],
+  ['fishing', 'salmon-and-steelhead', [{ column: 'salmonSteelhead' }]],
+  ['fishing', 'freshwater-predators', [{ column: 'freshwaterPredators' }]],
 ];
 (async () => {
   const apply = process.argv.includes('--apply');

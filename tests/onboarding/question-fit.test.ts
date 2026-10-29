@@ -832,3 +832,22 @@ describe('Trail Running questions', () => {
     expect(fit('q3', [2], { raceHost: false })).toBe(0);
   });
 });
+
+describe('Fishing question rules', () => {
+  const defs = factDefsFor('fishing');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`fishing.${q}`], picked, defs, facts as never);
+  it('tackle needs the method in the list', () => {
+    expect(fit('q5', [0], { fishingMethods: ['fly', 'lures', 'bait'] })).toBe(1);
+    expect(fit('q5', [0], { fishingMethods: ['lures', 'bait'] })).toBe(0);
+    expect(fit('q5', [3], { fishingMethods: ['lures', 'bait', 'trolling'] })).toBe(1);
+  });
+  it('where you fish from needs that kind of access', () => {
+    expect(fit('q6', [0], { fishingAccess: ['boat', 'shore'] })).toBe(1);
+    expect(fit('q6', [1], { fishingAccess: ['boat', 'shore'] })).toBe(0);
+    expect(fit('q6', [2], { fishingAccess: ['shore'] })).toBe(1);
+  });
+  it('has no rules for the questions it does not read', () => {
+    for (const q of ['q1', 'q2', 'q3', 'q4']) expect(QUESTION_FIT_RULES[`fishing.${q}`]).toBeUndefined();
+  });
+});
+

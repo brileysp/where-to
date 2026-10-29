@@ -242,6 +242,9 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'trailRunning.q1': R(has('trailDistances', 'm3', 'm6', 'm12', 'm30'), has('trailDistances', 'm6', 'm12', 'm30'), has('trailDistances', 'm12', 'm30'), has('trailDistances', 'm30')),
   'trailRunning.q2': R(has('trailClimbing', 'flat', 'up3000', 'big6500'), has('trailClimbing', 'up3000', 'big6500'), has('trailClimbing', 'big6500')),
   'trailRunning.q3': R(null, null, has('raceHost', 'true')),
+  // ---- Fishing ---- (28 Oct 2026; q5 and q6 read the worked-out methods and access lists; q1 and q3 have too few hand-researched places to be read, q2 and q4 are unmapped)
+  'fishing.q5': R(has('fishingMethods', 'fly'), has('fishingMethods', 'lures'), has('fishingMethods', 'bait'), has('fishingMethods', 'trolling')),
+  'fishing.q6': R(has('fishingAccess', 'boat'), has('fishingAccess', 'wading'), has('fishingAccess', 'shore')),
 
   // ---- Surfing ----
   'surfing.q1': R(atLeast(6, 'beginnerRating'), atLeast(5, 'beginnerRating'), null, atLeast(5, 'advancedRating'), atLeast(7, 'advancedRating')),
@@ -380,6 +383,8 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'trailRunning.q1': 'Not the distance you want',
   'trailRunning.q2': 'Not the climbing you want',
   'trailRunning.q3': 'No race held here',
+  'fishing.q5': 'Not suited to your tackle',
+  'fishing.q6': 'Not where you want to fish from',
   'surfing.q1': 'Not suited to your level',
   'surfing.q2': 'Waves peel the other way',
   'surfing.q3': 'Heavier local scene',
