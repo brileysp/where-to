@@ -851,3 +851,40 @@ describe('Fishing question rules', () => {
   });
 });
 
+describe('Yoga Retreats question rules', () => {
+  const defs = factDefsFor('yogaRetreats');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`yogaRetreats.${q}`], picked, defs, facts as never);
+  it('level, structure, style and length each read their list', () => {
+    expect(fit('q1', [0], { practiceLevels: ['beginner', 'regular'] })).toBe(1);
+    expect(fit('q1', [2], { practiceLevels: ['beginner', 'regular'] })).toBe(0);
+    expect(fit('q2', [1], { retreatStructure: ['balanced'] })).toBe(1);
+    expect(fit('q3', [1], { yogaStyles: ['gentle'] })).toBe(0);
+    expect(fit('q3', [3], { yogaStyles: ['gentle'] })).toBeNull();
+    expect(fit('q4', [2], { retreatLengths: ['week', 'twoweeks'] })).toBe(1);
+  });
+  it('a blank list asks nothing', () => {
+    expect(fit('q2', [0], {})).toBeNull();
+    expect(fit('q3', [0], {})).toBeNull();
+  });
+});
+
+describe('Indigenous Cultures question rules', () => {
+  const defs = factDefsFor('indigenousCultures');
+  const fit = (q: string, picked: number[], facts: Record<string, string | string[] | number | boolean>) => questionFit(QUESTION_FIT_RULES[`indigenousCultures.${q}`], picked, defs, facts as never);
+  it('depth: a performance is met by any offer, living alongside needs a stay or homestay', () => {
+    expect(fit('q1', [0], { exchangeDepth: ['living'] })).toBe(1);
+    expect(fit('q1', [2], { exchangeDepth: ['watch', 'conversation'] })).toBe(0);
+    expect(fit('q1', [2], { exchangeDepth: ['living'] })).toBe(1);
+  });
+  it('stay: comfortable needs a hotel, rustic accepts anything', () => {
+    expect(fit('q2', [0], { stayStandard: ['rustic'] })).toBe(0);
+    expect(fit('q2', [2], { stayStandard: ['rustic'] })).toBe(1);
+  });
+  it('distance: each answer allows places up to that far', () => {
+    expect(fit('q3', [0], { reachDistance: 'near' })).toBe(1);
+    expect(fit('q3', [0], { reachDistance: 'day' })).toBe(0.5);
+    expect(fit('q3', [0], { reachDistance: 'remote' })).toBe(0);
+    expect(fit('q3', [2], { reachDistance: 'remote' })).toBe(1);
+  });
+});
+

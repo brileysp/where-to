@@ -110,6 +110,8 @@ const MAP: Array<[string, string, Driver[]]> = [
   ['trailRunning', 'mountain-trail-running', [{ column: 'mountainTrailRunning' }]],
   ['trailRunning', 'ultra-distances-and-races', [{ column: 'raceHost' }]],
   ['trailRunning', 'hut-to-hut-running', [{ column: 'hutToHutRuns' }]],
+  ['indigenousCultures', 'indigenous-led-tours', [{ column: 'indigenousLed' }]],
+  ['indigenousCultures', 'homestays', [{ column: 'communityHomestay' }]],
   ['yogaRetreats', 'yoga-retreats', [{ column: 'yogaRetreat' }]],
   ['yogaRetreats', 'detox-retreats', [{ column: 'detoxRetreat' }]],
   ['yogaRetreats', 'meditation-and-silent-retreats', [{ column: 'meditationRetreat' }]],

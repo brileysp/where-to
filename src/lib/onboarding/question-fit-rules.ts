@@ -49,6 +49,7 @@ const HAGGLING = ['fixed', 'some', 'expected'];
 const GEAR_RULES_ORDER = ['none', 'some', 'many'];
 const CAMP_NIGHTS = ['warm', 'cool', 'cold', 'freezing'];
 const SEA_STATES = ['flat', 'swell', 'open'];
+const REACH = ['near', 'day', 'remote'];
 const WATER_TEMPS = ['warm', 'cool', 'glacial'];
 const WHALE_COLUMNS = ['humpback', 'sperm', 'minke', 'orca', 'blue', 'fin', 'gray', 'right', 'dolphins'];
 
@@ -242,6 +243,10 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'trailRunning.q1': R(has('trailDistances', 'm3', 'm6', 'm12', 'm30'), has('trailDistances', 'm6', 'm12', 'm30'), has('trailDistances', 'm12', 'm30'), has('trailDistances', 'm30')),
   'trailRunning.q2': R(has('trailClimbing', 'flat', 'up3000', 'big6500'), has('trailClimbing', 'up3000', 'big6500'), has('trailClimbing', 'big6500')),
   'trailRunning.q3': R(null, null, has('raceHost', 'true')),
+  // ---- Indigenous Cultures ---- (28 Oct 2026; q1 and q2 read hand-researched lists, a blank list asks nothing; q3 reads the straight-line distance choice)
+  'indigenousCultures.q1': R(has('exchangeDepth', 'watch', 'conversation', 'living'), has('exchangeDepth', 'conversation', 'living'), has('exchangeDepth', 'living')),
+  'indigenousCultures.q2': R(has('stayStandard', 'hotel'), has('stayStandard', 'hotel', 'guesthouse'), has('stayStandard', 'hotel', 'guesthouse', 'rustic')),
+  'indigenousCultures.q3': R(within('reachDistance', REACH, 'near'), within('reachDistance', REACH, 'day'), within('reachDistance', REACH, 'remote')),
   // ---- Yoga Retreats ---- (28 Oct 2026; every list column is hand-researched, a blank list is unknown and asks nothing)
   'yogaRetreats.q1': R(has('practiceLevels', 'beginner'), has('practiceLevels', 'regular'), has('practiceLevels', 'teacher')),
   'yogaRetreats.q2': R(has('retreatStructure', 'full'), has('retreatStructure', 'balanced'), has('retreatStructure', 'free')),
@@ -388,6 +393,9 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'trailRunning.q1': 'Not the distance you want',
   'trailRunning.q2': 'Not the climbing you want',
   'trailRunning.q3': 'No race held here',
+  'indigenousCultures.q1': 'Not the exchange you want',
+  'indigenousCultures.q2': 'Not the stay you want',
+  'indigenousCultures.q3': 'Further than you want to go',
   'yogaRetreats.q1': 'Not for your level',
   'yogaRetreats.q2': 'Not the structure you want',
   'yogaRetreats.q3': 'Not the style you want',
