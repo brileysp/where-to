@@ -60,10 +60,10 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 2763.0,
-  "high_m": 5072.0,
-  "low_m": 2309.0,
-  "has_coast": false,
+  "relief_m": 5938.0,
+  "high_m": 5938.0,
+  "low_m": 0,
+  "has_coast": true,
   "races": [],
   "values": {
    "trailClimbing": [
@@ -196,13 +196,13 @@
   "thin": true
  },
  "olympic": {
-  "routes": 21,
+  "routes": 24,
   "r20": 9,
-  "r40": 3,
+  "r40": 4,
   "r80": 1,
   "max_km": 213,
-  "coastal": 0,
-  "huts": 1,
+  "coastal": 3,
+  "huts": 2,
   "relief_m": 2367.0,
   "high_m": 2367.0,
   "low_m": 0,
@@ -221,7 +221,7 @@
     "big6500"
    ],
    "mountainTrailRunning": 9,
-   "coastalIslandTrails": 0
+   "coastalIslandTrails": 3
   },
   "thin": false
  },
@@ -294,15 +294,15 @@
   "thin": false
  },
  "milford-sound-fiordland": {
-  "routes": 5,
+  "routes": 14,
   "r20": 5,
-  "r40": 2,
+  "r40": 4,
   "r80": 0,
-  "max_km": 58,
-  "coastal": 0,
-  "huts": 52,
-  "relief_m": 2742.0,
-  "high_m": 2742.0,
+  "max_km": 62,
+  "coastal": 1,
+  "huts": 113,
+  "relief_m": 2686.0,
+  "high_m": 2686.0,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -318,7 +318,7 @@
     "big6500"
    ],
    "mountainTrailRunning": 10,
-   "coastalIslandTrails": 0,
+   "coastalIslandTrails": 2,
    "hutToHutRuns": true
   },
   "thin": false
@@ -428,9 +428,9 @@
   "max_km": 73,
   "coastal": 0,
   "huts": 4,
-  "relief_m": 1446.0,
+  "relief_m": 1613.0,
   "high_m": 1987.0,
-  "low_m": 541.0,
+  "low_m": 374.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -441,9 +441,10 @@
    ],
    "trailClimbing": [
     "flat",
-    "up3000"
+    "up3000",
+    "big6500"
    ],
-   "mountainTrailRunning": 7,
+   "mountainTrailRunning": 9,
    "coastalIslandTrails": 0
   },
   "thin": false
@@ -549,12 +550,12 @@
   "thin": false
  },
  "lake-district": {
-  "routes": 22,
-  "r20": 12,
+  "routes": 16,
+  "r20": 7,
   "r40": 6,
   "r80": 3,
   "max_km": 137,
-  "coastal": 7,
+  "coastal": 2,
   "huts": 19,
   "relief_m": 874.0,
   "high_m": 874.0,
@@ -579,7 +580,7 @@
     "up3000"
    ],
    "mountainTrailRunning": 5,
-   "coastalIslandTrails": 6,
+   "coastalIslandTrails": 3,
    "raceHost": true,
    "hutToHutRuns": true
   },
@@ -659,16 +660,16 @@
   "thin": false
  },
  "yosemite": {
-  "routes": 16,
+  "routes": 14,
   "r20": 6,
   "r40": 4,
   "r80": 1,
   "max_km": 116,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 3295.0,
-  "high_m": 3954.0,
-  "low_m": 659.0,
+  "relief_m": 2741.0,
+  "high_m": 3950.0,
+  "low_m": 1209.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -727,9 +728,9 @@
   "max_km": 93,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 2710.0,
-  "high_m": 2719.0,
-  "low_m": 9.0,
+  "relief_m": 2481.0,
+  "high_m": 2495.0,
+  "low_m": 14.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -812,16 +813,16 @@
   "thin": false
  },
  "banff": {
-  "routes": 10,
-  "r20": 6,
-  "r40": 4,
+  "routes": 21,
+  "r20": 17,
+  "r40": 8,
   "r80": 0,
   "max_km": 69,
   "coastal": 0,
-  "huts": 24,
-  "relief_m": 2441.0,
-  "high_m": 3465.0,
-  "low_m": 1024.0,
+  "huts": 41,
+  "relief_m": 2606.0,
+  "high_m": 3669.0,
+  "low_m": 1063.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -835,23 +836,23 @@
     "up3000",
     "big6500"
    ],
-   "mountainTrailRunning": 9,
+   "mountainTrailRunning": 10,
    "coastalIslandTrails": 0,
    "hutToHutRuns": true
   },
   "thin": false
  },
  "arches-canyonlands": {
-  "routes": 1,
+  "routes": 2,
   "r20": 1,
   "r40": 1,
   "r80": 1,
-  "max_km": 178,
+  "max_km": 281,
   "coastal": 0,
-  "huts": 12,
-  "relief_m": 2629.0,
-  "high_m": 3847.0,
-  "low_m": 1218.0,
+  "huts": 9,
+  "relief_m": 1264.0,
+  "high_m": 2460.0,
+  "low_m": 1196.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -862,8 +863,7 @@
    ],
    "trailClimbing": [
     "flat",
-    "up3000",
-    "big6500"
+    "up3000"
    ],
    "hutToHutRuns": true
   },
@@ -942,16 +942,16 @@
   "thin": false
  },
  "sequoia-kings-canyon": {
-  "routes": 41,
-  "r20": 9,
-  "r40": 4,
-  "r80": 1,
-  "max_km": 251,
+  "routes": 44,
+  "r20": 12,
+  "r40": 7,
+  "r80": 4,
+  "max_km": 410,
   "coastal": 0,
-  "huts": 0,
-  "relief_m": 4123.0,
+  "huts": 1,
+  "relief_m": 3852.0,
   "high_m": 4340.0,
-  "low_m": 217.0,
+  "low_m": 488.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1019,37 +1019,44 @@
   "thin": true
  },
  "bend-crater-lake": {
-  "routes": 0,
-  "r20": 0,
+  "routes": 3,
+  "r20": 2,
   "r40": 0,
   "r80": 0,
-  "max_km": 0,
+  "max_km": 25,
   "coastal": 0,
-  "huts": 1,
-  "relief_m": 928.0,
-  "high_m": 2233.0,
-  "low_m": 1305.0,
+  "huts": 2,
+  "relief_m": 1778.0,
+  "high_m": 2714.0,
+  "low_m": 936.0,
   "has_coast": false,
   "races": [],
   "values": {
+   "trailDistances": [
+    "m3",
+    "m6"
+   ],
    "trailClimbing": [
     "flat",
-    "up3000"
-   ]
+    "up3000",
+    "big6500"
+   ],
+   "mountainTrailRunning": 9,
+   "coastalIslandTrails": 0
   },
-  "thin": true
+  "thin": false
  },
  "zion-bryce": {
-  "routes": 17,
-  "r20": 6,
-  "r40": 3,
-  "r80": 2,
+  "routes": 9,
+  "r20": 4,
+  "r40": 1,
+  "r80": 1,
   "max_km": 116,
   "coastal": 0,
-  "huts": 24,
-  "relief_m": 2339.0,
-  "high_m": 3224.0,
-  "low_m": 885.0,
+  "huts": 3,
+  "relief_m": 1544.0,
+  "high_m": 2772.0,
+  "low_m": 1228.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1065,8 +1072,7 @@
     "big6500"
    ],
    "mountainTrailRunning": 9,
-   "coastalIslandTrails": 0,
-   "hutToHutRuns": true
+   "coastalIslandTrails": 0
   },
   "thin": false
  },
@@ -1251,9 +1257,9 @@
   "max_km": 17,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 1116.0,
-  "high_m": 3252.0,
-  "low_m": 2136.0,
+  "relief_m": 1551.0,
+  "high_m": 3435.0,
+  "low_m": 1884.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1262,9 +1268,10 @@
    ],
    "trailClimbing": [
     "flat",
-    "up3000"
+    "up3000",
+    "big6500"
    ],
-   "mountainTrailRunning": 7,
+   "mountainTrailRunning": 9,
    "coastalIslandTrails": 0
   },
   "thin": false
@@ -1739,19 +1746,24 @@
   "thin": false
  },
  "joshua-tree": {
-  "routes": 0,
-  "r20": 0,
-  "r40": 0,
-  "r80": 0,
-  "max_km": 0,
+  "routes": 2,
+  "r20": 1,
+  "r40": 1,
+  "r80": 1,
+  "max_km": 159,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 1812.0,
-  "high_m": 1763.0,
-  "low_m": -49.0,
+  "relief_m": 3266.0,
+  "high_m": 3273.0,
+  "low_m": 7.0,
   "has_coast": false,
   "races": [],
   "values": {
+   "trailDistances": [
+    "m3",
+    "m12",
+    "m30"
+   ],
    "trailClimbing": [
     "flat",
     "up3000",
@@ -1790,16 +1802,16 @@
   "thin": false
  },
  "rocky-mountain": {
-  "routes": 8,
+  "routes": 6,
   "r20": 3,
   "r40": 1,
   "r80": 0,
   "max_km": 64,
   "coastal": 0,
-  "huts": 4,
-  "relief_m": 2489.0,
+  "huts": 2,
+  "relief_m": 1799.0,
   "high_m": 4318.0,
-  "low_m": 1829.0,
+  "low_m": 2519.0,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1882,16 +1894,16 @@
   "thin": false
  },
  "north-cascades": {
-  "routes": 36,
-  "r20": 20,
-  "r40": 5,
-  "r80": 2,
+  "routes": 26,
+  "r20": 12,
+  "r40": 3,
+  "r80": 1,
   "max_km": 1472,
   "coastal": 0,
-  "huts": 4,
-  "relief_m": 2653.0,
+  "huts": 5,
+  "relief_m": 2553.0,
   "high_m": 2755.0,
-  "low_m": 102.0,
+  "low_m": 202.0,
   "has_coast": false,
   "races": [],
   "values": {

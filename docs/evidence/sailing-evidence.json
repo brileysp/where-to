@@ -817,9 +817,9 @@
   "bareboat_base": false
  },
  "acadia": {
-  "marinas": 12,
-  "islands": 127,
-  "sheltered": 8,
+  "marinas": 4,
+  "islands": 26,
+  "sheltered": 4,
   "regattas": 0,
   "events": [],
   "expedition": 0,
@@ -957,9 +957,9 @@
   "bareboat_base": false
  },
  "antarctica": {
-  "marinas": 1,
-  "islands": 12,
-  "sheltered": 2,
+  "marinas": 8,
+  "islands": 54,
+  "sheltered": 6,
   "regattas": 0,
   "events": [],
   "expedition": 10,
@@ -1190,9 +1190,9 @@
   "bareboat_base": false
  },
  "everglades": {
-  "marinas": 1,
-  "islands": 56,
-  "sheltered": 2,
+  "marinas": 19,
+  "islands": 163,
+  "sheltered": 8,
   "regattas": 0,
   "events": [],
   "expedition": 0,
@@ -1421,14 +1421,14 @@
   "bareboat_base": false
  },
  "botswana": {
-  "marinas": 0,
-  "islands": 2,
-  "sheltered": 0,
+  "marinas": 1,
+  "islands": 8,
+  "sheltered": 2,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
+  "sea": "flat",
   "median_wave_m": null,
   "calm_share": null,
   "bareboat_base": false
@@ -1460,8 +1460,8 @@
   "bareboat_base": false
  },
  "olympic": {
-  "marinas": 1,
-  "islands": 0,
+  "marinas": 2,
+  "islands": 1,
   "sheltered": 2,
   "regattas": 0,
   "events": [],
@@ -1499,14 +1499,14 @@
   "bareboat_base": false
  },
  "milford-sound-fiordland": {
-  "marinas": 0,
-  "islands": 2,
-  "sheltered": 0,
+  "marinas": 1,
+  "islands": 54,
+  "sheltered": 2,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
+  "sea": "flat",
   "median_wave_m": null,
   "calm_share": null,
   "bareboat_base": false
@@ -1562,7 +1562,7 @@
   "bareboat_base": false
  },
  "lake-district": {
-  "marinas": 12,
+  "marinas": 10,
   "islands": 3,
   "sheltered": 5,
   "regattas": 0,
@@ -1937,8 +1937,8 @@
   "bareboat_base": false
  },
  "bend-crater-lake": {
-  "marinas": 3,
-  "islands": 0,
+  "marinas": 1,
+  "islands": 1,
   "sheltered": 2,
   "regattas": 0,
   "events": [],
@@ -2015,14 +2015,14 @@
   "bareboat_base": false
  },
  "badlands-black-hills": {
-  "marinas": 0,
+  "marinas": 1,
   "islands": 0,
-  "sheltered": 0,
+  "sheltered": 2,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
+  "sea": "flat",
   "median_wave_m": null,
   "calm_share": null,
   "bareboat_base": false
@@ -2041,8 +2041,8 @@
   "bareboat_base": false
  },
  "great-smoky-mountains": {
-  "marinas": 2,
-  "islands": 13,
+  "marinas": 1,
+  "islands": 8,
   "sheltered": 2,
   "regattas": 0,
   "events": [],
@@ -2054,7 +2054,7 @@
   "bareboat_base": false
  },
  "rocky-mountain": {
-  "marinas": 5,
+  "marinas": 3,
   "islands": 0,
   "sheltered": 2,
   "regattas": 0,
