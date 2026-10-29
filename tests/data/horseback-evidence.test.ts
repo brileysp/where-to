@@ -38,3 +38,23 @@ describe('Horseback evidence', () => {
     expect(draft['uluru'].riderLevels).toBeUndefined();
   });
 });
+
+describe('Horseback local horse culture', () => {
+  type Culture = Record<string, { rating: number; signals: Array<{ kind: string; page: string; url: string }> }>;
+  const culture = JSON.parse(readFileSync(join(root, 'docs/evidence/horseback-culture-evidence.json'), 'utf8')) as Culture;
+  it('covers all 34 places and the rating follows the signal count', () => {
+    expect(Object.keys(culture)).toHaveLength(34);
+    for (const [p, c] of Object.entries(culture)) {
+      const n = c.signals.length;
+      expect(c.rating, p).toBe(n === 0 ? 0 : n === 1 ? 4 : n === 2 ? 7 : 10);
+      expect(draft[p].localHorseCulture, p).toBe(c.rating);
+      for (const s of c.signals) { expect(s.url, p).toMatch(/^https:\/\/en\.wikipedia\.org\/wiki\//); expect(['breed', 'event', 'tradition'], p).toContain(s.kind); }
+      expect(draft[p].evidence as string, p).toContain('Local horse culture:');
+    }
+  });
+  it('keeps the checked anchors', () => {
+    expect(draft['mongolia'].localHorseCulture).toBe(10);
+    expect(draft['andalucia'].localHorseCulture).toBe(10);
+    expect(draft['kenya'].localHorseCulture).toBe(0);
+  });
+});

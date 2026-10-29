@@ -234,6 +234,7 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   // ---- Horseback Riding ---- (28 Oct 2026; question 2, local horse culture, stays unmapped until that column is researched; Never ridden and Beginner read the same level)
   'horsebackRiding.q1': R(has('riderLevels', 'beginner'), has('riderLevels', 'confident', 'expert'), has('riderLevels', 'expert')),
   'horsebackRiding.q3': R(has('rideLengths', 'hours', 'day', 'days', 'week'), has('rideLengths', 'day', 'days', 'week'), has('rideLengths', 'days', 'week'), has('rideLengths', 'week')),
+  'horsebackRiding.q2': R(atLeast(7, 'localHorseCulture'), atLeast(4, 'localHorseCulture'), null),
   'sailing.q3': R(within('seaConditions', SEA_STATES, 'flat'), within('seaConditions', SEA_STATES, 'swell'), null),
   'kayakingRafting.q1': R(any(kAtLeast(3, 'calmWaterPaddling'), kHas('whitewaterClasses', 'ii')), has('whitewaterClasses', 'ii', 'iii', 'iv', 'v'), has('whitewaterClasses', 'iv', 'v'), has('whitewaterClasses', 'v')),
   'kayakingRafting.q3': R(within('waterTemperature', WATER_TEMPS, 'warm'), within('waterTemperature', WATER_TEMPS, 'cool'), null),
@@ -367,6 +368,7 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'campingBackcountry.q1': 'Not the remoteness you want',
   'campingBackcountry.q4': 'Colder than you want',
   'horsebackRiding.q1': 'Not suited to your level',
+  'horsebackRiding.q2': 'Little local horse culture',
   'horsebackRiding.q3': 'Not the trip length you want',
   'sailing.q3': 'Rougher than you want',
   'kayakingRafting.q1': 'Not the rapids you want',

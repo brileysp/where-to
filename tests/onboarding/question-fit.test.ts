@@ -750,8 +750,12 @@ describe('Horseback Riding questions', () => {
     expect(fit('q3', [3], { rideLengths: ['hours', 'day', 'days'] })).toBe(0);
     expect(fit('q3', [3], { rideLengths: ['week'] })).toBe(1);
   });
-  it('local horse culture (question 2) is left unmapped', () => {
-    expect(QUESTION_FIT_RULES['horsebackRiding.q2']).toBeUndefined();
+  it('local horse culture: half the trip needs 7, a bonus needs 4, just the ride asks nothing', () => {
+    expect(fit('q2', [0], { localHorseCulture: 10 })).toBe(1);
+    expect(fit('q2', [0], { localHorseCulture: 4 })).toBeCloseTo(4 / 7, 5);
+    expect(fit('q2', [1], { localHorseCulture: 7 })).toBe(1);
+    expect(fit('q2', [1], { localHorseCulture: 0 })).toBe(0);
+    expect(fit('q2', [2], { localHorseCulture: 0 })).toBeNull();
   });
 });
 
