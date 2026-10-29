@@ -243,6 +243,8 @@ export const QUESTION_FIT_RULES: Record<string, QuestionFitRule> = {
   'trailRunning.q1': R(has('trailDistances', 'm3', 'm6', 'm12', 'm30'), has('trailDistances', 'm6', 'm12', 'm30'), has('trailDistances', 'm12', 'm30'), has('trailDistances', 'm30')),
   'trailRunning.q2': R(has('trailClimbing', 'flat', 'up3000', 'big6500'), has('trailClimbing', 'up3000', 'big6500'), has('trailClimbing', 'big6500')),
   'trailRunning.q3': R(null, null, has('raceHost', 'true')),
+  // ---- Geology ---- (28 Oct 2026; question 3 reads the UNESCO tick; questions 1 and 2 have no data behind them and stay unmapped)
+  'geologyVolcanoes.q3': R(null, null, has('unescoGeology', 'true')),
   // ---- Indigenous Cultures ---- (28 Oct 2026; q1 and q2 read hand-researched lists, a blank list asks nothing; q3 reads the straight-line distance choice)
   'indigenousCultures.q1': R(has('exchangeDepth', 'watch', 'conversation', 'living'), has('exchangeDepth', 'conversation', 'living'), has('exchangeDepth', 'living')),
   'indigenousCultures.q2': R(has('stayStandard', 'hotel'), has('stayStandard', 'hotel', 'guesthouse'), has('stayStandard', 'hotel', 'guesthouse', 'rustic')),
@@ -393,6 +395,7 @@ export const PROPOSED_MISS_MESSAGES: Record<string, string> = {
   'trailRunning.q1': 'Not the distance you want',
   'trailRunning.q2': 'Not the climbing you want',
   'trailRunning.q3': 'No race held here',
+  'geologyVolcanoes.q3': 'No geopark or UNESCO site',
   'indigenousCultures.q1': 'Not the exchange you want',
   'indigenousCultures.q2': 'Not the stay you want',
   'indigenousCultures.q3': 'Further than you want to go',

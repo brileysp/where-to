@@ -36,7 +36,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   const n = (v: unknown) => Number(v ?? 0);
   const factRows = new Map<string, Array<Record<string, unknown>>>();
   for (const r of facts) { const k = String(r.interest_key); (factRows.get(k) ?? factRows.set(k, []).get(k)!).push(r); }
-  const out = SLIDERS.filter((s) => !(s as { hidden?: boolean }).hidden).map((s) => {
+  const out = SLIDERS.filter((s) => !(s as { hidden?: boolean }).hidden && s.key !== 'roadtrip').map((s) => {
     const p = P.get(s.key) ?? {}; const applicable = n(p.applicable);
     const defs = factDefsFor(s.key).filter((d) => !d.hidden && !['evidence', 'drawSourceChecked'].includes(d.key) && d.group !== 'draw');
     const hasDef = defs.length > 0;
