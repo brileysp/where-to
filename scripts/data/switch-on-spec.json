@@ -1,0 +1,884 @@
+[
+ {
+  "k": "geologyVolcanoes",
+  "pid": "galapagos",
+  "peak": 8,
+  "best": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "floor": 6,
+  "note": "Active shield volcanoes (Fernandina, Sierra Negra); UNESCO World Heritage; volcanic landscapes rated 9 and UNESCO tick from the geology build. Cool dry season June to December.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands",
+    "label": "Galápagos Islands"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "papua-new-guinea",
+  "peak": 7,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 4,
+  "note": "Rabaul caldera and Tavurvur are active; volcanic landscapes rated 7 in the geology build. Drier season May to October.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Tavurvur",
+    "label": "Tavurvur"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "colombian-andes",
+  "peak": 7,
+  "best": [
+   12,
+   1,
+   2,
+   3,
+   7,
+   8
+  ],
+  "floor": 5,
+  "note": "Nevado del Ruiz and the ice-capped volcanoes; volcanic landscapes and glaciers each rated 8. Dry windows December to March and July to August.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Nevado_del_Ruiz",
+    "label": "Nevado del Ruiz"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "nepal",
+  "peak": 7,
+  "best": [
+   3,
+   4,
+   5,
+   10,
+   11
+  ],
+  "floor": 3,
+  "note": "The Himalaya: glaciers rated 8 in the geology build, plus the tectonic story of the range. Monsoon (June to September) is the low season.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Geology_of_the_Himalaya",
+    "label": "Geology of the Himalaya"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "chamonix",
+  "peak": 7,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 4,
+  "note": "Mont Blanc massif glaciers rated 10 in the geology build (Mer de Glace). Snow-free high trails June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mer_de_Glace",
+    "label": "Mer de Glace"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "swissalps",
+  "peak": 7,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 4,
+  "note": "Aletsch and Gorner glaciers; glaciers rated 10 in the geology build. High trails June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Aletsch_Glacier",
+    "label": "Aletsch Glacier"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "borneo",
+  "peak": 7,
+  "best": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 5,
+  "note": "Gunung Mulu caves (UNESCO, criterion viii); caves rated 9 and UNESCO tick in the geology build. Drier months March to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gunung_Mulu_National_Park",
+    "label": "Gunung Mulu National Park"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "ireland",
+  "peak": 6,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 4,
+  "note": "The Burren and the Cliffs of Moher; rock formations rated 8 and caves rated 8 in the geology build. Best May to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Cliffs_of_Moher",
+    "label": "Cliffs of Moher"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/The_Burren",
+    "label": "The Burren"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "bavaria-munich",
+  "peak": 6,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 4,
+  "note": "Bavarian Alps and Franconian karst; rock formations and caves rated 8 and a UNESCO geopark within the area. Best June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bavarian_Alps",
+    "label": "Bavarian Alps"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "basque-country",
+  "peak": 5,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 4,
+  "note": "Basque Coast flysch (Zumaia, Deba); caves rated 7 in the geology build. The Basque Coast is a UNESCO Global Geopark (not in our geopark list).",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Basque_Coast_Geopark",
+    "label": "Basque Coast Geopark"
+   }
+  ]
+ },
+ {
+  "k": "geologyVolcanoes",
+  "pid": "antarctica",
+  "peak": 6,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 1,
+  "note": "Glaciers and ice rated 6 in the geology build; expedition season November to March only.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Antarctic_Peninsula",
+    "label": "Antarctic Peninsula"
+   }
+  ]
+ },
+ {
+  "k": "golf",
+  "pid": "pakistan",
+  "peak": 3,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 1.5,
+  "note": "58 golf courses mapped (OpenStreetMap and Overture); a real but niche golf scene, best in the cool season November to March.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Pakistan",
+    "label": "Pakistan"
+   }
+  ]
+ },
+ {
+  "k": "golf",
+  "pid": "mongolia",
+  "peak": 2,
+  "best": [
+   6,
+   7,
+   8
+  ],
+  "floor": 0.5,
+  "note": "7 golf courses mapped; short summer season (June to August).",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mongolia",
+    "label": "Mongolia"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "bali",
+  "peak": 3,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 2,
+  "note": "Toya Bungkah and Air Panas hot springs by Lake Batur and Banjar; modest scene. Dry season June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lake_Batur",
+    "label": "Lake Batur"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "bavaria-munich",
+  "peak": 6,
+  "best": [
+   10,
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 4,
+  "note": "Thermal spa towns of Bavaria (Bad Füssing, Bad Reichenhall, Erding); strong built-spa scene. Best in the cool months.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bad_F%C3%BCssing",
+    "label": "Bad Füssing"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "borneo",
+  "peak": 4,
+  "best": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 3,
+  "note": "Poring Hot Springs at Kinabalu; a handful of springs. Drier months February to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Poring",
+    "label": "Poring"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "chiang-mai",
+  "peak": 6,
+  "best": [
+   11,
+   12,
+   1,
+   2
+  ],
+  "floor": 3,
+  "note": "San Kamphaeng and other springs around Chiang Mai; best in the cool season November to February.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/San_Kamphaeng_district",
+    "label": "San Kamphaeng district"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "guatemala",
+  "peak": 6,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "floor": 4,
+  "note": "Fuentes Georginas and the springs near Quetzaltenango and Lake Atitlán. Dry season November to April.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Almolonga",
+    "label": "Almolonga (Zunil valley springs)"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "istanbul",
+  "peak": 2,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 1.5,
+  "note": "Listings are mostly hammams (built baths, counted under Spa & Wellness), not natural springs; the thermal springs lie outside the city area.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Turkish_bath",
+    "label": "Turkish bath"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "napa",
+  "peak": 6,
+  "best": [
+   10,
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "floor": 4,
+  "note": "Calistoga hot springs and spa resorts. Best in the cool months.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Calistoga,_California",
+    "label": "Calistoga, California"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "okinawa",
+  "peak": 3,
+  "best": [
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 2,
+  "note": "A few natural onsen; modest scene compared with mainland Japan.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Onsen",
+    "label": "Onsen"
+   }
+  ]
+ },
+ {
+  "k": "hotSprings",
+  "pid": "vietnam",
+  "peak": 5,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 3,
+  "note": "Kim Bôi, Thanh Tân and Bình Châu springs; best in the cooler months.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Hot_spring",
+    "label": "Hot spring"
+   }
+  ]
+ },
+ {
+  "k": "kayakingRafting",
+  "pid": "tokyo-kyoto",
+  "peak": 5,
+  "best": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "floor": 2,
+  "note": "Hozugawa River boat and rafting trips at Kameoka (Kyoto) and the Tama and Kinu rivers; 108 paddle launches and rentals mapped.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Hozu_River",
+    "label": "Hozu River"
+   }
+  ]
+ },
+ {
+  "k": "kayakingRafting",
+  "pid": "rajasthan-golden-triangle",
+  "peak": 3,
+  "best": [
+   10,
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "floor": 1,
+  "note": "Lake boating at Udaipur and Pushkar and the Chambal River; 35 paddle points mapped; no whitewater tradition.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Chambal_River",
+    "label": "Chambal River"
+   }
+  ]
+ },
+ {
+  "k": "mountainBiking",
+  "pid": "berlin",
+  "peak": 3,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 1.5,
+  "note": "Grunewald and Teufelsberg trails; modest hill terrain.",
+  "src": [
+   {
+    "url": "https://wiki.openstreetmap.org/wiki/Key:mtb:scale",
+    "label": "OpenStreetMap mtb:scale"
+   }
+  ]
+ },
+ {
+  "k": "mountainBiking",
+  "pid": "paris",
+  "peak": 3,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 1.5,
+  "note": "Fontainebleau and Rambouillet forests are within reach; trail riding on sand and rock.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Fontainebleau_Forest",
+    "label": "Fontainebleau Forest"
+   }
+  ]
+ },
+ {
+  "k": "mountainBiking",
+  "pid": "prague",
+  "peak": 3,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 1.5,
+  "note": "Šárka valley and the surrounding hills; modest scene.",
+  "src": [
+   {
+    "url": "https://wiki.openstreetmap.org/wiki/Key:mtb:scale",
+    "label": "OpenStreetMap mtb:scale"
+   }
+  ]
+ },
+ {
+  "k": "mountainBiking",
+  "pid": "champagne",
+  "peak": 2,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 1,
+  "note": "Montagne de Reims forest trails; modest scene.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Montagne_de_Reims",
+    "label": "Montagne de Reims"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "mongolia",
+  "peak": 6,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 1,
+  "note": "Altai Mountains (Tavan Bogd, Khüiten Peak 4,374 m); 135 peaks above 3,000 m mapped. Climbing season June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Altai_Mountains",
+    "label": "Altai Mountains"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "colombian-andes",
+  "peak": 5,
+  "best": [
+   12,
+   1,
+   2,
+   3,
+   7,
+   8
+  ],
+  "floor": 2,
+  "note": "Sierra Nevada del Cocuy (Ritacuba Blanco 5,330 m) and the Ruiz-Tolima volcanoes; 66 peaks above 3,000 m mapped. Dry windows December to March and July to August.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sierra_Nevada_del_Cocuy",
+    "label": "Sierra Nevada del Cocuy"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "guatemala",
+  "peak": 5,
+  "best": [
+   11,
+   12,
+   1,
+   2,
+   3,
+   4
+  ],
+  "floor": 2,
+  "note": "Tajumulco (4,220 m, the highest in Central America) and the Acatenango volcanoes. Dry season November to April.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Volc%C3%A1n_Tajumulco",
+    "label": "Volcán Tajumulco"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "costa-rica",
+  "peak": 3,
+  "best": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "floor": 1,
+  "note": "Cerro Chirripó (3,820 m) is a hike, not a technical climb; 72 peaks above 3,000 m mapped. Dry season January to April.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Cerro_Chirrip%C3%B3",
+    "label": "Cerro Chirripó"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "nice-riviera",
+  "peak": 4,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 1.5,
+  "note": "Mercantour and the Maritime Alps behind the coast, with via ferrata and alpine routes; 24 peaks above 3,000 m mapped. June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mercantour_National_Park",
+    "label": "Mercantour National Park"
+   }
+  ]
+ },
+ {
+  "k": "mountaineering",
+  "pid": "yellowstone",
+  "peak": 3,
+  "best": [
+   7,
+   8,
+   9
+  ],
+  "floor": 1,
+  "note": "Absaroka and Beartooth ranges (up to 3,900 m); 76 peaks above 3,000 m mapped, but climbing is a minor draw. July to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Absaroka_Range",
+    "label": "Absaroka Range"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "whistler",
+  "peak": 7,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "floor": 3,
+  "note": "Vancouver: English Bay, Howe Sound and the Gulf Islands; 63 marinas mapped inside the area. May to October.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Royal_Vancouver_Yacht_Club",
+    "label": "Royal Vancouver Yacht Club"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "snowdonia",
+  "peak": 6,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 2,
+  "note": "Wales: the Menai Strait, Pembrokeshire and Cardigan Bay; 65 marinas mapped. May to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Menai_Strait",
+    "label": "Menai Strait"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "hokkaido",
+  "peak": 4,
+  "best": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 0.5,
+  "note": "Hakodate, Otaru and Lake Toya; 34 marinas mapped. Short season June to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Hokkaido",
+    "label": "Hokkaido"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "tokyo-kyoto",
+  "peak": 5,
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11
+  ],
+  "floor": 3,
+  "note": "Tokyo Bay and Sagami Bay; Enoshima hosted Olympic sailing; 138 marinas mapped inside the area.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Enoshima",
+    "label": "Enoshima"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "uganda",
+  "peak": 4,
+  "best": [
+   1,
+   2,
+   6,
+   7,
+   8,
+   12
+  ],
+  "floor": 3,
+  "note": "Lake Victoria at Entebbe and Jinja; 95 marinas and harbours mapped (many are lake landings). Drier months.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lake_Victoria",
+    "label": "Lake Victoria"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "paris",
+  "peak": 3,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 1,
+  "note": "Seine and the Île-de-France lakes; 86 marinas mapped, mostly river moorings. May to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Seine",
+    "label": "Seine"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "vienna",
+  "peak": 4,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 1,
+  "note": "Danube and Neusiedler See, one of Europe's main dinghy lakes about 50 km away; 25 marinas mapped. May to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lake_Neusiedl",
+    "label": "Lake Neusiedl"
+   }
+  ]
+ },
+ {
+  "k": "sailing",
+  "pid": "prague",
+  "peak": 3,
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "floor": 1,
+  "note": "Vltava reservoirs; 45 marinas mapped. May to September.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Vltava",
+    "label": "Vltava"
+   }
+  ]
+ },
+ {
+  "k": "skiingSnowboarding",
+  "pid": "taiwan",
+  "peak": 2,
+  "best": [
+   12,
+   1,
+   2
+  ],
+  "floor": 0,
+  "note": "Hehuanshan has Taiwan's only small ski slope; snow is brief. December to February.",
+  "src": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Hehuanshan",
+    "label": "Hehuanshan"
+   }
+  ]
+ }
+]

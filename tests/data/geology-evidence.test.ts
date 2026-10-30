@@ -9,8 +9,8 @@ const PARTS = ['volcanicLandscapes', 'geothermalFeatures', 'glaciersIce', 'fossi
 const LABELS = ['Volcanoes and volcanic landscapes:', 'Geothermal features:', 'Glaciers and ice:', 'Fossils and dinosaurs:', 'Caves and karst:', 'Rock formations and canyons:', 'Tectonic landscapes:', 'Rocks, minerals and mines:', 'UNESCO geological site or geopark:'];
 
 describe('Geology evidence', () => {
-  it('covers all 69 places with an evidence line per part', () => {
-    expect(Object.keys(draft)).toHaveLength(69);
+  it('covers all 80 places with an evidence line per part', () => {
+    expect(Object.keys(draft)).toHaveLength(80);
     for (const [p, d] of Object.entries(draft)) for (const l of LABELS) expect(d.evidence as string, `${p} ${l}`).toContain(l);
   });
   it('values match the evidence file and stay on the 0 to 10 scale', () => {

@@ -16,7 +16,7 @@ const num = (text: string, re: RegExp) => Number(re.exec(text)?.[1]);
 
 describe('Mountain Biking evidence', () => {
   it('has an evidence line for every place and column (no gaps)', () => {
-    expect(Object.keys(evidence)).toHaveLength(128);
+    expect(Object.keys(evidence)).toHaveLength(132);
     for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(row.evidence[col]?.length ?? 0, `${place} ${col}`).toBeGreaterThan(20);
   });
   it('matches what was saved to the facts file', () => {

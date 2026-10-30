@@ -2517,5 +2517,25 @@
   ],
   "evidence": "Calm-water paddling: 2 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example Farmoor Reservoir (1 km2), Oldbury Nuclear Power Station Reservoir (1 km2) plus 10 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 12, which gives 8 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 54 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 6; 0 kayak or canoe rental points within 3 km of the coast gives 0; average 3. Median daily maximum wave in the paddling months 0.20 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater and multi-day: not researched, left blank.\nWater temperature: glacial (median sea surface temperature 7.3 C in the paddling months (Feb, Mar, Apr), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
   "drawSourceChecked": false
+ },
+ "tokyo-kyoto": {
+  "calmWaterPaddling": 10,
+  "seaKayaking": 7,
+  "waterTemperature": "cool",
+  "skillLevels": [
+   "never"
+  ],
+  "evidence": "Calm-water paddling: 47 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example 琵琶湖 (669 km2), 霞ヶ浦（西浦） (169 km2) plus 7 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 54, which gives 10 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: 1809 km of coastline inside the area (Natural Earth 10 m coast, which smooths bays and fjords, so long coasts are underestimated) gives 10; 4 kayak or canoe rental points within 3 km of the coast gives 4; average 7. Median daily maximum wave in the paddling months 0.47 m (Open-Meteo marine record, history from about 2021), no reduction.\nWhitewater and multi-day: not researched, left blank.\nWater temperature: cool (median sea surface temperature 15.1 C in the paddling months (Mar, Apr, May), Open-Meteo marine record).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "drawSourceChecked": false
+ },
+ "rajasthan-golden-triangle": {
+  "calmWaterPaddling": 4,
+  "seaKayaking": 0,
+  "waterTemperature": "cool",
+  "skillLevels": [
+   "never"
+  ],
+  "evidence": "Calm-water paddling: 4 lake(s) of 1 km2 or more (OpenStreetMap natural=water, lake or reservoir), for example unnamed (3 km2), Keetham Lake (2 km2) plus 0 canoe or kayak rental points or clubs (OpenStreetMap, merged within 300 m) = 4, which gives 4 (0 is 0, 1 is 2, 2-3 is 3, 4-6 is 4, 7-10 is 6, 11-20 is 8, 21 or more is 10).\nSea kayaking: no coastline inside the area, so 0.\nWhitewater and multi-day: not researched, left blank.\nWater temperature: cool (mean air temperature 18.4 C in the paddling months (Jan, Feb, Mar), Open-Meteo archive 2019-2024, as an upper bound for the water (lake water)).\nSkill levels: never (derived: never-paddled where calm-water paddling is 3 or more or class I-II is run; a little where class I-II or III is run; experienced where class IV or V is run).",
+  "drawSourceChecked": false
  }
 }

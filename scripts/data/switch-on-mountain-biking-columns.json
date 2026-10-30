@@ -1,0 +1,73 @@
+{
+ "berlin": {
+  "trailGrades": [
+   "green",
+   "intermediate"
+  ],
+  "easyFlowTrails": 10,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half",
+   "full"
+  ],
+  "bikeRental": 10,
+  "eBikeRental": 6,
+  "evidence": "Trail grades: Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 527 km easy (green), 36 km intermediate, 2 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.\nEasy flow trails: 527 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.\nBikepacking routes: 0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 3, 2-3 5, 4-6 7, 7 or more 9). Source: OpenStreetMap route=mtb relations.\nDay lengths: 567 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full.\nLift-served bike parks: Left blank: 2 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.\nBike rental: 64 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. VfJ Werkstätten GmbH, Rent a Bike, Radwelt. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).\nE-bike rental: 4 rental business(es) whose name or listing says e-bike, electric or pedelec (Coolebikes, Rent a Bike Berlin /Tandem/E-Bike, E-bike Tours Berlin/e-bike Und Fahrrad Verleih). Gives 6, same tiers. Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+ },
+ "champagne": {
+  "trailGrades": [
+   "green",
+   "intermediate"
+  ],
+  "easyFlowTrails": 10,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half",
+   "full",
+   "multi"
+  ],
+  "liftServedParks": 0,
+  "bikeRental": 4,
+  "eBikeRental": 2,
+  "evidence": "Trail grades: Trail grades with at least 5 km mapped: green, intermediate. Mapped length by grade within the place's area: 569 km easy (green), 200 km intermediate, 0 km black, 3 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.\nEasy flow trails: 569 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.\nBikepacking routes: 0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 3, 2-3 5, 4-6 7, 7 or more 9). Source: OpenStreetMap route=mtb relations.\nDay lengths: 773 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.\nLift-served bike parks: No gondolas, chairlifts or cable cars are mapped in the area (lifts are mapped thoroughly in OpenStreetMap), so there is no lift-served bike park.\nBike rental: 5 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Sport passion, Cycle Center, P.A.T.S.. Gives 4 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).\nE-bike rental: 1 rental business(es) whose name or listing says e-bike, electric or pedelec (Facil-e-bike). Gives 2, same tiers. Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+ },
+ "paris": {
+  "trailGrades": [
+   "green",
+   "intermediate",
+   "expert"
+  ],
+  "easyFlowTrails": 10,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half",
+   "full",
+   "multi"
+  ],
+  "liftServedParks": 6,
+  "bikeRental": 10,
+  "eBikeRental": 4,
+  "evidence": "Trail grades: Trail grades with at least 5 km mapped: green, intermediate, expert. Mapped length by grade within the place's area: 639 km easy (green), 63 km intermediate, 1 km black, 8 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.\nEasy flow trails: 639 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.\nBikepacking routes: 0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 3, 2-3 5, 4-6 7, 7 or more 9). Source: OpenStreetMap route=mtb relations.\nDay lengths: 710 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.\nLift-served bike parks: 3 lift(s) open to bikes (3 tagged on the map; ). Gives 6 (none 0, 1 lift 2, 2-3 3, 4-6 4, 7-10 6, 11-20 8, 21 or more 10).\nBike rental: 43 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. VelyVelo, Cyclo life, Podium.cc. Gives 10 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).\nE-bike rental: 3 rental business(es) whose name or listing says e-bike, electric or pedelec (Superchic Ebike, Onebike Paris – Electric & Cargo Bike Rental, Bizebike). Gives 4, same tiers. Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+ },
+ "prague": {
+  "trailGrades": [
+   "green",
+   "intermediate",
+   "black"
+  ],
+  "easyFlowTrails": 10,
+  "bikepackingRoutes": 0,
+  "dayLengths": [
+   "couple",
+   "half",
+   "full",
+   "multi"
+  ],
+  "bikeRental": 8,
+  "eBikeRental": 6,
+  "evidence": "Trail grades: Trail grades with at least 5 km mapped: green, intermediate, black. Mapped length by grade within the place's area: 1104 km easy (green), 87 km intermediate, 9 km black, 2 km expert. Source: OpenStreetMap mtb:scale (0-1 green, 2-3 intermediate, 4 black, 5-6 expert) and mtb:scale:imba (0-1 green, 2 intermediate, 3 black, 4-5 expert) where mtb:scale is missing, via the QLever OSM planet service.\nEasy flow trails: 1104 km of easy (green) trail mapped in the place's area gives 10 (none 0, under 20 km 2, 20-50 4, 50-150 6, 150-400 8, over 400 10). Note: OpenStreetMap grades are tagged unevenly between countries.\nBikepacking routes: 0 mountain-bike route relation(s) of 150 km or more in the area gives 0 (none 0, 1 route 3, 2-3 5, 4-6 7, 7 or more 9). Source: OpenStreetMap route=mtb relations.\nDay lengths: 1204 km of graded trail mapped in the area: a couple of hours from 10 km, half a day from 40 km, full days from 120 km, multi-day with a 150 km route or 600 km of linked network. Gives couple, half, full, multi.\nLift-served bike parks: Left blank: 1 gondola, chairlift or cable-car lifts are mapped but none is tagged for bikes and no bike park was confirmed on a resort page, so 0 would be a guess.\nBike rental: 17 bike rental business(es) found in the area (OpenStreetMap bike shops that rent, plus Overture Maps rental businesses whose names say rent/hire/e-bike; bike-share docking stations removed), e.g. Neklan sport, Bikeinvest, U Tyrše. Gives 8 (none 0, 1 -> 2, 2-3 -> 3, 4-6 -> 4, 7-10 -> 6, 11-20 -> 8, 21 or more -> 10).\nE-bike rental: 5 rental business(es) whose name or listing says e-bike, electric or pedelec (Půjčovna elektrokol Praha / Ebike Rental Prague, I Like eBike, Prague By E-Bike). Gives 6, same tiers. Shops that rent e-bikes without saying so in their name are not seen, so this can undercount."
+ }
+}

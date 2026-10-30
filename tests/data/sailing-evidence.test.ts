@@ -10,8 +10,8 @@ const tier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4
 const presence = (n: number) => (n === 0 ? 0 : n === 1 ? 6 : n === 2 ? 8 : 10);
 
 describe('Sailing evidence', () => {
-  it('covers all 138 places and every draft has an evidence line per rating', () => {
-    expect(Object.keys(ev)).toHaveLength(138);
+  it('covers all 146 places and every draft has an evidence line per rating', () => {
+    expect(Object.keys(ev)).toHaveLength(146);
     for (const p of Object.keys(ev)) {
       const e = draft[p].evidence as string;
       expect(e, p).toContain('Sheltered island hopping:');

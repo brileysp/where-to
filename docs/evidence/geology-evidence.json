@@ -40,14 +40,14 @@
   "caveEntrances": 15,
   "geothermalPoints": 13,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 1,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 1,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -65,14 +65,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -140,14 +140,14 @@
   "caveEntrances": 24,
   "geothermalPoints": 2,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -205,14 +205,14 @@
   "caveEntrances": 6,
   "geothermalPoints": 7,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 2,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -230,14 +230,14 @@
   "caveEntrances": 8,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -246,6 +246,66 @@
    "geothermalFeatures": 0,
    "glaciersIce": 3,
    "cavesKarst": 6
+  }
+ },
+ "colombian-andes": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Nevado del Ruiz",
+     "pages": 54,
+     "unesco": false
+    },
+    {
+     "label": "Santa Isabel",
+     "pages": 19,
+     "unesco": false
+    },
+    {
+     "label": "Cerro Bravo",
+     "pages": 15,
+     "unesco": false
+    }
+   ],
+   "glaciersIce": [
+    {
+     "label": "Nevado del Ruiz",
+     "pages": 54,
+     "unesco": false
+    },
+    {
+     "label": "Nevado del Tolima",
+     "pages": 31,
+     "unesco": false
+    },
+    {
+     "label": "Nevado del Quindío",
+     "pages": 17,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 18,
+  "caveEntrances": 3,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 2,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 8,
+   "geothermalFeatures": 0,
+   "glaciersIce": 8,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 3
   }
  },
  "sedona": {
@@ -262,14 +322,14 @@
   "caveEntrances": 4,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -315,14 +375,14 @@
   "caveEntrances": 3,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -347,14 +407,14 @@
   "caveEntrances": 1,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -414,14 +474,14 @@
   "caveEntrances": 16,
   "geothermalPoints": 3,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 11,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 11
   },
   "whs": [
    "Hawaiʻi Volcanoes National Park"
@@ -441,14 +501,14 @@
   "caveEntrances": 7,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -457,6 +517,59 @@
    "geothermalFeatures": 0,
    "glaciersIce": 0,
    "cavesKarst": 6
+  }
+ },
+ "basque-country": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Ekain cave",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Santimamiñe kobazuloa",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Cave del Valle",
+     "pages": 11,
+     "unesco": false
+    },
+    {
+     "label": "Praileaitz Cave",
+     "pages": 8,
+     "unesco": false
+    },
+    {
+     "label": "Axlor cave",
+     "pages": 8,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 827,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 7
   }
  },
  "grandcanyon": {
@@ -483,14 +596,14 @@
   "caveEntrances": 8,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Grand Canyon National Park"
@@ -519,14 +632,14 @@
   "caveEntrances": 7,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -552,14 +665,14 @@
   "caveEntrances": 2,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Te Wahipounamu"
@@ -614,14 +727,14 @@
   "caveEntrances": 10,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -638,14 +751,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -653,6 +766,74 @@
    "volcanicLandscapes": 0,
    "geothermalFeatures": 0,
    "glaciersIce": 6
+  }
+ },
+ "nepal": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Khumbu Glacier",
+     "pages": 32,
+     "unesco": false
+    },
+    {
+     "label": "Khumbu Icefall",
+     "pages": 14,
+     "unesco": false
+    },
+    {
+     "label": "Ngozumpa Glacier",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Davis Falls",
+     "pages": 12,
+     "unesco": false
+    },
+    {
+     "label": "Mahendra Cave",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Mustang Caves",
+     "pages": 8,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Kali Gandaki Gorge",
+     "pages": 10,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 3748,
+  "caveEntrances": 86,
+  "geothermalPoints": 1,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 2,
+   "glaciersIce": 8,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6,
+   "rockFormations": 4
   }
  },
  "rwanda": {
@@ -689,14 +870,14 @@
   "caveEntrances": 6,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -738,14 +919,14 @@
   "caveEntrances": 14,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [
@@ -831,14 +1012,14 @@
   "caveEntrances": 163,
   "geothermalPoints": 2,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [
@@ -869,14 +1050,14 @@
   "caveEntrances": 4,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -893,14 +1074,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Great Smoky Mountains National Park"
@@ -927,14 +1108,14 @@
   "caveEntrances": 85,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 1,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -973,14 +1154,14 @@
   "caveEntrances": 455,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 7,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 9,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 7,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1007,14 +1188,14 @@
   "caveEntrances": 173,
   "geothermalPoints": 2,
   "osmGeological": {
-   "palaeontological_site": 1,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1024,6 +1205,29 @@
    "glaciersIce": 2,
    "fossilsDinosaurs": 2,
    "cavesKarst": 6
+  }
+ },
+ "antarctica": {
+  "wikidata": {},
+  "glacierPolygons": 14,
+  "caveEntrances": 0,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6
   }
  },
  "yosemite": {
@@ -1060,14 +1264,14 @@
   "caveEntrances": 1,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Yosemite National Park"
@@ -1088,14 +1292,14 @@
   "caveEntrances": 1,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1120,14 +1324,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1156,14 +1360,14 @@
   "caveEntrances": 2,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1208,14 +1412,14 @@
   "caveEntrances": 256,
   "geothermalPoints": 2,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Tràng An",
@@ -1239,14 +1443,14 @@
   "caveEntrances": 4,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1291,13 +1495,13 @@
   "caveEntrances": 6,
   "geothermalPoints": 0,
   "osmGeological": {
+   "hoodoo": 0,
    "fault": 0,
    "palaeontological_site": 0,
    "inselberg": 0,
-   "meteor_crater": 0,
-   "hoodoo": 0,
    "limestone_pavement": 0,
    "giants_kettle": 0,
+   "meteor_crater": 0,
    "volcanic_lava_tube": 0
   },
   "whs": [],
@@ -1340,14 +1544,14 @@
   "caveEntrances": 3,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 3,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 1,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1393,14 +1597,14 @@
   "caveEntrances": 639,
   "geothermalPoints": 1,
   "osmGeological": {
-   "palaeontological_site": 16,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 3,
+   "fault": 0,
+   "palaeontological_site": 16,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 3
   },
   "whs": [],
   "geoparks": [
@@ -1480,14 +1684,14 @@
   "caveEntrances": 171,
   "geothermalPoints": 10,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1537,14 +1741,14 @@
   "caveEntrances": 10,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 1,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1583,14 +1787,14 @@
   "caveEntrances": 3,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1607,14 +1811,14 @@
   "caveEntrances": 1,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1644,14 +1848,14 @@
   "caveEntrances": 3,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1688,14 +1892,14 @@
   "caveEntrances": 83,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "South China Karst"
@@ -1744,14 +1948,14 @@
   "caveEntrances": 12,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Talamanca Range-La Amistad Reserves"
@@ -1786,14 +1990,14 @@
   "caveEntrances": 10,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1824,14 +2028,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1887,14 +2091,14 @@
   "caveEntrances": 40,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -1965,14 +2169,14 @@
   "caveEntrances": 131,
   "geothermalPoints": 228,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Tongariro National Park"
@@ -1984,6 +2188,135 @@
    "glaciersIce": 6,
    "cavesKarst": 6,
    "unescoGeology": true
+  }
+ },
+ "chamonix": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Mont Blanc",
+     "pages": 127,
+     "unesco": false
+    },
+    {
+     "label": "Mer de Glace",
+     "pages": 27,
+     "unesco": false
+    },
+    {
+     "label": "Dôme du Goûter",
+     "pages": 22,
+     "unesco": false
+    },
+    {
+     "label": "Argentière Glacier",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Bossons Glacier",
+     "pages": 14,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Gouffre Jean-Bernard",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Pointe Percée",
+     "pages": 12,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 207,
+  "caveEntrances": 91,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 10,
+   "fossilsDinosaurs": 2,
+   "cavesKarst": 6,
+   "rockFormations": 4
+  }
+ },
+ "ireland": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "The Burren",
+     "pages": 34,
+     "unesco": false
+    },
+    {
+     "label": "Aillwee Cave",
+     "pages": 11,
+     "unesco": false
+    },
+    {
+     "label": "Pol an Ionain",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Dunmore Cave",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Cliffs of Moher",
+     "pages": 48,
+     "unesco": false
+    },
+    {
+     "label": "Dun Briste",
+     "pages": 10,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 203,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 1
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 8,
+   "rockFormations": 8
   }
  },
  "croatia": {
@@ -2000,14 +2333,14 @@
   "caveEntrances": 182,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 1,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2033,14 +2366,14 @@
   "caveEntrances": 30,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 1,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 1,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 1,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2106,14 +2439,14 @@
   "caveEntrances": 2,
   "geothermalPoints": 1321,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Yellowstone National Park"
@@ -2190,14 +2523,14 @@
   "caveEntrances": 9,
   "geothermalPoints": 3,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 1,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2243,14 +2576,14 @@
   "caveEntrances": 4,
   "geothermalPoints": 12,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [
@@ -2278,14 +2611,14 @@
   "caveEntrances": 9,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2337,14 +2670,14 @@
   "caveEntrances": 39,
   "geothermalPoints": 3,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 2,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 1,
+   "fault": 2,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 1
   },
   "whs": [],
   "geoparks": [],
@@ -2384,14 +2717,14 @@
   "caveEntrances": 12,
   "geothermalPoints": 2,
   "osmGeological": {
-   "palaeontological_site": 2,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 2,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 1,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2410,14 +2743,14 @@
   "caveEntrances": 44,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 3,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 4,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 4
   },
   "whs": [],
   "geoparks": [],
@@ -2492,14 +2825,14 @@
   "caveEntrances": 492,
   "geothermalPoints": 1,
   "osmGeological": {
-   "palaeontological_site": 12,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 19,
+   "fault": 0,
+   "palaeontological_site": 12,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 19
   },
   "whs": [],
   "geoparks": [
@@ -2512,6 +2845,83 @@
    "fossilsDinosaurs": 6,
    "cavesKarst": 8,
    "rockFormations": 8,
+   "unescoGeology": true
+  }
+ },
+ "bavaria-munich": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Eisriesenwelt",
+     "pages": 34,
+     "unesco": true
+    },
+    {
+     "label": "Lamprechtsofen",
+     "pages": 16,
+     "unesco": false
+    }
+   ],
+   "rockFormations": [
+    {
+     "label": "Leutasch Gorge",
+     "pages": 16,
+     "unesco": false
+    },
+    {
+     "label": "Liechtensteinklamm",
+     "pages": 15,
+     "unesco": true
+    },
+    {
+     "label": "Partnach Gorge",
+     "pages": 9,
+     "unesco": false
+    }
+   ],
+   "mineralsMines": [
+    {
+     "label": "Hallein Salt Mine",
+     "pages": 5,
+     "unesco": false
+    },
+    {
+     "label": "Salzbergwerk Berchtesgaden",
+     "pages": 3,
+     "unesco": false
+    },
+    {
+     "label": "Hallstatt - Salt mine",
+     "pages": 3,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 213,
+  "caveEntrances": 587,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [
+   "Ore of the Alps Global Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 6,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 8,
+   "rockFormations": 8,
+   "mineralsMines": 2,
    "unescoGeology": true
   }
  },
@@ -2649,14 +3059,14 @@
   "caveEntrances": 89,
   "geothermalPoints": 15,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 1,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 1,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Vatnajökull National Park"
@@ -2674,20 +3084,75 @@
    "unescoGeology": true
   }
  },
+ "galapagos": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Floreana Island",
+     "pages": 33,
+     "unesco": false
+    },
+    {
+     "label": "Santiago Island",
+     "pages": 32,
+     "unesco": false
+    },
+    {
+     "label": "Española Island",
+     "pages": 28,
+     "unesco": false
+    },
+    {
+     "label": "Alcedo Volcano",
+     "pages": 22,
+     "unesco": false
+    },
+    {
+     "label": "Volcán Darwin",
+     "pages": 16,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 14,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [
+   "Galápagos Islands"
+  ],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 9,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 6,
+   "unescoGeology": true
+  }
+ },
  "cape-town": {
   "wikidata": {},
   "glacierPolygons": 0,
   "caveEntrances": 55,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2696,6 +3161,67 @@
    "geothermalFeatures": 0,
    "glaciersIce": 0,
    "cavesKarst": 6
+  }
+ },
+ "swissalps": {
+  "wikidata": {
+   "glaciersIce": [
+    {
+     "label": "Aletsch Glacier",
+     "pages": 53,
+     "unesco": false
+    },
+    {
+     "label": "Gorner Glacier",
+     "pages": 22,
+     "unesco": false
+    },
+    {
+     "label": "Zmutt Glacier",
+     "pages": 16,
+     "unesco": false
+    },
+    {
+     "label": "Argentière Glacier",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Fee Glacier",
+     "pages": 15,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Saint-Léonard underground lake",
+     "pages": 14,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 541,
+  "caveEntrances": 100,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 3,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 3,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 10,
+   "fossilsDinosaurs": 3,
+   "cavesKarst": 6,
+   "rockFormations": 3
   }
  },
  "uyuni": {
@@ -2712,14 +3238,14 @@
   "caveEntrances": 3,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2750,14 +3276,14 @@
   "caveEntrances": 22,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2767,6 +3293,63 @@
    "glaciersIce": 0,
    "cavesKarst": 6,
    "rockFormations": 6
+  }
+ },
+ "borneo": {
+  "wikidata": {
+   "cavesKarst": [
+    {
+     "label": "Niah National Park",
+     "pages": 30,
+     "unesco": false
+    },
+    {
+     "label": "Sarawak Chamber",
+     "pages": 17,
+     "unesco": true
+    },
+    {
+     "label": "Deer Cave",
+     "pages": 11,
+     "unesco": true
+    },
+    {
+     "label": "Gomantong Caves",
+     "pages": 11,
+     "unesco": false
+    },
+    {
+     "label": "Clearwater Cave",
+     "pages": 10,
+     "unesco": true
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 65,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [
+   "Gunung Mulu National Park"
+  ],
+  "geoparks": [
+   "Kinabalu UNESCO Global Geopark"
+  ],
+  "values": {
+   "volcanicLandscapes": 0,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 9,
+   "unescoGeology": true
   }
  },
  "jordan": {
@@ -2795,14 +3378,14 @@
   "caveEntrances": 46,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 4,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 4,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2821,14 +3404,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2879,14 +3462,14 @@
   "caveEntrances": 4,
   "geothermalPoints": 1,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 1,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [
@@ -2915,14 +3498,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2956,14 +3539,14 @@
   "caveEntrances": 54,
   "geothermalPoints": 1,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -2980,14 +3563,14 @@
   "caveEntrances": 1,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -3019,14 +3602,14 @@
   "caveEntrances": 6,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -3057,14 +3640,14 @@
   "caveEntrances": 38,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -3082,14 +3665,14 @@
   "caveEntrances": 0,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -3099,20 +3682,79 @@
    "glaciersIce": 6
   }
  },
+ "papua-new-guinea": {
+  "wikidata": {
+   "volcanicLandscapes": [
+    {
+     "label": "Mount Balbi",
+     "pages": 20,
+     "unesco": false
+    },
+    {
+     "label": "Mount Bosavi",
+     "pages": 17,
+     "unesco": false
+    },
+    {
+     "label": "Bagabag",
+     "pages": 15,
+     "unesco": false
+    },
+    {
+     "label": "Billy Mitchell",
+     "pages": 10,
+     "unesco": false
+    },
+    {
+     "label": "Mount Hagen",
+     "pages": 10,
+     "unesco": false
+    }
+   ],
+   "cavesKarst": [
+    {
+     "label": "Kilu Cave",
+     "pages": 9,
+     "unesco": false
+    }
+   ]
+  },
+  "glacierPolygons": 0,
+  "caveEntrances": 5,
+  "geothermalPoints": 0,
+  "osmGeological": {
+   "hoodoo": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
+   "giants_kettle": 0,
+   "meteor_crater": 0,
+   "volcanic_lava_tube": 0
+  },
+  "whs": [],
+  "geoparks": [],
+  "values": {
+   "volcanicLandscapes": 7,
+   "geothermalFeatures": 0,
+   "glaciersIce": 0,
+   "cavesKarst": 4
+  }
+ },
  "peru": {
   "wikidata": {},
   "glacierPolygons": 42,
   "caveEntrances": 4,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
@@ -3137,14 +3779,14 @@
   "caveEntrances": 6,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [
    "Uluṟu-Kata Tjuṯa National Park"
@@ -3173,14 +3815,14 @@
   "caveEntrances": 16,
   "geothermalPoints": 0,
   "osmGeological": {
-   "palaeontological_site": 0,
-   "fault": 0,
-   "limestone_pavement": 0,
    "hoodoo": 0,
-   "volcanic_lava_tube": 0,
+   "fault": 0,
+   "palaeontological_site": 0,
+   "inselberg": 0,
+   "limestone_pavement": 0,
    "giants_kettle": 0,
    "meteor_crater": 0,
-   "inselberg": 0
+   "volcanic_lava_tube": 0
   },
   "whs": [],
   "geoparks": [],
