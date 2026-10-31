@@ -29,3 +29,4 @@ Never write a different blurb for months that are the same in reality: cover the
 - Name no tour companies, operators or hotels. A museum, market, church or restaurant is named only when it is the reason to go and you are sure of it.
 - Say nothing about politics, security or environmental crises.
 - US units and spelling only: miles and feet, degrees Fahrenheit, American spelling. Never kilometers, meters, degrees Celsius or British spellings (color, center, neighbor).
+- Never write "for this interest" or "this interest" in the text. Name the thing itself (museums, buildings, restaurants). Say "The best time is...", not "The best time for this interest is...".
