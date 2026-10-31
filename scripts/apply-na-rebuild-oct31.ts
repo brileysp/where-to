@@ -1,14 +1,14 @@
 // 31 Oct 2026: applies the owner's rulings on the N/A rebuild review (scripts/data/na-rebuild-rulings.json; everything not ticked "keep as is" was accepted).
 // A: N/A -> applicable (N/A mark and reason removed; base score 1 where the place has none). B: applicable -> N/A with its short reason.
 // C: specialist list, N/A -> applicable (base score 1 where none) plus one build-queue to-do per interest. types: place-type corrections.
-// Only touches a cell that is still in the state the audit saw. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/apply-na-rebuild-oct31.ts [--apply]
+// Only touches a cell that is still in the state the audit saw. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/apply-na-rebuild-oct31.ts [--plan=file.json in scripts/data] [--apply]
 import { readFileSync } from 'fs';
 import { join } from 'path';
 for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').split('\n')) { const t = line.trim(); if (!t || t.startsWith('#')) continue; const i = t.indexOf('='); if (i === -1) continue; let v = t.slice(i + 1).trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); if (process.env[t.slice(0, i).trim()] === undefined) process.env[t.slice(0, i).trim()] = v; }
 type Plan = { A: string[][]; B: string[][]; C: string[][]; types: Record<string, string> };
 (async () => {
   const apply = process.argv.includes('--apply');
-  const plan = JSON.parse(readFileSync(join(__dirname, 'data', 'na-rebuild-rulings.json'), 'utf8')) as Plan;
+  const plan = JSON.parse(readFileSync(join(__dirname, 'data', process.argv.find((a) => a.startsWith('--plan='))?.slice(7) ?? 'na-rebuild-rulings.json'), 'utf8')) as Plan;
   const { db } = await import('../src/lib/db/client');
   const { places, interestTodos } = await import('../src/lib/db/schema');
   const { applyAdminEdits } = await import('../src/lib/admin/apply-edits');
