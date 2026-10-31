@@ -303,6 +303,7 @@ const RESPONSE_SCHEMA_LEAN = {
     },
     named_things: { type: Type.ARRAY, items: { type: Type.STRING } },
     flags: { type: Type.ARRAY, items: { type: Type.STRING } },
+    confidence: { type: Type.STRING, enum: ['high', 'medium', 'low'] },
   },
   required: ['applicable', 'depth', 'overview', 'blurbs', 'best_months'],
 };

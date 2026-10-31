@@ -1,0 +1,72 @@
+{
+ "culture": {
+  "title": "Culture",
+  "interests": {
+   "museumsArt": {
+    "label": "Museums & Art",
+    "about": "Museums, galleries and art as a reason to visit: the major collections, the best-known museums, art districts, and recurring shows or fairs.",
+    "notCount": "Historic sites and architecture (own interests; mention them only where they are also a museum); street life.",
+    "scope": "Museums, galleries and art as a reason to visit: the major collections, the best-known museums, art districts, and shows or fairs that recur. It applies wherever a visitor can spend meaningful time in museums or galleries, even a small number; it does not apply where there are none worth a visit."
+   },
+   "architecture": {
+    "label": "Architecture",
+    "about": "Buildings and built places as a reason to visit: notable architecture from any period, skylines, historic and modern districts, bridges, and planned or ruined places seen for their design.",
+    "notCount": "What is inside buildings (museums), religious use (Religious & Spiritual Sites), and the history behind a site (History & Archaeology).",
+    "scope": "Buildings and built places as a reason to visit: notable architecture from any period (historic, modern, vernacular), skylines, districts, bridges, and planned or ruined places seen for their design. It applies wherever a visitor can see buildings worth traveling for, even a single district or a single landmark."
+   },
+   "historyArchaeology": {
+    "label": "History & Archaeology",
+    "about": "Ancient and historic sites, ruins, castles, battlefields, palaces, old towns and the museums that interpret them.",
+    "notCount": "Buildings seen only for their design (Architecture) and places of worship seen as living religious sites (Religious & Spiritual Sites).",
+    "scope": "History and archaeology as a reason to visit: ancient and historic sites, ruins, castles, battlefields, palaces, old towns and the museums that interpret them. It applies wherever a visitor can reach sites with real historical depth; recent history counts when visitors travel to see it."
+   },
+   "religiousSites": {
+    "label": "Religious & Spiritual Sites",
+    "about": "Cathedrals, temples, mosques, shrines, monasteries, pilgrimage routes and sacred places, visited whatever the visitor's own beliefs; what can be seen and done, and the etiquette and access that matter.",
+    "notCount": "Buildings valued only for design (Architecture) or as ruins and history (History & Archaeology).",
+    "scope": "Religious and spiritual sites as places to visit, whatever the visitor's own beliefs: cathedrals, temples, mosques, shrines, monasteries, pilgrimage routes and sacred natural places. Cover what visitors can see and do, and the access and etiquette that matter (dress, hours, no entry during services). It applies wherever there are such sites visitors travel for."
+   },
+   "traditionalCrafts": {
+    "label": "Traditional Arts & Crafts",
+    "about": "Workshops, markets and villages where traditional crafts (textiles, ceramics, woodwork, metalwork, glass, paper and the like) are still made, and where a visitor can see them made or buy them.",
+    "notCount": "Mass-produced souvenirs, general shopping (Shopping), and art museums (Museums & Art).",
+    "scope": "Traditional arts and crafts as a reason to visit: workshops, markets and villages where traditional crafts are still made, and where a visitor can watch them being made or buy them. It applies only where living craft traditions exist that a visitor can reach; mass-produced souvenirs do not count."
+   },
+   "cityExploration": {
+    "label": "Local Culture & City Exploration",
+    "about": "Getting a feel for a place by exploring it: neighborhoods worth wandering, squares, local markets as street life, daily rhythms and customs.",
+    "notCount": "Museums, food, nightlife and shopping (own interests).",
+    "scope": "Exploring a place and getting a feel for everyday local life: neighborhoods worth wandering, squares, street life, daily rhythms and local customs, and how easy and pleasant the place is to explore. It applies wherever there is a town or city a visitor can explore; it does not apply where nobody lives within reach."
+   }
+  }
+ },
+ "food": {
+  "title": "Food and drink",
+  "interests": {
+   "fineDining": {
+    "label": "Fine Dining",
+    "about": "Serious restaurants and tasting menus, chef-led cooking and the places known for it.",
+    "notCount": "Casual local eating and markets (Street Food & Markets).",
+    "scope": "Fine dining as a reason to visit: serious restaurants and tasting menus, chef-led cooking and the places known for it, and the local cuisine they build on. It applies wherever a visitor can eat at restaurants of real culinary ambition; it does not apply where there is none within a day trip."
+   },
+   "streetFood": {
+    "label": "Street Food & Markets",
+    "about": "Food stalls, night markets, food halls, market-led eating and the local specialties people eat on the street.",
+    "notCount": "Sit-down fine dining (Fine Dining) and drinks (Wine, Beer & Spirits; Specialty Coffee & Tea).",
+    "scope": "Street food and markets as a reason to visit: food stalls, night markets, food halls, market-led eating and the local specialties people eat on the street. It applies wherever there is food a visitor can eat at stalls or markets, even a single market."
+   },
+   "coffeeTea": {
+    "label": "Specialty Coffee & Tea",
+    "about": "Roasters and serious café culture, tea houses and tea ceremonies, and where coffee or tea is grown or traditionally drunk.",
+    "notCount": "Chain cafés, and alcohol (Wine, Beer & Spirits).",
+    "scope": "Specialty coffee and tea as a reason to visit: roasters and serious café culture, tea houses and ceremonies, and the places where coffee or tea is grown or traditionally drunk. It applies wherever there is a coffee or tea culture a visitor can seek out; chain cafés do not count."
+   },
+   "wineSpirits": {
+    "label": "Wine, Beer & Spirits",
+    "about": "Wine regions and cellar doors, breweries and beer halls, distilleries and traditional local drinks.",
+    "notCount": "Bars as nightlife (Nightlife), and imported drinks alone.",
+    "scope": "Wine, beer and spirits as a reason to visit: wine regions and cellar doors, breweries and beer halls, distilleries and traditional local drinks. It applies wherever visitors can tour or taste local production or drink at places known for it; imported drinks alone do not count."
+   }
+  }
+ }
+}
