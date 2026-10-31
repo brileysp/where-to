@@ -10,7 +10,7 @@ const strip = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
 (async () => {
   const families = (arg('family') ?? '').split(',').filter(Boolean);
   const out = arg('out'); const dry = process.argv.includes('--dry');
-  if (!families.length || (!out && !dry)) { console.log('Usage: --family=culture,food --out=file.json [--per=3] [--budget=1.5] [--dry]'); process.exit(1); }
+  if (!families.length || (!out && !dry)) { console.log('Usage: --family=culture,food --out=file.json [--per=3] [--budget=1.5] [--model=gemini-3-flash-preview] [--dry]'); process.exit(1); }
   const per = Number(arg('per') ?? '3'); const budget = Number(arg('budget') ?? '1.5');
   const root = join(__dirname, '..');
   const scopes = JSON.parse(readFileSync(join(__dirname, 'data', 'family-scopes.json'), 'utf8')) as Record<string, { title: string; interests: Record<string, { label: string; about: string; notCount: string; scope: string }> }>;
@@ -44,10 +44,12 @@ const strip = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
     const prompt = template.replace('{{PLACE}}', place).replace(/\{\{LABEL\}\}/g, fam.interests[j.k].label).replace('{{SCOPE}}', fam.interests[j.k].scope).replace('{{FAMILY_TABLE}}', table).replace('{{CORE}}', core);
     if (dry) { console.log(prompt); console.log('\n~ chars', prompt.length); process.exit(0); }
     if (spent >= budget) { console.log(`Budget cap $${budget} reached after $${spent.toFixed(3)}; stopping.`); break; }
-    const r = await generateLean(prompt, MODEL);
-    const cost = (r.tokensIn * 2 + r.tokensOut * 12) / 1e6; spent += cost;
+    const model = arg('model') ?? MODEL;
+    const r = await generateLean(prompt, model);
+    const price = model.includes('flash') ? { i: 0.5, o: 3 } : { i: 2, o: 12 };
+    const cost = (r.tokensIn * price.i + r.tokensOut * price.o) / 1e6; spent += cost;
     const f = facts.find((x) => x.placeId === j.id && x.interestKey === j.k);
-    results.push({ family: j.family, k: j.k, id: j.id, rank: j.rank, name: row.name, model: MODEL, tokensIn: r.tokensIn, tokensOut: r.tokensOut, cost, parseError: r.parseError, gemini: r.json, curve: monthly, base: (row.baseScores as Record<string, number>)[j.k] ?? null, columns: f ? (f.facts as Record<string, unknown>) : null });
+    results.push({ family: j.family, k: j.k, id: j.id, rank: j.rank, name: row.name, model, tokensIn: r.tokensIn, tokensOut: r.tokensOut, cost, parseError: r.parseError, gemini: r.json, curve: monthly, base: (row.baseScores as Record<string, number>)[j.k] ?? null, columns: f ? (f.facts as Record<string, unknown>) : null });
     writeFileSync(out!, JSON.stringify(results, null, 1));
     console.log(`${j.k.padEnd(18)} ${j.rank.padEnd(7)} ${row.name.slice(0, 24).padEnd(24)} in ${r.tokensIn} out ${r.tokensOut} $${cost.toFixed(4)} total $${spent.toFixed(3)}`);
     await new Promise((res) => setTimeout(res, 1200));

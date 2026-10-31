@@ -22,7 +22,7 @@ def checks(r):
     txt=g.get('overview','')+' '+' '.join(b['text'] for b in g.get('blurbs',[]))
     h=BAN.findall(txt)
     if h: out.append(('flag','Banned promotional words: '+', '.join(sorted(set(x.lower() for x in h)))))
-    if re.search(r'\b\d+\s?(km|kilomet|meters|metres)\b|°\s?C\b|\bcolour|\bmetre|\bharbour|\bcentre|\bneighbour',txt,re.I): out.append(('flag','Metric units or UK spelling.'))
+    if re.search(r'\b\d+\s?(km|kilomet|meters|metres)\b|°\s?C\b',txt,re.I) or re.search(r'\b(colour|metre|harbour|neighbour|centre)\w*',txt): out.append(('flag','Metric units or UK spelling.'))
     if len(g.get('overview',''))>450: out.append(('flag',f"Overview {len(g['overview'])} characters (max 450)."))
     for b in g.get('blurbs',[]):
         if len(b['text'])>300: out.append(('flag',f"A blurb is {len(b['text'])} characters (max 300).")); break

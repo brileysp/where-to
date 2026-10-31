@@ -1,0 +1,2949 @@
+[
+ {
+  "family": "culture",
+  "k": "museumsArt",
+  "id": "vienna",
+  "rank": "strong",
+  "name": "Vienna",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1390,
+  "tokensOut": 376,
+  "cost": 0.001823,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Vienna is a premier global destination for art, housing massive imperial collections and significant modern works. You can spend days exploring the Kunsthistorisches Museum's Old Masters or the Belvedere's world-famous collection of Gustav Klimt paintings. The MuseumsQuartier provides a concentrated hub for contemporary art and photography in a relaxed, social setting.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Vienna's major museums are open year-round and offer a climate-controlled escape. The Kunsthistorisches Museum and the Albertina house vast permanent collections, while the Leopold Museum showcases Egon Schiele. In spring and fall, the city hosts major temporary exhibitions and art fairs."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The city's world-class museums and galleries are permanent fixtures with consistent indoor experiences regardless of the season.",
+   "flags": [],
+   "named_things": [
+    "Kunsthistorisches Museum",
+    "Belvedere",
+    "Gustav Klimt",
+    "MuseumsQuartier",
+    "Albertina",
+    "Leopold Museum",
+    "Egon Schiele"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   9,
+   10,
+   10,
+   9,
+   9,
+   10,
+   9,
+   9,
+   9
+  ],
+  "base": 9,
+  "columns": {
+   "fineArt": 10,
+   "modernArt": 6,
+   "streetArt": 5,
+   "timedEntry": "widely",
+   "daysOfMuseums": 10,
+   "famousMuseums": 9,
+   "quirkyMuseums": 6,
+   "historyMuseums": 9,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 6
+  },
+  "checks": []
+ },
+ {
+  "family": "culture",
+  "k": "museumsArt",
+  "id": "iceland",
+  "rank": "middle",
+  "name": "Iceland",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1392,
+  "tokensOut": 462,
+  "cost": 0.002082,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's art scene is concentrated in Reykjavik, where the National Gallery and Reykjavik Art Museum showcase a mix of traditional landscape painting and avant-garde installations. Beyond the capital, small towns often house quirky, specialized collections like the Herring Era Museum or the Skogar Museum. The country is particularly known for its contemporary sculpture and a high density of independent galleries and artist-run spaces.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Indoor galleries and museums provide a warm refuge during the colder months. In Reykjavik, the Marshall House and the Einar Jonsson Museum are easily accessible. While daylight is limited, the lighting in these spaces is designed to highlight the works effectively throughout the winter."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Summer brings the Reykjavik Arts Festival in June, featuring international and local performances and exhibitions. Long daylight hours make it easier to visit remote outdoor sculpture parks and regional museums like the Akureyri Art Museum in the north under the midnight sun."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "confidence": "high",
+   "depth_why": "The experience is consistent year-round for indoor collections, but the summer months offer specific festivals and easier access to regional galleries.",
+   "flags": [],
+   "named_things": [
+    "National Gallery of Iceland",
+    "Reykjavik Art Museum",
+    "Herring Era Museum",
+    "Skogar Museum",
+    "Marshall House",
+    "Einar Jonsson Museum",
+    "Reykjavik Arts Festival",
+    "Akureyri Art Museum"
+   ]
+  },
+  "curve": [
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.6,
+   4.6,
+   4.6,
+   4.1,
+   4.1,
+   4.1,
+   4.1
+  ],
+  "base": 4,
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 2,
+   "streetArt": 2,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 1,
+   "quirkyMuseums": 4,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "museumsArt",
+  "id": "arches-canyonlands",
+  "rank": "weak",
+  "name": "Arches & Canyonlands",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1397,
+  "tokensOut": 346,
+  "cost": 0.0017365,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "While these parks are primarily known for geology, the nearby town of Moab serves as a hub for regional art. Visitors can explore galleries featuring Southwestern landscapes and the Moab Museum, which displays local history and cultural artifacts. The area's art scene is small but provides a creative perspective on the surrounding desert environment.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Galleries in Moab, such as the Moab Arts and Recreation Center and Tom Till Gallery, remain open year-round. The Moab Museum offers consistent access to its collection of regional heritage and art, though winter hours may be slightly reduced compared to the busy spring and fall seasons."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The indoor galleries and museums in Moab do not change significantly by season, making the experience consistent throughout the year.",
+   "flags": [],
+   "named_things": [
+    "Moab Museum",
+    "Moab Arts and Recreation Center",
+    "Tom Till Gallery",
+    "Moab"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   0,
+   0,
+   2,
+   2,
+   2,
+   2
+  ],
+  "base": 1,
+  "columns": null,
+  "checks": []
+ },
+ {
+  "family": "culture",
+  "k": "architecture",
+  "id": "paris",
+  "rank": "strong",
+  "name": "Paris",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1382,
+  "tokensOut": 621,
+  "cost": 0.002554,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Paris is a living museum of urban design, spanning from the medieval streets of the Marais to the Haussmann-era boulevards and the modern glass of La Defense. Visitors can explore iconic landmarks like the Eiffel Tower and the Centre Pompidou or walk the high-concept Promenade Plantee. The city is best explored on foot from spring through fall when the light highlights the limestone facades.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Mild temperatures and long daylight hours are ideal for walking tours of the Haussmann boulevards or the modern Parc de la Villette. The soft light of spring and autumn emphasizes the textures of the city's limestone and the intricate ironwork of the Eiffel Tower and Grand Palais."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer heat can be intense on the pavement, but the clear skies provide excellent visibility from the roof of the Arc de Triomphe or the Montparnasse Tower. The city is less crowded as locals depart, making it easier to photograph the glass pyramids of the Louvre without heavy foot traffic."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Short days and frequent rain make outdoor exploration less comfortable, though the city's covered passages (passages couverts) offer a dry look at 19th-century iron and glass design. Interior visits to the Pantheon or the futuristic Centre Pompidou provide refuge from the winter chill."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of viewing architecture in Paris is heavily dependent on walking and natural light, which change significantly between the pleasant shoulder seasons, the hot summer, and the gray, rainy winter.",
+   "flags": [],
+   "named_things": [
+    "Eiffel Tower",
+    "Centre Pompidou",
+    "La Defense",
+    "Marais",
+    "Promenade Plantee",
+    "Haussmann boulevards",
+    "Parc de la Villette",
+    "Grand Palais",
+    "Arc de Triomphe",
+    "Montparnasse Tower",
+    "Louvre",
+    "passages couverts",
+    "Pantheon"
+   ]
+  },
+  "curve": [
+   7.6,
+   7.6,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   7.6,
+   7.6
+  ],
+  "base": 10,
+  "columns": {
+   "artNouveauDeco": 9,
+   "castlesPalaces": 6,
+   "grandMonuments": 10,
+   "buildingsInside": 9,
+   "everydayStreets": 8,
+   "drawSourceChecked": false,
+   "modernArchitecture": 7,
+   "historicArchitecture": 9
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Mar fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "architecture",
+  "id": "sedona",
+  "rank": "middle",
+  "name": "Sedona",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1385,
+  "tokensOut": 512,
+  "cost": 0.0022285,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Sedona is defined by its organic architecture that blends into the red rock landscape, most notably the Chapel of the Holy Cross built into a twin-pinnacle spur. Visitors can also explore the Tlaquepaque Arts & Shopping Village, designed in the style of a traditional Mexican village with arched entryways and cobblestone paths. The city features several mid-century and contemporary homes that prioritize desert views and natural materials.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+     ],
+     "level": "peak",
+     "text": "Mild temperatures are ideal for walking around the Tlaquepaque Arts & Shopping Village or visiting the Chapel of the Holy Cross. The clear light during these months highlights the way the structures integrate with the surrounding sandstone formations."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer heat can be intense, making midday architectural tours uncomfortable. However, the interior of the Chapel of the Holy Cross remains a cool retreat, and the long daylight hours provide ample time for early morning or late evening photography of the city's unique desert-style buildings."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Winter brings occasional snow, which creates a striking contrast against the red rock and the organic lines of Sedona's architecture. While it is colder, the lack of crowds makes it easier to appreciate the quiet design of the Chapel and the intricate stonework at Tlaquepaque."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of viewing Sedona's architecture is heavily influenced by the outdoor climate and the quality of light on the red rocks, which changes significantly between the peak seasons, the summer heat, and the cooler winter.",
+   "flags": [],
+   "named_things": [
+    "Chapel of the Holy Cross",
+    "Tlaquepaque Arts & Shopping Village"
+   ]
+  },
+  "curve": [
+   5.2,
+   5.2,
+   5.2,
+   5.2,
+   5.2,
+   3.6,
+   3.6012336160370086,
+   3.6399375975039003,
+   3.9845697329376857,
+   4.815430267062315,
+   5.1600624024961,
+   5.198766383962992
+  ],
+  "base": 4,
+  "columns": {
+   "artNouveauDeco": 0,
+   "castlesPalaces": 0,
+   "grandMonuments": 3,
+   "buildingsInside": 3,
+   "everydayStreets": 3,
+   "drawSourceChecked": false,
+   "modernArchitecture": 3,
+   "historicArchitecture": 2
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Dec fair; Jan fair; Feb fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "architecture",
+  "id": "svalbard",
+  "rank": "weak",
+  "name": "Svalbard",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1387,
+  "tokensOut": 511,
+  "cost": 0.0022265,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Svalbard's architecture is defined by its extreme Arctic environment and industrial history. Visitors can see the colorful, stilted wooden houses of Longyearbyen and the preserved Soviet-era industrial design of Barentsburg and the ghost town of Pyramiden. These settlements showcase unique adaptations to permafrost and isolation.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      8,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The light is best for viewing the stark lines of the Global Seed Vault and the wooden houses of Longyearbyen. You can reach the Soviet-era architecture of Barentsburg and Pyramiden by boat or snowmobile, seeing their monumental statues and functionalist blocks against the tundra."
+    },
+    {
+     "months": [
+      6,
+      7
+     ],
+     "level": "good",
+     "text": "Under the midnight sun, the colorful facades of Longyearbyen are visible 24 hours a day. Boat trips are the primary way to reach the abandoned mining town of Pyramiden, where the northernmost statue of Lenin stands among well-preserved socialist-classicist buildings."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "During the polar night, architecture is experienced through artificial light. While the silhouettes of the Svalbard Science Centre and the Global Seed Vault are illuminated, the remote settlements of Pyramiden and Barentsburg are much harder to access and see in the total darkness."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    8,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "Access to the most significant architectural sites outside Longyearbyen, like Pyramiden, depends heavily on seasonal light and transport conditions.",
+   "flags": [],
+   "named_things": [
+    "Longyearbyen",
+    "Barentsburg",
+    "Pyramiden",
+    "Global Seed Vault",
+    "Svalbard Science Centre",
+    "Lenin statue"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "base": 2,
+  "columns": {
+   "artNouveauDeco": 0,
+   "castlesPalaces": 0,
+   "grandMonuments": 1,
+   "buildingsInside": 1,
+   "everydayStreets": 2,
+   "drawSourceChecked": false,
+   "modernArchitecture": 0,
+   "historicArchitecture": 2
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "historyArchaeology",
+  "id": "beijing",
+  "rank": "strong",
+  "name": "Beijing & Great Wall",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1385,
+  "tokensOut": 591,
+  "cost": 0.0024655,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Beijing is the epicenter of Chinese imperial history, anchored by the Forbidden City and the Ming Tombs. The Great Wall stretches across the northern mountains in various states of preservation, from the restored ramparts at Badaling to the crumbling ruins of Jiankou. Visitors can explore the vast Palace Museum and the Summer Palace to see how the Ming and Qing dynasties lived and governed.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Winter is bitterly cold and dry, but the lack of crowds makes the Forbidden City and the Temple of Heaven feel more atmospheric. The Great Wall at Mutianyu is often dusted with snow, though steep sections can be slippery and the wind chill on the exposed ridges is intense."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+     ],
+     "level": "peak",
+     "text": "Mild temperatures are ideal for hiking the Great Wall at Jinshanling or Simatai. In the city, the grounds of the Summer Palace and the Old Summer Palace ruins are comfortable to explore on foot. October offers clear skies, though the first week of the month sees extreme crowds for National Day."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer is hot, humid, and prone to heavy rain, which can make climbing the Great Wall exhausting. The indoor galleries of the National Museum of China provide a climate-controlled escape to view ancient bronzes and jade, while the shaded courtyards of the Lama Temple offer some relief."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of visiting outdoor archaeological sites like the Great Wall is heavily dictated by Beijing's extreme seasonal temperature shifts.",
+   "flags": [],
+   "named_things": [
+    "Great Wall",
+    "Forbidden City",
+    "Ming Tombs",
+    "Badaling",
+    "Jiankou",
+    "Palace Museum",
+    "Summer Palace",
+    "Temple of Heaven",
+    "Mutianyu",
+    "Jinshanling",
+    "Simatai",
+    "Old Summer Palace",
+    "National Museum of China",
+    "Lama Temple"
+   ]
+  },
+  "curve": [
+   8.7,
+   8.7,
+   8.7,
+   10,
+   9.3,
+   8.6,
+   8.6,
+   8.6,
+   10,
+   9.984146341463415,
+   9.35,
+   8.715853658536584
+  ],
+  "base": 9,
+  "columns": {
+   "castles": 8,
+   "warHistory": 5,
+   "ancientRuins": 9,
+   "historyDensity": 8,
+   "interpretation": [
+    "audio",
+    "local",
+    "expert"
+   ],
+   "roughestGround": "climb",
+   "prehistoricSites": 2,
+   "drawSourceChecked": false,
+   "archaeologyMuseums": 8
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Dec fair; Jan fair; Feb fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "historyArchaeology",
+  "id": "ireland",
+  "rank": "middle",
+  "name": "Ireland",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1383,
+  "tokensOut": 623,
+  "cost": 0.0025605,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Ireland is a dense landscape of human history, from the Neolithic passage tombs at Brú na Bóinne to the medieval Rock of Cashel and the Victorian streets of Dublin. You can explore 5,000-year-old ruins, climb the stone stairs of Skellig Michael, or walk the 17th-century walls of Derry. The experience is best from late spring through early autumn when rural sites are fully accessible and daylight lasts long into the evening.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Short days and frequent rain make outdoor ruins like the Hill of Tara or Glendalough more challenging to visit. While major city museums like the National Museum of Ireland remain open, some rural heritage sites and boat trips to Skellig Michael are closed for the season."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "Mild weather and fewer crowds make this an ideal time for the Rock of Cashel or the monastic ruins of Clonmacnoise. Most seasonal heritage sites open by April, and the long twilight of May and June provides ample time to explore the megalithic tombs at Carrowmore and Newgrange."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Peak summer offers the best access to remote sites and offshore islands. You can take the ferry to the Aran Islands to see Dún Aonghasa or join guided tours of Kilmainham Gaol. Expect the largest crowds at popular spots like Blarney Castle and the Bunratty Castle Folk Park."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "confidence": "high",
+   "depth_why": "The experience is shaped by the seasonal accessibility of rural ruins and boat-access sites, which are restricted during the darker, wetter winter months.",
+   "flags": [],
+   "named_things": [
+    "Brú na Bóinne",
+    "Rock of Cashel",
+    "Dublin",
+    "Skellig Michael",
+    "Derry",
+    "National Museum of Ireland",
+    "Hill of Tara",
+    "Glendalough",
+    "Clonmacnoise",
+    "Carrowmore",
+    "Newgrange",
+    "Aran Islands",
+    "Dún Aonghasa",
+    "Kilmainham Gaol",
+    "Blarney Castle",
+    "Bunratty Castle Folk Park"
+   ]
+  },
+  "curve": [
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6
+  ],
+  "base": 6,
+  "columns": {
+   "castles": 8,
+   "warHistory": 4,
+   "ancientRuins": 5,
+   "historyDensity": 6,
+   "interpretation": [
+    "audio",
+    "local",
+    "expert"
+   ],
+   "roughestGround": "climb",
+   "prehistoricSites": 10,
+   "drawSourceChecked": false,
+   "archaeologyMuseums": 5
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Jan fair; Feb fair; Mar fair; Nov fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "historyArchaeology",
+  "id": "thailand",
+  "rank": "weak",
+  "name": "Phuket & the Andaman Coast",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1388,
+  "tokensOut": 457,
+  "cost": 0.002065,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Phuket and the Andaman Coast offer a window into the region's tin-mining wealth and maritime trade. Visitors can explore the Sino-Portuguese architecture of Phuket Old Town, visit the Thalang National Museum for regional history, and see the remains of ancient settlements in Takua Pa. The best time for exploring these outdoor sites is during the dry season when humidity is lower and walking tours are more comfortable.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "Dry weather makes this the ideal time for walking tours of Phuket Old Town's historic shophouses on Soi Rommanee. You can visit the Thai Hua Museum and the Baan Chinpracha mansion comfortably. In Thalang, the Heroines Monument and nearby historic sites are easily accessible without rain."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "fair",
+     "text": "Heavy monsoon rains can disrupt outdoor exploration of ruins in Takua Pa or the old town districts. While museums like the Thalang National Museum provide indoor alternatives, the high humidity and frequent downpours make navigating the historic streets and outdoor monuments less pleasant."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "confidence": "high",
+   "depth_why": "The experience is divided by the dry season and the monsoon season, which significantly impacts the ease of exploring outdoor historic districts and ruins.",
+   "flags": [],
+   "named_things": [
+    "Phuket Old Town",
+    "Soi Rommanee",
+    "Thai Hua Museum",
+    "Baan Chinpracha",
+    "Thalang National Museum",
+    "Takua Pa",
+    "Heroines Monument"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   1.5,
+   1,
+   0.5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ],
+  "base": 1,
+  "columns": null,
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "religiousSites",
+  "id": "uzbekistan",
+  "rank": "strong",
+  "name": "Samarkand & Bukhara",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1406,
+  "tokensOut": 584,
+  "cost": 0.002455,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Samarkand and Bukhara are centers of Islamic scholarship and Sufism, home to some of the most significant mosques and shrines in Central Asia. Visitors can explore the blue-tiled Registan complex and the sacred Shah-i-Zinda necropolis, or visit the tomb of Bahauddin Naqshband, a major pilgrimage site. Spring and fall offer the most comfortable weather for visiting these active places of worship.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Mild temperatures make this the best time to visit the sprawling Shah-i-Zinda necropolis and the Bibi-Khanym Mosque. You will see many local pilgrims at the Naqshbandi Sufi memorial. Dress modestly with shoulders and knees covered; women should carry a scarf for head covering in active mosques."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "fair",
+     "text": "Intense summer heat exceeding 100 degrees Fahrenheit makes midday visits to unshaded courtyards like the Po-i-Kalyan complex difficult. Plan to visit shrines in the early morning or late evening. Many sites remain active for prayer, so avoid walking directly in front of those praying."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Winter is cold but quiet, offering a more contemplative atmosphere at the Chor Minor or the Gur-e-Amir. While some smaller neighborhood mosques may have limited hours, major shrines remain open. Interior spaces are often unheated, so dress in heavy layers for extended visits."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of visiting these sites is heavily dictated by the extreme seasonal temperature shifts of the Uzbek steppe.",
+   "flags": [],
+   "named_things": [
+    "Registan",
+    "Shah-i-Zinda",
+    "Bahauddin Naqshband",
+    "Bibi-Khanym Mosque",
+    "Po-i-Kalyan",
+    "Chor Minor",
+    "Gur-e-Amir"
+   ]
+  },
+  "curve": [
+   8.1,
+   8.1,
+   8.1,
+   9,
+   8.35,
+   7.7,
+   7.7,
+   7.7,
+   9.4,
+   9.384146341463415,
+   8.75,
+   8.115853658536585
+  ],
+  "base": 8,
+  "columns": {
+   "siteRules": "modest",
+   "templeStays": false,
+   "mosquesIslamic": 10,
+   "templesShrines": 2,
+   "pilgrimageRoutes": 4,
+   "religiousDensity": 9,
+   "drawSourceChecked": false,
+   "cathedralsChurches": 0
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "religiousSites",
+  "id": "berlin",
+  "rank": "middle",
+  "name": "Berlin",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1401,
+  "tokensOut": 380,
+  "cost": 0.0018405,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Berlin offers a mix of historic Protestant and Catholic churches alongside modern places of worship that reflect its diverse population. Visitors can explore the massive Berlin Cathedral, the Kaiser Wilhelm Memorial Church with its war-damaged spire, and the New Synagogue. Most sites are active places of worship where visitors should dress modestly and avoid sightseeing during services.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Berlin's religious sites are accessible year-round. The Berlin Cathedral and St. Mary's Church offer regular organ recitals and services. The Kaiser Wilhelm Memorial Church provides a space for quiet reflection on peace. Dress respectfully by covering shoulders and knees, and check for midday or evening prayer times before visiting."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of visiting these religious and spiritual sites does not change significantly with the seasons, as they are primarily indoor activities with consistent access year-round.",
+   "flags": [],
+   "named_things": [
+    "Berlin Cathedral",
+    "Kaiser Wilhelm Memorial Church",
+    "New Synagogue",
+    "St. Mary's Church",
+    "Berliner Dom",
+    "Marienkirche"
+   ]
+  },
+  "curve": [
+   3.9,
+   3.9,
+   3.9,
+   3.9,
+   5.3,
+   5.299417152373023,
+   5.282926829268293,
+   5.139376770538243,
+   4.6,
+   4.060623229461756,
+   3.9170731707317072,
+   3.9005828476269775
+  ],
+  "base": 4,
+  "columns": {
+   "siteRules": "open",
+   "templeStays": false,
+   "mosquesIslamic": 3,
+   "templesShrines": 1,
+   "pilgrimageRoutes": 0,
+   "religiousDensity": 3,
+   "drawSourceChecked": false,
+   "cathedralsChurches": 4
+  },
+  "checks": [
+   [
+    "flag",
+    "A blurb is 334 characters (max 300)."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "religiousSites",
+  "id": "punta-cana",
+  "rank": "weak",
+  "name": "Dominican Republic",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1403,
+  "tokensOut": 402,
+  "cost": 0.0019075,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The Dominican Republic is home to the oldest colonial-era religious sites in the Americas, centered in Santo Domingo's Colonial Zone. Visitors can explore the first cathedral of the New World and several historic convents, while the modern Basilica in Higüey serves as a major pilgrimage site. These locations offer a mix of 16th-century Spanish architecture and active contemporary worship.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Religious sites are open year-round, though January 21 sees massive crowds at the Basilica of Our Lady of Altagracia in Higüey for its feast day. In Santo Domingo, visit the Cathedral of Santa María la Menor; modest dress is required, and sightseeing is restricted during Sunday services."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The primary religious sites are permanent structures with consistent access and significance throughout the year, with only minor variations for specific feast days.",
+   "flags": [],
+   "named_things": [
+    "Santo Domingo Colonial Zone",
+    "Cathedral of Santa María la Menor",
+    "Basilica of Our Lady of Altagracia",
+    "Higüey",
+    "Convent of San Francisco",
+    "Church of the Convent of Dominican Order"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2
+  ],
+  "base": 1,
+  "columns": null,
+  "checks": []
+ },
+ {
+  "family": "culture",
+  "k": "traditionalCrafts",
+  "id": "morocco",
+  "rank": "strong",
+  "name": "Marrakech & Atlas",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1388,
+  "tokensOut": 383,
+  "cost": 0.001843,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Marrakech is a major center for Moroccan craftsmanship, where artisans in the medina's specialized souks continue centuries-old traditions. Visitors can watch leather being tanned, metal being hammered, and wood being carved in open workshops. Beyond the city, the High Atlas villages are known for distinctive Berber weaving and pottery, offering a direct look at rural craft techniques that remain central to daily life.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Artisans work year-round in the Souk Haddadine for metalwork and Souk Cherratine for leather. While summer heat makes the workshops intense, the activity never stops. In the Atlas foothills, cooperatives in places like Tahnaout or Asni demonstrate traditional loom weaving and rug making."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "Traditional craft production in the souks and mountain villages is a consistent, year-round activity not dictated by seasons.",
+   "flags": [],
+   "named_things": [
+    "Souk Haddadine",
+    "Souk Cherratine",
+    "Medina of Marrakech",
+    "High Atlas",
+    "Tahnaout",
+    "Asni"
+   ]
+  },
+  "curve": [
+   8.7,
+   8.7,
+   10,
+   10,
+   10,
+   9.3,
+   9.3,
+   9.3,
+   10,
+   10,
+   10,
+   8.7
+  ],
+  "base": 9,
+  "columns": {
+   "courseLengths": [
+    "short",
+    "multiDay",
+    "apprenticeship"
+   ],
+   "craftSettings": [
+    "village",
+    "studios",
+    "markets",
+    "museums"
+   ],
+   "seriousPieces": 8,
+   "craftWorkshops": true,
+   "potteryCeramics": true,
+   "textilesWeaving": true,
+   "carvingMetalwork": true
+  },
+  "checks": []
+ },
+ {
+  "family": "culture",
+  "k": "traditionalCrafts",
+  "id": "chiang-mai",
+  "rank": "middle",
+  "name": "Chiang Mai & Northern Thailand",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1391,
+  "tokensOut": 401,
+  "cost": 0.0018985,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Northern Thailand is the center of the country's craft heritage, where visitors can visit specialized villages dedicated to silk weaving, celadon ceramics, and silverwork. Chiang Mai serves as the hub, but the most authentic experiences are found in nearby workshops where traditional techniques like woodcarving and paper umbrella making are still practiced daily. The cooler months from November to February are the most comfortable for exploring these outdoor artisan communities.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Artisan villages like Bo Sang for hand-painted umbrellas and Ban Tawai for woodcarving operate year-round. In Chiang Mai, the Sunday Walking Street and Wua Lai Saturday Market offer direct access to silver smiths and hill tribe textiles. For high-quality celadon, visit the Mengrai Kilns."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The craft villages and workshops in Northern Thailand are permanent fixtures that operate consistently throughout the year regardless of the season.",
+   "flags": [],
+   "named_things": [
+    "Bo Sang",
+    "Ban Tawai",
+    "Sunday Walking Street",
+    "Wua Lai Saturday Market",
+    "Mengrai Kilns",
+    "celadon",
+    "silk weaving",
+    "silverwork"
+   ]
+  },
+  "curve": [
+   6.7,
+   6.689024390243903,
+   6.25,
+   5.810975609756097,
+   5.8,
+   4.2,
+   4.2,
+   4.2,
+   4.2,
+   4.2,
+   6.7,
+   6.7
+  ],
+  "base": 6,
+  "columns": {
+   "courseLengths": [
+    "short",
+    "multiDay"
+   ],
+   "craftSettings": [
+    "village",
+    "studios",
+    "markets",
+    "museums"
+   ],
+   "seriousPieces": 10,
+   "craftWorkshops": true,
+   "potteryCeramics": true,
+   "textilesWeaving": true,
+   "carvingMetalwork": true
+  },
+  "checks": [
+   [
+    "flag",
+    "Overview 483 characters (max 450)."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "traditionalCrafts",
+  "id": "mongolia",
+  "rank": "weak",
+  "name": "Mongolia",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1389,
+  "tokensOut": 549,
+  "cost": 0.0023415,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Mongolia is a premier destination for textile and nomadic crafts, particularly felt-making, cashmere production, and intricate embroidery. Visitors can observe artisans crafting traditional gers, leatherwork, and silver ornaments in Ulaanbaatar workshops or rural cooperatives. The best experiences occur during summer festivals and autumn harvests when craft demonstrations are most frequent.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Extreme cold limits rural travel, but you can visit the Mary & Martha Mongolia shop or the Tsagaan Alt Wool Shop in Ulaanbaatar. These venues showcase high-quality felt slippers, camel wool garments, and quilted wall hangings made by local cooperatives during the long winter months."
+    },
+    {
+     "months": [
+      4,
+      5,
+      10
+     ],
+     "level": "good",
+     "text": "As the weather warms, workshops in the capital and provincial centers like Erdenet become more active. This is an excellent time to see the production of traditional leather boots and silver-inlaid saddles before the busy summer tourist and herding seasons begin."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer is peak season for living crafts. During the Naadam Festival in July, artisans gather to display archery gear and horse tack. In the Gobi and central steppes, you can watch nomadic families shearing sheep and wetting wool to press into felt for ger insulation and rugs."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of craft experiences shifts significantly between the harsh winter, when activities are indoor-focused in the capital, and the summer, when nomadic outdoor crafts like felt-making and festival-related gear production are accessible.",
+   "flags": [],
+   "named_things": [
+    "Ulaanbaatar",
+    "Mary & Martha Mongolia",
+    "Tsagaan Alt Wool Shop",
+    "Erdenet",
+    "Naadam Festival",
+    "Gobi",
+    "ger"
+   ]
+  },
+  "curve": [
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9,
+   4.9
+  ],
+  "base": 5,
+  "columns": {
+   "craftSettings": [
+    "village",
+    "markets",
+    "museums"
+   ],
+   "seriousPieces": 4,
+   "craftWorkshops": false,
+   "potteryCeramics": false,
+   "textilesWeaving": true,
+   "carvingMetalwork": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Nov fair; Dec fair; Jan fair; Feb fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "cityExploration",
+  "id": "barcelona",
+  "rank": "strong",
+  "name": "Barcelona",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1392,
+  "tokensOut": 631,
+  "cost": 0.002589,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Barcelona is a city of distinct neighborhoods, from the narrow medieval alleys of the Gothic Quarter to the wide, grid-like avenues of Eixample. Visitors can experience the local rhythm by walking the pedestrian-only Rambla del Poblenou or visiting neighborhood markets like Mercat de la Llibertat. Spring and fall offer the most comfortable weather for the city's extensive walking culture and outdoor plaza life.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Mild temperatures are ideal for long walks through Gràcia’s small squares or the hilly streets of El Poble-sec. In late September, the La Mercè festival fills the streets with castellers (human towers) and fire runs (correfocs), offering a deep look into Catalan traditions and street life."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "fair",
+     "text": "High humidity and heat make midday exploration draining, and many locals leave for vacation in August, leading some smaller neighborhood shops to close. Evening remains lively as people congregate in cooler coastal areas like Barceloneta or the shaded terraces of Enric Granados street."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Winter is bright and crisp, perfect for exploring the Born district without the summer crowds. While cooler, the sun often shines, and the city feels more authentic as the focus shifts to local holiday traditions, such as the Fira de Santa Llúcia market held near the cathedral in December."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of city exploration in Barcelona is heavily influenced by the Mediterranean climate and major cultural festivals like La Mercè, which change the street dynamic between seasons.",
+   "flags": [],
+   "named_things": [
+    "Gothic Quarter",
+    "Eixample",
+    "Rambla del Poblenou",
+    "Mercat de la Llibertat",
+    "Gràcia",
+    "El Poble-sec",
+    "La Mercè",
+    "castellers",
+    "correfocs",
+    "Barceloneta",
+    "Enric Granados street",
+    "Born district",
+    "Fira de Santa Llúcia"
+   ]
+  },
+  "curve": [
+   7.2,
+   9.2,
+   9.2,
+   9.2,
+   10,
+   9.5,
+   9,
+   9.058823529411764,
+   9.941176470588236,
+   10,
+   7.2,
+   7.2
+  ],
+  "base": 9,
+  "columns": {
+   "guidedWalks": true,
+   "famousSights": 9,
+   "daysItCanFill": "week",
+   "gettingAround": "transit",
+   "cityPopulation": 5600,
+   "historicOldTown": 8,
+   "offTheBeatenPath": 9,
+   "drawSourceChecked": false,
+   "marketsStreetLife": 8
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Jul fair; Aug fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "cityExploration",
+  "id": "jordan",
+  "rank": "middle",
+  "name": "Petra & Wadi Rum",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1396,
+  "tokensOut": 503,
+  "cost": 0.002207,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "While primarily known for ruins and desert, this region offers a window into Bedouin life and the modern town of Wadi Musa. Visitors can explore the bustling markets of Wadi Musa or experience the hospitality and traditional rhythms of the Zalabia and Howeitat tribes in the desert camps of Wadi Rum. The best experience is found during the temperate spring and fall when outdoor social life is most active.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+     ],
+     "level": "peak",
+     "text": "Mild temperatures make this the best time to wander the steep streets of Wadi Musa. You can visit the local fruit and vegetable markets or sit in a sidewalk cafe to observe daily life. In Wadi Rum, the Bedouin camps are lively, and the desert air is perfect for long evenings of storytelling."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "fair",
+     "text": "Intense summer heat keeps most locals indoors during the day. Street life in Wadi Musa only begins to stir after sunset when the air cools. In the desert, the pace of life slows significantly, though the clear nights are excellent for experiencing the quiet solitude of the landscape."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "poor",
+     "text": "Winter can be surprisingly cold with occasional snow or heavy rain. Many shops in Wadi Musa close early, and the social street life is minimal. In Wadi Rum, the experience is focused on staying warm around indoor fires in Bedouin tents rather than exploring the surroundings."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of local culture and street life is heavily dictated by the extreme seasonal temperature shifts in the Jordanian desert.",
+   "flags": [],
+   "named_things": [
+    "Wadi Musa",
+    "Wadi Rum",
+    "Zalabia Bedouin",
+    "Howeitat Bedouin"
+   ]
+  },
+  "curve": [
+   3,
+   3.65,
+   4.3,
+   4.3,
+   4.3,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   3.45,
+   4,
+   3.5
+  ],
+  "base": 3,
+  "columns": {
+   "guidedWalks": true,
+   "famousSights": 5,
+   "daysItCanFill": "4to5",
+   "gettingAround": "car",
+   "cityPopulation": 4000,
+   "historicOldTown": 5,
+   "offTheBeatenPath": 3,
+   "drawSourceChecked": false,
+   "marketsStreetLife": 6
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Dec poor; Jan poor; Feb poor"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "culture",
+  "k": "cityExploration",
+  "id": "black-forest",
+  "rank": "weak",
+  "name": "Black Forest",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1394,
+  "tokensOut": 666,
+  "cost": 0.002695,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Black Forest is defined by its network of historic towns and villages like Freiburg and Gengenbach, where life centers on cobblestone squares and weekly farmers' markets. Visitors can experience the region's distinct rhythms through its traditional festivals and the relaxed pace of its pedestrian zones. Late spring through early fall offers the most vibrant street life and outdoor cafe culture.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "February brings Fasnet, the Swabian-Alemannic carnival, where towns like Rottweil and Elzach fill with locals in traditional carved wooden masks. The atmosphere is intense and rooted in local custom, though the cold weather keeps most other daily life indoors."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5
+     ],
+     "level": "good",
+     "text": "As spring arrives, outdoor markets like the Muenstermarkt in Freiburg become lively hubs for local produce like white asparagus. The squares begin to fill with people again, and the smaller villages lose their winter quiet as hiking season begins to stir."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer is the best time for wandering the Bächle—the small water-filled runnels—of Freiburg's old town. Long daylight hours encourage a slow pace in the beer gardens and town squares, and many villages host local wine or harvest festivals that offer a genuine look at regional social life."
+    },
+    {
+     "months": [
+      10,
+      11
+     ],
+     "level": "fair",
+     "text": "The region slows down as the weather turns damp and foggy. While the larger towns remain active, many smaller tourist-oriented villages become very quiet, and the focus shifts to cozy indoor dining and local thermal baths."
+    },
+    {
+     "months": [
+      12
+     ],
+     "level": "peak",
+     "text": "December transforms the town centers with traditional Christmas markets. Places like the Ravenna Gorge or Gengenbach, which turns its town hall into a giant advent calendar, offer a festive atmosphere where locals gather for mulled wine and regional snacks."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The experience changes significantly between the peak summer street life, the specific cultural window of winter carnival (Fasnet), and the major seasonal draw of Christmas markets.",
+   "flags": [],
+   "named_things": [
+    "Freiburg",
+    "Gengenbach",
+    "Rottweil",
+    "Elzach",
+    "Fasnet",
+    "Muenstermarkt",
+    "Bächle",
+    "Ravenna Gorge"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "base": 1,
+  "columns": null,
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (3) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "fineDining",
+  "id": "hongkong",
+  "rank": "strong",
+  "name": "Hong Kong",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1191,
+  "tokensOut": 382,
+  "cost": 0.0017415,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Hong Kong is a global culinary capital where Cantonese traditions meet international innovation. You will find a high density of Michelin-starred establishments, from refined dim sum at Lung King Heen to modern French techniques at Caprice. The city is a primary destination for tasting menus that utilize premium seafood and seasonal ingredients sourced from across Asia and Europe.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Fine dining is a year-round pursuit in Hong Kong. While autumn brings the highly prized hairy crab season to Cantonese menus, the city's elite kitchens, such as Amber or L'Atelier de Jo!l Robuchon, maintain consistent excellence regardless of the month."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The quality and availability of high-end tasting menus and chef-led restaurants do not fluctuate significantly by season in this global hub.",
+   "flags": [],
+   "named_things": [
+    "Lung King Heen",
+    "Caprice",
+    "Amber",
+    "L'Atelier de Jo!l Robuchon",
+    "hairy crab",
+    "dim sum"
+   ]
+  },
+  "curve": [
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   10,
+   10,
+   10
+  ],
+  "base": 9,
+  "columns": {
+   "farmToTable": 4,
+   "bookingAhead": "months",
+   "tastingMenus": 9,
+   "diningWithView": 9,
+   "tastingMenuPrice": 290,
+   "michelinRestaurants": 76
+  },
+  "checks": []
+ },
+ {
+  "family": "food",
+  "k": "fineDining",
+  "id": "thailand",
+  "rank": "middle",
+  "name": "Phuket & the Andaman Coast",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1196,
+  "tokensOut": 449,
+  "cost": 0.001945,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Phuket has evolved into a serious culinary destination, anchored by the first Michelin-starred restaurant in southern Thailand and a growing scene of chef-led kitchens. The focus is often on elevated Southern Thai cuisine, which uses intense spices and local seafood, alongside sophisticated international tasting menus. Most high-end dining is concentrated on Phuket, though luxury resorts along the Khao Lak coast also offer ambitious seasonal menus.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "The dry season is the height of the culinary calendar, with all signature restaurants like Pru and Samut fully operational. This is the best time for tasting menus that rely on local Andaman seafood like blue swimmer crab and Phuket lobster, as supply is consistent and the weather is ideal."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "While the monsoon brings rain, the fine dining scene remains active. Some resort-based restaurants may reduce hours, but major venues in Phuket Town and Cherngtalay stay open. Menus often shift to highlight inland ingredients and fermented flavors typical of traditional Southern Thai preservation."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "confidence": "high",
+   "depth_why": "The dining scene is year-round but peaks during the dry season when tourism is at its height and all seasonal luxury venues are guaranteed to be open.",
+   "flags": [],
+   "named_things": [
+    "Pru",
+    "Samut",
+    "Phuket lobster",
+    "blue swimmer crab",
+    "Phuket Town",
+    "Cherngtalay",
+    "Khao Lak"
+   ]
+  },
+  "curve": [
+   6.6,
+   5.7,
+   5.7,
+   5.7,
+   5.7,
+   3.4,
+   3.4,
+   3.4,
+   3.4,
+   6,
+   6.6,
+   6.6
+  ],
+  "base": 6,
+  "columns": {
+   "farmToTable": 4,
+   "bookingAhead": "none",
+   "tastingMenus": 5,
+   "diningWithView": 8,
+   "tastingMenuPrice": 150,
+   "michelinRestaurants": 2
+  },
+  "checks": [
+   [
+    "flag",
+    "Overview 452 characters (max 450)."
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "fineDining",
+  "id": "peruvian-amazon",
+  "rank": "weak",
+  "name": "Peruvian Amazon",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1191,
+  "tokensOut": 414,
+  "cost": 0.0018375,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Fine dining in the Peruvian Amazon centers on Iquitos, where ambitious chefs transform jungle ingredients like paiche fish, camu camu, and heart of palm into sophisticated tasting menus. While the setting is remote, the culinary scene applies high-end techniques to indigenous flavors, often served in historic rubber-boom mansions. It is a consistent year-round destination for those seeking to taste the biodiversity of the rainforest.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The dining scene in Iquitos remains steady throughout the year. Restaurants like Al Frío y al Fuego, which floats on the Itaya River, and Fitzcarraldo serve refined versions of tacacho and cecina. Menus focus on fresh river catches and seasonal fruits regardless of the river's water level."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of high-end dining in Iquitos does not fluctuate significantly with the seasons, as restaurants operate year-round with consistent access to river and forest ingredients.",
+   "flags": [],
+   "named_things": [
+    "Iquitos",
+    "Al Frío y al Fuego",
+    "Fitzcarraldo",
+    "paiche",
+    "camu camu",
+    "tacacho",
+    "cecina",
+    "Itaya River"
+   ]
+  },
+  "curve": [
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   3.6,
+   3.6,
+   3.6,
+   2.9,
+   2.9,
+   2.9,
+   2.9
+  ],
+  "base": 3,
+  "columns": {
+   "farmToTable": 3,
+   "bookingAhead": "none",
+   "tastingMenus": 2,
+   "diningWithView": 3,
+   "michelinRestaurants": 0
+  },
+  "checks": []
+ },
+ {
+  "family": "food",
+  "k": "streetFood",
+  "id": "istanbul",
+  "rank": "strong",
+  "name": "Istanbul",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1186,
+  "tokensOut": 583,
+  "cost": 0.002342,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Istanbul is a premier destination for street food, where centuries-old markets like the Spice Bazaar and Kadıköy Market offer everything from artisanal cheeses to honeycomb. You can eat your way through the city with iconic snacks like simit, balık ekmek by the Bosphorus, and midye dolma. While the food is available year-round, the experience is most comfortable during the mild temperatures of spring and fall.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Mild weather makes this the best time to explore the open-air stalls of the Kadıköy Market or the historic Spice Bazaar. Seasonal produce like green plums and fresh figs appears, and the Bosphorus breeze is perfect for eating balık ekmek (fish sandwiches) off the boats at Eminönü."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "The heat can be intense, making the shaded corridors of the Grand Bazaar or the indoor sections of the Beşiktaş Market more appealing. Street vendors pivot to refreshing snacks like sliced watermelon and cold ayran to help locals and visitors manage the summer humidity."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Winter brings a shift in street flavors; look for vendors roasting chestnuts (kestane) on street corners and selling sahlep, a hot, creamy orchid-root drink topped with cinnamon. While outdoor markets are quieter, the heavy, spiced flavors of lahmacun and dürüm are especially satisfying in the cold."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of street food is constant, but the experience and specific seasonal offerings change based on the city's distinct Mediterranean climate shifts.",
+   "flags": [],
+   "named_things": [
+    "Spice Bazaar",
+    "Kadıköy Market",
+    "Grand Bazaar",
+    "Beşiktaş Market",
+    "simit",
+    "balık ekmek",
+    "midye dolma",
+    "Eminönü",
+    "ayran",
+    "kestane",
+    "sahlep",
+    "lahmacun",
+    "dürüm"
+   ]
+  },
+  "curve": [
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "base": 10,
+  "columns": {
+   "foodTours": true,
+   "eatingStyle": [
+    "standing",
+    "table"
+   ],
+   "illnessRisk": "some",
+   "nightMarkets": 5,
+   "streetStalls": 8,
+   "foodAdventure": "mixed",
+   "cookingClasses": true,
+   "produceMarkets": 9,
+   "signatureFoods": "Simit, balik ekmek, doner, kokorec, Egyptian Bazaar snacks",
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Nov fair; Dec fair; Jan fair; Feb fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "streetFood",
+  "id": "santorini",
+  "rank": "middle",
+  "name": "Santorini & Cyclades",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1194,
+  "tokensOut": 581,
+  "cost": 0.00234,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Street food in the Cyclades centers on portable classics like souvlaki and gyros, alongside island-specific snacks like tomato fritters (tomatokeftedes) in Santorini. While traditional open-air food markets are rare compared to mainland Greece, local produce stalls and bakeries serving savory pies define the casual eating scene. The experience is best from late spring through early fall when seasonal kiosks and outdoor vendors are fully operational.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Warm weather brings the most street food activity, with souvlaki stands in Fira and Oia at their busiest. Look for vendors selling roasted corn or loukoumades (honey-soaked donuts). In Naxos and Paros, local cheese and produce stalls are well-stocked with seasonal fruits and graviera cheese."
+    },
+    {
+     "months": [
+      4,
+      10
+     ],
+     "level": "good",
+     "text": "The shoulder season offers a quieter experience. Most popular gyro spots remain open, and bakeries are reliable for spanakopita and tyropita. The weather is comfortable for eating outdoors, though some smaller seasonal kiosks on the less-populated islands may begin to close."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3,
+      11,
+      12
+     ],
+     "level": "poor",
+     "text": "Winter is very quiet across the islands. Many street-facing food stalls and tourist-oriented snack bars close entirely. You can still find traditional bakeries and a few local souvlaki shops in the main towns like Fira or Ermoupoli, but the variety of quick, outdoor eating is significantly reduced."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of street food and outdoor vendors fluctuates significantly between the busy summer tourist season and the quiet winter months when many islands partially shut down.",
+   "flags": [],
+   "named_things": [
+    "souvlaki",
+    "gyros",
+    "tomatokeftedes",
+    "loukoumades",
+    "spanakopita",
+    "tyropita",
+    "Fira",
+    "Oia",
+    "Naxos",
+    "Paros",
+    "Ermoupoli",
+    "graviera"
+   ]
+  },
+  "curve": [
+   2.2,
+   2.2,
+   5.4,
+   5.4,
+   5.4,
+   5.4,
+   6,
+   5.9411764705882355,
+   5.0588235294117645,
+   5,
+   2.2,
+   2.2
+  ],
+  "base": 5,
+  "columns": {
+   "foodTours": false,
+   "eatingStyle": [
+    "table"
+   ],
+   "illnessRisk": "low",
+   "nightMarkets": 1,
+   "streetStalls": 3,
+   "foodAdventure": "familiar",
+   "cookingClasses": true,
+   "produceMarkets": 3,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Mar poor"
+   ],
+   [
+    "flag",
+    "Overview 453 characters (max 450)."
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "streetFood",
+  "id": "greenland",
+  "rank": "weak",
+  "name": "Greenland",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1189,
+  "tokensOut": 448,
+  "cost": 0.0019385,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Greenland lacks a traditional street food culture due to the extreme climate, but visitors can find local specialties at open-air markets known as Kalaaliaraq. These markets are the best places to see and buy fresh catches like seal, whale, and halibut directly from hunters and fishermen. In Nuuk and larger towns, occasional food stalls appear during summer festivals and community events.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Summer offers the most activity at the Kalaaliaraq markets in Nuuk and Sisimiut, where the day's catch is displayed on outdoor tables. This is the best time for food stalls at events like National Day on June 21, where you might find samples of suaasat, a traditional crowberry and seal soup."
+    },
+    {
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "fair",
+     "text": "During the colder months, market activity moves primarily indoors or is limited to quick transactions of frozen or dried meats. You can still find dried cod and whale meat at the markets, but the social, outdoor atmosphere of communal eating is largely absent due to the freezing temperatures."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of outdoor market activity and temporary food stalls is highly dependent on the short summer season and specific national celebrations.",
+   "flags": [],
+   "named_things": [
+    "Kalaaliaraq",
+    "Nuuk",
+    "Sisimiut",
+    "National Day",
+    "suaasat",
+    "seal",
+    "whale",
+    "halibut",
+    "crowberry"
+   ]
+  },
+  "curve": [
+   1.7,
+   1.7,
+   1.7,
+   1.7,
+   1.7,
+   1.7,
+   3,
+   2.35,
+   1.7,
+   1.7,
+   1.7,
+   1.7
+  ],
+  "base": 2,
+  "columns": {
+   "foodTours": false,
+   "eatingStyle": [
+    "table"
+   ],
+   "illnessRisk": "low",
+   "nightMarkets": 1,
+   "streetStalls": 2,
+   "foodAdventure": "familiar",
+   "cookingClasses": false,
+   "produceMarkets": 2,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Jun peak"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "coffeeTea",
+  "id": "tokyo-kyoto",
+  "rank": "strong",
+  "name": "Tokyo & Kyoto",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1195,
+  "tokensOut": 407,
+  "cost": 0.0018185,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Tokyo and Kyoto represent the pinnacle of Japanese beverage culture, blending centuries-old matcha traditions with a globally influential third-wave coffee scene. Visitors can experience formal tea ceremonies in Kyoto's historic wooden teahouses or explore Tokyo's specialized roasteries in neighborhoods like Kiyosumi Shirakawa. The experience is consistent year-round, though seasonal sweets often change to reflect the weather.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The coffee and tea scenes are vibrant throughout the year. Visit Kyoto's Uji district for high-grade matcha and gyokuro, or head to Tokyo's Omotesando to find minimalist espresso bars like Koffee Mameya. In winter, heavy ceramic bowls of thick tea provide warmth, while summer brings iced matcha and cold-brew coffee."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of specialty coffee and traditional tea does not fluctuate with the seasons, as most experiences are indoors and venues remain open year-round.",
+   "flags": [],
+   "named_things": [
+    "Kiyosumi Shirakawa",
+    "Uji",
+    "matcha",
+    "gyokuro",
+    "Koffee Mameya",
+    "Omotesando",
+    "tea ceremony"
+   ]
+  },
+  "curve": [
+   8,
+   8.5,
+   9,
+   8.65,
+   8.3,
+   8.3,
+   8.3,
+   8.3,
+   8.3,
+   9,
+   8.941176470588236,
+   8.058823529411764
+  ],
+  "base": 8,
+  "columns": {
+   "cafeStyles": [
+    "linger",
+    "quick"
+   ],
+   "coffeeFarms": false,
+   "teaCeremonies": 10,
+   "ceremonyStyles": [
+    "formal",
+    "demonstration"
+   ],
+   "specialtyCafes": 10,
+   "teaPlantations": true
+  },
+  "checks": [
+   [
+    "flag",
+    "A blurb is 317 characters (max 300)."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "coffeeTea",
+  "id": "pakistan",
+  "rank": "middle",
+  "name": "Pakistan",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1194,
+  "tokensOut": 448,
+  "cost": 0.001941,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Pakistan is a nation of tea drinkers where chai culture is central to social life. From the pink Kashmiri chai of the north to the strong doodh patti found at roadside dhabas, tea is a constant presence, while a modern specialty coffee scene is rapidly emerging in major urban centers. The experience is best during the cooler months when hot drinks are most enjoyable.",
+   "blurbs": [
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "Cooler temperatures make this the ideal time for hot tea. In Lahore and Islamabad, specialty cafes like Third Culture Coffee serve precise brews, while street vendors prepare Kashmiri chai—a pink, salty tea with pistachios—which is a winter staple across the Punjab and northern regions."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "fair",
+     "text": "Intense summer heat makes hot tea less comfortable, though the culture remains active in shaded dhabas. In the high-altitude north, such as Gilgit-Baltistan, the climate remains pleasant for enjoying local herbal teas or traditional salty butter tea in mountain villages."
+    }
+   ],
+   "best_months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of hot tea and coffee is significantly more pleasant during the cooler winter and shoulder seasons than in the extreme summer heat.",
+   "flags": [],
+   "named_things": [
+    "Kashmiri chai",
+    "doodh patti",
+    "dhaba",
+    "Third Culture Coffee",
+    "Lahore",
+    "Islamabad",
+    "Gilgit-Baltistan",
+    "butter tea"
+   ]
+  },
+  "curve": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   5,
+   5,
+   5,
+   4,
+   4,
+   4,
+   4
+  ],
+  "base": 4,
+  "columns": {
+   "cafeStyles": [
+    "quick"
+   ],
+   "coffeeFarms": false,
+   "teaCeremonies": 3,
+   "ceremonyStyles": [
+    "relaxed"
+   ],
+   "specialtyCafes": 2,
+   "teaPlantations": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Jun fair; Jul fair; Aug fair"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from the seasonal score (2) suggestion ('year')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "coffeeTea",
+  "id": "puglia",
+  "rank": "weak",
+  "name": "Puglia",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1194,
+  "tokensOut": 344,
+  "cost": 0.001629,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Puglia is defined by its traditional espresso culture, where the caffe leccese—espresso over ice with almond milk syrup—is a regional staple. While the third-wave movement is emerging slowly, specialty roasters in Bari and Lecce are beginning to offer single-origin beans and precise brewing methods alongside historic coffee bars.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The coffee scene is consistent year-round. In Lecce, try the signature caffe leccese at Caffe Alvino. For modern specialty beans and lighter roasts, visit Bloom in Bari, which focuses on transparency and technical brewing. Traditional bars across the region serve high-quality, dark-roast espresso."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of specialty coffee and traditional regional preparations does not change with the seasons.",
+   "flags": [],
+   "named_things": [
+    "caffe leccese",
+    "Caffe Alvino",
+    "Bloom",
+    "Bari",
+    "Lecce"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2
+  ],
+  "base": 2,
+  "columns": {
+   "cafeStyles": [
+    "quick"
+   ],
+   "coffeeFarms": false,
+   "teaCeremonies": 1,
+   "specialtyCafes": 3,
+   "teaPlantations": false
+  },
+  "checks": []
+ },
+ {
+  "family": "food",
+  "k": "wineSpirits",
+  "id": "provence",
+  "rank": "strong",
+  "name": "Provence",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1189,
+  "tokensOut": 726,
+  "cost": 0.0027725,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Provence is a premier wine destination, famous for its pale rosés and robust reds from regions like Châteauneuf-du-Pape and Bandol. Visitors can tour historic estates, taste pastis in village squares, and explore the vineyards of the Luberon and the Côtes de Provence. The experience is best from late spring through the fall harvest.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Winter is quiet in the vineyards. While tasting rooms in towns like Avignon and Aix-en-Provence remain open, many smaller cellar doors in the countryside have limited hours. It is a good time for cozy indoor tastings of heavy reds from Gigondas or Vacqueyras."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6
+     ],
+     "level": "good",
+     "text": "Spring brings the release of the new vintage of rosé. The weather is ideal for driving the Route des Vins, and outdoor terraces begin to fill. In April, Châteauneuf-du-Pape often hosts Les Printemps de Châteauneuf-du-Pape, a major tasting event for the public."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Summer is the peak season for enjoying chilled rosé and pastis, the anise-flavored spirit of Marseille. While vineyards are busy with tourists, the atmosphere is lively. Many estates host evening concerts or outdoor tastings under the plane trees."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The harvest, or vendange, typically occurs in September. This is the most atmospheric time to visit as tractors haul grapes to the cooperatives. In October, the Fête de la Gastronomie and various harvest festivals celebrate the new wine across the Vaucluse and Var departments."
+    },
+    {
+     "months": [
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "As the vines go dormant, the focus shifts to the holiday season. You can find local wines and spirits at the traditional Christmas markets. In early December, Bandol hosts its Fête du Millésime, where visitors can taste the young wines directly from the producers."
+    }
+   ],
+   "best_months": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "The experience changes significantly between the quiet winter months, the spring release of rosés, the peak summer tourism season, and the autumn harvest.",
+   "named_things": [
+    "Châteauneuf-du-Pape",
+    "Bandol",
+    "Luberon",
+    "Côtes de Provence",
+    "Gigondas",
+    "Vacqueyras",
+    "Pastis",
+    "Les Printemps de Châteauneuf-du-Pape",
+    "Route des Vins",
+    "Fête du Millésime",
+    "Vaucluse",
+    "Var"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   10,
+   10,
+   9,
+   9,
+   9,
+   9
+  ],
+  "base": 9,
+  "columns": {
+   "evidence": "Vineyards and wine regions: vineyard land mapped inside the area 1410.12 km2 (Overture land use) gives tier 10; 0 wine region or winery item(s) with 8 or more Wikipedia/Wikidata pages gives 0; 1009 listed wineries with a website (Overture) give 10 (5 or more is 2, 20 is 4, 50 is 6, 200 is 8, 1,000 is 10); the highest is 10.\nCraft beer and breweries: 79 breweries with a website (Overture) give base 6 (1 is 2, 2-9 is 4, 10 or more is 6); 0 brewery item(s) with 8 or more pages give 0; depth +1 (50 or more breweries +1, 150 or more +2); total 7.\nWhisky: 0 whisky distillery item(s) with 3 or more pages (Wikidata) and 0 further listed distillery(ies) (Overture names) give base 0 (a notable one is 6 or 8, a listed one is 2 to 4); depth +0 (5 or more +1, 20 or more +2); total 0.\nOther spirits: 0 non-whisky distillery item(s) with 3 or more pages (Wikidata) and 34 further listed distillery(ies) (Overture names) give base 4 (a notable one is 6 or 8, a listed one is 2 to 4); depth +2 (5 or more +1, 20 or more +2); total 6.\nSake and traditional drinks: Left blank: no sake brewery with 2 or more pages found on Wikidata; cider, mead and other traditional drinks have no usable list, so this is not a zero.\nCelebrated wines: reds Bandol (one of the most internationally recognized wines of Provence; about 70 percent red); whites Cassis (the appellation specializing in white wine); other Rose (more than half of Provencal production). Source: https://en.wikipedia.org/wiki/Provence_wine (confidence high).\nSpirits made here: Pastis (popular especially around Marseille). Source: https://en.wikipedia.org/wiki/Pastis (confidence medium).",
+   "wineRegion": 10,
+   "beerCulture": 7,
+   "spiritKinds": "Pastis (popular especially around Marseille)",
+   "otherSpirits": 6,
+   "whiskyCulture": 0,
+   "celebratedReds": "Bandol (one of the most internationally recognized wines of Provence; about 70 percent red)",
+   "celebratedWhites": "Cassis (the appellation specializing in white wine)",
+   "drawSourceChecked": false,
+   "celebratedOtherWines": "Rose (more than half of Provencal production)"
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve: Jan fair; Feb fair; Mar fair; Nov fair"
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "wineSpirits",
+  "id": "atacama",
+  "rank": "middle",
+  "name": "Atacama Desert",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1193,
+  "tokensOut": 427,
+  "cost": 0.0018775,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The Atacama Desert is home to the world's highest-altitude vineyards, centered around the oasis town of San Pedro de Atacama and the village of Toconao. Visitors can taste unique wines made from the Syrah and Pais grapes, or try the local Ayllu wine produced by a community cooperative. The region is also known for pisco sours infused with rica-rica, a desert herb that adds a distinct sage-like flavor.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Wine tasting at the Ayllu cooperative in Toconao is available year-round, offering a chance to sample volcanic-soil vintages. Local bars in San Pedro de Atacama consistently serve craft beers from Cervecería Atacama and cocktails featuring native herbs like rica-rica and pingo-pingo."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of local wines, craft beers, and herb-infused spirits does not fluctuate significantly by season, as tasting rooms and bars remain open throughout the year.",
+   "named_things": [
+    "Ayllu wine",
+    "Toconao",
+    "San Pedro de Atacama",
+    "rica-rica",
+    "pingo-pingo",
+    "Cervecería Atacama",
+    "Pais grape",
+    "Syrah"
+   ]
+  },
+  "curve": [
+   4,
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   3,
+   3,
+   3,
+   3,
+   4
+  ],
+  "base": 3,
+  "columns": {
+   "evidence": "Vineyards and wine regions: vineyard land mapped inside the area 0.1 km2 (Overture land use) gives tier 0; 0 wine region or winery item(s) with 8 or more Wikipedia/Wikidata pages gives 0; 0 listed wineries with a website (Overture) give 0 (5 or more is 2, 20 is 4, 50 is 6, 200 is 8, 1,000 is 10); the highest is 0.\nCraft beer and breweries: 2 breweries with a website (Overture) give base 4 (1 is 2, 2-9 is 4, 10 or more is 6); 0 brewery item(s) with 8 or more pages give 0; depth +0 (50 or more breweries +1, 150 or more +2); total 4.\nWhisky: 0 whisky distillery item(s) with 3 or more pages (Wikidata) and 0 further listed distillery(ies) (Overture names) give base 0 (a notable one is 6 or 8, a listed one is 2 to 4); depth +0 (5 or more +1, 20 or more +2); total 0.\nOther spirits: 0 non-whisky distillery item(s) with 3 or more pages (Wikidata) and 1 further listed distillery(ies) (Overture names) give base 2 (a notable one is 6 or 8, a listed one is 2 to 4); depth +0 (5 or more +1, 20 or more +2); total 2.\nSake and traditional drinks: Left blank: no sake brewery with 2 or more pages found on Wikidata; cider, mead and other traditional drinks have no usable list, so this is not a zero.\nCelebrated wines: left blank, the area is not a wine region.\nSpirits made here: left blank, no source tying a named spirit to this area was found.",
+   "wineRegion": 0,
+   "beerCulture": 4,
+   "otherSpirits": 2,
+   "whiskyCulture": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'year', one step from the seasonal score (4) suggestion ('groups')."
+   ]
+  ]
+ },
+ {
+  "family": "food",
+  "k": "wineSpirits",
+  "id": "snowdonia",
+  "rank": "weak",
+  "name": "Wales",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 1191,
+  "tokensOut": 473,
+  "cost": 0.0020145,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Wales has a rapidly growing craft scene, from the single malt whiskies of Penderyn to a surge in independent microbreweries like Tiny Rebel. Visitors can tour vineyards in the south, such as Llanerch, or explore the historic cider orchards of Monmouthshire. While production happens year-round, the experience is best during the summer festival season and autumn harvest.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer is the height of the festival season, including the Great Welsh Beer and Cider Festival. Vineyards like Ancre Hill are at their most scenic for tours, and beer gardens in rural Powys or coastal Pembrokeshire are in full swing. This is the best time to sample perry and cider at the source."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "good",
+     "text": "Winter and spring are ideal for indoor distillery tours at Penderyn or Coles. Cozy historic pubs, particularly in the Brecon Beacons and Snowdonia, provide a traditional atmosphere for tasting local stouts and ales. Many vineyards remain open for cellar door sales even when the vines are dormant."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "confidence": "high",
+   "depth_why": "The experience shifts between outdoor vineyard tours and festivals in the summer to indoor distillery visits and cozy pub culture in the colder months.",
+   "named_things": [
+    "Penderyn Distillery",
+    "Tiny Rebel Brewery",
+    "Llanerch Vineyard",
+    "Ancre Hill Estates",
+    "Coles Distillery",
+    "Great Welsh Beer and Cider Festival",
+    "Monmouthshire",
+    "Brecon Beacons",
+    "Snowdonia",
+    "Pembrokeshire"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "base": 1,
+  "columns": null,
+  "checks": []
+ }
+]
