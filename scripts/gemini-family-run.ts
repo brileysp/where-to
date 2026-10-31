@@ -31,6 +31,8 @@ const strip = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
       idx.forEach((ix, n) => jobs.push({ family: fam, k, id: app[Math.min(ix, app.length - 1)].id, rank: per === 3 ? labels[n] : String(n) }));
     }
   }
+  const sameAs = arg('same-as');
+  if (sameAs) { jobs.length = 0; for (const r of JSON.parse(readFileSync(sameAs, 'utf8'))) jobs.push({ family: r.family, k: r.k, id: r.id, rank: r.rank }); }
   const results: any[] = out && existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : [];
   let spent = results.reduce((a, r) => a + r.cost, 0);
   for (const j of jobs) {
@@ -45,7 +47,9 @@ const strip = (t: string) => t.replace(/<!--[\s\S]*?-->/g, '').trim();
     if (dry) { console.log(prompt); console.log('\n~ chars', prompt.length); process.exit(0); }
     if (spent >= budget) { console.log(`Budget cap $${budget} reached after $${spent.toFixed(3)}; stopping.`); break; }
     const model = arg('model') ?? MODEL;
-    const r = await generateLean(prompt, model);
+    const withScores = process.argv.includes('--scores');
+    const full = withScores ? prompt + '\n\n' + strip(readFileSync(join(root, 'prompts', '_shared', 'authoring-scores.md'), 'utf8')) : prompt;
+    const r = await generateLean(full, model, undefined, withScores);
     const price = model.includes('flash') ? { i: 0.5, o: 3 } : { i: 2, o: 12 };
     const cost = (r.tokensIn * price.i + r.tokensOut * price.o) / 1e6; spent += cost;
     const f = facts.find((x) => x.placeId === j.id && x.interestKey === j.k);
