@@ -345,3 +345,18 @@ export async function generateScoresOnly(prompt: string, model: string = MODEL, 
   try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
   catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
 }
+
+/** Fact-check call (1 Nov 2026): the model checks a text's claims with Google Search and returns JSON plus the pages it used. Capped on thinking like every call. */
+export async function generateVerified(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ text: string; sources: Array<{ uri: string; title: string }>; queries: string[]; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: 0, maxOutputTokens: 6000, thinkingConfig: thinkingConfigFor(thinkingLevel), tools: [{ googleSearch: {} }] },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  const gm = response.candidates?.[0]?.groundingMetadata;
+  const sources = (gm?.groundingChunks ?? []).map((c) => ({ uri: c.web?.uri ?? '', title: c.web?.title ?? '' })).filter((x) => x.uri);
+  return { text: response.text ?? '', sources, queries: gm?.webSearchQueries ?? [], tokensIn, tokensOut, model };
+}
