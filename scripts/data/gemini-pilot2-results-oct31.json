@@ -1,0 +1,554 @@
+[
+ {
+  "id": "belize",
+  "name": "Belize",
+  "tokensIn": 2811,
+  "tokensOut": 1893,
+  "cost": 0.028338,
+  "parseError": null,
+  "output": {
+   "overview": "Belize offers a massive barrier reef featuring vibrant coral gardens, steep drop-offs, and the famous Great Blue Hole, a deep marine sinkhole. Snorkelers and divers regularly encounter nurse sharks, stingrays, and sea turtles at sites like Hol Chan Marine Reserve. The best conditions run from February to May, with whale sharks visiting Gladden Spit between March and June.",
+   "monthly": [
+    {
+     "score": 9,
+     "text": "Winter winds can occasionally reduce visibility, but the barrier reef still offers excellent encounters with nurse sharks and eagle rays."
+    },
+    {
+     "score": 9.5,
+     "text": "The dry season settles in, bringing calmer seas and excellent visibility across the reef and the Great Blue Hole."
+    },
+    {
+     "score": 9.8,
+     "text": "Water clarity is superb. Whale sharks begin to arrive at Gladden Spit around the full moon to feed on snapper spawn."
+    },
+    {
+     "score": 10,
+     "text": "Peak conditions for both diving and snorkeling. Whale shark encounters at Gladden Spit are at their most reliable around the full moon."
+    },
+    {
+     "score": 10,
+     "text": "Calm, warm waters provide perfect visibility. This is the last prime month to swim with whale sharks at Gladden Spit."
+    },
+    {
+     "score": 9.5,
+     "text": "The rainy season begins, slightly reducing visibility near the coast, though offshore sites and the Blue Hole remain clear. Whale shark sightings become rare."
+    },
+    {
+     "score": 8.5,
+     "text": "Summer rains are frequent, but morning dives usually offer calm waters and active marine life along the barrier reef."
+    },
+    {
+     "score": 7.5,
+     "text": "Hurricane season begins to peak. While diving continues, trips to offshore atolls may be disrupted by passing storms."
+    },
+    {
+     "score": 7,
+     "text": "The height of hurricane season brings a higher risk of rough seas and canceled boat trips, though calm days still offer good reef diving."
+    },
+    {
+     "score": 7,
+     "text": "Storm risks remain high, keeping visibility variable. When the weather clears, snorkelers can still find turtles and rays at protected sites."
+    },
+    {
+     "score": 8,
+     "text": "Hurricane season winds down. Water clarity improves as the heavy rains stop, and eagle rays become more common along the reef walls."
+    },
+    {
+     "score": 8.5,
+     "text": "The winter season brings cooler water and occasional northern winds, but the barrier reef remains vibrant with active nurse sharks and reef fish."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 10,
+    "snorkeling_rating": 9,
+    "best_for": "both"
+   }
+  }
+ },
+ {
+  "id": "palau",
+  "name": "Palau",
+  "tokensIn": 2839,
+  "tokensOut": 1937,
+  "cost": 0.028922,
+  "parseError": null,
+  "output": {
+   "overview": "Palau is a world-class destination famous for sheer drop-offs, strong drift dives, and WWII wrecks. Divers use reef hooks at Blue Corner to watch pelagics like reef sharks and eagle rays ride the currents, while snorkelers can float among stingless golden medusas in Jellyfish Lake. The dry season from November to April offers the calmest seas and clearest water.",
+   "monthly": [
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    },
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    },
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    },
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    },
+    {
+     "score": 9,
+     "text": "The transition to the wet season brings occasional rain showers and slightly rougher surface conditions, though underwater visibility remains strong."
+    },
+    {
+     "score": 8.5,
+     "text": "The wet season brings heavier rain and choppier seas, which can reduce visibility and limit access to some outer reefs. Sheltered sites and lagoon wrecks remain highly rewarding."
+    },
+    {
+     "score": 8.5,
+     "text": "The wet season brings heavier rain and choppier seas, which can reduce visibility and limit access to some outer reefs. Sheltered sites and lagoon wrecks remain highly rewarding."
+    },
+    {
+     "score": 8.5,
+     "text": "The wet season brings heavier rain and choppier seas, which can reduce visibility and limit access to some outer reefs. Sheltered sites and lagoon wrecks remain highly rewarding."
+    },
+    {
+     "score": 8.5,
+     "text": "The wet season brings heavier rain and choppier seas, which can reduce visibility and limit access to some outer reefs. Sheltered sites and lagoon wrecks remain highly rewarding."
+    },
+    {
+     "score": 9,
+     "text": "Rain eases and surface conditions begin to settle. Visibility improves, making it easier to spot the sharks and rays riding the currents."
+    },
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    },
+    {
+     "score": 10,
+     "text": "The dry season provides calm seas and exceptional visibility often exceeding 30 meters. Strong currents at Blue Corner and Ulong Channel attract schooling sharks and manta rays."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 10,
+    "snorkeling_rating": 8,
+    "best_for": "diving"
+   }
+  }
+ },
+ {
+  "id": "galapagos",
+  "name": "Galápagos Islands",
+  "tokensIn": 2838,
+  "tokensOut": 2444,
+  "cost": 0.035004,
+  "parseError": null,
+  "output": {
+   "overview": "This is a world-class destination for big pelagics rather than colorful coral reefs, famous for schooling hammerhead sharks, marine iguanas, sea lions, and penguins. The most iconic dive sites, Darwin and Wolf, require Advanced certification for strong currents and are only accessible by liveaboard. While hammerheads and rays are present year-round, the seasons dictate water temperature and specific animal encounters.",
+   "monthly": [
+    {
+     "score": 9,
+     "text": "The water is at its warmest and calmest, with visibility often exceeding 20 meters. Manta rays are frequently spotted, and snorkelers enjoy comfortable conditions with sea lions and marine iguanas."
+    },
+    {
+     "score": 9,
+     "text": "The water is at its warmest and calmest, with visibility often exceeding 20 meters. Manta rays are frequently spotted, and snorkelers enjoy comfortable conditions with sea lions and marine iguanas."
+    },
+    {
+     "score": 9,
+     "text": "The water is at its warmest and calmest, with visibility often exceeding 20 meters. Manta rays are frequently spotted, and snorkelers enjoy comfortable conditions with sea lions and marine iguanas."
+    },
+    {
+     "score": 9,
+     "text": "The water is at its warmest and calmest, with visibility often exceeding 20 meters. Manta rays are frequently spotted, and snorkelers enjoy comfortable conditions with sea lions and marine iguanas."
+    },
+    {
+     "score": 9,
+     "text": "The water is at its warmest and calmest, with visibility often exceeding 20 meters. Manta rays are frequently spotted, and snorkelers enjoy comfortable conditions with sea lions and marine iguanas."
+    },
+    {
+     "score": 9.5,
+     "text": "The Humboldt Current brings cooler, nutrient-rich water, dropping temperatures and visibility but attracting massive schools of hammerhead sharks. Whale sharks begin arriving at Darwin and Wolf."
+    },
+    {
+     "score": 10,
+     "text": "Cooler, nutrient-rich waters dominate, creating peak conditions for big pelagics. Massive schools of hammerhead sharks gather, and whale sharks are a major draw at the remote Darwin and Wolf sites."
+    },
+    {
+     "score": 10,
+     "text": "Cooler, nutrient-rich waters dominate, creating peak conditions for big pelagics. Massive schools of hammerhead sharks gather, and whale sharks are a major draw at the remote Darwin and Wolf sites."
+    },
+    {
+     "score": 10,
+     "text": "Cooler, nutrient-rich waters dominate, creating peak conditions for big pelagics. Massive schools of hammerhead sharks gather, and whale sharks are a major draw at the remote Darwin and Wolf sites."
+    },
+    {
+     "score": 10,
+     "text": "Cooler, nutrient-rich waters dominate, creating peak conditions for big pelagics. Massive schools of hammerhead sharks gather, and whale sharks are a major draw at the remote Darwin and Wolf sites."
+    },
+    {
+     "score": 9.5,
+     "text": "The cooler garua season continues to provide excellent encounters with schooling hammerheads. Whale shark sightings remain strong at Darwin and Wolf before the water begins to warm."
+    },
+    {
+     "score": 9,
+     "text": "A transition month where the water begins to warm and calm down. Hammerheads are still present, and the warmer currents start bringing manta rays back to the islands."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 10,
+    "snorkeling_rating": 8.5,
+    "best_for": "diving"
+   }
+  }
+ },
+ {
+  "id": "jordan",
+  "name": "Petra & Wadi Rum",
+  "tokensIn": 2826,
+  "tokensOut": 1717,
+  "cost": 0.026256,
+  "parseError": null,
+  "output": {
+   "overview": "While Petra and Wadi Rum are desert destinations, the Red Sea coast at Aqaba is just a one- to two-hour drive away, making a day trip for diving or snorkeling easy. Aqaba features accessible shore dives, vibrant coral gardens, and famous underwater wrecks like the Cedar Pride and a submerged military museum.",
+   "monthly": [
+    {
+     "score": 6.5,
+     "text": "Water temperatures dip to around 21°C, requiring a thicker wetsuit, but visibility remains excellent for exploring the wrecks and reefs."
+    },
+    {
+     "score": 6.5,
+     "text": "Water temperatures dip to around 21°C, requiring a thicker wetsuit, but visibility remains excellent for exploring the wrecks and reefs."
+    },
+    {
+     "score": 6.5,
+     "text": "Water temperatures dip to around 21°C, requiring a thicker wetsuit, but visibility remains excellent for exploring the wrecks and reefs."
+    },
+    {
+     "score": 7,
+     "text": "Spring brings warming waters and comfortable surface temperatures, making it an excellent time to visit the coastal reefs."
+    },
+    {
+     "score": 7,
+     "text": "Spring brings warming waters and comfortable surface temperatures, making it an excellent time to visit the coastal reefs."
+    },
+    {
+     "score": 7,
+     "text": "The desert drive is intensely hot, but the Red Sea offers warm 27°C water and calm conditions for snorkeling and diving."
+    },
+    {
+     "score": 7,
+     "text": "The desert drive is intensely hot, but the Red Sea offers warm 27°C water and calm conditions for snorkeling and diving."
+    },
+    {
+     "score": 7,
+     "text": "The desert drive is intensely hot, but the Red Sea offers warm 27°C water and calm conditions for snorkeling and diving."
+    },
+    {
+     "score": 7.5,
+     "text": "Peak conditions arrive as the intense summer heat fades. The water remains very warm with superb visibility for exploring the Cedar Pride."
+    },
+    {
+     "score": 7.5,
+     "text": "Peak conditions arrive as the intense summer heat fades. The water remains very warm with superb visibility for exploring the Cedar Pride."
+    },
+    {
+     "score": 7.5,
+     "text": "Peak conditions arrive as the intense summer heat fades. The water remains very warm with superb visibility for exploring the Cedar Pride."
+    },
+    {
+     "score": 6.8,
+     "text": "Winter cooling begins, but the water remains clear and relatively calm for day-trippers heading to the coast."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 7,
+    "snorkeling_rating": 6,
+    "best_for": "diving"
+   }
+  }
+ },
+ {
+  "id": "maldives",
+  "name": "Maldives",
+  "tokensIn": 2829,
+  "tokensOut": 1499,
+  "cost": 0.023646,
+  "parseError": null,
+  "output": {
+   "overview": "The Maldives offers world-class coral atolls, drift dives, and shallow lagoons perfect for both diving and snorkeling. Expect to see manta rays, whale sharks, reef sharks, and sea turtles. The dry season brings the calmest water and clearest visibility, while the wet season shifts the plankton and the big pelagics to the western atolls.",
+   "monthly": [
+    {
+     "score": 10,
+     "text": "The dry season offers the calmest seas and peak visibility, often exceeding 30 meters. Reef sharks and turtles are easily spotted along the eastern atolls."
+    },
+    {
+     "score": 10,
+     "text": "The dry season offers the calmest seas and peak visibility, often exceeding 30 meters. Reef sharks and turtles are easily spotted along the eastern atolls."
+    },
+    {
+     "score": 10,
+     "text": "The dry season offers the calmest seas and peak visibility, often exceeding 30 meters. Reef sharks and turtles are easily spotted along the eastern atolls."
+    },
+    {
+     "score": 10,
+     "text": "The dry season offers the calmest seas and peak visibility, often exceeding 30 meters. Reef sharks and turtles are easily spotted along the eastern atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 9,
+     "text": "Winds pick up and visibility drops slightly due to plankton blooms, but this draws large numbers of manta rays and whale sharks to the western atolls."
+    },
+    {
+     "score": 10,
+     "text": "The winds drop and the sea flattens. Visibility improves significantly as the dry season begins, offering excellent conditions for spotting pelagics."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 10,
+    "snorkeling_rating": 10,
+    "best_for": "both"
+   }
+  }
+ },
+ {
+  "id": "cornwall",
+  "name": "Cornwall",
+  "tokensIn": 2814,
+  "tokensOut": 1557,
+  "cost": 0.024312,
+  "parseError": null,
+  "output": {
+   "overview": "Cornwall offers cold-water diving and snorkeling among kelp forests, rocky reefs, and historic shipwrecks. Summer brings the chance to see grey seals and huge, plankton-feeding basking sharks. The best conditions run from late spring through early autumn, as winter seas are often rough and murky.",
+   "monthly": [
+    {
+     "score": 2,
+     "text": "Winter storms often blow out dive sites, bringing rough seas and poor visibility. Water temperatures hover around 8°C."
+    },
+    {
+     "score": 2,
+     "text": "Winter storms often blow out dive sites, bringing rough seas and poor visibility. Water temperatures hover around 8°C."
+    },
+    {
+     "score": 2,
+     "text": "Winter storms often blow out dive sites, bringing rough seas and poor visibility. Water temperatures hover around 8°C."
+    },
+    {
+     "score": 4,
+     "text": "Conditions begin to settle and visibility improves, though the water remains a chilly 9°C. Kelp forests start to see more marine life activity."
+    },
+    {
+     "score": 5.5,
+     "text": "Late spring brings calmer seas and better visibility. Grey seals are frequently spotted darting through the kelp."
+    },
+    {
+     "score": 6.5,
+     "text": "Summer offers the warmest water, peaking around 15°C, and the calmest seas. Plankton blooms can reduce visibility but attract massive basking sharks to the area."
+    },
+    {
+     "score": 6.5,
+     "text": "Summer offers the warmest water, peaking around 15°C, and the calmest seas. Plankton blooms can reduce visibility but attract massive basking sharks to the area."
+    },
+    {
+     "score": 6.5,
+     "text": "Summer offers the warmest water, peaking around 15°C, and the calmest seas. Plankton blooms can reduce visibility but attract massive basking sharks to the area."
+    },
+    {
+     "score": 6.5,
+     "text": "Early autumn often provides the best balance of warm water and settled weather. Wreck dives and seal encounters are excellent before the winter winds return."
+    },
+    {
+     "score": 4.5,
+     "text": "The weather becomes less predictable and sea conditions roughen, though calm days still offer good wreck diving and seal sightings."
+    },
+    {
+     "score": 2.5,
+     "text": "Winter storms often blow out dive sites, bringing rough seas and poor visibility. Water temperatures drop significantly."
+    },
+    {
+     "score": 2,
+     "text": "Winter storms often blow out dive sites, bringing rough seas and poor visibility. Water temperatures hover around 8°C."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 6.5,
+    "snorkeling_rating": 5,
+    "best_for": "diving"
+   }
+  }
+ },
+ {
+  "id": "glacier-waterton",
+  "name": "Glacier & Waterton Lakes",
+  "tokensIn": 2849,
+  "tokensOut": 1966,
+  "cost": 0.02929,
+  "parseError": null,
+  "output": {
+   "overview": "High alpine lakes offer extremely cold, clear freshwater diving for those prepared with drysuits. The main attraction is in Waterton, where divers explore the wreck of the Gertrude, a 1907 paddlewheeler resting in Emerald Bay. Summer is the only practical window.",
+   "monthly": [
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    },
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    },
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    },
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    },
+    {
+     "score": 1,
+     "text": "Heavy spring runoff reduces visibility and the water remains bitterly cold."
+    },
+    {
+     "score": 2.5,
+     "text": "Summer access is restored. Visibility improves, though drysuits are still essential for the frigid water."
+    },
+    {
+     "score": 3.5,
+     "text": "The best conditions of the year. Divers can explore the Gertrude wreck in Waterton's Emerald Bay with clear, albeit very cold, water."
+    },
+    {
+     "score": 3.5,
+     "text": "The best conditions of the year. Divers can explore the Gertrude wreck in Waterton's Emerald Bay with clear, albeit very cold, water."
+    },
+    {
+     "score": 3,
+     "text": "Autumn brings colder air, but the wreck remains accessible and the water is clear."
+    },
+    {
+     "score": 1,
+     "text": "Snow returns and road access shuts down, severely limiting dive opportunities."
+    },
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    },
+    {
+     "score": 0,
+     "text": "The lakes are frozen over and the parks are largely inaccessible for diving."
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 3,
+    "snorkeling_rating": 1,
+    "best_for": "diving"
+   }
+  }
+ },
+ {
+  "id": "kerala",
+  "name": "Kerala",
+  "tokensIn": 2835,
+  "tokensOut": 1221,
+  "cost": 0.020322,
+  "parseError": null,
+  "output": {
+   "overview": "NOT_APPLICABLE: The Arabian Sea coast here has very poor visibility due to heavy river runoff and churning sandy bottoms, with no significant reefs or marine sites worth a day trip.",
+   "monthly": [
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    },
+    {
+     "score": 0,
+     "text": "n/a"
+    }
+   ],
+   "sources": [],
+   "confidence": "high",
+   "flags": [],
+   "extras": {
+    "diving_rating": 0,
+    "snorkeling_rating": 0,
+    "best_for": "both"
+   }
+  }
+ }
+]
