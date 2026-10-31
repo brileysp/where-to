@@ -1,6 +1,6 @@
 # Known truths
 
-Checked 2026-10-30. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
+Checked 2026-10-31. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
 **54 truths: 53 hold, 0 fail, 1 pending.** Pending means we know it does not hold yet and what will close it.
 

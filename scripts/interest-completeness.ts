@@ -15,7 +15,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
       count(*) filter (where not (k = any(p.na_sliders))) as applicable,
       count(*) filter (where k = any(p.na_sliders)) as na,
       count(*) filter (where k = any(p.na_sliders) and coalesce(length(p.na_reasons->k->>'reason'),0) > 0) as na_reason,
-      count(*) filter (where not (k = any(p.na_sliders)) and p.base_scores ? k) as scored,
+      count(*) filter (where not (k = any(p.na_sliders)) and (p.base_scores ? k or p.score_overrides ? k or k = any(p.authored_curves))) as scored,
       count(*) filter (where not (k = any(p.na_sliders)) and k = any(p.authored_curves)) as curve,
       count(*) filter (where not (k = any(p.na_sliders)) and coalesce(length(p.slider_overview->>k),0) > 0) as text,
       count(*) filter (where not (k = any(p.na_sliders)) and coalesce(jsonb_array_length(case when jsonb_typeof(p.slider_monthly_weather->k)='array' then p.slider_monthly_weather->k else '[]'::jsonb end),0) > 0) as months,
