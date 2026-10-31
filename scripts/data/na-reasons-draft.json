@@ -2205,34 +2205,6 @@
    ],
    "mountaineering": [
     {
-     "pid": "acadia",
-     "name": "Acadia National Park",
-     "pt": "national_park",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "algarve",
-     "name": "Algarve",
-     "pt": "coastal_area",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "amalfi",
-     "name": "Amalfi Coast",
-     "pt": "coastal_area",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "amsterdam",
-     "name": "Amsterdam",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "antarctica",
      "name": "Antarctic Peninsula",
      "pt": "wilderness_area",
@@ -2247,37 +2219,9 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "athens",
-     "name": "Athens",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "azores",
-     "name": "Azores",
-     "pt": "island",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "bahamas",
      "name": "Bahamas",
      "pt": "country",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "bali",
-     "name": "Bali",
-     "pt": "island",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bangkok",
-     "name": "Bangkok",
-     "pt": "city",
      "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2289,20 +2233,6 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "basque-country",
-     "name": "Basque Country",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "beijing",
-     "name": "Beijing & Great Wall",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "belize",
      "name": "Belize",
      "pt": "country",
@@ -2310,101 +2240,10 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "berlin",
-     "name": "Berlin",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "budapest",
-     "name": "Budapest",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "buenosaires",
-     "name": "Buenos Aires",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "angkor",
-     "name": "Cambodia",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "canaries",
-     "name": "Canary Islands",
-     "pt": "island",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "cape-cod-islands",
      "name": "Cape Cod & the Islands",
      "pt": "coastal_area",
      "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "champagne",
-     "name": "Champagne",
-     "pt": "region",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "charleston-savannah",
-     "name": "Charleston & Savannah",
-     "pt": "region",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "chiang-mai",
-     "name": "Chiang Mai & Northern Thailand",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "chiapas",
-     "name": "Chiapas",
-     "pt": "state_province",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "chicago",
-     "name": "Chicago",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "chilean-lake-district",
-     "name": "Chilean Lake District",
-     "pt": "region",
-     "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2422,59 +2261,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "copenhagen",
-     "name": "Copenhagen",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "havana",
      "name": "Cuba",
      "pt": "country",
      "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "country",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "douro-valley-porto",
-     "name": "Douro Valley & Porto",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "dubai",
-     "name": "Dubai",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "edinburgh",
-     "name": "Edinburgh",
-     "pt": "city",
-     "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2499,22 +2289,8 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "borabora",
      "name": "French Polynesia",
-     "pt": "island",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "galapagos",
-     "name": "Galápagos Islands",
      "pt": "island",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
@@ -2548,37 +2324,9 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "hongkong",
-     "name": "Hong Kong",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "ireland",
-     "name": "Ireland",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "istanbul",
-     "name": "Istanbul",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "jamaica",
      "name": "Jamaica",
      "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "kerala",
-     "name": "Kerala",
-     "pt": "state_province",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2597,53 +2345,11 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "luangprabang",
-     "name": "Laos",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "lisbon",
-     "name": "Lisbon",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "london",
-     "name": "London",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "los-cabos",
-     "name": "Los Cabos",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "maldives",
-     "name": "Maldives",
-     "pt": "country",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "marlborough-abel-tasman",
      "name": "Marlborough & Abel Tasman",
      "pt": "region",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "maui",
-     "name": "Maui",
-     "pt": "island",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "mauritius",
@@ -2653,72 +2359,9 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "nicaragua",
-     "name": "Nicaragua",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "oaxaca",
-     "name": "Oaxaca",
-     "pt": "state_province",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "botswana",
      "name": "Okavango Delta",
      "pt": "wilderness_area",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "okinawa",
-     "name": "Okinawa",
-     "pt": "island",
      "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2744,13 +2387,6 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "panama",
-     "name": "Panama",
-     "pt": "country",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
@@ -2765,45 +2401,10 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "piedmont",
-     "name": "Piedmont",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "puglia",
-     "name": "Puglia",
-     "pt": "region",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "rajaampat",
      "name": "Raja Ampat",
      "pt": "island",
      "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2817,34 +2418,6 @@
      "pid": "redwood",
      "name": "Redwood National and State Parks",
      "pt": "national_park",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "rio",
-     "name": "Rio de Janeiro",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "rioja",
-     "name": "Rioja",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "rivieramaya",
-     "name": "Riviera Maya",
-     "pt": "coastal_area",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "rome",
-     "name": "Rome",
-     "pt": "city",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2863,31 +2436,10 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "santorini",
-     "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "seychelles",
      "name": "Seychelles",
      "pt": "country",
      "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "singapore",
-     "name": "Singapore",
-     "pt": "country",
-     "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2905,27 +2457,6 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "srilanka",
-     "name": "Sri Lanka",
-     "pt": "country",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "sydney",
-     "name": "Sydney",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "texas-hill-country",
      "name": "Texas Hill Country",
      "pt": "region",
@@ -2940,24 +2471,10 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "tokyo-kyoto",
-     "name": "Tokyo & Kyoto",
-     "pt": "region",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "turks-caicos",
      "name": "Turks & Caicos",
      "pt": "island",
      "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "tuscany",
-     "name": "Tuscany",
-     "pt": "region",
-     "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2975,1056 +2492,19 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "vancouver-island",
-     "name": "Vancouver Island",
-     "pt": "island",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "venice",
-     "name": "Venice",
-     "pt": "city",
-     "reason": "No mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "vermont",
-     "name": "Vermont",
-     "pt": "state_province",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "zimbabwe",
      "name": "Victoria Falls & Hwange",
      "pt": "region",
      "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "vienna",
-     "name": "Vienna",
-     "pt": "city",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not a mountaineering destination.",
-     "basis": "Kind of place"
     }
    ],
-   "trailRunning": [
-    {
-     "pid": "acadia",
-     "name": "Acadia National Park",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "algarve",
-     "name": "Algarve",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "amalfi",
-     "name": "Amalfi Coast",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "amsterdam",
-     "name": "Amsterdam",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "antarctica",
-     "name": "Antarctic Peninsula",
-     "pt": "wilderness_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "aruba",
-     "name": "Aruba",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "state_province",
-     "reason": "Not a trail-running destination.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "athens",
-     "name": "Athens",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "badlands-black-hills",
-     "name": "Badlands & Black Hills",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bahamas",
-     "name": "Bahamas",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "bali",
-     "name": "Bali",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "bangkok",
-     "name": "Bangkok",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "barbados",
-     "name": "Barbados",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "barcelona",
-     "name": "Barcelona",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "basque-country",
-     "name": "Basque Country",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bavaria-munich",
-     "name": "Bavaria & Munich",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "beijing",
-     "name": "Beijing & Great Wall",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belize",
-     "name": "Belize",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "berlin",
-     "name": "Berlin",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "big-island",
-     "name": "Big Island",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "budapest",
-     "name": "Budapest",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "buenosaires",
-     "name": "Buenos Aires",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "angkor",
-     "name": "Cambodia",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cape-cod-islands",
-     "name": "Cape Cod & the Islands",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "champagne",
-     "name": "Champagne",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "charleston-savannah",
-     "name": "Charleston & Savannah",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "chiang-mai",
-     "name": "Chiang Mai & Northern Thailand",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "chiapas",
-     "name": "Chiapas",
-     "pt": "state_province",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "chicago",
-     "name": "Chicago",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "churchill",
-     "name": "Churchill",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "colombian-caribbean",
-     "name": "Colombian Caribbean",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "copenhagen",
-     "name": "Copenhagen",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "havana",
-     "name": "Cuba",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "croatia",
-     "name": "Dalmatian Coast",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "denali-interior",
-     "name": "Denali & the Interior",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "douro-valley-porto",
-     "name": "Douro Valley & Porto",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "dubai",
-     "name": "Dubai",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "edinburgh",
-     "name": "Edinburgh",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "falklands",
-     "name": "Falkland Islands",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "fiji",
-     "name": "Fiji",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "galapagos",
-     "name": "Galápagos Islands",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "ghana",
-     "name": "Ghana",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "gbr",
-     "name": "Great Barrier Reef",
-     "pt": "coastal_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "guatemala",
-     "name": "Guatemala",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "guilin-yangshuo",
-     "name": "Guilin & Yangshuo",
-     "pt": "region",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "ireland",
-     "name": "Ireland",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "istanbul",
-     "name": "Istanbul",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "jamaica",
-     "name": "Jamaica",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "kerala",
-     "name": "Kerala",
-     "pt": "state_province",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "luangprabang",
-     "name": "Laos",
-     "pt": "country",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "lisbon",
-     "name": "Lisbon",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "london",
-     "name": "London",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "los-cabos",
-     "name": "Los Cabos",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "madagascar",
-     "name": "Madagascar",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "borneo",
-     "name": "Malaysian Borneo",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maldives",
-     "name": "Maldives",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "mallorca",
-     "name": "Mallorca",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maui",
-     "name": "Maui",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "mauritius",
-     "name": "Mauritius",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "mendoza",
-     "name": "Mendoza",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "mexicocity",
-     "name": "Mexico City",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "mongolia",
-     "name": "Mongolia",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bagan",
-     "name": "Myanmar",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "namibia",
-     "name": "Namibia",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nicaragua",
-     "name": "Nicaragua",
-     "pt": "country",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "nice-riviera",
-     "name": "Nice & the French Riviera",
-     "pt": "coastal_area",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "oaxaca",
-     "name": "Oaxaca",
-     "pt": "state_province",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "botswana",
-     "name": "Okavango Delta",
-     "pt": "wilderness_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "okinawa",
-     "name": "Okinawa",
-     "pt": "island",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "palau",
-     "name": "Palau",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "palawan",
-     "name": "Palawan",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "panama",
-     "name": "Panama",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "pantanal",
-     "name": "Pantanal",
-     "pt": "wilderness_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "papua-new-guinea",
-     "name": "Papua New Guinea",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "paris",
-     "name": "Paris",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "peruvian-amazon",
-     "name": "Peruvian Amazon",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "piedmont",
-     "name": "Piedmont",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "prague",
-     "name": "Prague",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puglia",
-     "name": "Puglia",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rajaampat",
-     "name": "Raja Ampat",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "egypt",
-     "name": "Red Sea & Nile",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "redwood",
-     "name": "Redwood National and State Parks",
-     "pt": "national_park",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rioja",
-     "name": "Rioja",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rivieramaya",
-     "name": "Riviera Maya",
-     "pt": "coastal_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "rome",
-     "name": "Rome",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rwanda",
-     "name": "Rwanda",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "uzbekistan",
-     "name": "Samarkand & Bukhara",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "santorini",
-     "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sardinia",
-     "name": "Sardinia",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "seoul",
-     "name": "Seoul",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "seychelles",
-     "name": "Seychelles",
-     "pt": "country",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "sicily",
-     "name": "Sicily",
-     "pt": "island",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "singapore",
-     "name": "Singapore",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zambia",
-     "name": "South Luangwa",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "southeast-alaska",
-     "name": "Southeast Alaska & the Inside Passage",
-     "pt": "coastal_area",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "srilanka",
-     "name": "Sri Lanka",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "svalbard",
-     "name": "Svalbard",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "sydney",
-     "name": "Sydney",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "texas-hill-country",
-     "name": "Texas Hill Country",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "tierra-del-fuego",
-     "name": "Tierra del Fuego",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tokyo-kyoto",
-     "name": "Tokyo & Kyoto",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "turks-caicos",
-     "name": "Turks & Caicos",
-     "pt": "island",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "tuscany",
-     "name": "Tuscany",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uganda",
-     "name": "Uganda",
-     "pt": "country",
-     "reason": "Few waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "uluru",
-     "name": "Uluru & the Outback",
-     "pt": "national_park",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "upper-peninsula",
-     "name": "Upper Peninsula",
-     "pt": "region",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "venice",
-     "name": "Venice",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zimbabwe",
-     "name": "Victoria Falls & Hwange",
-     "pt": "region",
-     "reason": "No waymarked trails.",
-     "basis": "Waymarked hiking routes mapped"
-    },
-    {
-     "pid": "vienna",
-     "name": "Vienna",
-     "pt": "city",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not a trail-running destination.",
-     "basis": "Kind of place"
-    }
-   ],
+   "trailRunning": [],
    "mountainBiking": [
     {
-     "pid": "amsterdam",
-     "name": "Amsterdam",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "antarctica",
      "name": "Antarctic Peninsula",
      "pt": "wilderness_area",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "aruba",
-     "name": "Aruba",
-     "pt": "island",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "state_province",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "athens",
-     "name": "Athens",
-     "pt": "city",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "bahamas",
-     "name": "Bahamas",
-     "pt": "country",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "bangkok",
-     "name": "Bangkok",
-     "pt": "city",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
@@ -4036,73 +2516,10 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "belize",
-     "name": "Belize",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "buenosaires",
-     "name": "Buenos Aires",
-     "pt": "city",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "cape-cod-islands",
-     "name": "Cape Cod & the Islands",
-     "pt": "coastal_area",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "charleston-savannah",
-     "name": "Charleston & Savannah",
-     "pt": "region",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "chicago",
-     "name": "Chicago",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
      "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "colombian-caribbean",
-     "name": "Colombian Caribbean",
-     "pt": "coastal_area",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "copenhagen",
-     "name": "Copenhagen",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "havana",
-     "name": "Cuba",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
      "basis": "Graded trails mapped"
     },
     {
@@ -4113,109 +2530,11 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "country",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "dubai",
-     "name": "Dubai",
-     "pt": "city",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "fiji",
-     "name": "Fiji",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "galapagos",
-     "name": "Galápagos Islands",
-     "pt": "island",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "gbr",
-     "name": "Great Barrier Reef",
-     "pt": "coastal_area",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "greenland",
-     "name": "Greenland",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "istanbul",
-     "name": "Istanbul",
-     "pt": "city",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "london",
-     "name": "London",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "kenya",
      "name": "Maasai Mara & Amboseli",
      "pt": "national_park",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "borneo",
-     "name": "Malaysian Borneo",
-     "pt": "island",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "maldives",
@@ -4225,66 +2544,10 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "mauritius",
-     "name": "Mauritius",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "milford-sound-fiordland",
-     "name": "Milford Sound & Fiordland",
-     "pt": "national_park",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
-     "pt": "city",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
      "pid": "botswana",
      "name": "Okavango Delta",
      "pt": "wilderness_area",
      "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "palau",
-     "name": "Palau",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "palawan",
-     "name": "Palawan",
-     "pt": "island",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "panama",
-     "name": "Panama",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
      "basis": "Graded trails mapped"
     },
     {
@@ -4302,46 +2565,11 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "rajaampat",
-     "name": "Raja Ampat",
-     "pt": "island",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
      "pid": "egypt",
      "name": "Red Sea & Nile",
      "pt": "region",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "rivieramaya",
-     "name": "Riviera Maya",
-     "pt": "coastal_area",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rome",
-     "name": "Rome",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "uyuni",
@@ -4356,13 +2584,6 @@
      "pt": "region",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "santorini",
-     "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "sequoia-kings-canyon",
@@ -4372,20 +2593,6 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "seychelles",
-     "name": "Seychelles",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "singapore",
-     "name": "Singapore",
-     "pt": "country",
-     "reason": "Few mountain-bike trails.",
-     "basis": "Graded trails mapped"
-    },
-    {
      "pid": "zambia",
      "name": "South Luangwa",
      "pt": "national_park",
@@ -4407,13 +2614,6 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "tokyo-kyoto",
-     "name": "Tokyo & Kyoto",
-     "pt": "region",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "turks-caicos",
      "name": "Turks & Caicos",
      "pt": "island",
@@ -4428,30 +2628,9 @@
      "basis": "Graded trails mapped"
     },
     {
-     "pid": "venice",
-     "name": "Venice",
-     "pt": "city",
-     "reason": "Not a mountain-biking destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "zimbabwe",
      "name": "Victoria Falls & Hwange",
      "pt": "region",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "No mountain-bike trails mapped.",
-     "basis": "Graded trails mapped"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     }
@@ -4463,13 +2642,6 @@
      "pt": "region",
      "reason": "Not a sailing destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "arches-canyonlands",
-     "name": "Arches & Canyonlands",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
     },
     {
      "pid": "aspen",
@@ -4500,20 +2672,6 @@
      "basis": "Marinas mapped"
     },
     {
-     "pid": "bhutan",
-     "name": "Bhutan",
-     "pt": "country",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "chamonix",
-     "name": "Chamonix & the French Alps",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "champagne",
      "name": "Champagne",
      "pt": "region",
@@ -4535,34 +2693,6 @@
      "basis": "Marinas mapped"
     },
     {
-     "pid": "colombian-andes",
-     "name": "Colombian Andes",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "peru",
-     "name": "Cusco & Sacred Valley",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "denali-interior",
-     "name": "Denali & the Interior",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "dolomites",
      "name": "Dolomites",
      "pt": "region",
@@ -4574,13 +2704,6 @@
      "name": "Ecuadorian Andes",
      "pt": "region",
      "reason": "Hardly any marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "el-chalten",
-     "name": "El Chaltén & El Calafate",
-     "pt": "region",
-     "reason": "No marinas.",
      "basis": "Marinas mapped"
     },
     {
@@ -4598,46 +2721,11 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "kyrgyzstan",
      "name": "Kyrgyzstan",
      "pt": "country",
      "reason": "Not a sailing destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "ladakh",
-     "name": "Ladakh",
-     "pt": "state_province",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "mendoza",
-     "name": "Mendoza",
-     "pt": "city",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
     },
     {
      "pid": "mexicocity",
@@ -4661,20 +2749,6 @@
      "basis": "Marinas mapped"
     },
     {
-     "pid": "north-cascades",
-     "name": "North Cascades",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "oaxaca",
      "name": "Oaxaca",
      "pt": "state_province",
@@ -4687,13 +2761,6 @@
      "pt": "country",
      "reason": "Not a sailing destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
     },
     {
      "pid": "peruvian-amazon",
@@ -4710,20 +2777,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "redwood",
-     "name": "Redwood National and State Parks",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "rioja",
      "name": "Rioja",
      "pt": "region",
@@ -4738,67 +2791,11 @@
      "basis": "Marinas mapped"
     },
     {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "uzbekistan",
-     "name": "Samarkand & Bukhara",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "sedona",
-     "name": "Sedona",
-     "pt": "city",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
      "pid": "seoul",
      "name": "Seoul",
      "pt": "city",
      "reason": "Not a sailing destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "sequoia-kings-canyon",
-     "name": "Sequoia & Kings Canyon",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "torres-del-paine",
-     "name": "Torres del Paine",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "uluru",
-     "name": "Uluru & the Outback",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
     },
     {
      "pid": "yosemite",
@@ -4813,13 +2810,6 @@
      "pt": "region",
      "reason": "Not a sailing destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
-     "pt": "national_park",
-     "reason": "No marinas.",
-     "basis": "Marinas mapped"
     }
    ],
    "kayakingRafting": [
@@ -4852,32 +2842,11 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
      "pid": "bagan",
      "name": "Myanmar",
      "pt": "country",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "oaxaca",
-     "name": "Oaxaca",
-     "pt": "state_province",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
     },
     {
      "pid": "joshua-tree",
@@ -4899,41 +2868,6 @@
      "pt": "city",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
-     "pid": "uzbekistan",
-     "name": "Samarkand & Bukhara",
-     "pt": "region",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
-     "pid": "sedona",
-     "name": "Sedona",
-     "pt": "city",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
-    },
-    {
-     "pid": "uluru",
-     "name": "Uluru & the Outback",
-     "pt": "national_park",
-     "reason": "No paddling launches or rentals.",
-     "basis": "Paddle launches and rentals mapped"
     },
     {
      "pid": "zion-bryce",
@@ -6495,46 +4429,11 @@
    ],
    "geologyVolcanoes": [
     {
-     "pid": "acadia",
-     "name": "Acadia National Park",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "algarve",
-     "name": "Algarve",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "amsterdam",
      "name": "Amsterdam",
      "pt": "city",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "andalucia",
-     "name": "Andalucía",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "argentine-lake-district",
-     "name": "Argentine Lake District",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "aruba",
-     "name": "Aruba",
-     "pt": "island",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "aspen",
@@ -6544,37 +4443,9 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "state_province",
-     "reason": "Not a geology destination.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "athens",
-     "name": "Athens",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bahamas",
-     "name": "Bahamas",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "bangkok",
      "name": "Bangkok",
      "pt": "city",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "barbados",
-     "name": "Barbados",
-     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -6593,48 +4464,6 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "belize",
-     "name": "Belize",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bend-crater-lake",
-     "name": "Bend & Crater Lake",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "berlin",
-     "name": "Berlin",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bhutan",
-     "name": "Bhutan",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "budapest",
      "name": "Budapest",
      "pt": "city",
@@ -6649,46 +4478,11 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "angkor",
-     "name": "Cambodia",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "cape-cod-islands",
-     "name": "Cape Cod & the Islands",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "champagne",
-     "name": "Champagne",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "charleston-savannah",
-     "name": "Charleston & Savannah",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "chiang-mai",
      "name": "Chiang Mai & Northern Thailand",
      "pt": "city",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "chiapas",
-     "name": "Chiapas",
-     "pt": "state_province",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "chicago",
@@ -6705,51 +4499,9 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "colombian-caribbean",
-     "name": "Colombian Caribbean",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "copenhagen",
      "name": "Copenhagen",
      "pt": "city",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "cornwall",
-     "name": "Cornwall",
-     "pt": "coastal_area",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "havana",
-     "name": "Cuba",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "douro-valley-porto",
-     "name": "Douro Valley & Porto",
-     "pt": "region",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -6768,109 +4520,11 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "falklands",
-     "name": "Falkland Islands",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "fiji",
-     "name": "Fiji",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "ghana",
-     "name": "Ghana",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "gbr",
-     "name": "Great Barrier Reef",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "hongkong",
      "name": "Hong Kong",
      "pt": "city",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "istanbul",
-     "name": "Istanbul",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "jamaica",
-     "name": "Jamaica",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "ladakh",
-     "name": "Ladakh",
-     "pt": "state_province",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lake-district",
-     "name": "Lake District",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "luangprabang",
-     "name": "Laos",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
     },
     {
      "pid": "lisbon",
@@ -6887,156 +4541,9 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "los-cabos",
-     "name": "Los Cabos",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "madagascar",
-     "name": "Madagascar",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "madeira",
-     "name": "Madeira",
-     "pt": "island",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maldives",
-     "name": "Maldives",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "mallorca",
-     "name": "Mallorca",
-     "pt": "island",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "marlborough-abel-tasman",
-     "name": "Marlborough & Abel Tasman",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "mauritius",
-     "name": "Mauritius",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "mexicocity",
-     "name": "Mexico City",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bagan",
-     "name": "Myanmar",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "new-orleans",
      "name": "New Orleans",
      "pt": "city",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nice-riviera",
-     "name": "Nice & the French Riviera",
-     "pt": "coastal_area",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "oaxaca",
-     "name": "Oaxaca",
-     "pt": "state_province",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "botswana",
-     "name": "Okavango Delta",
-     "pt": "wilderness_area",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "okinawa",
-     "name": "Okinawa",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "palau",
-     "name": "Palau",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "panama",
-     "name": "Panama",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "pantanal",
-     "name": "Pantanal",
-     "pt": "wilderness_area",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -7048,62 +4555,6 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "peruvian-amazon",
-     "name": "Peruvian Amazon",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "piedmont",
-     "name": "Piedmont",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "prague",
-     "name": "Prague",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "provence",
-     "name": "Provence",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "puglia",
-     "name": "Puglia",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "queenstown",
      "name": "Queenstown",
      "pt": "city",
@@ -7111,226 +4562,9 @@
      "basis": "Features on Wikidata"
     },
     {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "egypt",
-     "name": "Red Sea & Nile",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "redwood",
-     "name": "Redwood National and State Parks",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "rio",
-     "name": "Rio de Janeiro",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rioja",
-     "name": "Rioja",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "rivieramaya",
-     "name": "Riviera Maya",
-     "pt": "coastal_area",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "rome",
-     "name": "Rome",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uzbekistan",
-     "name": "Samarkand & Bukhara",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "sardinia",
-     "name": "Sardinia",
-     "pt": "island",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "seoul",
-     "name": "Seoul",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "seychelles",
-     "name": "Seychelles",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "singapore",
-     "name": "Singapore",
-     "pt": "country",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "zambia",
-     "name": "South Luangwa",
-     "pt": "national_park",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "southeast-alaska",
-     "name": "Southeast Alaska & the Inside Passage",
-     "pt": "coastal_area",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "srilanka",
-     "name": "Sri Lanka",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
      "pid": "sydney",
      "name": "Sydney",
      "pt": "city",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "tasmania",
-     "name": "Tasmania",
-     "pt": "state_province",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "texas-hill-country",
-     "name": "Texas Hill Country",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "turks-caicos",
-     "name": "Turks & Caicos",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "tuscany",
-     "name": "Tuscany",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "uganda",
-     "name": "Uganda",
-     "pt": "country",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "upper-peninsula",
-     "name": "Upper Peninsula",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "region",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vancouver-island",
-     "name": "Vancouver Island",
-     "pt": "island",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "venice",
-     "name": "Venice",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vermont",
-     "name": "Vermont",
-     "pt": "state_province",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "zimbabwe",
-     "name": "Victoria Falls & Hwange",
-     "pt": "region",
-     "reason": "No notable geological sites.",
-     "basis": "Features on Wikidata"
-    },
-    {
-     "pid": "vienna",
-     "name": "Vienna",
-     "pt": "city",
-     "reason": "Not a geology destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     }
