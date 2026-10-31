@@ -1525,14 +1525,14 @@
   "bareboat_base": false
  },
  "angkor": {
-  "marinas": 0,
-  "islands": 0,
-  "sheltered": 0,
+  "marinas": 2,
+  "islands": 14,
+  "sheltered": 2,
   "regattas": 0,
   "events": [],
   "expedition": 0,
   "operators": [],
-  "sea": null,
+  "sea": "flat",
   "median_wave_m": null,
   "calm_share": null,
   "bareboat_base": false

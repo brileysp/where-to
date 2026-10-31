@@ -824,10 +824,11 @@
   "drawSourceChecked": false
  },
  "angkor": {
-  "shelteredIslandHopping": 0,
+  "shelteredIslandHopping": 2,
   "racingRegattas": 0,
   "expeditionSailing": 0,
-  "evidence": "Sheltered island hopping: 0 marinas (OpenStreetMap leisure=marina, merged within 300 m) gives tier 0; 0 named islands (OpenStreetMap place=island) allow at most 2; no sea in the place, so island hopping is capped at 2 = 0.\nRacing and regattas: No event on the sourced list (Olympic sailing venues 1996-2024, America's Cup, SailGP, a few major races) is held inside the place.\nExpedition sailing: Not a high-latitude or remote-waters place, so none by the rule (not researched).",
+  "seaConditions": "flat",
+  "evidence": "Sheltered island hopping: 2 marinas (OpenStreetMap leisure=marina, merged within 300 m) gives tier 3; 14 named islands (OpenStreetMap place=island) allow at most 10; no marina on the Gulf of Thailand coast to fetch a sea record from (the two mapped marinas are tour-boat stations near Siem Reap), so island hopping is capped at 2 = 2.\nRacing and regattas: No event on the sourced list (Olympic sailing venues 1996-2024, America's Cup, SailGP, a few major races) is held inside the place.\nExpedition sailing: Not a high-latitude or remote-waters place, so none by the rule (not researched).\nSea state: no marine record for the place (inland water); inland waters are set to flat as approved.",
   "drawSourceChecked": false
  },
  "scottish-highlands-skye": {
