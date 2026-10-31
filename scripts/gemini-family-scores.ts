@@ -35,9 +35,9 @@ const MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'
         const g = r.gemini;
         const text = [`Overview: ${g.overview}`, ...g.blurbs.map((b: any) => `${b.months.map((m: number) => MN[m - 1]).join(', ')} (${b.level}): ${b.text}`)].join('\n');
         const prompt = `You score a place for a travel app. The place is ${row.name} (${KIND[row.placeType ?? ''] ?? 'a place'}; ${row.region}). The interest is ${it.label}: ${it.scope}\n\nHere is the text written for this place and interest:\n\n${text}\n\n${scoreRules}\n\nReturn only monthly_scores (twelve numbers, January to December). Optionally put one short sentence in note if a score needs explaining.`;
-        let o: Awaited<ReturnType<typeof generateScoresOnly>> | null = null;
-        for (let a = 0; a < 3 && !o; a++) { try { o = await generateScoresOnly(prompt, model); if ((o.parseError || !o.json || o.json.monthly_scores?.length !== 12) && a < 2) o = null; } catch { await new Promise((s) => setTimeout(s, 4000 * (a + 1))); } }
-        if (!o || !o.json) { failed++; continue; }
+        let o: Awaited<ReturnType<typeof generateScoresOnly>> | null = null; let lastErr = '';
+        for (let a = 0; a < 3 && !o; a++) { try { o = await generateScoresOnly(prompt, model); if ((o.parseError || !o.json || o.json.monthly_scores?.length !== 12) && a < 2) o = null; } catch (err) { lastErr = String((err as Error).message).slice(0, 160); await new Promise((s) => setTimeout(s, 4000 * (a + 1))); } }
+        if (!o || !o.json) { failed++; console.log('FAILED', r.k, r.id, lastErr || 'bad or short scores'); continue; }
         const cost = (o.tokensIn * price.i + o.tokensOut * price.o) / 1e6; spent += cost; done++;
         res.push({ k: r.k, id: r.id, model, scores: o.json.monthly_scores, note: o.json.note ?? '', cost, tokensIn: o.tokensIn, tokensOut: o.tokensOut });
         if (done % 20 === 0) { writeFileSync(out, JSON.stringify(res)); console.log(`${done} done, ${failed} failed, $${spent.toFixed(3)}, ${queue.length} left`); }
