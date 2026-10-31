@@ -68,14 +68,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -96,7 +96,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -166,7 +166,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -222,7 +222,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -250,7 +250,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -341,7 +341,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -376,7 +376,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -411,7 +411,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -579,7 +579,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -656,7 +656,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -705,7 +705,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -775,7 +775,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -845,7 +845,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -880,14 +880,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -936,7 +936,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -964,7 +964,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Far outside the aurora zone.",
      "basis": "Latitude"
     },
@@ -1216,7 +1216,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "Aurora is rare at this latitude.",
      "basis": "Latitude"
     },
@@ -1302,7 +1302,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1400,7 +1400,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Too warm for snow.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1498,7 +1498,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Too warm for snow.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1526,7 +1526,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "No real ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1561,7 +1561,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1708,7 +1708,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Too warm for snow.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1785,7 +1785,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a ski destination.",
      "basis": "Kind of place"
     },
@@ -1827,7 +1827,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "No real ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1869,7 +1869,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1925,7 +1925,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -1960,14 +1960,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Too warm for snow.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -2009,7 +2009,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No ski areas.",
      "basis": "Ski lifts mapped (OpenStreetMap)"
     },
@@ -2249,7 +2249,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2354,8 +2354,8 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
-     "reason": "No mountains.",
+     "pt": "country",
+     "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
@@ -2445,7 +2445,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2459,7 +2459,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a mountaineering destination.",
      "basis": "Kind of place"
     },
@@ -2606,7 +2606,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2697,7 +2697,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2767,7 +2767,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2795,7 +2795,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "No high mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -2816,7 +2816,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No mountains.",
      "basis": "Peaks mapped (OpenStreetMap)"
     },
@@ -3070,7 +3070,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -3084,7 +3084,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3196,7 +3196,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3273,7 +3273,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3294,14 +3294,14 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3455,7 +3455,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Few waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -3560,7 +3560,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -3609,7 +3609,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3693,7 +3693,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -3735,7 +3735,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a trail-running destination.",
      "basis": "Kind of place"
     },
@@ -3756,7 +3756,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -3889,7 +3889,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "No waymarked trails.",
      "basis": "Waymarked hiking routes mapped"
     },
@@ -4010,7 +4010,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
@@ -4108,21 +4108,21 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Few mountain-bike trails.",
      "basis": "Graded trails mapped"
     },
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a mountain-biking destination.",
      "basis": "Kind of place"
     },
@@ -4178,7 +4178,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Few mountain-bike trails.",
      "basis": "Graded trails mapped"
     },
@@ -4304,7 +4304,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
@@ -4332,7 +4332,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
@@ -4402,7 +4402,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "No mountain-bike trails mapped.",
      "basis": "Graded trails mapped"
     },
@@ -4488,14 +4488,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Hardly any marinas.",
      "basis": "Marinas mapped"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Hardly any marinas.",
      "basis": "Marinas mapped"
     },
@@ -4516,7 +4516,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "No marinas.",
      "basis": "Marinas mapped"
     },
@@ -4565,7 +4565,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No marinas.",
      "basis": "Marinas mapped"
     },
@@ -4586,7 +4586,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "No marinas.",
      "basis": "Marinas mapped"
     },
@@ -4698,14 +4698,14 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No marinas.",
      "basis": "Marinas mapped"
     },
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Hardly any marinas.",
      "basis": "Marinas mapped"
     },
@@ -4833,14 +4833,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
@@ -4854,7 +4854,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
@@ -4882,7 +4882,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
@@ -4896,14 +4896,14 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
@@ -4982,7 +4982,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Few golf courses.",
      "basis": "Golf courses mapped"
     },
@@ -5010,7 +5010,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Few golf courses.",
      "basis": "Golf courses mapped"
     },
@@ -5045,14 +5045,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No golf courses.",
      "basis": "Golf courses mapped"
     },
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "No golf courses.",
      "basis": "Golf courses mapped"
     },
@@ -5082,7 +5082,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a fishing destination.",
      "basis": "Kind of place"
     }
@@ -5112,7 +5112,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a cycling destination.",
      "basis": "Kind of place"
     }
@@ -5149,14 +5149,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a beach destination.",
      "basis": "Kind of place"
     },
@@ -5184,7 +5184,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
@@ -5198,7 +5198,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
@@ -5233,7 +5233,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
@@ -5254,7 +5254,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
@@ -5282,7 +5282,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not a beach destination.",
      "basis": "Kind of place"
     },
@@ -5366,14 +5366,14 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Inland, no beaches.",
      "basis": "Coastline inside the area"
     },
@@ -5436,7 +5436,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not a beach destination.",
      "basis": "Kind of place"
     },
@@ -5536,7 +5536,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5550,7 +5550,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5599,7 +5599,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5641,7 +5641,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5725,7 +5725,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5746,14 +5746,14 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5774,7 +5774,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -5942,7 +5942,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6019,7 +6019,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6068,7 +6068,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6117,7 +6117,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6208,7 +6208,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6243,7 +6243,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6264,7 +6264,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6383,7 +6383,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "No hot springs listed.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6453,7 +6453,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6488,7 +6488,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
@@ -6560,7 +6560,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -6616,7 +6616,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a geology destination.",
      "basis": "Kind of place"
     },
@@ -6665,7 +6665,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -6749,14 +6749,14 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -6882,7 +6882,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a geology destination.",
      "basis": "Kind of place"
     },
@@ -6966,7 +6966,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a geology destination.",
      "basis": "Kind of place"
     },
@@ -7064,7 +7064,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -7113,7 +7113,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a geology destination.",
      "basis": "Kind of place"
     },
@@ -7134,7 +7134,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     },
@@ -7302,7 +7302,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a geology destination.",
      "basis": "Kind of place"
     },
@@ -7344,7 +7344,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "No notable geological sites.",
      "basis": "Features on Wikidata"
     }
@@ -7388,21 +7388,21 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7458,7 +7458,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7500,14 +7500,14 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
-     "reason": "No coast.",
-     "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
+     "pt": "country",
+     "reason": "No kite or windsurf schools listed.",
+     "basis": "Kite and windsurf schools listed (Overture Maps), whole country"
     },
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7563,7 +7563,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7584,7 +7584,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7612,7 +7612,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7689,7 +7689,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not a wind-sports destination.",
      "basis": "Kind of place"
     },
@@ -7787,7 +7787,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7871,7 +7871,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -7976,7 +7976,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -8011,14 +8011,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "No coast.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -8053,7 +8053,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -8179,7 +8179,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -8256,7 +8256,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Too little wind.",
      "basis": "Coastline and wind record (Open-Meteo 2019-2024)"
     },
@@ -8342,20 +8342,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "arches-canyonlands",
-     "name": "Arches & Canyonlands",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "banff",
-     "name": "Banff & Jasper National Parks",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
@@ -8363,36 +8349,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "falklands",
      "name": "Falkland Islands",
-     "pt": "island",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "fiji",
-     "name": "Fiji",
-     "pt": "country",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
      "pt": "island",
      "reason": "Not known for architecture.",
      "basis": "Kind of place"
@@ -8405,38 +8363,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "kruger",
      "name": "Kruger & Sabi Sands",
      "pt": "national_park",
      "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maldives",
-     "name": "Maldives",
-     "pt": "country",
-     "reason": "Not known for architecture.",
      "basis": "Kind of place"
     },
     {
@@ -8468,31 +8398,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "palawan",
-     "name": "Palawan",
-     "pt": "island",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
      "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "queenstown",
-     "name": "Queenstown",
-     "pt": "city",
-     "reason": "Not known for architecture.",
      "basis": "Kind of place"
     },
     {
@@ -8505,13 +8414,6 @@
     {
      "pid": "redwood",
      "name": "Redwood National and State Parks",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
      "pt": "national_park",
      "reason": "A natural area, not known for architecture.",
      "basis": "Kind of place"
@@ -8536,51 +8438,9 @@
      "pt": "country",
      "reason": "Not known for architecture.",
      "basis": "Kind of place"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "Not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for architecture.",
-     "basis": "Kind of place"
     }
    ],
    "museumsArt": [
-    {
-     "pid": "acadia",
-     "name": "Acadia National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
     {
      "pid": "antarctica",
      "name": "Antarctic Peninsula",
@@ -8589,38 +8449,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "arches-canyonlands",
-     "name": "Arches & Canyonlands",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "banff",
-     "name": "Banff & Jasper National Parks",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
      "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
      "basis": "Kind of place"
     },
     {
@@ -8634,27 +8466,6 @@
      "pid": "fiji",
      "name": "Fiji",
      "pt": "country",
-     "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
-     "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
      "reason": "Not known for museums and art.",
      "basis": "Kind of place"
     },
@@ -8694,13 +8505,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "palawan",
      "name": "Palawan",
      "pt": "island",
@@ -8708,24 +8512,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
      "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "queenstown",
-     "name": "Queenstown",
-     "pt": "city",
-     "reason": "Not known for museums and art.",
      "basis": "Kind of place"
     },
     {
@@ -8743,13 +8533,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "sequoia-kings-canyon",
      "name": "Sequoia & Kings Canyon",
      "pt": "national_park",
@@ -8761,41 +8544,6 @@
      "name": "Seychelles",
      "pt": "country",
      "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "Not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for museums and art.",
      "basis": "Kind of place"
     }
    ],
@@ -8808,66 +8556,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
      "reason": "Not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "falklands",
-     "name": "Falkland Islands",
-     "pt": "island",
-     "reason": "Not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "galapagos",
-     "name": "Galápagos Islands",
-     "pt": "island",
-     "reason": "Not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
-     "reason": "Not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
      "basis": "Kind of place"
     },
     {
@@ -8878,13 +8570,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "milford-sound-fiordland",
-     "name": "Milford Sound & Fiordland",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "north-cascades",
      "name": "North Cascades",
      "pt": "national_park",
@@ -8892,38 +8577,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "botswana",
-     "name": "Okavango Delta",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "pakistan",
-     "name": "Pakistan",
-     "pt": "country",
-     "reason": "Not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
      "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "papua-new-guinea",
-     "name": "Papua New Guinea",
-     "pt": "country",
-     "reason": "Not known for nightlife.",
      "basis": "Kind of place"
     },
     {
@@ -8941,57 +8598,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "sequoia-kings-canyon",
      "name": "Sequoia & Kings Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "torres-del-paine",
-     "name": "Torres del Paine",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uluru",
-     "name": "Uluru & the Outback",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for nightlife.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
      "pt": "national_park",
      "reason": "A natural area, not known for nightlife.",
      "basis": "Kind of place"
@@ -9034,23 +8642,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Not known for festivals.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "galapagos",
      "name": "Galápagos Islands",
      "pt": "island",
-     "reason": "Not known for festivals.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
      "reason": "Not known for festivals.",
      "basis": "Kind of place"
     },
@@ -9104,13 +8698,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for festivals.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
@@ -9132,13 +8719,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for festivals.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "uyuni",
      "name": "Salar de Uyuni",
      "pt": "wilderness_area",
@@ -9148,13 +8728,6 @@
     {
      "pid": "sequoia-kings-canyon",
      "name": "Sequoia & Kings Canyon",
-     "pt": "national_park",
-     "reason": "A natural area, not known for festivals.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
      "pt": "national_park",
      "reason": "A natural area, not known for festivals.",
      "basis": "Kind of place"
@@ -9183,45 +8756,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for shopping.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "falklands",
      "name": "Falkland Islands",
      "pt": "island",
      "reason": "Not known for shopping.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Not known for shopping.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "greenland",
-     "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for shopping.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
-     "reason": "Not known for shopping.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "milford-sound-fiordland",
-     "name": "Milford Sound & Fiordland",
-     "pt": "national_park",
-     "reason": "A natural area, not known for shopping.",
      "basis": "Kind of place"
     },
     {
@@ -9278,15 +8816,15 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
+     "pt": "state_province",
+     "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
+     "pt": "region",
+     "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
@@ -9327,7 +8865,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9346,20 +8884,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "costa-rica",
-     "name": "Costa Rica",
-     "pt": "country",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "havana",
-     "name": "Cuba",
-     "pt": "city",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "death-valley",
      "name": "Death Valley National Park",
      "pt": "national_park",
@@ -9369,14 +8893,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "region",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9390,14 +8907,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "ethiopia",
-     "name": "Ethiopia",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9472,22 +8982,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "great-smoky-mountains",
-     "name": "Great Smoky Mountains National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "guatemala",
-     "name": "Guatemala",
      "pt": "country",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
@@ -9496,20 +8992,6 @@
      "pid": "guilin-yangshuo",
      "name": "Guilin & Yangshuo",
      "pt": "region",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "iceland",
-     "name": "Iceland",
-     "pt": "country",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "jamaica",
-     "name": "Jamaica",
-     "pt": "country",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9558,7 +9040,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9607,7 +9089,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9630,13 +9112,6 @@
      "name": "North Cascades",
      "pt": "national_park",
      "reason": "A natural area, not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
@@ -9691,8 +9166,8 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
+     "pt": "region",
+     "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
@@ -9719,21 +9194,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for wine, beer and spirits.",
+     "pt": "region",
+     "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
      "pid": "thailand",
      "name": "Phuket & the Andaman Coast",
      "pt": "coastal_area",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9754,7 +9222,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
@@ -9815,13 +9283,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "taiwan",
-     "name": "Taiwan",
-     "pt": "country",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "torres-del-paine",
      "name": "Torres del Paine",
      "pt": "national_park",
@@ -9847,20 +9308,6 @@
      "name": "Victoria Falls & Hwange",
      "pt": "region",
      "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not known for wine, beer and spirits.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for wine, beer and spirits.",
      "basis": "Kind of place"
     },
     {
@@ -9917,29 +9364,22 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for specialty coffee and tea.",
+     "pt": "state_province",
+     "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "azores",
-     "name": "Azores",
-     "pt": "island",
+     "pt": "region",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
-     "reason": "A natural area, not known for specialty coffee and tea.",
+     "pt": "region",
+     "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
@@ -9964,23 +9404,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "bavaria-munich",
-     "name": "Bavaria & Munich",
-     "pt": "region",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "belize",
      "name": "Belize",
      "pt": "country",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "berlin",
-     "name": "Berlin",
-     "pt": "city",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
@@ -10015,21 +9441,21 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for specialty coffee and tea.",
+     "pt": "region",
+     "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
@@ -10120,14 +9546,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hokkaido",
-     "name": "Hokkaido",
-     "pt": "island",
+     "pt": "country",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
@@ -10181,13 +9600,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "borneo",
-     "name": "Malaysian Borneo",
-     "pt": "island",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "maldives",
      "name": "Maldives",
      "pt": "country",
@@ -10216,30 +9628,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "bagan",
-     "name": "Myanmar",
-     "pt": "region",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "namibia",
      "name": "Namibia",
      "pt": "country",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "north-island",
-     "name": "North Island",
-     "pt": "island",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "city",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
@@ -10274,28 +9665,14 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for specialty coffee and tea.",
+     "pt": "region",
+     "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
@@ -10363,17 +9740,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "Not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for specialty coffee and tea.",
+     "pt": "island",
+     "reason": "Not known for specialty coffee and tea.",
      "basis": "Kind of place"
     },
     {
@@ -10426,13 +9796,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for specialty coffee and tea.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "yellowstone",
      "name": "Yellowstone National Park",
      "pt": "national_park",
@@ -10463,13 +9826,6 @@
    ],
    "cityExploration": [
     {
-     "pid": "acadia",
-     "name": "Acadia National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "antarctica",
      "name": "Antarctic Peninsula",
      "pt": "wilderness_area",
@@ -10477,93 +9833,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "arches-canyonlands",
-     "name": "Arches & Canyonlands",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "argentine-lake-district",
-     "name": "Argentine Lake District",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "atacama",
-     "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "badlands-black-hills",
-     "name": "Badlands & Black Hills",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "banff",
-     "name": "Banff & Jasper National Parks",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belize",
-     "name": "Belize",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "chamonix",
-     "name": "Chamonix & the French Alps",
-     "pt": "city",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "chilean-lake-district",
-     "name": "Chilean Lake District",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cornwall",
-     "name": "Cornwall",
-     "pt": "coastal_area",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "costa-rica",
-     "name": "Costa Rica",
-     "pt": "country",
      "reason": "Not known for city exploration.",
      "basis": "Kind of place"
     },
@@ -10577,77 +9849,14 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "dolomites",
-     "name": "Dolomites",
      "pt": "region",
      "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "coastal_area",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "el-chalten",
-     "name": "El Chaltén & El Calafate",
-     "pt": "city",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "everglades",
-     "name": "Everglades National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
      "basis": "Kind of place"
     },
     {
      "pid": "falklands",
      "name": "Falkland Islands",
      "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "faroe-islands",
-     "name": "Faroe Islands",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "galapagos",
-     "name": "Galápagos Islands",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
      "reason": "Not known for city exploration.",
      "basis": "Kind of place"
     },
@@ -10659,218 +9868,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "gbr",
-     "name": "Great Barrier Reef",
-     "pt": "coastal_area",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "great-smoky-mountains",
-     "name": "Great Smoky Mountains National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "greenland",
-     "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hokkaido",
-     "name": "Hokkaido",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "iceland",
-     "name": "Iceland",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "komodo",
-     "name": "Komodo & Flores",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kruger",
-     "name": "Kruger & Sabi Sands",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kyrgyzstan",
-     "name": "Kyrgyzstan",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "ladakh",
-     "name": "Ladakh",
-     "pt": "state_province",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lake-district",
-     "name": "Lake District",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lofoten",
-     "name": "Lofoten Islands",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "borneo",
-     "name": "Malaysian Borneo",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maldives",
-     "name": "Maldives",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "marlborough-abel-tasman",
-     "name": "Marlborough & Abel Tasman",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mendoza",
-     "name": "Mendoza",
-     "pt": "city",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "milford-sound-fiordland",
-     "name": "Milford Sound & Fiordland",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mongolia",
-     "name": "Mongolia",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "namibia",
-     "name": "Namibia",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "north-cascades",
      "name": "North Cascades",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "north-island",
-     "name": "North Island",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "fjords",
-     "name": "Norwegian Fjords",
-     "pt": "coastal_area",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "botswana",
-     "name": "Okavango Delta",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "pakistan",
-     "name": "Pakistan",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "palau",
-     "name": "Palau",
-     "pt": "country",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
      "pt": "national_park",
      "reason": "A natural area, not known for city exploration.",
      "basis": "Kind of place"
@@ -10883,52 +9882,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "peruvian-amazon",
-     "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rajaampat",
-     "name": "Raja Ampat",
-     "pt": "island",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "redwood",
      "name": "Redwood National and State Parks",
      "pt": "national_park",
      "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "scottish-highlands-skye",
-     "name": "Scottish Highlands & Isle of Skye",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sedona",
-     "name": "Sedona",
-     "pt": "city",
-     "reason": "Not known for city exploration.",
      "basis": "Kind of place"
     },
     {
@@ -10953,20 +9910,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "svalbard",
-     "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tierra-del-fuego",
-     "name": "Tierra del Fuego",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "torres-del-paine",
      "name": "Torres del Paine",
      "pt": "national_park",
@@ -10974,57 +9917,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "uluru",
-     "name": "Uluru & the Outback",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "upper-peninsula",
-     "name": "Upper Peninsula",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vermont",
-     "name": "Vermont",
-     "pt": "state_province",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "yosemite",
      "name": "Yosemite National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "swissalps",
-     "name": "Zermatt & the Swiss Alps",
-     "pt": "region",
-     "reason": "Not known for city exploration.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
      "pt": "national_park",
      "reason": "A natural area, not known for city exploration.",
      "basis": "Kind of place"
@@ -11081,17 +9975,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11104,8 +9991,8 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11139,8 +10026,8 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11167,7 +10054,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
@@ -11200,20 +10087,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "costa-rica",
-     "name": "Costa Rica",
-     "pt": "country",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "death-valley",
      "name": "Death Valley National Park",
      "pt": "national_park",
@@ -11223,8 +10096,8 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11235,16 +10108,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "coastal_area",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
@@ -11321,27 +10187,13 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "country",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
      "pid": "guilin-yangshuo",
      "name": "Guilin & Yangshuo",
-     "pt": "region",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hokkaido",
-     "name": "Hokkaido",
-     "pt": "island",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
      "pt": "region",
      "reason": "Not known for religious sites.",
      "basis": "Kind of place"
@@ -11487,20 +10339,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "north-island",
-     "name": "North Island",
-     "pt": "island",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "fjords",
      "name": "Norwegian Fjords",
      "pt": "coastal_area",
@@ -11545,8 +10383,8 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11573,8 +10411,8 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "region",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11588,13 +10426,6 @@
      "pid": "piedmont",
      "name": "Piedmont",
      "pt": "region",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
      "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
@@ -11699,8 +10530,8 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for religious sites.",
+     "pt": "island",
+     "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11739,23 +10570,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "uganda",
-     "name": "Uganda",
-     "pt": "country",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "upper-peninsula",
      "name": "Upper Peninsula",
      "pt": "region",
-     "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
      "reason": "Not known for religious sites.",
      "basis": "Kind of place"
     },
@@ -11778,13 +10595,6 @@
      "name": "Victoria Falls & Hwange",
      "pt": "region",
      "reason": "Not known for religious sites.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for religious sites.",
      "basis": "Kind of place"
     },
     {
@@ -11869,15 +10679,15 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
+     "pt": "state_province",
+     "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for history and archaeology.",
+     "pt": "region",
+     "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
@@ -11911,35 +10721,14 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
      "pt": "region",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "canaries",
-     "name": "Canary Islands",
-     "pt": "island",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cape-cod-islands",
-     "name": "Cape Cod & the Islands",
-     "pt": "coastal_area",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -11958,27 +10747,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "cornwall",
-     "name": "Cornwall",
-     "pt": "coastal_area",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "costa-rica",
-     "name": "Costa Rica",
-     "pt": "country",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "death-valley",
      "name": "Death Valley National Park",
      "pt": "national_park",
@@ -11988,8 +10756,8 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
+     "pt": "region",
+     "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
@@ -12000,16 +10768,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "punta-cana",
-     "name": "Dominican Republic",
-     "pt": "coastal_area",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12038,13 +10799,6 @@
      "pid": "fiji",
      "name": "Fiji",
      "pt": "country",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12086,20 +10840,6 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hokkaido",
-     "name": "Hokkaido",
-     "pt": "island",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "iceland",
-     "name": "Iceland",
      "pt": "country",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
@@ -12108,13 +10848,6 @@
      "pid": "jamaica",
      "name": "Jamaica",
      "pt": "country",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kerala",
-     "name": "Kerala",
-     "pt": "state_province",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12137,13 +10870,6 @@
      "name": "Kyrgyzstan",
      "pt": "country",
      "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lake-district",
-     "name": "Lake District",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
@@ -12182,23 +10908,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "borneo",
-     "name": "Malaysian Borneo",
-     "pt": "island",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "maldives",
      "name": "Maldives",
      "pt": "country",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mallorca",
-     "name": "Mallorca",
-     "pt": "island",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12273,13 +10985,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "north-island",
-     "name": "North Island",
-     "pt": "island",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "tanzania",
      "name": "Northern Tanzania",
      "pt": "region",
@@ -12290,13 +10995,6 @@
      "pid": "fjords",
      "name": "Norwegian Fjords",
      "pt": "coastal_area",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12336,20 +11034,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "panama",
-     "name": "Panama",
-     "pt": "country",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pantanal",
      "name": "Pantanal",
      "pt": "wilderness_area",
@@ -12366,14 +11050,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
+     "pt": "region",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12381,13 +11058,6 @@
      "pid": "piedmont",
      "name": "Piedmont",
      "pt": "region",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
@@ -12434,20 +11104,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "sardinia",
-     "name": "Sardinia",
-     "pt": "island",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "scottish-highlands-skye",
-     "name": "Scottish Highlands & Isle of Skye",
-     "pt": "region",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "sedona",
      "name": "Sedona",
      "pt": "city",
@@ -12483,17 +11139,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for history and archaeology.",
+     "pt": "island",
+     "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
@@ -12539,13 +11188,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "vancouver-island",
      "name": "Vancouver Island",
      "pt": "island",
@@ -12557,13 +11199,6 @@
      "name": "Vermont",
      "pt": "state_province",
      "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for history and archaeology.",
      "basis": "Kind of place"
     },
     {
@@ -12639,13 +11274,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "argentine-lake-district",
-     "name": "Argentine Lake District",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "aruba",
      "name": "Aruba",
      "pt": "island",
@@ -12662,8 +11290,8 @@
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for Indigenous cultures.",
+     "pt": "region",
+     "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -12684,13 +11312,6 @@
      "pid": "bahamas",
      "name": "Bahamas",
      "pt": "country",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bali",
-     "name": "Bali",
-     "pt": "island",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12737,23 +11358,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "bend-crater-lake",
-     "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "berlin",
      "name": "Berlin",
      "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "big-island",
-     "name": "Big Island",
-     "pt": "island",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12786,13 +11393,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "angkor",
-     "name": "Cambodia",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "canaries",
      "name": "Canary Islands",
      "pt": "island",
@@ -12816,7 +11416,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12842,23 +11442,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "chilean-lake-district",
-     "name": "Chilean Lake District",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "churchill",
      "name": "Churchill",
      "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "colombian-caribbean",
-     "name": "Colombian Caribbean",
-     "pt": "coastal_area",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12893,7 +11479,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12914,8 +11500,8 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
+     "pt": "region",
+     "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -12928,7 +11514,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -12949,13 +11535,6 @@
     {
      "pid": "edinburgh",
      "name": "Edinburgh",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "el-chalten",
-     "name": "El Chaltén & El Calafate",
      "pt": "city",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
@@ -12982,13 +11561,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "borabora",
-     "name": "French Polynesia",
-     "pt": "island",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "galapagos",
      "name": "Galápagos Islands",
      "pt": "island",
@@ -13003,13 +11575,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "glacier-waterton",
-     "name": "Glacier & Waterton Lakes",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "gbr",
      "name": "Great Barrier Reef",
      "pt": "coastal_area",
@@ -13017,23 +11582,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "great-smoky-mountains",
-     "name": "Great Smoky Mountains National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "hongkong",
      "name": "Hong Kong",
      "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
-     "pt": "region",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -13143,37 +11694,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "marlborough-abel-tasman",
-     "name": "Marlborough & Abel Tasman",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "maui",
-     "name": "Maui",
-     "pt": "island",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "mauritius",
      "name": "Mauritius",
      "pt": "country",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mendoza",
-     "name": "Mendoza",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mexicocity",
-     "name": "Mexico City",
-     "pt": "city",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -13185,16 +11708,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -13202,20 +11718,6 @@
      "pid": "napa",
      "name": "Napa & Sonoma",
      "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
-     "pt": "city",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -13229,7 +11731,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
@@ -13241,24 +11743,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "olympic",
-     "name": "Olympic National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "pakistan",
      "name": "Pakistan",
      "pt": "country",
      "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -13311,31 +11799,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "rajaampat",
      "name": "Raja Ampat",
      "pt": "island",
      "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "redwood",
-     "name": "Redwood National and State Parks",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -13360,13 +11827,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rocky-mountain",
-     "name": "Rocky Mountain National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "rome",
      "name": "Rome",
      "pt": "city",
@@ -13381,22 +11841,8 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "santorini",
      "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sardinia",
-     "name": "Sardinia",
      "pt": "island",
      "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
@@ -13460,8 +11906,8 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for Indigenous cultures.",
+     "pt": "island",
+     "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -13514,13 +11960,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "Not known for Indigenous cultures.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "venice",
      "name": "Venice",
      "pt": "city",
@@ -13551,8 +11990,8 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for Indigenous cultures.",
+     "pt": "country",
+     "reason": "Not known for Indigenous cultures.",
      "basis": "Kind of place"
     },
     {
@@ -13644,15 +12083,15 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "state_province",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "region",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -13672,8 +12111,8 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "region",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -13742,8 +12181,8 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "region",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -13812,7 +12251,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -13889,7 +12328,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -13910,8 +12349,8 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "region",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -13924,7 +12363,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -13938,13 +12377,6 @@
     {
      "pid": "edinburgh",
      "name": "Edinburgh",
-     "pt": "city",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "el-chalten",
-     "name": "El Chaltén & El Calafate",
      "pt": "city",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
@@ -13967,13 +12399,6 @@
      "pid": "faroe-islands",
      "name": "Faroe Islands",
      "pt": "island",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "fiji",
-     "name": "Fiji",
-     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14022,21 +12447,14 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "country",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
      "pid": "guilin-yangshuo",
      "name": "Guilin & Yangshuo",
      "pt": "region",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hokkaido",
-     "name": "Hokkaido",
-     "pt": "island",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14051,13 +12469,6 @@
      "pid": "hudson-valley",
      "name": "Hudson Valley",
      "pt": "region",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "iceland",
-     "name": "Iceland",
-     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14090,13 +12501,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "lake-district",
-     "name": "Lake District",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "lisbon",
      "name": "Lisbon",
      "pt": "city",
@@ -14122,13 +12526,6 @@
      "name": "Los Cabos",
      "pt": "region",
      "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kenya",
-     "name": "Maasai Mara & Amboseli",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -14181,13 +12578,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "mexicocity",
-     "name": "Mexico City",
-     "pt": "city",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "milford-sound-fiordland",
      "name": "Milford Sound & Fiordland",
      "pt": "national_park",
@@ -14216,23 +12606,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "nyc",
      "name": "New York City",
      "pt": "city",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nicaragua",
-     "name": "Nicaragua",
-     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14253,14 +12629,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14316,8 +12685,8 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "region",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -14335,16 +12704,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "peruvian-amazon",
-     "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14377,13 +12739,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "puglia",
      "name": "Puglia",
      "pt": "region",
@@ -14393,7 +12748,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14489,13 +12844,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "sicily",
-     "name": "Sicily",
-     "pt": "island",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "singapore",
      "name": "Singapore",
      "pt": "country",
@@ -14517,13 +12865,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "srilanka",
-     "name": "Sri Lanka",
-     "pt": "country",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "st-andrews-fife",
      "name": "St Andrews & Fife",
      "pt": "region",
@@ -14533,8 +12874,8 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "island",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -14545,23 +12886,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "taiwan",
-     "name": "Taiwan",
-     "pt": "country",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "tasmania",
      "name": "Tasmania",
      "pt": "state_province",
-     "reason": "Not known for traditional crafts.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tbilisi-caucasus",
-     "name": "Tbilisi & the Caucasus",
-     "pt": "region",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14624,7 +12951,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
@@ -14659,8 +12986,8 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
-     "reason": "A natural area, not known for traditional crafts.",
+     "pt": "country",
+     "reason": "Not known for traditional crafts.",
      "basis": "Kind of place"
     },
     {
@@ -14694,38 +13021,10 @@
    ],
    "campingBackcountry": [
     {
-     "pid": "algarve",
-     "name": "Algarve",
-     "pt": "coastal_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "amalfi",
-     "name": "Amalfi Coast",
-     "pt": "coastal_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "amsterdam",
      "name": "Amsterdam",
      "pt": "city",
      "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "andalucia",
-     "name": "Andalucía",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "antarctica",
-     "name": "Antarctic Peninsula",
-     "pt": "wilderness_area",
-     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -14738,7 +13037,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -14753,13 +13052,6 @@
      "pid": "bahamas",
      "name": "Bahamas",
      "pt": "country",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bali",
-     "name": "Bali",
-     "pt": "island",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -14785,20 +13077,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "basque-country",
-     "name": "Basque Country",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bavaria-munich",
-     "name": "Bavaria & Munich",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "beijing",
      "name": "Beijing & Great Wall",
      "pt": "city",
@@ -14820,20 +13098,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "budapest",
      "name": "Budapest",
      "pt": "city",
@@ -14850,8 +13114,8 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
+     "pt": "country",
+     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -14876,13 +13140,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "chiang-mai",
-     "name": "Chiang Mai & Northern Thailand",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "chiapas",
      "name": "Chiapas",
      "pt": "state_province",
@@ -14904,30 +13161,16 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "cotswolds",
-     "name": "Cotswolds",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
+     "pt": "country",
+     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "douro-valley-porto",
-     "name": "Douro Valley & Porto",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -14988,13 +13231,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "guatemala",
-     "name": "Guatemala",
-     "pt": "country",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "guilin-yangshuo",
      "name": "Guilin & Yangshuo",
      "pt": "region",
@@ -15006,13 +13242,6 @@
      "name": "Hong Kong",
      "pt": "city",
      "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
-     "pt": "region",
-     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -15039,8 +13268,8 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
+     "pt": "country",
+     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -15079,13 +13308,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "mallorca",
-     "name": "Mallorca",
-     "pt": "island",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "mauritius",
      "name": "Mauritius",
      "pt": "country",
@@ -15100,30 +13322,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "mexicocity",
-     "name": "Mexico City",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -15142,24 +13343,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "nicaragua",
-     "name": "Nicaragua",
-     "pt": "country",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "nice-riviera",
      "name": "Nice & the French Riviera",
      "pt": "coastal_area",
      "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "belfast-giants-causeway",
-     "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -15207,20 +13394,6 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "thailand",
-     "name": "Phuket & the Andaman Coast",
-     "pt": "coastal_area",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "piedmont",
-     "name": "Piedmont",
      "pt": "region",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
@@ -15228,27 +13401,6 @@
     {
      "pid": "prague",
      "name": "Prague",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puerto-rico",
-     "name": "Puerto Rico",
-     "pt": "island",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "puglia",
-     "name": "Puglia",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "quebec-city",
-     "name": "Quebec City & Montreal",
      "pt": "city",
      "reason": "A city, not a camping destination.",
      "basis": "Kind of place"
@@ -15270,7 +13422,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -15279,13 +13431,6 @@
      "name": "Rio de Janeiro",
      "pt": "city",
      "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rioja",
-     "name": "Rioja",
-     "pt": "region",
-     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -15310,34 +13455,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "uzbekistan",
-     "name": "Samarkand & Bukhara",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "santorini",
-     "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sardinia",
-     "name": "Sardinia",
-     "pt": "island",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "seoul",
      "name": "Seoul",
      "pt": "city",
@@ -15352,23 +13469,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "sicily",
-     "name": "Sicily",
-     "pt": "island",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "singapore",
      "name": "Singapore",
      "pt": "country",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
      "reason": "Not a camping destination.",
      "basis": "Kind of place"
     },
@@ -15380,38 +13483,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "texas-hill-country",
-     "name": "Texas Hill Country",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tokyo-kyoto",
-     "name": "Tokyo & Kyoto",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "turks-caicos",
      "name": "Turks & Caicos",
      "pt": "island",
      "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tuscany",
-     "name": "Tuscany",
-     "pt": "region",
-     "reason": "Not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "A city, not a camping destination.",
      "basis": "Kind of place"
     },
     {
@@ -15426,13 +13501,6 @@
      "name": "Vienna",
      "pt": "city",
      "reason": "A city, not a camping destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not a camping destination.",
      "basis": "Kind of place"
     }
    ],
@@ -15473,13 +13541,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "arches-canyonlands",
-     "name": "Arches & Canyonlands",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "aruba",
      "name": "Aruba",
      "pt": "island",
@@ -15487,23 +13548,16 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "aspen",
-     "name": "Aspen Snowmass",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15512,13 +13566,6 @@
      "name": "Athens",
      "pt": "city",
      "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "azores",
-     "name": "Azores",
-     "pt": "island",
-     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -15557,13 +13604,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "basque-country",
-     "name": "Basque Country",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "bavaria-munich",
      "name": "Bavaria & Munich",
      "pt": "region",
@@ -15585,13 +13625,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "bend-crater-lake",
-     "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "berlin",
      "name": "Berlin",
      "pt": "city",
@@ -15599,31 +13632,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "bhutan",
-     "name": "Bhutan",
-     "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "big-island",
      "name": "Big Island",
      "pt": "island",
      "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "black-forest",
-     "name": "Black Forest",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "bordeaux",
-     "name": "Bordeaux",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -15643,14 +13655,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "canaries",
-     "name": "Canary Islands",
-     "pt": "island",
+     "pt": "country",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15671,8 +13676,8 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
+     "pt": "region",
+     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -15718,13 +13723,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "colombian-andes",
-     "name": "Colombian Andes",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "colombian-caribbean",
      "name": "Colombian Caribbean",
      "pt": "coastal_area",
@@ -15746,23 +13744,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "costa-rica",
-     "name": "Costa Rica",
-     "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "peru",
-     "name": "Cusco & Sacred Valley",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15774,16 +13758,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15797,7 +13774,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15806,13 +13783,6 @@
      "name": "Dubai",
      "pt": "city",
      "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "ecuadorian-andes",
-     "name": "Ecuadorian Andes",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -15858,13 +13828,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "lapland",
-     "name": "Finnish Lapland",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "borabora",
      "name": "French Polynesia",
      "pt": "island",
@@ -15886,13 +13849,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "grandcanyon",
-     "name": "Grand Canyon",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "gbr",
      "name": "Great Barrier Reef",
      "pt": "coastal_area",
@@ -15900,16 +13856,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "great-smoky-mountains",
-     "name": "Great Smoky Mountains National Park",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -15939,13 +13888,6 @@
      "name": "Hong Kong",
      "pt": "city",
      "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "hudson-valley",
-     "name": "Hudson Valley",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -15993,8 +13935,8 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
+     "pt": "country",
+     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -16033,13 +13975,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "madeira",
-     "name": "Madeira",
-     "pt": "island",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "borneo",
      "name": "Malaysian Borneo",
      "pt": "island",
@@ -16050,20 +13985,6 @@
      "pid": "maldives",
      "name": "Maldives",
      "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "mallorca",
-     "name": "Mallorca",
-     "pt": "island",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "marlborough-abel-tasman",
-     "name": "Marlborough & Abel Tasman",
-     "pt": "region",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16096,23 +14017,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16154,21 +14061,14 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
+     "pt": "country",
+     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "fjords",
      "name": "Norwegian Fjords",
      "pt": "coastal_area",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nova-scotia",
-     "name": "Nova Scotia",
-     "pt": "state_province",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16215,13 +14115,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "joshua-tree",
-     "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "panama",
      "name": "Panama",
      "pt": "country",
@@ -16252,7 +14145,7 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16260,13 +14153,6 @@
      "pid": "thailand",
      "name": "Phuket & the Andaman Coast",
      "pt": "coastal_area",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "piedmont",
-     "name": "Piedmont",
-     "pt": "region",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16285,37 +14171,16 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "puglia",
-     "name": "Puglia",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
+     "pt": "region",
+     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "rajaampat",
      "name": "Raja Ampat",
      "pt": "island",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "redwood",
-     "name": "Redwood National and State Parks",
-     "pt": "national_park",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16355,45 +14220,10 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "uyuni",
-     "name": "Salar de Uyuni",
-     "pt": "wilderness_area",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "uzbekistan",
      "name": "Samarkand & Bukhara",
      "pt": "region",
      "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "san-miguel-guanajuato",
-     "name": "San Miguel de Allende & Guanajuato",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "santorini",
-     "name": "Santorini & Cyclades",
-     "pt": "island",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sardinia",
-     "name": "Sardinia",
-     "pt": "island",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sedona",
-     "name": "Sedona",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
      "basis": "Kind of place"
     },
     {
@@ -16414,13 +14244,6 @@
      "pid": "seychelles",
      "name": "Seychelles",
      "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "sicily",
-     "name": "Sicily",
-     "pt": "island",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16453,16 +14276,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "st-andrews-fife",
-     "name": "St Andrews & Fife",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16474,41 +14290,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "taiwan",
-     "name": "Taiwan",
-     "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tasmania",
-     "name": "Tasmania",
-     "pt": "state_province",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tbilisi-caucasus",
-     "name": "Tbilisi & the Caucasus",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tierra-del-fuego",
-     "name": "Tierra del Fuego",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "tokyo-kyoto",
-     "name": "Tokyo & Kyoto",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "turks-caicos",
      "name": "Turks & Caicos",
      "pt": "island",
@@ -16516,37 +14297,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "tuscany",
-     "name": "Tuscany",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "uganda",
      "name": "Uganda",
      "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "upper-peninsula",
-     "name": "Upper Peninsula",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "whistler",
-     "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vancouver-island",
-     "name": "Vancouver Island",
-     "pt": "island",
      "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     },
@@ -16569,34 +14322,6 @@
      "name": "Vienna",
      "pt": "city",
      "reason": "A city, not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "swissalps",
-     "name": "Zermatt & the Swiss Alps",
-     "pt": "region",
-     "reason": "Not a horseback-riding destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "zion-bryce",
-     "name": "Zion & Bryce Canyon",
-     "pt": "national_park",
-     "reason": "Not a horseback-riding destination.",
      "basis": "Kind of place"
     }
    ],
@@ -16646,7 +14371,7 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -16709,7 +14434,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -16751,7 +14476,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -16765,13 +14490,6 @@
     {
      "pid": "champagne",
      "name": "Champagne",
-     "pt": "region",
-     "reason": "Not known for blooms or fall colors.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "charleston-savannah",
-     "name": "Charleston & Savannah",
      "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
@@ -16842,7 +14560,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -16863,7 +14581,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -16954,7 +14672,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17017,7 +14735,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17087,7 +14805,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17143,20 +14861,13 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
     {
      "pid": "new-orleans",
      "name": "New Orleans",
-     "pt": "city",
-     "reason": "Not known for blooms or fall colors.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "nyc",
-     "name": "New York City",
      "pt": "city",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
@@ -17178,7 +14889,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17269,14 +14980,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17332,7 +15043,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17472,7 +15183,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17528,7 +15239,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17570,21 +15281,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
-     "reason": "Not known for blooms or fall colors.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yellowstone",
-     "name": "Yellowstone National Park",
-     "pt": "national_park",
-     "reason": "Not known for blooms or fall colors.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "yosemite",
-     "name": "Yosemite National Park",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "Not known for blooms or fall colors.",
      "basis": "Kind of place"
     },
@@ -17663,14 +15360,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -17691,7 +15388,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -17761,7 +15458,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -17810,8 +15507,8 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "country",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -17831,8 +15528,8 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "region",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -17922,8 +15619,8 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "country",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -17943,7 +15640,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -17957,7 +15654,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -17992,8 +15689,8 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "region",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -18090,7 +15787,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18188,8 +15885,8 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "country",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -18300,7 +15997,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18356,8 +16053,8 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "country",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -18433,7 +16130,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18468,14 +16165,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18517,8 +16214,8 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "region",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -18545,7 +16242,7 @@
     {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18685,7 +16382,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18776,8 +16473,8 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
-     "reason": "A city, not a yoga-retreat destination.",
+     "pt": "region",
+     "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
     {
@@ -18825,7 +16522,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "Not a yoga-retreat destination.",
      "basis": "Kind of place"
     },
@@ -18925,14 +16622,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -18953,7 +16650,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19002,14 +16699,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "berlin",
-     "name": "Berlin",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19051,7 +16741,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19079,7 +16769,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19108,13 +16798,6 @@
      "pid": "chiapas",
      "name": "Chiapas",
      "pt": "state_province",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "chicago",
-     "name": "Chicago",
-     "pt": "city",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19170,7 +16853,7 @@
     {
      "pid": "havana",
      "name": "Cuba",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19198,7 +16881,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19212,7 +16895,7 @@
     {
      "pid": "punta-cana",
      "name": "Dominican Republic",
-     "pt": "coastal_area",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19240,7 +16923,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19331,7 +17014,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19374,13 +17057,6 @@
      "pid": "ireland",
      "name": "Ireland",
      "pt": "country",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "istanbul",
-     "name": "Istanbul",
-     "pt": "city",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19436,14 +17112,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "lisbon",
-     "name": "Lisbon",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19513,7 +17182,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19553,16 +17222,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "monterey-big-sur",
-     "name": "Monterey & Big Sur",
-     "pt": "coastal_area",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19574,23 +17236,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "napa",
-     "name": "Napa & Sonoma",
-     "pt": "region",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "nepal",
      "name": "Nepal",
      "pt": "country",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "new-orleans",
-     "name": "New Orleans",
-     "pt": "city",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19625,7 +17273,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19679,13 +17327,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "pakistan",
-     "name": "Pakistan",
-     "pt": "country",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "palau",
      "name": "Palau",
      "pt": "country",
@@ -19702,7 +17343,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19730,14 +17371,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19786,7 +17427,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19805,16 +17446,9 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "rajasthan-golden-triangle",
-     "name": "Rajasthan & the Golden Triangle",
-     "pt": "region",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "egypt",
      "name": "Red Sea & Nile",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19843,13 +17477,6 @@
      "pid": "rocky-mountain",
      "name": "Rocky Mountain National Park",
      "pt": "national_park",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "rome",
-     "name": "Rome",
-     "pt": "city",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -19924,13 +17551,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "sicily",
-     "name": "Sicily",
-     "pt": "island",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "zambia",
      "name": "South Luangwa",
      "pt": "national_park",
@@ -19961,7 +17581,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -20038,7 +17658,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -20074,20 +17694,6 @@
      "pid": "vienna",
      "name": "Vienna",
      "pt": "city",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "vietnam",
-     "name": "Vietnam",
-     "pt": "country",
-     "reason": "Not a theme-park destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "snowdonia",
-     "name": "Wales",
-     "pt": "national_park",
      "reason": "Not a theme-park destination.",
      "basis": "Kind of place"
     },
@@ -20143,13 +17749,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "andalucia",
-     "name": "Andalucía",
-     "pt": "region",
-     "reason": "Not an all-inclusive destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "antarctica",
      "name": "Antarctic Peninsula",
      "pt": "wilderness_area",
@@ -20180,14 +17779,14 @@
     {
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
-     "pt": "national_park",
+     "pt": "state_province",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "atacama",
      "name": "Atacama Desert",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20208,7 +17807,7 @@
     {
      "pid": "badlands-black-hills",
      "name": "Badlands & Black Hills",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20257,7 +17856,7 @@
     {
      "pid": "bend-crater-lake",
      "name": "Bend & Crater Lake",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20313,7 +17912,7 @@
     {
      "pid": "angkor",
      "name": "Cambodia",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20334,7 +17933,7 @@
     {
      "pid": "chamonix",
      "name": "Chamonix & the French Alps",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20423,13 +18022,6 @@
      "basis": "Kind of place"
     },
     {
-     "pid": "havana",
-     "name": "Cuba",
-     "pt": "city",
-     "reason": "Not an all-inclusive destination.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "peru",
      "name": "Cusco & Sacred Valley",
      "pt": "region",
@@ -20453,7 +18045,7 @@
     {
      "pid": "denali-interior",
      "name": "Denali & the Interior",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20495,7 +18087,7 @@
     {
      "pid": "el-chalten",
      "name": "El Chaltén & El Calafate",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20579,7 +18171,7 @@
     {
      "pid": "greenland",
      "name": "Greenland",
-     "pt": "wilderness_area",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20684,7 +18276,7 @@
     {
      "pid": "luangprabang",
      "name": "Laos",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20747,7 +18339,7 @@
     {
      "pid": "morocco",
      "name": "Marrakech & Atlas",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20796,7 +18388,7 @@
     {
      "pid": "bagan",
      "name": "Myanmar",
-     "pt": "region",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20866,7 +18458,7 @@
     {
      "pid": "belfast-giants-causeway",
      "name": "Northern Ireland",
-     "pt": "city",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20929,7 +18521,7 @@
     {
      "pid": "joshua-tree",
      "name": "Palm Springs & Joshua Tree",
-     "pt": "national_park",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20957,14 +18549,14 @@
     {
      "pid": "peruvian-amazon",
      "name": "Peruvian Amazon",
-     "pt": "wilderness_area",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
     {
      "pid": "jordan",
      "name": "Petra & Wadi Rum",
-     "pt": "country",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -20999,7 +18591,7 @@
     {
      "pid": "quebec-city",
      "name": "Quebec City & Montreal",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -21174,7 +18766,7 @@
     {
      "pid": "svalbard",
      "name": "Svalbard",
-     "pt": "wilderness_area",
+     "pt": "island",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -21265,7 +18857,7 @@
     {
      "pid": "whistler",
      "name": "Vancouver & Whistler",
-     "pt": "city",
+     "pt": "region",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -21314,7 +18906,7 @@
     {
      "pid": "snowdonia",
      "name": "Wales",
-     "pt": "national_park",
+     "pt": "country",
      "reason": "Not an all-inclusive destination.",
      "basis": "Kind of place"
     },
@@ -21349,26 +18941,10 @@
    ],
    "streetFood": [
     {
-     "pid": "death-valley",
-     "name": "Death Valley National Park",
-     "pt": "national_park",
-     "reason": "A natural area, not known for street food.",
-     "basis": "Kind of place"
-    },
-    {
      "pid": "north-cascades",
      "name": "North Cascades",
      "pt": "national_park",
      "reason": "A natural area, not known for street food.",
-     "basis": "Kind of place"
-    }
-   ],
-   "sunbathing": [
-    {
-     "pid": "tanzania",
-     "name": "Northern Tanzania",
-     "pt": "region",
-     "reason": "Not a sunbathing destination.",
      "basis": "Kind of place"
     }
    ],
@@ -21389,150 +18965,129 @@
      "reason": "A natural area, not known for fine dining.",
      "basis": "Kind of place"
     }
+   ],
+   "sailing": [
+    {
+     "pid": "beijing",
+     "name": "Beijing & Great Wall",
+     "pt": "city",
+     "reason": "Mapped marinas are on lakes, not open water.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "cotswolds",
+     "name": "Cotswolds",
+     "pt": "region",
+     "reason": "Marinas are canal moorings, not sailing.",
+     "basis": "Your ruling (kept N/A)"
+    }
+   ],
+   "mountaineering": [
+    {
+     "pid": "big-island",
+     "name": "Big Island",
+     "pt": "island",
+     "reason": "High volcano hikes, not mountaineering.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "uyuni",
+     "name": "Salar de Uyuni",
+     "pt": "wilderness_area",
+     "reason": "The climbable volcanoes lie outside the salt flat.",
+     "basis": "Your ruling (kept N/A)"
+    }
+   ],
+   "hotSprings": [
+    {
+     "pid": "berlin",
+     "name": "Berlin",
+     "pt": "city",
+     "reason": "Spa pools, not natural hot springs.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "srilanka",
+     "name": "Sri Lanka",
+     "pt": "country",
+     "reason": "Too few natural hot springs.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "prague",
+     "name": "Prague",
+     "pt": "city",
+     "reason": "Spa towns are well outside the area.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "seoul",
+     "name": "Seoul",
+     "pt": "city",
+     "reason": "Bathhouses, not natural hot springs.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "rio",
+     "name": "Rio de Janeiro",
+     "pt": "city",
+     "reason": "No natural hot springs.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "copenhagen",
+     "name": "Copenhagen",
+     "pt": "city",
+     "reason": "Saunas and spas, not natural hot springs.",
+     "basis": "Your ruling (kept N/A)"
+    }
+   ],
+   "windSports": [
+    {
+     "pid": "churchill",
+     "name": "Churchill",
+     "pt": "city",
+     "reason": "Sub-arctic bay with no wind-sport scene.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "falklands",
+     "name": "Falkland Islands",
+     "pt": "island",
+     "reason": "Windy, but no schools or scene.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "st-andrews-fife",
+     "name": "St Andrews & Fife",
+     "pt": "region",
+     "reason": "No kite or windsurf schools listed.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "belfast-giants-causeway",
+     "name": "Northern Ireland",
+     "pt": "country",
+     "reason": "No kite or windsurf schools listed.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "faroe-islands",
+     "name": "Faroe Islands",
+     "pt": "island",
+     "reason": "Open Atlantic with no wind-sport scene.",
+     "basis": "Your ruling (kept N/A)"
+    },
+    {
+     "pid": "rome",
+     "name": "Rome",
+     "pt": "city",
+     "reason": "Few schools, and only modest wind in the city.",
+     "basis": "Your ruling (kept N/A)"
+    }
    ]
   }
  },
- "doubts": [
-  {
-   "k": "windSports",
-   "pid": "athens",
-   "name": "Athens",
-   "fact": "3 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 30.9
-  },
-  {
-   "k": "windSports",
-   "pid": "thailand",
-   "name": "Phuket & the Andaman Coast",
-   "fact": "3 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 30.0
-  },
-  {
-   "k": "windSports",
-   "pid": "rome",
-   "name": "Rome",
-   "fact": "7 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 81.1
-  },
-  {
-   "k": "windSports",
-   "pid": "falklands",
-   "name": "Falkland Islands",
-   "fact": "windy on 82% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 82.5
-  },
-  {
-   "k": "windSports",
-   "pid": "st-andrews-fife",
-   "name": "St Andrews & Fife",
-   "fact": "windy on 30% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 30.2
-  },
-  {
-   "k": "windSports",
-   "pid": "amalfi",
-   "name": "Amalfi Coast",
-   "fact": "5 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 50.3
-  },
-  {
-   "k": "windSports",
-   "pid": "churchill",
-   "name": "Churchill",
-   "fact": "windy on 52% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 52.1
-  },
-  {
-   "k": "windSports",
-   "pid": "edinburgh",
-   "name": "Edinburgh",
-   "fact": "windy on 31% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 31.1
-  },
-  {
-   "k": "windSports",
-   "pid": "azores",
-   "name": "Azores",
-   "fact": "windy on 68% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 68.2
-  },
-  {
-   "k": "windSports",
-   "pid": "maldives",
-   "name": "Maldives",
-   "fact": "windy on 40% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 40.5
-  },
-  {
-   "k": "windSports",
-   "pid": "belfast-giants-causeway",
-   "name": "Northern Ireland",
-   "fact": "windy on 42% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 52.5
-  },
-  {
-   "k": "windSports",
-   "pid": "seychelles",
-   "name": "Seychelles",
-   "fact": "windy on 48% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 47.699999999999996
-  },
-  {
-   "k": "windSports",
-   "pid": "punta-cana",
-   "name": "Dominican Republic",
-   "fact": "15 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 158.1
-  },
-  {
-   "k": "windSports",
-   "pid": "santorini",
-   "name": "Santorini & Cyclades",
-   "fact": "windy on 56% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 65.9
-  },
-  {
-   "k": "windSports",
-   "pid": "algarve",
-   "name": "Algarve",
-   "fact": "3 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 37.9
-  },
-  {
-   "k": "windSports",
-   "pid": "faroe-islands",
-   "name": "Faroe Islands",
-   "fact": "windy on 44% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 43.5
-  },
-  {
-   "k": "windSports",
-   "pid": "snowdonia",
-   "name": "Wales",
-   "fact": "4 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median); windy on 32% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 72.0
-  },
-  {
-   "k": "windSports",
-   "pid": "rivieramaya",
-   "name": "Riviera Maya",
-   "fact": "3 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 35.7
-  },
-  {
-   "k": "windSports",
-   "pid": "palawan",
-   "name": "Palawan",
-   "fact": "3 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median)",
-   "n": 31.7
-  },
-  {
-   "k": "windSports",
-   "pid": "amsterdam",
-   "name": "Amsterdam",
-   "fact": "4 kite and windsurf schools or centres listed (Overture Maps; applicable wind places have 1 at the median); windy on 31% of days at the coast (daily mean 20 km/h or more, Open-Meteo 2019-2024)",
-   "n": 71.3
-  }
- ],
+ "doubts": [],
  "windThreshold": 0.031
 }
