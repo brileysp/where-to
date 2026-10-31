@@ -320,3 +320,22 @@ export async function generateLean(prompt: string, model: string = MODEL, thinki
   try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
   catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
 }
+
+/** Month scores only (31 Oct 2026): given a text Gemini already wrote, return twelve scores in tenths for it. Used to add Gemini's scores beside ours without rewriting the text. */
+const RESPONSE_SCHEMA_SCORES_ONLY = {
+  type: Type.OBJECT,
+  properties: { monthly_scores: { type: Type.ARRAY, minItems: '12', maxItems: '12', items: { type: Type.NUMBER } }, note: { type: Type.STRING } },
+  required: ['monthly_scores'],
+};
+export async function generateScoresOnly(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ json: { monthly_scores: number[]; note?: string } | null; parseError: string | null; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: TEMPERATURE, maxOutputTokens: 2048, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: RESPONSE_SCHEMA_SCORES_ONLY },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
+  catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
+}
