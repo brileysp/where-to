@@ -36,7 +36,8 @@ function monthly(s: Spec): number[] {
     const authored = new Set(row.authoredCurves ?? []);
     const sources = { ...((row.sliderSources ?? {}) as Record<string, Array<{ url: string; label?: string; note?: string; addedAt: string }>>) };
     for (const s of list) {
-      if (!na.includes(s.k)) { console.log(`${pid}/${s.k}: not N/A, skipped`); continue; }
+      const rescore = process.argv.includes('--rescore') && !na.includes(s.k) && (base[s.k] ?? 0) <= 1 && !authored.has(s.k); // already switched on at a placeholder, no curve yet
+      if (!na.includes(s.k) && !rescore) { console.log(`${pid}/${s.k}: not N/A, skipped`); continue; }
       const mv = monthly(s);
       const fit = fitMonthlyToCurve(mv, { maxSteepness: 4, errorTolerance: 0.5 });
       na = na.filter((k) => k !== s.k); delete reasons[s.k];
