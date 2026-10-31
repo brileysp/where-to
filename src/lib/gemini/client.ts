@@ -308,12 +308,18 @@ const RESPONSE_SCHEMA_LEAN = {
   required: ['applicable', 'depth', 'overview', 'blurbs', 'best_months'],
 };
 const RESPONSE_SCHEMA_LEAN_SCORES = { ...RESPONSE_SCHEMA_LEAN, properties: { ...RESPONSE_SCHEMA_LEAN.properties, monthly_scores: { type: Type.ARRAY, minItems: '12', maxItems: '12', items: { type: Type.NUMBER } } }, required: [...RESPONSE_SCHEMA_LEAN.required, 'monthly_scores'] };
+/** The one config used for lean authoring calls, live or batch, so both always carry the thinking cap and the same schema. */
+export function leanGenerateConfig(thinkingLevel?: ThinkingLevelName, withScores = false) {
+  return { temperature: TEMPERATURE, maxOutputTokens: 4096, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: withScores ? RESPONSE_SCHEMA_LEAN_SCORES : RESPONSE_SCHEMA_LEAN };
+}
+/** The shared API client, for the batch script. */
+export function getGeminiClient(): GoogleGenAI { return getClient(); }
 export async function generateLean(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName, withScores = false): Promise<{ json: Record<string, unknown> | null; parseError: string | null; tokensIn: number; tokensOut: number; model: string }> {
   const ai = getClient();
   const response = await ai.models.generateContent({
     model,
     contents: prompt,
-    config: { temperature: TEMPERATURE, maxOutputTokens: 4096, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: withScores ? RESPONSE_SCHEMA_LEAN_SCORES : RESPONSE_SCHEMA_LEAN },
+    config: leanGenerateConfig(thinkingLevel, withScores),
   });
   const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
   const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
