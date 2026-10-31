@@ -2247,13 +2247,6 @@
      "basis": "Peaks mapped (OpenStreetMap)"
     },
     {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "state_province",
-     "reason": "No high mountains.",
-     "basis": "Peaks mapped (OpenStreetMap)"
-    },
-    {
      "pid": "athens",
      "name": "Athens",
      "pt": "city",
@@ -3071,7 +3064,7 @@
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
      "pt": "state_province",
-     "reason": "No waymarked trails.",
+     "reason": "Not a trail-running destination.",
      "basis": "Waymarked hiking routes mapped"
     },
     {
@@ -4489,7 +4482,7 @@
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
      "pt": "state_province",
-     "reason": "Hardly any marinas.",
+     "reason": "Not a sailing destination.",
      "basis": "Marinas mapped"
     },
     {
@@ -4848,13 +4841,6 @@
      "pid": "beijing",
      "name": "Beijing & Great Wall",
      "pt": "city",
-     "reason": "Not a paddling destination.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "angkor",
-     "name": "Cambodia",
-     "pt": "country",
      "reason": "Not a paddling destination.",
      "basis": "Kind of place"
     },
@@ -5537,7 +5523,7 @@
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
      "pt": "state_province",
-     "reason": "No hot springs listed.",
+     "reason": "Few hot springs.",
      "basis": "Hot springs listed (Overture Maps)"
     },
     {
@@ -6561,7 +6547,7 @@
      "pid": "kaziranga",
      "name": "Assam & Northeast India",
      "pt": "state_province",
-     "reason": "No notable geological sites.",
+     "reason": "Not a geology destination.",
      "basis": "Features on Wikidata"
     },
     {
@@ -10673,13 +10659,6 @@
      "pid": "aspen",
      "name": "Aspen Snowmass",
      "pt": "city",
-     "reason": "Not known for history and archaeology.",
-     "basis": "Kind of place"
-    },
-    {
-     "pid": "kaziranga",
-     "name": "Assam & Northeast India",
-     "pt": "state_province",
      "reason": "Not known for history and archaeology.",
      "basis": "Kind of place"
     },

@@ -4737,5 +4737,25 @@
   "urls": [],
   "water_temperature": "cool",
   "glacial": false
+ },
+ "angkor": {
+  "sea_lists": [],
+  "sea_list_urls": {},
+  "calm": 10,
+  "lakes": 53,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 285,
+  "sea": 4,
+  "sea_formula": null,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
+  "glacial": false
  }
 }

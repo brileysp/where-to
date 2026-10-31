@@ -2062,41 +2062,53 @@
  "angkor": {
   "coastal": null,
   "rated": {
-   "bigGameFish": null,
+   "bigGameFish": 3,
    "flatsFish": null,
    "troutChar": 0,
    "salmonSteelhead": 0,
    "freshwaterPredators": null
   },
   "species": {
-   "big": [],
+   "big": [
+    "cobia"
+   ],
    "flats": [],
    "trout": [],
    "salmon": [],
    "pred": []
   },
   "records": {
-   "big": 0,
+   "big": 5,
    "flats": 0,
    "trout": 0,
    "salmon": 0,
    "pred": 0
   },
   "nSpecies": {
-   "big": 0,
+   "big": 1,
    "flats": 0,
    "trout": 0,
    "salmon": 0,
    "pred": 0
   },
-  "charters": 0,
-  "fishingBusinesses": 0,
+  "charters": 2,
+  "fishingBusinesses": 5,
   "overallFishing": 2,
   "judged": {},
   "values": {
+   "bigGameFish": 3,
    "troutChar": 0,
    "salmonSteelhead": 0,
-   "evidence": "Big ocean game fish: Only 0 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nFlats fish: Only 0 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 0 freshwater game-fish records in the place, too few to call a zero: left blank."
+   "fishingMethods": [
+    "lures",
+    "bait",
+    "trolling"
+   ],
+   "fishingAccess": [
+    "boat",
+    "shore"
+   ],
+   "evidence": "Big ocean game fish: 1 species (cobia) with 5 or more records, 5 records; 2 fishing charters in the place -> species tier 3 = 3.\nFlats fish: Only 8 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 3 freshwater game-fish records in the place, too few to call a zero: left blank.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
   }
  },
  "bali": {
@@ -2257,7 +2269,7 @@
    "pred": 0
   },
   "charters": 0,
-  "fishingBusinesses": 2,
+  "fishingBusinesses": 5,
   "overallFishing": 2,
   "judged": {},
   "values": {

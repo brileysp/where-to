@@ -1,7 +1,7 @@
 // 30 Oct 2026: switches on the 43 place-interest pairs the owner ruled "Switch on" in the N/A review (batch A doubts list). For each pair this removes the N/A mark and
 // its reason, sets the place's score for the interest (peak = base score), authors the 12-month curve from the best months in scripts/data/switch-on-spec.json, and
 // records the source page in the place's sources. Scores and seasons are judged from the map counts and the page named; the columns are filled separately.
-// Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/switch-on-oct30.ts [--apply]
+// Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/switch-on-oct30.ts [--spec=file.json in scripts/data] [--apply]
 import { readFileSync } from 'fs';
 import { join } from 'path';
 for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').split('\n')) { const t = line.trim(); if (!t || t.startsWith('#')) continue; const i = t.indexOf('='); if (i === -1) continue; let v = t.slice(i + 1).trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); if (process.env[t.slice(0, i).trim()] === undefined) process.env[t.slice(0, i).trim()] = v; }
@@ -18,7 +18,7 @@ function monthly(s: Spec): number[] {
 }
 (async () => {
   const apply = process.argv.includes('--apply');
-  const specs = JSON.parse(readFileSync(join(__dirname, 'data', 'switch-on-spec.json'), 'utf8')) as Spec[];
+  const specs = JSON.parse(readFileSync(join(__dirname, 'data', process.argv.find((a) => a.startsWith('--spec='))?.slice(7) ?? 'switch-on-spec.json'), 'utf8')) as Spec[];
   const { db } = await import('../src/lib/db/client');
   const { places } = await import('../src/lib/db/schema');
   const { eq } = await import('drizzle-orm');

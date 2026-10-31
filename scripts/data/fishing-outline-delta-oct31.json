@@ -1,0 +1,24 @@
+{
+ "angkor": {
+  "bigGameFish": 3,
+  "troutChar": 0,
+  "salmonSteelhead": 0,
+  "fishingMethods": [
+   "lures",
+   "bait",
+   "trolling"
+  ],
+  "fishingAccess": [
+   "boat",
+   "shore"
+  ],
+  "evidence": "Big ocean game fish: 1 species (cobia) with 5 or more records, 5 records; 2 fishing charters in the place -> species tier 3 = 3.\nFlats fish: Only 8 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 3 freshwater game-fish records in the place, too few to call a zero: left blank.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
+ },
+ "kaziranga": {
+  "bigGameFish": 0,
+  "flatsFish": 0,
+  "troutChar": 0,
+  "salmonSteelhead": 0,
+  "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 0 freshwater game-fish records in the place, too few to call a zero: left blank."
+ }
+}

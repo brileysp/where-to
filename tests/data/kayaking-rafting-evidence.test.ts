@@ -12,8 +12,8 @@ const kmTier = (k: number) => (k <= 0 ? 0 : k < 20 ? 2 : k < 50 ? 4 : k < 150 ? 
 const adj: Record<string, number> = { II: -3, III: -1, IV: 0, V: 1 };
 
 describe('Kayaking & Rafting evidence', () => {
-  it('covers all 182 places and every draft has an evidence text', () => {
-    expect(Object.keys(ev)).toHaveLength(182);
+  it('covers all 183 places and every draft has an evidence text', () => {
+    expect(Object.keys(ev)).toHaveLength(183);
     for (const p of Object.keys(ev)) {
       expect(typeof draft[p].evidence, p).toBe('string');
       expect(draft[p].evidence as string, p).toContain('Calm-water paddling:');

@@ -573,9 +573,19 @@
   "evidence": "Big ocean game fish: 5 species (amberjack, billfish, mahi-mahi, tuna, wahoo) with 5 or more records, 107 records; 45 fishing charters in the place -> species tier 9, +1 for 5 or more = 9. Rating 9 became 10. Judged: Bisbee's Black & Blue at Cabo San Lucas is called the oldest, largest and richest marlin tournament in the world by Marlin Magazine; the 2022 purse was $11.65 million (https://www.marlinmag.com/?p=48163).\nFlats fish: 137 records of ocean game and flats fish near the coast and none of this group with 5 or more records: 0.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 3 freshwater game-fish records in the place, too few to call a zero: left blank.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nCatch-and-release rule: limited. A Cabo San Lucas guide says the limit is one billfish per day and ten fish a day in total, only five of one species. Secondary source. Source: https://www.pvangels.com/news/2570/mexico-fishing-regulations-fish-on-the-right-side-of-the-law (confidence low)."
  },
  "angkor": {
+  "bigGameFish": 3,
   "troutChar": 0,
   "salmonSteelhead": 0,
-  "evidence": "Big ocean game fish: Only 0 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nFlats fish: Only 0 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 0 freshwater game-fish records in the place, too few to call a zero: left blank."
+  "fishingMethods": [
+   "lures",
+   "bait",
+   "trolling"
+  ],
+  "fishingAccess": [
+   "boat",
+   "shore"
+  ],
+  "evidence": "Big ocean game fish: 1 species (cobia) with 5 or more records, 5 records; 2 fishing charters in the place -> species tier 3 = 3.\nFlats fish: Only 8 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 3 freshwater game-fish records in the place, too few to call a zero: left blank.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
  "bali": {
   "bigGameFish": 6,
