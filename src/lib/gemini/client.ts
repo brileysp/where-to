@@ -279,3 +279,42 @@ export async function generateLabelled(prompt: string, model: string = MODEL, th
   const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
   return { json: JSON.parse(response.text ?? '{}'), tokensIn, tokensOut, model };
 }
+
+/**
+ * The lean authoring pilot (31 Oct 2026, docs: artifact "Gemini Authoring Plan"): the model chooses how many month blurbs the interest needs.
+ * Returns the parsed JSON as-is (no Zod); the pilot script checks it. Capped on thinking and on answer length like every call.
+ */
+const RESPONSE_SCHEMA_LEAN = {
+  type: Type.OBJECT,
+  properties: {
+    applicable: { type: Type.BOOLEAN },
+    na_reason: { type: Type.STRING },
+    depth: { type: Type.STRING, enum: ['year', 'groups', 'months'] },
+    depth_why: { type: Type.STRING },
+    best_months: { type: Type.ARRAY, items: { type: Type.INTEGER } },
+    overview: { type: Type.STRING },
+    blurbs: {
+      type: Type.ARRAY,
+      items: {
+        type: Type.OBJECT,
+        properties: { months: { type: Type.ARRAY, items: { type: Type.INTEGER } }, level: { type: Type.STRING, enum: ['peak', 'good', 'fair', 'poor', 'closed'] }, text: { type: Type.STRING } },
+        required: ['months', 'level', 'text'],
+      },
+    },
+    named_things: { type: Type.ARRAY, items: { type: Type.STRING } },
+    flags: { type: Type.ARRAY, items: { type: Type.STRING } },
+  },
+  required: ['applicable', 'depth', 'overview', 'blurbs', 'best_months'],
+};
+export async function generateLean(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ json: Record<string, unknown> | null; parseError: string | null; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: TEMPERATURE, maxOutputTokens: 4096, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: RESPONSE_SCHEMA_LEAN },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
+  catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
+}

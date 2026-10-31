@@ -1,0 +1,3925 @@
+[
+ {
+  "k": "whaleWatching",
+  "id": "churchill",
+  "name": "Churchill",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 721,
+  "tokensOut": 1213,
+  "cost": 0.015998,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Churchill is a world-renowned destination for observing beluga whales. Every summer, thousands of these friendly, white whales migrate into the warmer waters of the Churchill River estuary to feed and give birth. Visitors can get incredibly close to them via boat tours, kayaks, or even by snorkeling.",
+   "blurbs": [
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Thousands of beluga whales congregate in the Churchill River estuary. The waters are teeming with them, making it the perfect time for boat tours, kayaking, or paddleboarding right alongside these curious creatures."
+    },
+    {
+     "months": [
+      6,
+      9
+     ],
+     "level": "fair",
+     "text": "In June, the ice breaks up and the first belugas arrive in the estuary. By September, the population thins out as they begin their migration back into the deeper waters of Hudson Bay, but sightings are still possible."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      10,
+      11,
+      12
+     ],
+     "level": "closed",
+     "text": "The Churchill River and Hudson Bay are frozen or freezing over. The beluga whales have migrated away to winter feeding grounds, making whale watching impossible during these months."
+    }
+   ],
+   "best_months": [
+    7,
+    8
+   ],
+   "depth_why": "The presence of beluga whales is strictly tied to the summer months when the ice melts, making grouped blurbs ideal.",
+   "flags": [],
+   "named_things": [
+    "Churchill River estuary",
+    "Hudson Bay",
+    "Beluga whale"
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   2.7,
+   10,
+   10,
+   3.7,
+   0,
+   0,
+   0
+  ],
+  "base": 5,
+  "approved": {
+   "overview": "Thousands of **beluga whales** gather in the Churchill River estuary each summer to feed and calve in the warmer waters. Zodiac tours, passenger boats, and kayaking excursions departing directly from Churchill offer highly reliable, close encounters with these vocal whales. The short, intense season runs strictly from July through August when the sea ice has cleared.",
+   "monthly": [
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "Sea ice breaks up in the Churchill River estuary late in the month. A few early **beluga whales** arrive, but regular boat trips do not yet operate.",
+    "Thousands of **beluga whales** fill the Churchill River estuary to feed and calve. Zodiacs, kayaks, and passenger boats offer highly reliable, close encounters with the whales daily.",
+    "Thousands of **beluga whales** remain in the Churchill River estuary to feed and nurse calves. Zodiacs, kayaks, and passenger boats offer highly reliable, close encounters daily.",
+    "**Beluga whales** leave the Churchill River estuary for wintering grounds as the water cools. Sightings drop sharply, and most whale watching boat trips stop running.",
+    "The Churchill River begins to freeze, and **beluga whales** have left the coastal waters. No whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate.",
+    "The Churchill River and Hudson Bay are frozen solid, and no whale watching trips operate."
+   ]
+  },
+  "columns": {
+   "draw": "strong",
+   "seasick": 2,
+   "boatStyle": [
+    "inflatable",
+    "midsize"
+   ],
+   "closeness": 10,
+   "otherWhales": "Beluga (guaranteed, Jul–Aug)",
+   "swimAllowed": true,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "sydney",
+  "name": "Sydney",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 718,
+  "tokensOut": 1118,
+  "cost": 0.014852,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Sydney offers excellent whale watching as thousands of humpback and southern right whales migrate along the New South Wales coast. Visitors can spot them from coastal cliffs like Cape Solander or join boat tours departing directly from the city harbor. The season runs from May to November, peaking in mid-winter and spring.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7
+     ],
+     "level": "peak",
+     "text": "Humpback whales travel north to warmer waters. June and July offer peak sightings from boat tours out of Circular Quay or shore vantage points like Cape Solander and Barrenjoey Lighthouse."
+    },
+    {
+     "months": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "level": "good",
+     "text": "Whales return south, often swimming closer to shore with their newborn calves. September and October are excellent for spotting them from the Bondi to Coogee coastal walk or on harbor cruises."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "poor",
+     "text": "The whale migration is over, making sightings very rare. However, visitors can still spot resident bottlenose dolphins year-round on harbor cruises or from the coastal cliffs."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    9,
+    10
+   ],
+   "depth_why": "The whale migration creates distinct peak, shoulder, and off-season periods.",
+   "flags": [],
+   "named_things": [
+    "Humpback whale",
+    "Southern right whale",
+    "Cape Solander",
+    "Barrenjoey Lighthouse",
+    "Circular Quay",
+    "Bondi to Coogee coastal walk",
+    "Bottlenose dolphin"
+   ]
+  },
+  "curve": [
+   1.1,
+   1.1400000000000001,
+   1.26,
+   1.3,
+   6.7,
+   9.2,
+   10,
+   8.9,
+   10,
+   9.682142857142857,
+   5.55,
+   1.4178571428571427
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "**Humpback whales** pass just outside Sydney Harbour in huge numbers during their annual migration, and boat trips from Circular Quay find them reliably in season. The season runs from May to November, peaking first in July as whales head north to breed, and again in September and October when mothers and calves return south. **Bottlenose dolphins** are also regularly seen year-round.",
+   "monthly": [
+    "**Humpback whales** are absent during the off-season, but resident **bottlenose dolphins** are regularly seen on general harbour cruises or from the shore.",
+    "**Humpback whales** are absent during the off-season, but resident **bottlenose dolphins** are regularly seen on general harbour cruises or from the shore.",
+    "**Humpback whales** are absent during the off-season, but resident **bottlenose dolphins** are regularly seen on general harbour cruises or from the shore.",
+    "**Humpback whales** are absent during the off-season, but resident **bottlenose dolphins** are regularly seen on general harbour cruises or from the shore.",
+    "The northern migration begins. **Humpback whales** start to appear offshore, and dedicated boat trips from Circular Quay resume with good chances of sightings.",
+    "The northern migration is in full swing. **Humpback whales** are reliably seen on boat trips from Circular Quay as they travel rapidly up the coast.",
+    "Peak northern migration. **Humpback whales** are highly reliable on boat trips from Circular Quay, often seen breaching and surface-active as they head to tropical breeding grounds.",
+    "A transition month. **Humpback whales** are reliably seen on boat trips, with late arrivals heading north and the first early whales beginning their return journey south.",
+    "Peak southern migration. **Humpback whales** are highly reliable on boat trips, with mothers and calves traveling slower and closer to the coast on their way back to Antarctica.",
+    "The southern migration continues strongly. **Humpback whales**, particularly mothers and calves, are reliably seen on boat trips from Circular Quay.",
+    "The migration winds down. Late-departing **humpback whales** are occasionally spotted on boat trips, but sightings become less reliable as the month progresses.",
+    "**Humpback whales** are absent during the off-season, but resident **bottlenose dolphins** are regularly seen on general harbour cruises or from the shore."
+   ]
+  },
+  "columns": {
+   "draw": "strong",
+   "right": "Southern right whale (possible, Jul–Sep)",
+   "seasick": 6,
+   "dolphins": "Bottlenose dolphin (likely, year-round), Common dolphin (possible, year-round)",
+   "humpback": "Humpback whale (guaranteed, Jun–Nov)",
+   "boatStyle": [
+    "inflatable",
+    "midsize"
+   ],
+   "closeness": 7,
+   "watchShore": true,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "antarctica",
+  "name": "Antarctic Peninsula",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 721,
+  "tokensOut": 1399,
+  "cost": 0.01823,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Antarctic Peninsula offers world-class whale watching during the austral summer when nutrient-rich waters draw massive numbers of cetaceans. Visitors on expedition cruises can spot humpback, minke, and killer whales breaching among the icebergs. The absolute best time to see large pods feeding is late in the season, from February to March.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Early summer brings the first migrating whales back to the peninsula. Sightings of humpback and minke whales are possible from expedition ships, but they are less frequent than later in the season as the sea ice is just beginning to break up."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "This is the peak time for whale watching. The waters are packed with humpback, minke, and killer whales feeding on krill. Visitors often enjoy incredibly close encounters from Zodiac boats or the decks of expedition ships."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "closed",
+     "text": "The Antarctic winter sets in, bringing impenetrable sea ice and darkness. Expedition cruises cease operating entirely, and most whales migrate north to warmer breeding grounds, making the region inaccessible for whale watching."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3
+   ],
+   "depth_why": "Grouped by the austral summer cruise season and the inaccessible winter months.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Humpback whale",
+    "Minke whale",
+    "Killer whale",
+    "Zodiac"
+   ]
+  },
+  "curve": [
+   8.7,
+   10,
+   9.6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4.2,
+   6.449999999999999
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "**Humpback** and **minke whales**, along with **orcas**, gather in the krill-rich waters of the Antarctic Peninsula. Expedition ships and inflatable boats provide highly reliable, close encounters during the short austral summer from November to March, and **fin whales** are sometimes seen in deeper water and on the Drake Passage crossing. Sightings peak in February and March when retreating sea ice opens up bays and channels, allowing access to prime feeding grounds.",
+   "monthly": [
+    "**Humpback** and **minke whales** are reliably seen from expedition ships and inflatable boats as they feed in the krill-rich waters. Sea ice continues to break up, allowing access to more bays and channels.",
+    "Retreating sea ice opens the peninsula's bays, creating peak conditions for highly reliable, close encounters with feeding **humpback** and **minke whales** and **orcas** from expedition ships and inflatable boats. **Fin whales** are sometimes seen in deeper water.",
+    "High concentrations of **humpback** and **minke whales** remain in the open bays and channels to feed heavily before their northward migration, offering highly reliable sightings from expedition ships and inflatable boats.",
+    "The austral winter begins, sea ice advances, and expedition ships cease operations. No boat trips run.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "The peninsula is locked in winter sea ice, and no expedition ships operate.",
+    "Expedition ships return as the austral summer begins, but thick sea ice limits access to many bays. Early arriving **humpback** and **minke whales** are occasionally spotted.",
+    "Whale numbers increase as more **humpbacks** and **minkes** arrive to feed. Sightings from expedition ships become regular, though sea ice still blocks some of the deeper bays."
+   ]
+  },
+  "columns": {
+   "fin": "Fin whale (possible, Nov–Mar)",
+   "draw": "strong",
+   "orca": "Orca (likely, Nov–Mar)",
+   "minke": "Antarctic minke whale (likely, Nov–Mar)",
+   "seasick": 9,
+   "humpback": "Humpback whale (guaranteed, Jan–Mar)",
+   "boatStyle": [
+    "inflatable",
+    "large"
+   ],
+   "closeness": 10,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "scottish-highlands-skye",
+  "name": "Scottish Highlands & Isle of Skye",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 724,
+  "tokensOut": 1087,
+  "cost": 0.014492,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Scottish Highlands and Isle of Skye offer fantastic opportunities to spot minke whales, bottlenose dolphins, and harbor porpoises. Boat tours from coastal towns explore the rich waters of the Minch, while the Moray Firth is famous for shore-based dolphin watching. The best sightings occur during the warmer summer months.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer brings calm waters and migrating minke whales to the Minch between Skye and the mainland. Boat tours from Portree or Gairloch offer the best odds, while the Moray Firth provides excellent shore-based bottlenose dolphin sightings."
+    },
+    {
+     "months": [
+      4,
+      10
+     ],
+     "level": "fair",
+     "text": "Spring and early autumn offer fair chances to spot resident harbor porpoises and occasional dolphins. Boat tours begin operating or wind down, but unpredictable weather can lead to frequent cancellations."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Winter brings rough seas and harsh weather, causing most boat tours to cease operations. While resident dolphins and porpoises remain, spotting them from shore is difficult in the choppy waters."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Whale and dolphin watching in Scotland is highly seasonal, with summer bringing migratory species and better weather for boat tours.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Minch",
+    "Portree",
+    "Gairloch",
+    "Moray Firth",
+    "minke whale",
+    "bottlenose dolphin",
+    "harbor porpoise"
+   ]
+  },
+  "curve": [
+   0.9666666666666667,
+   1.1333333333333333,
+   1.3,
+   3.5,
+   4.02,
+   5.58,
+   6.1,
+   5.699999999999999,
+   5.3,
+   3.2,
+   1,
+   0.8
+  ],
+  "base": 5,
+  "approved": {
+   "overview": "**Minke whales** visit the coastal waters of the Minch and the Isle of Skye to feed during the summer, and dedicated boat trips from ports like Gairloch and Portree find them regularly. **Harbor porpoises** and **common dolphins** are also frequently seen on these trips, with occasional sightings of **orcas** passing through.",
+   "monthly": [
+    "Winter weather and rough seas halt dedicated boat trips. **Harbor porpoises** and resident **bottlenose dolphins** are occasionally spotted from coastal lookouts, but sightings are chance encounters.",
+    "Winter weather and rough seas halt dedicated boat trips. **Harbor porpoises** and resident **bottlenose dolphins** are occasionally spotted from coastal lookouts, but sightings are chance encounters.",
+    "Winter weather keeps most dedicated boat trips at the dock. **Harbor porpoises** and resident **bottlenose dolphins** are occasionally spotted from coastal lookouts, but sightings remain chance encounters.",
+    "Boat trips from Gairloch and Portree begin running as the spring weather improves. **Minke whales** start to arrive in the coastal waters, and **harbor porpoises** are regularly seen.",
+    "**Minke whale** sightings become more frequent on boat trips into the Minch as they settle in to feed. **Common dolphins** and **harbor porpoises** are regularly spotted alongside them.",
+    "Peak summer feeding brings reliable sightings of **minke whales** on dedicated boat trips from Skye and the mainland coast. **Common dolphins** and **harbor porpoises** are frequently seen, and calm sea windows offer good viewing.",
+    "Peak summer feeding brings reliable sightings of **minke whales** on dedicated boat trips from Skye and the mainland coast. **Common dolphins** and **harbor porpoises** are frequently seen, and calm sea windows offer good viewing.",
+    "Peak summer feeding brings reliable sightings of **minke whales** on dedicated boat trips from Skye and the mainland coast. **Common dolphins** and **harbor porpoises** are frequently seen, and calm sea windows offer good viewing.",
+    "**Minke whales** are still regularly seen on boat trips from Gairloch and Portree before they begin their autumn departure. **Common dolphins** remain active in the coastal waters.",
+    "Autumn weather brings rougher seas, and dedicated boat trips wind down. Late **minke whales** are occasionally spotted, but sightings become less dependable as the season closes.",
+    "Winter weather and rough seas halt dedicated boat trips. **Harbor porpoises** and resident **bottlenose dolphins** are occasionally spotted from coastal lookouts, but sightings are chance encounters.",
+    "Winter weather and rough seas halt dedicated boat trips. **Harbor porpoises** and resident **bottlenose dolphins** are occasionally spotted from coastal lookouts, but sightings are chance encounters."
+   ]
+  },
+  "columns": {
+   "draw": "moderate",
+   "orca": "Orca (possible, May–Aug)",
+   "minke": "Minke whale (likely, May–Sep)",
+   "seasick": 4,
+   "dolphins": "Common dolphin (likely, May–Sep), Harbor porpoise (likely, year-round), Risso's dolphin (possible, Jun–Sep)",
+   "humpback": "Humpback whale (possible, Jun–Sep)",
+   "boatStyle": [
+    "inflatable",
+    "midsize"
+   ],
+   "closeness": 6,
+   "watchShore": true,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "azores",
+  "name": "Azores",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 723,
+  "tokensOut": 1182,
+  "cost": 0.01563,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Azores is a world-class destination for whale watching, thanks to nutrient-rich waters that attract over 20 cetacean species. Visitors take boat tours from islands like Sao Miguel and Pico to spot resident sperm whales and dolphins, alongside migrating baleen whales. The best sightings occur from spring through late summer.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6
+     ],
+     "level": "peak",
+     "text": "Spring brings migrating giants like blue, fin, and sei whales passing through the archipelago. Resident sperm whales and various dolphin species are also highly active. Boat tours run frequently from the main islands."
+    },
+    {
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer offers the calmest seas and warmest weather for boat trips. While the big baleen whales have mostly moved on, sperm whales, pilot whales, and Atlantic spotted dolphins are abundant and highly visible."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Resident sperm whales, common dolphins, and bottlenose dolphins remain year-round. However, winter weather and rough seas often cause boat tour cancellations, making trips and sightings much less reliable."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Grouping by season highlights the spring baleen whale migration, the reliable summer sperm whale sightings, and the weather-dependent winter months.",
+   "flags": [],
+   "named_things": [
+    "Sao Miguel",
+    "Pico",
+    "sperm whale",
+    "blue whale",
+    "fin whale",
+    "sei whale",
+    "pilot whale",
+    "Atlantic spotted dolphin",
+    "common dolphin",
+    "bottlenose dolphin"
+   ]
+  },
+  "curve": [
+   6.059459459459459,
+   6,
+   7.4,
+   10,
+   10,
+   9.1,
+   8.2,
+   8.14054054054054,
+   7.896551724137931,
+   7.4079999999999995,
+   6.792,
+   6.303448275862069
+  ],
+  "base": 9,
+  "approved": {
+   "overview": "**Sperm whales** are reliably seen year-round in the deep waters around the Azores, while **blue**, **fin** and **sei whales** pass through on their spring migration, peaking in April and May. Boat trips leave mainly from Pico and São Miguel, guided by trained shore lookouts who spot the animals from the cliffs. **Common** and **bottlenose dolphins** are also a regular draw on nearly every departure.",
+   "monthly": [
+    "**Sperm whales** are present year-round, and boat trips from Pico and São Miguel find them reliably alongside **common dolphins**, though winter weather can occasionally disrupt departures.",
+    "**Sperm whales** are present year-round, and boat trips from Pico and São Miguel find them reliably alongside **common dolphins**, though winter weather can occasionally disrupt departures.",
+    "**Sperm whales** and **common dolphins** are reliably seen on boat trips from Pico and São Miguel, with the first migrating baleen whales beginning to arrive late in the month.",
+    "**Blue** and **fin whales** pass through the archipelago on their spring migration, joining the resident **sperm whales**. Boat trips guided by shore lookouts offer highly reliable encounters with multiple species.",
+    "**Blue** and **fin whales** pass through the archipelago on their spring migration, joining the resident **sperm whales**. Boat trips guided by shore lookouts offer highly reliable encounters with multiple species.",
+    "**Sperm whales** are reliably seen, and a few late **sei**, **fin** and **blue whales** are still passing through the archipelago. Boat trips guided by shore lookouts find multiple species.",
+    "**Sperm whales** are seen on nearly every trip, joined by large groups of **common** and **Atlantic spotted dolphins** with many calves in the calm summer waters. Boat trips from Pico and São Miguel find them reliably.",
+    "**Sperm whales** are seen on nearly every trip, joined by large groups of **common** and **Atlantic spotted dolphins** with many calves in the calm summer waters. Boat trips from Pico and São Miguel find them reliably.",
+    "**Sperm whales** are seen on nearly every trip, joined by large groups of **common** and **Atlantic spotted dolphins** with many calves in the calm summer waters. Boat trips from Pico and São Miguel find them reliably.",
+    "Resident **sperm whales** and **common dolphins** are reliably seen on boat trips from Pico and São Miguel as the summer migratory species depart and winter weather begins to set in.",
+    "Resident **sperm whales** and **common dolphins** are reliably seen on boat trips from Pico and São Miguel, though rougher late-autumn seas can impact the frequency of departures.",
+    "**Sperm whales** are present year-round, and boat trips from Pico and São Miguel find them reliably alongside **common dolphins**, though winter weather can occasionally disrupt departures."
+   ]
+  },
+  "columns": {
+   "fin": "Fin whale (likely, Apr–Jun)",
+   "blue": "Blue whale (possible, Apr–Jun)",
+   "draw": "strong",
+   "sperm": "Sperm whale (guaranteed, year-round)",
+   "seasick": 5,
+   "dolphins": "Common dolphin (guaranteed, year-round), Bottlenose dolphin (likely, year-round), Atlantic spotted dolphin (likely, May–Oct), Risso's dolphin (possible, Apr–Jun)",
+   "boatStyle": [
+    "inflatable",
+    "midsize"
+   ],
+   "closeness": 7,
+   "watchShore": true,
+   "otherWhales": "Sei whale (possible, Mar–Jun)",
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "bali",
+  "name": "Bali",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 722,
+  "tokensOut": 1242,
+  "cost": 0.016348,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Bali offers reliable year-round dolphin watching, particularly off the northern coast. Visitors take traditional outrigger boats at sunrise to see large pods of spinner dolphins leaping in the calm waters. While whales are rare, the dry season provides the best sea conditions for spotting resident dolphins.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The dry season brings calm seas and clear skies, making it the best time to take a sunrise boat tour from Lovina Beach. Large pods of acrobatic spinner dolphins are highly active, and the smooth water makes spotting them much easier."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Dolphins remain in the waters off the northern coast year-round, but the rainy season brings rougher seas and unpredictable weather. Sunrise boat trips still run from Lovina, though choppy water can make spotting the pods more challenging."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "depth_why": "Grouped by wet and dry seasons, as dolphin presence is year-round but sea conditions dictate the quality of the experience.",
+   "flags": [],
+   "named_things": [
+    "Lovina Beach",
+    "spinner dolphins"
+   ]
+  },
+  "curve": [
+   2.533333333333333,
+   2.4,
+   2.8,
+   3.2,
+   3.6,
+   3.466666666666667,
+   3.3333333333333335,
+   3.2,
+   3.0666666666666664,
+   2.9333333333333336,
+   2.8,
+   2.6666666666666665
+  ],
+  "base": 2,
+  "approved": {
+   "overview": "**Spinner dolphins** are regularly seen on sunrise boat trips from Lovina, though the unregulated viewing is often overcrowded. Whales occasionally pass through the Lombok Strait, but sightings are chance encounters.",
+   "monthly": [
+    "**Spinner dolphins** are present off Lovina, but wet monsoon winds bring rougher seas that can disrupt sunrise boat trips.",
+    "**Spinner dolphins** are present off Lovina, but wet monsoon winds bring rougher seas that can disrupt sunrise boat trips.",
+    "**Spinner dolphins** are present off Lovina, but wet monsoon winds bring rougher seas that can disrupt sunrise boat trips.",
+    "Calmer dry-season seas improve conditions for sunrise boat trips from Lovina, where **spinner dolphins** are regularly seen.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are regularly seen on sunrise trips from Lovina, though the unregulated viewing is often overcrowded.",
+    "**Spinner dolphins** are present off Lovina, but the arriving wet monsoon brings rougher seas that can disrupt boat trips.",
+    "**Spinner dolphins** are present off Lovina, but wet monsoon winds bring rougher seas that can disrupt sunrise boat trips."
+   ]
+  },
+  "columns": {
+   "draw": "weak",
+   "seasick": 3,
+   "dolphins": "Spinner dolphin (likely, year-round)",
+   "boatStyle": [
+    "inflatable"
+   ],
+   "closeness": 4,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "vietnam",
+  "name": "Vietnam",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 721,
+  "tokensOut": 1581,
+  "cost": 0.020414,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Vietnam is not a traditional whale-watching hub, but lucky visitors might spot wild cetaceans. Spinner and Indo-Pacific humpback dolphins are occasionally seen around the Con Dao islands. Rare baleen whales sometimes appear off the central coast in summer, though organized tours are scarce.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "fair",
+     "text": "Summer offers the best, albeit slim, chances to spot marine life. Boat tours around the Con Dao archipelago occasionally encounter spinner dolphins. Off the central coast near Binh Dinh, rare sightings of Bryde's whales have occurred during these calmer months."
+    },
+    {
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "poor",
+     "text": "Rougher seas and monsoon conditions make boat trips less reliable and cetacean sightings highly unlikely. While dolphins reside in Vietnamese waters year-round, spotting them during this period is very rare."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "depth_why": "Sightings are generally rare year-round, with a slight increase in summer months along the central coast when seas are calmer.",
+   "flags": [
+    "Organized whale watching is virtually non-existent in Vietnam; sightings are usually incidental on general boat tours."
+   ],
+   "named_things": [
+    "Con Dao archipelago",
+    "Binh Dinh",
+    "Bryde's whale",
+    "spinner dolphin",
+    "Indo-Pacific humpback dolphin"
+   ]
+  },
+  "curve": [
+   0.4,
+   0.4,
+   0.7600000000000001,
+   1.12,
+   1.48,
+   1.8400000000000003,
+   2.2,
+   1.6,
+   1,
+   0.3999999999999999,
+   0.4,
+   0.4
+  ],
+  "base": 2,
+  "approved": {
+   "overview": "**Bryde's whales** are occasionally spotted feeding off the central coast near De Gi during the summer, while dolphins are chance encounters year-round. Sightings are incidental from general boat trips or the shore, as Vietnam lacks a dedicated whale-watching industry.",
+   "monthly": [
+    "Winter brings rougher seas to the central coast, and any sightings of dolphins or passing whales are purely chance encounters on general boat trips.",
+    "Winter brings rougher seas to the central coast, and any sightings of dolphins or passing whales are purely chance encounters on general boat trips.",
+    "As seas begin to calm, chance sightings of **Indo-Pacific bottlenose dolphins** or **spinner dolphins** are possible on general coastal boat trips, though no dedicated tours operate.",
+    "Calmer seas allow chance sightings of Indo-Pacific **bottlenose** or **spinner dolphins** on general coastal boat trips; no dedicated tours operate.",
+    "Calmer seas allow chance sightings of Indo-Pacific **bottlenose** or **spinner dolphins** on general coastal boat trips; no dedicated tours operate.",
+    "**Bryde's whales** are occasionally seen feeding close to shore off the central coast, particularly near De Gi in Binh Dinh province, offering the year's best chance for an incidental sighting.",
+    "**Bryde's whales** are occasionally seen feeding close to shore off the central coast, particularly near De Gi in Binh Dinh province, offering the year's best chance for an incidental sighting.",
+    "**Bryde's whales** are occasionally seen feeding close to shore off the central coast, particularly near De Gi in Binh Dinh province, offering the year's best chance for an incidental sighting.",
+    "Typhoon season brings rough, unpredictable seas to the central and northern coasts, making boat trips less frequent and chance dolphin or whale sightings very unlikely.",
+    "Typhoon season brings rough, unpredictable seas to the central and northern coasts, making boat trips less frequent and chance dolphin or whale sightings very unlikely.",
+    "Typhoon season brings rough, unpredictable seas to the central and northern coasts, making boat trips less frequent and chance dolphin or whale sightings very unlikely.",
+    "Winter seas remain choppy, and any sightings of dolphins or passing whales are purely chance encounters on general boat trips."
+   ]
+  },
+  "columns": {
+   "draw": "weak",
+   "seasick": 4,
+   "closeness": 1,
+   "otherWhales": "Bryde's whale (unlikely, Jun–Aug)",
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (9) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "whaleWatching",
+  "id": "havana",
+  "name": "Cuba",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 720,
+  "tokensOut": 656,
+  "cost": 0.009312,
+  "parseError": null,
+  "gemini": {
+   "applicable": false,
+   "depth": "year",
+   "overview": "",
+   "blurbs": [],
+   "best_months": [],
+   "depth_why": "",
+   "flags": [],
+   "na_reason": "No dedicated wild whale watching industry exists in Cuba.",
+   "named_things": []
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0.8,
+   0.8,
+   0.8,
+   1,
+   1
+  ],
+  "base": 3,
+  "approved": {
+   "overview": "**Bottlenose dolphins** are occasionally spotted on general boat and dive trips along Cuba's coasts. There is no dedicated whale-watching industry here, and sightings are chance encounters year-round.",
+   "monthly": [
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters. Peak hurricane season brings rougher seas.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters. Peak hurricane season brings rougher seas.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters. Peak hurricane season brings rougher seas.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters.",
+    "**Bottlenose dolphins** are occasionally seen on general boat and dive trips, with sightings being chance encounters."
+   ]
+  },
+  "columns": {
+   "draw": "weak",
+   "seasick": 3,
+   "dolphins": "Bottlenose dolphin (likely, year-round)",
+   "humpback": "Humpback whale (unlikely, Jan–Mar)",
+   "closeness": 1,
+   "drawSourceChecked": true
+  },
+  "checks": [
+   [
+    "flag",
+    "Gemini says N/A (No dedicated wild whale watching industry exists in Cuba.); our score peaks at 1.0, so we have it applicable."
+   ]
+  ]
+ },
+ {
+  "k": "diving",
+  "id": "belize",
+  "name": "Belize",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 734,
+  "tokensOut": 1211,
+  "cost": 0.016,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Belize boasts the second-largest barrier reef in the world, offering world-class snorkeling and scuba diving. Visitors can explore the iconic Great Blue Hole, swim with nurse sharks at Shark Ray Alley, and drift along vibrant coral walls. The best conditions run from dry season through early summer, when visibility is excellent and whale sharks migrate through.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Dry season brings excellent visibility and calm waters for exploring the Belize Barrier Reef and the Great Blue Hole."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "level": "peak",
+     "text": "Peak diving season coincides with the arrival of whale sharks near Gladden Spit around the full moons. Water is warm and clear for exploring vibrant coral walls."
+    },
+    {
+     "months": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "The rainy and hurricane seasons can reduce visibility and cause boat cancellations, though marine life at Hol Chan Marine Reserve remains abundant when weather permits."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "depth_why": "Grouped by the dry season, the specific whale shark migration window, and the wetter hurricane season.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Belize Barrier Reef",
+    "Great Blue Hole",
+    "Shark Ray Alley",
+    "Gladden Spit",
+    "Hol Chan Marine Reserve",
+    "whale sharks",
+    "nurse sharks"
+   ]
+  },
+  "curve": [
+   9.52,
+   9.64,
+   9.76,
+   9.88,
+   10,
+   9.2,
+   8.4,
+   5.8,
+   4.8,
+   5.2,
+   9.02,
+   9.4
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "Belize holds the second-largest barrier reef on Earth, with vibrant coral scenery, nurse sharks, Caribbean reef sharks, and eagle rays year-round, plus the Great Blue Hole. Whale sharks gather at Gladden Spit around the full moons from late March to June. The Blue Hole and Gladden Spit need Advanced certification, but much of the reef suits Open Water divers, and snorkelers can easily explore shallow reserves.",
+   "monthly": [
+    "The dry season brings clear water and excellent visibility. Nurse sharks and eagle rays are common sights along the reef.",
+    "The dry season brings clear water and excellent visibility. Nurse sharks and eagle rays are common sights along the reef.",
+    "The dry season brings clear water and excellent visibility. Nurse sharks and eagle rays are common sights along the reef.",
+    "Water is warm and whale sharks are likely around the full moon at Gladden Spit, adding to the year-round reef sharks and rays.",
+    "Water is warm and whale sharks are likely around the full moon at Gladden Spit, adding to the year-round reef sharks and rays.",
+    "Water is warm and whale sharks are likely around the full moon at Gladden Spit, adding to the year-round reef sharks and rays.",
+    "The water is very warm and visibility remains good, though the early hurricane season can bring occasional rain.",
+    "Peak hurricane season brings a higher risk of storms and reduced visibility, though the barrier reef keeps inshore waters relatively calm.",
+    "Peak hurricane season brings a higher risk of storms and reduced visibility, though the barrier reef keeps inshore waters relatively calm.",
+    "Peak hurricane season brings a higher risk of storms and reduced visibility, though the barrier reef keeps inshore waters relatively calm.",
+    "The weather begins to stabilize as hurricane season ends, and water clarity improves for spotting Caribbean reef sharks.",
+    "The dry season returns, bringing clear waters and excellent conditions for exploring the coral reef scenery."
+   ]
+  },
+  "columns": {
+   "animals": "Whale shark (possible, Apr-Jun), Nurse shark (likely, year-round), Caribbean reef shark (likely, year-round), Eagle ray (likely, year-round)",
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": [
+    "reef"
+   ],
+   "waterTemp": "79-86 F",
+   "accessStyle": [
+    "dayBoat",
+    "liveaboard"
+   ],
+   "divingRating": 10,
+   "typicalDepth": "35-130 ft",
+   "certification": "advanced",
+   "snorkelingRating": 9
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Nov fair vs our 9.0; Dec fair vs our 9.4"
+   ]
+  ]
+ },
+ {
+  "k": "diving",
+  "id": "palau",
+  "name": "Palau",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 735,
+  "tokensOut": 1438,
+  "cost": 0.018726,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Palau is a world-class diving and snorkeling destination famous for its vibrant coral reefs, WWII shipwrecks, and unique marine life like the stingless golden jellyfish. Divers flock to iconic sites like Blue Corner and German Channel to drift alongside reef sharks and manta rays. The best conditions run from November to May during the dry season.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The dry season brings the best visibility and calmest waters. Drift dive at Blue Corner to see gray reef sharks, or snorkel Jellyfish Lake. Manta rays frequent German Channel for cleaning stations."
+    },
+    {
+     "months": [
+      6,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "The rainy season brings frequent showers and choppier seas, which can reduce visibility. However, the water remains warm, and dive sites are less crowded. Wreck diving in Malakal Harbor remains excellent."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "fair",
+     "text": "These are the wettest months with the highest chance of storms affecting boat crossings to the Rock Islands. Snorkeling and diving are still possible, but flexibility is required due to weather."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12
+   ],
+   "depth_why": "Diving is year-round, but conditions are grouped by the dry and rainy seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Blue Corner",
+    "Jellyfish Lake",
+    "German Channel",
+    "Malakal Harbor",
+    "Rock Islands",
+    "gray reef shark",
+    "manta ray",
+    "golden jellyfish"
+   ]
+  },
+  "curve": [
+   9.9,
+   9.9,
+   9.9,
+   9.9,
+   8.85,
+   7.8,
+   7.8,
+   7.8,
+   7.8,
+   8.5,
+   9.2,
+   9.9
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "Palau is a world-class destination for coral reef scenery and marine life, accessed by day boats. Blue Corner and the Peleliu sites need Advanced certification and good current skills for thrilling drift dives, while the German Channel is shallow and easy. Gray reef sharks and green turtles are likely year-round, and manta rays are best seen from December to March.",
+   "monthly": [
+    "The dry season brings calm seas and excellent visibility, perfect for drifting along the reefs with gray reef sharks and green turtles, and manta rays are at their best at the German Channel.",
+    "The dry season brings calm seas and excellent visibility, perfect for drifting along the reefs with gray reef sharks and green turtles, and manta rays are at their best at the German Channel.",
+    "Peak dry season conditions offer the calmest water and the highest visibility, with manta ray encounters still possible at the German Channel.",
+    "Peak dry season conditions offer the calmest water and the highest visibility, with manta ray encounters still possible at the German Channel.",
+    "The wet season begins, bringing more rain and slightly rougher surface conditions, though the underwater reef scenery remains vibrant.",
+    "Rain and rougher water are more common during the wet season, but diving continues with warm water and reliable shark sightings, although exposed sites such as Peleliu are often cancelled.",
+    "Rain and rougher water are more common during the wet season, but diving continues with warm water and reliable shark sightings, although exposed sites such as Peleliu are often cancelled.",
+    "Rain and rougher water are more common during the wet season, but diving continues with warm water and reliable shark sightings, although exposed sites such as Peleliu are often cancelled.",
+    "Rain and rougher water are more common during the wet season, but diving continues with warm water and reliable shark sightings, although exposed sites such as Peleliu are often cancelled.",
+    "The wet season begins to transition, with surface conditions slowly improving while turtles and sharks remain active on the reefs.",
+    "The dry season returns, dropping the wind and flattening the sea for clearer views of the coral walls and pelagic life.",
+    "Excellent visibility and calm surface conditions make this a prime time to explore the deep sites and drift with the strong currents."
+   ]
+  },
+  "columns": {
+   "animals": "Grey reef shark (likely, year-round), Manta ray (possible, Mar-Apr), Green turtle (likely, year-round)",
+   "bestFor": "diving",
+   "current": "strong",
+   "drawType": [
+    "reef",
+    "wrecks"
+   ],
+   "waterTemp": "81-86 F",
+   "accessStyle": [
+    "dayBoat"
+   ],
+   "divingRating": 10,
+   "typicalDepth": "35-130 ft",
+   "certification": "advanced",
+   "snorkelingRating": 8,
+   "drawSourceChecked": false
+  },
+  "checks": []
+ },
+ {
+  "k": "diving",
+  "id": "galapagos",
+  "name": "Galápagos Islands",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 736,
+  "tokensOut": 1472,
+  "cost": 0.019136,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Galapagos Islands offer world-class diving and snorkeling with unique wildlife like marine iguanas, sea lions, and hammerhead sharks. The warm season brings clearer waters and manta rays, while the cool season attracts massive whale sharks and active penguins. It is a year-round destination, but conditions vary significantly by season.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "good",
+     "text": "Water temperatures reach the upper 70s with better visibility and calmer seas. Snorkelers enjoy comfortable conditions, while divers spot large schools of hammerhead sharks and manta rays around Darwin and Wolf islands."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The Humboldt Current brings nutrient-rich water in the 60s. Visibility drops, but marine life explodes. Divers flock to Darwin Island for massive whale sharks, while snorkelers swim with active penguins and playful sea lions."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "depth_why": "The marine environment is dictated by two distinct seasons: the warm season and the cool, nutrient-rich season.",
+   "flags": [],
+   "named_things": [
+    "Darwin Island",
+    "Wolf Island",
+    "Humboldt Current"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9.166666666666666,
+   9.333333333333334,
+   9.5,
+   9.666666666666666,
+   9.833333333333334,
+   10,
+   10,
+   9.9,
+   9.5,
+   9.1
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "This is cold, current-swept, advanced diving, not a tropical reef — a wetsuit (often 7mm, sometimes a hood) is essential even at the equator. Darwin and Wolf, the two legendary sites, are liveaboard-only and have the highest concentration of shark biomass recorded anywhere on Earth, with hammerhead schools numbering in the hundreds. Snorkelers have the chance to swim with sea turtles, rays, and curious Galapagos sea lions in many places across the archipelago.",
+   "monthly": [
+    "Warm and calm conditions settle in, with water temperatures around 75-79°F. Manta rays are more frequently spotted alongside the resident hammerheads and sea lions.",
+    "The warm season provides comfortable diving and snorkeling with flat seas. Manta rays, green turtles, and eagle rays glide through the relatively clear waters.",
+    "Calm seas and warmer waters make for excellent conditions. Divers and snorkelers can expect reliable encounters with resident sea lions and hammerhead sharks.",
+    "Visibility peaks at up to 100 ft in the warm, calm water. It is an excellent time to spot manta rays and enjoy clear views of the resident marine life.",
+    "The water remains warm and exceptionally clear, offering some of the best visibility of the year for spotting manta rays, turtles, and eagle rays.",
+    "The nutrient-rich garua season arrives, cooling the water and lowering visibility to 30-60 ft. Whale sharks begin to appear at the far northern islands.",
+    "Whale sharks become a reliable and spectacular sight at Darwin and Wolf. A thick wetsuit and hood are necessary in the cooler water.",
+    "The water is cool (61-72°F) and the pelagic action is at its best. Whale sharks are at their peak, and newly born sea lion pups are highly curious and playful with swimmers.",
+    "Despite the cold and choppy conditions, this is a prime month for massive whale sharks at the northern islands. Playful sea lion pups continue to dart around snorkelers in the shallows.",
+    "Whale sharks remain a major draw at Darwin and Wolf. The water is still cool and nutrient-dense, supporting the resident hammerheads, eagle rays, and marine iguanas.",
+    "Whale shark sightings are still possible before they depart for the season. The water remains cool, and playful sea lion pups continue to interact with divers.",
+    "The water begins to warm and clear up, offering calmer seas. Manta rays return more frequently, and the resident green turtles and hammerheads remain abundant."
+   ]
+  },
+  "columns": {
+   "animals": "Galapagos sea lion (guaranteed, year-round), Green turtle (likely, year-round), Eagle ray (likely, year-round), Hammerhead shark (likely, Jun-Nov), Whale shark (likely, Jun-Nov), Marine iguana (possible, year-round), Galapagos penguin (unlikely, year-round)",
+   "bestFor": "diving",
+   "current": "strong",
+   "drawType": [
+    "animals"
+   ],
+   "waterTemp": "61-82 F (cold Jun-Nov)",
+   "accessStyle": [
+    "dayBoat",
+    "liveaboard"
+   ],
+   "divingRating": 10,
+   "typicalDepth": "35-100 ft",
+   "certification": "advanced",
+   "snorkelingRating": 8
+  },
+  "checks": []
+ },
+ {
+  "k": "diving",
+  "id": "jordan",
+  "name": "Petra & Wadi Rum",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 734,
+  "tokensOut": 1176,
+  "cost": 0.01558,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "While Petra and Wadi Rum are desert wonders, the world-class reefs of the Red Sea at Aqaba are just a short day trip away. Visitors can snorkel or scuba dive among vibrant corals, sea turtles, and famous wrecks like the Cedar Pride. The best conditions are in the spring and fall when the weather is pleasant and water visibility is excellent.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5
+     ],
+     "level": "peak",
+     "text": "Spring brings pleasant air temperatures and great underwater visibility in the Red Sea. It is an ideal time to spot sea turtles and rays at the Japanese Garden dive site on a day trip to Aqaba."
+    },
+    {
+     "months": [
+      9,
+      10,
+      11
+     ],
+     "level": "peak",
+     "text": "Water temperatures are warm, often around 80 degrees Fahrenheit, and visibility is fantastic. Divers can comfortably explore the Cedar Pride wreck and vibrant coral gardens teeming with marine life."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "The Red Sea water is very warm, making for comfortable diving and snorkeling. However, the desert heat above water during the drive from Wadi Rum or Petra can be intense."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Winter brings cooler water temperatures around 70 degrees Fahrenheit, requiring thicker wetsuits. Visibility remains good, but boat rides and surface intervals can be chilly."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "depth_why": "Diving in nearby Aqaba is a year-round activity, but grouped by seasonal variations in water temperature and above-water desert heat.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Aqaba",
+    "Red Sea",
+    "Cedar Pride",
+    "Japanese Garden"
+   ]
+  },
+  "curve": [
+   5.6,
+   5.6,
+   5.84,
+   6.08,
+   6.319999999999999,
+   6.5,
+   6.8,
+   6.8,
+   6.8,
+   6.8,
+   6.3999999999999995,
+   6
+  ],
+  "base": 4,
+  "approved": {
+   "overview": "Accessible as a day trip to the Red Sea at Aqaba, about an hour from Wadi Rum and two hours from Petra, this area offers excellent shore and house-reef diving with no boat needed, plus the Cedar Pride wreck at 80-90 ft just off the beach. Visitors explore vibrant coral reef scenery and its fish, with main sites reaching depths up to 130 ft.",
+   "monthly": [
+    "The water is at its coolest around 70°F, but shore diving remains accessible for exploring the coral reefs.",
+    "The water is at its coolest around 70°F, but shore diving remains accessible for exploring the coral reefs.",
+    "The water is at its coolest around 70°F, but shore diving remains accessible for exploring the coral reefs.",
+    "Water temperatures are warming, making shore dives to the coral reefs more comfortable.",
+    "Water temperatures are warming, making shore dives to the coral reefs more comfortable.",
+    "Summer brings the warmest water at 82°F, ideal for long shore dives and snorkeling among the reef fish.",
+    "Summer brings the warmest water at 82°F, ideal for long shore dives and snorkeling among the reef fish.",
+    "Summer brings the warmest water at 82°F, ideal for long shore dives and snorkeling among the reef fish.",
+    "Summer brings the warmest water at 82°F, ideal for long shore dives and snorkeling among the reef fish.",
+    "Fall offers excellent conditions with warm water and clear visibility on the house reefs.",
+    "Fall offers excellent conditions with warm water and clear visibility on the house reefs.",
+    "Water temperatures drop, but the coral reef scenery remains accessible directly from the shore."
+   ]
+  },
+  "columns": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": [
+    "reef",
+    "wrecks"
+   ],
+   "waterTemp": "70-82 F",
+   "accessStyle": [
+    "shore"
+   ],
+   "divingRating": 7,
+   "typicalDepth": "15-130 ft",
+   "certification": "openWater",
+   "snorkelingRating": 7,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Dec fair vs our 6.0"
+   ]
+  ]
+ },
+ {
+  "k": "diving",
+  "id": "maldives",
+  "name": "Maldives",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 734,
+  "tokensOut": 1319,
+  "cost": 0.017296,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Maldives offers world-class diving and snorkeling across its 26 coral atolls. Visitors can explore vibrant reefs, drift along deep channels, and swim with massive whale sharks and manta rays. The best overall conditions align with the dry season from December to April, though marine life is abundant year-round.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "During the dry northeast monsoon, visibility peaks on the eastern atolls, often exceeding 100 feet. This is the prime time for drift diving through deep channels to see grey reef sharks, eagle rays, and vibrant soft corals."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "level": "good",
+     "text": "The southwest monsoon brings plankton-rich waters, reducing overall visibility but triggering massive feeding frenzies. Snorkelers can witness dozens of manta rays and whale sharks gathering at Hanifaru Bay in Baa Atoll."
+    }
+   ],
+   "best_months": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "depth_why": "Grouped by the two main monsoon seasons which dictate visibility and pelagic animal movements.",
+   "flags": [],
+   "named_things": [
+    "Baa Atoll",
+    "Hanifaru Bay"
+   ]
+  },
+  "curve": [
+   9.822222222222223,
+   9.911111111111111,
+   10,
+   9.733333333333333,
+   9.466666666666667,
+   9.2,
+   9.288888888888888,
+   9.377777777777776,
+   9.466666666666667,
+   9.555555555555555,
+   9.644444444444444,
+   9.733333333333333
+  ],
+  "base": 8,
+  "approved": {
+   "overview": "The Maldives offers coral reefs, reef sharks, and green turtles year-round. The dry season brings the clearest water, while the wet season's plankton blooms attract manta rays and whale sharks. Hanifaru Bay is a famous snorkel-only spot to see feeding mantas.",
+   "monthly": [
+    "The dry northeast monsoon brings calm seas and clear water, with visibility reaching 100 ft on the best days. Reef sharks and green turtles are common along the coral reefs.",
+    "The dry northeast monsoon brings calm seas and clear water, with visibility reaching 100 ft on the best days. Reef sharks and green turtles are common along the coral reefs.",
+    "The dry northeast monsoon brings calm seas and clear water, with visibility reaching 100 ft on the best days. Reef sharks and green turtles are common along the coral reefs.",
+    "The dry northeast monsoon brings calm seas and clear water, with visibility reaching 100 ft on the best days. Reef sharks and green turtles are common along the coral reefs.",
+    "The dry northeast monsoon is winding down, with calm seas and clear water on the reefs. Reef sharks and green turtles are common along the coral reefs.",
+    "The wet southwest monsoon brings plankton blooms that reduce visibility but attract large pelagics. Manta rays begin gathering at cleaning stations.",
+    "Plankton blooms reduce visibility but attract large pelagics. Manta rays gather in huge numbers to feed at the snorkel-only Hanifaru Bay.",
+    "Plankton blooms reduce visibility but attract large pelagics. Manta rays gather in huge numbers to feed at the snorkel-only Hanifaru Bay, and whale sharks are highly reliable in South Ari Atoll.",
+    "Plankton blooms reduce visibility but attract large pelagics. Manta rays gather in huge numbers to feed at the snorkel-only Hanifaru Bay, and whale sharks are highly reliable in South Ari Atoll.",
+    "Plankton blooms reduce visibility but attract large pelagics. Manta rays gather in huge numbers to feed at the snorkel-only Hanifaru Bay, and whale sharks are highly reliable in South Ari Atoll.",
+    "The wet monsoon brings plankton blooms that reduce visibility but attract large pelagics. Whale sharks are highly reliable in South Ari Atoll.",
+    "The dry northeast monsoon brings calm seas and clear water, with visibility reaching 100 ft on the best days. Reef sharks and green turtles are common along the coral reefs."
+   ]
+  },
+  "columns": {
+   "animals": "Manta ray (likely, Jun-Nov), Whale shark (likely, year-round), Reef shark (likely, year-round), Green turtle (likely, year-round)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": [
+    "reef"
+   ],
+   "waterTemp": "81-86 F",
+   "accessStyle": [
+    "dayBoat",
+    "shore",
+    "liveaboard"
+   ],
+   "divingRating": 10,
+   "typicalDepth": "15-100 ft",
+   "certification": "openWater",
+   "snorkelingRating": 10
+  },
+  "checks": []
+ },
+ {
+  "k": "diving",
+  "id": "cornwall",
+  "name": "Cornwall",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 733,
+  "tokensOut": 1082,
+  "cost": 0.01445,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Cornwall offers some of the UK's best cold-water diving and snorkeling, featuring dense kelp forests, playful gray seals, and historic shipwrecks. Summer brings warmer waters and the chance to spot massive basking sharks. The best conditions run from late spring through early fall.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Summer brings the warmest water (around 60°F) and best visibility. Snorkelers can explore kelp forests and spot gray seals, while divers explore wrecks at the Manacles. Basking sharks often appear between mid-May and July."
+    },
+    {
+     "months": [
+      4,
+      10
+     ],
+     "level": "fair",
+     "text": "Shoulder months offer cooler waters and less predictable visibility. Hardy divers in thick wetsuits or drysuits can still explore sheltered coves and spot seals, but offshore wreck diving is highly weather-dependent."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3,
+      11,
+      12
+     ],
+     "level": "poor",
+     "text": "Winter brings cold water (down to 48°F), frequent storms, and poor visibility. Most casual snorkeling and diving stops, though dedicated drysuit divers might explore very sheltered sites on rare calm days."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Water temperature, visibility, and wildlife sightings vary significantly by season, making grouped blurbs ideal.",
+   "flags": [],
+   "named_things": [
+    "gray seals",
+    "basking sharks",
+    "the Manacles",
+    "kelp forests"
+   ]
+  },
+  "curve": [
+   1.9,
+   2.0346153846153845,
+   2.6,
+   3.6500000000000004,
+   4.7,
+   5.265384615384615,
+   5.4,
+   5.265384615384615,
+   4.7,
+   3.6500000000000004,
+   2.6,
+   2.0346153846153845
+  ],
+  "base": 3,
+  "approved": {
+   "overview": "Cornwall offers cold-water diving and snorkeling among kelp forests and rocky reefs. Visitors wear a thick wetsuit or drysuit (water is 50 to 63°F) where gray seals are a regular but not guaranteed sight. From May to August, lucky snorkelers and divers might even spot a passing basking shark.",
+   "monthly": [
+    "The water is at its coldest, around 45-48°F, and winter storms often disrupt boat trips, but gray seals can still be seen in sheltered coves.",
+    "The water remains a chilly 45-48°F, with rough seas limiting access to the kelp forests, though gray seals are present year-round.",
+    "Conditions are still cold and often rough, but shore dives offer glimpses of cold-water reef life and resident gray seals.",
+    "Spring brings slightly calmer seas and improving visibility, making it easier to explore the rocky reefs and swim with gray seals.",
+    "Water temperatures begin to rise, and the kelp forests become more accessible for spotting seals and coastal fish.",
+    "Summer conditions arrive with water warming up, and there is a chance to see massive basking sharks cruising near the surface.",
+    "This is peak season for exploring the kelp forests, with the warmest water and the best odds of encountering a basking shark alongside the resident gray seals.",
+    "The water peaks around 63°F, offering the most comfortable conditions for swimming with seals and keeping an eye out for basking sharks.",
+    "Basking shark sightings taper off, but the water remains relatively warm and the kelp forests are still full of life.",
+    "Autumn winds begin to pick up, reducing visibility, though gray seals remain active around the rocky reefs.",
+    "Sea conditions become rougher as winter approaches, making boat trips less reliable, but sheltered shore sites still hold seals.",
+    "Winter storms frequently limit diving and snorkeling, with water temperatures dropping back down and gray seals being the main draw in protected bays."
+   ]
+  },
+  "columns": {
+   "animals": "Grey seal (likely, year-round), Basking shark (possible, Jun-Aug)",
+   "bestFor": "both",
+   "current": "moderate",
+   "drawType": [
+    "kelp"
+   ],
+   "waterTemp": "50-63 F (7 mm wetsuit or drysuit)",
+   "accessStyle": [
+    "dayBoat",
+    "shore"
+   ],
+   "divingRating": 6,
+   "typicalDepth": "15-100 ft",
+   "certification": "openWater",
+   "snorkelingRating": 5
+  },
+  "checks": []
+ },
+ {
+  "k": "diving",
+  "id": "glacier-waterton",
+  "name": "Glacier & Waterton Lakes",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 741,
+  "tokensOut": 1334,
+  "cost": 0.01749,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Glacier and Waterton Lakes offer unique, high-altitude cold-water diving. The highlight is the wreck of the Gertrude, a paddlewheeler scuttled in Emerald Bay at Waterton Lakes. Summer and early fall provide the best conditions and access, though drysuits are mandatory year-round due to frigid temperatures.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "good",
+     "text": "Summer and early fall offer the best access to Emerald Bay to dive the wreck of the Gertrude. The water is still frigid, requiring a drysuit, but surface conditions are pleasant and visibility is generally good."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "poor",
+     "text": "Winter brings freezing temperatures, ice, and closed facilities across the parks. Diving the Gertrude or exploring Lake McDonald is largely inaccessible and not recommended during these harsh, snowy months."
+    }
+   ],
+   "best_months": [
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Access and water temperatures vary significantly by season, with winter bringing ice and closures.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Waterton Lakes National Park",
+    "Emerald Bay",
+    "Gertrude wreck",
+    "Lake McDonald"
+   ]
+  },
+  "curve": [
+   0.8,
+   0.8,
+   1.7999999999999998,
+   2.8,
+   3.1,
+   2.3,
+   3.6,
+   3.75,
+   3.9,
+   3.59,
+   2.35,
+   1.1100000000000003
+  ],
+  "base": 0,
+  "approved": {
+   "overview": "Cold-water divers head to Waterton Lake to explore the wreck of the Gertrude, a paddlewheeler scuttled in Emerald Bay at about 65 ft. The water is frigid year-round, requiring a drysuit, and visibility is often best in early spring and autumn. There is no dive rental in the park.",
+   "monthly": [
+    "Waterton Lake is bitterly cold and can ice over; there is no regular diving, and only very experienced cold-water divers go in.",
+    "Waterton Lake is bitterly cold and can ice over; there is no regular diving, and only very experienced cold-water divers go in.",
+    "The water is at its coldest, but early spring is when visibility is often best, before snowmelt runoff, for the few divers who go in.",
+    "Early spring brings some of the best visibility of the year before runoff clouds the lake, though the water is still very cold.",
+    "Snowmelt runoff clouds the lake, though visibility can still be good early in the month; the water is very cold.",
+    "Spring runoff significantly reduces underwater visibility.",
+    "The warmest water, though still very cold, with visibility better than in June but short of its best; the Gertrude in Emerald Bay is an easy dive at about 65 ft.",
+    "The warmest water, though still very cold, with visibility better than in June but short of its best; the Gertrude in Emerald Bay is an easy dive at about 65 ft.",
+    "Visibility improves toward its autumn best while the water is still at its warmest.",
+    "Autumn brings some of the clearest water of the year, with the Gertrude an easy dive at about 65 ft.",
+    "The clear autumn water is turning colder and fewer divers go, but conditions can still be good before the lake nears freezing.",
+    "The water is close to freezing and diving winds down for the winter."
+   ]
+  },
+  "columns": {
+   "bestFor": "diving",
+   "current": "none",
+   "drawType": [
+    "other"
+   ],
+   "waterTemp": "37-55 F (drysuit)",
+   "accessStyle": [
+    "shore"
+   ],
+   "divingRating": 4,
+   "typicalDepth": "15-80 ft",
+   "certification": "specialty",
+   "snorkelingRating": 1
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Oct poor vs our 3.6; Nov poor vs our 2.4; Apr poor vs our 2.8; May poor vs our 3.1"
+   ]
+  ]
+ },
+ {
+  "k": "diving",
+  "id": "kerala",
+  "name": "Kerala",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 732,
+  "tokensOut": 1068,
+  "cost": 0.01428,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Kerala offers modest but accessible scuba diving and snorkeling along its Arabian Sea coastline, particularly around Kovalam. While not a world-class reef destination, divers can explore rocky seabeds, artificial reefs, and spot moray eels, pufferfish, and rays. The best conditions are during the dry winter months when the sea is calmest.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "good",
+     "text": "The dry season brings the calmest waters and best visibility for diving around Kovalam's rocky reefs. Expect to see shoals of local fish, moray eels, and occasional rays."
+    },
+    {
+     "months": [
+      5,
+      10
+     ],
+     "level": "fair",
+     "text": "Shoulder season brings unpredictable weather and choppy seas as the monsoon transitions. Visibility drops, and dive trips may be canceled depending on daily sea conditions."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "closed",
+     "text": "The southwest monsoon brings heavy rains, strong currents, and extremely poor visibility to the Arabian Sea. Diving operations generally shut down entirely during this period."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "depth_why": "The monsoon season dictates water clarity and safety, dividing the year into a clear dry season, a transitional shoulder season, and a closed monsoon season.",
+   "flags": [],
+   "named_things": [
+    "Kovalam",
+    "Arabian Sea"
+   ]
+  },
+  "curve": [
+   2.5,
+   2.4,
+   2,
+   1.5,
+   1,
+   0,
+   0,
+   0,
+   0.625,
+   1.25,
+   1.875,
+   2.5
+  ],
+  "base": 2,
+  "approved": {
+   "overview": "The Arabian Sea coast offers modest underwater exploration. Dives around Kovalam feature rocky patches and artificial reefs home to moray eels, pufferfish, and groupers. The water is calmest from December to February; the summer monsoon shuts down ocean trips entirely.",
+   "monthly": [
+    "The Arabian Sea is at its calmest, offering the year's best visibility around Kovalam's artificial reefs. Expect to see pufferfish and groupers.",
+    "Calm waters continue, making this a reliable month to spot moray eels and schooling fish among the rocky coastal patches.",
+    "Visibility begins to drop as the season transitions, but short boat trips to the reefs still run.",
+    "Sea conditions become less predictable ahead of the monsoon, reducing water clarity.",
+    "Pre-monsoon winds pick up, stirring up the sandy bottom and significantly reducing visibility.",
+    "The southwest monsoon arrives with heavy rain and rough seas, shutting down diving operations.",
+    "Sustained monsoon conditions mean the ocean is too rough for diving or snorkeling trips.",
+    "Heavy rains and strong swells continue to keep boats off the water and sites inaccessible.",
+    "The monsoon begins to ease, but the water remains murky from runoff and ocean swells.",
+    "Dive centers resume operations as the sea flattens out, though visibility takes time to recover.",
+    "Water clarity improves significantly as the dry season approaches, bringing marine life into view.",
+    "Prime conditions return with calm water, offering the best chance to explore the coastal reefs."
+   ]
+  },
+  "columns": {
+   "bestFor": "both",
+   "current": "mild",
+   "drawType": [
+    "reef"
+   ],
+   "waterTemp": "79-86 F",
+   "accessStyle": [
+    "dayBoat"
+   ],
+   "divingRating": 3,
+   "typicalDepth": "15-65 ft",
+   "certification": "openWater",
+   "snorkelingRating": 2
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "london",
+  "name": "London",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 713,
+  "tokensOut": 1008,
+  "cost": 0.013522,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "London is a premier destination for art and history lovers, boasting world-class institutions with free entry to their permanent collections. Visitors can explore ancient artifacts, classic masterpieces, and cutting-edge contemporary art across diverse neighborhoods. The experience is excellent year-round, as the main attractions are indoors.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Enjoy free access to the permanent collections of the British Museum, National Gallery, and Tate Modern year-round. While summer brings larger crowds, the indoor nature of these vast galleries makes them a perfect cultural refuge regardless of the weather outside."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "Museums and galleries are indoor attractions open year-round with consistent core offerings.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "British Museum",
+    "National Gallery",
+    "Tate Modern"
+   ]
+  },
+  "curve": [
+   7.8,
+   7.8,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   7.8,
+   7.8
+  ],
+  "base": 10,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 9,
+   "modernArt": 9,
+   "streetArt": 8,
+   "timedEntry": "widely",
+   "daysOfMuseums": 10,
+   "famousMuseums": 10,
+   "quirkyMuseums": 10,
+   "historyMuseums": 10,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 10
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "chicago",
+  "name": "Chicago",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 713,
+  "tokensOut": 1231,
+  "cost": 0.016198,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Chicago is a world-class destination for museums and art, anchored by the renowned Art Institute of Chicago and its vast Impressionist collection. Visitors can explore the sprawling Museum Campus, home to the Field Museum, or discover contemporary works in the River North gallery district. The museums are excellent year-round, offering a perfect indoor escape during the colder months.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "The Art Institute of Chicago, Museum of Contemporary Art, and the Field Museum are open year-round. Winter is ideal for spending full days indoors exploring these vast collections, while summer offers pleasant weather for gallery strolls in River North and outdoor neighborhood art fairs."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "depth_why": "Museum collections are indoors and accessible year-round, making a single annual summary appropriate.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Art Institute of Chicago",
+    "Museum Campus",
+    "Field Museum",
+    "River North gallery district",
+    "Museum of Contemporary Art"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
+  ],
+  "base": 9,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 9,
+   "modernArt": 7,
+   "streetArt": 8,
+   "timedEntry": "widely",
+   "daysOfMuseums": 8,
+   "famousMuseums": 7,
+   "quirkyMuseums": 5,
+   "historyMuseums": 8,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 6
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "singapore",
+  "name": "Singapore",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 714,
+  "tokensOut": 1115,
+  "cost": 0.014808,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Singapore boasts a world-class museum scene that perfectly blends history, culture, and cutting-edge art. Visitors can explore the massive Southeast Asian art collection at the National Gallery or interactive exhibits at the ArtScience Museum. It is a fantastic year-round activity, offering an air-conditioned escape from the tropical heat.",
+   "blurbs": [
+    {
+     "months": [
+      1
+     ],
+     "level": "peak",
+     "text": "January is the best time for art lovers thanks to Singapore Art Week, a city-wide celebration featuring gallery openings, art fairs, and special exhibitions. Major institutions like the National Gallery and Asian Civilisations Museum also host major events."
+    },
+    {
+     "months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Museums are excellent year-round, providing a cool retreat from the humidity. Explore the vast Southeast Asian collections at the National Gallery Singapore, dive into regional history at the Asian Civilisations Museum, or see futuristic displays at the ArtScience Museum."
+    }
+   ],
+   "best_months": [
+    1
+   ],
+   "depth_why": "Museums are a year-round indoor activity, but January stands out due to the annual Singapore Art Week.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "National Gallery Singapore",
+    "ArtScience Museum",
+    "Asian Civilisations Museum",
+    "Singapore Art Week"
+   ]
+  },
+  "curve": [
+   5,
+   8,
+   8,
+   8,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   5,
+   5
+  ],
+  "base": 7,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 6,
+   "modernArt": 6,
+   "streetArt": 5,
+   "timedEntry": "some",
+   "daysOfMuseums": 5,
+   "famousMuseums": 5,
+   "quirkyMuseums": 5,
+   "historyMuseums": 6,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 4
+  },
+  "checks": [
+   [
+    "flag",
+    "Best months differ: Gemini Jan; our curve peaks Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct."
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (2) suggests ('year')."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "rivieramaya",
+  "name": "Riviera Maya",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 714,
+  "tokensOut": 1149,
+  "cost": 0.015216,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "While famous for its beaches, the Riviera Maya offers a modest selection of art and museums centered in Playa del Carmen. Visitors can explore contemporary Mexican art in local galleries or enjoy interactive exhibits. These indoor venues provide a great year-round escape from the midday sun.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Playa del Carmen hosts the area's art scene, including the interactive 3D Museum of Wonders and the small Frida Kahlo Museum. Stroll along La Quinta Avenida to find independent spaces like the Gaston Charo Gallery showcasing local artists."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "Museums and galleries are indoors and open year-round, making the season irrelevant.",
+   "flags": [],
+   "named_things": [
+    "Playa del Carmen",
+    "3D Museum of Wonders",
+    "Frida Kahlo Museum",
+    "La Quinta Avenida",
+    "Gaston Charo Gallery"
+   ]
+  },
+  "curve": [
+   6.1,
+   6.1,
+   6.1,
+   6.1,
+   4.4,
+   2.7,
+   2.7,
+   2.7,
+   2.7,
+   5,
+   6.1,
+   6.1
+  ],
+  "base": 5,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 1,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 1,
+   "famousMuseums": 0,
+   "quirkyMuseums": 2,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 1
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Jan fair vs our 6.1; Feb fair vs our 6.1; Mar fair vs our 6.1; Apr fair vs our 6.1; Nov fair vs our 6.1..."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "iceland",
+  "name": "Iceland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 713,
+  "tokensOut": 900,
+  "cost": 0.012226,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Iceland offers a compact but fascinating museum scene, primarily centered in Reykjavik. Visitors can explore Viking history, contemporary Icelandic art, and unique natural history exhibits. It is a great year-round activity, especially useful for escaping the unpredictable weather.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Reykjavik's major institutions like the National Museum of Iceland and the Reykjavik Art Museum are open year-round. You can explore Viking artifacts at the Settlement Exhibition or contemporary works. Regional museums may have shorter winter hours, but the capital's scene thrives."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "depth_why": "Museums and galleries are indoors and generally open year-round, making them independent of the season.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "National Museum of Iceland",
+    "Reykjavik Art Museum",
+    "Settlement Exhibition"
+   ]
+  },
+  "curve": [
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.6,
+   4.6,
+   4.6,
+   4.1,
+   4.1,
+   4.1,
+   4.1
+  ],
+  "base": 4,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 2,
+   "streetArt": 2,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 1,
+   "quirkyMuseums": 4,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "hokkaido",
+  "name": "Hokkaido",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 716,
+  "tokensOut": 1154,
+  "cost": 0.01528,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Hokkaido offers a unique blend of contemporary art, indigenous history, and open-air sculpture. Visitors can explore the Upopoy National Ainu Museum to learn about the region's native people, or wander through Sapporo's Moerenuma Park and Sapporo Art Park. While indoor galleries are great year-round, outdoor art is best enjoyed from late spring to early fall.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The warmer months are ideal for exploring outdoor installations at Sapporo Art Park and the massive landscape sculptures of Moerenuma Park. Indoor venues like the Hokkaido Museum of Modern Art and the Upopoy National Ainu Museum are also fully accessible and comfortable to visit."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "good",
+     "text": "Heavy snow blankets the island. While outdoor art parks like Moerenuma Park become striking winter landscapes, some installations are buried. Indoor institutions like the Hokkaido Museum of Modern Art and Abashiri Prison Museum remain excellent, cozy retreats from the cold."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "depth_why": "Grouped by snow season, as Hokkaido's notable outdoor art parks are heavily impacted by winter weather, while indoor museums remain constant.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Upopoy National Ainu Museum",
+    "Moerenuma Park",
+    "Sapporo Art Park",
+    "Hokkaido Museum of Modern Art",
+    "Abashiri Prison Museum"
+   ]
+  },
+  "curve": [
+   3.3,
+   3.3,
+   3.3,
+   3.3,
+   3.3,
+   3.8,
+   3.8,
+   3.8,
+   3.3,
+   3.3,
+   3.3,
+   3.3
+  ],
+  "base": 3,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 3,
+   "modernArt": 3,
+   "streetArt": 2,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 2,
+   "quirkyMuseums": 3,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 3
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (2) suggests ('year')."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "rioja",
+  "name": "Rioja",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 712,
+  "tokensOut": 1043,
+  "cost": 0.01394,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Rioja offers a unique blend of wine culture and art for visitors to explore. The region is home to the world-renowned Vivanco Museum of Wine Culture, which houses an impressive collection of wine-related art and artifacts. Logroño's Museo de La Rioja provides regional history and fine arts, making the area a rewarding year-round destination for cultural exploration.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Museums and galleries in Rioja are open year-round. The Vivanco Museum of Wine Culture in Briones showcases centuries of wine-related art, including classic antiquities. In Logroño, the Museo de La Rioja offers regional art and history housed in a beautiful 18th-century palace."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "depth_why": "Museums and art collections are indoor attractions with consistent year-round availability, making the experience largely independent of the season.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Vivanco Museum of Wine Culture",
+    "Museo de La Rioja",
+    "Briones",
+    "Logroño"
+   ]
+  },
+  "curve": [
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9
+  ],
+  "base": 3,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 2,
+   "modernArt": 1,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 1,
+   "quirkyMuseums": 4,
+   "historyMuseums": 2,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "lapland",
+  "name": "Finnish Lapland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 714,
+  "tokensOut": 1008,
+  "cost": 0.013524,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Finnish Lapland offers excellent museums focused on Arctic life, nature, and indigenous Sámi culture. Visitors can explore the renowned Arktikum in Rovaniemi and the Siida museum in Inari to understand the region's heritage. Contemporary northern art is also showcased at the Korundi House of Culture.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Museums like Arktikum, Siida, and Korundi are open year-round, offering deep dives into Arctic history, Sámi culture, and northern contemporary art. Indoor exhibits provide a perfect cultural retreat from the extreme winter cold or summer mosquitoes."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "Museums in Finnish Lapland are indoors and open year-round, making the experience consistent regardless of the season.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Arktikum",
+    "Siida",
+    "Korundi House of Culture"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "base": 2,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 0,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 1,
+   "famousMuseums": 0,
+   "quirkyMuseums": 3,
+   "historyMuseums": 2,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": []
+ },
+ {
+  "k": "golf",
+  "id": "st-andrews-fife",
+  "name": "St Andrews & Fife",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 705,
+  "tokensOut": 1334,
+  "cost": 0.017418,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "St Andrews is the undisputed Home of Golf, offering legendary links courses along the Fife coast. Visitors can play historic public tracks like the Old Course, or scenic modern masterpieces like Kingsbarns. The best time to play is from late spring to early autumn when days are long and the weather is mildest.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Long daylight hours allow for early morning and late evening tee times. Courses like the Old Course, New Course, and Kingsbarns are in prime condition, though booking well in advance or entering the daily ballot is essential."
+    },
+    {
+     "months": [
+      4,
+      10
+     ],
+     "level": "good",
+     "text": "Spring and early autumn offer crisp, cooler days and slightly easier access to tee times. Links courses drain well, making them highly playable, though you should pack layers for unpredictable coastal winds and rain."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Winter brings short days, cold winds, and frequent rain. Many courses require players to hit off fairway mats to protect the turf, and some facilities may have reduced hours, though green fees are significantly cheaper."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Grouping by season reflects the dramatic impact of Scottish weather and daylight hours on golf conditions.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Old Course",
+    "New Course",
+    "Kingsbarns"
+   ]
+  },
+  "curve": [
+   3.7,
+   3.7,
+   8,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   3.7,
+   3.7
+  ],
+  "base": 8,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 157 golf courses in the place's area: 142 mapped course areas, 12 courses known only as map points, 3 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 15 links course(s) (of which 9 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Gullane Golf Club, Montrose Golf Links, Dumbarnie Links, The Renaissance Club). Gives 10 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 4 venue(s) in the place's area that hosted a men's major, a Ryder Cup, a Presidents Cup or Olympic golf in 1990-2025 (venue coordinates from the Wikipedia event pages, same venue merged within about 2 km); events held there: 1990 Open Championship; 1992 Open Championship; 1999 Open Championship; 2014 Ryder Cup. Gives 10 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 39 scenic course(s): 39 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Gullane Golf Club, Montrose Golf Links, The North Berwick Golf Club. Gives 10, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 59 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Gullane Golf Club, Montrose Golf Links, Bruntsfield Links Short Hole Golf Course. Gives 10, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 25; standard = regulation courses 81; championship = 90 ha or more, or a major or cup venue 51. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: streetFood 6, scenicLandscapes 6, luxuryHotels 6 = 6.0.\nTee-time access: months (medium confidence): Old Course: a daily ballot 48 hours ahead plus an advance ballot (late August window for the next season) and guaranteed packages through authorised providers; advance slots can mean a 12-month-plus wait. Sources: top100golfcourses.com ballot guide, welcometofife.com (the St Andrews Links page itself was not retrieved).",
+   "linksGolf": 10,
+   "courseKinds": [
+    "easy",
+    "standard",
+    "championship"
+   ],
+   "golfCourses": 157,
+   "resortCourses": 10,
+   "scenicCourses": 10,
+   "teeTimeAccess": "months",
+   "thingsBeyondGolf": 6,
+   "bucketListCourses": 10,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Mar poor vs our 8.0"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "lisbon",
+  "name": "Lisbon",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 703,
+  "tokensOut": 1196,
+  "cost": 0.015758,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Lisbon coast offers fantastic golfing with ocean views, pine forests, and championship layouts just a short drive from the city center. Visitors can tee off at renowned courses in Cascais, Sintra, and the Setubal peninsula. Spring and fall provide the most comfortable weather for a round.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Spring and autumn offer ideal golfing weather with mild temperatures and sunny skies. Courses like Oitavos Dunes in Cascais and Penha Longa in Sintra are in prime condition, providing excellent playability and stunning coastal or mountain views."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer brings hot, dry weather, making early morning tee times essential to beat the heat. Coastal courses like Troia Golf offer refreshing Atlantic breezes, though fairways can get firm and busy with vacationers."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Winter is mild but brings a higher chance of rain and softer fairways. It remains a viable time to play courses like Aroeira Pines Classic, often with discounted green fees and quieter links, provided you pack a rain jacket."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    9,
+    10
+   ],
+   "depth_why": "Golf is played year-round, but weather groups the year into peak spring/fall, hot summers, and mild but rainy winters.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Oitavos Dunes",
+    "Penha Longa",
+    "Troia Golf",
+    "Aroeira Pines Classic",
+    "Cascais",
+    "Sintra",
+    "Setubal peninsula"
+   ]
+  },
+  "curve": [
+   4.5,
+   4.5,
+   6,
+   6,
+   6,
+   9,
+   9,
+   9,
+   9,
+   6,
+   4.5,
+   4.5
+  ],
+  "base": 6,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 21 golf courses in the place's area: 18 mapped course areas, 2 courses known only as map points, 1 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 4 scenic course(s): 4 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Troia Golf Course, Oitavos Dunes, Troia Golf Championship Course. Gives 9, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 9 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. PGA Aroeira 2 Golf Course, Troia Golf Course, Quinta do Peru Golf & Country Club. Gives 10, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 7; standard = regulation courses 14; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: fineDining 9, nightlife 8, museumsArt 8 = 8.3.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "courseKinds": [
+    "easy",
+    "standard"
+   ],
+   "golfCourses": 21,
+   "resortCourses": 10,
+   "scenicCourses": 9,
+   "thingsBeyondGolf": 8.3,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Best months differ: Gemini Mar, Apr, May, Sep, Oct; our curve peaks Jun, Jul, Aug, Sep."
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "scottish-highlands-skye",
+  "name": "Scottish Highlands & Isle of Skye",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 707,
+  "tokensOut": 1181,
+  "cost": 0.015586,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Scottish Highlands offer some of the world's most dramatic and historic golf courses, featuring rugged links and stunning coastal views. Visitors can play legendary tracks like Royal Dornoch or scenic gems on the Isle of Skye. The best time to play is from late spring to early fall when daylight is long and the weather is mildest.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Long daylight hours allow for evening rounds at world-class links like Royal Dornoch and Cabot Highlands. The weather is at its warmest, and courses are in prime condition, though booking well in advance is essential."
+    },
+    {
+     "months": [
+      4,
+      10
+     ],
+     "level": "good",
+     "text": "Spring and early fall offer crisp, beautiful days on courses like Nairn and Brora. You will face cooler temperatures and a higher chance of wind or rain, but tee times are easier to secure and green fees are often lower."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Winter brings short days, cold winds, and frequent rain or snow. Many courses, including the Isle of Skye Golf Club, remain open but may use winter greens or mats to protect the fairways."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Golf in the Highlands is heavily dependent on weather and daylight, making grouped seasonal blurbs the most logical approach.",
+   "flags": [],
+   "named_things": [
+    "Royal Dornoch",
+    "Cabot Highlands",
+    "Nairn",
+    "Brora",
+    "Isle of Skye Golf Club"
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   3.7,
+   3.7,
+   7,
+   4.2,
+   2.1,
+   2.1,
+   4.2,
+   3.5,
+   0,
+   0
+  ],
+  "base": 4,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 13 golf courses in the place's area: 10 mapped course areas, 3 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 1 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses (Castle Stuart Golf Links). Gives 7 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 2 scenic course(s): 2 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Castle Stuart Golf Links, Lochcarron Golf Club. Gives 8, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 7 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Fairways Loch Ness Golf Club, Inverness Golf Club, Strathpeffer Spa Golf Club. Gives 10, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 3; standard = regulation courses 7; championship = 90 ha or more, or a major or cup venue 3. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: scenicLandscapes 9, roadtrip 8, hiking 8 = 8.3.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 7,
+   "courseKinds": [
+    "easy",
+    "standard",
+    "championship"
+   ],
+   "golfCourses": 13,
+   "resortCourses": 10,
+   "scenicCourses": 8,
+   "thingsBeyondGolf": 8.3,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Jul peak vs our 2.1; Aug peak vs our 2.1"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "egypt",
+  "name": "Red Sea & Nile",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 705,
+  "tokensOut": 1361,
+  "cost": 0.017742,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Red Sea coast and Nile Valley offer a surprising array of championship golf courses set against desert mountains and azure waters. Visitors can tee off at lush resort courses in El Gouna, Soma Bay, and Makadi Bay, or play near ancient sites in Luxor. The best time to play is during the cooler winter months when the desert climate is mild.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "peak",
+     "text": "Winter brings perfect, sunny weather with temperatures in the 70s Fahrenheit. It is the ideal time to play the Gary Player-designed Cascades course in Soma Bay or the Royal Valley Golf Club in Luxor without the oppressive heat."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5,
+      10
+     ],
+     "level": "good",
+     "text": "Spring and fall offer warm but manageable temperatures for a round of golf. Early morning tee times at El Gouna Golf Club or Madinat Makadi are recommended to beat the midday sun, though occasional spring sandstorms can occur."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "poor",
+     "text": "Summer temperatures regularly exceed 100 degrees Fahrenheit, making daytime golf grueling. If you must play, book the earliest possible morning tee times at coastal courses where sea breezes provide slight relief."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2
+   ],
+   "depth_why": "Grouped by season because the extreme summer heat significantly impacts the golfing experience, while winter offers perfect conditions.",
+   "flags": [],
+   "named_things": [
+    "Cascades Golf Resort",
+    "Royal Valley Golf Club",
+    "El Gouna Golf Club",
+    "Madinat Makadi Golf Resort"
+   ]
+  },
+  "curve": [
+   6,
+   6,
+   6,
+   3,
+   3,
+   0,
+   0,
+   0,
+   3,
+   6,
+   6,
+   6
+  ],
+  "base": 3,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 1 golf courses in the place's area: 1 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 0; championship = 90 ha or more, or a major or cup venue 1. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: museumsArt 10, historyArchaeology 10, architecture 10 = 10.0.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "courseKinds": [
+    "championship"
+   ],
+   "golfCourses": 1,
+   "resortCourses": 0,
+   "scenicCourses": 0,
+   "thingsBeyondGolf": 10,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "chamonix",
+  "name": "Chamonix & the French Alps",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 707,
+  "tokensOut": 1290,
+  "cost": 0.016894,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The French Alps offer spectacular alpine golf with dramatic mountain backdrops and crisp air. Visitors can play renowned courses like the Robert Trent Jones Sr.-designed Golf de Chamonix or the prestigious Evian Resort Golf Club. The season runs from late spring to early fall, peaking in the warm summer months.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      10
+     ],
+     "level": "fair",
+     "text": "Courses begin to open in May and prepare to close in October. Weather can be unpredictable with cooler temperatures, but the mountain scenery is striking and crowds are thinner."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "The prime golfing season offers warm weather and clear views of Mont Blanc. Top courses like Golf de Chamonix and Evian Resort Golf Club are in excellent condition, making this the best time to book a tee time."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "closed",
+     "text": "Alpine golf courses are covered in snow and closed for the winter season, as the region shifts entirely to skiing and winter sports."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "depth_why": "Golf in the Alps is highly seasonal, with courses closing entirely during the snowy winter months.",
+   "flags": [],
+   "named_things": [
+    "Golf de Chamonix",
+    "Evian Resort Golf Club",
+    "Mont Blanc",
+    "Robert Trent Jones Sr."
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   0,
+   0,
+   2.5,
+   5,
+   5,
+   5,
+   5,
+   2.5,
+   0,
+   0
+  ],
+  "base": 2,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 12 golf courses in the place's area: 10 mapped course areas, 2 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 11 scenic course(s): 0 within 1 km of the coast and 11 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Golf Club de Verbier, Golf de Chamonix, Parcours des Esserts. Gives 10, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 3 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Golf Club de Verbier, Parcours des Esserts, Golf Les Gets. Gives 8, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 4; standard = regulation courses 8; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: scenicLandscapes 10, skiingSnowboarding 9, landscapePhotography 9 = 9.3.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "courseKinds": [
+    "easy",
+    "standard"
+   ],
+   "golfCourses": 12,
+   "resortCourses": 8,
+   "scenicCourses": 10,
+   "thingsBeyondGolf": 9.3,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "jordan",
+  "name": "Petra & Wadi Rum",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 705,
+  "tokensOut": 843,
+  "cost": 0.011526,
+  "parseError": null,
+  "gemini": {
+   "applicable": false,
+   "depth": "year",
+   "overview": "",
+   "blurbs": [],
+   "best_months": [],
+   "na_reason": "There are no golf courses in Petra or Wadi Rum."
+  },
+  "curve": [
+   0.8,
+   0.8,
+   4.1,
+   4.1,
+   4.1,
+   0,
+   0,
+   0,
+   1,
+   4.4,
+   4.4,
+   0.7999999999999998
+  ],
+  "base": 1,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 1 golf courses in the place's area: 1 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 1; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: historyArchaeology 10, architecture 10, stargazing 8 = 9.3.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "courseKinds": [
+    "standard"
+   ],
+   "golfCourses": 1,
+   "resortCourses": 0,
+   "scenicCourses": 0,
+   "thingsBeyondGolf": 9.3,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Gemini says N/A (There are no golf courses in Petra or Wadi Rum.); our score peaks at 4.4, so we have it applicable."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "zambia",
+  "name": "South Luangwa",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 705,
+  "tokensOut": 560,
+  "cost": 0.00813,
+  "parseError": null,
+  "gemini": {
+   "applicable": false,
+   "depth": "year",
+   "overview": "",
+   "blurbs": [],
+   "best_months": [],
+   "na_reason": "No golf courses exist in or near this national park."
+  },
+  "curve": [
+   0,
+   0,
+   0,
+   1,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   1,
+   0
+  ],
+  "base": 1,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 0 golf courses in the place's area: 0 mapped course areas, 0 courses known only as map points, 0 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 0 scenic course(s): 0 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre). Gives 0, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 0 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places). Gives 0, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 0; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: nationalParks 8, kayakingRafting 8, scenicLandscapes 7 = 7.7.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "golfCourses": 0,
+   "resortCourses": 0,
+   "scenicCourses": 0,
+   "thingsBeyondGolf": 7.7,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Gemini says N/A (No golf courses exist in or near this national park.); our score peaks at 4.0, so we have it applicable."
+   ]
+  ]
+ },
+ {
+  "k": "golf",
+  "id": "nicaragua",
+  "name": "Nicaragua",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 705,
+  "tokensOut": 924,
+  "cost": 0.012498,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Nicaragua offers a small but scenic selection of golf courses, highlighted by coastal resort layouts and a classic country club in the capital. Golfers can enjoy ocean views and tropical surroundings, with the best playing conditions occurring during the sunny dry season from December to April.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "The dry season brings sunny skies and warm breezes, making it the perfect time to play the oceanfront holes at Guacalito de la Isla or the coastal layout at Gran Pacífica without worrying about rain."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "level": "fair",
+     "text": "The green season brings lush fairways but frequent afternoon downpours. Morning tee times at Nejapa Golf & Country Club or the coastal resorts are highly recommended to beat the heavy rain and humidity."
+    }
+   ],
+   "best_months": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "depth_why": "Nicaragua's tropical climate is divided into a distinct dry season and a wet season, which dictates the golfing conditions.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Guacalito de la Isla",
+    "Gran Pacífica",
+    "Nejapa Golf & Country Club"
+   ]
+  },
+  "curve": [
+   3.7,
+   3.7,
+   3.7,
+   3.7,
+   0.8999999999999999,
+   0.9,
+   0.9,
+   0.9,
+   0,
+   0,
+   3.7,
+   3.7
+  ],
+  "base": 1,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "evidence": "Golf courses: 5 golf courses in the place's area: 0 mapped course areas, 2 courses known only as map points, 3 more from OpenStreetMap; driving ranges, putting greens, par-3 and pitch-and-putt, indoor and park golf removed; entries within about 1 km of each other merged. Sources: Overture Maps land use and places, OpenStreetMap.\nLinks golf: 0 links course(s) (of which 0 on Wikipedia's list of links courses): within 1 km of the coast (Natural Earth 10 m coastline) and either named 'Links' or on Wikipedia's List of links golf courses. Gives 0 (none 0, 1 course 7, 2-3 gives 8, 4-6 gives 9, 7 or more gives 10; one course on Wikipedia's links list gives at least 9, because one great course can be the reason for the trip).\nBucket-list courses: 0 venue(s) in the place's area that hosted a men's major (Open, U.S. Open, PGA, Masters), a Ryder Cup, a Presidents Cup or Olympic golf since 1990 (venue coordinates from the Wikipedia event pages, 1990-2025, same venue merged within about 2 km). Gives 0 (none 0, one venue 9, two or more 10: a single championship venue can be the reason for the trip). Earlier venues and women's events are not counted.\nScenic courses: 2 scenic course(s): 2 within 1 km of the coast and 0 on land at 1,000 m or higher (Open-Meteo elevation at the course centre), e.g. Marsella Valley Disk Golf, Milagro Golf Club. Gives 8, same scale as links. Courses with a big elevation drop but a lower start are not counted.\nResort courses: 1 full-size course(s) with a hotel, resort or lodge within 1 km (Overture Maps places), e.g. Marsella Valley Disk Golf. Gives 7, same scale as links.\nCourse kinds: Course kinds present: easy = 9-hole or short courses (under 40 ha or fewer than 18 greens) 0; standard = regulation courses 5; championship = 90 ha or more, or a major or cup venue 0. Course areas from Overture Maps land use; where the area is not mapped, the number of mapped greens is used.\nThings beyond golf: Average of the three highest other-interest scores for the place: surfing 8, adventureSports 8, sunbathing 7 = 7.7.\nTee-time access: Left blank: the marquee courses' booking rules were not researched for this place (no dataset exists; it needs the clubs' own booking pages).",
+   "linksGolf": 0,
+   "courseKinds": [
+    "standard"
+   ],
+   "golfCourses": 5,
+   "resortCourses": 7,
+   "scenicCourses": 8,
+   "thingsBeyondGolf": 7.7,
+   "bucketListCourses": 0,
+   "drawSourceChecked": false
+  },
+  "checks": [
+   [
+    "flag",
+    "Month level two bands from our curve (relative to its own peak): Nov fair vs our 3.7"
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (8) suggests ('months')."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "london",
+  "name": "London",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 713,
+  "tokensOut": 354,
+  "cost": 0.0014185,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "London is a global titan for art and history, housing everything from the Rosetta Stone to contemporary masterpieces. Visitors can explore massive national collections like the British Museum and Tate Modern, which are free to enter. While the city is a year-round cultural hub, major temporary exhibitions often launch in spring and autumn.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "London's world-class museums, including the National Gallery and the Victoria and Albert Museum, are open year-round and largely indoors, making them perfect regardless of weather. Major blockbuster exhibitions typically debut in the spring and fall, while the Frieze Art Fair arrives in October."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "London's major museums are permanent, indoor fixtures that offer a consistent, high-quality experience throughout the entire year.",
+   "flags": [],
+   "named_things": [
+    "British Museum",
+    "Tate Modern",
+    "National Gallery",
+    "Victoria and Albert Museum",
+    "Frieze Art Fair",
+    "Rosetta Stone"
+   ]
+  },
+  "curve": [
+   7.8,
+   7.8,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   7.8,
+   7.8
+  ],
+  "base": 10,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 9,
+   "modernArt": 9,
+   "streetArt": 8,
+   "timedEntry": "widely",
+   "daysOfMuseums": 10,
+   "famousMuseums": 10,
+   "quirkyMuseums": 10,
+   "historyMuseums": 10,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 10
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "chicago",
+  "name": "Chicago",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 713,
+  "tokensOut": 348,
+  "cost": 0.0014005,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Chicago is a world-class art destination anchored by the Art Institute of Chicago and the Museum of Contemporary Art. Visitors can explore massive collections of Impressionist masterpieces, cutting-edge modern installations, and specialized cultural museums across the city. While indoor galleries are year-round, summer brings vibrant outdoor art festivals.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Chicago's museums are premier indoor attractions regardless of the weather. The Art Institute of Chicago and the Field Museum offer vast permanent collections, while the Museum of Contemporary Art hosts rotating exhibitions. Summer adds the 57th Street Art Fair and EXPO CHICAGO in the spring."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "The city's major museums are world-class indoor institutions that remain open and consistent in quality throughout the entire year.",
+   "flags": [],
+   "named_things": [
+    "Art Institute of Chicago",
+    "Museum of Contemporary Art",
+    "Field Museum",
+    "57th Street Art Fair",
+    "EXPO CHICAGO"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
+  ],
+  "base": 9,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 9,
+   "modernArt": 7,
+   "streetArt": 8,
+   "timedEntry": "widely",
+   "daysOfMuseums": 8,
+   "famousMuseums": 7,
+   "quirkyMuseums": 5,
+   "historyMuseums": 8,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 6
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "singapore",
+  "name": "Singapore",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 714,
+  "tokensOut": 406,
+  "cost": 0.001575,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Singapore is a premier Southeast Asian art hub, blending colonial-era heritage with cutting-edge contemporary spaces. Visitors can explore world-class collections of Southeast Asian art at the National Gallery or immersive digital installations at the ArtScience Museum. While museums are excellent year-round, January is the standout month due to a major city-wide art festival.",
+   "blurbs": [
+    {
+     "months": [
+      1
+     ],
+     "level": "peak",
+     "text": "January is the peak for art lovers during Singapore Art Week. This city-wide celebration features the S.E.A. Focus fair, light installations at Light to Night, and numerous pop-up exhibitions and gallery openings that make the city feel like a living gallery."
+    },
+    {
+     "months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "The rest of the year offers consistent access to major institutions like the National Museum of Singapore and the Singapore Art Museum (SAM). These climate-controlled spaces provide a perfect escape from the tropical heat, featuring rotating international exhibitions and permanent collections."
+    }
+   ],
+   "best_months": [
+    1
+   ],
+   "depth_why": "Singapore's museums are high-quality year-round, but January is elevated by the major Singapore Art Week festival.",
+   "flags": [],
+   "named_things": [
+    "National Gallery Singapore",
+    "ArtScience Museum",
+    "Singapore Art Week",
+    "S.E.A. Focus",
+    "Light to Night",
+    "National Museum of Singapore",
+    "Singapore Art Museum"
+   ]
+  },
+  "curve": [
+   5,
+   8,
+   8,
+   8,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   5,
+   5
+  ],
+  "base": 7,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 6,
+   "modernArt": 6,
+   "streetArt": 5,
+   "timedEntry": "some",
+   "daysOfMuseums": 5,
+   "famousMuseums": 5,
+   "quirkyMuseums": 5,
+   "historyMuseums": 6,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 4
+  },
+  "checks": [
+   [
+    "flag",
+    "Best months differ: Gemini Jan; our curve peaks Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct."
+   ],
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (2) suggests ('year')."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "rivieramaya",
+  "name": "Riviera Maya",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 714,
+  "tokensOut": 369,
+  "cost": 0.001464,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "While famous for beaches, the Riviera Maya offers unique cultural spaces like the 3D Museum of Wonders and the Museo de la Prehistoria. Visitors can explore contemporary Mexican art in Playa del Carmen galleries or visit the MUSA underwater museum via glass-bottom boat. It is a year-round destination for indoor and submerged art.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "The region's museums, including the Museo Maya de Cancun and the 3D Museum of Wonders, are climate-controlled and open year-round. For a unique experience, the MUSA underwater sculptures near Isla Mujeres are accessible by boat or diving regardless of the season, provided the seas are calm."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "The museums and galleries in this region are primarily indoor or permanent underwater installations that do not have a significant seasonal variation.",
+   "flags": [],
+   "named_things": [
+    "3D Museum of Wonders",
+    "Museo de la Prehistoria",
+    "Playa del Carmen",
+    "MUSA",
+    "Museo Maya de Cancun",
+    "Isla Mujeres"
+   ]
+  },
+  "curve": [
+   6.1,
+   6.1,
+   6.1,
+   6.1,
+   4.4,
+   2.7,
+   2.7,
+   2.7,
+   2.7,
+   5,
+   6.1,
+   6.1
+  ],
+  "base": 5,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 1,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 1,
+   "famousMuseums": 0,
+   "quirkyMuseums": 2,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 1
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "iceland",
+  "name": "Iceland",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 713,
+  "tokensOut": 508,
+  "cost": 0.0018805,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's art scene centers on Reykjavik, where a high density of galleries and museums showcase everything from ancient sagas to cutting-edge contemporary works. Visitors can explore the National Museum's historical treasures or the Reykjavik Art Museum's three distinct locations. While museums are open year-round, the winter months bring indoor-focused festivals that highlight the country's creative energy.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Winter is prime time for indoor culture. The Winter Lights Festival in February illuminates the capital with art installations, while the long nights make cozy gallery-hopping in Reykjavik especially appealing. Major institutions like the National Gallery of Iceland offer a warm refuge."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5,
+      9
+     ],
+     "level": "good",
+     "text": "Spring and fall offer a balanced experience with standard museum hours and fewer crowds. The Reykjavik Arts Festival, held biennially in late spring, is a major draw, featuring a mix of local and international performances and visual arts across the city's venues."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer brings extended daylight for exploring outdoor sculpture parks like the Einar Jonsson Museum garden. While most tourists head to the countryside, the city's museums remain vibrant, though popular spots like the Perlan's exhibitions can become quite busy with peak-season crowds."
+    }
+   ],
+   "best_months": [
+    2,
+    5,
+    6,
+    10,
+    11
+   ],
+   "depth_why": "I chose groups because while museums are open year-round, specific festivals in winter and spring enhance the experience beyond the standard offerings.",
+   "flags": [],
+   "named_things": [
+    "National Museum of Iceland",
+    "Reykjavik Art Museum",
+    "National Gallery of Iceland",
+    "Winter Lights Festival",
+    "Reykjavik Arts Festival",
+    "Einar Jonsson Museum",
+    "Perlan"
+   ]
+  },
+  "curve": [
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.1,
+   4.6,
+   4.6,
+   4.6,
+   4.1,
+   4.1,
+   4.1,
+   4.1
+  ],
+  "base": 4,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 2,
+   "streetArt": 2,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 1,
+   "quirkyMuseums": 4,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": [
+   [
+    "note",
+    "Depth 'groups', one step from what the seasonal score (2) suggests ('year')."
+   ]
+  ]
+ },
+ {
+  "k": "museumsArt",
+  "id": "hokkaido",
+  "name": "Hokkaido",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 716,
+  "tokensOut": 360,
+  "cost": 0.001438,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Hokkaido offers a diverse cultural landscape, from the contemporary installations at Moerenuma Park to the historical exhibits of the Upopoy National Ainu Museum. Visitors can explore Sapporo's urban galleries or the scenic outdoor sculpture parks that dot the island's interior. While indoor museums are year-round, the outdoor art parks are most striking when the landscape shifts from lush green to deep snow.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Hokkaido's museums are reliable year-round. In Sapporo, the Hokkaido Museum of Modern Art and the Beer Museum offer indoor escapes. The Upopoy National Ainu Museum in Shiraoi provides essential cultural context, while Moerenuma Park's geometric landscapes are stunning in both summer and snow."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "depth_why": "The primary museum collections and indoor galleries are consistent throughout the year, though outdoor sculpture parks are more accessible in warmer months.",
+   "flags": [],
+   "named_things": [
+    "Moerenuma Park",
+    "Upopoy National Ainu Museum",
+    "Hokkaido Museum of Modern Art",
+    "Sapporo Beer Museum",
+    "Shiraoi"
+   ]
+  },
+  "curve": [
+   3.3,
+   3.3,
+   3.3,
+   3.3,
+   3.3,
+   3.8,
+   3.8,
+   3.8,
+   3.3,
+   3.3,
+   3.3,
+   3.3
+  ],
+  "base": 3,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 3,
+   "modernArt": 3,
+   "streetArt": 2,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 2,
+   "quirkyMuseums": 3,
+   "historyMuseums": 3,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 3
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "rioja",
+  "name": "Rioja",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 712,
+  "tokensOut": 347,
+  "cost": 0.001397,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "While famous for wine, Rioja offers a sophisticated art scene centered in Logro\u0011o and Haro. Visitors can explore contemporary works at the Museo Wurth La Rioja or delve into regional history and fine arts at the Museo de La Rioja. Several avant-garde wineries also double as architectural landmarks and private galleries.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Museums in Rioja remain open year-round, offering a reliable indoor alternative to vineyard tours. The Museo Wurth La Rioja showcases world-class contemporary art, while the Vivanco Museum of Wine Culture provides an artistic look at viticulture through the ages in a climate-controlled setting."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "depth_why": "The museum and art offerings in Rioja are primarily indoor experiences that do not fluctuate significantly in quality or availability throughout the year.",
+   "flags": [],
+   "named_things": [
+    "Logro\u0011o",
+    "Haro",
+    "Museo Wurth La Rioja",
+    "Museo de La Rioja",
+    "Vivanco Museum of Wine Culture"
+   ]
+  },
+  "curve": [
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9,
+   2.9
+  ],
+  "base": 3,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 2,
+   "modernArt": 1,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 2,
+   "famousMuseums": 1,
+   "quirkyMuseums": 4,
+   "historyMuseums": 2,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": []
+ },
+ {
+  "k": "museumsArt",
+  "id": "lapland",
+  "name": "Finnish Lapland",
+  "model": "gemini-3-flash-preview",
+  "tokensIn": 714,
+  "tokensOut": 351,
+  "cost": 0.00141,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Finnish Lapland offers a unique cultural landscape centered on Sami heritage and Arctic history. Visitors can explore world-class institutions like Arktikum and Siida, which blend modern architecture with deep insights into northern life and indigenous art. While the region is famous for nature, its museums provide essential context for the Arctic environment.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Museums in Lapland are excellent year-round indoor retreats. In Rovaniemi, Arktikum and Korundi House of Culture showcase Arctic science and contemporary Finnish art. In Inari, the Siida Museum is the premier site for Sami culture, featuring indoor galleries and an extensive open-air section."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "depth_why": "The primary museums and galleries in Finnish Lapland are permanent indoor institutions with consistent year-round programming.",
+   "flags": [],
+   "named_things": [
+    "Arktikum",
+    "Siida Museum",
+    "Korundi House of Culture",
+    "Rovaniemi",
+    "Inari"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "base": 2,
+  "approved": {
+   "overview": null,
+   "monthly": null
+  },
+  "columns": {
+   "fineArt": 1,
+   "modernArt": 0,
+   "streetArt": 1,
+   "timedEntry": "rarely",
+   "daysOfMuseums": 1,
+   "famousMuseums": 0,
+   "quirkyMuseums": 3,
+   "historyMuseums": 2,
+   "drawSourceChecked": false,
+   "biggestMuseumHours": 2
+  },
+  "checks": []
+ }
+]
