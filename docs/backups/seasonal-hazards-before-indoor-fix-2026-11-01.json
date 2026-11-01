@@ -1,0 +1,82 @@
+{
+ "chiang-mai": [
+  {
+   "label": "Burning season (crop & forest smoke)",
+   "months": [
+    2,
+    3,
+    4
+   ],
+   "category": "airQuality",
+   "severity": "severe",
+   "affectedSliders": [
+    "scenicLandscapes",
+    "architecture",
+    "stargazing",
+    "adventureSports"
+   ]
+  }
+ ],
+ "beijing": [
+  {
+   "label": "Winter smog season",
+   "months": [
+    11,
+    12,
+    1,
+    2
+   ],
+   "category": "airQuality",
+   "severity": "severe",
+   "affectedSliders": [
+    "architecture",
+    "museumsArt",
+    "stargazing"
+   ]
+  },
+  {
+   "label": "Spring dust storms",
+   "months": [
+    3,
+    4
+   ],
+   "category": "airQuality",
+   "severity": "moderate",
+   "affectedSliders": [
+    "architecture",
+    "stargazing"
+   ]
+  }
+ ],
+ "rajasthan-golden-triangle": [
+  {
+   "label": "Peak smog season (Delhi/Agra)",
+   "months": [
+    11,
+    12,
+    1
+   ],
+   "category": "airQuality",
+   "severity": "severe",
+   "affectedSliders": [
+    "architecture",
+    "museumsArt",
+    "stargazing"
+   ]
+  },
+  {
+   "label": "Elevated smog",
+   "months": [
+    10,
+    2
+   ],
+   "category": "airQuality",
+   "severity": "mild",
+   "affectedSliders": [
+    "architecture",
+    "museumsArt",
+    "stargazing"
+   ]
+  }
+ ]
+}

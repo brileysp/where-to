@@ -45,6 +45,7 @@ tfoot td{position:sticky;bottom:0;background:var(--head);font-weight:600;font-si
 tfoot td.name{z-index:4;background:var(--head)}
 .notes{margin:16px 0 0;color:var(--muted);font-size:13px;max-width:100ch}
 .notes li{margin:0 0 4px}
+td.clk{cursor:pointer}td.clk:hover{background:var(--head)}
 </style>
 <div class="wrap">
 <h1>Interest completeness</h1>
@@ -55,7 +56,7 @@ tfoot td.name{z-index:4;background:var(--head)}
 </div>
 <div class="tw"><table id="t"></table></div>
 <ul class="notes">
-<li><b>How "done" is decided.</b> Scores: every applicable place has one. Month curves: 90% of places have a hand-authored curve. Columns filled: 90% of places have a quarter or more of the cells filled, or are marked source-checked. Source-checked: 90% of places marked. Text written: 90% of places have a Gemini overview and months. Fact-checked: every risky sentence checked. Expert review: at least one review by a person (Claude's own notes do not count).</li>
+<li><b>How "done" is decided.</b> Scores: every applicable place has one. Month curves: 90% of places have a hand-authored curve. Columns filled: 90% of places have a quarter or more of the cells filled, or are marked source-checked. Source-checked: 90% of places marked. Text written: 90% of places have a Gemini overview and months. Fact-checked: a dated fact-check note with its sources on the interest page, or every risky sentence checked. Expert review: at least one review by a person (Claude's own notes do not count). <b>Riley reviewed?</b> and the two <b>Rank check</b> columns are your own marks, not computed: click a cell to cycle not yet, partly, done. They are saved for everyone who opens the page. <b>Rank check: similar places</b> means the scores were ranked within kinds of places (for example fine dining among cities) and any that felt high or low were adjusted; <b>all places</b> means the peak scores were ranked across every place for the interest. Both are marked done for the seven interests Gemini wrote before 31 October, as you told me; the rest are blank until the check is done.</li>
 <li><b>Pass finished</b> is bookkeeping: a pass is closed by hand once its run is done. Seventeen old passes were closed on 28 October after checking that no staged text was newer than the live text, so nothing was waiting to be applied.</li>
 <li><b>Answers mapped</b> shows partial when some questions are deliberately left unmapped (no data to read), so a full tick is not always the goal.</li>
 <li>Interests with no columns yet (Landscape Photography, National Parks) show their chips and questions only. Road-Tripping (not an interest, just a way to see a place) and three internal sliders (Family Fun, Low-Season Deals, Avoiding Crowds) are left out.</li>
@@ -64,6 +65,18 @@ tfoot td.name{z-index:4;background:var(--head)}
 <script>
 const DATA=__DATA__;
 const ASOF="__ASOF__";
+const DEF={riley:{hiking:'done',birding:'done',wildlifeViewing:'done',whaleWatching:'done',diving:'done',surfing:'done',safari:'done',museumsArt:'part',architecture:'part'},
+ rankType:{hiking:'done',birding:'done',wildlifeViewing:'done',whaleWatching:'done',diving:'done',surfing:'done',safari:'done'},
+ rankAll:{hiking:'done',birding:'done',wildlifeViewing:'done',whaleWatching:'done',diving:'done',surfing:'done',safari:'done'}};
+const MARK={}; Object.keys(DEF).forEach(kind=>Object.keys(DEF[kind]).forEach(k=>{MARK[kind+':'+k]={state:DEF[kind][k],at:'2026-10-31'};}));
+let revCol=null;
+function markRes(kind,r,doneWord,partWord){
+  if(kind==='riley'&&!(r.gemini>0)) return {t:'na'};
+  const v=MARK[kind+':'+r.key]; const when=v&&v.at?' on '+v.at.slice(0,10):'';
+  if(v&&v.state==='done') return {t:'done',tip:'You marked this '+doneWord+when+'. Click to change.'};
+  if(v&&v.state==='part') return {t:'part',p:0.5,txt:'Partly',tip:'You marked this '+partWord+when+'. Click to change.'};
+  return {t:'none',tip:'Not done yet. Click to mark it partly or fully done.'};
+}
 const STEPS=[
  {g:'Scores and scope',k:'scores',l:'Scores set',f:r=>frac(r.scored,r.applicable,0.95,'places with a score')},
  {g:'Scores and scope',k:'curves',l:'Month curves authored',f:r=>frac(r.curve,r.applicable,0.9,'places with a hand-authored curve')},
@@ -77,7 +90,10 @@ const STEPS=[
  {g:'Chips and questions',k:'qM',l:'Answers mapped to columns',f:r=>r.qs?frac(r.qsMapped,r.qs,1,'questions mapped to columns (some are left unmapped on purpose)'):{t:'none',tip:'No questions'}},
  {g:'Gemini text',k:'text',l:'Text written',f:r=>frac(r.text,r.applicable,0.9,'places with a Gemini overview')},
  {g:'Gemini text',k:'pass',l:'Pass finished',f:r=>r.passes?(r.passesFinished===r.passes?{t:'done',tip:r.passes+' passes, all finished'}:{t:'part',p:r.passesFinished/r.passes,tip:r.passesFinished+' of '+r.passes+' passes finished (one still open)'}):{t:'none',tip:'No Gemini pass recorded'}},
- {g:'Gemini text',k:'fact',l:'Fact-checked',f:r=>r.fcTotal?(r.fcUnchecked===0&&r.fcWrong===0?{t:'done',tip:r.fcTotal+' risky sentences, all checked'}:{t:'part',p:r.fcOk/r.fcTotal,tip:r.fcOk+' of '+r.fcTotal+' risky sentences checked'+(r.fcWrong?', '+r.fcWrong+' marked wrong':'')}):{t:'none',tip:'No fact-checks recorded'}},
+ {g:'Gemini text',k:'fact',l:'Fact-checked',f:r=>r.factNoteOn?{t:'done',tip:'Fact check done '+r.factNoteOn+' (dated note with sources on the interest page)'}:r.srcChecked&&r.srcChecked>=0.95*r.gemini?{t:'done',tip:r.srcChecked+' places source-checked one by one'}:r.srcChecked&&r.srcChecked>=r.fcOk?{t:'part',p:Math.min(1,r.srcChecked/Math.max(1,r.gemini)),tip:r.srcChecked+' of '+r.gemini+' places source-checked one by one'}:r.fcTotal?(r.fcUnchecked===0&&r.fcWrong===0?{t:'done',tip:r.fcTotal+' risky sentences, all checked'}:{t:'part',p:r.fcOk/r.fcTotal,tip:r.fcOk+' of '+r.fcTotal+' risky sentences checked'+(r.fcWrong?', '+r.fcWrong+' marked wrong':'')}):{t:'none',tip:'No fact-checks recorded'}},
+ {g:'Review',k:'riley',l:'Riley reviewed?',kind:'riley',onlyGemini:true,f:r=>markRes('riley',r,'reviewed','partly reviewed')},
+ {g:'Review',k:'rankType',l:'Rank check: similar places',kind:'rankType',f:r=>markRes('rankType',r,'ranked within similar types of places (for example fine dining among cities) and checked','partly ranked within types')},
+ {g:'Review',k:'rankAll',l:'Rank check: all places',kind:'rankAll',f:r=>markRes('rankAll',r,'peak scores ranked across all places and checked','partly ranked across all places')},
  {g:'Review',k:'expert',l:'Expert review',f:r=>r.humanNames>0?{t:'done',tip:r.humanNames+' reviewer(s) who are people; '+r.reviewsAi+' AI note(s) not counted'}:{t:'none',tip:'No review by a person yet ('+r.reviewsAi+' AI note(s) not counted)'}},
 ];
 function frac(n,d,need,what){
@@ -85,12 +101,13 @@ function frac(n,d,need,what){
   const p=n/d, tip=n+' of '+d+' '+what;
   return p>=need?{t:'done',tip}:(n>0?{t:'part',p,tip}:{t:'none',tip});
 }
-DATA.forEach(r=>{
+function calc(){ DATA.forEach(r=>{
   r.res=STEPS.map(s=>s.f(r));
   const used=r.res.filter(x=>x.t!=='na');
   r.score=used.reduce((a,x)=>a+(x.t==='done'?1:x.t==='part'?x.p*0.999:0),0)/used.length;
   r.doneN=r.res.filter(x=>x.t==='done').length; r.usedN=used.length;
-});
+}); }
+calc();
 const root=document.getElementById('t'); document.getElementById('asof').textContent=ASOF;
 function render(mode){
   const rows=[...DATA];
@@ -102,13 +119,14 @@ function render(mode){
   rows.forEach(r=>{
     h+=`<tr><td class="name"><div class="l">${r.icon} ${r.label}</div><div class="m">${r.applicable} places${r.na?` · ${r.na} N/A`:''}</div></td>`;
     h+=`<td class="sc"><div class="pb" title="${r.doneN} of ${r.usedN} steps fully done"><i><b style="width:${Math.round(r.score*100)}%"></b></i><span>${Math.round(r.score*100)}%</span></div></td>`;
-    r.res.forEach(x=>{
+    r.res.forEach((x,si)=>{
       let c;
       if(x.t==='done') c='<span class="ck">✓</span>';
-      else if(x.t==='part') c=`<span class="pt">${Math.round(x.p*100)}%</span>`;
+      else if(x.t==='part') c=`<span class="pt">${x.txt||Math.round(x.p*100)+'%'}</span>`;
       else if(x.t==='na') c='<span class="na">n/a</span>';
       else c='<span class="no">·</span>';
-      h+=`<td class="c" title="${(x.tip||'').replace(/"/g,'&quot;')}">${c}</td>`;
+      const clk=!!STEPS[si].kind&&!(STEPS[si].onlyGemini&&!(r.gemini>0));
+      h+=`<td class="c${clk?' clk':''}"${clk?` data-key="${r.key}" data-kind="${STEPS[si].kind}"`:''} title="${(x.tip||'').replace(/"/g,'&quot;')}">${c}</td>`;
     });
     h+=`<td class="c todo" title="${r.needsYou} waiting on you">${r.todosOpen?`${r.todosOpen}${r.needsYou?`<span class="sub"><b>${r.needsYou}</b> need you</span>`:''}`:'<span class="no">·</span>'}</td></tr>`;
   });
@@ -116,5 +134,17 @@ function render(mode){
   root.innerHTML=h;
 }
 document.querySelectorAll('.sort button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.sort button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render(b.dataset.s);}));
+let curMode='done';
+document.querySelectorAll('.sort button').forEach(b=>b.addEventListener('click',()=>{curMode=b.dataset.s;}));
+document.getElementById('t').addEventListener('click',ev=>{
+  const td=ev.target.closest('td.clk'); if(!td) return; const id=td.dataset.kind+':'+td.dataset.key;
+  const cur=(MARK[id]&&MARK[id].state)||''; const next=cur===''?'part':cur==='part'?'done':'';
+  MARK[id]={state:next,at:new Date().toISOString()}; calc(); render(curMode);
+  if(revCol) revCol.doc(id.replace(':','__')).set(MARK[id]).catch(()=>{});
+});
 render('done');
+(async()=>{ let db=null; try{db=await claude.use('db');}catch(e){}
+  if(!db) return; revCol=db.collection('riley_review');
+  revCol.onSnapshot(sn=>{ sn.docs.forEach(d=>{MARK[d.id.replace('__',':')]=d.data();}); calc(); render(curMode); },()=>{});
+})();
 </script>

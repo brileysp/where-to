@@ -1,5 +1,5 @@
 <!--
-  version: authoring-scores/v1 (31 Oct 2026). Appended to the family directive only when a run asks for scores (--scores): Gemini's own month scores are a second opinion, compared with ours, never applied automatically.
+  version: authoring-scores/v2 (31 Oct 2026, after the Food test samples). Appended to the family directive only when a run asks for scores (--scores): Gemini's own month scores are a second opinion, compared with ours, never applied automatically.
   Scale taken from the Diving directive that produced the approved text. Rounding rule from the owner (3 and 11 Oct 2026): scores must not pile up on whole numbers and .5s.
 -->
 ## Month scores
@@ -9,3 +9,6 @@ Also return monthly_scores: twelve numbers, January to December, from 0.0 to 10.
 - A month's score follows its text and level word. Months that are genuinely the same get the same score.
 - Use the full range of tenths. Do not round to whole numbers or halves: 6.3 and 6.8 are as normal as 6.0 or 6.5, and two months should not share a score unless they are truly identical. Never score two neighboring months the same without a reason.
 - Score the experience, not the weather outside. For an interest that happens indoors or all year (museums, architecture, restaurants, shopping, spas and the like), heat, cold and crowds do not make a month worse; only a real change in access does (a closure, reduced hours, a season when a site is shut). Such an interest should be close to flat across the year unless something real changes. Only outdoor and weather-driven interests swing with the seasons.
+- If nothing changes through the year, a flat set of twelve identical scores is correct, but pick a value that does not end in .0 or .5 (7.6, not 7.5).
+- Score a place's honest standing for this interest, not its best single venue. A place that is not known for it, or known only for plain versions of it, scores in the low or modest range even if a few good places exist.
+- Where the experience is mostly outdoors (open-air markets and stalls, terraces, vineyard and brewery visits), weather and the produce season do matter even when everything stays open: in temperate climates, cold and rainy months mean fewer vendors, fewer visitors and thinner produce, so those months score lower.

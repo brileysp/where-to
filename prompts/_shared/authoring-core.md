@@ -1,5 +1,5 @@
 <!--
-  version: authoring-core/v1 (31 Oct 2026). Shared by every family directive in the family authoring plan (artifact "Gemini Authoring Plan", approved 31 Oct 2026).
+  version: authoring-core/v2 (31 Oct 2026, after the owner's comments on the Food test samples: no 'year-round' filler, short month blurbs, no 'offers', no contrast framings, no restaurant names). Shared by every family directive in the family authoring plan (artifact "Gemini Authoring Plan", approved 31 Oct 2026).
   Built from voice-rules.md, the Diving directive that produced the approved text, and the two pilots: the pilot found the units rule missing and promotional words creeping in.
   Update here, not in each family file.
 -->
@@ -11,7 +11,7 @@ Write only as many month blurbs as this interest really needs in this place.
 - If the time of year barely changes what a visitor can do or enjoy, write a single blurb for the whole year (depth "year"), and add a month blurb only where something real changes: a closure season, a festival that takes over the place, heat or cold that changes how visitors spend their time.
 - If the seasons change things in clear stages, write blurbs for groups of months (depth "groups").
 - If each month is genuinely different, cover every month with its own blurb (depth "months").
-Never write a different blurb for months that are the same in reality: cover them together. Say in one line which depth you chose and why (depth_why).
+Never write a different blurb for months that are the same in reality: cover them together. When a month blurb is needed only because a little changes, keep it to one or two short sentences. Say in one line which depth you chose and why (depth_why).
 
 ## What to write
 - overview: two or three sentences, at most 450 characters. What makes this place worth it for this interest, what a visitor will actually see or do, and when it is best. Every sentence tells the reader something new: mention each site, dish or fact once.
@@ -20,13 +20,17 @@ Never write a different blurb for months that are the same in reality: cover the
 - named_things: every specific named place, building, route, dish, venue, event or species your text relies on, so they can be checked.
 - flags: anything you are not sure is accurate. Say so here rather than asserting it.
 - confidence: high, medium or low, for how well you know this place for this interest.
+- Final check before you answer: search your own text for "year-round", "all year", "throughout the year", "every season", "all seasons", "consistent", "consistently", "regardless of" and "the same". If any of them says that something is open, running or unchanged across the seasons, delete that sentence or replace it with a concrete fact. A text that ends on a sentence about the year being even is wrong.
 
 ## Rules
 - Write the way a knowledgeable friend would describe the place to someone deciding whether to go: plain, specific, honest. Not a specialist, and no unexplained jargon.
 - Every claim must be real and specific. Never invent or pattern-match a fact; never name a building, dish or venue unless you are sure it exists. State real odds honestly and never oversell something that is rare or hard to experience.
 - No promotional language. Do not use words such as boasts, world-class, unparalleled, stunning, incredible, spectacular, breathtaking, paradise, unforgettable, legendary, teeming, thriving, must-see, hidden gem or bucket-list.
+- Never say that something is open, running or available all year, or that the experience is the same in every season. Readers assume it. Say only what is closed, seasonal or reduced. When nothing changes through the year, the single blurb carries a concrete detail instead (a dish, a district, a market day, a season of the produce).
+- Do not say that a town or place "offers" something. Say it specializes in it, is known for it, is the home of it, or that it is a popular X in the region. Vary the verbs.
+- Avoid contrast framings such as "evolved far beyond", "more than just", "not just" and "goes beyond". Say plainly what is there. Do not say what a cuisine, craft or tradition "grew from" unless you are certain.
 - Do not compare this place with other named destinations. Comparing its own seasons with each other is fine.
-- Name no tour companies, operators or hotels. A museum, market, church or restaurant is named only when it is the reason to go and you are sure of it.
+- Name no tour companies, operators or hotels. A museum, market or church is named only when it is the reason to go and you are sure of it. Do not name individual restaurants, cafés, bars, shops or chefs unless the interest's own scope says you may.
 - Say nothing about politics, security or environmental crises.
 - US units and spelling only: miles and feet, degrees Fahrenheit, American spelling. Never kilometers, meters, degrees Celsius or British spellings (color, center, neighbor).
 - Never write "for this interest" or "this interest" in the text. Name the thing itself (museums, buildings, restaurants). Say "The best time is...", not "The best time for this interest is...".
