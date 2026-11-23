@@ -4,6 +4,7 @@ import { drizzle as drizzlePostgres } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import * as schema from './schema';
 import { throttleClient } from './throttle';
+import { withPlaceSnapshot } from './script-place-snapshot';
 
 /**
  * When DATABASE_URL is set (Supabase), use real Postgres. Otherwise fall
@@ -42,5 +43,5 @@ function pgliteClient() {
 }
 
 export const db = databaseUrl
-  ? drizzlePostgres(pgThrottled(), { schema }) // throttled: see throttle.ts (the pooler hangs on bursts)
+  ? withPlaceSnapshot(drizzlePostgres(pgThrottled(), { schema })) // throttled: see throttle.ts (the pooler hangs on bursts); withPlaceSnapshot only acts in scripts that set PLACE_ROWS_SNAPSHOT
   : drizzlePglite(pgliteClient(), { schema });

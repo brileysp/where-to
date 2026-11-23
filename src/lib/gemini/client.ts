@@ -279,3 +279,86 @@ export async function generateLabelled(prompt: string, model: string = MODEL, th
   const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
   return { json: JSON.parse(response.text ?? '{}'), tokensIn, tokensOut, model };
 }
+
+/**
+ * The lean authoring pilot (31 Oct 2026, docs: artifact "Gemini Authoring Plan"): the model chooses how many month blurbs the interest needs.
+ * Returns the parsed JSON as-is (no Zod); the pilot script checks it. Capped on thinking and on answer length like every call.
+ */
+const RESPONSE_SCHEMA_LEAN = {
+  type: Type.OBJECT,
+  properties: {
+    applicable: { type: Type.BOOLEAN },
+    na_reason: { type: Type.STRING },
+    depth: { type: Type.STRING, enum: ['year', 'groups', 'months'] },
+    depth_why: { type: Type.STRING },
+    best_months: { type: Type.ARRAY, items: { type: Type.INTEGER } },
+    overview: { type: Type.STRING },
+    blurbs: {
+      type: Type.ARRAY,
+      items: {
+        type: Type.OBJECT,
+        properties: { months: { type: Type.ARRAY, items: { type: Type.INTEGER } }, level: { type: Type.STRING, enum: ['peak', 'good', 'fair', 'poor', 'closed'] }, text: { type: Type.STRING } },
+        required: ['months', 'level', 'text'],
+      },
+    },
+    named_things: { type: Type.ARRAY, items: { type: Type.STRING } },
+    flags: { type: Type.ARRAY, items: { type: Type.STRING } },
+    confidence: { type: Type.STRING, enum: ['high', 'medium', 'low'] },
+  },
+  required: ['applicable', 'depth', 'overview', 'blurbs', 'best_months'],
+};
+const RESPONSE_SCHEMA_LEAN_SCORES = { ...RESPONSE_SCHEMA_LEAN, properties: { ...RESPONSE_SCHEMA_LEAN.properties, monthly_scores: { type: Type.ARRAY, minItems: '12', maxItems: '12', items: { type: Type.NUMBER } } }, required: [...RESPONSE_SCHEMA_LEAN.required, 'monthly_scores'] };
+// 13 Nov 2026: scores are written BEFORE the blurbs, so the groups are built from numbers already on the page (Gemini fills the answer in this order).
+(RESPONSE_SCHEMA_LEAN_SCORES as { propertyOrdering?: string[] }).propertyOrdering = ['applicable', 'na_reason', 'monthly_scores', 'depth', 'depth_why', 'best_months', 'overview', 'blurbs', 'named_things', 'flags', 'confidence'];
+/** The one config used for lean authoring calls, live or batch, so both always carry the thinking cap and the same schema. */
+export function leanGenerateConfig(thinkingLevel?: ThinkingLevelName, withScores = false) {
+  return { temperature: TEMPERATURE, maxOutputTokens: 4096, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: withScores ? RESPONSE_SCHEMA_LEAN_SCORES : RESPONSE_SCHEMA_LEAN };
+}
+/** The shared API client, for the batch script. */
+export function getGeminiClient(): GoogleGenAI { return getClient(); }
+export async function generateLean(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName, withScores = false): Promise<{ json: Record<string, unknown> | null; parseError: string | null; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: leanGenerateConfig(thinkingLevel, withScores),
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
+  catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
+}
+
+/** Month scores only (31 Oct 2026): given a text Gemini already wrote, return twelve scores in tenths for it. Used to add Gemini's scores beside ours without rewriting the text. */
+const RESPONSE_SCHEMA_SCORES_ONLY = {
+  type: Type.OBJECT,
+  properties: { monthly_scores: { type: Type.ARRAY, minItems: '12', maxItems: '12', items: { type: Type.NUMBER } }, note: { type: Type.STRING } },
+  required: ['monthly_scores'],
+};
+export async function generateScoresOnly(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ json: { monthly_scores: number[]; note?: string } | null; parseError: string | null; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: TEMPERATURE, maxOutputTokens: 2048, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: RESPONSE_SCHEMA_SCORES_ONLY },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  try { return { json: JSON.parse(response.text ?? '{}'), parseError: null, tokensIn, tokensOut, model }; }
+  catch (err) { return { json: null, parseError: err instanceof Error ? err.message : String(err), tokensIn, tokensOut, model }; }
+}
+
+/** Fact-check call (1 Nov 2026): the model checks a text's claims with Google Search and returns JSON plus the pages it used. Capped on thinking like every call. */
+export async function generateVerified(prompt: string, model: string = MODEL, thinkingLevel?: ThinkingLevelName): Promise<{ text: string; sources: Array<{ uri: string; title: string }>; queries: string[]; tokensIn: number; tokensOut: number; model: string }> {
+  const ai = getClient();
+  const response = await ai.models.generateContent({
+    model,
+    contents: prompt,
+    config: { temperature: 0, maxOutputTokens: 6000, thinkingConfig: thinkingConfigFor(thinkingLevel), tools: [{ googleSearch: {} }] },
+  });
+  const tokensIn = response.usageMetadata?.promptTokenCount ?? 0;
+  const tokensOut = (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
+  const gm = response.candidates?.[0]?.groundingMetadata;
+  const sources = (gm?.groundingChunks ?? []).map((c) => ({ uri: c.web?.uri ?? '', title: c.web?.title ?? '' })).filter((x) => x.uri);
+  return { text: response.text ?? '', sources, queries: gm?.webSearchQueries ?? [], tokensIn, tokensOut, model };
+}

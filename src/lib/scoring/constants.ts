@@ -34,7 +34,7 @@ export const SLIDERS: Slider[] = [
   // from every user-facing pick/display surface via VISIBLE_SLIDERS.
   { key: 'nationalParks', label: 'National Parks', icon: '🌲', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'iconic', hidden: true },
   { key: 'campingBackcountry', label: 'Camping & Backcountry', icon: '🏕️', group: 'Nature & Wildlife', formula: 'hiking', audienceTier: 'enthusiast' },
-  { key: 'stargazing', label: 'Stargazing', icon: '✨', group: 'Nature & Wildlife', formula: 'culture', audienceTier: 'enthusiast' },
+  { key: 'stargazing', label: 'Stargazing', icon: '🪐', group: 'Nature & Wildlife', formula: 'culture', audienceTier: 'enthusiast' },
   // Enthusiast, not specialist. Tromso and Icelandic winter tourism are
   // built on the aurora; it has outgrown the 0.15 bucket it shared with
   // birding and trail running.
@@ -66,7 +66,8 @@ export const SLIDERS: Slider[] = [
   { key: 'golf', label: 'Golf', icon: '⛳', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'enthusiast' },
   { key: 'fishing', label: 'Fishing', icon: '🎣', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'enthusiast' },
   { key: 'horsebackRiding', label: 'Horseback Riding', icon: '🐴', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'specialist' },
-  { key: 'trailRunning', label: 'Trail Running', icon: '🏃', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'specialist' },
+  // Hidden 21 Nov 2026 (owner): it was already on the fence, and hiding it leaves an even number in every section of the picker (10, 14, 12, 10).
+  { key: 'trailRunning', label: 'Trail Running', icon: '🏃', group: 'Sports & Recreation', formula: 'hiking', audienceTier: 'specialist', hidden: true },
   // Culture & Discovery
   { key: 'historyArchaeology', label: 'History & Archaeology', icon: '🏺', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'iconic' },
   { key: 'museumsArt', label: 'Museums & Art', icon: '🖼️', group: 'Culture & Discovery', formula: 'culture', audienceTier: 'popular' },
@@ -121,7 +122,7 @@ export const SLIDERS: Slider[] = [
   // so personas and saved weights keep working; hidden from every pick and display surface and from the admin lists by default.
   { key: 'deals', label: 'Low-Season Deals', icon: '💸', group: 'Value', formula: 'deals', audienceTier: 'specialist', hidden: true },
   { key: 'crowds', label: 'Avoiding Crowds', icon: '🧘', group: 'Value', formula: 'crowds', audienceTier: 'specialist', hidden: true },
-  { key: 'roadtrip', label: 'Road-Tripping', icon: '🚗', group: 'Value', formula: 'hiking', audienceTier: 'enthusiast' },
+  { key: 'roadtrip', label: 'Road-Tripping', icon: '🚗', group: 'Value', formula: 'hiking', audienceTier: 'enthusiast', hidden: true },
 ];
 
 /**
@@ -134,6 +135,7 @@ export const INACTIVE_NOTES: Record<string, string> = {
   familyFun: 'Hidden; not built as an experience.',
   deals: 'Replaced by the Crowds & prices trip setting (22 Oct 2026).',
   crowds: 'Replaced by the Crowds & prices trip setting (22 Oct 2026).',
+  roadtrip: 'A way to see a place, like a cruise or a train trip, not an interest (13 Nov 2026).',
 };
 
 // The list every admin/app screen that lists or lets someone pick an

@@ -1,0 +1,34 @@
+[
+ {
+  "title": "Scenic: final expert pass on the whole interest",
+  "detail": "The regional expert read (checklist 8.5) was skipped for now. Do the last read as an expert would, with the open-decisions list: anchors held below 10 (Milford Sound & Fiordland, Atacama, Salar de Uyuni, Guilin & Yangshuo, Greenland), the Denali peak that assumes bus service to Wonder Lake returns in 2027, and the hurricane-belt and winter dips."
+ },
+ {
+  "title": "Scenic: check Jamaica and Cuba after Hurricane Melissa",
+  "detail": "Melissa struck in October 2025 as the strongest hurricane in Jamaica's history and hit Cuba too. The text describes Negril cliffs, the Blue Mountains, Viñales and Havana as before; I could not find post-storm scenery or access reports. Confirm nothing in the text is now wrong."
+ },
+ {
+  "title": "Scenic: check Myanmar balloons and access",
+  "detail": "Balloons ran October to April in 2025-26, but I found nothing on earthquake damage, pagoda access or current travel advice. Confirm the Bagan and Inle text still holds."
+ },
+ {
+  "title": "Scenic: current Highway 1 (Big Sur) and Hana Highway status",
+  "detail": "Regent's Slide reopened on 14 Jan 2026 but a February notice shows another closure, and the Hana Highway was cut off by the March 2026 Kona storm. The texts only say storms can close these roads; confirm before relying on them."
+ },
+ {
+  "title": "Scenic: rebuild the stored ratings and signature views for the 19 widened places",
+  "detail": "They still describe the old, narrower places. The scopes are confirmed; rebuild them before any new Gemini batch uses them."
+ },
+ {
+  "title": "Fix the false scope stamps from 18 Nov and the \"Oct 2026\" scope-note wording",
+  "detail": "595 interest facts and 376 generations were stamped with a scope version that vouches wrongly for old-name data; the saved scope notes say \"Oct 2026\" where the real dates are unknown. Both need your yes (live database writes)."
+ },
+ {
+  "title": "Great Smoky Mountains birding text still says Clingmans Dome",
+  "detail": "The place is now called Kuwohi (formerly Clingmans Dome); Scenic now says so. Update the birding text to match."
+ },
+ {
+  "title": "Fix odd primary setting tags",
+  "detail": "Iceland is tagged Island, Tbilisi & the Caucasus and Cuba are tagged City, Northern Ireland is tagged City. Decide the right primary tag for each."
+ }
+]

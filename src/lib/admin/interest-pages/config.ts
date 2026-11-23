@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { InterestFactValue } from '@/lib/db/schema';
+import { TRAVEL_KEY, TRAVEL_FACTS } from '@/lib/admin/travel-needs/config';
 
 /**
  * What each per-interest admin page shows in its "Places & data" table, beyond
@@ -8,7 +9,7 @@ import type { InterestFactValue } from '@/lib/db/schema';
  */
 
 export type FactType = 'int' | 'rating' | 'text' | 'draw' | 'bool' | 'birds' | 'list' | 'choice' | 'multi' | 'likelihood';
-export type FactGroup = 'data' | 'draw' | 'planning' | 'species' | 'style' | 'experience' | 'practical' | 'waves' | 'trails';
+export type FactGroup = 'data' | 'draw' | 'planning' | 'species' | 'style' | 'experience' | 'practical' | 'waves' | 'trails' | 'kids' | 'format' | 'language' | 'diet' | 'access';
 
 export interface FactOption {
   value: string;
@@ -55,6 +56,11 @@ export const FACT_GROUP_LABELS: Record<FactGroup, { label: string; tone: 'app' |
   trails: { label: 'Trails', tone: 'app' },
   draw: { label: 'Draw', tone: 'draw' },
   planning: { label: 'Not collected yet', tone: 'new' },
+  kids: { label: 'Traveling with kids', tone: 'app' },
+  format: { label: 'How you travel', tone: 'info' },
+  language: { label: 'Language', tone: 'draw' },
+  diet: { label: 'Dietary needs', tone: 'new' },
+  access: { label: 'Accessibility', tone: 'app' },
 };
 
 export const DRAW_RATINGS = ['strong', 'moderate', 'weak'] as const;
@@ -346,7 +352,7 @@ const FINE_DINING_FACTS: FactDef[] = [
  * edit it here from now on. The other Scenic chips (types of landscape) still need their own columns before the rest of the data can be filled.
  */
 const SCENIC_FACTS: FactDef[] = [
-  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
+  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. May be above the place\'s Scenic peak (21 Nov 2026: a place can be better to photograph than to just look at, such as Salar de Uyuni or Namibia). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
   // 23 Oct 2026: the other columns. Ratings are for the place in a good season, on its own, against the best of that kind in the world; 7 or more is a full chip match.
   // A place is rated for the landscapes it has (Venice is a 10 for cities and a 0 for mountains). Owner approved the plan on 23 Oct 2026 with two changes: lakes and ice are
   // two columns, not one. Proposal page: claude.ai/artifact/TwyGHpABKoHDuAhxVzxKRK.
@@ -827,7 +833,7 @@ const MOUNTAIN_BIKING_FACTS: FactDef[] = [
  * government pages, one source per place, blank where no reliable source was found (docs/evidence/camping-law-and-wildlife-research.json). Full working: docs/evidence/camping-evidence.json.
  */
 const CAMPING_FACTS: FactDef[] = [
-  rate('campgrounds', 'Campgrounds', 'Number of distinct campgrounds, caravan sites and camp sites in the area: under 20 gives 4, 20-39 gives 5, 40-79 gives 6, 80-149 gives 7, 150-299 gives 8, 300-599 gives 9, 600 or more gives 10. Blank under 10 sites. Anchors: 10 Taiwan and Cornwall, 9 Vancouver Island, 8 Yellowstone, 4 Atacama.'),
+  rate('campgrounds', 'Campgrounds', 'Number of distinct campgrounds, caravan sites and camp sites in the area: under 20 gives 4, 20-39 gives 5, 40-79 gives 6, 80-149 gives 7, 150-299 gives 8, 300-599 gives 9, 600 or more gives 10. Blank under 10 sites. Anchors: 10 Taiwan and Cornwall, 9 Vancouver Island and Yellowstone, 5 Atacama.'),
   rate('backcountry', 'Backcountry camping', 'Number of backcountry camp sites mapped (OpenStreetMap camp_site with backcountry=yes): none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Blank where none is mapped, because mapping habit varies by country and a blank does not rule out walk-in camping.'),
   rate('glamping', 'Glamping', 'Number of glamping-style places found by name (glamp, yurt, safari tent, tipi, bell tent, tented camp, treehouse, dome, shepherd\'s hut) among campgrounds, cabins and lodges: none 0, 1 gives 2, 2-3 gives 3, 4-6 gives 4, 7-10 gives 6, 11-20 gives 8, 21 or more gives 10. Names in other languages are missed.'),
   { key: 'wildCampingLaw', label: 'Wild camping law', type: 'choice', group: 'practical', options: [{ value: 'allowed', label: 'Allowed on most open land' }, { value: 'limited', label: 'Permit, zone or some land only' }, { value: 'not_allowed', label: 'Designated sites or landowner permission only' }], hint: 'Researched by hand from park-authority and government pages, one source per place in the Evidence column. Allowed = most open or public land can be camped on without a permit; limited = a permit, a zone, or only some kinds of land; not allowed = designated campsites or landowner permission only. Blank where no reliable source was found. The Free wild camping chip reads it.' },
@@ -1019,6 +1025,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   indigenousCultures: INDIGENOUS_FACTS,
   geologyVolcanoes: GEOLOGY_FACTS,
   wineSpirits: WINE_BEER_SPIRITS_FACTS,
+  [TRAVEL_KEY]: TRAVEL_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

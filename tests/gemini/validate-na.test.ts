@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { isNotApplicable, validateContent, overallStatus } from '../../src/lib/gemini/validate';
 import type { GenerationOutput } from '../../src/lib/gemini/schema';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const na = (overview: string, score = 0, text = 'n/a'): GenerationOutput => ({
   overview,
@@ -14,7 +15,7 @@ describe('NOT_APPLICABLE convention', () => {
   it('accepts a well-formed not-applicable output and flags it for a human glance', () => {
     const out = na('NOT_APPLICABLE: Landlocked, no river dolphins, and the nearest sea is more than a day away.');
     expect(isNotApplicable(out)).toBe(true);
-    const issues = validateContent(out, 'whaleWatching', 'kyrgyzstan');
+    const issues = validateContent(out, 'whaleWatching', PLACE.kyrgyzstan);
     expect(overallStatus(issues)).toBe('valid');
     expect(issues.some((i) => i.severity === 'warning' && /not applicable/i.test(i.message))).toBe(true);
   });

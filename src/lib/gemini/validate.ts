@@ -425,7 +425,8 @@ export function validateContent(rawOutput: GenerationOutput, interestKey: string
         if (found.size > 0) issues.push({ layer: 'content', severity: 'warning', message: `Acronym(s) not expanded in the overview: ${[...found].join(', ')}. Spell out the organization on first use, with the abbreviation in parentheses.` });
       }
       // Surfing and hiking may say "world-class" (owner decisions 11 and 14 Oct 2026; hiking has its own once-per-place check).
-      if (/\b(premier|world-class|top-notch)\b/i.test(overview) && !((interestKey === 'surfing' || interestKey === 'hiking') && !/\b(premier|top-notch)\b/i.test(overview))) issues.push({ layer: 'content', severity: 'warning', message: 'Self-rating word in the overview ("premier"/"world-class"): cut it.' });
+      // Owner (13 Nov 2026): "premier" is fine. "World-class" and "top-notch" stay flagged, except "world-class" for surfing and hiking.
+      { const bad = /\b(world-class|top-notch)\b/i.exec(overview)?.[1]?.toLowerCase(); if (bad && !((interestKey === 'surfing' || interestKey === 'hiking') && bad === 'world-class')) issues.push({ layer: 'content', severity: 'warning', message: 'Self-rating word in the overview ("world-class"/"top-notch"): cut it.' }); }
     }
   }
 

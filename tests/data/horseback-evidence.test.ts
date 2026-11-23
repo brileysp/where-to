@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { found: boolean; beach?: boolean; ranch?: boolean; trek?: boolean; levels?: string[]; lengths?: string[]; operators?: Array<{ name: string; url: string; says: string }> }>;
 const root = join(__dirname, '..', '..');
@@ -31,11 +32,11 @@ describe('Horseback evidence', () => {
     for (const [p, r] of Object.entries(ev)) if (r.trek) expect(r.lengths!.some((l) => l === 'days' || l === 'week'), p).toBe(true);
   });
   it('keeps the checked anchors', () => {
-    expect(draft['botswana'].riderLevels).toEqual(['expert']);
-    expect(draft['kenya'].multiDayTreks).toBe(true);
-    expect(draft['andalucia'].beachRides).toBe(true);
-    expect(draft['ladakh'].riderLevels).toBeUndefined();
-    expect(draft['uluru'].riderLevels).toBeUndefined();
+    expect(draft[PLACE['okavango-delta']].riderLevels).toEqual(['expert']);
+    expect(draft[PLACE['maasai-mara-and-amboseli']].multiDayTreks).toBe(true);
+    expect(draft[PLACE.andalucia].beachRides).toBe(true);
+    expect(draft[PLACE.ladakh].riderLevels).toBeUndefined();
+    expect(draft[PLACE['uluru-and-the-outback']].riderLevels).toBeUndefined();
   });
 });
 
@@ -53,8 +54,8 @@ describe('Horseback local horse culture', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['mongolia'].localHorseCulture).toBe(10);
-    expect(draft['andalucia'].localHorseCulture).toBe(10);
-    expect(draft['kenya'].localHorseCulture).toBe(0);
+    expect(draft[PLACE.mongolia].localHorseCulture).toBe(10);
+    expect(draft[PLACE.andalucia].localHorseCulture).toBe(10);
+    expect(draft[PLACE['maasai-mara-and-amboseli']].localHorseCulture).toBe(0);
   });
 });

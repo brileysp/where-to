@@ -1,0 +1,57 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#faf8f4;--fg:#1f1d1a;--muted:#6b665e;--line:#e4dfd6;--card:#fff;--accent:#7a4a14;--hi:#e6f2e9;--hic:#2d6a3e;--warn:#fbf1d6;--warnc:#8a6100}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171613;--fg:#ece8e1;--muted:#a09a90;--line:#3a372f;--card:#201f1b;--accent:#e5b36a;--hi:#1d2e22;--hic:#8fcf9f;--warn:#34290f;--warnc:#e8c46a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171613;--fg:#ece8e1;--muted:#a09a90;--line:#3a372f;--card:#201f1b;--accent:#e5b36a;--hi:#1d2e22;--hic:#8fcf9f;--warn:#34290f;--warnc:#e8c46a;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 Georgia,serif;padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:920px;margin:0 auto}
+h1{font-size:28px;margin:0 0 6px;text-wrap:balance}.sub{color:var(--muted);max-width:72ch}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:12px 0;font:14px/1.5 system-ui,sans-serif}.box h3{margin:0 0 6px;font:600 15px system-ui,sans-serif}.box ul{margin:4px 0;padding-left:20px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif}
+.bar button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 14px;font:500 13px system-ui,sans-serif;cursor:pointer}.bar button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+textarea{width:100%;box-sizing:border-box;margin-top:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:14px system-ui,sans-serif;padding:7px 10px}
+.saved{font:12px system-ui,sans-serif;color:var(--muted);min-height:14px}
+.rul{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;font-family:system-ui,sans-serif}.rul button{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:6px;padding:4px 12px;font:500 13px system-ui,sans-serif;cursor:pointer}.rul button[aria-pressed="true"]{background:var(--hi);color:var(--hic);border-color:var(--hic)}
+table{border-collapse:collapse;width:100%;font:13.5px/1.4 system-ui,sans-serif}th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-weight:600;color:var(--muted);font-size:12px}td.n{font-variant-numeric:tabular-nums;white-space:nowrap}tr.mv td{background:var(--warn)}.tw{overflow-x:auto}.mvbox{margin:4px 0 8px;font:13px/1.45 system-ui,sans-serif}
+</style>
+<main>
+<h1>__TITLE__</h1>
+<p class="sub">__SUB__</p>
+__INTRO__
+<div class="bar" id="bar"></div>
+<div id="out"></div>
+</main>
+<script>
+const DATA=__DATA__;
+const COLS=__COLS__; const KEY='__KEY__'; const COLL='__COLL__'; const N=DATA.length; const TYPES=Array.from(new Set(DATA.map(p=>p.type))).sort((a,b)=>DATA.filter(p=>p.type===b).length-DATA.filter(p=>p.type===a).length);
+let cur='kinds'; const NOTES={}; let col=null;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const id=p=>KEY+'__'+p.id; const v=x=>x==null?'-':x;
+function row(p){const n=NOTES[id(p)]||{};const mv=p.mv;
+  const m=mv?`<tr class="mv"><td colspan="${3+COLS.length}"><div class="mvbox"><b>Suggested: ${p.peak.toFixed(1)} to ${mv.to.toFixed(1)}.</b> ${esc(mv.why)}<div class="rul" data-id="${id(p)}"><button data-c="accept" aria-pressed="${n.choice==='accept'}">Accept</button><button data-c="decline" aria-pressed="${n.choice==='decline'}">Decline</button></div><textarea data-n="${id(p)}" rows="1" placeholder="Note">${esc(n.note||'')}</textarea><span class="saved"></span></div></td></tr>`:'';
+  return `<tr class="${mv?'mv':''}"><td>${esc(p.name)}</td><td class="n"><b>${p.peak.toFixed(1)}</b></td><td class="n">${p.low.toFixed(1)}</td>${COLS.map(c=>`<td class="n">${v(p.f[c.key])}</td>`).join('')}</tr>`+m;}
+const head='<tr><th>Place</th><th>Peak</th><th>Lowest</th>'+COLS.map(c=>'<th>'+esc(c.label)+'</th>').join('')+'</tr>';
+function render(){
+  document.getElementById('bar').innerHTML=`<button data-t="kinds" aria-pressed="${cur==='kinds'}">1. Within similar places</button><button data-t="all" aria-pressed="${cur==='all'}">2. All places</button>`;
+  let h='';
+  if(cur==='kinds'){
+    h='<div class="box">The evidence columns are our own ratings for this interest; a dash means blank. Highlighted rows have a suggested move. Places are grouped by kind so you can compare like with like.</div>';
+    for(const t of TYPES){const rows=DATA.filter(p=>p.type===t).sort((a,b)=>b.peak-a.peak||a.name.localeCompare(b.name)); if(!rows.length) continue;
+      h+=`<h3 style="font:600 17px Georgia,serif;margin:22px 0 6px">${t} (${rows.length})</h3><div class="tw"><table>${head}${rows.map(p=>row(p)).join('')}</table></div>`;}
+  } else {
+    const after=DATA.map(p=>Object.assign({},p,{pk2:(p.mv&&NOTES[id(p)]&&NOTES[id(p)].choice==='decline')?p.peak:(p.mv?p.mv.to:p.peak)}));
+    const top=DATA.slice().sort((a,b)=>b.peak-a.peak||a.name.localeCompare(b.name)).slice(0,40);
+    const top2=after.slice().sort((a,b)=>b.pk2-a.pk2||a.name.localeCompare(b.name)).slice(0,40);
+    h=`<div class="box"><h3>Reading all ${N} together</h3><ul><li>The first table puts the top 40 as saved beside the top 40 after any moves you accept (declined moves stay as saved).</li><li>The second table lists every place, highest first, with its evidence.</li></ul></div>
+    <div class="tw"><table><tr><th>#</th><th>As saved</th><th>Peak</th><th>After accepted moves</th><th>Peak</th></tr>${top.map((p,k)=>`<tr><td class="n">${k+1}</td><td>${esc(p.name)}</td><td class="n">${p.peak.toFixed(1)}</td><td>${esc(top2[k].name)}</td><td class="n">${top2[k].pk2.toFixed(1)}</td></tr>`).join('')}</table></div>
+    <h3 style="font:600 17px Georgia,serif;margin:22px 0 6px">All ${N}, highest first</h3><div class="tw"><table>${head}${DATA.slice().sort((a,b)=>b.peak-a.peak||a.name.localeCompare(b.name)).map(p=>row(p)).join('')}</table></div>`;
+  }
+  document.getElementById('out').innerHTML=h;}
+document.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; if(b.dataset.t){cur=b.dataset.t;render();window.scrollTo(0,0);return;}
+  if(b.dataset.c){const i=b.closest('.rul').dataset.id; NOTES[i]=Object.assign({},NOTES[i]||{},{choice:b.dataset.c,at:new Date().toISOString()}); if(col) col.doc(i).set(NOTES[i]).catch(()=>{}); render();}});
+document.addEventListener('focusout',e=>{const t=e.target; if(!t.dataset||!t.dataset.n) return; const i=t.dataset.n; NOTES[i]=Object.assign({},NOTES[i]||{},{note:t.value,at:new Date().toISOString()}); if(col) col.doc(i).set(NOTES[i]).then(()=>{if(t.nextElementSibling)t.nextElementSibling.textContent='Saved';}).catch(()=>{});});
+render();
+(async()=>{let db=null;try{db=await claude.use("db");}catch(e){} if(!db) return; col=db.collection(COLL);
+ col.onSnapshot(s=>{s.docs.forEach(d=>{NOTES[d.id]=d.data();}); const a=document.activeElement; if(!(a&&(a.tagName==='TEXTAREA'||a.tagName==='INPUT'))) render();},()=>{});})();
+</script>

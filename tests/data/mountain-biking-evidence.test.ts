@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Row = Record<string, unknown> & { evidence: Record<string, string> };
 const root = join(__dirname, '..', '..');
@@ -16,7 +17,7 @@ const num = (text: string, re: RegExp) => Number(re.exec(text)?.[1]);
 
 describe('Mountain Biking evidence', () => {
   it('has an evidence line for every place and column (no gaps)', () => {
-    expect(Object.keys(evidence)).toHaveLength(128);
+    expect(Object.keys(evidence)).toHaveLength(132);
     for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(row.evidence[col]?.length ?? 0, `${place} ${col}`).toBeGreaterThan(20);
   });
   it('matches what was saved to the facts file', () => {
@@ -24,9 +25,9 @@ describe('Mountain Biking evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      easyFlowTrails: { swissalps: 10, tuscany: 10, whistler: 8, queenstown: 2 },
-      liftServedParks: { swissalps: 10, dolomites: 10, chamonix: 10, whistler: 10, 'north-island': 10, 'quebec-city': 10, 'arches-canyonlands': 0 },
-      bikepackingRoutes: { banff: 10, 'arches-canyonlands': 10 },
+      easyFlowTrails: { [PLACE['zermatt-and-the-swiss-alps']]: 10, [PLACE.tuscany]: 10, [PLACE['vancouver-and-whistler']]: 8, [PLACE.queenstown]: 2 },
+      liftServedParks: { [PLACE['zermatt-and-the-swiss-alps']]: 10, [PLACE.dolomites]: 10, [PLACE['chamonix-and-the-french-alps']]: 10, [PLACE['vancouver-and-whistler']]: 10, [PLACE['north-island']]: 10, [PLACE['quebec-city-and-montreal']]: 10, [PLACE['arches-and-canyonlands']]: 0 },
+      bikepackingRoutes: { [PLACE['banff-and-jasper-national-parks']]: 10, [PLACE['arches-and-canyonlands']]: 10 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });

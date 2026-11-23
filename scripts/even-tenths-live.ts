@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, prefer-const */
 // usage: npx tsx scripts/even-tenths-live.ts [--apply] [--only=interestKey,...] [--backup=path]
 // Evens out the last digit of the LIVE monthly scores, interest by interest (owner rule, see src/lib/gemini/even-tenths.ts):
-// each digit about a tenth, no strings of x.5. Only interests that are noticeably skewed (any digit over 14% or under 6%) are touched,
+// each digit about a tenth, no strings of x.5. Only interests whose digits are outside the shared tolerance (digitReport) are touched, and every place's best month is protected (an approved peak never moves),
 // diving is skipped (its staged replacement is already evened), and a place is only changed when the refitted curve reproduces the
 // nudged months within 0.11. Dry run unless --apply. With --apply the old curves of every changed place are saved first.
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
@@ -16,7 +16,7 @@ const {places}=await import('../src/lib/db/schema');
 const {eq}=await import('drizzle-orm');
 const {scorePlace}=await import('../src/lib/db/queries/places');
 const {SLIDERS}=await import('../src/lib/scoring/constants');
-const {evenTenthsCatalog,countDigits}=await import('../src/lib/gemini/even-tenths');
+const {evenTenthsCatalog,countDigits,digitReport}=await import('../src/lib/gemini/even-tenths');
 const {curveValue,parseSliderCurve}=await import('../src/lib/scoring/curve');
 const {applyAdminEdits}=await import('../src/lib/admin/apply-edits');
 const {SYSTEM_ACTOR}=await import('../src/lib/gemini/apply');
@@ -46,12 +46,12 @@ for(const s of SLIDERS){
  const ids=Object.keys(series);if(ids.length<10)continue;
  const before=countDigits(Object.values(series));const n=before.reduce((a,b)=>a+b,0)||1;
  const shares=before.map(x=>x/n);
- if(!(shares.some(x=>x>0.14)||shares.some(x=>x<0.06)))continue; // already about even
+ if(digitReport(Object.values(series)).even)continue; // within the shared tolerance (src/lib/gemini/even-tenths.ts tenthsTolerance): already even
  const orig:Record<string,number[]>=JSON.parse(JSON.stringify(series));
  const touched=new Set<string>();
  for(let pass=0;pass<3;pass++){
   const exempt=new Set(skipped);
-  const target=evenTenthsCatalog(series,exempt,{maxMove:4});
+  const target=evenTenthsCatalog(series,exempt,{maxMove:3,protectPeak:true,diffuse:true});
   let any=false;
   for(const id of ids){
    if(skipped.has(id))continue;

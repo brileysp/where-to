@@ -2,6 +2,7 @@ import { and, eq } from 'drizzle-orm';
 import { db } from '../client';
 import { places } from '../schema';
 import type { PlaceDetailText } from '@/lib/scoring/types';
+import { costSeasonalityFor } from '@/lib/cost-seasonality';
 
 /**
  * The text of one place, read when a visitor opens it (the ranked list is built from scores only, see list-place-rows.ts).
@@ -27,5 +28,6 @@ export async function getPlaceDetailText(id: string): Promise<PlaceDetailText | 
     specialSeasons: r.specialSeasons,
     sliderOverview: r.sliderOverview,
     sliderMonthlyWeather: r.sliderMonthlyWeather,
+    costSeasonality: costSeasonalityFor(id),
   };
 }

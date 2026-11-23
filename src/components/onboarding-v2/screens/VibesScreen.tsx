@@ -6,7 +6,7 @@ export function VibesScreen({ picked, onToggle, onContinue }: { picked: string[]
     <>
       <div className="ob2-scr">
         <h2>Which of these feels like you?</h2>
-        <p className="ob2-sub">Pick any. These are the photos you would normally see.</p>
+        <p className="ob2-sub">Pick any that sound like you.</p>
         <div className="ob2-grid2">
           {VIBES.map((v) => (
             <button key={v.key} type="button" className={`ob2-vt ${picked.includes(v.key) ? 'on' : ''}`} style={{ background: v.gradient }} aria-pressed={picked.includes(v.key)} onClick={() => onToggle(v.key)}>

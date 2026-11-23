@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { resolveAdminPlace } from '@/lib/places/admin-route';
 import { getDestinationForAdmin } from '@/lib/db/queries/admin-destinations';
 import { scorePlace } from '@/lib/db/queries/places';
 import { continentOf } from '@/lib/scoring/continents';
@@ -6,7 +7,8 @@ import { VISIBLE_SLIDERS, SLIDER_GROUPS } from '@/lib/scoring/constants';
 import { PlaceProfileGrid, type ProfileCell } from '@/components/admin/PlaceProfileGrid';
 
 export default async function PlaceProfilePage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+  const { id: param } = await params;
+  const { key: id } = await resolveAdminPlace(param, '/profile');
   const row = await getDestinationForAdmin(id);
   if (!row) notFound();
 

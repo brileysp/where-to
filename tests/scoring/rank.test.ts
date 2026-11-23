@@ -405,13 +405,13 @@ describe('timingScoreForMonth', () => {
   // the general score down — 'insects'/'seaweed' stay narrowly scoped to
   // their affectedSliders, matching how they're deliberately real but
   // non-trip-ruining nuisances.
-  it('lets a severe storm/airQuality hazard pull the general comfort score down', () => {
+  it('does not let a storm/airQuality hazard flag pull the general comfort score down (owner decision, 21 Nov 2026: flags are reference only)', () => {
     const withHazard = makeDestination({
       climate: 'tropical',
       seasonalHazards: [{ category: 'storm', label: 'Peak hurricane season', months: [10], severity: 'severe', affectedSliders: ['beachesSwimming'] }],
     });
     const withoutHazard = makeDestination({ climate: 'tropical' });
-    expect(timingScoreForMonth(withHazard, 9)).toBeLessThan(timingScoreForMonth(withoutHazard, 9)); // October
+    expect(timingScoreForMonth(withHazard, 9)).toBe(timingScoreForMonth(withoutHazard, 9)); // October
   });
 
   it('does not let an insects/seaweed hazard drag down the general comfort score', () => {

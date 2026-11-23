@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { OnboardingChip } from '@/lib/db/queries/onboarding-chips';
-import { barPoints, barTotal, dnaPercent, deeperItems, firstUnansweredGate, gateItems, gatePercent, newItems, qid, toUnlock, type LiveItem, type LiveStep, type Skipped } from '@/lib/onboarding/live-questions';
+import { barPoints, barTotal, deeperItems, firstUnansweredGate, gateItems, gatePercent, newItems, qid, toUnlock, type LiveItem, type LiveStep, type Skipped } from '@/lib/onboarding/live-questions';
 import type { MatchSetups } from '@/lib/onboarding/live-types';
 import { orderedByLevel, type Levels } from '@/lib/onboarding/levels';
 import type { InterestAnswers } from '@/lib/onboarding/profile';
@@ -28,6 +28,14 @@ export interface LiveFlowArgs {
   /** A line about what this answer did to the list, worked out before it is stored. Null = nothing worth saying. */
   describeMove: (interest: string, questionKey: string, picks: number[]) => string | null;
 }
+
+/** What the Travel DNA meter shows before any question is answered: the interests and preferences picked on the way in count as 60 of it (the three globe moments play 0 to 10, 10 to 30 and 40 to 60). */
+export const DNA_START_PERCENT = 60;
+/** The last globe moment before the list plays the meter from here to DNA_START_PERCENT; two earlier ones cover 0 to 10 (after the interests) and 10 to 30 (before the dates). */
+export const DNA_PREFERENCES_PERCENT = 40;
+
+/** The meter runs from DNA_START_PERCENT to 100 over the questions, chips and extras the bar counts. */
+const onMeter = (share: number): number => DNA_START_PERCENT + ((100 - DNA_START_PERCENT) * share);
 
 export type TeaserState = 'off' | 'on' | 'done';
 export type FillState = 'none' | 'hold' | 'run';
@@ -80,10 +88,11 @@ export function useLiveFlow(a: LiveFlowArgs) {
   const newOnes = added.filter((k) => !newChipped.includes(k));
 
   const bar = { keys: initial.keys, added, setups, qa, ticked: subs, chipsDone, marks: a.marks, newChipped };
-  const percent = dnaPercent(bar);
   const points = barPoints(bar);
   const barSize = barTotal(bar);
-  const gatePct = gatePercent(gate.length, bar);
+  const percent = Math.round(onMeter(points / barSize));
+  const fillPct = onMeter(points / barSize);
+  const gatePct = onMeter(gatePercent(gate.length, bar) / 100);
   const remaining = toUnlock(gate.length, j);
   const moreToDo = step !== 'interests' || !unlocked || newOnes.length > 0;
 
@@ -156,7 +165,7 @@ export function useLiveFlow(a: LiveFlowArgs) {
 
   return {
     applies, gate, initial, step, item, j, total, open, unlocked, pulse, listShown, fill, teaser, pop, msg, dir, added, newOnes,
-    percent, points, barSize, gatePct, remaining, moreToDo,
+    percent, points, barSize, fillPct, gatePct, remaining, moreToDo,
     answer, skip, back, toggleBox, finishChips, toNewChips, backToChips, finishNewChips, addInterest, removeInterest,
     closeTeaser: () => setTeaser('done'),
     /** Marking a place Visited or Saved shows the teaser has done its job. */

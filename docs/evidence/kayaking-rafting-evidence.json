@@ -1,10 +1,10 @@
 {
- "grandcanyon": {
+ "p0074": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 0,
+  "calm": 2,
   "lakes": 0,
-  "paddle": 0,
+  "paddle": 1,
   "paddle_sea": 0,
   "coast_km": 0,
   "sea": 0,
@@ -30,7 +30,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -61,7 +61,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "zimbabwe": {
+ "p0193": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -94,7 +94,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "zambia": {
+ "p0171": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -114,7 +114,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "nepal": {
+ "p0116": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -174,7 +174,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "uganda": {
+ "p0186": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -205,7 +205,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "costa-rica": {
+ "p0050": {
   "sea_lists": [
    "unbound",
    "classicjourneys"
@@ -254,7 +254,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "ecuadorian-andes": {
+ "p0061": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -290,7 +290,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "queenstown": {
+ "p0148": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -323,7 +323,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "north-island": {
+ "p0122": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -352,7 +352,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "bali": {
+ "p0017": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -381,7 +381,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "colombian-andes": {
+ "p0046": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -415,7 +415,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "provence": {
+ "p0144": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -443,7 +443,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "belize": {
+ "p0025": {
   "sea_lists": [
    "oars",
    "classicjourneys"
@@ -473,7 +473,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "kerala": {
+ "p0087": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -493,7 +493,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "puerto-rico": {
+ "p0145": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -513,7 +513,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "southeast-alaska": {
+ "p0172": {
   "sea_lists": [
    "oars",
    "seakayakadventures",
@@ -546,11 +546,11 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "botswana": {
+ "p0128": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 0,
-  "lakes": 0,
+  "calm": 8,
+  "lakes": 11,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -566,7 +566,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "los-cabos": {
+ "p0097": {
   "sea_lists": [
    "unbound",
    "oars",
@@ -599,15 +599,15 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 6,
-  "lakes": 9,
+  "calm": 8,
+  "lakes": 19,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 152,
-  "sea": 4,
+  "coast_km": 1078,
+  "sea": 5,
   "sea_formula": null,
   "median_wave_m": null,
   "whitewater": null,
@@ -619,7 +619,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "vancouver-island": {
+ "p0190": {
   "sea_lists": [
    "unbound",
    "oars",
@@ -650,7 +650,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "fjords": {
+ "p0125": {
   "sea_lists": [
    "classicjourneys",
    "manawa"
@@ -689,7 +689,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "panama": {
+ "p0135": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -718,7 +718,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "guatemala": {
+ "p0078": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -747,7 +747,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "thailand": {
+ "p0141": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -767,7 +767,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "turks-caicos": {
+ "p0184": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -787,7 +787,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "monterey-big-sur": {
+ "p0112": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -807,7 +807,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "big-island": {
+ "p0029": {
   "sea_lists": [
    "seakayakadventures",
    "iexplore"
@@ -837,7 +837,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "fiji": {
+ "p0068": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -873,7 +873,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "charleston-savannah": {
+ "p0040": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -893,15 +893,15 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "lake-district": {
+ "p0092": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
   "lakes": 10,
-  "paddle": 7,
+  "paddle": 3,
   "paddle_sea": 0,
-  "coast_km": 165,
-  "sea": 4,
+  "coast_km": 95,
+  "sea": 3,
   "sea_formula": null,
   "median_wave_m": 0.7,
   "whitewater": null,
@@ -913,7 +913,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "palau": {
+ "p0132": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -933,7 +933,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "chilean-lake-district": {
+ "p0044": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -967,7 +967,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "vietnam": {
+ "p0195": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1001,7 +1001,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "lofoten": {
+ "p0095": {
   "sea_lists": [
    "classicjourneys",
    "manawa"
@@ -1031,11 +1031,11 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "arches-canyonlands": {
+ "p0007": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 2,
-  "lakes": 1,
+  "calm": 0,
+  "lakes": 0,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -1067,7 +1067,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "mallorca": {
+ "p0103": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -1087,7 +1087,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "amalfi": {
+ "p0003": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1107,7 +1107,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "okinawa": {
+ "p0129": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1127,7 +1127,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "chiang-mai": {
+ "p0041": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1156,7 +1156,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "cape-cod-islands": {
+ "p0036": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -1176,7 +1176,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "sardinia": {
+ "p0163": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -1196,7 +1196,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "hokkaido": {
+ "p0080": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1224,7 +1224,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "maui": {
+ "p0106": {
   "sea_lists": [
    "seakayakadventures",
    "iexplore"
@@ -1254,7 +1254,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "bahamas": {
+ "p0016": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -1274,7 +1274,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "borabora": {
+ "p0070": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1294,7 +1294,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "copenhagen": {
+ "p0048": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1314,7 +1314,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "canaries": {
+ "p0035": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1334,7 +1334,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "iceland": {
+ "p0083": {
   "sea_lists": [
    "iexplore",
    "manawa"
@@ -1384,7 +1384,7 @@
   "water_temperature": "glacial",
   "glacial": true
  },
- "tasmania": {
+ "p0178": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1418,7 +1418,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "cape-town": {
+ "p0037": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1438,7 +1438,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "nicaragua": {
+ "p0119": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1458,7 +1458,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "algarve": {
+ "p0002": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -1478,7 +1478,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "snowdonia": {
+ "p0196": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1512,7 +1512,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "peru": {
+ "p0053": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -1552,7 +1552,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "rivieramaya": {
+ "p0155": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -1572,7 +1572,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "sydney": {
+ "p0176": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -1592,7 +1592,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "palawan": {
+ "p0133": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -1612,7 +1612,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "amsterdam": {
+ "p0004": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1632,15 +1632,15 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "everglades": {
+ "p0065": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 4,
-  "lakes": 6,
+  "calm": 6,
+  "lakes": 7,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 223,
-  "sea": 4,
+  "coast_km": 512,
+  "sea": 5,
   "sea_formula": null,
   "median_wave_m": 0.2,
   "whitewater": null,
@@ -1652,11 +1652,11 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "peruvian-amazon": {
+ "p0139": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 0,
-  "lakes": 0,
+  "calm": 2,
+  "lakes": 1,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -1672,7 +1672,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "croatia": {
+ "p0054": {
   "sea_lists": [
    "unbound",
    "oars",
@@ -1714,7 +1714,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "lapland": {
+ "p0069": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1737,12 +1737,12 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "great-smoky-mountains": {
+ "p0076": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 4,
-  "lakes": 1,
-  "paddle": 5,
+  "calm": 6,
+  "lakes": 4,
+  "paddle": 4,
   "paddle_sea": 0,
   "coast_km": 0,
   "sea": 0,
@@ -1771,7 +1771,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -1815,15 +1815,15 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "antarctica": {
+ "p0006": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
   "lakes": 0,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 313,
-  "sea": 4,
+  "coast_km": 8918,
+  "sea": 5,
   "sea_formula": null,
   "median_wave_m": 0.4,
   "whitewater": 0,
@@ -1835,7 +1835,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "aspen": {
+ "p0010": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -1873,15 +1873,15 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "torres-del-paine": {
+ "p0183": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
-  "lakes": 14,
+  "lakes": 12,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 0,
-  "sea": 0,
+  "coast_km": 35,
+  "sea": 2,
   "sea_formula": null,
   "median_wave_m": null,
   "whitewater": 0,
@@ -1896,12 +1896,12 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "banff": {
+ "p0018": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 8,
-  "lakes": 15,
-  "paddle": 2,
+  "calm": 10,
+  "lakes": 30,
+  "paddle": 3,
   "paddle_sea": 0,
   "coast_km": 0,
   "sea": 0,
@@ -1940,7 +1940,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "chicago": {
+ "p0043": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -1960,15 +1960,15 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "acadia": {
+ "p0001": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 8,
-  "lakes": 10,
-  "paddle": 3,
+  "calm": 4,
+  "lakes": 3,
+  "paddle": 2,
   "paddle_sea": 1,
-  "coast_km": 451,
-  "sea": 6,
+  "coast_km": 167,
+  "sea": 5,
   "sea_formula": null,
   "median_wave_m": 0.66,
   "whitewater": null,
@@ -1980,7 +1980,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "guilin-yangshuo": {
+ "p0079": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -2000,12 +2000,12 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "bend-crater-lake": {
+ "p0026": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 4,
-  "lakes": 4,
-  "paddle": 0,
+  "calm": 3,
+  "lakes": 1,
+  "paddle": 1,
   "paddle_sea": 0,
   "coast_km": 0,
   "sea": 0,
@@ -2029,7 +2029,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "kyrgyzstan": {
+ "p0090": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2071,7 +2071,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "chamonix": {
+ "p0038": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -2100,7 +2100,7 @@
   "water_temperature": "glacial",
   "glacial": true
  },
- "ireland": {
+ "p0084": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2134,7 +2134,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "whistler": {
+ "p0189": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2180,7 +2180,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "azores": {
+ "p0014": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -2200,7 +2200,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "upper-peninsula": {
+ "p0188": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2220,7 +2220,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "nova-scotia": {
+ "p0126": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2242,7 +2242,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "texas-hill-country": {
+ "p0180": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -2262,7 +2262,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "galapagos": {
+ "p0071": {
   "sea_lists": [
    "oars",
    "seakayakadventures",
@@ -2293,7 +2293,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "swissalps": {
+ "p0199": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2338,7 +2338,7 @@
   "water_temperature": "glacial",
   "glacial": true
  },
- "vermont": {
+ "p0192": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2367,7 +2367,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "borneo": {
+ "p0101": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2396,7 +2396,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "glacier-waterton": {
+ "p0073": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2430,11 +2430,11 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "rocky-mountain": {
+ "p0156": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 6,
-  "lakes": 7,
+  "calm": 4,
+  "lakes": 4,
   "paddle": 1,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -2459,7 +2459,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "faroe-islands": {
+ "p0067": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -2479,7 +2479,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "cornwall": {
+ "p0049": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -2499,7 +2499,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "argentine-lake-district": {
+ "p0008": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2528,7 +2528,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "mauritius": {
+ "p0107": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -2548,7 +2548,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "luangprabang": {
+ "p0093": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2579,7 +2579,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "bhutan": {
+ "p0028": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2614,15 +2614,15 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "olympic": {
+ "p0130": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 3,
-  "lakes": 2,
+  "calm": 4,
+  "lakes": 4,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 27,
-  "sea": 2,
+  "coast_km": 143,
+  "sea": 3,
   "sea_formula": null,
   "median_wave_m": 0.4,
   "whitewater": null,
@@ -2634,7 +2634,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "rajaampat": {
+ "p0149": {
   "sea_lists": [
    "oars",
    "manawa"
@@ -2664,7 +2664,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "colombian-caribbean": {
+ "p0047": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -2684,7 +2684,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "madeira": {
+ "p0100": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -2704,7 +2704,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "berlin": {
+ "p0027": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2724,7 +2724,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "barbados": {
+ "p0020": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -2744,7 +2744,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "komodo": {
+ "p0088": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -2764,11 +2764,11 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "denali-interior": {
+ "p0056": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 2,
-  "lakes": 1,
+  "calm": 8,
+  "lakes": 11,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -2793,7 +2793,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "buenosaires": {
+ "p0033": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -2813,7 +2813,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "ladakh": {
+ "p0091": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2852,7 +2852,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "srilanka": {
+ "p0173": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2881,7 +2881,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "taiwan": {
+ "p0177": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -2910,7 +2910,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "hongkong": {
+ "p0081": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2930,11 +2930,11 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "yosemite": {
+ "p0198": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 6,
-  "lakes": 7,
+  "calm": 4,
+  "lakes": 4,
   "paddle": 1,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -2959,7 +2959,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "tierra-del-fuego": {
+ "p0181": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -2979,7 +2979,7 @@
   "water_temperature": null,
   "glacial": false
  },
- "sicily": {
+ "p0169": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -2999,7 +2999,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "prague": {
+ "p0143": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3019,7 +3019,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "svalbard": {
+ "p0175": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3039,7 +3039,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "pantanal": {
+ "p0136": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3059,7 +3059,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "greenland": {
+ "p0077": {
   "sea_lists": [
    "oars",
    "seakayakadventures",
@@ -3090,7 +3090,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "nice-riviera": {
+ "p0120": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3110,7 +3110,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "maldives": {
+ "p0102": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -3130,7 +3130,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "seychelles": {
+ "p0168": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3150,7 +3150,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "quebec-city": {
+ "p0147": {
   "sea_lists": [
    "unbound",
    "seakayakadventures"
@@ -3190,7 +3190,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "punta-cana": {
+ "p0058": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3218,7 +3218,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "venice": {
+ "p0191": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3238,7 +3238,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "santorini": {
+ "p0162": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3258,7 +3258,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "jamaica": {
+ "p0086": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -3278,7 +3278,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "aruba": {
+ "p0009": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3298,7 +3298,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "mendoza": {
+ "p0108": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -3327,7 +3327,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "gbr": {
+ "p0075": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -3356,7 +3356,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "london": {
+ "p0096": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -3376,7 +3376,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "dubai": {
+ "p0060": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3396,7 +3396,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "havana": {
+ "p0052": {
   "sea_lists": [
    "unbound",
    "seakayakadventures"
@@ -3426,7 +3426,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "chiapas": {
+ "p0042": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3462,7 +3462,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "basque-country": {
+ "p0022": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3496,7 +3496,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "bordeaux": {
+ "p0031": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -3516,7 +3516,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "rwanda": {
+ "p0158": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -3536,7 +3536,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "black-forest": {
+ "p0030": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3559,7 +3559,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "nyc": {
+ "p0118": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3579,7 +3579,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "el-chalten": {
+ "p0063": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3608,7 +3608,7 @@
   "water_temperature": "glacial",
   "glacial": true
  },
- "churchill": {
+ "p0045": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3628,7 +3628,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "seoul": {
+ "p0166": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3648,7 +3648,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "edinburgh": {
+ "p0062": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3668,7 +3668,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "budapest": {
+ "p0032": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3688,7 +3688,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "rio": {
+ "p0153": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3708,7 +3708,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "napa": {
+ "p0115": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3728,7 +3728,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "egypt": {
+ "p0151": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -3748,7 +3748,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "new-orleans": {
+ "p0117": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3768,7 +3768,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "vienna": {
+ "p0194": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3788,7 +3788,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "yellowstone": {
+ "p0197": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -3817,7 +3817,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "lisbon": {
+ "p0094": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -3837,7 +3837,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "douro-valley-porto": {
+ "p0059": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -3857,7 +3857,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "belfast-giants-causeway": {
+ "p0123": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -3877,7 +3877,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "bavaria-munich": {
+ "p0023": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -3906,7 +3906,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "hudson-valley": {
+ "p0082": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -3929,7 +3929,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "singapore": {
+ "p0170": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -3949,14 +3949,14 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "redwood": {
+ "p0152": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
   "lakes": 0,
   "paddle": 0,
   "paddle_sea": 0,
-  "coast_km": 85,
+  "coast_km": 81,
   "sea": 1,
   "sea_formula": null,
   "median_wave_m": 1.52,
@@ -3978,11 +3978,11 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "north-cascades": {
+ "p0121": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
-  "lakes": 3,
+  "lakes": 2,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -4006,7 +4006,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "papua-new-guinea": {
+ "p0137": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4037,7 +4037,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "puglia": {
+ "p0146": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4057,7 +4057,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "barcelona": {
+ "p0021": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 2,
@@ -4077,7 +4077,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "ethiopia": {
+ "p0064": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4108,7 +4108,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "athens": {
+ "p0013": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4128,7 +4128,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "istanbul": {
+ "p0085": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -4148,7 +4148,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "morocco": {
+ "p0105": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4185,7 +4185,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "andalucia": {
+ "p0005": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -4219,7 +4219,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "madagascar": {
+ "p0099": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4239,11 +4239,11 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "badlands-black-hills": {
+ "p0015": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 0,
-  "lakes": 0,
+  "calm": 4,
+  "lakes": 4,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -4259,7 +4259,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "st-andrews-fife": {
+ "p0174": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -4279,7 +4279,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "namibia": {
+ "p0114": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4312,11 +4312,11 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "sequoia-kings-canyon": {
+ "p0167": {
   "sea_lists": [],
   "sea_list_urls": {},
-  "calm": 3,
-  "lakes": 2,
+  "calm": 2,
+  "lakes": 1,
   "paddle": 0,
   "paddle_sea": 0,
   "coast_km": 0,
@@ -4343,7 +4343,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "pakistan": {
+ "p0131": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4374,7 +4374,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "tuscany": {
+ "p0185": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4394,7 +4394,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "mexicocity": {
+ "p0109": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4414,7 +4414,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "mongolia": {
+ "p0111": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 10,
@@ -4451,7 +4451,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "paris": {
+ "p0138": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -4471,7 +4471,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "ghana": {
+ "p0072": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -4491,7 +4491,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -4520,7 +4520,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "bangkok": {
+ "p0019": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 0,
@@ -4540,7 +4540,7 @@
   "water_temperature": "warm",
   "glacial": false
  },
- "tanzania": {
+ "p0124": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4560,7 +4560,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "dolomites": {
+ "p0057": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 6,
@@ -4589,7 +4589,7 @@
   "water_temperature": "glacial",
   "glacial": false
  },
- "falklands": {
+ "p0066": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4609,7 +4609,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "rioja": {
+ "p0154": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -4629,7 +4629,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "champagne": {
+ "p0039": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 3,
@@ -4649,7 +4649,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "piedmont": {
+ "p0142": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 4,
@@ -4678,7 +4678,7 @@
   "water_temperature": "cool",
   "glacial": false
  },
- "cotswolds": {
+ "p0051": {
   "sea_lists": [],
   "sea_list_urls": {},
   "calm": 8,
@@ -4696,6 +4696,66 @@
   "multi_operators": [],
   "urls": [],
   "water_temperature": "glacial",
+  "glacial": false
+ },
+ "p0182": {
+  "sea_lists": [],
+  "sea_list_urls": {},
+  "calm": 10,
+  "lakes": 47,
+  "paddle": 7,
+  "paddle_sea": 4,
+  "coast_km": 1809,
+  "sea": 7,
+  "sea_formula": null,
+  "median_wave_m": 0.47,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "p0150": {
+  "sea_lists": [],
+  "sea_list_urls": {},
+  "calm": 4,
+  "lakes": 4,
+  "paddle": 0,
+  "paddle_sea": 0,
+  "coast_km": 0,
+  "sea": 0,
+  "sea_formula": null,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "cool",
+  "glacial": false
+ },
+ "p0034": {
+  "sea_lists": [],
+  "sea_list_urls": {},
+  "calm": 10,
+  "lakes": 53,
+  "paddle": 2,
+  "paddle_sea": 0,
+  "coast_km": 285,
+  "sea": 4,
+  "sea_formula": null,
+  "median_wave_m": null,
+  "whitewater": null,
+  "multi": null,
+  "type": "blank",
+  "rivers": [],
+  "multi_operators": [],
+  "urls": [],
+  "water_temperature": "warm",
   "glacial": false
  }
 }

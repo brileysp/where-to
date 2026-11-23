@@ -1,0 +1,464 @@
+{
+ "builtOn": "2026-11-14",
+ "index": "100 = the average of the sampled months for that tier",
+ "places": [
+  {
+   "place": "Maui",
+   "tiers": [
+    {
+     "tier": "luxury resort",
+     "label": "Luxury resort (Maui County luxury class, STR)",
+     "unit": "USD per room night (average daily rate)",
+     "adr": [
+      1039.6,
+      982.49,
+      992.14,
+      906.98,
+      807.24,
+      921.8,
+      957.15,
+      847.03,
+      736.91,
+      738.46,
+      859.58,
+      1387.1
+     ],
+     "index": [
+      112,
+      105,
+      107,
+      97,
+      87,
+      99,
+      103,
+      91,
+      79,
+      79,
+      92,
+      149
+     ],
+     "monthsSampled": 11,
+     "estimatedMonths": [
+      8
+     ],
+     "basis": "official monthly, STR data published by the Hawaii Tourism Authority / DBEDT, 2025",
+     "note": "Luxury-class hotels on Maui, mostly Wailea, Kaanapali and Kapalua resorts.",
+     "ratioPeakLow": 1.88
+    },
+    {
+     "tier": "mid-range resort",
+     "label": "Mid-range resort (Maui County upper upscale and upscale, STR)",
+     "unit": "USD per room night (average daily rate)",
+     "adr": [
+      435.99,
+      439.05,
+      426.02,
+      401.43,
+      376.72,
+      418.72,
+      419.0,
+      375.18,
+      331.36,
+      331.47,
+      345.18,
+      468.89
+     ],
+     "index": [
+      110,
+      110,
+      107,
+      101,
+      95,
+      105,
+      105,
+      94,
+      83,
+      83,
+      87,
+      118
+     ],
+     "monthsSampled": 11,
+     "estimatedMonths": [
+      8
+     ],
+     "basis": "official monthly, STR data published by the Hawaii Tourism Authority / DBEDT, 2025",
+     "note": "Upper-upscale and upscale hotels on Maui.",
+     "ratioPeakLow": 1.42
+    },
+    {
+     "tier": "budget",
+     "label": "Budget hotel (Hawaii statewide midscale and economy, STR; Maui has too few for its own figure)",
+     "unit": "USD per room night (average daily rate)",
+     "adr": [
+      228.87,
+      231.28,
+      223.67,
+      219.39,
+      211.49,
+      233.77,
+      237.29,
+      215.93,
+      194.57,
+      198.29,
+      197.43,
+      255.4
+     ],
+     "index": [
+      104,
+      105,
+      101,
+      99,
+      96,
+      106,
+      108,
+      98,
+      88,
+      90,
+      89,
+      116
+     ],
+     "monthsSampled": 11,
+     "estimatedMonths": [
+      8
+     ],
+     "basis": "official monthly, STR data published by the Hawaii Tourism Authority / DBEDT, 2025",
+     "note": "Statewide, not Maui: STR notes samples for some classes and regions were too small to publish.",
+     "ratioPeakLow": 1.31
+    }
+   ],
+   "composite": {
+    "label": "All Maui County hotels",
+    "adr": [
+     591.72,
+     578.44,
+     577.36,
+     538.63,
+     494.74,
+     558.02,
+     558.25,
+     490.96,
+     423.67,
+     433.55,
+     472.43,
+     689.08
+    ],
+    "index": [
+     111,
+     108,
+     108,
+     101,
+     93,
+     105,
+     105,
+     92,
+     79,
+     81,
+     88,
+     129
+    ],
+    "monthsSampled": 11,
+    "basis": "official monthly, STR data published by the Hawaii Tourism Authority / DBEDT, 2025 (all Maui County hotels)",
+    "unit": "USD per room night"
+   },
+   "notBuilt": [
+    "city budget hotel (Maui has no city)",
+    "city mid-range hotel",
+    "city luxury hotel"
+   ],
+   "spikes": [
+    {
+     "what": "December peak (holidays): luxury ADR $1,387 against $737 in September",
+     "ratio": 1.88
+    }
+   ],
+   "caveats": [
+    "August 2025 report could not be read (its text is scrambled in the PDF); August is the average of July and September and is marked estimated.",
+    "Maui demand and prices are still shaped by the August 2023 wildfires, so 2025 may not be a typical year."
+   ],
+   "sources": [
+    "Hawaii Tourism Authority / DBEDT monthly Hawaii Hotel Performance reports, January to December 2025 (files.hawaii.gov/dbedt/economic/tourism/hotel-performance/), compiled by STR"
+   ]
+  },
+  {
+   "place": "Kyoto (Tokyo and Kyoto place)",
+   "tiers": [],
+   "composite": {
+    "label": "All sampled Kyoto City hotels (about 110 to 118 hotels, DMO Kyoto)",
+    "unit": "JPY per room night, excluding taxes",
+    "adr": [
+     17968,
+     17163,
+     24849,
+     30712,
+     23277,
+     17007,
+     17534,
+     16863,
+     21574,
+     24859,
+     29085,
+     null
+    ],
+    "index": [
+     82,
+     78,
+     113,
+     140,
+     106,
+     78,
+     80,
+     77,
+     99,
+     114,
+     133,
+     null
+    ],
+    "monthsSampled": 11,
+    "basis": "official monthly (Kyoto City Tourism Association): January to July from the 2026 reports restated to 2025 using each month's year-on-year change; August to November 2025 as reported by Travel Voice quoting the same association"
+   },
+   "notBuilt": [
+    "budget city hotel",
+    "mid-range city hotel",
+    "luxury city hotel",
+    "luxury resort (not applicable)"
+   ],
+   "spikes": [
+    {
+     "what": "Early October (China National Day and Mid-Autumn): booking-site average selling prices above 50,000 yen against a 24,859 yen hotel ADR for the month",
+     "ratio": 2.0
+    },
+    {
+     "what": "Cherry blossom: April 2026 hotel ADR 31,296 yen was a record since 2014 and about 1.8 times August",
+     "ratio": 1.8
+    }
+   ],
+   "caveats": [
+    "December 2025 could not be found (no published actual).",
+    "The report does not split by hotel class, so luxury and budget cannot be separated.",
+    "A search snippet gave April 2026 as 26,633 yen; the report page itself says 31,296 yen. I used the page."
+   ],
+   "sources": [
+    "Kyoto City Tourism Association monthly data reports (kyokanko.or.jp/report/hotelYYYYMM/en), January to July 2026",
+    "Travel Voice (travelvoice.jp/english) on the August to November 2025 reports"
+   ]
+  },
+  {
+   "place": "Paris",
+   "tiers": [],
+   "composite": {
+    "label": "All Paris hotels (CoStar, preliminary)",
+    "unit": "EUR per room night",
+    "adr": [
+     355.96,
+     null,
+     null,
+     null,
+     null,
+     514.05,
+     null,
+     null,
+     null,
+     null,
+     null,
+     371.87
+    ],
+    "index": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "monthsSampled": 3,
+    "basis": "official monthly, CoStar press releases (3 months only)",
+    "relativeTo": "January = 100: June 144, December 104"
+   },
+   "notBuilt": [
+    "budget city hotel",
+    "mid-range city hotel (aggregator averages only)",
+    "luxury city hotel",
+    "luxury resort (not applicable)"
+   ],
+   "aggregators": [
+    {
+     "what": "Skyscanner Paris pages: 3-star average about 264 EUR, 4-star about 349 EUR; cheapest month February (about 273 EUR); most expensive September or November on different pages",
+     "confidence": "low, pages disagree"
+    }
+   ],
+   "spikes": [
+    {
+     "what": "New Year's Eve night: ADR 586 EUR against 372 EUR for December",
+     "ratio": 1.58
+    },
+    {
+     "what": "June 2025 record month: two large concerts, Eurostatory trade fair and Fashion Week pushed occupancy to 86% and ADR to 514 EUR",
+     "ratio": 1.44
+    }
+   ],
+   "caveats": [
+    "Only January, June and December were found. CoStar's free press releases do not cover every month, and its star-class split is not public.",
+    "The star-class figures found (Lighthouse) are for France as a whole, not Paris."
+   ],
+   "sources": [
+    "CoStar press releases \"Mix of events drove Paris room rates to January high\" and \"...to all-time high\" (June), \"Paris hotel performance reached December high\"",
+    "Skyscanner Paris hotel pages (aggregator)"
+   ]
+  },
+  {
+   "place": "Iceland",
+   "tiers": [
+    {
+     "tier": "mid-range city hotel",
+     "label": "One central Reykjavik hotel, published offer rates (double room, ISK per night)",
+     "unit": "ISK per room night",
+     "adr": [
+      28800,
+      28800,
+      30800,
+      30800,
+      33800,
+      null,
+      null,
+      null,
+      null,
+      33800,
+      28800,
+      28800
+     ],
+     "index": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "monthsSampled": 8,
+     "basis": "rate card, one hotel (offer page; October 2025 to May 2026)",
+     "note": "Summer (June to September) not on the offer page, so the highest part of the year is missing.",
+     "ratioPeakLow": 1.17
+    }
+   ],
+   "composite": {
+    "label": "Reykjavik 3-star hotels, monthly averages (Hopper, USD)",
+    "unit": "USD per room night",
+    "adr": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     260,
+     243,
+     null,
+     null,
+     null,
+     186,
+     171
+    ],
+    "index": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "monthsSampled": 4,
+    "basis": "aggregator averages, 4 months only",
+    "relativeTo": "December = 100: June 152, July 142, November 109"
+   },
+   "demand": {
+    "label": "Capital-region hotel occupancy (Statistics Iceland via the Icelandic Tourist Board)",
+    "byMonth": {
+     "Jan 2025": 62.2,
+     "Jun 2025": 81.6,
+     "Aug 2024": 89.2,
+     "Oct 2025": 80.9,
+     "Dec 2025": 58.4
+    },
+    "note": "Occupancy, not price: it shows the summer peak and the winter trough but is not a price series."
+   },
+   "notBuilt": [
+    "budget city hotel",
+    "luxury city hotel",
+    "luxury resort"
+   ],
+   "aggregators": [
+    {
+     "what": "HotelsCombined: cheapest April (107 EUR), dearest July (417 EUR); another aggregator: cheapest April 195 EUR, dearest August 460 EUR; Kayak: low season January, high season August",
+     "confidence": "low, pages disagree on the months and the price levels differ several times over"
+    }
+   ],
+   "spikes": [],
+   "caveats": [
+    "No official monthly price series was found; Statistics Iceland publishes occupancy, not room rates."
+   ],
+   "sources": [
+    "Hotel Alda Reykjavik offer page (Iceland Hotel Collection)",
+    "Hopper Reykjavik 3-star averages",
+    "Statistics Iceland and Icelandic Tourist Board occupancy releases",
+    "HotelsCombined, aggregator pages"
+   ]
+  },
+  {
+   "place": "Santorini and the Cyclades",
+   "tiers": [],
+   "composite": null,
+   "notBuilt": [
+    "budget city hotel",
+    "mid-range city hotel",
+    "luxury city hotel",
+    "luxury resort"
+   ],
+   "statements": [
+    {
+     "what": "Shoulder months (late June, early September) priced at roughly 60 to 70% of peak; May and September rates 30 to 50% below August",
+     "source": "travel guides",
+     "confidence": "low"
+    },
+    {
+     "what": "The same luxury suite can cost two to three times more in August than in May",
+     "source": "one guide",
+     "confidence": "low"
+    },
+    {
+     "what": "Nearly all hotels close from November to March, so low-season prices barely exist",
+     "source": "priceoftravel.com guide (undated)",
+     "confidence": "low"
+    },
+    {
+     "what": "Short-term rental average daily rate in Santorini: 388 EUR (July 2024) and 365 EUR (July 2025); not hotels",
+     "source": "AirDNA via Tornos News",
+     "confidence": "medium, but wrong product"
+    }
+   ],
+   "spikes": [],
+   "caveats": [
+    "No monthly hotel price series of any kind was found for Santorini (STR and SETE data are paid)."
+   ],
+   "sources": [
+    "Search results only: travel guides and aggregator pages"
+   ]
+  }
+ ]
+}

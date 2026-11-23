@@ -2,7 +2,7 @@
  "rule": "zoo, aquarium, theme park and water park within 100 km straight line of the place centre (two bases for Tokyo & Kyoto), with a yearly visitor figure of at least 1 million",
  "candidates": [
   {
-   "id": "vienna",
+   "id": "p0194",
    "name": "Vienna",
    "flag": "",
    "zoo": 6,
@@ -16,8 +16,8 @@
      "Wikidata"
     ],
     [
-     "Sch\u00f6nbrunn Zoo",
-     2.0,
+     "Schönbrunn Zoo",
+     2,
      6,
      "zoo",
      "Wikipedia infobox"
@@ -25,7 +25,7 @@
    ]
   },
   {
-   "id": "chicago",
+   "id": "p0043",
    "name": "Chicago",
    "flag": "",
    "zoo": 10,
@@ -47,7 +47,7 @@
     ],
     [
      "Brookfield Zoo",
-     2.0,
+     2,
      18,
      "zoo",
      "Wikipedia infobox"
@@ -55,7 +55,7 @@
    ]
   },
   {
-   "id": "berlin",
+   "id": "p0027",
    "name": "Berlin",
    "flag": "",
    "zoo": 9,
@@ -85,7 +85,7 @@
    ]
   },
   {
-   "id": "bahamas",
+   "id": "p0016",
    "name": "Bahamas",
    "flag": "",
    "zoo": null,
@@ -101,7 +101,7 @@
    ]
   },
   {
-   "id": "buenosaires",
+   "id": "p0033",
    "name": "Buenos Aires",
    "flag": "",
    "zoo": null,
@@ -117,7 +117,7 @@
    ]
   },
   {
-   "id": "ireland",
+   "id": "p0084",
    "name": "Ireland",
    "flag": "",
    "zoo": 5,
@@ -133,7 +133,7 @@
    ]
   },
   {
-   "id": "prague",
+   "id": "p0143",
    "name": "Prague",
    "flag": "",
    "zoo": 5,
@@ -149,7 +149,7 @@
    ]
   },
   {
-   "id": "nepal",
+   "id": "p0116",
    "name": "Nepal",
    "flag": "",
    "zoo": 4,
@@ -157,7 +157,7 @@
    "fac": [
     [
      "Kathmandu Zoo",
-     1.0,
+     1,
      5,
      "zoo",
      "Wikipedia infobox"
@@ -165,7 +165,7 @@
    ]
   },
   {
-   "id": "champagne",
+   "id": "p0039",
    "name": "Champagne",
    "flag": "far: nearest is 88 km",
    "zoo": null,
@@ -195,7 +195,7 @@
    ]
   },
   {
-   "id": "canaries",
+   "id": "p0035",
    "name": "Canary Islands",
    "flag": "far: nearest is 75 km",
    "zoo": null,
@@ -218,7 +218,7 @@
    ]
   },
   {
-   "id": "cotswolds",
+   "id": "p0051",
    "name": "Cotswolds",
    "flag": "far: nearest is 92 km",
    "zoo": 7,
@@ -234,7 +234,7 @@
    ]
   },
   {
-   "id": "snowdonia",
+   "id": "p0196",
    "name": "Wales",
    "flag": "far: nearest is 82 km",
    "zoo": 6,
@@ -250,7 +250,7 @@
    ]
   },
   {
-   "id": "hudson-valley",
+   "id": "p0082",
    "name": "Hudson Valley",
    "flag": "far: nearest is 95 km",
    "zoo": 6,
@@ -266,7 +266,7 @@
    ]
   },
   {
-   "id": "rocky-mountain",
+   "id": "p0156",
    "name": "Rocky Mountain National Park",
    "flag": "national park base",
    "zoo": 5,
@@ -282,7 +282,7 @@
    ]
   },
   {
-   "id": "srilanka",
+   "id": "p0173",
    "name": "Sri Lanka",
    "flag": "far: nearest is 98 km",
    "zoo": 5,
@@ -298,7 +298,7 @@
    ]
   },
   {
-   "id": "texas-hill-country",
+   "id": "p0180",
    "name": "Texas Hill Country",
    "flag": "far: nearest is 97 km",
    "zoo": 4,
@@ -314,7 +314,7 @@
    ]
   },
   {
-   "id": "colombian-andes",
+   "id": "p0046",
    "name": "Colombian Andes",
    "flag": "far: nearest is 65 km",
    "zoo": null,
@@ -330,7 +330,7 @@
    ]
   },
   {
-   "id": "everglades",
+   "id": "p0065",
    "name": "Everglades National Park",
    "flag": "national park base",
    "zoo": 4,
@@ -338,7 +338,7 @@
    "fac": [
     [
      "Zoo Miami",
-     1.0,
+     1,
      56,
      "zoo",
      "Wikipedia infobox"
@@ -346,7 +346,7 @@
    ]
   },
   {
-   "id": "olympic",
+   "id": "p0130",
    "name": "Olympic National Park",
    "flag": "national park base",
    "zoo": 5,
@@ -354,7 +354,7 @@
    "fac": [
     [
      "Woodland Park Zoo",
-     1.0,
+     1,
      95,
      "zoo",
      "Wikipedia infobox"
@@ -362,7 +362,7 @@
    ]
   },
   {
-   "id": "nice-riviera",
+   "id": "p0120",
    "name": "Nice & the French Riviera",
    "flag": "far: nearest is 74 km",
    "zoo": 3,
@@ -370,7 +370,7 @@
    "fac": [
     [
      "Q36698368",
-     1.0,
+     1,
      74,
      "theme_park",
      "Wikidata"

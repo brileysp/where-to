@@ -13,7 +13,7 @@ export function TasteCard({ card, onAnswer }: { card: DnaCard; onAnswer: (t: Swi
       <div className="ob2-swbtns">
         <button type="button" onClick={() => onAnswer('no')}>No</button>
         <button type="button" onClick={() => onAnswer('yes')}>Yes</button>
-        <button type="button" className="love" onClick={() => onAnswer('love')}>Love ♥</button>
+        <button type="button" onClick={() => onAnswer('love')}>Love ♥</button>
       </div>
     </>
   );

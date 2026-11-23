@@ -1,0 +1,75 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#faf8f4;--fg:#1f1d1a;--muted:#6b665e;--line:#e4dfd6;--card:#fff;--accent:#7a4a14;--ten:#f6e7b4;--tenc:#6b4b00;--hi:#e6f2e9;--hic:#2d6a3e;--warn:#fbf1d6;--warnc:#8a6100}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171613;--fg:#ece8e1;--muted:#a09a90;--line:#3a372f;--card:#201f1b;--accent:#e5b36a;--ten:#4a3a10;--tenc:#f0d78a;--hi:#1d2e22;--hic:#8fcf9f;--warn:#34290f;--warnc:#e8c46a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171613;--fg:#ece8e1;--muted:#a09a90;--line:#3a372f;--card:#201f1b;--accent:#e5b36a;--ten:#4a3a10;--tenc:#f0d78a;--hi:#1d2e22;--hic:#8fcf9f;--warn:#34290f;--warnc:#e8c46a;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 Georgia,serif;padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:900px;margin:0 auto}h1{font-size:28px;margin:0 0 6px;text-wrap:balance}.sub{color:var(--muted);max-width:74ch}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:12px 0;font:14px/1.5 system-ui,sans-serif}.box h3{margin:0 0 6px;font:600 15px system-ui,sans-serif}.box ul{margin:4px 0;padding-left:20px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif;align-items:center}
+.bar button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 14px;font:500 13px system-ui,sans-serif;cursor:pointer}.bar button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.bar input,.bar select{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:13px system-ui,sans-serif;min-width:0;max-width:220px}
+.nav,.filt{display:flex;flex-wrap:wrap;gap:8px;align-items:center;width:100%}.pos{font:13px system-ui,sans-serif;color:var(--muted);margin-left:auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;min-width:0;scroll-margin-top:var(--barh,120px)}.card h2{font-size:18px;margin:0 0 4px}
+.meta{font:12.5px/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 8px}
+.pill{display:inline-block;border-radius:6px;padding:1px 8px;font:600 11.5px system-ui,sans-serif;margin-right:4px}.pill.ten{background:var(--ten);color:var(--tenc)}.pill.warn{background:var(--warn);color:var(--warnc)}.pill.ok{background:var(--hi);color:var(--hic)}
+.ov{margin:6px 0 10px}.bl{margin:0 0 8px}.lv{font:600 11px system-ui,sans-serif;color:var(--muted);text-transform:uppercase;margin-left:6px}
+.len{font:12.5px/1.5 system-ui,sans-serif;color:var(--muted);margin:6px 0}.over{color:var(--warnc);font-weight:600}
+.sc{font:12.5px/1.5 system-ui,sans-serif;color:var(--muted);background:var(--bg);border-radius:6px;padding:7px 10px;margin:8px 0;overflow-wrap:anywhere}.sc b{color:var(--fg)}
+.why{font:13px/1.45 system-ui,sans-serif;margin:4px 0}
+.ovpair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}@media(max-width:640px){.ovpair{grid-template-columns:1fr}}.ovbox{border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0}.ovbox.alt{background:var(--hi)}.ovlab{font:600 12px system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}.ovbox p{margin:6px 0}.altwhy{font:13px/1.45 system-ui,sans-serif;color:var(--muted)}.ovrul{grid-column:1/-1}
+.rul{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;font-family:system-ui,sans-serif;align-items:center}.rul button{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:6px;padding:4px 12px;font:500 13px system-ui,sans-serif;cursor:pointer}.rul button[aria-pressed="true"]{background:var(--hi);color:var(--hic);border-color:var(--hic)}
+textarea{width:100%;box-sizing:border-box;margin-top:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:14px system-ui,sans-serif;padding:7px 10px}
+.rulechk{font:13px system-ui,sans-serif;color:var(--muted);display:flex;gap:6px;align-items:center;margin-top:4px}.saved{font:12px system-ui,sans-serif;color:var(--muted)}.grph{font:600 22px Georgia,serif;margin:30px 0 4px;padding-top:14px;border-top:2px solid var(--line);scroll-margin-top:var(--barh,120px)}.grph span{font:500 13px system-ui,sans-serif;color:var(--muted);margin-left:8px}
+</style>
+<main>
+<h1>__TITLE__</h1>
+<p class="sub">__SUB__</p>
+__INTRO__
+<div class="bar" id="bar"></div>
+<div id="out"></div>
+</main>
+<script>
+const DATA=__DATA__;
+const KEY='__KEY__'; const COLL='__COLL__';
+const GRPS=Array.from(new Set(DATA.map(c=>c.grp).filter(Boolean))); let cur={q:'',sort:GRPS.length?'grp':'name',over:false,scan:false,alt:false,nc:false,g:''}; const NOTES={}; let col=null;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function tier(p){return p<4?[280,180]:p<6?[380,260]:p<8.5?[450,320]:[550,326];}
+function ms(a){return a.length===12?'All months':a.map(m=>['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(', ');}
+const idOf=c=>KEY+'__'+c.id;
+function lens(c){const peak=Math.max(...c.fin),[om,bm]=tier(peak);const bl=c.bl.map(b=>b.t.length);const words=(c.ov+' '+c.bl.map(b=>b.t).join(' ')).trim().split(/\s+/).length;return {peak,om,bm,ol:c.ov.length,bl,words,over:c.ov.length>om||bl.some(n=>n>bm)};}
+function ovPair(c,id,n){const [om]=tier(Math.max(...c.fin)); const ch=n.ovChoice||''; const f=t=>t.length>om?`<b class="over">${t.length} / ${om}</b>`:`${t.length} / ${om}`;
+  return `<div class="ovpair"><div class="ovbox"><div class="ovlab">Current text</div><p class="ov">${esc(c.ov)}</p><div class="altwhy">${f(c.ov)} characters</div></div><div class="ovbox alt"><div class="ovlab">Clause alt (proposal)</div><p class="ov">${esc(c.alt)}</p><div class="altwhy">${f(c.alt)} characters. <b>Why:</b> ${esc(c.altwhy||'')}</div></div><div class="rul ovrul" data-id="${id}"><button data-ov="orig" aria-pressed="${ch==='orig'}">Use the current text</button><button data-ov="alt" aria-pressed="${ch==='alt'}">Use the clause alt</button><span class="altwhy">${ch?'':'Not chosen yet: the current text stays unless you pick the alt.'}</span></div></div>`;}
+function card(c){const id=idOf(c); const n=NOTES[id]||{}; const L=lens(c); const peak=L.peak;
+  const w=(a,m)=>a>m?`<b class="over">${a} / ${m}</b>`:`${a} / ${m}`;
+  const pills=(peak>=9.95?'<span class="pill ten">a 10</span>':'')+(c.scan&&c.scan.length?`<span class="pill warn">scan: ${esc(c.scan.join(', '))}</span>`:'<span class="pill ok">scan clean</span>')+(c.alt?'<span class="pill ok">clause alt proposed</span>':'')+(L.over?'<span class="pill warn">over the max</span>':'');
+  return `<section class="card" id="c-${c.id}"><h2>${esc(c.name)}</h2><p class="meta">${esc(c.type)} · ${c.depth==='year'?'one blurb for the year':c.depth==='groups'?'blurbs by season':'month by month'} · peak <b>${peak.toFixed(1)}</b> ${pills}</p>
+  ${c.alt?ovPair(c,id,n):`<p class="ov">${esc(c.ov)}</p>`}${c.bl.map(b=>`<p class="bl"><b>${ms(b.m)}</b><span class="lv">${esc(b.lv||'')}</span><br>${esc(b.t)}</p>`).join('')}
+  <p class="len"><b>Length (limits for a ${peak.toFixed(1)} peak):</b> overview ${w(L.ol,L.om)} characters · ${L.bl.length===1?'blurb':'blurbs'} ${L.bl.map(x=>w(x,L.bm)).join(', ')} (max ${L.bm} each) · total ${L.words} words</p>
+  <div class="sc"><b>Saved scores:</b> ${c.fin.map(v=>v.toFixed(1)).join(' ')}${c.gem?`<br><b>Gemini:</b> ${c.gem.map(v=>v.toFixed(1)).join(' ')}`:''}${c.ours?`<br><b>Our old:</b> ${c.ours.map(v=>v.toFixed(1)).join(' ')}`:''}</div>
+  ${c.why?`<p class="why"><b>What I checked and changed.</b> ${esc(c.why)}</p>`:''}${c.flag?`<p class="why"><b>Company name left in (core to the place).</b> ${esc(c.flag)}</p>`:''}
+  <textarea data-n="${id}" rows="2" placeholder="Your note on this one">${esc(n.note||'')}</textarea><label class="rulechk"><input type="checkbox" data-rule="${id}" ${n.rule?'checked':''}> make this a rule for every interest</label><span class="saved"></span></section>`;}
+function render(){
+  document.getElementById('bar').innerHTML=`<div class="nav"><button data-nav="top">&uarr; Top</button><button data-nav="prev">&laquo; Previous</button><button data-nav="next">Next &raquo;</button><button data-nav="ten">+10 &raquo;&raquo;</button><button data-nav="nonote">Next without a note</button><select id="jump" aria-label="Go to a place"><option value="">Go to a place&hellip;</option>${GRPS.length?GRPS.map(g=>`<optgroup label="${esc(g)}">${DATA.filter(c=>c.grp===g).sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<option value="${c.id}">${esc(c.name.replace(/ \u2014 .*$/,''))}</option>`).join('')}</optgroup>`).join(''):DATA.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><span class="pos" id="pos"></span></div><div class="filt">${GRPS.length?`<button data-g="" aria-pressed="${cur.g===''}">All interests</button>${GRPS.map((g,i)=>`<button data-g="${i+1}" aria-pressed="${cur.g===String(i+1)}">${esc(g)} (${DATA.filter(c=>c.grp===g).length})</button>`).join('')}`:''}<button data-s="${GRPS.length?'grp':'name'}" aria-pressed="${cur.sort==='name'||cur.sort==='grp'}">${GRPS.length?'By interest, A to Z':'A to Z'}</button><button data-s="peak" aria-pressed="${cur.sort==='peak'}">Highest peak</button><button data-v="1" aria-pressed="${cur.over}">Over the length max only</button><button data-sc="1" aria-pressed="${cur.scan}">Scan hits only (${DATA.filter(c=>c.scan&&c.scan.length).length})</button>${DATA.some(c=>c.alt)?`<button data-a="1" aria-pressed="${cur.alt}">Places with a clause alt (${DATA.filter(c=>c.alt).length})</button><button data-nc="1" aria-pressed="${cur.nc}">Alts not yet chosen</button>`:''}<input id="q" placeholder="Search a place" value="${esc(cur.q)}"></div>`;
+  let rows=DATA.filter(c=>(!cur.q||c.name.toLowerCase().includes(cur.q.toLowerCase()))&&(!cur.over||lens(c).over)&&(!cur.scan||(c.scan&&c.scan.length))&&(!cur.alt||c.alt)&&(!cur.nc||(c.alt&&!((NOTES[idOf(c)]||{}).ovChoice)))&&(!cur.g||c.grp===GRPS[+cur.g-1]));
+  rows.sort(cur.sort==='peak'?(a,b)=>(GRPS.length?GRPS.indexOf(a.grp)-GRPS.indexOf(b.grp):0)||Math.max(...b.fin)-Math.max(...a.fin):(a,b)=>(GRPS.length?GRPS.indexOf(a.grp)-GRPS.indexOf(b.grp):0)||a.name.localeCompare(b.name));
+  let last=null; document.getElementById('out').innerHTML=`<p class="len">${rows.length} places</p>`+rows.map(c=>{let h='';if(GRPS.length&&c.grp!==last){last=c.grp;h=`<h2 class="grph">${esc(c.grp)} <span>${rows.filter(r=>r.grp===c.grp).length} places</span></h2>`;}return h+card(c);}).join('');}
+function cards(){return Array.from(document.querySelectorAll('#out section.card'));}
+function curIdx(){const cs=cards(); const y=document.getElementById('bar').getBoundingClientRect().height+8; let i=0; for(let k=0;k<cs.length;k++){ if(cs[k].getBoundingClientRect().top-y<=8) i=k; else break; } return i;}
+function goTo(i){const cs=cards(); if(!cs.length) return; i=Math.max(0,Math.min(cs.length-1,i)); cs[i].scrollIntoView({behavior:'smooth',block:'start'});}
+function updatePos(){const bh=document.getElementById('bar').getBoundingClientRect().height; document.documentElement.style.setProperty('--barh',(bh+10)+'px'); const cs=cards(); const el=document.getElementById('pos'); if(el) el.textContent=cs.length?('Place '+(curIdx()+1)+' of '+cs.length):'';}
+function save(id,patch){NOTES[id]=Object.assign({},NOTES[id]||{},patch,{at:new Date().toISOString()}); if(col) col.doc(id).set(NOTES[id]).catch(()=>{});}
+document.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.nav){const cs=cards(); const i=curIdx(); const n=b.dataset.nav; if(n==='top') window.scrollTo({top:0,behavior:'smooth'}); else if(n==='prev') goTo(i-1); else if(n==='next') goTo(i+1); else if(n==='ten') goTo(i+10); else if(n==='nonote'){for(let k=i+1;k<cs.length;k++){const t=cs[k].querySelector('textarea'); if(t&&!t.value.trim()){goTo(k);return;}}} return;}
+  if(b.dataset.g!==undefined){cur.g=b.dataset.g;render();updatePos();window.scrollTo({top:0});return;} if(b.dataset.s){cur.sort=b.dataset.s;render();updatePos();return;} if(b.dataset.v){cur.over=!cur.over;render();updatePos();return;} if(b.dataset.sc){cur.scan=!cur.scan;render();updatePos();return;} if(b.dataset.a){cur.alt=!cur.alt;render();updatePos();return;} if(b.dataset.nc){cur.nc=!cur.nc;render();updatePos();return;}
+  if(b.dataset.ov){const id=b.closest('.rul').dataset.id; save(id,{ovChoice:b.dataset.ov}); render();updatePos();}});
+document.addEventListener('change',e=>{if(e.target.id==='jump'&&e.target.value){const el=document.getElementById('c-'+e.target.value); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); e.target.value='';return;} if(e.target.dataset&&e.target.dataset.rule){save(e.target.dataset.rule,{rule:e.target.checked});}});
+document.addEventListener('input',e=>{if(e.target.id==='q'){cur.q=e.target.value;const p=e.target.selectionStart;render();updatePos();const q=document.getElementById('q');q.focus();q.setSelectionRange(p,p);}});
+document.addEventListener('focusout',e=>{const t=e.target; if(!t.dataset||!t.dataset.n) return; save(t.dataset.n,{note:t.value}); if(t.parentElement.querySelector('.saved')) t.parentElement.querySelector('.saved').textContent=' Saved';});
+document.addEventListener('keydown',e=>{const t=e.target; if(t&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT'||t.tagName==='SELECT')) return; if(e.key==='j'||e.key==='n') goTo(curIdx()+1); else if(e.key==='k'||e.key==='p') goTo(curIdx()-1);});
+window.addEventListener('scroll',updatePos,{passive:true});
+render();updatePos();
+(async()=>{let db=null;try{db=await claude.use("db");}catch(e){} if(!db) return; col=db.collection(COLL);
+ col.onSnapshot(s=>{s.docs.forEach(d=>{NOTES[d.id]=d.data();}); const a=document.activeElement; if(!(a&&(a.tagName==='TEXTAREA'||a.tagName==='INPUT'))){render();updatePos();}},()=>{});})();
+</script>

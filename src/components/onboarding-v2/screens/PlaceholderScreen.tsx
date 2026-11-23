@@ -3,7 +3,6 @@ import type { ScreenId } from '@/lib/onboarding/path';
 const NAMES: Record<ScreenId, string> = {
   door: 'First screen',
   when: 'When',
-  logistics: 'Getting there',
   love: 'What do you love to do?',
   rank: 'Top interests',
   essentials: 'The basics',

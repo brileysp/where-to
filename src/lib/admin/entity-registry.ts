@@ -290,6 +290,25 @@ export const ENTITY_REGISTRY: Record<string, EntityConfig> = {
       hidden: zodField(z.boolean().nullable()),
       audienceTier: zodField(z.enum(['iconic', 'popular', 'enthusiast', 'specialist']).nullable()),
       sortOrder: zodField(z.number().int().min(1).max(500).nullable()),
+      // Planning scores, 1 to 10 (null = not set). See src/lib/scoring/planning.ts. Never read by the scoring engine.
+      seasonalVariance: zodField(z.number().int().min(1).max(10).nullable()),
+      evergreen: zodField(z.number().int().min(1).max(10).nullable()),
+      stakes: zodField(z.number().int().min(1).max(10).nullable()),
+      refreshEffort: zodField(z.number().int().min(1).max(10).nullable()),
+      planningNotes: zodField(
+        z
+          .object({
+            seasonalWhy: z.string().trim().max(600).optional(),
+            evergreenWhy: z.string().trim().max(600).optional(),
+            staleFirst: z.string().trim().max(400).optional(),
+            reviewTrigger: z.string().trim().max(400).optional(),
+            stakesWhy: z.string().trim().max(800).optional(),
+            refreshWhy: z.string().trim().max(800).optional(),
+            proposedBy: z.string().trim().max(120).optional(),
+            approved: z.record(z.string(), z.object({ by: z.string().max(120), at: z.string().max(40), via: z.string().max(200).optional() })).optional(),
+          })
+          .nullable(),
+      ),
     },
   },
 };

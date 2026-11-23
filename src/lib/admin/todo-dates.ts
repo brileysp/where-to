@@ -4,7 +4,7 @@
  */
 
 export const SITE_TODO_KEY = '_site';
-export type TodoRepeat = 'weekly' | 'monthly';
+export type TodoRepeat = 'weekly' | 'monthly' | 'quarterly' | 'annually';
 
 const DAY = 86_400_000;
 const parse = (iso: string) => Date.parse(`${iso}T00:00:00Z`);
@@ -19,17 +19,18 @@ export function daysUntil(dueOn: string, today: string): number {
   return Math.round((parse(dueOn) - parse(today)) / DAY);
 }
 
-function addMonth(iso: string): string {
+function addMonths(iso: string, months: number): string {
   const d = new Date(parse(iso));
   const day = d.getUTCDate();
   d.setUTCDate(1);
-  d.setUTCMonth(d.getUTCMonth() + 1);
+  d.setUTCMonth(d.getUTCMonth() + months);
   const last = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate();
   d.setUTCDate(Math.min(day, last));
   return format(d.getTime());
 }
 
-const step = (iso: string, repeat: TodoRepeat) => (repeat === 'weekly' ? format(parse(iso) + 7 * DAY) : addMonth(iso));
+const MONTHS_PER_STEP: Record<Exclude<TodoRepeat, 'weekly'>, number> = { monthly: 1, quarterly: 3, annually: 12 };
+const step = (iso: string, repeat: TodoRepeat) => (repeat === 'weekly' ? format(parse(iso) + 7 * DAY) : addMonths(iso, MONTHS_PER_STEP[repeat]));
 
 /** The date of the next copy of a repeating item: one step after its date, skipping any dates already past. */
 export function nextDueOn(dueOn: string | null, repeat: TodoRepeat, today: string): string {

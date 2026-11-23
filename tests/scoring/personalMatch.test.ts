@@ -28,9 +28,9 @@ describe('matching one interest', () => {
   it('uses the best ticked chip, so ticking more chips never lowers a place', () => {
     const one = matchInterest({ ticked: [chip('Big climbs', 0)], chipsOffered: 4, answers: [] }).factor;
     const two = matchInterest({ ticked: [chip('Big climbs', 0), chip('Quiet roads', 6)], chipsOffered: 4, answers: [] }).factor;
-    expect(one).toBe(0.5);
+    expect(one).toBe(0.85);
     expect(two).toBeGreaterThan(one);
-    expect(two).toBeCloseTo(survives(0.5, 6 / 7));
+    expect(two).toBeCloseTo(survives(0.85, 6 / 7));
   });
   it('counts a rating at or above the full-match rating as a full match', () => {
     expect(matchInterest({ ticked: [chip('X', 7)], chipsOffered: 4, answers: [] }).factor).toBe(1);
@@ -44,12 +44,12 @@ describe('matching one interest', () => {
     expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [lean(0), lean(0), lean(0)] }).factor).toBeCloseTo(0.85 ** 3);
   });
   it('never goes below the floor however much is missed', () => {
-    const r = matchInterest({ ticked: [chip('X', 0)], chipsOffered: 4, answers: [limit(0), limit(0), lean(0)] });
+    const r = matchInterest({ ticked: [chip('X', 0)], chipsOffered: 4, answers: [limit(0), limit(0), limit(0), lean(0)] });
     expect(r.factor).toBe(DEFAULT_MATCH_SETTINGS.interestFloor);
   });
   it('gives reason chips for the biggest losses only, at most two, and none below the threshold', () => {
     const r = matchInterest({ ticked: [chip('Orcas', 0)], chipsOffered: 4, answers: [limit(0, 'Needs a higher dive certification'), lean(0, 'No right-hand waves'), lean(0.9, 'tiny')] });
-    expect(r.reasons.map((x) => x.message)).toEqual(['Not much for: Orcas', 'Needs a higher dive certification']);
+    expect(r.reasons.map((x) => x.message)).toEqual(['Needs a higher dive certification', 'Not much for: Orcas']);
     expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [lean(0.9, 'tiny')] }).reasons).toEqual([]);
   });
   it('gives no chip to a question with no message, though it still lowers the score', () => {
@@ -61,8 +61,8 @@ describe('matching one interest', () => {
     const harsher = mergeMatchSettings({ keepIfLimitMissed: 0.3, interestFloor: 0.2 });
     expect(matchInterest({ ticked: [], chipsOffered: 4, answers: [limit(0)] }, harsher).factor).toBeCloseTo(0.3);
   });
-  it('reproduces the worked example: a place that scores 9 for a traveler who ticked only a chip it lacks', () => {
-    expect(9 * matchInterest({ ticked: [chip('Big mountain climbs', 0)], chipsOffered: 4, answers: [] }).factor).toBeCloseTo(4.5);
+  it('reproduces the worked example: a place that scores 9 for a traveler who ticked only a chip it lacks keeps 85% of it (a wish, not a wall; was 50% until 21 Nov 2026)', () => {
+    expect(9 * matchInterest({ ticked: [chip('Big mountain climbs', 0)], chipsOffered: 4, answers: [] }).factor).toBeCloseTo(7.65);
   });
 });
 
@@ -77,6 +77,6 @@ describe('the settings', () => {
   });
   it('refuses a floor higher than what a missed chip or Limit keeps', () => {
     expect(matchSettingsProblem(DEFAULT_MATCH_SETTINGS)).toBeNull();
-    expect(matchSettingsProblem({ ...DEFAULT_MATCH_SETTINGS, interestFloor: 0.6 })).toContain('floor');
+    expect(matchSettingsProblem({ ...DEFAULT_MATCH_SETTINGS, interestFloor: 0.7 })).toContain('floor');
   });
 });

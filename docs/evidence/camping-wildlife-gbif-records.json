@@ -1,30 +1,30 @@
 {
- "uganda": {
+ "p0186": {
   "total": 20,
   "speciesKeys": {
    "2435350": 6,
-   "2441034": 5,
-   "2441341": 3,
-   "2441247": 2,
-   "5219404": 2,
    "2440880": 1,
+   "2441034": 5,
+   "2441247": 2,
+   "2441341": 3,
+   "5219404": 2,
    "5219436": 1
   },
   "coverage_carnivores": 58
  },
- "everglades": {
+ "p0065": {
   "total": 7038,
   "speciesKeys": {
-   "2441370": 5399,
-   "2441329": 1588,
    "2433407": 38,
    "2435099": 6,
-   "8953936": 6,
-   "2441341": 1
+   "2441329": 1588,
+   "2441341": 1,
+   "2441370": 5399,
+   "8953936": 6
   },
   "coverage_carnivores": 211
  },
- "ethiopia": {
+ "p0064": {
   "total": 4,
   "speciesKeys": {
    "2441247": 2,
@@ -32,41 +32,41 @@
   },
   "coverage_carnivores": 32
  },
- "bhutan": {
+ "p0028": {
   "total": 58,
   "speciesKeys": {
-   "5219461": 32,
-   "5220113": 12,
-   "9335699": 9,
    "2441360": 3,
    "5219416": 1,
-   "5219436": 1
+   "5219436": 1,
+   "5219461": 32,
+   "5220113": 12,
+   "9335699": 9
   },
   "coverage_carnivores": 105
  },
- "atacama": {
+ "p0012": {
   "total": 1,
   "speciesKeys": {
    "2435099": 1
   },
   "coverage_carnivores": 36
  },
- "morocco": {
+ "p0105": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 255
  },
- "colombian-andes": {
+ "p0046": {
   "total": 152,
   "speciesKeys": {
-   "2435099": 84,
    "2433401": 61,
-   "8953936": 6,
-   "5219426": 1
+   "2435099": 84,
+   "5219426": 1,
+   "8953936": 6
   },
   "coverage_carnivores": 730
  },
- "sedona": {
+ "p0165": {
   "total": 31,
   "speciesKeys": {
    "2433407": 18,
@@ -74,7 +74,7 @@
   },
   "coverage_carnivores": 442
  },
- "ecuadorian-andes": {
+ "p0061": {
   "total": 2257,
   "speciesKeys": {
    "2433401": 2039,
@@ -83,7 +83,7 @@
   },
   "coverage_carnivores": 6741
  },
- "olympic": {
+ "p0130": {
   "total": 305,
   "speciesKeys": {
    "2433407": 276,
@@ -91,55 +91,55 @@
   },
   "coverage_carnivores": 788
  },
- "big-island": {
+ "p0029": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 1428
  },
- "colombian-caribbean": {
+ "p0047": {
   "total": 175,
   "speciesKeys": {
-   "8953936": 97,
-   "2441329": 64,
    "2435099": 9,
-   "5219426": 5
+   "2441329": 64,
+   "5219426": 5,
+   "8953936": 97
   },
   "coverage_carnivores": 463
  },
- "madeira": {
+ "p0100": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 143
  },
- "zimbabwe": {
+ "p0193": {
   "total": 1617,
   "speciesKeys": {
-   "2441341": 395,
    "2435350": 495,
-   "2441247": 320,
-   "2441034": 177,
    "2440880": 77,
+   "2441034": 177,
+   "2441247": 320,
+   "2441341": 395,
    "5219404": 120,
-   "5220111": 21,
-   "5219436": 12
+   "5219436": 12,
+   "5220111": 21
   },
   "coverage_carnivores": 583
  },
- "kenya": {
+ "p0098": {
   "total": 7108,
   "speciesKeys": {
-   "5219404": 1907,
    "2435350": 1915,
-   "2441247": 1111,
+   "2440880": 24,
    "2441034": 933,
+   "2441247": 1111,
    "2441341": 669,
+   "5219404": 1907,
    "5219436": 431,
-   "5220111": 118,
-   "2440880": 24
+   "5220111": 118
   },
   "coverage_carnivores": 6357
  },
- "grandcanyon": {
+ "p0074": {
   "total": 5,
   "speciesKeys": {
    "2433407": 3,
@@ -147,157 +147,157 @@
   },
   "coverage_carnivores": 107
  },
- "badlands-black-hills": {
+ "p0015": {
   "total": 4,
   "speciesKeys": {
-   "2435099": 3,
-   "2433407": 1
+   "2433407": 1,
+   "2435099": 3
   },
   "coverage_carnivores": 100
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 445
  },
- "denali-interior": {
+ "p0056": {
   "total": 380,
   "speciesKeys": {
-   "2433433": 376,
-   "2433407": 4
+   "2433407": 4,
+   "2433433": 376
   },
   "coverage_carnivores": 499
  },
- "southeast-alaska": {
+ "p0172": {
   "total": 343,
   "speciesKeys": {
-   "2433433": 340,
-   "2433407": 3
+   "2433407": 3,
+   "2433433": 340
   },
   "coverage_carnivores": 784
  },
- "lapland": {
+ "p0069": {
   "total": 2,
   "speciesKeys": {
    "2433433": 2
   },
   "coverage_carnivores": 1188
  },
- "nepal": {
+ "p0116": {
   "total": 1224,
   "speciesKeys": {
-   "5220113": 459,
+   "2433395": 61,
+   "2435238": 2,
    "2441350": 294,
    "2441360": 289,
-   "2433395": 61,
-   "5219461": 58,
    "5219416": 43,
    "5219436": 13,
-   "9335699": 4,
-   "2435238": 2
+   "5219461": 58,
+   "5220113": 459,
+   "9335699": 4
   },
   "coverage_carnivores": 316
  },
- "rwanda": {
+ "p0158": {
   "total": 560,
   "speciesKeys": {
-   "2441247": 127,
+   "2435349": 5,
    "2435350": 105,
-   "2441034": 99,
-   "2441341": 94,
    "2440880": 52,
+   "2441034": 99,
+   "2441247": 127,
+   "2441341": 94,
    "5219404": 46,
    "5219436": 21,
-   "5220111": 7,
-   "2435349": 5
+   "5220111": 7
   },
   "coverage_carnivores": 171
  },
- "ladakh": {
+ "p0091": {
   "total": 70,
   "speciesKeys": {
-   "2435238": 68,
-   "2433433": 2
+   "2433433": 2,
+   "2435238": 68
   },
   "coverage_carnivores": 242
  },
- "srilanka": {
+ "p0173": {
   "total": 2053,
   "speciesKeys": {
-   "5219461": 1297,
+   "2433395": 45,
+   "2441333": 78,
    "2441350": 434,
    "5219436": 186,
-   "2441333": 78,
-   "2433395": 45
+   "5219461": 1297
   },
   "coverage_carnivores": 1131
  },
- "fjords": {
+ "p0125": {
   "total": 26,
   "speciesKeys": {
    "2433433": 26
   },
   "coverage_carnivores": 2780
  },
- "kruger": {
+ "p0089": {
   "total": 8338,
   "speciesKeys": {
+   "2435349": 1,
    "2435350": 2135,
+   "2440880": 629,
    "2441034": 1325,
+   "2441247": 1088,
    "2441341": 1159,
    "5219404": 1125,
-   "2441247": 1088,
    "5219436": 841,
-   "2440880": 629,
-   "5220111": 33,
-   "2435349": 1
+   "5220111": 33
   },
   "coverage_carnivores": 5284
  },
- "great-smoky-mountains": {
+ "p0076": {
   "total": 2283,
   "speciesKeys": {
    "2433407": 2283
   },
   "coverage_carnivores": 2867
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 12514
  },
- "dolomites": {
+ "p0057": {
   "total": 1,
   "speciesKeys": {
    "2433433": 1
   },
   "coverage_carnivores": 1259
  },
- "lake-district": {
+ "p0092": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 5701
  },
- "taiwan": {
+ "p0177": {
   "total": 7,
   "speciesKeys": {
    "9335699": 7
   },
   "coverage_carnivores": 7384
  },
- "zambia": {
+ "p0171": {
   "total": 1039,
   "speciesKeys": {
-   "2441247": 209,
    "2435350": 202,
+   "2441034": 135,
+   "2441247": 209,
    "2441341": 189,
-   "5219436": 154,
    "5219404": 150,
-   "2441034": 135
+   "5219436": 154
   },
   "coverage_carnivores": 689
  },
- "yosemite": {
+ "p0198": {
   "total": 840,
   "speciesKeys": {
    "2433407": 821,
@@ -305,12 +305,12 @@
   },
   "coverage_carnivores": 2732
  },
- "tierra-del-fuego": {
+ "p0181": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 1916
  },
- "aspen": {
+ "p0010": {
   "total": 94,
   "speciesKeys": {
    "2433407": 92,
@@ -318,28 +318,28 @@
   },
   "coverage_carnivores": 416
  },
- "torres-del-paine": {
+ "p0183": {
   "total": 623,
   "speciesKeys": {
    "2435099": 623
   },
   "coverage_carnivores": 1779
  },
- "chilean-lake-district": {
+ "p0044": {
   "total": 7,
   "speciesKeys": {
    "2435099": 7
   },
   "coverage_carnivores": 129
  },
- "lofoten": {
+ "p0095": {
   "total": 14,
   "speciesKeys": {
    "2433433": 14
   },
   "coverage_carnivores": 5225
  },
- "banff": {
+ "p0018": {
   "total": 1395,
   "speciesKeys": {
    "2433407": 965,
@@ -348,7 +348,7 @@
   },
   "coverage_carnivores": 1976
  },
- "arches-canyonlands": {
+ "p0007": {
   "total": 21,
   "speciesKeys": {
    "2433407": 15,
@@ -356,49 +356,49 @@
   },
   "coverage_carnivores": 162
  },
- "provence": {
+ "p0144": {
   "total": 1,
   "speciesKeys": {
    "2433433": 1
   },
   "coverage_carnivores": 22951
  },
- "namibia": {
+ "p0114": {
   "total": 105,
   "speciesKeys": {
-   "5219436": 60,
+   "2435350": 3,
    "2440880": 18,
    "2441247": 13,
-   "5219404": 6,
-   "2435350": 3,
    "2441341": 3,
+   "5219404": 6,
+   "5219436": 60,
    "5220111": 2
   },
   "coverage_carnivores": 408
  },
- "el-chalten": {
+ "p0063": {
   "total": 116,
   "speciesKeys": {
    "2435099": 116
   },
   "coverage_carnivores": 258
  },
- "churchill": {
+ "p0045": {
   "total": 580,
   "speciesKeys": {
-   "2433451": 579,
-   "2433407": 1
+   "2433407": 1,
+   "2433451": 579
   },
   "coverage_carnivores": 857
  },
- "acadia": {
+ "p0001": {
   "total": 17,
   "speciesKeys": {
    "2433407": 17
   },
   "coverage_carnivores": 6171
  },
- "sequoia-kings-canyon": {
+ "p0167": {
   "total": 906,
   "speciesKeys": {
    "2433407": 886,
@@ -406,24 +406,24 @@
   },
   "coverage_carnivores": 1087
  },
- "svalbard": {
+ "p0175": {
   "total": 48,
   "speciesKeys": {
    "2433451": 48
   },
   "coverage_carnivores": 1459
  },
- "costa-rica": {
+ "p0050": {
   "total": 6233,
   "speciesKeys": {
-   "2441329": 3781,
-   "8953936": 2123,
    "2435099": 192,
-   "5219426": 136
+   "2441329": 3781,
+   "5219426": 136,
+   "8953936": 2123
   },
   "coverage_carnivores": 7882
  },
- "bend-crater-lake": {
+ "p0026": {
   "total": 36,
   "speciesKeys": {
    "2433407": 24,
@@ -431,117 +431,117 @@
   },
   "coverage_carnivores": 247
  },
- "kerala": {
+ "p0087": {
   "total": 1831,
   "speciesKeys": {
-   "5219461": 1332,
-   "5219436": 313,
    "2433395": 137,
+   "2441350": 8,
    "5219416": 41,
-   "2441350": 8
+   "5219436": 313,
+   "5219461": 1332
   },
   "coverage_carnivores": 2689
  },
- "zion-bryce": {
+ "p0200": {
   "total": 42,
   "speciesKeys": {
-   "2435099": 29,
-   "2433407": 13
+   "2433407": 13,
+   "2435099": 29
   },
   "coverage_carnivores": 253
  },
- "kyrgyzstan": {
+ "p0090": {
   "total": 1,
   "speciesKeys": {
    "2435238": 1
   },
   "coverage_carnivores": 64
  },
- "north-island": {
+ "p0122": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 650
  },
- "chamonix": {
+ "p0038": {
   "total": 1,
   "speciesKeys": {
    "2433433": 1
   },
   "coverage_carnivores": 10658
  },
- "ireland": {
+ "p0084": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 13591
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 430
  },
- "pantanal": {
+ "p0136": {
   "total": 4936,
   "speciesKeys": {
+   "2435099": 4,
    "5219426": 4413,
    "5220210": 518,
-   "2435099": 4,
    "8953936": 1
   },
   "coverage_carnivores": 4860
  },
- "croatia": {
+ "p0054": {
   "total": 2,
   "speciesKeys": {
    "2433433": 2
   },
   "coverage_carnivores": 162
  },
- "greenland": {
+ "p0077": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 15
  },
- "yellowstone": {
+ "p0197": {
   "total": 1813,
   "speciesKeys": {
-   "2433433": 1066,
    "2433407": 745,
+   "2433433": 1066,
    "2435099": 1
   },
   "coverage_carnivores": 3164
  },
- "pakistan": {
+ "p0131": {
   "total": 28,
   "speciesKeys": {
-   "5219436": 26,
    "2433433": 1,
+   "5219436": 26,
    "9335699": 1
   },
   "coverage_carnivores": 115
  },
- "hokkaido": {
+ "p0080": {
   "total": 5,
   "speciesKeys": {
    "2433433": 5
   },
   "coverage_carnivores": 1382
  },
- "maui": {
+ "p0106": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 1220
  },
- "azores": {
+ "p0014": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 2528
  },
- "mongolia": {
+ "p0111": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 97
  },
- "vancouver-island": {
+ "p0190": {
   "total": 1991,
   "speciesKeys": {
    "2433407": 1830,
@@ -549,17 +549,17 @@
   },
   "coverage_carnivores": 33178
  },
- "canaries": {
+ "p0035": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 221
  },
- "iceland": {
+ "p0083": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 1072
  },
- "upper-peninsula": {
+ "p0188": {
   "total": 77,
   "speciesKeys": {
    "2433407": 76,
@@ -567,49 +567,49 @@
   },
   "coverage_carnivores": 336
  },
- "nova-scotia": {
+ "p0126": {
   "total": 156,
   "speciesKeys": {
    "2433407": 156
   },
   "coverage_carnivores": 1839
  },
- "tasmania": {
+ "p0178": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 1000
  },
- "cape-town": {
+ "p0037": {
   "total": 145,
   "speciesKeys": {
+   "2435350": 1,
    "2441247": 142,
-   "5219436": 2,
-   "2435350": 1
+   "5219436": 2
   },
   "coverage_carnivores": 4220
  },
- "swissalps": {
+ "p0199": {
   "total": 11,
   "speciesKeys": {
    "2433433": 11
   },
   "coverage_carnivores": 63267
  },
- "vermont": {
+ "p0192": {
   "total": 1651,
   "speciesKeys": {
    "2433407": 1651
   },
   "coverage_carnivores": 9976
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "total": 4,
   "speciesKeys": {
    "2433433": 4
   },
   "coverage_carnivores": 440
  },
- "borneo": {
+ "p0101": {
   "total": 65,
   "speciesKeys": {
    "2441333": 64,
@@ -617,28 +617,28 @@
   },
   "coverage_carnivores": 48
  },
- "queenstown": {
+ "p0148": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 14
  },
- "jordan": {
+ "p0140": {
   "total": 26,
   "speciesKeys": {
-   "5219436": 25,
-   "2441341": 1
+   "2441341": 1,
+   "5219436": 25
   },
   "coverage_carnivores": 19159
  },
- "joshua-tree": {
+ "p0134": {
   "total": 31,
   "speciesKeys": {
-   "2435099": 26,
-   "2433407": 5
+   "2433407": 5,
+   "2435099": 26
   },
   "coverage_carnivores": 906
  },
- "glacier-waterton": {
+ "p0073": {
   "total": 1625,
   "speciesKeys": {
    "2433407": 1069,
@@ -647,7 +647,7 @@
   },
   "coverage_carnivores": 2225
  },
- "redwood": {
+ "p0152": {
   "total": 264,
   "speciesKeys": {
    "2433407": 249,
@@ -655,39 +655,39 @@
   },
   "coverage_carnivores": 1551
  },
- "tanzania": {
+ "p0124": {
   "total": 320,
   "speciesKeys": {
-   "2441034": 181,
    "2435350": 95,
+   "2441034": 181,
    "2441247": 19,
    "5219404": 18,
    "5219436": 7
   },
   "coverage_carnivores": 139
  },
- "death-valley": {
+ "p0055": {
   "total": 1,
   "speciesKeys": {
    "2435099": 1
   },
   "coverage_carnivores": 415
  },
- "botswana": {
+ "p0128": {
   "total": 603,
   "speciesKeys": {
    "2435350": 159,
+   "2440880": 5,
+   "2441034": 74,
    "2441247": 120,
+   "2441341": 50,
    "5219404": 109,
    "5219436": 85,
-   "2441034": 74,
-   "2441341": 50,
-   "2440880": 5,
    "5220111": 1
   },
   "coverage_carnivores": 448
  },
- "rocky-mountain": {
+ "p0156": {
   "total": 384,
   "speciesKeys": {
    "2433407": 330,
@@ -695,26 +695,26 @@
   },
   "coverage_carnivores": 1710
  },
- "faroe-islands": {
+ "p0067": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 74
  },
- "snowdonia": {
+ "p0196": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 8878
  },
- "north-cascades": {
+ "p0121": {
   "total": 158,
   "speciesKeys": {
    "2433407": 148,
-   "2435099": 9,
-   "2433433": 1
+   "2433433": 1,
+   "2435099": 9
   },
   "coverage_carnivores": 203
  },
- "peru": {
+ "p0053": {
   "total": 13,
   "speciesKeys": {
    "2433401": 11,
@@ -722,19 +722,19 @@
   },
   "coverage_carnivores": 119
  },
- "uluru": {
+ "p0187": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 30
  },
- "argentine-lake-district": {
+ "p0008": {
   "total": 23,
   "speciesKeys": {
    "2435099": 23
   },
   "coverage_carnivores": 471
  },
- "palawan": {
+ "p0133": {
   "total": 0,
   "speciesKeys": {},
   "coverage_carnivores": 155

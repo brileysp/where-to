@@ -1,6 +1,6 @@
 {
  "_note": "Surfing notes (Oct 2026), built by scripts/build-surfing-facts.ts from the surfing columns on the interest page; first drafts, only partly checked against web sources. Passed to Gemini as ground truth.",
- "maui": {
+ "p0106": {
   "forPlaceName": "Maui",
   "scope": "",
   "facts": [
@@ -25,7 +25,7 @@
   "season": "",
   "mustMention": []
  },
- "nicaragua": {
+ "p0119": {
   "forPlaceName": "Nicaragua",
   "scope": "",
   "facts": [
@@ -50,7 +50,7 @@
   "season": "",
   "mustMention": []
  },
- "basque-country": {
+ "p0022": {
   "forPlaceName": "Basque Country",
   "scope": "",
   "facts": [
@@ -75,7 +75,7 @@
   "season": "",
   "mustMention": []
  },
- "vancouver-island": {
+ "p0190": {
   "forPlaceName": "Vancouver Island",
   "scope": "",
   "facts": [
@@ -101,7 +101,7 @@
   "season": "",
   "mustMention": []
  },
- "fiji": {
+ "p0068": {
   "forPlaceName": "Fiji",
   "scope": "",
   "facts": [
@@ -126,7 +126,7 @@
   "season": "",
   "mustMention": []
  },
- "ghana": {
+ "p0072": {
   "forPlaceName": "Ghana",
   "scope": "",
   "facts": [
@@ -151,7 +151,7 @@
   "season": "",
   "mustMention": []
  },
- "cornwall": {
+ "p0049": {
   "forPlaceName": "Cornwall",
   "scope": "",
   "facts": [
@@ -176,7 +176,7 @@
   "season": "",
   "mustMention": []
  },
- "algarve": {
+ "p0002": {
   "forPlaceName": "Algarve",
   "scope": "",
   "facts": [
@@ -201,7 +201,7 @@
   "season": "",
   "mustMention": []
  },
- "srilanka": {
+ "p0173": {
   "forPlaceName": "Sri Lanka",
   "scope": "",
   "facts": [
@@ -226,7 +226,7 @@
   "season": "",
   "mustMention": []
  },
- "north-island": {
+ "p0122": {
   "forPlaceName": "North Island",
   "scope": "",
   "facts": [
@@ -251,7 +251,7 @@
   "season": "",
   "mustMention": []
  },
- "sydney": {
+ "p0176": {
   "forPlaceName": "Sydney",
   "scope": "",
   "facts": [
@@ -276,7 +276,7 @@
   "season": "",
   "mustMention": []
  },
- "cape-town": {
+ "p0037": {
   "forPlaceName": "Cape Town",
   "scope": "",
   "facts": [
@@ -301,7 +301,7 @@
   "season": "",
   "mustMention": []
  },
- "big-island": {
+ "p0029": {
   "forPlaceName": "Big Island",
   "scope": "",
   "facts": [
@@ -326,7 +326,7 @@
   "season": "",
   "mustMention": []
  },
- "los-cabos": {
+ "p0097": {
   "forPlaceName": "Los Cabos",
   "scope": "",
   "facts": [
@@ -351,7 +351,7 @@
   "season": "",
   "mustMention": []
  },
- "maldives": {
+ "p0102": {
   "forPlaceName": "Maldives",
   "scope": "",
   "facts": [
@@ -377,7 +377,7 @@
   "season": "",
   "mustMention": []
  },
- "monterey-big-sur": {
+ "p0112": {
   "forPlaceName": "Monterey & Big Sur",
   "scope": "",
   "facts": [
@@ -402,7 +402,7 @@
   "season": "",
   "mustMention": []
  },
- "borabora": {
+ "p0070": {
   "forPlaceName": "French Polynesia",
   "scope": "French Polynesia as a whole: Tahiti (Teahupo'o on the southeast coast, plus Papara and Taapuna), Moorea, and Bora Bora, which has only minor reef-pass surf. Describe by island and name the break. Do not treat Bora Bora as the whole place.",
   "facts": [
@@ -427,7 +427,7 @@
   "season": "",
   "mustMention": []
  },
- "nyc": {
+ "p0118": {
   "forPlaceName": "New York City",
   "scope": "",
   "facts": [
@@ -453,7 +453,7 @@
   "season": "",
   "mustMention": []
  },
- "azores": {
+ "p0014": {
   "forPlaceName": "Azores",
   "scope": "",
   "facts": [
@@ -478,7 +478,7 @@
   "season": "",
   "mustMention": []
  },
- "nova-scotia": {
+ "p0126": {
   "forPlaceName": "Nova Scotia",
   "scope": "",
   "facts": [
@@ -503,7 +503,7 @@
   "season": "",
   "mustMention": []
  },
- "st-andrews-fife": {
+ "p0174": {
   "forPlaceName": "St Andrews & Fife",
   "scope": "",
   "facts": [
@@ -526,7 +526,7 @@
   "season": "",
   "mustMention": []
  },
- "chicago": {
+ "p0043": {
   "forPlaceName": "Chicago",
   "scope": "",
   "facts": [
@@ -549,7 +549,7 @@
   "season": "",
   "mustMention": []
  },
- "egypt": {
+ "p0151": {
   "forPlaceName": "Red Sea & Nile",
   "scope": "",
   "facts": [
@@ -567,7 +567,7 @@
   "season": "",
   "mustMention": []
  },
- "croatia": {
+ "p0054": {
   "forPlaceName": "Dalmatian Coast",
   "scope": "",
   "facts": [
@@ -584,7 +584,7 @@
   "season": "",
   "mustMention": []
  },
- "dubai": {
+ "p0060": {
   "forPlaceName": "Dubai",
   "scope": "",
   "facts": [
@@ -607,7 +607,7 @@
   "season": "",
   "mustMention": []
  },
- "gbr": {
+ "p0075": {
   "forPlaceName": "Great Barrier Reef",
   "scope": "",
   "facts": [
@@ -625,7 +625,7 @@
   "season": "",
   "mustMention": []
  },
- "morocco": {
+ "p0105": {
   "forPlaceName": "Marrakech & Atlas",
   "scope": "",
   "facts": [
@@ -650,7 +650,7 @@
   "season": "",
   "mustMention": []
  },
- "panama": {
+ "p0135": {
   "forPlaceName": "Panama",
   "scope": "",
   "facts": [
@@ -675,7 +675,7 @@
   "season": "",
   "mustMention": []
  },
- "okinawa": {
+ "p0129": {
   "forPlaceName": "Okinawa",
   "scope": "",
   "facts": [
@@ -700,7 +700,7 @@
   "season": "",
   "mustMention": []
  },
- "taiwan": {
+ "p0177": {
   "forPlaceName": "Taiwan",
   "scope": "",
   "facts": [
@@ -725,7 +725,7 @@
   "season": "",
   "mustMention": []
  },
- "mauritius": {
+ "p0107": {
   "forPlaceName": "Mauritius",
   "scope": "",
   "facts": [
@@ -750,7 +750,7 @@
   "season": "",
   "mustMention": []
  },
- "bahamas": {
+ "p0016": {
   "forPlaceName": "Bahamas",
   "scope": "",
   "facts": [
@@ -775,7 +775,7 @@
   "season": "",
   "mustMention": []
  },
- "namibia": {
+ "p0114": {
   "forPlaceName": "Namibia",
   "scope": "",
   "facts": [
@@ -801,7 +801,7 @@
   "season": "",
   "mustMention": []
  },
- "bali": {
+ "p0017": {
   "forPlaceName": "Bali",
   "scope": "",
   "facts": [
@@ -826,7 +826,7 @@
   "season": "",
   "mustMention": []
  },
- "lisbon": {
+ "p0094": {
   "forPlaceName": "Lisbon",
   "scope": "",
   "facts": [
@@ -851,7 +851,7 @@
   "season": "",
   "mustMention": []
  },
- "oaxaca": {
+ "p0127": {
   "forPlaceName": "Oaxaca",
   "scope": "",
   "facts": [
@@ -876,7 +876,7 @@
   "season": "",
   "mustMention": []
  },
- "canaries": {
+ "p0035": {
   "forPlaceName": "Canary Islands",
   "scope": "",
   "facts": [
@@ -901,7 +901,7 @@
   "season": "",
   "mustMention": []
  },
- "costa-rica": {
+ "p0050": {
   "forPlaceName": "Costa Rica",
   "scope": "",
   "facts": [
@@ -926,7 +926,7 @@
   "season": "",
   "mustMention": []
  },
- "puerto-rico": {
+ "p0145": {
   "forPlaceName": "Puerto Rico",
   "scope": "",
   "facts": [
@@ -951,7 +951,7 @@
   "season": "",
   "mustMention": []
  },
- "rio": {
+ "p0153": {
   "forPlaceName": "Rio de Janeiro",
   "scope": "",
   "facts": [
@@ -976,7 +976,7 @@
   "season": "",
   "mustMention": []
  },
- "ireland": {
+ "p0084": {
   "forPlaceName": "Ireland",
   "scope": "",
   "facts": [
@@ -1001,7 +1001,7 @@
   "season": "",
   "mustMention": []
  },
- "bavaria-munich": {
+ "p0023": {
   "forPlaceName": "Bavaria & Munich",
   "scope": "",
   "facts": [
@@ -1024,7 +1024,7 @@
   "season": "",
   "mustMention": []
  },
- "papua-new-guinea": {
+ "p0137": {
   "forPlaceName": "Papua New Guinea",
   "scope": "",
   "facts": [
@@ -1050,7 +1050,7 @@
   "season": "",
   "mustMention": []
  },
- "sicily": {
+ "p0169": {
   "forPlaceName": "Sicily",
   "scope": "",
   "facts": [
@@ -1073,7 +1073,7 @@
   "season": "",
   "mustMention": []
  },
- "havana": {
+ "p0052": {
   "forPlaceName": "Cuba",
   "scope": "Cuba as a whole, not only Havana.",
   "facts": [
@@ -1099,7 +1099,7 @@
   "season": "",
   "mustMention": []
  },
- "komodo": {
+ "p0088": {
   "forPlaceName": "Komodo & Flores",
   "scope": "Komodo & Flores as a whole, not only Komodo Island.",
   "facts": [
@@ -1116,7 +1116,7 @@
   "season": "",
   "mustMention": []
  },
- "iceland": {
+ "p0083": {
   "forPlaceName": "Iceland",
   "scope": "",
   "facts": [
@@ -1139,7 +1139,7 @@
   "season": "",
   "mustMention": []
  },
- "rajaampat": {
+ "p0149": {
   "forPlaceName": "Raja Ampat",
   "scope": "",
   "facts": [
@@ -1161,7 +1161,7 @@
   "season": "",
   "mustMention": []
  },
- "vietnam": {
+ "p0195": {
   "forPlaceName": "Vietnam",
   "scope": "",
   "facts": [
@@ -1185,7 +1185,7 @@
   "season": "",
   "mustMention": []
  },
- "seychelles": {
+ "p0168": {
   "forPlaceName": "Seychelles",
   "scope": "",
   "facts": [
@@ -1208,7 +1208,7 @@
   "season": "",
   "mustMention": []
  },
- "fjords": {
+ "p0125": {
   "forPlaceName": "Norwegian Fjords",
   "scope": "",
   "facts": [
@@ -1232,7 +1232,7 @@
   "season": "",
   "mustMention": []
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "forPlaceName": "Scottish Highlands & Isle of Skye",
   "scope": "",
   "facts": [
@@ -1257,7 +1257,7 @@
   "season": "",
   "mustMention": []
  },
- "charleston-savannah": {
+ "p0040": {
   "forPlaceName": "Charleston & Savannah",
   "scope": "",
   "facts": [
@@ -1282,7 +1282,7 @@
   "season": "",
   "mustMention": []
  },
- "aruba": {
+ "p0009": {
   "forPlaceName": "Aruba",
   "scope": "",
   "facts": [
@@ -1302,7 +1302,7 @@
   "season": "",
   "mustMention": []
  },
- "palau": {
+ "p0132": {
   "forPlaceName": "Palau",
   "scope": "",
   "facts": [
@@ -1326,7 +1326,7 @@
   "season": "",
   "mustMention": []
  },
- "turks-caicos": {
+ "p0184": {
   "forPlaceName": "Turks & Caicos",
   "scope": "",
   "facts": [
@@ -1348,7 +1348,7 @@
   "season": "",
   "mustMention": []
  },
- "colombian-caribbean": {
+ "p0047": {
   "forPlaceName": "Colombian Caribbean",
   "scope": "",
   "facts": [
@@ -1371,7 +1371,7 @@
   "season": "",
   "mustMention": []
  },
- "barbados": {
+ "p0020": {
   "forPlaceName": "Barbados",
   "scope": "",
   "facts": [
@@ -1395,7 +1395,7 @@
   "season": "",
   "mustMention": []
  },
- "sardinia": {
+ "p0163": {
   "forPlaceName": "Sardinia",
   "scope": "",
   "facts": [
@@ -1420,7 +1420,7 @@
   "season": "",
   "mustMention": []
  },
- "kerala": {
+ "p0087": {
   "forPlaceName": "Kerala",
   "scope": "",
   "facts": [
@@ -1443,7 +1443,7 @@
   "season": "",
   "mustMention": []
  },
- "guatemala": {
+ "p0078": {
   "forPlaceName": "Guatemala",
   "scope": "",
   "facts": [
@@ -1467,7 +1467,7 @@
   "season": "",
   "mustMention": []
  },
- "madagascar": {
+ "p0099": {
   "forPlaceName": "Madagascar",
   "scope": "",
   "facts": [
@@ -1490,7 +1490,7 @@
   "season": "",
   "mustMention": []
  },
- "galapagos": {
+ "p0071": {
   "forPlaceName": "Galápagos Islands",
   "scope": "",
   "facts": [
@@ -1515,7 +1515,7 @@
   "season": "",
   "mustMention": []
  },
- "douro-valley-porto": {
+ "p0059": {
   "forPlaceName": "Douro Valley & Porto",
   "scope": "",
   "facts": [
@@ -1540,7 +1540,7 @@
   "season": "",
   "mustMention": []
  },
- "hongkong": {
+ "p0081": {
   "forPlaceName": "Hong Kong",
   "scope": "",
   "facts": [
@@ -1564,7 +1564,7 @@
   "season": "",
   "mustMention": []
  },
- "mallorca": {
+ "p0103": {
   "forPlaceName": "Mallorca",
   "scope": "",
   "facts": [
@@ -1588,7 +1588,7 @@
   "season": "",
   "mustMention": []
  },
- "belfast-giants-causeway": {
+ "p0123": {
   "forPlaceName": "Northern Ireland",
   "scope": "Northern Ireland as a whole, not only Belfast and the Giant's Causeway.",
   "facts": [
@@ -1612,7 +1612,7 @@
   "season": "",
   "mustMention": []
  },
- "faroe-islands": {
+ "p0067": {
   "forPlaceName": "Faroe Islands",
   "scope": "",
   "facts": [
@@ -1638,7 +1638,7 @@
   "season": "",
   "mustMention": []
  },
- "thailand": {
+ "p0141": {
   "forPlaceName": "Phuket & the Andaman Coast",
   "scope": "Phuket & the Andaman Coast as a whole, not only Phuket and its islands.",
   "facts": [
@@ -1663,7 +1663,7 @@
   "season": "",
   "mustMention": []
  },
- "madeira": {
+ "p0100": {
   "forPlaceName": "Madeira",
   "scope": "",
   "facts": [
@@ -1688,7 +1688,7 @@
   "season": "",
   "mustMention": []
  },
- "olympic": {
+ "p0130": {
   "forPlaceName": "Olympic National Park",
   "scope": "",
   "facts": [
@@ -1714,7 +1714,7 @@
   "season": "",
   "mustMention": []
  },
- "redwood": {
+ "p0152": {
   "forPlaceName": "Redwood National and State Parks",
   "scope": "",
   "facts": [
@@ -1736,7 +1736,7 @@
   "season": "",
   "mustMention": []
  },
- "rivieramaya": {
+ "p0155": {
   "forPlaceName": "Riviera Maya",
   "scope": "",
   "facts": [
@@ -1754,7 +1754,7 @@
   "season": "",
   "mustMention": []
  },
- "palawan": {
+ "p0133": {
   "forPlaceName": "Palawan",
   "scope": "",
   "facts": [
@@ -1777,7 +1777,7 @@
   "season": "",
   "mustMention": []
  },
- "puglia": {
+ "p0146": {
   "forPlaceName": "Puglia",
   "scope": "",
   "facts": [
@@ -1797,7 +1797,7 @@
   "season": "",
   "mustMention": []
  },
- "jamaica": {
+ "p0086": {
   "forPlaceName": "Jamaica",
   "scope": "",
   "facts": [
@@ -1821,7 +1821,7 @@
   "season": "",
   "mustMention": []
  },
- "barcelona": {
+ "p0021": {
   "forPlaceName": "Barcelona",
   "scope": "",
   "facts": [
@@ -1845,7 +1845,7 @@
   "season": "",
   "mustMention": []
  },
- "tasmania": {
+ "p0178": {
   "forPlaceName": "Tasmania",
   "scope": "",
   "facts": [
@@ -1869,7 +1869,7 @@
   "season": "",
   "mustMention": []
  },
- "belize": {
+ "p0025": {
   "forPlaceName": "Belize",
   "scope": "",
   "facts": [
@@ -1894,7 +1894,7 @@
   "season": "",
   "mustMention": []
  },
- "athens": {
+ "p0013": {
   "forPlaceName": "Athens",
   "scope": "",
   "facts": [
@@ -1917,7 +1917,7 @@
   "season": "",
   "mustMention": []
  },
- "nice-riviera": {
+ "p0120": {
   "forPlaceName": "Nice & the French Riviera",
   "scope": "",
   "facts": [
@@ -1940,7 +1940,7 @@
   "season": "",
   "mustMention": []
  },
- "provence": {
+ "p0144": {
   "forPlaceName": "Provence",
   "scope": "",
   "facts": [
@@ -1962,7 +1962,7 @@
   "season": "",
   "mustMention": []
  },
- "lofoten": {
+ "p0095": {
   "forPlaceName": "Lofoten Islands",
   "scope": "",
   "facts": [
@@ -1986,7 +1986,7 @@
   "season": "",
   "mustMention": []
  },
- "cape-cod-islands": {
+ "p0036": {
   "forPlaceName": "Cape Cod & the Islands",
   "scope": "",
   "facts": [
@@ -2011,7 +2011,7 @@
   "season": "",
   "mustMention": []
  },
- "copenhagen": {
+ "p0048": {
   "forPlaceName": "Copenhagen",
   "scope": "",
   "facts": [
@@ -2036,7 +2036,7 @@
   "season": "",
   "mustMention": []
  },
- "punta-cana": {
+ "p0058": {
   "forPlaceName": "Dominican Republic",
   "scope": "Dominican Republic as a whole, not only Punta Cana.",
   "facts": [
@@ -2060,7 +2060,7 @@
   "season": "",
   "mustMention": []
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "forPlaceName": "Marlborough & Abel Tasman",
   "scope": "",
   "facts": [
@@ -2083,7 +2083,7 @@
   "season": "",
   "mustMention": []
  },
- "santorini": {
+ "p0162": {
   "forPlaceName": "Santorini & Cyclades",
   "scope": "Santorini and the Cyclades as a whole. Santorini itself has no real surf: Monolithos beach is used for kitesurfing and wing foiling, and wind chop is not swell. The only documented surf in the island group is small, beginner-friendly summer windswell from the meltemi on north-facing beaches of Tinos (Kolymbithra, where a surf school runs, and Livada), a long ferry from Santorini. Waves are knee-high and rarely above shoulder height, and there can be months with nothing ridable. Owner decision, 17 Oct 2026: this is NOT a not-applicable place. Give it a very low score (best months well under 2), with the honest message that surf is a side note here.",
   "facts": [
@@ -2105,7 +2105,7 @@
   "season": "",
   "mustMention": []
  },
- "snowdonia": {
+ "p0196": {
   "forPlaceName": "Wales",
   "scope": "Wales as a whole, not only Snowdonia.",
   "facts": [],
@@ -2116,7 +2116,7 @@
   "season": "",
   "mustMention": []
  },
- "quebec-city": {
+ "p0147": {
   "forPlaceName": "Quebec City & Montreal",
   "scope": "Quebec City & Montreal as a whole, not only Quebec City.",
   "facts": [],
@@ -2127,7 +2127,7 @@
   "season": "",
   "mustMention": []
  },
- "napa": {
+ "p0115": {
   "forPlaceName": "Napa & Sonoma",
   "scope": "Napa & Sonoma as a whole, not only Napa Valley.",
   "facts": [],

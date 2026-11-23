@@ -3,6 +3,7 @@ import { TRUTHS, runTruths } from '@/lib/truths/truths';
 import { emptyContext, type TruthContext } from '@/lib/truths/context';
 import { UNSELECTED_CHIPS } from '@/lib/truths/decisions';
 import { QUESTION_FIT_RULES } from '@/lib/onboarding/question-fit-rules';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const byId = (id: string) => TRUTHS.find((t) => t.id === id)!;
 const ok = (id: string, ctx: TruthContext) => byId(id).check(ctx).ok;
@@ -60,7 +61,7 @@ describe('the known truths', () => {
   it('can fail: the coast rule', () => {
     expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['beachesSwimming'] })] })).toBe(false);
     expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['surfing', 'diving'] })] })).toBe(false);
-    expect(ok('P09', { ...emptyContext(), places: [place({ id: 'copenhagen', naSliders: ['surfing', 'diving'] })] })).toBe(true);
+    expect(ok('P09', { ...emptyContext(), places: [place({ id: PLACE.copenhagen, naSliders: ['surfing', 'diving'] })] })).toBe(true);
     expect(ok('P09', { ...emptyContext(), places: [place({ naSliders: ['surfing'] })] })).toBe(true);
   });
   it('can fail: the crowd and price tiers', () => {

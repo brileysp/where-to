@@ -1,0 +1,398 @@
+[
+ {
+  "k": "scenicLandscapes",
+  "id": "p0010",
+  "name": "Aspen Snowmass",
+  "to": 9.1,
+  "mode": "scale",
+  "why": "A ski town with one famous pair of peaks. At 9.6 it sits above Glacier & Waterton Lakes, Acadia and Rocky Mountain National Park, which all feel stronger.",
+  "from": 9.6
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0151",
+  "name": "Red Sea & Nile",
+  "to": 9.1,
+  "mode": "scale",
+  "why": "Giza and the Nile are monuments and a river strip. At 9.6 it sits above Death Valley, Arches and Sedona, which are more purely landscape.",
+  "from": 9.6
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0013",
+  "name": "Athens",
+  "to": 7.6,
+  "mode": "scale",
+  "why": "A city under an Acropolis. At 9.3 it is level with Greenland, the Faroe Islands and Olympic National Park; every other city below Rio and Cape Town is at 8.5 or lower.",
+  "from": 9.3
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0002",
+  "name": "Algarve",
+  "to": 9.2,
+  "mode": "scale",
+  "why": "Golden cliffs and coves are lovely but feel smaller than the Dalmatian Coast and Santorini, which it sits above.",
+  "from": 9.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0001",
+  "name": "Acadia National Park",
+  "to": 8.9,
+  "mode": "scale",
+  "why": "A beautiful small park. At 9.4 it sits above Olympic and North Cascades, which are larger and wilder.",
+  "from": 9.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0165",
+  "name": "Sedona",
+  "to": 9.0,
+  "mode": "scale",
+  "why": "Striking red rock but smaller in scale than Zion, Arches and Death Valley, which it should sit under.",
+  "from": 9.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0023",
+  "name": "Bavaria & Munich",
+  "to": 8.8,
+  "mode": "scale",
+  "why": "Alpine foothills and lakes. At 9.2 it ties with the Ecuadorian Andes and the Caucasus, which are far bigger mountains.",
+  "from": 9.2
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0076",
+  "name": "Great Smoky Mountains National Park",
+  "to": 8.8,
+  "mode": "scale",
+  "why": "Gentle forested ridges. At 9.2 it sits above Rocky Mountain National Park and Denali.",
+  "from": 9.2
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0192",
+  "name": "Vermont",
+  "to": 8.5,
+  "mode": "scale",
+  "why": "Most of its score is autumn color. At 9.2 it sits above Denali and the Scottish Highlands.",
+  "from": 9.2
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0030",
+  "name": "Black Forest",
+  "to": 8.2,
+  "mode": "scale",
+  "why": "Wooded hills and valleys. At 9.0 it ties with Chiapas, Ireland and Cornwall.",
+  "from": 9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0036",
+  "name": "Cape Cod & the Islands",
+  "to": 8.0,
+  "mode": "scale",
+  "why": "Dunes and gray-shingled villages. At 9.0 it ties with Cornwall and Ireland.",
+  "from": 9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0104",
+  "name": "Marlborough & Abel Tasman",
+  "to": 8.7,
+  "mode": "scale",
+  "why": "Pleasant bays and sounds, but at 9.1 it is level with Bhutan and Tuscany, which feel grander.",
+  "from": 9.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0126",
+  "name": "Nova Scotia",
+  "to": 8.7,
+  "mode": "scale",
+  "why": "The Cabot Trail and granite shores are good rather than great; 9.1 is level with Bhutan and Tuscany.",
+  "from": 9.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0004",
+  "name": "Amsterdam",
+  "to": 6.6,
+  "mode": "scale",
+  "why": "A flat canal city. At 8.0 it sits above Budapest, Istanbul and Hong Kong, and 1.6 above Venice.",
+  "from": 8
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0032",
+  "name": "Budapest",
+  "to": 7.2,
+  "mode": "scale",
+  "why": "A fine river city, but 7.9 puts it above Istanbul and Hong Kong, whose settings are bigger.",
+  "from": 7.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0134",
+  "name": "Palm Springs & Joshua Tree",
+  "to": 8.6,
+  "mode": "scale",
+  "why": "Owner picked 8.6 (suggested 8.4). Pleasant desert, but 8.9 sits above Mongolia and the Badlands, which feel larger.",
+  "from": 8.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0136",
+  "name": "Pantanal",
+  "to": 8.4,
+  "mode": "scale",
+  "why": "Flat wetland; 8.9 puts it level with the Galápagos and Costa Rica.",
+  "from": 8.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0082",
+  "name": "Hudson Valley",
+  "to": 7.9,
+  "mode": "scale",
+  "why": "Rolling hills and a river; 8.5 puts it level with Tasmania and Nice.",
+  "from": 8.5
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0148",
+  "name": "Queenstown",
+  "to": 9.4,
+  "mode": "scale",
+  "why": "Lake and mountains, but 9.6 puts it above Glacier & Waterton Lakes and Monterey & Big Sur.",
+  "from": 9.6
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0176",
+  "name": "Sydney",
+  "to": 8.0,
+  "mode": "scale",
+  "why": "A harbor city; 8.5 puts it above Quebec City & Montreal and Wales without the setting to match.",
+  "from": 8.5
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0075",
+  "name": "Great Barrier Reef",
+  "to": 9.4,
+  "mode": "scale",
+  "why": "Mostly seen underwater or from the air; 9.7 puts it level with Petra and Guilin.",
+  "from": 9.7
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0006",
+  "name": "Antarctic Peninsula",
+  "to": 9.7,
+  "mode": "scale",
+  "why": "Glaciers calving into the sea, icebergs and mountains; 9.1 sits level with Tuscany and Nova Scotia.",
+  "from": 9.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0077",
+  "name": "Greenland",
+  "to": 9.6,
+  "mode": "scale",
+  "why": "Icefjords and icebergs on a huge scale; 9.3 is level with the Faroe Islands and Athens.",
+  "from": 9.3
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0175",
+  "name": "Svalbard",
+  "to": 9.4,
+  "mode": "scale",
+  "why": "Glaciers and arctic coast; 9.1 is level with Fiji and Sicily.",
+  "from": 9.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0124",
+  "name": "Northern Tanzania",
+  "to": 9.1,
+  "mode": "scale",
+  "why": "Owner picked 9.1 (declined 9.4). Serengeti, Ngorongoro and Kilimanjaro together; 9.0 is level with Cape Cod.",
+  "from": 9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0156",
+  "name": "Rocky Mountain National Park",
+  "to": 9.3,
+  "mode": "scale",
+  "why": "Real high mountains; 9.0 puts it below Vermont and the Great Smoky Mountains.",
+  "from": 9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0056",
+  "name": "Denali & the Interior",
+  "to": 9.2,
+  "mode": "scale",
+  "why": "The Alaska Range is a major mountain landscape; 9.0 is below the Great Smoky Mountains.",
+  "from": 9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0164",
+  "name": "Scottish Highlands & Isle of Skye",
+  "to": 9.2,
+  "mode": "scale",
+  "why": "Skye, Glencoe and the lochs; 8.9 is below Vermont and the Great Smoky Mountains.",
+  "from": 8.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0053",
+  "name": "Cusco & Sacred Valley",
+  "to": 9.8,
+  "mode": "scale",
+  "why": "Machu Picchu in its mountain setting; 9.7 is level with Guilin and Petra.",
+  "from": 9.7
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0028",
+  "name": "Bhutan",
+  "to": 9.2,
+  "mode": "scale",
+  "why": "Himalayan valleys and the Tiger's Nest; 9.1 is below Bavaria.",
+  "from": 9.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0044",
+  "name": "Chilean Lake District",
+  "to": 9.0,
+  "mode": "scale",
+  "why": "Volcanoes over lakes; 8.7 sits well below the Argentine Lake District at 9.3 for similar scenery.",
+  "from": 8.7
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0098",
+  "name": "Maasai Mara & Amboseli",
+  "to": 8.7,
+  "mode": "scale",
+  "why": "Kilimanjaro over open savanna; 8.3 is level with Maui and the Canary Islands.",
+  "from": 8.3
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0029",
+  "name": "Big Island",
+  "to": 8.7,
+  "mode": "scale",
+  "why": "Active volcanoes, lava coasts and waterfalls; 8.1 is level with Puglia.",
+  "from": 8.1
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0106",
+  "name": "Maui",
+  "to": 8.6,
+  "mode": "scale",
+  "why": "Haleakalā crater and the Hana coast; 8.3 is level with the Upper Peninsula.",
+  "from": 8.3
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0177",
+  "name": "Taiwan",
+  "to": 8.3,
+  "mode": "scale",
+  "why": "Taroko Gorge and Alishan; 7.9 is below Chiang Mai and Amsterdam.",
+  "from": 7.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0195",
+  "name": "Vietnam",
+  "to": 8.9,
+  "mode": "scale",
+  "why": "Ha Long Bay and Sapa terraces; 8.5 is level with Sydney and Nice.",
+  "from": 8.5
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0132",
+  "name": "Palau",
+  "to": 8.9,
+  "mode": "scale",
+  "why": "The Rock Islands are among the world's best seascapes; 8.4 is level with Okinawa and Piedmont.",
+  "from": 8.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0090",
+  "name": "Kyrgyzstan",
+  "to": 9.1,
+  "mode": "scale",
+  "why": "Tian Shan lakes and peaks; 8.9 is level with Bali and Costa Rica.",
+  "from": 8.9
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0191",
+  "name": "Venice",
+  "to": 7.4,
+  "mode": "scale",
+  "why": "Unique, and the best urban view anywhere; 6.4 is below Aruba and Tokyo & Kyoto.",
+  "from": 6.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0143",
+  "name": "Prague",
+  "to": 6.9,
+  "mode": "scale",
+  "why": "Castle and river skyline; 6.3 is level with the Cotswolds and Bordeaux and below Hong Kong.",
+  "from": 6.3
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0062",
+  "name": "Edinburgh",
+  "to": 6.9,
+  "mode": "scale",
+  "why": "A castle on a crag with Arthur's Seat behind; 6.2 is below Rioja and St Andrews & Fife.",
+  "from": 6.2
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0094",
+  "name": "Lisbon",
+  "to": 6.5,
+  "mode": "scale",
+  "why": "Hills over the Tagus; 6.0 is level with Mexico City and London.",
+  "from": 6
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0026",
+  "name": "Bend & Crater Lake",
+  "to": 8.8,
+  "mode": "scale",
+  "why": "Crater Lake is a standout; 8.4 is level with Piedmont and Okinawa.",
+  "from": 8.4
+ },
+ {
+  "k": "scenicLandscapes",
+  "id": "p0080",
+  "name": "Hokkaido",
+  "to": 8.2,
+  "mode": "scale",
+  "why": "Volcanoes, lakes and lavender; 7.8 is level with Napa & Sonoma.",
+  "from": 7.8
+ }
+]

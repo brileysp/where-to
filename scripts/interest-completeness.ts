@@ -3,11 +3,12 @@ import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').split('\n')) { const t = line.trim(); if (!t || t.startsWith('#')) continue; const i = t.indexOf('='); if (i === -1) continue; let v = t.slice(i + 1).trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); if (process.env[t.slice(0, i).trim()] === undefined) process.env[t.slice(0, i).trim()] = v; }
 (async () => {
+  const { installLabelFilter } = await import('../src/lib/places/console-labels'); await installLabelFilter(); // standard D03: a report never prints a place key
   const { db } = await import('../src/lib/db/client');
   const { sql } = await import('drizzle-orm');
-  const { SLIDERS } = await import('../src/lib/scoring/constants');
+  const { getActiveInterests } = await import('../src/lib/scoring/active-interests'); const ACTIVE = await getActiveInterests(); // the active list (code + admin overrides), not the raw SLIDERS
   const { factDefsFor } = await import('../src/lib/admin/interest-pages/config');
-  const keys = SLIDERS.map((s) => s.key);
+  const keys = ACTIVE.map((s) => s.key);
   const rows = (r: unknown) => ((r as { rows?: unknown[] }).rows ?? r) as Record<string, unknown>[];
   const arr = sql.raw(`ARRAY[${keys.map((k) => `'${k}'`).join(',')}]::text[]`);
   const places = rows(await db.execute(sql`
@@ -15,7 +16,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
       count(*) filter (where not (k = any(p.na_sliders))) as applicable,
       count(*) filter (where k = any(p.na_sliders)) as na,
       count(*) filter (where k = any(p.na_sliders) and coalesce(length(p.na_reasons->k->>'reason'),0) > 0) as na_reason,
-      count(*) filter (where not (k = any(p.na_sliders)) and p.base_scores ? k) as scored,
+      count(*) filter (where not (k = any(p.na_sliders)) and (p.base_scores ? k or p.score_overrides ? k or k = any(p.authored_curves))) as scored,
       count(*) filter (where not (k = any(p.na_sliders)) and k = any(p.authored_curves)) as curve,
       count(*) filter (where not (k = any(p.na_sliders)) and coalesce(length(p.slider_overview->>k),0) > 0) as text,
       count(*) filter (where not (k = any(p.na_sliders)) and coalesce(jsonb_array_length(case when jsonb_typeof(p.slider_monthly_weather->k)='array' then p.slider_monthly_weather->k else '[]'::jsonb end),0) > 0) as months,
@@ -28,15 +29,17 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   const reviews = rows(await db.execute(sql`select interest_key, count(*) filter (where coalesce(reviewer_role,'') !~* '^AI' and reviewer_name !~* '(claude|gemini)') as human, count(*) filter (where coalesce(reviewer_role,'') ~* '^AI' or reviewer_name ~* '(claude|gemini)') as ai, count(distinct reviewer_name) filter (where coalesce(reviewer_role,'') !~* '^AI' and reviewer_name !~* '(claude|gemini)') as human_names from interest_reviews group by interest_key`));
   const passes = rows(await db.execute(sql`select interest_key, count(*) as total, count(*) filter (where finished_at is not null) as finished, max(prompt_version) as pv from authoring_passes group by interest_key`));
   const fc = rows(await db.execute(sql`select interest_key, count(*) as total, count(*) filter (where verdict in ('verified','owner_accepted')) as ok, count(*) filter (where verdict='unchecked') as unchecked, count(*) filter (where verdict='wrong') as wrong from content_fact_checks group by interest_key`));
+  const fcNotes = rows(await db.execute(sql`select interest_key, max(reviewed_on)::text as on_date from interest_reviews where place_id is null and notes ~* '^Fact check done' group by interest_key`));
+  const srcChk = rows(await db.execute(sql`select interest_key, count(distinct place_id) as n from interest_reviews where place_id is not null and reviewer_name ~* '(web source check|second look)' group by interest_key`));
   const gens = rows(await db.execute(sql`select interest_key, count(*) filter (where validation_status='applied') as applied, count(distinct place_id) filter (where validation_status='applied') as applied_places from content_generations group by interest_key`));
   const anchors = rows(await db.execute(sql`select interest_key from interest_anchor_overrides`));
   const rules = rows(await db.execute(sql`select interest_key, count(*) as n from interest_rule_sections group by interest_key`));
   const by = <T extends Record<string, unknown>>(a: T[], f = 'interest_key') => new Map(a.map((r) => [String(r[f]), r]));
-  const P = by(places, 'key'), C = by(chips), Q = by(qs), T = by(todos), R = by(reviews), A = by(passes), F = by(fc), G = by(gens), RU = by(rules);
+  const P = by(places, 'key'), C = by(chips), Q = by(qs), T = by(todos), R = by(reviews), A = by(passes), F = by(fc), FN = by(fcNotes), SC = by(srcChk), G = by(gens), RU = by(rules);
   const n = (v: unknown) => Number(v ?? 0);
   const factRows = new Map<string, Array<Record<string, unknown>>>();
   for (const r of facts) { const k = String(r.interest_key); (factRows.get(k) ?? factRows.set(k, []).get(k)!).push(r); }
-  const out = SLIDERS.filter((s) => !(s as { hidden?: boolean }).hidden && s.key !== 'roadtrip').map((s) => {
+  const out = ACTIVE.map((s) => {
     const p = P.get(s.key) ?? {}; const applicable = n(p.applicable);
     const defs = factDefsFor(s.key).filter((d) => !d.hidden && !['evidence', 'drawSourceChecked'].includes(d.key) && d.group !== 'draw');
     const hasDef = defs.length > 0;
@@ -58,7 +61,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
       todosOpen: n(T.get(s.key)?.open), needsYou: n(T.get(s.key)?.needs_you),
       reviewsHuman: n(R.get(s.key)?.human), reviewsAi: n(R.get(s.key)?.ai), humanNames: n(R.get(s.key)?.human_names),
       passes: n(A.get(s.key)?.total), passesFinished: n(A.get(s.key)?.finished), promptVersion: String(A.get(s.key)?.pv ?? ''),
-      fcTotal: n(F.get(s.key)?.total), fcOk: n(F.get(s.key)?.ok), fcUnchecked: n(F.get(s.key)?.unchecked), fcWrong: n(F.get(s.key)?.wrong),
+      srcChecked: n(SC.get(s.key)?.n), factNoteOn: String(FN.get(s.key)?.on_date ?? ''), fcTotal: n(F.get(s.key)?.total), fcOk: n(F.get(s.key)?.ok), fcUnchecked: n(F.get(s.key)?.unchecked), fcWrong: n(F.get(s.key)?.wrong),
       applied: n(G.get(s.key)?.applied_places), ruleSections: n(RU.get(s.key)?.n),
       anchorOverride: anchors.some((a) => a.interest_key === s.key),
     };

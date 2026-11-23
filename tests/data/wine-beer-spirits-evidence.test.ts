@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const root = join(__dirname, '..', '..');
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/wine-beer-spirits-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
@@ -29,17 +30,17 @@ describe('Wine, Beer & Spirits evidence', () => {
     }
   });
   it('the two sourced raises say so, and no other rating is above the tier formula without a Judged note', () => {
-    expect(draft['oaxaca'].otherSpirits).toBe(10);
-    expect(draft['barbados'].otherSpirits).toBe(9);
-    for (const [p, d] of Object.entries(draft)) if (d.otherSpirits !== undefined && ['oaxaca', 'barbados'].includes(p)) expect(d.evidence as string, p).toContain('Judged:');
+    expect(draft[PLACE.oaxaca].otherSpirits).toBe(10);
+    expect(draft[PLACE.barbados].otherSpirits).toBe(9);
+    for (const [p, d] of Object.entries(draft)) if (d.otherSpirits !== undefined && [PLACE.oaxaca, PLACE.barbados].includes(p)) expect(d.evidence as string, p).toContain('Judged:');
   });
   it('keeps the checked anchors', () => {
-    for (const p of ['bordeaux', 'napa', 'tuscany', 'champagne', 'rioja']) expect(draft[p].wineRegion, p).toBe(10);
-    expect(draft['bavaria-munich'].beerCulture).toBe(10);
-    expect(draft['ireland'].whiskyCulture).toBe(10);
-    expect(draft['palau'].wineRegion).toBe(0);
-    expect(draft['mendoza'].whiskyCulture).toBe(0);
-    expect(draft['tokyo-kyoto'].sakeTraditional).toBeDefined();
+    for (const p of [PLACE.bordeaux, PLACE['napa-and-sonoma'], PLACE.tuscany, PLACE.champagne, PLACE.rioja]) expect(draft[p].wineRegion, p).toBe(10);
+    expect(draft[PLACE['bavaria-and-munich']].beerCulture).toBe(10);
+    expect(draft[PLACE.ireland].whiskyCulture).toBe(10);
+    expect(draft[PLACE.palau].wineRegion).toBe(0);
+    expect(draft[PLACE.mendoza].whiskyCulture).toBe(0);
+    expect(draft[PLACE['tokyo-and-kyoto']].sakeTraditional).toBeDefined();
     expect(Object.values(draft).filter((d) => d.sakeTraditional !== undefined)).toHaveLength(1);
   });
 });

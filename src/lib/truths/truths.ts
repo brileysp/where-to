@@ -10,8 +10,11 @@ import { pickerInterests } from '@/lib/onboarding/interests';
 import { birdCaseProblems, SPECIES_CASE_INTERESTS } from '@/lib/text/species-case';
 import { retiredBirdNames } from '@/lib/text/retired-bird-names';
 import { emphasisIsBalanced } from '@/lib/text/emphasis';
+import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
+import { CADENCE_TODO_SOURCE, PLANNING_KEYS, PLANNING_LABELS, isPlanningScore, reviewCadence } from '@/lib/scoring/planning';
 import type { TruthContext } from './context';
 import { REMOVED_ANSWERS, REMOVED_INTERESTS, UNSELECTED_CHIPS } from './decisions';
+import { PLACE } from '@/lib/places/keys.generated';
 
 /**
  * The known truths: plain-language statements about what must always be true of Where To?, each one a check that can fail. They are the owner's
@@ -41,9 +44,9 @@ export interface Truth {
  * Places where Beaches is on although neither surfing nor diving applies: a real coast with no waves or diving (Copenhagen, Acadia), and cities with a real
  * urban swimming scene (Paris Plages, Berlin's lakes, Vienna's Alte Donau). Owner rule, 22 Oct 2026.
  */
-const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia', 'paris', 'berlin', 'vienna'];
+const COASTAL_WITHOUT_SURF = [PLACE.copenhagen, PLACE['acadia-national-park'], PLACE.paris, PLACE.berlin, PLACE.vienna];
 /** Swimming that is not about the ocean at all (river and swimming holes), so it says nothing about being near a coast. */
-const INLAND_SWIMMING = ['guilin-yangshuo', 'hudson-valley'];
+const INLAND_SWIMMING = [PLACE['guilin-and-yangshuo'], PLACE['hudson-valley']];
 /** A not-applicable reason that says the place is too far away. Murky water or no diving is a fine reason; being too far is not (owner rule, 24 Oct 2026). */
 const TOO_FAR = /too far|far from|requires? travel|other regions/i;
 const pass: TruthResult = { ok: true };
@@ -110,9 +113,9 @@ export const TRUTHS: Truth[] = [
     for (let i = 1; i < r.reasons.length; i++) if (r.reasons[i].cost > r.reasons[i - 1].cost) return fail('not biggest first');
     return pass;
   } },
-  { id: 'M08', area: 'Matching', says: 'Missing a Limit answer costs more than missing a Lean answer, and a missed chip costs at least as much as a missed Limit.', check: () => {
+  { id: 'M08', area: 'Matching', says: 'Missing a Limit answer costs more than missing a Lean answer, and a missed chip is as mild as a missed Lean (a wish, never a wall).', check: () => {
     const s = DEFAULT_MATCH_SETTINGS;
-    return s.keepIfLimitMissed < s.keepIfLeanMissed && s.keepIfChipMissed <= s.keepIfLimitMissed ? pass : fail(`chip ${s.keepIfChipMissed}, limit ${s.keepIfLimitMissed}, lean ${s.keepIfLeanMissed}`);
+    return s.keepIfLimitMissed < s.keepIfLeanMissed && s.keepIfChipMissed >= s.keepIfLeanMissed ? pass : fail(`chip ${s.keepIfChipMissed}, limit ${s.keepIfLimitMissed}, lean ${s.keepIfLeanMissed}`);
   } },
   { id: 'M09', area: 'Matching', says: 'Answers are kept while a chip is unticked and count again the moment it is ticked again.', check: () => {
     const w = world();
@@ -318,7 +321,9 @@ export const TRUTHS: Truth[] = [
   } },
   { id: 'T05', area: 'Text', says: 'Animal names use American spelling ("gray seal", "Gray Heron"), the way eBird and NOAA write them.', check: (ctx) => {
     const re = /\b[Gg]rey\b/; const bad: string[] = [];
-    for (const p of ctx.places) for (const [k, t] of Object.entries(p.overview)) if (t && re.test(t)) bad.push(`${p.name} ${k}`);
+    // Proper names keep their own spelling (Grey Glacier and Lago Grey in Torres del Paine), the same way T04 leaves "Wetland Centre" alone.
+    const properNames = /\bGrey (Glacier|Lake|Towers?)\b/g;
+    for (const p of ctx.places) for (const [k, t] of Object.entries(p.overview)) if (t && re.test(t.replace(properNames, ''))) bad.push(`${p.name} ${k}`);
     return noneOf(bad, 'overviews that write "grey"');
   } },
   { id: 'T06', area: 'Text', says: 'Bird names are the eBird names: a name swept out on 22 Oct 2026 (Common Starling, Griffon Vulture, Little Auk and the rest) never comes back.', check: (ctx) => {
@@ -335,6 +340,26 @@ export const TRUTHS: Truth[] = [
     const bad: string[] = [];
     for (const [id, rule] of Object.entries(QUESTION_FIT_RULES)) { const [ik, qk] = id.split('.'); const q = ctx.questions.find((x) => x.interestKey === ik && x.questionKey === qk); if (!q?.fitRule) bad.push(`${id}: not saved`); else if (canon(q.fitRule) !== canon(rule)) bad.push(`${id}: differs`); }
     return noneOf(bad, 'rules that differ between code and admin');
+  } },
+  { id: 'A05', area: 'Admin', says: 'Every interest has all four planning scores (seasonal variance, evergreen, stakes, refresh effort), each a whole number from 1 to 10.', check: (ctx) => {
+    const bad: string[] = [];
+    for (const s of VISIBLE_SLIDERS.filter((x) => x.key !== 'roadtrip')) { // Road-Tripping is a way to see a place, not an interest
+      const p = ctx.planning.find((x) => x.key === s.key);
+      for (const k of PLANNING_KEYS) if (!isPlanningScore(p?.[k])) bad.push(`${s.label}: ${PLANNING_LABELS[k].label}`);
+    }
+    return noneOf(bad, 'planning scores missing or out of range');
+  } },
+  { id: 'A06', area: 'Admin', says: 'Every interest reviewed monthly, quarterly or annually (by its Evergreen score) has an open repeating review to-do with the same cadence.', check: (ctx) => {
+    const bad: string[] = [];
+    for (const s of VISIBLE_SLIDERS.filter((x) => x.key !== 'roadtrip')) {
+      const p = ctx.planning.find((x) => x.key === s.key);
+      if (!isPlanningScore(p?.evergreen)) continue;
+      const cadence = reviewCadence(p.evergreen);
+      const open = ctx.todos.filter((t) => t.interestKey === s.key && t.source === CADENCE_TODO_SOURCE && t.status !== 'done');
+      if (open.length !== 1) bad.push(`${s.label}: ${open.length} open review to-dos`);
+      else if (open[0].repeatEvery !== cadence) bad.push(`${s.label}: review repeats ${open[0].repeatEvery ?? 'never'}, cadence is ${cadence}`);
+    }
+    return noneOf(bad, 'interests whose review to-do is missing or on the wrong cadence');
   } },
 ];
 

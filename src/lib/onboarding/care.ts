@@ -75,7 +75,8 @@ export const CARE_ITEMS: CareItem[] = [
   { key: 'physical', icon: '💪', name: 'Physical demand', detail: 'Easy to challenging', band: true, trip: true },
   { key: 'kids', icon: '👶', name: 'Kid-friendly', detail: 'Easy with children', question: 'Ages', options: [['u5', 'Under 5'], ['k', '5 to 12'], ['t', 'Teens']], multi: true, firm: 'Must be geared to families', trip: true },
   { key: 'food', icon: '🥗', name: 'Food needs', detail: 'Vegetarian, halal, gluten-free', question: 'Needs', options: [['veg', 'Vegetarian'], ['vegan', 'Vegan'], ['gf', 'Gluten-free'], ['halal', 'Halal'], ['kosher', 'Kosher']], multi: true, firm: 'Rule out places with few options', lasting: true },
-  { key: 'lang', icon: '🗣️', name: 'Language', detail: 'How easy it is to get by', question: 'I need', options: [['en', 'English to work'], ['es', 'Spanish'], ['pt', 'Portuguese'], ['it', 'Italian'], ['ja', 'Japanese']], multi: true, firm: 'Rule out places where English is hard', lasting: true },
+  { key: 'lang', icon: '🗣️', name: 'Language', detail: 'How easy it is to get by', question: 'I need', options: [['en', 'English to work'], ['es', 'Spanish'], ['pt', 'Portuguese'], ['it', 'Italian'], ['fr', 'French'], ['de', 'German'], ['ja', 'Japanese'], ['zh', 'Chinese'], ['ko', 'Korean'], ['ar', 'Arabic']], multi: true, firm: 'Rule out places where it is hard to get by', lasting: true },
+  { key: 'access', icon: '♿', name: 'Easy to get around', detail: 'Limited walking, steps or a wheelchair', question: 'I need', options: [['steps', 'Few steps and short walks'], ['chair', 'Wheelchair or walker friendly']], multi: true, firm: 'Rule out places that are hard to get around', lasting: true },
   { key: 'how', icon: '🧭', name: 'How you travel', detail: 'Road trip, tour, cruise', question: 'I like', options: [['road', 'Road trip'], ['tour', 'Guided tour'], ['cruise', 'Cruise'], ['base', 'One base, day trips']], multi: true, lasting: true },
 ];
 

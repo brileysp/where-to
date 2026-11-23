@@ -5,9 +5,9 @@ import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import { RELATED_INTERESTS } from '@/lib/onboarding/related-interests';
 
 describe('the interest picker data', () => {
-  it('has the four categories and the 47 real interests, none from the Value group', () => {
+  it('has the four categories and the 46 real interests (Trail Running is hidden), none from the Value group', () => {
     expect(pickerGroups().map((g) => g.name)).toEqual(['Nature & Wildlife', 'Sports & Recreation', 'Culture & Discovery', 'Relaxation & Leisure']);
-    expect(pickerInterests().length).toBe(47);
+    expect(pickerInterests().length).toBe(46);
     expect(pickerInterests().some((i) => ['deals', 'crowds', 'roadtrip'].includes(i.key))).toBe(false);
   });
   it('every fixed first-eight interest exists in its own category', () => {
@@ -98,5 +98,34 @@ describe('levels and top interests', () => {
     const on = toggleSpecific({}, 'hiking', 'day-hikes');
     expect(on).toEqual({ hiking: ['day-hikes'] });
     expect(toggleSpecific(on, 'hiking', 'day-hikes')).toEqual({ hiking: [] });
+  });
+});
+
+describe('the top-interest order (owner, 21 Nov 2026)', () => {
+  const order = (l: Record<string, string>) => orderedByLevel(l as never);
+  it('puts a newly starred interest just below the ones starred before it, not above them', () => {
+    // Surfing was starred first, then Safari: Safari was picked earlier in the list but must land under Surfing.
+    let l: Record<string, string> = { safari: 'like', birding: 'like', surfing: 'like', diving: 'like' };
+    l = toggleTop(l as never, 'surfing').levels;
+    l = toggleTop(l as never, 'safari').levels;
+    expect(order(l)).toEqual(['surfing', 'safari', 'birding', 'diving']);
+  });
+  it('drops an un-starred interest to just below the Top group', () => {
+    let l: Record<string, string> = { a: 'like', b: 'like', c: 'like' };
+    l = toggleTop(l as never, 'a').levels;
+    l = toggleTop(l as never, 'b').levels;
+    l = toggleTop(l as never, 'a').levels;
+    expect(order(l)).toEqual(['b', 'a', 'c']);
+  });
+});
+
+describe('the kinds of place (owner, 21 Nov 2026)', () => {
+  it('starts with every type on, lets one be left out and put back, and never leaves none', async () => {
+    const { ALL_PLACE_TYPES, togglePlaceType } = await import('@/lib/onboarding/place-types');
+    const without = togglePlaceType(ALL_PLACE_TYPES, 'city');
+    expect(without).not.toContain('city');
+    expect(without.length).toBe(ALL_PLACE_TYPES.length - 1);
+    expect(togglePlaceType(without, 'city')).toEqual(ALL_PLACE_TYPES);
+    expect(togglePlaceType(['city'], 'city')).toEqual(['city']);
   });
 });

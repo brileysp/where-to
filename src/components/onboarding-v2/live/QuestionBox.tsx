@@ -78,7 +78,7 @@ export function QuestionBox({ ctx, wrapRef }: { ctx: BoxContext; wrapRef?: React
           <div className="lq-meter">
             <b>DNA {f.percent}%</b>
             <div className="lq-mbar">
-              <div className="lq-fill" style={{ width: `${Math.max(2, (f.points / f.barSize) * 100)}%` }} />
+              <div className="lq-fill" style={{ width: `${f.fillPct}%` }} />
               <div className={`lq-gate ${f.unlocked ? 'open' : ''}`} style={{ ['--gx' as string]: `${f.gatePct}%` }}>{f.unlocked ? OPEN_LOCK : LOCK}</div>
             </div>
             <span className="lq-sr">{label}</span>

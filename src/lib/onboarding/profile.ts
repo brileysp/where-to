@@ -11,6 +11,7 @@ import { REGION_KEYS, allRegions, type RegionKey } from './regions';
 import { hasSubStep, subChoices } from './origin';
 import { isCountryCode } from '@/lib/units/countries';
 import { DEFAULT_PEAK, isPeak } from './peak';
+import { ALL_PLACE_TYPES, allPlaceTypes } from './place-types';
 
 /**
  * What a traveler keeps from the new onboarding flow (docs/onboarding-v2/SPEC.md 6, 4.11). Only the rows whose "keep in my Travel DNA"
@@ -44,6 +45,8 @@ export interface TravelProfile {
   /** How long the trip is (kept with the dates), and the continents left in (empty = all). */
   length: TripLength | null;
   continents: RegionKey[];
+  /** The kinds of place left on (place-types.ts; empty = all), kept with the dates like the continents. */
+  placeTypes?: string[];
   /** Only when the traveler chose to keep flight limits. */
   maxHours: number;
   /** Peak or off peak, the traveler's usual leaning (a step from 0 to 4; a trip can change it). */
@@ -66,6 +69,7 @@ export interface FlowChoices {
   week: number;
   length?: TripLength | null;
   continents?: RegionKey[];
+  placeTypes?: string[];
   maxHours: number;
   peak?: number;
 }
@@ -122,6 +126,7 @@ export function toTravelProfile(c: FlowChoices, keep: Record<string, boolean>, d
     week: kept('when') ? c.week : 0,
     length: kept('when') ? c.length ?? null : null,
     continents: kept('when') && !allRegions(c.continents ?? []) ? (c.continents ?? []) : [],
+    placeTypes: kept('when') && !allPlaceTypes(c.placeTypes) ? (c.placeTypes ?? []) : [],
     maxHours: kept('limits') ? c.maxHours : 0,
     peak: isPeak(c.peak) ? c.peak : DEFAULT_PEAK,
   };
@@ -146,6 +151,7 @@ export function fromTravelProfile(p: TravelProfile, cards: DnaCard[]): FlowChoic
     week: p.week,
     length: p.length ?? null,
     continents: p.continents ?? [],
+    placeTypes: p.placeTypes ?? [],
     maxHours: p.maxHours,
     peak: isPeak(p.peak) ? p.peak : DEFAULT_PEAK,
   };
@@ -192,6 +198,7 @@ export function parseTravelProfile(raw: unknown): TravelProfile | null {
   const subRaw = typeof raw.homeSub === 'string' ? raw.homeSub.toUpperCase() : null;
   const homeSub = homeCountry && hasSubStep(homeCountry) && subRaw && subChoices(homeCountry).some(([code]) => code === subRaw) ? subRaw : null;
   const continents = Array.isArray(raw.continents) ? REGION_KEYS.filter((k) => (raw.continents as unknown[]).includes(k)) : [];
+  const placeTypes = Array.isArray(raw.placeTypes) ? ALL_PLACE_TYPES.filter((k) => (raw.placeTypes as unknown[]).includes(k)) : [];
   return {
     v: 1,
     levels,
@@ -209,6 +216,7 @@ export function parseTravelProfile(raw: unknown): TravelProfile | null {
     week,
     length: isTripLength(raw.length) ? raw.length : null,
     continents: allRegions(continents) ? [] : continents,
+    placeTypes: allPlaceTypes(placeTypes) ? [] : placeTypes,
     maxHours,
     peak: isPeak(raw.peak) ? raw.peak : DEFAULT_PEAK,
   };

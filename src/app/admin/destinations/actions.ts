@@ -72,8 +72,7 @@ export async function restoreDestinationVersion(id: string, auditId: string, _fo
 export async function createPlace(formData: FormData): Promise<void> {
   const admin = await requireAdminUser();
   const name = String(formData.get('name') ?? '');
-  const error = await insertNewPlace(admin, {
-    id: String(formData.get('id') ?? ''),
+  const result = await insertNewPlace(admin, {
     name,
     region: String(formData.get('region') ?? ''),
     emoji: String(formData.get('emoji') ?? ''),
@@ -81,7 +80,7 @@ export async function createPlace(formData: FormData): Promise<void> {
     countryCode: String(formData.get('countryCode') ?? '') || null,
     continent: String(formData.get('continent') ?? '') || null,
   });
-  if (error) redirect(`/admin/destinations/new?error=${encodeURIComponent(error)}`);
+  if ('error' in result) redirect(`/admin/destinations/new?error=${encodeURIComponent(result.error)}`);
   redirect(`/admin/destinations/new?created=${encodeURIComponent(name.trim())}`);
 }
 

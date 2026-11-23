@@ -5,6 +5,7 @@ import { getDestinationForAdmin } from '@/lib/db/queries/admin-destinations';
 import { listAuditHistory } from '@/lib/db/queries/admin-audit';
 import { AuditHistoryList } from '@/components/admin/AuditHistoryList';
 import { restoreDestinationVersion } from '../../actions';
+import { resolveAdminPlace } from '@/lib/places/admin-route';
 
 export default async function DestinationHistoryPage({
   params,
@@ -14,8 +15,9 @@ export default async function DestinationHistoryPage({
   searchParams: Promise<{ error?: string }>;
 }) {
   await requireAdminUser();
-  const { id } = await params;
+  const { id: param } = await params;
   const { error } = await searchParams;
+  const { key: id, slug } = await resolveAdminPlace(param, '/history', error ? `?error=${encodeURIComponent(error)}` : '');
 
   const destination = await getDestinationForAdmin(id);
   if (!destination) notFound();
@@ -27,7 +29,9 @@ export default async function DestinationHistoryPage({
     <main style={{ maxWidth: 720, margin: '48px auto', fontFamily: 'system-ui, sans-serif' }}>
       <div style={{ marginBottom: 24, display: 'flex', gap: 16 }}>
         <Link href="/admin/destinations">← Destinations</Link>
-        <Link href={`/admin/destinations/${id}/profile`}>Place Profile</Link>
+        <Link href={`/admin/destinations/${slug}/profile`}>Place Profile</Link>
+        {' · '}
+        <Link href={`/admin/destinations/${slug}/identity`}>Names &amp; scope</Link>
       </div>
       <h1 style={{ fontSize: 22, marginBottom: 4 }}>{destination.name} — history</h1>
       <p style={{ color: '#888', fontSize: 13, marginBottom: 20 }}>

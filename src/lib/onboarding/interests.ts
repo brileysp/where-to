@@ -19,6 +19,15 @@ const GROUP_ICONS: Record<string, string> = {
   'Relaxation & Leisure': '🏖️',
 };
 
+/** The short names the category tabs use (the full name stays in the heading above the boxes). */
+const GROUP_SHORT: Record<string, string> = {
+  'Nature & Wildlife': 'Nature',
+  'Sports & Recreation': 'Recreation',
+  'Culture & Discovery': 'Culture',
+  'Relaxation & Leisure': 'Relaxation',
+};
+export const shortGroupName = (name: string): string => GROUP_SHORT[name] ?? name;
+
 /** The four categories, in tab order. */
 export function pickerGroups(): PickerGroup[] {
   return SLIDER_GROUPS.filter((g) => g !== 'Value').map((name) => ({ name, icon: GROUP_ICONS[name] ?? '•' }));

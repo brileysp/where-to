@@ -17,6 +17,8 @@ export interface TripWork {
   bands: Bands;
   care: CareState;
   peak: number;
+  /** The kinds of place left on; empty = all. */
+  placeTypes: string[];
 }
 
 /** What the traveler's profile says for the choices a trip can change (the defaults a trip inherits). */
@@ -25,6 +27,7 @@ export interface TripDefaults {
   bands: Bands;
   care: CareState;
   peak: number;
+  placeTypes: string[];
 }
 
 export interface TripsArgs {
@@ -60,7 +63,7 @@ export function useTrips(a: TripsArgs) {
       week: a.work.week,
       length: a.work.length,
       continents: a.work.continents,
-      overrides: overridesFor(a.defaults, { who: a.work.who, bands: a.work.bands, care: a.work.care, peak: a.work.peak }),
+      overrides: overridesFor(a.defaults, { who: a.work.who, bands: a.work.bands, care: a.work.care, peak: a.work.peak, placeTypes: a.work.placeTypes }),
     };
   }, [stored, a.first, a.work, a.defaults]);
 

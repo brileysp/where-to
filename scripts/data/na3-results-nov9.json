@@ -1,0 +1,271 @@
+[
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0050",
+  "rank": "batch",
+  "name": "Costa Rica",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2561,
+  "tokensOut": 1567,
+  "cost": 0.011963,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Costa Rica has a growing craft beer industry centered around San José and coastal surf towns. The national spirit is guaro, a clear sugar cane liquor. Rural areas in Guanacaste produce coyol, a traditional fermented palm sap drink harvested during the dry season.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "good",
+     "text": "The dry season, from December to April, is the time to find coyol wine, a fermented palm sap sold at roadside stands in Guanacaste. Craft beer taprooms in San José and coastal towns operate normally."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "level": "fair",
+     "text": "Coyol season ends with the rains. Visitors can still visit craft taprooms in the capital or try chiliguaro shots at local bars."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "monthly_scores": [
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    3.8,
+    3.8,
+    3.8,
+    3.8,
+    3.8,
+    3.8,
+    3.8,
+    4.2
+   ],
+   "confidence": "high",
+   "depth_why": "The dry season allows for the harvest of traditional coyol wine, separating the year into two distinct periods.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "San José",
+    "Guanacaste",
+    "guaro",
+    "chiliguaro",
+    "coyol"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0064",
+  "rank": "batch",
+  "name": "Ethiopia",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2560,
+  "tokensOut": 1830,
+  "cost": 0.01354,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Ethiopia is known for tej, a traditional honey wine served in specialized tejbet houses. Local brewers also produce tella, a traditional grain beer. The country has a growing commercial beer industry centered in Addis Ababa.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Visitors can taste tej served in a traditional glass flask called a berele at local tejbets. The Rift Valley winery near Ziway runs tours and a tasting room for domestic wines."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2
+   ],
+   "confidence": "medium",
+   "depth_why": "The availability of traditional drinks and brewery access remains consistent across the seasons.",
+   "flags": [],
+   "named_things": [
+    "tej",
+    "tejbet",
+    "tella",
+    "Addis Ababa",
+    "Rift Valley",
+    "Ziway",
+    "berele"
+   ]
+  },
+  "curve": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0076",
+  "rank": "batch",
+  "name": "Great Smoky Mountains National Park",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2568,
+  "tokensOut": 1812,
+  "cost": 0.01344,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The gateway towns of Gatlinburg and Pigeon Forge are known for legal moonshine distilleries that honor Appalachian bootlegging traditions. Visitors can taste unaged corn whiskey and flavored spirits at tasting counters along the main parkways. The region also produces sweet muscadine wines and local craft beer.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Tasting rooms along the Gatlinburg and Pigeon Forge parkways pour samples of traditional corn moonshine and Appalachian whiskey. Visitors can also follow the Rocky Top Wine Trail to try sweet regional wines made from muscadine grapes."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8
+   ],
+   "confidence": "high",
+   "depth_why": "The distilleries and tasting rooms in the gateway towns operate on a static schedule.",
+   "flags": [],
+   "named_things": [
+    "Gatlinburg",
+    "Pigeon Forge",
+    "Rocky Top Wine Trail"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  "base": 1
+ }
+]

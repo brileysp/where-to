@@ -6,6 +6,9 @@ describe('nextDueOn', () => {
   it('skips dates already past', () => expect(nextDueOn('2026-10-01', 'weekly', '2026-10-21')).toBe('2026-10-22'));
   it('clamps a monthly item to the end of a short month', () => expect(nextDueOn('2026-01-31', 'monthly', '2026-01-31')).toBe('2026-02-28'));
   it('starts from today when there is no date', () => expect(nextDueOn(null, 'monthly', '2026-10-14')).toBe('2026-11-14'));
+  it('steps a quarterly item three months on', () => expect(nextDueOn('2026-11-30', 'quarterly', '2026-11-30')).toBe('2027-02-28'));
+  it('steps an annual item a year on, clamping a leap day', () => expect(nextDueOn('2028-02-29', 'annually', '2028-02-29')).toBe('2029-02-28'));
+  it('skips past quarters', () => expect(nextDueOn('2026-01-15', 'quarterly', '2026-10-14')).toBe('2026-10-15'));
 });
 
 describe('dueInfo', () => {

@@ -10,7 +10,8 @@ import { MONTH_NAMES } from '@/lib/scoring/constants';
 import { ForYouTab } from './ForYouTab';
 import { AboutTab } from './AboutTab';
 import { CostsTab } from './CostsTab';
-import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import { PlaceCardTips, PLACE_TIPS_SEEN_KEY } from './PlaceCardTips';
+import type { InterestFactors, PlaceAdjust, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
 import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import type { ScoredDestination } from '@/lib/scoring/types';
 
@@ -41,6 +42,7 @@ export function DestinationDetailSheet({
   onToggleFavorited,
   onClose,
   factors,
+  adjust,
   notes,
   interestKeys,
 }: {
@@ -61,6 +63,8 @@ export function DestinationDetailSheet({
   onClose: () => void;
   /** What the traveler's chips and answers keep of each place's score (onboarding's live questions), and this place's reasons. */
   factors?: InterestFactors;
+  /** What the list does to this place beyond the month's own score (season leaning, trip length, what else matters), so the card shows the list's number. */
+  adjust?: PlaceAdjust;
   notes?: Record<string, PlaceNote>;
   /** Show exactly these interests as chips (the ones the traveler picked). */
   interestKeys?: string[];
@@ -82,6 +86,20 @@ export function DestinationDetailSheet({
   // while the sheet is open the preview snaps back to it without an effect.
   const previewIdx = previewOverride && previewOverride.forMonth === monthIdx ? previewOverride.idx : monthIdx;
   const setPreviewIdx = (idx: number) => setPreviewOverride(idx === monthIdx ? null : { forMonth: monthIdx, idx });
+  // The first time any place card opens, a short demo shows how the For You tab works (see PlaceCardTips).
+  const [tipsOpen, setTipsOpen] = useState(() => {
+    try { return window.localStorage.getItem(PLACE_TIPS_SEEN_KEY) !== '1'; } catch { return false; }
+  });
+  const [tipsReady, setTipsReady] = useState(false);
+  useEffect(() => {
+    if (!tipsOpen) return;
+    const t = setTimeout(() => setTipsReady(true), 900);
+    return () => clearTimeout(t);
+  }, [tipsOpen]);
+  function closeTips() {
+    try { window.localStorage.setItem(PLACE_TIPS_SEEN_KEY, '1'); } catch { /* storage blocked */ }
+    setTipsOpen(false);
+  }
   const bodyRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const [lockedHeight, setLockedHeight] = useState<number | null>(null);
@@ -143,52 +161,51 @@ export function DestinationDetailSheet({
           <span className="detail-sheet-emoji">{dest.emoji}</span>
           <div className="detail-sheet-title-wrap">
             <div className="detail-sheet-name">{dest.name}</div>
-            <div className="detail-sheet-region">{dest.region}</div>
+            <div className="detail-sheet-region">
+              {dest.region}
+              {' · '}
+              <span className="detail-sheet-month-group">
+                <MonthChip month={previewIdx + 1} onChangeMonth={(m) => setPreviewIdx(m - 1)} />
+                {previewIdx !== monthIdx && (
+                  <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)} aria-label={`Back to ${MONTH_NAMES[monthIdx]}`}>
+                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M3 7.5a5 5 0 1 1 1.6 3.7" />
+                      <path d="M3 3.2v4.3h4.3" />
+                    </svg>
+                    {MONTH_NAMES[monthIdx]}
+                  </button>
+                )}
+              </span>
+            </div>
+          </div>
+          <div className="detail-sheet-action-group">
+            {visited && <StampBadge destinationId={dest.id} size={30} popping={justStamped} />}
+            <button
+              type="button"
+              className="card-bookmark-btn"
+              aria-label={favorited ? 'Saved — tap to change' : 'Save or mark visited'}
+              onClick={() => setActionOpen(true)}
+            >
+              <BookmarkIcon filled={favorited} />
+            </button>
           </div>
           <button type="button" className="detail-close-btn" onClick={onClose} aria-label="Close">
             ×
           </button>
         </div>
-
-        <div className="detail-sheet-subheader">
-          <span className="detail-sheet-month-group">
-            <MonthChip month={previewIdx + 1} onChangeMonth={(m) => setPreviewIdx(m - 1)} />
-            {previewIdx !== monthIdx && (
-              <button type="button" className="detail-sheet-month-reset" onClick={() => setPreviewIdx(monthIdx)} aria-label={`Back to ${MONTH_NAMES[monthIdx]}`}>
-                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M3 7.5a5 5 0 1 1 1.6 3.7" />
-                  <path d="M3 3.2v4.3h4.3" />
-                </svg>
-                {MONTH_NAMES[monthIdx]}
+        {actionOpen && (
+          <div className="detail-sheet-subheader">
+            <div className="month-menu-scrim" onClick={() => setActionOpen(false)} />
+            <div className="card-action-chips">
+              <button type="button" className={`card-chip card-chip-visited${visited ? ' active' : ''}`} onClick={handleMarkVisited}>
+                <CheckIcon /> Visited
               </button>
-            )}
-          </span>
-          {actionOpen ? (
-            <>
-              <div className="month-menu-scrim" onClick={() => setActionOpen(false)} />
-              <div className="card-action-chips">
-                <button type="button" className={`card-chip card-chip-visited${visited ? ' active' : ''}`} onClick={handleMarkVisited}>
-                  <CheckIcon /> Visited
-                </button>
-                <button type="button" className={`card-chip card-chip-save${favorited ? ' active' : ''}`} onClick={handleSave}>
-                  <BookmarkIcon filled={favorited} /> Save
-                </button>
-              </div>
-            </>
-          ) : (
-            <div className="detail-sheet-action-group">
-              {visited && <StampBadge destinationId={dest.id} size={34} popping={justStamped} />}
-              <button
-                type="button"
-                className="card-bookmark-btn"
-                aria-label={favorited ? 'Saved — tap to change' : 'Save or mark visited'}
-                onClick={() => setActionOpen(true)}
-              >
-                <BookmarkIcon filled={favorited} />
+              <button type="button" className={`card-chip card-chip-save${favorited ? ' active' : ''}`} onClick={handleSave}>
+                <BookmarkIcon filled={favorited} /> Save
               </button>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         <div className="detail-tabs">
           <button type="button" className={`detail-tab-btn${tab === 'foryou' ? ' active' : ''}`} onClick={() => setTab('foryou')}>
@@ -221,6 +238,8 @@ export function DestinationDetailSheet({
               selectedCategory={selectedCategory}
               onSelectCategory={setSelectedCategory}
               factors={factors}
+              adjust={adjust}
+              searchIdx={monthIdx}
               notes={notes}
               interestKeys={interestKeys}
             />
@@ -233,6 +252,22 @@ export function DestinationDetailSheet({
           </div>
         </div>
       </div>
+      {tipsOpen && tipsReady && (
+        <PlaceCardTips
+          dest={withText}
+          weights={weights}
+          emojiOverrides={emojiOverrides}
+          shortNames={shortNames}
+          bands={bands}
+          selectedStyles={selectedStyles}
+          startMonth={monthIdx}
+          factors={factors}
+          adjust={adjust}
+          notes={notes}
+          interestKeys={interestKeys}
+          onClose={closeTips}
+        />
+      )}
     </>
   );
 }

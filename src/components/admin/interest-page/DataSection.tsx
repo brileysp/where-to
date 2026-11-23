@@ -11,7 +11,8 @@ import { NaReasonChip, type NaChange } from './NaReasonChip';
 import Link from 'next/link';
 import { NaToggle } from '../NaToggle';
 import { OverviewCell, MonthlyCell, StagedButtons } from './InterestTextCells';
-import { PLACE_TYPES, type PlaceType } from '@/lib/admin/interest-pages/place-types';
+import { SETTING_TAGS } from '@/lib/places/setting-tags';
+import { placeSwingFlags } from '@/lib/scoring/planning';
 
 const STATUS_CHIP: Record<PlaceStatus, { label: string; tone: string }> = {
   live: { label: 'Live', tone: 'good' },
@@ -31,20 +32,38 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
   // 'active' (the default) is everything except places scored N/A; '' is All, including N/A.
   const [status, setStatus] = useState<'' | 'active' | PlaceStatus>('active');
   const defs = useMemo(() => visibleFactDefs(data.key), [data.key]);
-  const [placeType, setPlaceType] = useState<'' | PlaceType>('');
+  const [setting, setSetting] = useState('');
   const lastReview = useMemo(() => {
     const m = new Map<string, string>();
     for (const r of reviews) if (r.placeId && (m.get(r.placeId) ?? '') < r.reviewedOn) m.set(r.placeId, r.reviewedOn);
     return m;
   }, [reviews]);
 
-  const rows = useMemo(() => places.filter((p) => (!status || (status === 'active' ? p.status !== 'na' : p.status === status)) && (!placeType || p.placeType === placeType)), [places, status, placeType]);
+  const swingFlags = useMemo(() => placeSwingFlags(places), [places]);
+  const rows = useMemo(() => places.filter((p) => (!status || (status === 'active' ? p.status !== 'na' : p.status === status)) && (!setting || p.settingTags.includes(setting))), [places, status, setting]);
 
   const columns: GridColumn<InterestPlaceRow>[] = [
     { key: 'name', label: 'Place', sortable: true, sortValue: (p) => p.name, render: (p) => <div className="cell-inner" style={{ fontWeight: 600 }}><Link href={`/admin/destinations/${p.id}/profile`} title="Open this place's month-by-month profile" style={{ color: 'inherit', textDecoration: 'none' }}>{p.name}</Link></div> },
     { key: 'region', label: 'Region', sortable: true, sortValue: (p) => p.region, render: (p) => <div className="cell-inner ip-muted">{p.region}</div> },
     { key: 'peak', label: 'Peak', sortable: true, align: 'right', sortValue: (p) => peakOf(p), render: (p) => <div className="cell-inner ip-mono" style={{ justifyContent: 'flex-end', fontWeight: 700 }}>{p.status === 'na' ? '—' : peakOf(p).toFixed(1)}</div> },
     { key: 'season', label: 'Season', render: (p) => <div className="cell-inner">{p.status === 'na' ? null : <Spark monthly={p.monthly} />}</div> },
+    {
+      key: 'swing',
+      label: 'Swing',
+      sortable: true,
+      align: 'right',
+      sortValue: (p) => swingFlags.get(p.id)?.swing ?? -1,
+      render: (p) => {
+        const f = swingFlags.get(p.id);
+        if (!f) return <div className="cell-inner ip-faint" style={{ justifyContent: 'flex-end' }}>—</div>;
+        return (
+          <div className="cell-inner ip-mono" style={{ justifyContent: 'flex-end', gap: 6 }} title={`Best month minus worst month: ${f.swing.toFixed(1)} points. The interest's usual swing is ${f.norm.toFixed(1)}.`}>
+            {f.swing.toFixed(1)}
+            {f.exception && <span className="ip-chip warn">{f.diff > 0 ? 'more seasonal' : 'flatter'}</span>}
+          </div>
+        );
+      },
+    },
     {
       key: 'status',
       label: 'Status',
@@ -134,7 +153,7 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
     sortValue: (p) => p.naReason?.reason ?? '',
     render: (p) => <div className="cell-inner ip-nareason-cell">{p.naReason?.reason ?? <span className="ip-faint">No reason recorded</span>}</div>,
   };
-  const shownColumns = status === 'na' ? [columns[0], columns[1], naReasonColumn, ...columns.slice(4)] : columns;
+  const shownColumns = status === 'na' ? [columns[0], columns[1], naReasonColumn, ...columns.slice(5)] : columns;
 
   const groupsPresent = [...new Set(defs.map((d) => d.group))];
 
@@ -169,7 +188,7 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
             rows={rows}
             columns={shownColumns}
             rowId={(p) => p.id}
-            searchText={(p) => `${p.name} ${p.region} ${p.placeType} ${defs.filter((d) => d.animals || d.key === 'headlineBirds' || d.key === 'headlineAnimals').map((d) => factToText(d, p.facts[d.key])).join(' ')}`}
+            searchText={(p) => `${p.name} ${p.region} ${p.settingTags.join(' ')} ${defs.filter((d) => d.animals || d.key === 'headlineBirds' || d.key === 'headlineAnimals').map((d) => factToText(d, p.facts[d.key])).join(' ')}`}
             searchPlaceholder={data.key === 'birding' ? 'Search place, region or bird…' : 'Search place, region or animal…'}
             defaultSort={{ col: 'peak', dir: -1 }}
             footerNote={`${rows.length} of ${places.length} places`}
@@ -184,10 +203,10 @@ export function DataSection({ data, places, reviews, onFact, onNa, onPlace }: { 
                   <option value="none">No text yet</option>
                   <option value="na">N/A</option>
                 </select>
-                <span className="filter-label">Place type</span>
-                <select className="filter-select" value={placeType} onChange={(e) => setPlaceType(e.target.value as '' | PlaceType)}>
-                  <option value="">All types</option>
-                  {PLACE_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+                <span className="filter-label">Setting</span>
+                <select className="filter-select" value={setting} onChange={(e) => setSetting(e.target.value)}>
+                  <option value="">All settings</option>
+                  {SETTING_TAGS.map((t) => <option key={t.slug} value={t.slug}>{t.emoji} {t.label}</option>)}
                 </select>
               </>
             }

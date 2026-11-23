@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { marinas: number; islands: number; sheltered: number; regattas: number; events: string[]; expedition: number | null; operators: Array<{ name: string; says: string; url: string }>; sea: string | null; median_wave_m: number | null; calm_share: number | null; bareboat_base: boolean }>;
 const root = join(__dirname, '..', '..');
@@ -10,8 +11,8 @@ const tier = (n: number) => (n === 0 ? 0 : n === 1 ? 2 : n <= 3 ? 3 : n <= 6 ? 4
 const presence = (n: number) => (n === 0 ? 0 : n === 1 ? 6 : n === 2 ? 8 : 10);
 
 describe('Sailing evidence', () => {
-  it('covers all 138 places and every draft has an evidence line per rating', () => {
-    expect(Object.keys(ev)).toHaveLength(138);
+  it('covers all 146 places and every draft has an evidence line per rating', () => {
+    expect(Object.keys(ev)).toHaveLength(146);
     for (const p of Object.keys(ev)) {
       const e = draft[p].evidence as string;
       expect(e, p).toContain('Sheltered island hopping:');
@@ -51,16 +52,16 @@ describe('Sailing evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['croatia'].shelteredIslandHopping).toBe(10);
-    expect(draft['morocco'].shelteredIslandHopping).toBe(0);
-    expect(draft['sydney'].racingRegattas).toBe(10);
-    expect(draft['barcelona'].racingRegattas).toBe(10);
-    expect(draft['nice-riviera'].racingRegattas).toBe(10);
-    expect(draft['north-island'].racingRegattas).toBe(10);
-    expect(draft['greenland'].expeditionSailing).toBe(10);
-    expect(draft['tierra-del-fuego'].expeditionSailing).toBe(10);
-    expect(draft['svalbard'].expeditionSailing).toBe(10);
-    expect(draft['antarctica'].expeditionSailing).toBe(10);
-    expect(draft['croatia'].bareboatBase).toBe(true);
+    expect(draft[PLACE['dalmatian-coast']].shelteredIslandHopping).toBe(10);
+    expect(draft[PLACE['marrakech-and-atlas']].shelteredIslandHopping).toBe(0);
+    expect(draft[PLACE.sydney].racingRegattas).toBe(10);
+    expect(draft[PLACE.barcelona].racingRegattas).toBe(10);
+    expect(draft[PLACE['nice-and-the-french-riviera']].racingRegattas).toBe(10);
+    expect(draft[PLACE['north-island']].racingRegattas).toBe(10);
+    expect(draft[PLACE.greenland].expeditionSailing).toBe(10);
+    expect(draft[PLACE['tierra-del-fuego']].expeditionSailing).toBe(10);
+    expect(draft[PLACE.svalbard].expeditionSailing).toBe(10);
+    expect(draft[PLACE['antarctic-peninsula']].expeditionSailing).toBe(10);
+    expect(draft[PLACE['dalmatian-coast']].bareboatBase).toBe(true);
   });
 });

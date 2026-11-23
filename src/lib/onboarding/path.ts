@@ -8,7 +8,6 @@ import { getOnboardingSettings } from './settings';
 export type ScreenId =
   | 'door'
   | 'when'
-  | 'logistics'
   | 'love'
   | 'rank'
   | 'essentials'
@@ -43,18 +42,27 @@ export function chooseDoor(doors: Doors, key: DoorKey): Doors {
 /** Continue needs an answer to both questions. */
 export const canContinueFromDoor = (d: Doors): boolean => (d.love || d.open) && (d.window || d.flex);
 
+/** The second question appears once the first is answered (owner, 22 Nov 2026). */
+export const doorSecondShown = (d: Doors): boolean => d.love || d.open;
+
+/** What the disabled Continue says, so a grey button always tells you what is missing (owner, 22 Nov 2026). */
+export function doorButtonLabel(d: Doors): string {
+  if (canContinueFromDoor(d)) return 'Continue';
+  return doorSecondShown(d) ? 'Now pick your timing' : 'Pick one above to start';
+}
+
 /**
  * The person's own screens, in order.
  *  - Travel DNA path (the small link on the first screen): interests, top interests, basics, cards, the DNA page.
- *  - Something I love to do: interests and top interests come first, then the timing screens (When, and Getting there for a specific
- *    window), then the basics. Whatever the timing, interests lead.
+ *  - Something I love to do: interests and top interests come first, then the timing screen (When), then the basics. Whatever the timing, interests lead.
  *  - A great trip with a specific time window: the timing screens first, because the window decides what can be ranked, then the basics and
  *    the photo picks.
  *  - A great trip with flexible timing: the basics and the photo picks first, then the month last.
  */
 export function buildPath(mode: FlowMode, doors: Doors): ScreenId[] {
   if (mode === 'dna') return ['love', 'rank', 'dnabasics', 'cards', 'dnasum'];
-  const timing: ScreenId[] = doors.window ? ['when', 'logistics'] : doors.flex ? ['when'] : [];
+  // "Getting there" is gone: where you fly from is asked on the When screen, under How long (owner, 23 Nov 2026).
+  const timing: ScreenId[] = doors.window || doors.flex ? ['when'] : [];
   if (doors.love) return ['door', 'love', 'rank', ...timing, 'essentials'];
   if (doors.window) return ['door', ...timing, 'essentials', 'vibes'];
   return ['door', 'essentials', 'vibes', ...timing];

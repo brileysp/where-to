@@ -1,6 +1,6 @@
 {
  "_note": "Verified fact sheets for the safari re-author (Oct 2026). Built from the Gemini Flash audit plus Claude web research; every season window below was checked against at least one operator or park source. Passed to Gemini as ground truth; mustMention is only a post-check.",
- "kruger": {
+ "p0089": {
   "scope": "Kruger National Park (self-drive on public roads plus guided drives) and the unfenced private reserves along its western edge, above all Sabi Sands, where off-road tracking gives the best leopard sightings.",
   "facts": [
    "Dry season runs roughly May to October; vegetation thins and animals concentrate at the rivers and dams (Sabie, Olifants).",
@@ -19,7 +19,7 @@
    "Big Five"
   ]
  },
- "kenya": {
+ "p0098": {
   "scope": "Maasai Mara (Mara River crossings, big cats) and Amboseli (elephants with Kilimanjaro behind them).",
   "facts": [
    "The Great Migration herds arrive in the Mara from the Serengeti around July and leave by late October; river crossings are most likely August and September, with the first from about mid-July and again as herds return in October.",
@@ -38,7 +38,7 @@
    "long rains"
   ]
  },
- "tanzania": {
+ "p0124": {
   "scope": "Serengeti ecosystem only (the southern plains around Ndutu and the Ngorongoro Conservation Area, the western corridor, and the northern Serengeti around Kogatende); Zanzibar is a beach extension, not a safari.",
   "facts": [
    "Calving on the short-grass plains around Ndutu runs from late January through March, peaking in February, with more than half a million calves and heavy predator activity.",
@@ -58,7 +58,7 @@
    "calving"
   ]
  },
- "botswana": {
+ "p0128": {
   "scope": "Okavango Delta and Moremi Game Reserve for land and water safaris (mokoro canoe, boat, game drive), with the Chobe riverfront for elephant herds.",
   "facts": [
    "Floodwater from Angola's summer rains takes about four months to arrive, entering the Delta between March and May, peaking around June and July in Moremi (about mid-August around Maun), then receding.",
@@ -78,7 +78,7 @@
    "mokoro"
   ]
  },
- "zambia": {
+ "p0171": {
   "scope": "South Luangwa National Park and the Luangwa River.",
   "facts": [
    "Birthplace of the walking safari (Norman Carr, 1950s); known as the Valley of the Leopard for one of Africa's highest leopard densities, with night drives allowed.",
@@ -97,7 +97,7 @@
    "Luangwa River"
   ]
  },
- "zimbabwe": {
+ "p0193": {
   "scope": "Hwange National Park, with Victoria Falls as the gateway.",
   "facts": [
    "Hwange has almost no natural surface water; its 45,000 or more elephants depend on pumped waterholes, which draw very large herds in the dry season, with lions and other predators close behind.",
@@ -116,7 +116,7 @@
    "elephants"
   ]
  },
- "namibia": {
+ "p0114": {
   "scope": "Etosha National Park (the main safari), with a mention of the Zambezi Region's riverside elephant safaris and Damaraland's desert-adapted elephant tracking only if space allows.",
   "facts": [
    "Dry season June to October is the best; animals gather at waterholes along the southern edge of the Etosha Pan.",
@@ -134,7 +134,7 @@
    "floodlit"
   ]
  },
- "uganda": {
+ "p0186": {
   "scope": "Murchison Falls National Park (Nile boat trip, savanna game drives) and Queen Elizabeth National Park (Kazinga Channel boat cruise, Ishasha tree-climbing lions). Gorilla trekking is NOT safari and stays out.",
   "facts": [
    "Murchison Falls: elephants, giraffes, lions, buffalo and hippos on game drives north of the Nile, plus the boat trip to the base of the falls; best months December to February and June to September.",
@@ -152,7 +152,7 @@
    "Kazinga"
   ]
  },
- "rwanda": {
+ "p0158": {
   "scope": "Akagera National Park only (Rwanda's only savanna park). Gorilla trekking at Volcanoes is NOT safari and stays out.",
   "facts": [
    "Seven lions were reintroduced in 2015 after about twenty years without them, and the population has grown strongly since; eastern black rhinos returned in 2017 and white rhinos were added in 2021, so all Big Five are present again.",
@@ -169,7 +169,7 @@
    "rhino"
   ]
  },
- "ethiopia": {
+ "p0064": {
   "scope": "Real but modest game viewing in Awash National Park, Nechisar National Park, and the remote Omo and Mago parks; game numbers are far lower and access harder than East Africa. Simien and Bale trekking is NOT safari and stays out.",
   "facts": [
    "Awash National Park, about 225 km east of Addis Ababa: beisa oryx, greater and lesser kudu, Soemmerring's gazelle, Swayne's hartebeest, hot springs and volcanic terrain; open year-round, best roughly September to November.",
@@ -187,7 +187,7 @@
    "Nechisar"
   ]
  },
- "ghana": {
+ "p0072": {
   "scope": "Mole National Park in the northwest.",
   "facts": [
    "Mole offers both walking safaris with armed rangers and vehicle game drives (including night drives); it is not either-or.",
@@ -205,7 +205,7 @@
    "walking"
   ]
  },
- "nepal": {
+ "p0116": {
   "scope": "Chitwan National Park (with Bardia National Park in the far west as the quieter alternative).",
   "facts": [
    "Greater one-horned rhinos are seen on most safaris; the park holds about 700 of them. Tigers are present but a sighting is a lucky event, not routine.",
@@ -224,7 +224,7 @@
    "jeep"
   ]
  },
- "kaziranga": {
+ "p0011": {
   "scope": "Kaziranga National Park, Assam.",
   "facts": [
    "The park holds about two-thirds of the world's greater one-horned rhinos, plus wild elephants, wild water buffalo, swamp deer and a growing tiger population (136 tigers in the 2022 count).",
@@ -242,7 +242,7 @@
    "elephant"
   ]
  },
- "rajasthan-golden-triangle": {
+ "p0150": {
   "scope": "Ranthambore National Park for tigers (the standard safari add-on to the Golden Triangle).",
   "facts": [
    "The park is open roughly October 1 to June 30; core zones 1 to 5 close from July to September for the monsoon, while buffer zones 6 to 10 stay open with much lower tiger odds.",
@@ -258,7 +258,7 @@
    "zones"
   ]
  },
- "srilanka": {
+ "p0173": {
   "scope": "Minneriya and Kaudulla (the elephant Gathering), Yala (leopards), Udawalawe (elephants year-round), with Wilpattu as the quieter option.",
   "facts": [
    "The Gathering of up to 200 to 300 wild Asian elephants at Minneriya Tank runs roughly July to October, peaking August and September; Kaudulla takes over or shares the herds at different times.",
@@ -277,7 +277,7 @@
    "Udawalawe"
   ]
  },
- "pantanal": {
+ "p0136": {
   "scope": "The northern Pantanal around Porto Jofre at the end of the Transpantaneira road (boat-based jaguar safaris).",
   "facts": [
    "June to October is the dry season and jaguar season; July to early October has the most sightings, August and September are ideal, and multi-day boat safaris report success rates above 90 percent.",
@@ -295,7 +295,7 @@
    "Transpantaneira"
   ]
  },
- "borneo": {
+ "p0101": {
   "scope": "The Kinabatangan River (small-boat river safaris), with Danum Valley and Tabin Wildlife Reserve as land-based alternatives in Sabah.",
   "facts": [
    "River cruises at dawn and dusk show orangutans, proboscis monkeys, hornbills and macaques; pygmy elephants are less predictable, appearing on a fraction of trips.",

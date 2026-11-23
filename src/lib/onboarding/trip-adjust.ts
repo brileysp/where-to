@@ -3,11 +3,13 @@ import { estimateFlightHours, milesBetween } from './airports';
 import type { Origin } from './origin';
 import { daysFor, lengthFactor, lengthTier, type LengthTier, type TripLength } from './trip-length';
 import { allRegions, regionAllows, type RegionKey } from './regions';
+import { placeTypeAllows } from './place-types';
 
 /**
  * What the trip settings do to the places, in one place so the shortlist, the full results page and the settings sheet agree:
  *   - Trip length ranks a place lower when the flights would eat the trip (`factors`, never hides a place).
  *   - Continents leave out places in regions the traveler turned off (`leftOut`).
+ *   - Kinds of place leave out places that have none of the kinds still on (`leftOut`, `leftOutKinds`).
  * The flight-hour limit is separate (applyFlightLimit in shortlist.ts) because it also says why a place was set aside.
  */
 
@@ -17,6 +19,9 @@ export interface TripAdjustInput {
   origin: Origin | null;
   length: TripLength | null;
   continents: readonly RegionKey[];
+  /** Place id to its setting tags, and the kinds of place left on (empty or missing = all). */
+  settingTags?: Record<string, readonly string[]>;
+  placeTypes?: readonly string[];
   settings?: MatchSettings;
 }
 
@@ -27,14 +32,16 @@ export interface TripAdjust {
   tiers: Record<string, LengthTier>;
   /** Place id to flying hours one way from home. */
   hours: Record<string, number>;
-  /** Ids of places in regions that are turned off. */
+  /** Ids of places in regions that are turned off, or that are none of the kinds left on. */
   leftOut: Set<string>;
+  /** Just the ones left out by kind. */
+  leftOutKinds: Set<string>;
 }
 
 export function tripAdjust(a: TripAdjustInput): TripAdjust {
   const s = a.settings ?? DEFAULT_MATCH_SETTINGS;
   const days = daysFor(a.length);
-  const out: TripAdjust = { factors: {}, tiers: {}, hours: {}, leftOut: new Set() };
+  const out: TripAdjust = { factors: {}, tiers: {}, hours: {}, leftOut: new Set(), leftOutKinds: new Set() };
   const filtering = !allRegions(a.continents);
   for (const [id, at] of Object.entries(a.coords)) {
     if (a.origin) {
@@ -49,5 +56,6 @@ export function tripAdjust(a: TripAdjustInput): TripAdjust {
   }
   // A place with no coordinates still has a region (it comes from its country), so the continents filter reads the region map, not the coordinates.
   for (const id of Object.keys(a.regions)) if (filtering && !regionAllows(a.continents, a.regions[id])) out.leftOut.add(id);
+  if (a.settingTags) for (const [id, tags] of Object.entries(a.settingTags)) if (!placeTypeAllows(a.placeTypes, tags)) { out.leftOut.add(id); out.leftOutKinds.add(id); }
   return out;
 }

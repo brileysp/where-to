@@ -1,8 +1,8 @@
-import { useMemo, useRef, type ReactNode } from 'react';
+import { useMemo, useRef, useState, type ReactNode } from 'react';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
 import { dnaStateFor, type ProfileInput } from '@/lib/onboarding/bridge';
 import { CARE_ITEMS, COMPANIONS, bandDims, isNarrowed, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
-import { dnaRows, keepOn, rowHasChoices, type DnaRow, type RowContext } from '@/lib/onboarding/dna-rows';
+import { dnaRows, rowHasChoices, type DnaRow, type RowContext } from '@/lib/onboarding/dna-rows';
 import { interestByKey, pickerGroups, pickerInterests } from '@/lib/onboarding/interests';
 import { LEVEL_LABELS, LEVEL_ORDER, topCount, type Levels } from '@/lib/onboarding/levels';
 import { getOnboardingSettings, type InterestLevelId } from '@/lib/onboarding/settings';
@@ -10,11 +10,14 @@ import { VIBES } from '@/lib/onboarding/vibes';
 import type { FlowData } from '../FlowData';
 import { HomeLocation, type HomeBundle } from '../HomeLocation';
 import { ContinentPicker } from '../live/ContinentPicker';
+import { PeakScale } from '../live/PeakScale';
 import { LengthPicker } from '../live/LengthPicker';
 import type { TripLength } from '@/lib/onboarding/trip-length';
 import type { RegionKey } from '@/lib/onboarding/regions';
 import { useFlip } from '../useFlip';
 
+/** The meter's four dots: Curious, Like, Love, Top. No dots lit means Off; tapping the lit level again turns it Off. */
+const DOT_LEVELS: InterestLevelId[] = LEVEL_ORDER.filter((l) => l !== 'off');
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export interface DnaPageProps {
@@ -31,18 +34,19 @@ export interface DnaPageProps {
   month: number | null;
   week: number;
   maxHours: number;
+  /** Crowds & prices (a step from 0 to 4) and how to change it. */
+  peak: number;
+  onPeak: (step: number) => void;
   /** Interests listed, in the order fixed when the page was opened. */
   order: string[];
   open: Record<string, boolean>;
   collapsed: Record<string, boolean>;
   showAll: boolean;
-  keep: Record<string, boolean>;
   onLevel: (key: string, level: InterestLevelId) => void;
   onSpecific: (interest: string, chip: string) => void;
   onToggleOpen: (key: string, current: boolean) => void;
   onToggleBlock: (key: string) => void;
   onShowAll: () => void;
-  onKeep: (key: string, def: boolean) => void;
   onBandPill: (dim: string, band: string) => void;
   /** The "What matters" bands (social vibe, physical demand): pick none for no preference. */
   onBandChoice: (dim: string, band: string) => void;
@@ -65,16 +69,16 @@ export interface DnaPageProps {
 
 export function DnaPage(p: DnaPageProps) {
   const root = useRef<HTMLDivElement>(null);
+  const [added, setAdded] = useState<string[]>([]);
+  const [addOpen, setAddOpen] = useState(false);
   useFlip(root);
   const settings = getOnboardingSettings();
-  const ctx: RowContext = { dnaMode: p.dnaMode, bands: p.bands, care: p.care, who: p.who, home: p.home, vibes: p.vibes, answerCount: p.input.answers.length, month: p.month, week: p.week, maxHours: p.maxHours };
+  const ctx: RowContext = { dnaMode: p.dnaMode, bands: p.bands, care: p.care, who: p.who, home: p.home, vibes: p.vibes, answerCount: p.input.answers.length, month: p.month, week: p.week, maxHours: p.maxHours, peak: p.peak };
   const rows = dnaRows(ctx);
   const calibration = Math.round(useMemo(() => computeDisplayCalibrationPercent(dnaStateFor(p.input, p.data.dimensions), p.data.cards), [p.input, p.data]));
   const isOpen = (key: string) => (p.open[key] !== undefined ? p.open[key] : rowHasChoices(key, { ...ctx, subs: p.subs }));
   const nTop = topCount(p.levels);
   const selected = Object.keys(p.levels).length;
-  const fineTuned = Object.keys(p.levels).filter((k) => (p.subs[k] ?? []).length).length;
-  const total = pickerInterests().length;
   const listed = new Set(p.order);
   const offAll = pickerInterests().filter((i) => !listed.has(i.key));
 
@@ -86,6 +90,7 @@ export function DnaPage(p: DnaPageProps) {
     const picked = p.subs[k] ?? [];
     const can = on && ch.length > 0;
     const open = can && isOpen(`i:${k}`);
+    const levelWord = on ? `${level === 'top' ? '★ ' : ''}${LEVEL_LABELS[level]}` : 'Off';
     const pickedText = picked.map((c) => ch.find((x) => x.key === c)?.label ?? c).join(', ');
     return (
       <div key={k} className={`ob2-dc ic ${on ? '' : 'off'}`} data-flip={`i:${k}`}>
@@ -95,23 +100,25 @@ export function DnaPage(p: DnaPageProps) {
             <div className="dhd" role="button" tabIndex={0} aria-expanded={open} onClick={() => p.onToggleOpen(`i:${k}`, open)} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), p.onToggleOpen(`i:${k}`, open))}>
               <div className="t">
                 <b>{i.label}</b>
-                {picked.length > 0 && !open && <small>{pickedText}</small>}
+                <small>{levelWord}{picked.length > 0 && !open ? ` · ${pickedText}` : ''}</small>
               </div>
               <span className="xpi" aria-hidden="true">{open ? '▴' : '▾'}</span>
             </div>
           ) : (
             <div className="dhd">
-              <div className="t"><b>{i.label}</b></div>
+              <div className="t">
+                <b>{i.label}</b>
+                <small>{levelWord}</small>
+              </div>
             </div>
           )}
-        </div>
-        <div className="lvl" role="group" aria-label={`${i.label} level`}>
-          {LEVEL_ORDER.map((l) => (
-            <button key={l} type="button" className={level === l ? 'on' : ''} aria-pressed={level === l} onClick={() => p.onLevel(k, l)}>
-              {l === 'top' ? '★ ' : ''}
-              {LEVEL_LABELS[l]}
-            </button>
-          ))}
+          <div className="lvm" role="group" aria-label={`${i.label} level`}>
+            {DOT_LEVELS.map((l, n) => (
+              <button key={l} type="button" aria-label={`${i.label}: ${LEVEL_LABELS[l]}`} aria-pressed={level === l} onClick={() => p.onLevel(k, level === l ? 'off' : l)}>
+                <i className={DOT_LEVELS.indexOf(level) >= n ? 'o' : ''} />
+              </button>
+            ))}
+          </div>
         </div>
         {open && (
           <div className="rks">
@@ -183,6 +190,7 @@ export function DnaPage(p: DnaPageProps) {
         </>
       );
     }
+    if (k === 'peak') return <PeakScale value={p.peak} onChange={p.onPeak} />;
     if (k === 'who')
       return (
         <div className="ob2-otp">
@@ -237,11 +245,10 @@ export function DnaPage(p: DnaPageProps) {
   }
 
   function renderRow(r: DnaRow) {
-    const on = keepOn(p.keep, r.key, r.def);
     const editable = r.key !== 'ans';
     const open = editable && isOpen(r.key);
     return (
-      <div key={r.key} className={`ob2-dc ${on ? '' : 'off'}`}>
+      <div key={r.key} className="ob2-dc">
         <div className="dch">
           <span className="e" aria-hidden="true">{r.icon}</span>
           {editable ? (
@@ -260,7 +267,6 @@ export function DnaPage(p: DnaPageProps) {
               </div>
             </div>
           )}
-          <button type="button" className={`ob2-tg ${on ? 'on' : ''}`} aria-label={`${on ? 'Keep' : 'Do not keep'} ${r.title} in my Travel DNA`} aria-pressed={on} onClick={() => p.onKeep(r.key, r.def)} />
         </div>
         {open && <div className="ded">{editor(r)}</div>}
       </div>
@@ -288,12 +294,12 @@ export function DnaPage(p: DnaPageProps) {
     );
   }
 
-  const bySec = (sec: DnaRow['sec']) => rows.filter((r) => r.sec === sec && r.def);
-  const rowsBlock = (id: string, title: string, sub: string, list: DnaRow[]) =>
-    list.length ? (
-      renderBlock(id, title, list.length, sub, list.map((r) => renderRow(r)))
-    ) : null;
-  const tripOnly = rows.filter((r) => !r.def);
+  // The page is your baseline (owner, 23 Nov 2026): only what carries to every trip. Dates, flight limits and the this-trip-only items live in the trip sheet.
+  const baseRows = rows.filter((r) => r.def);
+  const always = new Set(['b_budget', 'b_weather', 'peak', 'who', 'origin', 'vibes', 'ans']);
+  const isSet = (r: DnaRow) => rowHasChoices(r.key, { ...ctx, subs: p.subs });
+  const visible = baseRows.filter((r) => always.has(r.key) || isSet(r) || added.includes(r.key));
+  const hidden = baseRows.filter((r) => !visible.includes(r));
 
   return (
     <>
@@ -302,14 +308,15 @@ export function DnaPage(p: DnaPageProps) {
         <div className="ob2-prog"><i style={{ width: '100%' }} /></div>
       </div>
       <div className="ob2-scr" ref={root}>
-        <h2>{p.dnaMode ? 'Your Travel DNA, first sketch' : 'Your Travel DNA'}</h2>
+        <h2>Your Travel DNA</h2>
+        <p className="ob2-sub" style={{ margin: '-2px 0 10px' }}>Your baseline. What we start with for every trip.</p>
         <div className="ob2-dna">
-          <div className="ob2-sharp"><span>Calibration</span><div className="m"><i style={{ width: `${calibration}%` }} /></div><b>{calibration}%</b></div>
+          <div className="ob2-sharp"><span>How well we know you</span><div className="m"><i style={{ width: `${calibration}%` }} /></div><b>{calibration}%</b></div>
           <div className="ob2-fine">
-            {p.dnaMode ? 'A sketch, not a verdict. Every trip you plan sharpens it.' : 'Changes apply to your list right away. Save to keep them as your defaults for the next trip. Switch off anything you do not want to carry over.'}
+            {p.dnaMode ? 'Every trip you plan sharpens it.' : 'Changes apply to your list right away. Save to keep them as your baseline.'}
           </div>
         </div>
-        {renderBlock('ints', 'Interests', `${selected}/${total} selected · ${fineTuned}/${total} fine-tuned`, 'Each interest has a level, and up to five can be Top. Tap a card header for its specifics.', (<>
+        {renderBlock('ints', 'Interests', `${selected} picked`, 'Each interest has a level, and up to five can be Top. Tap a card header for its specifics.', (<>
           {p.order.map((k) => renderInterest(k))}
           {p.order.length === 0 && <div className="ob2-fine">No interests yet. Tap Show all to add some.</div>}
           <div className="ob2-fine" style={{ margin: 0 }}>{nTop} of {settings.maxTopInterests} top interests. The order updates the next time you open this page.</div>
@@ -324,21 +331,35 @@ export function DnaPage(p: DnaPageProps) {
               ) : null;
             })}
           <button type="button" className="ob2-btn ghost" style={{ alignSelf: 'flex-start', width: 'auto' }} onClick={p.onShowAll}>
-            {p.showAll ? 'Hide the rest' : `Show all ${offAll.length} more interests`}
+            {p.showAll ? 'Done adding' : '＋ Add interests'}
           </button>
         </>))}
-        {rowsBlock('open', 'Open to', 'Your defaults. Tap a card header to edit it.', bySec('open'))}
-        {rowsBlock('care', 'What matters when you choose', 'Tap a card header to edit it. Nothing picked means no preference.', bySec('care'))}
-        {rowsBlock('who', 'Who and where from', '', bySec('who'))}
-        {rowsBlock('taste', 'Tastes we learned', '', bySec('taste'))}
-        {rowsBlock('trip', 'This trip only', 'Switch on to keep any of these in your Travel DNA.', tripOnly)}
+        {renderBlock('prefs', 'Preferences', visible.length, undefined, (<>
+          {visible.map((r) => renderRow(r))}
+          {hidden.length > 0 &&
+            (addOpen ? (
+              <div className="ob2-dc">
+                <div className="ob2-rkl">Add a preference</div>
+                <div className="ob2-otp">
+                  {hidden.map((r) => (
+                    <button key={r.key} type="button" className="ob2-opill" onClick={() => { setAdded((a) => [...a, r.key]); setAddOpen(false); p.onToggleOpen(r.key, false); }}>
+                      <span aria-hidden="true">{r.icon}</span> {r.title}
+                    </button>
+                  ))}
+                </div>
+                <button type="button" className="ob2-link" style={{ alignSelf: 'flex-start' }} onClick={() => setAddOpen(false)}>Done</button>
+              </div>
+            ) : (
+              <button type="button" className="ob2-btn ghost" style={{ alignSelf: 'flex-start', width: 'auto' }} onClick={() => setAddOpen(true)}>＋ Add a preference</button>
+            ))}
+        </>))}
       </div>
       <div className="ob2-foot">
         <button type="button" className="ob2-btn" onClick={p.onSave}>
           {p.dnaMode ? 'Save my Travel DNA' : 'Save and go back'}
         </button>
-        <button type="button" className="ob2-btn ghost" onClick={p.onSecondary}>
-          {p.dnaMode ? 'See where it points' : 'Back without saving'}
+        <button type="button" className="ob2-link" onClick={p.onSecondary}>
+          {p.dnaMode ? 'Preview my places' : 'Back without saving'}
         </button>
       </div>
     </>

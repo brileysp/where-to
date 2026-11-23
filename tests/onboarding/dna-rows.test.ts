@@ -8,10 +8,10 @@ const base: RowContext = { dnaMode: false, bands: allBands(), care: {}, who: [],
 describe('Travel DNA page rows', () => {
   it('lists the four bands, every "what else matters" item, who and the home airport; weather stays with the trip unless it is the Travel DNA path', () => {
     const trip = dnaRows(base);
-    expect(trip.map((r) => r.key)).toEqual(['b_budget', 'b_weather', 'b_vibe', 'b_physical', 'c_kids', 'c_food', 'c_lang', 'c_how', 'who', 'origin']);
+    expect(trip.map((r) => r.key)).toEqual(['b_budget', 'b_weather', 'b_vibe', 'b_physical', 'peak', 'c_kids', 'c_food', 'c_lang', 'c_access', 'c_how', 'who', 'origin']);
     expect(trip.find((r) => r.key === 'b_weather')!.def).toBe(false);
     expect(trip.find((r) => r.key === 'who')!.def).toBe(false);
-    expect(trip.find((r) => r.key === 'who')!.title).toBe('Who is going this time');
+    expect(trip.find((r) => r.key === 'who')!.title).toBe('Who’s going this time');
     const dna = dnaRows({ ...base, dnaMode: true });
     expect(dna.find((r) => r.key === 'b_weather')!.def).toBe(true);
     expect(dna.find((r) => r.key === 'who')!.def).toBe(true);
@@ -38,15 +38,23 @@ describe('Travel DNA page rows', () => {
   });
   it('every "what else matters" row says "No preference" until something is picked, whatever the item', () => {
     const rows = dnaRows(base).filter((r) => r.key.startsWith('c_') || r.key === 'b_vibe' || r.key === 'b_physical');
-    expect(rows.length).toBe(6);
+    expect(rows.length).toBe(7);
     expect(rows.every((r) => r.summary === 'No preference')).toBe(true);
     expect(dnaRows({ ...base, care: { food: { o: [], firm: false } } }).find((r) => r.key === 'c_food')!.summary).toBe('No preference');
   });
   it('social vibe and physical demand are listed with the other "what matters" items; budget and weather stay under Open to', () => {
     const rows = dnaRows(base);
-    expect(rows.filter((r) => r.sec === 'care').map((r) => r.key)).toEqual(['b_vibe', 'b_physical', 'c_food', 'c_lang', 'c_how']);
-    expect(rows.filter((r) => r.sec === 'open').map((r) => r.key)).toEqual(['b_budget', 'b_weather']);
+    expect(rows.filter((r) => r.sec === 'care').map((r) => r.key)).toEqual(['b_vibe', 'b_physical', 'c_food', 'c_lang', 'c_access', 'c_how']);
+    expect(rows.filter((r) => r.sec === 'open').map((r) => r.key)).toEqual(['b_budget', 'b_weather', 'peak']);
     expect(rows.filter((r) => r.sec === 'trip').map((r) => r.key)).toEqual(['c_kids']);
+  });
+  it('has a Crowds & prices row (owner, 22 Nov 2026: the page had none), kept by default, reading "In between" until changed', () => {
+    const row = dnaRows(base).find((r) => r.key === 'peak')!;
+    expect(row).toMatchObject({ sec: 'open', def: true, title: 'Crowds & prices', summary: 'In between' });
+    expect(dnaRows({ ...base, peak: 4 }).find((r) => r.key === 'peak')!.summary).toBe('Off peak');
+    expect(dnaRows({ ...base, peak: 99 }).find((r) => r.key === 'peak')!.summary).toBe('In between');
+    expect(rowHasChoices('peak', { ...base, subs: {} })).toBe(false);
+    expect(rowHasChoices('peak', { ...base, subs: {}, peak: 0 })).toBe(true);
   });
   it('opens a card by default only when it already holds choices', () => {
     const ctx = { ...base, subs: { hiking: ['day-hikes'], golf: [] }, bands: toggleBandChoice(allBands(), 'vibe', 'lively'), home: 'JFK' };

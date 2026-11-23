@@ -18,7 +18,7 @@ import { backTarget, buildPath, chooseDoor, emptyDoors, nextScreen, progressPerc
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
 import { pickerGroups, setInterestEmojiOverrides } from '@/lib/onboarding/interests';
 import { orderedByLevel, setLevel, togglePick, toggleSpecific, toggleTop, type Levels } from '@/lib/onboarding/levels';
-import { dnaRows, dnaTags, keepOn } from '@/lib/onboarding/dna-rows';
+import { dnaRows, dnaTags } from '@/lib/onboarding/dna-rows';
 import { interestByKey } from '@/lib/onboarding/interests';
 import { computeDisplayCalibrationPercent } from '@/lib/dna/calibration-feedback';
 import { allBands, clearCare, setCareFirm, toggleBandChoice, toggleBandPill, toggleCareOption, toggleInList, resetBand, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
@@ -39,14 +39,17 @@ import { PlaceholderScreen } from './screens/PlaceholderScreen';
 import { LoveScreen } from './screens/LoveScreen';
 import { RankScreen } from './screens/RankScreen';
 import { WhenScreen } from './screens/WhenScreen';
-import { LogisticsScreen } from './screens/LogisticsScreen';
 import { EssentialsScreen, type CareHandlers } from './screens/EssentialsScreen';
 import { DnaBasicsScreen } from './screens/DnaBasicsScreen';
 import { VibesScreen } from './screens/VibesScreen';
 import { CardsScreen } from './screens/CardsScreen';
 import { ShortlistScreen } from './screens/ShortlistScreen';
+import { GlobeMoment } from './GlobeMoment';
+import { kindsOrAll, kindsToSave } from '@/lib/onboarding/place-types';
+import { DNA_PREFERENCES_PERCENT, DNA_START_PERCENT } from './live/useLiveFlow';
 import { DnaPage } from './screens/DnaPage';
 import { SavedScreen } from './screens/SavedScreen';
+import { KIDS_ITEM } from './KidsAges';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 
 /**
@@ -60,11 +63,16 @@ export interface FlowEntry {
   name: string | null;
   /** True when opened from "Review Travel DNA": straight to the Travel DNA page. */
   review: boolean;
+  /** True when a returning traveler is sent straight to their list (the home address does this). */
+  list: boolean;
   /** Opened with ?fresh=1 (testing): the one-time lessons play again. */
   fresh: boolean;
   /** The traveler's saved trips, the most recently saved first. */
   trips: Trip[];
 }
+
+/** The screens where the traveler picks preferences: finishing the last of them is what plays the globe moment before the list. */
+const PREFERENCE_SCREENS: ScreenId[] = ['door', 'when', 'love', 'rank', 'essentials', 'vibes'];
 
 export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowEntry }) {
   const router = useRouter();
@@ -75,14 +83,14 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   // The longest-flight question is gone (flights are worked out from where you live and the trip length), so a limit saved earlier no longer applies.
   const start: FlowChoices | null = useMemo(() => (entry.saved ? { ...fromTravelProfile(entry.saved, data.cards), maxHours: 0 } : null), [entry.saved, data.cards]);
   /** What the profile says for the choices a trip can change: the defaults every trip inherits. */
-  const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, peak: start?.peak ?? DEFAULT_PEAK }));
+  const [defaults, setDefaults] = useState<TripDefaults>(() => ({ who: start?.who ?? [], bands: start?.bands ?? allBands(), care: start?.care ?? {}, peak: start?.peak ?? DEFAULT_PEAK, placeTypes: start?.placeTypes ?? [] }));
   // The most recently saved trip is the one open; its settings are laid over the profile's defaults.
   const openTrip = entry.trips[0] ?? null;
   const openEff = openTrip ? effectiveTrip(defaults, openTrip) : null;
   const [returning, setReturning] = useState(!!entry.saved);
   const [mode, setMode] = useState<FlowMode>('trip');
   const [doors, setDoors] = useState<Doors>(emptyDoors());
-  const [screen, setScreen] = useState<ScreenId>(entry.saved ? (entry.review ? 'dnasum' : 'welcome') : 'door');
+  const [screen, setScreen] = useState<ScreenId>(entry.saved ? (entry.review ? 'dnasum' : entry.list ? 'results' : 'welcome') : 'door');
   const firstGroup = pickerGroups()[0].name;
   const [levels, setLevels] = useState<Levels>(start?.levels ?? {});
   const [subs, setSubs] = useState<Record<string, string[]>>(start?.subs ?? {});
@@ -90,11 +98,12 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [qa, setQa] = useState<InterestAnswers>(start?.qa ?? {});
   const [group, setGroup] = useState(firstGroup);
   const [seen, setSeen] = useState<Record<string, boolean>>({ [firstGroup]: true });
-  const [more, setMore] = useState<Record<string, boolean>>({});
   const [topPopup, setTopPopup] = useState(false);
   const [month, setMonth] = useState<number | null>(openTrip ? openTrip.month : (start?.month ?? null));
   const [week, setWeek] = useState(openTrip ? openTrip.week : (start?.week ?? 0));
   const [who, setWho] = useState<string[]>(openEff ? openEff.who : (start?.who ?? []));
+  // What the traveler had set when they arrived: the welcome screen offers it back as "Same as last time".
+  const [lastTime] = useState(() => (entry.saved ? { month: openTrip ? openTrip.month : (start?.month ?? null), who: openEff ? openEff.who : (start?.who ?? []) } : null));
   const [bands, setBands] = useState<Bands>(openEff ? openEff.bands : (start?.bands ?? allBands()));
   const [care, setCare] = useState<CareState>(openEff ? openEff.care : (start?.care ?? {}));
   const [careOpen, setCareOpen] = useState(false);
@@ -107,6 +116,8 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [homeCountry, setHomeCountry] = useState<string | null>(start?.homeCountry ?? (HOME_COUNTRIES.some((c) => c[0] === unitsCountry) ? unitsCountry : null));
   const [homeSub, setHomeSub] = useState<string | null>(start?.homeSub ?? null);
   const [length, setLength] = useState<TripLength | null>(openTrip ? openTrip.length : (start?.length ?? null));
+  // The kinds of place wanted (all on to start): places with none of them on are left out. See src/lib/onboarding/place-types.ts.
+  const [placeTypes, setPlaceTypes] = useState<string[]>(kindsOrAll(openEff ? openEff.placeTypes : start?.placeTypes));
   const [continents, setContinents] = useState<RegionKey[]>(openTrip ? openTrip.continents : (start?.continents ?? []));
   const [maxHours, setMaxHours] = useState(start?.maxHours ?? 0);
   /** Peak or off peak (a step from 0 to 4, starting in the middle). */
@@ -132,7 +143,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   const [keep, setKeep] = useState<Record<string, boolean>>({});
 
   // Saved trips: the screens work on one set of values; this keeps the list of trips, saves the open one, and loads another when switching.
-  const tripWork = useMemo(() => ({ month, week, length, continents, who, bands, care, peak }), [month, week, length, continents, who, bands, care, peak]);
+  const tripWork = useMemo(() => ({ month, week, length, continents, who, bands, care, peak, placeTypes: kindsToSave(placeTypes) }), [month, week, length, continents, who, bands, care, peak, placeTypes]);
   const trips = useTrips({
     initial: entry.trips,
     first: entry.name,
@@ -148,6 +159,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       setBands(eff.bands);
       setCare(eff.care);
       setPeak(eff.peak);
+      setPlaceTypes(kindsOrAll(eff.placeTypes));
     },
     toast: setToast,
   });
@@ -162,8 +174,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     const ok = (k: string) => (interestByKey(k)?.tier ?? 'specialist') !== 'specialist' && (data.setups[k]?.questions.length ?? 0) > 0;
     return Object.fromEntries(startingInterests(vibes, ok).map((k) => [k, 'like' as const]));
   }
+  // The globe moment between the preferences and the first list: on only while arriving at the list from another screen.
+  const [mapping, setMapping] = useState(false);
+  // The two earlier globe moments (owner, 22 Nov 2026): after the interests (the meter goes 0 to 10) and before the dates (10 to 30), each a little longer than the one before.
+  const [moment, setMoment] = useState<{ from: number; to: number; ms: number; lines: [string, string]; then: ScreenId | null } | null>(null);
   function go(next: ScreenId | null) {
     if (!next) return;
+    if (next === 'results' && PREFERENCE_SCREENS.includes(screen)) setMapping(true);
     if ((screen === 'vibes' || next === 'results') && (Object.keys(levels).length === 0 || autoLevels)) {
       const auto = startingLevels();
       if (Object.keys(auto).length) {
@@ -184,7 +201,13 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     window.scrollTo({ top: 0 });
   }
   function onContinue() {
-    go(nextScreen(mode, doors, screen));
+    const next = nextScreen(mode, doors, screen);
+    if (mode === 'trip' && next) {
+      const n = Object.keys(levels).length;
+      if (screen === 'love') { setMoment({ from: 0, to: 10, ms: 3400, lines: [`Reading your ${n} interest${n === 1 ? '' : 's'}…`, 'Building your interest signature…'], then: next }); return; }
+      if (next === 'when') { setMoment({ from: 10, to: 30, ms: 4800, lines: [`Cross-referencing ${data.destinations.length} destinations…`, 'Lining them up with your interests…'], then: next }); return; }
+    }
+    go(next);
   }
   function onBack() {
     const t = backTarget(mode, doors, screen);
@@ -203,7 +226,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setQa({});
     setGroup(firstGroup);
     setSeen({ [firstGroup]: true });
-    setMore({});
     setTopPopup(false);
     setMonth(null);
     setWeek(0);
@@ -232,6 +254,11 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setDall(false);
     setKeep({});
   }
+  /** Picking or dropping a companion. Dropping "With my kids" also drops the ages that went with it. */
+  function toggleWho(k: string) {
+    setWho((w) => toggleInList(w, k));
+    if (k === 'kids' && who.includes('kids')) setCare((c) => clearCare(c, 'kids'));
+  }
   function careProps(scope: 'trip' | 'dna'): CareHandlers {
     return {
       scope,
@@ -239,7 +266,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       bands,
       open: careOpen,
       tiles: careTiles,
-      kidsSuggested: who.includes('kids') && !care.kids,
       onOpen: () => setCareOpen((o) => !o),
       onTile: (k) => setCareTiles((t) => toggleInList(t, k)),
       onBandChoice: (dim, band) => setBands((b) => toggleBandChoice(b, dim, band)),
@@ -247,10 +273,6 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
       onOption: (item: CareItem, option) => setCare((c) => toggleCareOption(c, item, option)),
       onFirm: (k, firm) => setCare((c) => setCareFirm(c, k, firm)),
       onClear: (k) => setCare((c) => clearCare(c, k)),
-      onAddKids: () => {
-        setCareOpen(true);
-        setCareTiles((t) => (t.includes('kids') ? t : [...t, 'kids']));
-      },
     };
   }
   function onDnaFirst() {
@@ -285,14 +307,35 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
   }
   /** What would be saved right now, and the save itself. */
   function choices(): FlowChoices {
-    return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, maxHours, peak };
+    return { levels, subs, qa, bands, care, who, home, homeCountry: homeCountry === ELSEWHERE ? null : homeCountry, homeSub, vibes, answers: [...swipes, ...sharpen], month, week, length, continents, placeTypes: kindsToSave(placeTypes), maxHours, peak };
   }
   async function persist(): Promise<boolean> {
     const profile = toTravelProfile(choices(), keep, mode === 'dna');
     const r = await saveTravelProfile(profile);
     if (!r.ok) setToast('Could not save. Try again.');
-    else setDefaults({ who: profile.who, bands: profile.bands, care: profile.care, peak: profile.peak });
+    else setDefaults({ who: profile.who, bands: profile.bands, care: profile.care, peak: profile.peak, placeTypes: profile.placeTypes ?? [] });
     return r.ok;
+  }
+  /**
+   * "Make this my default" in the trip sheet (owner, 23 Nov 2026): saves one trip choice (budget, climate, crowds or who is going) into the Travel DNA, leaving the
+   * other defaults as they were, so changing it for one trip never quietly changes the rest.
+   */
+  async function makeDefault(part: 'budget' | 'weather' | 'peak' | 'who') {
+    const profile = toTravelProfile(choices(), keep, mode === 'dna');
+    const next: TripDefaults = {
+      who: part === 'who' ? who : defaults.who,
+      bands: part === 'budget' || part === 'weather' ? { ...defaults.bands, [part]: bands[part] } : defaults.bands,
+      care: defaults.care,
+      peak: part === 'peak' ? peak : defaults.peak,
+      placeTypes: defaults.placeTypes,
+    };
+    const r = await saveTravelProfile({ ...profile, who: next.who, bands: next.bands, care: next.care, peak: next.peak });
+    if (!r.ok) {
+      setToast('Could not save. Try again.');
+      return;
+    }
+    setDefaults(next);
+    setToast('Saved to your Travel DNA');
   }
   async function onDnaSave() {
     if (!(await persist())) return;
@@ -319,6 +362,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     setHomeSub(kept.homeSub ?? null);
     setLength(kept.length ?? null);
     setContinents(kept.continents ?? []);
+    setPlaceTypes(kindsOrAll(kept.placeTypes));
     setVibes(kept.vibes);
     setSwipes(kept.answers);
     setSharpen([]);
@@ -400,22 +444,22 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
         month={month}
         week={week}
         maxHours={maxHours}
+        peak={peak}
+        onPeak={setPeak}
         order={dorder}
         open={dxo}
         collapsed={dsc}
         showAll={dall}
-        keep={keep}
         onLevel={onDnaLevel}
         onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))}
         onToggleOpen={(k, cur) => setDxo((o) => ({ ...o, [k]: !cur }))}
         onToggleBlock={(k) => setDsc((c) => ({ ...c, [k]: !c[k] }))}
         onShowAll={() => setDall((a) => !a)}
-        onKeep={(k, def) => setKeep((m) => ({ ...m, [k]: !keepOn(m, k, def) }))}
         onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
         onBandChoice={(d, b) => setBands((x) => toggleBandChoice(x, d, b))}
         onCareOption={(item, o) => setCare((c) => toggleCareOption(c, item, o, true))}
         onCareFirm={(k, f) => setCare((c) => setCareFirm(c, k, f))}
-        onWho={(k) => setWho((w) => toggleInList(w, k))}
+        onWho={(k) => toggleWho(k)}
         loc={loc}
         length={length}
         continents={continents}
@@ -447,27 +491,41 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
     const t = setTimeout(() => setFitsGiveUp(true), 5000);
     return () => clearTimeout(t);
   }, [screen, fitsPending]);
-  const waitingForFits = screen === 'results' && fitsPending && !fitsGiveUp;
+  // Only the first arrival at the list waits: adding an interest later (from the Travel DNA page over the list) must not swap the page for a waiting message.
+  const [listOpened, setListOpened] = useState(false);
+  if (screen === 'results' && !fitsPending && !listOpened) setListOpened(true);
+  if (screen === 'door' && listOpened) setListOpened(false);
+  const waitingForFits = screen === 'results' && fitsPending && !fitsGiveUp && !listOpened;
+  const showMapping = screen === 'results' && mapping;
 
   const hasBack = backTarget(mode, doors, screen).kind !== 'none';
 
   return (
     <div className="ob2">
       <div className="ob2-phone">
-        {screen !== 'results' && screen !== 'dnasum' && screen !== 'welcome' && <TopBar onBack={hasBack ? onBack : undefined} percent={progressPercent(mode, doors, screen)} />}
+        {!moment && screen !== 'results' && screen !== 'dnasum' && screen !== 'welcome' && <TopBar onBack={hasBack ? onBack : undefined} percent={progressPercent(mode, doors, screen)} />}
         {mode === 'dna' && <div className="ob2-mb">Building your Travel DNA · no trip needed · about a minute</div>}
-        {screen === 'door' ? (
+        {moment ? (
+          <GlobeMoment
+            key={`${moment.from}-${moment.to}`}
+            from={moment.from}
+            to={moment.to}
+            label="Mapping your Travel DNA"
+            lines={moment.lines}
+            duration={moment.ms}
+            ready
+            onDone={() => { const t = moment.then; setMoment(null); go(t); }}
+          />
+        ) : screen === 'door' ? (
           <DoorScreen doors={doors} onChoose={(k: DoorKey) => setDoors((d) => chooseDoor(d, k))} onContinue={onContinue} onDnaFirst={onDnaFirst} />
         ) : screen === 'love' ? (
           <LoveScreen
             levels={levels}
             group={group}
             seen={seen}
-            more={more}
             dnaMode={mode === 'dna'}
             onToggle={(k) => { setAutoLevels(false); setLevels((l) => togglePick(l, k)); }}
             onGroup={openGroup}
-            onMore={(g) => setMore((m) => ({ ...m, [g]: !m[g] }))}
             onSkip={() => {
               setLevels({});
               go('essentials');
@@ -477,17 +535,15 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
         ) : screen === 'rank' ? (
           <RankScreen levels={levels} chips={chips} subs={subs} onStar={onStar} onSpecific={(i, c) => setSubs((s) => toggleSpecific(s, i, c))} onContinue={onContinue} onBack={onBack} />
         ) : screen === 'when' ? (
-          <WhenScreen month={month} week={week} length={length} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onLength={setLength} onContinue={onContinue} />
-        ) : screen === 'logistics' ? (
-          <LogisticsScreen loc={loc} onContinue={onContinue} />
+          <WhenScreen month={month} week={week} length={length} loc={loc} windowMode={doors.window} onMonth={(m) => setMonth(m)} onWeek={setWeek} onLength={setLength} onContinue={onContinue} />
         ) : screen === 'essentials' ? (
-          <EssentialsScreen who={who} bands={bands} continents={continents} peak={peak} onPeak={setPeak} onWho={(k) => setWho((w) => toggleInList(w, k))} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
+          <EssentialsScreen who={who} bands={bands} continents={continents} placeTypes={placeTypes} onPlaceTypes={setPlaceTypes} peak={peak} onPeak={setPeak} onWho={(k) => toggleWho(k)} last={nextScreen(mode, doors, 'essentials') === 'results'} onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))} onContinents={setContinents} careProps={careProps('trip')} onContinue={onContinue} />
         ) : screen === 'dnabasics' ? (
           <DnaBasicsScreen
             who={who}
             bands={bands}
             loc={loc}
-            onWho={(k) => setWho((w) => toggleInList(w, k))}
+            onWho={(k) => toggleWho(k)}
             onBand={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
             careProps={careProps('dna')}
             onContinue={onContinue}
@@ -496,11 +552,23 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
           <VibesScreen picked={vibes} onToggle={(k) => setVibes((v) => toggleInList(v, k))} onContinue={onContinue} />
         ) : screen === 'cards' ? (
           <CardsScreen card={tasteCard} done={tasteCount >= tasteTotal} index={tasteCount} total={tasteTotal} onAnswer={onTasteAnswer} onContinue={onContinue} />
+        ) : showMapping ? (
+          <GlobeMoment
+            from={DNA_PREFERENCES_PERCENT}
+            to={DNA_START_PERCENT}
+            label="Mapping your Travel DNA"
+            lines={[`Cross-referencing ${data.destinations.length} destinations…`, 'Compiling your interest signature…']}
+            duration={5600}
+            ready={!waitingForFits}
+            onDone={() => { setMapping(false); window.scrollTo({ top: 0 }); }}
+          />
         ) : screen === 'results' && waitingForFits ? (
           <div className="ob2-scr"><p className="ob2-sub" role="status">Finding your places…</p></div>
         ) : screen === 'results' ? (
           <ShortlistScreen
             data={data}
+            defaults={defaults}
+            onMakeDefault={makeDefault}
             input={input}
             sharpenAnswered={sharpen.length}
             seenCardIds={skipped}
@@ -528,13 +596,15 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             onSharpenAnswer={(card, type) => setSharpen((a) => [...a, { card, type }])}
             onSharpenSkip={(card) => setSkipped((s) => [...s, card.id])}
             onSwipe={(card, type) => setSwipes((a) => [...a, { card, type }])}
-            onWho={(k) => setWho((w) => toggleInList(w, k))}
+            onWho={(k) => toggleWho(k)}
             onBandPill={(d, b) => setBands((x) => toggleBandPill(x, d, b))}
             onMonth={setMonth}
             onWeek={setWeek}
             loc={loc}
             length={length}
             continents={continents}
+            placeTypes={placeTypes}
+            onPlaceTypes={setPlaceTypes}
             onLength={setLength}
             onContinents={setContinents}
             onMaxHours={setMaxHours}
@@ -554,7 +624,7 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             calibration={Math.round(computeDisplayCalibrationPercent(dnaStateFor(input, data.dimensions), data.cards))}
             rows={dnaRows(rowCtx)}
             keep={keep}
-            onReturning={seeAsReturning}
+            onPreview={entry.fresh ? seeAsReturning : undefined}
             onBack={() => go('results')}
           />
         ) : screen === 'welcome' ? (
@@ -563,8 +633,12 @@ export function OnboardingV2Flow({ data, entry }: { data: FlowData; entry: FlowE
             tags={dnaTags({ bands, care, vibes, levels, subs, chips, interestOrder: orderedByLevel(levels), interestName: (k) => interestByKey(k) ?? { icon: '•', label: k } })}
             month={month}
             who={who}
+            ages={care.kids?.o ?? []}
+            onAge={(o) => setCare((c) => toggleCareOption(c, KIDS_ITEM, o))}
+            lastTime={lastTime}
+            onUseLast={() => { if (lastTime) { setMonth(lastTime.month); setWho(lastTime.who); } }}
             onMonth={setMonth}
-            onWho={(k) => setWho((w) => toggleInList(w, k))}
+            onWho={(k) => toggleWho(k)}
             onContinue={() => go('results')}
           />
         ) : (

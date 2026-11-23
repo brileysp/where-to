@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Row = Record<string, unknown> & { evidence: Record<string, string> };
 const root = join(__dirname, '..', '..');
@@ -22,7 +23,7 @@ describe('Camping evidence', () => {
     for (const [place, row] of Object.entries(evidence)) for (const col of COLUMNS) expect(draft[place][col] ?? null, `${place} ${col}`).toEqual(row[col] ?? null);
   });
   it('keeps the anchors named in the column hints', () => {
-    const anchors: Record<string, Record<string, number>> = { campgrounds: { taiwan: 10, cornwall: 10, 'vancouver-island': 9, yellowstone: 8, atacama: 4 } };
+    const anchors: Record<string, Record<string, number>> = { campgrounds: { [PLACE.taiwan]: 10, [PLACE.cornwall]: 10, [PLACE['vancouver-island']]: 9, [PLACE['yellowstone-national-park']]: 9, [PLACE['atacama-desert']]: 5 } };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
   it('ratings follow the stated tiers', () => {
@@ -64,7 +65,7 @@ describe('Camping evidence', () => {
     }
   });
   it('keeps the checked law anchors', () => {
-    const law: Record<string, string> = { 'scottish-highlands-skye': 'allowed', lapland: 'allowed', acadia: 'not_allowed', uluru: 'not_allowed', yellowstone: 'limited', iceland: 'limited', 'badlands-black-hills': 'allowed', cornwall: 'not_allowed' };
+    const law: Record<string, string> = { [PLACE['scottish-highlands-and-isle-of-skye']]: 'allowed', [PLACE['finnish-lapland']]: 'allowed', [PLACE['acadia-national-park']]: 'not_allowed', [PLACE['uluru-and-the-outback']]: 'not_allowed', [PLACE['yellowstone-national-park']]: 'limited', [PLACE.iceland]: 'limited', [PLACE['badlands-and-black-hills']]: 'allowed', [PLACE.cornwall]: 'not_allowed' };
     for (const [place, want] of Object.entries(law)) expect(evidence[place].wildCampingLaw, place).toBe(want);
   });
 });
@@ -81,7 +82,7 @@ describe('Camping wildlife: none from GBIF records', () => {
     }
   });
   it('Palawan stays blank because saltwater crocodiles are known there', () => {
-    expect(draft['palawan'].dangerousWildlife).toBeUndefined();
-    expect(evidence['palawan'].evidence.dangerousWildlife).toContain('saltwater crocodiles');
+    expect(draft[PLACE.palawan].dangerousWildlife).toBeUndefined();
+    expect(evidence[PLACE.palawan].evidence.dangerousWildlife).toContain('saltwater crocodiles');
   });
 });

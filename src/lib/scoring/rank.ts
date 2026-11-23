@@ -1,6 +1,6 @@
 import { seasonOffset } from './seasonCrowds';
 import { BAND_DIMENSIONS, NEUTRAL_WEIGHT, SLIDERS, sliderState } from './constants';
-import { deriveWeatherBand, has, isSliderNA } from './destinations';
+import { deriveWeatherBand, has, isSliderNA, SEASONAL_HAZARDS_CHANGE_SCORES } from './destinations';
 import { seasonPosition } from './blurb';
 import type { AudienceTier, ScoredDestination, ScoringDestination, Severity } from './types';
 import { INTEREST_THRESHOLDS, DEFAULT_THRESHOLD } from './interestThresholds';
@@ -67,7 +67,10 @@ export function styleAdjustedScore(
   return raw * multiplier;
 }
 
-export function bandPenalty(dest: ScoredDestination, monthIdx: number, selectedBands: SelectedBands): number {
+/** What a place keeps of its score for each group of levels (budget, weather, vibe, physical) it misses. The Matching tab's `keepIfBandMissed` replaces it for the traveler. */
+export const DEFAULT_BAND_KEEP = 0.5;
+
+export function bandPenalty(dest: ScoredDestination, monthIdx: number, selectedBands: SelectedBands, keep = DEFAULT_BAND_KEEP): number {
   let mult = 1;
   BAND_DIMENSIONS.forEach((dim) => {
     const selected = selectedBands[dim.key] || [];
@@ -76,7 +79,7 @@ export function bandPenalty(dest: ScoredDestination, monthIdx: number, selectedB
       dim.key === 'weather'
         ? selected.includes(dest.weatherBand[monthIdx])
         : ((dest as unknown as Record<string, string[]>)[dim.key + 'Bands'] || []).some((b) => selected.includes(b));
-    if (!match) mult *= 0.5;
+    if (!match) mult *= keep;
   });
   return mult;
 }
@@ -337,6 +340,8 @@ export function scoreForMonth(
   selectedBands: SelectedBands,
   selectedStyles?: SelectedStyles,
   factors?: InterestFactors,
+  /** What a place keeps for each band group it misses (the Matching tab's keepIfBandMissed). */
+  bandKeep = DEFAULT_BAND_KEEP,
 ): number {
   // Everything below reads the floored weights, never the raw ones (see effectiveWeights).
   const weights = effectiveWeights(stated);
@@ -354,7 +359,7 @@ export function scoreForMonth(
 
   const tw = eligible.reduce((s, c) => s + (weights[c.key] || 0), 0);
   if (tw === 0) {
-    return defaultAppealScore(dest, monthIdx, selectedStyles) * bandPenalty(dest, monthIdx, selectedBands);
+    return defaultAppealScore(dest, monthIdx, selectedStyles) * bandPenalty(dest, monthIdx, selectedBands, bandKeep);
   }
 
   const broadAvg = eligible.reduce((s, c) => s + (weights[c.key] || 0) * scoreFor(c.key), 0) / tw;
@@ -410,7 +415,7 @@ export function scoreForMonth(
   const topAvg = rankedSliders.reduce((s, c, i) => s + priorityWeights[i] * specialistScoreFor(c.key), 0) / priorityWeightSum;
 
   const blended = broadAvg * (1 - TOP_SCORE_BOOST_WEIGHT) + topAvg * TOP_SCORE_BOOST_WEIGHT;
-  return blended * bandPenalty(dest, monthIdx, selectedBands);
+  return blended * bandPenalty(dest, monthIdx, selectedBands, bandKeep);
 }
 
 // Weather-band midpoints for the timing score's comfort baseline — warm
@@ -512,7 +517,7 @@ export function weatherComfortScore(dest: ScoringDestination, monthIdx: number):
   if (has(dest.hot, m)) v += HOT_SEVERITY_PENALTY[dest.hotSeverity || 'moderate'] * seasonTaper(dest.hot, m);
   if (has(dest.cold, m)) v += COLD_SEVERITY_PENALTY[dest.coldSeverity || 'moderate'] * seasonTaper(dest.cold, m);
   if (has(dest.dry, m)) v += 0.5 * seasonTaper(dest.dry, m);
-  const hazardPenalty = (dest.seasonalHazards || [])
+  const hazardPenalty = (SEASONAL_HAZARDS_CHANGE_SCORES ? dest.seasonalHazards || [] : [])
     .filter((hz) => GENERAL_IMPACT_HAZARD_CATEGORIES.has(hz.category) && has(hz.months, m))
     .reduce((worst, hz) => Math.min(worst, HAZARD_COMFORT_PENALTY[hz.severity]), 0);
   v += hazardPenalty;
@@ -789,11 +794,67 @@ export function computeRankedDestinations(
   placeFactors?: Record<string, number>,
   /** Crowds & prices: points moved per point of season difference (negative = prefers peak times, positive = prefers off peak, 0 = neutral). */
   peakGain = 0,
+  /** A trip that covers more than one month: each month (0 = January) with the number of days in it. Scored as the day-weighted average of the months. */
+  monthShares?: ReadonlyArray<{ month: number; days: number }>,
+  /** What a place keeps for each band group it misses (the Matching tab's keepIfBandMissed). */
+  bandKeep = DEFAULT_BAND_KEEP,
 ): RankedDestination[] {
   const monthIdx = month - 1;
+  const shares = monthShares && monthShares.length > 1 ? monthShares : null;
+  const totalDays = shares ? shares.reduce((n, m) => n + m.days, 0) : 0;
+  const scoreIn = (d: ScoredDestination, idx: number) => seasonScoreForMonth(d, weights, idx, selectedBands, selectedStyles, factors, peakGain, bandKeep);
   return [...destinations]
-    .map((d) => ({ d, s: shiftForSeason(scoreForMonth(d, weights, monthIdx, selectedBands, selectedStyles, factors), seasonOffset(d, monthIdx), peakGain) * (placeFactors?.[d.id] ?? 1) }))
+    .map((d) => ({ d, s: (shares ? shares.reduce((sum, m) => sum + scoreIn(d, m.month) * m.days, 0) / totalDays : scoreIn(d, monthIdx)) * (placeFactors?.[d.id] ?? 1) }))
     .sort((a, b) => b.s - a.s);
+}
+
+/** A place's score for one month as the list ranks it: the month's score moved for the traveler's Crowds & prices leaning (before any whole-place factor). */
+export function seasonScoreForMonth(
+  dest: ScoredDestination,
+  weights: Record<string, number>,
+  monthIdx: number,
+  selectedBands: SelectedBands,
+  selectedStyles?: SelectedStyles,
+  factors?: InterestFactors,
+  peakGain = 0,
+  bandKeep = DEFAULT_BAND_KEEP,
+): number {
+  return shiftForSeason(scoreForMonth(dest, weights, monthIdx, selectedBands, selectedStyles, factors, bandKeep), seasonOffset(dest, monthIdx), peakGain);
+}
+
+/** What the list does to one place beyond the month's own score, so the place card can show the same number the list does. */
+export interface PlaceAdjust {
+  /** Crowds & prices: points per point of season difference (0 = neutral, or no month chosen). */
+  peakGain: number;
+  /** What the place keeps of its score for the trip length and for What else matters (1 = all). */
+  placeFactor: number;
+  /** What the place keeps for each Budget, Climate, Vibe or Physical group it misses (default 0.5). */
+  bandKeep?: number;
+  /** A trip over more than one month: the list scores the search month as the day-weighted average of these (0 = January). */
+  shares?: ReadonlyArray<{ month: number; days: number }>;
+}
+
+/**
+ * The score the list shows for this place when the traveler's month is `monthIdx`, or what it would show for another month: the same season shift and the same
+ * whole-place factor. A trip that spans months averages them only for the search month (`searchIdx`), exactly as the list does.
+ */
+export function adjustedScoreForMonth(
+  dest: ScoredDestination,
+  weights: Record<string, number>,
+  monthIdx: number,
+  selectedBands: SelectedBands,
+  selectedStyles: SelectedStyles | undefined,
+  factors: InterestFactors | undefined,
+  adjust?: PlaceAdjust,
+  searchIdx?: number,
+): number {
+  if (!adjust) return scoreForMonth(dest, weights, monthIdx, selectedBands, selectedStyles, factors);
+  const keep = adjust.bandKeep ?? DEFAULT_BAND_KEEP;
+  const shares = adjust.shares && adjust.shares.length > 1 && monthIdx === searchIdx ? adjust.shares : null;
+  const base = shares
+    ? shares.reduce((sum, m) => sum + seasonScoreForMonth(dest, weights, m.month, selectedBands, selectedStyles, factors, adjust.peakGain, keep) * m.days, 0) / shares.reduce((n, m) => n + m.days, 0)
+    : seasonScoreForMonth(dest, weights, monthIdx, selectedBands, selectedStyles, factors, adjust.peakGain, keep);
+  return base * adjust.placeFactor;
 }
 
 /**

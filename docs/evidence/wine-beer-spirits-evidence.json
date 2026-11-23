@@ -1,7 +1,7 @@
 {
- "mauritius": {
+ "p0107": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     6,
     2
@@ -22,7 +22,7 @@
    "otherSpirits": 3
   }
  },
- "mendoza": {
+ "p0108": {
   "raw": {
    "area": 111.66,
    "wineries": [
@@ -47,9 +47,9 @@
    "celebratedWhites": "Chardonnay (named as a premium white in the Uco Valley)"
   }
  },
- "gbr": {
+ "p0075": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     4,
     4
@@ -70,7 +70,7 @@
    "otherSpirits": 5
   }
  },
- "london": {
+ "p0096": {
   "raw": {
    "area": 3.92,
    "wineries": [
@@ -98,7 +98,7 @@
    "spiritKinds": "Gin (London gin is a style, not a place of origin; over half of London's 18th-century drinking shops were gin shops)"
   }
  },
- "athens": {
+ "p0013": {
   "raw": {
    "area": 0.42,
    "wineries": [
@@ -121,7 +121,7 @@
    "otherSpirits": 5
   }
  },
- "istanbul": {
+ "p0085": {
   "raw": {
    "area": 0.01,
    "wineries": [
@@ -144,9 +144,9 @@
    "otherSpirits": 5
   }
  },
- "dubai": {
+ "p0060": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
@@ -167,15 +167,15 @@
    "otherSpirits": 0
   }
  },
- "atacama": {
+ "p0012": {
   "raw": {
    "area": 0.1,
    "wineries": [
-    1,
+    6,
     0
    ],
-   "breweries": 0,
-   "distilleries": 0,
+   "breweries": 2,
+   "distilleries": 1,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -185,12 +185,12 @@
   },
   "values": {
    "wineRegion": 0,
-   "beerCulture": 0,
+   "beerCulture": 4,
    "whiskyCulture": 0,
-   "otherSpirits": 0
+   "otherSpirits": 2
   }
  },
- "morocco": {
+ "p0105": {
   "raw": {
    "area": 0.57,
    "wineries": [
@@ -213,9 +213,9 @@
    "otherSpirits": 0
   }
  },
- "colombian-andes": {
+ "p0046": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     10,
     3
@@ -236,9 +236,9 @@
    "otherSpirits": 0
   }
  },
- "sedona": {
+ "p0165": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     40,
     35
@@ -259,9 +259,9 @@
    "otherSpirits": 0
   }
  },
- "monterey-big-sur": {
+ "p0112": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     129,
     120
@@ -284,7 +284,7 @@
    "celebratedWhites": "Chardonnay (prized by winemakers throughout the state)"
   }
  },
- "andalucia": {
+ "p0005": {
   "raw": {
    "area": 5.66,
    "wineries": [
@@ -307,9 +307,9 @@
    "otherSpirits": 2
   }
  },
- "big-island": {
+ "p0029": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     3,
     2
@@ -330,9 +330,9 @@
    "otherSpirits": 4
   }
  },
- "chiapas": {
+ "p0042": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     12,
     1
@@ -353,9 +353,9 @@
    "otherSpirits": 5
   }
  },
- "colombian-caribbean": {
+ "p0047": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
@@ -376,7 +376,7 @@
    "otherSpirits": 0
   }
  },
- "madeira": {
+ "p0100": {
   "raw": {
    "area": 0.36,
    "wineries": [
@@ -399,7 +399,7 @@
    "otherSpirits": 3
   }
  },
- "berlin": {
+ "p0027": {
   "raw": {
    "area": 0.04,
    "wineries": [
@@ -422,7 +422,7 @@
    "otherSpirits": 5
   }
  },
- "basque-country": {
+ "p0022": {
   "raw": {
    "area": 6.24,
    "wineries": [
@@ -447,7 +447,7 @@
    "celebratedWhites": "Txakoli, a slightly sparkling dry white from Hondarribi Zuri (Getaria, Biscay, Alava)"
   }
  },
- "rome": {
+ "p0157": {
   "raw": {
    "area": 16.71,
    "wineries": [
@@ -470,7 +470,7 @@
    "otherSpirits": 5
   }
  },
- "bordeaux": {
+ "p0031": {
   "raw": {
    "area": 809.64,
    "wineries": [
@@ -501,9 +501,9 @@
    "celebratedWhites": "Sauternes (some of the world's most famous sweet wines); dry whites from Graves"
   }
  },
- "barbados": {
+ "p0020": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     2,
     1
@@ -528,7 +528,7 @@
    "spiritKinds": "Rum (Mount Gay claims to be the world's oldest active rum company; the first recorded rum production took place in Barbados)"
   }
  },
- "buenosaires": {
+ "p0033": {
   "raw": {
    "area": 0.03,
    "wineries": [
@@ -551,9 +551,9 @@
    "otherSpirits": 5
   }
  },
- "los-cabos": {
+ "p0097": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     6,
     1
@@ -574,9 +574,9 @@
    "otherSpirits": 2
   }
  },
- "oaxaca": {
+ "p0127": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     14,
     3
@@ -598,9 +598,9 @@
    "spiritKinds": "Mezcal, from agave (some 90 percent of Mexican mezcal comes from Oaxaca)"
   }
  },
- "charleston-savannah": {
+ "p0040": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     13,
     10
@@ -621,9 +621,9 @@
    "otherSpirits": 6
   }
  },
- "tokyo-kyoto": {
+ "p0182": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     324,
     193
@@ -660,9 +660,9 @@
    "spiritKinds": "Japanese whisky (Yamazaki, between Osaka and Kyoto); sake (Fushimi, near Kyoto)"
   }
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     1
@@ -690,7 +690,7 @@
    "spiritKinds": "Scotch whisky: Highlands and Islands styles, with Talisker named as the Skye distillery"
   }
  },
- "dolomites": {
+ "p0057": {
   "raw": {
    "area": 15.12,
    "wineries": [
@@ -715,9 +715,9 @@
    "celebratedWhites": "Pinot Grigio, Gewurztraminer, Pinot Bianco and Chardonnay (the most common)"
   }
  },
- "hongkong": {
+ "p0081": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     25,
     18
@@ -738,9 +738,9 @@
    "otherSpirits": 5
   }
  },
- "st-andrews-fife": {
+ "p0174": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     7,
     5
@@ -770,7 +770,7 @@
    "spiritKinds": "Scotch whisky: the Lowlands entry names the Kingdom of Fife and lists Eden Mill, Kingsbarns and Daftmill (the article does not give their locations)"
   }
  },
- "black-forest": {
+ "p0030": {
   "raw": {
    "area": 194.29,
    "wineries": [
@@ -796,9 +796,9 @@
    "spiritKinds": "Kirschwasser (cherry brandy believed to have originated in the Black Forest)"
   }
  },
- "palau": {
+ "p0132": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
@@ -819,9 +819,32 @@
    "otherSpirits": 0
   }
  },
- "yosemite": {
+ "p0198": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
+   "wineries": [
+    8,
+    8
+   ],
+   "breweries": 5,
+   "distilleries": 1,
+   "whiskyNames": 0,
+   "wdWine": [],
+   "wdBeer": [],
+   "wdWhisky": [],
+   "wdOther": [],
+   "wdSake": []
+  },
+  "values": {
+   "wineRegion": 2,
+   "beerCulture": 4,
+   "whiskyCulture": 0,
+   "otherSpirits": 2
+  }
+ },
+ "p0181": {
+  "raw": {
+   "area": 0,
    "wineries": [
     0,
     0
@@ -842,32 +865,9 @@
    "otherSpirits": 0
   }
  },
- "tierra-del-fuego": {
+ "p0010": {
   "raw": {
-   "area": 0.0,
-   "wineries": [
-    0,
-    0
-   ],
-   "breweries": 0,
-   "distilleries": 0,
-   "whiskyNames": 0,
-   "wdWine": [],
-   "wdBeer": [],
-   "wdWhisky": [],
-   "wdOther": [],
-   "wdSake": []
-  },
-  "values": {
-   "wineRegion": 0,
-   "beerCulture": 0,
-   "whiskyCulture": 0,
-   "otherSpirits": 0
-  }
- },
- "aspen": {
-  "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     2,
     1
@@ -888,9 +888,9 @@
    "otherSpirits": 3
   }
  },
- "chilean-lake-district": {
+ "p0044": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     1
@@ -911,9 +911,9 @@
    "otherSpirits": 0
   }
  },
- "beijing": {
+ "p0024": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     3,
     0
@@ -934,7 +934,7 @@
    "otherSpirits": 0
   }
  },
- "rioja": {
+ "p0154": {
   "raw": {
    "area": 932.78,
    "wineries": [
@@ -961,14 +961,14 @@
    "celebratedWhites": "Viura (69.2 percent of white plantings), Malvasia, Garnacha Blanca"
   }
  },
- "banff": {
+ "p0018": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
    ],
-   "breweries": 8,
+   "breweries": 9,
    "distilleries": 3,
    "whiskyNames": 0,
    "wdWine": [],
@@ -984,9 +984,9 @@
    "otherSpirits": 3
   }
  },
- "nyc": {
+ "p0118": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     74,
     53
@@ -1009,7 +1009,7 @@
    "otherSpirits": 6
   }
  },
- "provence": {
+ "p0144": {
   "raw": {
    "area": 1410.12,
    "wineries": [
@@ -1036,7 +1036,7 @@
    "spiritKinds": "Pastis (popular especially around Marseille)"
   }
  },
- "sicily": {
+ "p0169": {
   "raw": {
    "area": 158.47,
    "wineries": [
@@ -1062,9 +1062,9 @@
    "celebratedOtherWines": "Marsala (fortified wine, dry or sweet); Passito di Pantelleria (raisin wine)"
   }
  },
- "chicago": {
+ "p0043": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     36,
     27
@@ -1087,7 +1087,7 @@
    "otherSpirits": 6
   }
  },
- "prague": {
+ "p0143": {
   "raw": {
    "area": 3.25,
    "wineries": [
@@ -1112,7 +1112,7 @@
    "otherSpirits": 5
   }
  },
- "mallorca": {
+ "p0103": {
   "raw": {
    "area": 20.63,
    "wineries": [
@@ -1135,7 +1135,7 @@
    "otherSpirits": 5
   }
  },
- "amalfi": {
+ "p0003": {
   "raw": {
    "area": 13.8,
    "wineries": [
@@ -1161,9 +1161,9 @@
    "spiritKinds": "Limoncello (the article says it was first made on the Amalfi coast)"
   }
  },
- "seoul": {
+ "p0166": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     12,
     2
@@ -1184,9 +1184,9 @@
    "otherSpirits": 5
   }
  },
- "edinburgh": {
+ "p0062": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     6,
     3
@@ -1217,7 +1217,7 @@
    "spiritKinds": "Scotch whisky: the Lowlands entry covers Edinburgh and the Lothians"
   }
  },
- "budapest": {
+ "p0032": {
   "raw": {
    "area": 29.63,
    "wineries": [
@@ -1244,9 +1244,9 @@
    "spiritKinds": "Palinka, a Hungarian fruit brandy with EU protected status (made across Hungary)"
   }
  },
- "svalbard": {
+ "p0175": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
@@ -1267,9 +1267,9 @@
    "otherSpirits": 0
   }
  },
- "rio": {
+ "p0153": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     10,
     5
@@ -1290,9 +1290,9 @@
    "otherSpirits": 5
   }
  },
- "napa": {
+ "p0115": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     2600,
     2249
@@ -1318,15 +1318,15 @@
    "celebratedWhites": "Chardonnay (named with Cabernet in the same account)"
   }
  },
- "bend-crater-lake": {
+ "p0026": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
-    0,
-    0
+    10,
+    9
    ],
-   "breweries": 3,
-   "distilleries": 0,
+   "breweries": 57,
+   "distilleries": 7,
    "whiskyNames": 0,
    "wdWine": [],
    "wdBeer": [],
@@ -1335,13 +1335,13 @@
    "wdSake": []
   },
   "values": {
-   "wineRegion": 0,
-   "beerCulture": 4,
+   "wineRegion": 2,
+   "beerCulture": 7,
    "whiskyCulture": 0,
-   "otherSpirits": 0
+   "otherSpirits": 5
   }
  },
- "champagne": {
+ "p0039": {
   "raw": {
    "area": 442.56,
    "wineries": [
@@ -1371,7 +1371,7 @@
    "celebratedOtherWines": "Champagne (the sparkling white wine that bears the region's name); Rose des Riceys; Coteaux Champenois (still wines)"
   }
  },
- "cape-cod-islands": {
+ "p0036": {
   "raw": {
    "area": 0.01,
    "wineries": [
@@ -1394,9 +1394,9 @@
    "otherSpirits": 5
   }
  },
- "north-island": {
+ "p0122": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     223,
     199
@@ -1419,7 +1419,7 @@
    "celebratedWhites": "Chardonnay, Sauvignon Blanc and Viognier (Hawke's Bay)"
   }
  },
- "chamonix": {
+ "p0038": {
   "raw": {
    "area": 9.62,
    "wineries": [
@@ -1443,7 +1443,7 @@
    "spiritKinds": "Genepi, a herbal liqueur of the Alps made in Savoy and the Aosta Valley"
   }
  },
- "piedmont": {
+ "p0142": {
   "raw": {
    "area": 285.2,
    "wineries": [
@@ -1474,7 +1474,7 @@
    "spiritKinds": "Vermouth (modern vermouth first produced in Turin in the 18th century; Carpano and Cinzano)"
   }
  },
- "ireland": {
+ "p0084": {
   "raw": {
    "area": 0.13,
    "wineries": [
@@ -1510,9 +1510,9 @@
    "spiritKinds": "Irish whiskey (single pot still, single malt, grain); poitin; gin"
   }
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     34,
     31
@@ -1533,9 +1533,9 @@
    "otherSpirits": 4
   }
  },
- "new-orleans": {
+ "p0117": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     0
@@ -1556,7 +1556,7 @@
    "otherSpirits": 5
   }
  },
- "vienna": {
+ "p0194": {
   "raw": {
    "area": 67.79,
    "wineries": [
@@ -1582,7 +1582,7 @@
    "celebratedWhites": "Gemischter Satz (field blends common in Vienna, drunk young in heurigen taverns)"
   }
  },
- "sardinia": {
+ "p0163": {
   "raw": {
    "area": 45.1,
    "wineries": [
@@ -1607,7 +1607,7 @@
    "otherSpirits": 6
   }
  },
- "croatia": {
+ "p0054": {
   "raw": {
    "area": 18.86,
    "wineries": [
@@ -1630,7 +1630,7 @@
    "otherSpirits": 0
   }
  },
- "nice-riviera": {
+ "p0120": {
   "raw": {
    "area": 14.23,
    "wineries": [
@@ -1654,9 +1654,9 @@
    "celebratedWhites": "Bellet: Vermentino (called Rolle in France) is the major white"
   }
  },
- "whistler": {
+ "p0189": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     44,
     39
@@ -1677,7 +1677,7 @@
    "otherSpirits": 5
   }
  },
- "tuscany": {
+ "p0185": {
   "raw": {
    "area": 380.98,
    "wineries": [
@@ -1704,9 +1704,9 @@
    "celebratedWhites": "Vernaccia di San Gimignano (the first wine to receive a DOC)"
   }
  },
- "san-miguel-guanajuato": {
+ "p0161": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     42,
     28
@@ -1727,9 +1727,9 @@
    "otherSpirits": 4
   }
  },
- "hokkaido": {
+ "p0080": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     73,
     56
@@ -1754,9 +1754,9 @@
    "spiritKinds": "Japanese whisky (Yoichi, on Hokkaido; Akkeshi)"
   }
  },
- "mexicocity": {
+ "p0109": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     117,
     32
@@ -1777,9 +1777,9 @@
    "otherSpirits": 6
   }
  },
- "maui": {
+ "p0106": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     4,
     4
@@ -1800,7 +1800,7 @@
    "otherSpirits": 3
   }
  },
- "lisbon": {
+ "p0094": {
   "raw": {
    "area": 54.83,
    "wineries": [
@@ -1824,7 +1824,7 @@
    "celebratedReds": "Colares (deep-coloured, full-bodied reds from Ramisco, near Sintra)"
   }
  },
- "azores": {
+ "p0014": {
   "raw": {
    "area": 5.01,
    "wineries": [
@@ -1850,9 +1850,9 @@
    "celebratedWhites": "Verdelho (Pico's famous verdelho wine, widely appreciated for two centuries)"
   }
  },
- "maldives": {
+ "p0102": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     0
@@ -1873,7 +1873,7 @@
    "otherSpirits": 0
   }
  },
- "douro-valley-porto": {
+ "p0059": {
   "raw": {
    "area": 694.55,
    "wineries": [
@@ -1900,9 +1900,9 @@
    "celebratedOtherWines": "Port (Ruby and Tawny red ports; white ports); Barca Velha is named as a Douro table wine"
   }
  },
- "vancouver-island": {
+ "p0190": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     45,
     41
@@ -1923,7 +1923,7 @@
    "otherSpirits": 6
   }
  },
- "copenhagen": {
+ "p0048": {
   "raw": {
    "area": 0.12,
    "wineries": [
@@ -1946,7 +1946,7 @@
    "otherSpirits": 5
   }
  },
- "uzbekistan": {
+ "p0160": {
   "raw": {
    "area": 0.01,
    "wineries": [
@@ -1969,7 +1969,7 @@
    "otherSpirits": 0
   }
  },
- "cotswolds": {
+ "p0051": {
   "raw": {
    "area": 3.12,
    "wineries": [
@@ -1994,7 +1994,7 @@
    "otherSpirits": 8
   }
  },
- "paris": {
+ "p0138": {
   "raw": {
    "area": 0.72,
    "wineries": [
@@ -2017,7 +2017,7 @@
    "otherSpirits": 5
   }
  },
- "canaries": {
+ "p0035": {
   "raw": {
    "area": 39.89,
    "wineries": [
@@ -2045,7 +2045,7 @@
    "celebratedWhites": "Listan Blanco, Malvasia Volcanica and Malvasia Aromatica (authorised white grapes, Tacoronte-Acentejo)"
   }
  },
- "bavaria-munich": {
+ "p0023": {
   "raw": {
    "area": 0.16,
    "wineries": [
@@ -2073,7 +2073,7 @@
    "otherSpirits": 6
   }
  },
- "hudson-valley": {
+ "p0082": {
   "raw": {
    "area": 0.61,
    "wineries": [
@@ -2096,9 +2096,9 @@
    "otherSpirits": 6
   }
  },
- "upper-peninsula": {
+ "p0188": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     0
@@ -2119,7 +2119,7 @@
    "otherSpirits": 2
   }
  },
- "nova-scotia": {
+ "p0126": {
   "raw": {
    "area": 0.9,
    "wineries": [
@@ -2142,9 +2142,9 @@
    "otherSpirits": 6
   }
  },
- "texas-hill-country": {
+ "p0180": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     189,
     179
@@ -2165,9 +2165,9 @@
    "otherSpirits": 5
   }
  },
- "tasmania": {
+ "p0178": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     199,
     164
@@ -2192,7 +2192,7 @@
    "spiritKinds": "Tasmanian whisky (Lark, Sullivans Cove, Hellyers Road)"
   }
  },
- "cape-town": {
+ "p0037": {
   "raw": {
    "area": 98.76,
    "wineries": [
@@ -2218,7 +2218,7 @@
    "celebratedOtherWines": "Vin de Constance (a sweet dessert wine exported in large amounts before the twentieth century); the article names the Constantia wine farms Groot Constantia, Steenberg, Buitenverwachting, Klein Constantia and Constantia Uitsig"
   }
  },
- "swissalps": {
+ "p0199": {
   "raw": {
    "area": 75.01,
    "wineries": [
@@ -2244,7 +2244,7 @@
    "celebratedOtherWines": "Vin des glaciers (made from Reze in the Valais)"
   }
  },
- "vermont": {
+ "p0192": {
   "raw": {
    "area": 0.08,
    "wineries": [
@@ -2267,7 +2267,7 @@
    "otherSpirits": 6
   }
  },
- "quebec-city": {
+ "p0147": {
   "raw": {
    "area": 0.14,
    "wineries": [
@@ -2290,7 +2290,7 @@
    "otherSpirits": 6
   }
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "raw": {
    "area": 3.76,
    "wineries": [
@@ -2315,9 +2315,9 @@
    "celebratedWhites": "Tsinandali (one of the best-known white wines); Rkatsiteli (the most important white grape)"
   }
  },
- "queenstown": {
+ "p0148": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     31,
     22
@@ -2338,7 +2338,7 @@
    "otherSpirits": 2
   }
  },
- "jordan": {
+ "p0140": {
   "raw": {
    "area": 1.35,
    "wineries": [
@@ -2361,7 +2361,7 @@
    "otherSpirits": 0
   }
  },
- "venice": {
+ "p0191": {
   "raw": {
    "area": 53.5,
    "wineries": [
@@ -2386,9 +2386,9 @@
    "celebratedWhites": "Soave; Prosecco"
   }
  },
- "nicaragua": {
+ "p0119": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     7,
     2
@@ -2409,9 +2409,9 @@
    "otherSpirits": 2
   }
  },
- "singapore": {
+ "p0170": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     14,
     10
@@ -2432,14 +2432,14 @@
    "otherSpirits": 5
   }
  },
- "redwood": {
+ "p0152": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
-    5,
-    5
+    1,
+    1
    ],
-   "breweries": 0,
+   "breweries": 2,
    "distilleries": 0,
    "whiskyNames": 0,
    "wdWine": [],
@@ -2449,13 +2449,13 @@
    "wdSake": []
   },
   "values": {
-   "wineRegion": 2,
-   "beerCulture": 0,
+   "wineRegion": 0,
+   "beerCulture": 4,
    "whiskyCulture": 0,
    "otherSpirits": 0
   }
  },
- "santorini": {
+ "p0162": {
   "raw": {
    "area": 0.59,
    "wineries": [
@@ -2478,7 +2478,7 @@
    "otherSpirits": 3
   }
  },
- "algarve": {
+ "p0002": {
   "raw": {
    "area": 9.04,
    "wineries": [
@@ -2501,7 +2501,7 @@
    "otherSpirits": 5
   }
  },
- "cornwall": {
+ "p0049": {
   "raw": {
    "area": 0.34,
    "wineries": [
@@ -2524,9 +2524,9 @@
    "otherSpirits": 6
   }
  },
- "peru": {
+ "p0053": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     2,
     2
@@ -2547,9 +2547,9 @@
    "otherSpirits": 2
   }
  },
- "uluru": {
+ "p0187": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     0,
     0
@@ -2570,9 +2570,9 @@
    "otherSpirits": 0
   }
  },
- "rivieramaya": {
+ "p0155": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     11,
     1
@@ -2593,9 +2593,9 @@
    "otherSpirits": 5
   }
  },
- "argentine-lake-district": {
+ "p0008": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     1,
     1
@@ -2616,9 +2616,9 @@
    "otherSpirits": 0
   }
  },
- "sydney": {
+ "p0176": {
   "raw": {
-   "area": 0.0,
+   "area": 0,
    "wineries": [
     36,
     32
@@ -2639,7 +2639,7 @@
    "otherSpirits": 6
   }
  },
- "puglia": {
+ "p0146": {
   "raw": {
    "area": 13.73,
    "wineries": [
@@ -2663,7 +2663,7 @@
    "celebratedReds": "Primitivo (best known as Zinfandel; Primitivo di Manduria is made in Apulia)"
   }
  },
- "amsterdam": {
+ "p0004": {
   "raw": {
    "area": 0.07,
    "wineries": [
@@ -2687,7 +2687,7 @@
    "spiritKinds": "Genever (made in Amsterdam by The Stillery, Van Wees and Wynand Fockink)"
   }
  },
- "barcelona": {
+ "p0021": {
   "raw": {
    "area": 68.25,
    "wineries": [

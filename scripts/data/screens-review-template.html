@@ -1,0 +1,446 @@
+<title>Screen By Screen Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f6f4f1;--card:#fff;--fg:#21201d;--dim:#5a5650;--faint:#8b867d;--line:#e3ddd4;--accent:#b9693c;--accent-soft:#b9693c1f;--good:#3f8f62;--bad:#c0583a;--track:#ece7df;--shadow:#0000001a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1416;--card:#1a2226;--fg:#eef2f3;--dim:#9fb0b5;--faint:#6d7c80;--line:#2a3438;--accent:#e8935a;--accent-soft:#e8935a2e;--good:#6cc596;--bad:#e8896a;--track:#263034;--shadow:#00000066;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1416;--card:#1a2226;--fg:#eef2f3;--dim:#9fb0b5;--faint:#6d7c80;--line:#2a3438;--accent:#e8935a;--accent-soft:#e8935a2e;--good:#6cc596;--bad:#e8896a;--track:#263034;--shadow:#00000066;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding-block:0 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.page{max-width:1040px;margin:0 auto}
+h1{font-size:28px;margin:26px 0 6px;text-wrap:balance}h2{font-size:21px;margin:0;text-wrap:balance}
+.lead{color:var(--dim);max-width:70ch;margin:0 0 12px}
+button{font:inherit;color:inherit;cursor:pointer}
+.how{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:10px 0}
+.how ol{margin:6px 0 0;padding-left:20px;color:var(--dim)}.how li{margin:3px 0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 0;margin-top:14px}
+.bar .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.meter{flex:1;min-width:140px;height:8px;border-radius:8px;background:var(--track);overflow:hidden}.meter i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+.cnt{font-size:13px;color:var(--dim);white-space:nowrap}
+.nav{display:flex;gap:6px;overflow-x:auto;padding:8px 0 0;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:12.5px;text-decoration:none;color:var(--dim);border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 11px;white-space:nowrap}
+.nav a.done{color:var(--good);border-color:var(--good)}
+.sec{padding-top:38px;scroll-margin-top:96px}
+.sec .hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sec .num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+.verdict{margin:6px 0 14px;color:var(--dim);max-width:75ch}
+.verdict b{color:var(--fg)}
+.grid{display:grid;grid-template-columns:340px minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:2px;max-width:100%}
+.seg button{border:0;background:none;border-radius:99px;padding:4px 12px;font-size:12.5px;color:var(--dim)}
+.seg button.on{background:var(--accent);color:#fff;font-weight:700}
+.phones{display:flex;gap:16px;flex-wrap:wrap}
+.pwrap{width:340px;max-width:100%}
+.ptag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px;color:var(--faint)}.ptag.new{color:var(--accent)}
+.phone{width:340px;max-width:100%;height:620px;border:1px solid var(--line);border-radius:30px;background:#f5f3f0;overflow:hidden;box-shadow:0 10px 30px var(--shadow);position:relative;display:flex;flex-direction:column}
+.shots{overflow-y:auto;height:100%;background:#f5f3f0}.shots img{display:block;width:100%;height:auto}.shots .cap{font:700 10px/1 system-ui;letter-spacing:.08em;color:#8b867d;background:#e9e4dc;padding:5px 10px;text-transform:uppercase}
+.changes{display:flex;flex-direction:column;gap:10px}
+.chg{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.chg.keep{border-color:var(--good)}.chg.skip{opacity:.7}
+.chg .t{font-weight:700}.chg .w{color:var(--dim);font-size:13.5px;margin:3px 0 8px}
+.chg .btns{display:flex;gap:6px;align-items:center}
+.chg .btns button{border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:4px 14px;font-size:13px}
+.chg .btns .k.on{background:var(--good);border-color:var(--good);color:#fff;font-weight:700}
+.chg .btns .s.on{background:var(--bad);border-color:var(--bad);color:#fff;font-weight:700}
+.chg .st{font-size:12px;color:var(--faint);margin-left:auto}
+.note{width:100%;margin-top:10px;min-height:54px;resize:vertical;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:12px;padding:8px 10px;font:inherit;font-size:14px}
+.flat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin-top:30px}
+.flat ul{margin:6px 0 0;padding-left:20px;color:var(--dim)}
+.sum{margin-top:30px}.sum pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font:13px/1.5 ui-monospace,Menlo,monospace;max-height:340px;overflow:auto}
+.bt{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 16px;font-size:14px}.bt.p{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+/* ---------- the drawn app (always light, like the screenshots) ---------- */
+.a{--abg:#f5f3f0;--ac:#b9693c;--as:#f0e1d8;--aln:#e3dcd3;--afg:#22201d;--adim:#5a5650;--afa:#8b867d;--agood:#4f9a6c;--abad:#c5603f;color:var(--afg);font:13.5px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--abg);display:flex;flex-direction:column;height:100%;min-height:0}
+.a button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0;text-align:left}
+.a .scr{flex:1;overflow-y:auto;padding:4px 16px 16px;min-height:0}
+.a .foot{border-top:1px solid var(--aln);padding:10px 16px 12px;background:var(--abg);display:flex;flex-direction:column;gap:7px;align-items:stretch}
+.a .top{display:flex;align-items:center;gap:10px;padding:14px 16px 6px}.a .top .bk{font-size:18px;width:14px}.a .prog{flex:1;height:3px;border-radius:3px;background:#e4ded6}.a .prog i{display:block;height:100%;background:var(--ac);border-radius:3px}
+.a h3{font-size:24px;line-height:1.15;margin:8px 0 4px;font-weight:800;letter-spacing:-.01em}
+.a .sub{color:var(--adim);margin:0 0 12px;font-size:14px}
+.a .q{font-weight:800;font-size:14.5px;margin:14px 0 8px}.a .q small{color:var(--ac);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:5px}
+.a .tile{display:flex;align-items:center;gap:12px;width:100%;background:#fff;border:1.5px solid var(--aln);border-radius:14px;padding:11px 13px;margin-bottom:8px;position:relative}
+.a .tile .e{font-size:22px;width:28px;text-align:center}.a .tile .tx{flex:1;min-width:0}.a .tile b{display:block;font-size:14.5px}.a .tile span.s{color:var(--afa);font-size:12.5px}
+.a .tile .rad{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--aln)}.a .tile.sel{background:var(--as);border-color:var(--ac)}.a .tile.sel .rad{border:6px solid var(--ac);background:#fff}
+.a .tile.soft b{font-weight:600}.a .tile.soft{background:#faf8f5}
+.a .btn{display:block;width:100%;text-align:center;border-radius:12px;padding:12px;font-weight:700;background:var(--ac);color:#fff}
+.a .btn.dis{background:#e3c3b2;color:#fff;cursor:default}.a .btn.ghost{background:none;border:1.5px solid var(--aln);color:var(--afg);font-weight:600}
+.a .lnk{text-align:center;text-decoration:underline;font-size:13px;color:var(--afg);padding:3px}
+.a .pills{display:flex;flex-wrap:wrap;gap:7px}
+.a .pill{border:1.5px solid var(--aln);background:#fff;border-radius:99px;padding:6px 13px;font-size:13.5px;white-space:nowrap}.a .pill.sel{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:700}
+.a .pill.out{background:var(--as);border-color:var(--ac);color:var(--afg)}
+.a .card{background:#fff;border:1px solid var(--aln);border-radius:16px;padding:13px 14px;margin-bottom:11px}
+.a .card h4{margin:0 0 6px;font-size:15.5px}.a .card p{margin:0 0 8px;color:var(--adim);font-size:12.5px}
+.a .tabs{display:flex;gap:7px;overflow:hidden;padding:2px 0 8px}.a .tab{flex:none;border:1.5px solid var(--aln);background:#fff;border-radius:99px;padding:6px 12px;font-size:13px}.a .tab.on{background:var(--as);border-color:var(--ac);font-weight:700}
+.a .tab em{font-style:normal;background:var(--ac);color:#fff;border-radius:10px;padding:0 6px;font-size:11px;margin-left:5px}
+.a .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.a .t2{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--aln);border-radius:12px;padding:10px;min-height:54px;font-size:13.5px;position:relative}.a .t2 .e{font-size:17px}.a .t2.sel{background:var(--as);border-color:var(--ac);font-weight:700}
+.a .t2 .ck{position:absolute;right:7px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--ac);color:#fff;font-size:10px;display:grid;place-items:center}
+.a .mg{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.a .mg button{border:1.5px solid var(--aln);background:#fff;border-radius:11px;padding:10px 0;text-align:center;font-size:14px}.a .mg button.sel{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:700}
+.a .sg{display:grid;grid-template-columns:repeat(4,1fr);background:#ece7df;border-radius:12px;padding:3px}.a .sg button{text-align:center;padding:8px 2px;border-radius:9px;font-size:12.5px;line-height:1.15}.a .sg button.sel{background:#fff;box-shadow:0 1px 3px #0002;font-weight:700}
+.a .row{display:flex;align-items:center;gap:10px;padding:12px 2px;border-bottom:1px solid var(--aln)}.a .row .l{flex:1;font-weight:700}.a .row .v{color:var(--adim)}.a .row .v.o{color:var(--ac);font-weight:700}
+.a .row.last{border:0}
+.a .lab{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--afa);margin:14px 0 6px}
+.a .dim{color:var(--adim)}.a .fa{color:var(--afa)}.a .small{font-size:12px}
+.a .ph2{display:flex;align-items:center;gap:8px;padding:12px 16px 4px}.a .ph2 .ttl{font-weight:800;font-size:15px}.a .ph2 .sp{flex:1}
+.a .chipbtn{border-radius:12px;padding:6px 10px;font-weight:700;font-size:13px;background:var(--as);color:var(--ac)}
+.a .place{background:#fff;border:1px solid var(--aln);border-radius:16px;padding:12px 14px;margin-bottom:10px}
+.a .place .l1{display:flex;align-items:baseline;gap:8px}.a .place .rk{color:var(--afa);font-weight:700;font-size:12px}.a .place .nm{font-weight:800;font-size:16px;flex:1}.a .place .sc{font-weight:800;font-size:20px;color:var(--agood)}
+.a .place .l2{display:flex;align-items:center;gap:8px;margin-top:7px}.a .place .reg{border:1px solid var(--aln);border-radius:99px;padding:2px 9px;font-size:12px;color:var(--adim)}.a .place .bm{margin-left:auto;width:30px;height:30px;border:1px solid var(--aln);border-radius:50%;text-align:center;line-height:28px;color:var(--adim)}
+.a .place .why{margin-top:7px;font-size:12px;color:var(--adim);display:flex;gap:10px}.a .place .why b{color:var(--afg)}
+.a .sheetbg{position:absolute;inset:0;background:#0006;display:flex;flex-direction:column;justify-content:flex-end}
+.a .sheet{background:#f5f3f0;border-radius:22px 22px 0 0;padding:14px 16px 14px;max-height:92%;display:flex;flex-direction:column;min-height:0}
+.a .sheet .sc2{overflow-y:auto;min-height:0}
+.a .spin{width:30px;height:30px;border-radius:50%;border:3px solid var(--as);border-top-color:var(--ac);animation:sp 1s linear infinite;margin:0 auto}@keyframes sp{to{transform:rotate(360deg)}}
+.a .in{animation:fi .35s both}@keyframes fi{from{opacity:0;transform:translateY(6px)}}
+.a .dots{display:flex;gap:5px;justify-content:center;margin:2px 0 10px}.a .dots i{width:7px;height:7px;border-radius:50%;background:#ddd5ca}.a .dots i.d{background:var(--ac)}
+.a .vibe{border-radius:14px;min-height:92px;padding:11px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;font-weight:700;font-size:14px;line-height:1.2}
+.a .vibe .e{position:absolute;right:9px;top:8px;font-size:26px}
+.a .lvl{display:flex;gap:4px;margin-left:auto}.a .lvl i{width:11px;height:11px;border-radius:50%;border:1.5px solid #cfc6ba;background:#fff}.a .lvl i.o{background:var(--ac);border-color:var(--ac)}
+.a .tg{width:44px;height:26px;border-radius:14px;background:var(--ac);position:relative}.a .tg:after{content:"";position:absolute;right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff}
+.a input.f{width:100%;border:1px solid #c9c9c9;border-radius:4px;padding:6px;font:inherit;background:#fff}
+.a .bar2{height:8px;border-radius:8px;background:#e3ddd0;overflow:hidden}.a .bar2 i{display:block;height:100%;background:var(--ac)}
+.a .paper{background:#efe9d8;color:#2f5a63}
+.a .paperbg{--pg:__PAPER_GRAIN__;--pw:__PAPER_WAVES__;position:relative;min-height:100%;background-color:#f3eedc;background-image:linear-gradient(180deg,rgba(59,143,153,.09) 0,rgba(139,114,179,.05) 110px,rgba(59,143,153,0) 220px),radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.6),transparent 55%),radial-gradient(ellipse at 50% 110%,rgba(140,112,60,.14),transparent 60%),var(--pg);background-size:auto,auto,auto,200px 200px}
+.a .paperbg:before{content:'';position:absolute;inset:0;background:var(--pw);background-size:200px 60px;opacity:.17;pointer-events:none}
+.a .paperbg>*{position:relative}
+</style>
+<div class="page">
+<h1>Every screen, tidied: pick what you like</h1>
+<p class="lead">Each section has a phone you can tap, and a list of proposed changes. Mark each change Keep or Skip. The phone updates live, so Skip puts that one part back to how it is today. Tap Current to see the real screenshot.</p>
+<div class="how"><b>How this works</b><ol><li>Tap around inside the phone: tiles, pills and rows all respond.</li><li>Under Proposed changes, press <b>Keep</b> or <b>Skip</b>. Changes you have not touched show as proposed.</li><li>Your picks save on their own. Add a note per screen if you want something different.</li></ol></div>
+<div class="bar"><div class="row"><div class="meter"><i id="meter"></i></div><span class="cnt" id="cnt"></span></div><div class="nav" id="nav"></div></div>
+<div id="app"></div>
+<details class="flat"><summary><b>Already built and gone from this page</b></summary><ul id="builtlist"></ul></details>
+<div class="flat"><b>Looked at, and good as is</b><ul>
+<li><b>Searching places.</b> The search box opens inline in the list and works well.</li>
+<li><b>The globe moments</b> between steps. New and doing their job.</li>
+<li><b>The place card.</b> Covered in the earlier review.</li>
+<li><b>The first-time tips</b> on the list and the place card.</li></ul>
+<p class="lead" style="margin:10px 0 0">Not covered: the admin screens. They are your own tool, not the traveler's app. Say if you want them done the same way.</p></div>
+<div class="sum"><h2>Your picks, in one place</h2><p class="lead">This is what I will build from. It saves as you go.</p><pre id="summary"></pre><div class="ctl"><button class="bt p" id="copy">Copy summary</button><button class="bt" id="reset">Clear all picks</button><span class="cnt" id="saved"></span></div></div>
+</div>
+<script>
+var SHOTS=__SHOTS__;
+var P={},NOTES={},UI={},VIEW={},STATE={};
+var db=null,docRef=null,timer=null;
+function ui(s,k,d){var o=UI[s]||{};return o[k]===undefined?d:o[k];}
+function setui(s,k,v){UI[s]=UI[s]||{};UI[s][k]=v;}
+function togui(s,k,v){var a=ui(s,k,[]).slice();var i=a.indexOf(v);if(i<0)a.push(v);else a.splice(i,1);setui(s,k,a);}
+function has(s,k,v){return ui(s,k,[]).indexOf(v)>=0;}
+var D=function(s,k,v,extra){return 'data-a="ui" data-s="'+s+'" data-k="'+k+'" data-v="'+v+'" '+(extra||'');};
+var T=function(s,k,v){return 'data-a="tog" data-s="'+s+'" data-k="'+k+'" data-v="'+v+'"';};
+function btn(t,dis,ghost){return '<div class="btn'+(dis?' dis':'')+(ghost?' ghost':'')+'">'+t+'</div>';}
+function topbar(p){return '<div class="top"><span class="bk">‹</span><div class="prog"><i style="width:'+p+'%"></i></div></div>';}
+function tile(s,k,v,e,t,sub,sel,soft){return '<button class="tile'+(sel?' sel':'')+(soft?' soft':'')+'" '+D(s,k,v)+'><span class="e">'+e+'</span><span class="tx"><b>'+t+'</b><span class="s">'+sub+'</span></span><span class="rad"></span></button>';}
+function pill(s,k,v,t,sel,cls){return '<button class="pill'+(sel?' '+(cls||'sel'):'')+'" '+D(s,k,v)+'>'+t+'</button>';}
+var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+/* Built in the app from her picks (22 Nov 2026): they stay on in the mockups as the base, and are not shown as changes any more. */
+var BUILT=['dnaD','dnaE','sp6','logi1','bas1','bas2','bas3','res4','pc_s1','pc_s3','pc_a3','pc_c2','pc_c3','door1','door2','rank2','when1','when2','vibes1','vibes2','vibes3','taste1','taste2','taste3','dna1','dna2','dna4','sw1','sw2','sw3','pass1','pass2','trips2','trips3','res1','trips1','home1'];
+var BUILT_TITLES=[];
+var DECIDED_NO=['love1','rank1','home2','home3','bas4','res2','pc_c1','sp4','sp5','dnaA','dnaB','dnaC'];
+var SKIPPED=['bas4','res2','pc_c1'];
+
+var MAPP=__MAPPATHS__;var PTS=__PTS__;
+var MONTHN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t2=Math.imul(a^a>>>15,1|a);t2=t2+Math.imul(t2^t2>>>7,61|t2)^t2;return((t2^t2>>>14)>>>0)/4294967296;};}
+var ORDER=(function(){var r=rng(11),a=PTS.map(function(_,i){return i;});for(var i=a.length-1;i>0;i--){var j=Math.floor(r()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}return a;})();
+function px(p){return [(p.lon+180)/360*720,Math.min(280,(84-p.lat)/142*284)];}
+/* ===================== the screens ===================== */
+var SCREENS=[
+{id:'door',name:'First screen',verdict:'<b>Close to good as is.</b> We reworked it recently. These are two small polish items, nothing structural.',
+ states:[{id:'a',label:'First screen',shots:['door']}],
+ changes:[
+  {id:'door1',t:'Ask one question at a time',w:'Both questions sit on screen at once. Showing the timing question only after the first is answered, with "1 of 2", makes each choice lighter. Try tapping a tile.'},
+  {id:'door2',t:'The disabled button says what is missing',w:'A grey Continue gives no clue. "Pick one above to start" tells people why they cannot move on.'}],
+ mock:function(on,s){var a=ui(s,'a',null),b=ui(s,'b',null),seq=on('door1'),ready=a&&b;
+  var g1='<div class="q">'+(seq?'<small>1 of 2</small>':'')+'What should the trip be built around?</div>'+tile(s,'a','love','🎯','Something I love to do','Hiking, birding, diving, food…',a==='love')+tile(s,'a','open','🎲','Just show me ideas','Quicker, but less personal',a==='open',true);
+  var g2=(!seq||a)?'<div class="q '+(seq?'in':'')+'">'+(seq?'<small>2 of 2</small>':'')+'How fixed is your timing?</div>'+tile(s,'b','window','📅','A specific time window','Exact weeks, or flight logistics',b==='window')+tile(s,'b','flex','🌤️','My timing is flexible','Just pick a month',b==='flex'):'';
+  var lab=ready?'Continue':(on('door2')?(a?'Now pick your timing':'Pick one above to start'):'Continue');
+  return {body:topbar(18)+'<div style="padding:0 16px"><h3>Let us plan a trip</h3>'+g1+g2+'</div>',foot:btn(lab,!ready)+'<div class="lnk">Not planning a trip yet? Build my Travel DNA instead</div>',flush:true};}},
+
+{id:'love',name:'Interests',verdict:'<b>Good as is.</b> This is the screen we have worked on most. One optional addition for people who cannot tell the orange tint apart.',
+ states:[{id:'a',label:'Interests',shots:['love']}],
+ changes:[{id:'love1',t:'Check mark on picked tiles',w:'Selection today is a color tint only. A small check makes it unmistakable and works for color-blind users.'}],
+ mock:function(on,s){var L=[['🏔️','Scenic Landscapes'],['🐾','Wildlife Viewing'],['🐘','Safari'],['🐋','Whale Watching'],['⛺','Camping & Backcountry'],['✨','Stargazing'],['🦜','Birding'],['🌌','Northern Lights / Aurora'],['🌋','Geology'],['🌸','Blooms & Colors']];
+  var n=ui(s,'p',[]).length;
+  var g=L.map(function(x){var sel=has(s,'p',x[1]);return '<button class="t2'+(sel?' sel':'')+'" '+T(s,'p',x[1])+'><span class="e">'+x[0]+'</span>'+x[1]+(sel&&on('love1')?'<span class="ck">✓</span>':'')+'</button>';}).join('');
+  var head='<div class="top"><span class="bk">‹</span><div class="prog"><i style="width:30%"></i></div></div><div style="padding:0 16px"><div style="display:flex;align-items:baseline"><h3 style="flex:1">What do you love to do?</h3><span class="dim">Skip</span></div><p class="sub">Pick your interests in 4 categories</p><div class="tabs"><span class="tab on">🌿 Nature'+(n?'<em>'+n+'</em>':'')+'</span><span class="tab">🥾 Recreation</span><span class="tab">🏛️ Culture</span><span class="tab">♨️ Rela</span></div><h3 style="font-size:21px">Nature &amp; Wildlife – 1 of 4</h3><div class="tgrid">'+g+'</div><div class="card" style="margin-top:12px;background:var(--as);border-color:var(--ac);text-align:center;color:var(--ac);font-weight:700">🥾 Continue to Sports &amp; Recreation ›</div></div>';
+  return {body:head,foot:btn(n?'Done, '+n+' picked':'Pick at least one',!n),flush:true};}},
+
+{id:'rank',name:'Top interests',verdict:'<b>Two small fixes.</b> The screen works, but nobody knows how many stars are left, and starred rows jump to the top with no explanation.',
+ states:[{id:'a',label:'Top interests',shots:['rank','rank2']}],
+ changes:[
+  {id:'rank1',t:'Show how many stars are left',w:'"Pick up to 5" never updates. A live "2 of 5 starred" tells you where you stand.'},
+  {id:'rank2',t:'Name the two groups',w:'Starred interests jump to the top. Headers ("Top interests", "Also picked") make the jump make sense and match the Travel DNA page.'}],
+ mock:function(on,s){var I=[['🏔️','Scenic Landscapes',[]],['🐾','Wildlife Viewing',['Big predators','Primates','Marine life','Reptiles and amphibians','Birds']],['🐋','Whale Watching',['Humpbacks','Orcas','Blue and fin whales','Dolphins and porpoises']],['✨','Stargazing',[]],['🦜','Birding',[]]];
+  var st=ui(s,'st',[]);function row(x){var sel=st.indexOf(x[1])>=0;var chips=sel&&x[2].length?'<div class="lab" style="margin:8px 0 5px">What kind?</div><div class="pills">'+x[2].map(function(c){return '<span class="pill">'+c+'</span>';}).join('')+'</div>':'';
+   return '<div class="card" style="'+(sel?'background:var(--as);border-color:var(--ac)':'')+'"><button style="display:flex;align-items:center;gap:10px;width:100%" '+T(s,'st',x[1])+'><span style="font-size:20px">'+x[0]+'</span><b style="flex:1;font-size:14.5px">'+x[1]+'</b>'+(sel?'<span style="color:var(--ac);font-weight:700">★ Top interest</span>':'<span class="fa" style="font-size:16px">☆</span>')+'</button>'+chips+'</div>';}
+  var tops=I.filter(function(x){return st.indexOf(x[1])>=0;}),rest=I.filter(function(x){return st.indexOf(x[1])<0;});
+  var list=on('rank2')&&tops.length?'<div class="lab">Top interests</div>'+tops.map(row).join('')+'<div class="lab">Also picked</div>'+rest.map(row).join(''):tops.concat(rest).map(row).join('');
+  var sub=on('rank1')?'Tap ☆ on up to 5 that matter most for travel <b style="color:var(--ac);white-space:nowrap">· '+st.length+' of 5 starred</b>':'Pick up to 5, the most important ones for travel';
+  return {body:topbar(40)+'<div style="padding:0 16px"><h3>Top interests</h3><p class="sub">'+sub+'</p>'+list+'</div>',foot:btn('Continue')+'<div class="lnk">Back to add more</div>',flush:true};}},
+
+{id:'when',name:'When are you going',verdict:'<b>Month, then how long, then a calm way to pick the week.</b> How long now comes before the week, so the week choice already knows how many weeks to fill. All three start from "Any week" (the default for people who do not know yet), have no cards or banners, and show only one quiet line of summary. They sit between the big week rows and the one-week-at-a-time stepper. Pick one with Keep.',
+ states:[{id:'a',label:'A · Week chips',shots:['when']},{id:'b',label:'B · One month bar',shots:['when']},{id:'c',label:'C · Early, middle, late',shots:['when']}],
+ changes:[
+  {id:'wv4',t:'Version A: a row of week chips',w:'Below "How long", one wrapping row of small pills: "Any week", then one pill per real week of the month ("6–12"). A short first or last week is just a shorter range. Tap one and the chosen length fills forward.'},
+  {id:'wv5',t:'Version B: the month as one bar of week slices',w:'A single slim bar for the month cut into its real weeks (short weeks are short slices). Tap a slice to start there and the length fills forward. "Any week" is a quiet switch above it. The most visual, still small.'},
+  {id:'wv6',t:'Version C: early, middle or late, then the exact week if you know it',w:'For people who do not know yet: three big soft choices (Early, Middle, Late September) are enough. A small "Pick the exact week" link opens version A\'s chips for people who do know.'}],
+ mock:function(on,s,st){
+  var CY=2027;var mm=ui(s,'mm',8);var len=ui(s,'len','2w');var sr=ui(s,'sr',null);var any=sr===null;
+  var LN=[['wk','Long weekend'],['1w','1 week'],['2w','2 weeks'],['3w','3+ weeks']];var NB={wk:1,'1w':1,'2w':2,'3w':3}[len];var DAYS={wk:4,'1w':7,'2w':14,'3w':21}[len];
+  function segs(y,m){var dim=new Date(y,m+1,0).getDate(),out=[],cur=null;for(var d=1;d<=dim;d++){var wd=new Date(y,m,d).getDay();if(!cur||wd===1){cur={d1:d,d2:d,m:m,y:y};out.push(cur);}else cur.d2=d;}return out;}
+  var S=segs(CY,mm);if(!any&&sr>=S.length)sr=0;
+  var months='<div class="mg" style="margin:4px 0 14px">'+MONTHS.map(function(x,i){return '<button class="'+(mm===i?'sel':'')+'" '+D(s,'mm',i)+'>'+x+'</button>';}).join('')+'</div>';
+  var lenH='<div class="lab" style="margin:0 0 6px">How long</div><div class="sg">'+LN.map(function(x){return '<button class="'+(len===x[0]?'sel':'')+'" '+D(s,'len',x[0])+'>'+(x[0]==='wk'?'Long<br>weekend':x[1])+'</button>';}).join('')+'</div>';
+  function lenTxt(){return len==='wk'?'a long weekend':len==='1w'?'1 week':len==='2w'?'2 weeks':'3 weeks or more';}
+  function line(){if(any)return '<p class="small dim" style="margin:12px 2px 0">Any time in '+MONTHN[mm]+', '+lenTxt()+'.</p>';var seg=S[sr];var a=new Date(seg.y,seg.m,seg.d1);var e=new Date(a.getTime()+(DAYS-1)*864e5);var spill=e.getMonth()!==seg.m||sr+NB>S.length;return '<p class="small dim" style="margin:12px 2px 0">'+MONTHN[mm].slice(0,3)+' '+seg.d1+', '+lenTxt()+(spill?' · runs into '+MONTHN[(mm+1)%12]:'')+'</p>';}
+  function lab(x){return x.d1===x.d2?String(x.d1):x.d1+'–'+x.d2;}
+  var weekHead='<div class="lab" style="margin:16px 0 6px">Which week? <span style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--afa)">Optional</span></div>';
+  function chipsRow(){return '<div class="pills"><button class="pill'+(any?' sel':'')+'" '+D(s,'sr',null)+'>Any week</button>'+S.map(function(x,i){var inr=!any&&i>=sr&&i<sr+NB;return '<button class="pill'+(inr?' sel':'')+'" '+D(s,'sr',i)+'>'+lab(x)+'</button>';}).join('')+'</div>';}
+  var head='<h3>When are you going?</h3><p class="sub">Pick the month, how long, then the week if you know it.</p>'+months+lenH;
+  if(st==='a')return {body:topbar(60)+'<div style="padding:0 16px">'+head+weekHead+chipsRow()+line()+'</div>',foot:btn('Continue'),flush:true};
+  if(st==='b'){var bar='<div style="display:flex;gap:3px;margin-top:2px">'+S.map(function(x,i){var n=x.d2-x.d1+1;var inr=!any&&i>=sr&&i<sr+NB;return '<button '+D(s,'sr',i)+' style="flex:'+n+' 1 0;min-width:0;height:34px;border-radius:9px;background:'+(inr?'var(--ac)':'#e3ddd4')+';opacity:'+(any?.55:1)+'"></button>';}).join('')+'</div><div style="display:flex;gap:3px;margin-top:3px">'+S.map(function(x){var n=x.d2-x.d1+1;return '<span style="flex:'+n+' 1 0;min-width:0;font-size:10px;color:var(--afa)">'+x.d1+'</span>';}).join('')+'</div>';
+   return {body:topbar(60)+'<div style="padding:0 16px">'+head+'<div style="display:flex;align-items:center;margin:16px 0 6px"><span class="lab" style="margin:0;flex:1">Which week? <span style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--afa)">Optional</span></span><button class="pill'+(any?' sel':'')+'" '+D(s,'sr',null)+' style="font-size:12px;padding:4px 11px">Any week</button></div>'+bar+line()+'</div>',foot:btn('Continue'),flush:true};}
+  var ex=ui(s,'ex',false);var third=Math.ceil(S.length/3);
+  var big=[['Early','the first week or so',0],['Middle','around the middle',1],['Late','the last week or so',2]].map(function(b){var idx=b[2]===0?0:b[2]===1?Math.floor(S.length/2):S.length-1;var on1=!any&&!ex&&sr===idx;return '<button '+D(s,'sr',idx)+' style="display:block;width:100%;text-align:left;padding:12px 14px;margin-bottom:7px;border-radius:12px;border:1.5px solid '+(on1?'var(--ac)':'var(--aln)')+';background:'+(on1?'var(--as)':'#fff')+'"><b>'+b[0]+' '+MONTHN[mm]+'</b><div class="small dim">'+b[1]+'</div></button>';}).join('');
+  return {body:topbar(60)+'<div style="padding:0 16px">'+head+weekHead+big+'<div style="display:flex;gap:14px;align-items:center"><button class="pill'+(any?' sel':'')+'" '+D(s,'sr',null)+' style="font-size:12.5px">Any week</button><button class="small" '+D(s,'ex',!ex)+' style="color:var(--ac);text-decoration:underline">'+(ex?'Hide the exact weeks':'Pick the exact week')+'</button></div>'+(ex?'<div style="margin-top:10px">'+chipsRow()+'</div>':'')+line()+'</div>',foot:btn('Continue'),flush:true};}},
+
+{id:'logi',name:'Getting there: Flying from',verdict:'<b>Trying again, with the right reason.</b> You are right: "Where in the world" narrows places by continent, and "Flying from" is about trip time against travel time, how far each place is for the length of trip you have. So it belongs next to trip length, not next to the continents. Two placements below; I would pick B. Tap the tabs above the phone.',
+ states:[{id:'a',label:'A · On The basics, next to the logistics',shots:['logi','bas1']},{id:'b',label:'B · On When, under How long',shots:['logi','when']}],
+ changes:[
+  {id:'logi1',t:'Delete the "Getting there" screen and ask "Flying from" somewhere that makes sense',w:'Same question, same two dropdowns, one step fewer. A: on The basics as its own row, right after Crowds & prices and with a line saying what it is for (weighing flight time against your trip length). B: on the When screen inside the "How long?" card, because that card already says far places rank lower when flights would eat a short trip, so the two answers sit together. Say which, or neither.'}],
+ mock:function(on,s,st){
+  var from=ui(s,'from',null);var fromBody='<div style="padding:4px 0 6px"><div class="card" style="margin:0 0 8px;padding:10px 12px;display:flex"><span style="flex:1">United States</span><span class="fa">▾</span></div><button class="card" style="margin:0;padding:10px 12px;display:flex;width:100%" '+D(s,'from','Colorado, United States')+'><span style="flex:1;color:'+(from?'var(--afg)':'var(--afa)')+'">'+(from?'Colorado':'Choose your state')+'</span><span class="fa">▾</span></button></div>';
+  if(st==='b'){var len=ui(s,'len','2w');var LN=[['wk','Long weekend'],['1w','1 week'],['2w','2 weeks'],['3w','3+ weeks']];
+   return {body:topbar(60)+'<div style="padding:0 16px"><h3>When are you going?</h3><p class="sub">Just pick a month.</p><div class="card"><h4>When?</h4><div class="mg">'+MONTHS.map(function(x,i){return '<button class="'+(i===8?'sel':'')+'">'+x+'</button>';}).join('')+'</div></div><div class="card" style="border-color:var(--ac)"><h4>How long?</h4><p>Places far from home rank lower when the flights would eat most of a short trip.</p><div class="sg">'+LN.map(function(x){return '<button class="'+(len===x[0]?'sel':'')+'" '+D(s,'len',x[0])+'>'+(x[0]==='wk'?'Long<br>weekend':x[1])+'</button>';}).join('')+'</div><div style="border-top:1px solid var(--aln);margin-top:12px;padding-top:10px"><div style="display:flex;align-items:center"><b style="flex:1">Flying from</b><span class="v o" style="color:var(--ac);font-weight:700">'+(from||'Not set')+'</span></div><div class="small dim" style="margin:2px 0 6px">So we can tell which places are a long flight for the time you have.</div>'+fromBody+'</div></div></div>',foot:btn('Continue'),flush:true};}
+  if(ui(s,'op',null)===null)setui(s,'op',['from']);var op=ui(s,'op',[]);
+  function row(key,label,val,body){var o=op.indexOf(key)>=0;return '<div class="card" style="padding:4px 14px 6px'+(key==='from'&&o?';border-color:var(--ac)':'')+'"><button style="display:flex;width:100%;align-items:center;padding:10px 0" '+T(s,'op',key)+'><b style="flex:1;font-size:14.5px">'+label+(key==='from'?' <span class="small" style="color:var(--ac);font-weight:700">new</span>':'')+'</b><span class="v">'+val+' '+(o?'⌃':'›')+'</span></button>'+(o&&body?body:'')+'</div>';}
+  var fb='<div class="small dim" style="margin:0 0 8px">Weighs flight time against your trip length: places far from home rank lower for short trips.</div>'+fromBody;
+  return {body:topbar(90)+'<div style="padding:0 16px"><h3>The basics</h3><p class="sub">A few taps. Your shortlist appears right after.</p>'+row('b','Budget &amp; comfort','Any')+row('c','Climate','Any')+row('w','Where in the world','Anywhere')+row('p','Crowds &amp; prices','In between')+row('from','Flying from',from||'Not set',fb)+row('who','Who’s going','Anyone')+row('care','What else matters','Optional')+row('k','What kind of place','Any')+'</div>',foot:btn('Show my places'),flush:true};}},
+
+{id:'bas',name:'The basics',verdict:'<b>This is the screen that needs the most help.</b> It is about three screens tall, and every pill starts filled orange, so a screen full of orange means "I have not chosen anything". The order also ignores what each question actually does to your results (see the scores in the change below).',
+ states:[{id:'a',label:'The basics',shots:['bas1','bas2','bas3','bas4']}],
+ changes:[
+  {id:'bas1',t:'Quiet "Any" rows instead of walls of pills',w:'Everything starts as an "Any ›" row and opens on tap, with pills that only fill when you choose. Same pattern as the trip settings, so you learn it once.'},
+  {id:'bas2',t:'Open Budget and Climate first, then order by impact',w:'Budget & comfort (about 9 out of 10 for changing results) and Climate (8) start open. Then rows: Where in the world (8 when used), Crowds & prices (5), Who’s going (3), What else matters (6 for those who need it). Who’s going drops from the top because for anyone with two or more interests it changes no scores.'},
+  {id:'bas3',t:'One button instead of two',w:'"Continue" and "Skip, I will decide later" both do the same thing here. One button, "Show my places".'},
+  {id:'bas4',t:'Hide "What kind of place?" until it does something',w:'It is not wired up, so it currently changes nothing. Showing it is a promise we do not keep. It comes back once places have a type (cities, parks, islands…).'}],
+ mock:function(on,s){
+  var flat=!on('bas1');
+  if(ui(s,'op',null)===null)setui(s,'op',on('bas2')?['b','c']:[]);
+  var op=ui(s,'op',[]);
+  function opt(key,label,anyTxt,pills){var o=op.indexOf(key)>=0;var picked=ui(s,'p_'+key,[]);var val=picked.length?picked.join(', '):anyTxt;return '<div class="card" style="padding:4px 14px 6px"><button style="display:flex;width:100%;align-items:center;padding:10px 0" '+T(s,'op',key)+'><b style="flex:1;font-size:14.5px">'+label+'</b><span class="v" style="max-width:150px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'+(picked.length?'color:var(--ac);font-weight:700':'')+'">'+val+'</span><span class="v" style="margin-left:6px">'+(o?'⌃':'›')+'</span></button>'+(o?'<div class="pills" style="padding:2px 0 8px">'+pills.map(function(x){return pill(s,'p_'+key,x,x,picked.indexOf(x)>=0);}).join('')+'</div>':'')+'</div>';}
+  function flatCard(t,sub,pills){return '<div class="card"><h4>'+t+'</h4><p>'+sub+'</p><div class="pills">'+pills.map(function(x){return '<span class="pill sel">'+x+'</span>';}).join('')+'</div></div>';}
+  var B=['Basic / Budget','Comfortable','High-End','Luxury'],C=['Cold','Cool','Warm','Hot'],W=['Solo','With friends','With a spouse or partner','With my kids'],K=['Cities','US National Parks','Wilderness areas','Small towns','Islands','Beaches & coast'],R=['North America','Central & South America','Europe','Africa','Asia','Australia and the Pacific'];
+  var parts;
+  if(!flat){
+   var care='<div class="card" style="padding:4px 14px"><div class="row last"><span class="l" style="font-weight:700">What else matters?<br><span class="fa small" style="font-weight:400">Kids’ ages, food needs, language, getting around</span></span><span class="v">›</span></div></div>';
+   var kind=on('bas4')?'':opt('k','What kind of place','Any',K);
+   parts=on('bas2')?[opt('b','Budget &amp; comfort','Any',B),opt('c','Climate','Any',C),opt('w','Where in the world','Anywhere',R),opt('p','Crowds &amp; prices','In between',['Peak times','In between','Off peak']),opt('who','Who’s going','Anyone',W),care,kind]
+    :[opt('who','Who’s going','Anyone',W),opt('b','Budget &amp; comfort','Any',B),opt('c','Climate','Any',C),opt('p','Crowds &amp; prices','In between',['Peak times','In between','Off peak']),opt('w','Where in the world','Anywhere',R),kind,care];
+  } else {
+   var whoCard='<div class="card"><h4>Who’s going?</h4><p>Select all that apply.</p><div class="pills">'+W.map(function(x){return pill(s,'who',x,x,has(s,'who',x));}).join('')+'</div></div>';
+   var bc=flatCard('Budget &amp; comfort','Everything selected means “no preference.”',B),cc=flatCard('Climate','Daily highs: Cold under 50°F · Cool 50 to 69 · Warm 70 to 84 · Hot 85 and up',C);
+   var rest=flatCard('Crowds &amp; prices','Peak times … Off peak',['In between'])+flatCard('Where in the world?','Everywhere is on. Tap a continent to leave it out.',R)+(on('bas4')?'':flatCard('What kind of place?','Everything is on. Tap a type to leave it out.',K));
+   parts=on('bas2')?[bc,cc,rest,whoCard]:[whoCard,bc,cc,rest];
+  }
+  return {body:topbar(90)+'<div style="padding:0 16px"><h3>The basics</h3><p class="sub">A few taps. Your shortlist appears right after.</p>'+parts.join('')+'</div>',foot:on('bas3')?btn('Show my places'):btn('Continue')+'<div class="lnk">Skip, I will decide later</div>',flush:true};}},
+
+{id:'vibes',name:'Photo picks',verdict:'<b>Three real problems.</b> The dark labels are hard to read on the dark tiles, the text promises photos but they are colored tiles, and a selected tile looks nearly the same as an unselected one.',
+ states:[{id:'a',label:'Photo picks',shots:['vibes']}],
+ changes:[
+  {id:'vibes1',t:'White labels on a soft dark fade',w:'"Rooftops and late nights" is near-black on purple today. White text with a gradient behind it reads on every tile.'},
+  {id:'vibes2',t:'Honest subtitle',w:'"These are the photos you would normally see" is not true of colored tiles. "Pick any that sound like you."'},
+  {id:'vibes3',t:'Check mark on picked tiles',w:'Right now you cannot tell what you picked.'}],
+ mock:function(on,s){var V=[['Toes in the sand','🏖️','#3c7f8c,#d9a867'],['Long lunches and market crawls','🍜','#a14f33,#d49a55'],['A hotel you never want to leave','🛎️','#4b4a82,#a58ab9'],['Trail dust and big views','🏔️','#3a5f4e,#86a0ad'],['Old streets and big museums','🏛️','#6f5438,#b9a07c'],['Rooftops and late nights','🍸','#2b1c52,#b04675'],['Wild animals up close','🐆','#566a2c,#bfa045'],['Total quiet','🌿','#2c5658,#85b39a']];
+  var sel=ui(s,'v',[]);var g=V.map(function(v){var on1=sel.indexOf(v[0])>=0;var c=v[2].split(',');var txt=on('vibes1')?'color:#fff;text-shadow:0 1px 6px #0008':'color:#2b2622;text-shadow:0 1px 5px #0003';
+   return '<button class="vibe" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+');'+txt+';'+(on1?'outline:3px solid var(--ac);outline-offset:-3px':'')+'" '+T(s,'v',v[0])+'>'+(on('vibes1')?'<span style="position:absolute;inset:0;background:linear-gradient(0deg,#0006,#0000 55%)"></span>':'')+'<span class="e">'+v[1]+'</span>'+(on1&&on('vibes3')?'<span style="position:absolute;left:9px;top:9px;width:22px;height:22px;border-radius:50%;background:#fff;color:var(--ac);display:grid;place-items:center;font-size:13px;font-weight:800">✓</span>':'')+'<span style="position:relative">'+v[0]+'</span></button>';}).join('');
+  return {body:topbar(80)+'<div style="padding:0 16px"><h3>Which of these feels like you?</h3><p class="sub">'+(on('vibes2')?'Pick any that sound like you.':'Pick any. These are the photos you would normally see.')+'</p><div class="tgrid">'+g+'</div></div>',foot:btn('Show my shortlist')+'<div class="lnk">Skip, surprise me</div>',flush:true};}},
+
+{id:'res',name:'Results list',verdict:'<b>Parked: we will do a deeper dive here later.</b> The most important screen, and the one with most to gain. The header has two controls that mean nearly the same thing, the cards do not say why a place is ranked, and the row of faint "visited / hide / saved" text is noise.',
+ states:[{id:'list',label:'After unlocking',shots:['res1','res2']},{id:'lock',label:'New traveler (locked)',shots:['res_lock','res_lock2']}],
+ changes:[
+  {id:'res1',later:'it goes with merging the two trip sheets (section 9).',t:'One trip control, not two',w:'"My September 2027 trip ▾" and "Trip" do overlapping jobs. The trip name opens one sheet, with dates shown under it. The Travel DNA % stays.'},
+  {id:'res2',t:'A one-line "why" on every card',w:'The card says 9.5 but not why. Two top interest scores under the name answer the first question everyone has. (The numbers here are examples.)'},
+  {id:'res3',t:'Saved / Visited switch, a way to hide where you have been, and the passport stays',w:'A segmented All / Saved / Visited control, plus a clear "Hide places I have been" switch, because many people want to filter OUT visited places. The passport (My Stamps) keeps its own button with your count, so that view is still one tap away. Try all three.'},
+  {id:'res4',t:'Compact question card (locked state)',w:'Today the first question takes the whole top of the screen with a six-row grid. A compact card with answer pills uses half the height and shows the places sooner.'},
+  {id:'res5',t:'One footer button (locked state)',w:'Two buttons, one of them a muddy, disabled "Save to my Travel DNA", sit on top of each other. Show only the one that works.'}],
+ mock:function(on,s,st){var seg=ui(s,'seg','All'),q=ui(s,'q',[]),search=ui(s,'sr',false);
+  var hdr=on('res1')?'<div style="padding:10px 16px 2px;display:flex;align-items:center"><div style="flex:1"><div style="font-weight:800;font-size:15.5px">My September 2027 trip ▾</div><div class="small fa">Sep 2027 · 2 weeks · tap to edit</div></div><span class="chipbtn">🧬 50%</span></div>':'<div style="padding:12px 16px 2px;display:flex;align-items:center;gap:8px"><span style="font-weight:800;font-size:15.5px;flex:1">My September 2027 trip ▾</span><span class="dim">💼 Trip</span><span class="chipbtn">🧬 50%</span></div>';
+  var P=[['Namibia','9.5','Southern Africa','🐾 94','✨ 91'],['Maasai Mara &amp; Amboseli','8.9','Kenya','🐾 96','🏔️ 80'],['Northern Tanzania','8.9','Tanzania','🐾 95','🏔️ 81'],['Okavango Delta','8.5','Botswana','🐾 92','✨ 84'],['Yellowstone National Park','8.3','Wyoming, USA','🐾 85','🏔️ 90']];
+  function pc(p,i){var vis=VIS.indexOf(p[0])>=0;return '<div class="place"><div class="l1"><span class="rk">#'+(i+1)+'</span><span class="nm">'+p[0]+'</span><span class="sc">'+p[1]+'</span></div><div class="l2"><span class="reg">📍 '+p[2]+'</span>'+(vis&&on('res3')?'<span class="reg" style="color:var(--ac);border-color:var(--ac)">✓ Visited</span>':'')+'<span class="bm">'+(SAV.indexOf(p[0])>=0&&on('res3')?'🔖':'🔖')+'</span></div>'+(on('res2')?'<div class="why"><span>Your top matches:</span><b>'+p[3]+'</b><b>'+p[4]+'</b></div>':'')+'</div>';}
+  var chips='<div class="tabs" style="padding:4px 16px 6px"><span class="tab on">🧬 My Interests</span><span class="tab">🏔️</span><span class="tab">🐾</span><span class="tab">✨</span></div>';
+  var VIS=['Maasai Mara &amp; Amboseli'],SAV=['Namibia','Okavango Delta'];var hide=ui(s,'hide',false);
+  var filt=on('res3')?'<div style="padding:0 16px 8px"><div class="sg" style="grid-template-columns:repeat(3,1fr)">'+['All','Saved','Visited'].map(function(x){return '<button class="'+(seg===x?'sel':'')+'" '+D(s,'seg',x)+'>'+x+'</button>';}).join('')+'</div><div style="display:flex;align-items:center;gap:8px;margin-top:9px"><button style="display:flex;align-items:center;gap:8px;flex:1" '+D(s,'hide',!hide)+'><span class="tg" style="width:36px;height:22px;background:'+(hide?'var(--ac)':'#cfc6ba')+';'+(hide?'':'')+'"><span style="position:absolute;top:3px;'+(hide?'right:3px':'left:3px')+';width:16px;height:16px;border-radius:50%;background:#fff"></span></span><span class="small">Hide places I have been</span></button><button class="chipbtn" '+D(s,'pp',true)+'>🛂 My Stamps · '+VIS.length+' ›</button></div></div>':'<div style="padding:0 16px 8px;display:flex;gap:14px;font-size:12.5px"><button '+D(s,'pp',true)+' class="dim">⬡ places visited ›</button><span class="fa">Hide visited</span><span class="fa">Show saved 🔖</span></div>';
+  var srch=search?'<div style="padding:0 16px 8px"><div class="card" style="margin:0;padding:9px 12px;color:var(--afa)">🔍 Search destinations…</div></div>':'';
+  var titleRow='<div style="padding:4px 16px 4px;display:flex;align-items:center"><h3 style="margin:0;font-size:21px;flex:1">Your places</h3><span class="fa small" style="margin-right:8px">Sep · 200 places</span><button class="chipbtn" style="background:#fff;border:1px solid var(--aln);color:var(--afg);border-radius:50%;width:30px;height:30px;text-align:center;padding:0;line-height:28px" '+D(s,'sr',!search)+'>🔍</button></div>';
+  if(st==='lock'){var Q=['From a vehicle','On foot with a guide','From a boat','From a hide','In the water'];
+   var qbox=on('res4')?'<div class="card" style="margin:4px 16px 10px;border-color:var(--ac)"><div style="display:flex;align-items:center;gap:8px"><b style="color:var(--ac)">7 quick questions unlock all 200 places</b></div><div class="bar2" style="margin:7px 0 9px"><i style="width:40%"></i></div><div style="font-weight:800;margin-bottom:7px">🐾 Favorite ways to watch animals? <span class="fa small" style="font-weight:400">pick up to 2</span></div><div class="pills">'+Q.map(function(x){return pill(s,'q',x,x,q.indexOf(x)>=0,'out');}).join('')+'</div><div style="text-align:right;margin-top:6px" class="fa small"><u>Skip</u></div></div>':'<div class="card" style="margin:4px 16px 10px;border-color:var(--ac);padding-bottom:18px"><div style="display:flex;align-items:center;gap:8px;color:var(--ac);font-weight:800;font-size:12px"><span>DNA 50%</span><div class="bar2" style="flex:1"><i style="width:50%"></i></div><span>Manage DNA ›</span></div><div style="margin:8px 0 4px;color:var(--ac);font-weight:700;font-size:12.5px">🐾 Wildlife Viewing · 1 of 7 · 7 more to unlock</div><div style="font-weight:800;font-size:15px;margin-bottom:8px">Favorite ways to watch animals?</div><div class="tgrid" style="gap:0 12px">'+Q.map(function(x){return '<button style="display:flex;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--aln)" '+T(s,'q',x)+'><span style="width:16px;height:16px;border:1.5px solid #888;border-radius:4px;background:'+(q.indexOf(x)>=0?'var(--ac)':'#fff')+'"></span>'+x+'</button>';}).join('')+'</div><div class="fa small" style="margin-top:34px;display:flex;justify-content:space-between"><span>Reshuffles ~3 of your top 5</span><u>Skip</u></div></div>';
+   return {body:hdr+'<div style="padding:4px 16px 0;font-weight:800;font-size:20px">Your top 5</div>'+qbox+'<div style="padding:0 16px">'+P.slice(0,on('res4')?4:3).map(pc).join('')+'<div class="card" style="border-style:dashed;color:var(--adim);text-align:center">🔒 The rest of your 200 places unlock after 7 more questions</div></div>',foot:on('res5')?btn('Teach us your taste (5 swipes)'):'<div style="display:flex;gap:10px"><div class="btn ghost" style="flex:1;font-size:12px;padding:10px">Teach us your taste (5 swipes)</div><div class="btn dis" style="flex:1;font-size:12px;padding:10px">Save to my Travel DNA</div></div>',flush:true};}
+  var shown=P.filter(function(p){if(!on('res3'))return true;if(seg==='Saved'&&SAV.indexOf(p[0])<0)return false;if(seg==='Visited'&&VIS.indexOf(p[0])<0)return false;if(hide&&VIS.indexOf(p[0])>=0)return false;return true;});
+  var over=ui(s,'pp',false)?'<div class="sheetbg"><div class="sheet" style="background:#f3eedc"><div style="display:flex;align-items:center"><div style="flex:1"><div style="font:800 19px ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#2f5a63">MY STAMPS</div><div class="dim" style="font-family:ui-monospace,Menlo,monospace">'+VIS.length+' of 200 collected</div></div><button '+D(s,'pp',false)+' style="width:30px;height:30px;border-radius:50%;background:#fff;text-align:center">×</button></div><p class="dim" style="margin:12px 0 4px">The passport sheet, unchanged: your stamps and the full collection.</p></div></div>':'';
+  return {body:hdr+titleRow+srch+chips+filt+'<div style="padding:0 16px">'+(shown.length?shown.map(pc).join(''):'<div class="card" style="text-align:center;color:var(--adim)">Nothing here yet.</div>')+'</div>',foot:null,flush:true,over:over};}},
+
+{id:'trips',name:'Trip sheets',verdict:'<b>Two sheets for one idea.</b> Tapping the trip name opens "Your trips", tapping "Trip" opens the settings, and the settings sheet opens with the biggest block (month, year, week) at the very top.',
+ states:[{id:'a',label:'Your trips',shots:['trips']},{id:'b',label:'Trip settings',shots:['tripset']}],
+ changes:[
+  {id:'trips1',later:'merging two sheets is a bigger change.',t:'One sheet: switch trips at the top, settings below',w:'A small trip switcher row sits above the settings. No second sheet to find.'},
+  {id:'trips2',t:'Year stepper and a collapsed week row',w:'Three year chips and five week pills become "‹ 2027 ›" and one "Any week" row.'},
+  {id:'trips3',t:'Reset goes to the bottom',w:'"Reset" sits next to the rename pencil, easy to hit by accident. It becomes a quiet link at the end.'}],
+ mock:function(on,s,st){var merged=on('trips1');var m=ui(s,'m','Sep'),y=ui(s,'y',2027),wo=ui(s,'wo',false);
+  var bg='<div style="padding:12px 16px;font-weight:800">My September 2027 trip ▾</div><div style="padding:8px 16px"><div class="place"><b>#1 Namibia</b></div><div class="place"><b>#2 Maasai Mara</b></div></div>';
+  var rows=[['How long','2 weeks',1],['Budget &amp; comfort','Any'],['Climate','Any'],['Crowds &amp; prices','In between'],['Continents','All'],['Flying from','Not set'],['Who is going','Anyone']].map(function(r){return '<div class="row"><span class="l">'+r[0]+'</span><span class="v'+(r[2]?' o':'')+'">'+r[1]+' ›</span></div>';}).join('');
+  var mo=on('trips2')?'<div style="display:flex;align-items:center;justify-content:center;gap:16px;margin:4px 0 8px"><button '+D(s,'y',y-1)+' style="font-size:18px">‹</button><b>'+y+'</b><button '+D(s,'y',y+1)+' style="font-size:18px">›</button></div><div class="mg">'+MONTHS.map(function(x){return '<button class="'+(m===x?'sel':'')+'" '+D(s,'m',x)+'>'+x+'</button>';}).join('')+'</div><div class="row" style="margin-top:6px"><button class="l" style="text-align:left" '+D(s,'wo',!wo)+'>Which week?</button><span class="v o">Any week '+(wo?'⌃':'›')+'</span></div>'+(wo?'<div class="pills" style="margin-bottom:6px">'+['Any week','Week 1','Week 2','Week 3','Week 4'].map(function(x){return '<span class="pill'+(x==='Any week'?' out':'')+'">'+x+'</span>';}).join('')+'</div>':''):'<div class="pills" style="margin-bottom:6px">'+MONTHS.map(function(x){return pill(s,'m',x,x,m===x,'out');}).join('')+'</div><div class="lab" style="margin:4px 0">Year</div><div class="pills">'+[2027,2028,2029].map(function(x){return pill(s,'y',x,x,y===x,'out');}).join('')+'</div><div class="pills" style="margin-top:8px">'+['Any week','Week 1','Week 2','Week 3','Week 4'].map(function(x){return '<span class="pill'+(x==='Any week'?' out':'')+'">'+x+'</span>';}).join('')+'</div>';
+  var switcher=merged?'<div class="pills" style="margin-bottom:10px"><span class="pill out">✓ My September 2027 trip</span><span class="pill">＋ New trip</span></div>':'';
+  var editor='<div style="display:flex;align-items:center;margin-bottom:8px"><h3 style="margin:0;font-size:20px;flex:1">My September 2027 trip</h3><span class="dim">✎</span>'+(on('trips3')?'':' <u style="margin-left:10px">Reset</u>')+'</div>'+switcher+'<div class="lab" style="margin:6px 0">When</div>'+mo+rows+(on('trips3')?'<div style="text-align:center;padding:10px"><u class="dim small">Reset this trip</u></div>':'');
+  var foot='<div class="btn" style="margin-top:8px">Show 200 places</div>';
+  var old='<div style="display:flex;align-items:center;margin-bottom:6px"><h3 style="margin:0;font-size:22px;flex:1">Your trips</h3><u>Done</u></div><div class="row"><span style="width:22px;height:22px;border-radius:50%;background:var(--ac);color:#fff;text-align:center;line-height:22px">✓</span><span class="l">My September 2027 trip ✎<br><span class="fa small" style="font-weight:400">Sep 2027 · 2 weeks</span></span></div><p class="fa small">Interests, Travel DNA and where you live are shared by every trip.</p><div class="btn" style="margin-top:8px">＋ New trip</div>';
+  var showOld=(st==='a'&&!merged);
+  return {body:bg,foot:null,over:'<div class="sheetbg"><div class="sheet"><div class="sc2">'+(showOld?old:editor)+'</div>'+(showOld?'':foot)+'</div></div>'};}},
+
+{id:'taste',name:'Taste cards',verdict:'<b>Good bones, three polish items.</b> The Love button is pre-highlighted in orange, which nudges every answer. The "Taste captured" end card is a dead stop. Tap through all five.',
+ states:[{id:'a',label:'Taste cards',shots:['cards','cardsdone']}],
+ changes:[
+  {id:'taste1',t:'Equal weight for No, Yes, Love',w:'Love looks like the "recommended" button today. All three neutral, with the one you tap lighting up.'},
+  {id:'taste2',t:'Five progress dots',w:'"Card 1 of 5. Go with your gut." becomes five dots. Less to read, same information.'},
+  {id:'taste3',t:'Finish without an extra tap',w:'"Taste captured ✓" then Continue becomes a brief "Building your DNA…" that moves on by itself.'}],
+ mock:function(on,s){var i=ui(s,'i',0);var C=[['🥾','A muddy hike to a waterfall, with nobody else there.'],['🛵','Renting a real motorcycle for a full day and taking the long way.'],['🍜','A table at a night market where you cannot read the menu.'],['🏝️','Floating in warm water with nothing on the schedule.'],['🏛️','Three museums in one day.']];
+  if(i>=5){return {body:topbar(90)+'<div style="padding:0 16px"><h3>Five cards in.</h3><p class="sub">That is enough for a first read.</p><div class="card" style="min-height:300px;display:grid;place-items:center;text-align:center">'+(on('taste3')?'<div><div class="spin"></div><p style="margin-top:14px;font-weight:800;font-size:16px;color:var(--afg)">Building your DNA…</p></div>':'<div><div style="font-size:70px">✓</div><b style="font-size:20px">Taste captured</b></div>')+'</div></div>',foot:on('taste3')?'<div class="lnk" '+D(s,'i',0)+' style="text-decoration:none">↺ Play again</div>':btn('Continue')+'<div class="lnk" '+D(s,'i',0)+'>↺ Play again</div>',flush:true};}
+  var c=C[i];var look=function(l){var pre=!on('taste1')&&l==='Love';return '<button class="btn" style="'+(pre?'background:var(--as);border:1.5px solid var(--ac);color:var(--afg)':'background:#fff;border:1.5px solid var(--aln);color:var(--afg)')+';padding:15px 6px" '+D(s,'i',i+1)+'>'+l+(l==='Love'?' ♥':'')+'</button>';};
+  var dots='<div class="dots">'+C.map(function(_,k){return '<i class="'+(k<=i?'d':'')+'"></i>';}).join('')+'</div>';
+  return {body:topbar(75)+'<div style="padding:0 16px"><h3>Which sounds like your kind of day?</h3><p class="sub">'+(on('taste2')?'':'Card '+(i+1)+' of 5. Go with your gut.')+'</p>'+(on('taste2')?dots:'')+'<div class="card" style="min-height:240px;text-align:center;display:grid;place-items:center;padding:20px"><div><div style="font-size:64px">'+c[0]+'</div><b style="font-size:19px;line-height:1.25;display:block;margin-top:14px">'+c[1]+'</b></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">'+look('No')+look('Yes')+look('Love')+'</div></div>',foot:'<div class="lnk">Skip the cards</div>',flush:true};}},
+
+{id:'dna',name:'Travel DNA page: your baseline',verdict:'<b>You agree with the concept, so here is how you edit it.</b> The page says "Your baseline. What we start with for every trip." Interests: tap the dots to change how much you like one, and "Add interests" opens the full list by group. Preferences: only the ones you have set are listed, each editable in place, and "Add a preference" lists the rest (climate, food needs, language, getting around, how you travel, kids). Trip choices live in the trip sheet. Try the add buttons.',
+ states:[{id:'a',label:'The page',shots:['dna2']},{id:'b',label:'Trip sheet: save as default',shots:['tripset']}],
+ changes:[
+  {id:'dnaD',t:'The Travel DNA page is your baseline: no trip rows, no switches, with add buttons',w:'Removes "This trip only", every keep switch and the trip rows. Adds "Your baseline. What we start with for every trip." under the title, an "Add interests" button, and an "Add a preference" button, so the page is both where you edit and where you grow it.'},
+  {id:'dnaE',t:'In the trip sheet, a quiet "Make this my default" under a choice',w:'Change Budget in the trip sheet and a small link offers to save it to your baseline. Optional; skip it and that trip keeps its own value.'}],
+ mock:function(on,s,st){
+  if(st==='b'){var saved=ui(s,'saved',false);return {body:'<div style="padding:12px 16px;font-weight:800">My September 2027 trip ▾</div><div style="padding:8px 16px"><div class="place"><b>#1 Namibia</b></div></div>',foot:null,over:'<div class="sheetbg"><div class="sheet"><div class="sc2"><h3 style="margin:0 0 8px;font-size:20px">My September 2027 trip</h3><div class="card" style="padding:4px 14px 10px"><div class="row last"><span class="l">Budget &amp; comfort</span><span class="v o" style="color:var(--ac);font-weight:700">Comfortable</span></div><div class="pills" style="margin:0 0 8px">'+['Basic / Budget','Comfortable','High-End','Luxury'].map(function(x){return '<span class="pill'+(x==='Comfortable'?' sel':'')+'">'+x+'</span>';}).join('')+'</div>'+(saved?'<div class="small" style="color:var(--agood);font-weight:700">✓ Saved to your baseline</div>':'<button class="small" '+D(s,'saved',true)+' style="color:var(--ac);text-decoration:underline">Make this my default</button>')+'</div><div class="row"><span class="l">Climate</span><span class="v">Any ›</span></div><div class="row"><span class="l">Who’s going</span><span class="v">Anyone ›</span></div></div><div class="btn" style="margin-top:8px">Show 200 places</div></div></div>'};}
+  var LV=['Off','Curious','Like','Love','Top'];
+  var ints=ui(s,'ints',[['🏔️','Scenic Landscapes',2],['🐾','Wildlife Viewing',3],['✨','Stargazing',2]]);
+  var ADDI=[['🐘','Safari'],['🐋','Whale Watching'],['🦜','Birding'],['🌋','Geology'],['🥾','Hiking & Trekking'],['🍜','Food & Markets']];
+  var addI=ui(s,'addi',false);var pickedI=ui(s,'pi',[]);
+  var allInts=ints.concat(pickedI.map(function(n){var a=ADDI.filter(function(x){return x[1]===n;})[0];return [a[0],a[1],2];}));
+  var irows=allInts.map(function(x,n){var L=ui(s,'lv'+x[1],x[2]);return '<div class="row'+(n===allInts.length-1?' last':'')+'" style="padding:11px 0"><span style="font-size:19px">'+x[0]+'</span><b style="flex:1;font-size:13.5px">'+x[1]+'</b><span class="small dim" style="width:46px;text-align:right">'+LV[L]+'</span><span class="lvl">'+[0,1,2,3].map(function(k){return '<button '+D(s,'lv'+x[1],k+1)+' style="display:block;padding:0"><i style="display:block;border-color:'+(k+1<=L?'var(--ac)':'#cfc6ba')+';background:'+(k+1<=L?'var(--ac)':'#fff')+'"></i></button>';}).join('')+'</span></div>';}).join('');
+  var addBox=addI?'<div class="card" style="margin-top:8px"><div class="lab" style="margin:0 0 6px">Add interests</div><div class="pills">'+ADDI.filter(function(x){return pickedI.indexOf(x[1])<0;}).map(function(x){return '<button class="pill" '+T(s,'pi',x[1])+'>'+x[0]+' '+x[1]+'</button>';}).join('')+'</div><button class="small" '+D(s,'addi',false)+' style="margin-top:8px;color:var(--ac);text-decoration:underline">Done</button></div>':'<button class="pill" '+D(s,'addi',true)+' style="margin-top:8px">＋ Add interests</button>';
+  var PR=[['💳','Budget & comfort','Any'],['👨‍👩‍👧','Who you usually travel with','Solo, With a spouse or partner'],['🏠','Where you live','Colorado, United States']];
+  var MORE=[['🌡️','Climate'],['🎭','Social vibe'],['💪','Physical demand'],['🍽️','Food needs'],['🗣️','Language'],['♿','Getting around'],['🧭','How you travel'],['👶','Kid-friendly']];
+  var addedP=ui(s,'pp',[]);var addP=ui(s,'addp',false);
+  var prows=PR.concat(addedP.map(function(n){var a=MORE.filter(function(x){return x[1]===n;})[0];return [a[0],a[1],'Any'];})).map(function(r){return '<div class="card" style="padding:4px 14px"><div style="display:flex;align-items:center;gap:10px;padding:9px 0"><span style="font-size:20px">'+r[0]+'</span><div style="flex:1"><b>'+r[1]+'</b><div class="dim small">'+r[2]+'</div></div><span class="v">▾</span></div></div>';}).join('');
+  var addPbox=addP?'<div class="card"><div class="lab" style="margin:0 0 6px">Add a preference</div><div class="pills">'+MORE.filter(function(x){return addedP.indexOf(x[1])<0;}).map(function(x){return '<button class="pill" '+T(s,'pp',x[1])+'>'+x[0]+' '+x[1]+'</button>';}).join('')+'</div><button class="small" '+D(s,'addp',false)+' style="margin-top:8px;color:var(--ac);text-decoration:underline">Done</button></div>':'<button class="pill" '+D(s,'addp',true)+'>＋ Add a preference</button>';
+  return {body:topbar(100)+'<div style="padding:0 16px"><h3 style="font-size:21px">Your Travel DNA</h3><p class="sub" style="margin-bottom:10px">Your baseline. What we start with for every trip.</p><div class="lab" style="margin:6px 0 4px">Interests</div><div class="card" style="padding:4px 14px">'+irows+'</div>'+addBox+'<div class="lab" style="margin:16px 0 6px">Preferences</div>'+prows+addPbox+'</div>',foot:btn('Save my Travel DNA')+'<div class="lnk">Preview my places</div>',flush:true};}},
+
+{id:'sw',name:'Saved and Welcome back',verdict:'<b>Mostly good.</b> The "See it as a returning traveler" button looks like a developer preview rather than something a person would press, and the returning screen asks two questions it could already guess.',
+ states:[{id:'a',label:'After saving',shots:['saved']},{id:'b',label:'Welcome back',shots:['welcome']}],
+ changes:[
+  {id:'sw1',t:'Replace the demo button with "See my places"',w:'Same destination, plain words. (If you still need the preview for testing, I would keep it behind the admin switch.)'},
+  {id:'sw2',t:'Suggest last time’s answers',w:'Welcome back offers "Same as last time: September · With my spouse" as a one-tap confirm, with the months below if they want to change.'},
+  {id:'sw3',t:'Month as a single scrolling row',w:'The 5 / 5 / 2 wrapped month pills become one swipeable row, so the party question is visible without scrolling.'}],
+ mock:function(on,s,st){var m=ui(s,'m',null),who=ui(s,'w',[]);
+  if(st==='a')return {body:topbar(100)+'<div style="padding:0 16px"><h3>Saved. Next trip starts here.</h3><div class="card"><h4>Your Travel DNA</h4><div class="pills" style="margin-bottom:10px"><span class="pill out">🏔️ Scenic Landscapes</span><span class="pill out">🐾 Wildlife Viewing</span><span class="pill out">✨ Stargazing</span></div><div class="dim small">Next time we only ask: when, and who is coming.</div></div></div>',foot:on('sw1')?btn('See my places'):btn('See it as a returning traveler')+btn('Back to my shortlist',false,true),flush:true};
+  var last=on('sw2')&&m===null;
+  var mon=on('sw3')?'<div style="display:flex;gap:7px;overflow-x:auto;padding-bottom:4px">'+MONTHS.map(function(x){return '<button class="pill'+(m===x?' sel':'')+'" style="flex:none" '+D(s,'m',x)+'>'+x+'</button>';}).join('')+'</div>':'<div class="pills">'+MONTHS.map(function(x){return pill(s,'m',x,x,m===x);}).join('')+'</div>';
+  var W=['Solo','With friends','With a spouse or partner','With my kids'];
+  return {body:'<div style="padding:14px 16px 0;font-weight:800">Where To?</div><div style="padding:0 16px"><h3 style="font-size:26px">Welcome back.<br>Planning something?</h3><div class="card"><div class="lab" style="margin:0 0 7px">Starting from your Travel DNA</div><div class="pills"><span class="pill out">🏔️ Scenic Landscapes</span><span class="pill out">🐾 Wildlife Viewing</span><span class="pill out">✨ Stargazing</span></div></div>'+(on('sw2')?'<button class="card" style="width:100%;display:flex;gap:10px;align-items:center;background:var(--as);border-color:var(--ac)" '+D(s,'m','Sep')+'><span style="font-size:20px">↺</span><span style="flex:1"><b>Same as last time?</b><br><span class="dim small">September · With my spouse or partner</span></span><b style="color:var(--ac)">Use ›</b></button>':'')+'<div class="card"><h4>When?</h4>'+mon+'</div><div class="card"><h4>Who is going this time?</h4><div class="pills">'+W.map(function(x){return pill(s,'w',x,x,who.indexOf(x)>=0);}).join('')+'</div></div></div>',foot:btn('Show my shortlist',!(m||last)),flush:true};}},
+
+{id:'stamps',name:'My Stamps: pushpins',verdict:'<b>Small red round-headed pushpins, like the ones you press into a real map.</b> Nothing on the map until you have been somewhere, then one pin per place. No names and no emoji, only the pin. Three sizes and settings of the same pin; use the chips on the phone to go from 0 to 120 stamps, and tap a pin to see which place it is. (Collected places are random, just for the demo.)',
+ states:[{id:'a',label:'A · Pushpin',shots:['stamps']},{id:'b',label:'B · Tiny',shots:['stamps']},{id:'c',label:'C · With shadow',shots:['stamps']}],
+ changes:[
+  {id:'sp4',t:'Pin A: a classic red pushpin',w:'A round red head with a small highlight and a short needle, small enough that 100 of them still read as dots of color.'},
+  {id:'sp5',t:'Pin B: tiny pushpins',w:'The same pin about a third smaller, with almost no needle: the lightest on a crowded map (Europe with 50 places), the least pin-like.'},
+  {id:'sp6',t:'Pin C: pushpins with a soft shadow',w:'The classic pin with a faint shadow under the head, as if pressed into paper. The most real-looking, slightly heavier.'}],
+ mock:function(on,s,st){
+  var n=ui(s,'n',25),sel=ui(s,'sel',null),zoom=ui(s,'zoom',false);
+  var vis={};for(var q=0;q<n&&q<ORDER.length;q++)vis[ORDER[q]]=true;
+  var LAND='#e6dfc8';var svg='';Object.keys(MAPP).forEach(function(k){svg+='<path d="'+MAPP[k]+'" fill="'+LAND+'" stroke="#cfc6a8" stroke-width="0.6" stroke-linejoin="round"/>';});
+  var sc=st==='b'?0.62:1;
+  PTS.forEach(function(p,i){if(!vis[i])return;var c=px(p);var isel=sel===i;var k=sc*(isel?1.6:1);
+   var g='<g data-a="ui" data-s="'+s+'" data-k="sel" data-v="'+i+'" transform="translate('+c[0].toFixed(1)+' '+c[1].toFixed(1)+') scale('+k.toFixed(2)+')" style="cursor:pointer">';
+   if(st==='c')g+='<ellipse cx="2.2" cy="-1" rx="4.6" ry="1.6" fill="#000" opacity=".22"/>';
+   g+='<line x1="0" y1="0" x2="0" y2="'+(st==='b'?'-3':'-7')+'" stroke="#8a8a8a" stroke-width="1"/><circle cx="0" cy="-9.5" r="5.2" fill="#d23b32" stroke="#a3231c" stroke-width=".8"/><circle cx="-1.6" cy="-11.2" r="1.5" fill="#fff" opacity=".7"/></g>';svg+=g;});
+  var W=zoom?'220%':'100%';
+  var map='<div style="overflow-x:auto;border-radius:14px;border:1px solid #d9d2b8;background:#f8f4e6"><svg viewBox="0 0 720 284" style="display:block;width:'+W+';min-width:100%;height:auto">'+svg+'</svg></div>';
+  var chips='<div class="pills" style="margin:10px 0 4px"><span class="fa small" style="align-self:center">Stamps</span>'+[0,8,25,60,120].map(function(x){return '<button class="pill'+(n===x?' out':'')+'" '+D(s,'n',x)+'>'+x+'</button>';}).join('')+'<button class="pill'+(zoom?' out':'')+'" '+D(s,'zoom',!zoom)+'>🔍 Zoom</button></div>';
+  var selTxt=(sel!==null&&vis[sel])?'<div class="small" style="margin:4px 0"><b>'+PTS[sel].n+'</b></div>':(n===0?'<div class="small dim" style="margin:4px 0">Nothing yet. Mark a place visited and a pin lands here.</div>':'');
+  return {body:'<div class="paperbg"><div style="padding:16px 16px 8px"><div style="display:flex;align-items:center"><div style="flex:1"><div style="font:800 21px ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#2f5a63">MY STAMPS</div><div class="dim" style="font-family:ui-monospace,Menlo,monospace">'+n+' of 200 collected</div></div><span style="width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center">×</span></div></div><div style="padding:0 16px 24px">'+map+chips+selTxt+'<div class="sg" style="grid-template-columns:1fr 1fr;margin:12px 0 4px;background:#e3dcc7"><button class="sel">Collected</button><button>All destinations</button></div></div></div>',foot:null,flush:true};}},
+
+{id:'home',name:'The older home page',verdict:'<b>I would retire this page.</b> It looks like a different app: four stacked buttons for Travel DNA, a persona list, 46 sliders, then the list. The new results list already does the job better, so an unfinished onboarding or a plain visit could land there instead.',
+ states:[{id:'a',label:'Top of the page',shots:['home1']},{id:'b',label:'Sliders',shots:['home2']},{id:'c',label:'List',shots:['home3']}],
+ changes:[
+  {id:'home1',later:'retiring a whole page is a bigger change.',t:'Replace the page with the new results list',w:'Same header, same cards, same filters as everywhere else. One list in the app instead of two.'},
+  {id:'home2',t:'If you keep it: one Travel DNA button',w:'"Use my Travel DNA" is primary. "Keep refining / Review / Reset" move into a ⋯ menu.'},
+  {id:'home3',t:'If you keep it: hide the 46 sliders',w:'They collapse behind one "Fine-tune interest weights" row.'}],
+ mock:function(on,s){if(on('home1')){var P2=[['Namibia','9.5','Southern Africa'],['Maasai Mara &amp; Amboseli','8.9','Kenya'],['Northern Tanzania','8.9','Tanzania']];return {body:'<div style="padding:12px 16px 2px;display:flex;align-items:center"><div style="flex:1"><div style="font-weight:800;font-size:15.5px">My September 2027 trip ▾</div><div class="small fa">Sep 2027 · 2 weeks · tap to edit</div></div><span class="chipbtn">🧬 50%</span></div><div style="padding:6px 16px;font-weight:800;font-size:21px">Your places</div><div class="tabs" style="padding:4px 16px 6px"><span class="tab on">🧬 My Interests</span><span class="tab">🏔️</span><span class="tab">🐾</span></div><div style="padding:0 16px">'+P2.map(function(p,i){return '<div class="place"><div class="l1"><span class="rk">#'+(i+1)+'</span><span class="nm">'+p[0]+'</span><span class="sc">'+p[1]+'</span></div><div class="l2"><span class="reg">📍 '+p[2]+'</span><span class="bm">🔖</span></div></div>';}).join('')+'</div>',flush:true};}
+  var menu=ui(s,'menu',false),sl=ui(s,'sl',false);
+  var dna=on('home2')?'<div class="card"><h4 style="font-size:19px">Travel DNA</h4><p>Swipe through experiences to teach Where To? your travel style.</p><div style="display:flex;gap:8px;position:relative"><div class="btn" style="flex:1">Use my Travel DNA</div><button class="btn ghost" style="width:46px;text-align:center" '+D(s,'menu',!menu)+'>⋯</button>'+(menu?'<div class="card" style="position:absolute;right:0;top:48px;width:170px;margin:0;box-shadow:0 8px 24px #0003;z-index:3"><div class="row">Keep refining</div><div class="row">Review Travel DNA</div><div class="row last">Reset Travel DNA</div></div>':'')+'</div></div>':'<div class="card"><h4 style="font-size:19px">Travel DNA</h4><p>Swipe through experiences to teach Where To? your travel style.</p><div class="btn ghost" style="margin-bottom:7px;text-align:left">Use my Travel DNA</div><div class="btn ghost" style="margin-bottom:7px;text-align:left">Keep refining</div><div class="btn ghost" style="margin-bottom:7px;text-align:left">Review Travel DNA</div><div class="btn ghost" style="text-align:left">Reset Travel DNA</div></div>';
+  var sli=on('home3')?'<div class="card"><button style="display:flex;width:100%;align-items:center" '+D(s,'sl',!sl)+'><b style="flex:1">Fine-tune interest weights</b><span class="dim">46 '+(sl?'⌃':'›')+'</span></button>'+(sl?'<div style="margin-top:8px">'+['🐾 Wildlife Viewing 9','🦜 Birding 5','🏔️ Scenic Landscapes 8'].map(function(x,k){return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:12.5px"><span>'+x.slice(0,-2)+'</span><b style="color:var(--ac)">'+x.slice(-1)+'</b></div><div class="bar2"><i style="width:'+[90,50,80][k]+'%"></i></div></div>';}).join('')+'</div>':'')+'</div>':'<div class="card"><h4>Interest weights</h4>'+['🐾 Wildlife Viewing|90|9','🦜 Birding|50|5','🏔️ Scenic Landscapes|80|8','⛺ Camping &amp; Backcountry|50|5','✨ Stargazing|40|4','🥾 Hiking &amp; Trekking|60|6'].map(function(x){var p=x.split('|');return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:12.5px"><span>'+p[0]+'</span><b style="color:var(--ac)">'+p[2]+'</b></div><div class="bar2"><i style="width:'+p[1]+'%"></i></div></div>';}).join('')+'<div class="btn ghost" style="margin-top:8px">Show all 46 sliders</div></div>';
+  return {body:'<div style="background:#fff;border-bottom:1px solid var(--aln);margin:-4px -16px 12px;padding:14px 16px;display:flex;gap:12px;align-items:center"><span style="font-size:24px">🧭</span><b style="font-size:20px;flex:1">Where To?</b></div>'+dna+'<div class="card"><h4 style="font-size:19px">Pick a starting point</h4><div class="card" style="background:var(--as);border-color:var(--ac);margin:0 0 8px"><b>🦜 The Naturalist</b><div class="dim small">Wildlife, birds and wild places</div></div><div class="card" style="margin:0"><b>🏖️ Sun &amp; Water</b><div class="dim small">Beaches, warm water, slowing down</div></div></div>'+sli,flush:true};}},
+
+{id:'pass',name:'Passcode page',verdict:'<b>Cheap to fix.</b> It is the first thing a tester sees and it is the only page in the app with browser-default styling.',
+ states:[{id:'a',label:'Passcode',shots:['passw']}],
+ changes:[
+  {id:'pass1',t:'Style it like the app',w:'Same background, rounded field, terracotta button. Big enough to type on a phone.'},
+  {id:'pass2',t:'Say what went wrong',w:'A wrong passcode shows "That passcode did not work. Try again." instead of nothing. Try pressing Enter with anything typed.'}],
+ mock:function(on,s){var err=ui(s,'err',false);if(!on('pass1'))return {body:'<div style="padding:60px 40px"><b style="font-size:19px">Where To?</b><p class="dim">This preview is password-protected.</p><div style="margin-top:14px">Passcode</div><input class="f" style="margin:6px 0 14px;height:34px;border-radius:2px"><button class="btn" style="background:#efefef;color:#000;border:1px solid #767676;border-radius:3px;padding:6px" '+D(s,'err',on('pass2'))+'>Enter</button>'+(err?'<p style="color:#b00;margin-top:12px">Wrong passcode.</p>':'')+'</div>',flush:true};
+  return {body:'<div style="padding:70px 24px 0;text-align:center"><div style="font-size:40px">🧭</div><h3 style="font-size:26px;margin:6px 0 6px">Where To?</h3><p class="sub">This preview is password-protected.</p><div class="card" style="text-align:left;padding:16px"><div class="lab" style="margin:0 0 6px">Passcode</div><input class="f" type="password" placeholder="Enter passcode" style="padding:13px;border-radius:12px;border:1.5px solid '+(err?'var(--abad)':'var(--aln)')+'"><p style="color:var(--abad);margin:8px 0 0;min-height:18px">'+(err&&on('pass2')?'That passcode did not work. Try again.':'')+'</p><button class="btn" style="margin-top:6px" '+D(s,'err',true)+'>Enter</button></div></div>',flush:true};}}
+];
+/* what is built or decided no is not shown again; screens with nothing left are dropped */
+var BUILT_ALL=[];SCREENS.forEach(function(sc){sc.changes.forEach(function(c){if(BUILT.indexOf(c.id)>=0)BUILT_ALL.push(c.t);});});
+SCREENS.forEach(function(sc){sc.changes=sc.changes.filter(function(c){return BUILT.indexOf(c.id)<0&&DECIDED_NO.indexOf(c.id)<0;});});
+SCREENS=SCREENS.filter(function(sc){return sc.changes.length;});
+/* ===================== plumbing ===================== */
+/* Built in the app on 22 Nov 2026 from her picks: these stay on and show no buttons. */
+function on(id){return SKIPPED.indexOf(id)<0&&(BUILT.indexOf(id)>=0||P[id]!=='skip');}
+function stOf(sc){return STATE[sc.id]||sc.states[0].id;}
+function phoneHTML(sc,mode){
+ var st=stOf(sc);var stateObj=sc.states.filter(function(x){return x.id===st;})[0];
+ if(mode==='now'){return '<div class="phone"><div class="shots">'+stateObj.shots.map(function(k,i){return (stateObj.shots.length>1?'<div class="cap">'+(i===0?'Top of screen':'Scrolled / next view')+'</div>':'')+'<img alt="Current screen" src="'+SHOTS[k]+'">';}).join('')+'</div></div>';}
+ var m=sc.mock(on,sc.id,st);var body='<div class="scr" data-sc="'+sc.id+'"'+(m.flush?' style="padding:0 0 16px"':'')+'>'+m.body+'</div>';
+ return '<div class="phone"><div class="a">'+body+(m.foot?'<div class="foot">'+m.foot+'</div>':'')+'</div>'+(m.over?'<div class="a" style="position:absolute;inset:0;pointer-events:auto;background:none">'+m.over+'</div>':'')+'</div>';}
+function sectionHTML(sc,i){
+ var mode=VIEW[sc.id]||'new';var st=stOf(sc);
+ var ctl='<div class="ctl"><div class="seg">'+[['new','Proposed'],['now','Current'],['both','Side by side']].map(function(x){return '<button class="'+(mode===x[0]?'on':'')+'" data-a="view" data-s="'+sc.id+'" data-v="'+x[0]+'">'+x[1]+'</button>';}).join('')+'</div>'+(sc.states.length>1?'<div class="seg">'+sc.states.map(function(x){return '<button class="'+(st===x.id?'on':'')+'" data-a="state" data-s="'+sc.id+'" data-v="'+x.id+'">'+x.label+'</button>';}).join('')+'</div>':'')+'</div>';
+ var phones=mode==='both'?'<div class="phones"><div class="pwrap"><div class="ptag">Current</div>'+phoneHTML(sc,'now')+'</div><div class="pwrap"><div class="ptag new">Proposed</div>'+phoneHTML(sc,'new')+'</div></div>':'<div class="pwrap"><div class="ptag'+(mode==='new'?' new':'')+'">'+(mode==='new'?'Proposed (tap around)':'Current screen')+'</div>'+phoneHTML(sc,mode)+'</div>';
+ var ch=sc.changes.map(function(c){var v=P[c.id];return '<div class="chg'+(v==='keep'?' keep':v==='skip'?' skip':'')+'"><div class="t">'+c.t+'</div><div class="w">'+c.w+'</div><div class="btns"><button class="k'+(v==='keep'?' on':'')+'" data-a="pick" data-c="'+c.id+'" data-v="keep">Keep</button><button class="s'+(v==='skip'?' on':'')+'" data-a="pick" data-c="'+c.id+'" data-v="skip">Skip</button><span class="st">'+(v==='keep'?(c.later?'Kept. Not built yet: '+c.later:'Kept'):v==='skip'?'Skipped, put back':'Proposed')+'</span></div></div>';}).join('');
+ return '<section class="sec" id="s-'+sc.id+'"><div class="hd"><span class="num">'+(i+1)+' OF '+SCREENS.length+'</span><h2>'+sc.name+'</h2></div><p class="verdict">'+sc.verdict+'</p><div class="grid"><div>'+ctl+'<div class="phones-area" data-sc="'+sc.id+'">'+phones+'</div></div><div><div class="lab2" style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 6px">Proposed changes</div><div class="changes">'+ch+'</div><textarea class="note" data-a="note" data-s="'+sc.id+'" placeholder="Anything else on this screen? (optional)">'+(NOTES[sc.id]||'')+'</textarea></div></div></section>';}
+function renderAll(){document.getElementById('app').innerHTML=SCREENS.map(sectionHTML).join('');nav();stats();}
+function refresh(sc){var area=document.querySelector('.phones-area[data-sc="'+sc.id+'"]');if(!area)return;var sec=document.getElementById('s-'+sc.id);var tops=[].map.call(area.querySelectorAll('.scr,.shots'),function(e){return e.scrollTop;});
+ var tmp=document.createElement('div');tmp.innerHTML=sectionHTML(sc,SCREENS.indexOf(sc));
+ area.innerHTML=tmp.querySelector('.phones-area').innerHTML;
+ sec.querySelector('.ctl').innerHTML=tmp.querySelector('.ctl').innerHTML;sec.querySelector('.changes').innerHTML=tmp.querySelector('.changes').innerHTML;
+ [].forEach.call(area.querySelectorAll('.scr,.shots'),function(e,i){e.scrollTop=tops[i]||0;});stats();}
+function nav(){document.getElementById('nav').innerHTML=SCREENS.map(function(sc,i){var d=sc.changes.every(function(c){return P[c.id]||BUILT.indexOf(c.id)>=0;});return '<a href="#s-'+sc.id+'" class="'+(d?'done':'')+'">'+(i+1)+' '+sc.name+'</a>';}).join('');}
+function counts(){var k=0,s=0,t=0;SCREENS.forEach(function(sc){sc.changes.forEach(function(c){t++;if(BUILT.indexOf(c.id)>=0||P[c.id]==='keep')k++;else if(P[c.id]==='skip')s++;});});return {k:k,s:s,t:t};}
+function stats(){var c=counts();document.getElementById('meter').style.width=((c.k+c.s)/c.t*100)+'%';document.getElementById('cnt').textContent=(c.k+c.s)+' of '+c.t+' decided · '+c.k+' kept · '+c.s+' skipped';nav();document.getElementById('summary').textContent=summary();}
+function summary(){var out=[];SCREENS.forEach(function(sc,i){var l=sc.changes.map(function(c){return '  '+(BUILT.indexOf(c.id)>=0?'BUILT  ':P[c.id]==='keep'?'KEEP  ':P[c.id]==='skip'?'SKIP  ':'(undecided)  ')+c.t;});out.push((i+1)+'. '+sc.name+'\n'+l.join('\n')+(NOTES[sc.id]?'\n  NOTE: '+NOTES[sc.id]:''));});return out.join('\n\n');}
+var loaded=false,touched=false,pending=false;
+function save(){touched=true;if(!loaded){pending=true;return;}clearTimeout(timer);timer=setTimeout(function(){if(docRef){docRef.set({picks:P,notes:NOTES,summary:summary(),at:new Date().toISOString()}).then(function(){document.getElementById('saved').textContent='Saved';}).catch(function(){document.getElementById('saved').textContent='Could not save';});}},500);}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-a]');if(!t)return;var a=t.dataset.a,s=t.dataset.s;var sc=SCREENS.filter(function(x){return x.id===s;})[0];
+ if(a==='pick'){P[t.dataset.c]=P[t.dataset.c]===t.dataset.v?undefined:t.dataset.v;if(P[t.dataset.c]===undefined)delete P[t.dataset.c];var own=SCREENS.filter(function(x){return x.changes.some(function(c){return c.id===t.dataset.c;});})[0];refresh(own);save();}
+ else if(a==='view'){VIEW[s]=t.dataset.v;refresh(sc);}
+ else if(a==='state'){STATE[s]=t.dataset.v;refresh(sc);}
+ else if(a==='ui'&&t.dataset.k==='nav'){var cm0=ui(s,'cm',8),cy0=ui(s,'cy',2027),dlt=+t.dataset.v;cm0+=dlt;if(cm0<0){cm0=11;cy0--;}if(cm0>11){cm0=0;cy0++;}setui(s,'cm',cm0);setui(s,'cy',cy0);refresh(sc);}
+ else if(a==='ui'&&t.dataset.k==='pick'){var tv=+t.dataset.v,a0=ui(s,'a',null),b0=ui(s,'b',null);if(!a0||(a0&&b0)){setui(s,'a',tv);setui(s,'b',null);}else if(tv<a0){setui(s,'a',tv);}else{setui(s,'b',tv);}refresh(sc);}
+ else if(a==='ui'){var v=t.dataset.v;if(v==='true')v=true;else if(v==='false')v=false;else if(/^-?\d+$/.test(v))v=+v;setui(s,t.dataset.k,v);refresh(sc);}
+ else if(a==='tog'){togui(s,t.dataset.k,t.dataset.v);refresh(sc);}});
+document.addEventListener('input',function(e){var t=e.target;if(t.dataset&&t.dataset.a==='note'){NOTES[t.dataset.s]=t.value;stats();save();}});
+document.getElementById('copy').onclick=function(){var txt=summary();var b=document.getElementById('copy');function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy summary';},1500);}try{navigator.clipboard.writeText(txt).then(ok,function(){var r=document.createRange();r.selectNodeContents(document.getElementById('summary'));var sel=getSelection();sel.removeAllRanges();sel.addRange(r);});}catch(x){}};
+document.getElementById('reset').onclick=function(){P={};NOTES={};renderAll();stats();save();};
+document.getElementById('builtlist').innerHTML=BUILT_ALL.map(function(x){return '<li>'+x+'</li>';}).join('');
+renderAll();
+(async function(){
+ var gaveUp=setTimeout(function(){loaded=true;if(pending){pending=false;save();}},4000);
+ try{db=await claude.use('db');}catch(e){}
+ if(!db){clearTimeout(gaveUp);loaded=true;return;}
+ var col=db.collection('screensReview');docRef=col.doc('picks');var first=true;
+ col.onSnapshot(function(snap){if(!first)return;first=false;clearTimeout(gaveUp);
+  snap.docs.forEach(function(d){if(d.id==='picks'){var v=d.data()||{};
+   /* what she did on the page before this arrived wins; the saved copy only fills the gaps */
+   var sp=v.picks||{},sn=v.notes||{};Object.keys(sp).forEach(function(k){if(P[k]===undefined)P[k]=sp[k];});Object.keys(sn).forEach(function(k){if(NOTES[k]===undefined)NOTES[k]=sn[k];});
+   var keep=document.activeElement&&document.activeElement.tagName==='TEXTAREA';
+   if(!touched){renderAll();}else{SCREENS.forEach(function(sc){refresh(sc);});[].forEach.call(document.querySelectorAll('textarea[data-a=note]'),function(x){if(document.activeElement!==x&&NOTES[x.dataset.s]!==undefined&&x.value===''){x.value=NOTES[x.dataset.s];}});}
+   stats();}});
+  loaded=true;if(pending){pending=false;save();}},function(){loaded=true;if(pending){pending=false;save();}});})();
+</script>

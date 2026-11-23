@@ -1,0 +1,27 @@
+{
+ "reviewedOn": "2026-11-09",
+ "by": "Claude (web source check, 9 Nov 2026)",
+ "whole": "Fact check done 9 Nov 2026 on all 109 Gemini-written Wine, Beer & Spirits texts. Before the owner read them, Claude read every text twice and corrected the errors it found; the owner then reviewed all 109 texts and scores on 6 to 9 Nov 2026: she chose a restructured overview for 26 places, rewrote 15 texts herself, asked for rewrites of 8 more and set six peak scores. Sources used: Wikipedia entity lookups for about 2,860 names across the Food batch (regions, wine routes, festivals, drinks), and targeted web searches for festival dates, closures and seasons, plus three this week: Asahikawa's sake breweries (Hokkaido), Taipei's cocktail bars on the Asia's 50 Best Bars lists, and the history of Uzbek winemaking (Samarkand, 1868). On the owner's instruction the texts name no individual producers: 33 names were removed (for example Jameson, Penderyn, Marques de Riscal, the Hofbrauhaus), and eight places keep a name because it is the point of the entry (Barbados, Svalbard, Ireland, Hokkaido, Taiwan, Palau, Budapest and Venice). The places where Gemini scored a month more than 2 points below the peak were each checked; 59 seasonal-drop judgments across the four Food interests had no evidence either way and are flagged for later review.",
+ "places": [
+  {
+   "id": "p0080",
+   "note": "Added after an owner question. Asahikawa has long-established sake breweries that run tours, so the overview now says so. Source: travel and brewery pages."
+  },
+  {
+   "id": "p0177",
+   "note": "Rewritten after an owner question. Several Taipei bars appear on the Asia's 50 Best Bars lists (2023 to 2025), so the overview mentions the cocktail scene and the peak was raised from 3.7 to 5.6. Source: World's 50 Best Bars pages."
+  },
+  {
+   "id": "p0160",
+   "note": "Rewritten from research after an owner comment. Modern Uzbek winemaking dates from 1868 in Samarkand; the Samarkand winery has a winemaking museum with tastings; Bukhara grows Rkatsiteli and Muscat, Samarkand Shirin and Gulyakandoz. Source: wine references and travel pages."
+  },
+  {
+   "id": "p0126",
+   "note": "Corrected on 1 Nov. The text named the Devour! film festival twice in one sentence; it now names it once."
+  },
+  {
+   "id": "p0115",
+   "note": "Corrected on 1 Nov after the source check: a sentence about a film festival was removed."
+  }
+ ]
+}

@@ -1,19 +1,21 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { SiteTodoRow } from '@/lib/db/queries/site-todos';
 import { INTEREST_TODO_STATUSES, type InterestTodoStatus } from '@/lib/db/schema';
 import { SITE_TODO_KEY, compareTodos, dueInfo, isOpen, type TodoRepeat } from '@/lib/admin/todo-dates';
 import { addSiteTodo, deleteSiteTodo, updateSiteTodo, type SiteTodoInput } from '@/app/admin/destinations/todo/actions';
+import { CADENCE_TODO_SOURCE } from '@/lib/scoring/planning';
+import { StaleChecklist } from '@/components/admin/interest-page/StaleChecklist';
 import '@/components/admin/interest-page/interest-page.css';
 
 const STATUS: Record<InterestTodoStatus, string> = { needs_you: 'Needs you', ready_for_claude: 'Ready for Claude', waiting: 'Waiting', idea: 'Idea', done: 'Done' };
 const PRIORITY: Record<number, string> = { 1: 'High', 2: 'Normal', 3: 'Low' };
-const REPEAT_LABEL: Record<TodoRepeat, string> = { weekly: 'Every week', monthly: 'Every month' };
+const REPEAT_LABEL: Record<TodoRepeat, string> = { weekly: 'Every week', monthly: 'Every month', quarterly: 'Every quarter', annually: 'Every year' };
 
 type Chip = 'all' | 'site' | 'due';
-type Interest = { key: string; label: string; /** Hidden from travellers and from the admin lists by default. */ inactive?: boolean };
+type Interest = { key: string; label: string; /** Hidden from travellers and from the admin lists by default. */ inactive?: boolean; /** The interest's Evergreen planning score, which sets how often a reason is due. */ evergreen?: number | null };
 type Draft = { interestKey: string; title: string; detail: string; status: InterestTodoStatus; source: string; priority: number; dueOn: string; repeatEvery: '' | TodoRepeat };
 const blank = (): Draft => ({ interestKey: SITE_TODO_KEY, title: '', detail: '', status: 'needs_you', source: '', priority: 2, dueOn: '', repeatEvery: '' });
 const fromRow = (t: SiteTodoRow): Draft => ({ interestKey: t.interestKey, title: t.title, detail: t.detail, status: t.status, source: t.source, priority: t.priority, dueOn: t.dueOn ?? '', repeatEvery: t.repeatEvery ?? '' });
@@ -26,6 +28,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
   const [status, setStatus] = useState<'open' | InterestTodoStatus | 'all'>('open');
   const [sort, setSort] = useState<'date' | 'priority' | 'newest'>('date');
   const [form, setForm] = useState<{ id: string | null; draft: Draft } | null>(null);
+  const [openChecklist, setOpenChecklist] = useState<string | null>(null); // the review to-do whose reasons are showing
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const label = useMemo(() => new Map([[SITE_TODO_KEY, 'Site-wide'], ...interests.map((i) => [i.key, i.inactive ? `${i.label} (inactive)` : i.label] as [string, string])]), [interests]);
@@ -113,7 +116,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
           <label>Status<select value={form.draft.status} onChange={(e) => set({ status: e.target.value as InterestTodoStatus })}>{INTEREST_TODO_STATUSES.map((s) => <option key={s} value={s}>{STATUS[s]}</option>)}</select></label>
           <label>Priority<select value={form.draft.priority} onChange={(e) => set({ priority: Number(e.target.value) })}>{[1, 2, 3].map((n) => <option key={n} value={n}>{PRIORITY[n]}</option>)}</select></label>
           <label>Check on<input type="date" value={form.draft.dueOn} onChange={(e) => set({ dueOn: e.target.value })} /></label>
-          <label>Repeat<select value={form.draft.repeatEvery} onChange={(e) => set({ repeatEvery: e.target.value as '' | TodoRepeat })}><option value="">Never</option>{(['weekly', 'monthly'] as TodoRepeat[]).map((r) => <option key={r} value={r}>{REPEAT_LABEL[r]}</option>)}</select></label>
+          <label>Repeat<select value={form.draft.repeatEvery} onChange={(e) => set({ repeatEvery: e.target.value as '' | TodoRepeat })}><option value="">Never</option>{(['weekly', 'monthly', 'quarterly', 'annually'] as TodoRepeat[]).map((r) => <option key={r} value={r}>{REPEAT_LABEL[r]}</option>)}</select></label>
           <label className="full">Where it came from<input value={form.draft.source} onChange={(e) => set({ source: e.target.value })} maxLength={200} placeholder="e.g. Usage page, 14 Oct 2026" /></label>
           <div className="btns full"><button className="btn btn-primary" disabled={busy || !form.draft.title.trim()} onClick={save}>{form.id ? 'Save changes' : 'Save item'}</button><button className="btn" onClick={() => setForm(null)}>Cancel</button></div>
         </div>
@@ -128,7 +131,8 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
               const info = t.dueOn && isOpen(t) ? dueInfo(t.dueOn, today) : null;
               const site = t.interestKey === SITE_TODO_KEY;
               return (
-                <tr key={t.id} style={t.status === 'done' ? { opacity: 0.6 } : undefined}>
+                <Fragment key={t.id}>
+                <tr style={t.status === 'done' ? { opacity: 0.6 } : undefined}>
                   <td><select className="ip-select" value={t.priority} disabled={busy} onChange={(e) => patch(t, { priority: Number(e.target.value) })} aria-label="Priority">{[1, 2, 3].map((n) => <option key={n} value={n}>{PRIORITY[n]}</option>)}</select></td>
                   <td><select className="ip-select" value={t.status} disabled={busy} onChange={(e) => patch(t, { status: e.target.value as InterestTodoStatus })} aria-label="Status">{INTEREST_TODO_STATUSES.map((s) => <option key={s} value={s}>{STATUS[s]}</option>)}</select></td>
                   <td style={{ maxWidth: 560, whiteSpace: 'normal' }}>
@@ -136,7 +140,7 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
                     <b>{t.title}</b>
                     {t.placeId && <span className="ip-chip info" style={{ marginLeft: 6 }}>{placeNames[t.placeId] ?? t.placeId}{t.closeOnApply ? ' · auto-close' : ''}</span>}
                     {t.detail && <div className="ip-muted">{t.detail}</div>}
-                    {t.repeatEvery && isOpen(t) && <div className="ip-faint">Repeats {t.repeatEvery === 'weekly' ? 'every week' : 'every month'}</div>}
+                    {t.repeatEvery && isOpen(t) && <div className="ip-faint">Repeats {REPEAT_LABEL[t.repeatEvery].toLowerCase()}</div>}
                   </td>
                   <td className="ip-mono" style={{ whiteSpace: 'nowrap' }}>
                     {t.dueOn ? <>{t.dueOn}{info && <div style={{ fontSize: 11.5, fontWeight: 600, color: info.tone === 'over' ? 'var(--bad)' : info.tone === 'soon' ? 'var(--warn)' : 'var(--text-faint)' }}>{info.text}</div>}</> : <span className="ip-faint">none</span>}
@@ -144,13 +148,16 @@ export function SiteTodoView({ initialTodos, placeNames, interests, today }: { i
                   <td className="ip-muted" style={{ whiteSpace: 'normal', maxWidth: 240 }}>{t.source}</td>
                   <td>
                     <div className="ip-actions">
-                      {isOpen(t) && <button className="ip-link-btn" disabled={busy} onClick={() => patch(t, { status: 'done' })}>Done</button>}
+                      {isOpen(t) && t.source === CADENCE_TODO_SOURCE && <button className="ip-link-btn" onClick={() => setOpenChecklist(openChecklist === t.id ? null : t.id)}>{openChecklist === t.id ? 'Hide reasons' : 'Reasons to check'}</button>}
+                      {isOpen(t) && <button className="ip-link-btn" disabled={busy} onClick={() => { if (t.source === CADENCE_TODO_SOURCE) setOpenChecklist(t.id); patch(t, { status: 'done' }); }}>Done</button>}
                       {!site && <Link className="ip-link-btn" href={`/admin/destinations/interests/${t.interestKey}#todo`}>Open interest</Link>}
                       <button className="ip-link-btn" onClick={() => setForm({ id: t.id, draft: fromRow(t) })}>Edit</button>
                       <button className="ip-link-btn danger" disabled={busy} onClick={() => remove(t)}>Delete</button>
                     </div>
                   </td>
                 </tr>
+                {openChecklist === t.id && <tr><td colSpan={6}><div className="ip-card"><StaleChecklist interestKey={t.interestKey} evergreen={interests.find((i) => i.key === t.interestKey)?.evergreen ?? null} todoId={t.id} /></div></td></tr>}
+                </Fragment>
               );
             })}
           </tbody>

@@ -1,6 +1,6 @@
 {
  "_note": "Hiking notes (Oct 2026), built by scripts/build-hiking-facts.ts from the hiking columns on the interest page; first drafts, only partly checked against web sources. Passed to Gemini as ground truth.",
- "falklands": {
+ "p0066": {
   "forPlaceName": "Falkland Islands",
   "scope": "Walking is on the islands' open land: the nature trail to Gypsy Cove near Stanley (Magellanic penguins), the Maritime History Trail from Stanley to Cape Pembroke, and Sea Lion Island (reached by a 40-minute flight from Stanley or by cruise-ship landings), where you can walk anywhere without disturbing the wildlife.",
   "facts": [
@@ -15,7 +15,7 @@
   "season": "",
   "mustMention": []
  },
- "faroe-islands": {
+ "p0067": {
   "forPlaceName": "Faroe Islands",
   "scope": "",
   "facts": [
@@ -31,7 +31,7 @@
   "season": "",
   "mustMention": []
  },
- "fiji": {
+ "p0068": {
   "forPlaceName": "Fiji",
   "scope": "Walking in Fiji: the Lavena Coastal Walk on Taveuni (about 10 km round trip with a rope-assisted creek crossing to Wainibau waterfall, slippery in the November to March wet season) and Mount Batilamu in the Koroyanitu range on Viti Levu (1,110 m, from Abaca village).",
   "facts": [
@@ -47,7 +47,7 @@
   "season": "",
   "mustMention": []
  },
- "fjords": {
+ "p0125": {
   "forPlaceName": "Norwegian Fjords",
   "scope": "",
   "facts": [
@@ -63,7 +63,7 @@
   "season": "",
   "mustMention": []
  },
- "okinawa": {
+ "p0129": {
   "forPlaceName": "Okinawa",
   "scope": "Okinawa as a whole: the Yanbaru forest in the north (Yonaha-dake, the island's highest peak; rugged, narrow trails; guided tours are optional) plus coastal walks and island castles.",
   "facts": [
@@ -78,7 +78,7 @@
   "season": "",
   "mustMention": []
  },
- "olympic": {
+ "p0130": {
   "forPlaceName": "Olympic National Park",
   "scope": "Olympic Peninsula as a whole: the high ridge trails near Hurricane Ridge, the Hoh Rain Forest (the Upper Hoh road washed out in December 2024), Sol Duc and the wilderness coast.",
   "facts": [
@@ -94,7 +94,7 @@
   "season": "",
   "mustMention": []
  },
- "barcelona": {
+ "p0021": {
   "forPlaceName": "Barcelona",
   "scope": "",
   "facts": [
@@ -109,7 +109,7 @@
   "season": "",
   "mustMention": []
  },
- "beijing": {
+ "p0024": {
   "forPlaceName": "Beijing & Great Wall",
   "scope": "",
   "facts": [
@@ -125,7 +125,7 @@
   "season": "",
   "mustMention": []
  },
- "seoul": {
+ "p0166": {
   "forPlaceName": "Seoul",
   "scope": "Seoul as a whole: Bukhansan National Park (the Baegundae route, about 10 km and 4 hours), Bugaksan and the Seoul City Wall, all reached by metro.",
   "facts": [
@@ -140,7 +140,7 @@
   "season": "",
   "mustMention": []
  },
- "sequoia-kings-canyon": {
+ "p0167": {
   "forPlaceName": "Sequoia & Kings Canyon",
   "scope": "Sequoia and Kings Canyon as a whole: big-tree groves and High Sierra trails, with wilderness permits for overnight trips.",
   "facts": [
@@ -156,7 +156,7 @@
   "season": "",
   "mustMention": []
  },
- "seychelles": {
+ "p0168": {
   "forPlaceName": "Seychelles",
   "scope": "Seychelles as a whole: short forest and granite-slab trails on Mahe such as Anse Major (about 2.4 km, 70 m of climbing, around an hour) and Morne Seychellois National Park.",
   "facts": [
@@ -171,7 +171,7 @@
   "season": "",
   "mustMention": []
  },
- "belfast-giants-causeway": {
+ "p0123": {
   "forPlaceName": "Northern Ireland",
   "scope": "Northern Ireland as a whole, not only Belfast & the Giant's Causeway.",
   "facts": [
@@ -186,7 +186,7 @@
   "season": "",
   "mustMention": []
  },
- "bend-crater-lake": {
+ "p0026": {
   "forPlaceName": "Bend & Crater Lake",
   "scope": "",
   "facts": [
@@ -202,7 +202,7 @@
   "season": "",
   "mustMention": []
  },
- "bhutan": {
+ "p0028": {
   "forPlaceName": "Bhutan",
   "scope": "",
   "facts": [
@@ -218,7 +218,7 @@
   "season": "",
   "mustMention": []
  },
- "black-forest": {
+ "p0030": {
   "forPlaceName": "Black Forest",
   "scope": "",
   "facts": [
@@ -233,7 +233,7 @@
   "season": "",
   "mustMention": []
  },
- "borneo": {
+ "p0101": {
   "forPlaceName": "Malaysian Borneo",
   "scope": "",
   "facts": [
@@ -249,7 +249,7 @@
   "season": "",
   "mustMention": []
  },
- "borabora": {
+ "p0070": {
   "forPlaceName": "French Polynesia",
   "scope": "French Polynesia as a whole, not only Bora Bora.",
   "facts": [
@@ -265,7 +265,7 @@
   "season": "",
   "mustMention": []
  },
- "botswana": {
+ "p0128": {
   "forPlaceName": "Okavango Delta",
   "scope": "Walking in the Okavango is guided bush walks on the delta's islands from safari camps, for wildlife; there are no trails to hike independently.",
   "facts": [
@@ -280,7 +280,7 @@
   "season": "",
   "mustMention": []
  },
- "aruba": {
+ "p0009": {
   "forPlaceName": "Aruba",
   "scope": "",
   "facts": [
@@ -295,7 +295,7 @@
   "season": "",
   "mustMention": []
  },
- "athens": {
+ "p0013": {
   "forPlaceName": "Athens",
   "scope": "",
   "facts": [
@@ -310,7 +310,7 @@
   "season": "",
   "mustMention": []
  },
- "bahamas": {
+ "p0016": {
   "forPlaceName": "Bahamas",
   "scope": "Walking within reach: boardwalk and cave trails in Lucayan National Park on Grand Bahama; boardwalk trails to blue holes in Blue Holes National Park on Andros; the short path up Mount Alvernia (203 ft, the highest point in the Bahamas) on Cat Island; the Bimini nature trail.",
   "facts": [
@@ -325,7 +325,7 @@
   "season": "",
   "mustMention": []
  },
- "barbados": {
+ "p0020": {
   "forPlaceName": "Barbados",
   "scope": "",
   "facts": [
@@ -340,7 +340,7 @@
   "season": "",
   "mustMention": []
  },
- "dolomites": {
+ "p0057": {
   "forPlaceName": "Dolomites",
   "scope": "",
   "facts": [
@@ -355,7 +355,7 @@
   "season": "",
   "mustMention": []
  },
- "sedona": {
+ "p0165": {
   "forPlaceName": "Sedona",
   "scope": "",
   "facts": [
@@ -370,7 +370,7 @@
   "season": "",
   "mustMention": []
  },
- "madeira": {
+ "p0100": {
   "forPlaceName": "Madeira",
   "scope": "",
   "facts": [
@@ -385,7 +385,7 @@
   "season": "",
   "mustMention": []
  },
- "cape-town": {
+ "p0037": {
   "forPlaceName": "Cape Town",
   "scope": "",
   "facts": [
@@ -400,7 +400,7 @@
   "season": "",
   "mustMention": []
  },
- "banff": {
+ "p0018": {
   "forPlaceName": "Banff & Jasper National Parks",
   "scope": "Banff & Jasper National Parks as a whole, not only Banff National Park.",
   "facts": [
@@ -416,7 +416,7 @@
   "season": "",
   "mustMention": []
  },
- "torres-del-paine": {
+ "p0183": {
   "forPlaceName": "Torres del Paine",
   "scope": "",
   "facts": [
@@ -432,7 +432,7 @@
   "season": "",
   "mustMention": []
  },
- "swissalps": {
+ "p0199": {
   "forPlaceName": "Zermatt & the Swiss Alps",
   "scope": "",
   "facts": [
@@ -447,7 +447,7 @@
   "season": "",
   "mustMention": []
  },
- "chicago": {
+ "p0043": {
   "forPlaceName": "Chicago",
   "scope": "",
   "facts": [
@@ -462,7 +462,7 @@
   "season": "",
   "mustMention": []
  },
- "belize": {
+ "p0025": {
   "forPlaceName": "Belize",
   "scope": "",
   "facts": [
@@ -477,7 +477,7 @@
   "season": "",
   "mustMention": []
  },
- "budapest": {
+ "p0032": {
   "forPlaceName": "Budapest",
   "scope": "",
   "facts": [
@@ -492,7 +492,7 @@
   "season": "",
   "mustMention": []
  },
- "angkor": {
+ "p0034": {
   "forPlaceName": "Cambodia",
   "scope": "Cambodia as a whole, not only Angkor Wat & Siem Reap.",
   "facts": [
@@ -507,7 +507,7 @@
   "season": "",
   "mustMention": []
  },
- "bagan": {
+ "p0113": {
   "forPlaceName": "Myanmar",
   "scope": "Myanmar as a whole, not only Bagan.",
   "facts": [
@@ -522,7 +522,7 @@
   "season": "",
   "mustMention": []
  },
- "amsterdam": {
+ "p0004": {
   "forPlaceName": "Amsterdam",
   "scope": "",
   "facts": [
@@ -536,7 +536,7 @@
   "season": "",
   "mustMention": []
  },
- "berlin": {
+ "p0027": {
   "forPlaceName": "Berlin",
   "scope": "",
   "facts": [
@@ -550,7 +550,7 @@
   "season": "",
   "mustMention": []
  },
- "bangkok": {
+ "p0019": {
   "forPlaceName": "Bangkok",
   "scope": "Walking within reach is city parks: Lumphini Park in the city, and the green riverside paths of Bang Krachao across the river.",
   "facts": [
@@ -564,7 +564,7 @@
   "season": "",
   "mustMention": []
  },
- "bordeaux": {
+ "p0031": {
   "forPlaceName": "Bordeaux",
   "scope": "",
   "facts": [
@@ -578,7 +578,7 @@
   "season": "",
   "mustMention": []
  },
- "buenosaires": {
+ "p0033": {
   "forPlaceName": "Buenos Aires",
   "scope": "Walking within reach is city parks and nature paths: the Costanera Sur ecological reserve, the Palermo parks, and the delta waterways around Tigre.",
   "facts": [
@@ -592,7 +592,7 @@
   "season": "",
   "mustMention": []
  },
- "big-island": {
+ "p0029": {
   "forPlaceName": "Big Island",
   "scope": "",
   "facts": [
@@ -607,7 +607,7 @@
   "season": "",
   "mustMention": []
  },
- "nepal": {
+ "p0116": {
   "forPlaceName": "Nepal",
   "scope": "",
   "facts": [
@@ -623,7 +623,7 @@
   "season": "",
   "mustMention": []
  },
- "tokyo-kyoto": {
+ "p0182": {
   "forPlaceName": "Tokyo & Kyoto",
   "scope": "",
   "facts": [
@@ -638,7 +638,7 @@
   "season": "",
   "mustMention": []
  },
- "acadia": {
+ "p0001": {
   "forPlaceName": "Acadia National Park",
   "scope": "",
   "facts": [
@@ -654,7 +654,7 @@
   "season": "",
   "mustMention": []
  },
- "aspen": {
+ "p0010": {
   "forPlaceName": "Aspen Snowmass",
   "scope": "Aspen Snowmass as a whole, not only Aspen.",
   "facts": [
@@ -670,7 +670,7 @@
   "season": "",
   "mustMention": []
  },
- "bavaria-munich": {
+ "p0023": {
   "forPlaceName": "Bavaria & Munich",
   "scope": "",
   "facts": [
@@ -685,7 +685,7 @@
   "season": "",
   "mustMention": []
  },
- "basque-country": {
+ "p0022": {
   "forPlaceName": "Basque Country",
   "scope": "",
   "facts": [
@@ -701,7 +701,7 @@
   "season": "",
   "mustMention": []
  },
- "algarve": {
+ "p0002": {
   "forPlaceName": "Algarve",
   "scope": "",
   "facts": [
@@ -716,7 +716,7 @@
   "season": "",
   "mustMention": []
  },
- "amalfi": {
+ "p0003": {
   "forPlaceName": "Amalfi Coast",
   "scope": "",
   "facts": [
@@ -731,7 +731,7 @@
   "season": "",
   "mustMention": []
  },
- "andalucia": {
+ "p0005": {
   "forPlaceName": "Andalucía",
   "scope": "",
   "facts": [
@@ -747,7 +747,7 @@
   "season": "",
   "mustMention": []
  },
- "antarctica": {
+ "p0006": {
   "forPlaceName": "Antarctic Peninsula",
   "scope": "The only walking is short shore landings from expedition cruise ships on the Antarctic Peninsula, on snow and ice, in the cruise season only.",
   "facts": [
@@ -763,7 +763,7 @@
   "season": "",
   "mustMention": []
  },
- "arches-canyonlands": {
+ "p0007": {
   "forPlaceName": "Arches & Canyonlands",
   "scope": "",
   "facts": [
@@ -779,7 +779,7 @@
   "season": "",
   "mustMention": []
  },
- "argentine-lake-district": {
+ "p0008": {
   "forPlaceName": "Argentine Lake District",
   "scope": "",
   "facts": [
@@ -795,7 +795,7 @@
   "season": "",
   "mustMention": []
  },
- "atacama": {
+ "p0012": {
   "forPlaceName": "Atacama Desert",
   "scope": "",
   "facts": [
@@ -811,7 +811,7 @@
   "season": "",
   "mustMention": []
  },
- "azores": {
+ "p0014": {
   "forPlaceName": "Azores",
   "scope": "",
   "facts": [
@@ -827,7 +827,7 @@
   "season": "",
   "mustMention": []
  },
- "badlands-black-hills": {
+ "p0015": {
   "forPlaceName": "Badlands & Black Hills",
   "scope": "",
   "facts": [
@@ -842,7 +842,7 @@
   "season": "",
   "mustMention": []
  },
- "bali": {
+ "p0017": {
   "forPlaceName": "Bali",
   "scope": "",
   "facts": [
@@ -858,7 +858,7 @@
   "season": "",
   "mustMention": []
  },
- "canaries": {
+ "p0035": {
   "forPlaceName": "Canary Islands",
   "scope": "",
   "facts": [
@@ -874,7 +874,7 @@
   "season": "",
   "mustMention": []
  },
- "cape-cod-islands": {
+ "p0036": {
   "forPlaceName": "Cape Cod & the Islands",
   "scope": "",
   "facts": [
@@ -889,7 +889,7 @@
   "season": "",
   "mustMention": []
  },
- "chamonix": {
+ "p0038": {
   "forPlaceName": "Chamonix & the French Alps",
   "scope": "",
   "facts": [
@@ -904,7 +904,7 @@
   "season": "",
   "mustMention": []
  },
- "champagne": {
+ "p0039": {
   "forPlaceName": "Champagne",
   "scope": "",
   "facts": [
@@ -919,7 +919,7 @@
   "season": "",
   "mustMention": []
  },
- "charleston-savannah": {
+ "p0040": {
   "forPlaceName": "Charleston & Savannah",
   "scope": "",
   "facts": [
@@ -933,7 +933,7 @@
   "season": "",
   "mustMention": []
  },
- "chiang-mai": {
+ "p0041": {
   "forPlaceName": "Chiang Mai & Northern Thailand",
   "scope": "Northern Thailand as a whole, not only the city: Doi Inthanon (Kew Mae Pan trail, Thailand's highest peak) and Doi Suthep. Field-burning smoke runs about February to April, worst in March, and it hazes the views and the air.",
   "facts": [
@@ -949,7 +949,7 @@
   "season": "",
   "mustMention": []
  },
- "chiapas": {
+ "p0042": {
   "forPlaceName": "Chiapas",
   "scope": "",
   "facts": [
@@ -963,7 +963,7 @@
   "season": "",
   "mustMention": []
  },
- "chilean-lake-district": {
+ "p0044": {
   "forPlaceName": "Chilean Lake District",
   "scope": "",
   "facts": [
@@ -979,7 +979,7 @@
   "season": "",
   "mustMention": []
  },
- "churchill": {
+ "p0045": {
   "forPlaceName": "Churchill",
   "scope": "Walking is limited to short paths near town and guided outings. Polar bears frequent the town and local trails from about May to December, so Parks Canada advises against walking out of town in September to November and says never to walk alone. Wapusk National Park is only visited with a licensed guide.",
   "facts": [
@@ -993,7 +993,7 @@
   "season": "",
   "mustMention": []
  },
- "colombian-andes": {
+ "p0046": {
   "forPlaceName": "Colombian Andes",
   "scope": "",
   "facts": [
@@ -1008,7 +1008,7 @@
   "season": "",
   "mustMention": []
  },
- "colombian-caribbean": {
+ "p0047": {
   "forPlaceName": "Colombian Caribbean",
   "scope": "",
   "facts": [
@@ -1024,7 +1024,7 @@
   "season": "",
   "mustMention": []
  },
- "copenhagen": {
+ "p0048": {
   "forPlaceName": "Copenhagen",
   "scope": "",
   "facts": [
@@ -1038,7 +1038,7 @@
   "season": "",
   "mustMention": []
  },
- "cornwall": {
+ "p0049": {
   "forPlaceName": "Cornwall",
   "scope": "",
   "facts": [
@@ -1053,7 +1053,7 @@
   "season": "",
   "mustMention": []
  },
- "costa-rica": {
+ "p0050": {
   "forPlaceName": "Costa Rica",
   "scope": "",
   "facts": [
@@ -1069,7 +1069,7 @@
   "season": "",
   "mustMention": []
  },
- "cotswolds": {
+ "p0051": {
   "forPlaceName": "Cotswolds",
   "scope": "",
   "facts": [
@@ -1084,7 +1084,7 @@
   "season": "",
   "mustMention": []
  },
- "croatia": {
+ "p0054": {
   "forPlaceName": "Dalmatian Coast",
   "scope": "The Dalmatian Coast and its hinterland: Paklenica National Park, Biokovo, Marjan hill at Split, Krka. Plitvice Lakes lies inland, about two hours from Zadar and Split.",
   "facts": [
@@ -1100,7 +1100,7 @@
   "season": "",
   "mustMention": []
  },
- "death-valley": {
+ "p0055": {
   "forPlaceName": "Death Valley National Park",
   "scope": "Best from November to March. Summer hiking is dangerous heat (hikers have died on the Golden Canyon trail in August). Telescope Peak (11,049 ft, 14 miles round trip) is the high-country escape, snowy until about June.",
   "facts": [
@@ -1115,7 +1115,7 @@
   "season": "",
   "mustMention": []
  },
- "denali-interior": {
+ "p0056": {
   "forPlaceName": "Denali & the Interior",
   "scope": "Denali & the Interior as a whole, not only the national park; the Denali Park Road (private vehicles to mile 15 only) and its trails.",
   "facts": [
@@ -1131,7 +1131,7 @@
   "season": "",
   "mustMention": []
  },
- "douro-valley-porto": {
+ "p0059": {
   "forPlaceName": "Douro Valley & Porto",
   "scope": "",
   "facts": [
@@ -1146,7 +1146,7 @@
   "season": "",
   "mustMention": []
  },
- "dubai": {
+ "p0060": {
   "forPlaceName": "Dubai",
   "scope": "Hiking in the UAE: Hatta (Dubai emirate, the Hatta Wadi Hub has 32.6 km of trails) and Jebel Jais in Ras Al Khaimah (1,934 m, the UAE's highest point, about 10 degrees cooler). Best from November to March; summer heat is dangerous even at altitude.",
   "facts": [
@@ -1161,7 +1161,7 @@
   "season": "",
   "mustMention": []
  },
- "ecuadorian-andes": {
+ "p0061": {
   "forPlaceName": "Ecuadorian Andes",
   "scope": "",
   "facts": [
@@ -1176,7 +1176,7 @@
   "season": "",
   "mustMention": []
  },
- "edinburgh": {
+ "p0062": {
   "forPlaceName": "Edinburgh",
   "scope": "",
   "facts": [
@@ -1191,7 +1191,7 @@
   "season": "",
   "mustMention": []
  },
- "egypt": {
+ "p0151": {
   "forPlaceName": "Red Sea & Nile",
   "scope": "Red Sea & Nile as a whole, including the Sinai (Mount Sinai, Jebel Musa) and the desert and coastal mountains near the Red Sea.",
   "facts": [
@@ -1207,7 +1207,7 @@
   "season": "",
   "mustMention": []
  },
- "el-chalten": {
+ "p0063": {
   "forPlaceName": "El Chaltén & El Calafate",
   "scope": "El Chaltén & El Calafate as a whole, not only El Chaltén & Fitz Roy.",
   "facts": [
@@ -1222,7 +1222,7 @@
   "season": "",
   "mustMention": []
  },
- "ethiopia": {
+ "p0064": {
   "forPlaceName": "Ethiopia",
   "scope": "",
   "facts": [
@@ -1238,7 +1238,7 @@
   "season": "",
   "mustMention": []
  },
- "everglades": {
+ "p0065": {
   "forPlaceName": "Everglades National Park",
   "scope": "",
   "facts": [
@@ -1253,7 +1253,7 @@
   "season": "",
   "mustMention": []
  },
- "galapagos": {
+ "p0071": {
   "forPlaceName": "Galápagos Islands",
   "scope": "",
   "facts": [
@@ -1269,7 +1269,7 @@
   "season": "",
   "mustMention": []
  },
- "gbr": {
+ "p0075": {
   "forPlaceName": "Great Barrier Reef",
   "scope": "",
   "facts": [
@@ -1285,7 +1285,7 @@
   "season": "",
   "mustMention": []
  },
- "ghana": {
+ "p0072": {
   "forPlaceName": "Ghana",
   "scope": "",
   "facts": [
@@ -1301,7 +1301,7 @@
   "season": "",
   "mustMention": []
  },
- "glacier-waterton": {
+ "p0073": {
   "forPlaceName": "Glacier & Waterton Lakes",
   "scope": "",
   "facts": [
@@ -1317,7 +1317,7 @@
   "season": "",
   "mustMention": []
  },
- "grandcanyon": {
+ "p0074": {
   "forPlaceName": "Grand Canyon",
   "scope": "Grand Canyon: the corridor trails (Bright Angel, South Kaibab) and rim walks. Summer heat in the inner canyon is dangerous: the NPS says temperatures on exposed trail can pass 120 F and advises against hiking the inner canyon between 10 a.m. and 4 p.m.; water is available on Bright Angel and North Kaibab but not on South Kaibab; day hiking the corridor trails needs no permit.",
   "facts": [
@@ -1332,7 +1332,7 @@
   "season": "",
   "mustMention": []
  },
- "great-smoky-mountains": {
+ "p0076": {
   "forPlaceName": "Great Smoky Mountains National Park",
   "scope": "",
   "facts": [
@@ -1348,7 +1348,7 @@
   "season": "",
   "mustMention": []
  },
- "greenland": {
+ "p0077": {
   "forPlaceName": "Greenland",
   "scope": "The Arctic Circle Trail runs 165 km from Kangerlussuaq to Sisimiut, usually 7 to 10 days, snow-free in summer, with no permits, no phone signal and nothing to buy on the way; hikers must be self-sufficient.",
   "facts": [
@@ -1363,7 +1363,7 @@
   "season": "",
   "mustMention": []
  },
- "guatemala": {
+ "p0078": {
   "forPlaceName": "Guatemala",
   "scope": "",
   "facts": [
@@ -1378,7 +1378,7 @@
   "season": "",
   "mustMention": []
  },
- "guilin-yangshuo": {
+ "p0079": {
   "forPlaceName": "Guilin & Yangshuo",
   "scope": "",
   "facts": [
@@ -1393,7 +1393,7 @@
   "season": "",
   "mustMention": []
  },
- "havana": {
+ "p0052": {
   "forPlaceName": "Cuba",
   "scope": "Cuba as a whole, not only Havana.",
   "facts": [
@@ -1409,7 +1409,7 @@
   "season": "",
   "mustMention": []
  },
- "hokkaido": {
+ "p0080": {
   "forPlaceName": "Hokkaido",
   "scope": "",
   "facts": [
@@ -1425,7 +1425,7 @@
   "season": "",
   "mustMention": []
  },
- "hongkong": {
+ "p0081": {
   "forPlaceName": "Hong Kong",
   "scope": "Hong Kong: Dragon's Back (about 8 to 9 km, much of it without shade) and the 100 km MacLehose Trail in ten sections. Summer heat and humidity are the main hazard; start early.",
   "facts": [
@@ -1440,7 +1440,7 @@
   "season": "",
   "mustMention": []
  },
- "hudson-valley": {
+ "p0082": {
   "forPlaceName": "Hudson Valley",
   "scope": "",
   "facts": [
@@ -1456,7 +1456,7 @@
   "season": "",
   "mustMention": []
  },
- "iceland": {
+ "p0083": {
   "forPlaceName": "Iceland",
   "scope": "Iceland as a whole, including the Laugavegur trail through the highlands (hut season late June to early September).",
   "facts": [
@@ -1472,7 +1472,7 @@
   "season": "",
   "mustMention": []
  },
- "ireland": {
+ "p0084": {
   "forPlaceName": "Ireland",
   "scope": "Ireland as a whole: the Kerry Way (about 214 to 232 km, about nine days), the Wicklow Way (132 km, about a week), the Dingle Way (about 179 km), Carrauntoohil (1,038 m, Ireland's highest) and Croagh Patrick (a pilgrimage climb on the last Sunday of July).",
   "facts": [
@@ -1487,7 +1487,7 @@
   "season": "",
   "mustMention": []
  },
- "istanbul": {
+ "p0085": {
   "forPlaceName": "Istanbul",
   "scope": "",
   "facts": [
@@ -1502,7 +1502,7 @@
   "season": "",
   "mustMention": []
  },
- "jamaica": {
+ "p0086": {
   "forPlaceName": "Jamaica",
   "scope": "",
   "facts": [
@@ -1517,7 +1517,7 @@
   "season": "",
   "mustMention": []
  },
- "jordan": {
+ "p0140": {
   "forPlaceName": "Petra & Wadi Rum",
   "scope": "Petra & Wadi Rum: the Monastery climb at Petra (about 800 rock-cut steps), the back-door trail from Little Petra (part of the Jordan Trail), and Wadi Rum, usually visited on tours with a guide.",
   "facts": [
@@ -1532,7 +1532,7 @@
   "season": "",
   "mustMention": []
  },
- "joshua-tree": {
+ "p0134": {
   "forPlaceName": "Palm Springs & Joshua Tree",
   "scope": "Palm Springs & Joshua Tree as a whole, not only Joshua Tree National Park. Joshua Tree has no entry reservation; summer heat can reach 120 F with no water or shade, rangers advise against hiking from about 10 a.m. to 5 p.m., and the 49 Palms Oasis Trail is closed June to September. Near Palm Springs, the Mount San Jacinto wilderness (tram, free wilderness permit) and the Indian Canyons are the main walks; winter is prime hiking season.",
   "facts": [
@@ -1547,7 +1547,7 @@
   "season": "",
   "mustMention": []
  },
- "kaziranga": {
+ "p0011": {
   "forPlaceName": "Assam & Northeast India",
   "scope": "Assam & Northeast India as a whole, not only Kaziranga: the Meghalaya living root bridges (the Double Decker root bridge at Nongriat is about 3,500 stone steps from the trailhead, best October to March), Nagaland's Dzukou Valley (from Viswema, an Inner Line Permit needed for Indians) and Arunachal's Tawang.",
   "facts": [
@@ -1563,7 +1563,7 @@
   "season": "",
   "mustMention": []
  },
- "kenya": {
+ "p0098": {
   "forPlaceName": "Maasai Mara & Amboseli",
   "scope": "Maasai Mara & Amboseli as a whole: Hell's Gate National Park (walking and cycling allowed, no large predators), guided walks in private Maasai Mara conservancies, and Mount Kenya (the Sirimon and Naro Moru routes, usually with guides and porters).",
   "facts": [
@@ -1579,7 +1579,7 @@
   "season": "",
   "mustMention": []
  },
- "kerala": {
+ "p0087": {
   "forPlaceName": "Kerala",
   "scope": "",
   "facts": [
@@ -1595,7 +1595,7 @@
   "season": "",
   "mustMention": []
  },
- "komodo": {
+ "p0088": {
   "forPlaceName": "Komodo & Flores",
   "scope": "Komodo & Flores as a whole: Padar Island (a short, steep climb of roughly 1 to 1.5 km and 200 to 250 m for the famous view, best at sunrise) and ranger-guided walks on Komodo and Rinca.",
   "facts": [
@@ -1611,7 +1611,7 @@
   "season": "",
   "mustMention": []
  },
- "kruger": {
+ "p0089": {
   "forPlaceName": "Kruger & Sabi Sands",
   "scope": "Kruger & Sabi Sands as a whole. In Kruger walking is only on guided walks or multi-day wilderness trails with armed guides; Sabi Sands lodges run guided bush walks of two to three hours.",
   "facts": [
@@ -1627,7 +1627,7 @@
   "season": "",
   "mustMention": []
  },
- "kyrgyzstan": {
+ "p0090": {
   "forPlaceName": "Kyrgyzstan",
   "scope": "",
   "facts": [
@@ -1643,7 +1643,7 @@
   "season": "",
   "mustMention": []
  },
- "ladakh": {
+ "p0091": {
   "forPlaceName": "Ladakh",
   "scope": "",
   "facts": [
@@ -1659,7 +1659,7 @@
   "season": "",
   "mustMention": []
  },
- "lake-district": {
+ "p0092": {
   "forPlaceName": "Lake District",
   "scope": "",
   "facts": [
@@ -1674,7 +1674,7 @@
   "season": "",
   "mustMention": []
  },
- "lapland": {
+ "p0069": {
   "forPlaceName": "Finnish Lapland",
   "scope": "Finnish Lapland as a whole: Pallas-Yllastunturi National Park (the 50 km Hetta-Pallas trail with wilderness huts), the Karhunkierros (Bear's Ring) trail (about 50 miles, 3 to 7 days). Summer mosquitoes are heavy; ruska autumn colors run from mid-September for a few weeks.",
   "facts": [
@@ -1689,7 +1689,7 @@
   "season": "",
   "mustMention": []
  },
- "lisbon": {
+ "p0094": {
   "forPlaceName": "Lisbon",
   "scope": "Lisbon as a whole: the Sintra hills (Pena Palace and Castle of the Moors, a roughly 11 km loop), Arrabida Natural Park above Sesimbra (the Serra do Risco), the Monsanto forest park.",
   "facts": [
@@ -1704,7 +1704,7 @@
   "season": "",
   "mustMention": []
  },
- "lofoten": {
+ "p0095": {
   "forPlaceName": "Lofoten Islands",
   "scope": "Lofoten Islands: Reinebringen above Reine (a stone staircase, about 1,500 steps, steep and very popular) and Kvalvika Beach (harder to follow, steep and slippery descent).",
   "facts": [
@@ -1719,7 +1719,7 @@
   "season": "",
   "mustMention": []
  },
- "london": {
+ "p0096": {
   "forPlaceName": "London",
   "scope": "London as a whole: the Thames Path, Epping Forest (the Oak Trail, just under 7 miles), Box Hill (272 steps) and the North Downs, reached by train.",
   "facts": [
@@ -1734,7 +1734,7 @@
   "season": "",
   "mustMention": []
  },
- "los-cabos": {
+ "p0097": {
   "forPlaceName": "Los Cabos",
   "scope": "Los Cabos as a whole: Sierra de la Laguna (about 2,100 m, reached from Todos Santos or the East Cape; November to early spring, a guide recommended for hard routes) and short coastal walks. Hurricane season runs roughly August to November.",
   "facts": [
@@ -1749,7 +1749,7 @@
   "season": "",
   "mustMention": []
  },
- "luangprabang": {
+ "p0093": {
   "forPlaceName": "Laos",
   "scope": "Laos as a whole, not only Luang Prabang: Nong Khiaw viewpoints (Pha Noy about 2 hours, Pha Daeng about 3 hours; October to February), about 150 km north of Luang Prabang.",
   "facts": [
@@ -1764,7 +1764,7 @@
   "season": "",
   "mustMention": []
  },
- "madagascar": {
+ "p0099": {
   "forPlaceName": "Madagascar",
   "scope": "",
   "facts": [
@@ -1780,7 +1780,7 @@
   "season": "",
   "mustMention": []
  },
- "maldives": {
+ "p0102": {
   "forPlaceName": "Maldives",
   "scope": "The Maldives have no hiking trails; walking is short island loops and sandbank walks (for example Dhigurah), with the monsoon making some unsafe.",
   "facts": [
@@ -1795,7 +1795,7 @@
   "season": "",
   "mustMention": []
  },
- "mallorca": {
+ "p0103": {
   "forPlaceName": "Mallorca",
   "scope": "",
   "facts": [
@@ -1810,7 +1810,7 @@
   "season": "",
   "mustMention": []
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "forPlaceName": "Marlborough & Abel Tasman",
   "scope": "",
   "facts": [
@@ -1826,7 +1826,7 @@
   "season": "",
   "mustMention": []
  },
- "maui": {
+ "p0106": {
   "forPlaceName": "Maui",
   "scope": "Maui as a whole: Haleakala crater (the Sliding Sands trail, a hard climb back out at altitude) and the Pipiwai Trail near Hana (about 4 miles round trip, 975 ft of climbing, bamboo forest and Waimoku Falls).",
   "facts": [
@@ -1842,7 +1842,7 @@
   "season": "",
   "mustMention": []
  },
- "mauritius": {
+ "p0107": {
   "forPlaceName": "Mauritius",
   "scope": "Mauritius: Le Morne Brabant (about 4.2 miles round trip, 1,505 ft of climbing, rock scrambling, a guide recommended; do not go after rain) and Black River Gorges National Park (60 km of trails, Black River Peak 828 m).",
   "facts": [
@@ -1857,7 +1857,7 @@
   "season": "",
   "mustMention": []
  },
- "mendoza": {
+ "p0108": {
   "forPlaceName": "Mendoza",
   "scope": "",
   "facts": [
@@ -1873,7 +1873,7 @@
   "season": "",
   "mustMention": []
  },
- "mexicocity": {
+ "p0109": {
   "forPlaceName": "Mexico City",
   "scope": "Mexico City as a whole: Iztaccihuatl (about 9 miles and a little over 3,000 ft of climbing from La Joya, 6 to 12 hours, October to November most stable), Desierto de los Leones and the surrounding volcanoes.",
   "facts": [
@@ -1889,7 +1889,7 @@
   "season": "",
   "mustMention": []
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "forPlaceName": "Milford Sound & Fiordland",
   "scope": "",
   "facts": [
@@ -1905,7 +1905,7 @@
   "season": "",
   "mustMention": []
  },
- "mongolia": {
+ "p0111": {
   "forPlaceName": "Mongolia",
   "scope": "Mongolia as a whole: Gorkhi-Terelj National Park, about 70 km from Ulaanbaatar, mostly visited on guided horse treks or day trips (May to September).",
   "facts": [
@@ -1920,7 +1920,7 @@
   "season": "",
   "mustMention": []
  },
- "monterey-big-sur": {
+ "p0112": {
   "forPlaceName": "Monterey & Big Sur",
   "scope": "Monterey & Big Sur: coastal and redwood trails; Highway 1 closes repeatedly after winter storms and slides.",
   "facts": [
@@ -1935,7 +1935,7 @@
   "season": "",
   "mustMention": []
  },
- "morocco": {
+ "p0105": {
   "forPlaceName": "Marrakech & Atlas",
   "scope": "Marrakech & Atlas: Mount Toubkal from Imlil (about 90 minutes from Marrakech; usually two days, a guide recommended, especially in winter when crampons are essential). Best in spring and autumn; September and October are clearest.",
   "facts": [
@@ -1950,7 +1950,7 @@
   "season": "",
   "mustMention": []
  },
- "namibia": {
+ "p0114": {
   "forPlaceName": "Namibia",
   "scope": "Namibia as a whole: the Fish River Canyon hike (about 85 km over 4 to 5 days, permit season 1 May to 15 September) and the Sossusvlei dunes (Dune 45 is over 170 m; go at sunrise or late afternoon to avoid the crowds and midday heat).",
   "facts": [
@@ -1966,7 +1966,7 @@
   "season": "",
   "mustMention": []
  },
- "napa": {
+ "p0115": {
   "forPlaceName": "Napa & Sonoma",
   "scope": "Napa & Sonoma as a whole, not only Napa Valley.",
   "facts": [
@@ -1981,7 +1981,7 @@
   "season": "",
   "mustMention": []
  },
- "new-orleans": {
+ "p0117": {
   "forPlaceName": "New Orleans",
   "scope": "",
   "facts": [
@@ -1996,7 +1996,7 @@
   "season": "",
   "mustMention": []
  },
- "nicaragua": {
+ "p0119": {
   "forPlaceName": "Nicaragua",
   "scope": "Nicaragua as a whole: Volcan Maderas on Ometepe (about 4 to 8 hours round trip, muddy year-round, a guide required or advised, cloud on the summit in the morning), plus other volcanoes and cloud-forest walks. Dry season December to April.",
   "facts": [
@@ -2012,7 +2012,7 @@
   "season": "",
   "mustMention": []
  },
- "nice-riviera": {
+ "p0120": {
   "forPlaceName": "Nice & the French Riviera",
   "scope": "Nice and the Riviera as a whole: the Nietzsche Path from Eze-sur-Mer up to Eze village (about an hour, train to the foot), coastal paths around Cap d'Antibes and the Cap Ferrat peninsula.",
   "facts": [
@@ -2027,7 +2027,7 @@
   "season": "",
   "mustMention": []
  },
- "north-cascades": {
+ "p0121": {
   "forPlaceName": "North Cascades",
   "scope": "",
   "facts": [
@@ -2043,7 +2043,7 @@
   "season": "",
   "mustMention": []
  },
- "north-island": {
+ "p0122": {
   "forPlaceName": "North Island",
   "scope": "New Zealand's North Island as a whole: the Tongariro Alpine Crossing (about 19 km, booking system) and Northern Circuit, plus Mount Taranaki's Pouakai Circuit (25 km, 2 to 3 days, a hard route in Egmont National Park).",
   "facts": [
@@ -2059,7 +2059,7 @@
   "season": "",
   "mustMention": []
  },
- "nova-scotia": {
+ "p0126": {
   "forPlaceName": "Nova Scotia",
   "scope": "Nova Scotia as a whole, mainly Cape Breton Highlands National Park: the Skyline Trail (reservation-only parking in 2026 summer peak) and other Cabot Trail walks.",
   "facts": [
@@ -2075,7 +2075,7 @@
   "season": "",
   "mustMention": []
  },
- "nyc": {
+ "p0118": {
   "forPlaceName": "New York City",
   "scope": "",
   "facts": [
@@ -2090,7 +2090,7 @@
   "season": "",
   "mustMention": []
  },
- "oaxaca": {
+ "p0127": {
   "forPlaceName": "Oaxaca",
   "scope": "Oaxaca as a whole: the Pueblos Mancomunados (more than 100 km of trails between villages at 2,200 to 3,200 m, with community cabins) and day walks around the city.",
   "facts": [
@@ -2106,7 +2106,7 @@
   "season": "",
   "mustMention": []
  },
- "pakistan": {
+ "p0131": {
   "forPlaceName": "Pakistan",
   "scope": "Pakistan's Karakoram as a whole: Fairy Meadows and Nanga Parbat base camp (a jeep to Tato, then 2 to 3 hours to the meadows), the Baltoro Glacier and K2 base camp (guided only), and the Hunza valley.",
   "facts": [
@@ -2122,7 +2122,7 @@
   "season": "",
   "mustMention": []
  },
- "palau": {
+ "p0132": {
   "forPlaceName": "Palau",
   "scope": "Palau has only short walks (such as the Ngardmau waterfall on Babeldaob); the islands are mostly a boat and water destination.",
   "facts": [
@@ -2138,7 +2138,7 @@
   "season": "",
   "mustMention": []
  },
- "palawan": {
+ "p0133": {
   "forPlaceName": "Palawan",
   "scope": "Palawan as a whole: Mount Tapyas in Coron (about 720 steps, best at dawn or dusk for the heat), the Taraw Cliff trail at El Nido (about 30 minutes, steep), and short jungle walks; island hopping is the main activity.",
   "facts": [
@@ -2153,7 +2153,7 @@
   "season": "",
   "mustMention": []
  },
- "panama": {
+ "p0135": {
   "forPlaceName": "Panama",
   "scope": "Panama as a whole: Boquete and Volcan Baru (the Sendero Los Quetzales, 6 to 8 hours, whose status has been uncertain since 2021 storms), rainforest walks near the canal.",
   "facts": [
@@ -2169,7 +2169,7 @@
   "season": "",
   "mustMention": []
  },
- "pantanal": {
+ "p0136": {
   "forPlaceName": "Pantanal",
   "scope": "",
   "facts": [
@@ -2184,7 +2184,7 @@
   "season": "",
   "mustMention": []
  },
- "papua-new-guinea": {
+ "p0137": {
   "forPlaceName": "Papua New Guinea",
   "scope": "Papua New Guinea as a whole: the Kokoda Track (about 96 km over roughly 8 days, permit required, wet and extremely steep) and highland valleys.",
   "facts": [
@@ -2200,7 +2200,7 @@
   "season": "",
   "mustMention": []
  },
- "paris": {
+ "p0138": {
   "forPlaceName": "Paris",
   "scope": "Paris as a whole: day walks by train in the Fontainebleau forest and along the Île-de-France GR11 loop; the city itself offers only urban walks.",
   "facts": [
@@ -2215,7 +2215,7 @@
   "season": "",
   "mustMention": []
  },
- "peru": {
+ "p0053": {
   "forPlaceName": "Cusco & Sacred Valley",
   "scope": "Peru as a whole: the classic Inca Trail (500 permits a day), the Salkantay and Choquequirao routes, and Rainbow Mountain, which is a high-altitude day trip from Cusco.",
   "facts": [
@@ -2231,7 +2231,7 @@
   "season": "",
   "mustMention": []
  },
- "peruvian-amazon": {
+ "p0139": {
   "forPlaceName": "Peruvian Amazon",
   "scope": "Peru's Amazon as a whole: guided walks from lodges around Tambopata, Manu and Iquitos; there are no independent trails, and walking is slow, hot and wet.",
   "facts": [
@@ -2247,7 +2247,7 @@
   "season": "",
   "mustMention": []
  },
- "piedmont": {
+ "p0142": {
   "forPlaceName": "Piedmont",
   "scope": "Piedmont as a whole: the Langhe vineyard hills (loops of about 13 km around Barolo, with the Alps visible on clear days) and alpine valleys farther north.",
   "facts": [
@@ -2262,7 +2262,7 @@
   "season": "",
   "mustMention": []
  },
- "prague": {
+ "p0143": {
   "forPlaceName": "Prague",
   "scope": "Prague as a whole: urban walks, plus day trips to Bohemian Switzerland (Pravcicka Gate, Europe's largest natural sandstone arch, open daily April to October).",
   "facts": [
@@ -2278,7 +2278,7 @@
   "season": "",
   "mustMention": []
  },
- "provence": {
+ "p0144": {
   "forPlaceName": "Provence",
   "scope": "Provence as a whole: the Calanques coast between Marseille and Cassis (summer booking at Sugiton and fire closures), the Luberon villages, and hill walks near Mont Ventoux.",
   "facts": [
@@ -2294,7 +2294,7 @@
   "season": "",
   "mustMention": []
  },
- "puerto-rico": {
+ "p0145": {
   "forPlaceName": "Puerto Rico",
   "scope": "Puerto Rico as a whole, mainly El Yunque National Forest (La Mina trail closed for construction; Juan Diego falls as an easy alternative) and the Cordillera Central.",
   "facts": [
@@ -2310,7 +2310,7 @@
   "season": "",
   "mustMention": []
  },
- "puglia": {
+ "p0146": {
   "forPlaceName": "Puglia",
   "scope": "Puglia as a whole: the Gargano coast and Foresta Umbra (ancient beech forest, loops of about 15 km), plus coastal walks in the Salento.",
   "facts": [
@@ -2325,7 +2325,7 @@
   "season": "",
   "mustMention": []
  },
- "punta-cana": {
+ "p0058": {
   "forPlaceName": "Dominican Republic",
   "scope": "Dominican Republic as a whole, not only Punta Cana.",
   "facts": [
@@ -2340,7 +2340,7 @@
   "season": "",
   "mustMention": []
  },
- "quebec-city": {
+ "p0147": {
   "forPlaceName": "Quebec City & Montreal",
   "scope": "Quebec City & Montreal as a whole, not only Quebec City.",
   "facts": [
@@ -2355,7 +2355,7 @@
   "season": "",
   "mustMention": []
  },
- "queenstown": {
+ "p0148": {
   "forPlaceName": "Queenstown",
   "scope": "Queenstown as a whole: Ben Lomond (the gondola saves about 400 m of climbing), the Routeburn Track (33 km one way; Great Walk bookings from 1 November), the Kepler Track and Roys Peak above Wanaka.",
   "facts": [
@@ -2371,7 +2371,7 @@
   "season": "",
   "mustMention": []
  },
- "rajaampat": {
+ "p0149": {
   "forPlaceName": "Raja Ampat",
   "scope": "",
   "facts": [
@@ -2386,7 +2386,7 @@
   "season": "",
   "mustMention": []
  },
- "rajasthan-golden-triangle": {
+ "p0150": {
   "forPlaceName": "Rajasthan & the Golden Triangle",
   "scope": "",
   "facts": [
@@ -2401,7 +2401,7 @@
   "season": "",
   "mustMention": []
  },
- "redwood": {
+ "p0152": {
   "forPlaceName": "Redwood National and State Parks",
   "scope": "",
   "facts": [
@@ -2417,7 +2417,7 @@
   "season": "",
   "mustMention": []
  },
- "rio": {
+ "p0153": {
   "forPlaceName": "Rio de Janeiro",
   "scope": "Rio de Janeiro as a whole: Dois Irmaos from Vidigal, Pedra da Gavea (about 5 km round trip but with a steep rock section best done with a guide), Pico da Tijuca and the Sugarloaf. Trails turn slippery in rain.",
   "facts": [
@@ -2432,7 +2432,7 @@
   "season": "",
   "mustMention": []
  },
- "rioja": {
+ "p0154": {
   "forPlaceName": "Rioja",
   "scope": "",
   "facts": [
@@ -2447,7 +2447,7 @@
   "season": "",
   "mustMention": []
  },
- "rivieramaya": {
+ "p0155": {
   "forPlaceName": "Riviera Maya",
   "scope": "",
   "facts": [
@@ -2462,7 +2462,7 @@
   "season": "",
   "mustMention": []
  },
- "rocky-mountain": {
+ "p0156": {
   "forPlaceName": "Rocky Mountain National Park",
   "scope": "Rocky Mountain National Park as a whole, including timed-entry rules in summer and the high alpine trails above Bear Lake.",
   "facts": [
@@ -2478,7 +2478,7 @@
   "season": "",
   "mustMention": []
  },
- "rome": {
+ "p0157": {
   "forPlaceName": "Rome",
   "scope": "",
   "facts": [
@@ -2493,7 +2493,7 @@
   "season": "",
   "mustMention": []
  },
- "rwanda": {
+ "p0158": {
   "forPlaceName": "Rwanda",
   "scope": "Rwanda as a whole: Volcanoes National Park (the Dian Fossey grave hike and volcano climbs on Bisoke and Karisimbi, all with park guides) and Nyungwe forest trails.",
   "facts": [
@@ -2509,7 +2509,7 @@
   "season": "",
   "mustMention": []
  },
- "san-miguel-guanajuato": {
+ "p0161": {
   "forPlaceName": "San Miguel de Allende & Guanajuato",
   "scope": "",
   "facts": [
@@ -2524,7 +2524,7 @@
   "season": "",
   "mustMention": []
  },
- "santorini": {
+ "p0162": {
   "forPlaceName": "Santorini & Cyclades",
   "scope": "Santorini as a whole: the caldera-rim path from Fira to Oia (just over 10 km, 3 to 5 hours, hilly with little shade; start early) plus small coastal walks.",
   "facts": [
@@ -2539,7 +2539,7 @@
   "season": "",
   "mustMention": []
  },
- "sardinia": {
+ "p0163": {
   "forPlaceName": "Sardinia",
   "scope": "Sardinia as a whole: the Supramonte and the Gennargentu uplands, and the Selvaggio Blu along the Baunei coast (technical, scrambling and abseiling, guide strongly advised; best in spring and autumn).",
   "facts": [
@@ -2555,7 +2555,7 @@
   "season": "",
   "mustMention": []
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "forPlaceName": "Scottish Highlands & Isle of Skye",
   "scope": "Scottish Highlands and the Isle of Skye as a whole: the Quiraing, Old Man of Storr, Fairy Pools and the Cuillin ridge, plus mainland glens.",
   "facts": [
@@ -2570,7 +2570,7 @@
   "season": "",
   "mustMention": []
  },
- "sicily": {
+ "p0169": {
   "forPlaceName": "Sicily",
   "scope": "Sicily as a whole: Mount Etna (guide required near the summit craters), coastal reserves such as Zingaro, and the Madonie mountains.",
   "facts": [
@@ -2586,7 +2586,7 @@
   "season": "",
   "mustMention": []
  },
- "singapore": {
+ "p0170": {
   "forPlaceName": "Singapore",
   "scope": "Singapore as a whole: the 10 km Southern Ridges trail from Mount Faber past Henderson Waves to Kent Ridge Park, partly urban and easy to leave at many points, plus short rainforest walks.",
   "facts": [
@@ -2601,7 +2601,7 @@
   "season": "",
   "mustMention": []
  },
- "snowdonia": {
+ "p0196": {
   "forPlaceName": "Wales",
   "scope": "Snowdonia as a whole: Snowdon by the Pyg Track, Miners' Track and the quieter Watkin Path (1,025 m of climbing from the Nantgwynant valley), plus the Glyderau and Carneddau ranges.",
   "facts": [
@@ -2616,7 +2616,7 @@
   "season": "",
   "mustMention": []
  },
- "southeast-alaska": {
+ "p0172": {
   "forPlaceName": "Southeast Alaska & the Inside Passage",
   "scope": "Southeast Alaska as a whole: Juneau's Mendenhall Glacier trails and the West Glacier Trail (3.4 miles one way, unmaintained), and the Chilkoot Trail from Dyea near Skagway.",
   "facts": [
@@ -2632,7 +2632,7 @@
   "season": "",
   "mustMention": []
  },
- "srilanka": {
+ "p0173": {
   "forPlaceName": "Sri Lanka",
   "scope": "Sri Lanka as a whole: Adam's Peak (a night climb on stairs from Nallathanniya, season December to May; huge queues on full-moon Poya nights), Pidurangala Rock, Ella Rock and the Knuckles range.",
   "facts": [
@@ -2648,7 +2648,7 @@
   "season": "",
   "mustMention": []
  },
- "st-andrews-fife": {
+ "p0174": {
   "forPlaceName": "St Andrews & Fife",
   "scope": "",
   "facts": [
@@ -2663,7 +2663,7 @@
   "season": "",
   "mustMention": []
  },
- "svalbard": {
+ "p0175": {
   "forPlaceName": "Svalbard",
   "scope": "Svalbard as a whole: Longyearbyen, where walks beyond the settlement require polar bear precautions, and guided hikes onto glaciers and peaks.",
   "facts": [
@@ -2679,7 +2679,7 @@
   "season": "",
   "mustMention": []
  },
- "sydney": {
+ "p0176": {
   "forPlaceName": "Sydney",
   "scope": "Sydney as a whole: the Royal National Park Coast Track (about 26 km, graded 5), the Blue Mountains' Three Sisters and Grand Canyon tracks, and harbor and Manly walks.",
   "facts": [
@@ -2694,7 +2694,7 @@
   "season": "",
   "mustMention": []
  },
- "taiwan": {
+ "p0177": {
   "forPlaceName": "Taiwan",
   "scope": "Taiwan as a whole: Yushan (Jade Mountain, Taiwan's highest, lottery permits), Taroko Gorge and Zhuilu Old Road, Alishan and the Central Cross-Island walks.",
   "facts": [
@@ -2710,7 +2710,7 @@
   "season": "",
   "mustMention": []
  },
- "tanzania": {
+ "p0124": {
   "forPlaceName": "Northern Tanzania",
   "scope": "Tanzania as a whole, mainly Kilimanjaro (Machame, Lemosho, Marangu; Marangu has huts, the others tents) plus Mount Meru and Ngorongoro rim walks.",
   "facts": [
@@ -2726,7 +2726,7 @@
   "season": "",
   "mustMention": []
  },
- "tasmania": {
+ "p0178": {
   "forPlaceName": "Tasmania",
   "scope": "Tasmania as a whole: the Overland Track (65 km, 6 days, booked from 1 October to 31 May), Cradle Mountain day walks, Freycinet and Wineglass Bay.",
   "facts": [
@@ -2742,7 +2742,7 @@
   "season": "",
   "mustMention": []
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "forPlaceName": "Tbilisi & the Caucasus",
   "scope": "Tbilisi and the Georgian Caucasus as a whole: Kazbegi's Gergeti Trinity Church hike (about 6 km round trip, 60 to 75 minutes up), the Gergeti Glacier (about 20 km), the Mestia to Ushguli trek (4 days, about 55 km, guesthouses in each village).",
   "facts": [
@@ -2757,7 +2757,7 @@
   "season": "",
   "mustMention": []
  },
- "texas-hill-country": {
+ "p0180": {
   "forPlaceName": "Texas Hill Country",
   "scope": "Texas Hill Country as a whole: Enchanted Rock (day pass reservation on weekends), plus short state park and river walks. Summer is very hot.",
   "facts": [
@@ -2773,7 +2773,7 @@
   "season": "",
   "mustMention": []
  },
- "thailand": {
+ "p0141": {
   "forPlaceName": "Phuket & the Andaman Coast",
   "scope": "Thailand as a whole: northern forest trails and national park walks.",
   "facts": [
@@ -2788,7 +2788,7 @@
   "season": "",
   "mustMention": []
  },
- "tierra-del-fuego": {
+ "p0181": {
   "forPlaceName": "Tierra del Fuego",
   "scope": "Tierra del Fuego as a whole, including Dientes de Navarino on Isla Navarino in Chile (the southernmost trek in the world, 4 to 5 days, December to March) and Tierra del Fuego National Park in Argentina.",
   "facts": [
@@ -2804,7 +2804,7 @@
   "season": "",
   "mustMention": []
  },
- "turks-caicos": {
+ "p0184": {
   "forPlaceName": "Turks & Caicos",
   "scope": "Turks and Caicos have very few established trails: the Crossing Place Trail on Middle Caicos, the Bird Rock Trail on Providenciales (about 1.7 miles) and the Northwest Point coastline. Sharp ironshore limestone and poisonous coral sumac line some routes.",
   "facts": [
@@ -2819,7 +2819,7 @@
   "season": "",
   "mustMention": []
  },
- "tuscany": {
+ "p0185": {
   "forPlaceName": "Tuscany",
   "scope": "Tuscany as a whole: the Via Francigena from Lucca to Siena and other hill-town walks, plus the nearby Cinque Terre coastal paths.",
   "facts": [
@@ -2834,7 +2834,7 @@
   "season": "",
   "mustMention": []
  },
- "uganda": {
+ "p0186": {
   "forPlaceName": "Uganda",
   "scope": "Uganda as a whole: the Rwenzori Mountains (the 'Mountains of the Moon', Margherita Peak about 5,109 m, guided only), Mount Elgon and forest walks near Kibale and Bwindi.",
   "facts": [
@@ -2850,7 +2850,7 @@
   "season": "",
   "mustMention": []
  },
- "uluru": {
+ "p0187": {
   "forPlaceName": "Uluru & the Outback",
   "scope": "Uluru-Kata Tjuta as a whole: the Uluru base walk, Valley of the Winds at Kata Tjuta and the Kings Canyon rim; heat closures apply on hot days.",
   "facts": [
@@ -2866,7 +2866,7 @@
   "season": "",
   "mustMention": []
  },
- "upper-peninsula": {
+ "p0188": {
   "forPlaceName": "Upper Peninsula",
   "scope": "Michigan's Upper Peninsula as a whole: Pictured Rocks National Lakeshore, the Porcupine Mountains, and Isle Royale National Park by ferry.",
   "facts": [
@@ -2882,7 +2882,7 @@
   "season": "",
   "mustMention": []
  },
- "uyuni": {
+ "p0159": {
   "forPlaceName": "Salar de Uyuni",
   "scope": "Uyuni as a whole: short walks only, such as the 15-minute climb of Isla Incahuasi in the salt flat and the Tunupa volcano trek; the salt flat floods roughly November to April.",
   "facts": [
@@ -2898,7 +2898,7 @@
   "season": "",
   "mustMention": []
  },
- "uzbekistan": {
+ "p0160": {
   "forPlaceName": "Samarkand & Bukhara",
   "scope": "Uzbekistan as a whole: Chimgan in the Western Tian Shan near Tashkent (Little Chimgan 2,097 m, loop about 11.6 km; Greater Chimgan 3,309 m steep and rocky) and the Nuratau mountains.",
   "facts": [
@@ -2913,7 +2913,7 @@
   "season": "",
   "mustMention": []
  },
- "vancouver-island": {
+ "p0190": {
   "forPlaceName": "Vancouver Island",
   "scope": "Vancouver Island as a whole: the West Coast Trail (75 km, 6 to 8 days, reservations from January) and shorter coastal and rainforest trails in Pacific Rim National Park.",
   "facts": [
@@ -2929,7 +2929,7 @@
   "season": "",
   "mustMention": []
  },
- "venice": {
+ "p0191": {
   "forPlaceName": "Venice",
   "scope": "Venice as a whole, for walkers mainly the Dolomites on day trips (Lago di Braies loop of about 4 km, high trails open mid-June to late September).",
   "facts": [
@@ -2944,7 +2944,7 @@
   "season": "",
   "mustMention": []
  },
- "vermont": {
+ "p0192": {
   "forPlaceName": "Vermont",
   "scope": "Vermont as a whole: the Long Trail, Mount Mansfield and Camel's Hump (both busy and sensitive alpine summits), and lower Green Mountain walks.",
   "facts": [
@@ -2959,7 +2959,7 @@
   "season": "",
   "mustMention": []
  },
- "vienna": {
+ "p0194": {
   "forPlaceName": "Vienna",
   "scope": "Vienna as a whole: the Vienna Woods (Wienerwald) by train or tram, such as Kahlenberg and the Hagenbachklamm gorge; the best months are April to October.",
   "facts": [
@@ -2974,7 +2974,7 @@
   "season": "",
   "mustMention": []
  },
- "vietnam": {
+ "p0195": {
   "forPlaceName": "Vietnam",
   "scope": "Vietnam as a whole: Sapa and Fansipan (guide and permit), Ha Giang (guide and permit for overnight treks) and Pu Luong rice terraces (best May to June and September to October).",
   "facts": [
@@ -2990,7 +2990,7 @@
   "season": "",
   "mustMention": []
  },
- "whistler": {
+ "p0189": {
   "forPlaceName": "Vancouver & Whistler",
   "scope": "Whistler as a whole: Garibaldi Provincial Park (the Rubble Creek, Diamond Head and Cheakamus trailheads need day passes in summer 2026) and the nearby Joffre Lakes.",
   "facts": [
@@ -3006,7 +3006,7 @@
   "season": "",
   "mustMention": []
  },
- "yellowstone": {
+ "p0197": {
   "forPlaceName": "Yellowstone National Park",
   "scope": "Yellowstone as a whole: the Grand Prismatic overlook via Fairy Falls (over a mile one way), geyser basin boardwalks and backcountry trails; bear spray is strongly advised.",
   "facts": [
@@ -3021,7 +3021,7 @@
   "season": "",
   "mustMention": []
  },
- "yosemite": {
+ "p0198": {
   "forPlaceName": "Yosemite National Park",
   "scope": "Yosemite as a whole: the Mist Trail to Vernal and Nevada Falls (no permit), the Half Dome cables (permit by lottery) and high-country trails.",
   "facts": [
@@ -3037,7 +3037,7 @@
   "season": "",
   "mustMention": []
  },
- "zambia": {
+ "p0171": {
   "forPlaceName": "South Luangwa",
   "scope": "Zambia as a whole: guided walking safaris in South Luangwa National Park and short trails around Victoria Falls.",
   "facts": [
@@ -3052,7 +3052,7 @@
   "season": "",
   "mustMention": []
  },
- "zimbabwe": {
+ "p0193": {
   "forPlaceName": "Victoria Falls & Hwange",
   "scope": "Zimbabwe as a whole: guided walking safaris in Mana Pools and short walks around Victoria Falls.",
   "facts": [
@@ -3067,7 +3067,7 @@
   "season": "",
   "mustMention": []
  },
- "zion-bryce": {
+ "p0200": {
   "forPlaceName": "Zion & Bryce Canyon",
   "scope": "Zion and Bryce as a whole: Angels Landing (lottery permit), the Narrows, the Navajo Loop (1.3 miles, 550 ft) and Bryce's Rim trails.",
   "facts": [

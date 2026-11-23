@@ -1,17 +1,17 @@
 import { eq, desc, inArray, sql } from 'drizzle-orm';
-import { existsSync, readdirSync } from 'fs';
+import { existsSync, readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { db } from '../client';
-import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips } from '../schema';
+import { authoringPasses, contentGenerationBatches, contentGenerations, interestReviews, interestTodos, interestPlaceIdeas, interestReferenceSites, interestRuleSections, placeInterestFacts, interestChips, placeChipOverrides, interestQuestions, interestQuestionChips, interestMeta } from '../schema';
 import { getAllScoredPlaces } from './places';
 import { getPrimaryPlaceRows } from './primary-place-rows';
 import { SLIDERS, VISIBLE_SLIDERS, INACTIVE_NOTES } from '@/lib/scoring/constants';
+import { CADENCE_TODO_SOURCE } from '@/lib/scoring/planning';
 import { INTEREST_ANCHORS } from '@/lib/scoring/anchors';
 import { loadAnchorOverrides } from '@/lib/scoring/anchorOverrides';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import { factDefsFor, RULES_TAB_KEYS } from '@/lib/admin/interest-pages/config';
 import { describeQuestionRule } from '@/lib/onboarding/question-fit';
-import { PLACE_TYPE_BY_ID } from '@/lib/admin/interest-pages/place-types';
 import { computeCompleteness, type Completeness, type PlaceInput } from '@/lib/admin/interest-pages/completeness';
 import type { AuthoringBatchRow, AuthoringPassRow, ChipOverrideRow, ChipRow, IdeaRow, InterestPageData, InterestPlaceRow, NaReasonInfo, PlaceStatus, QuestionRow, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
 
@@ -107,16 +107,27 @@ export async function getLastPassFinishedByInterest(): Promise<Record<string, { 
   return out;
 }
 
+/** Interests written through the shared family directive (4 Nov 2026) have no folder of their own: name the shared files instead. */
+function familyDirective(interestKey: string): string | null {
+  try {
+    const scopes = JSON.parse(readFileSync(join(process.cwd(), 'scripts', 'data', 'family-scopes.json'), 'utf8')) as Record<string, { interests: Record<string, unknown> }>;
+    const inFamily = Object.values(scopes).some((f) => interestKey in f.interests);
+    return inFamily && existsSync(join(process.cwd(), 'prompts', 'family-v1.md')) ? 'prompts/family-v1.md (shared family directive) + prompts/_shared/authoring-core.md' : null;
+  } catch {
+    return null;
+  }
+}
+
 /** Newest prompts/<interest>/vN.md, if the prompts folder is deployed alongside the app. */
 function latestDirective(interestKey: string): string | null {
   try {
     const dir = join(process.cwd(), 'prompts', interestKey);
-    if (!existsSync(dir)) return null;
+    if (!existsSync(dir)) return familyDirective(interestKey);
     const versions = readdirSync(dir)
       .map((f) => /^v(\d+)\.md$/.exec(f))
       .filter((m): m is RegExpExecArray => !!m)
       .map((m) => Number(m[1]));
-    if (versions.length === 0) return null;
+    if (versions.length === 0) return familyDirective(interestKey);
     return `prompts/${interestKey}/v${Math.max(...versions)}.md`;
   } catch {
     return null;
@@ -151,7 +162,7 @@ export async function getInterestCompleteness(keys?: string[], scoredById?: Map<
   const rows = await getPrimaryPlaceRows();
   const scored = scoredById ?? new Map((await getAllScoredPlaces({ includeUnpublished: true })).map((d) => [d.id, d]));
 
-  const [gens, facts, reviews, ideas] = await Promise.all([
+  const [gens, facts, reviews, ideas, familyRules] = await Promise.all([
     db
       .select({ placeId: contentGenerations.placeId, interestKey: contentGenerations.interestKey, status: contentGenerations.validationStatus, createdAt: contentGenerations.createdAt, appliedAt: contentGenerations.appliedAt })
       .from(contentGenerations)
@@ -159,6 +170,8 @@ export async function getInterestCompleteness(keys?: string[], scoredById?: Map<
     db.select({ placeId: placeInterestFacts.placeId, interestKey: placeInterestFacts.interestKey, facts: placeInterestFacts.facts }).from(placeInterestFacts).where(inArray(placeInterestFacts.interestKey, sliderKeys)),
     db.select({ interestKey: interestReviews.interestKey, placeId: interestReviews.placeId, reviewedOn: interestReviews.reviewedOn }).from(interestReviews).where(inArray(interestReviews.interestKey, sliderKeys)),
     db.select({ interestKey: interestPlaceIdeas.interestKey }).from(interestPlaceIdeas).where(inArray(interestPlaceIdeas.interestKey, sliderKeys)),
+    // Interests written through the shared family directive keep their rules as family.* sections (9 Nov 2026), which count as a rules tab.
+    db.select({ interestKey: interestRuleSections.interestKey, sectionKey: interestRuleSections.sectionKey }).from(interestRuleSections).where(inArray(interestRuleSections.interestKey, sliderKeys)),
   ]);
 
   const cutoff = new Date(Date.now() - 365 * 86400000).toISOString().slice(0, 10);
@@ -192,7 +205,7 @@ export async function getInterestCompleteness(keys?: string[], scoredById?: Map<
       hasDefinition: !!anchor?.definition,
       hasTen: (anchor?.ten.length ?? 0) > 0,
       hasDirective: latestDirective(key) !== null,
-      hasRulesTab: RULES_TAB_KEYS.has(key),
+      hasRulesTab: RULES_TAB_KEYS.has(key) || familyRules.filter((r) => r.interestKey === key && r.sectionKey.startsWith('family.')).length >= 4,
       ideasCount: ideas.filter((i) => i.interestKey === key).length,
       wideReviewed: recent.some((r) => !r.placeId),
     });
@@ -234,6 +247,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     db.select().from(interestQuestionChips).where(eq(interestQuestionChips.interestKey, interestKey)),
   ]);
   const completenessMap = await getInterestCompleteness([interestKey], new Map(scored.map((d) => [d.id, d])));
+  const [metaRow] = await db.select().from(interestMeta).where(eq(interestMeta.key, interestKey));
 
   // Staged = a valid generation that was never applied and is newer than the last applied one.
   const lastApplied = new Map<string, number>();
@@ -248,6 +262,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     }
   }
   const factsByPlace = new Map(factRows.map((f) => [f.placeId, f.facts]));
+  const settingTagsByPlace = new Map(primaryRows.map((r) => [r.id, (r.settingTags ?? []) as string[]]));
   const naReasonByPlace = new Map<string, NaReasonInfo>();
   for (const r of primaryRows) {
     const n = (r.naReasons as Record<string, NaReasonInfo> | undefined)?.[interestKey];
@@ -265,7 +280,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
         monthly: (d.monthly?.[interestKey] ?? []).map((v) => Math.round(v * 10) / 10),
         status,
         naReason: status === 'na' ? naReasonByPlace.get(d.id) ?? null : null,
-        placeType: PLACE_TYPE_BY_ID[d.id] ?? 'Tropical islands',
+        settingTags: settingTagsByPlace.get(d.id) ?? [],
         facts: factsByPlace.get(d.id) ?? {},
         overview: d.sliderOverview?.[interestKey] ?? '',
         monthlyText: d.sliderMonthlyWeather?.[interestKey] ?? [],
@@ -318,7 +333,7 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     region: r.region,
     why: r.why,
     nearestExisting: r.nearestExisting,
-    placeType: r.placeType,
+    settingTags: r.settingTags,
     stage: r.stage,
     grain: r.grain,
     grainNote: r.grainNote,
@@ -352,5 +367,14 @@ export async function getInterestPageData(interestKey: string): Promise<Interest
     // Inactive interests stay out of the picker, except the one being looked at.
     interestOptions: SLIDERS.filter((s) => !s.hidden || s.key === interestKey).map((s) => ({ key: s.key, label: s.hidden ? `${s.label} (inactive)` : s.label, icon: s.icon, group: s.group })),
     inactive: slider.hidden ? { note: INACTIVE_NOTES[interestKey] ?? '' } : null,
+    planning: {
+      seasonalVariance: metaRow?.seasonalVariance ?? null,
+      evergreen: metaRow?.evergreen ?? null,
+      stakes: metaRow?.stakes ?? null,
+      refreshEffort: metaRow?.refreshEffort ?? null,
+      notes: metaRow?.planningNotes ?? {},
+      updatedAt: (metaRow?.updatedAt ?? new Date()).toISOString(),
+      nextReviewOn: todoRows.filter((t) => t.source === CADENCE_TODO_SOURCE && t.status !== 'done' && t.dueOn).map((t) => t.dueOn as string).sort()[0] ?? null,
+    },
   };
 }

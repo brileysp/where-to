@@ -91,7 +91,7 @@ async function main() {
   const scored = await getAllScoredPlaces();
   const bands = allBandsSelected();
 
-  const authorable = SLIDERS.map((s) => s.key).filter((k) => !DERIVED_SLIDERS.has(k));
+  const authorable = (await (await import('../src/lib/scoring/active-interests')).getActiveInterests()).map((s) => s.key);
   const tierOf = new Map(SLIDERS.map((s) => [s.key, s.audienceTier]));
 
   // unauthored = no base score AND not explicitly marked N/A.

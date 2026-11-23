@@ -4,6 +4,7 @@ import { VIBES } from './vibes';
 import { originLabel } from './origin';
 import { allRegions, REGION_KEYS, REGION_LABELS, type RegionKey } from './regions';
 import { TRIP_LENGTHS, type TripLength } from './trip-length';
+import { DEFAULT_PEAK, PEAK_NAMES, PEAK_TITLE, isPeak } from './peak';
 
 /**
  * The cards on the Travel DNA page other than interests (docs/onboarding-v2/SPEC.md 4.11 and 6). Each row says where it is listed (`sec`),
@@ -39,6 +40,8 @@ export interface RowContext {
   length?: TripLength | null;
   continents?: readonly RegionKey[];
   maxHours: number;
+  /** Crowds & prices, a step from 0 to 4 (peak.ts); missing = the middle. */
+  peak?: number;
 }
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -75,6 +78,9 @@ export function dnaRows(c: RowContext): DnaRow[] {
       summary: isNarrowed(c.bands, d.key) ? c.bands[d.key].map((b) => bandLabel(d.key, b)).join(', ') : 'No preference',
     });
   }
+  // Crowds & prices sits with budget and climate under "Open to": it is a default every trip starts from (owner, 22 Nov 2026: the page had no row for it).
+  const peak = isPeak(c.peak) ? c.peak : DEFAULT_PEAK;
+  rows.push({ key: 'peak', sec: 'open', def: true, icon: '🎟️', title: PEAK_TITLE, summary: PEAK_NAMES[peak] });
   // Every "What else matters" item is always listed, "No preference" until something is picked. Lasting ones are kept by default; the rest
   // sit under "This trip only".
   for (const item of CARE_ITEMS) {
@@ -93,7 +99,7 @@ export function dnaRows(c: RowContext): DnaRow[] {
     sec: 'who',
     def: c.dnaMode,
     icon: '👥',
-    title: c.dnaMode ? 'Who you usually travel with' : 'Who is going this time',
+    title: c.dnaMode ? 'Who you usually travel with' : 'Who’s going this time',
     summary: c.who.length ? c.who.map((k) => COMPANIONS.find((x) => x.key === k)?.label ?? k).join(', ') : 'Not set',
   });
   rows.push({ key: 'origin', sec: 'who', def: true, icon: '🏠', title: 'Where you live', summary: originLabel({ airport: c.home, country: c.homeCountry, sub: c.homeSub }) });
@@ -112,6 +118,7 @@ export function rowHasChoices(key: string, c: RowContext & { subs: Record<string
   if (key.startsWith('i:')) return (c.subs[key.slice(2)] ?? []).length > 0;
   if (key.startsWith('b_')) return isNarrowed(c.bands, key.slice(2));
   if (key.startsWith('c_')) return !!c.care[key.slice(2)]?.o.length;
+  if (key === 'peak') return isPeak(c.peak) && c.peak !== DEFAULT_PEAK;
   if (key === 'who') return c.who.length > 0;
   if (key === 'origin') return !!c.home || !!c.homeCountry;
   if (key === 'vibes') return c.vibes.length > 0;

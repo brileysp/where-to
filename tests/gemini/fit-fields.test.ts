@@ -8,6 +8,7 @@ import { bestForFromRatings, validateContent } from '../../src/lib/gemini/valida
 import { generationOutputSchemaFlatV2Fit, normalizeFlatOutput, type GenerationOutput } from '../../src/lib/gemini/schema';
 import { FACT_GROUP_LABELS, RULES_TAB_KEYS, divingFormatCallouts, factDefsFor, parseFact } from '../../src/lib/admin/interest-pages/config';
 import { oldNameIssues, loadRenamedPlaces } from '../../src/lib/gemini/renamed-places';
+import { PLACE } from '@/lib/places/keys.generated';
 
 // An in-memory Postgres stands in for the app database in the last test; nothing here touches Supabase.
 const h = vi.hoisted(() => ({ db: null as unknown }));
@@ -185,13 +186,13 @@ describe('calculated format callouts (snorkeling & diving)', () => {
 describe('old names surviving in generated text', () => {
   const renamed = loadRenamedPlaces();
   it('knows the renamed places', () => {
-    expect(renamed.get('borabora')?.newName).toBe('French Polynesia');
+    expect(renamed.get(PLACE['french-polynesia'])?.newName).toBe('French Polynesia');
   });
   it('warns when the old name appears for a renamed place, and not otherwise', () => {
-    expect(oldNameIssues('borabora', ['Bora Bora lagoon shallows with blacktip sharks.'], renamed).length).toBe(1);
-    expect(oldNameIssues('borabora', ['Tuamotu passes with grey reef sharks.'], renamed)).toEqual([]);
-    expect(oldNameIssues('seychelles', ['Bora Bora lagoon.'], renamed)).toEqual([]);
-    expect(oldNameIssues('havana', ['Dive sites around Havana are few.'], renamed).length).toBe(1);
+    expect(oldNameIssues(PLACE['french-polynesia'], ['Bora Bora lagoon shallows with blacktip sharks.'], renamed).length).toBe(1);
+    expect(oldNameIssues(PLACE['french-polynesia'], ['Tuamotu passes with grey reef sharks.'], renamed)).toEqual([]);
+    expect(oldNameIssues(PLACE.seychelles, ['Bora Bora lagoon.'], renamed)).toEqual([]);
+    expect(oldNameIssues(PLACE['dominican-republic'], ['Dive sites around Punta Cana are few.'], renamed).length).toBe(1); // Cuba's Havana is now an old name the owner chose to keep (21 Nov 2026)
   });
 });
 

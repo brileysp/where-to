@@ -29,6 +29,8 @@ export interface MatchSettings {
   keepIfTripStretch: number;
   /** What a place keeps when the trip would be mostly travel. */
   keepIfTripFar: number;
+  /** Budget, Climate, Social vibe or Physical demand: a place with none of the levels the traveler kept for one of them keeps this share of its score (once for each such group). */
+  keepIfBandMissed: number;
   /**
    * Peak or off peak (Crowds & prices): points a place's score moves for each point its month is busier or quieter than a typical month for that
    * place (a peak month is 1 to 5 points below typical depending on how extreme its peak is, a low-season month 3 above; see seasonCrowds.ts). The
@@ -42,7 +44,9 @@ export interface MatchSettings {
 }
 
 export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
-  keepIfChipMissed: 0.5,
+  // 21 Nov 2026 (owner): 0.5 -> 0.85. A tick is a wish, not a wall: someone who ticks Primates still wants Torres del Paine's pumas. The best ticked chip already
+  // decides (any match keeps the full score), so this only sizes the mark-down when nothing ticked is offered.
+  keepIfChipMissed: 0.85,
   chipFullMatchRating: 7,
   keepIfLimitMissed: 0.65,
   keepIfLeanMissed: 0.85,
@@ -54,6 +58,8 @@ export const DEFAULT_MATCH_SETTINGS: MatchSettings = {
   tripFarShare: 0.45,
   keepIfTripStretch: 0.85,
   keepIfTripFar: 0.6,
+  // 22 Nov 2026: this was a fixed 0.5 in rank.ts (bandPenalty); it is the same number, now editable.
+  keepIfBandMissed: 0.5,
   peakStepPeak: -0.25,
   peakStepLeanPeak: -0.125,
   peakStepLeanOff: 0.125,
@@ -85,6 +91,7 @@ export const MATCH_SETTING_FIELDS: MatchSettingField[] = [
   { key: 'tripFarShare', label: 'Trip length: share that makes the trip mostly travel', help: 'Above this share of the trip in transit, the place is mostly travel.', min: 0.1, max: 0.9, step: 0.05, percent: true },
   { key: 'keepIfTripStretch', label: 'Keeps this much when the flights are a stretch', help: 'A place whose flights take more than the fine share of the trip keeps this share of its score. Trip length never hides a place.', min: 0.3, max: 1, step: 0.05, percent: true },
   { key: 'keepIfTripFar', label: 'Keeps this much when the trip would be mostly travel', help: 'A place whose flights take most of the trip keeps this share of its score.', min: 0.2, max: 1, step: 0.05, percent: true },
+  { key: 'keepIfBandMissed', label: 'Misses a Budget, Climate, Vibe or Physical level you kept', help: 'Budget, Climate, Social vibe and Physical demand start with every level on. Once a level is left out, a place that offers none of the levels still on keeps this share of its score, once for each of the four groups it misses. This is the strictest number here on purpose: a place you cannot afford, or that is freezing in your month, is not a match for you. It never hides a place.', min: 0.2, max: 1, step: 0.05, percent: true },
   { key: 'peakStepPeak', label: 'Crowds & prices: "Peak times" moves a score by', help: 'Points moved per point a month is busier or quieter than typical for that place. Negative means busy, expensive months gain and quiet ones lose. A peak month of an extreme-peak place is 5 points below typical, so -0.25 is about 1.25 points. Places with no real season barely move.', min: -1, max: 0, step: 0.025, percent: false },
   { key: 'peakStepLeanPeak', label: 'Crowds & prices: "Leaning peak" moves a score by', help: 'The same, one step toward the middle. The middle step moves nothing.', min: -1, max: 0, step: 0.025, percent: false },
   { key: 'peakStepLeanOff', label: 'Crowds & prices: "Leaning off peak" moves a score by', help: 'Positive means quiet, cheaper months gain and busy ones lose.', min: 0, max: 1, step: 0.025, percent: false },

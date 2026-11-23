@@ -26,9 +26,21 @@ export const topCount = (levels: Levels): number => Object.values(levels).filter
  * in which case nothing changes and `blocked` says to show the popup.
  */
 export function toggleTop(levels: Levels, key: string): { levels: Levels; blocked: boolean } {
-  if (levels[key] === 'top') return { levels: { ...levels, [key]: 'like' }, blocked: false };
+  if (levels[key] === 'top') return { levels: placeBelowTops(levels, key, 'like'), blocked: false };
   if (topCount(levels) >= getOnboardingSettings().maxTopInterests) return { levels, blocked: true };
-  return { levels: { ...levels, [key]: 'top' }, blocked: false };
+  return { levels: placeBelowTops(levels, key, 'top'), blocked: false };
+}
+
+/**
+ * Sets one interest's level and puts it right after the interests that are already Top, ahead of the rest. The list is sorted by level, and equal levels
+ * keep this order, so a newly starred interest lands just below the ones starred before it (not above them) and one that is un-starred drops to just
+ * below the Top group instead of jumping elsewhere.
+ */
+function placeBelowTops(levels: Levels, key: string, level: InterestLevelId): Levels {
+  const others = Object.entries(levels).filter(([k]) => k !== key);
+  const tops = others.filter(([, l]) => l === 'top');
+  const rest = others.filter(([, l]) => l !== 'top');
+  return Object.fromEntries([...tops, [key, level], ...rest]);
 }
 
 /** Highest weight first; equal weights keep the order they were picked in. */

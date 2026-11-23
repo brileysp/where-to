@@ -1,7 +1,7 @@
 {
  "rule": "guaranteed = a continuous annual migration of 100,000 or more animals in a known season; likely = a documented annual migration or gathering of several hundred animals or more together in a known season (Sri Lanka's elephant gathering is the existing anchor); possible = herds of tens to a few hundred, seasonal, remote or hard to reach; unlikely = only small groups, or park totals too small for a mass gathering; notPresent = no herd-forming species.",
  "places": {
-  "zambia": {
+  "p0171": {
    "value": "likely",
    "confidence": "high",
    "evidence": "Liuwa Plain: more than 45,000 wildebeest in Africa's second-largest wildebeest migration (African Parks, Oct-Dec); Kasanka: an estimated 8-10 million straw-coloured fruit bats, mid-Oct to late Dec (UNESCO tentative list).",
@@ -10,7 +10,7 @@
     "https://whc.unesco.org/en/tentativelists/6994/"
    ]
   },
-  "botswana": {
+  "p0128": {
    "value": "likely",
    "confidence": "medium",
    "evidence": "About 30,000 zebra make the 250 km Chobe-Nxai Pan migration and stay at the pans December to February (CMS fact sheet on the Zambezi plains zebra; National Geographic, 2018).",
@@ -19,7 +19,7 @@
     "https://www.nationalgeographic.com/news/2018/05/botswana-africa-revived-largest-mammal-zebra-migration/"
    ]
   },
-  "zimbabwe": {
+  "p0193": {
    "value": "likely",
    "confidence": "medium",
    "evidence": "Hwange: more than 40,000 elephants in the dry season, visiting the waterholes every other day (CMS fact sheet on African elephant migration).",
@@ -27,7 +27,7 @@
     "https://www.cms.int/fr/node/41586"
    ]
   },
-  "namibia": {
+  "p0114": {
    "value": "likely",
    "confidence": "low",
    "evidence": "Etosha dry season: springbok herds often in the thousands, 200-300 zebra and 300-400 springbok at single waterholes (travel guides; no census herd data).",
@@ -36,7 +36,7 @@
     "https://www.namibia-tours-safaris.com/travel-guide/best-time-to-visit-etosha"
    ]
   },
-  "kruger": {
+  "p0089": {
    "value": "likely",
    "confidence": "medium",
    "evidence": "Kruger buffalo herds range from 1 to over 1,000 animals (PLOS ONE 2017, SANParks data); park-wide about 47,000 buffalo in 2016.",
@@ -45,7 +45,7 @@
     "https://www.krugerpark.co.za/krugerpark-times-2-12-buffalo-rhino-auction-19958.html"
    ]
   },
-  "ethiopia": {
+  "p0064": {
    "value": "possible",
    "confidence": "low",
    "evidence": "Gambella: part of the white-eared kob migration of about 5 million animals across South Sudan and Ethiopia (CMS fact sheet); most of it is in Boma, South Sudan, and Gambella is remote and hard to reach.",
@@ -53,7 +53,7 @@
     "https://www.cms.int/es/node/45824"
    ]
   },
-  "kaziranga": {
+  "p0011": {
    "value": "possible",
    "confidence": "low",
    "evidence": "About 1,300-1,800 wild water buffalo, about 1,000-1,300 elephants and 800 swamp deer; herd sizes reported inconsistently (National Geographic; International Rhino Foundation).",
@@ -62,7 +62,7 @@
     "https://rhinos.org/blog/wild-asian-water-buffalos-in-kaziranga-national-park/"
    ]
   },
-  "rajasthan-golden-triangle": {
+  "p0150": {
    "value": "possible",
    "confidence": "medium",
    "evidence": "Tal Chhapar sanctuary (719 ha): about 2,025 blackbuck in the 2010-11 forest department census (Journal of Threatened Taxa).",
@@ -70,7 +70,7 @@
     "https://threatenedtaxa.org/index.php/JoTT/article/view/8038"
    ]
   },
-  "pantanal": {
+  "p0136": {
    "value": "possible",
    "confidence": "medium",
    "evidence": "White-lipped peccaries travel in herds of 50 to 300 (Wildlife Conservation Society).",
@@ -78,7 +78,7 @@
     "https://brasil.wcs.org/en-us/Wildlife/White-lipped-peccaries/Project-Goals.aspx"
    ]
   },
-  "borneo": {
+  "p0101": {
    "value": "unlikely",
    "confidence": "medium",
    "evidence": "Bearded pig migrations of several hundred animals are known on fixed routes, but the Kinabatangan population fell by about 90% after African swine fever and the pigs are now rare there (Cardiff University; The Vibes).",
@@ -87,7 +87,7 @@
     "https://www.thevibes.com/articles/news/55611/sabahs-bearded-pigs-under-threat-as-african-swine-flu-decimates-population"
    ]
   },
-  "ghana": {
+  "p0072": {
    "value": "unlikely",
    "confidence": "medium",
    "evidence": "Mole National Park elephant groups average about 9 animals, with herds up to 80 (2007 aerial survey, PMC).",
@@ -95,7 +95,7 @@
     "https://pmc.ncbi.nlm.nih.gov/articles/PMC5468139"
    ]
   },
-  "rwanda": {
+  "p0158": {
    "value": "unlikely",
    "confidence": "medium",
    "evidence": "Akagera aerial census: about 2,100-2,600 buffalo and 1,000-1,800 zebra in the whole park, no mass gatherings recorded (African Parks).",
@@ -105,7 +105,7 @@
   }
  },
  "leftBlank": {
-  "nepal": "Chitwan and Bardia chital herd sizes were not found on an official page.",
-  "uganda": "Queen Elizabeth has about 90,000 Uganda kob (2018 census) but no herd sizes were found."
+  "p0116": "Chitwan and Bardia chital herd sizes were not found on an official page.",
+  "p0186": "Queen Elizabeth has about 90,000 Uganda kob (2018 census) but no herd sizes were found."
  }
 }

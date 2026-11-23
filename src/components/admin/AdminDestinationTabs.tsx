@@ -7,9 +7,11 @@ const TABS: Array<{ href: string; label: string; soon?: boolean }> = [
   { href: '/admin/destinations/interests', label: 'Interests' },
   { href: '/admin/destinations', label: 'Places' },
   { href: '/admin/destinations/matrix', label: 'Interests × Places' },
+  { href: '/admin/destinations/travel-needs', label: 'Traveler needs' },
   { href: '/admin/destinations/cost-items', label: 'Cost Items' },
   { href: '/admin/destinations/advisories', label: 'Advisories', soon: true },
   { href: '/admin/destinations/question-links', label: 'Question links' },
+  { href: '/admin/destinations/identity', label: 'Names & scope' },
   { href: '/admin/destinations/matching', label: 'Matching' },
   { href: '/admin/destinations/todo', label: 'To do' },
 ];

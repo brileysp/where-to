@@ -1,3 +1,6 @@
+import { redirect } from 'next/navigation';
+import { loadFeatures } from '@/lib/featuresServer';
+import { onboardingV2On } from '@/lib/features';
 import { getListScoredPlaces } from '@/lib/db/queries/places';
 import { loadUserPreferences, listSavedProfiles, loadFirstName } from '@/app/actions';
 import { loadDnaState } from '@/app/dna/actions';
@@ -10,6 +13,8 @@ import { liveMatchForProfile, tripEffectForProfile } from '@/lib/onboarding/live
 const DEFAULT_DNA_HINT = 'Swipe through experiences to teach Where To? your travel style.';
 
 export default async function Home() {
+  // 22 Nov 2026 (owner): with the new onboarding on, this older page is retired. Everyone goes to the new flow; a traveler with a saved profile lands straight on their list.
+  if (onboardingV2On(await loadFeatures())) redirect((await loadTravelProfile()) ? '/onboarding-v2?list=1' : '/onboarding-v2');
   const [destinations, preferences, savedProfiles, dnaState, travelProfile, firstName, emojiOverrides, shortNames] = await Promise.all([
     getListScoredPlaces(),
     loadUserPreferences(),

@@ -1,0 +1,481 @@
+{
+ "reviewedOn": "2026-11-21",
+ "interest": "scenicLandscapes",
+ "coverage": {
+  "riskySentences": 1015,
+  "byKind": {
+   "named": 808,
+   "access": 107,
+   "superlative": 99,
+   "plural": 43,
+   "climate": 84,
+   "number": 6
+  },
+  "places": 198,
+  "method": "Every one of the risky sentences was read by Claude after the scope changes. Named features, access and closure dates, climate numbers, counts and superlatives were each judged; those that could be wrong, that change from year to year, or that I could not vouch for from the source list were searched and are listed below.",
+  "notSourcedIndividually": "Descriptions of long-established landmarks (for example Sagrada Familia in Barcelona, Table Mountain above Cape Town, the Registan in Samarkand) and well-known climate patterns were judged from general knowledge and not individually sourced. Sources were mostly Park Service, road authority and tourism sites, some conflicting; travel blogs were used for Ladakh winter roads only."
+ },
+ "checks": [
+  {
+   "topic": "Denali Park Road and Wonder Lake",
+   "places": "Denali & the Interior",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/dena/learn/news/pretty-rocks-bridge-complete-090226.htm"
+   ],
+   "note": "Buses reach East Fork (mile 43) only in 2026; full service planned 2027. Wonder Lake removed as a sure view."
+  },
+  {
+   "topic": "Tre Cime toll road and Seceda lifts booking; lift and road dates",
+   "places": "Dolomites",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.dolomiti.it/en/auronzo-misurina/news/toll-road-tre-cime-di-lavaredo-open",
+    "https://throneandvine.com/dolomites-hiking-seceda-guide/",
+    "https://www.dolomitisuperski.com/de/planen-und-buchen/liftpass"
+   ],
+   "note": "Toll road needs online reservation; Seceda lifts timed entry, two thirds bookable; regional lift season 14 May to 8 November."
+  },
+  {
+   "topic": "North Rim season",
+   "places": "Grand Canyon",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/grca/learn/news/modified-fall-operations-north-rim-2026.htm",
+    "https://www.nps.gov/grca/planyourvisit/roadclosures.htm"
+   ],
+   "note": "Full season 15 May to 15 October, day use to 30 November, road closes by 1 December."
+  },
+  {
+   "topic": "Furnace Creek monthly highs",
+   "places": "Death Valley National Park",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/deva/planyourvisit/weather.htm"
+   ],
+   "note": "April 91, May 100.7 (NWS 1991-2020); June to August above 105."
+  },
+  {
+   "topic": "Highland road opening dates",
+   "places": "Iceland",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.vegagerdin.is/en/the-transportation-system/the-road-system/roads/opening-of-mountain-roads"
+   ],
+   "note": "F208 average opening 2 June; F26 late June to early July. June scored 9.4."
+  },
+  {
+   "topic": "Winter road access",
+   "places": "Ladakh",
+   "verdict": "corrected",
+   "sources": [
+    "https://vargiskhan.com/log/?p=9805",
+    "https://discoverwithdheeraj.com/leh-ladakh-in-winters/"
+   ],
+   "note": "Nubra and Pangong roads usually open with temporary closures; Zanskar shut; Manali to Leh unreliable. Travel-blog sources, so wording kept soft."
+  },
+  {
+   "topic": "W Trek winter rules",
+   "places": "Torres del Paine",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.riotimesonline.com/torres-del-paine-o-circuit-reopening-november-2026/",
+    "https://www.gochile.cl/en/articles/torres-del-paine-2-new-safety-measures-to-enter-and-travel-through.htm"
+   ],
+   "note": "Sources conflict on the guide rule, so the text says restricted or closed."
+  },
+  {
+   "topic": "Daylight hours",
+   "places": "Torres del Paine, Tierra del Fuego",
+   "verdict": "corrected",
+   "sources": [],
+   "note": "Computed from latitude (not a web source): Torres 7.7 to 9.6 hours, Ushuaia 7.0 to 9.3 hours, June to August."
+  },
+  {
+   "topic": "Tioga and Glacier Point road dates",
+   "places": "Yosemite National Park",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/yose/planyourvisit/tiogaopen.htm"
+   ],
+   "note": "Tioga typically late May or June to November; Glacier Point Road from May, April in some years."
+  },
+  {
+   "topic": "Number of islands",
+   "places": "Maldives",
+   "verdict": "corrected",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Geography_of_the_Maldives"
+   ],
+   "note": "1,192 islands; \"thousands\" corrected."
+  },
+  {
+   "topic": "North Cascades Highway closing",
+   "places": "North Cascades",
+   "verdict": "corrected",
+   "sources": [
+    "https://wsdot.wa.gov/travel/roads-bridges/mountain-pass-closure-and-opening-dates"
+   ],
+   "note": "Recent closings 18 November to 4 December; usual reopening April or May."
+  },
+  {
+   "topic": "Clingmans Dome renamed Kuwohi; road season",
+   "places": "Great Smoky Mountains National Park",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm"
+   ],
+   "note": "NPS schedule lists Kuwohi Road (formerly Clingmans Dome Road), 2026 season 1 April to 29 November."
+  },
+  {
+   "topic": "Moraine Lake Road",
+   "places": "Banff & Jasper National Parks",
+   "verdict": "corrected",
+   "sources": [
+    "https://parks.canada.ca/lakelouise-transit"
+   ],
+   "note": "Closed to personal vehicles all year since 2023; shuttle 1 June to 12 October."
+  },
+  {
+   "topic": "Milford Track in winter",
+   "places": "Milford Sound & Fiordland",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/milford-track/may-to-october",
+    "https://blog.doc.govt.nz/2023/09/11/thinking-of-hiking-the-milford-track-before-the-great-walks-season-heres-what-you-need-to-know/"
+   ],
+   "note": "Open with reduced facilities May to October; Great Walks season late October to 30 April."
+  },
+  {
+   "topic": "Narrows closures",
+   "places": "Zion & Bryce Canyon",
+   "verdict": "corrected",
+   "sources": [
+    "https://www.nps.gov/zion/planyourvisit/thenarrows.htm"
+   ],
+   "note": "Closed above 150 cfs and after flash flood warnings."
+  },
+  {
+   "topic": "Summer highs",
+   "places": "Dubai, Samarkand & Bukhara, Red Sea & Nile",
+   "verdict": "corrected",
+   "sources": [],
+   "note": "Climate normals from memory of published station data, not sourced individually; wording loosened to what the normals support."
+  },
+  {
+   "topic": "Winter wording",
+   "places": "Mongolia",
+   "verdict": "corrected",
+   "sources": [],
+   "note": "\"Impassable\" overstated; changed to snow blocks many roads."
+  },
+  {
+   "topic": "Trail Ridge Road opening Memorial Day, closing mid to late October",
+   "places": "Rocky Mountain National Park",
+   "verdict": "verified",
+   "sources": [
+    "https://www.nps.gov/romo/learn/photosmultimedia/opening_closing_trr_ofr.htm"
+   ],
+   "note": "Opens near Memorial Day weekend; closes mid to late October, sometimes earlier."
+  },
+  {
+   "topic": "Independence Pass opens Thursday before Memorial Day; closes late October to mid-November",
+   "places": "Aspen Snowmass",
+   "verdict": "verified",
+   "sources": [
+    "https://www.codot.gov/projects/SH82/travel-information.html"
+   ],
+   "note": "Recent closings 28 October to 17 November."
+  },
+  {
+   "topic": "Crater Lake roads",
+   "places": "Bend & Crater Lake",
+   "verdict": "verified",
+   "sources": [
+    "https://www.nps.gov/crla/planyourvisit/hours.htm"
+   ],
+   "note": "North Entrance and West Rim open mid-May to late June, East Rim mid-June to late July; close with first big storm or 1 November."
+  },
+  {
+   "topic": "Yellowstone roads",
+   "places": "Yellowstone National Park",
+   "verdict": "verified",
+   "sources": [
+    "https://www.nps.gov/yell/planyourvisit/parkroads.htm"
+   ],
+   "note": "Roads closed to regular vehicles early November to late April; spring openings from mid-April through May; snowcoach and snowmobile mid-December to mid-March."
+  },
+  {
+   "topic": "Inca Trail closed every February",
+   "places": "Cusco & Sacred Valley",
+   "verdict": "verified",
+   "sources": [
+    "https://www.travelagentcentral.com/destinations/reminder-machu-picchu-to-remain-open-during-inca-trail-closure"
+   ],
+   "note": "Closed each February since 2000; Machu Picchu stays open."
+  },
+  {
+   "topic": "Mykines boat season",
+   "places": "Faroe Islands",
+   "verdict": "verified",
+   "sources": [
+    "https://guidetofaroeislands.fo/nature-in-faroe-islands/mykines"
+   ],
+   "note": "Visits and ferry 1 May to 31 August."
+  },
+  {
+   "topic": "Tsingy de Bemaraha closed in the wet season",
+   "places": "Madagascar",
+   "verdict": "verified",
+   "sources": [
+    "https://safaribookings.com/bemaraha/best-time"
+   ],
+   "note": "Closed from late November or December to March or April."
+  },
+  {
+   "topic": "Raja Ampat southeast monsoon",
+   "places": "Raja Ampat",
+   "verdict": "verified",
+   "sources": [
+    "https://www.lonelyplanet.com/articles/guide-to-raja-ampat-indonesia"
+   ],
+   "note": "Rough seas in July and August can shut boat travel."
+  },
+  {
+   "topic": "Hurricane Ridge road",
+   "places": "Olympic National Park",
+   "verdict": "verified",
+   "sources": [
+    "https://www.nps.gov/olym/planyourvisit/hurricane-ridge-in-winter.htm"
+   ],
+   "note": "Winter opening Friday to Sunday, chains required, weather permitting."
+  },
+  {
+   "topic": "Pico Duarte is the Caribbean highest peak",
+   "places": "Dominican Republic",
+   "verdict": "verified",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pico_Duarte"
+   ],
+   "note": "Only Caribbean summit above 3,000 meters."
+  },
+  {
+   "topic": "Slieve Donard about 2,800 feet",
+   "places": "Northern Ireland",
+   "verdict": "verified",
+   "sources": [
+    "https://www.britannica.com/place/Slieve-Donard"
+   ],
+   "note": "About 850 meters."
+  },
+  {
+   "topic": "Blyde River Canyon and God's Window: cliffs over 2,000 feet; summer mist, dry-season clarity",
+   "places": "Kruger & Sabi Sands",
+   "verdict": "verified",
+   "sources": [
+    "https://www.southafrica.net/gl/en/travel/article/god-s-window-a-lowveld-highlight"
+   ],
+   "note": "Cliffs of about 700 meters; mist and thunderstorms in summer; dry season clearest."
+  },
+  {
+   "topic": "Sonoma Coast fog",
+   "places": "Napa & Sonoma",
+   "verdict": "verified",
+   "sources": [
+    "https://parks.sonomacounty.ca.gov/learn/blog/park-blogs/autumn-is-ideal-for-visiting-the-sonoma-coast"
+   ],
+   "note": "Summer mornings and evenings foggy; September to November among the best days."
+  },
+  {
+   "topic": "Meghalaya waterfalls fullest June to September",
+   "places": "Assam & Northeast India",
+   "verdict": "verified",
+   "sources": [
+    "https://thebetterindia.com/web-stories/must-visit-best-waterfalls-in-meghalaya-during-monsoon"
+   ],
+   "note": "Most sources say monsoon; one says September and October. Tourism sources only."
+  },
+  {
+   "topic": "Kelimutu lakes change color over time",
+   "places": "Komodo & Flores",
+   "verdict": "verified",
+   "sources": [
+    "https://www.timeout.com/asia/news/these-magical-colour-changing-lakes-are-hiding-in-a-park-right-here-in-asia-042026"
+   ],
+   "note": "Colors shift over time, unpredictably."
+  },
+  {
+   "topic": "Laos clear season November to February, haze March and April",
+   "places": "Laos",
+   "verdict": "verified",
+   "sources": [
+    "https://www.audleytravel.com/us/laos/best-time-to-visit"
+   ],
+   "note": "Cool dry November to February; haze March and April."
+  }
+ ],
+ "corrections": [
+  {
+   "place": "Denali & the Interior",
+   "where": "overview",
+   "was": "often seen from Wonder Lake or on a flightseeing trip",
+   "now": "often seen from the park road or on a flightseeing trip"
+  },
+  {
+   "place": "Denali & the Interior",
+   "where": "months [6, 7, 8]",
+   "was": "providing access to the deep Interior and viewpoints like Wonder Lake.",
+   "now": "with views of the Alaska Range from buses and overlooks along it."
+  },
+  {
+   "place": "Dolomites",
+   "where": "months [6, 7, 8, 9]",
+   "was": "(Seceda's lifts and the Tre Cime toll road both need advance booking)",
+   "now": "(the Tre Cime toll road needs an online reservation, and the Seceda lifts use timed entry)"
+  },
+  {
+   "place": "Dolomites",
+   "where": "months [11]",
+   "was": "are closed, and snow begins to close",
+   "now": "are closed for most of the month, and snow begins to close"
+  },
+  {
+   "place": "Grand Canyon",
+   "where": "months [11]",
+   "was": "The North Rim is closed for the season, leaving the South Rim as the primary vantage point.",
+   "now": "The North Rim has no visitor services and is open only for day use, weather permitting, so the South Rim is the main vantage point."
+  },
+  {
+   "place": "Death Valley National Park",
+   "where": "months [6, 7, 8]",
+   "was": "Daytime highs often above 110 degrees Fahrenheit limit viewing",
+   "now": "Daytime highs above 105 degrees Fahrenheit on most days limit viewing"
+  },
+  {
+   "place": "Iceland",
+   "where": "months [6,7,8] split",
+   "was": "The mountain roads open, allowing access... deep interior",
+   "now": "June: Landmannalaugar road usually passable, interior routes mostly closed; July and August: mountain roads open"
+  },
+  {
+   "place": "Ladakh",
+   "where": "months [1, 2]",
+   "was": "Heavy winter snow blocks the high passes, cutting off road access to the lakes and valleys outside Leh.",
+   "now": "Heavy snow often closes the high passes for days at a time, and the road to remote valleys such as Zanskar stays shut."
+  },
+  {
+   "place": "Ladakh",
+   "where": "months [11, 12]",
+   "was": "The high passes close for the season, restricting travel to the immediate surroundings of Leh.",
+   "now": "Snow often closes the highest passes for days at a time, and the road from Manali to Leh is not reliably open."
+  },
+  {
+   "place": "Torres del Paine",
+   "where": "months [6, 7, 8]",
+   "was": "require a guide or are closed entirely, and most refugios shut down.",
+   "now": "are restricted or closed, and most refugios shut down."
+  },
+  {
+   "place": "Yosemite National Park",
+   "where": "months [6]",
+   "was": "The high passes are open,",
+   "now": "The high passes are usually open,"
+  },
+  {
+   "place": "Yosemite National Park",
+   "where": "months [3, 4]",
+   "was": "remain blocked by snow.",
+   "now": "remains blocked by snow, and Glacier Point Road is often blocked too."
+  },
+  {
+   "place": "Maldives",
+   "where": "overview",
+   "was": "Thousands of low-lying islands",
+   "now": "More than a thousand low-lying islands"
+  },
+  {
+   "place": "North Cascades",
+   "where": "months [11, 12]",
+   "was": "The North Cascades Highway is shut for the season,",
+   "now": "The North Cascades Highway is usually shut by mid-November,"
+  },
+  {
+   "place": "Great Smoky Mountains National Park",
+   "where": "overview",
+   "was": "viewpoints like Clingmans Dome and",
+   "now": "viewpoints like Kuwohi, formerly Clingmans Dome, and"
+  },
+  {
+   "place": "Great Smoky Mountains National Park",
+   "where": "months [1, 2, 3, 12]",
+   "was": "The road to Clingmans Dome is closed for the winter,",
+   "now": "The road to Kuwohi, formerly Clingmans Dome, is closed for the winter,"
+  },
+  {
+   "place": "Banff & Jasper National Parks",
+   "where": "months [10]",
+   "was": "The access road to Moraine Lake typically closes to vehicles in the middle of the month as winter conditions set in.",
+   "now": "The shuttle to Moraine Lake stops running in the middle of the month as winter conditions set in."
+  },
+  {
+   "place": "Milford Sound & Fiordland",
+   "where": "months [5, 6, 7, 8]",
+   "was": "Snow covers the mountains, shutting the Milford Track to independent hikers and limiting access to higher elevations.",
+   "now": "Snow covers the mountains, and the Milford Track loses its bridges and staffed huts for the winter, limiting access to higher elevations."
+  },
+  {
+   "place": "Zion & Bryce Canyon",
+   "where": "months [5, 6, 7, 8]",
+   "was": "The Narrows are typically open for wading,",
+   "now": "The Narrows are typically open for wading, apart from closures after flash flood warnings,"
+  },
+  {
+   "place": "Mongolia",
+   "where": "months [11,12,1,2,3]",
+   "was": "roads are impassable",
+   "now": "snow blocks many roads"
+  },
+  {
+   "place": "Torres del Paine",
+   "where": "[6, 7, 8]",
+   "was": "only about eight hours of light",
+   "now": "only about eight to ten hours of light"
+  },
+  {
+   "place": "Tierra del Fuego",
+   "where": "[6, 7, 8]",
+   "was": "daylight lasts only about seven hours",
+   "now": "daylight lasts only about seven to nine hours"
+  },
+  {
+   "place": "Dubai",
+   "where": "[11, 12, 1, 2, 3]",
+   "was": "highs from the upper 70s to the mid 80s Fahrenheit",
+   "now": "highs from the mid 70s to the upper 80s Fahrenheit"
+  },
+  {
+   "place": "Samarkand & Bukhara",
+   "where": "[6, 7, 8]",
+   "was": "Heat above 100 degrees Fahrenheit",
+   "now": "Heat near 100 degrees Fahrenheit"
+  },
+  {
+   "place": "Red Sea & Nile",
+   "where": "[6, 7, 8]",
+   "was": "Daytime highs often above 105 degrees Fahrenheit",
+   "now": "Daytime highs often reach 100 degrees Fahrenheit or more and"
+  },
+  {
+   "place": "Iceland",
+   "where": "June score and level",
+   "was": "10, peak",
+   "now": "9.4, good (interior roads mostly closed in June)"
+  },
+  {
+   "place": "Ladakh",
+   "where": "months [3,4]",
+   "was": "the major mountain passes remain blocked by deep drifts, keeping the wider region inaccessible by road.",
+   "now": "highest passes often blocked; Manali road still shut"
+  }
+ ]
+}

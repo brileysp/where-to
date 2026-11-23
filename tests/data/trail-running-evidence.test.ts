@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { routes: number; r20: number; r40: number; r80: number; max_km: number; coastal: number; huts: number; relief_m: number | null; thin: boolean; races: Array<{ race: string; series: string; host: string }>; values: Record<string, unknown> }>;
 const root = join(__dirname, '..', '..');
@@ -46,11 +47,11 @@ describe('Trail Running evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['nepal'].mountainTrailRunning).toBe(10);
-    expect(draft['swissalps'].mountainTrailRunning).toBe(10);
-    expect(draft['cornwall'].coastalIslandTrails).toBe(10);
-    expect(draft['canaries'].coastalIslandTrails).toBe(10);
-    expect(draft['chamonix'].raceHost).toBe(true);
-    expect(draft['dolomites'].trailDistances).toContain('m30');
+    expect(draft[PLACE.nepal].mountainTrailRunning).toBe(10);
+    expect(draft[PLACE['zermatt-and-the-swiss-alps']].mountainTrailRunning).toBe(10);
+    expect(draft[PLACE.cornwall].coastalIslandTrails).toBe(10);
+    expect(draft[PLACE['canary-islands']].coastalIslandTrails).toBe(10);
+    expect(draft[PLACE['chamonix-and-the-french-alps']].raceHost).toBe(true);
+    expect(draft[PLACE.dolomites].trailDistances).toContain('m30');
   });
 });

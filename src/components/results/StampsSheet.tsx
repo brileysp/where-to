@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { StampBadge } from './StampBadge';
 import { CheckIcon } from './CheckIcon';
+import { StampsMap } from './StampsMap';
 import { stampsRegionFor, REGION_DISPLAY_ORDER, type StampsRegion } from '@/lib/scoring/continents';
 import type { ScoredDestination } from '@/lib/scoring/types';
 
@@ -83,11 +84,14 @@ function StampRow({
 export function StampsSheet({
   destinations,
   visited,
+  coords,
   onToggleVisited,
   onClose,
 }: {
   destinations: ScoredDestination[];
   visited: Record<string, boolean>;
+  /** Latitude and longitude for each place; with them the map shows a pin for every place visited. */
+  coords?: Record<string, { lat: number; lon: number }>;
   onToggleVisited: (id: string) => void;
   onClose: () => void;
 }) {
@@ -137,11 +141,15 @@ export function StampsSheet({
 
         <div className="detail-sheet-body">
           <div className="stamps-body-content">
-            <div className="stamps-map-placeholder">
-              WORLD MAP PLACEHOLDER
-              <br />
-              countries &amp; states colored in as visited
-            </div>
+            {coords ? (
+              <StampsMap pins={destinations.filter((d) => visited[d.id] && coords[d.id]).map((d) => ({ id: d.id, name: d.name, lat: coords[d.id].lat, lon: coords[d.id].lon }))} />
+            ) : (
+              <div className="stamps-map-placeholder">
+                WORLD MAP PLACEHOLDER
+                <br />
+                countries &amp; states colored in as visited
+              </div>
+            )}
 
             <div className="stamps-collection-head">
               <div className="detail-section-title stamps-collection-title">Collection</div>

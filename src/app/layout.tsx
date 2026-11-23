@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { loadAndApplyOverrides } from "@/lib/scoring/overridesServer";
 import { OverridesApplier } from "@/components/OverridesApplier";
 import { UnitsProvider } from "@/components/UnitsProvider";
 import { getUnitsContext } from "@/lib/units/server";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,7 +22,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   // Home country, which decides the units (°F or °C, miles or km, feet or metres) text is shown in.
   const unitsContext = await getUnitsContext();
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={geistMono.variable}>
       <body>
         <OverridesApplier overrides={overrides} />
         <UnitsProvider country={unitsContext.country} source={unitsContext.source} units={unitsContext.units}>

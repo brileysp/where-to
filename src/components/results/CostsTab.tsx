@@ -4,6 +4,7 @@ import { useUnitText } from '@/components/UnitsProvider';
 import { useState } from 'react';
 import { costItemIcon, formatPrice } from '@/lib/scoring/costIcons';
 import type { ScoredDestination } from '@/lib/scoring/types';
+import { CostSeasonalityCard } from './CostSeasonalityCard';
 
 const COST_TIER_KEY = '$ under $100/day · $$ $100–200 · $$$ $200–400 · $$$$ $400–800 · $$$$$ $800+';
 
@@ -21,7 +22,7 @@ export function CostsTab({ dest }: { dest: ScoredDestination }) {
 
   return (
     <div className="detail-tab-content">
-      <div className="detail-card">
+      <div className="detail-plain">
         <div className="cost-range-header">
           <div className="cost-range-label">
             {dest.costRange.min}
@@ -42,7 +43,7 @@ export function CostsTab({ dest }: { dest: ScoredDestination }) {
         {dest.costOverview && <p className="cost-overview-text">{u(dest.costOverview)}</p>}
       </div>
 
-      <div className="detail-card">
+      <div className="detail-plain">
         <div className="price-list">
           {[...dest.costItems].sort((a, b) => a.price - b.price).map((item, i) => (
             <div className="price-row" key={i}>
@@ -56,6 +57,8 @@ export function CostsTab({ dest }: { dest: ScoredDestination }) {
           ))}
         </div>
       </div>
+
+      {dest.costSeasonality && <CostSeasonalityCard card={dest.costSeasonality} />}
     </div>
   );
 }
