@@ -26,7 +26,10 @@ import { applyAdminEdits } from '@/lib/admin/apply-edits';
 import { SLIDERS } from '@/lib/scoring/constants';
 import { factDefsFor, parseFact } from '@/lib/admin/interest-pages/config';
 import type { IdeaRow, NaReasonInfo, ReferenceSiteRow, ReviewRow, TodoRow } from '@/lib/admin/interest-pages/types';
-import { PLACE_TYPES } from '@/lib/admin/interest-pages/place-types';
+import { SETTING_TAG_SLUGS, MAX_SETTING_TAGS } from '@/lib/places/setting-tags';
+import { TRAVEL_KEY } from '@/lib/admin/travel-needs/config';
+import { getRoundProgress } from '@/lib/db/queries/stale-factors';
+import { reviewGateMessage } from '@/lib/admin/stale-checks';
 
 /**
  * Server actions behind the per-interest admin page. Every one re-checks the
@@ -40,7 +43,7 @@ export type ActionResult<T> = ({ ok: true } & T) | { ok: false; message: string 
 const fail = (message: string): { ok: false; message: string } => ({ ok: false, message });
 
 function validInterest(key: string): boolean {
-  return SLIDERS.some((s) => s.key === key);
+  return SLIDERS.some((s) => s.key === key) || key === TRAVEL_KEY; // the traveler-needs columns reuse the fact editor (9-10 Nov 2026)
 }
 
 async function placeExists(placeId: string): Promise<boolean> {
@@ -309,6 +312,10 @@ export async function updateTodo(interestKey: string, id: string, input: TodoInp
   if (!p.success) return fail(p.error.issues[0]?.message ?? 'Invalid item');
   const [before] = await db.select().from(interestTodos).where(and(eq(interestTodos.id, id), eq(interestTodos.interestKey, interestKey)));
   if (!before) return fail('Item not found');
+  if (before.status !== 'done' && p.data.status === 'done') { // a review to-do cannot be ticked done until every active reason has a result for this round (13 Nov 2026)
+    const gate = reviewGateMessage(before.source, await getRoundProgress(before.interestKey, id));
+    if (gate) return fail(gate);
+  }
   const doneAt = p.data.status === 'done' ? before.doneAt ?? new Date() : null;
   const [row] = await withAdminAudit<Array<typeof interestTodos.$inferSelect>>({
     actor: admin,
@@ -339,7 +346,7 @@ const ideaInput = z.object({
   region: z.string().trim().max(160),
   why: z.string().trim().max(1000),
   nearestExisting: z.string().trim().max(200),
-  placeType: z.string().default('').refine((v) => v === '' || (PLACE_TYPES as readonly string[]).includes(v), 'Pick one of the ten place types'),
+  settingTags: z.array(z.string().refine((x) => (SETTING_TAG_SLUGS as readonly string[]).includes(x), 'Unknown setting tag')).max(MAX_SETTING_TAGS, `At most ${MAX_SETTING_TAGS} setting tags`).default([]).refine((v) => new Set(v).size === v.length, 'A setting tag is picked twice'),
   stage: z.enum(INTEREST_IDEA_STAGES),
   grain: z.number().int().min(-3).max(3).nullable().default(null),
   grainNote: z.string().trim().max(400).default(''),
@@ -348,7 +355,7 @@ const ideaInput = z.object({
 export type IdeaInput = z.input<typeof ideaInput>;
 
 function toIdeaRow(r: typeof interestPlaceIdeas.$inferSelect): IdeaRow {
-  return { id: r.id, name: r.name, region: r.region, why: r.why, nearestExisting: r.nearestExisting, placeType: r.placeType, stage: r.stage, grain: r.grain, grainNote: r.grainNote, sortOrder: r.sortOrder, promotedPlaceId: r.promotedPlaceId, createdAt: r.createdAt.toISOString() };
+  return { id: r.id, name: r.name, region: r.region, why: r.why, nearestExisting: r.nearestExisting, settingTags: r.settingTags, stage: r.stage, grain: r.grain, grainNote: r.grainNote, sortOrder: r.sortOrder, promotedPlaceId: r.promotedPlaceId, createdAt: r.createdAt.toISOString() };
 }
 
 export async function addIdea(interestKey: string, input: IdeaInput): Promise<ActionResult<{ idea: IdeaRow }>> {
@@ -665,18 +672,18 @@ export async function moveIdea(interestKey: string, id: string, direction: 'up' 
 
 /**
  * Turns a future-place idea into a real place: creates an empty place (retired and unpublished until you switch it on) from the idea's
- * name and region, and marks the idea "added". You choose the id and climate, which an idea does not carry.
+ * name and region, and marks the idea "added". You choose the climate, which an idea does not carry; the place gets the next key automatically.
  */
-export async function promoteIdea(interestKey: string, ideaId: string, input: { id: string; climate: string; countryCode?: string | null; continent?: string | null }): Promise<ActionResult<{ idea: IdeaRow; placeId: string }>> {
+export async function promoteIdea(interestKey: string, ideaId: string, input: { climate: string; countryCode?: string | null; continent?: string | null }): Promise<ActionResult<{ idea: IdeaRow; placeId: string }>> {
   const admin = await requireAdminUser();
   if (!validInterest(interestKey)) return fail('Unknown interest');
   const [idea] = await db.select().from(interestPlaceIdeas).where(and(eq(interestPlaceIdeas.id, ideaId), eq(interestPlaceIdeas.interestKey, interestKey)));
   if (!idea) return fail('Idea not found');
   if (idea.promotedPlaceId) return fail('This idea was already turned into a place.');
   const { insertNewPlace } = await import('@/lib/admin/create-place');
-  const error = await insertNewPlace(admin, { id: input.id, name: idea.name, region: idea.region || 'To be set', climate: input.climate, countryCode: input.countryCode ?? null, continent: input.continent ?? null, summary: idea.why || null });
-  if (error) return fail(error);
-  const newId = input.id.trim().toLowerCase();
+  const result = await insertNewPlace(admin, { name: idea.name, region: idea.region || 'To be set', climate: input.climate, countryCode: input.countryCode ?? null, continent: input.continent ?? null, summary: idea.why || null, settingTags: idea.settingTags });
+  if ('error' in result) return fail(result.error);
+  const newId = result.key;
   const [row] = await withAdminAudit<Array<typeof interestPlaceIdeas.$inferSelect>>({
     actor: admin, skipPlaceCache: true, entityType: 'interest_place_idea', entityId: ideaId, action: 'update', before: idea,
     after: { ...idea, stage: 'added', promotedPlaceId: newId },

@@ -9,14 +9,14 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   const apply = process.argv.includes('--apply');
   const { db } = await import('../src/lib/db/client');
   const { interestMeta, interestTodos } = await import('../src/lib/db/schema');
-  const { SLIDERS } = await import('../src/lib/scoring/constants');
+  const { getActiveInterests } = await import('../src/lib/scoring/active-interests'); const ACTIVE = await getActiveInterests(); // the active list (code + admin overrides), not the raw SLIDERS
   const { withAdminAudit } = await import('../src/lib/admin/write');
   const { CLAUDE_ACTOR } = await import('../src/lib/admin/auth');
   const { reviewCadence, CADENCE_LABEL, CADENCE_TODO_SOURCE, effortBand, stakesBand } = await import('../src/lib/scoring/planning');
   const meta = new Map((await db.select().from(interestMeta)).map((m) => [m.key, m]));
   const existing = await db.select().from(interestTodos);
   const have = new Set(existing.filter((t) => t.source === CADENCE_TODO_SOURCE && t.status !== 'done').map((t) => t.interestKey));
-  const rows = SLIDERS.filter((s) => !s.hidden && meta.get(s.key)?.evergreen != null).map((s) => ({ s, m: meta.get(s.key)! })).sort((a, b) => a.s.label.localeCompare(b.s.label));
+  const rows = ACTIVE.filter((s) => meta.get(s.key)?.evergreen != null).map((s) => ({ s, m: meta.get(s.key)! })).sort((a, b) => a.s.label.localeCompare(b.s.label));
   const by = { weekly: [] as typeof rows, monthly: [] as typeof rows, quarterly: [] as typeof rows, annually: [] as typeof rows };
   for (const r of rows) by[reviewCadence(r.m.evergreen as number)].push(r);
   const pad = (n: number) => String(n).padStart(2, '0');
@@ -31,7 +31,7 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
       const values = {
         interestKey: s.key,
         title: `${CADENCE_LABEL[c]} review: ${stale}`.slice(0, 200),
-        detail: `Check what goes stale first for ${s.label}: ${stale}. Check early if: ${n.reviewTrigger ?? 'a major change is reported'}. Stakes ${m.stakes ?? '?'} (${m.stakes ? stakesBand(m.stakes) : 'not set'}); refresh effort ${m.refreshEffort ?? '?'} (${m.refreshEffort ? effortBand(m.refreshEffort) : 'not set'}). When the review is done, tick this item: the next one is created on its own.`,
+        detail: `Check what goes stale first for ${s.label}: ${stale}. Check early if: ${n.reviewTrigger ?? 'a major change is reported'}. Stakes ${m.stakes ?? '?'} (${m.stakes ? stakesBand(m.stakes) : 'not set'}); refresh effort ${m.refreshEffort ?? '?'} (${m.refreshEffort ? effortBand(m.refreshEffort) : 'not set'}). When the review is done, tick this item: the next one is created on its own. Open "Reasons to check" and give every reason a result: this item cannot be ticked done until each one has Checked, Changed or Does not apply.`,
         status: 'needs_you' as const,
         source: CADENCE_TODO_SOURCE,
         priority: (m.stakes ?? 0) >= 7 ? 1 : (m.stakes ?? 0) >= 4 ? 2 : 3,

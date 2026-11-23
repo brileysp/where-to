@@ -1,0 +1,62 @@
+{
+ "scenicLandscapes|amalfi": {
+  "why": "Peak 9.8, not Gemini's 10: Amalfi is not on the Scenic list of places allowed a 10, so you decide. March and April were scored 7.8 and 9.4, too far apart for one blurb, so I split them; November is split from December to February for the same reason. 'Return of ferry services' is gone from the shared text. 'Defined by' became 'known for', as in your Santorini and Dolomites edits. Rank among the authored scenic cells (batches 2 and 3): level with Grand Canyon and Antarctica at 9.8, just above Santorini at 9.7."
+ },
+ "scenicLandscapes|grandcanyon": {
+  "why": "Peak 9.8, not Gemini's 10: not on the Scenic list of 10s, so you decide. The North Rim opening is stated only in May, with June as its own blurb; September and October are split because October names the North Rim closing in mid-October; November now says the North Rim is closed, which agrees with October. 'Fully accessible' reworded. 'Defined by' became 'known for'."
+ },
+ "scenicLandscapes|iceland": {
+  "why": "Peak 10 (Iceland is on the list). September (8.2) and October (6.4) were one blurb with a 1.8-point spread, so they are split; the highland roads are said to close in October only. 'Defined by' became 'known for'."
+ },
+ "scenicLandscapes|rio": {
+  "why": "Peak 9.7 (a city whose setting is the view, so scored as landscape). Rio is a southern-hemisphere place, so the text now says dry and wet weather, not summer and winter, and no blurb says 'months'. Judgement call for you: Rio at 9.7 sits level with Santorini and far above Venice at 6.4, which is also a water city."
+ },
+ "scenicLandscapes|swissalps": {
+  "why": "Peak 10 (on the list). No wording changes were needed; all checks passed as written."
+ },
+ "stargazing|atacama": {
+  "why": "Peak 10 (on the list). April, May to August and September to October each get their own blurb, so the Milky Way's bright core is named only for months it covers; 'cloud begins to increase' reworded."
+ },
+ "stargazing|big-island": {
+  "why": "Peak 9.8. Split February to April from May, and June to August from September to October, because scores moved more than half a point inside one blurb. 'During these months' and 'begins to rise' removed; 'offers' varied."
+ },
+ "stargazing|ladakh": {
+  "why": "Peak 9.7 (August to October). Gemini scored November to April 0 because snow shuts the roads to the remote dark-sky sites. Judgement call for you: Leh itself can be reached by air in winter, so tell me whether 0 is right or whether those months should be low instead."
+ },
+ "stargazing|scottish-highlands-skye": {
+  "why": "Peak 4.0, held down by cloud (about 90 percent at night most of the year). May 1.3, June 0.8 and July 0.9 are low, not zero: the sun stays 9 to 14 degrees below the horizon in those months, so a few of the brightest stars still show. This is your Lapland rule working."
+ },
+ "stargazing|svalbard": {
+  "why": "Peak 4.6. April to August are exactly 0.0: the sun is at or above the horizon all night (2 degrees below in April, up to 12 degrees above in June), so no star shows. March is 2.2 (sun 15 degrees below, most stars show) and September 0.3 (10 degrees below, only the brightest). This is your Lapland rule working."
+ },
+ "sunbathing|maldives": {
+  "why": "Peak 10 (on the list). 'One of the world's premier destinations' and 'consistently hot' removed; 'these are the driest months' and 'during these months' reworded so each blurb speaks for one month."
+ },
+ "sunbathing|joshua-tree": {
+  "why": "Peak 9.0. December to January and March to April were scored apart by more than half a point, so December to January, February, March to April and May each have a blurb. Judgement call for you: December and January (69 and 70 degrees) score 6.2 and 6.8, about 1.2 above the temperature ramp (Croatia in October at 69 degrees is 4.0). I left them because Palm Springs is far sunnier and drier; say if you want them lowered."
+ },
+ "sunbathing|croatia": {
+  "why": "Peak 9.1. Follows the new temperature ramp exactly: 58 degrees in March 0.4, 65 in April 2.6, 69 in October 4.0, 60 in November 1.0. No changes."
+ },
+ "sunbathing|cornwall": {
+  "why": "Peak 4.1 at 68 degrees in July and August, which matches Croatia in October (69 degrees, 4.0): the same temperature scores the same in both places. No changes."
+ },
+ "sunbathing|los-cabos": {
+  "why": "Peak 9.7. 'A premier destination for lying out' removed (your Aruba edit); 'returning' reworded so the October to November blurb describes a stable condition."
+ },
+ "spaWellness|bali": {
+  "why": "Peak 10, flat all year (spas are indoors). 'A premier destination for wellness' removed."
+ },
+ "spaWellness|budapest": {
+  "why": "Peak 10, from 8.5 in summer to 10 in winter because the outdoor thermal pools are better in the cold. 'Defined by' became 'known for'."
+ },
+ "spaWellness|morocco": {
+  "why": "Peak 9.2, flat. 'Also host wellness retreats' became 'are also home to', because the retreats live there all year."
+ },
+ "spaWellness|thailand": {
+  "why": "Peak 10, flat. I removed 'though built bathing traditions like thermal baths are uncommon' (it says what the place is not) and the bare word Phuket, which the old-name check flags; the overview now starts with the Andaman Coast. Judgement call for you: Thailand ties with Bali, Budapest and Kerala at 10 although its strength is massage and clinical wellness, not bathing culture."
+ },
+ "spaWellness|tuscany": {
+  "why": "Peak 8.1, flat. 'Defined by' became 'known for'. Covers thermal towns, wellness resorts and day spas, so all three kinds are present."
+ }
+}

@@ -99,6 +99,7 @@ export function ResultsList({
   const ghostToken = useRef(0);
   const prevLayout = useRef<Layout | null>(null);
   const flipCounter = useRef(0);
+  const lastFilterKey = useRef(filterKey);
 
   // Re-sort animation (design "2a"): when the order of cards that stay on
   // screen changes, each one is snapped back to where it was and then slides
@@ -117,6 +118,12 @@ export function ResultsList({
     });
     const prev = prevLayout.current;
     prevLayout.current = { ids, tops };
+    // The render-phase `filterJustChanged` above is already false by the time
+    // this commit's effect runs (React re-renders right after the state
+    // update), so a filter that only removes cards ("Show saved") would never
+    // animate. Remember the key here instead.
+    const filterChanged = lastFilterKey.current !== filterKey;
+    lastFilterKey.current = filterKey;
     if (!prev || prefersReducedMotion()) return;
 
     const nowSet = new Set(ids);
@@ -125,7 +132,7 @@ export function ResultsList({
     const nowShared = ids.filter((id) => prevSet.has(id));
     const entering = ids.filter((id) => !prevSet.has(id));
     const leaving = prev.ids.filter((id) => !nowSet.has(id));
-    if (!prevShared.some((id, i) => id !== nowShared[i]) && !(entering.length > 0 && leaving.length > 0) && !filterJustChanged) return;
+    if (!prevShared.some((id, i) => id !== nowShared[i]) && !(entering.length > 0 && leaving.length > 0) && !filterChanged) return;
     const listHeight = list.getBoundingClientRect().height;
 
     const token = String(++flipCounter.current);

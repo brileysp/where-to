@@ -1,7 +1,7 @@
 [
  {
   "k": "whaleWatching",
-  "id": "churchill",
+  "id": "p0045",
   "name": "Churchill",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 721,
@@ -109,7 +109,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "sydney",
+  "id": "p0176",
   "name": "Sydney",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 718,
@@ -225,7 +225,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "antarctica",
+  "id": "p0006",
   "name": "Antarctic Peninsula",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 721,
@@ -338,7 +338,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "scottish-highlands-skye",
+  "id": "p0164",
   "name": "Scottish Highlands & Isle of Skye",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 724,
@@ -457,7 +457,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "azores",
+  "id": "p0014",
   "name": "Azores",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 723,
@@ -580,7 +580,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "bali",
+  "id": "p0017",
   "name": "Bali",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 722,
@@ -684,7 +684,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "vietnam",
+  "id": "p0195",
   "name": "Vietnam",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 721,
@@ -788,7 +788,7 @@
  },
  {
   "k": "whaleWatching",
-  "id": "havana",
+  "id": "p0052",
   "name": "Cuba",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 720,
@@ -855,7 +855,7 @@
  },
  {
   "k": "diving",
-  "id": "belize",
+  "id": "p0025",
   "name": "Belize",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 734,
@@ -975,7 +975,7 @@
  },
  {
   "k": "diving",
-  "id": "palau",
+  "id": "p0132",
   "name": "Palau",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 735,
@@ -1094,7 +1094,7 @@
  },
  {
   "k": "diving",
-  "id": "galapagos",
+  "id": "p0071",
   "name": "Galápagos Islands",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 736,
@@ -1200,7 +1200,7 @@
  },
  {
   "k": "diving",
-  "id": "jordan",
+  "id": "p0140",
   "name": "Petra & Wadi Rum",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 734,
@@ -1325,7 +1325,7 @@
  },
  {
   "k": "diving",
-  "id": "maldives",
+  "id": "p0102",
   "name": "Maldives",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 734,
@@ -1430,7 +1430,7 @@
  },
  {
   "k": "diving",
-  "id": "cornwall",
+  "id": "p0049",
   "name": "Cornwall",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 733,
@@ -1541,7 +1541,7 @@
  },
  {
   "k": "diving",
-  "id": "glacier-waterton",
+  "id": "p0073",
   "name": "Glacier & Waterton Lakes",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 741,
@@ -1649,7 +1649,7 @@
  },
  {
   "k": "diving",
-  "id": "kerala",
+  "id": "p0087",
   "name": "Kerala",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 732,
@@ -1758,7 +1758,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "london",
+  "id": "p0096",
   "name": "London",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 713,
@@ -1847,7 +1847,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "chicago",
+  "id": "p0043",
   "name": "Chicago",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 713,
@@ -1932,7 +1932,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "singapore",
+  "id": "p0170",
   "name": "Singapore",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 714,
@@ -2026,7 +2026,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "rivieramaya",
+  "id": "p0155",
   "name": "Riviera Maya",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 714,
@@ -2121,7 +2121,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "iceland",
+  "id": "p0083",
   "name": "Iceland",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 713,
@@ -2201,7 +2201,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "hokkaido",
+  "id": "p0080",
   "name": "Hokkaido",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 716,
@@ -2297,7 +2297,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "rioja",
+  "id": "p0154",
   "name": "Rioja",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 712,
@@ -2380,7 +2380,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "lapland",
+  "id": "p0069",
   "name": "Finnish Lapland",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 714,
@@ -2469,7 +2469,7 @@
  },
  {
   "k": "golf",
-  "id": "st-andrews-fife",
+  "id": "p0174",
   "name": "St Andrews & Fife",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 705,
@@ -2576,7 +2576,7 @@
  },
  {
   "k": "golf",
-  "id": "lisbon",
+  "id": "p0094",
   "name": "Lisbon",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 703,
@@ -2685,7 +2685,7 @@
  },
  {
   "k": "golf",
-  "id": "scottish-highlands-skye",
+  "id": "p0164",
   "name": "Scottish Highlands & Isle of Skye",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 707,
@@ -2792,7 +2792,7 @@
  },
  {
   "k": "golf",
-  "id": "egypt",
+  "id": "p0151",
   "name": "Red Sea & Nile",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 705,
@@ -2891,7 +2891,7 @@
  },
  {
   "k": "golf",
-  "id": "chamonix",
+  "id": "p0038",
   "name": "Chamonix & the French Alps",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 707,
@@ -2991,7 +2991,7 @@
  },
  {
   "k": "golf",
-  "id": "jordan",
+  "id": "p0140",
   "name": "Petra & Wadi Rum",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 705,
@@ -3047,7 +3047,7 @@
  },
  {
   "k": "golf",
-  "id": "zambia",
+  "id": "p0171",
   "name": "South Luangwa",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 705,
@@ -3100,7 +3100,7 @@
  },
  {
   "k": "golf",
-  "id": "nicaragua",
+  "id": "p0119",
   "name": "Nicaragua",
   "model": "gemini-3.1-pro-preview",
   "tokensIn": 705,
@@ -3198,7 +3198,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "london",
+  "id": "p0096",
   "name": "London",
   "model": "gemini-3-flash-preview",
   "tokensIn": 713,
@@ -3289,7 +3289,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "chicago",
+  "id": "p0043",
   "name": "Chicago",
   "model": "gemini-3-flash-preview",
   "tokensIn": 713,
@@ -3379,7 +3379,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "singapore",
+  "id": "p0170",
   "name": "Singapore",
   "model": "gemini-3-flash-preview",
   "tokensIn": 714,
@@ -3475,7 +3475,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "rivieramaya",
+  "id": "p0155",
   "name": "Riviera Maya",
   "model": "gemini-3-flash-preview",
   "tokensIn": 714,
@@ -3566,7 +3566,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "iceland",
+  "id": "p0083",
   "name": "Iceland",
   "model": "gemini-3-flash-preview",
   "tokensIn": 713,
@@ -3668,7 +3668,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "hokkaido",
+  "id": "p0080",
   "name": "Hokkaido",
   "model": "gemini-3-flash-preview",
   "tokensIn": 716,
@@ -3752,7 +3752,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "rioja",
+  "id": "p0154",
   "name": "Rioja",
   "model": "gemini-3-flash-preview",
   "tokensIn": 712,
@@ -3834,7 +3834,7 @@
  },
  {
   "k": "museumsArt",
-  "id": "lapland",
+  "id": "p0069",
   "name": "Finnish Lapland",
   "model": "gemini-3-flash-preview",
   "tokensIn": 714,

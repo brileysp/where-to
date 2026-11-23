@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { bandDims, careCount, careHas, careItemsFor, careRowSummary, isNarrowed, type Bands, type CareItem, type CareState } from '@/lib/onboarding/care';
 
 /**
@@ -10,14 +11,12 @@ export function CareAccordion({
   bands,
   open,
   tiles,
-  kidsSuggested,
   bare,
   onOpen,
   onTile,
   onBandChoice,
   onOption,
   onFirm,
-  onAddKids,
 }: {
   scope: 'trip' | 'dna';
   care: CareState;
@@ -25,8 +24,7 @@ export function CareAccordion({
   open: boolean;
   /** The rows that are open. */
   tiles: string[];
-  kidsSuggested: boolean;
-  /** In a sheet: no collapsible header and no suggestion line, just the open rows. */
+  /** In a sheet: no collapsible header, just the open rows. */
   bare?: boolean;
   onOpen: () => void;
   onTile: (key: string) => void;
@@ -35,21 +33,23 @@ export function CareAccordion({
   onOption: (item: CareItem, option: string) => void;
   onFirm: (key: string, firm: boolean) => void;
   onClear?: (key: string) => void;
-  onAddKids: () => void;
 }) {
   const items = careItemsFor(scope);
   const n = careCount(care, bands);
+  // Opening the section brings its top to the top of the screen, so the rows start where the heading was.
+  const box = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(open);
+  useEffect(() => {
+    if (open && !wasOpen.current && !bare) {
+      const t = setTimeout(() => box.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+      wasOpen.current = open;
+      return () => clearTimeout(t);
+    }
+    wasOpen.current = open;
+  }, [open, bare]);
   return (
     <>
-      {kidsSuggested && !bare && (
-        <div className="ob2-sugg">
-          <span>Traveling with kids? Add ages and we will favor family-friendly places.</span>
-          <button type="button" className="ob2-link" onClick={onAddKids}>
-            Add kid-friendly
-          </button>
-        </div>
-      )}
-      <div className="ob2-care">
+      <div className={`ob2-care${open && !bare ? ' open' : ''}`} ref={box}>
         {!bare && (
           <button type="button" className="carehd" aria-expanded={open} onClick={onOpen}>
             <span>
@@ -123,7 +123,7 @@ export function CareAccordion({
                 );
               })}
             </div>
-            <div className="ob2-fine">Budget, dates and who is coming are asked separately. Only what you pick here is used.</div>
+            <div className="ob2-fine">Budget, dates and who’s coming are asked separately. Only what you pick here is used.</div>
           </>
         )}
       </div>

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const root = join(__dirname, '..', '..');
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/yoga-retreats-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
@@ -24,8 +25,8 @@ describe('Yoga Retreats evidence', () => {
   });
   it('Vipassana ticks come from the dhamma.org directory except one named silent-retreat operator', () => {
     const med = Object.entries(draft).filter(([, d]) => d.meditationRetreat).map(([p]) => p).sort();
-    expect(med).toEqual(['algarve', 'bali', 'costa-rica', 'kerala', 'nepal', 'srilanka', 'tuscany']);
-    for (const p of med.filter((x) => x !== 'algarve')) expect(draft[p].evidence as string, p).toContain('dhamma.org');
+    expect(med).toEqual([PLACE.algarve, PLACE.bali, PLACE['costa-rica'], PLACE.kerala, PLACE.nepal, PLACE['sri-lanka'], PLACE.tuscany]);
+    for (const p of med.filter((x) => x !== PLACE.algarve)) expect(draft[p].evidence as string, p).toContain('dhamma.org');
   });
   it('each place has levels and lengths, and values are from the allowed lists', () => {
     for (const [p, d] of Object.entries(draft)) {

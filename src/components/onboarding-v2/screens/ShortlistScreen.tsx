@@ -5,7 +5,8 @@ import { SearchBox } from '@/components/results/SearchBox';
 import { StampsSheet } from '@/components/results/StampsSheet';
 import { VisitedCounterStamp } from '@/components/results/VisitedCounterStamp';
 import { BookmarkIcon } from '@/components/results/BookmarkIcon';
-import { ONBOARDING_SEEN_KEY, useResortDemo } from '@/components/results/useResortDemo';
+import { ONBOARDING_SEEN_KEY } from '@/components/results/useResortDemo';
+import { PLACE_TIPS_SEEN_KEY } from '@/components/results/PlaceCardTips';
 import { SLIDERS } from '@/lib/scoring/constants';
 import { orderedByLevel } from '@/lib/onboarding/levels';
 import { DestinationDetailSheet } from '@/components/results/DestinationDetailSheet';
@@ -21,6 +22,7 @@ import { answerMessage, isShortlistLocked, questionsToUnlock } from '@/lib/onboa
 import { pickQuestion } from '@/lib/onboarding/questions';
 import { applyFlightLimitFrom, rankPlaces, rankingMonth } from '@/lib/onboarding/shortlist';
 import { tripAdjust } from '@/lib/onboarding/trip-adjust';
+import { tripMonthShares } from '@/lib/onboarding/trip-span';
 import type { TripLength } from '@/lib/onboarding/trip-length';
 import type { RegionKey } from '@/lib/onboarding/regions';
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
@@ -32,10 +34,13 @@ import type { LiveItem } from '@/lib/onboarding/live-questions';
 import { liveMatch, type MatchFitsByInterest } from '@/lib/onboarding/live-factors';
 import { useLiveFlow } from '../live/useLiveFlow';
 import { OPEN_LOCK, QuestionBox } from '../live/QuestionBox';
-import { Teaser } from '../live/Teaser';
+import { HowToPopup } from '../live/HowToPopup';
 import { peakGain } from '@/lib/onboarding/peak';
+import { careMatch } from '@/lib/onboarding/care-match';
 import { TripSheet, monthShort, originOf, tripSetCount } from '../live/TripSheet';
-import { TripsSheet } from '../live/TripsSheet';
+import { tripSummary } from '@/lib/onboarding/trips';
+import { TRIP_LENGTHS } from '@/lib/onboarding/trip-length';
+import { REGION_LABELS } from '@/lib/onboarding/regions';
 import type { TripsApi } from '../live/useTrips';
 import { Sheet } from '../Sheet';
 import { SharpenCard } from '../SharpenCard';
@@ -52,6 +57,9 @@ type SheetId = 'who' | 'when' | 'care' | 'bands' | 'limits' | 'aside' | 'swipe' 
 
 export interface ShortlistProps {
   data: FlowData;
+  /** What the Travel DNA says for the choices a trip can change, and the way to save a trip's choice as the new default. */
+  defaults: { who: string[]; bands: Bands; peak: number };
+  onMakeDefault: (part: 'budget' | 'weather' | 'peak' | 'who') => void;
   input: ProfileInput;
   /** Taste-card swipes and sharpen answers kept apart: only sharpen answers count toward the unlock. */
   sharpenAnswered: number;
@@ -91,6 +99,9 @@ export interface ShortlistProps {
   loc: HomeBundle;
   length: TripLength | null;
   continents: RegionKey[];
+  /** The kinds of place left on (all of them when nothing is left out) and how to change them. */
+  placeTypes: string[];
+  onPlaceTypes: (next: string[]) => void;
   onLength: (l: TripLength | null) => void;
   onContinents: (next: RegionKey[]) => void;
   onMaxHours: (h: number) => void;
@@ -113,7 +124,6 @@ export function ShortlistScreen(p: ShortlistProps) {
   const [sheet, setSheet] = useState<SheetId>(null);
   const [showAside, setShowAside] = useState(false);
   const [tripOpen, setTripOpen] = useState(false);
-  const [tripsOpen, setTripsOpen] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
   const [visited, setVisited] = useState<Record<string, boolean>>({});
   const [favorited, setFavorited] = useState<Record<string, boolean>>({});
@@ -122,6 +132,19 @@ export function ShortlistScreen(p: ShortlistProps) {
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   const weights = useMemo(() => weightsFor(input), [input]);
+
+  // The chips stick just under the top bar, so the page tells the style how tall that bar is.
+  const rootRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const root = rootRef.current;
+    const bar = root?.querySelector<HTMLElement>('.lq-sticky');
+    if (!root || !bar) return;
+    const set = () => root.style.setProperty('--lq-top-h', `${bar.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(bar);
+    return () => ro.disconnect();
+  }, []);
 
   // How each place does for the chips and answers of the interests the traveler has. The flow loads these as soon as the interests are picked, so they
   // are normally here before this screen shows; if a ticked chip still has to wait for them, the list waits too (up to 2.5 seconds), so it never
@@ -140,22 +163,33 @@ export function ShortlistScreen(p: ShortlistProps) {
   // The trip settings: where flights start from, what the trip length does to far places, and which continents are left out.
   const origin = useMemo(() => originOf(p.loc), [p.loc.airport, p.loc.country, p.loc.sub]); // eslint-disable-line react-hooks/exhaustive-deps
   const adjust = useMemo(
-    () => tripAdjust({ coords: data.coords, regions: data.regions, origin, length: p.length, continents: p.continents, settings: data.matchSettings }),
-    [data.coords, data.regions, origin, p.length, p.continents, data.matchSettings],
+    () => tripAdjust({ coords: data.coords, regions: data.regions, origin, length: p.length, continents: p.continents, settingTags: data.settingTags, placeTypes: p.placeTypes, settings: data.matchSettings }),
+    [data.coords, data.regions, data.settingTags, origin, p.length, p.continents, p.placeTypes, data.matchSettings],
   );
+  // What else matters (kids, food, language, mobility, how you travel): its own factor on each whole place, and places a firm item sets aside.
+  const careFx = useMemo(() => careMatch({ care: p.careProps.care, facts: data.travelFacts, settings: data.matchSettings }), [p.careProps.care, data.travelFacts, data.matchSettings]);
+  const placeFactors = useMemo(() => {
+    const f: Record<string, number> = { ...adjust.factors };
+    for (const [id, v] of Object.entries(careFx.factors)) f[id] = (f[id] ?? 1) * v;
+    return f;
+  }, [adjust.factors, careFx]);
+  const isOut = useCallback((id: string) => adjust.leftOut.has(id) || !!careFx.hidden[id], [adjust.leftOut, careFx]);
   // Crowds & prices moves a score by how busy or quiet the month is for that place (neutral in the middle); it needs a month to mean anything.
   const seasonGain = peakGain(p.peak, data.matchSettings);
-  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, seasonGain), [data.destinations, weights, p.month, p.bands, match.factors, adjust.factors, seasonGain]);
-  const inView = useMemo(() => rankedAll.filter((r) => !adjust.leftOut.has(r.d.id)), [rankedAll, adjust.leftOut]);
+  // A trip with a full week in a second month is scored on both months (see lib/onboarding/trip-span.ts).
+  const shares = useMemo(() => tripMonthShares(p.month, p.week, p.length), [p.month, p.week, p.length]);
+  const rankedAll = useMemo(() => rankPlaces(data.destinations, weights, p.month, p.bands, match.factors, placeFactors, seasonGain, shares, data.matchSettings.keepIfBandMissed), [data.destinations, weights, p.month, p.bands, match.factors, placeFactors, seasonGain, shares, data.matchSettings.keepIfBandMissed]);
+  const inView = useMemo(() => rankedAll.filter((r) => !isOut(r.d.id)), [rankedAll, isOut]);
   const limited = useMemo(() => applyFlightLimitFrom(inView, origin, p.maxHours, data.coords), [inView, origin, p.maxHours, data.coords]);
+  const asideAll = useMemo(() => [...limited.aside, ...rankedAll.filter((r) => careFx.hidden[r.d.id] && !adjust.leftOut.has(r.d.id)).map((r) => ({ d: r.d, why: careFx.hidden[r.d.id] }))], [limited.aside, rankedAll, careFx, adjust.leftOut]);
 
   /** The places that would be kept (best first) if the traveler's answers were these. */
   const keptWith = useCallback(
     (nextQa: InterestAnswers) => {
       const m = liveMatch({ interests: interestKeys, setups: data.setups, fits, ticked: p.subs, qa: nextQa, month: p.month, settings: data.matchSettings });
-      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, adjust.factors, seasonGain).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept;
+      return applyFlightLimitFrom(rankPlaces(data.destinations, weights, p.month, p.bands, m.factors, placeFactors, seasonGain, shares, data.matchSettings.keepIfBandMissed).filter((r) => !isOut(r.d.id)), origin, p.maxHours, data.coords).kept;
     },
-    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, adjust, origin, p.maxHours, seasonGain],
+    [interestKeys, data.setups, data.destinations, data.matchSettings, data.coords, fits, p.subs, weights, p.month, p.bands, placeFactors, isOut, origin, p.maxHours, seasonGain, shares],
   );
   const withAnswer = (interest: string, qkey: string, picks: number[]): InterestAnswers => ({ ...p.qa, [interest]: { ...(p.qa[interest] ?? {}), [qkey]: picks } });
   const nameOf = (k: string) => ({ icon: data.emojiOverrides[k] ?? interestByKey(k)?.icon ?? '•', label: interestByKey(k)?.label ?? k });
@@ -194,7 +228,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   // "Reshuffles ~2 of your top 5": how many of the top five positions an answer would change, averaged over its options. Kept per state.
   const impactCache = useRef<{ sig: string; map: Map<string, string> }>({ sig: '', map: new Map() });
   function impactText(item: LiveItem): string {
-    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.loc.airport, p.loc.country, p.loc.sub, p.length, p.continents, p.maxHours, p.peak, p.levels]);
+    const sig = JSON.stringify([p.qa, p.subs, interestKeys, Object.keys(fits), p.month, p.bands, p.loc.airport, p.loc.country, p.loc.sub, p.length, p.continents, p.placeTypes, p.maxHours, p.peak, p.levels]);
     if (impactCache.current.sig !== sig) impactCache.current = { sig, map: new Map() };
     const id = `${item.interest}.${item.q.key}`;
     const hit = impactCache.current.map.get(id);
@@ -221,12 +255,23 @@ export function ShortlistScreen(p: ShortlistProps) {
   const [pinnedChip, setPinnedChip] = useState<string | null>(null);
   const [hideVisited, setHideVisited] = useState(false);
   const [showWishlistOnly, setShowWishlistOnly] = useState(false);
+  const listWrapRef = useRef<HTMLDivElement>(null);
+  // Changing the filter from further down the page starts the new list at its top again, with its first place just under the sticky header.
+  const filterSig = `${pinnedChip}|${hideVisited}|${showWishlistOnly}`;
+  const lastFilter = useRef(filterSig);
+  useEffect(() => {
+    if (lastFilter.current === filterSig) return;
+    lastFilter.current = filterSig;
+    const list = listWrapRef.current;
+    const root = rootRef.current;
+    if (!list || !root) return;
+    const header = (root.querySelector<HTMLElement>('.lq-sticky')?.offsetHeight ?? 0) + (root.querySelector<HTMLElement>('.lq-chipstick')?.offsetHeight ?? 0);
+    const target = list.getBoundingClientRect().top + window.scrollY - header - 8;
+    if (window.scrollY > target) window.scrollTo({ top: Math.max(0, target) });
+  }, [filterSig]);
   const [showStamps, setShowStamps] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
-  const chipRowRef = useRef<HTMLDivElement>(null);
-  const chipEls = useRef<Map<string, HTMLElement>>(new Map());
-  const listWrapRef = useRef<HTMLDivElement>(null);
   // The chips are exactly the interests the traveler starred as top (what they would build a trip around), never other picks and never ones worked
   // out from their budget, weather or companions. Only when they starred none do their picked interests stand in, so the row is not empty.
   const chipSliders = useMemo(() => {
@@ -254,43 +299,26 @@ export function ShortlistScreen(p: ShortlistProps) {
   const visitedCount = Object.values(visited).filter(Boolean).length;
   const favoritedCount = Object.values(favorited).filter(Boolean).length;
 
-  // First visit to the list: the re-sort walkthrough plays after the flag teaser is finished, so only one lesson is on screen at a time.
-  // The flag lesson's own show lasts about six seconds; the re-sort lesson may start once it has played, even if the card is still there.
-  const [teaserPlayed, setTeaserPlayed] = useState(false);
-  useEffect(() => {
-    if (live.teaser !== 'on') return;
-    const t = setTimeout(() => setTeaserPlayed(true), 6500);
-    return () => clearTimeout(t);
-  }, [live.teaser]);
+  // The two lessons (re-sort by an interest, mark where you have been) play in a window over the list once it has unlocked, so nothing on the page
+  // itself moves. A returning traveler who has not seen them gets the same window once, when the list first settles.
+  const [howExtra, setHowExtra] = useState(false);
   useEffect(() => {
     if (!p.fresh) return;
-    try { window.localStorage.removeItem(ONBOARDING_SEEN_KEY); } catch { /* storage blocked: the lesson may simply replay */ }
+    try { window.localStorage.removeItem(ONBOARDING_SEEN_KEY); window.localStorage.removeItem(PLACE_TIPS_SEEN_KEY); } catch { /* storage blocked: the lesson may simply replay */ }
   }, [p.fresh]);
-  const demo = useResortDemo({
-    seenKey: ONBOARDING_SEEN_KEY,
-    ready: toolsOn && live.fill === 'none' && (live.teaser !== 'on' || teaserPlayed) && !openId && shown.length > 0,
-    chipKeys: chipSliders.map((x) => x.key),
-    pinChip: setPinnedChip,
-    containerRef: listWrapRef,
-    chipRowRef,
-    chipEls,
-    cardRefs,
-    rowIds: () => shown.map((r) => r.d.id),
-  });
-  // When the flag lesson's show is over, bring the chip row into view so the re-sort lesson (which waits for it) is actually seen.
   useEffect(() => {
-    if (!teaserPlayed) return;
+    if (!toolsOn || !listReady || live.fill !== 'none' || live.teaser !== 'off' || openId || shown.length === 0) return;
     let seen = false;
     try { seen = window.localStorage.getItem(ONBOARDING_SEEN_KEY) === '1'; } catch { /* storage blocked */ }
-    if (seen) return;
-    const t = setTimeout(() => chipRowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
-    return () => clearTimeout(t);
-  }, [teaserPlayed]);
-  useEffect(() => {
-    if (live.teaser !== 'done') return;
-    const t = setTimeout(() => chipRowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 450);
-    return () => clearTimeout(t);
-  }, [live.teaser]);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (!seen) setHowExtra(true);
+  }, [toolsOn, listReady, live.fill, live.teaser, openId, shown.length]);
+  const howOpen = live.teaser === 'on' || howExtra;
+  function closeHow() {
+    try { window.localStorage.setItem(ONBOARDING_SEEN_KEY, '1'); } catch { /* storage blocked */ }
+    setHowExtra(false);
+    live.closeTeaser();
+  }
 
   function selectSearchResult(id: string) {
     const idx = shown.findIndex((r) => r.d.id === id);
@@ -308,8 +336,6 @@ export function ShortlistScreen(p: ShortlistProps) {
     const t = setTimeout(() => setHighlightedId(null), 1700);
     return () => clearTimeout(t);
   }, [highlightedId]);
-  const teaserRef = useRef<HTMLDivElement>(null);
-
   // The unlock sequence scrolls the page: down to the new places, then to the teaser.
   useEffect(() => {
     if (live.fill !== 'hold') return;
@@ -320,14 +346,6 @@ export function ShortlistScreen(p: ShortlistProps) {
     }, 100);
     return () => clearTimeout(t);
   }, [live.fill]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    if (live.teaser !== 'on') return;
-    const t = setTimeout(() => {
-      const el = teaserRef.current;
-      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
-    }, 200);
-    return () => clearTimeout(t);
-  }, [live.teaser]);
   const question = useMemo(
     () => pickQuestion({ input, cards: data.cards, seenCardIds: p.seenCardIds, askedCardIds: [...p.sharpenCardIds, ...p.seenCardIds], destinations: data.destinations, month: p.month }),
     [input, data.cards, p.seenCardIds, p.sharpenCardIds, data.destinations, p.month],
@@ -341,7 +359,7 @@ export function ShortlistScreen(p: ShortlistProps) {
   function moverFor(card: DnaCard, type: SwipeType): { name: string; by: number } | null {
     const before = limited.kept.map((r) => r.d.id);
     const nextInput: ProfileInput = { ...input, answers: [...input.answers, { card, type } as Answer] };
-    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, adjust.factors, seasonGain).filter((r) => !adjust.leftOut.has(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
+    const after = applyFlightLimitFrom(rankPlaces(data.destinations, weightsFor(nextInput), p.month, p.bands, match.factors, placeFactors, seasonGain, shares, data.matchSettings.keepIfBandMissed).filter((r) => !isOut(r.d.id)), origin, p.maxHours, data.coords).kept.slice(0, 10);
     let best = null as { name: string; by: number } | null;
     after.forEach((r, i) => {
       const was = before.indexOf(r.d.id);
@@ -387,10 +405,12 @@ export function ShortlistScreen(p: ShortlistProps) {
   const home = airportByCode(p.home);
   const nCare = careCount(p.careProps.care, p.bands);
 
-  const tripValues = { month: p.month, week: p.week, length: p.length, continents: p.continents, who: p.who, bands: p.bands, loc: p.loc, maxHours: p.maxHours, peak: p.peak, careProps: p.careProps };
+  const tripValues = { month: p.month, week: p.week, length: p.length, continents: p.continents, placeTypes: p.placeTypes, who: p.who, bands: p.bands, loc: p.loc, maxHours: p.maxHours, peak: p.peak, careProps: p.careProps };
   const placeNames = useMemo(() => Object.fromEntries(data.destinations.map((d) => [d.id, d.name])), [data.destinations]);
   const inViewIds = useMemo(() => new Set(inView.map((r) => r.d.id)), [inView]);
   const tripCount = tripSetCount(tripValues);
+  const sameSet = (a: readonly string[] | undefined, b: readonly string[] | undefined) => [...(a ?? [])].sort().join('|') === [...(b ?? [])].sort().join('|');
+  const defaultsDiff = { budget: !sameSet(p.bands.budget, p.defaults.bands.budget), weather: !sameSet(p.bands.weather, p.defaults.bands.weather), peak: p.peak !== p.defaults.peak, who: !sameSet(p.who, p.defaults.who) };
   const lockedNow = liveOn ? !live.unlocked : locked;
   const barChips = (
     <div className="ob2-bar">
@@ -412,19 +432,17 @@ export function ShortlistScreen(p: ShortlistProps) {
   const boxCtx = { flow: live, setups: data.setups, levels: p.levels, subs: p.subs, qa: p.qa, chips: data.chips, nameOf, impactText, onTick: p.onTick, onManage: p.onDna };
 
   return (
-    <div className={liveOn ? 'lq' : undefined}>
+    <div className={liveOn ? 'lq' : undefined} ref={rootRef}>
       {liveOn ? (
         <div className="ob2-top shortlist lq-sticky">
-          <button type="button" className="lq-tnbtn" onClick={() => setTripsOpen(true)} aria-haspopup="dialog" aria-label={`${p.trips.active.name}. Your trips`}>
-            <b>{p.trips.active.name}</b>
+          <button type="button" className="lq-tnbtn" onClick={() => setTripOpen(true)} aria-haspopup="dialog" aria-label={`${p.trips.active.name}. Your trip settings${tripCount ? `, ${tripCount} set` : ''}`}>
+            <span className="lq-tntx">
+              <b>{p.trips.active.name}</b>
+              <small>{tripSummary(p.trips.active, (l) => TRIP_LENGTHS.find((x) => x.key === l)!.label, (k) => REGION_LABELS[k])}{tripCount > 0 ? ` · ${tripCount} ${tripCount === 1 ? 'setting' : 'settings'}` : ''}</small>
+            </span>
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 4.2 6 8l4-3.8" /></svg>
           </button>
           <div className="lq-topbtns">
-            <button type="button" className={`lq-tripbtn${tripOpen ? ' open' : ''}`} onClick={() => setTripOpen(true)} aria-haspopup="dialog" aria-label={`Your trip settings${tripCount ? `, ${tripCount} set` : ''}`}>
-              <span aria-hidden="true">🧳</span>
-              <span>Trip</span>
-              {tripCount > 0 && <span className="badge">{tripCount}</span>}
-            </button>
             <button type="button" className={`lq-prof${live.open ? ' open' : ''}${live.pulse ? ' pulse' : ''}${live.moreToDo ? ' ask' : ''}`} onClick={live.toggleBox} aria-expanded={live.open} aria-label={`${live.open ? 'Collapse' : 'Open'} your Travel DNA questions`}>
               <span aria-hidden="true">🧬</span>
               <span>{live.percent}%</span>
@@ -456,46 +474,47 @@ export function ShortlistScreen(p: ShortlistProps) {
               )}
             </div>
             {toolsOn && <SearchBox destinations={data.destinations} ranked={limited.kept} rankedAll={rankedAll} onSelectResult={selectSearchResult} expanded={searchOpen} />}
+            </div>
             {toolsOn && (
               <>
-                <div className={`resort-callout${demo.calloutVisible ? ' show' : ''}`} aria-hidden={!demo.calloutVisible}>
-                  <span className="resort-callout-icon">👆</span>Tap any interest to re-sort your results
-                </div>
-                <div className="quick-chip-row-wrap">
-                  <div className="quick-chip-row" ref={chipRowRef}>
-                    <InterestChip emoji="🧬" label="My Interests" active={pinnedChip === null} onClick={() => setPinnedChip(null)} />
-                    {chipSliders.map((x) => (
-                      <InterestChip
-                        key={x.key}
-                        emoji={data.emojiOverrides[x.key] ?? x.icon}
-                        label={shortInterestLabel(x.label, data.shortNames[x.key])}
-                        fullLabel={x.label}
-                        active={pinnedChip === x.key}
-                        onClick={() => setPinnedChip(x.key)}
-                        chipRef={(el) => { if (el) chipEls.current.set(x.key, el); else chipEls.current.delete(x.key); }}
-                      />
-                    ))}
+                {/* The interest chips stay under the top bar while the list scrolls; the heading above and the visited counter below scroll away. */}
+                <div className="lq-chipstick res-scope">
+                  <div className="quick-chip-row-wrap">
+                    <div className="quick-chip-row">
+                      <InterestChip emoji="🧬" label="My Interests" active={pinnedChip === null} onClick={() => setPinnedChip(null)} />
+                      {chipSliders.map((x) => (
+                        <InterestChip
+                          key={x.key}
+                          emoji={data.emojiOverrides[x.key] ?? x.icon}
+                          label={shortInterestLabel(x.label, data.shortNames[x.key])}
+                          fullLabel={x.label}
+                          active={pinnedChip === x.key}
+                          onClick={() => setPinnedChip(x.key)}
+                        />
+                      ))}
+                    </div>
+                    <div className="quick-chip-row-fade" aria-hidden />
                   </div>
-                  <div className="quick-chip-row-fade" aria-hidden />
                 </div>
-                <div className="results-stats-row">
-                  <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
-                    <VisitedCounterStamp count={visitedCount} size={26} />
-                    <span className="visited-stat-label">places visited</span>
-                    <span className="visited-stat-chevron">›</span>
-                  </button>
-                  <button type="button" className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`} onClick={() => setHideVisited((v) => !v)} disabled={visitedCount === 0}>
-                    Hide visited
-                    <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
-                  </button>
-                  <button type="button" className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`} onClick={() => setShowWishlistOnly((v) => !v)} disabled={favoritedCount === 0}>
-                    Show saved
-                    <span className="filter-icon"><BookmarkIcon filled={showWishlistOnly} /></span>
-                  </button>
+                <div className="lq-statswrap res-scope">
+                  <div className="results-stats-row">
+                    <button type="button" className="visited-stat-btn" onClick={() => setShowStamps(true)}>
+                      <VisitedCounterStamp count={visitedCount} size={26} />
+                      <span className="visited-stat-label">places visited</span>
+                      <span className="visited-stat-chevron">›</span>
+                    </button>
+                    <button type="button" className={`filter-link${visitedCount === 0 ? ' empty' : hideVisited ? ' on' : ''}`} onClick={() => setHideVisited((v) => !v)} disabled={visitedCount === 0}>
+                      Hide visited
+                      <span className="filter-icon">{visitedCount > 0 && hideVisited ? '✓' : ''}</span>
+                    </button>
+                    <button type="button" className={`filter-link${favoritedCount === 0 ? ' empty' : showWishlistOnly ? ' wishlist-on' : ''}`} onClick={() => setShowWishlistOnly((v) => !v)} disabled={favoritedCount === 0}>
+                      Show saved
+                      <span className="filter-icon"><BookmarkIcon filled={showWishlistOnly} /></span>
+                    </button>
+                  </div>
                 </div>
               </>
             )}
-            </div>
           </>
         ) : (
           <>
@@ -519,7 +538,6 @@ export function ShortlistScreen(p: ShortlistProps) {
           </>
         )}
         <div ref={listWrapRef} style={{ position: 'relative' }} className={`ob2-tz res-scope ${!liveOn && locked ? 'lock' : ''}${liveOn && live.fill === 'hold' ? ' lq-hold-new' : ''}`}>
-          {toolsOn && <div className="resort-cursor" aria-hidden style={{ left: demo.cursor.left, top: demo.cursor.top, opacity: demo.cursor.visible ? 1 : 0, transform: `translate(-50%, -50%) scale(${demo.cursor.pressed ? 0.65 : 1})` }} />}
           {!listReady ? (
             <div className="lq-wait" role="status">Ranking places for you…</div>
           ) : (
@@ -536,7 +554,6 @@ export function ShortlistScreen(p: ShortlistProps) {
             onToggleVisited={(id) => { setVisited((v) => ({ ...v, [id]: !v[id] })); live.markedPlace(); }}
             filterKey={`${hideVisited}:${showWishlistOnly}`}
             cardsRevealed
-            inserted={liveOn && live.teaser === 'on' && shown.length >= 3 ? { after: 3, node: <div ref={teaserRef}><Teaser dest={shown[0].d} score={shown[0].s} onGotIt={live.closeTeaser} /></div> } : undefined}
           />
           )}
         </div>
@@ -558,20 +575,20 @@ export function ShortlistScreen(p: ShortlistProps) {
             <span className="tx">
               <b>See {limited.kept.length} places that fit your criteria</b>
               <span>
-                {limited.aside.length ? `${limited.aside.length} set aside by your limits · ` : ''}the full results page
+                {asideAll.length ? `${asideAll.length} set aside by your limits · ` : ''}the full results page
               </span>
             </span>
             <i aria-hidden="true">›</i>
           </button>
         )}
-        {limited.aside.length > 0 && (
+        {asideAll.length > 0 && (
           <div className="ob2-hid">
             <button type="button" className="ob2-link plain" onClick={() => setShowAside((s) => !s)}>
-              {showAside ? '▾' : '▸'} {limited.aside.length} place{limited.aside.length > 1 ? 's' : ''} set aside by your limits
+              {showAside ? '▾' : '▸'} {asideAll.length} place{asideAll.length > 1 ? 's' : ''} set aside by your limits
             </button>
             {showAside && (
               <ul>
-                {limited.aside.map((a) => (
+                {asideAll.map((a) => (
                   <li key={a.d.id}>
                     <b>{a.d.name}</b>: {a.why}
                   </li>
@@ -581,7 +598,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           </div>
         )}
       </div>
-      <div className="ob2-foot">
+      <div className="ob2-foot lq-foot">
         <button type="button" className="ob2-btn ghost" onClick={openSwipes}>
           Teach us your taste ({settings.shortlistPlaces} swipes)
         </button>
@@ -597,34 +614,23 @@ export function ShortlistScreen(p: ShortlistProps) {
           </div>
         </div>
       )}
-      {tripsOpen && (
-        <TripsSheet
-          api={p.trips}
-          onClose={() => setTripsOpen(false)}
-          onNew={async () => {
-            await p.trips.create();
-            setTripsOpen(false);
-            setTripOpen(true);
-          }}
-        />
-      )}
       {tripOpen && (
         <TripSheet
           v={tripValues}
-          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onLength: p.onLength, onContinents: p.onContinents, onWho: p.onWho, onBandPill: p.onBandPill, onMaxHours: p.onMaxHours, onPeak: p.onPeak, onNeedHome: p.onNeedHome }}
+          h={{ onMonth: p.onMonth, onWeek: p.onWeek, onLength: p.onLength, onContinents: p.onContinents, onPlaceTypes: p.onPlaceTypes, onWho: p.onWho, onBandPill: p.onBandPill, onMaxHours: p.onMaxHours, onPeak: p.onPeak, onNeedHome: p.onNeedHome }}
           placeCount={limited.kept.length}
           adjust={adjust}
           names={placeNames}
           inScope={inViewIds}
-          trip={p.trips.active}
-          onRename={p.trips.rename}
-          onYear={p.trips.setYear}
+          api={p.trips}
+          defaultsDiff={defaultsDiff}
+          onMakeDefault={p.onMakeDefault}
           onClose={() => setTripOpen(false)}
         />
       )}
       {sheet === 'who' && (
         <Sheet onClose={() => setSheet(null)}>
-          <h3>Who is going?</h3>
+          <h3>Who’s going?</h3>
           <div className="ob2-otp">
             {COMPANIONS.map((c) => (
               <button key={c.key} type="button" className={`ob2-opill ${p.who.includes(c.key) ? 'on' : ''}`} aria-pressed={p.who.includes(c.key)} onClick={() => p.onWho(c.key)}>
@@ -692,6 +698,7 @@ export function ShortlistScreen(p: ShortlistProps) {
           bands={p.bands}
           selectedStyles={{}}
           factors={match.factors}
+          adjust={{ peakGain: p.month == null ? 0 : seasonGain, bandKeep: data.matchSettings.keepIfBandMissed, placeFactor: placeFactors[openEntry.d.id] ?? 1, shares: p.month == null ? undefined : shares }}
           notes={match.notes[openEntry.d.id]}
           interestKeys={myInterestKeys}
           month={p.month == null ? new Date().getMonth() + 1 : p.month + 1}
@@ -702,7 +709,16 @@ export function ShortlistScreen(p: ShortlistProps) {
           onClose={() => setOpenId(null)}
         /></div>
       )}
-      {showStamps && <div className="res-scope"><StampsSheet destinations={data.destinations} visited={visited} onToggleVisited={(id) => setVisited((v) => ({ ...v, [id]: !v[id] }))} onClose={() => setShowStamps(false)} /></div>}
+      {showStamps && <div className="res-scope"><StampsSheet destinations={data.destinations} visited={visited} coords={data.coords} onToggleVisited={(id) => setVisited((v) => ({ ...v, [id]: !v[id] }))} onClose={() => setShowStamps(false)} /></div>}
+      {liveOn && howOpen && (
+        <HowToPopup
+          pool={shownBase.slice(0, 10)}
+          chips={chipSliders.map((x) => ({ key: x.key, emoji: data.emojiOverrides[x.key] ?? x.icon, label: shortInterestLabel(x.label, data.shortNames[x.key]), fullLabel: x.label }))}
+          month={p.month}
+          factors={matchFactors}
+          onClose={closeHow}
+        />
+      )}
       {liveOn && (
         <div className={`lq-pop${live.pop.on ? ' show' : ''}`} role="status" aria-live="polite">
           {OPEN_LOCK}

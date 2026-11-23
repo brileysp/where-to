@@ -100,7 +100,6 @@ async function main() {
   // Dynamic, after the env is set — see review-scenic-saturation.ts.
   const { getAllScoredPlaces } = await import('../src/lib/db/queries/places');
   const { isSliderNA } = await import('../src/lib/scoring/destinations');
-  const { SLIDERS } = await import('../src/lib/scoring/constants');
 
   const scored = (await getAllScoredPlaces()) as unknown as Array<
     Record<string, unknown> & { id: string; monthly: Record<string, number[]> }
@@ -109,8 +108,7 @@ async function main() {
   type Row = { slider: string; flag: string; on: number; off: number; delta: number; n: number };
   const rows: Row[] = [];
 
-  for (const s of SLIDERS) {
-    if (s.key === 'deals' || s.key === 'crowds') continue;
+  for (const s of await (await import('../src/lib/scoring/active-interests')).getActiveInterests()) {
     for (const flag of FLAGS) {
       let onSum = 0, onN = 0, offSum = 0, offN = 0, places = 0;
       for (const d of scored) {

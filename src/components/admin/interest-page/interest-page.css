@@ -256,3 +256,23 @@ span.ip-gdot { cursor: default; width: 18px; height: 18px; font-size: 10px; vert
 .ip-plan-note textarea { width: 100%; font: inherit; font-size: 12.5px; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; background: var(--bg); resize: vertical; }
 .ip-plan-foot { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
 .ip-linkbtn { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
+
+/* Staleness checks (13 Nov 2026) */
+.ip-stale-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; margin-bottom: 8px; }
+.ip-stale-bar { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; margin: 6px 0 10px; }
+.ip-stale-bar > i { display: block; height: 100%; background: var(--good); }
+.ip-stale-cat { margin: 14px 0 4px; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-faint); font-weight: 700; }
+.ip-stale-row { border-top: 1px solid var(--border); padding: 8px 0; }
+.ip-stale-row.retired { opacity: 0.55; }
+.ip-stale-row .st { font-weight: 600; }
+.ip-stale-meta { font-size: 12px; color: var(--text-dim); margin-top: 3px; }
+.ip-stale-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+.ip-stale-actions input[type="text"] { flex: 1 1 220px; min-width: 0; }
+.ip-stale-btn { border: 1px solid var(--border); background: var(--bg-panel); color: var(--text); border-radius: 6px; padding: 3px 9px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.ip-stale-btn.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.ip-stale-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.ip-stale-form { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; margin-top: 8px; }
+.ip-stale-form .full { grid-column: 1 / -1; }
+.ip-stale-form label { display: grid; gap: 3px; font-size: 12px; color: var(--text-dim); }
+.ip-stale-form textarea, .ip-stale-form input, .ip-stale-form select { font: inherit; font-size: 13px; }
+@media (max-width: 640px) { .ip-stale-form { grid-template-columns: 1fr; } }

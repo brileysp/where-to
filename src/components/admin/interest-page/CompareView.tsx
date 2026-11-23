@@ -6,6 +6,7 @@ import type { FactDef } from '@/lib/admin/interest-pages/config';
 import type { InterestFactValue } from '@/lib/db/schema';
 import { FACT_GROUP_LABELS, likelihoodRank, optionLabel } from '@/lib/admin/interest-pages/config';
 import { factToText } from './FactCell';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const MON = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 const MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -40,8 +41,8 @@ function Months({ monthly }: { monthly: number[] }) {
 export function CompareView({ data, places, defs }: { data: InterestPageData; places: InterestPlaceRow[]; defs: FactDef[] }) {
   const options = useMemo(() => places.filter((p) => p.status !== 'na'), [places]);
   const initial = (id: string, fallback: number) => (options.find((p) => p.id === id) ? id : options[fallback]?.id ?? '');
-  const [aId, setA] = useState(initial(data.key === 'safari' ? 'tanzania' : 'ecuadorian-andes', 0));
-  const [bId, setB] = useState(initial(data.key === 'safari' ? 'kruger' : 'colombian-andes', 1));
+  const [aId, setA] = useState(initial(data.key === 'safari' ? PLACE['northern-tanzania'] : PLACE['ecuadorian-andes'], 0));
+  const [bId, setB] = useState(initial(data.key === 'safari' ? PLACE['kruger-and-sabi-sands'] : PLACE['colombian-andes'], 1));
   const a = options.find((p) => p.id === aId);
   const b = options.find((p) => p.id === bId);
   if (!a || !b) return <div className="ip-card ip-faint">Pick two places with data.</div>;

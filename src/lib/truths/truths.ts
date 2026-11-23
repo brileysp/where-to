@@ -14,6 +14,7 @@ import { VISIBLE_SLIDERS } from '@/lib/scoring/constants';
 import { CADENCE_TODO_SOURCE, PLANNING_KEYS, PLANNING_LABELS, isPlanningScore, reviewCadence } from '@/lib/scoring/planning';
 import type { TruthContext } from './context';
 import { REMOVED_ANSWERS, REMOVED_INTERESTS, UNSELECTED_CHIPS } from './decisions';
+import { PLACE } from '@/lib/places/keys.generated';
 
 /**
  * The known truths: plain-language statements about what must always be true of Where To?, each one a check that can fail. They are the owner's
@@ -43,9 +44,9 @@ export interface Truth {
  * Places where Beaches is on although neither surfing nor diving applies: a real coast with no waves or diving (Copenhagen, Acadia), and cities with a real
  * urban swimming scene (Paris Plages, Berlin's lakes, Vienna's Alte Donau). Owner rule, 22 Oct 2026.
  */
-const COASTAL_WITHOUT_SURF = ['copenhagen', 'acadia', 'paris', 'berlin', 'vienna'];
+const COASTAL_WITHOUT_SURF = [PLACE.copenhagen, PLACE['acadia-national-park'], PLACE.paris, PLACE.berlin, PLACE.vienna];
 /** Swimming that is not about the ocean at all (river and swimming holes), so it says nothing about being near a coast. */
-const INLAND_SWIMMING = ['guilin-yangshuo', 'hudson-valley'];
+const INLAND_SWIMMING = [PLACE['guilin-and-yangshuo'], PLACE['hudson-valley']];
 /** A not-applicable reason that says the place is too far away. Murky water or no diving is a fine reason; being too far is not (owner rule, 24 Oct 2026). */
 const TOO_FAR = /too far|far from|requires? travel|other regions/i;
 const pass: TruthResult = { ok: true };
@@ -112,9 +113,9 @@ export const TRUTHS: Truth[] = [
     for (let i = 1; i < r.reasons.length; i++) if (r.reasons[i].cost > r.reasons[i - 1].cost) return fail('not biggest first');
     return pass;
   } },
-  { id: 'M08', area: 'Matching', says: 'Missing a Limit answer costs more than missing a Lean answer, and a missed chip costs at least as much as a missed Limit.', check: () => {
+  { id: 'M08', area: 'Matching', says: 'Missing a Limit answer costs more than missing a Lean answer, and a missed chip is as mild as a missed Lean (a wish, never a wall).', check: () => {
     const s = DEFAULT_MATCH_SETTINGS;
-    return s.keepIfLimitMissed < s.keepIfLeanMissed && s.keepIfChipMissed <= s.keepIfLimitMissed ? pass : fail(`chip ${s.keepIfChipMissed}, limit ${s.keepIfLimitMissed}, lean ${s.keepIfLeanMissed}`);
+    return s.keepIfLimitMissed < s.keepIfLeanMissed && s.keepIfChipMissed >= s.keepIfLeanMissed ? pass : fail(`chip ${s.keepIfChipMissed}, limit ${s.keepIfLimitMissed}, lean ${s.keepIfLeanMissed}`);
   } },
   { id: 'M09', area: 'Matching', says: 'Answers are kept while a chip is unticked and count again the moment it is ticked again.', check: () => {
     const w = world();
@@ -320,7 +321,9 @@ export const TRUTHS: Truth[] = [
   } },
   { id: 'T05', area: 'Text', says: 'Animal names use American spelling ("gray seal", "Gray Heron"), the way eBird and NOAA write them.', check: (ctx) => {
     const re = /\b[Gg]rey\b/; const bad: string[] = [];
-    for (const p of ctx.places) for (const [k, t] of Object.entries(p.overview)) if (t && re.test(t)) bad.push(`${p.name} ${k}`);
+    // Proper names keep their own spelling (Grey Glacier and Lago Grey in Torres del Paine), the same way T04 leaves "Wetland Centre" alone.
+    const properNames = /\bGrey (Glacier|Lake|Towers?)\b/g;
+    for (const p of ctx.places) for (const [k, t] of Object.entries(p.overview)) if (t && re.test(t.replace(properNames, ''))) bad.push(`${p.name} ${k}`);
     return noneOf(bad, 'overviews that write "grey"');
   } },
   { id: 'T06', area: 'Text', says: 'Bird names are the eBird names: a name swept out on 22 Oct 2026 (Common Starling, Griffon Vulture, Little Auk and the rest) never comes back.', check: (ctx) => {

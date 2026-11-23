@@ -17,6 +17,7 @@ import { AuthoringSection } from './AuthoringSection';
 import { ChipsSection } from './ChipsSection';
 import { QuestionsSection } from './QuestionsSection';
 import { PlanningCard } from './PlanningCard';
+import { StalenessCard } from './StalenessCard';
 
 type Tab = 'rules' | 'todo' | 'ideas' | 'data' | 'reviews' | 'authoring' | 'chips';
 const TABS: Tab[] = ['data', 'todo', 'ideas', 'rules', 'reviews', 'authoring', 'chips'];
@@ -133,6 +134,8 @@ export function InterestPage({ data }: { data: InterestPageData }) {
       </div>
 
       <PlanningCard data={data} places={places} />
+
+      <StalenessCard data={data} />
 
       <Completeness c={data.completeness} openItems={counts.open} go={go} />
 

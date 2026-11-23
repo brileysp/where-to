@@ -1,5 +1,5 @@
 import { getOnboardingSettings } from '@/lib/onboarding/settings';
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import { interestByKey } from '@/lib/onboarding/interests';
 import { orderedByLevel, type Levels } from '@/lib/onboarding/levels';
 import type { OnboardingChip } from '@/lib/db/queries/onboarding-chips';
@@ -26,11 +26,14 @@ export function RankScreen({
   const root = useRef<HTMLDivElement>(null);
   useFlip(root);
   const rows = orderedByLevel(levels).filter((k) => interestByKey(k));
+  // Headers only once something is starred, so the jump to the top reads as a group (owner, 22 Nov 2026).
+  const hasTop = rows.some((k) => levels[k] === 'top');
+  const firstOther = rows.find((k) => levels[k] !== 'top');
   return (
     <>
       <div className="ob2-scr" ref={root}>
         <h2>Top interests</h2>
-        <p className="ob2-sub">Which are most important for picking where you go? Choose up to {getOnboardingSettings().maxTopInterests}.</p>
+        <p className="ob2-sub">Pick up to {getOnboardingSettings().maxTopInterests}, the most important ones for travel</p>
         <div className="ob2-rows">
           {rows.map((k) => {
             const i = interestByKey(k)!;
@@ -38,7 +41,10 @@ export function RankScreen({
             const ch = chips[k] ?? [];
             const pick = subs[k] ?? [];
             return (
-              <div key={k} className={`ob2-rk ${on ? 'on top' : ''}`} data-flip={k}>
+              <Fragment key={k}>
+              {hasTop && k === rows[0] && on && <div className="ob2-grp">Top interests</div>}
+              {hasTop && k === firstOther && <div className="ob2-grp">Also picked</div>}
+              <div className={`ob2-rk ${on ? 'on top' : ''}`} data-flip={k}>
                 <button type="button" className="rkh" aria-pressed={on} onClick={() => onStar(k)}>
                   <span className="e" aria-hidden="true">{i.icon}</span>
                   <b>{i.label}</b>
@@ -57,6 +63,7 @@ export function RankScreen({
                   </div>
                 )}
               </div>
+              </Fragment>
             );
           })}
         </div>

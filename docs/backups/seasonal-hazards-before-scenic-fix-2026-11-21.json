@@ -1,0 +1,70 @@
+{
+ "p0041": [
+  {
+   "label": "Burning season (crop & forest smoke)",
+   "months": [
+    2,
+    3,
+    4
+   ],
+   "category": "airQuality",
+   "severity": "severe",
+   "affectedSliders": [
+    "scenicLandscapes",
+    "stargazing",
+    "adventureSports"
+   ]
+  }
+ ],
+ "p0164": [
+  {
+   "label": "Peak midge season",
+   "months": [
+    7,
+    8
+   ],
+   "category": "insects",
+   "severity": "severe",
+   "affectedSliders": [
+    "scenicLandscapes",
+    "fishing",
+    "cyclingRoad",
+    "adventureSports",
+    "roadtrip",
+    "golf"
+   ]
+  },
+  {
+   "label": "Midge season",
+   "months": [
+    6,
+    9
+   ],
+   "category": "insects",
+   "severity": "moderate",
+   "affectedSliders": [
+    "scenicLandscapes",
+    "fishing",
+    "cyclingRoad",
+    "adventureSports",
+    "roadtrip",
+    "golf"
+   ]
+  }
+ ],
+ "p0200": [
+  {
+   "label": "Flash flood risk (monsoon)",
+   "months": [
+    7,
+    8
+   ],
+   "category": "storm",
+   "severity": "severe",
+   "affectedSliders": [
+    "adventureSports",
+    "scenicLandscapes"
+   ]
+  }
+ ]
+}

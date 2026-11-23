@@ -24,6 +24,15 @@ export interface PlaceCoordsRow {
   lon: number;
 }
 
+/** Each place's setting tags (what it is like: city, island, mountains...), for the kinds-of-place filter. A place with none on file is absent. */
+export async function getPlaceSettingTags(): Promise<Record<string, string[]>> {
+  const { places } = await import('../schema');
+  const rows = await db.select({ id: places.id, tags: places.settingTags }).from(places);
+  const out: Record<string, string[]> = {};
+  for (const r of rows) if (r.tags?.length) out[r.id] = r.tags;
+  return out;
+}
+
 /** Latitude and longitude for every place that has them on file, for estimating flight hours. A place without coordinates is simply absent. */
 export async function getPlaceCoords(): Promise<Record<string, PlaceCoordsRow>> {
   const { places } = await import('../schema');

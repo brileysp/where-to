@@ -4,6 +4,7 @@ import { airportsFor, hasSubStep, originLabel, resolveOrigin, subChoices } from 
 import { daysFor, lengthFactor, lengthTier, travelShare } from '@/lib/onboarding/trip-length';
 import { DEFAULT_MATCH_SETTINGS, matchSettingsProblem, mergeMatchSettings } from '@/lib/scoring/matchSettings';
 import { milesBetween, estimateFlightHours } from '@/lib/onboarding/airports';
+import { PLACE } from '@/lib/places/keys.generated';
 
 describe('regions', () => {
   it('puts places in the region the owner chose', () => {
@@ -40,10 +41,10 @@ describe('regions', () => {
     expect(regionAllows([], 'as')).toBe(true);
   });
   it('gives every real place a region or a deliberate none', () => {
-    const r = regionsForPlaces({ istanbul: { lat: 41, lon: 28.98 }, antarctica: { lat: -65, lon: -62 }, maui: { lat: 20.8, lon: -156.3 } });
-    expect(r.istanbul).toBe('eu');
-    expect(r.antarctica).toBeNull();
-    expect(r.maui).toBe('na');
+    const r = regionsForPlaces({ [PLACE.istanbul]: { lat: 41, lon: 28.98 }, [PLACE['antarctic-peninsula']]: { lat: -65, lon: -62 }, [PLACE.maui]: { lat: 20.8, lon: -156.3 } });
+    expect(r[PLACE.istanbul]).toBe('eu');
+    expect(r[PLACE['antarctic-peninsula']]).toBeNull();
+    expect(r[PLACE.maui]).toBe('na');
   });
 });
 

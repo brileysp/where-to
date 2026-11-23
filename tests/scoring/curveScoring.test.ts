@@ -78,7 +78,7 @@ describe('deriveDestinationScoresFromCurves', () => {
     expect(result.monthly.hiking).toEqual(new Array(12).fill(0));
   });
 
-  it('reapplies seasonalHazards on top of curve-derived monthly, same multiplier as the old formula', () => {
+  it('does not let seasonalHazards change a curve-derived score (owner decision, 21 Nov 2026: flags are reference only)', () => {
     const d = makeDestination({
       sliderCurves: { diving: { anchors: [{ month: 1, value: 8 }] } },
       seasonalHazards: [
@@ -86,8 +86,8 @@ describe('deriveDestinationScoresFromCurves', () => {
       ],
     });
     const result = deriveDestinationScoresFromCurves(d);
-    expect(result.monthly.diving[0]).toBe(8); // January, unaffected
-    expect(result.monthly.diving[6]).toBeCloseTo(8 * 0.3, 5); // July, severe multiplier applied
+    expect(result.monthly.diving[0]).toBe(8); // January
+    expect(result.monthly.diving[6]).toBe(8); // July, flagged but not cut
   });
 
   it('scoreOverrides win over both the curve and any hazard', () => {

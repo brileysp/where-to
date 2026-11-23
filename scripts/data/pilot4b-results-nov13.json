@@ -1,0 +1,1878 @@
+[
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0006",
+  "rank": "batch",
+  "name": "Antarctic Peninsula",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3616,
+  "tokensOut": 1559,
+  "cost": 0.01297,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Antarctic Peninsula is defined by colossal ice shelves, glaciers, and rugged coastlines. Visitors view towering icebergs and steep, snow-covered mountains from expedition ships and Zodiac boats. The Lemaire Channel provides a narrow, steep-sided passage known for its mirrored reflections of ice and rock.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "peak",
+     "text": "The days are very long, and open water lets ships and Zodiacs weave between icebergs, with the Lemaire Channel often passable."
+    },
+    {
+     "months": [
+      11
+     ],
+     "level": "good",
+     "text": "Sea ice can still block narrow channels and bays, so some landings and the Lemaire Channel may be out of reach, but the snow on the shores and mountains is pristine."
+    },
+    {
+     "months": [
+      3
+     ],
+     "level": "good",
+     "text": "The days are shorter, the snow cover is thinner and more rock shows along the shores."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "closed",
+     "text": "Thick sea ice and storms close the peninsula, and no passenger ships sail."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    12
+   ],
+   "monthly_scores": [
+    9.8,
+    9.6,
+    8.5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8.7,
+    9.7
+   ],
+   "confidence": "high",
+   "depth_why": "The travel season is strictly limited to the austral summer, with peak access in mid-summer and complete closure during the winter.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Lemaire Channel",
+    "Zodiac"
+   ]
+  },
+  "curve": [
+   9.2,
+   9.2,
+   9.2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   8.5,
+   8.85
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0043",
+  "rank": "batch",
+  "name": "Chicago",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3609,
+  "tokensOut": 1700,
+  "cost": 0.013809,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Chicago's scenery is defined by its vast lakefront and the river that cuts through downtown. The primary views are of the city skyline rising directly from the shores of Lake Michigan, best seen from the water or the lakefront trail.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Boat tours run frequently on the river and lake, providing the main vantage points for the skyline."
+    },
+    {
+     "months": [
+      10,
+      11
+     ],
+     "level": "fair",
+     "text": "Boat tours reduce their schedules as the lakefront cools."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Ice often forms on Lake Michigan, and the bitter winds keep most people away from the open waterfront."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "fair",
+     "text": "Boat tours begin to resume their routes on the river and lake."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    2.5,
+    2.6,
+    2.8,
+    3.5,
+    4.2,
+    4.5,
+    4.6,
+    4.5,
+    4.3,
+    3.6,
+    3.2,
+    2.7
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of the lakefront and river views changes with the weather and the operating seasons of the boat tours.",
+   "flags": [],
+   "named_things": [
+    "Lake Michigan",
+    "Chicago River"
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   5,
+   5,
+   5,
+   5,
+   1,
+   1,
+   5,
+   5,
+   5,
+   0
+  ],
+  "base": 5
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0057",
+  "rank": "batch",
+  "name": "Dolomites",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3619,
+  "tokensOut": 579,
+  "cost": 0.007093,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Dolomites are defined by their sheer, pale limestone peaks rising abruptly from green valleys and alpine meadows. The scenery centers on these mountains, with signature views at the three pillars of Tre Cime di Lavaredo and the high plateau of Alpe di Siusi. The landscape also includes deep forests and alpine lakes like Lago di Braies, best seen when the high passes and trails are clear of snow.",
+   "blurbs": [
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "The high passes, cable cars and trails are all open, the alpine lakes are thawed and the meadows are green, giving clear views of the jagged peaks at Tre Cime and Alpe di Siusi."
+    },
+    {
+     "months": [
+      6,
+      9
+     ],
+     "level": "peak",
+     "text": "Most lifts, passes and trails are open, though patches of snow can still block the highest routes."
+    },
+    {
+     "months": [
+      5
+     ],
+     "level": "good",
+     "text": "Snow still covers the high trails and passes and some cable cars have not yet opened, while the valleys and meadows turn green."
+    },
+    {
+     "months": [
+      10
+     ],
+     "level": "good",
+     "text": "Snow reaches the high trails and some cable cars close for the season, but the larch woods in the valleys turn gold and the lakes stay visible."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "fair",
+     "text": "Snow still covers the high meadows and most lifts and passes are closed, but the valleys are greening and the peaks stay white."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Heavy snow covers the high meadows, and many mountain passes are shut. The peaks look striking under snow, but the signature viewpoints are reached mainly by winter-sports routes."
+    }
+   ],
+   "best_months": [
+    7,
+    8
+   ],
+   "monthly_scores": [
+    5.2,
+    5.4,
+    5.6,
+    6.1,
+    7.8,
+    9.6,
+    10,
+    9.8,
+    9.3,
+    7.5,
+    5.1,
+    5.3
+   ],
+   "confidence": "high",
+   "depth_why": "The seasons dictate access to the high mountain passes and trails, with summer offering full access, shoulder months having partial closures, and winter restricting movement due to snow.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Tre Cime di Lavaredo",
+    "Alpe di Siusi",
+    "Lago di Braies"
+   ]
+  },
+  "curve": [
+   6,
+   6,
+   6,
+   6,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   6,
+   6
+  ],
+  "base": 10
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0162",
+  "rank": "batch",
+  "name": "Santorini & Cyclades",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3631,
+  "tokensOut": 1709,
+  "cost": 0.013885,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Santorini is defined by its dramatic caldera, formed by a volcanic eruption, with whitewashed villages clinging to the sheer cliffs. The signature views are the sunsets from Oia and Fira, looking out over the Aegean Sea and the volcanic islands. Boat trips into the caldera give a different view of the coastal cliffs.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Rain and reduced ferry service limit boat trips into the caldera, though the cliffside villages look just as dramatic."
+    },
+    {
+     "months": [
+      4,
+      5,
+      10
+     ],
+     "level": "good",
+     "text": "Skies are mostly clear and most boat tours run normally, with clear views of the caldera and the cliffside villages."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Clear skies and full ferry schedules make it easy to take boat trips to the volcano and watch the famous sunsets from Oia and Fira."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    7,
+    7.1,
+    7.3,
+    8.5,
+    9.2,
+    9.5,
+    9.7,
+    9.6,
+    9.4,
+    8.8,
+    7.5,
+    7.2
+   ],
+   "confidence": "high",
+   "depth_why": "The scenery is always there, but access to boat trips and ferries changes with the winter weather.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Aegean Sea",
+    "Fira",
+    "Oia"
+   ]
+  },
+  "curve": [
+   7,
+   7,
+   7,
+   7,
+   8,
+   9,
+   3,
+   3,
+   9,
+   8,
+   7,
+   7
+  ],
+  "base": 7
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0191",
+  "rank": "batch",
+  "name": "Venice",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3619,
+  "tokensOut": 370,
+  "cost": 0.005839,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Venice's scenery is entirely urban and aquatic, defined by its canals, lagoons and historic architecture. The signature views are the Grand Canal and St. Mark's Square, where the water meets the city's palazzos and bridges. The surrounding Venetian Lagoon is flatter and quieter.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Fog and high water (acqua alta) can flood the squares and soften the lagoon views in the cooler months, while bright, clear days on the water are common in summer."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5
+   ],
+   "confidence": "high",
+   "depth_why": "The scenery is urban and aquatic, remaining visible and unchanged in its core elements throughout the year.",
+   "flags": [],
+   "named_things": [
+    "Grand Canal",
+    "St. Mark's Square",
+    "Venetian Lagoon"
+   ]
+  },
+  "curve": [
+   3.4,
+   4.7,
+   4.7,
+   6,
+   6,
+   4.75,
+   3.5,
+   3.5,
+   5.6,
+   5.6,
+   3.4,
+   3.4
+  ],
+  "base": 7
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0035",
+  "rank": "batch",
+  "name": "Canary Islands",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 4302,
+  "tokensOut": 553,
+  "cost": 0.00762,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Canary Islands have some of the darkest and clearest skies in the world. High-altitude sites on Tenerife and La Palma sit above the cloud inversion layer, so the air is very transparent and the skies very dark. The Milky Way's bright core is visible from spring through early fall.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Nights are very long, and the skies are very dark and often clear high above the clouds. The brightest part of the Milky Way is not up in these months."
+    },
+    {
+     "months": [
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "The Milky Way's bright core shows in the early morning hours. Nights are long and the high-altitude skies stay very dark and clear."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "The Milky Way's bright core is well placed for most of the night. Nights are at their shortest, and cloud at lower elevations is more frequent, though the peaks stay clear."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The core of the Milky Way is still well placed in the evening, and nights are lengthening, with very dark and clear skies high up."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    9
+   ],
+   "monthly_scores": [
+    8.6,
+    8.8,
+    9.2,
+    9.1,
+    8.7,
+    8.4,
+    8.5,
+    8.9,
+    9.3,
+    8.9,
+    8.5,
+    8.7
+   ],
+   "confidence": "high",
+   "depth_why": "The year is grouped by the visibility of the Milky Way core and the length of true darkness, which changes from long winter nights to shorter summer nights.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Tenerife",
+    "La Palma"
+   ]
+  },
+  "curve": [
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9,
+   6.9
+  ],
+  "base": 6
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0069",
+  "rank": "batch",
+  "name": "Finnish Lapland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 4284,
+  "tokensOut": 3652,
+  "cost": 0.026196,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Finnish Lapland has very dark skies away from the towns, but at this high latitude the sky never gets fully dark from spring until late summer. The best stargazing comes in late winter, and cloud is a frequent problem; when it clears, the stars are striking.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "poor",
+     "text": "The sky never gets fully dark, so only the brightest stars show, if any."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "fair",
+     "text": "The sky is properly dark on clear nights, but cloud often hides the stars."
+    },
+    {
+     "months": [
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Nights are very long, but this is the cloudiest stretch of the year, and the bright core of the Milky Way is below the horizon."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "level": "good",
+     "text": "Nights are long and cloud is thinner than in the darkest months, making these the most reliable months for clear, very dark skies away from the towns."
+    }
+   ],
+   "best_months": [
+    3
+   ],
+   "monthly_scores": [
+    4.5,
+    4.8,
+    5.5,
+    0.8,
+    0.5,
+    0.5,
+    0.6,
+    0.7,
+    3.5,
+    4.2,
+    4,
+    3.8
+   ],
+   "confidence": "high",
+   "depth_why": "The extreme changes in daylight and heavy winter cloud cover create distinct stargazing seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": []
+  },
+  "curve": [
+   6.5,
+   8,
+   6,
+   2,
+   2,
+   2,
+   2,
+   2,
+   4.5,
+   7,
+   7,
+   5
+  ],
+  "base": 2
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0114",
+  "rank": "batch",
+  "name": "Namibia",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 4295,
+  "tokensOut": 2442,
+  "cost": 0.018947,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Namibia has some of the darkest and clearest night skies on earth. The NamibRand Nature Reserve is a certified dark-sky reserve where the Milky Way is exceptionally bright. May to October is the dry season, with mostly clear nights, and the bright core of the galaxy is well placed from May to August.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "The sky is mostly clear and the bright core of the Milky Way is well placed for viewing and photography."
+    },
+    {
+     "months": [
+      3,
+      4,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "Cloud is low and the skies are very dark, though the brightest part of the Milky Way is less prominent."
+    },
+    {
+     "months": [
+      2,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Clouds can hide the stars on some nights, but clear spells still show very dark skies."
+    },
+    {
+     "months": [
+      1
+     ],
+     "level": "poor",
+     "text": "The highest chance of night clouds occurs now, often blocking the view of the stars."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7
+   ],
+   "monthly_scores": [
+    5.4,
+    7.2,
+    8.6,
+    9.1,
+    9.8,
+    10,
+    9.9,
+    9.6,
+    9.3,
+    8.8,
+    8.2,
+    7.7
+   ],
+   "confidence": "high",
+   "depth_why": "The visibility of the Milky Way core and the amount of night cloud cover change in clear stages across the year.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Milky Way",
+    "NamibRand Nature Reserve"
+   ]
+  },
+  "curve": [
+   7.3,
+   7.3,
+   7.3,
+   8.65,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   8.65,
+   7.3
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0170",
+  "rank": "batch",
+  "name": "Singapore",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 4284,
+  "tokensOut": 577,
+  "cost": 0.007746,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Singapore is a densely built city-state, and its lights wash out the night sky. Visitors can pick out the brightest planets and a few major stars, but the Milky Way is not visible. Cloud is heavy through the year.",
+   "blurbs": [
+    {
+     "months": [
+      2,
+      3,
+      4
+     ],
+     "level": "fair",
+     "text": "These are the driest months, with the best chance of gaps in the cloud, but the glow of the city still washes out the sky and only the brightest stars and planets show."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "poor",
+     "text": "Cloud is usually heavy and the city glow reflects off the damp air, so the sky stays bright and only the brightest planets break through."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1
+     ],
+     "level": "poor",
+     "text": "The wet season brings heavy rain and near-constant cloud, so the sky is almost always hidden, even the brightest planets."
+    }
+   ],
+   "best_months": [
+    2,
+    3,
+    4
+   ],
+   "monthly_scores": [
+    1.1,
+    2.4,
+    2.6,
+    2.5,
+    2.1,
+    2,
+    2.2,
+    2.3,
+    2.1,
+    1.2,
+    0.8,
+    0.9
+   ],
+   "confidence": "high",
+   "depth_why": "The sky is heavily light-polluted year-round, but the dry and wet seasons dictate the likelihood of seeing anything through the clouds.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "East Coast Park",
+    "Changi Beach",
+    "Sungei Buloh"
+   ]
+  },
+  "curve": [
+   0,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0159",
+  "rank": "batch",
+  "name": "Salar de Uyuni",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 4306,
+  "tokensOut": 2856,
+  "cost": 0.021442,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Salar de Uyuni's high altitude, dry air and vast flat horizon give it some of the darkest skies on earth. When a thin film of water covers the salt flat it mirrors the stars, which makes the salar a major draw for astrophotography. The Milky Way's bright core is high overhead in the dry months.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Nights are very clear and cold with almost no cloud, and the bright core of the Milky Way is perfectly placed high in the sky for the best views and photography."
+    },
+    {
+     "months": [
+      4,
+      5
+     ],
+     "level": "good",
+     "text": "Skies are mostly clear, and the Milky Way's bright core is in the sky from after midnight."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "Nights stay largely clear, but the Milky Way's core is only up in the first half of the night."
+    },
+    {
+     "months": [
+      3,
+      11
+     ],
+     "level": "fair",
+     "text": "Cloud is moderate with plenty of clear patches, and the bright core of the Milky Way is mostly below the horizon."
+    },
+    {
+     "months": [
+      1,
+      2,
+      12
+     ],
+     "level": "poor",
+     "text": "Heavy cloud often hides the stars, and the Milky Way's core is not up at night. When a thin layer of water covers the salt flat, it can mirror the sky."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    6.8,
+    7.2,
+    7.8,
+    8.8,
+    9.4,
+    9.8,
+    9.7,
+    9.9,
+    9.2,
+    8.6,
+    7.9,
+    6.3
+   ],
+   "confidence": "high",
+   "depth_why": "Cloud cover and the position of the Milky Way's core change distinctly between the wet and dry seasons, creating clear stages for stargazing quality.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Salar de Uyuni",
+    "Milky Way"
+   ]
+  },
+  "curve": [
+   6.5,
+   6.5,
+   6.5,
+   8.25,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   8.25,
+   6.5
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0002",
+  "rank": "batch",
+  "name": "Algarve",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3806,
+  "tokensOut": 1531,
+  "cost": 0.012992,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Algarve is defined by its sandy coves, dramatic cliffs, and extensive resort pools. Visitors can rent loungers at beach clubs along the coast or relax by the water at inland hotels. The dry summer months provide the most reliable heat for lying out.",
+   "blurbs": [
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Highs reach the mid-80s with almost no rain, the prime time for beach clubs and resort pools."
+    },
+    {
+     "months": [
+      6,
+      9
+     ],
+     "level": "peak",
+     "text": "Afternoons sit around 80 degrees, with excellent conditions for lying out on the sand."
+    },
+    {
+     "months": [
+      5,
+      10
+     ],
+     "level": "good",
+     "text": "Highs in the mid-70s make for warm afternoons, though the weather is less settled."
+    },
+    {
+     "months": [
+      4,
+      11
+     ],
+     "level": "fair",
+     "text": "Highs hover in the upper 60s, often too cool for a full beach day but fine for sheltered resort pools."
+    },
+    {
+     "months": [
+      1,
+      2,
+      3,
+      12
+     ],
+     "level": "poor",
+     "text": "Highs are in the low to mid 60s and rain is regular, so sunbathing is unlikely."
+    }
+   ],
+   "best_months": [
+    7,
+    8
+   ],
+   "monthly_scores": [
+    1.2,
+    1.5,
+    1.6,
+    3.5,
+    6.5,
+    8.5,
+    9.3,
+    9.2,
+    8.5,
+    6.1,
+    3.5,
+    0.8
+   ],
+   "confidence": "high",
+   "depth_why": "Temperatures and rainfall change in clear stages, dictating when sunbathing is viable.",
+   "flags": [],
+   "named_things": []
+  },
+  "curve": [
+   5,
+   5,
+   9,
+   9,
+   9,
+   10,
+   10,
+   10,
+   10,
+   9,
+   5,
+   5
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0009",
+  "rank": "batch",
+  "name": "Aruba",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3828,
+  "tokensOut": 566,
+  "cost": 0.007224,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Aruba's sunshine is reliable and the heat constant. Visitors choose between resort pools and the white sand of Eagle Beach and Palm Beach, where beach clubs and loungers are plentiful. The trade winds blow constantly, so truly calm shores are rare.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "peak",
+     "text": "The most reliable sunshine and the lowest chance of rain, with afternoon highs from the upper 80s to near 90 degrees."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "good",
+     "text": "Highs are around 90 degrees and the sun is strong; the trade winds keep it comfortable at the beach clubs."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "These are the rainiest months, with more cloud, though showers are usually brief and temperatures stay warm."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "monthly_scores": [
+    9.5,
+    9.6,
+    9.4,
+    9.6,
+    9.3,
+    8.9,
+    8.7,
+    8.5,
+    8.7,
+    8.4,
+    8,
+    8.3
+   ],
+   "confidence": "high",
+   "depth_why": "The year is split into three groups based on rain and temperature: the driest and most comfortable early months, the hotter summer, and the slightly wetter late fall and early winter.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Eagle Beach",
+    "Palm Beach"
+   ]
+  },
+  "curve": [
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0036",
+  "rank": "batch",
+  "name": "Cape Cod & the Islands",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3810,
+  "tokensOut": 562,
+  "cost": 0.007182,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Cape Cod and the Islands have classic New England beach days on wide sandy shores. Visitors lie out on the calmer beaches of Cape Cod Bay and Nantucket Sound or on the wilder ocean beaches of the Cape Cod National Seashore. The season is short.",
+   "blurbs": [
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Afternoon highs are near 80 degrees and the sun is strong enough for full days on the sand, though the beaches are busy."
+    },
+    {
+     "months": [
+      6,
+      9
+     ],
+     "level": "good",
+     "text": "Sunny days are common, but highs in the low 70s mean sunbathing is best in the warmest part of the afternoon or in sheltered spots."
+    },
+    {
+     "months": [
+      5,
+      10
+     ],
+     "level": "fair",
+     "text": "Highs in the low 60s are generally too cool for traditional sunbathing; a warm afternoon is possible, but most days call for layers."
+    },
+    {
+     "months": [
+      4,
+      11
+     ],
+     "level": "poor",
+     "text": "Highs around 50 degrees are too cool for sunbathing apart from the odd sheltered, sunny afternoon."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Highs stay in the 30s and 40s, too cold for sunbathing."
+    }
+   ],
+   "best_months": [
+    7,
+    8
+   ],
+   "monthly_scores": [
+    0.5,
+    0.6,
+    1,
+    2.5,
+    4.5,
+    6.6,
+    7.6,
+    7.4,
+    6,
+    3.5,
+    1.6,
+    0.8
+   ],
+   "confidence": "high",
+   "depth_why": "The seasons dictate sunbathing conditions clearly, from peak summer heat to cold winters.",
+   "flags": [],
+   "named_things": [
+    "Cape Cod Bay",
+    "Nantucket Sound",
+    "Cape Cod National Seashore"
+   ]
+  },
+  "curve": [
+   2.6,
+   2.6,
+   7.199999999999999,
+   7.2,
+   7.2,
+   7.2,
+   7.7,
+   7.6865853658536585,
+   7.15,
+   6.613414634146341,
+   6.6,
+   2.6
+  ],
+  "base": 7
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0083",
+  "rank": "batch",
+  "name": "Iceland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3810,
+  "tokensOut": 2203,
+  "cost": 0.017028,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's northern climate makes it too cold for traditional sunbathing. While the country features striking black sand coastlines, afternoon temperatures rarely reach 60 degrees even at the height of summer. Visitors spend their time exploring the dramatic landscapes rather than lounging in the sun.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "poor",
+     "text": "Summer brings up to nine hours of daily sunshine, but afternoon highs only reach the upper 50s. The striking black sand beaches are suited for walking and sightseeing rather than lounging in the sun."
+    },
+    {
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "poor",
+     "text": "The rest of the year brings colder temperatures, frequent rain, and very little daylight in midwinter. The coastal winds and near-freezing conditions keep the shores entirely unsuited for sunbathing."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    0.1,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.9,
+    0.8,
+    0.5,
+    0.2,
+    0.1,
+    0
+   ],
+   "confidence": "high",
+   "depth_why": "Grouped to separate the brighter summer months from the dark and freezing winter, though temperatures remain too cold for sunbathing year-round.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": []
+  },
+  "curve": [
+   0,
+   0.015853658536585366,
+   0.65,
+   1.2841463414634147,
+   1.3,
+   3.2,
+   3.2,
+   3.2,
+   0.7000000000000002,
+   0.6914634146341463,
+   0.35,
+   0.008536585365853666
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0165",
+  "rank": "batch",
+  "name": "Sedona",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3815,
+  "tokensOut": 3167,
+  "cost": 0.022817,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Sunbathing in Sedona centers entirely on resort pool days, set against the striking backdrop of the surrounding red rock landscape. Visitors spend their time lounging on sun decks at the city's desert resorts. The best conditions run from late spring through early fall, when the desert sun is strong and temperatures are high enough to lie out comfortably.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Afternoon highs from the upper 70s to the mid 90s make for ideal resort pool days, and the desert sun is strong under mostly clear skies."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Highs reach the mid to upper 90s. Brief afternoon monsoon showers are common, but mornings by the pool stay hot and sunny."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "fair",
+     "text": "Afternoon highs reach the mid-70s. The weather is pleasant and sunny, though the milder air makes the pool deck cooler."
+    },
+    {
+     "months": [
+      3,
+      11
+     ],
+     "level": "poor",
+     "text": "Highs in the upper 60s are generally too cool for lying out, even with the strong desert sunshine."
+    },
+    {
+     "months": [
+      1,
+      2,
+      12
+     ],
+     "level": "poor",
+     "text": "Highs hover near 60 degrees, too cold to spend time sunbathing by the pool."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    9
+   ],
+   "monthly_scores": [
+    1.1,
+    1.5,
+    3.4,
+    5.6,
+    7.2,
+    7.4,
+    6.5,
+    6.8,
+    7.5,
+    7.2,
+    3.1,
+    0.9
+   ],
+   "confidence": "high",
+   "depth_why": "The seasons dictate sunbathing conditions, with clear stages from cold winters to ideal warm months and a hotter, wetter monsoon period.",
+   "flags": [],
+   "named_things": []
+  },
+  "curve": [
+   1.5,
+   1.5,
+   1.5,
+   2.55,
+   3.6,
+   6.4,
+   6.4,
+   6.4,
+   3.6,
+   2.55,
+   1.5,
+   1.5
+  ],
+  "base": 3
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0030",
+  "rank": "batch",
+  "name": "Black Forest",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3474,
+  "tokensOut": 1434,
+  "cost": 0.012078,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The Black Forest is one of Europe's strongest regions for thermal baths and wellness resorts, anchored by historic spa towns like Baden-Baden and Bad Wildbad. Visitors soak in mineral-rich thermal water, try the Roman-Irish bathhouse circuit, and stay in dedicated wellness hotels. Saunas across the region follow the German custom of being mixed-gender and nude.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Baden-Baden has grand bathhouses with indoor and outdoor pools, and Bad Wildbad has large thermal complexes. Wellness hotels run full spa menus and clinical treatments, and the outdoor thermal pools stay warm in winter, so snow adds to the soak."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8,
+    9.8
+   ],
+   "confidence": "high",
+   "depth_why": "Spas and thermal baths operate indoors and are visited in all months, so a single blurb covers the year.",
+   "flags": [],
+   "named_things": [
+    "Baden-Baden",
+    "Bad Wildbad",
+    "Roman-Irish bathhouses"
+   ]
+  },
+  "curve": [
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   9,
+   9,
+   8,
+   8,
+   8,
+   8
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0080",
+  "rank": "batch",
+  "name": "Hokkaido",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3486,
+  "tokensOut": 1133,
+  "cost": 0.010284,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Hokkaido is built around onsen, the traditional Japanese hot-spring baths, with onsen towns in volcanic districts such as Noboribetsu. Visitors soak in mineral-rich hot spring water, a deeply ingrained custom. Baths are separated by gender and bathing is nude, and some onsen turn away visitors with visible tattoos.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "Freezing air and deep snow make soaking in outdoor baths especially rewarding: the contrast between the cold and the hot mineral water is the main draw."
+    },
+    {
+     "months": [
+      10,
+      11
+     ],
+     "level": "good",
+     "text": "Cooler air makes outdoor soaking more comfortable."
+    },
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "good",
+     "text": "Baths and resorts are fully open and make a relaxing break after hiking or exploring the island; the warmer air makes outdoor baths less dramatic but still enjoyable."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    12
+   ],
+   "monthly_scores": [
+    8.4,
+    8.5,
+    8.2,
+    7.5,
+    7.3,
+    7.1,
+    7.2,
+    7,
+    7.4,
+    7.6,
+    7.8,
+    8.3
+   ],
+   "confidence": "high",
+   "depth_why": "Outdoor hot-water soaking in Japan is noticeably better and more atmospheric during the cold winter months.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "onsen"
+   ]
+  },
+  "curve": [
+   9,
+   8.35,
+   7.7,
+   7.7,
+   7.7,
+   7.7,
+   9,
+   8.55,
+   8.1,
+   8.1,
+   8.1,
+   8.1
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0085",
+  "rank": "batch",
+  "name": "Istanbul",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3484,
+  "tokensOut": 456,
+  "cost": 0.00622,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Istanbul is one of the world's great destinations for traditional bathing, centered on the historic hammam. Visitors can experience centuries-old marble bathhouses where the ritual of steam, scrubbing and massage has changed little. The city also has modern day spas and clinical wellness centers.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Historic hammams run in every month: you lie on a heated marble slab, then an attendant scrubs you and gives a foam massage. Most traditional hammams keep separate sections or hours for men and women, and you wear a thin cotton wrap."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4
+   ],
+   "confidence": "high",
+   "depth_why": "The hammam and spa experience in Istanbul is indoors and remains consistent throughout the year, so a single blurb covers all twelve months.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "hammam"
+   ]
+  },
+  "curve": [
+   7.9,
+   7.9,
+   7.9,
+   7.9,
+   7.9,
+   9.3,
+   9.3,
+   9.3,
+   7.9,
+   7.9,
+   7.9,
+   7.9
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0087",
+  "rank": "batch",
+  "name": "Kerala",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3487,
+  "tokensOut": 2506,
+  "cost": 0.018523,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Kerala is a global center for Ayurveda, with intensive clinical treatments and immersive wellness resort stays. Visitors book multi-day programs that include specialized oil massages, herbal therapies and strict diets overseen by Ayurvedic doctors. The monsoon is traditionally considered the most effective time for these treatments.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "The wet monsoon months are the traditional time for clinical Ayurvedic cures, as the damp air is believed to help the body absorb herbal oils and treatments."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "good",
+     "text": "Clinical programs and day spas run as usual, and the drier weather makes it easier to get out between treatments."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    9.3,
+    9.2,
+    9.1,
+    8.9,
+    8.9,
+    9.7,
+    10,
+    9.9,
+    9.8,
+    9.6,
+    9.5,
+    9.4
+   ],
+   "confidence": "high",
+   "depth_why": "The monsoon season is traditionally the peak time for Ayurvedic treatments, separating the year into two distinct wellness seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Ayurveda"
+   ]
+  },
+  "curve": [
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "base": 10
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0166",
+  "rank": "batch",
+  "name": "Seoul",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3491,
+  "tokensOut": 2247,
+  "cost": 0.016973,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Seoul is defined by its jjimjilbangs, expansive 24-hour bathhouses that combine hot soaking pools, specialized saunas, and communal lounging areas. The city also features high-end day spas focused on Korean beauty treatments and traditional acupressure massage. Medical wellness clinics provide advanced skincare and dermatology services.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Bathing areas are nude and gender-segregated, while the heated kiln saunas and sleeping floors are mixed-gender and require the provided cotton uniforms. Visitors can book body scrubs (seshin) performed by attendants in the wet rooms, or relax in rooms heated by jade, salt, or charcoal."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2,
+    9.2
+   ],
+   "confidence": "high",
+   "depth_why": "Spas and bathhouses are indoors and their services do not change with the weather.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "jjimjilbang",
+    "seshin"
+   ]
+  },
+  "curve": [
+   8.4,
+   8.4,
+   8.4,
+   9,
+   8.2,
+   8.2,
+   8.2,
+   8.2,
+   8.2,
+   9,
+   8.4,
+   8.4
+  ],
+  "base": 8
+ }
+]

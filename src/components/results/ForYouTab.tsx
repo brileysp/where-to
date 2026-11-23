@@ -1,8 +1,9 @@
 import { useUnitText } from '@/components/UnitsProvider';
 import { useEffect, useRef, useState } from 'react';
 import { MONTH_NAMES, MONTH_SHORT, SLIDERS } from '@/lib/scoring/constants';
-import { matchLabel, barColor, smoothedMonthlyDisplay, scoreForMonth, styleAdjustedScore } from '@/lib/scoring/rank';
-import type { InterestFactors, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import { matchLabel, barColor, smoothedMonthlyDisplay, adjustedScoreForMonth, styleAdjustedScore, effectiveWeights } from '@/lib/scoring/rank';
+import type { InterestFactors, PlaceAdjust, SelectedBands, SelectedStyles } from '@/lib/scoring/rank';
+import { CARE_NOTE_KEY } from '@/lib/onboarding/care-match';
 import type { PlaceNote } from '@/lib/onboarding/live-factors';
 import { topInterestChips } from '@/lib/scoring/breakdown';
 import { matchAdjustments } from '@/lib/scoring/matchExplainer';
@@ -10,7 +11,6 @@ import type { MatchAdjustment } from '@/lib/scoring/matchExplainer';
 import { isSliderNA } from '@/lib/scoring/destinations';
 import type { ScoredDestination } from '@/lib/scoring/types';
 import { InterestChip, shortInterestLabel } from './InterestChip';
-import { CollapsibleBlurb } from './CollapsibleBlurb';
 import { prefersReducedMotion } from './useResortDemo';
 import { splitEmphasis } from '@/lib/text/emphasis';
 
@@ -45,7 +45,7 @@ function joinReasons(reasons: MatchAdjustment[]): string {
  * Everything here is computed for `previewIdx`, the month being previewed inside this card. That
  * is separate from the app's search month: changing it moves every score, every chip bubble, and
  * the month card, but never re-sorts the results list behind the sheet. Nothing here is a new
- * scoring concept: scoreForMonth for the combined score, styleAdjustedScore for each interest.
+ * scoring concept: adjustedScoreForMonth (the list's own number) for the combined score, styleAdjustedScore for each interest.
  */
 export function ForYouTab({
   dest,
@@ -59,6 +59,8 @@ export function ForYouTab({
   selectedCategory,
   onSelectCategory,
   factors,
+  adjust,
+  searchIdx,
   notes,
   interestKeys,
 }: {
@@ -77,6 +79,10 @@ export function ForYouTab({
   onSelectCategory: (key: string | null) => void;
   /** What the traveler's chips and answers keep of this place's score, by interest (onboarding's live questions). Missing = nothing changes. */
   factors?: InterestFactors;
+  /** What the list does to this place beyond the month's own score (season leaning, trip length, what else matters), so the numbers here match the list's. */
+  adjust?: PlaceAdjust;
+  /** The traveler's month (0 = January), for a trip over several months. */
+  searchIdx?: number;
   /** This place's reasons and matches by interest, for the notes under the chips. */
   notes?: Record<string, PlaceNote>;
   /** Show exactly these interests as chips (the ones the traveler picked) instead of working them out from the weights. */
@@ -119,7 +125,7 @@ export function ForYouTab({
     onChangeMonth(idx);
   }
 
-  const score = scoreForMonth(dest, weights, previewIdx, bands, selectedStyles, factors);
+  const score = adjustedScoreForMonth(dest, weights, previewIdx, bands, selectedStyles, factors, adjust, searchIdx);
   const placeFactor = (key: string) => factors?.[dest.id]?.[key] ?? 1;
 
   const chipSliders = interestKeys ? interestKeys.flatMap((k) => SLIDERS.filter((x) => x.key === k)) : topInterestChips(weights);
@@ -135,7 +141,6 @@ export function ForYouTab({
     <div className="detail-tab-content">
       {chips.length > 0 && (
         <>
-          <div className="detail-section-title interest-chips-title">Your top interests · Tap to compare</div>
           <div className="interest-chip-row-wrap">
             <div className="interest-chip-row">
               <InterestChip
@@ -164,7 +169,7 @@ export function ForYouTab({
 
           {stage >= 3 &&
             (isDnaSelected ? (
-              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} notes={notes} emojiOverrides={emojiOverrides} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
+              <DnaDetail dest={dest} weights={weights} bands={bands} selectedStyles={selectedStyles} factors={factors} adjust={adjust} searchIdx={searchIdx} notes={notes} emojiOverrides={emojiOverrides} previewIdx={previewIdx} onChangeMonth={handleChangeMonth} />
             ) : (
               selectedChip && (
                 <InterestDetail
@@ -172,8 +177,6 @@ export function ForYouTab({
                   row={selectedChip}
                   icon={emojiOverrides[selectedChip.slider.key] ?? selectedChip.slider.icon}
                   shortName={shortInterestLabel(selectedChip.slider.label, shortNames[selectedChip.slider.key])}
-                  notes={notes?.[selectedChip.slider.key] ? { [selectedChip.slider.key]: notes[selectedChip.slider.key] } : undefined}
-                  emojiOverrides={emojiOverrides}
                   previewIdx={previewIdx}
                   onChangeMonth={handleChangeMonth}
                 />
@@ -198,6 +201,8 @@ function DnaDetail({
   bands,
   selectedStyles,
   factors,
+  adjust,
+  searchIdx,
   notes,
   emojiOverrides,
   previewIdx,
@@ -208,31 +213,23 @@ function DnaDetail({
   bands: SelectedBands;
   selectedStyles?: SelectedStyles;
   factors?: InterestFactors;
+  adjust?: PlaceAdjust;
+  searchIdx?: number;
   notes?: Record<string, PlaceNote>;
   emojiOverrides: Record<string, string>;
   previewIdx: number;
   onChangeMonth: (monthIdx: number) => void;
 }) {
-  const months = Array.from({ length: 12 }, (_, i) => scoreForMonth(dest, weights, i, bands, selectedStyles, factors));
+  const months = Array.from({ length: 12 }, (_, i) => adjustedScoreForMonth(dest, weights, i, bands, selectedStyles, factors, adjust, searchIdx));
   const score = months[previewIdx];
   const quality = matchLabel(score);
   const badReasons = matchAdjustments(dest, previewIdx, bands).filter((a) => a.tone === 'bad');
 
-  let sentence = `${MONTH_NAMES[previewIdx]}’s match score of ${score.toFixed(1)} is based on your combined top interests`;
-  if (badReasons.length > 0) sentence += `, then adjusted lower because it’s ${joinReasons(badReasons)}`;
-  sentence += '.';
+  // Said only when something lowered the score (owner pick, 22 Nov 2026); otherwise the summary line below says it all.
+  const lowered = badReasons.length > 0 ? `Adjusted lower because it’s ${joinReasons(badReasons)}.` : null;
 
   return (
     <div className="interest-detail">
-      <div className="interest-detail-heading">
-        <span className="interest-detail-icon" aria-hidden="true">
-          🧬
-        </span>
-        My Interests
-      </div>
-      <p className="dna-hint">Tap any interest above to learn more.</p>
-      <p className="dna-hint">Tap any month on the chart below to see how it compares.</p>
-      <div className="detail-section-title interest-detail-months-title">Combined match by month · Tap to compare</div>
       <div className="months-chart">
         {months.map((v, i) => (
           <button
@@ -254,17 +251,13 @@ function DnaDetail({
           </span>
         ))}
       </div>
-      <div className="month-detail-card month-detail-card-scored">
-        <div className="month-detail-top">
-          <div className="month-detail-text">
-            <div className="month-detail-name">Your combined match in {MONTH_NAMES[previewIdx]}</div>
-            <div className={`month-detail-quality score-${quality.cls}`}>{quality.text}</div>
-          </div>
-          <div className={`month-detail-score score-${quality.cls}`}>{score.toFixed(1)}</div>
-        </div>
+      <div className="dna-summary">
+        <span className={`dna-summary-score score-${quality.cls}`}>{score.toFixed(1)}</span>
+        <b className={`score-${quality.cls}`}>{quality.text}</b>
+        <span className="dna-summary-month">{MONTH_NAMES[previewIdx]}</span>
       </div>
-      <p className="dna-sentence">{sentence}</p>
-      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={(key) => dest.monthly[key]?.[previewIdx] ?? null} />}
+      {lowered && <p className="dna-sentence">{lowered}</p>}
+      <MatchRows dest={dest} weights={weights} selectedStyles={selectedStyles} factors={factors} notes={notes} emojiOverrides={emojiOverrides} previewIdx={previewIdx} />
     </div>
   );
 }
@@ -274,14 +267,10 @@ function InterestDetail({
   row,
   icon,
   shortName,
-  notes,
-  emojiOverrides,
   previewIdx,
   onChangeMonth,
 }: {
   dest: ScoredDestination;
-  notes?: Record<string, PlaceNote>;
-  emojiOverrides: Record<string, string>;
   row: { slider: { key: string; icon: string; label: string }; isNA: boolean; score: number };
   /** Resolved icon (admin override already applied) — don't read row.slider.icon directly here. */
   icon: string;
@@ -313,8 +302,8 @@ function InterestDetail({
   return (
     <div className="interest-detail">
       {heading}
-      {placeBlurb && <CollapsibleBlurb className="interest-place-blurb"><EmphasisText text={placeBlurb} /></CollapsibleBlurb>}
-      <div className="detail-section-title interest-detail-months-title">{shortName} by month · Tap to compare</div>
+      {placeBlurb && <p className="interest-place-blurb"><EmphasisText text={placeBlurb} /></p>}
+      <div className="detail-section-title interest-detail-months-title">{shortName} by month</div>
       <div className="months-chart">
         {dest.monthly[slider.key].map((_, i) => {
           const v = smoothedMonthlyDisplay(dest, slider.key, i);
@@ -346,16 +335,70 @@ function InterestDetail({
       <div className="month-detail-card month-detail-card-scored">
         <div className="month-detail-top">
           <div className="month-detail-text">
-            <div className="month-detail-name">
-              {slider.label} in {dest.name} in {MONTH_NAMES[previewIdx]}
-            </div>
+            <div className="month-detail-name">In {MONTH_NAMES[previewIdx]}</div>
             <div className={`month-detail-quality score-${monthQuality.cls}`}>{monthQuality.text}</div>
           </div>
           <div className={`month-detail-score score-${monthQuality.cls}`}>{score.toFixed(1)}</div>
         </div>
         {monthBlurb && <p className="card-monthly-blurb"><EmphasisText text={monthBlurb} /></p>}
       </div>
-      {notes && <MatchNotes notes={notes} emojiOverrides={emojiOverrides} monthScore={() => score} />}
+    </div>
+  );
+}
+
+/**
+ * "My Interests": every interest the traveler has, one shaded row each, filled to how well this place suits it in the month shown. An interest that the
+ * traveler's picks and answers lowered keeps a hatched ghost to where it was and an "i": tap the row to see why. Top interests first, then the rest.
+ */
+const TOP_WEIGHT = 9;
+function MatchRows({ dest, weights, selectedStyles, factors, notes, emojiOverrides, previewIdx }: { dest: ScoredDestination; weights: Record<string, number>; selectedStyles?: SelectedStyles; factors?: InterestFactors; notes?: Record<string, PlaceNote>; emojiOverrides: Record<string, string>; previewIdx: number }) {
+  const [open, setOpen] = useState<string | null>(null);
+  const eff = effectiveWeights(weights);
+  const rows = SLIDERS.filter((s) => (eff[s.key] || 0) > 0).map((s) => {
+    const na = isSliderNA(dest, s.key);
+    const orig = na ? 0 : styleAdjustedScore(dest, s.key, previewIdx, selectedStyles);
+    const f = factors?.[dest.id]?.[s.key] ?? 1;
+    const pct = Math.round(orig * f * 10);
+    const origPct = Math.round(orig * 10);
+    return { s, na, pct, origPct, cut: !na && f < 0.999 && origPct - pct >= 1, top: (weights[s.key] || 0) >= TOP_WEIGHT };
+  });
+  rows.sort((a, b) => Number(b.top) - Number(a.top) || Number(a.na) - Number(b.na) || b.pct - a.pct);
+  if (!rows.length) return null;
+  const hasLikes = rows.some((r) => !r.top) && rows.some((r) => r.top);
+  const tone = (p: number) => (p >= 80 ? 'var(--good)' : p >= 50 ? 'var(--okay)' : 'var(--poor)');
+  const care = notes?.[CARE_NOTE_KEY]?.reasons ?? [];
+  return (
+    <div className="mi-rows">
+      {rows.map((r, i) => {
+        const key = r.s.key;
+        const icon = emojiOverrides[key] ?? r.s.icon;
+        const why = notes?.[key]?.reasons.map((x) => x.message).join('. ');
+        const inner = (
+          <>
+            {!r.na && r.cut && <span className="mi-ghost" style={{ left: `${r.pct}%`, width: `${r.origPct - r.pct}%` }} />}
+            {!r.na && <span className="mi-fill" style={{ width: `${r.pct}%`, background: tone(r.pct) }} />}
+            <span className="mi-e" aria-hidden="true">{icon}</span>
+            <span className="mi-nm">{r.s.label}</span>
+            {r.cut && <span className="mi-i" aria-hidden="true">i</span>}
+            <span className="mi-pc" style={r.na ? { color: 'var(--text-faint)' } : { color: tone(r.pct) }}>{r.na ? 'Not here' : `${r.pct}%`}</span>
+          </>
+        );
+        return (
+          <div key={key}>
+            {hasLikes && i === 0 && <div className="mi-sep first">Top interests</div>}
+            {hasLikes && !r.top && (i === 0 || rows[i - 1].top) && <div className="mi-sep">Also liked</div>}
+            {r.cut ? (
+              <button type="button" className="mi-row tap" aria-expanded={open === key} onClick={() => setOpen(open === key ? null : key)}>{inner}</button>
+            ) : (
+              <div className={`mi-row${r.na ? ' na' : ''}`}>{inner}</div>
+            )}
+            {r.cut && open === key && (
+              <div className="mi-why"><b>Was {r.origPct}%.</b> {why || 'Your picks and answers lower this a little.'}</div>
+            )}
+          </div>
+        );
+      })}
+      {care.length > 0 && <p className="mi-care">🧳 {care.map((x) => x.message).join('. ')}</p>}
     </div>
   );
 }
@@ -378,32 +421,3 @@ function EmphasisText({ text }: { text: string }) {
   );
 }
 
-/**
- * Why the traveler's chips and answers moved this place: the reasons for a drop, and the chips it matches fully. A match is good news only
- * when the month itself is workable, so "Matches" notes are left out for an interest that scores under 6 in the month shown (the drops stay).
- */
-const MATCH_NOTE_MIN_SCORE = 6;
-function MatchNotes({ notes, emojiOverrides, monthScore }: { notes: Record<string, PlaceNote>; emojiOverrides: Record<string, string>; monthScore: (interest: string) => number | null }) {
-  const slider = (key: string) => SLIDERS.find((x) => x.key === key);
-  const rows = Object.entries(notes)
-    .map(([key, n]) => {
-      const s = monthScore(key);
-      return [key, s !== null && s < MATCH_NOTE_MIN_SCORE ? { ...n, matches: [] } : n] as const;
-    })
-    .filter(([, n]) => n.reasons.length > 0 || n.matches.length > 0);
-  if (!rows.length) return null;
-  return (
-    <div className="match-notes">
-      <div className="detail-section-title">From your picks and answers</div>
-      <div className="match-note-row">
-        {rows.flatMap(([key, n]) => {
-          const icon = emojiOverrides[key] ?? slider(key)?.icon ?? '';
-          return [
-            ...n.reasons.map((r) => <span key={`${key}-${r.message}`} className="match-reason">{icon} {r.message}</span>),
-            ...n.matches.map((m) => <span key={`${key}-m-${m}`} className="match-ok">{icon} Matches: {m}</span>),
-          ];
-        })}
-      </div>
-    </div>
-  );
-}

@@ -1,0 +1,150 @@
+{
+  "what": "Luxury = most expensive ~10% of hotel-type listings on Booking.com (owner's rule, 14 Nov 2026). Star ratings ignored. One night, 2 adults, US$, cheapest available room, quoted 14 Nov 2026. Whole-home rental operators (Vacation STAY, Rinn) removed.",
+  "kyoto": {
+    "dates": {
+      "high": "Tue 13 Apr 2027",
+      "low": "Tue 10 Aug 2027"
+    },
+    "officialAprilOverAugust": 1.8,
+    "universe": "373 hotel-type listings in August, 545 in April (Booking filter ht_id=204); only the 118 most expensive in April and 100 in August were loaded.",
+    "rankedOnAugust": {
+      "n": 25,
+      "medianRatio": 1.67,
+      "top13MedianRatio": 2.05
+    },
+    "rankedOnApril": {
+      "n": 24,
+      "medianRatio": 2.22
+    },
+    "note": "Ranking on the low month biases the ratio down, ranking on the high month biases it up, so the truth sits between 1.7 and 2.2.",
+    "pairsAprAug": {
+      "Capella Kyoto": [
+        2439,
+        1188
+      ],
+      "Four Seasons Hotel Kyoto": [
+        3592,
+        1013
+      ],
+      "Imperial Hotel Kyoto": [
+        1219,
+        958
+      ],
+      "Park Hyatt Kyoto": [
+        2377,
+        851
+      ],
+      "The Ritz-Carlton Kyoto": [
+        1889,
+        844
+      ],
+      "Kamo Residences": [
+        1815,
+        766
+      ],
+      "Suiran": [
+        1088,
+        751
+      ],
+      "Hotel Seiryu Kyoto Kiyomizu": [
+        1472,
+        750
+      ],
+      "Banyan Tree Higashiyama": [
+        1398,
+        749
+      ],
+      "Six Senses Kyoto": [
+        1393,
+        712
+      ],
+      "Sowaka": [
+        1552,
+        708
+      ],
+      "Hotel The Mitsui Kyoto": [
+        1814,
+        688
+      ],
+      "Hotel VMG Kyoto Kamogawa": [
+        571,
+        651
+      ],
+      "Hotel Shuro Kyoto Shijo Karasuma": [
+        626,
+        626
+      ],
+      "Akekure Kyoto Shirakawa": [
+        355,
+        625
+      ],
+      "Higashiyama Shikikaboku": [
+        555,
+        555
+      ],
+      "Maana Kiyomizu": [
+        664,
+        479
+      ],
+      "Muni Kyoto": [
+        768,
+        437
+      ],
+      "Aoi Hotel Kyoto": [
+        1244,
+        447
+      ]
+    }
+  },
+  "p0106": {
+    "dates": {
+      "high": "Tue 15 Dec 2026 (non-holiday mid-December)",
+      "low": "Tue 14 Sep 2027"
+    },
+    "officialDecOverSepLuxuryResort": 1.88,
+    "universe": "36 hotel/resort listings in September (Booking classes most Maui lodging as condos/apartments); 41 in December. Top 10% is only 4 hotels.",
+    "pairsDecSep": {
+      "The Resort at Kapalua Bay": [
+        2039,
+        1039
+      ],
+      "Ho'olei at Grand Wailea": [
+        1803,
+        1803
+      ],
+      "Four Seasons Resort Maui": [
+        1305,
+        895
+      ],
+      "Hotel Wailea Maui": [
+        1060,
+        1129
+      ],
+      "Fairmont Kea Lani": [
+        979,
+        959
+      ],
+      "Andaz Maui at Wailea": [
+        849,
+        795
+      ],
+      "Grand Wailea": [
+        688,
+        827
+      ],
+      "Wailea Beach Resort Marriott": [
+        566,
+        985
+      ]
+    },
+    "rankedOnSeptTop4MedianRatio": 0.97,
+    "rankedOnDecTop4MedianRatio": 1.23,
+    "result": "Did not reproduce the official 1.88x."
+  },
+  "bookingWindowFinding": "Booking.com shows only about 12 months of future dates: Tue 14 Dec 2027 returned 8 properties, so Dec 2027 could not be compared. A panel has to sit inside the next ~12 months and be quoted the same day.",
+  "caveats": [
+    "Kyoto April and August quoted at different lead times (5 vs 9 months); Maui Dec at 1 month vs Sep at 10 months.",
+    "Cheapest available room for one night; a near-sold-out date can leave only suites (Hilton Kyoto 4.4x, Ace Hotel 3.5x).",
+    "Maui 15 Dec misses the Christmas-New Year peak that the official December average includes."
+  ]
+}

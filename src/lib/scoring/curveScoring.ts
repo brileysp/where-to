@@ -1,5 +1,5 @@
 import { SLIDERS } from './constants';
-import { clamp10, computeBadges, deriveWeatherBand, HAZARD_SLIDER_MULTIPLIER, has } from './destinations';
+import { clamp10, computeBadges, deriveWeatherBand, HAZARD_SLIDER_MULTIPLIER, has, SEASONAL_HAZARDS_CHANGE_SCORES } from './destinations';
 import { crowdsScore, curveValue, dealsScore, parseSliderCurve, type SliderCurve } from './curve';
 import type { Badge, DerivedScores, ScoringDestination } from './types';
 
@@ -99,7 +99,7 @@ export function deriveDestinationScoresFromCurves(d: ScoringDestination): Derive
   // seasonalHazards — identical logic to deriveDestinationScores's own
   // hazard block, operating on curve-derived monthly instead of
   // formula-derived monthly.
-  for (let m = 1; m <= 12; m++) {
+  for (let m = 1; m <= 12 && SEASONAL_HAZARDS_CHANGE_SCORES; m++) {
     const idx = m - 1;
     (d.seasonalHazards || []).forEach((hz) => {
       if (!has(hz.months, m)) return;

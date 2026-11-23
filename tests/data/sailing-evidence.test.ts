@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { marinas: number; islands: number; sheltered: number; regattas: number; events: string[]; expedition: number | null; operators: Array<{ name: string; says: string; url: string }>; sea: string | null; median_wave_m: number | null; calm_share: number | null; bareboat_base: boolean }>;
 const root = join(__dirname, '..', '..');
@@ -51,16 +52,16 @@ describe('Sailing evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['croatia'].shelteredIslandHopping).toBe(10);
-    expect(draft['morocco'].shelteredIslandHopping).toBe(0);
-    expect(draft['sydney'].racingRegattas).toBe(10);
-    expect(draft['barcelona'].racingRegattas).toBe(10);
-    expect(draft['nice-riviera'].racingRegattas).toBe(10);
-    expect(draft['north-island'].racingRegattas).toBe(10);
-    expect(draft['greenland'].expeditionSailing).toBe(10);
-    expect(draft['tierra-del-fuego'].expeditionSailing).toBe(10);
-    expect(draft['svalbard'].expeditionSailing).toBe(10);
-    expect(draft['antarctica'].expeditionSailing).toBe(10);
-    expect(draft['croatia'].bareboatBase).toBe(true);
+    expect(draft[PLACE['dalmatian-coast']].shelteredIslandHopping).toBe(10);
+    expect(draft[PLACE['marrakech-and-atlas']].shelteredIslandHopping).toBe(0);
+    expect(draft[PLACE.sydney].racingRegattas).toBe(10);
+    expect(draft[PLACE.barcelona].racingRegattas).toBe(10);
+    expect(draft[PLACE['nice-and-the-french-riviera']].racingRegattas).toBe(10);
+    expect(draft[PLACE['north-island']].racingRegattas).toBe(10);
+    expect(draft[PLACE.greenland].expeditionSailing).toBe(10);
+    expect(draft[PLACE['tierra-del-fuego']].expeditionSailing).toBe(10);
+    expect(draft[PLACE.svalbard].expeditionSailing).toBe(10);
+    expect(draft[PLACE['antarctic-peninsula']].expeditionSailing).toBe(10);
+    expect(draft[PLACE['dalmatian-coast']].bareboatBase).toBe(true);
   });
 });

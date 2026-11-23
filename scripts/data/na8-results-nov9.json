@@ -1,0 +1,727 @@
+[
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0123",
+  "rank": "batch",
+  "name": "Northern Ireland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2562,
+  "tokensOut": 1855,
+  "cost": 0.013692,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Northern Ireland is anchored by whiskey, led by the centuries-old Bushmills distillery on the Causeway Coast. County Armagh in the south presses traditional ciders from local Bramley apples. Craft beer and gin are also produced, with taprooms and small distilleries clustered around Belfast and the Ards Peninsula.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Warmer weather favors coastal taprooms and drinking craft beer at Belfast's outdoor venues. Gin distilleries on the Ards Peninsula run regular tasting tours."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The apple harvest in County Armagh makes this the best time to visit local cider presses. Whiskey distilleries keep their regular tour schedules as the weather cools."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "fair",
+     "text": "Cold and wet weather pushes drinking indoors. The Causeway Coast whiskey distillery and newer gin producers near Belfast keep their tasting room hours, a warm retreat."
+    }
+   ],
+   "best_months": [
+    9,
+    10
+   ],
+   "monthly_scores": [
+    6.2,
+    6.1,
+    6.3,
+    6.4,
+    6.8,
+    6.9,
+    7,
+    6.9,
+    7.2,
+    7.1,
+    6.5,
+    6.3
+   ],
+   "confidence": "high",
+   "depth_why": "The cider harvest defines autumn, while summer favors coastal taprooms and winter pushes visits entirely indoors.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Bushmills distillery",
+    "County Armagh",
+    "Bramley apples",
+    "Belfast",
+    "Ards Peninsula",
+    "Causeway Coast"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0078",
+  "rank": "batch",
+  "name": "Guatemala",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2562,
+  "tokensOut": 2052,
+  "cost": 0.014874,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Guatemala is known for its aged rums, made in a cool highland climate. The craft beer scene centers on taprooms in Antigua and Guatemala City. Aguardiente, a local cane spirit, is also widely drank.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Rum tastings in Guatemala City and the highlands pour aged local spirits. Taprooms in Antigua serve regional craft ales and lagers. Cantinas and local markets sell cane aguardiente."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2,
+    4.2
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of local rum, craft beer, and traditional spirits does not change with the seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Quetzaltenango",
+    "Antigua",
+    "Zone 4",
+    "Guatemala City",
+    "Quetzalteca",
+    "chicha"
+   ]
+  },
+  "curve": [
+   1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "base": 0
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0052",
+  "rank": "batch",
+  "name": "Cuba",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2560,
+  "tokensOut": 453,
+  "cost": 0.005278,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Cuba is known for its rum, with distilleries across the island producing light, aged spirits from local sugarcane molasses. Visitors can tour rum factories in Havana and Santiago de Cuba to see the aging cellars and taste the results. The country also produces a few domestic light lager beers.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Rum distilleries in Havana and Santiago de Cuba run guided tours of their aging cellars and tasting rooms. Local bars serve traditional rum cocktails like mojitos and daiquiris, while domestic light lagers are widely available."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    6.2
+   ],
+   "confidence": "high",
+   "depth_why": "Rum production and distillery tours operate consistently throughout the year, with no seasonal changes in availability.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Havana",
+    "Santiago de Cuba",
+    "mojito",
+    "daiquiri"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0083",
+  "rank": "batch",
+  "name": "Iceland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2560,
+  "tokensOut": 2181,
+  "cost": 0.015646,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's craft beer scene is a main draw, with microbreweries in Reykjavik and farm breweries in the countryside. Distilleries produce traditional Brennivín aquavit, gin, and vodka, some using native botanicals like arctic thyme.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Summer weather allows reliable access to rural microbreweries and independent distilleries."
+    },
+    {
+     "months": [
+      3
+     ],
+     "level": "good",
+     "text": "March 1 marks Beer Day, celebrating the 1989 legalization of beer with special releases and taproom events centered in Reykjavik."
+    },
+    {
+     "months": [
+      1,
+      2,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Winter snow and ice restrict travel to regional producers. Urban taprooms and distillery tasting rooms in the capital region maintain regular indoor service."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    4.8,
+    4.8,
+    5.5,
+    5,
+    5.2,
+    5.8,
+    5.9,
+    5.8,
+    5.2,
+    5,
+    4.9,
+    4.9
+   ],
+   "confidence": "high",
+   "depth_why": "Summer provides access to rural breweries, March features Beer Day, and winter limits travel outside the capital.",
+   "flags": [],
+   "named_things": [
+    "Reykjavik",
+    "Brennivín",
+    "Ring Road",
+    "Westfjords",
+    "Beer Day"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0086",
+  "rank": "batch",
+  "name": "Jamaica",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2559,
+  "tokensOut": 437,
+  "cost": 0.005181,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Jamaica is known for its rum, with several historic estates running tours and tastings of their production processes. The island also brews its own beer, most notably Red Stripe, which is widely available. Traditional drinks such as ginger beer and sorrel are part of the local drinking culture.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Rum estates across the island run tours of their distilleries and aging houses, ending with tastings of their aged and overproof rums. Local beers are found in bars and restaurants, and traditional drinks like sorrel, often spiked with rum, are common, especially around the holidays."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8
+   ],
+   "confidence": "high",
+   "depth_why": "The availability of rum tours and local beer remains consistent throughout the year.",
+   "flags": [],
+   "named_things": [
+    "Red Stripe",
+    "sorrel",
+    "ginger beer"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "base": 0
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0145",
+  "rank": "batch",
+  "name": "Puerto Rico",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2562,
+  "tokensOut": 449,
+  "cost": 0.005256,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Puerto Rico is known for rum, with several major distilleries running tours and tastings. The island also has a growing craft beer scene, particularly in San Juan and the western coast. Local drinks include pitorro, a traditional moonshine often flavored with fruits, and the piña colada, which originated here.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Rum distilleries operate regular tours detailing the production process and history, ending with tastings. Craft breweries in San Juan and coastal towns serve local ales and lagers. Pitorro is widely available, especially during the holiday season when it is traditionally consumed."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.8
+   ],
+   "confidence": "high",
+   "depth_why": "The distilleries and breweries operate consistently throughout the year, with no major seasonal variations in access or offerings.",
+   "flags": [],
+   "named_things": [
+    "rum",
+    "pitorro",
+    "piña colada",
+    "San Juan"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "base": 0
+ },
+ {
+  "family": "batch",
+  "k": "wineSpirits",
+  "id": "p0058",
+  "rank": "batch",
+  "name": "Dominican Republic",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2561,
+  "tokensOut": 1467,
+  "cost": 0.011363,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The Dominican Republic is known for its rum, with historic distilleries in San Pedro de Macorís and Puerto Plata running tasting tours. Visitors can also try mamajuana, a traditional spiced drink made by steeping tree bark and herbs in rum, red wine, and honey.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Rum distilleries in San Pedro de Macorís and Puerto Plata run regular guided tours and tastings of aged Caribbean rums. Local bars and restaurants serve mamajuana, a traditional spiced rum drink."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8,
+    5.8
+   ],
+   "confidence": "high",
+   "depth_why": "Rum production, distillery tours, and local drinks like mamajuana do not change with the seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "San Pedro de Macorís",
+    "Puerto Plata",
+    "Santo Domingo",
+    "mamajuana"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "base": 0
+ },
+ {
+  "family": "batch",
+  "k": "coffeeTea",
+  "id": "p0014",
+  "rank": "batch",
+  "name": "Azores",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2573,
+  "tokensOut": 2046,
+  "cost": 0.014849,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Azores is home to Europe's only commercial tea plantations and a rare micro-climate coffee farm. Visitors can tour working tea estates on São Miguel to walk the fields and see historic processing machinery. A small coffee farm in São Jorge's Fajã dos Vimes grows and roasts its own beans.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "The tea harvest is underway on São Miguel, allowing visitors to see active picking and processing at the historic estates. The small coffee farm in Fajã dos Vimes on São Jorge also serves its own beans."
+    },
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "good",
+     "text": "The tea estates on São Miguel remain open for tours of the vintage machinery and tastings, though the fields are dormant. The coffee farm in São Jorge continues to serve its locally grown cups to visitors."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    5.5,
+    5.5,
+    5.6,
+    6.7,
+    6.8,
+    6.8,
+    6.8,
+    6.8,
+    6.7,
+    5.7,
+    5.6,
+    5.5
+   ],
+   "confidence": "high",
+   "depth_why": "The tea and coffee harvests occur in the spring and summer, changing what visitors see at the farms.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "São Miguel",
+    "São Jorge",
+    "Fajã dos Vimes"
+   ]
+  },
+  "curve": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  "base": 1
+ }
+]

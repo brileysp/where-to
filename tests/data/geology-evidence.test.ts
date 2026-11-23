@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const root = join(__dirname, '..', '..');
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/geology-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
@@ -30,17 +31,17 @@ describe('Geology evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['iceland'].volcanicLandscapes).toBe(10);
-    expect(draft['iceland'].glaciersIce).toBe(10);
-    expect(draft['big-island'].volcanicLandscapes).toBe(10);
-    expect(draft['sicily'].volcanicLandscapes).toBe(10);
-    expect(draft['yellowstone'].geothermalFeatures).toBe(10);
-    expect(draft['north-island'].geothermalFeatures).toBe(10);
-    expect(draft['vietnam'].cavesKarst).toBe(10);
-    expect(draft['grandcanyon'].rockFormations).toBe(10);
-    expect(draft['mendoza'].volcanicLandscapes).toBe(0);
-    expect(draft['big-island'].glaciersIce).toBe(0);
-    expect(draft['north-cascades'].glaciersIce).toBe(6);
+    expect(draft[PLACE.iceland].volcanicLandscapes).toBe(10);
+    expect(draft[PLACE.iceland].glaciersIce).toBe(10);
+    expect(draft[PLACE['big-island']].volcanicLandscapes).toBe(10);
+    expect(draft[PLACE.sicily].volcanicLandscapes).toBe(10);
+    expect(draft[PLACE['yellowstone-national-park']].geothermalFeatures).toBe(10);
+    expect(draft[PLACE['north-island']].geothermalFeatures).toBe(10);
+    expect(draft[PLACE.vietnam].cavesKarst).toBe(10);
+    expect(draft[PLACE['grand-canyon']].rockFormations).toBe(10);
+    expect(draft[PLACE.mendoza].volcanicLandscapes).toBe(0);
+    expect(draft[PLACE['big-island']].glaciersIce).toBe(0);
+    expect(draft[PLACE['north-cascades']].glaciersIce).toBe(6);
   });
   it('UNESCO tick appears only where a site or geopark is named in the evidence', () => {
     for (const [p, d] of Object.entries(draft)) {

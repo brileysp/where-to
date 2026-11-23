@@ -20,7 +20,7 @@ For every check, what survives is `1 - (1 - keep) * (1 - fit)`: `keep` is what a
 
 | Setting | Default |
 |---|---|
-| A place has none of the chips you ticked keeps | 50% |
+| A place has none of the chips you ticked keeps | 85% (was 50% until 21 Nov 2026: a tick is a wish, not a wall. Any ticked chip the place offers still keeps the full score) |
 | A chip rating that counts as a full match | 7 of 10 |
 | A missed Limit answer keeps | 65% (weakened from 50% on 22 Oct 2026: the first shadow run showed stacked Limits pushing most places to the floor) |
 | A missed Lean answer keeps | 85% |
@@ -51,6 +51,12 @@ A question rule can be marked `bonusOnly` (`QuestionFitRule.bonusOnly`): the ans
 
 Separate from interests, chips and answers. **How long** (long weekend, 1 week, 2 weeks, 3+ weeks) counts the flights against the trip: round-trip flying hours plus `tripAirportHours` as a share of the trip's days. Up to `tripStretchShare` is fine; up to `tripFarShare` the place keeps `keepIfTripStretch` of its final score; above that it keeps `keepIfTripFar`. It needs the traveler's home (country, US state or Canadian province, or an airport). **Continents** leave out places in regions turned off (six regions; Russia and Turkey split by location, see `src/lib/onboarding/regions.ts`). Both live in `src/lib/onboarding/trip-adjust.ts` and feed `computeRankedDestinations` through `placeFactors`.
 
+**Kinds of place** (22 Nov 2026): the traveler can turn off kinds of place (the places' own setting tags: city, town and countryside, island, beach and coast, mountains, desert, jungle and forest, savanna and wetlands, polar and ice). A place is left out only when none of its tags is still on; a place with no tags is never left out. It lives in `trip-adjust.ts` next to continents and is saved with the trip like peak and bands.
+
+**Budget, Climate, Social vibe, Physical demand** (all levels on to start): a place with none of the levels still on for a group keeps `keepIfBandMissed` of its score (50% unless changed on the Matching tab), once for each group it misses. It never hides a place.
+
+**The place card shows the list's score** (22 Nov 2026): the My Interests score and month chart use `adjustedScoreForMonth` in `rank.ts`, which applies the same season leaning, trip-length and care factor, band number and (for the search month of a multi-month trip) day-weighted average as the list.
+
 ### Saved trips (22 Oct 2026)
 
 A traveler can keep up to 20 trips (`user_trips` table, `src/lib/onboarding/trips.ts`, `src/app/onboarding-v2/trip-actions.ts`). **Per trip, always set for that trip:** month, week, year, trip length, continents, and the trip's name. **Inherited from the traveler's defaults but changeable for one trip** (only what differs is stored, in `overrides`): who is going, budget and climate bands, what else matters (dietary and so on), and the longest flight. **Never per trip, always shared:** interests, Travel DNA, and where you live. The year is the next time the chosen month comes round, and can be edited (it then stops following the month). The name starts as "[first name]'s [month] [year] trip" and follows the month and year until the traveler renames it. The most recently saved trip is the active one: saving it also copies its month and bands into the saved preferences, and the full results page (`/`) takes length, continents and longest flight from it (`tripEffectForProfile`). Travelers with no saved trips are unchanged (the profile's own values apply).
@@ -69,3 +75,14 @@ Owner decision: **nothing is inferred when the traveler has picked interests.** 
 ### Answers that read the trip month (23 Oct 2026)
 
 A question's answer can ask about the month the traveler is going (a `month` check: Hot Springs "Winter, in the snow" and "Cool weather only" read the place's cold or snowy and cool months). The per-place table then holds 12 fits for that option, January first, and `matchFromFits` / `liveMatch` take the trip month (0 = January); `liveMatchForProfile` uses the active trip's month, else the profile's. With no month chosen such an answer asks for nothing. A place with data on file and nothing ticked in the list has no such months, so it does not fit. Only Hot Springs uses it so far.
+
+### What else matters when you choose (10 Nov 2026)
+
+Kids (with ages), dietary needs, languages, mobility and how you travel now change a place's score, from the place's traveler-needs ratings (admin: Traveler needs tab; 15 columns, 0 to 10, `src/lib/admin/travel-needs/config.ts`). Unlike chips and answers, which work inside one interest, these apply to the **whole place score** at the end, alongside the trip-length factor (`src/lib/onboarding/care-match.ts`, `live-match-server.ts`, the shortlist screen).
+
+- `fit` = the rating as a share of a full match (7 of 10), capped at 1. Several picks the traveler **needs** (children of three ages, three dietary needs): the weakest decides. Several picks they would be **happy with** (languages, ways to travel): the best decides. English uses the English rating; any other language is a yes or no from the place's list. Mobility has two levels with their own ratings ("Few steps and short walks" and "Wheelchair or walker"); the stricter level wins when both are picked.
+- A nice-to-have keeps `1 - (1 - 0.85) * (1 - fit)` (the Lean number, so a complete miss costs 15%); a firm item uses the Limit number, 65%. Items multiply, never below the interest floor (30%). The numbers are the Matching tab's, so no new setting.
+- **A firm item also sets places aside** when the weakest pick rates under 4 (the same bar for every item). They appear in the shortlist's "set aside by your limits" list with the reason. "How you travel" is a wish only (no firm option).
+- **Reasons and matches** show in the place sheet under "From your picks and answers" (key `_care`): a reason when the weakest pick rates under half a full match, a match when it rates 7 or more.
+- **No data is a pass:** a place with no traveler-needs row, or a missing rating, is left alone. A place with a row and no other language listed counts as English-speaking.
+- The ratings are drafts (kids, how you travel and mobility are judgments; English and dietary come from the EF index and map listings): check the Traveler needs review page before leaning on them. Offline check on the real data: `scripts/shadow-care-match.ts`.

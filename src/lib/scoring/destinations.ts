@@ -221,6 +221,13 @@ function round2(n: number): number {
 export const HAZARD_SLIDER_MULTIPLIER: Record<Severity, number> = { mild: 0.85, moderate: 0.6, severe: 0.3 };
 
 /**
+ * 21 Nov 2026 (owner decision): seasonal hazard flags no longer change any score. Every interest's month-by-month text and scores are authored by hand and already say what a
+ * hurricane, smog, smoke or insect month does for that interest, so a flag that also cut the score would count the hazard twice. The flags stay in the data, in the admin
+ * Seasonal Flags tab and as the warning badge on the month, as a reference list to check that no hazard is missed. Set this to true only to bring the old penalty back.
+ */
+export const SEASONAL_HAZARDS_CHANGE_SCORES = false;
+
+/**
  * Narrates a base+terms formula's result — the same shape every non-
  * deals/crowds formula below computes. Purely descriptive: takes the
  * already-computed values, never re-derives them, so it can never disagree
@@ -723,7 +730,7 @@ export function deriveDestinationScores(d: ScoringDestination, opts?: { skipHaza
     // dynamically in the curve-based evaluator keeps the two mechanisms
     // doing exactly one job each, matching today's live formula's own
     // separation between "the slider's shape" and "a cross-cutting risk."
-    if (!opts?.skipHazards) {
+    if (SEASONAL_HAZARDS_CHANGE_SCORES && !opts?.skipHazards) {
       (d.seasonalHazards || []).forEach((hz) => {
         if (!has(hz.months, m)) return;
         const mult = HAZARD_SLIDER_MULTIPLIER[hz.severity];

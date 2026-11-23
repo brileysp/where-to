@@ -26,7 +26,6 @@ export default async function NewPlacePage({ searchParams }: { searchParams: Pro
       <h2 style={{ fontSize: 17, marginTop: 28 }}>New place</h2>
       <p style={{ color: '#555', fontSize: 13 }}>Creates an empty place. It starts retired and unpublished, so nobody sees it until you switch it on. Fill in everything else on the Places grid.</p>
       <form action={createPlace}>
-        <label style={labelStyle}>Id (lowercase, hyphens, never changes)<input name="id" required placeholder="new-orleans" style={fieldStyle} /></label>
         <label style={labelStyle}>Name<input name="name" required style={fieldStyle} /></label>
         <label style={labelStyle}>Region<input name="region" required placeholder="Louisiana, USA" style={fieldStyle} /></label>
         <label style={labelStyle}>Emoji<input name="emoji" placeholder="📍" style={fieldStyle} /></label>

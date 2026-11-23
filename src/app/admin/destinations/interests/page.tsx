@@ -4,9 +4,13 @@ import { SLIDERS } from '@/lib/scoring/constants';
 import { builtInSlider } from '@/lib/scoring/overrides';
 import { shortInterestLabel } from '@/lib/scoring/shortName';
 import { InterestsGrid, type InterestRow } from '@/components/admin/InterestsGrid';
+import { SiteStalenessCard } from '@/components/admin/interest-page/SiteStalenessCard';
 import { getNextReviewByInterest } from '@/lib/db/queries/admin-interests';
+import { getStaleFactorsByInterest } from '@/lib/db/queries/stale-factors';
+import { summarize } from '@/lib/admin/stale-checks';
 
 export default async function AdminInterestsPage() {
+  const staleByInterest = await getStaleFactorsByInterest([...SLIDERS].map((s) => s.key));
   const [metaRows, coverage, completeness, lastPasses, nextReviews] = await Promise.all([listInterestMetaForAdmin(), getInterestCoverage(), getAllInterestCompleteness(), getLastPassFinishedByInterest(), getNextReviewByInterest()]);
   const metaByKey = new Map(metaRows.map((r) => [r.key, r]));
 
@@ -40,8 +44,14 @@ export default async function AdminInterestsPage() {
       stakes: meta?.stakes ?? null,
       refreshEffort: meta?.refreshEffort ?? null,
       nextReviewOn: nextReviews[s.key] ?? null,
+      stale: (({ total, current, overdue, never }) => ({ total, current, overdue, never }))(summarize(staleByInterest[s.key] ?? [], meta?.evergreen ?? null)),
     };
   });
 
-  return <InterestsGrid initialRows={rows} />;
+  return (
+    <>
+      <SiteStalenessCard />
+      <InterestsGrid initialRows={rows} />
+    </>
+  );
 }

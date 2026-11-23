@@ -1,4 +1,3 @@
-import { CollapsibleBlurb } from './CollapsibleBlurb';
 import { useUnitText } from '@/components/UnitsProvider';
 import { MONTH_SHORT, MONTH_NAMES } from '@/lib/scoring/constants';
 import { scoreLabel, timingScoreForMonth, barColor } from '@/lib/scoring/rank';
@@ -26,7 +25,8 @@ export function AboutTab({
   // month — otherwise tapping a different month here leaves a stale badge from
   // wherever the month picker happens to be pointed, showing
   // e.g. a "Rainy season" pill next to a description of a dry month.
-  const badges = dest.badges[generalMonthIdx];
+  // Only the warning pills show (owner pick, 23 Nov 2026): the green "Dry season" and "Low season" ones just repeat the verdict.
+  const badges = dest.badges[generalMonthIdx].filter((b) => b.tone !== 'good');
   const generalScores = Array.from({ length: 12 }, (_, i) => timingScoreForMonth(dest, i));
   const selectedLabel = scoreLabel(generalScores[generalMonthIdx]);
   const blurb = generateMonthlyBlurb(dest, generalMonthIdx + 1);
@@ -34,13 +34,13 @@ export function AboutTab({
 
   return (
     <div className="detail-tab-content">
-      <div className="detail-card">
-        <CollapsibleBlurb className="about-text">{u(dest.overview ?? dest.about)}</CollapsibleBlurb>
+      <div className="detail-plain">
+        <p className="about-text">{u(dest.overview ?? dest.about)}</p>
         {dest.overview && <p className="season-line">{u(dest.about)}</p>}
       </div>
 
-      <div className="detail-card">
-        <div className="detail-section-title">Best months overall · Tap to compare</div>
+      <div className="detail-plain">
+        <div className="detail-section-title">Best months for a typical visitor</div>
         <div className="months-chart months-chart-compact">
           {generalScores.map((v, i) => (
             <div
@@ -64,9 +64,10 @@ export function AboutTab({
           ))}
         </div>
 
-        <div className="month-detail-card">
-          <div className="month-detail-name">{MONTH_NAMES[generalMonthIdx]}</div>
-          <div className={`month-detail-quality score-${selectedLabel.cls}`}>{selectedLabel.text}</div>
+        <div className="month-detail-plain">
+          <div className="month-detail-line">
+            <b>{MONTH_NAMES[generalMonthIdx]}</b> · <span className={`score-${selectedLabel.cls}`}>{selectedLabel.text}</span>
+          </div>
           {badges.length > 0 && (
             <div className="detail-badges">
               {badges.map((b, i) => (

@@ -573,3 +573,21 @@ two from the same family back-to-back — it reads as repetitive:
 Recommendation standing from earlier: pick one interest at a time rather than committing
 to a whole formula family upfront, so sample-round voice calibration stays matched to
 actual feedback rather than assumed in bulk.
+
+## Family-directive interests (added 9 Nov 2026)
+
+Museums & Art, Architecture, Fine Dining, Street Food & Markets, Specialty Coffee & Tea and Wine, Beer & Spirits were written through the shared family directive (`prompts/family-v1.md` + `prompts/_shared/authoring-core.md`, version v3 from 6 Nov 2026), not a directive of their own. Their scope text lives in `scripts/data/family-scopes.json`. What the admin shows on each interest's Rules tab (what counts, writing rules, how scores are set, a dated "what we learned" log) is stored in `interest_rule_sections` as `family.scope`, `family.writing`, `family.scoring` and `family.lessons`; seed or refresh it with `scripts/seed-family-rule-sections-nov9.ts` and edit it on the page. When a review teaches something new, add a dated line to `family.lessons`, and if it is a rule, add it to `family.writing` and to `authoring-core.md` so the next Gemini run gets it.
+
+
+## Month blurbs: rules from the owner's review of the practice batch of four (13 Nov 2026)
+
+Written into `prompts/_shared/authoring-core.md` (v4) and checked by `scanStructure` in `src/lib/authoring/rules.ts` (shown in `scan-texts.ts` and on the review pages):
+1. **One-month test.** A blurb never names a month it does not cover or only some of the months it does; split where the detail differs (`otherMonth`, `partialMonths`).
+2. **Months that are not neighbors** share a blurb only if one simple sentence is true of all and names no month or season, and does not say "these months" (`disparateNamed`).
+3. **A blurb whose scores differ by more than 1.5 points must be split** (`wideGroup`); **above 0.5, consider splitting** (`splitConsider`), judged by how natural the curve is: a smooth climb or fall of up to 1.0 across the group is fine, a bump, dip or surprising difference is split. A big annual swing needs more than two blurbs.
+4. **Seasons agree across interests:** use the place's dry and wet months (the facts block now carries them).
+5. **No obvious statements and no restating the interest** ("to view the scenery"), **no spelling out what a place lacks** (`lacks`), **no "remains accessible"** (`accessibleFiller`).
+6. **Say astronomical darkness, never "true night"** (`trueNight`), and lead with roads and cloud where the night length hardly varies (near the tropics).
+7. **Call out what is unusual about doing the interest in that place** (nude mixed saunas in Switzerland, the naked pre-shower in Icelandic pools).
+8. **Last digits: each of .0 to .9 about 10%, across the batch and the catalog** (not 'avoid .0 and .5'). Enforced by `balanceAgainstLive` in `score-proposals.ts` and `apply-rank-moves-nov1.ts`, by the gate in `apply-family-text.ts`, and by `npm run check:tenths`. An earlier version of this note said the opposite; that was wrong.
+

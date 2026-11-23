@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { InterestFactValue } from '@/lib/db/schema';
+import { TRAVEL_KEY, TRAVEL_FACTS } from '@/lib/admin/travel-needs/config';
 
 /**
  * What each per-interest admin page shows in its "Places & data" table, beyond
@@ -8,7 +9,7 @@ import type { InterestFactValue } from '@/lib/db/schema';
  */
 
 export type FactType = 'int' | 'rating' | 'text' | 'draw' | 'bool' | 'birds' | 'list' | 'choice' | 'multi' | 'likelihood';
-export type FactGroup = 'data' | 'draw' | 'planning' | 'species' | 'style' | 'experience' | 'practical' | 'waves' | 'trails';
+export type FactGroup = 'data' | 'draw' | 'planning' | 'species' | 'style' | 'experience' | 'practical' | 'waves' | 'trails' | 'kids' | 'format' | 'language' | 'diet' | 'access';
 
 export interface FactOption {
   value: string;
@@ -55,6 +56,11 @@ export const FACT_GROUP_LABELS: Record<FactGroup, { label: string; tone: 'app' |
   trails: { label: 'Trails', tone: 'app' },
   draw: { label: 'Draw', tone: 'draw' },
   planning: { label: 'Not collected yet', tone: 'new' },
+  kids: { label: 'Traveling with kids', tone: 'app' },
+  format: { label: 'How you travel', tone: 'info' },
+  language: { label: 'Language', tone: 'draw' },
+  diet: { label: 'Dietary needs', tone: 'new' },
+  access: { label: 'Accessibility', tone: 'app' },
 };
 
 export const DRAW_RATINGS = ['strong', 'moderate', 'weak'] as const;
@@ -346,7 +352,7 @@ const FINE_DINING_FACTS: FactDef[] = [
  * edit it here from now on. The other Scenic chips (types of landscape) still need their own columns before the rest of the data can be filled.
  */
 const SCENIC_FACTS: FactDef[] = [
-  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. Kept at or below the place\'s Scenic peak (a photograph cannot beat the landscape). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
+  rate('landscapePhotography', 'Landscape photography', 'How good the place is for photographing landscapes: distinct, reachable subjects, light and conditions. May be above the place\'s Scenic peak (21 Nov 2026: a place can be better to photograph than to just look at, such as Salar de Uyuni or Namibia). 0-1 almost none, 5 a few good spots, 8-10 a destination for landscape photographers.'),
   // 23 Oct 2026: the other columns. Ratings are for the place in a good season, on its own, against the best of that kind in the world; 7 or more is a full chip match.
   // A place is rated for the landscapes it has (Venice is a 10 for cities and a 0 for mountains). Owner approved the plan on 23 Oct 2026 with two changes: lakes and ice are
   // two columns, not one. Proposal page: claude.ai/artifact/TwyGHpABKoHDuAhxVzxKRK.
@@ -1019,6 +1025,7 @@ const FACTS_BY_INTEREST: Record<string, FactDef[]> = {
   indigenousCultures: INDIGENOUS_FACTS,
   geologyVolcanoes: GEOLOGY_FACTS,
   wineSpirits: WINE_BEER_SPIRITS_FACTS,
+  [TRAVEL_KEY]: TRAVEL_FACTS,
 };
 
 export function factDefsFor(interestKey: string): FactDef[] {

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = { rule: string; places: Record<string, { value: string; confidence: string; evidence: string; sources: string[] }>; leftBlank: Record<string, string> };
 const root = join(__dirname, '..', '..');
@@ -24,7 +25,7 @@ describe('Safari Great herds fill (28 Oct 2026)', () => {
   });
   it('keeps the anchors: a continuous 100,000+ migration is the only guaranteed', () => {
     expect(Object.values(ev.places).filter((r) => r.value === 'guaranteed')).toHaveLength(0);
-    expect(ev.places.zambia.value).toBe('likely');
-    expect(ev.places.rwanda.value).toBe('unlikely');
+    expect(ev.places[PLACE['south-luangwa']].value).toBe('likely');
+    expect(ev.places[PLACE.rwanda].value).toBe('unlikely');
   });
 });

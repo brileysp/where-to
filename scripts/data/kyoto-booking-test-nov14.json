@@ -1,0 +1,41 @@
+{
+  "what": "Kyoto booking-site quote test, 14 Nov 2026. Same hotels, one night, 2 adults, US$, cheapest available room shown on Booking.com search results, quoted 14 Nov 2026.",
+  "dates": { "high": "Tue 13 Apr 2027", "low": "Tue 10 Aug 2027" },
+  "whyTheseMonths": "April and August chosen from the official Kyoto all-hotel monthly report (April about 1.8x August), not from the booking data itself.",
+  "officialComparison": "Official all-hotel April/August = about 1.8x",
+  "luxury5star": {
+    "pairs": [
+      ["The Royal Park Hotel Iconic Kyoto", 283, 140],
+      ["Fauchon Hotel Kyoto", 339, 288],
+      ["THE THOUSAND KYOTO", 514, 226],
+      ["Mitsui Garden Hotel Kyoto Sanjo PREMIER", 319, 162],
+      ["The Gate Hotel Kyoto Takasegawa by Hulic", 448, 178],
+      ["Hotel The Celestine Kyoto Gion", 527, 262],
+      ["Hotel Okura Kyoto", 261, 130],
+      ["Muni Kyoto", 768, 437],
+      ["Six Senses Kyoto", 1467, 712],
+      ["Dusit Thani Kyoto", 707, 315]
+    ],
+    "medianRatio": 2.02,
+    "range": [1.18, 2.52]
+  },
+  "midrange4star": {
+    "pairs": [
+      ["KIORI Hotel Higashino Toin", 149, 67],
+      ["The Chapter Kyoto, a Tribute Portfolio Hotel by Marriott", 600, 144],
+      ["Kyoto Century Hotel", 166, 100],
+      ["Mitsui Garden Hotel Kyoto Station", 241, 110],
+      ["Sora Niwa Terrace Kyoto", 242, 144],
+      ["La'gent Hotel Kyoto Nijo", 157, 76],
+      ["ORIENTAL HOTEL KYOTO ROKUJO", 160, 79]
+    ],
+    "medianRatio": 2.07,
+    "range": [1.66, 4.17]
+  },
+  "caveats": [
+    "Only hotels that appeared in both the April and August first-page lists (first 20 of 50 five-star, first 20 of 122/163 four-star) were matched, so n is small and not a random sample.",
+    "April quoted about 5 months ahead, August about 9 months ahead; longer lead usually means lower August prices, which would push the ratio up.",
+    "Cheapest available room, one Tuesday per month; a sold-out or near-sold-out date inflates a quote (Chapter Kyoto 4.2x).",
+    "Budget 3-star not run."
+  ]
+}

@@ -29,7 +29,6 @@ export function DestinationsTable({ destinations }: { destinations: DestinationR
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
         <thead>
           <tr style={{ textAlign: 'left', borderBottom: '1px solid #ccc' }}>
-            <th style={{ padding: '6px 8px' }}>id</th>
             <th style={{ padding: '6px 8px' }}>name</th>
             <th style={{ padding: '6px 8px' }}>region</th>
             <th style={{ padding: '6px 8px' }}>climate</th>
@@ -40,9 +39,8 @@ export function DestinationsTable({ destinations }: { destinations: DestinationR
           {filtered.map((d) => (
             <tr key={d.id} style={{ borderBottom: '1px solid #eee' }}>
               <td style={{ padding: '6px 8px' }}>
-                <Link href={`/admin/destinations/${d.id}`}>{d.id}</Link>
+                <Link href={`/admin/destinations/${d.id}/profile`}>{d.name}</Link>
               </td>
-              <td style={{ padding: '6px 8px' }}>{d.name}</td>
               <td style={{ padding: '6px 8px' }}>{d.region}</td>
               <td style={{ padding: '6px 8px' }}>{d.climate}</td>
               <td style={{ padding: '6px 8px', color: '#888' }}>{d.updatedAtLabel}</td>

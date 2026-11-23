@@ -22,7 +22,7 @@ export function RulesSection({ data }: { data: InterestPageData }) {
             <li>Audience tier: <b>{data.audienceTier ?? 'not set'}</b></li>
             <li>Authoring directive: {data.directive ? <b className="ip-mono">{data.directive}</b> : 'none found (this interest was not written through the Gemini pipeline, or the prompts folder is not deployed)'}</li>
           </ul>
-          {data.key !== 'birding' && data.key !== 'safari' && data.key !== 'wildlifeViewing' && data.key !== 'diving' && data.key !== 'surfing' && data.key !== 'whaleWatching' && data.key !== 'hiking' && <p className="ip-faint" style={{ marginTop: 10, marginBottom: 0 }}>Interest-specific formula and writing rules are shown here for Birding first; the other interests get theirs as their columns are added.</p>}
+          {data.key !== 'birding' && data.key !== 'safari' && data.key !== 'wildlifeViewing' && data.key !== 'diving' && data.key !== 'surfing' && data.key !== 'whaleWatching' && data.key !== 'hiking' && <p className="ip-faint" style={{ marginTop: 10, marginBottom: 0 }}>{Object.keys(data.ruleOverrides ?? {}).some((k) => k.startsWith('family.')) ? 'The cards below are this interest\'s scope, writing rules, scoring notes and a dated log of what we learned. They can be edited.' : 'Interest-specific formula and writing rules are shown here for Birding first; the other interests get theirs as their columns are added.'}</p>}
         </div>
       </div>
       {data.key === 'birding' && <BirdingRules />}
@@ -32,8 +32,39 @@ export function RulesSection({ data }: { data: InterestPageData }) {
       {data.key === 'surfing' && <SurfingRules />}
       {data.key === 'whaleWatching' && <WhaleRules />}
       {data.key === 'hiking' && <HikingRules />}
+      {!CUSTOM_RULE_KEYS.includes(data.key) && <FamilyRules />}
     </div>
     </RulesContext.Provider>
+  );
+}
+
+const CUSTOM_RULE_KEYS = ['birding', 'safari', 'wildlifeViewing', 'diving', 'surfing', 'whaleWatching', 'hiking'];
+
+/** Rules for interests written through the shared family directive (Museums, Architecture, Food and drink). The text lives in interest_rule_sections as "family.*" lists. */
+const FAMILY_SECTIONS: Array<{ id: string; title: string; intro: string }> = [
+  { id: 'family.scope', title: 'What counts and what does not', intro: 'What the interest covers, what belongs to another interest, and when it applies to a place.' },
+  { id: 'family.writing', title: 'Writing rules', intro: 'What the authoring directive tells Gemini, and the rules the owner added while reviewing the texts.' },
+  { id: 'family.scoring', title: 'How scores are set', intro: 'Where the month scores come from, how they are checked, and how the top of the scale is used.' },
+  { id: 'family.lessons', title: 'What we learned', intro: 'A dated log of what went wrong or was decided while this interest was written and reviewed, so the next run starts with it.' },
+];
+
+function FamilyRules() {
+  const ctx = useContext(RulesContext)!;
+  const present = FAMILY_SECTIONS.filter((sec) => (ctx.overrides[sec.id] as unknown[] | undefined)?.length);
+  if (present.length === 0) return null;
+  return (
+    <div className="ip-grid2">
+      {present.map((sec) => {
+        const items = ctx.overrides[sec.id] as Array<Record<string, string>>;
+        return (
+          <div className="ip-card" key={sec.id}>
+            <h3>{sec.title}</h3><EditRules id={sec.id} label={sec.title} fields={TEST_FIELDS} items={items} />
+            <p className="ip-muted">{sec.intro}</p>
+            <ul className="ip-list">{items.map((it, i) => <li key={i}><b>{it.title}.</b> <span className="ip-muted">{it.body}</span></li>)}</ul>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 

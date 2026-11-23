@@ -1,3 +1,4 @@
+import type { CostSeasonality } from '@/lib/cost-seasonality';
 /**
  * Shapes match the legacy vanilla-JS app (data.js) field-for-field so the
  * ported scoring functions in destinations.ts/blurb.ts/rank.ts can be
@@ -121,6 +122,8 @@ export interface ScoringDestination {
   // Real one-time/per-day prices, author-sorted low to high. Empty for
   // destinations not yet backfilled.
   costItems: { label: string; price: number; unit: string; emoji?: string }[];
+  // The cost seasonality card (sentence, one-word badge and 52 weekly bars) shown below the price list on the Cost tab. Absent for places scored below Fair.
+  costSeasonality?: CostSeasonality | null;
   base: Record<string, number>;
   budgetBands: string[];
   vibeBands: string[];
@@ -233,4 +236,4 @@ export interface DerivedScores {
 export type ScoredDestination = ScoringDestination & DerivedScores;
 
 /** The text of one place, fetched when a visitor opens it. The ranked list carries these fields empty (see list-place-rows.ts). */
-export type PlaceDetailText = Pick<ScoringDestination, 'about' | 'overview' | 'costOverview' | 'costItems' | 'monthlyWeather' | 'specialSeasons' | 'sliderOverview' | 'sliderMonthlyWeather'>;
+export type PlaceDetailText = Pick<ScoringDestination, 'about' | 'overview' | 'costOverview' | 'costItems' | 'costSeasonality' | 'monthlyWeather' | 'specialSeasons' | 'sliderOverview' | 'sliderMonthlyWeather'>;

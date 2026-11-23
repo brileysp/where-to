@@ -147,6 +147,8 @@ function loadDotEnvLocal(): Record<string, string> {
 }
 
 async function main() {
+  const { installLabelFilter } = await import('../src/lib/places/console-labels'); await installLabelFilter(); // standard D03: a report never prints a place key
+  await (await import('../src/lib/places/renamed-sync')).syncRenamedPlacesFile(); // the old-name check reads the label history
   const args = parseCliArgs(process.argv.slice(2));
   const interestKey = getString(args, 'interest') ?? 'kayakingRafting';
   const limit = Number(getString(args, 'limit') ?? '5');
@@ -162,8 +164,9 @@ async function main() {
   const preview = getFlag(args, 'preview');
   const smoothBlockyFlag = getFlag(args, 'smooth-blocky');
   const runDigitCounts: number[] = new Array(10).fill(0);
-  // Places renamed or broadened in Oct 2026 must have a scope sheet (see docs/renamed-places.json); --allow-unscoped-renamed overrides.
+  // Places renamed or broadened (all 20 before 14 Oct 2026; the exact dates were never recorded) must have a scope sheet (see docs/renamed-places.json); --allow-unscoped-renamed overrides.
   const allowUnscopedRenamed = getFlag(args, 'allow-unscoped-renamed');
+  const scopeConfirmed = async (key: string): Promise<boolean> => { const { db } = await import('../src/lib/db/client'); const { placeIdentity } = await import('../src/lib/db/schema'); const { eq } = await import('drizzle-orm'); const [r] = await db.select({ s: placeIdentity.scopeStatus }).from(placeIdentity).where(eq(placeIdentity.key, key)); return r?.s === 'confirmed'; };
   const renamedPlaces = new Map<string, string>(Object.entries((JSON.parse(readFileSync(join(__dirname, '..', 'docs', 'renamed-places.json'), 'utf8')) as { ids: Record<string, string> }).ids));
   const reauthor = getFlag(args, 'reauthor') || getFlag(args, 'force');
   // --include-na: also generate for places currently marked N/A, so the model decides applicability itself (whaleWatching/v1 §1).
@@ -300,6 +303,11 @@ async function main() {
       continue;
     }
     const renamedNote = renamedPlaces.get(place.id);
+    if (renamedNote && !allowUnscopedRenamed && !(await scopeConfirmed(place.id))) { // 20 Nov 2026, standard D05
+      console.error(`\n-- ${place.name} -- SKIPPED: renamed or widened place (${renamedNote}) whose scope the owner has not confirmed. Confirm it on the Names & scope screen first, or pass --allow-unscoped-renamed.`);
+      summary.push({ place: place.name, status: 'api_error', cost: 0, rejects: 0, warnings: 0, generationId: '—' });
+      continue;
+    }
     if (renamedNote && !factSheet?.scope?.trim() && !allowUnscopedRenamed) {
       console.error(`\n-- ${place.name} (${place.id}) -- SKIPPED: renamed place (${renamedNote}) with no scope sheet in docs/${interestKey}-facts.json. Add one, or pass --allow-unscoped-renamed.`);
       summary.push({ place: place.name, status: 'api_error', cost: 0, rejects: 0, warnings: 0, generationId: '—' });

@@ -1,0 +1,1461 @@
+{
+ "wildlifeViewing": [
+  {
+   "howToCheck": "For each headline species in our text, look up its current status and trend (IUCN Red List entry, the park or conservation agency's latest census or press release). If a species has declined sharply or vanished from the place, rewrite that text and re-check the score.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the 'best months' with the park's own wildlife calendar and with recent trip reports for the last two seasons. If operators now describe different peak months, shift the text and the monthly curve.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open the park authority's rules page for each major place and look for new distance limits, feeding or baiting bans, night-drive or vehicle limits, and seasonal closures. Update the text if anything a visitor would do has changed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open the park authority's fees and permits page for the headline permits (gorillas, tigers, bears and similar) and note the current price and booking system. Update any price or booking claim in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named lodge, camp or operator in our text, search its name and look for a working website and recent reviews. Replace anything closed, and check the road or airstrip still operates.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search recent news for each major place for fire, flood, drought, invasive species or a new road or dam in the park. If the habitat changed, check the text and the scores still fit.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the species names in our text with the current eBird/Clements list for birds and the IUCN or the mammal checklist for mammals. Re-run the species-name pass if names changed.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "birding": [
+  {
+   "howToCheck": "Each October, read the eBird/Clements taxonomy update notes (published on the eBird science pages) and list the species splits, lumps and renames. Re-run the species-name pass on the text and check endemic counts.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "For each hotspot in our text, check its eBird recent sightings and the latest bar chart for arrival and departure dates. Move 'best months' if the pattern has shifted for two seasons.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search each named hotspot for news of drainage, clearing, development or a new reserve in the last year. Replace or caveat any site that has been lost.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each hotspot's managing body (reserve authority, lodge or landowner) for access changes: permits, breeding-season closures, new entry fees, a gate closed. Update the access wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search the national wildlife agency and the world animal-health organisation for current avian influenza closures at the named reserves and colonies.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "After each taxonomy update, recount the endemics and 'lifer' potential in our evidence columns using the new list. Update the columns that changed.",
+   "checker": "script",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Re-run the eBird-based counts for the place list when the yearly eBird data release arrives, and compare with the stored counts. Re-run the species-name pass at the same time.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "safari": [
+  {
+   "howToCheck": "Open each national park or conservation authority's current fee schedule and compare with the fees in our text and columns. Update any fee or permit price that changed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent wildlife-census news (lion, elephant, rhino) and the migration trackers for each place for the last season. If the migration timing moved, adjust the best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named camp, lodge or concession in our text, search its name for a live website and recent bookings. Replace any that closed, changed owner or went mobile.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Read the park authority's rules page and recent news for changes to night drives, off-road driving, walking safaris, balloons and drones. Update the text where a visitor's day changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent rainfall reports and the park authority's road-status notices for each place. Check whether our 'green season' wording still matches how the rains have behaved.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open each country's official immigration and health-ministry pages for the current visa, e-visa and vaccination certificate requirements, and compare with our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the main safari airlines' and charter operators' current schedules for the circuits we describe. Note any route cut or added.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search recent news for disease outbreaks or security incidents in or near each named park. Anything affecting visitors goes to the advisories, and the text is caveated if needed.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "whaleWatching": [
+  {
+   "howToCheck": "Check the national marine agency's latest population status and the last two seasons' sighting reports for each species we name. If the season moved or sightings dropped, update the months and the score.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open the vessel rules for each place (marine mammal approach and speed rules, licence conditions, sanctuaries) and compare with our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search each named operator and for new operators in places we marked N/A. A place with no operator last year may now qualify, so revisit the N/A reason.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current whaling and whale-watching policy of the countries involved (Iceland, Norway, Japan and others) and whether it changes how we describe the place.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search the national marine agency for unusual mortality events, strandings and marine heatwave reports in the past year for the relevant region.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the marine-protected-area and shipping-lane authorities for new sanctuaries or lane changes in the regions we describe.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "scenicLandscapes": [
+  {
+   "howToCheck": "For each place's signature views, search recent news and photos for glacier retreat, collapses, drought or lake-level change at the named landmark. Rewrite anything that no longer looks as described.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the road, trail and cable-car operator pages for each named viewpoint for closures after landslide or fire, and for new openings. Update the access wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search the managing authority for each popular viewpoint for new timed entry, caps, fees or shuttle-only access.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent seasons' smoke and haze reports for the regions where our texts promise clear views, and whether our best months still avoid them.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for new dams, wind farms, mines or large buildings proposed or completed in the view of each signature place.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When new places are added to Scenic, re-read the 10s and the scenery-type ratings against the others and move any that are no longer the top of their type. Needs your judgement.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  }
+ ],
+ "campingBackcountry": [
+  {
+   "howToCheck": "Open each land agency's permit and reservation page for the places in our text (national park, forest service, national trust equivalents) and compare the system, quotas and fees with our wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current fire-restriction pages (land agency and national fire service) for each region and whether the seasons of bans have grown.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each area's food-storage, bear-canister and group-size rules on the managing agency's page and compare with our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each campground we name, check the agency's closure notices and status page for hazard-tree, flood, fire or bear closures.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent seasons' trail-condition and wildfire closure notices for each region, and whether water sources named in our text are still reliable.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the country's access-rights law and the local rules for wild camping where we mention it, and compare with our wording.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "stargazing": [
+  {
+   "howToCheck": "For each named dark site, compare the current light-pollution map (the VIIRS-based maps) with last year's, and check news for new lighting, towns or resorts nearby. Update the darkness class if it changed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent astronomy reports on satellite-constellation impact and whether our text claims anything about streak-free skies. Update the wording only if a claim became untrue.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check DarkSky International's list of certified places for additions, losses or tier changes at our places, and the local lighting ordinances for named towns.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last season's cloud and smoke at our key places with the figures in our facts block. If wet seasons or smoke seasons moved, adjust the best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named observatory, dark-sky lodge or road, check the operator's page for public programmes and access.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Re-run the night-cloud and darkness figures with the newest three years of data, compare with the stored values and update the score bands for any place that moved.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "auroraChasing": [
+  {
+   "howToCheck": "Read the NOAA space weather prediction centre's current solar cycle progression and forecast. Update the wording about the odds of a strong season if the outlook changed.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check the light-pollution maps and local news for the named viewing sites, and recent clear-sky statistics for the region.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named operator, lodge or dome in our text, check its website and recent reviews, and check the flights and roads that reach the site.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the snow-reliability and dark-season statements with the last winters' records for the main places.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the managing authority for each named park or road used for viewing for closures or new fees.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the national volcano and road authorities for closures that affect aurora sites (for example Iceland's road status and the Icelandic Met Office notices).",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "geologyVolcanoes": [
+  {
+   "howToCheck": "Check the Smithsonian Global Volcanism Program weekly report and the national volcano observatory for each volcano in our text. Update the text where a volcano has erupted, quieted or changed access.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Search the national geological survey for recent earthquakes or landslides at each site in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each geothermal feature we name (geysers, springs, ice caves), search for recent news of changed or ended activity.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open the managing authority's current access rules for each volcano or crater (guide requirements, height limits, exclusion zones, permits).",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check the UNESCO Global Geoparks and World Heritage lists after each annual decision for new or reviewed geological designations at our places.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "When a new Overture or Wikidata release arrives, re-run the Earth-only geology filter and compare counts with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "wildflowerBlooms": [
+  {
+   "howToCheck": "Compare the last two seasons' bloom and fall-colour observation dates (national bloom-tracking pages, tourism boards) with the months in our text. Move the window if it shifted.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check last winter's rainfall and the reported bloom quality for desert super-bloom places. Caveat the text if the window depends on rain.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for disease, pest or tree-loss reports at the named forests and fields.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named farm or field's page for whether it is planted and open to visitors this season.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the festival's official page for this year's dates and any new viewing-area fees.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "hiking": [
+  {
+   "howToCheck": "Open the permit and hut-booking page for each major trek in our text (park authority, hut federation) and compare the system, quotas and booking windows with our wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each route's managing authority for trail closures, rerouting, bridge washouts and hut renovations.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each region's rules on guides for the named routes (for example mandatory-guide announcements) and compare with our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last two seasons' snow-free dates and heat closures for the main high routes with our best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check hut and permit prices on the official pages for the named routes and update any figure in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When map data is refreshed, re-run the distance and climb figures for our trails and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "mountaineering": [
+  {
+   "howToCheck": "For each major peak in our text, open the permitting authority's current fee and rules page (permits, oxygen, guides, insurance, waste) and compare with our text. This one matters most for safety.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check the mountain-guide federations and recent season reports for rockfall closures and changed seasons on the classic routes we name.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check each named hut's booking page and status for closures, reduced capacity and booking rules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the foreign-office or government pages for peak closures, border-area permits and sacred-mountain climbing bans at the named peaks.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each country's current rescue and insurance requirements for climbers.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the guide-certification body and the named operators for changes, and whether a key operator has left.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the route names and grades in our text with the current guidebook or club information for the named routes.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "cyclingRoad": [
+  {
+   "howToCheck": "Check each named pass's road authority for this season's opening dates and any rockfall or avalanche closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the road authority for major works, new tunnels or bypasses on the routes we describe.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the local rules and plans on car-free days, e-bike rules and new cycle infrastructure for the named regions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check this year's dates for the major races and sportives named, and the traffic notices for those weekends.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named rental or tour operator, check its website and recent reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "mountainBiking": [
+  {
+   "howToCheck": "Check each land manager's trail pages and recent notices for new e-bike rules, closures to bikes and wet-season restrictions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named bike park's website for opening, ownership and lift schedule.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each region's trail-association pages for closures after fire, storm or erosion.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search local news for user-conflict restrictions on named trail systems.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare our trail-difficulty wording with the current trail-association ratings for named trails.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "skiingSnowboarding": [
+  {
+   "howToCheck": "Compare the last three winters' season lengths and snow depth for each resort in our text (resort reports, national weather service). Lower the snow-reliability wording where a low resort lost weeks.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the Epic, Ikon and regional pass networks' current resort lists and any resort ownership news. Update the pass wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each resort's lift map and news for new, replaced or removed lifts and terrain expansions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the resort's current lift-ticket and season-pass prices on its official page.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the road, rail and avalanche authorities for access changes to named villages.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When the resort data (altitude, terrain, lifts) is refreshed, compare the snow-reliability and terrain figures with the stored values and re-score if they moved.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "surfing": [
+  {
+   "howToCheck": "Check recent surf-forecast and local reports for each named break for a changed sandbar, reef or point, and for coastal works (breakwaters, reclamation).",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check access and fees for each regulated break (reef-pass fees, resort-controlled breaks, local bans) on the managing authority or operator pages.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the beach-safety and water-quality authority for closures, and the shark-management policy for the named coasts.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare recent storm tracks and the surf-forecast's seasonal data with our best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named surf camp or school, check its website and reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare our breaks list and ratings with the current surf-guide sources, and re-check the rough ratings. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  }
+ ],
+ "diving": [
+  {
+   "howToCheck": "Check NOAA Coral Reef Watch's current bleaching alerts and the latest bleaching reports for each reef in our text. If a reef bleached badly, update the text and the score.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check recent dive-operator and survey reports on visibility, water temperature and the named marine life (sharks, mantas, whale sharks) for each place.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named wreck, check recent reports for collapse, silting and mooring or access changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Open each marine park's current rules and fees page (entry fees, diver limits, guide requirements, closures) and compare with our text.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "For each named dive operator and liveaboard, check its website, route list and reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check PADI and local authorities for certification and insurance requirements at named places.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent reports on invasive species and fishing pressure at the named reefs.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "windSports": [
+  {
+   "howToCheck": "Check each spot's managing authority or local association for restrictions, nesting closures and zoning changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named school, rental station or beach club, check its website and reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last seasons' wind statistics at each spot with the reliability numbers in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check parking, beach fee and access notices, and whether a hotel or development took over the spot.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check local reports on water quality and seaweed seasons at the named launch spots.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "sailing": [
+  {
+   "howToCheck": "For each named charter base, check the charter companies' current base lists and the marina's page.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the national and marine-park rules on anchoring and mooring, and the cruising-permit and skipper-licence requirements, for each region.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current port, mooring and tourist-tax rates for yachts in each region.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the foreign-office advice and the maritime security authorities for piracy or restricted areas on our routes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last seasons' storm and wind patterns, and seaweed or jellyfish reports, with our best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When map data is refreshed, re-run the charter-base and harbour counts and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "kayakingRafting": [
+  {
+   "howToCheck": "Check river-flow gauges and the dam operator's release schedule for each named river, and compare the season of runnable flows with our best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each river's permit and lottery pages and the outfitter licence rules for the named runs.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for new dams, diversions, landslides or canyon blockages on the named rivers.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named outfitter, check its website, licence and reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the managing agency for closures after accidents or for wildlife protection.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the water-quality and algae advisories on the named sections.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "adventureSports": [
+  {
+   "howToCheck": "Search each country's authority news for bans, licensing or new safety rules after accidents for the named activities.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named operator, check its website, insurance statement and recent reviews.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for new record-scale attractions and new operators in each place.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named operators' public liability and insurance statements and any regulator notices.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the named activity seasons with recent wind, snow and river conditions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When map data is refreshed, re-run the operator counts and equipment lists and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "golf": [
+  {
+   "howToCheck": "For each named course, check its website for opening status and access (public, semi-private, resort guests only), and search local news for sale or redevelopment.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named course's current green fees on its own booking page.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When Golf Digest, Top 100 Golf Courses or the equivalent lists update, compare the courses we treat as the best with the new lists and move any 10s that no longer fit.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check each named course's news for renovation closures.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the local water-authority restrictions and the last summer's heat closures for the named regions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When a new Overture or Wikidata release arrives, re-run the course counts and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "fishing": [
+  {
+   "howToCheck": "Open each named fishery's current regulations page (fish and wildlife agency): seasons, bag limits, slots, catch-and-release, licences. Update our rules text. This changes every year.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the agency's current stock status for each named species and run (salmon returns, trout surveys), and move any 10 judged on a fishery that has collapsed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the agency's closure notices and the last summer's low-water and heat closures for the named rivers.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check marine-reserve maps and invasive-species rules (boat inspection, gear) for each named place.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named lodge and guide, check its website and reviews, and search for dam removals or reopened runs.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Re-read the 'famous fishery' 10s against the current sources, and move any that no longer fit. Needs your judgement.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  }
+ ],
+ "horsebackRiding": [
+  {
+   "howToCheck": "For each named ranch, stable or outfitter, check its website and reviews, and search local news for a sale or closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the public-land agency's permit and stock rules and trail notices for the named areas.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the national animal-health authority for current horse disease outbreaks and quarantines.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the animal-welfare rules and recent news at the named tourist sites.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the riding season in our text with recent fire, drought and snow conditions.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "trailRunning": [
+  {
+   "howToCheck": "Check each named race's official site for this year's date, entry system (lottery, qualifying points) and any cancellation. Race dates are set a year ahead.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check each race's and trail's managing authority for new permit or participant caps and reroutes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the running season in our text with the last seasons' snow, heat and fire closures on the high routes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named huts and aid points on their booking pages.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current UTMB-style point systems and the race organisers' lists, and compare with the 'best races' wording in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "historyArchaeology": [
+  {
+   "howToCheck": "For each named site, check the heritage authority's page for restoration closures and new excavations, and update the text if the picture changed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named site's official ticketing page for daily and hourly caps, timed tickets and new fees.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check UNESCO's and the national heritage authority's pages for conflict, looting or climate damage reports at the named sites.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "After each yearly World Heritage Committee decision, check additions, danger listings and removals for the places in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check the status of each named site for re-purposing, restitution or political changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the latest scholarly or heritage-authority statements for the 'oldest' and 'largest' claims in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "museumsArt": [
+  {
+   "howToCheck": "For each named museum, check its official 'plan your visit' page for closures and renovations, and search news for newly opened flagship museums in the city.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named museum's tickets page for timed entry, prices, foreign-visitor prices, free-entry rules and closing days.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check news for collection moves, long loans and restitutions affecting the works named in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent news for strikes or security closures at the named museums.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named private foundation or small museum, check its website and opening status.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When map data or Wikidata is refreshed, re-run the gallery and museum counts and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "architecture": [
+  {
+   "howToCheck": "Search each city for newly completed landmarks, and for fires, demolitions or conflict damage at the buildings named in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named building's official page for interior access, tower climbs and tour ticketing.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named facade's heritage authority or building page for scaffolding and restoration schedules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the heritage listing and the current name of each named building, and the opening status of each named observation deck.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named private residence's page for its current open days.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "cityExploration": [
+  {
+   "howToCheck": "Search local news and the city's own tourism pages for neighbourhood changes in the districts our text recommends. Replace any that changed character.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the city council's current visitor rules: day-tripper fees, short-stay rental limits, cruise limits, alcohol and noise rules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the city transport authority for new lines, strikes and airport or rail link changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the city's events calendar for large events (Olympics, expos, summits) in the next year that reshape it.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named market or cultural venue's official page for relocation or closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the foreign-office advice and recent news for the named city, and send anything material to the advisories.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "indigenousCultures": [
+  {
+   "howToCheck": "Open each community's own tourism page or council notices for who may visit, fees and booking systems, and compare with our text. This changes without notice, so check the community's own source first.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each community's visitor guidelines for photography, ceremonies and dress rules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named community-led operator or guide, check its website and the community's page.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the national government and land-council pages for land-rights decisions and protected-area changes at the named places.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the preferred names for the named peoples and places on the community's own pages and current style guidance, and fix wording that is outdated. Needs your judgement on tone.",
+   "checker": "owner",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the national indigenous-affairs agency for exclusion zones and health-related closures of communities we name.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "religiousSites": [
+  {
+   "howToCheck": "Check each named site's official page for current entry rules, dress codes, photography rules and tickets.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named site's page for restoration closures and their schedule.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the religious calendars (Hajj, Ramadan and similar) for next year's dates for the festivals in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check recent news and the site's page for security restrictions and daily visitor limits.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the legal and religious status of each named building for re-purposing.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check pilgrimage-route authorities for rerouting.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "festivals": [
+  {
+   "howToCheck": "For each named festival, check its official site for this year's dates and lineup announcements, and for cancellation, rebranding or a venue change.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search local news for refused permits and safety incidents at the named festivals.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the lunar and religious calendars for the dates of the festivals tied to them, and the long-range weather notes where a festival depends on it.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check each festival's ticketing page for lotteries, tiers and prices.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for new festivals in the same place that are now better known than the ones in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the local noise and crowd rules that affect named festivals.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "traditionalCrafts": [
+  {
+   "howToCheck": "For each named workshop or craft village, check its own page and local news for closure, retirement of masters or a switch to mass production.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check CITES and the national customs authority for new material bans (ivory, shell, wood) and export rules that change what a visitor can bring home.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named cooperative or market's page for relocation or closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "After each yearly UNESCO intangible-heritage decision, check additions at the places we describe.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check recent prices of the named finished goods at the workshop or cooperative.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "streetFood": [
+  {
+   "howToCheck": "For each named market or street, check local news and the city's market page for redevelopment, relocation and closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the city's current vendor licensing and hygiene rules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When the Michelin Bib Gourmand and similar guide lists update each year, compare them with the places in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check current food-safety news for the region and whether the named seasonal dishes are still in season in the months we say.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check current prices at the named stalls and whether payment is cash only or cashless only.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Search for places that went viral and now have long queues, and update the practical wording.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "fineDining": [
+  {
+   "howToCheck": "For each named restaurant, check its own site, its booking page and the guide listing for closure, move or a chef change. Replace any that closed.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When the Michelin guide and The World's 50 Best update each year, compare them with the restaurants and cities in our text and note new countries.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check the named restaurants' current tasting-menu prices and service-charge rules.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named restaurant's booking system and lead time.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the guide lists for rising food cities against the cities we describe.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check the named restaurants' current dress code and tipping notes.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "wineSpirits": [
+  {
+   "howToCheck": "Check each named region's last vintage reports (frost, hail, fire, smoke) and harvest dates, and update the best months if the harvest moved.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named producer, check its website for appointments, tasting fees and ownership news.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the regional appellation bodies for classification or sub-region changes, and the yearly awards lists that our celebrated-wine and spirit lists follow.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Check each country's current alcohol rules for licensing, drinking age, bans and drink-driving limits, and compare with our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named craft breweries and distilleries for opening status.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When a new Overture release arrives, re-run the producer counts and compare with the stored values, then refresh the celebrated-wine and spirit-kind columns.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "coffeeTea": [
+  {
+   "howToCheck": "For each named café or scene, check its own page and local news, and note when a scene moved to a new district.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named estate or farm tour, check its website for tour availability and ownership.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the latest climate-suitability and harvest-timing reports for the named growing regions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the trade-rule pages (deforestation-free sourcing, certification schemes) that affect the named regions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent news for chains acquiring the named independent roasters.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check current commodity prices where our text mentions price levels.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "beachesSwimming": [
+  {
+   "howToCheck": "For each named beach, compare recent photos and the coastal authority's reports for erosion, nourishment and storm damage.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the beach-water-quality authority and recent seaweed and jellyfish reports for each region for this season.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check the local authority's closure notices for each named beach, and whether any closure from the past years has reopened with caps.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "howToCheck": "Check each named beach's authority for concessions, sunbed contracts and lifeguard hours.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the turtle-nesting and bird-protection rules for the named beaches.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "After each yearly Blue Flag announcement, compare awards with the beaches in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "sunbathing": [
+  {
+   "howToCheck": "Check each named beach club, resort pool and beach for access, fees and renovation notices.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last summers' heat-wave records for the named places with our best months.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each country's current rules on public nudity and topless sunbathing where our text mentions them.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the last seasons' cloud and rain statistics with the sunshine claims in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When the climate data window is refreshed, re-run the sunshine and temperature figures and compare with the stored values.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "luxuryHotels": [
+  {
+   "howToCheck": "For each named hotel, check its website and booking page for opening status, renovation, brand and owner changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "When the Michelin Keys and the other yearly hotel lists update, compare them with the hotels in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "howToCheck": "Search for new resort openings (islands, mega-projects) in the next year and add them to the review of that destination.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named resort's seasonal closure dates and storm damage news.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare current nightly rates for the named hotels with our price wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the foreign-office advice and the hotel group's news for brand exits and political events at each place.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "allInclusive": [
+  {
+   "howToCheck": "For each named resort, check its website for opening status, rebranding and adults-only changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the hotel groups' destination news for brand exits and the national weather service for storm damage to the named resorts.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current package tiers and mandatory resort fees at the named resorts.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent seaweed and storm reports for each named coast.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the foreign-office advice for each destination and send anything material to the advisories.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "spaWellness": [
+  {
+   "howToCheck": "For each named spa, check its website and recent reviews for closure, refurbishment, owner change and seasonal opening.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named spa's rules page for textile or nude rules in saunas and mixed or single-gender hours.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named thermal sources for water temperature or flow changes.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the regulators' pages for traditional-medicine certification and medical-tourism rules where we mention them.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare current treatment prices at the named spas.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "hotSprings": [
+  {
+   "howToCheck": "Check the geological survey and local news for earthquake or volcanic effects on spring flow and temperature at the named springs.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "For each named facility, check its website for closure, fees and ownership, and check closures of wild springs by the land managers.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the health authority's pages for bacteria and gas closures at the named springs.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the named baths' tattoo and nudity policy pages.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the Icelandic Met Office and the operators' notices for eruption-related closures of baths.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check current entry prices at the named springs.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "yogaRetreats": [
+  {
+   "howToCheck": "For each named centre, check its website and recent reviews, and search news for a scandal or closure.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each country's visa and business-licensing rules for foreign-run retreats where we mention them.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the current legal status of the plant-medicine and similar retreat offerings named in our text.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the yoga certification body's current standards where our text relies on them.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare current prices and package structures at the named centres.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "themeParks": [
+  {
+   "howToCheck": "Check each operator's news for new parks, lands and closing rides in the places we describe.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named park's tickets page for tiers, fast-pass systems, caps and prices.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent news for new height or safety rules after accidents.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each park's calendar for opening hours and seasons.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the licence and franchise news for the named parks.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "nightlife": [
+  {
+   "howToCheck": "For each named club or bar, check its page and recent reviews, and search local news for district-level shifts.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check the city council's current rules on closing times, noise, licensing, and drug or smoking policy.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent news for venues restricting tourists, and the door policies at the named clubs.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent news on safety (spiking, crime) in the named districts.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check where the named resident DJs and promoters are now.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ],
+ "shopping": [
+  {
+   "howToCheck": "Check each country's current tax-free refund rules and customs allowances for visitors.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check recent exchange-rate moves for the places where our text says prices are cheap or dear.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each named store, mall or market's page for closure and relocation.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Check each city's current trading-hours rules and counterfeit enforcement.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "howToCheck": "Compare the named places' own shopping descriptions with current tourism pages for what is still worth the trip.",
+   "checker": "claude",
+   "checkEvery": null
+  }
+ ]
+}

@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { loadSkipList } from '../../src/lib/gemini/skip-list';
+import { oldNameIssues } from '../../src/lib/gemini/renamed-places';
+import { PLACE } from '@/lib/places/keys.generated';
 
 // A renamed or broadened place must be described by its whole new scope, never its old name: see docs/renamed-places.json.
 const root = join(__dirname, '..', '..');
@@ -13,7 +15,7 @@ describe('renamed places and the snorkeling & diving run', () => {
   const inRun = Object.keys(renamed).filter((id) => !skipped.has(id));
   it('lists the renamed places', () => {
     expect(Object.keys(renamed).length).toBeGreaterThan(15);
-    expect(renamed.borabora).toMatch(/French Polynesia/);
+    expect(renamed[PLACE['french-polynesia']]).toMatch(/French Polynesia/);
   });
   it('gives every renamed place that goes to Gemini a scope sheet', () => {
     const missing = inRun.filter((id) => !facts[id]?.scope?.trim());
@@ -33,7 +35,23 @@ describe('renamed places and the snorkeling & diving run', () => {
     expect(bad).toEqual([]);
   });
   it('says plainly that French Polynesia is the whole territory', () => {
-    expect(facts.borabora?.scope).toMatch(/whole territory/);
-    expect(facts.borabora?.scope).toMatch(/Tuamotu/);
+    expect(facts[PLACE['french-polynesia']]?.scope).toMatch(/whole territory/);
+    expect(facts[PLACE['french-polynesia']]?.scope).toMatch(/Tuamotu/);
+  });
+});
+
+describe('old-name parts the owner chose to keep (18 Nov 2026)', () => {
+  it('lets Northern Tanzania mention the Serengeti plains but still flags Zanzibar', () => {
+    expect(oldNameIssues(PLACE['northern-tanzania'], ['The vast plains of the Serengeti are seen from a bush plane.'])).toEqual([]);
+    expect(oldNameIssues(PLACE['northern-tanzania'], ['Beaches on Zanzibar.']).length).toBe(1);
+  });
+});
+
+
+describe('old names the owner chose to keep in Scenic Landscapes (21 Nov 2026)', () => {
+  it('lets a whole old name stay when the owner allowed it, but still flags other old names', () => {
+    expect(oldNameIssues(PLACE.cuba, ['The colonial architecture of Old Havana and the sea wall of the Malecón.'])).toEqual([]);
+    expect(oldNameIssues(PLACE.wales, ['The rugged mountains of Eryri (Snowdonia) and the Brecon Beacons.'])).toEqual([]);
+    expect(oldNameIssues(PLACE['phuket-and-the-andaman-coast'], ['Beaches on Phuket.']).length).toBeLessThanOrEqual(1);
   });
 });

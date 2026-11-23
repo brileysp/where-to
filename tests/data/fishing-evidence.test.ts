@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { rated: Record<string, number | null>; nSpecies: Record<string, number>; charters: number; fishingBusinesses: number; overallFishing: number; judged: Record<string, number>; values: Record<string, unknown> }>;
 const root = join(__dirname, '..', '..');
@@ -40,18 +41,18 @@ describe('Fishing evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['los-cabos'].bigGameFish).toBe(10);
-    expect(draft['gbr'].bigGameFish).toBe(10);
-    expect(draft['belize'].flatsFish).toBe(10);
-    expect(draft['bahamas'].flatsFish).toBe(10);
-    expect(draft['tasmania'].troutChar).toBe(10);
-    expect(draft['southeast-alaska'].salmonSteelhead).toBe(10);
-    expect(draft['mongolia'].freshwaterPredators).toBe(10);
-    expect(draft['hokkaido'].salmonSteelhead).toBe(4);
-    expect(draft['galapagos'].flatsFish).toBe(0);
+    expect(draft[PLACE['los-cabos']].bigGameFish).toBe(10);
+    expect(draft[PLACE['great-barrier-reef']].bigGameFish).toBe(10);
+    expect(draft[PLACE.belize].flatsFish).toBe(10);
+    expect(draft[PLACE.bahamas].flatsFish).toBe(10);
+    expect(draft[PLACE.tasmania].troutChar).toBe(10);
+    expect(draft[PLACE['southeast-alaska-and-the-inside-passage']].salmonSteelhead).toBe(10);
+    expect(draft[PLACE.mongolia].freshwaterPredators).toBe(10);
+    expect(draft[PLACE.hokkaido].salmonSteelhead).toBe(4);
+    expect(draft[PLACE['galapagos-islands']].flatsFish).toBe(0);
   });
   it('landlocked places get no ocean fishing', () => {
-    for (const p of ['bavaria-munich', 'prague', 'vienna', 'nepal', 'swissalps']) if (draft[p]) expect(draft[p].bigGameFish, p).toBe(0);
+    for (const p of [PLACE['bavaria-and-munich'], PLACE.prague, PLACE.vienna, PLACE.nepal, PLACE['zermatt-and-the-swiss-alps']]) if (draft[p]) expect(draft[p].bigGameFish, p).toBe(0);
   });
   it('hand-researched rules name a source and a quote, and salmon months only sit where salmon are rated', () => {
     for (const [p, d] of Object.entries(draft)) {

@@ -113,7 +113,8 @@ async function main() {
   // audit-ranking-expectations.ts as named editorial assertions, alongside
   // the ranking ones, rather than as a rule here that cries wolf.
 
-  const undefined_ = SLIDERS.filter((s) => !INTEREST_ANCHORS[s.key] && s.key !== 'deals' && s.key !== 'crowds');
+  const { getActiveInterests } = await import('../src/lib/scoring/active-interests'); // retired interests need no ceiling: the active list decides, not a hand-typed exclusion
+  const undefined_ = (await getActiveInterests()).filter((s) => !INTEREST_ANCHORS[s.key]);
   if (undefined_.length) {
     console.log(`\nNo ceiling defined (${undefined_.length}): ${undefined_.map((s) => s.key).join(' ')}`);
   }

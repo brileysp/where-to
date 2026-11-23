@@ -1,0 +1,32 @@
+{
+  "what": "Maui retry, 14 Nov 2026. Booking.com, one night, 2 adults, US$, cheapest available room, hotel + resort + condo-hotel types (ht_id 204/206/219; 56 listings on Dec 15). Individual condo units excluded. All quoted 14 Nov 2026.",
+  "officialDecOverSepLuxuryResort": 1.88,
+  "dates": {
+    "december2026": ["Tue 8 Dec", "Tue 15 Dec", "Tue 22 Dec", "Tue 29 Dec", "Thu 31 Dec"],
+    "september2027": ["Tue 7 Sep", "Tue 14 Sep", "Tue 21 Sep", "Tue 28 Sep"],
+    "decemberWeights": "days represented: 8 Dec=14, 15 Dec=7, 22 Dec=5, 29 Dec=4, 31 Dec=1"
+  },
+  "prices": {
+    "Fairmont Kea Lani": { "dec": [979, 979, 1429, 2299, 2069], "sep": [959, 959, 959, 959] },
+    "Hotel Wailea Maui": { "dec": [876, 1068, 1299, 3399, 1206], "sep": [1199, 1129, 1199, 1199] },
+    "Andaz Maui at Wailea": { "dec": [934, 849, 1020, 2159, 1810], "sep": [727, 795, 729, 730] },
+    "Wailea Beach Resort Marriott": { "dec": [587, 566, 892, 1619, 1799], "sep": [773, 985, 773, 773] },
+    "Grand Wailea": { "dec": [688, 688, 1402, 4019, 4019], "sep": [827, 827, 827, 937] },
+    "Four Seasons Maui": { "dec": [975, 1305, 2095, null, null], "sep": [895, 895, 1355, 1355] },
+    "The Resort at Kapalua Bay": { "dec": [1299, 2039, 3249, null, null], "sep": [1039, 1039, 1039, 1279] },
+    "Ho'olei at Grand Wailea": { "dec": [1926, 1803, 4099, null, null], "sep": [1803, 1803, 1803, 1803] }
+  },
+  "decOverSep": {
+    "Fairmont Kea Lani": 1.31, "Hotel Wailea Maui": 1.12, "Andaz Maui at Wailea": 1.50,
+    "Wailea Beach Resort Marriott": 0.97, "Grand Wailea": 1.57,
+    "Four Seasons Maui (first 26 days only)": 1.14, "Kapalua Bay (first 26 days only)": 1.70, "Ho'olei (first 26 days only)": 1.28
+  },
+  "medianDecOverSep": 1.3,
+  "result": "Median about 1.3x against official 1.88x. Shape is right (ordinary December Tuesdays near September, 29 Dec 2.0x to 4.7x the September average) but the monthly level comes out about a third low.",
+  "findings": [
+    "Hotels that are sold out on peak nights drop out of the list, so the peak is understated (Four Seasons, Kapalua Bay and Ho'olei have no price for 29 and 31 Dec).",
+    "Far-out September quotes are flat across dates (Fairmont 959 on all four Tuesdays, Grand Wailea 827 on three): they look like base rates, not demand pricing, while December (1 month out) is demand-priced. Lead time cannot be separated from season in a single quote day.",
+    "Cheapest-room quotes rise less than average daily rate in peak weeks because premium rooms rise more.",
+    "Booking.com shows about 12 months of future dates."
+  ]
+}

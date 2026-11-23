@@ -1,0 +1,22 @@
+[
+ "scripts/_measure_digits.ts",
+ "scripts/audit-anchors.ts",
+ "scripts/audit-content-outliers.ts",
+ "scripts/audit-curve-migration-parity.ts",
+ "scripts/audit-curve-smoothness.ts",
+ "scripts/audit-persona-coverage.ts",
+ "scripts/audit-ranking-expectations.ts",
+ "scripts/audit-scoring-consistency.ts",
+ "scripts/backfill-authoring-passes.ts",
+ "scripts/content/destination-schema.ts",
+ "scripts/even-tenths-live.ts",
+ "scripts/gemini-author-batch.ts",
+ "scripts/generate-interest-thresholds.ts",
+ "scripts/rename-batch3.ts",
+ "scripts/rename-batch4.ts",
+ "scripts/rename-six-places.ts",
+ "scripts/seed-interest-meta.ts",
+ "scripts/seed-interest-planning.ts",
+ "scripts/todos-earlier-renames.ts",
+ "scripts/triage-zero-scores.ts"
+]

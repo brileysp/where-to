@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { generationOutputSchemaFlatV2Hike, normalizeFlatOutput } from '../../src/lib/gemini/schema';
 import { validateContent } from '../../src/lib/gemini/validate';
 import type { GenerationOutput } from '../../src/lib/gemini/schema';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const flat = (over: Record<string, unknown> = {}) => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
@@ -31,32 +32,32 @@ describe('hiking pipeline', () => {
   it('warns when the better rating is not within 0.5 of the peak', () => {
     const o = out();
     o.extras = { day_hike_rating: 5, trek_rating: 6 };
-    expect(validateContent(o, 'hiking', 'dolomites').some((i) => /better of the two ratings/.test(i.message))).toBe(true);
+    expect(validateContent(o, 'hiking', PLACE.dolomites).some((i) => /better of the two ratings/.test(i.message))).toBe(true);
   });
   it('rejects a rating outside 0 to 10', () => {
     const o = out();
     o.extras = { day_hike_rating: 11, trek_rating: 9 };
-    expect(validateContent(o, 'hiking', 'dolomites').some((i) => i.severity === 'reject' && /between 0 and 10/.test(i.message))).toBe(true);
+    expect(validateContent(o, 'hiking', PLACE.dolomites).some((i) => i.severity === 'reject' && /between 0 and 10/.test(i.message))).toBe(true);
   });
   it('only warns about a 10 outside the expected eight', () => {
     const o = out();
     o.monthly[7] = { ...o.monthly[7], score: 10 };
-    const tens = validateContent(o, 'hiking', 'madeira').filter((i) => /not in that interest's anchor list/.test(i.message));
+    const tens = validateContent(o, 'hiking', PLACE.madeira).filter((i) => /not in that interest's anchor list/.test(i.message));
     expect(tens).toHaveLength(1);
     expect(tens[0].severity).toBe('warning');
   });
   it('allows "world-class" once in the overview, warns on a second use or one in a month', () => {
     const one = out({ overview: 'A world-class trek over glacier passes, strenuous and best from July to September, starting from the village of Chamonix.' });
-    expect(validateContent(one, 'hiking', 'chamonix').some((i) => /World-class|appears/.test(i.message))).toBe(false);
+    expect(validateContent(one, 'hiking', PLACE['chamonix-and-the-french-alps']).some((i) => /World-class|appears/.test(i.message))).toBe(false);
     const two = out({ overview: 'A world-class trek, a legendary glacier crossing, strenuous and best from July to September, from the village of Chamonix.' });
-    expect(validateContent(two, 'hiking', 'chamonix').some((i) => /at most once/.test(i.message))).toBe(true);
+    expect(validateContent(two, 'hiking', PLACE['chamonix-and-the-french-alps']).some((i) => /at most once/.test(i.message))).toBe(true);
     const m = out();
     m.monthly[6] = { ...m.monthly[6], text: 'A world-class stretch of high trail is open and strenuous above 8,000 ft.' };
-    expect(validateContent(m, 'hiking', 'chamonix').some((i) => /never in a month/.test(i.message))).toBe(true);
+    expect(validateContent(m, 'hiking', PLACE['chamonix-and-the-french-alps']).some((i) => /never in a month/.test(i.message))).toBe(true);
   });
 
   it('warns on the v3 overview and month rules (14 Oct 2026)', () => {
-    const msgs = (o: GenerationOutput) => validateContent(o, 'hiking', 'sedona').map((i) => i.message).join(' | ');
+    const msgs = (o: GenerationOutput) => validateContent(o, 'hiking', PLACE.sedona).map((i) => i.message).join(' | ');
     expect(msgs(out({ overview: 'The walking suits day hikers best, with easy 2-mile loops and a steep strenuous scramble, best in spring and autumn near town.' }))).toMatch(/suits or that it is day-hike only/);
     expect(msgs(out({ overview: 'Easy 2-mile loops near the town and a strenuous scramble up a steep rock, best in spring and autumn when it is mild.' }))).toMatch(/distance but no multi-day route/);
     expect(msgs(out({ overview: 'The 75-mile Alta Via takes 10 to 13 days, a strenuous trek through the high limestone towers, with day hikes beside it too.' }))).not.toMatch(/distance but no multi-day route/);
@@ -67,7 +68,7 @@ describe('hiking pipeline', () => {
   });
 
   it('warns on scoring words, loaded crowd words and season words in a months-only place (hiking/v4)', () => {
-    const msgs = (o: GenerationOutput, opts = {}) => validateContent(o, 'hiking', 'cape-town', opts).map((i) => i.message).join(' | ');
+    const msgs = (o: GenerationOutput, opts = {}) => validateContent(o, 'hiking', PLACE['cape-town'], opts).map((i) => i.message).join(' | ');
     expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/World-reference/);
     expect(msgs(out({ overview: 'World-reference walking among spires, with a famous loop that is overrun in summer and a strenuous trek that is best in March.' }))).toMatch(/overrun/);
     const m = out(); m.monthly[5] = { ...m.monthly[5], text: 'Winter brings regular rain and low cloud that make steep rock routes slippery.' };
@@ -76,7 +77,7 @@ describe('hiking pipeline', () => {
   });
 
   it('checks crowd mentions against the count of documented indicators', () => {
-    const msgs = (o: GenerationOutput, crowding: number) => validateContent(o, 'hiking', 'banff', { crowding }).map((i) => i.message).join(' | ');
+    const msgs = (o: GenerationOutput, crowding: number) => validateContent(o, 'hiking', PLACE['banff-and-jasper-national-parks'], { crowding }).map((i) => i.message).join(' | ');
     const crowded = out({ overview: 'The lakeside trails are crowded in July and August, with a shuttle and timed slots, best from late June to September in the high country.' });
     const plain = out({ overview: 'The lakeside trails are the reason to come, best from late June to September in the high country, with huts along the way.' });
     expect(msgs(plain, 5)).toMatch(/overview must mention crowds/);

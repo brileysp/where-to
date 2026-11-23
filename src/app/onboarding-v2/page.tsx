@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { OnboardingV2Flow } from '@/components/onboarding-v2/OnboardingV2Flow';
-import { getLiveInterestChips, getPlaceCoords } from '@/lib/db/queries/onboarding-chips';
+import { getLiveInterestChips, getPlaceCoords, getPlaceSettingTags } from '@/lib/db/queries/onboarding-chips';
 import { getListScoredPlaces } from '@/lib/db/queries/places';
 import { getAllDnaCards, getAllDomainDefs, getAllDimensionDefs } from '@/lib/db/queries/dna-content';
 import { getInterestEmojiOverrides, getInterestShortNames } from '@/lib/scoring/interestMeta';
@@ -11,6 +11,7 @@ import { loadFeatures } from '@/lib/featuresServer';
 import { getMatchSetups } from '@/lib/db/queries/match-data';
 import { regionsForPlaces } from '@/lib/onboarding/regions';
 import { loadMatchSettings } from '@/lib/scoring/matchSettingsServer';
+import { getTravelFacts } from '@/lib/db/queries/travel-needs';
 import { onboardingV2Allowed } from '@/lib/features';
 
 export const dynamic = 'force-dynamic';
@@ -21,12 +22,13 @@ export const dynamic = 'force-dynamic';
  * opens it for trying.
  *   ?fresh=1   ignores what the traveler saved, to see the first-time flow again.
  *   ?review=1  opens the Travel DNA page directly (the "Review Travel DNA" link).
+ *   ?list=1    a returning traveler goes straight to their list instead of the welcome questions (where the home address sends them).
  */
 export default async function OnboardingV2Page({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   if (!onboardingV2Allowed(await loadFeatures(), params.preview)) notFound();
   const fresh = params.fresh === '1';
-  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name, setups, matchSettings, trips] = await Promise.all([
+  const [chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, saved, name, setups, matchSettings, travelFacts, trips, settingTags] = await Promise.all([
     // (the trips load last in the list below)
     getLiveInterestChips(),
     getListScoredPlaces(),
@@ -40,7 +42,9 @@ export default async function OnboardingV2Page({ searchParams }: { searchParams:
     loadFirstName(),
     getMatchSetups(),
     loadMatchSettings().then((m) => m.settings),
+    getTravelFacts(),
     fresh ? Promise.resolve([]) : loadTrips(),
+    getPlaceSettingTags(),
   ]);
-  return <OnboardingV2Flow data={{ chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings, regions: regionsForPlaces(coords) }} entry={{ saved, name, review: params.review === '1' && !!saved, fresh, trips }} />;
+  return <OnboardingV2Flow data={{ travelFacts, chips, destinations, cards, domains, dimensions, emojiOverrides, shortNames, coords, setups, matchSettings, regions: regionsForPlaces(coords), settingTags }} entry={{ saved, name, review: params.review === '1' && !!saved, list: params.list === '1' && !!saved, fresh, trips }} />;
 }

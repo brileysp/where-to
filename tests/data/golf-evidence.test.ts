@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 // The checks docs/column-scoring-plan.md asks for: no gaps, the saved file matches, anchors hold, and the ratings follow the stated formulas.
 type Row = Record<string, unknown> & { evidence: Record<string, string> };
@@ -23,8 +24,8 @@ describe('Golf evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      linksGolf: { 'st-andrews-fife': 10, 'monterey-big-sur': 10, ireland: 10, nyc: 8, amsterdam: 0 },
-      bucketListCourses: { 'st-andrews-fife': 10, nyc: 10, rome: 9, paris: 9, algarve: 0 },
+      linksGolf: { [PLACE['st-andrews-and-fife']]: 10, [PLACE['monterey-and-big-sur']]: 10, [PLACE.ireland]: 10, [PLACE['new-york-city']]: 8, [PLACE.amsterdam]: 0 },
+      bucketListCourses: { [PLACE['st-andrews-and-fife']]: 10, [PLACE['new-york-city']]: 10, [PLACE.rome]: 9, [PLACE.paris]: 9, [PLACE.algarve]: 0 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });
@@ -47,7 +48,7 @@ describe('Golf evidence', () => {
   });
   it('tee-time access is filled only for the six places with a researched famous course', () => {
     const filled = Object.entries(evidence).filter(([, r]) => r.teeTimeAccess).map(([p]) => p).sort();
-    expect(filled).toEqual(['edinburgh', 'monterey-big-sur', 'nyc', 'paris', 'rome', 'st-andrews-fife']);
+    expect(filled).toEqual([PLACE.edinburgh, PLACE['monterey-and-big-sur'], PLACE['new-york-city'], PLACE.paris, PLACE.rome, PLACE['st-andrews-and-fife']]);
     for (const p of filled) expect(['walkOn', 'weeks', 'months']).toContain(evidence[p].teeTimeAccess);
   });
   it('course kinds are easy, standard or championship', () => {

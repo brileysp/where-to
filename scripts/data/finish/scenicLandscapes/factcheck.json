@@ -1,0 +1,83 @@
+{
+ "reviewedOn": "2026-11-21",
+ "whole": "Fact check done 21 Nov 2026 (Claude, web source check). All 1,015 risky sentences in the 198 Scenic Landscapes texts were read after the scope changes; 33 topics were checked against Park Service, road authority, Department of Conservation, Parks Canada, WSDOT, CDOT, NWS and tourism sources, and 19 places were corrected (Denali road and Wonder Lake, Dolomites booking and lift dates, Grand Canyon North Rim season, Death Valley summer highs, Iceland highland road dates, Ladakh winter roads, Torres del Paine winter rules and daylight, Tierra del Fuego daylight, Yosemite roads, Maldives island count, North Cascades closing, Kuwohi (formerly Clingmans Dome), Moraine Lake Road, Milford Track winter, Zion Narrows closures, three summer-heat figures, Mongolia winter roads). Descriptions of long-established landmarks and well-known climate patterns were judged from general knowledge and not individually sourced. Full log: scripts/data/finish/scenicLandscapes/factcheck-claims.json. Further checks 21 Nov 2026 before apply: closures and dates re-swept (Hana Highway, Grand Canyon North Rim after the 2025 fire, Hurricane Melissa recovery, Bagan balloons, Highway 1 Big Sur, Machu Picchu and the Inca Trail); no text contradicts a current closure, and what could not be confirmed is listed as owner to-dos. The flatness rebuild used sources for Saharan dust (NOAA), the Mexican fire season, calima, vog (USGS and Hawaii health notices), Kona storms (Maui County), wildfire smoke (NPS), winter access in Greenland, Svalbard and Mongolia, and the Dolomites lift season (Dolomiti Superski).",
+ "by": "Claude (web source check, 2026-11-21)",
+ "places": [
+  {
+   "id": "p0056",
+   "note": "Fact check (21 Nov): the Denali Park Road past East Fork (mile 43) has been closed since the Pretty Rocks landslide; the new bridge is done, buses go no farther than East Fork in 2026 and the Park Service plans full service in 2027, so Wonder Lake is no longer named as a sure view (NPS release on the Pretty Rocks bridge). The score of 9 is unchanged and assumes the 2027 reopening."
+  },
+  {
+   "id": "p0057",
+   "note": "Fact check (21 Nov): the Tre Cime toll road needs an online reservation (official Dolomiti notice) and the Seceda lifts use timed entry, with two thirds of seats bookable ahead, so 'both need advance booking' was reworded. Lifts and toll road are closed for most of November (the regional lift season ends 8 November)."
+  },
+  {
+   "id": "p0074",
+   "note": "Fact check (21 Nov): NPS puts the North Rim's full season at 15 May to 15 October and a day-use shoulder season to 30 November with no services, and the road closes by 1 December or earlier with snow, so November no longer says the North Rim is closed."
+  },
+  {
+   "id": "p0055",
+   "note": "Fact check (21 Nov): NWS 1991 to 2020 normals at Furnace Creek give April 91, May 100.7 (both already right); June to August averages are above 105, so 'often above 110' now says above 105 on most days."
+  },
+  {
+   "id": "p0083",
+   "note": "Fact check (21 Nov): the road authority's opening dates put the Landmannalaugar road (F208) at early June on average and Sprengisandur (F26) at late June to early July, so June is now its own blurb and scores 9.4 (was 10, peak) because many interior routes are still closed. July and August stay 10."
+  },
+  {
+   "id": "p0091",
+   "note": "Fact check (21 Nov): winter sources say the Nubra (Khardung La) and Pangong roads are usually open with temporary snow closures, Zanskar stays shut and the Manali to Leh road is not reliable, so the winter blurbs no longer say the passes are closed for the season. Scores are unchanged (cold and limited services still hold them down)."
+  },
+  {
+   "id": "p0183",
+   "note": "Fact check (21 Nov): sources disagree on whether a guide is required on the W Trek in winter, so the blurb now says trails are restricted or closed. Daylight worked out from the latitude is 7.7 to 9.6 hours from June to August, so 'about eight hours' became 'eight to ten'."
+  },
+  {
+   "id": "p0198",
+   "note": "Fact check (21 Nov): NPS says Tioga Road typically opens late May or June and Glacier Point Road from May (April in some years), so June says 'usually open' and March and April no longer say both roads are blocked."
+  },
+  {
+   "id": "p0102",
+   "note": "Fact check (21 Nov): the Maldives has 1,192 islands, so 'thousands of islands' became 'more than a thousand'."
+  },
+  {
+   "id": "p0121",
+   "note": "Fact check (21 Nov): WSDOT records show the highway closing between 18 November and 4 December in recent years, so November and December now say it is usually shut by mid-November."
+  },
+  {
+   "id": "p0076",
+   "note": "Fact check (21 Nov): the Park Service now calls Clingmans Dome Kuwohi; its seasonal road schedule has the road closed in winter (2026 season 1 April to 29 November). Text now says Kuwohi, formerly Clingmans Dome."
+  },
+  {
+   "id": "p0018",
+   "note": "Fact check (21 Nov): Parks Canada has closed Moraine Lake Road to personal vehicles all year since 2023; the shuttle runs 1 June to 12 October, so October now says the shuttle stops running."
+  },
+  {
+   "id": "p0110",
+   "note": "Fact check (21 Nov): the Department of Conservation says the Milford Track stays open from May to October with reduced facilities (14 bridges removed, no avalanche management), so the May to September blurb no longer says it is shut to independent hikers."
+  },
+  {
+   "id": "p0200",
+   "note": "Fact check (21 Nov): the Narrows close when the river is above 150 cubic feet per second and after flash flood warnings, so the summer blurb now says closures happen after flash flood warnings."
+  },
+  {
+   "id": "p0111",
+   "note": "Fact check (21 Nov): winter 'roads are impassable' reworded to 'snow blocks many roads'."
+  },
+  {
+   "id": "p0181",
+   "note": "Fact check (21 Nov): daylight worked out from the latitude is 7.0 to 9.3 hours from June to August, so 'about seven hours' became 'seven to nine'."
+  },
+  {
+   "id": "p0060",
+   "note": "Fact check (21 Nov): average highs run about 76 in January to 87 in November, so 'upper 70s to mid 80s' became 'mid 70s to upper 80s'."
+  },
+  {
+   "id": "p0160",
+   "note": "Fact check (21 Nov): July highs average about 95 in Samarkand and about 100 in Bukhara, so 'heat above 100' became 'heat near 100'."
+  },
+  {
+   "id": "p0151",
+   "note": "Fact check (21 Nov): Cairo averages about 95 in summer and Luxor and Aswan above 105, so 'often above 105' became 'often 100 or more'."
+  }
+ ]
+}

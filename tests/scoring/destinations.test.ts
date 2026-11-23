@@ -702,7 +702,7 @@ describe('deriveDestinationScores — seasonalHazards', () => {
   // Reproduces the Caribbean-hurricane-season gap: a targeted hazard
   // should only drag down the sliders it actually names, not the whole
   // destination — unlike the blanket wet/hot/cold flags.
-  it('multiplies down only the affected sliders in an active hazard month', () => {
+  it('does not change any slider score in a flagged month (owner decision, 21 Nov 2026: flags are reference only)', () => {
     const dest = makeDestination({
       base: { beachesSwimming: 9, museumsArt: 9 },
       seasonalHazards: [
@@ -710,23 +710,15 @@ describe('deriveDestinationScores — seasonalHazards', () => {
       ],
     });
     const { monthly } = deriveDestinationScores(dest);
-    expect(monthly.beachesSwimming[8]).toBeCloseTo(9 * 0.3, 5); // September, severe → ×0.3
-    expect(monthly.museumsArt[8]).toBe(9); // untouched — not in affectedSliders
-    expect(monthly.beachesSwimming[7]).toBe(9); // August — outside the hazard's months
+    expect(monthly.beachesSwimming[8]).toBe(9); // September, flagged severe, not cut
+    expect(monthly.museumsArt[8]).toBe(9);
+    expect(monthly.beachesSwimming[7]).toBe(9);
   });
 
-  it('applies a lighter multiplier for a mild hazard and a heavier one for severe', () => {
-    const mildDest = makeDestination({
-      base: { beachesSwimming: 10 },
-      seasonalHazards: [{ category: 'seaweed', label: 'Sargassum', months: [6], severity: 'mild', affectedSliders: ['beachesSwimming'] }],
-    });
-    const severeDest = makeDestination({
-      base: { beachesSwimming: 10 },
-      seasonalHazards: [{ category: 'seaweed', label: 'Sargassum', months: [6], severity: 'severe', affectedSliders: ['beachesSwimming'] }],
-    });
-    const mild = deriveDestinationScores(mildDest).monthly.beachesSwimming[5];
-    const severe = deriveDestinationScores(severeDest).monthly.beachesSwimming[5];
-    expect(mild).toBeGreaterThan(severe);
+  it('keeps the multiplier table for anyone who turns the switch back on, and the switch is off', async () => {
+    const { SEASONAL_HAZARDS_CHANGE_SCORES, HAZARD_SLIDER_MULTIPLIER } = await import('../../src/lib/scoring/destinations');
+    expect(SEASONAL_HAZARDS_CHANGE_SCORES).toBe(false);
+    expect(HAZARD_SLIDER_MULTIPLIER.severe).toBeLessThan(HAZARD_SLIDER_MULTIPLIER.mild);
   });
 
   it('surfaces the hazard as a badge, soft-toned when mild', () => {

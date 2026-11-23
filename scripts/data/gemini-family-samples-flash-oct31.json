@@ -2,7 +2,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "vienna",
+  "id": "p0194",
   "rank": "strong",
   "name": "Vienna",
   "model": "gemini-3-flash-preview",
@@ -93,7 +93,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "iceland",
+  "id": "p0083",
   "rank": "middle",
   "name": "Iceland",
   "model": "gemini-3-flash-preview",
@@ -187,7 +187,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "arches-canyonlands",
+  "id": "p0007",
   "rank": "weak",
   "name": "Arches & Canyonlands",
   "model": "gemini-3-flash-preview",
@@ -264,7 +264,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "paris",
+  "id": "p0138",
   "rank": "strong",
   "name": "Paris",
   "model": "gemini-3-flash-preview",
@@ -373,7 +373,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "sedona",
+  "id": "p0165",
   "rank": "middle",
   "name": "Sedona",
   "model": "gemini-3-flash-preview",
@@ -472,7 +472,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "svalbard",
+  "id": "p0175",
   "rank": "weak",
   "name": "Svalbard",
   "model": "gemini-3-flash-preview",
@@ -571,7 +571,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "beijing",
+  "id": "p0024",
   "rank": "strong",
   "name": "Beijing & Great Wall",
   "model": "gemini-3-flash-preview",
@@ -685,7 +685,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "ireland",
+  "id": "p0084",
   "rank": "middle",
   "name": "Ireland",
   "model": "gemini-3-flash-preview",
@@ -802,7 +802,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "thailand",
+  "id": "p0141",
   "rank": "weak",
   "name": "Phuket & the Andaman Coast",
   "model": "gemini-3-flash-preview",
@@ -887,7 +887,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "uzbekistan",
+  "id": "p0160",
   "rank": "strong",
   "name": "Samarkand & Bukhara",
   "model": "gemini-3-flash-preview",
@@ -986,7 +986,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "berlin",
+  "id": "p0027",
   "rank": "middle",
   "name": "Berlin",
   "model": "gemini-3-flash-preview",
@@ -1079,7 +1079,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "punta-cana",
+  "id": "p0058",
   "rank": "weak",
   "name": "Dominican Republic",
   "model": "gemini-3-flash-preview",
@@ -1158,7 +1158,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "morocco",
+  "id": "p0105",
   "rank": "strong",
   "name": "Marrakech & Atlas",
   "model": "gemini-3-flash-preview",
@@ -1254,7 +1254,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "chiang-mai",
+  "id": "p0041",
   "rank": "middle",
   "name": "Chiang Mai & Northern Thailand",
   "model": "gemini-3-flash-preview",
@@ -1356,7 +1356,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "mongolia",
+  "id": "p0111",
   "rank": "weak",
   "name": "Mongolia",
   "model": "gemini-3-flash-preview",
@@ -1460,7 +1460,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "barcelona",
+  "id": "p0021",
   "rank": "strong",
   "name": "Barcelona",
   "model": "gemini-3-flash-preview",
@@ -1571,7 +1571,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "jordan",
+  "id": "p0140",
   "rank": "middle",
   "name": "Petra & Wadi Rum",
   "model": "gemini-3-flash-preview",
@@ -1673,7 +1673,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "black-forest",
+  "id": "p0030",
   "rank": "weak",
   "name": "Black Forest",
   "model": "gemini-3-flash-preview",
@@ -1776,7 +1776,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "hongkong",
+  "id": "p0081",
   "rank": "strong",
   "name": "Hong Kong",
   "model": "gemini-3-flash-preview",
@@ -1862,7 +1862,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "thailand",
+  "id": "p0141",
   "rank": "middle",
   "name": "Phuket & the Andaman Coast",
   "model": "gemini-3-flash-preview",
@@ -1958,7 +1958,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "peruvian-amazon",
+  "id": "p0139",
   "rank": "weak",
   "name": "Peruvian Amazon",
   "model": "gemini-3-flash-preview",
@@ -2045,7 +2045,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "istanbul",
+  "id": "p0085",
   "rank": "strong",
   "name": "Istanbul",
   "model": "gemini-3-flash-preview",
@@ -2160,7 +2160,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "santorini",
+  "id": "p0162",
   "rank": "middle",
   "name": "Santorini & Cyclades",
   "model": "gemini-3-flash-preview",
@@ -2275,7 +2275,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "greenland",
+  "id": "p0077",
   "rank": "weak",
   "name": "Greenland",
   "model": "gemini-3-flash-preview",
@@ -2375,7 +2375,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "tokyo-kyoto",
+  "id": "p0182",
   "rank": "strong",
   "name": "Tokyo & Kyoto",
   "model": "gemini-3-flash-preview",
@@ -2473,7 +2473,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "pakistan",
+  "id": "p0131",
   "rank": "middle",
   "name": "Pakistan",
   "model": "gemini-3-flash-preview",
@@ -2574,7 +2574,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "puglia",
+  "id": "p0146",
   "rank": "weak",
   "name": "Puglia",
   "model": "gemini-3-flash-preview",
@@ -2660,7 +2660,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "provence",
+  "id": "p0144",
   "rank": "strong",
   "name": "Provence",
   "model": "gemini-3-flash-preview",
@@ -2776,7 +2776,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "atacama",
+  "id": "p0012",
   "rank": "middle",
   "name": "Atacama Desert",
   "model": "gemini-3-flash-preview",
@@ -2868,7 +2868,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "snowdonia",
+  "id": "p0196",
   "rank": "weak",
   "name": "Wales",
   "model": "gemini-3-flash-preview",

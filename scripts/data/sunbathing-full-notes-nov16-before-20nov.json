@@ -1,0 +1,602 @@
+{
+ "p0002": {
+  "why": "Five groups, all neighbors. Temperatures match the climate table (April 69, May 74, October 74). I restored Gemini's own June to September scores because the digit balance had widened that group beyond 0.5. On 14 Nov the scores were nudged by at most 0.3 so the last digits are spread evenly and no cell is clumped on .0 and .5; Gemini's own numbers are kept in the data. Rank among the 13 coastal areas in this batch: 5 at 8.9; next above Amalfi Coast (9); next below Nice & the French Riviera (8.7)."
+ },
+ "p0009": {
+  "why": "Gemini wrote one blurb for the whole year although its own scores run 8.8 to 9.6. I split it: December to September and October to November. 'Premier' kept (you said it is fine). Reworded on 14 Nov so each blurb speaks as if for one month: the rainy blurb no longer says 'These are among the rainiest months'. On 14 Nov the scores were nudged by at most 0.3 so the last digits are spread evenly and no cell is clumped on .0 and .5; Gemini's own numbers are kept in the data. Rank among the 27 islands in this batch: 5 at 9.6; next above Turks & Caicos (9.7); next below French Polynesia (9.6)."
+ },
+ "p0036": {
+  "why": "Six groups. Peak about 7.5, close to the 7.6 I set in the first run. 'October' removed from the October to November blurb; 'the sun begins to shine longer' became 'days are lengthening'. Reworded on 14 Nov so each blurb speaks as if for one month: the cold and hot blurbs no longer say 'the cold months' and 'the hot months'. On 14 Nov the scores were nudged by at most 0.3 so the last digits are spread evenly and no cell is clumped on .0 and .5; Gemini's own numbers are kept in the data. Rank among the 13 coastal areas in this batch: 9 at 7.7; next above Colombian Caribbean (7.9); next below Cornwall (4.1)."
+ },
+ "p0083": {
+  "why": "Gemini's own scores: two groups, May to September (0.5 to 1.0) and October to April. Left as written. Reworded on 14 Nov so each blurb speaks as if for one month: the summer blurb no longer says 'The brightest and warmest months', and the overview no longer says 'rather than lying out in the sun'. On 14 Nov the scores were nudged by at most 0.3 so the last digits are spread evenly and no cell is clumped on .0 and .5; Gemini's own numbers are kept in the data. Rank among the 39 countries in this batch: 37 at 1; next above Kyrgyzstan (1.7); next below Wales (0.7)."
+ },
+ "p0165": {
+  "why": "Six groups. I restored Gemini's own May to September scores because the digit balance had widened that group. 'Sunny days become more consistent' (a change in a one-month blurb) reworded. Natural spots along Oak Creek: Oak Creek has real swimming holes, but I did not check lounging spots, so please read that line. Reworded on 14 Nov so each blurb speaks as if for one month: the summer blurb no longer says 'The warmest months'. On 14 Nov the scores were nudged by at most 0.3 so the last digits are spread evenly and no cell is clumped on .0 and .5; Gemini's own numbers are kept in the data. Rank among the 34 cities in this batch: 12 at 7.1; next above Budapest (7.1); next below Paris (6.4)."
+ },
+ "p0102": {
+  "why": "Your question (16 Nov): the step is real in the data but I made it a little gentler. Malé gets roughly 200 mm of rain in December and about 90 mm in January (sources vary), and the facts show 22 rainy days against 10, so December stays at 7.5. January was tied with February at 10.0 although February is the driest month, so January is now 9.4. Peak 10 (on the list). 'One of the world's premier destinations' and 'consistently hot' removed; 'these are the driest months' and 'during these months' reworded so each blurb speaks for one month. Rank among the 39 countries in this batch: 1 at 10; next below Cuba (9.8)."
+ },
+ "p0134": {
+  "why": "Peak 9.0. December to January and March to April were scored apart by more than half a point, so December to January, February, March to April and May each have a blurb. Judgement call for you: December and January (69 and 70 degrees) score 6.2 and 6.8, about 1.2 above the temperature ramp (Croatia in October at 69 degrees is 4.0). I left them because Palm Springs is far sunnier and drier; say if you want them lowered. Rank among the 53 regions in this batch: 4 at 9; next above Andalucía (9.3); next below Puglia (8.7)."
+ },
+ "p0054": {
+  "why": "Peak 9.1. Follows the new temperature ramp exactly: 58 degrees in March 0.4, 65 in April 2.6, 69 in October 4.0, 60 in November 1.0. No changes. Rank among the 13 coastal areas in this batch: 3 at 9.1; next above Phuket & the Andaman Coast (9.6); next below Amalfi Coast (9)."
+ },
+ "p0049": {
+  "why": "Peak 4.1 at 68 degrees in July and August, which matches Croatia in October (69 degrees, 4.0): the same temperature scores the same in both places. No changes. Rank among the 13 coastal areas in this batch: 10 at 4.1; next above Cape Cod & the Islands (7.7); next below Monterey & Big Sur (2.7)."
+ },
+ "p0097": {
+  "why": "Your question (16 Nov): the resort corridor and Medano Beach face the Sea of Cortez side, but the Sea of Cortez and the Pacific meet at the tip of the peninsula (Land's End), so the text now says 'at the southern tip of Baja California'. Peak 9.7. 'A premier destination for lying out' removed (your Aruba edit); 'returning' reworded so the October to November blurb describes a stable condition. Rank among the 53 regions in this batch: 1 at 9.7; next below Red Sea & Nile (9.6)."
+ },
+ "p0001": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 22 national parks in this batch: 3 at 4.9; next above Zion & Bryce Canyon (5); next below Death Valley National Park (4)."
+ },
+ "p0003": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; blurbs split where scores moved more than 1.5 inside one group; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 13 coastal areas in this batch: 4 at 9; next above Dalmatian Coast (9.1); next below Algarve (8.9)."
+ },
+ "p0004": {
+  "why": "Edited after the rule scan: blurbs regrouped so each covers neighboring months only. Rank among the 34 cities in this batch: 20 at 4.5; next above Istanbul (4.8); next below Rome (4.4)."
+ },
+ "p0005": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; blurbs regrouped so each covers neighboring months only; blurbs split where scores moved more than 1.5 inside one group. Rank among the 53 regions in this batch: 3 at 9.3; next above Red Sea & Nile (9.6); next below Palm Springs & Joshua Tree (9)."
+ },
+ "p0034": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 14 at 8.7; next above Palau (8.8); next below Sri Lanka (8.4)."
+ },
+ "p0006": {
+  "why": "Edited after the rule scan: year-round filler removed; months named instead of seasons (southern-hemisphere or tropical place). Rank among the 4 wilderness areas in this batch: 4 at 0; next above Salar de Uyuni (1.4)."
+ },
+ "p0007": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 22 national parks in this batch: 18 at 2.1; next above Great Smoky Mountains National Park (2.3); next below Rocky Mountain National Park (2)."
+ },
+ "p0008": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event; months named instead of seasons (southern-hemisphere or tropical place). Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 23 at 4.2; next above Douro Valley & Porto (4.7); next below Bend & Crater Lake (4)."
+ },
+ "p0010": {
+  "why": "Old-name check: 'Aspen' is the start of the place name Aspen Snowmass, not a leftover old name. Rank among the 34 cities in this batch: 31 at 2.6; next above Prague (2.8); next below Edinburgh (2.6)."
+ },
+ "p0012": {
+  "why": "Rank among the 53 regions in this batch: 48 at 2; next above Cotswolds (2.2); next below Zermatt & the Swiss Alps (2)."
+ },
+ "p0013": {
+  "why": "Rank among the 34 cities in this batch: 18 at 5.5; next above Venice (5.6); next below Istanbul (4.8)."
+ },
+ "p0014": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; blurbs split where scores moved more than 1.5 inside one group; blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 20 at 6.9; next above Malaysian Borneo (7.6); next below Sicily (6.4)."
+ },
+ "p0015": {
+  "why": "Rank among the 53 regions in this batch: 40 at 2.6; next above Tbilisi & the Caucasus (2.7); next below Chamonix & the French Alps (2.5)."
+ },
+ "p0113": {
+  "why": "Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 16 at 8.3; next above Sri Lanka (8.4); next below Vietnam (8.3)."
+ },
+ "p0016": {
+  "why": "Rank among the 39 countries in this batch: 4 at 9.7; next above Dominican Republic (9.8); next below Jamaica (9.6)."
+ },
+ "p0019": {
+  "why": "Rank among the 34 cities in this batch: 26 at 3; next above Seoul (3.2); next below Buenos Aires (3)."
+ },
+ "p0020": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 6 at 9.4; next above Jamaica (9.6); next below Mauritius (9.2)."
+ },
+ "p0021": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; blurbs regrouped so each covers neighboring months only; month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 8 at 7.7; next above Chicago (7.8); next below Berlin (7.6)."
+ },
+ "p0022": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 19 at 5.7; next above Vancouver & Whistler (5.8); next below Rajasthan & the Golden Triangle (4.9)."
+ },
+ "p0023": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 15 at 6.4; next above Texas Hill Country (6.5); next below Marlborough & Abel Tasman (6.4)."
+ },
+ "p0024": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 34 cities in this batch: 29 at 2.9; next above New Orleans (3); next below Prague (2.8)."
+ },
+ "p0123": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 32 at 2.5; next above Ethiopia (2.6); next below Nepal (2.4)."
+ },
+ "p0025": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 12 at 8.8; next above Seychelles (9); next below Palau (8.8)."
+ },
+ "p0026": {
+  "why": "Rank among the 53 regions in this batch: 24 at 4; next above Argentine Lake District (4.2); next below Ecuadorian Andes (4)."
+ },
+ "p0027": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 9 at 7.6; next above Barcelona (7.7); next below Hong Kong (7.4)."
+ },
+ "p0028": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 34 at 2.1; next above Nepal (2.4); next below Rwanda (2.1)."
+ },
+ "p0029": {
+  "why": "Rank among the 27 islands in this batch: 13 at 8.7; next above Puerto Rico (9.1); next below Galápagos Islands (8.6)."
+ },
+ "p0030": {
+  "why": "Rank among the 53 regions in this batch: 31 at 3; next above Victoria Falls & Hwange (3.1); next below Denali & the Interior (3)."
+ },
+ "p0070": {
+  "why": "Edited after the rule scan: year-round filler removed; group wording (\"these months\", named months) removed. Rank among the 27 islands in this batch: 6 at 9.6; next above Aruba (9.6); next below Palawan (9.6)."
+ },
+ "p0031": {
+  "why": "Edited after the rule scan: blurbs split where scores moved more than 1.5 inside one group. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 14 at 6.2; next above Paris (6.4); next below Queenstown (5.7)."
+ },
+ "p0101": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed. Rank among the 27 islands in this batch: 19 at 7.6; next above Madeira (7.7); next below Azores (6.9)."
+ },
+ "p0128": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 4 wilderness areas in this batch: 1 at 2.7; next below Pantanal (2.2)."
+ },
+ "p0032": {
+  "why": "Edited after the rule scan: blurbs split where scores moved more than 1.5 inside one group; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 34 cities in this batch: 11 at 7.1; next above Hong Kong (7.4); next below Sedona (7.1)."
+ },
+ "p0033": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed. Rank among the 34 cities in this batch: 27 at 3; next above Bangkok (3); next below New Orleans (3)."
+ },
+ "p0035": {
+  "why": "Rank among the 27 islands in this batch: 10 at 9.3; next above Raja Ampat (9.4); next below Okinawa (9.1)."
+ },
+ "p0037": {
+  "why": "Edited after the rule scan: blurbs regrouped so each covers neighboring months only; blurbs split where scores moved more than 1.5 inside one group; months named instead of seasons (southern-hemisphere or tropical place). Rank among the 34 cities in this batch: 4 at 8.3; next above Sydney (8.4); next below Vienna (8.1)."
+ },
+ "p0038": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 41 at 2.5; next above Badlands & Black Hills (2.6); next below Champagne (2.5)."
+ },
+ "p0039": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 42 at 2.5; next above Chamonix & the French Alps (2.5); next below Finnish Lapland (2.5)."
+ },
+ "p0040": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 6 at 8.2; next above Puglia (8.7); next below Tuscany (8)."
+ },
+ "p0041": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 53 regions in this batch: 37 at 2.7; next above Peruvian Amazon (2.8); next below El Chaltén & El Calafate (2.7)."
+ },
+ "p0042": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 8 states and provinces in this batch: 4 at 5.5; next above Vermont (6); next below Nova Scotia (5.5)."
+ },
+ "p0043": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 7 at 7.8; next above Lisbon (7.9); next below Barcelona (7.7)."
+ },
+ "p0044": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Rank among the 53 regions in this batch: 50 at 1.8; next above Zermatt & the Swiss Alps (2); next below Cusco & Sacred Valley (1.8)."
+ },
+ "p0045": {
+  "why": "Rank among the 34 cities in this batch: 33 at 2.2; next above Edinburgh (2.6); next below Mexico City (2)."
+ },
+ "p0047": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 13 coastal areas in this batch: 8 at 7.9; next above Great Barrier Reef (8.3); next below Cape Cod & the Islands (7.7)."
+ },
+ "p0048": {
+  "why": "Edited after the rule scan. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 23 at 4.1; next above Mendoza (4.3); next below London (3.8)."
+ },
+ "p0050": {
+  "why": "Rank among the 39 countries in this batch: 10 at 9; next above Panama (9.1); next below Seychelles (9)."
+ },
+ "p0055": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 22 national parks in this batch: 4 at 4; next above Acadia National Park (4.9); next below Yosemite National Park (3.9)."
+ },
+ "p0056": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 32 at 3; next above Black Forest (3); next below Piedmont (3)."
+ },
+ "p0057": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 21 at 4.7; next above Rajasthan & the Golden Triangle (4.9); next below Douro Valley & Porto (4.7)."
+ },
+ "p0059": {
+  "why": "Rank among the 53 regions in this batch: 22 at 4.7; next above Dolomites (4.7); next below Argentine Lake District (4.2)."
+ },
+ "p0061": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 25 at 4; next above Bend & Crater Lake (4); next below Petra & Wadi Rum (3.7)."
+ },
+ "p0062": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 32 at 2.6; next above Aspen Snowmass (2.6); next below Churchill (2.2)."
+ },
+ "p0151": {
+  "why": "Rank among the 53 regions in this batch: 2 at 9.6; next above Los Cabos (9.7); next below Andalucía (9.3)."
+ },
+ "p0063": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; months named instead of seasons (southern-hemisphere or tropical place). Old-name check: El Chaltén is half of the place name (El Chaltén & El Calafate), not a leftover. Rank among the 53 regions in this batch: 38 at 2.7; next above Chiang Mai & Northern Thailand (2.7); next below Tbilisi & the Caucasus (2.7)."
+ },
+ "p0064": {
+  "why": "Rank among the 39 countries in this batch: 31 at 2.6; next above Uganda (2.9); next below Northern Ireland (2.5)."
+ },
+ "p0066": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed. Rank among the 27 islands in this batch: 25 at 0.9; next above Lofoten Islands (1.1); next below Faroe Islands (0.6)."
+ },
+ "p0067": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 27 islands in this batch: 26 at 0.6; next above Falkland Islands (0.9); next below Svalbard (0)."
+ },
+ "p0068": {
+  "why": "Rank among the 39 countries in this batch: 8 at 9.1; next above Mauritius (9.2); next below Panama (9.1)."
+ },
+ "p0125": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 13 coastal areas in this batch: 12 at 2.5; next above Monterey & Big Sur (2.7); next below Southeast Alaska & the Inside Passage (2.1)."
+ },
+ "p0071": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 14 at 8.6; next above Big Island (8.7); next below Bali (8.5)."
+ },
+ "p0075": {
+  "why": "Rank among the 13 coastal areas in this batch: 7 at 8.3; next above Nice & the French Riviera (8.7); next below Colombian Caribbean (7.9)."
+ },
+ "p0072": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 22 at 6.7; next above Singapore (7.6); next below Taiwan (6.6)."
+ },
+ "p0073": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 12 at 6.8; next above Napa & Sonoma (7); next below Marrakech & Atlas (6.7)."
+ },
+ "p0074": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 22 national parks in this batch: 9 at 3.1; next above Milford Sound & Fiordland (3.4); next below South Luangwa (3.1)."
+ },
+ "p0077": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 39 at 0.2; next above Wales (0.7)."
+ },
+ "p0078": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 24 at 5.5; next above Taiwan (6.6); next below Namibia (5)."
+ },
+ "p0079": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 53 regions in this batch: 27 at 3.1; next above Petra & Wadi Rum (3.7); next below Quebec City & Montreal (3.1)."
+ },
+ "p0052": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: the text describes hard conditions (rain or storms) but the month scores stay fairly high; left as Gemini drafted them. Rank among the 39 countries in this batch: 2 at 9.8; next above Maldives (10); next below Dominican Republic (9.8)."
+ },
+ "p0080": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 27 islands in this batch: 22 at 5.8; next above Sicily (6.4); next below Vancouver Island (3.7)."
+ },
+ "p0081": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 10 at 7.4; next above Berlin (7.6); next below Budapest (7.1)."
+ },
+ "p0082": {
+  "why": "Rank among the 53 regions in this batch: 17 at 6.1; next above Marlborough & Abel Tasman (6.4); next below Vancouver & Whistler (5.8)."
+ },
+ "p0084": {
+  "why": "Rank among the 39 countries in this batch: 26 at 4.8; next above Namibia (5); next below Laos (3.9)."
+ },
+ "p0085": {
+  "why": "Rank among the 34 cities in this batch: 19 at 4.8; next above Athens (5.5); next below Amsterdam (4.5)."
+ },
+ "p0086": {
+  "why": "Edited after the rule scan. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 5 at 9.6; next above Bahamas (9.7); next below Barbados (9.4)."
+ },
+ "p0011": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; group wording (\"these months\", named months) removed. Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Rank among the 8 states and provinces in this batch: 8 at 2; next above Ladakh (3)."
+ },
+ "p0098": {
+  "why": "Rank among the 22 national parks in this batch: 16 at 2.4; next above Redwood National and State Parks (2.5); next below Great Smoky Mountains National Park (2.3)."
+ },
+ "p0087": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 8 states and provinces in this batch: 2 at 6.7; next above Oaxaca (8.3); next below Vermont (6)."
+ },
+ "p0088": {
+  "why": "Peak 9.8, not Gemini's 10: not on the list of places allowed a 10 for Sunbathing, so you decide. Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event; a 10 lowered (not on the list of places allowed a 10). Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 1 at 9.8; next below Maui (9.8)."
+ },
+ "p0089": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Old-name check: 'Kruger' is the start of the place name Kruger & Sabi Sands, not a leftover. Rank among the 22 national parks in this batch: 13 at 2.8; next above Yellowstone National Park (3); next below Lake District (2.6)."
+ },
+ "p0090": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 39 countries in this batch: 36 at 1.7; next above Rwanda (2.1); next below Iceland (1)."
+ },
+ "p0091": {
+  "why": "Rank among the 8 states and provinces in this batch: 7 at 3; next above Tasmania (4.3); next below Assam & Northeast India (2)."
+ },
+ "p0092": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 22 national parks in this batch: 14 at 2.6; next above Kruger & Sabi Sands (2.8); next below Redwood National and State Parks (2.5)."
+ },
+ "p0069": {
+  "why": "Edited after the rule scan. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 43 at 2.5; next above Champagne (2.5); next below St Andrews & Fife (2.4)."
+ },
+ "p0094": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; a month named inside a blurb for other months removed. Rank among the 34 cities in this batch: 6 at 7.9; next above Vienna (8.1); next below Chicago (7.8)."
+ },
+ "p0095": {
+  "why": "Rank among the 27 islands in this batch: 24 at 1.1; next above Vancouver Island (3.7); next below Falkland Islands (0.9)."
+ },
+ "p0096": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 24 at 3.8; next above Copenhagen (4.1); next below Seoul (3.2)."
+ },
+ "p0093": {
+  "why": "Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Rank among the 39 countries in this batch: 27 at 3.9; next above Ireland (4.8); next below Mongolia (3.3)."
+ },
+ "p0099": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 19 at 7.9; next above Nicaragua (8.2); next below Papua New Guinea (7.9)."
+ },
+ "p0100": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 27 islands in this batch: 18 at 7.7; next above North Island (7.8); next below Malaysian Borneo (7.6)."
+ },
+ "p0103": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 8 at 9.5; next above Palawan (9.6); next below Raja Ampat (9.4)."
+ },
+ "p0104": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; blurbs split where scores moved more than 1.5 inside one group; month groups reworded to describe stable conditions, or split where a month had its own event; months named instead of seasons (southern-hemisphere or tropical place). Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 16 at 6.4; next above Bavaria & Munich (6.4); next below Hudson Valley (6.1)."
+ },
+ "p0106": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 27 islands in this batch: 2 at 9.8; next above Komodo & Flores (9.8); next below Sardinia (9.8)."
+ },
+ "p0107": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: the text describes hard conditions (rain or storms) but the month scores stay fairly high; left as Gemini drafted them. Rank among the 39 countries in this batch: 7 at 9.2; next above Barbados (9.4); next below Fiji (9.1)."
+ },
+ "p0108": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 22 at 4.3; next above Rome (4.4); next below Copenhagen (4.1)."
+ },
+ "p0109": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 34 cities in this batch: 34 at 2; next above Churchill (2.2)."
+ },
+ "p0110": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; months named instead of seasons (southern-hemisphere or tropical place). Rank among the 22 national parks in this batch: 8 at 3.4; next above North Cascades (3.7); next below Grand Canyon (3.1)."
+ },
+ "p0112": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 13 coastal areas in this batch: 11 at 2.7; next above Cornwall (4.1); next below Norwegian Fjords (2.5)."
+ },
+ "p0105": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 13 at 6.7; next above Glacier & Waterton Lakes (6.8); next below Texas Hill Country (6.5)."
+ },
+ "p0114": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event; months named instead of seasons (southern-hemisphere or tropical place). Rank among the 39 countries in this batch: 25 at 5; next above Guatemala (5.5); next below Ireland (4.8)."
+ },
+ "p0115": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 11 at 7; next above Upper Peninsula (7.2); next below Glacier & Waterton Lakes (6.8)."
+ },
+ "p0116": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 33 at 2.4; next above Northern Ireland (2.5); next below Bhutan (2.1)."
+ },
+ "p0117": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 34 cities in this batch: 28 at 3; next above Buenos Aires (3); next below Beijing & Great Wall (2.9)."
+ },
+ "p0119": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 18 at 8.2; next above Vietnam (8.3); next below Madagascar (7.9)."
+ },
+ "p0120": {
+  "why": "Edited after the rule scan: blurbs regrouped so each covers neighboring months only; group wording (\"these months\", named months) removed. Rank among the 13 coastal areas in this batch: 6 at 8.7; next above Algarve (8.9); next below Great Barrier Reef (8.3)."
+ },
+ "p0121": {
+  "why": "Rank among the 22 national parks in this batch: 7 at 3.7; next above Everglades National Park (3.7); next below Milford Sound & Fiordland (3.4)."
+ },
+ "p0122": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 17 at 7.8; next above Santorini & Cyclades (8.2); next below Madeira (7.7)."
+ },
+ "p0126": {
+  "why": "Rank among the 8 states and provinces in this batch: 5 at 5.5; next above Chiapas (5.5); next below Tasmania (4.3)."
+ },
+ "p0118": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 34 cities in this batch: 16 at 5.6; next above Queenstown (5.7); next below Venice (5.6)."
+ },
+ "p0127": {
+  "why": "Rank among the 8 states and provinces in this batch: 1 at 8.3; next below Kerala (6.7)."
+ },
+ "p0129": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; blurbs split where scores moved more than 1.5 inside one group; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 27 islands in this batch: 11 at 9.1; next above Canary Islands (9.3); next below Puerto Rico (9.1)."
+ },
+ "p0130": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 22 national parks in this batch: 1 at 5; next below Zion & Bryce Canyon (5)."
+ },
+ "p0131": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 29 at 3; next above Mongolia (3.3); next below Uganda (2.9)."
+ },
+ "p0132": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 13 at 8.8; next above Belize (8.8); next below Cambodia (8.7)."
+ },
+ "p0133": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 7 at 9.6; next above French Polynesia (9.6); next below Mallorca (9.5)."
+ },
+ "p0135": {
+  "why": "Rank among the 39 countries in this batch: 9 at 9.1; next above Fiji (9.1); next below Costa Rica (9)."
+ },
+ "p0136": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 4 wilderness areas in this batch: 2 at 2.2; next above Okavango Delta (2.7); next below Salar de Uyuni (1.4)."
+ },
+ "p0137": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 20 at 7.9; next above Madagascar (7.9); next below Singapore (7.6)."
+ },
+ "p0053": {
+  "why": "Edited after the rule scan: wording about what the place lacks removed. Rank among the 53 regions in this batch: 51 at 1.8; next above Chilean Lake District (1.8); next below Scottish Highlands & Isle of Skye (1.7)."
+ },
+ "p0139": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 36 at 2.8; next above Samarkand & Bukhara (3); next below Chiang Mai & Northern Thailand (2.7)."
+ },
+ "p0142": {
+  "why": "Rank among the 53 regions in this batch: 33 at 3; next above Denali & the Interior (3); next below Rioja (3)."
+ },
+ "p0143": {
+  "why": "Rank among the 34 cities in this batch: 30 at 2.8; next above Beijing & Great Wall (2.9); next below Aspen Snowmass (2.6)."
+ },
+ "p0144": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 8 at 7.7; next above Tuscany (8); next below Northern Tanzania (7.6)."
+ },
+ "p0145": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: the text describes hard conditions (rain or storms) but the month scores stay fairly high; left as Gemini drafted them. Rank among the 27 islands in this batch: 12 at 9.1; next above Okinawa (9.1); next below Big Island (8.7)."
+ },
+ "p0146": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; blurbs split where scores moved more than 1.5 inside one group. Rank among the 53 regions in this batch: 5 at 8.7; next above Palm Springs & Joshua Tree (9); next below Charleston & Savannah (8.2)."
+ },
+ "p0058": {
+  "why": "Edited after the rule scan: year-round filler removed; group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 3 at 9.8; next above Cuba (9.8); next below Bahamas (9.7)."
+ },
+ "p0147": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 28 at 3.1; next above Guilin & Yangshuo (3.1); next below Tokyo & Kyoto (3.1)."
+ },
+ "p0148": {
+  "why": "Edited after the rule scan: year-round filler removed; month groups reworded to describe stable conditions, or split where a month had its own event; months named instead of seasons (southern-hemisphere or tropical place). Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 15 at 5.7; next above Bordeaux (6.2); next below New York City (5.6)."
+ },
+ "p0149": {
+  "why": "Rank among the 27 islands in this batch: 9 at 9.4; next above Mallorca (9.5); next below Canary Islands (9.3)."
+ },
+ "p0150": {
+  "why": "Rank among the 53 regions in this batch: 20 at 4.9; next above Basque Country (5.7); next below Dolomites (4.7)."
+ },
+ "p0152": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 22 national parks in this batch: 15 at 2.5; next above Lake District (2.6); next below Maasai Mara & Amboseli (2.4)."
+ },
+ "p0153": {
+  "why": "Edited after the rule scan: year-round filler removed; months named instead of seasons (southern-hemisphere or tropical place). Judgement call for you: the text describes hard conditions (rain or storms) but the month scores stay fairly high; left as Gemini drafted them. Rank among the 34 cities in this batch: 1 at 9.2; next below Dubai (9.1)."
+ },
+ "p0154": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 53 regions in this batch: 34 at 3; next above Piedmont (3); next below Samarkand & Bukhara (3)."
+ },
+ "p0155": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 13 coastal areas in this batch: 1 at 10; next below Phuket & the Andaman Coast (9.6)."
+ },
+ "p0156": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 22 national parks in this batch: 19 at 2; next above Arches & Canyonlands (2.1); next below Sequoia & Kings Canyon (2)."
+ },
+ "p0157": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 21 at 4.4; next above Amsterdam (4.5); next below Mendoza (4.3)."
+ },
+ "p0158": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; blurbs split where a detail was true of only some of the months. Rank among the 39 countries in this batch: 35 at 2.1; next above Bhutan (2.1); next below Kyrgyzstan (1.7)."
+ },
+ "p0161": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 46 at 2.3; next above Colombian Andes (2.3); next below Cotswolds (2.2)."
+ },
+ "p0162": {
+  "why": "Rank among the 27 islands in this batch: 16 at 8.2; next above Bali (8.5); next below North Island (7.8)."
+ },
+ "p0163": {
+  "why": "Peak 9.8, not Gemini's 10: not on the list of places allowed a 10 for Sunbathing, so you decide. Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed; blurbs split where scores moved more than 1.5 inside one group; a 10 lowered (not on the list of places allowed a 10). Rank among the 27 islands in this batch: 3 at 9.8; next above Maui (9.8); next below Turks & Caicos (9.7)."
+ },
+ "p0164": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed. Rank among the 53 regions in this batch: 52 at 1.7; next above Cusco & Sacred Valley (1.8); next below Tierra del Fuego (0.7)."
+ },
+ "p0166": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 34 cities in this batch: 25 at 3.2; next above London (3.8); next below Bangkok (3)."
+ },
+ "p0167": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 22 national parks in this batch: 20 at 2; next above Rocky Mountain National Park (2); next below Banff & Jasper National Parks (1.9)."
+ },
+ "p0168": {
+  "why": "Edited after the rule scan: year-round filler removed; blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 11 at 9; next above Costa Rica (9); next below Belize (8.8)."
+ },
+ "p0169": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 27 islands in this batch: 21 at 6.4; next above Azores (6.9); next below Hokkaido (5.8)."
+ },
+ "p0170": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed. Rank among the 39 countries in this batch: 21 at 7.6; next above Papua New Guinea (7.9); next below Ghana (6.7)."
+ },
+ "p0196": {
+  "why": "Rank among the 39 countries in this batch: 38 at 0.7; next above Iceland (1); next below Greenland (0.2)."
+ },
+ "p0173": {
+  "why": "Edited after the rule scan: year-round filler removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 15 at 8.4; next above Cambodia (8.7); next below Myanmar (8.3)."
+ },
+ "p0175": {
+  "why": "Rank among the 27 islands in this batch: 27 at 0; next above Faroe Islands (0.6)."
+ },
+ "p0199": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 49 at 2; next above Atacama Desert (2); next below Chilean Lake District (1.8)."
+ },
+ "p0176": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 34 cities in this batch: 3 at 8.4; next above Dubai (9.1); next below Cape Town (8.3)."
+ },
+ "p0177": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 23 at 6.6; next above Ghana (6.7); next below Guatemala (5.5)."
+ },
+ "p0124": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Our climate table has no highs for this place, so Gemini wrote temperatures from its own knowledge; worth a look. Old-name check: the earlier place name appears only as one item in a list for the wider place, not as the whole place. Rank among the 53 regions in this batch: 9 at 7.6; next above Provence (7.7); next below Upper Peninsula (7.2)."
+ },
+ "p0178": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event; months named instead of seasons (southern-hemisphere or tropical place). Rank among the 8 states and provinces in this batch: 6 at 4.3; next above Nova Scotia (5.5); next below Ladakh (3)."
+ },
+ "p0179": {
+  "why": "Rank among the 53 regions in this batch: 39 at 2.7; next above El Chaltén & El Calafate (2.7); next below Badlands & Black Hills (2.6)."
+ },
+ "p0180": {
+  "why": "Rank among the 53 regions in this batch: 14 at 6.5; next above Marrakech & Atlas (6.7); next below Bavaria & Munich (6.4)."
+ },
+ "p0141": {
+  "why": "Edited after the rule scan: year-round filler removed; group wording (\"these months\", named months) removed. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 13 coastal areas in this batch: 2 at 9.6; next above Riviera Maya (10); next below Dalmatian Coast (9.1)."
+ },
+ "p0181": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Rank among the 53 regions in this batch: 53 at 0.7; next above Scottish Highlands & Isle of Skye (1.7)."
+ },
+ "p0182": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 29 at 3.1; next above Quebec City & Montreal (3.1); next below Victoria Falls & Hwange (3.1)."
+ },
+ "p0183": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Rank among the 22 national parks in this batch: 22 at 1.8; next above Banff & Jasper National Parks (1.9)."
+ },
+ "p0184": {
+  "why": "Edited after the rule scan: blurbs split where a detail was true of only some of the months; group wording (\"these months\", named months) removed. Rank among the 27 islands in this batch: 4 at 9.7; next above Sardinia (9.8); next below Aruba (9.6)."
+ },
+ "p0185": {
+  "why": "Edited after the rule scan: group wording (\"these months\", named months) removed; blurbs split where scores moved more than 1.5 inside one group; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 7 at 8; next above Charleston & Savannah (8.2); next below Provence (7.7)."
+ },
+ "p0186": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 39 countries in this batch: 30 at 2.9; next above Pakistan (3); next below Ethiopia (2.6)."
+ },
+ "p0187": {
+  "why": "Edited after the rule scan: months named instead of seasons (southern-hemisphere or tropical place). Rank among the 22 national parks in this batch: 11 at 3; next above South Luangwa (3.1); next below Yellowstone National Park (3)."
+ },
+ "p0188": {
+  "why": "Edited after the rule scan: wording that says what the place is not removed; month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 53 regions in this batch: 10 at 7.2; next above Northern Tanzania (7.6); next below Napa & Sonoma (7)."
+ },
+ "p0159": {
+  "why": "Edited after the rule scan: month groups reworded to describe stable conditions, or split where a month had its own event. Rank among the 4 wilderness areas in this batch: 3 at 1.4; next above Pantanal (2.2); next below Antarctic Peninsula (0)."
+ },
+ "p0160": {
+  "why": "Rank among the 53 regions in this batch: 35 at 3; next above Rioja (3); next below Peruvian Amazon (2.8)."
+ },
+ "p0190": {
+  "why": "Rank among the 27 islands in this batch: 23 at 3.7; next above Hokkaido (5.8); next below Lofoten Islands (1.1)."
+ },
+ "p0191": {
+  "why": "Rank among the 34 cities in this batch: 17 at 5.6; next above New York City (5.6); next below Athens (5.5)."
+ },
+ "p0192": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 8 states and provinces in this batch: 3 at 6; next above Kerala (6.7); next below Chiapas (5.5)."
+ },
+ "p0194": {
+  "why": "Rank among the 34 cities in this batch: 5 at 8.1; next above Cape Town (8.3); next below Lisbon (7.9)."
+ },
+ "p0195": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 39 countries in this batch: 17 at 8.3; next above Myanmar (8.3); next below Nicaragua (8.2)."
+ },
+ "p0189": {
+  "why": "Old-name check: 'Whistler' is half of the place name (Vancouver & Whistler), not a leftover. Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 53 regions in this batch: 18 at 5.8; next above Hudson Valley (6.1); next below Basque Country (5.7)."
+ },
+ "p0197": {
+  "why": "Rank among the 22 national parks in this batch: 12 at 3; next above Uluru & the Outback (3); next below Kruger & Sabi Sands (2.8)."
+ },
+ "p0198": {
+  "why": "Judgement call for you: scores in one blurb move by more than half a point; split if the curve should read finer. Rank among the 22 national parks in this batch: 5 at 3.9; next above Death Valley National Park (4); next below Everglades National Park (3.7)."
+ },
+ "p0171": {
+  "why": "Rank among the 22 national parks in this batch: 10 at 3.1; next above Grand Canyon (3.1); next below Uluru & the Outback (3)."
+ },
+ "p0174": {
+  "why": "Edited after the rule scan. Rank among the 53 regions in this batch: 44 at 2.4; next above Finnish Lapland (2.5); next below Colombian Andes (2.3)."
+ },
+ "p0193": {
+  "why": "Edited after the rule scan. Rank among the 53 regions in this batch: 30 at 3.1; next above Tokyo & Kyoto (3.1); next below Black Forest (3)."
+ },
+ "p0018": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 22 national parks in this batch: 21 at 1.9; next above Sequoia & Kings Canyon (2); next below Torres del Paine (1.8)."
+ },
+ "p0046": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 53 regions in this batch: 45 at 2.3; next above St Andrews & Fife (2.4); next below San Miguel de Allende & Guanajuato (2.3)."
+ },
+ "p0051": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 53 regions in this batch: 47 at 2.2; next above San Miguel de Allende & Guanajuato (2.3); next below Atacama Desert (2)."
+ },
+ "p0065": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 22 national parks in this batch: 6 at 3.7; next above Yosemite National Park (3.9); next below North Cascades (3.7)."
+ },
+ "p0076": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 22 national parks in this batch: 17 at 2.3; next above Maasai Mara & Amboseli (2.4); next below Arches & Canyonlands (2.1)."
+ },
+ "p0140": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Rank among the 53 regions in this batch: 26 at 3.7; next above Ecuadorian Andes (4); next below Guilin & Yangshuo (3.1)."
+ },
+ "p0111": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 39 countries in this batch: 28 at 3.3; next above Laos (3.9); next below Pakistan (3)."
+ },
+ "p0138": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 34 cities in this batch: 13 at 6.4; next above Sedona (7.1); next below Bordeaux (6.2)."
+ },
+ "p0200": {
+  "why": "Gemini first marked this not applicable; the Sunbathing scope says never to, so it was rerun with the keep-applicable note (16 Nov). Edited after the rule scan. Rank among the 22 national parks in this batch: 2 at 5; next above Olympic National Park (5); next below Acadia National Park (4.9)."
+ },
+ "p0017": {
+  "why": "Rewritten on 16 Nov under the current rules: the 9 Nov practice text failed today's checks. Edited after the rule scan. Rank among the 27 islands in this batch: 15 at 8.5; next above Galápagos Islands (8.6); next below Santorini & Cyclades (8.2)."
+ },
+ "p0060": {
+  "why": "Rewritten on 16 Nov under the current rules: the 9 Nov practice text failed today's checks. Rank among the 34 cities in this batch: 2 at 9.1; next above Rio de Janeiro (9.2); next below Sydney (8.4)."
+ },
+ "p0172": {
+  "why": "Rewritten on 16 Nov under the current rules: the 9 Nov practice text failed today's checks. Edited after the rule scan. Rank among the 13 coastal areas in this batch: 13 at 2.1; next above Norwegian Fjords (2.5)."
+ }
+}

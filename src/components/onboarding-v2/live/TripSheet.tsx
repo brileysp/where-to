@@ -10,13 +10,17 @@ import { allRegions, REGION_KEYS, REGION_LABELS, type RegionKey } from '@/lib/on
 import type { TripAdjust } from '@/lib/onboarding/trip-adjust';
 import { TRIP_LENGTHS, type TripLength } from '@/lib/onboarding/trip-length';
 import { CareAccordion } from '../CareAccordion';
+import { KIDS_ITEM, KidsAges } from '../KidsAges';
 import type { CareHandlers } from '../screens/EssentialsScreen';
 import { ContinentPicker } from './ContinentPicker';
+import { PlaceTypePicker } from './PlaceTypePicker';
+import { ALL_PLACE_TYPES, allPlaceTypes, placeTypesText } from '@/lib/onboarding/place-types';
 import { TripName } from './TripsSheet';
 import { PeakScale } from './PeakScale';
 import { DEFAULT_PEAK, PEAK_NAMES, PEAK_TITLE } from '@/lib/onboarding/peak';
 import { nextYearFor, type Trip } from '@/lib/onboarding/trips';
 import { LengthPicker } from './LengthPicker';
+import type { TripsApi } from './useTrips';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const WEEKS = ['Any week', 'Week 1', 'Week 2', 'Week 3', 'Week 4'];
@@ -27,6 +31,7 @@ export interface TripValues {
   week: number;
   length: TripLength | null;
   continents: RegionKey[];
+  placeTypes: string[];
   who: string[];
   bands: Bands;
   loc: HomeBundle;
@@ -40,6 +45,7 @@ export interface TripHandlers {
   onWeek: (w: number) => void;
   onLength: (l: TripLength | null) => void;
   onContinents: (next: RegionKey[]) => void;
+  onPlaceTypes: (next: string[]) => void;
   onWho: (k: string) => void;
   onBandPill: (dim: string, band: string) => void;
   onMaxHours: (h: number) => void;
@@ -59,6 +65,7 @@ export function tripSetCount(v: TripValues): number {
     (isNarrowed(v.bands, 'weather') ? 1 : 0) +
     (v.peak !== DEFAULT_PEAK ? 1 : 0) +
     (!allRegions(v.continents) ? 1 : 0) +
+    (!allPlaceTypes(v.placeTypes) ? 1 : 0) +
     (originOf(v.loc) ? 1 : 0) +
     (careCount(v.careProps.care, v.bands) > 0 ? 1 : 0)
   );
@@ -67,13 +74,13 @@ export function tripSetCount(v: TripValues): number {
 /** The month as the list heading shows it: "Mar", or "Any month". */
 export const monthShort = (month: number | null): string => (month == null ? 'Any month' : MONTHS[month]);
 
-function bandText(bands: Bands, dim: string, any: string): string {
+export function bandText(bands: Bands, dim: string, any: string): string {
   const d = BAND_DIMENSIONS.find((x) => x.key === dim);
   if (!d || !isNarrowed(bands, dim)) return any;
   return bands[dim].map((b) => d.bands.find((x) => x.key === b)?.label ?? b).join(', ');
 }
 
-function continentsText(on: readonly RegionKey[]): string {
+export function continentsText(on: readonly RegionKey[]): string {
   if (allRegions(on)) return 'All';
   const off = REGION_KEYS.filter((k) => !on.includes(k));
   return off.length <= 2 ? `All except ${off.map((k) => REGION_LABELS[k]).join(', ')}` : REGION_KEYS.filter((k) => on.includes(k)).map((k) => REGION_LABELS[k]).join(', ');
@@ -110,14 +117,23 @@ function LengthEffect({ length, adjust, names, inScope, home }: { length: TripLe
 
 /**
  * "Your trip": the settings behind the Trip button, one row each with its current value, in this order: When, How long, Budget & comfort,
- * Climate, Continents, Flying from, then Who is going (not in the list the owner gave, kept so travelers can still say who is coming), What else matters. A row opens its choices right under it (one open at a time). The button at the bottom
+ * Climate, Continents, Flying from, then Who’s going (not in the list the owner gave, kept so travelers can still say who is coming), What else matters. A row opens its choices right under it (one open at a time). The button at the bottom
  * shows how many places are in view and closes the sheet. The list behind keeps following every change.
  */
-export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRename, onYear, onClose }: { v: TripValues; h: TripHandlers; placeCount: number; adjust: TripAdjust; names: Record<string, string>; inScope: Set<string>; trip: Trip; onRename: (name: string) => void; onYear: (year: number) => void; onClose: () => void }) {
+export function TripSheet({ v, h, placeCount, adjust, names, inScope, api, defaultsDiff, onMakeDefault, onClose }: { v: TripValues; h: TripHandlers; placeCount: number; adjust: TripAdjust; names: Record<string, string>; inScope: Set<string>; api: TripsApi; defaultsDiff?: Record<'budget' | 'weather' | 'peak' | 'who', boolean>; onMakeDefault?: (part: 'budget' | 'weather' | 'peak' | 'who') => void; onClose: () => void }) {
+  const trip: Trip = api.active;
+  const onRename = api.rename;
+  const onYear = api.setYear;
+  const [sure, setSure] = useState(false);
   const unitText = useUnitText();
   const [openRow, setOpenRow] = useState<string | null>('when');
+  const [weekOpen, setWeekOpen] = useState(false);
   const origin = originOf(v.loc);
   const nCare = careCount(v.careProps.care, v.bands);
+  const makeDefaultLink = (part: 'budget' | 'weather' | 'peak' | 'who') =>
+    defaultsDiff?.[part] ? (
+      <button type="button" className="lq-link lq-mkdef" onClick={() => onMakeDefault?.(part)}>Make this my default</button>
+    ) : null;
 
   function reset() {
     v.who.forEach((k) => h.onWho(k));
@@ -125,6 +141,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
     h.onPeak(DEFAULT_PEAK);
     h.onLength(null);
     h.onContinents([]);
+    h.onPlaceTypes([...ALL_PLACE_TYPES]);
     v.loc.onClearAirport();
     CARE_ITEMS.forEach((i) => { if (v.careProps.care[i.key]) v.careProps.onClear(i.key); });
   }
@@ -145,6 +162,7 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
             ))}
           </div>
           <div className="lq-hint" style={{ marginTop: 6 }}>Pick any. Everything picked, or nothing, means no preference.</div>
+          {makeDefaultLink(dim)}
         </>
       ),
     };
@@ -163,19 +181,31 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
               <button key={m} type="button" className={`lq-tp sm${v.month === i ? ' on' : ''}`} aria-pressed={v.month === i} onClick={() => h.onMonth(i)}>{m}</button>
             ))}
           </div>
-          {v.month != null && trip.year != null && (
-            <div className="lq-yearseg">
-              <span className="lq-lbl">Year</span>
-              {[...new Set([nextYearFor(v.month), nextYearFor(v.month) + 1, nextYearFor(v.month) + 2, trip.year])].sort().map((y) => (
-                <button key={y} type="button" className={`lq-tp sm${trip.year === y ? ' on' : ''}`} aria-pressed={trip.year === y} onClick={() => onYear(y)}>{y}</button>
-              ))}
-            </div>
-          )}
+          {v.month != null && trip.year != null && (() => {
+            const first = nextYearFor(v.month);
+            const year = trip.year;
+            return (
+              <div className="lq-yearstep">
+                <button type="button" aria-label="Earlier year" disabled={year <= first} onClick={() => onYear(year - 1)}>‹</button>
+                <b>{year}</b>
+                <button type="button" aria-label="Later year" disabled={year >= first + 2} onClick={() => onYear(year + 1)}>›</button>
+              </div>
+            );
+          })()}
           {v.month != null && (
-            <div className="lq-seg" style={{ marginTop: 8 }}>
-              {WEEKS.map((w, i) => (
-                <button key={w} type="button" className={`lq-tp${v.week === i ? ' on' : ''}`} aria-pressed={v.week === i} onClick={() => h.onWeek(i)}>{w}</button>
-              ))}
+            <div className="lq-weekrow">
+              <button type="button" aria-expanded={weekOpen} onClick={() => setWeekOpen((o) => !o)}>
+                <span className="k">Which week?</span>
+                <span className={`v${v.week ? ' set' : ''}`}>{WEEKS[v.week] ?? WEEKS[0]}</span>
+                <span className="ch" aria-hidden="true">{weekOpen ? '⌃' : '›'}</span>
+              </button>
+              {weekOpen && (
+                <div className="lq-seg" style={{ marginTop: 6 }}>
+                  {WEEKS.map((w, i) => (
+                    <button key={w} type="button" className={`lq-tp${v.week === i ? ' on' : ''}`} aria-pressed={v.week === i} onClick={() => h.onWeek(i)}>{w}</button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </>
@@ -202,7 +232,12 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
       label: PEAK_TITLE,
       value: PEAK_NAMES[v.peak] ?? PEAK_NAMES[DEFAULT_PEAK],
       set: v.peak !== DEFAULT_PEAK,
-      body: <PeakScale value={v.peak} onChange={h.onPeak} />,
+      body: (
+        <>
+          <PeakScale value={v.peak} onChange={h.onPeak} />
+          {makeDefaultLink('peak')}
+        </>
+      ),
     },
     {
       id: 'continents',
@@ -210,6 +245,13 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
       value: continentsText(v.continents),
       set: !allRegions(v.continents),
       body: <ContinentPicker on={v.continents} onChange={h.onContinents} />,
+    },
+    {
+      id: 'kinds',
+      label: 'What kind of place',
+      value: placeTypesText(v.placeTypes),
+      set: !allPlaceTypes(v.placeTypes),
+      body: <PlaceTypePicker on={v.placeTypes} onChange={h.onPlaceTypes} />,
     },
     {
       id: 'from',
@@ -220,15 +262,19 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
     },
     {
       id: 'who',
-      label: 'Who is going',
+      label: 'Who’s going',
       value: v.who.length ? v.who.map((k) => COMPANIONS.find((c) => c.key === k)?.label ?? k).join(', ') : 'Anyone',
       set: v.who.length > 0,
       body: (
-        <div className="lq-seg">
-          {COMPANIONS.map((c) => (
-            <button key={c.key} type="button" className={`lq-tp${v.who.includes(c.key) ? ' on' : ''}`} aria-pressed={v.who.includes(c.key)} onClick={() => h.onWho(c.key)}>{c.label}</button>
-          ))}
-        </div>
+        <>
+          <div className="lq-seg">
+            {COMPANIONS.map((c) => (
+              <button key={c.key} type="button" className={`lq-tp${v.who.includes(c.key) ? ' on' : ''}`} aria-pressed={v.who.includes(c.key)} onClick={() => h.onWho(c.key)}>{c.label}</button>
+            ))}
+          </div>
+          {v.who.includes('kids') && <KidsAges ages={v.careProps.care.kids?.o ?? []} onToggle={(o) => v.careProps.onOption(KIDS_ITEM, o)} />}
+          {makeDefaultLink('who')}
+        </>
       ),
     },
     {
@@ -245,7 +291,14 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
       <div className="ob2-sheet lq-trip" role="dialog" aria-modal="true" aria-label="Your trip">
         <div className="lq-triphd">
           <TripName name={trip.name} onRename={onRename} big />
-          <button type="button" className="lq-link" onClick={reset}>Reset</button>
+        </div>
+        <div className="lq-switch" role="group" aria-label="Your trips">
+          <button type="button" className="lq-swchip add" onClick={() => { setSure(false); void api.create(); }}>+ New trip</button>
+          {api.trips.map((t2) => (
+            <button key={t2.id} type="button" className={`lq-swchip${t2.id === api.activeId ? ' on' : ''}`} aria-pressed={t2.id === api.activeId} onClick={() => { setSure(false); api.switchTo(t2.id); }}>
+              {t2.id === api.activeId ? '✓ ' : ''}{t2.name}
+            </button>
+          ))}
         </div>
         <div className="lq-tripbody">
           {rows.map((r) => (
@@ -259,6 +312,15 @@ export function TripSheet({ v, h, placeCount, adjust, names, inScope, trip, onRe
             </div>
           ))}
         </div>
+        <div className="lq-resetrow">
+          <button type="button" className="lq-link" onClick={reset}>Reset this trip</button>
+          {api.trips.length > 1 && (
+            <button type="button" className="lq-link" onClick={() => (sure ? (api.remove(trip.id), setSure(false)) : setSure(true))}>
+              {sure ? 'Sure? Delete it' : 'Delete this trip'}
+            </button>
+          )}
+        </div>
+        <div className="lq-hint" style={{ textAlign: 'center', padding: '0 4px 6px' }}>Interests, Travel DNA and where you live are shared by every trip.</div>
         <div className="lq-tripft">
           <button type="button" className="ob2-btn" onClick={onClose}>Show {placeCount} places</button>
         </div>

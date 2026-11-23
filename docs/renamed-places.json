@@ -1,25 +1,61 @@
 {
- "_note": "Places renamed or re-scoped in Oct 2026. Their old name and narrower scope can survive in other interests' text and in a careless fact sheet, so gemini-author-batch.ts refuses to send one to Gemini unless docs/<interest>-facts.json has a non-empty scope sheet for it (override: --allow-unscoped-renamed), and it drops the other-interest summaries for these places because they still describe the old scope. See memory feedback_renamed_place_old_names.",
+ "_note": "Built from the label history (place_label_history) by src/lib/places/renamed-sync.ts: every label a place has retired is an old name that must not stand for the place in a text. Edit names on the admin Names & scope screen, not here. Only \"allow\" is kept by hand (an old name the owner chose to keep, with her reason). gemini-author-batch.ts refuses to send a renamed place to Gemini unless docs/<interest>-facts.json has a non-empty scope sheet for it (override: --allow-unscoped-renamed).",
  "ids": {
-  "bagan": "Myanmar (was Bagan)",
-  "kaziranga": "Assam & Northeast India (was Kaziranga National Park)",
-  "komodo": "Komodo & Flores (was Komodo Island)",
-  "joshua-tree": "Palm Springs & Joshua Tree (was Joshua Tree National Park)",
-  "punta-cana": "Dominican Republic (was Punta Cana)",
-  "whistler": "Vancouver & Whistler (was Whistler)",
-  "el-chalten": "El Chaltén & El Calafate (was El Chaltén & Fitz Roy)",
-  "havana": "Cuba (was Havana)",
-  "angkor": "Cambodia (was Angkor Wat & Siem Reap)",
-  "luangprabang": "Laos (was Luang Prabang)",
-  "belfast-giants-causeway": "Northern Ireland (was Belfast & the Giant's Causeway)",
-  "snowdonia": "Wales (was Snowdonia)",
-  "banff": "Banff & Jasper National Parks (was Banff National Park)",
-  "quebec-city": "Quebec City & Montreal (was Quebec City)",
-  "aspen": "Aspen Snowmass (was Aspen)",
-  "kruger": "Kruger & Sabi Sands (was Kruger National Park)",
-  "napa": "Napa & Sonoma (was Napa Valley)",
-  "borabora": "French Polynesia (was Bora Bora)",
-  "thailand": "Phuket & the Andaman Coast (was Thailand - Phuket & Islands)",
-  "tanzania": "Northern Tanzania (was Serengeti & Zanzibar)"
+  "p0010": "Aspen Snowmass (was Aspen)",
+  "p0011": "Assam & Northeast India (was Kaziranga National Park)",
+  "p0018": "Banff & Jasper National Parks (was Banff National Park)",
+  "p0034": "Cambodia (was Angkor Wat & Siem Reap)",
+  "p0052": "Cuba (was Havana)",
+  "p0058": "Dominican Republic (was Punta Cana)",
+  "p0063": "El Chaltén & El Calafate (was El Chaltén & Fitz Roy)",
+  "p0070": "French Polynesia (was Bora Bora)",
+  "p0088": "Komodo & Flores (was Komodo Island)",
+  "p0089": "Kruger & Sabi Sands (was Kruger National Park)",
+  "p0093": "Laos (was Luang Prabang)",
+  "p0113": "Myanmar (was Bagan)",
+  "p0115": "Napa & Sonoma (was Napa Valley)",
+  "p0123": "Northern Ireland (was Belfast & the Giant's Causeway)",
+  "p0124": "Northern Tanzania (was Serengeti & Zanzibar)",
+  "p0134": "Palm Springs & Joshua Tree (was Joshua Tree National Park)",
+  "p0141": "Phuket & the Andaman Coast (was Thailand - Phuket & Islands)",
+  "p0147": "Quebec City & Montreal (was Quebec City)",
+  "p0189": "Vancouver & Whistler (was Whistler)",
+  "p0196": "Wales (was Snowdonia)"
+ },
+ "allow": {
+  "_note": "Old-name parts that may stay in the text on purpose, with the owner's reason. The old-name check skips these parts (it still flags the full old name and the other parts).",
+  "p0124": {
+   "Serengeti": "18 Nov 2026: the owner asked for the Serengeti plains to be mentioned in Northern Tanzania; the Serengeti is inside the current scope, only Zanzibar left it."
+  },
+  "p0010": {
+   "Aspen": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. The match is the tree (\"aspen forests\"), not the old town name."
+  },
+  "p0034": {
+   "Angkor Wat": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Angkor Wat is one signature view beside the Mekong floodplains, the Cardamom forests and Tonle Sap."
+  },
+  "p0052": {
+   "Havana": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Old Havana is one urban item beside the Vinales karst and the Malecon."
+  },
+  "p0063": {
+   "Fitz Roy": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Mount Fitz Roy is one peak beside Cerro Torre and the Perito Moreno Glacier."
+  },
+  "p0089": {
+   "Kruger National Park": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. The match is the start of the new name, Kruger and Sabi Sands."
+  },
+  "p0113": {
+   "Bagan": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Bagan is the signature view beside the Irrawaddy, Inle Lake and Hpa-An."
+  },
+  "p0123": {
+   "the Giant's Causeway": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. The Causeway is one item on a coast that also has the Dark Hedges and the Mourne Mountains; the month text now names the Mournes too."
+  },
+  "p0134": {
+   "Joshua Tree National Park": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. The match is \"Joshua trees\", the plant."
+  },
+  "p0189": {
+   "Whistler": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Whistler is in the new name and is one stop on the Sea-to-Sky Highway."
+  },
+  "p0196": {
+   "Snowdonia": "21 Nov 2026: the owner reviewed the Scenic old-name blocks and chose to keep it. Snowdonia is one area beside the Glyderau, the Brecon Beacons and the Pembrokeshire coast; the overview now reads Eryri (Snowdonia)."
+  }
  }
 }

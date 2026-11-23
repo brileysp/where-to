@@ -8,14 +8,14 @@ for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').spl
   const apply = process.argv.includes('--apply');
   const { db } = await import('../src/lib/db/client');
   const { places, interestTodos } = await import('../src/lib/db/schema');
-  const { SLIDERS } = await import('../src/lib/scoring/constants');
+  const { getActiveInterests } = await import('../src/lib/scoring/active-interests'); const ACTIVE = await getActiveInterests(); // the active list (code + admin overrides), not the raw SLIDERS
   const { withAdminAudit } = await import('../src/lib/admin/write');
   const { CLAUDE_ACTOR } = await import('../src/lib/admin/auth');
   const rows = await db.select({ name: places.name, na: places.naSliders, reasons: places.naReasons, primary: places.isPrimaryDestination }).from(places);
   const existing = await db.select().from(interestTodos);
   const today = new Date().toISOString().slice(0, 10);
   let made = 0, skipped = 0;
-  for (const s of SLIDERS.filter((x) => !x.hidden)) {
+  for (const s of ACTIVE) {
     const missing = rows.filter((p) => p.primary && (p.na as string[]).includes(s.key) && !(p.reasons as Record<string, unknown>)[s.key]).map((p) => p.name).sort();
     if (!missing.length) continue;
     if (existing.some((t) => t.interestKey === s.key && t.status !== 'done' && t.title.startsWith('Add N/A reasons'))) { skipped++; continue; }

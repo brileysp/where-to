@@ -2,6 +2,7 @@ import { COMPANIONS, allBands, bandDims, type Bands, type CareState } from './ca
 import { isTripLength, type TripLength } from './trip-length';
 import { REGION_KEYS, allRegions, type RegionKey } from './regions';
 import { isPeak } from './peak';
+import { ALL_PLACE_TYPES, allPlaceTypes } from './place-types';
 
 /**
  * Saved trips: a traveler can plan more than one at once. What stays the same across trips (interests, Travel DNA, where you live, and the
@@ -18,6 +19,8 @@ export interface TripOverrides {
   care?: CareState;
   /** Peak or off peak, a step from 0 to 4 (see peak.ts). */
   peak?: number;
+  /** The kinds of place left on (place-types.ts); missing = the profile's, empty = all. */
+  placeTypes?: string[];
 }
 
 export interface Trip {
@@ -92,22 +95,25 @@ export interface EffectiveTrip {
   bands: Bands;
   care: CareState;
   peak: number;
+  /** The kinds of place left on; empty = all. */
+  placeTypes: string[];
 }
 
-export function effectiveTrip(profile: { who: string[]; bands: Bands; care: CareState; peak: number }, trip: Pick<Trip, 'overrides'>): EffectiveTrip {
+export function effectiveTrip(profile: { who: string[]; bands: Bands; care: CareState; peak: number; placeTypes?: string[] }, trip: Pick<Trip, 'overrides'>): EffectiveTrip {
   const o = trip.overrides;
   return {
     who: o.who ?? profile.who,
     bands: o.bands ?? profile.bands,
     care: { ...profile.care, ...(o.care ?? {}) },
     peak: o.peak ?? profile.peak,
+    placeTypes: o.placeTypes ?? profile.placeTypes ?? [],
   };
 }
 
 const sameJson = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
 /** The overrides to save for a trip whose working choices are `current`: only what differs from the profile's defaults. */
-export function overridesFor(profile: { who: string[]; bands: Bands; care: CareState; peak: number }, current: EffectiveTrip): TripOverrides {
+export function overridesFor(profile: { who: string[]; bands: Bands; care: CareState; peak: number; placeTypes?: string[] }, current: Omit<EffectiveTrip, 'placeTypes'> & { placeTypes?: string[] }): TripOverrides {
   const out: TripOverrides = {};
   if (!sameJson(current.who, profile.who)) out.who = current.who;
   if (!sameJson(current.bands, profile.bands)) out.bands = current.bands;
@@ -117,6 +123,7 @@ export function overridesFor(profile: { who: string[]; bands: Bands; care: CareS
   for (const k of Object.keys(profile.care)) if (!current.care[k]) care[k] = { o: [], firm: false };
   if (Object.keys(care).length) out.care = care;
   if (current.peak !== profile.peak) out.peak = current.peak;
+  if (!sameJson(current.placeTypes ?? [], profile.placeTypes ?? [])) out.placeTypes = current.placeTypes ?? [];
   return out;
 }
 
@@ -150,6 +157,10 @@ export function parseTrip(raw: unknown): Trip | null {
     overrides.care = care;
   }
   if (isPeak(o.peak)) overrides.peak = o.peak;
+  if (Array.isArray(o.placeTypes)) {
+    const kinds = ALL_PLACE_TYPES.filter((k) => (o.placeTypes as unknown[]).includes(k));
+    overrides.placeTypes = allPlaceTypes(kinds) ? [] : kinds;
+  }
   const nameAuto = raw.nameAuto !== false;
   return {
     id: raw.id.toLowerCase(),

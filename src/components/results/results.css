@@ -17,11 +17,11 @@
 
 .app-header h1 {
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .app-header-tagline {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
 }
 
@@ -89,7 +89,7 @@
 .panel h2 {
   margin: 0 0 10px;
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .panel-hint {
@@ -109,7 +109,7 @@
   color: var(--accent);
   border-radius: 6px;
   padding: 4px 10px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   margin: -4px 0 10px;
 }
@@ -262,11 +262,11 @@
 /* ---- Slider panel ---- */
 
 .slider-group-header {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-faint);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   margin: 16px 0 8px;
 }
 
@@ -310,10 +310,10 @@
 }
 
 .style-pill-group-label {
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
   color: var(--text-faint);
   margin-bottom: 3px;
 }
@@ -331,7 +331,7 @@
 .style-pill {
   border-radius: 999px;
   padding: 3px 10px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
   background: transparent;
@@ -361,7 +361,7 @@
 }
 
 .band-dim-header {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-dim);
   margin-bottom: 6px;
 }
@@ -377,7 +377,7 @@
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 5px 11px;
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text);
   cursor: pointer;
 }
@@ -390,7 +390,7 @@
   background: var(--accent);
   border-color: var(--accent);
   color: #1a1108;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 /* ---- Month grid ---- */
@@ -406,7 +406,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 4px;
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text);
   cursor: pointer;
 }
@@ -589,13 +589,13 @@
 }
 
 .search-dropdown-region {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
 }
 
 .search-dropdown-rank {
   margin-left: auto;
-  font-size: 11px;
+  font-size: 12.5px;
   white-space: nowrap;
 }
 
@@ -777,7 +777,7 @@
 
 .card-region::before {
   content: '📍';
-  font-size: 10.5px;
+  font-size: 11.5px;
   flex-shrink: 0;
 }
 
@@ -942,7 +942,7 @@
 .badge {
   border-radius: 999px;
   padding: 3px 9px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
 }
 
@@ -966,7 +966,7 @@
 }
 
 .card-monthly-blurb {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-dim);
   margin-top: 10px;
   line-height: 1.5;
@@ -974,19 +974,19 @@
 
 .card-monthly-blurb .blurb-month {
   color: var(--text);
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .about-text {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 10px 0 0;
 }
 
 .cost-overview-text {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 10px 0 0;
 }
@@ -1003,7 +1003,7 @@
   gap: 10px;
   padding: 13px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .price-row:last-child {
@@ -1018,7 +1018,7 @@
 }
 
 .price-icon {
-  font-size: 13px;
+  font-size: 14px;
   width: 16px;
   flex-shrink: 0;
   text-align: center;
@@ -1031,8 +1031,8 @@
 }
 
 .season-line {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 10px 0 0;
 }
@@ -1173,11 +1173,11 @@
 
 .detail-sheet-name {
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .detail-sheet-region {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   margin-top: 2px;
 }
@@ -1221,7 +1221,7 @@
   border: none;
   background: transparent;
   color: var(--text-faint);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1282,7 +1282,7 @@
 }
 
 .detail-section-title {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   margin: 22px 0 12px;
 }
@@ -1298,8 +1298,8 @@
    generated from real numbers, not written, so it shouldn't visually read
    as prose someone crafted. */
 .dna-sentence {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 8px 0 10px;
 }
@@ -1316,9 +1316,9 @@
 }
 
 .interest-place-blurb {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 8px 0 14px;
 }
@@ -1390,7 +1390,7 @@
 .months-chart-label {
   flex: 1;
   text-align: center;
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   font-weight: 500;
   cursor: pointer;
@@ -1462,12 +1462,12 @@
 }
 
 .month-detail-name {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
 }
 
 .month-detail-quality {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   margin: 2px 0 8px;
 }
@@ -1488,7 +1488,7 @@
 }
 
 .cost-range-hint {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   flex: 1;
 }
@@ -1501,7 +1501,7 @@
   background: none;
   color: var(--text-faint);
   opacity: 0.7;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   font-style: italic;
   cursor: pointer;
@@ -1515,13 +1515,125 @@
 }
 
 .cost-key-text {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   line-height: 1.6;
   background: var(--card-bg);
   border-radius: 10px;
   padding: 10px 12px;
   margin-bottom: 10px;
+}
+
+/* ---- Cost seasonality card (below the cost items) ---- */
+
+.cost-season-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cost-season-head .detail-section-title {
+  margin: 0;
+  flex: 1;
+}
+
+.cost-season-badge {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cost-season-key-toggle {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  font-size: 11.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cost-season-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+
+.cost-season-bars {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5px;
+  height: 54px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cost-season-bars i {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: var(--cost-season-bar);
+}
+
+.cost-season-bars i.faded {
+  opacity: 0.38;
+}
+
+.cost-season-bars i.closed {
+  height: 9px;
+  border-radius: 1px;
+  background: repeating-linear-gradient(135deg, var(--text-faint) 0 1.5px, transparent 1.5px 4px);
+  opacity: 0.55;
+}
+
+.cost-season-avg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed var(--text-faint);
+  pointer-events: none;
+}
+
+.cost-season-axis {
+  position: relative;
+  height: 16px;
+  margin-top: 3px;
+}
+
+.cost-season-axis span {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.cost-season-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 12.5px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+.cost-season-legend i {
+  display: inline-block;
+  width: 16px;
+  border-top: 1px dashed var(--text-faint);
+}
+
+/* The app is dark by default and light under prefers-color-scheme: light (see globals.css), so the bar colour follows the same split. */
+.cost-season {
+  --cost-season-bar: #a39d94;
+}
+
+@media (prefers-color-scheme: light) {
+  .cost-season {
+    --cost-season-bar: #6b665f;
+  }
 }
 
 /* ---- Stamps sheet ---- */
@@ -1571,7 +1683,7 @@
   margin-bottom: 18px;
   text-align: center;
   font-family: monospace;
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   line-height: 1.6;
 }
@@ -1619,11 +1731,11 @@
   margin: 16px 0 4px;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   color: var(--text-faint);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .stamps-continent-header:first-child {
@@ -1658,7 +1770,7 @@
 }
 
 .stamps-row-region {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
 }
 
@@ -1758,7 +1870,7 @@
 
 .stamps-sheet .detail-sheet-region {
   font-family: var(--font-geist-mono), ui-monospace, Menlo, monospace;
-  font-size: 11px;
+  font-size: 12.5px;
   letter-spacing: 0.04em;
   color: var(--paper-dim);
 }
@@ -1862,7 +1974,7 @@
 }
 
 .visited-stat-label {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-faint);
   font-weight: 600;
 }
@@ -1878,7 +1990,7 @@
   gap: 4px;
   background: none;
   border: none;
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--text-dim);
   opacity: 0.7;
   font-weight: 500;
@@ -2137,7 +2249,7 @@
 }
 
 .card-row.rank-flash .card-score {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .resort-callout {
@@ -2149,9 +2261,9 @@
   opacity: 0;
   background: var(--accent);
   color: #1a1108;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.5;
   border-radius: 12px;
   transition: max-height 340ms ease, opacity 220ms ease, margin-bottom 340ms ease, padding 340ms ease, box-shadow 340ms ease;
 }
@@ -2354,7 +2466,7 @@
   border-radius: 11px;
   display: grid;
   place-items: center;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   border: 2px solid var(--bg-card);
@@ -2466,10 +2578,7 @@
 
 .interest-detail-months-title {
   margin-top: 4px;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text-faint);
+  font-size: 16px;
 }
 
 /* Previewing a month inside a sheet: the chip plus its "Back to May" link. */
@@ -2488,7 +2597,7 @@
   padding: 3px 6px;
   border-radius: 999px;
   font-family: inherit;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-faint);
   cursor: pointer;
@@ -2509,18 +2618,83 @@
 /* Why a place moved after the traveler's chips and answers (onboarding's live questions) */
 .match-notes { margin-bottom: 10px; }
 .match-note-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.match-reason, .match-ok { font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
+.match-reason, .match-ok { font-size: 13.5px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
 .match-reason { color: var(--poor); background: color-mix(in srgb, var(--poor) 14%, transparent); }
 .match-ok { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
 
-/* Collapsed blurbs: two and a half lines, the half line fading out so the third line is plainly there, "Read more" to open. */
-.cb-text.cb-clip { overflow: hidden; cursor: pointer; transition: max-height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.cb-text.cb-fade {
-  /* Solid for the first two lines, then the top half of the third fades toward (not quite to) nothing, so it reads as a line that goes on. */
-  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
-  mask-image: linear-gradient(to bottom, #000 0, #000 78%, rgba(0, 0, 0, 0.14) 100%);
-}
-.cb-more { display: inline-flex; align-items: center; gap: 4px; margin: -8px 0 12px; border: none; background: none; padding: 2px 0; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--accent); cursor: pointer; }
-.cb-more svg { width: 12px; height: 12px; transition: transform 0.25s; }
-.cb-more[aria-expanded='true'] svg { transform: rotate(180deg); }
-@media (prefers-reduced-motion: reduce) { .cb-text.cb-clip, .cb-more svg { transition: none; } }
+
+/* My Interests: one shaded row per interest, filled to its percent. A lowered one has a hatched ghost to its old level and an "i" that opens the reason. */
+.mi-rows { margin: 4px 0 10px; }
+.mi-legend { font-size: 13.5px; color: var(--text-dim); margin: 0 0 8px; }
+.mi-row { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 6px; border: 0; border-radius: 10px; overflow: hidden; background: color-mix(in srgb, var(--text) 8%, var(--bg-card)); color: var(--text); font: inherit; text-align: left; }
+.mi-row.tap { cursor: pointer; }
+.mi-fill { position: absolute; left: 0; top: 0; bottom: 0; opacity: 0.34; }
+.mi-ghost { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--poor) 18%, transparent) 0 4px, transparent 4px 8px); border-right: 1.5px dashed var(--poor); }
+.mi-row > :not(.mi-fill):not(.mi-ghost) { position: relative; }
+.mi-e { font-size: 16px; }
+.mi-nm { flex: 1; min-width: 0; font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mi-pc { font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums; }
+.mi-i { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--poor); color: var(--poor); font-size: 11.5px; font-weight: 800; display: grid; place-items: center; }
+.mi-why { margin: -2px 2px 8px; padding: 9px 12px; border-radius: 10px; font-size: 13.5px; background: color-mix(in srgb, var(--poor) 12%, transparent); }
+.mi-why b { color: var(--poor); }
+.mi-sep { font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin: 12px 0 6px; }
+.mi-care { font-size: 13.5px; color: var(--text-dim); margin: 6px 2px 0; }
+
+.mi-sep.first { margin-top: 4px; }
+/* An interest the place does not offer: name and emoji greyed out too. */
+.mi-row.na .mi-e { filter: grayscale(1); opacity: 0.4; }
+.mi-row.na .mi-nm { color: var(--text-faint); font-weight: 500; }
+
+/* The first-time tips for a place card: a frosted window with the real For You tab playing in it. */
+.pt-bg { position: fixed; inset: 0; z-index: 120; display: flex; align-items: center; justify-content: center; padding: 16px; background: #00000026; animation: pt-fade 0.25s ease-out; }
+@keyframes pt-fade { from { opacity: 0; } to { opacity: 1; } }
+.pt-card { width: 100%; max-width: 400px; max-height: calc(100dvh - 32px); overflow: hidden auto; background: color-mix(in srgb, var(--bg) 40%, transparent); -webkit-backdrop-filter: blur(16px) saturate(1.7); backdrop-filter: blur(16px) saturate(1.7); border: 1px solid color-mix(in srgb, #ffffff 55%, transparent); border-radius: 24px; box-shadow: 0 20px 56px #0000004d, inset 0 1px 0 color-mix(in srgb, #ffffff 70%, transparent); padding: 12px 14px; animation: pt-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--text); }
+@keyframes pt-pop { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: none; } }
+.pt-top { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.pt-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 4px 10px; }
+.pt-count { flex: 1; font-size: 14px; color: var(--text-dim); font-weight: 600; }
+.pt-btn { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--border); background: color-mix(in srgb, var(--bg-card) 70%, transparent); color: var(--text-dim); display: inline-flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.pt-cap { margin: 4px 0 12px; font-size: 21px; line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; color: var(--text); min-height: 2.5em; background: var(--accent-soft); border-left: 5px solid var(--accent); border-radius: 12px; padding: 10px 14px; text-wrap: balance; }
+.pt-stage { position: relative; border: 1.5px dashed color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 16px; padding: 8px; background: color-mix(in srgb, var(--bg-card) 70%, transparent); }
+.pt-clip { height: min(400px, calc(100dvh - 330px)); min-height: 240px; overflow: hidden; pointer-events: none; }
+.pt-demo { margin: 10px 2px 0; font-size: 13px; color: var(--text-faint); text-align: center; }
+.pt-finger { position: absolute; width: 30px; height: 30px; border-radius: 50%; background: #1b1d1230; border: 2.5px solid var(--text); z-index: 60; transition: left 1.2s cubic-bezier(0.45, 0, 0.25, 1), top 1.2s cubic-bezier(0.45, 0, 0.25, 1); pointer-events: none; }
+.pt-finger[hidden] { display: none; }
+.pt-finger.tap { animation: pt-tap 0.5s ease-out; }
+@keyframes pt-tap { 0% { box-shadow: 0 0 0 0 var(--accent); transform: scale(1); } 50% { transform: scale(0.85); } 100% { box-shadow: 0 0 0 14px transparent; transform: scale(1); } }
+
+/* 22 Nov 2026 (owner picks from the place card review) */
+/* Header: the month is a quiet link under the name; the bookmark sits beside close. */
+.detail-sheet-region { font-size: 13px; display: flex; align-items: center; flex-wrap: wrap; gap: 0 4px; }
+.detail-sheet-region .month-chip { background: none; border: none; padding: 0; border-radius: 0; font-size: 13px; font-weight: 700; gap: 3px; }
+.detail-sheet-region .month-chip-wrap .month-menu { top: 22px; }
+.detail-sheet-region .detail-sheet-month-group { gap: 8px; }
+.detail-sheet-subheader { justify-content: flex-end; border-bottom: none; padding: 0 16px 8px; }
+.detail-sheet-header { border-bottom: 1px solid transparent; }
+.detail-tabs { border-top: none; }
+/* About and Costs: plain sections instead of boxed cards. */
+.detail-plain { margin-bottom: 22px; }
+.detail-plain:last-child { margin-bottom: 0; }
+.detail-plain.cost-season { padding: 0; }
+.detail-plain .price-list { margin-top: 0; }
+/* My Interests: one summary line instead of a card and a sentence. */
+.dna-summary { display: flex; align-items: baseline; gap: 10px; margin: 14px 0 6px; flex-wrap: wrap; }
+.dna-summary-score { font-size: 30px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.dna-summary b { font-size: 14px; }
+.dna-summary-month { color: var(--text-dim); font-size: 13px; }
+.interest-chip-row-wrap + .interest-detail { margin-top: 4px; }
+
+/* 23 Nov 2026 (owner pick): the About month as one line, warnings under it only when there are any. */
+.month-detail-plain { margin-top: 12px; }
+.month-detail-line { font-size: 14.5px; margin-bottom: 6px; }
+.month-detail-line b { font-weight: 800; }
+.month-detail-plain .detail-badges { margin: 4px 0 8px; }
+.month-detail-plain .card-monthly-blurb { margin-top: 6px; }
+
+/* 23 Nov 2026 (owner picks): the My Stamps world map, empty until a place is visited, then one pushpin per place. */
+.stamps-map-wrap { margin-bottom: 18px; }
+.stamps-map { border-radius: 14px; border: 1px solid #d9d2b8; background: #f8f4e6; overflow: hidden; }
+.stamps-map svg { display: block; width: 100%; height: auto; }
+.stamps-map-wait { aspect-ratio: 2.1 / 1; }
+.stamps-pin { cursor: pointer; }
+.stamps-map-sel { margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--text); }

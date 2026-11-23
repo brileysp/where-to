@@ -1,0 +1,26 @@
+[
+ {
+  "k": "wineSpirits",
+  "id": "p0123",
+  "name": "Northern Ireland",
+  "to": 6.9,
+  "mode": "scale",
+  "why": "7.2 puts it level with St Andrews & Fife (7.2), which is stronger on every column (whisky 10 vs 8, other spirits 8 vs 6, beer 7 vs 6). Northern Ireland has Bushmills (a whisky item with 19 Wikipedia pages), 37 breweries and about 40 listed distilleries, so it belongs just under St Andrews and above Hokkaido (6.7). My earlier suggestion of 6.4, made before the evidence columns were filled, was too low."
+ },
+ {
+  "k": "wineSpirits",
+  "id": "p0052",
+  "name": "Cuba",
+  "to": 5.6,
+  "mode": "scale",
+  "why": "6.2 sits above Istanbul and Algarve, but the evidence is thin: beer 2, other spirits 3, no wine, the same as Mauritius (5.3). Rum is the draw, but the map and Wikidata find only 2 listed distilleries. 5.6 keeps it above Mauritius for rum's reputation."
+ },
+ {
+  "k": "wineSpirits",
+  "id": "p0076",
+  "name": "Great Smoky Mountains National Park",
+  "to": 5.6,
+  "mode": "scale",
+  "why": "4.8 sits level with the Upper Peninsula and below the Big Island's neighbors, but the evidence is stronger: 23 distilleries, 13 breweries with websites and 27 wineries in the gateway towns (wine 4, beer 6, other spirits 6). That matches Cape Cod & the Islands (5.6)."
+ }
+]

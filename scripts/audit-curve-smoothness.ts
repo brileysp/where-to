@@ -98,7 +98,7 @@ async function main() {
   const findings: Finding[] = [];
   const bySlider = new Map<string, Set<string>>();
 
-  const targetSliders = sliderArg !== -1 ? [process.argv[sliderArg + 1]] : SLIDERS.map((s) => s.key);
+  const targetSliders = sliderArg !== -1 ? [process.argv[sliderArg + 1]] : (await (await import('../src/lib/scoring/active-interests')).getActiveInterests()).map((s) => s.key);
 
   for (const d of scored) {
     for (const key of targetSliders) {

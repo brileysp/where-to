@@ -1,0 +1,433 @@
+{
+ "geologyVolcanoes": [
+  {
+   "category": "Nature and climate",
+   "statement": "A headline feature changes physically: a volcano erupts or goes quiet, a new lava field or crater opens, a geyser stops or moves, a cave or arch collapses, a canyon wall slides, an ice cave melts.",
+   "howToCheck": "For each place where any geology column is rated 6 or more, search the national geological survey and the managing authority for the last year's news on its best feature in that column (for volcanoes also the Smithsonian Global Volcanism Program weekly report). Update the rating and the text if the feature changed.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Glaciers and ice shrink faster than our ratings assume, and some stop being reachable on foot or by boat.",
+   "howToCheck": "For each place with glaciers and ice rated 5 or more, check the national glacier-monitoring agency or the tour operators' current pages for whether the ice can still be reached the way our text says. Lower the rating if access ended.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Access rules change for any geological feature: guide-only zones on volcanoes, cave entry limits, protected rock formations, fossil-collecting bans, glacier-walk guide rules, permits.",
+   "howToCheck": "For the best feature in each geology column of each place, open the managing authority's current rules page and compare with the practical wording in our text. This covers caves, fossils, canyons and ice, not only volcanoes.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "Getting to the feature changes: roads, trails, boardwalks, boats and cable cars close after landslides, floods or damage, and show caves, mines, fossil sites and geoparks open or close.",
+   "howToCheck": "Check the managing authority's closure and status notices for the best feature in each geology column of each place, and update the access wording.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "category": "Names and data",
+   "statement": "UNESCO World Heritage (geology) and Global Geopark designations are added, reviewed or withdrawn each year.",
+   "howToCheck": "After each yearly UNESCO decision (the World Heritage Committee and the Global Geoparks Council), compare the designations with our UNESCO geology column and update it.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "Names and statuses change: a feature is renamed, a volcano moves between active and dormant, the age or classification of a formation is revised.",
+   "howToCheck": "Spot-check the named features in our geology text against the survey agency's current name and status, and fix anything that no longer matches.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Our own sources",
+   "statement": "Our geology columns are built from Wikidata page counts and OpenStreetMap counts, which grow and change, so a rating can drift without anything changing on the ground.",
+   "howToCheck": "When a new Overture or Wikidata release arrives, re-run the Earth-only geology filter and the counts for every column and compare with the stored values and Evidence lines. Re-check any rating that moved by 2 or more.",
+   "checker": "script",
+   "checkEvery": "annually"
+  }
+ ],
+ "fishing": [
+  {
+   "category": "Rules",
+   "statement": "Seasons, bag limits, size slots, catch-and-release and guide rules, and licence systems change every year, so our catch-and-release and guide-rule columns go stale.",
+   "howToCheck": "For each place where the catch-and-release or guide-rule column is filled, open the regulator's current rules page and compare with the quoted rule in the Evidence line. Update the column and the confidence.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Fish stocks collapse or recover (salmon runs especially) and species ranges move with warming, so a fish-group rating can be right on paper and wrong on the water.",
+   "howToCheck": "For each place where salmon, trout or another fish group is rated 6 or more, check the fish and wildlife agency's latest stock status or season outcome. Lower the rating where a fishery is closed or collapsed and raise it where one reopened.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Heat and low water close rivers temporarily, and the seasons for those closures are getting longer.",
+   "howToCheck": "Check the fish and wildlife agency's closure notices for the last summer in the main river regions in our text and note the months affected. Update the practical wording if closures became routine.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Marine reserves create no-take zones, and invasive-species rules (boat inspection, gear cleaning) affect where and how people can fish.",
+   "howToCheck": "Check each region's marine-reserve map and invasive-species rules for new zones or requirements, and compare with our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "The guided and charter offer in a place appears or disappears: a place with no established guided or charter fishing may gain one, or lose the last.",
+   "howToCheck": "For each place where the 'where you fish from' or 'methods available' columns depend on guided or charter fishing, check the regulator's licensed-guide listing or the tourism board's fishing page for whether an established offer still exists. Do not name providers in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Our own sources",
+   "statement": "Our fish-group ratings come from GBIF records, which keep growing and shift with survey effort.",
+   "howToCheck": "When the next GBIF export is run, re-run the fish-group counts and compare with the stored ratings and Evidence lines. Re-check any rating that moved by 2 or more.",
+   "checker": "script",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Our own sources",
+   "statement": "Our 'famous fishery' 10s were judged against sources at the time, and fisheries move up and down those lists.",
+   "howToCheck": "Re-read the fishing 10s against current fishing-press and tourism-board sources, and move any that no longer fit. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  }
+ ],
+ "horsebackRiding": [
+  {
+   "category": "Places and operators",
+   "statement": "What a place offers appears or disappears: a place can gain its first beach ride or multi-day trek, or lose the last operator behind a ranch stay, which flips the yes or no in our columns.",
+   "howToCheck": "For each place where a yes-or-no column (beach rides, ranch stays, multi-day treks) rests on one or two operators in the Evidence line, re-check that at least one still runs it, and search for new ones. Operators stay in the Evidence line and are not named in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Public-land permits, wilderness stock restrictions and trail closures to horses change.",
+   "howToCheck": "Check the public-land agency's current stock and permit rules for the riding areas in our text, and trail notices for closures to horses.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Horse disease outbreaks (equine herpes, flu) cause quarantines and cancelled rides.",
+   "howToCheck": "Check the national animal-health authority for current horse disease outbreaks and quarantines in the regions we describe.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "category": "Rules",
+   "statement": "Animal-welfare standards and rules for tourist riding tighten.",
+   "howToCheck": "Check the welfare rules and recent news for riding at the tourist sites we describe, and update the wording if riding there is restricted.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Fire, drought and snow shift the riding season.",
+   "howToCheck": "Compare the riding months in our text with the last seasons' fire, drought and snow conditions in the main regions.",
+   "checker": "claude",
+   "checkEvery": null
+  },
+  {
+   "category": "Our own sources",
+   "statement": "Rider-level and ride-length columns come from operators' own published requirements, which change.",
+   "howToCheck": "For a sample of places each year, re-read the operators' published rider requirements and ride lengths and compare with the columns. Update any column that no longer matches.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "Local horse culture ratings rest on a native breed, a horse festival or a riding tradition, each of which can change status.",
+   "howToCheck": "Check each place's Wikipedia pages and the festival organisers for a breed's status or a festival's cancellation, and update the local horse culture rating.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "fineDining": [
+  {
+   "category": "Names and data",
+   "statement": "The Michelin Guide changes every year: stars are gained and lost and new countries and cities are added, so the starred-restaurant count for a place goes stale.",
+   "howToCheck": "After each yearly Michelin release, update the starred-restaurant count for every place from the Guide's own site, and note any place the Guide newly covers.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "How strong a place's tasting-menu, farm-to-table and dining-with-a-view scenes are rises or falls as chefs open, leave or close, without any single restaurant being named in our text.",
+   "howToCheck": "Each year compare the place's ratings with the Michelin Guide, The World's 50 Best and the regional guide coverage for the place, and with city-level food press. Move a rating only where the whole scene changed. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Money and policy",
+   "statement": "Tasting-menu prices rise, and so does the service-charge convention.",
+   "howToCheck": "Each year compare the typical tasting-menu price for each place with recent guide and press coverage of well-regarded restaurants there, and update the price column.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "How far ahead the best tables must be booked changes, as booking platforms and demand change.",
+   "howToCheck": "Each year review the booking-ahead column against the main reservation platforms' behaviour for the top restaurants in each place and recent press, and update any place that moved a band.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "New food cities rise and old ones fade.",
+   "howToCheck": "Compare the guides' newly covered or newly starred cities with the places in our list, and flag any city that has become a dining destination or lost the status.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Dress-code and tipping norms at fine-dining level change from city to city.",
+   "howToCheck": "Check recent restaurant-guide and local press notes for the place about dress and tipping norms, and update the wording only where it changed.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "coffeeTea": [
+  {
+   "category": "Places and operators",
+   "statement": "How strong a place's specialty coffee scene is shifts as independent roasters open, close or are bought, and as the scene moves between neighbourhoods, without any café being named in our text.",
+   "howToCheck": "Each year compare the place's specialty-café rating with the current specialty coffee city guides and the national barista and roaster association coverage. Move the rating only if the whole scene changed. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "Whether visitors can tour a working coffee farm or tea plantation within a day trip changes as tours start, stop or the estates change hands, which flips the yes or no in our columns.",
+   "howToCheck": "For each place where the coffee-farm or tea-plantation column is ticked, check the tourism board's listings for at least one current visitor tour, and search for places that now offer one. Do not name estates in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Climate changes where good coffee and tea can grow, and harvest timing moves.",
+   "howToCheck": "Check recent climate-suitability and harvest-timing reports for the growing regions we describe, and update harvest months and claims about the region's coffee or tea.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Trade and sourcing rules (deforestation-free sourcing, certification schemes) change what a farm visit looks like.",
+   "howToCheck": "Check the trade-rule pages for the producing countries we describe and update any wording about certification or sourcing.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "Café-style and tea-ceremony-style columns drift as cafés and customs change.",
+   "howToCheck": "For a sample of places each year, read the current tourism and local press descriptions of café and tea-house culture and compare with the style columns. Update any that no longer fit.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Money and policy",
+   "statement": "Coffee and tea price swings change what a visit costs and which places are described as cheap.",
+   "howToCheck": "Check current price levels for coffee and tea in the places where our text mentions prices or value.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "luxuryHotels": [
+  {
+   "category": "Places and operators",
+   "statement": "How strong a place's luxury scene is (boutique, grand and historic, remote lodges, private villas) rises or falls as properties open, close, are renovated or change brand, without any hotel being named in our text.",
+   "howToCheck": "Each year compare each place's luxury ratings with the number of properties it has on the current Michelin Keys, Forbes and Condé Nast luxury lists, and with the tourism board's luxury coverage. Move a rating only where the whole scene changed. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "The yearly guide lists (Michelin Keys, Forbes, Condé Nast) change, so counts that follow them go stale.",
+   "howToCheck": "After each list's yearly release, update the counts of listed properties for every place and note any place newly covered.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "New luxury destinations and mega-projects open each season (islands, resort regions) and change which place leads.",
+   "howToCheck": "Each year search for new luxury resort regions and islands opening in the next two years, and add them to the review of the relevant place.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "A destination's luxury stock can close for months after a storm or disaster, and some resorts close for part of every year.",
+   "howToCheck": "Check the destination's tourism board and recent storm news for lasting closures of the luxury stock in the places we describe.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Money and policy",
+   "statement": "Price inflation moves hotels in and out of the 'luxury' tier.",
+   "howToCheck": "Each year compare typical luxury nightly rates in each place with the price bands we use and update the wording if a place moved a tier.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "The private-villa market is regulated or banned in some places (short-stay rental rules, permits), changing the villa rating.",
+   "howToCheck": "Check each place's current short-stay and villa rental rules, and update the private-villa column where the market changed.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Brand exits and political or safety events change a destination's luxury market.",
+   "howToCheck": "Check the major hotel groups' destination news and the foreign-office advice for each place, and send anything material to the advisories.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  }
+ ],
+ "spaWellness": [
+  {
+   "category": "Places and operators",
+   "statement": "How strong a place's spa and wellness scene is (day spas, thermal baths, wellness resorts, clinical wellness) rises or falls as spas open, close or are refurbished, without any spa being named in our text.",
+   "howToCheck": "Each year compare each place's four ratings with the tourism board's spa and wellness coverage, the destination spa guides and any spa-town association figures. Move a rating only where the whole scene changed. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Bathing customs change: textile or nude rules, mixed or single-gender hours, tattoo rules, private rooms.",
+   "howToCheck": "For each place where our bathing-customs column is filled, check the spa town's or tourism board's visitor guidance and compare. Update the column and any wording about customs.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Thermal water sources fall or change temperature, and a spa town's water supply can be disrupted.",
+   "howToCheck": "Check the geological survey and local news for the spa towns and thermal areas we describe for changes in spring flow or temperature.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Places and operators",
+   "statement": "The main bathing complexes of a spa town can close for long renovations, changing what a visit offers.",
+   "howToCheck": "Check the spa town's tourism board for lasting closures of its main bathing complexes in the places where thermal baths are rated 6 or more.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Rules",
+   "statement": "Treatment regulation changes (traditional-medicine certification, medical-tourism rules), which affects clinical and medical wellness.",
+   "howToCheck": "Check the health ministry or regulator pages for the places where clinical wellness is rated 6 or more.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Money and policy",
+   "statement": "Prices rise and trends change which treatments matter.",
+   "howToCheck": "Each year compare typical prices for a day spa visit and a multi-day stay in each place with recent tourism-board and press figures.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "yogaRetreats": [
+  {
+   "category": "Places and operators",
+   "statement": "The yes-or-no columns (yoga, detox, meditation retreats) rest on operators found for each place, and a place can lose its last one or gain its first.",
+   "howToCheck": "For each place where a retreat column is ticked on one or two operators in the Evidence line, re-check that at least one still runs programmes of three days or more, and re-run the retreat-directory search for places with none. Operators stay in the Evidence line and are not named in our text.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Our own sources",
+   "statement": "The meditation column follows the Vipassana directory, which adds and removes centres.",
+   "howToCheck": "Re-run the check against the dhamma.org directory for every place and compare with the stored meditation column.",
+   "checker": "script",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Visa and licensing rules for foreign-run retreats and for long stays change.",
+   "howToCheck": "Check each country's current visa and business-licensing rules where our text or columns rely on retreats for foreign visitors.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Rules about plant-medicine and similar retreat offerings change, and legality varies and moves.",
+   "howToCheck": "Check the current legal status in the countries where our text mentions such retreats, and update or remove the wording.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "Teacher-training and certification standards change.",
+   "howToCheck": "Check the yoga certification body's current standards where our practice-level column relies on them.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Money and policy",
+   "statement": "Retreat prices, lengths and structures change.",
+   "howToCheck": "For a sample of places each year, compare the retreat-lengths and structure columns with the operators' published programmes, and update any that moved.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ],
+ "nightlife": [
+  {
+   "category": "Places and operators",
+   "statement": "How strong a place's scene is (clubs, live music, cocktail bars, quiet bars) rises or falls as venues open and close and scenes move between districts, without any venue being named in our text.",
+   "howToCheck": "Each year compare each place's ratings with the current club and bar rankings (for example the DJ Mag top clubs list) and city-level nightlife press. Move a rating only where the whole scene changed. Needs your judgement on the scale.",
+   "checker": "owner",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Closing times, noise, licensing and drug or smoking policy change at city level, which changes the 'how late it runs' column.",
+   "howToCheck": "Check each city council's current rules on closing times and licensing for the places where the late-nights column is filled, and update it.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Cities add rules aimed at visitors (pub-crawl bans, alcohol limits, tourist-area curfews) and venues change door policies.",
+   "howToCheck": "Search each place's council and local news for new visitor-targeted nightlife rules, and update the practical wording.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Nature and climate",
+   "statement": "Safety perception (drink spiking, crime) moves a place up or down.",
+   "howToCheck": "Check the foreign-office advice and recent local news for nightlife safety in each place, and send anything material to the advisories.",
+   "checker": "claude",
+   "checkEvery": "quarterly"
+  },
+  {
+   "category": "Rules",
+   "statement": "The legal and social environment for LGBTQ+ people changes, which changes whether a scene is safe or open.",
+   "howToCheck": "Check the current LGBTQ+ legal environment for each country where the LGBTQ+ scene column is ticked, and recheck the column and any safety wording.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Rules",
+   "statement": "Beach and island party scenes are regulated or closed down in some places.",
+   "howToCheck": "Check the local authority for new restrictions on beach clubs, boat parties and island parties in the places where the beach-parties column is ticked.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  },
+  {
+   "category": "Names and data",
+   "statement": "Dress-code and door norms drift.",
+   "howToCheck": "Check recent local press and guide notes for the place about what better bars and clubs expect, and compare with the dress-code column.",
+   "checker": "claude",
+   "checkEvery": "annually"
+  }
+ ]
+}

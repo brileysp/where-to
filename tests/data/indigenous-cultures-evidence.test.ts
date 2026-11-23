@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 const root = join(__dirname, '..', '..');
 const draft = JSON.parse(readFileSync(join(root, 'scripts/data/indigenous-cultures-facts-draft.json'), 'utf8')) as Record<string, Record<string, unknown>>;
@@ -37,9 +38,9 @@ describe('Indigenous Cultures evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    for (const p of ['peruvian-amazon', 'tasmania', 'uluru', 'vancouver-island', 'queenstown']) expect(draft[p].indigenousLed, p).toBe(true);
-    for (const p of ['sedona', 'yellowstone', 'rwanda', 'greenland']) expect(draft[p].indigenousLed, p).toBeUndefined();
-    expect(draft['uluru'].reachDistance).toBe('remote');
-    expect(draft['nepal'].reachDistance).toBe('near');
+    for (const p of [PLACE['peruvian-amazon'], PLACE.tasmania, PLACE['uluru-and-the-outback'], PLACE['vancouver-island'], PLACE.queenstown]) expect(draft[p].indigenousLed, p).toBe(true);
+    for (const p of [PLACE.sedona, PLACE['yellowstone-national-park'], PLACE.rwanda, PLACE.greenland]) expect(draft[p].indigenousLed, p).toBeUndefined();
+    expect(draft[PLACE['uluru-and-the-outback']].reachDistance).toBe('remote');
+    expect(draft[PLACE.nepal].reachDistance).toBe('near');
   });
 });

@@ -9,6 +9,8 @@ import { withAdminAudit } from '@/lib/admin/write';
 import { SLIDERS } from '@/lib/scoring/constants';
 import { SITE_TODO_KEY, nextDueOn, todayIso } from '@/lib/admin/todo-dates';
 import type { SiteTodoRow } from '@/lib/db/queries/site-todos';
+import { getRoundProgress } from '@/lib/db/queries/stale-factors';
+import { reviewGateMessage } from '@/lib/admin/stale-checks';
 
 /** Server actions behind the To do tab. Each one re-checks the admin session and writes through withAdminAudit. */
 
@@ -55,6 +57,10 @@ export async function updateSiteTodo(id: string, raw: SiteTodoInput): Promise<Re
   const [before] = await db.select().from(interestTodos).where(eq(interestTodos.id, id));
   if (!before) return fail('Item not found');
   const finishing = before.status !== 'done' && p.data.status === 'done';
+  if (finishing) { // a review to-do cannot be ticked done until every active reason has a result for this round (13 Nov 2026)
+    const gate = reviewGateMessage(before.source, await getRoundProgress(before.interestKey, id));
+    if (gate) return fail(gate);
+  }
   const repeat = p.data.repeatEvery;
   const spawn = finishing && repeat ? { interestKey: p.data.interestKey, title: p.data.title, detail: p.data.detail, status: 'needs_you' as const, source: p.data.source, priority: p.data.priority, dueOn: nextDueOn(p.data.dueOn, repeat, todayIso()), repeatEvery: repeat, placeId: before.placeId, closeOnApply: false } : null;
   const doneAt = p.data.status === 'done' ? before.doneAt ?? new Date() : null;

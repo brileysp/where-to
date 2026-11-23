@@ -48,6 +48,8 @@ export interface InterestRow {
   refreshEffort: number | null;
   /** The open repeating review to-do made from this interest's cadence: its check-on date. Null when there is none. */
   nextReviewOn: string | null;
+  /** The "why it goes stale" reasons: how many are asked, how many are current, overdue or never checked. */
+  stale: { total: number; current: number; overdue: number; never: number };
 }
 
 const bandColor = (n: number) => (n < 50 ? 'var(--bad, #a8452a)' : n < 80 ? 'var(--warn, #a0731a)' : 'var(--good, #2b7d4f)');
@@ -172,6 +174,22 @@ export function InterestsGrid({ initialRows }: { initialRows: InterestRow[] }) {
       sortValue: (r) => r[k] ?? -1,
       render: (r) => <PlanningScoreCell entityKey={r.key} entityLabel={r.label} loadedUpdatedAt={r.updatedAt} field={k} value={r[k]} setLocal={(v) => patchRow(r.key, { [k]: v } as Partial<InterestRow>)} />,
     })),
+    {
+      key: 'staleChecks',
+      label: 'Staleness checks',
+      sortable: true,
+      sortValue: (r) => (r.stale.total === 0 ? -1 : r.stale.overdue * 1000 + r.stale.never),
+      render: (r) => {
+        const { total, current, overdue, never } = r.stale;
+        if (total === 0) return <div className="cell-inner" style={{ color: 'var(--text-faint)', fontSize: 12 }}>no reasons written</div>;
+        return (
+          <div className="cell-inner" style={{ fontSize: 12, gap: 6 }} title={`${current} current, ${overdue} overdue, ${never} never checked`}>
+            <a href={`/admin/destinations/interests/${r.key}#stale`} style={{ color: 'inherit' }}>{current} of {total} current</a>
+            {overdue > 0 ? <span style={{ color: 'var(--bad, #a8452a)', fontWeight: 600 }}>{overdue} overdue</span> : never > 0 ? <span style={{ color: 'var(--text-faint)' }}>{never} never checked</span> : null}
+          </div>
+        );
+      },
+    },
     {
       key: 'nextReview',
       label: 'Next review',

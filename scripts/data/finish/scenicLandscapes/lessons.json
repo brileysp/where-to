@@ -1,0 +1,26 @@
+[
+ {
+  "title": "Check the scope before any facts are written",
+  "body": "21 Nov 2026: the Scenic ratings and signature views for 19 widened places were written for their old, narrower names. Confirm the scope first, and never send a renamed or widened place to Gemini with facts written for the old one (standard D05). The scope was confirmed for all 20 on 21 Nov, but the stored ratings for those places still describe the old places and need rebuilding before they feed any new prompt."
+ },
+ {
+  "title": "A closed month is not a zero",
+  "body": "Greenland, Svalbard and Mongolia scored 0 in winter as if closed, but all three receive winter visitors. Only the Antarctic Peninsula is closed. Dark or cold months score low (1.0 to 3.2), not 0."
+ },
+ {
+  "title": "A rainy season is not automatically lower",
+  "body": "Check what the rain does. Oaxaca's showers are short and mornings are clear, so its green rainy season scores near the top, while its dry, brown, smoky months are lowest. A gray rainy season, a hurricane month or a monsoon that hides the peaks does lower the score. A dry desert's winter rain can bring a flower bloom."
+ },
+ {
+  "title": "Flat curves need a reason; so do wild swings",
+  "body": "Eight places came back completely flat and three polar or steppe places swung 0 to peak. A flatness check by comparable places (the Caribbean hurricane belt, the Alps, the Himalaya) caught 16. Compare places that share a climate, then check smoke, haze, dust and pollution (Saharan dust, seasonal fires, calima, vog, wildfire smoke) for each."
+ },
+ {
+  "title": "Rank at tenths cannot fix a ceiling crowd by itself",
+  "body": "With ten anchors at 10 and 40 places above 9, the top 20 cannot have 14 different peak values at one decimal. Break the crowd by merit, in three groupings (landscape kind, all together, place-type tag), and record the anchors held below 10 as decisions. Never list \"stays at 10\" as a proposed move."
+ },
+ {
+  "title": "Fact-check access and closure sentences against the park or road authority, and the current name",
+  "body": "Corrections included Denali's park road closed past mile 43, Moraine Lake Road closed to cars since 2023, the Milford Track open in winter, the Grand Canyon North Rim open for day use in November, and Clingmans Dome now called Kuwohi."
+ }
+]

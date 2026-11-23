@@ -1,5 +1,5 @@
 {
- "croatia": {
+ "p0054": {
   "marinas": 78,
   "islands": 13,
   "sheltered": 10,
@@ -12,7 +12,7 @@
   "calm_share": 0.976,
   "bareboat_base": true
  },
- "bahamas": {
+ "p0016": {
   "marinas": 69,
   "islands": 125,
   "sheltered": 10,
@@ -25,7 +25,7 @@
   "calm_share": 0.905,
   "bareboat_base": true
  },
- "santorini": {
+ "p0162": {
   "marinas": 28,
   "islands": 72,
   "sheltered": 10,
@@ -38,7 +38,7 @@
   "calm_share": 0.744,
   "bareboat_base": false
  },
- "fiji": {
+ "p0068": {
   "marinas": 13,
   "islands": 78,
   "sheltered": 8,
@@ -57,7 +57,7 @@
   "calm_share": 0.999,
   "bareboat_base": false
  },
- "gbr": {
+ "p0075": {
   "marinas": 5,
   "islands": 2,
   "sheltered": 2,
@@ -70,7 +70,7 @@
   "calm_share": 0.856,
   "bareboat_base": false
  },
- "north-island": {
+ "p0122": {
   "marinas": 58,
   "islands": 274,
   "sheltered": 10,
@@ -87,7 +87,7 @@
   "calm_share": 0.962,
   "bareboat_base": false
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "marinas": 3,
   "islands": 19,
   "sheltered": 3,
@@ -100,7 +100,7 @@
   "calm_share": 0.915,
   "bareboat_base": false
  },
- "komodo": {
+ "p0088": {
   "marinas": 1,
   "islands": 33,
   "sheltered": 2,
@@ -126,10 +126,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.31,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "amalfi": {
+ "p0003": {
   "marinas": 49,
   "islands": 3,
   "sheltered": 5,
@@ -142,7 +142,7 @@
   "calm_share": 0.878,
   "bareboat_base": true
  },
- "venice": {
+ "p0191": {
   "marinas": 40,
   "islands": 23,
   "sheltered": 10,
@@ -155,7 +155,7 @@
   "calm_share": 0.995,
   "bareboat_base": false
  },
- "kerala": {
+ "p0087": {
   "marinas": 12,
   "islands": 20,
   "sheltered": 8,
@@ -168,7 +168,7 @@
   "calm_share": 0.931,
   "bareboat_base": false
  },
- "sardinia": {
+ "p0163": {
   "marinas": 99,
   "islands": 10,
   "sheltered": 10,
@@ -181,7 +181,7 @@
   "calm_share": 0.817,
   "bareboat_base": true
  },
- "nice-riviera": {
+ "p0120": {
   "marinas": 74,
   "islands": 1,
   "sheltered": 2,
@@ -198,7 +198,7 @@
   "calm_share": 0.931,
   "bareboat_base": false
  },
- "borabora": {
+ "p0070": {
   "marinas": 30,
   "islands": 43,
   "sheltered": 8,
@@ -227,7 +227,7 @@
   "calm_share": 0.131,
   "bareboat_base": true
  },
- "barbados": {
+ "p0020": {
   "marinas": 5,
   "islands": 1,
   "sheltered": 0,
@@ -240,7 +240,7 @@
   "calm_share": 0.445,
   "bareboat_base": false
  },
- "seychelles": {
+ "p0168": {
   "marinas": 3,
   "islands": 16,
   "sheltered": 1,
@@ -253,7 +253,7 @@
   "calm_share": 0.445,
   "bareboat_base": true
  },
- "turks-caicos": {
+ "p0184": {
   "marinas": 6,
   "islands": 11,
   "sheltered": 2,
@@ -266,7 +266,7 @@
   "calm_share": 0.456,
   "bareboat_base": false
  },
- "mauritius": {
+ "p0107": {
   "marinas": 7,
   "islands": 8,
   "sheltered": 3,
@@ -279,7 +279,7 @@
   "calm_share": 0.004,
   "bareboat_base": false
  },
- "palawan": {
+ "p0133": {
   "marinas": 3,
   "islands": 61,
   "sheltered": 3,
@@ -292,7 +292,7 @@
   "calm_share": 0.896,
   "bareboat_base": false
  },
- "colombian-caribbean": {
+ "p0047": {
   "marinas": 2,
   "islands": 0,
   "sheltered": 0,
@@ -305,7 +305,7 @@
   "calm_share": 0.293,
   "bareboat_base": false
  },
- "mallorca": {
+ "p0103": {
   "marinas": 42,
   "islands": 1,
   "sheltered": 2,
@@ -321,7 +321,7 @@
   "calm_share": 0.887,
   "bareboat_base": false
  },
- "sydney": {
+ "p0176": {
   "marinas": 67,
   "islands": 7,
   "sheltered": 3,
@@ -338,7 +338,7 @@
   "calm_share": 0.524,
   "bareboat_base": false
  },
- "thailand": {
+ "p0141": {
   "marinas": 8,
   "islands": 32,
   "sheltered": 6,
@@ -348,10 +348,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.33,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": true
  },
- "galapagos": {
+ "p0071": {
   "marinas": 0,
   "islands": 15,
   "sheltered": 0,
@@ -375,7 +375,7 @@
   "calm_share": 0.941,
   "bareboat_base": false
  },
- "southeast-alaska": {
+ "p0172": {
   "marinas": 1,
   "islands": 25,
   "sheltered": 2,
@@ -391,10 +391,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.04,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "fjords": {
+ "p0125": {
   "marinas": 19,
   "islands": 9,
   "sheltered": 5,
@@ -404,10 +404,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.02,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "aruba": {
+ "p0009": {
   "marinas": 5,
   "islands": 1,
   "sheltered": 0,
@@ -420,7 +420,7 @@
   "calm_share": 0.589,
   "bareboat_base": false
  },
- "panama": {
+ "p0135": {
   "marinas": 29,
   "islands": 98,
   "sheltered": 10,
@@ -430,10 +430,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.39,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "dubai": {
+ "p0060": {
   "marinas": 28,
   "islands": 9,
   "sheltered": 5,
@@ -448,7 +448,7 @@
   "calm_share": 0.835,
   "bareboat_base": false
  },
- "rajaampat": {
+ "p0149": {
   "marinas": 0,
   "islands": 39,
   "sheltered": 0,
@@ -474,10 +474,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.18,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "palau": {
+ "p0132": {
   "marinas": 4,
   "islands": 51,
   "sheltered": 2,
@@ -490,7 +490,7 @@
   "calm_share": 0.26,
   "bareboat_base": false
  },
- "tierra-del-fuego": {
+ "p0181": {
   "marinas": 6,
   "islands": 15,
   "sheltered": 4,
@@ -521,10 +521,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.19,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "sicily": {
+ "p0169": {
   "marinas": 86,
   "islands": 2,
   "sheltered": 2,
@@ -537,7 +537,7 @@
   "calm_share": 0.902,
   "bareboat_base": true
  },
- "belize": {
+ "p0025": {
   "marinas": 9,
   "islands": 62,
   "sheltered": 6,
@@ -550,7 +550,7 @@
   "calm_share": 0.998,
   "bareboat_base": true
  },
- "rio": {
+ "p0153": {
   "marinas": 21,
   "islands": 5,
   "sheltered": 5,
@@ -566,7 +566,7 @@
   "calm_share": 0.784,
   "bareboat_base": false
  },
- "egypt": {
+ "p0151": {
   "marinas": 1,
   "islands": 2,
   "sheltered": 2,
@@ -579,7 +579,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "cape-cod-islands": {
+ "p0036": {
   "marinas": 31,
   "islands": 183,
   "sheltered": 10,
@@ -592,7 +592,7 @@
   "calm_share": 0.892,
   "bareboat_base": false
  },
- "maui": {
+ "p0106": {
   "marinas": 2,
   "islands": 2,
   "sheltered": 2,
@@ -605,7 +605,7 @@
   "calm_share": 0.987,
   "bareboat_base": false
  },
- "lisbon": {
+ "p0094": {
   "marinas": 20,
   "islands": 3,
   "sheltered": 5,
@@ -620,7 +620,7 @@
   "calm_share": 0.923,
   "bareboat_base": false
  },
- "maldives": {
+ "p0102": {
   "marinas": 104,
   "islands": 72,
   "sheltered": 10,
@@ -633,7 +633,7 @@
   "calm_share": 0.911,
   "bareboat_base": false
  },
- "canaries": {
+ "p0035": {
   "marinas": 45,
   "islands": 13,
   "sheltered": 8,
@@ -646,7 +646,7 @@
   "calm_share": 0.359,
   "bareboat_base": false
  },
- "algarve": {
+ "p0002": {
   "marinas": 12,
   "islands": 3,
   "sheltered": 5,
@@ -659,7 +659,7 @@
   "calm_share": 0.984,
   "bareboat_base": false
  },
- "rivieramaya": {
+ "p0155": {
   "marinas": 8,
   "islands": 2,
   "sheltered": 2,
@@ -672,7 +672,7 @@
   "calm_share": 0.962,
   "bareboat_base": false
  },
- "barcelona": {
+ "p0021": {
   "marinas": 14,
   "islands": 1,
   "sheltered": 2,
@@ -689,7 +689,7 @@
   "calm_share": 0.907,
   "bareboat_base": false
  },
- "cape-town": {
+ "p0037": {
   "marinas": 6,
   "islands": 2,
   "sheltered": 0,
@@ -704,7 +704,7 @@
   "calm_share": 0.04,
   "bareboat_base": false
  },
- "athens": {
+ "p0013": {
   "marinas": 49,
   "islands": 5,
   "sheltered": 5,
@@ -716,10 +716,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.2,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": true
  },
- "havana": {
+ "p0052": {
   "marinas": 66,
   "islands": 76,
   "sheltered": 8,
@@ -732,7 +732,7 @@
   "calm_share": 0.561,
   "bareboat_base": false
  },
- "los-cabos": {
+ "p0097": {
   "marinas": 2,
   "islands": 0,
   "sheltered": 0,
@@ -745,7 +745,7 @@
   "calm_share": 0.218,
   "bareboat_base": false
  },
- "bali": {
+ "p0017": {
   "marinas": 11,
   "islands": 10,
   "sheltered": 6,
@@ -758,7 +758,7 @@
   "calm_share": 0.41,
   "bareboat_base": false
  },
- "hongkong": {
+ "p0081": {
   "marinas": 19,
   "islands": 34,
   "sheltered": 8,
@@ -774,7 +774,7 @@
   "calm_share": 0.908,
   "bareboat_base": false
  },
- "vietnam": {
+ "p0195": {
   "marinas": 77,
   "islands": 60,
   "sheltered": 10,
@@ -787,7 +787,7 @@
   "calm_share": 0.813,
   "bareboat_base": false
  },
- "provence": {
+ "p0144": {
   "marinas": 51,
   "islands": 4,
   "sheltered": 5,
@@ -803,7 +803,7 @@
   "calm_share": 0.964,
   "bareboat_base": false
  },
- "okinawa": {
+ "p0129": {
   "marinas": 12,
   "islands": 44,
   "sheltered": 8,
@@ -816,7 +816,7 @@
   "calm_share": 0.716,
   "bareboat_base": false
  },
- "acadia": {
+ "p0001": {
   "marinas": 5,
   "islands": 26,
   "sheltered": 4,
@@ -829,7 +829,7 @@
   "calm_share": 0.967,
   "bareboat_base": false
  },
- "guilin-yangshuo": {
+ "p0079": {
   "marinas": 9,
   "islands": 0,
   "sheltered": 2,
@@ -842,7 +842,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "puerto-rico": {
+ "p0145": {
   "marinas": 16,
   "islands": 44,
   "sheltered": 8,
@@ -855,7 +855,7 @@
   "calm_share": 0.782,
   "bareboat_base": false
  },
- "copenhagen": {
+ "p0048": {
   "marinas": 74,
   "islands": 6,
   "sheltered": 5,
@@ -867,10 +867,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.36,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "tasmania": {
+ "p0178": {
   "marinas": 15,
   "islands": 30,
   "sheltered": 8,
@@ -880,10 +880,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.38,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "punta-cana": {
+ "p0058": {
   "marinas": 25,
   "islands": 6,
   "sheltered": 3,
@@ -896,7 +896,7 @@
   "calm_share": 0.096,
   "bareboat_base": false
  },
- "nicaragua": {
+ "p0119": {
   "marinas": 67,
   "islands": 47,
   "sheltered": 10,
@@ -909,7 +909,7 @@
   "calm_share": 0.967,
   "bareboat_base": false
  },
- "cornwall": {
+ "p0049": {
   "marinas": 9,
   "islands": 10,
   "sheltered": 4,
@@ -922,7 +922,7 @@
   "calm_share": 0.513,
   "bareboat_base": false
  },
- "papua-new-guinea": {
+ "p0137": {
   "marinas": 4,
   "islands": 571,
   "sheltered": 2,
@@ -941,7 +941,7 @@
   "calm_share": 0.272,
   "bareboat_base": false
  },
- "puglia": {
+ "p0146": {
   "marinas": 17,
   "islands": 1,
   "sheltered": 2,
@@ -956,7 +956,7 @@
   "calm_share": 0.964,
   "bareboat_base": false
  },
- "antarctica": {
+ "p0006": {
   "marinas": 8,
   "islands": 54,
   "sheltered": 6,
@@ -990,7 +990,7 @@
   "calm_share": 0.941,
   "bareboat_base": false
  },
- "istanbul": {
+ "p0085": {
   "marinas": 21,
   "islands": 5,
   "sheltered": 5,
@@ -1003,7 +1003,7 @@
   "calm_share": 0.993,
   "bareboat_base": false
  },
- "big-island": {
+ "p0029": {
   "marinas": 5,
   "islands": 1,
   "sheltered": 0,
@@ -1016,7 +1016,7 @@
   "calm_share": 0.036,
   "bareboat_base": false
  },
- "madeira": {
+ "p0100": {
   "marinas": 11,
   "islands": 4,
   "sheltered": 3,
@@ -1029,7 +1029,7 @@
   "calm_share": 0.174,
   "bareboat_base": false
  },
- "srilanka": {
+ "p0173": {
   "marinas": 34,
   "islands": 14,
   "sheltered": 10,
@@ -1042,7 +1042,7 @@
   "calm_share": 0.956,
   "bareboat_base": false
  },
- "chilean-lake-district": {
+ "p0044": {
   "marinas": 5,
   "islands": 2,
   "sheltered": 2,
@@ -1055,7 +1055,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "lofoten": {
+ "p0095": {
   "marinas": 43,
   "islands": 231,
   "sheltered": 10,
@@ -1079,7 +1079,7 @@
   "calm_share": 0.815,
   "bareboat_base": false
  },
- "costa-rica": {
+ "p0050": {
   "marinas": 28,
   "islands": 35,
   "sheltered": 10,
@@ -1092,7 +1092,7 @@
   "calm_share": 0.886,
   "bareboat_base": false
  },
- "azores": {
+ "p0014": {
   "marinas": 14,
   "islands": 9,
   "sheltered": 3,
@@ -1105,7 +1105,7 @@
   "calm_share": 0.076,
   "bareboat_base": false
  },
- "vancouver-island": {
+ "p0190": {
   "marinas": 88,
   "islands": 290,
   "sheltered": 10,
@@ -1120,7 +1120,7 @@
   "calm_share": 0.942,
   "bareboat_base": false
  },
- "nova-scotia": {
+ "p0126": {
   "marinas": 46,
   "islands": 716,
   "sheltered": 8,
@@ -1135,7 +1135,7 @@
   "calm_share": 0.348,
   "bareboat_base": false
  },
- "singapore": {
+ "p0170": {
   "marinas": 10,
   "islands": 17,
   "sheltered": 6,
@@ -1147,10 +1147,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.26,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "argentine-lake-district": {
+ "p0008": {
   "marinas": 13,
   "islands": 2,
   "sheltered": 2,
@@ -1163,7 +1163,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "jamaica": {
+ "p0086": {
   "marinas": 6,
   "islands": 4,
   "sheltered": 4,
@@ -1176,7 +1176,7 @@
   "calm_share": 0.786,
   "bareboat_base": false
  },
- "amsterdam": {
+ "p0004": {
   "marinas": 219,
   "islands": 14,
   "sheltered": 2,
@@ -1189,7 +1189,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "everglades": {
+ "p0065": {
   "marinas": 19,
   "islands": 164,
   "sheltered": 8,
@@ -1199,10 +1199,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.2,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "luangprabang": {
+ "p0093": {
   "marinas": 10,
   "islands": 7,
   "sheltered": 2,
@@ -1215,7 +1215,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "monterey-big-sur": {
+ "p0112": {
   "marinas": 2,
   "islands": 3,
   "sheltered": 1,
@@ -1228,7 +1228,7 @@
   "calm_share": 0.022,
   "bareboat_base": false
  },
- "zimbabwe": {
+ "p0193": {
   "marinas": 2,
   "islands": 3,
   "sheltered": 2,
@@ -1241,7 +1241,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "madagascar": {
+ "p0099": {
   "marinas": 11,
   "islands": 12,
   "sheltered": 6,
@@ -1254,7 +1254,7 @@
   "calm_share": 0.569,
   "bareboat_base": false
  },
- "basque-country": {
+ "p0022": {
   "marinas": 25,
   "islands": 1,
   "sheltered": 2,
@@ -1267,7 +1267,7 @@
   "calm_share": 0.641,
   "bareboat_base": false
  },
- "bordeaux": {
+ "p0031": {
   "marinas": 10,
   "islands": 5,
   "sheltered": 2,
@@ -1280,7 +1280,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "charleston-savannah": {
+ "p0040": {
   "marinas": 57,
   "islands": 272,
   "sheltered": 10,
@@ -1295,7 +1295,7 @@
   "calm_share": 0.907,
   "bareboat_base": false
  },
- "nyc": {
+ "p0118": {
   "marinas": 111,
   "islands": 51,
   "sheltered": 10,
@@ -1307,10 +1307,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.34,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "chicago": {
+ "p0043": {
   "marinas": 32,
   "islands": 1,
   "sheltered": 2,
@@ -1326,7 +1326,7 @@
   "calm_share": 0.975,
   "bareboat_base": false
  },
- "tuscany": {
+ "p0185": {
   "marinas": 2,
   "islands": 0,
   "sheltered": 2,
@@ -1339,7 +1339,7 @@
   "calm_share": 0.85,
   "bareboat_base": false
  },
- "iceland": {
+ "p0083": {
   "marinas": 23,
   "islands": 46,
   "sheltered": 10,
@@ -1368,7 +1368,7 @@
   "calm_share": 0.79,
   "bareboat_base": false
  },
- "upper-peninsula": {
+ "p0188": {
   "marinas": 4,
   "islands": 6,
   "sheltered": 4,
@@ -1381,7 +1381,7 @@
   "calm_share": 0.879,
   "bareboat_base": false
  },
- "ghana": {
+ "p0072": {
   "marinas": 3,
   "islands": 5,
   "sheltered": 3,
@@ -1390,11 +1390,11 @@
   "expedition": 0,
   "operators": [],
   "sea": "swell",
-  "median_wave_m": 1.0,
+  "median_wave_m": 1,
   "calm_share": 0.878,
   "bareboat_base": false
  },
- "borneo": {
+ "p0101": {
   "marinas": 12,
   "islands": 51,
   "sheltered": 8,
@@ -1407,7 +1407,7 @@
   "calm_share": 0.96,
   "bareboat_base": false
  },
- "queenstown": {
+ "p0148": {
   "marinas": 1,
   "islands": 3,
   "sheltered": 2,
@@ -1420,7 +1420,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "botswana": {
+ "p0128": {
   "marinas": 1,
   "islands": 8,
   "sheltered": 2,
@@ -1433,7 +1433,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "london": {
+ "p0096": {
   "marinas": 51,
   "islands": 21,
   "sheltered": 2,
@@ -1446,7 +1446,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "morocco": {
+ "p0105": {
   "marinas": 0,
   "islands": 0,
   "sheltered": 0,
@@ -1459,7 +1459,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "olympic": {
+ "p0130": {
   "marinas": 3,
   "islands": 1,
   "sheltered": 2,
@@ -1472,7 +1472,7 @@
   "calm_share": 0.993,
   "bareboat_base": false
  },
- "berlin": {
+ "p0027": {
   "marinas": 245,
   "islands": 3,
   "sheltered": 2,
@@ -1485,7 +1485,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "rome": {
+ "p0157": {
   "marinas": 11,
   "islands": 0,
   "sheltered": 2,
@@ -1498,7 +1498,7 @@
   "calm_share": 0.831,
   "bareboat_base": false
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "marinas": 1,
   "islands": 54,
   "sheltered": 2,
@@ -1511,7 +1511,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "buenosaires": {
+ "p0033": {
   "marinas": 48,
   "islands": 7,
   "sheltered": 5,
@@ -1524,7 +1524,7 @@
   "calm_share": 0.986,
   "bareboat_base": false
  },
- "angkor": {
+ "p0034": {
   "marinas": 2,
   "islands": 14,
   "sheltered": 2,
@@ -1537,7 +1537,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "marinas": 7,
   "islands": 21,
   "sheltered": 6,
@@ -1558,10 +1558,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.22,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "lake-district": {
+ "p0092": {
   "marinas": 10,
   "islands": 3,
   "sheltered": 5,
@@ -1574,7 +1574,7 @@
   "calm_share": 0.732,
   "bareboat_base": false
  },
- "taiwan": {
+ "p0177": {
   "marinas": 198,
   "islands": 17,
   "sheltered": 8,
@@ -1587,7 +1587,7 @@
   "calm_share": 0.322,
   "bareboat_base": false
  },
- "zambia": {
+ "p0171": {
   "marinas": 0,
   "islands": 0,
   "sheltered": 0,
@@ -1600,7 +1600,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "st-andrews-fife": {
+ "p0174": {
   "marinas": 18,
   "islands": 2,
   "sheltered": 2,
@@ -1613,7 +1613,7 @@
   "calm_share": 0.913,
   "bareboat_base": false
  },
- "edinburgh": {
+ "p0062": {
   "marinas": 15,
   "islands": 0,
   "sheltered": 2,
@@ -1623,10 +1623,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.26,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "budapest": {
+ "p0032": {
   "marinas": 25,
   "islands": 4,
   "sheltered": 2,
@@ -1639,7 +1639,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "svalbard": {
+ "p0175": {
   "marinas": 1,
   "islands": 192,
   "sheltered": 2,
@@ -1670,10 +1670,10 @@
   ],
   "sea": "flat",
   "median_wave_m": 0.24,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "napa": {
+ "p0115": {
   "marinas": 9,
   "islands": 33,
   "sheltered": 6,
@@ -1683,10 +1683,10 @@
   "operators": [],
   "sea": "swell",
   "median_wave_m": 0.58,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "ireland": {
+ "p0084": {
   "marinas": 171,
   "islands": 129,
   "sheltered": 10,
@@ -1699,7 +1699,7 @@
   "calm_share": 0.845,
   "bareboat_base": false
  },
- "new-orleans": {
+ "p0117": {
   "marinas": 26,
   "islands": 7,
   "sheltered": 5,
@@ -1712,7 +1712,7 @@
   "calm_share": 0.996,
   "bareboat_base": false
  },
- "pantanal": {
+ "p0136": {
   "marinas": 0,
   "islands": 0,
   "sheltered": 0,
@@ -1725,7 +1725,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "greenland": {
+ "p0077": {
   "marinas": 23,
   "islands": 376,
   "sheltered": 10,
@@ -1764,7 +1764,7 @@
   "calm_share": 0.844,
   "bareboat_base": false
  },
- "douro-valley-porto": {
+ "p0059": {
   "marinas": 87,
   "islands": 0,
   "sheltered": 0,
@@ -1777,7 +1777,7 @@
   "calm_share": 0.111,
   "bareboat_base": false
  },
- "bagan": {
+ "p0113": {
   "marinas": 33,
   "islands": 52,
   "sheltered": 10,
@@ -1787,10 +1787,10 @@
   "operators": [],
   "sea": "flat",
   "median_wave_m": 0.14,
-  "calm_share": 1.0,
+  "calm_share": 1,
   "bareboat_base": false
  },
- "bavaria-munich": {
+ "p0023": {
   "marinas": 93,
   "islands": 1,
   "sheltered": 2,
@@ -1803,7 +1803,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "hudson-valley": {
+ "p0082": {
   "marinas": 32,
   "islands": 21,
   "sheltered": 2,
@@ -1816,7 +1816,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "vermont": {
+ "p0192": {
   "marinas": 32,
   "islands": 12,
   "sheltered": 2,
@@ -1829,7 +1829,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "bangkok": {
+ "p0019": {
   "marinas": 7,
   "islands": 1,
   "sheltered": 2,
@@ -1842,7 +1842,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "jordan": {
+ "p0140": {
   "marinas": 2,
   "islands": 0,
   "sheltered": 2,
@@ -1855,7 +1855,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "glacier-waterton": {
+ "p0073": {
   "marinas": 1,
   "islands": 1,
   "sheltered": 2,
@@ -1868,7 +1868,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "faroe-islands": {
+ "p0067": {
   "marinas": 5,
   "islands": 19,
   "sheltered": 2,
@@ -1897,7 +1897,7 @@
   "calm_share": 0.55,
   "bareboat_base": false
  },
- "guatemala": {
+ "p0078": {
   "marinas": 17,
   "islands": 5,
   "sheltered": 5,
@@ -1910,7 +1910,7 @@
   "calm_share": 0.72,
   "bareboat_base": false
  },
- "nepal": {
+ "p0116": {
   "marinas": 1,
   "islands": 0,
   "sheltered": 2,
@@ -1923,7 +1923,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "black-forest": {
+ "p0030": {
   "marinas": 28,
   "islands": 0,
   "sheltered": 2,
@@ -1936,7 +1936,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "bend-crater-lake": {
+ "p0026": {
   "marinas": 1,
   "islands": 1,
   "sheltered": 2,
@@ -1949,7 +1949,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "chiang-mai": {
+ "p0041": {
   "marinas": 0,
   "islands": 0,
   "sheltered": 0,
@@ -1962,7 +1962,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "belfast-giants-causeway": {
+ "p0123": {
   "marinas": 64,
   "islands": 148,
   "sheltered": 10,
@@ -1975,7 +1975,7 @@
   "calm_share": 0.826,
   "bareboat_base": false
  },
- "texas-hill-country": {
+ "p0180": {
   "marinas": 0,
   "islands": 0,
   "sheltered": 0,
@@ -1988,7 +1988,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "quebec-city": {
+ "p0147": {
   "marinas": 61,
   "islands": 59,
   "sheltered": 2,
@@ -2001,7 +2001,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "marinas": 1,
   "islands": 0,
   "sheltered": 2,
@@ -2014,7 +2014,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "badlands-black-hills": {
+ "p0015": {
   "marinas": 1,
   "islands": 0,
   "sheltered": 2,
@@ -2027,7 +2027,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "lapland": {
+ "p0069": {
   "marinas": 60,
   "islands": 99,
   "sheltered": 2,
@@ -2040,7 +2040,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "great-smoky-mountains": {
+ "p0076": {
   "marinas": 1,
   "islands": 11,
   "sheltered": 2,
@@ -2053,7 +2053,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "rocky-mountain": {
+ "p0156": {
   "marinas": 3,
   "islands": 0,
   "sheltered": 2,
@@ -2066,7 +2066,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "whistler": {
+ "p0189": {
   "marinas": 55,
   "islands": 27,
   "sheltered": 10,
@@ -2079,7 +2079,7 @@
   "calm_share": 0.997,
   "bareboat_base": false
  },
- "snowdonia": {
+ "p0196": {
   "marinas": 59,
   "islands": 31,
   "sheltered": 10,
@@ -2094,7 +2094,7 @@
   "calm_share": 0.859,
   "bareboat_base": false
  },
- "hokkaido": {
+ "p0080": {
   "marinas": 34,
   "islands": 13,
   "sheltered": 10,
@@ -2107,7 +2107,7 @@
   "calm_share": 0.957,
   "bareboat_base": false
  },
- "tokyo-kyoto": {
+ "p0182": {
   "marinas": 122,
   "islands": 67,
   "sheltered": 10,
@@ -2122,7 +2122,7 @@
   "calm_share": 0.919,
   "bareboat_base": false
  },
- "uganda": {
+ "p0186": {
   "marinas": 89,
   "islands": 20,
   "sheltered": 2,
@@ -2135,7 +2135,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "paris": {
+ "p0138": {
   "marinas": 75,
   "islands": 5,
   "sheltered": 2,
@@ -2148,7 +2148,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "vienna": {
+ "p0194": {
   "marinas": 21,
   "islands": 2,
   "sheltered": 2,
@@ -2161,7 +2161,7 @@
   "calm_share": null,
   "bareboat_base": false
  },
- "prague": {
+ "p0143": {
   "marinas": 43,
   "islands": 4,
   "sheltered": 2,

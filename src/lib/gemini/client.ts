@@ -308,6 +308,8 @@ const RESPONSE_SCHEMA_LEAN = {
   required: ['applicable', 'depth', 'overview', 'blurbs', 'best_months'],
 };
 const RESPONSE_SCHEMA_LEAN_SCORES = { ...RESPONSE_SCHEMA_LEAN, properties: { ...RESPONSE_SCHEMA_LEAN.properties, monthly_scores: { type: Type.ARRAY, minItems: '12', maxItems: '12', items: { type: Type.NUMBER } } }, required: [...RESPONSE_SCHEMA_LEAN.required, 'monthly_scores'] };
+// 13 Nov 2026: scores are written BEFORE the blurbs, so the groups are built from numbers already on the page (Gemini fills the answer in this order).
+(RESPONSE_SCHEMA_LEAN_SCORES as { propertyOrdering?: string[] }).propertyOrdering = ['applicable', 'na_reason', 'monthly_scores', 'depth', 'depth_why', 'best_months', 'overview', 'blurbs', 'named_things', 'flags', 'confidence'];
 /** The one config used for lean authoring calls, live or batch, so both always carry the thinking cap and the same schema. */
 export function leanGenerateConfig(thinkingLevel?: ThinkingLevelName, withScores = false) {
   return { temperature: TEMPERATURE, maxOutputTokens: 4096, thinkingConfig: thinkingConfigFor(thinkingLevel), responseMimeType: 'application/json', responseSchema: withScores ? RESPONSE_SCHEMA_LEAN_SCORES : RESPONSE_SCHEMA_LEAN };

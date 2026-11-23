@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 // docs/column-scoring-plan.md checks for All-inclusive Resorts: no gaps, anchors hold, the three chip ratings follow the stated count tiers.
 const root = join(__dirname, '..', '..');
@@ -23,13 +24,13 @@ describe('All-inclusive evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      adultsOnly: { rivieramaya: 10, jamaica: 8, 'punta-cana': 8, bahamas: 4, okinawa: 0 },
-      familyResorts: { rivieramaya: 10, 'punta-cana': 10, canaries: 10, egypt: 10, jamaica: 8, mauritius: 8, 'turks-caicos': 3 },
-      luxuryAllInclusive: { maldives: 10, rivieramaya: 8, 'punta-cana': 8, mauritius: 8, jamaica: 6, 'turks-caicos': 3 },
+      adultsOnly: { [PLACE['riviera-maya']]: 10, [PLACE.jamaica]: 8, [PLACE['dominican-republic']]: 8, [PLACE.bahamas]: 4, [PLACE.okinawa]: 0 },
+      familyResorts: { [PLACE['riviera-maya']]: 10, [PLACE['dominican-republic']]: 10, [PLACE['canary-islands']]: 10, [PLACE['red-sea-and-nile']]: 10, [PLACE.jamaica]: 8, [PLACE.mauritius]: 8, [PLACE['turks-and-caicos']]: 3 },
+      luxuryAllInclusive: { [PLACE.maldives]: 10, [PLACE['riviera-maya']]: 8, [PLACE['dominican-republic']]: 8, [PLACE.mauritius]: 8, [PLACE.jamaica]: 6, [PLACE['turks-and-caicos']]: 3 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(draft[place][col], `${col} ${place}`).toBe(want);
   });
   it('keeps the safari lodges out: Northern Tanzania rates zero on all three chips', () => {
-    for (const col of ['adultsOnly', 'familyResorts', 'luxuryAllInclusive']) expect(draft.tanzania[col]).toBe(0);
+    for (const col of ['adultsOnly', 'familyResorts', 'luxuryAllInclusive']) expect(draft[PLACE['northern-tanzania']][col]).toBe(0);
   });
 });

@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '../src/lib/places/keys.generated';
 
 /**
  * ============================================================
@@ -44,16 +45,16 @@ const SNAPSHOT_DIR = join(__dirname, '..', 'docs', 'rankings');
 // US/Canadian national parks — named explicitly rather than derived from
 // placeType so the set under test is reviewable in one glance.
 const NATIONAL_PARKS = [
-  'yellowstone', 'yosemite', 'grandcanyon', 'sequoia-kings-canyon', 'denali-interior',
-  'glacier-waterton', 'rocky-mountain', 'olympic', 'great-smoky-mountains', 'arches-canyonlands',
-  'zion-bryce', 'north-cascades', 'redwood', 'everglades', 'acadia', 'death-valley',
-  'badlands-black-hills', 'joshua-tree', 'banff',
+  PLACE['yellowstone-national-park'], PLACE['yosemite-national-park'], PLACE['grand-canyon'], PLACE['sequoia-and-kings-canyon'], PLACE['denali-and-the-interior'],
+  PLACE['glacier-and-waterton-lakes'], PLACE['rocky-mountain-national-park'], PLACE['olympic-national-park'], PLACE['great-smoky-mountains-national-park'], PLACE['arches-and-canyonlands'],
+  PLACE['zion-and-bryce-canyon'], PLACE['north-cascades'], PLACE['redwood-national-and-state-parks'], PLACE['everglades-national-park'], PLACE['acadia-national-park'], PLACE['death-valley-national-park'],
+  PLACE['badlands-and-black-hills'], PLACE['palm-springs-and-joshua-tree'], PLACE['banff-and-jasper-national-parks'],
 ];
 
 // Destinations whose appeal is real but narrow — the niche places that
 // must NOT float to the top of a no-preference view, and must still be
 // reachable when a user asks for what they offer.
-const SPECIALIST_PLACES = ['churchill', 'svalbard', 'antarctica', 'falklands', 'kaziranga', 'pantanal', 'peruvian-amazon'];
+const SPECIALIST_PLACES = [PLACE.churchill, PLACE.svalbard, PLACE['antarctic-peninsula'], PLACE['falkland-islands'], PLACE['assam-and-northeast-india'], PLACE.pantanal, PLACE['peruvian-amazon']];
 
 type Assertion =
   | { kind: 'above'; a: string; b: string; why: string }
@@ -106,82 +107,82 @@ const ASSERTIONS: Assertion[] = [
   },
 
   // ---- Bands: where specific destinations belong ----
-  { kind: 'band', id: 'yellowstone', bestRank: 1, worstRank: 50, why: 'The archetypal mainstream nature destination — roughly 4M visitors a year. If a general-audience ranking cannot place Yellowstone in its top quartile, the ranking is wrong.' },
-  { kind: 'band', id: 'grandcanyon', bestRank: 1, worstRank: 120, why: 'Deliberately looser than Yellowstone (editorial review, 2026-09-07). Awareness is comparable but the visit is not: the Grand Canyon is largely one overwhelming thing absorbed over a day or two, where Yellowstone sustains a week across geothermal features, wildlife, hiking, camping and fishing. It should rank respectably, not in the top quartile. The original top-50 assertion here was wrong — the model already had these two in the right order.' },
-  { kind: 'band', id: 'paris', bestRank: 1, worstRank: 30, why: 'If a no-preference "where should I go" list does not surface Paris near the top, the list has no credibility with a general audience.' },
-  { kind: 'band', id: 'rome', bestRank: 1, worstRank: 30, why: 'Same as Paris. Sat at 86th pre-change purely for lacking nature content.' },
-  { kind: 'band', id: 'nyc', bestRank: 1, worstRank: 30, why: 'Same as Paris.' },
-  { kind: 'band', id: 'tuscany', bestRank: 1, worstRank: 40, why: 'Broad mainstream appeal on many axes at once — beautiful towns, food, scenery, history, culture and high-end hotels, not just wine and cycling. Ranked 134th after the aggregation change, which review traced to under-authored content rather than to the model (scenicLandscapes 6 while the same row tagged landscapePhotography signature; historyArchaeology 5 alongside architecture 9). Corrected in scripts/fix-tuscany-underscored.ts — the fix belonged in the content, not the algorithm.' },
-  { kind: 'band', id: 'churchill', bestRank: 140, why: 'Genuinely excellent and genuinely niche. It should be findable by someone who wants polar bears, and should not appear in a general list. Currently 196th, but for the wrong reason (thin content, not niche appeal) — this must stay true once coverage stops being the driver.' },
+  { kind: 'band', id: PLACE['yellowstone-national-park'], bestRank: 1, worstRank: 50, why: 'The archetypal mainstream nature destination — roughly 4M visitors a year. If a general-audience ranking cannot place Yellowstone in its top quartile, the ranking is wrong.' },
+  { kind: 'band', id: PLACE['grand-canyon'], bestRank: 1, worstRank: 120, why: 'Deliberately looser than Yellowstone (editorial review, 2026-09-07). Awareness is comparable but the visit is not: the Grand Canyon is largely one overwhelming thing absorbed over a day or two, where Yellowstone sustains a week across geothermal features, wildlife, hiking, camping and fishing. It should rank respectably, not in the top quartile. The original top-50 assertion here was wrong — the model already had these two in the right order.' },
+  { kind: 'band', id: PLACE.paris, bestRank: 1, worstRank: 30, why: 'If a no-preference "where should I go" list does not surface Paris near the top, the list has no credibility with a general audience.' },
+  { kind: 'band', id: PLACE.rome, bestRank: 1, worstRank: 30, why: 'Same as Paris. Sat at 86th pre-change purely for lacking nature content.' },
+  { kind: 'band', id: PLACE['new-york-city'], bestRank: 1, worstRank: 30, why: 'Same as Paris.' },
+  { kind: 'band', id: PLACE.tuscany, bestRank: 1, worstRank: 40, why: 'Broad mainstream appeal on many axes at once — beautiful towns, food, scenery, history, culture and high-end hotels, not just wine and cycling. Ranked 134th after the aggregation change, which review traced to under-authored content rather than to the model (scenicLandscapes 6 while the same row tagged landscapePhotography signature; historyArchaeology 5 alongside architecture 9). Corrected in scripts/fix-tuscany-underscored.ts — the fix belonged in the content, not the algorithm.' },
+  { kind: 'band', id: PLACE.churchill, bestRank: 140, why: 'Genuinely excellent and genuinely niche. It should be findable by someone who wants polar bears, and should not appear in a general list. Currently 196th, but for the wrong reason (thin content, not niche appeal) — this must stay true once coverage stops being the driver.' },
   // ---- Trough convictions: the scale under the ranking ----------------
   {
-    kind: 'trough', slider: 'birding', a: 'costa-rica', b: 'great-smoky-mountains',
+    kind: 'trough', slider: 'birding', a: PLACE['costa-rica'], b: PLACE['great-smoky-mountains-national-park'],
     why: 'Costa Rica in the September rain beats the Smokies in the May warbler wave. ~600 resident species against ~30 breeding warblers; only comfort changes in Costa Rica, while the Smokies genuinely empty out. This is the assertion a percentage-based trough broke — it had Costa Rica at 3.0 in July against Lofoten at 7.0.',
   },
   {
-    kind: 'trough', slider: 'birding', a: 'panama', b: 'great-smoky-mountains',
+    kind: 'trough', slider: 'birding', a: PLACE.panama, b: PLACE['great-smoky-mountains-national-park'],
     why: 'Pipeline Road in June still has 400 species available. Panama\'s worst month previously fell BELOW the Smokies\' best, which is the clearest single symptom of a relative trough on an absolute scale.',
   },
   {
-    kind: 'trough', slider: 'birding', a: 'ecuadorian-andes', b: 'iceland',
+    kind: 'trough', slider: 'birding', a: PLACE['ecuadorian-andes'], b: PLACE.iceland,
     why: 'Andean cloud forest is resident endemics with essentially no bad month; Iceland is a seabird colony that is empty for eight months. The best-case comparison has to favour the cloud forest even at its worst.',
   },
   {
-    kind: 'trough', slider: 'birding', a: 'kruger', b: 'yellowstone',
+    kind: 'trough', slider: 'birding', a: PLACE['kruger-and-sabi-sands'], b: PLACE['yellowstone-national-park'],
     why: 'Kruger holds ~500 species of which ~350 are resident, so the dry season loses a bonus tier and keeps the foundation. Its worst month should still beat Yellowstone at peak spring migration.',
   },
-  { kind: 'band', id: 'antarctica', bestRank: 140, why: 'Extreme cost and access put it outside any general recommendation, regardless of how remarkable it is.' },
+  { kind: 'band', id: PLACE['antarctic-peninsula'], bestRank: 140, why: 'Extreme cost and access put it outside any general recommendation, regardless of how remarkable it is.' },
   {
-    kind: 'band', id: 'north-cascades', bestRank: 60, worstRank: 175,
+    kind: 'band', id: PLACE['north-cascades'], bestRank: 60, worstRank: 175,
     why: 'Two-sided on purpose. It is last (200th) today on 9 authored sliders, which is a coverage artifact and should improve. But strength-based scoring must not over-correct and reward thin content — a place we know almost nothing about should not outrank places we have documented well. If this lands top-50, the decay constant is too aggressive.',
   },
 
   // ---- Orderings: each encodes a principle, not a preference ----
-  { kind: 'band', id: 'colombian-caribbean', bestRank: 31, why: 'Editorial review, 2026-09-07: it reached 2nd on the strength of a nationalParks score for Tayrona. National parks are an iconic-tier interest, but this destination is not iconic FOR national parks — nobody flies to Colombia for them. A destination must not draw an interest\'s full audience weight unless it is genuinely notable for that interest; this assertion is the guard on that.' },
-  { kind: 'above', a: 'yellowstone', b: 'colombian-caribbean', why: 'The same claim stated as an ordering, so it survives both moving together. Yellowstone IS iconic for national parks; Tayrona is a pleasant bonus once you are already there.' },
-  { kind: 'above', a: 'yellowstone', b: 'churchill', why: 'Broad-appeal nature over niche-appeal nature — the single clearest statement of what the general view is for.' },
-  { kind: 'above', a: 'yellowstone', b: 'grandcanyon', why: 'Comparable fame, different trip. Yellowstone is a multi-day destination with genuinely distributed appeal; the Grand Canyon is a shorter, more singular visit. Encoded as an ordering rather than as two bands so it keeps holding if both move together.' },
-  { kind: 'above', a: 'grandcanyon', b: 'uyuni', why: 'Comparable visual spectacle; vastly different awareness and accessibility. Tests that fame and reachability count for something.' },
-  { kind: 'above', a: 'paris', b: 'champagne', why: 'A globally iconic city over a narrow regional specialty within the same country.' },
-  { kind: 'above', a: 'rome', b: 'piedmont', why: 'Same principle as Paris/Champagne, same country.' },
-  { kind: 'above', a: 'kenya', b: 'kaziranga', why: 'Both wildlife destinations; one is the global reference for safari. Tests that being the category archetype counts.' },
+  { kind: 'band', id: PLACE['colombian-caribbean'], bestRank: 31, why: 'Editorial review, 2026-09-07: it reached 2nd on the strength of a nationalParks score for Tayrona. National parks are an iconic-tier interest, but this destination is not iconic FOR national parks — nobody flies to Colombia for them. A destination must not draw an interest\'s full audience weight unless it is genuinely notable for that interest; this assertion is the guard on that.' },
+  { kind: 'above', a: PLACE['yellowstone-national-park'], b: PLACE['colombian-caribbean'], why: 'The same claim stated as an ordering, so it survives both moving together. Yellowstone IS iconic for national parks; Tayrona is a pleasant bonus once you are already there.' },
+  { kind: 'above', a: PLACE['yellowstone-national-park'], b: PLACE.churchill, why: 'Broad-appeal nature over niche-appeal nature — the single clearest statement of what the general view is for.' },
+  { kind: 'above', a: PLACE['yellowstone-national-park'], b: PLACE['grand-canyon'], why: 'Comparable fame, different trip. Yellowstone is a multi-day destination with genuinely distributed appeal; the Grand Canyon is a shorter, more singular visit. Encoded as an ordering rather than as two bands so it keeps holding if both move together.' },
+  { kind: 'above', a: PLACE['grand-canyon'], b: PLACE['salar-de-uyuni'], why: 'Comparable visual spectacle; vastly different awareness and accessibility. Tests that fame and reachability count for something.' },
+  { kind: 'above', a: PLACE.paris, b: PLACE.champagne, why: 'A globally iconic city over a narrow regional specialty within the same country.' },
+  { kind: 'above', a: PLACE.rome, b: PLACE.piedmont, why: 'Same principle as Paris/Champagne, same country.' },
+  { kind: 'above', a: PLACE['maasai-mara-and-amboseli'], b: PLACE['assam-and-northeast-india'], why: 'Both wildlife destinations; one is the global reference for safari. Tests that being the category archetype counts.' },
   // The safari ladder. These four are the same product at different levels
   // of fame and accessibility, so they are the sharpest available test of
   // whether the model grades within a category rather than just across
   // them — a failure here is invisible to every other assertion.
-  { kind: 'near', a: 'kenya', b: 'tanzania', within: 15, why: 'The Mara and the Serengeti are the same ecosystem and the same trip, marketed and priced alike. A model that separates them materially is reading noise, not travel.' },
-  { kind: 'above', a: 'kenya', b: 'uganda', why: 'Kenya is the default first safari; Uganda is a gorilla-trekking specialist that far fewer travellers consider.' },
-  { kind: 'above', a: 'tanzania', b: 'uganda', why: 'Same claim as Kenya/Uganda — the Serengeti and Kilimanjaro carry recognition Uganda does not.' },
-  { kind: 'above', a: 'uganda', b: 'ethiopia', why: 'Both are enthusiast-level East African destinations, but Uganda has a defined draw (gorillas) that converts; Ethiopia is a historical and highland destination with far thinner tourism.' },
-  { kind: 'above', a: 'banff', b: 'north-cascades', why: 'Comparable mountain parks, sharply different real-world draw.' },
-  { kind: 'above', a: 'nyc', b: 'chicago', why: 'Two US cities with similar activity profiles; one is a global destination. If the model cannot separate them it is not modelling appeal at all.' },
-  { kind: 'above', a: 'iceland', b: 'greenland', why: 'Adjacent, similar landscapes; hugely different tourism maturity and access.' },
-  { kind: 'above', a: 'venice', b: 'bagan', why: 'Both historic-architecture destinations of genuine world importance; one draws an order of magnitude more travellers.' },
-  { kind: 'above', a: 'maui', b: 'punta-cana', why: 'Both beach destinations; one has real breadth beyond the resort strip.' },
+  { kind: 'near', a: PLACE['maasai-mara-and-amboseli'], b: PLACE['northern-tanzania'], within: 15, why: 'The Mara and the Serengeti are the same ecosystem and the same trip, marketed and priced alike. A model that separates them materially is reading noise, not travel.' },
+  { kind: 'above', a: PLACE['maasai-mara-and-amboseli'], b: PLACE.uganda, why: 'Kenya is the default first safari; Uganda is a gorilla-trekking specialist that far fewer travellers consider.' },
+  { kind: 'above', a: PLACE['northern-tanzania'], b: PLACE.uganda, why: 'Same claim as Kenya/Uganda — the Serengeti and Kilimanjaro carry recognition Uganda does not.' },
+  { kind: 'above', a: PLACE.uganda, b: PLACE.ethiopia, why: 'Both are enthusiast-level East African destinations, but Uganda has a defined draw (gorillas) that converts; Ethiopia is a historical and highland destination with far thinner tourism.' },
+  { kind: 'above', a: PLACE['banff-and-jasper-national-parks'], b: PLACE['north-cascades'], why: 'Comparable mountain parks, sharply different real-world draw.' },
+  { kind: 'above', a: PLACE['new-york-city'], b: PLACE.chicago, why: 'Two US cities with similar activity profiles; one is a global destination. If the model cannot separate them it is not modelling appeal at all.' },
+  { kind: 'above', a: PLACE.iceland, b: PLACE.greenland, why: 'Adjacent, similar landscapes; hugely different tourism maturity and access.' },
+  { kind: 'above', a: PLACE.venice, b: PLACE.myanmar, why: 'Both historic-architecture destinations of genuine world importance; one draws an order of magnitude more travellers.' },
+  { kind: 'above', a: PLACE.maui, b: PLACE['dominican-republic'], why: 'Both beach destinations; one has real breadth beyond the resort strip.' },
 
   // ---- Personas: the For You path, which the general view must not break ----
   {
-    kind: 'persona', label: 'mountaineering-focused', id: 'nepal', maxRank: 15,
+    kind: 'persona', label: 'mountaineering-focused', id: PLACE.nepal, maxRank: 15,
     weights: { mountaineering: 10, hiking: 9, scenicLandscapes: 8, campingBackcountry: 7 },
     why: 'The mirror of the general view: when someone states a niche priority, the niche destination must surface. Suppressing specialist places in the default view is only correct if personalisation still finds them.',
   },
   {
-    kind: 'persona', label: 'mountaineering-focused', id: 'pakistan', maxRank: 40,
+    kind: 'persona', label: 'mountaineering-focused', id: PLACE.pakistan, maxRank: 40,
     weights: { mountaineering: 10, hiking: 9, scenicLandscapes: 8, campingBackcountry: 7 },
     why: 'Pakistan should usually not appear in a general list, but for a stated trekking priority it is genuinely world-class and must rank accordingly. This is the assertion that stops general-view suppression from becoming blanket suppression.',
   },
   {
-    kind: 'persona', label: 'aurora-focused', id: 'churchill', maxRank: 20,
+    kind: 'persona', label: 'aurora-focused', id: PLACE.churchill, maxRank: 20,
     weights: { auroraChasing: 10, wildlifeViewing: 8, stargazing: 6 },
     why: 'The exact destination the general view must bury is the one this persona must surface. If both hold, the two modes are doing their separate jobs correctly.',
   },
   {
-    kind: 'persona', label: 'beach-focused', id: 'maldives', maxRank: 20,
+    kind: 'persona', label: 'beach-focused', id: PLACE.maldives, maxRank: 20,
     weights: { beachesSwimming: 10, sunbathing: 9, diving: 8, luxuryHotels: 7 },
     why: 'Sanity check on the most common real-world travel motivation.',
   },
   {
-    kind: 'persona', label: 'city-culture-focused', id: 'paris', maxRank: 10,
+    kind: 'persona', label: 'city-culture-focused', id: PLACE.paris, maxRank: 10,
     weights: { museumsArt: 10, cityExploration: 9, architecture: 9, fineDining: 8, historyArchaeology: 8 },
     why: 'Where a stated preference and iconic status point the same way, the answer should be unambiguous.',
   },

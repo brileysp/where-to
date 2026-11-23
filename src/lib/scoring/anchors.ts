@@ -1,3 +1,4 @@
+import { PLACE } from '@/lib/places/keys.generated';
 /**
  * What a 10 means, per interest.
  *
@@ -56,9 +57,9 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // a global-pinnacle claim on the level of a Serengeti crossing or an
     // Antarctic hatching season.
     ten: [
-      'galapagos', 'kenya', 'tanzania', 'botswana', 'antarctica', 'svalbard',
-      'madagascar', 'rwanda', 'uganda', 'costa-rica', 'peruvian-amazon',
-      'zimbabwe', 'komodo',
+      PLACE['galapagos-islands'], PLACE['maasai-mara-and-amboseli'], PLACE['northern-tanzania'], PLACE['okavango-delta'], PLACE['antarctic-peninsula'], PLACE.svalbard,
+      PLACE.madagascar, PLACE.rwanda, PLACE.uganda, PLACE['costa-rica'], PLACE['peruvian-amazon'],
+      PLACE['victoria-falls-and-hwange'], PLACE['komodo-and-flores'],
     ],
   },
   birding: {
@@ -70,13 +71,13 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // endemism, charisma, spectacle) puts all three at a precise 9.1/8.8/
     // 9.1, genuinely a notch below the true ceiling, not tied for it.
     ten: [
-      'colombian-andes', 'peru', 'ecuadorian-andes', 'peruvian-amazon',
-      'papua-new-guinea', 'madagascar', 'kenya', 'uganda', 'tanzania',
+      PLACE['colombian-andes'], PLACE['cusco-and-sacred-valley'], PLACE['ecuadorian-andes'], PLACE['peruvian-amazon'],
+      PLACE['papua-new-guinea'], PLACE.madagascar, PLACE['maasai-mara-and-amboseli'], PLACE.uganda, PLACE['northern-tanzania'],
     ],
   },
   safari: {
     definition: 'The classic big-game safari at its global best.',
-    ten: ['kenya', 'tanzania', 'botswana'],
+    ten: [PLACE['maasai-mara-and-amboseli'], PLACE['northern-tanzania'], PLACE['okavango-delta']],
   },
   whaleWatching: {
     definition:
@@ -100,28 +101,32 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // regard as a lesser encounter than blue/humpback. Both still real,
     // dialed down rather than removed from the catalog.
     ten: [
-      'monterey-big-sur', 'vancouver-island', 'southeast-alaska', 'los-cabos',
-      'maui', 'azores', 'churchill', 'cape-town', 'antarctica',
-      'sydney',
+      PLACE['monterey-and-big-sur'], PLACE['vancouver-island'], PLACE['southeast-alaska-and-the-inside-passage'], PLACE['los-cabos'],
+      PLACE.maui, PLACE.azores, PLACE.churchill, PLACE['cape-town'], PLACE['antarctic-peninsula'],
+      PLACE.sydney,
     ],
   },
   scenicLandscapes: {
     definition: 'The global reference for landscape — the scenery IS the trip.',
+    // 21 Nov 2026 (owner's rank checks): ten of these fifteen peak at 10 (El Chaltén & El Calafate, Iceland, Yosemite, Dolomites, Norwegian Fjords, Chamonix,
+    // Zermatt, Nepal, Lofoten, Torres del Paine). Five are anchors held below 10 by recorded decision: Milford Sound & Fiordland 9.9, Atacama 9.8 and Salar de
+    // Uyuni 9.8 (each is one kind of landscape), Guilin & Yangshuo 9.7, Greenland 9.6. Nobody outside this list is at 10.
     ten: [
-      'el-chalten', 'iceland', 'yosemite', 'atacama', 'dolomites', 'fjords',
-      'greenland', 'chamonix', 'swissalps', 'nepal', 'lofoten',
-      'milford-sound-fiordland', 'torres-del-paine', 'uyuni', 'guilin-yangshuo',
+      PLACE['el-chalten-and-el-calafate'], PLACE.iceland, PLACE['yosemite-national-park'], PLACE['atacama-desert'], PLACE.dolomites, PLACE['norwegian-fjords'],
+      PLACE.greenland, PLACE['chamonix-and-the-french-alps'], PLACE['zermatt-and-the-swiss-alps'], PLACE.nepal, PLACE['lofoten-islands'],
+      PLACE['milford-sound-and-fiordland'], PLACE['torres-del-paine'], PLACE['salar-de-uyuni'], PLACE['guilin-and-yangshuo'],
     ],
   },
   landscapePhotography: {
     definition:
-      'A landscape photographer plans a trip around it. Capped at the ' +
-      "destination's own scenicLandscapes peak — a photograph cannot beat the " +
-      'landscape it is a photograph of.',
+      'A landscape photographer plans a trip around it. May exceed the ' +
+      "destination's own scenicLandscapes peak (owner decision, 21 Nov 2026).",
+    // 21 Nov 2026: the owner decided the cap does not apply. A place can be better to photograph than to look at (Salar de Uyuni, Namibia), so photography may
+    // exceed the Scenic peak. This is a hidden slider and no data was changed.",
     ten: [
-      'el-chalten', 'iceland', 'yosemite', 'atacama', 'dolomites', 'fjords',
-      'greenland', 'chamonix', 'swissalps', 'nepal', 'lofoten',
-      'milford-sound-fiordland', 'torres-del-paine', 'uyuni', 'guilin-yangshuo',
+      PLACE['el-chalten-and-el-calafate'], PLACE.iceland, PLACE['yosemite-national-park'], PLACE['atacama-desert'], PLACE.dolomites, PLACE['norwegian-fjords'],
+      PLACE.greenland, PLACE['chamonix-and-the-french-alps'], PLACE['zermatt-and-the-swiss-alps'], PLACE.nepal, PLACE['lofoten-islands'],
+      PLACE['milford-sound-and-fiordland'], PLACE['torres-del-paine'], PLACE['salar-de-uyuni'], PLACE['guilin-and-yangshuo'],
     ],
   },
   nationalParks: {
@@ -130,8 +135,8 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'from the US-centric signatureTier notch, which gates how much audience ' +
       'weight the claim earns rather than how good the park is.',
     ten: [
-      'yellowstone', 'yosemite', 'grandcanyon', 'torres-del-paine', 'denali-interior',
-      'milford-sound-fiordland', 'banff', 'zion-bryce', 'sequoia-kings-canyon', 'kruger',
+      PLACE['yellowstone-national-park'], PLACE['yosemite-national-park'], PLACE['grand-canyon'], PLACE['torres-del-paine'], PLACE['denali-and-the-interior'],
+      PLACE['milford-sound-and-fiordland'], PLACE['banff-and-jasper-national-parks'], PLACE['zion-and-bryce-canyon'], PLACE['sequoia-and-kings-canyon'], PLACE['kruger-and-sabi-sands'],
     ],
   },
   campingBackcountry: {
@@ -139,26 +144,26 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'Multi-day self-supported wilderness is the point of going, and the ' +
       'terrain, permit culture and route network are a world reference.',
     ten: [
-      'yosemite', 'sequoia-kings-canyon', 'glacier-waterton', 'denali-interior',
-      'yellowstone', 'north-cascades', 'banff', 'torres-del-paine', 'el-chalten',
-      'nepal', 'greenland', 'mongolia',
+      PLACE['yosemite-national-park'], PLACE['sequoia-and-kings-canyon'], PLACE['glacier-and-waterton-lakes'], PLACE['denali-and-the-interior'],
+      PLACE['yellowstone-national-park'], PLACE['north-cascades'], PLACE['banff-and-jasper-national-parks'], PLACE['torres-del-paine'], PLACE['el-chalten-and-el-calafate'],
+      PLACE.nepal, PLACE.greenland, PLACE.mongolia,
     ],
   },
   stargazing: {
     definition: 'Certified-dark, dry, high or remote — among the best night skies on earth.',
-    ten: ['joshua-tree', 'big-island', 'atacama', 'namibia', 'death-valley', 'uluru', 'uyuni'],
+    ten: [PLACE['palm-springs-and-joshua-tree'], PLACE['big-island'], PLACE['atacama-desert'], PLACE.namibia, PLACE['death-valley-national-park'], PLACE['uluru-and-the-outback'], PLACE['salar-de-uyuni']],
   },
   auroraChasing: {
     definition: 'High-latitude, long dark season, statistically reliable aurora.',
-    ten: ['iceland', 'churchill', 'svalbard', 'lapland', 'lofoten'],
+    ten: [PLACE.iceland, PLACE.churchill, PLACE.svalbard, PLACE['finnish-lapland'], PLACE['lofoten-islands']],
   },
   geologyVolcanoes: {
     definition:
       'The rock is the destination: active volcanism you can stand near, or a ' +
       'formation that is the textbook example of its kind.',
     ten: [
-      'iceland', 'big-island', 'yellowstone', 'grandcanyon', 'ethiopia',
-      'north-island', 'sicily', 'atacama', 'uyuni', 'canaries',
+      PLACE.iceland, PLACE['big-island'], PLACE['yellowstone-national-park'], PLACE['grand-canyon'], PLACE.ethiopia,
+      PLACE['north-island'], PLACE.sicily, PLACE['atacama-desert'], PLACE['salar-de-uyuni'], PLACE['canary-islands'],
     ],
   },
   wildflowerBlooms: {
@@ -168,15 +173,15 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // claim (Iceland's subarctic flora isn't a classic bloom destination).
     // amsterdam added Sep 2026: Keukenhof and the Bollenstreek bulb fields are the world's
     // reference tulip event — a named, dated, mass bloom that draws travellers on its own.
-    ten: ['canaries', 'cape-town', 'tokyo-kyoto', 'glacier-waterton', 'amsterdam'],
+    ten: [PLACE['canary-islands'], PLACE['cape-town'], PLACE['tokyo-and-kyoto'], PLACE['glacier-and-waterton-lakes'], PLACE.amsterdam],
   },
 
   // ---- Sports & Recreation ----------------------------------------------
   hiking: {
     definition: 'A global trekking reference — world walking, not good walking.',
     ten: [
-      'nepal', 'dolomites', 'torres-del-paine', 'el-chalten', 'chamonix',
-      'swissalps', 'pakistan', 'ladakh',
+      PLACE.nepal, PLACE.dolomites, PLACE['torres-del-paine'], PLACE['el-chalten-and-el-calafate'], PLACE['chamonix-and-the-french-alps'],
+      PLACE['zermatt-and-the-swiss-alps'], PLACE.pakistan, PLACE.ladakh,
     ],
   },
   mountaineering: {
@@ -184,8 +189,8 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'A world centre for alpinism or big-wall climbing — where the sport is ' +
       'practised at its highest level and where its history was made.',
     ten: [
-      'chamonix', 'nepal', 'pakistan', 'yosemite', 'el-chalten', 'denali-interior',
-      'swissalps', 'dolomites',
+      PLACE['chamonix-and-the-french-alps'], PLACE.nepal, PLACE.pakistan, PLACE['yosemite-national-park'], PLACE['el-chalten-and-el-calafate'], PLACE['denali-and-the-interior'],
+      PLACE['zermatt-and-the-swiss-alps'], PLACE.dolomites,
     ],
   },
   cyclingRoad: {
@@ -194,36 +199,36 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'surfaces and routes. City-cycling culture is a different thing and does ' +
       'not earn a 10 here.',
     ten: [
-      'mallorca', 'dolomites', 'provence', 'tuscany', 'chamonix', 'swissalps',
-      'andalucia', 'colombian-andes',
+      PLACE.mallorca, PLACE.dolomites, PLACE.provence, PLACE.tuscany, PLACE['chamonix-and-the-french-alps'], PLACE['zermatt-and-the-swiss-alps'],
+      PLACE.andalucia, PLACE['colombian-andes'],
     ],
   },
   mountainBiking: {
     definition: 'A destination trail network riders travel internationally to ride.',
     ten: [
-      'whistler', 'arches-canyonlands', 'queenstown', 'bend-crater-lake',
-      'north-island', 'tasmania', 'sedona', 'vermont', 'swissalps', 'cape-town',
+      PLACE['vancouver-and-whistler'], PLACE['arches-and-canyonlands'], PLACE.queenstown, PLACE['bend-and-crater-lake'],
+      PLACE['north-island'], PLACE.tasmania, PLACE.sedona, PLACE.vermont, PLACE['zermatt-and-the-swiss-alps'], PLACE['cape-town'],
     ],
   },
   skiingSnowboarding: {
     definition: 'A world-reference ski destination on terrain, snow and scale.',
-    ten: ['chamonix', 'swissalps', 'hokkaido', 'dolomites', 'whistler', 'aspen'],
+    ten: [PLACE['chamonix-and-the-french-alps'], PLACE['zermatt-and-the-swiss-alps'], PLACE.hokkaido, PLACE.dolomites, PLACE['vancouver-and-whistler'], PLACE['aspen-snowmass']],
   },
   surfing: {
     definition: 'A world-reference wave.',
     // Set by the owner on 11 Oct 2026 (was Bali, Maui, Lisbon). French Polynesia is Teahupo'o, Fiji is Cloudbreak, Namibia is Skeleton Bay.
     // 17 Oct 2026: Lisbon dropped (Gemini scores it 9.0, a wave for every level but no single world-reference wave). Namibia stays on the list
     // with no 10, a recorded decision: Skeleton Bay breaks only a few days a year, so it peaks at 9.4.
-    ten: ['bali', 'maui', 'borabora', 'fiji', 'namibia'],
+    ten: [PLACE.bali, PLACE.maui, PLACE['french-polynesia'], PLACE.fiji, PLACE.namibia],
   },
   diving: {
     definition: 'Among the best reefs or marine encounters on the planet.',
     ten: [
-      'rajaampat', 'palau', 'gbr', 'galapagos', 'egypt', 'maldives', 'komodo',
-      'borneo', 'belize', 'fiji',
+      PLACE['raja-ampat'], PLACE.palau, PLACE['great-barrier-reef'], PLACE['galapagos-islands'], PLACE['red-sea-and-nile'], PLACE.maldives, PLACE['komodo-and-flores'],
+      PLACE['malaysian-borneo'], PLACE.belize, PLACE.fiji,
     ],
   },
-  sailing: { definition: 'A world cruising ground.', ten: ['croatia', 'santorini', 'bahamas'] },
+  sailing: { definition: 'A world cruising ground.', ten: [PLACE['dalmatian-coast'], PLACE['santorini-and-cyclades'], PLACE.bahamas] },
   windSports: {
     definition:
       'A world-reference wind-sports coastline — the sport\'s own competitive ' +
@@ -239,56 +244,56 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // surfing's 3-destination anchor set needed, so 7 felt right, but this is
     // a first draft: worth revisiting once real destinations are compared
     // side by side in the sample round.
-    ten: ['maui', 'aruba', 'mauritius', 'cape-town', 'morocco', 'canaries', 'andalucia'],
+    ten: [PLACE.maui, PLACE.aruba, PLACE.mauritius, PLACE['cape-town'], PLACE['marrakech-and-atlas'], PLACE['canary-islands'], PLACE.andalucia],
   },
   kayakingRafting: {
     definition: 'A world-reference river or paddling coast.',
-    ten: ['zambia', 'zimbabwe', 'grandcanyon', 'marlborough-abel-tasman'],
+    ten: [PLACE['south-luangwa'], PLACE['victoria-falls-and-hwange'], PLACE['grand-canyon'], PLACE['marlborough-and-abel-tasman']],
   },
   adventureSports: {
     definition:
       'An adventure capital — several world-class adrenaline activities in one ' +
       'place, with the operator infrastructure to match.',
     ten: [
-      'queenstown', 'chamonix', 'swissalps', 'costa-rica', 'whistler', 'nepal',
-      'zimbabwe', 'dolomites',
+      PLACE.queenstown, PLACE['chamonix-and-the-french-alps'], PLACE['zermatt-and-the-swiss-alps'], PLACE['costa-rica'], PLACE['vancouver-and-whistler'], PLACE.nepal,
+      PLACE['victoria-falls-and-hwange'], PLACE.dolomites,
     ],
   },
   golf: {
     definition: 'A bucket-list course or cluster golfers plan a trip around.',
-    ten: ['monterey-big-sur', 'dubai', 'los-cabos', 'algarve', 'st-andrews-fife'],
+    ten: [PLACE['monterey-and-big-sur'], PLACE.dubai, PLACE['los-cabos'], PLACE.algarve, PLACE['st-andrews-and-fife']],
   },
   fishing: {
     definition: 'A named world fishery — the fish is the reason for the trip.',
     ten: [
-      'costa-rica', 'argentine-lake-district', 'belize',
-      'southeast-alaska', 'yellowstone', 'los-cabos', 'bahamas', 'pantanal',
+      PLACE['costa-rica'], PLACE['argentine-lake-district'], PLACE.belize,
+      PLACE['southeast-alaska-and-the-inside-passage'], PLACE['yellowstone-national-park'], PLACE['los-cabos'], PLACE.bahamas, PLACE.pantanal,
     ],
   },
   horsebackRiding: {
     definition: 'A riding culture you travel into — multi-day riding across open country.',
-    ten: ['iceland', 'mongolia', 'kyrgyzstan', 'argentine-lake-district', 'provence', 'andalucia'],
+    ten: [PLACE.iceland, PLACE.mongolia, PLACE.kyrgyzstan, PLACE['argentine-lake-district'], PLACE.provence, PLACE.andalucia],
   },
   trailRunning: {
     definition: 'A trail-running destination with the races and the terrain to prove it.',
     ten: [
-      'el-chalten', 'lake-district', 'canaries', 'cape-town', 'dolomites', 'chamonix',
-      'swissalps', 'rocky-mountain', 'nepal',
+      PLACE['el-chalten-and-el-calafate'], PLACE['lake-district'], PLACE['canary-islands'], PLACE['cape-town'], PLACE.dolomites, PLACE['chamonix-and-the-french-alps'],
+      PLACE['zermatt-and-the-swiss-alps'], PLACE['rocky-mountain-national-park'], PLACE.nepal,
     ],
   },
 
   // ---- Culture & Discovery ----------------------------------------------
   historyArchaeology: {
     definition: 'A site of world-historical importance that people travel specifically to see.',
-    ten: ['athens', 'egypt', 'peru', 'angkor', 'jordan', 'bagan', 'beijing', 'rome', 'uzbekistan'],
+    ten: [PLACE.athens, PLACE['red-sea-and-nile'], PLACE['cusco-and-sacred-valley'], PLACE.cambodia, PLACE['petra-and-wadi-rum'], PLACE.myanmar, PLACE['beijing-and-great-wall'], PLACE.rome, PLACE['samarkand-and-bukhara']],
   },
   museumsArt: {
     definition:
       'Holds collections that are a reason in themselves to visit the city — ' +
       'the museums, not the monuments.',
     ten: [
-      'paris', 'london', 'nyc', 'rome', 'tuscany', 'vienna', 'amsterdam', 'berlin',
-      'mexicocity', 'athens',
+      PLACE.paris, PLACE.london, PLACE['new-york-city'], PLACE.rome, PLACE.tuscany, PLACE.vienna, PLACE.amsterdam, PLACE.berlin,
+      PLACE['mexico-city'], PLACE.athens,
     ],
   },
   architecture: {
@@ -296,70 +301,70 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'A world reference for the built environment — people study it, not just ' +
       'photograph it.',
     ten: [
-      'rome', 'paris', 'venice', 'istanbul', 'barcelona', 'tokyo-kyoto', 'beijing',
-      'angkor', 'vienna', 'prague', 'andalucia', 'nyc', 'chicago', 'uzbekistan',
+      PLACE.rome, PLACE.paris, PLACE.venice, PLACE.istanbul, PLACE.barcelona, PLACE['tokyo-and-kyoto'], PLACE['beijing-and-great-wall'],
+      PLACE.cambodia, PLACE.vienna, PLACE.prague, PLACE.andalucia, PLACE['new-york-city'], PLACE.chicago, PLACE['samarkand-and-bukhara'],
       // Florence, Siena, Pisa. Added when the hiking deflation dropped
       // Tuscany out of its expected band and its profile showed why: it was
       // riding an inflated hiking 9 while the Duomo, the Uffizi and the
       // Palazzo Vecchio sat at an 8.
-      'tuscany',
+      PLACE.tuscany,
     ],
   },
   cityExploration: {
     definition: 'One of the great cities to simply walk around in.',
-    ten: ['tokyo-kyoto', 'paris', 'london', 'istanbul', 'hongkong', 'nyc', 'rome', 'barcelona'],
+    ten: [PLACE['tokyo-and-kyoto'], PLACE.paris, PLACE.london, PLACE.istanbul, PLACE['hong-kong'], PLACE['new-york-city'], PLACE.rome, PLACE.barcelona],
   },
   indigenousCultures: {
     definition: 'Living indigenous culture, met on its own terms, is central to the visit.',
-    ten: ['peru', 'uluru', 'papua-new-guinea'],
+    ten: [PLACE['cusco-and-sacred-valley'], PLACE['uluru-and-the-outback'], PLACE['papua-new-guinea']],
   },
   religiousSites: {
     definition: 'A first-rank pilgrimage or sacred landscape of global significance.',
-    ten: ['ethiopia', 'bhutan', 'bagan', 'rome'],
+    ten: [PLACE.ethiopia, PLACE.bhutan, PLACE.myanmar, PLACE.rome],
   },
   festivals: {
     definition: 'A festival famous enough that people time the whole trip to it.',
     ten: [
-      'rio', 'bavaria-munich', 'edinburgh', 'oaxaca', 'andalucia', 'chiang-mai',
-      'tokyo-kyoto', 'papua-new-guinea',
+      PLACE['rio-de-janeiro'], PLACE['bavaria-and-munich'], PLACE.edinburgh, PLACE.oaxaca, PLACE.andalucia, PLACE['chiang-mai-and-northern-thailand'],
+      PLACE['tokyo-and-kyoto'], PLACE['papua-new-guinea'],
     ],
   },
   traditionalCrafts: {
     definition: 'A living craft tradition worth travelling for.',
-    ten: ['morocco', 'oaxaca'],
+    ten: [PLACE['marrakech-and-atlas'], PLACE.oaxaca],
   },
   streetFood: {
     definition: 'Eating on the street is one of the top reasons to go, and among the best anywhere.',
     ten: [
-      'bangkok', 'mexicocity', 'oaxaca', 'istanbul', 'hongkong', 'taiwan', 'vietnam',
-      'singapore', 'seoul', 'morocco',
+      PLACE.bangkok, PLACE['mexico-city'], PLACE.oaxaca, PLACE.istanbul, PLACE['hong-kong'], PLACE.taiwan, PLACE.vietnam,
+      PLACE.singapore, PLACE.seoul, PLACE['marrakech-and-atlas'],
     ],
   },
   fineDining: {
     definition: 'A global restaurant capital people book flights around.',
     ten: [
-      'paris', 'tokyo-kyoto', 'nyc', 'copenhagen', 'basque-country', 'london',
-      'hongkong', 'barcelona', 'mexicocity', 'piedmont',
+      PLACE.paris, PLACE['tokyo-and-kyoto'], PLACE['new-york-city'], PLACE.copenhagen, PLACE['basque-country'], PLACE.london,
+      PLACE['hong-kong'], PLACE.barcelona, PLACE['mexico-city'], PLACE.piedmont,
     ],
   },
   wineSpirits: {
     definition: 'A benchmark wine or spirits region with the visitor culture to match.',
     ten: [
-      'rioja', 'bordeaux', 'marlborough-abel-tasman', 'provence', 'douro-valley-porto',
-      'mendoza', 'tbilisi-caucasus', 'piedmont', 'tuscany', 'napa', 'champagne',
+      PLACE.rioja, PLACE.bordeaux, PLACE['marlborough-and-abel-tasman'], PLACE.provence, PLACE['douro-valley-and-porto'],
+      PLACE.mendoza, PLACE['tbilisi-and-the-caucasus'], PLACE.piedmont, PLACE.tuscany, PLACE['napa-and-sonoma'], PLACE.champagne,
     ],
   },
   coffeeTea: {
     definition: 'The origin or the ritual is world-defining.',
-    ten: ['ethiopia', 'colombian-andes'],
+    ten: [PLACE.ethiopia, PLACE['colombian-andes']],
   },
 
   // ---- Relaxation, Leisure & Practical ----------------------------------
   beachesSwimming: {
     definition: 'Among the best beaches on earth to actually swim from.',
     ten: [
-      'turks-caicos', 'maldives', 'borabora', 'seychelles', 'bahamas', 'barbados',
-      'palawan', 'fiji', 'maui', 'mauritius',
+      PLACE['turks-and-caicos'], PLACE.maldives, PLACE['french-polynesia'], PLACE.seychelles, PLACE.bahamas, PLACE.barbados,
+      PLACE.palawan, PLACE.fiji, PLACE.maui, PLACE.mauritius,
     ],
   },
   sunbathing: {
@@ -367,21 +372,21 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
       'Near-guaranteed sun and a beach built for lying on it. This is about ' +
       'reliability and lounging, not scenery.',
     ten: [
-      'turks-caicos', 'maldives', 'borabora', 'barbados', 'aruba', 'bahamas',
-      'punta-cana', 'rivieramaya', 'canaries', 'algarve', 'egypt', 'los-cabos',
+      PLACE['turks-and-caicos'], PLACE.maldives, PLACE['french-polynesia'], PLACE.barbados, PLACE.aruba, PLACE.bahamas,
+      PLACE['dominican-republic'], PLACE['riviera-maya'], PLACE['canary-islands'], PLACE.algarve, PLACE['red-sea-and-nile'], PLACE['los-cabos'],
     ],
   },
   luxuryHotels: {
     definition: 'Holds hotels or lodges that are themselves the destination.',
     ten: [
-      'maldives', 'borabora', 'botswana', 'kenya', 'tanzania', 'kruger', 'paris',
-      'london', 'tokyo-kyoto', 'nyc', 'dubai', 'bali',
+      PLACE.maldives, PLACE['french-polynesia'], PLACE['okavango-delta'], PLACE['maasai-mara-and-amboseli'], PLACE['northern-tanzania'], PLACE['kruger-and-sabi-sands'], PLACE.paris,
+      PLACE.london, PLACE['tokyo-and-kyoto'], PLACE['new-york-city'], PLACE.dubai, PLACE.bali,
     ],
   },
-  allInclusive: { definition: 'The global centre of gravity for the resort format.', ten: ['punta-cana', 'rivieramaya'] },
+  allInclusive: { definition: 'The global centre of gravity for the resort format.', ten: [PLACE['dominican-republic'], PLACE['riviera-maya']] },
   spaWellness: {
     definition: 'A wellness destination in its own right, not a hotel amenity.',
-    ten: ['borabora', 'maldives', 'sedona', 'thailand', 'budapest', 'kerala', 'bali'],
+    ten: [PLACE['french-polynesia'], PLACE.maldives, PLACE.sedona, PLACE['phuket-and-the-andaman-coast'], PLACE.budapest, PLACE.kerala, PLACE.bali],
   },
   hotSprings: {
     definition: 'A world bathing culture.',
@@ -390,30 +395,30 @@ export const INTEREST_ANCHORS: Record<string, InterestAnchor> = {
     // docked -5 for a cold month: Hokkaido's rotenburo in the snow — the
     // single most iconic image of the whole interest — were being scored as
     // its worst season, so it never reached a 10 for anyone to notice.
-    ten: ['iceland', 'budapest', 'hokkaido'],
+    ten: [PLACE.iceland, PLACE.budapest, PLACE.hokkaido],
   },
-  yogaRetreats: { definition: 'A world centre of the practice.', ten: ['kerala', 'bali'] },
+  yogaRetreats: { definition: 'A world centre of the practice.', ten: [PLACE.kerala, PLACE.bali] },
   themeParks: { definition: 'A world-reference park cluster.', ten: [] },
   nightlife: {
     definition: 'A night out here is a reason people choose the city.',
-    ten: ['buenosaires', 'hongkong', 'new-orleans', 'rio', 'berlin', 'bangkok', 'nyc', 'seoul', 'barcelona'],
+    ten: [PLACE['buenos-aires'], PLACE['hong-kong'], PLACE['new-orleans'], PLACE['rio-de-janeiro'], PLACE.berlin, PLACE.bangkok, PLACE['new-york-city'], PLACE.seoul, PLACE.barcelona],
   },
   shopping: {
     definition: 'A global shopping capital, whether luxury retail or a great market city.',
-    ten: ['paris', 'london', 'hongkong', 'singapore', 'morocco', 'dubai', 'bangkok', 'rajasthan-golden-triangle', 'nyc', 'seoul'],
+    ten: [PLACE.paris, PLACE.london, PLACE['hong-kong'], PLACE.singapore, PLACE['marrakech-and-atlas'], PLACE.dubai, PLACE.bangkok, PLACE['rajasthan-and-the-golden-triangle'], PLACE['new-york-city'], PLACE.seoul],
   },
   familyFun: {
     definition: 'Genuinely built for travelling with children, end to end.',
-    ten: ['costa-rica', 'turks-caicos', 'maui'],
+    ten: [PLACE['costa-rica'], PLACE['turks-and-caicos'], PLACE.maui],
   },
   roadtrip: {
     definition:
       'The drive is the trip. A named touring route where the road itself is ' +
       'the attraction, not a park you drive to and then stop.',
     ten: [
-      'iceland', 'ireland', 'scottish-highlands-skye', 'fjords', 'monterey-big-sur',
-      'banff', 'glacier-waterton', 'queenstown', 'namibia', 'argentine-lake-district',
-      'dolomites', 'cape-town',
+      PLACE.iceland, PLACE.ireland, PLACE['scottish-highlands-and-isle-of-skye'], PLACE['norwegian-fjords'], PLACE['monterey-and-big-sur'],
+      PLACE['banff-and-jasper-national-parks'], PLACE['glacier-and-waterton-lakes'], PLACE.queenstown, PLACE.namibia, PLACE['argentine-lake-district'],
+      PLACE.dolomites, PLACE['cape-town'],
     ],
   },
 

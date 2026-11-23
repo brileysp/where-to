@@ -2,7 +2,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "athens",
+  "id": "p0013",
   "rank": "strong",
   "name": "Athens",
   "model": "gemini-3.1-pro-preview",
@@ -108,7 +108,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "iceland",
+  "id": "p0083",
   "rank": "middle",
   "name": "Iceland",
   "model": "gemini-3.1-pro-preview",
@@ -196,7 +196,7 @@
  {
   "family": "culture",
   "k": "museumsArt",
-  "id": "joshua-tree",
+  "id": "p0134",
   "rank": "weak",
   "name": "Palm Springs & Joshua Tree",
   "model": "gemini-3.1-pro-preview",
@@ -279,7 +279,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "angkor",
+  "id": "p0034",
   "rank": "strong",
   "name": "Cambodia",
   "model": "gemini-3.1-pro-preview",
@@ -380,7 +380,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "napa",
+  "id": "p0115",
   "rank": "middle",
   "name": "Napa & Sonoma",
   "model": "gemini-3.1-pro-preview",
@@ -458,7 +458,7 @@
  {
   "family": "culture",
   "k": "architecture",
-  "id": "svalbard",
+  "id": "p0175",
   "rank": "weak",
   "name": "Svalbard",
   "model": "gemini-3.1-pro-preview",
@@ -553,7 +553,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "uzbekistan",
+  "id": "p0160",
   "rank": "strong",
   "name": "Samarkand & Bukhara",
   "model": "gemini-3.1-pro-preview",
@@ -661,7 +661,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "ireland",
+  "id": "p0084",
   "rank": "middle",
   "name": "Ireland",
   "model": "gemini-3.1-pro-preview",
@@ -767,7 +767,7 @@
  {
   "family": "culture",
   "k": "historyArchaeology",
-  "id": "thailand",
+  "id": "p0141",
   "rank": "weak",
   "name": "Phuket & the Andaman Coast",
   "model": "gemini-3.1-pro-preview",
@@ -852,7 +852,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "uzbekistan",
+  "id": "p0160",
   "rank": "strong",
   "name": "Samarkand & Bukhara",
   "model": "gemini-3.1-pro-preview",
@@ -953,7 +953,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "amalfi",
+  "id": "p0003",
   "rank": "middle",
   "name": "Amalfi Coast",
   "model": "gemini-3.1-pro-preview",
@@ -1055,7 +1055,7 @@
  {
   "family": "culture",
   "k": "religiousSites",
-  "id": "punta-cana",
+  "id": "p0058",
   "rank": "weak",
   "name": "Dominican Republic",
   "model": "gemini-3.1-pro-preview",
@@ -1154,7 +1154,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "morocco",
+  "id": "p0105",
   "rank": "strong",
   "name": "Marrakech & Atlas",
   "model": "gemini-3.1-pro-preview",
@@ -1262,7 +1262,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "chiang-mai",
+  "id": "p0041",
   "rank": "middle",
   "name": "Chiang Mai & Northern Thailand",
   "model": "gemini-3.1-pro-preview",
@@ -1369,7 +1369,7 @@
  {
   "family": "culture",
   "k": "traditionalCrafts",
-  "id": "mongolia",
+  "id": "p0111",
   "rank": "weak",
   "name": "Mongolia",
   "model": "gemini-3.1-pro-preview",
@@ -1463,7 +1463,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "barcelona",
+  "id": "p0021",
   "rank": "strong",
   "name": "Barcelona",
   "model": "gemini-3.1-pro-preview",
@@ -1577,7 +1577,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "jordan",
+  "id": "p0140",
   "rank": "middle",
   "name": "Petra & Wadi Rum",
   "model": "gemini-3.1-pro-preview",
@@ -1674,7 +1674,7 @@
  {
   "family": "culture",
   "k": "cityExploration",
-  "id": "chamonix",
+  "id": "p0038",
   "rank": "weak",
   "name": "Chamonix & the French Alps",
   "model": "gemini-3.1-pro-preview",
@@ -1771,7 +1771,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "hongkong",
+  "id": "p0081",
   "rank": "strong",
   "name": "Hong Kong",
   "model": "gemini-3.1-pro-preview",
@@ -1859,7 +1859,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "thailand",
+  "id": "p0141",
   "rank": "middle",
   "name": "Phuket & the Andaman Coast",
   "model": "gemini-3.1-pro-preview",
@@ -1938,7 +1938,7 @@
  {
   "family": "food",
   "k": "fineDining",
-  "id": "peruvian-amazon",
+  "id": "p0139",
   "rank": "weak",
   "name": "Peruvian Amazon",
   "model": "gemini-3.1-pro-preview",
@@ -1986,7 +1986,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "istanbul",
+  "id": "p0085",
   "rank": "strong",
   "name": "Istanbul",
   "model": "gemini-3.1-pro-preview",
@@ -2080,7 +2080,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "vancouver-island",
+  "id": "p0190",
   "rank": "middle",
   "name": "Vancouver Island",
   "model": "gemini-3.1-pro-preview",
@@ -2173,7 +2173,7 @@
  {
   "family": "food",
   "k": "streetFood",
-  "id": "fjords",
+  "id": "p0125",
   "rank": "weak",
   "name": "Norwegian Fjords",
   "model": "gemini-3.1-pro-preview",
@@ -2266,7 +2266,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "tokyo-kyoto",
+  "id": "p0182",
   "rank": "strong",
   "name": "Tokyo & Kyoto",
   "model": "gemini-3.1-pro-preview",
@@ -2357,7 +2357,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "okinawa",
+  "id": "p0129",
   "rank": "middle",
   "name": "Okinawa",
   "model": "gemini-3.1-pro-preview",
@@ -2440,7 +2440,7 @@
  {
   "family": "food",
   "k": "coffeeTea",
-  "id": "puglia",
+  "id": "p0146",
   "rank": "weak",
   "name": "Puglia",
   "model": "gemini-3.1-pro-preview",
@@ -2518,7 +2518,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "provence",
+  "id": "p0144",
   "rank": "strong",
   "name": "Provence",
   "model": "gemini-3.1-pro-preview",
@@ -2612,7 +2612,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "atacama",
+  "id": "p0012",
   "rank": "middle",
   "name": "Atacama Desert",
   "model": "gemini-3.1-pro-preview",
@@ -2702,7 +2702,7 @@
  {
   "family": "food",
   "k": "wineSpirits",
-  "id": "tierra-del-fuego",
+  "id": "p0181",
   "rank": "weak",
   "name": "Tierra del Fuego",
   "model": "gemini-3.1-pro-preview",

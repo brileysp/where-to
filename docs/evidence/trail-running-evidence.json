@@ -1,5 +1,5 @@
 {
- "ethiopia": {
+ "p0064": {
   "routes": 0,
   "r20": 0,
   "r40": 0,
@@ -7,9 +7,9 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 31,
-  "relief_m": 4264.0,
-  "high_m": 4497.0,
-  "low_m": 233.0,
+  "relief_m": 4264,
+  "high_m": 4497,
+  "low_m": 233,
   "has_coast": false,
   "races": [],
   "values": {
@@ -21,7 +21,7 @@
   },
   "thin": true
  },
- "bhutan": {
+ "p0028": {
   "routes": 17,
   "r20": 14,
   "r40": 3,
@@ -29,9 +29,9 @@
   "max_km": 337,
   "coastal": 0,
   "huts": 20,
-  "relief_m": 7378.0,
-  "high_m": 7490.0,
-  "low_m": 112.0,
+  "relief_m": 7378,
+  "high_m": 7490,
+  "low_m": 112,
   "has_coast": false,
   "races": [],
   "values": {
@@ -52,7 +52,7 @@
   },
   "thin": false
  },
- "atacama": {
+ "p0012": {
   "routes": 0,
   "r20": 0,
   "r40": 0,
@@ -60,8 +60,8 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 5938.0,
-  "high_m": 5938.0,
+  "relief_m": 5938,
+  "high_m": 5938,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -74,7 +74,7 @@
   },
   "thin": true
  },
- "morocco": {
+ "p0105": {
   "routes": 1,
   "r20": 0,
   "r40": 0,
@@ -82,9 +82,9 @@
   "max_km": 12,
   "coastal": 0,
   "huts": 13,
-  "relief_m": 3819.0,
-  "high_m": 4149.0,
-  "low_m": 330.0,
+  "relief_m": 3819,
+  "high_m": 4149,
+  "low_m": 330,
   "has_coast": false,
   "races": [],
   "values": {
@@ -99,7 +99,7 @@
   },
   "thin": true
  },
- "colombian-andes": {
+ "p0046": {
   "routes": 4,
   "r20": 2,
   "r40": 1,
@@ -107,9 +107,9 @@
   "max_km": 51,
   "coastal": 0,
   "huts": 50,
-  "relief_m": 4311.0,
-  "high_m": 5215.0,
-  "low_m": 904.0,
+  "relief_m": 4311,
+  "high_m": 5215,
+  "low_m": 904,
   "has_coast": false,
   "races": [],
   "values": {
@@ -129,7 +129,7 @@
   },
   "thin": false
  },
- "sedona": {
+ "p0165": {
   "routes": 6,
   "r20": 1,
   "r40": 0,
@@ -137,9 +137,9 @@
   "max_km": 24,
   "coastal": 0,
   "huts": 2,
-  "relief_m": 1628.0,
-  "high_m": 2585.0,
-  "low_m": 957.0,
+  "relief_m": 1628,
+  "high_m": 2585,
+  "low_m": 957,
   "has_coast": false,
   "races": [
    {
@@ -163,7 +163,7 @@
   },
   "thin": false
  },
- "ecuadorian-andes": {
+ "p0061": {
   "routes": 2,
   "r20": 0,
   "r40": 0,
@@ -171,9 +171,9 @@
   "max_km": 17,
   "coastal": 0,
   "huts": 33,
-  "relief_m": 3814.0,
-  "high_m": 4787.0,
-  "low_m": 973.0,
+  "relief_m": 3814,
+  "high_m": 4787,
+  "low_m": 973,
   "has_coast": false,
   "races": [
    {
@@ -195,7 +195,7 @@
   },
   "thin": true
  },
- "olympic": {
+ "p0130": {
   "routes": 24,
   "r20": 9,
   "r40": 4,
@@ -203,8 +203,8 @@
   "max_km": 213,
   "coastal": 3,
   "huts": 2,
-  "relief_m": 2367.0,
-  "high_m": 2367.0,
+  "relief_m": 2367,
+  "high_m": 2367,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -225,7 +225,7 @@
   },
   "thin": false
  },
- "andalucia": {
+ "p0005": {
   "routes": 3,
   "r20": 1,
   "r40": 1,
@@ -233,8 +233,8 @@
   "max_km": 213,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 220.0,
-  "high_m": 220.0,
+  "relief_m": 220,
+  "high_m": 220,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -252,7 +252,7 @@
   },
   "thin": false
  },
- "madeira": {
+ "p0100": {
   "routes": 22,
   "r20": 7,
   "r40": 1,
@@ -260,8 +260,8 @@
   "max_km": 40,
   "coastal": 2,
   "huts": 0,
-  "relief_m": 1832.0,
-  "high_m": 1832.0,
+  "relief_m": 1832,
+  "high_m": 1832,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -293,7 +293,7 @@
   },
   "thin": false
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "routes": 14,
   "r20": 5,
   "r40": 4,
@@ -301,8 +301,8 @@
   "max_km": 62,
   "coastal": 1,
   "huts": 113,
-  "relief_m": 2686.0,
-  "high_m": 2686.0,
+  "relief_m": 2686,
+  "high_m": 2686,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -323,7 +323,7 @@
   },
   "thin": false
  },
- "nepal": {
+ "p0116": {
   "routes": 93,
   "r20": 74,
   "r40": 43,
@@ -331,9 +331,9 @@
   "max_km": 239,
   "coastal": 0,
   "huts": 180,
-  "relief_m": 8540.0,
-  "high_m": 8600.0,
-  "low_m": 60.0,
+  "relief_m": 8540,
+  "high_m": 8600,
+  "low_m": 60,
   "has_coast": false,
   "races": [],
   "values": {
@@ -354,7 +354,7 @@
   },
   "thin": false
  },
- "ladakh": {
+ "p0091": {
   "routes": 102,
   "r20": 66,
   "r40": 27,
@@ -362,9 +362,9 @@
   "max_km": 173,
   "coastal": 0,
   "huts": 9,
-  "relief_m": 4657.0,
-  "high_m": 7604.0,
-  "low_m": 2947.0,
+  "relief_m": 4657,
+  "high_m": 7604,
+  "low_m": 2947,
   "has_coast": false,
   "races": [],
   "values": {
@@ -385,7 +385,7 @@
   },
   "thin": false
  },
- "fjords": {
+ "p0125": {
   "routes": 102,
   "r20": 17,
   "r40": 0,
@@ -393,8 +393,8 @@
   "max_km": 32,
   "coastal": 6,
   "huts": 46,
-  "relief_m": 1929.0,
-  "high_m": 1929.0,
+  "relief_m": 1929,
+  "high_m": 1929,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -420,7 +420,7 @@
   },
   "thin": false
  },
- "great-smoky-mountains": {
+ "p0076": {
   "routes": 9,
   "r20": 4,
   "r40": 2,
@@ -428,9 +428,9 @@
   "max_km": 73,
   "coastal": 0,
   "huts": 4,
-  "relief_m": 1666.0,
-  "high_m": 1987.0,
-  "low_m": 321.0,
+  "relief_m": 1666,
+  "high_m": 1987,
+  "low_m": 321,
   "has_coast": false,
   "races": [],
   "values": {
@@ -449,7 +449,7 @@
   },
   "thin": false
  },
- "scottish-highlands-skye": {
+ "p0164": {
   "routes": 30,
   "r20": 16,
   "r40": 8,
@@ -457,8 +457,8 @@
   "max_km": 125,
   "coastal": 4,
   "huts": 49,
-  "relief_m": 1286.0,
-  "high_m": 1286.0,
+  "relief_m": 1286,
+  "high_m": 1286,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -496,7 +496,7 @@
   },
   "thin": false
  },
- "dolomites": {
+ "p0057": {
   "routes": 516,
   "r20": 87,
   "r40": 17,
@@ -504,9 +504,9 @@
   "max_km": 556,
   "coastal": 0,
   "huts": 611,
-  "relief_m": 3187.0,
-  "high_m": 3468.0,
-  "low_m": 281.0,
+  "relief_m": 3187,
+  "high_m": 3468,
+  "low_m": 281,
   "has_coast": false,
   "races": [
    {
@@ -549,7 +549,7 @@
   },
   "thin": false
  },
- "lake-district": {
+ "p0092": {
   "routes": 16,
   "r20": 7,
   "r40": 6,
@@ -557,8 +557,8 @@
   "max_km": 137,
   "coastal": 2,
   "huts": 19,
-  "relief_m": 874.0,
-  "high_m": 874.0,
+  "relief_m": 874,
+  "high_m": 874,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -586,7 +586,7 @@
   },
   "thin": false
  },
- "taiwan": {
+ "p0177": {
   "routes": 94,
   "r20": 58,
   "r40": 29,
@@ -594,8 +594,8 @@
   "max_km": 241,
   "coastal": 10,
   "huts": 113,
-  "relief_m": 3861.0,
-  "high_m": 3861.0,
+  "relief_m": 3861,
+  "high_m": 3861,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -624,7 +624,7 @@
   },
   "thin": false
  },
- "hongkong": {
+ "p0081": {
   "routes": 29,
   "r20": 3,
   "r40": 1,
@@ -632,8 +632,8 @@
   "max_km": 45,
   "coastal": 16,
   "huts": 0,
-  "relief_m": 937.0,
-  "high_m": 937.0,
+  "relief_m": 937,
+  "high_m": 937,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -659,7 +659,7 @@
   },
   "thin": false
  },
- "yosemite": {
+ "p0198": {
   "routes": 14,
   "r20": 6,
   "r40": 4,
@@ -667,9 +667,9 @@
   "max_km": 116,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 3312.0,
-  "high_m": 3950.0,
-  "low_m": 638.0,
+  "relief_m": 3312,
+  "high_m": 3950,
+  "low_m": 638,
   "has_coast": false,
   "races": [],
   "values": {
@@ -689,7 +689,7 @@
   },
   "thin": false
  },
- "aspen": {
+ "p0010": {
   "routes": 4,
   "r20": 3,
   "r40": 1,
@@ -697,9 +697,9 @@
   "max_km": 148,
   "coastal": 0,
   "huts": 16,
-  "relief_m": 1924.0,
-  "high_m": 4375.0,
-  "low_m": 2451.0,
+  "relief_m": 1924,
+  "high_m": 4375,
+  "low_m": 2451,
   "has_coast": false,
   "races": [],
   "values": {
@@ -720,7 +720,7 @@
   },
   "thin": false
  },
- "torres-del-paine": {
+ "p0183": {
   "routes": 2,
   "r20": 2,
   "r40": 2,
@@ -728,8 +728,8 @@
   "max_km": 93,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 2495.0,
-  "high_m": 2495.0,
+  "relief_m": 2495,
+  "high_m": 2495,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -748,7 +748,7 @@
   },
   "thin": true
  },
- "chilean-lake-district": {
+ "p0044": {
   "routes": 6,
   "r20": 5,
   "r40": 4,
@@ -756,9 +756,9 @@
   "max_km": 804,
   "coastal": 0,
   "huts": 4,
-  "relief_m": 2340.0,
-  "high_m": 2407.0,
-  "low_m": 67.0,
+  "relief_m": 2340,
+  "high_m": 2407,
+  "low_m": 67,
   "has_coast": false,
   "races": [
    {
@@ -785,7 +785,7 @@
   },
   "thin": false
  },
- "lofoten": {
+ "p0095": {
   "routes": 19,
   "r20": 2,
   "r40": 0,
@@ -793,8 +793,8 @@
   "max_km": 22,
   "coastal": 12,
   "huts": 24,
-  "relief_m": 1229.0,
-  "high_m": 1229.0,
+  "relief_m": 1229,
+  "high_m": 1229,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -812,7 +812,7 @@
   },
   "thin": false
  },
- "banff": {
+ "p0018": {
   "routes": 21,
   "r20": 17,
   "r40": 8,
@@ -820,9 +820,9 @@
   "max_km": 69,
   "coastal": 0,
   "huts": 42,
-  "relief_m": 2606.0,
-  "high_m": 3669.0,
-  "low_m": 1063.0,
+  "relief_m": 2606,
+  "high_m": 3669,
+  "low_m": 1063,
   "has_coast": false,
   "races": [],
   "values": {
@@ -842,7 +842,7 @@
   },
   "thin": false
  },
- "arches-canyonlands": {
+ "p0007": {
   "routes": 2,
   "r20": 1,
   "r40": 1,
@@ -850,9 +850,9 @@
   "max_km": 281,
   "coastal": 0,
   "huts": 9,
-  "relief_m": 1263.0,
-  "high_m": 2460.0,
-  "low_m": 1197.0,
+  "relief_m": 1263,
+  "high_m": 2460,
+  "low_m": 1197,
   "has_coast": false,
   "races": [],
   "values": {
@@ -869,7 +869,7 @@
   },
   "thin": true
  },
- "provence": {
+ "p0144": {
   "routes": 83,
   "r20": 23,
   "r40": 10,
@@ -877,8 +877,8 @@
   "max_km": 335,
   "coastal": 13,
   "huts": 14,
-  "relief_m": 1899.0,
-  "high_m": 1899.0,
+  "relief_m": 1899,
+  "high_m": 1899,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -912,7 +912,7 @@
   },
   "thin": false
  },
- "el-chalten": {
+ "p0063": {
   "routes": 4,
   "r20": 2,
   "r40": 2,
@@ -920,9 +920,9 @@
   "max_km": 80,
   "coastal": 0,
   "huts": 6,
-  "relief_m": 2657.0,
-  "high_m": 2836.0,
-  "low_m": 179.0,
+  "relief_m": 2657,
+  "high_m": 2836,
+  "low_m": 179,
   "has_coast": false,
   "races": [],
   "values": {
@@ -941,7 +941,7 @@
   },
   "thin": false
  },
- "sequoia-kings-canyon": {
+ "p0167": {
   "routes": 44,
   "r20": 12,
   "r40": 7,
@@ -949,9 +949,9 @@
   "max_km": 410,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 4154.0,
-  "high_m": 4340.0,
-  "low_m": 186.0,
+  "relief_m": 4154,
+  "high_m": 4340,
+  "low_m": 186,
   "has_coast": false,
   "races": [],
   "values": {
@@ -971,7 +971,7 @@
   },
   "thin": false
  },
- "rio": {
+ "p0153": {
   "routes": 1,
   "r20": 1,
   "r40": 1,
@@ -979,8 +979,8 @@
   "max_km": 68,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 1005.0,
-  "high_m": 1005.0,
+  "relief_m": 1005,
+  "high_m": 1005,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -996,7 +996,7 @@
   },
   "thin": true
  },
- "costa-rica": {
+ "p0050": {
   "routes": 0,
   "r20": 0,
   "r40": 0,
@@ -1004,8 +1004,8 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 60,
-  "relief_m": 3765.0,
-  "high_m": 3765.0,
+  "relief_m": 3765,
+  "high_m": 3765,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1018,7 +1018,7 @@
   },
   "thin": true
  },
- "bend-crater-lake": {
+ "p0026": {
   "routes": 3,
   "r20": 2,
   "r40": 0,
@@ -1026,9 +1026,9 @@
   "max_km": 25,
   "coastal": 0,
   "huts": 2,
-  "relief_m": 1778.0,
-  "high_m": 2714.0,
-  "low_m": 936.0,
+  "relief_m": 1778,
+  "high_m": 2714,
+  "low_m": 936,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1046,7 +1046,7 @@
   },
   "thin": false
  },
- "zion-bryce": {
+ "p0200": {
   "routes": 9,
   "r20": 4,
   "r40": 1,
@@ -1054,9 +1054,9 @@
   "max_km": 116,
   "coastal": 0,
   "huts": 5,
-  "relief_m": 1553.0,
-  "high_m": 2772.0,
-  "low_m": 1219.0,
+  "relief_m": 1553,
+  "high_m": 2772,
+  "low_m": 1219,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1076,7 +1076,7 @@
   },
   "thin": false
  },
- "kyrgyzstan": {
+ "p0090": {
   "routes": 67,
   "r20": 47,
   "r40": 17,
@@ -1084,9 +1084,9 @@
   "max_km": 73,
   "coastal": 0,
   "huts": 63,
-  "relief_m": 6618.0,
-  "high_m": 7269.0,
-  "low_m": 651.0,
+  "relief_m": 6618,
+  "high_m": 7269,
+  "low_m": 651,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1106,7 +1106,7 @@
   },
   "thin": false
  },
- "north-island": {
+ "p0122": {
   "routes": 121,
   "r20": 61,
   "r40": 22,
@@ -1114,8 +1114,8 @@
   "max_km": 150,
   "coastal": 27,
   "huts": 518,
-  "relief_m": 2748.0,
-  "high_m": 2748.0,
+  "relief_m": 2748,
+  "high_m": 2748,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -1144,7 +1144,7 @@
   },
   "thin": false
  },
- "chamonix": {
+ "p0038": {
   "routes": 120,
   "r20": 21,
   "r40": 12,
@@ -1152,9 +1152,9 @@
   "max_km": 166,
   "coastal": 0,
   "huts": 163,
-  "relief_m": 3960.0,
-  "high_m": 4718.0,
-  "low_m": 758.0,
+  "relief_m": 3960,
+  "high_m": 4718,
+  "low_m": 758,
   "has_coast": false,
   "races": [
    {
@@ -1187,7 +1187,7 @@
   },
   "thin": false
  },
- "marlborough-abel-tasman": {
+ "p0104": {
   "routes": 9,
   "r20": 7,
   "r40": 3,
@@ -1195,8 +1195,8 @@
   "max_km": 196,
   "coastal": 3,
   "huts": 67,
-  "relief_m": 1822.0,
-  "high_m": 1822.0,
+  "relief_m": 1822,
+  "high_m": 1822,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1218,7 +1218,7 @@
   },
   "thin": false
  },
- "greenland": {
+ "p0077": {
   "routes": 14,
   "r20": 10,
   "r40": 6,
@@ -1226,8 +1226,8 @@
   "max_km": 196,
   "coastal": 6,
   "huts": 82,
-  "relief_m": 3662.0,
-  "high_m": 3662.0,
+  "relief_m": 3662,
+  "high_m": 3662,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1249,7 +1249,7 @@
   },
   "thin": false
  },
- "yellowstone": {
+ "p0197": {
   "routes": 3,
   "r20": 0,
   "r40": 0,
@@ -1257,9 +1257,9 @@
   "max_km": 17,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 1487.0,
-  "high_m": 3435.0,
-  "low_m": 1948.0,
+  "relief_m": 1487,
+  "high_m": 3435,
+  "low_m": 1948,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1275,7 +1275,7 @@
   },
   "thin": false
  },
- "pakistan": {
+ "p0131": {
   "routes": 5,
   "r20": 4,
   "r40": 1,
@@ -1283,8 +1283,8 @@
   "max_km": 45,
   "coastal": 0,
   "huts": 159,
-  "relief_m": 8518.0,
-  "high_m": 8518.0,
+  "relief_m": 8518,
+  "high_m": 8518,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1304,7 +1304,7 @@
   },
   "thin": false
  },
- "whistler": {
+ "p0189": {
   "routes": 12,
   "r20": 7,
   "r40": 3,
@@ -1312,8 +1312,8 @@
   "max_km": 86,
   "coastal": 4,
   "huts": 22,
-  "relief_m": 2846.0,
-  "high_m": 2846.0,
+  "relief_m": 2846,
+  "high_m": 2846,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -1347,7 +1347,7 @@
   },
   "thin": false
  },
- "hokkaido": {
+ "p0080": {
   "routes": 10,
   "r20": 3,
   "r40": 0,
@@ -1355,8 +1355,8 @@
   "max_km": 27,
   "coastal": 0,
   "huts": 35,
-  "relief_m": 2213.0,
-  "high_m": 2213.0,
+  "relief_m": 2213,
+  "high_m": 2213,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1375,7 +1375,7 @@
   },
   "thin": false
  },
- "azores": {
+ "p0014": {
   "routes": 33,
   "r20": 13,
   "r40": 0,
@@ -1383,8 +1383,8 @@
   "max_km": 38,
   "coastal": 20,
   "huts": 6,
-  "relief_m": 1224.0,
-  "high_m": 1224.0,
+  "relief_m": 1224,
+  "high_m": 1224,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1402,7 +1402,7 @@
   },
   "thin": false
  },
- "vancouver-island": {
+ "p0190": {
   "routes": 21,
   "r20": 7,
   "r40": 4,
@@ -1410,8 +1410,8 @@
   "max_km": 742,
   "coastal": 6,
   "huts": 16,
-  "relief_m": 2069.0,
-  "high_m": 2069.0,
+  "relief_m": 2069,
+  "high_m": 2069,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1433,7 +1433,7 @@
   },
   "thin": false
  },
- "canaries": {
+ "p0035": {
   "routes": 177,
   "r20": 41,
   "r40": 11,
@@ -1441,8 +1441,8 @@
   "max_km": 155,
   "coastal": 45,
   "huts": 19,
-  "relief_m": 3100.0,
-  "high_m": 3100.0,
+  "relief_m": 3100,
+  "high_m": 3100,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -1476,7 +1476,7 @@
   },
   "thin": false
  },
- "iceland": {
+ "p0083": {
   "routes": 30,
   "r20": 7,
   "r40": 5,
@@ -1484,8 +1484,8 @@
   "max_km": 66,
   "coastal": 3,
   "huts": 141,
-  "relief_m": 1997.0,
-  "high_m": 1997.0,
+  "relief_m": 1997,
+  "high_m": 1997,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1506,7 +1506,7 @@
   },
   "thin": false
  },
- "tasmania": {
+ "p0178": {
   "routes": 9,
   "r20": 3,
   "r40": 3,
@@ -1514,8 +1514,8 @@
   "max_km": 91,
   "coastal": 3,
   "huts": 49,
-  "relief_m": 1555.0,
-  "high_m": 1555.0,
+  "relief_m": 1555,
+  "high_m": 1555,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1537,7 +1537,7 @@
   },
   "thin": false
  },
- "cape-town": {
+ "p0037": {
   "routes": 4,
   "r20": 1,
   "r40": 0,
@@ -1545,8 +1545,8 @@
   "max_km": 20,
   "coastal": 1,
   "huts": 6,
-  "relief_m": 1078.0,
-  "high_m": 1078.0,
+  "relief_m": 1078,
+  "high_m": 1078,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1563,7 +1563,7 @@
   },
   "thin": false
  },
- "swissalps": {
+ "p0199": {
   "routes": 396,
   "r20": 68,
   "r40": 18,
@@ -1571,9 +1571,9 @@
   "max_km": 231,
   "coastal": 0,
   "huts": 410,
-  "relief_m": 4245.0,
-  "high_m": 4528.0,
-  "low_m": 283.0,
+  "relief_m": 4245,
+  "high_m": 4528,
+  "low_m": 283,
   "has_coast": false,
   "races": [
    {
@@ -1626,7 +1626,7 @@
   },
   "thin": false
  },
- "vermont": {
+ "p0192": {
   "routes": 13,
   "r20": 8,
   "r40": 6,
@@ -1634,9 +1634,9 @@
   "max_km": 401,
   "coastal": 0,
   "huts": 24,
-  "relief_m": 1279.0,
-  "high_m": 1306.0,
-  "low_m": 27.0,
+  "relief_m": 1279,
+  "high_m": 1306,
+  "low_m": 27,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1656,7 +1656,7 @@
   },
   "thin": false
  },
- "tbilisi-caucasus": {
+ "p0179": {
   "routes": 8,
   "r20": 0,
   "r40": 0,
@@ -1664,9 +1664,9 @@
   "max_km": 18,
   "coastal": 0,
   "huts": 8,
-  "relief_m": 2066.0,
-  "high_m": 2323.0,
-  "low_m": 257.0,
+  "relief_m": 2066,
+  "high_m": 2323,
+  "low_m": 257,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1683,7 +1683,7 @@
   },
   "thin": false
  },
- "queenstown": {
+ "p0148": {
   "routes": 4,
   "r20": 3,
   "r40": 1,
@@ -1691,9 +1691,9 @@
   "max_km": 313,
   "coastal": 0,
   "huts": 79,
-  "relief_m": 1952.0,
-  "high_m": 2262.0,
-  "low_m": 310.0,
+  "relief_m": 1952,
+  "high_m": 2262,
+  "low_m": 310,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1714,7 +1714,7 @@
   },
   "thin": false
  },
- "jordan": {
+ "p0140": {
   "routes": 104,
   "r20": 34,
   "r40": 3,
@@ -1722,8 +1722,8 @@
   "max_km": 125,
   "coastal": 0,
   "huts": 3,
-  "relief_m": 1713.0,
-  "high_m": 1713.0,
+  "relief_m": 1713,
+  "high_m": 1713,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1744,7 +1744,7 @@
   },
   "thin": false
  },
- "joshua-tree": {
+ "p0134": {
   "routes": 2,
   "r20": 1,
   "r40": 1,
@@ -1752,9 +1752,9 @@
   "max_km": 159,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 3269.0,
-  "high_m": 3273.0,
-  "low_m": 4.0,
+  "relief_m": 3269,
+  "high_m": 3273,
+  "low_m": 4,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1771,7 +1771,7 @@
   },
   "thin": true
  },
- "glacier-waterton": {
+ "p0073": {
   "routes": 11,
   "r20": 9,
   "r40": 2,
@@ -1779,9 +1779,9 @@
   "max_km": 48,
   "coastal": 0,
   "huts": 7,
-  "relief_m": 2102.0,
-  "high_m": 3045.0,
-  "low_m": 943.0,
+  "relief_m": 2102,
+  "high_m": 3045,
+  "low_m": 943,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1800,7 +1800,7 @@
   },
   "thin": false
  },
- "rocky-mountain": {
+ "p0156": {
   "routes": 6,
   "r20": 3,
   "r40": 1,
@@ -1808,9 +1808,9 @@
   "max_km": 64,
   "coastal": 0,
   "huts": 2,
-  "relief_m": 1804.0,
-  "high_m": 4318.0,
-  "low_m": 2514.0,
+  "relief_m": 1804,
+  "high_m": 4318,
+  "low_m": 2514,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1829,7 +1829,7 @@
   },
   "thin": false
  },
- "faroe-islands": {
+ "p0067": {
   "routes": 0,
   "r20": 0,
   "r40": 0,
@@ -1837,8 +1837,8 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 1,
-  "relief_m": 835.0,
-  "high_m": 835.0,
+  "relief_m": 835,
+  "high_m": 835,
   "low_m": 0,
   "has_coast": true,
   "races": [],
@@ -1850,7 +1850,7 @@
   },
   "thin": true
  },
- "snowdonia": {
+ "p0196": {
   "routes": 64,
   "r20": 39,
   "r40": 26,
@@ -1858,8 +1858,8 @@
   "max_km": 482,
   "coastal": 7,
   "huts": 35,
-  "relief_m": 1058.0,
-  "high_m": 1058.0,
+  "relief_m": 1058,
+  "high_m": 1058,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -1892,7 +1892,7 @@
   },
   "thin": false
  },
- "north-cascades": {
+ "p0121": {
   "routes": 26,
   "r20": 12,
   "r40": 3,
@@ -1900,9 +1900,9 @@
   "max_km": 1472,
   "coastal": 0,
   "huts": 5,
-  "relief_m": 2332.0,
-  "high_m": 2755.0,
-  "low_m": 423.0,
+  "relief_m": 2332,
+  "high_m": 2755,
+  "low_m": 423,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1922,7 +1922,7 @@
   },
   "thin": false
  },
- "cornwall": {
+ "p0049": {
   "routes": 31,
   "r20": 15,
   "r40": 2,
@@ -1930,8 +1930,8 @@
   "max_km": 64,
   "coastal": 26,
   "huts": 1,
-  "relief_m": 197.0,
-  "high_m": 197.0,
+  "relief_m": 197,
+  "high_m": 197,
   "low_m": 0,
   "has_coast": true,
   "races": [
@@ -1956,7 +1956,7 @@
   },
   "thin": false
  },
- "peru": {
+ "p0053": {
   "routes": 0,
   "r20": 0,
   "r40": 0,
@@ -1964,9 +1964,9 @@
   "max_km": 0,
   "coastal": 0,
   "huts": 0,
-  "relief_m": 3175.0,
-  "high_m": 5754.0,
-  "low_m": 2579.0,
+  "relief_m": 3175,
+  "high_m": 5754,
+  "low_m": 2579,
   "has_coast": false,
   "races": [],
   "values": {
@@ -1978,7 +1978,7 @@
   },
   "thin": true
  },
- "argentine-lake-district": {
+ "p0008": {
   "routes": 6,
   "r20": 5,
   "r40": 3,
@@ -1986,9 +1986,9 @@
   "max_km": 73,
   "coastal": 0,
   "huts": 15,
-  "relief_m": 2823.0,
-  "high_m": 3229.0,
-  "low_m": 406.0,
+  "relief_m": 2823,
+  "high_m": 3229,
+  "low_m": 406,
   "has_coast": false,
   "races": [
    {

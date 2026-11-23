@@ -7,14 +7,16 @@ export interface RenamedPlace { newName: string; oldNames: string[] }
 export function loadRenamedPlaces(root: string = join(__dirname, '..', '..', '..')): Map<string, RenamedPlace> {
   const file = join(root, 'docs', 'renamed-places.json');
   if (!existsSync(file)) return new Map();
-  const doc = JSON.parse(readFileSync(file, 'utf8')) as { ids?: Record<string, string> };
+  const doc = JSON.parse(readFileSync(file, 'utf8')) as { ids?: Record<string, string>; earlier?: Record<string, string[]>; allow?: Record<string, Record<string, string> | string> };
   const out = new Map<string, RenamedPlace>();
   for (const [id, text] of Object.entries(doc.ids ?? {})) {
     const m = /^(.*) \(was (.*)\)$/.exec(text);
     if (!m) continue;
     // "Angkor Wat & Siem Reap" and "Thailand - Phuket & Islands": check the distinctive parts, not generic words.
-    const parts = m[2].split(/\s*(?:&|-|,)\s*/).map((x) => x.trim()).filter((x) => x.length >= 4 && !/^(thailand|national park|islands?|valley)$/i.test(x));
-    out.set(id, { newName: m[1], oldNames: [...new Set([m[2], ...parts])] });
+    const allowed = new Set(Object.keys((typeof doc.allow?.[id] === 'object' ? doc.allow[id] : {}) as Record<string, string>).map((x) => x.toLowerCase())); // parts the owner chose to keep in the text
+    const parts = m[2].split(/\s*(?:&|-|,)\s*/).map((x) => x.trim()).filter((x) => x.length >= 4 && !/^(thailand|national park|islands?|valley)$/i.test(x) && !allowed.has(x.toLowerCase()));
+    const earlier = (doc.earlier?.[id] ?? []).filter((x) => !allowed.has(x.toLowerCase())); // older retired labels, from the label history
+    out.set(id, { newName: m[1], oldNames: [...new Set([m[2], ...parts, ...earlier])].filter((x) => !allowed.has(x.toLowerCase())) }); // 21 Nov 2026: an allowed old name may be the whole old name too (Aspen, Havana, Bagan)
   }
   return out;
 }

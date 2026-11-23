@@ -9,6 +9,8 @@ import { join } from 'path';
 for (const line of readFileSync(join(__dirname, '..', '.env.local'), 'utf8').split('\n')) { const t = line.trim(); if (!t || t.startsWith('#')) continue; const i = t.indexOf('='); if (i === -1) continue; let v = t.slice(i + 1).trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); if (process.env[t.slice(0, i).trim()] === undefined) process.env[t.slice(0, i).trim()] = v; }
 const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3);
 (async () => {
+  const { installLabelFilter } = await import('../src/lib/places/console-labels'); await installLabelFilter(); // standard D03: a report never prints a place key
+  await (await import('../src/lib/places/renamed-sync')).syncRenamedPlacesFile(); // the old-name check reads the label history
   const apply = process.argv.includes('--apply');
   const interests = new Set((arg('interests') ?? '').split(',').filter(Boolean));
   const exclude = new Set((arg('exclude') ?? '').split(',').filter(Boolean).map((x) => x.replace(':', '|')));
@@ -27,14 +29,44 @@ const arg = (n: string) => process.argv.find((a) => a.startsWith(`--${n}=`))?.sl
   const promptHash = sha256(['prompts/family-v1.md', 'prompts/_shared/authoring-core.md', 'prompts/_shared/authoring-scores.md'].map((f) => readFileSync(join(root, f), 'utf8')).join('\n'));
   const todo = results.filter((r) => interests.has(r.k) && r.gemini?.applicable && proposals.has(`${r.k}|${r.id}`) && !exclude.has(`${r.k}|${r.id}`));
   console.log(`${todo.length} cells to save of ${results.filter((r) => interests.has(r.k)).length} in the results (${exclude.size} excluded, rest N/A or without scores)`);
+  // 13 Nov 2026: last-digit gate. Each digit .0-.9 must be about 10% of what is live plus what is about to be saved (owner rule, standing). A batch that comes
+  // from scripts/score-proposals.ts already is; anything edited by hand since must pass the same test. Refuses to save otherwise (--apply only; a dry run reports).
+  {
+    const { assertEvenTenths, digitReport, describeDigits } = await import('../src/lib/gemini/even-tenths');
+    const { getPrimaryPlaceRows } = await import('../src/lib/db/queries/primary-place-rows'); const { liveSeries } = await import('../src/lib/authoring/live-series');
+    const liveRows = (await getPrimaryPlaceRows()) as any[];
+    for (const k of interests) {
+      const mine = todo.filter((r) => r.k === k); if (!mine.length) continue;
+      const fresh = mine.map((r) => (proposals.get(`${r.k}|${r.id}`).proposed as number[]).map((v) => Math.round(v * 10) / 10));
+      const live = liveSeries(liveRows, k, new Set(mine.map((r) => r.id)));
+      // 14 Nov 2026: the batch is judged on its own and cell by cell as well (src/lib/gemini/clump.ts); inside the catalog a small batch hides its own skew.
+      const { checkBatch, describeBatchCheck, assertBatchAcceptable } = await import('../src/lib/gemini/clump');
+      const bySeries = Object.fromEntries(mine.map((r, i) => [r.id, fresh[i]]));
+      if (apply) { assertBatchAcceptable(k, bySeries); assertEvenTenths(k, fresh, live); } else { console.log(`${k}: ${describeDigits(digitReport([...live, ...fresh]))}`); for (const l of describeBatchCheck(k, checkBatch(bySeries))) console.log(l); }
+    }
+    // Old-pipeline rules (src/lib/authoring/old-rules.ts): transitions in shared blurbs, resident verbs, old place names and a 10 off the anchor list stop a save; the rest are listed.
+    const { oldRuleHits } = await import('../src/lib/authoring/old-rules');
+    let blockers = 0;
+    for (const r of todo) {
+      const row = liveRows.find((x: any) => x.id === r.id);
+      const hits = oldRuleHits({ overview: edits[`${r.k}|${r.id}`]?.overview ?? r.gemini.overview, blurbs: r.gemini.blurbs, monthly_scores: proposals.get(`${r.k}|${r.id}`).proposed }, r.k, r.id, row?.countryCode);
+      for (const h of hits) { if (h.blocks) blockers++; console.log(`  ${h.blocks ? 'BLOCKS' : 'note  '} ${r.k} ${r.id}: ${h.id}`); }
+    }
+    if (blockers && apply && !process.argv.includes('--allow-rule-hits')) { console.log(`${blockers} cells break a blocking rule: fix them or exclude them (--exclude), or pass --allow-rule-hits once the owner has said so.`); process.exit(1); }
+  }
   const monthTexts = (g: any): string[] => { const out: string[] = new Array(12).fill(''); for (const b of g.blurbs) for (const m of b.months) if (m >= 1 && m <= 12) out[m - 1] = b.text; return out.map((t, i) => t || g.blurbs[0]?.text || ''); };
   let badFit = 0, saved = 0, problems = 0;
   const batchIds = new Map<string, string>();
   for (const k of interests) {
     const mine = todo.filter((r) => r.k === k); if (!mine.length) continue;
+    if (apply && arg('reuse-batch')) { batchIds.set(k, arg('reuse-batch')!); continue; } // 4 Nov 2026: resume a run that died part-way without creating a second batch and pass
     if (apply) {
       const [b] = await db.insert(contentGenerationBatches).values({ interestKey: k, kind: 'author', rolloutPhase: 3, placeCount: mine.length, totalCostUsd: mine.reduce((a, r) => a + r.cost, 0), promptVersion: 'family/v1 + authoring-core/v1 + authoring-scores/v1', model: mine[0].model, thinkingLevel: 'low', tokensIn: mine.reduce((a, r) => a + r.tokensIn, 0), tokensOut: mine.reduce((a, r) => a + r.tokensOut, 0), finishedAt: new Date() }).returning();
       batchIds.set(k, b.id);
+      // record the authoring pass (added 2 Nov 2026: earlier runs left the "pass finished" column empty); applying means the owner approved, so the pass is finished
+      const { authoringPasses } = await import('../src/lib/db/schema');
+      const [pass] = await db.insert(authoringPasses).values({ interestKey: k, label: `${k} · family/v1 (${new Date().toISOString().slice(0, 10)})`, kind: 'initial', promptVersion: 'family/v1', notes: 'Created by apply-family-text.ts when the approved texts were saved.', finishedAt: new Date() }).returning();
+      await db.update(contentGenerationBatches).set({ passId: pass.id }).where(eq(contentGenerationBatches.id, b.id));
     }
   }
   for (const r of todo) {

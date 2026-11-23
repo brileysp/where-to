@@ -10,7 +10,7 @@ import { PlanningPill } from '@/components/admin/PlanningCells';
 import type { InterestPageData, InterestPlaceRow } from '@/lib/admin/interest-pages/types';
 
 const place = (id: string, name: string, swing: number): InterestPlaceRow =>
-  ({ id, name, region: '', monthly: Array.from({ length: 12 }, (_, i) => (i === 0 ? 2 + swing : 2)), status: 'live', naReason: null, placeType: 'city', facts: {}, overview: '', monthlyText: [], stagedGenerationId: null }) as unknown as InterestPlaceRow;
+  ({ id, name, region: '', monthly: Array.from({ length: 12 }, (_, i) => (i === 0 ? 2 + swing : 2)), status: 'live', naReason: null, settingTags: ['city'], facts: {}, overview: '', monthlyText: [], stagedGenerationId: null }) as unknown as InterestPlaceRow;
 
 const data = {
   key: 'shopping',
@@ -43,10 +43,11 @@ describe('Interests list', () => {
       key: 'fishing', label: 'Fishing', group: 'Sports & Recreation', emoji: '🎣', shortName: null, autoShortName: 'Fishing', updatedAt: '2026-10-29T00:00:00.000Z',
       labelOverride: null, groupOverride: null, hiddenOverride: null, tierOverride: null, orderOverride: null,
       builtIn: { label: 'Fishing', group: 'Sports & Recreation', hidden: false, tier: 'enthusiast', position: 1 }, hidden: false, tier: 'enthusiast',
-      written: 0, na: 2, total: 200, completeness: 50, seasonalVariance: 8, evergreen: 5, stakes: 6, refreshEffort: 5, nextReviewOn: '2026-12-03',
+      written: 0, na: 2, total: 200, completeness: 50, seasonalVariance: 8, evergreen: 5, stakes: 6, refreshEffort: 5, nextReviewOn: '2026-12-03', stale: { total: 6, current: 4, overdue: 1, never: 1 },
     };
     const html = renderToStaticMarkup(createElement(PendingEditsProvider, null, createElement(InterestsGrid, { initialRows: [row] as never })));
-    for (const h of ['Seasonal variance', 'Evergreen', 'Stakes', 'Refresh effort', 'Next review']) expect(html).toContain(h);
+    for (const h of ['Seasonal variance', 'Evergreen', 'Stakes', 'Refresh effort', 'Next review', 'Staleness checks']) expect(html).toContain(h);
+    expect(html).toContain('4 of 6 current'); expect(html).toContain('1 overdue');
     expect(html).toContain('Very high');
     expect(html).toContain('Quarterly');
     expect(html).toContain('3 Dec 2026');

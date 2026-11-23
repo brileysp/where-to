@@ -16,9 +16,9 @@ const MONTH_SHORT = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 /**
- * Seasonal hazards for one place: the months a real hazard (hurricane season, monsoon, smoke) cuts into scores, how severe it is, and which
- * interests it affects. The scoring engine reads these, so every change here moves scores. Edits go to the pending-changes tray as one
- * whole list, like every other cell.
+ * Seasonal hazards for one place: the months a real hazard (hurricane season, monsoon, smoke) happens, how severe it is, and which
+ * interests it touches. Since 21 Nov 2026 these are a reference list only: they no longer change any score (each interest's authored months
+ * already say what the hazard does), and the month still shows the warning badge. Edits go to the pending-changes tray as one whole list.
  */
 export function HazardsPanel({
   destId,
@@ -60,6 +60,7 @@ export function HazardsPanel({
       </button>
       {open && (
         <div style={{ padding: '4px 12px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ color: 'var(--text-faint)', fontSize: 11 }}>Reference only: these flags no longer change any score. Check them against the authored months so no hazard is missed.</div>
           {list.length === 0 && <div style={{ color: 'var(--text-faint)', fontSize: 12 }}>No hazards recorded for {destName}.</div>}
           {list.map((h, i) => (
             <div key={i} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 8, alignItems: 'start', borderTop: i ? '1px solid var(--border)' : 'none', paddingTop: i ? 10 : 0 }}>

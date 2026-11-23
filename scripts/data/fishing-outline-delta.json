@@ -1,5 +1,5 @@
 {
- "grandcanyon": {
+ "p0074": {
   "fishingAccess": [
    "boat",
    "wading",
@@ -14,7 +14,7 @@
   ],
   "freshwaterPredators": 3
  },
- "badlands-black-hills": {
+ "p0015": {
   "fishingAccess": [
    "boat",
    "wading",
@@ -31,7 +31,7 @@
   "troutChar": 6,
   "freshwaterPredators": 6
  },
- "milford-sound-fiordland": {
+ "p0110": {
   "fishingAccess": [
    "boat",
    "wading",
@@ -46,7 +46,7 @@
    "trolling"
   ]
  },
- "denali-interior": {
+ "p0056": {
   "fishingAccess": [
    "boat",
    "wading",
@@ -63,11 +63,11 @@
   "troutChar": 5,
   "freshwaterPredators": 0
  },
- "great-smoky-mountains": {
+ "p0076": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 4 species (brown trout, char, native western trout, rainbow trout) with 5 or more records, 381 records; 6 fishing businesses and clubs in the place -> species tier 9, +1 for 5 or more = 9. Capped at 8: the place's overall Fishing score is 5 and a column may not exceed it by more than 3 (was 9).\nSalmon and steelhead: 465 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 1 species (black bass) with 5 or more records, 73 records; 6 fishing businesses and clubs in the place -> species tier 3, +1 for 5 or more = 4.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nCatch-and-release rule: keep_ok. A Tennessee or North Carolina state licence is required; the daily limit is five trout or smallmouth bass combined (secondary sources). Source: https://www.nps.gov/grsm/planyourvisit/fishing.htm (confidence medium).\nGuide rule: optional. Same sources; guides are not required where a licence alone is stated, and are required where only licensed operators may take tourists.",
   "freshwaterPredators": 4
  },
- "yosemite": {
+ "p0198": {
   "fishingAccess": [
    "wading",
    "shore"
@@ -81,76 +81,76 @@
   ],
   "freshwaterPredators": 0
  },
- "torres-del-paine": {
+ "p0183": {
   "fishingAccess": null,
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Only 5 freshwater game-fish records in the place, too few to call a zero: left blank.\nSalmon and steelhead: Only 5 freshwater game-fish records in the place, too few to call a zero: left blank.\nFreshwater predators: Only 5 freshwater game-fish records in the place, too few to call a zero: left blank.",
   "salmonSteelhead": null,
   "fishingMethods": null,
   "troutChar": null
  },
- "banff": {
+ "p0018": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 2 species (char, rainbow trout) with 5 or more records, 171 records; 1 fishing businesses and clubs in the place -> species tier 5 = 5.\nSalmon and steelhead: 197 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 197 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "troutChar": 5
  },
- "arches-canyonlands": {
+ "p0007": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 1 species (brown trout) with 5 or more records, 6 records; 0 fishing businesses and clubs in the place -> species tier 3 = 3.\nSalmon and steelhead: 38 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 3 species (black bass, pike and muskie, walleye and zander) with 5 or more records, 20 records; 0 fishing businesses and clubs in the place -> species tier 7 = 7. Capped at 4: the place's overall Fishing score is 1 and a column may not exceed it by more than 3 (was 7).\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "troutChar": 3,
   "freshwaterPredators": 4
  },
- "sequoia-kings-canyon": {
+ "p0167": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 4 species (brown trout, char, native western trout, rainbow trout) with 5 or more records, 611 records; 1 fishing businesses and clubs in the place -> species tier 9 = 9. Capped at 7: the place's overall Fishing score is 4 and a column may not exceed it by more than 3 (was 9).\nSalmon and steelhead: 620 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 1 species (black bass) with 5 or more records, 6 records; 1 fishing businesses and clubs in the place -> species tier 3 = 3.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
- "bend-crater-lake": {
+ "p0026": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 3 species (brown trout, char, rainbow trout) with 5 or more records, 92 records; 6 fishing businesses and clubs in the place -> species tier 7, +1 for 5 or more = 8.\nSalmon and steelhead: 116 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 1 species (black bass) with 5 or more records, 14 records; 6 fishing businesses and clubs in the place -> species tier 3, +1 for 5 or more = 4.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "salmonSteelhead": 0,
   "troutChar": 8,
   "freshwaterPredators": 4
  },
- "zion-bryce": {
+ "p0200": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 1 species (rainbow trout) with 5 or more records, 8 records; 0 fishing businesses and clubs in the place -> species tier 3 = 3.\nSalmon and steelhead: Only 16 freshwater game-fish records in the place, too few to call a zero: left blank.\nFreshwater predators: Only 16 freshwater game-fish records in the place, too few to call a zero: left blank.\nMethods and access: worked out from the fish groups rated 3 or more here (troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "salmonSteelhead": null,
   "troutChar": 3,
   "freshwaterPredators": null
  },
- "yellowstone": {
+ "p0197": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 4 species (brown trout, char, cutthroat trout, rainbow trout) with 5 or more records, 475 records; 2 fishing businesses and clubs in the place -> species tier 9 = 9.\nSalmon and steelhead: 477 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nFreshwater predators: 477 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nCatch-and-release rule: limited. \"All native fish, including the cutthroat trout, are catch-and-release only\"; lake trout must be killed; park permit needed, no guide required. Source: https://www.nps.gov/yell/planyourvisit/fishing.htm (confidence high).\nGuide rule: optional. Same sources; guides are not required where a licence alone is stated, and are required where only licensed operators may take tourists."
  },
- "redwood": {
+ "p0152": {
   "evidence": "Big ocean game fish: 1 species (amberjack) with 5 or more records, 393 records; 2 fishing charters in the place -> species tier 3 = 3.\nFlats fish: 396 records of ocean game and flats fish near the coast and none of this group with 5 or more records: 0.\nTrout and char: 2 species (cutthroat trout, rainbow trout) with 5 or more records, 90 records; 3 fishing businesses and clubs in the place -> species tier 5 = 5.\nSalmon and steelhead: 2 species (Chinook, coho) with 5 or more records, 63 records; 3 fishing businesses and clubs in the place -> species tier 5 = 5.\nFreshwater predators: 167 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish, salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "salmonSteelhead": 5
  },
- "north-cascades": {
+ "p0121": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 2 species (char, rainbow trout) with 5 or more records, 18 records; 0 fishing businesses and clubs in the place -> species tier 5 = 5.\nSalmon and steelhead: 4 species (chum, coho, pink, sockeye) with 5 or more records, 175 records; 0 fishing businesses and clubs in the place -> species tier 9 = 9. Capped at 8: the place's overall Fishing score is 5 and a column may not exceed it by more than 3 (was 9).\nFreshwater predators: 200 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.",
   "salmonSteelhead": 8
  },
- "atacama": {
+ "p0012": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 1 freshwater game-fish records in the place, too few to call a zero: left blank."
  },
- "everglades": {
+ "p0065": {
   "evidence": "Big ocean game fish: 6 species (amberjack, billfish, cobia, mahi-mahi, tuna, wahoo) with 5 or more records, 33500 records; 178 fishing charters in the place -> species tier 9, +1 for 5 or more = 9.\nFlats fish: 5 species (bonefish, permit, redfish, snook, tarpon) with 5 or more records, 29304 records; 178 fishing charters in the place -> species tier 9, +1 for 5 or more = 9. Rating 9 became 10. Judged: The Everglades, Florida Bay and the Keys are the home of the tarpon, permit and bonefish grand slam; Islamorada calls itself the sport fishing capital of the world (https://guidesly.com/fishing/places/islamorada-fl-fishing-the-sport-fishing-capital-of-the-world).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: 3 species (black bass, peacock bass, pike and muskie) with 5 or more records, 628 records; 194 fishing businesses and clubs in the place -> species tier 7, +1 for 5 or more = 8.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish, flatsFish, freshwaterPredators). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nCatch-and-release rule: limited. Bonefish (park since 2013) and tarpon are catch-and-release only; snook has a closed season. The park says visitors follow Florida FWC licence rules, with no guide requirement stated. Source: https://home.nps.gov/ever/planyourvisit/fishing.htm/index.htm (confidence medium).\nGuide rule: optional. Same sources; guides are not required where a licence alone is stated, and are required where only licensed operators may take tourists.",
   "freshwaterPredators": 8
  },
- "olympic": {
+ "p0130": {
   "evidence": "Big ocean game fish: Only 5 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nFlats fish: Colder than the range of the flats fish (more than 45 degrees from the equator): 0 by rule.\nTrout and char: 3 species (char, cutthroat trout, rainbow trout) with 5 or more records, 117 records; 2 fishing businesses and clubs in the place -> species tier 7 = 7.\nSalmon and steelhead: 3 species (Chinook, coho, sockeye) with 5 or more records, 114 records; 2 fishing businesses and clubs in the place -> species tier 7 = 7.\nFreshwater predators: 243 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nSalmon run months: apr, may, jun, jul, aug, sep, oct, nov, dec. Spring chinook April-July, summer chinook June-August, fall chinook September-October, coho July-December, chum late fall. Source: https://www.orvis.com/chrome-chasers-fly-fishing-wa/2F720000.html.",
   "salmonSteelhead": 7
  },
- "kruger": {
+ "p0089": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: 1 species (tigerfish) with 5 or more records, 246 records; 1 fishing businesses and clubs in the place -> species tier 3 = 3.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
- "lake-district": {
+ "p0092": {
   "evidence": "Big ocean game fish: 1 species (billfish) with 5 or more records, 27 records; 1 fishing charters in the place -> species tier 3 = 3.\nFlats fish: Colder than the range of the flats fish (more than 45 degrees from the equator): 0 by rule.\nTrout and char: 3 species (brown trout, char, rainbow trout) with 5 or more records, 4795 records; 5 fishing businesses and clubs in the place -> species tier 7, +1 for 5 or more = 8. Capped at 6: the place's overall Fishing score is 3 and a column may not exceed it by more than 3 (was 8).\nSalmon and steelhead: 1 species (Atlantic salmon) with 5 or more records, 3012 records; 5 fishing businesses and clubs in the place -> species tier 3, +1 for 5 or more = 4.\nFreshwater predators: 1 species (pike and muskie) with 5 or more records, 150 records; 5 fishing businesses and clubs in the place -> species tier 3, +1 for 5 or more = 4.\nMethods and access: worked out from the fish groups rated 3 or more here (bigGameFish, freshwaterPredators, salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
- "acadia": {
+ "p0001": {
   "evidence": "Big ocean game fish: Only 4 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nFlats fish: Only 4 records of this group of ocean fish near the coast, too few to call a zero: left blank.\nTrout and char: 3 species (brown trout, char, rainbow trout) with 5 or more records, 165 records; 0 fishing businesses and clubs in the place -> species tier 7 = 7.\nSalmon and steelhead: 1 species (Atlantic salmon) with 5 or more records, 145 records; 0 fishing businesses and clubs in the place -> species tier 3 = 3.\nFreshwater predators: 2 species (black bass, pike and muskie) with 5 or more records, 36 records; 0 fishing businesses and clubs in the place -> species tier 5 = 5.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators, salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
- "rocky-mountain": {
+ "p0156": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: 4 species (brown trout, char, cutthroat trout, rainbow trout) with 5 or more records, 563 records; 7 fishing businesses and clubs in the place -> species tier 9, +1 for 5 or more = 9. Capped at 8: the place's overall Fishing score is 5 and a column may not exceed it by more than 3 (was 9).\nSalmon and steelhead: 1 species (sockeye) with 5 or more records, 9 records; 7 fishing businesses and clubs in the place -> species tier 3, +1 for 5 or more = 4.\nFreshwater predators: 576 records of this group of freshwater fish in the place and none with 5 or more records for a species of this group: 0.\nMethods and access: worked out from the fish groups rated 3 or more here (salmonSteelhead, troutChar). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way.\nCatch-and-release rule: limited. Waters with native cutthroat populations are open to catch-and-release only, with barbless hooks; all other waters are catch-and-keep. A Colorado licence is required. Source: https://www.nps.gov/romo/planyourvisit/fishing.htm (confidence high).\nGuide rule: optional. Same sources; guides are not required where a licence alone is stated, and are required where only licensed operators may take tourists.",
   "freshwaterPredators": 0
  },
- "botswana": {
+ "p0128": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: 1 species (tigerfish) with 5 or more records, 58 records; 1 fishing businesses and clubs in the place -> species tier 3 = 3.\nMethods and access: worked out from the fish groups rated 3 or more here (freshwaterPredators). Fly fishing from trout, salmon or flats fish; lures and bait wherever any group is rated; trolling from ocean game fish, salmon or freshwater predators. Boat from ocean, flats, predator or salmon fishing; wading from trout, salmon or flats; shore always. LOW CONFIDENCE: this says the kind of fishing is possible, not that it is the usual way."
  },
- "peruvian-amazon": {
+ "p0139": {
   "evidence": "Big ocean game fish: No coastline inside the place, so no ocean fishing (0 by rule).\nFlats fish: No coastline inside the place, so no ocean fishing (0 by rule).\nTrout and char: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nSalmon and steelhead: Tropical latitude (under 30 degrees) and no wild trout or salmon record: 0 by rule.\nFreshwater predators: Only 17 freshwater game-fish records in the place, too few to call a zero: left blank."
  }
 }

@@ -1,6 +1,6 @@
 # Known truths
 
-Checked 2026-10-31. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
+Checked 2026-11-21. Each line is something that must always be true of Where To?, written as a test that can fail. Run `npm run truths` to check them against the live data.
 
 **54 truths: 53 hold, 0 fail, 1 pending.** Pending means we know it does not hold yet and what will close it.
 
@@ -15,7 +15,7 @@ Checked 2026-10-31. Each line is something that must always be true of Where To?
 | holds | M05: A question that chips open is ignored until one of those chips is ticked, then it counts. |  |
 | holds | M06: A chip that is still a draft can never be ticked or counted. |  |
 | holds | M07: At most two reason chips show for a place, the biggest loss first, and none for a loss under the threshold. |  |
-| holds | M08: Missing a Limit answer costs more than missing a Lean answer, and a missed chip costs at least as much as a missed Limit. |  |
+| holds | M08: Missing a Limit answer costs more than missing a Lean answer, and a missed chip is as mild as a missed Lean (a wish, never a wall). |  |
 | holds | M09: Answers are kept while a chip is unticked and count again the moment it is ticked again. |  |
 | holds | M10: The built-in matching numbers are all inside their allowed ranges, and the floor sits below what a miss keeps. |  |
 | holds | M11: An unanswered question never lowers a score. |  |

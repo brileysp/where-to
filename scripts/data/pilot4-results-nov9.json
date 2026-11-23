@@ -1,0 +1,1932 @@
+[
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0003",
+  "rank": "batch",
+  "name": "Amalfi Coast",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2937,
+  "tokensOut": 1687,
+  "cost": 0.013059,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Amalfi Coast is defined by steep limestone cliffs dropping into the Tyrrhenian Sea, with pastel villages like Positano built directly into the rock faces. The signature views are seen from the water on coastal boat trips or from high above on the Path of the Gods hiking trail. Ferries run mainly from April to October.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Ferries run along the coast, giving the best views of the cliffside villages from the water. The Path of the Gods hiking trail shows the coast from above."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Most ferry services stop, so the villages are seen from the coast road rather than from the water, and low clouds and rain can reduce visibility."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    6.6,
+    7.2,
+    7.5,
+    9.5,
+    9.7,
+    10,
+    10,
+    10,
+    9.7,
+    9.5,
+    7.5,
+    7.2
+   ],
+   "confidence": "high",
+   "depth_why": "Ferry access to the signature water views defines the two main seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Tyrrhenian Sea",
+    "Positano",
+    "Path of the Gods"
+   ]
+  },
+  "curve": [
+   8,
+   8.333333333333334,
+   8.666666666666666,
+   9,
+   8.5,
+   8,
+   3.5999999999999996,
+   3.6,
+   9.4,
+   9.382926829268293,
+   8.7,
+   8.017073170731708
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0083",
+  "rank": "batch",
+  "name": "Iceland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2946,
+  "tokensOut": 1576,
+  "cost": 0.012402,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's scenery is defined by its massive waterfalls, glaciers, and volcanic coasts. Visitors drive the Ring Road and the Golden Circle to see the powerful falls like Skógafoss and Gullfoss, and the floating icebergs of Jökulsárlón glacier lagoon. The rugged interior mountains of the Landmannalaugar highlands can only be accessed by road during the short summer.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Long days and open highland F-roads put the colorful rhyolite mountains of Landmannalaugar within reach."
+    },
+    {
+     "months": [
+      5
+     ],
+     "level": "good",
+     "text": "The Ring Road is fully navigable to the big waterfalls and coastal cliffs, but the highland roads are still closed by snow."
+    },
+    {
+     "months": [
+      9
+     ],
+     "level": "good",
+     "text": "The Ring Road is clear, and the highland F-roads begin closing as the first snow arrives."
+    },
+    {
+     "months": [
+      3,
+      4
+     ],
+     "level": "fair",
+     "text": "Snow still covers much of the land, but the main southern waterfalls and the glacier lagoons are reachable by the Ring Road."
+    },
+    {
+     "months": [
+      10
+     ],
+     "level": "fair",
+     "text": "The Ring Road stays open to the southern waterfalls and the glacier lagoons while the days shorten and the highlands close."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "poor",
+     "text": "Daylight is short and ice frequently closes roads, limiting scenic drives to the southwest."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    4.2,
+    4.5,
+    6.5,
+    7.2,
+    8.5,
+    10,
+    10,
+    9.5,
+    8.5,
+    6.5,
+    4.5,
+    3.5
+   ],
+   "confidence": "high",
+   "depth_why": "Access to the interior and the amount of daylight change the scenic experience in clear seasonal stages.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Gullfoss",
+    "Jökulsárlón",
+    "Landmannalaugar",
+    "Ring Road",
+    "Skógafoss"
+   ]
+  },
+  "curve": [
+   3.7,
+   3.7,
+   8.2,
+   8.2,
+   8.2,
+   9.1,
+   10,
+   9,
+   8.5,
+   8,
+   3.7,
+   3.7
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0091",
+  "rank": "batch",
+  "name": "Ladakh",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2934,
+  "tokensOut": 1691,
+  "cost": 0.01308,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Ladakh's high-altitude scenery is defined by barren mountains, deep valleys, and high-altitude lakes. The main draws are the stark peaks of the Himalayas and Karakoram, the blue waters of Pangong Tso, and the sand dunes of the Nubra Valley. Monasteries perched on rocky ridges add to the dramatic landscape, which is best accessed during the short summer when mountain passes are clear of snow.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "The high mountain passes, including Khardung La, are open, giving access to Pangong Tso and the Nubra Valley. The lakes are thawed and reflect the surrounding arid peaks."
+    },
+    {
+     "months": [
+      5
+     ],
+     "level": "good",
+     "text": "The lower valleys have cleared of snow, but some high passes and lakes are still closed or frozen."
+    },
+    {
+     "months": [
+      10
+     ],
+     "level": "good",
+     "text": "The first heavy snows begin to close the high passes, and access to the remote lakes and valleys becomes unreliable."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "fair",
+     "text": "Snow is starting to melt on the lower roads, but most high passes are still shut."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Heavy snow blocks most high passes and cuts off road access to Pangong Tso and the Nubra Valley. The landscape is blanketed in white."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    2.2,
+    2.5,
+    3.2,
+    5.2,
+    7.5,
+    8.5,
+    8.7,
+    9.2,
+    8.5,
+    7.2,
+    4.2,
+    3.2
+   ],
+   "confidence": "high",
+   "depth_why": "The seasons dictate access to the scenery, with summer offering open passes, shoulder months bringing transition, and winter closing most high-altitude routes.",
+   "flags": [],
+   "named_things": [
+    "Himalayas",
+    "Karakoram",
+    "Pangong Tso",
+    "Nubra Valley",
+    "Khardung La",
+    "Zanskar River"
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   5.4,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   5.4,
+   0
+  ],
+  "base": 10
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0138",
+  "rank": "batch",
+  "name": "Paris",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2925,
+  "tokensOut": 1986,
+  "cost": 0.014841,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "The Eiffel Tower rising above the Seine is the signature view of Paris, best seen at dusk from the Trocadéro. The city is flat, so the wide rooftop panoramas come from raised spots like the steps of Sacré-Cœur in Montmartre.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Vantage points like the Trocadéro and the steps of Sacré-Cœur in Montmartre provide clear sightlines across the rooftops and the river. Winter skies can bring low clouds, but the major monuments remain visible."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6,
+    5.6
+   ],
+   "confidence": "high",
+   "depth_why": "Urban scenery and city viewpoints do not change significantly with the seasons.",
+   "flags": [],
+   "named_things": [
+    "Seine",
+    "Eiffel Tower",
+    "Trocadéro",
+    "Sacré-Cœur",
+    "Montmartre"
+   ]
+  },
+  "curve": [
+   2.5,
+   2.5,
+   4,
+   7,
+   7,
+   7,
+   3.5,
+   0,
+   7,
+   7,
+   2.5,
+   2.5
+  ],
+  "base": 4
+ },
+ {
+  "family": "batch",
+  "k": "scenicLandscapes",
+  "id": "p0175",
+  "rank": "batch",
+  "name": "Svalbard",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2939,
+  "tokensOut": 553,
+  "cost": 0.006257,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Svalbard is defined by its polar landscapes, with vast glaciers, sea ice, and deep fjords dominating the archipelago. Visitors explore the ice and coastal scenery largely by boat, taking in the stark mountains that rise from the water. The polar night and midnight sun dictate the best seasons.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "level": "poor",
+     "text": "Polar night: the sun does not rise. Travel outside the settlements is limited to guided snowmobile trips."
+    },
+    {
+     "months": [
+      2
+     ],
+     "level": "poor",
+     "text": "The sun returns in mid-month and the days lengthen quickly. Snowmobile trips begin crossing the frozen fjords and glaciers."
+    },
+    {
+     "months": [
+      3,
+      4,
+      5
+     ],
+     "level": "good",
+     "text": "Snow still covers the mountains and ice holds the fjords. Snowmobile and dog sled trips cross the ice."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": "peak",
+     "text": "Boats reach the deep fjords and the fronts of the big glaciers."
+    },
+    {
+     "months": [
+      10
+     ],
+     "level": "poor",
+     "text": "Daylight fades fast as the polar night approaches, boat tours wind down, and snow cover is not yet reliable for winter travel."
+    }
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "monthly_scores": [
+    0.5,
+    1.5,
+    7.5,
+    8.5,
+    8.7,
+    9.5,
+    10,
+    9.7,
+    9.5,
+    4.5,
+    0.5,
+    0.2
+   ],
+   "confidence": "high",
+   "depth_why": "The extreme changes in daylight (polar night vs midnight sun) and sea ice dictate how and when the landscapes can be seen, creating distinct seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": []
+  },
+  "curve": [
+   1.6,
+   1.6,
+   1.6,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   9.2,
+   1.5999999999999996,
+   1.6,
+   1.6
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0017",
+  "rank": "batch",
+  "name": "Bali",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3131,
+  "tokensOut": 1561,
+  "cost": 0.012497,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Bali is known for its extensive beach clubs along the southern coast and luxury resort pools inland. Visitors can lie out on the sand in areas like Seminyak and Canggu, or relax by infinity pools overlooking the jungle in Ubud. The dry season brings the most reliable sunshine for outdoor lounging.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Reliable sunshine for the sea and the resort pools, with afternoon highs in the mid to high 80s."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "good",
+     "text": "The rain is easing and the sun is out more often, with afternoon highs near 88 F."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "fair",
+     "text": "Frequent rain showers and thick cloud limit the sun, though warm days still allow time at the beach clubs and resort pools between showers."
+    }
+   ],
+   "best_months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "monthly_scores": [
+    5.2,
+    5,
+    5.5,
+    6.6,
+    8.6,
+    8.4,
+    8.3,
+    8,
+    8.4,
+    8.7,
+    6.2,
+    5.5
+   ],
+   "confidence": "high",
+   "depth_why": "The year divides into a dry season with peak sunshine and a wet season with more frequent showers, changing how reliable a full day in the sun will be.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Seminyak",
+    "Canggu",
+    "Ubud"
+   ],
+   "gemini_scores": [
+    7.1,
+    7,
+    7.4,
+    7.9,
+    8.5,
+    8.4,
+    8.3,
+    8.3,
+    8.5,
+    8.5,
+    7.6,
+    7.2
+   ]
+  },
+  "curve": [
+   4.2,
+   4.2,
+   4.2,
+   8.1,
+   8.1,
+   8.1,
+   8.1,
+   8.1,
+   8.1,
+   8.1,
+   4.2,
+   4.2
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0060",
+  "rank": "batch",
+  "name": "Dubai",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3122,
+  "tokensOut": 1390,
+  "cost": 0.011462,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Dubai is a major destination for resort pool days and luxury beach clubs along the Persian Gulf. Visitors can lie out on the sand at developments like Palm Jumeirah or lounge by expansive, temperature-controlled hotel pools. The most comfortable weather for spending hours in the sun runs from late fall through early spring.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "Afternoon highs in the 70s and 80s make for ideal days on the sand or by the pool, with clear skies."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "good",
+     "text": "Highs reach the low 90s, shifting time toward shaded cabanas and resort pools before the extreme heat sets in."
+    },
+    {
+     "months": [
+      5,
+      9
+     ],
+     "level": "fair",
+     "text": "Midday heat is extreme, with highs of 100 or more, so time outside is limited to early mornings and shaded pools."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "poor",
+     "text": "Highs run from 104 to 108 F, too hot for most on the beach; early mornings and cooled hotel pools are what is left."
+    },
+    {
+     "months": [
+      10
+     ],
+     "level": "good",
+     "text": "Highs ease to the high 90s as the summer heat breaks, and late afternoons on the sand are comfortable again."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "monthly_scores": [
+    8.5,
+    8.9,
+    9.2,
+    8.5,
+    5.5,
+    3.5,
+    2.8,
+    2.7,
+    4.5,
+    7.5,
+    8.9,
+    8.5
+   ],
+   "confidence": "high",
+   "depth_why": "The extreme summer heat clearly divides the year into comfortable winter beach days, transitional hot months, and a summer where sunbathing is limited to early mornings by the pool.",
+   "flags": [],
+   "named_things": [
+    "Persian Gulf",
+    "Palm Jumeirah"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   7,
+   7,
+   4,
+   4,
+   4,
+   7,
+   7,
+   9,
+   9
+  ],
+  "base": 7
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0134",
+  "rank": "batch",
+  "name": "Palm Springs & Joshua Tree",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3127,
+  "tokensOut": 1595,
+  "cost": 0.012697,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Palm Springs is a premier destination for resort pool days, with abundant sunshine in a desert setting. Visitors lounge by the pools of mid-century modern hotels and luxury resorts. The best conditions run through the spring and fall.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      4,
+      5,
+      10,
+      11
+     ],
+     "level": "peak",
+     "text": "Highs from the high 70s to the mid-90s make ideal conditions to lounge by the pools of desert resorts."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Midday sunbathing is comfortable with highs around 70 degrees, though mornings and late afternoons are cool."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "poor",
+     "text": "Highs of 104 to 109 F push sunbathing to the early morning, and the pool is the only comfortable place to lie out."
+    },
+    {
+     "months": [
+      9
+     ],
+     "level": "fair",
+     "text": "Highs still reach 102 F, so sunbathing is limited to the early morning and late afternoon by the pool."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    5,
+    10,
+    11
+   ],
+   "monthly_scores": [
+    6.5,
+    7.3,
+    9.1,
+    9.1,
+    8.5,
+    3.5,
+    2.4,
+    2.5,
+    4.5,
+    8.8,
+    8.7,
+    5.9
+   ],
+   "confidence": "high",
+   "depth_why": "The seasons dictate sunbathing conditions, with ideal spring and fall weather, cool winters, and extreme summer heat.",
+   "flags": [],
+   "named_things": []
+  },
+  "curve": [
+   0,
+   4,
+   4,
+   4,
+   4,
+   0,
+   0,
+   0,
+   0,
+   4,
+   4,
+   0
+  ],
+  "base": 2
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0102",
+  "rank": "batch",
+  "name": "Maldives",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3132,
+  "tokensOut": 447,
+  "cost": 0.005814,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Maldives is a premier destination for sunbathing, with private island resorts that have pristine white-sand beaches and luxurious pool decks. Visitors can lounge by the Indian Ocean or on overwater villa terraces. The dry season provides the most reliable sunshine for long days by the water.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "level": "peak",
+     "text": "The dry season brings the most reliable sunshine and the fewest rainy days. Afternoon temperatures in the upper 80s make for ideal conditions to lounge on resort beaches or by infinity pools."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "level": "good",
+     "text": "The wet season increases the chance of rain and cloud cover, though temperatures remain warm. Sunbathing is still possible between showers."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "monthly_scores": [
+    10,
+    10,
+    9.8,
+    9.7,
+    8,
+    8.8,
+    8.5,
+    8.7,
+    8.4,
+    7.9,
+    8.5,
+    9.5
+   ],
+   "confidence": "high",
+   "depth_why": "The year is divided into a dry season with peak sunbathing conditions and a wet season with more rain and cloud cover.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Indian Ocean"
+   ]
+  },
+  "curve": [
+   10,
+   10,
+   10,
+   10,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   10
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "sunbathing",
+  "id": "p0172",
+  "rank": "batch",
+  "name": "Southeast Alaska & the Inside Passage",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3129,
+  "tokensOut": 1321,
+  "cost": 0.011055,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Southeast Alaska is not a sunbathing destination: the maritime climate is cool and rainy. A clear summer afternoon may allow a few hours of sun on a rocky shoreline or a cruise ship deck, but there are no real beach or pool days.",
+   "blurbs": [
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer is warmest, with highs in the low 60s. On rare clear days people sit in the sun on a ship deck or a rocky beach, though it is too cool for real sunbathing."
+    },
+    {
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "level": "poor",
+     "text": "Cool to cold, rainy and mostly overcast."
+    }
+   ],
+   "best_months": [
+    7,
+    8
+   ],
+   "monthly_scores": [
+    0.1,
+    0.1,
+    0.1,
+    0.2,
+    0.3,
+    0.6,
+    1.1,
+    0.5,
+    0.3,
+    0.2,
+    0.1,
+    0.1
+   ],
+   "confidence": "high",
+   "depth_why": "Summer offers the only marginal chance to sit in the sun, while the rest of the year is too cold and wet.",
+   "flags": [],
+   "named_things": []
+  },
+  "curve": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0017",
+  "rank": "batch",
+  "name": "Bali",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2755,
+  "tokensOut": 1846,
+  "cost": 0.013831,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Bali is a major center for wellness resort stays and day spas, specializing in traditional Balinese massage and holistic therapies. Visitors can book treatments ranging from floral baths and reflexology in Ubud to beachfront spa days in Seminyak. The island also features extensive clinical wellness and detox programs.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "peak",
+     "text": "Traditional Balinese massage uses deep tissue techniques and essential oils, widely available in spa districts like Ubud and Seminyak. Wellness resorts run multi-day programs focused on detox, meditation, and traditional healing practices."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4,
+    9.4
+   ],
+   "confidence": "high",
+   "depth_why": "Spa and wellness facilities operate indoors and remain fully accessible in both the wet and dry seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Ubud",
+    "Seminyak",
+    "Canggu",
+    "Balinese massage"
+   ]
+  },
+  "curve": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   10,
+   10,
+   10,
+   9,
+   9,
+   9,
+   10
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0032",
+  "rank": "batch",
+  "name": "Budapest",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2751,
+  "tokensOut": 514,
+  "cost": 0.005835,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Budapest is defined by its thermal bath culture, built on natural hot springs that have been used since Roman times. Visitors can soak in grand Neo-Baroque pools, Ottoman-era hammams, and modern wellness complexes. The city also supports a strong clinical wellness sector focused on balneotherapy.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "Cold weather makes the outdoor thermal pools, especially the steaming waters of Széchenyi, highly atmospheric. Indoor Ottoman baths like Rudas and Király provide a warm retreat."
+    },
+    {
+     "months": [
+      4,
+      5,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "Mild temperatures make it comfortable to move between the indoor and outdoor pools."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Summer heat makes the hot thermal waters less appealing, though many complexes have cooler swimming pools. The major baths are heavily crowded with tourists."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "monthly_scores": [
+    10,
+    10,
+    9.7,
+    9.5,
+    9.5,
+    8.5,
+    8.7,
+    8.5,
+    9.2,
+    9.2,
+    9.5,
+    10
+   ],
+   "confidence": "high",
+   "depth_why": "Grouped by season, as the appeal of hot thermal baths changes with the outside temperature.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Széchenyi",
+    "Rudas",
+    "Király"
+   ]
+  },
+  "curve": [
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   8.7,
+   10,
+   10,
+   10,
+   8.7,
+   8.7,
+   8.7,
+   8.7
+  ],
+  "base": 9
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0083",
+  "rank": "batch",
+  "name": "Iceland",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2751,
+  "tokensOut": 1753,
+  "cost": 0.013269,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Iceland's geothermal activity fuels a nationwide culture of outdoor bathing in naturally heated water. Visitors can soak in large, mineral-rich thermal complexes built into lava fields or oceanfront cliffs. Nearly every town has a public pool with hot tubs, and many add steam rooms. The rules are strict: bathers shower with soap, naked, before putting on a swimsuit and entering the pool.",
+   "blurbs": [
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "The sharp contrast between freezing air and hot geothermal water makes outdoor soaking ideal. Long nights give a chance to watch for the northern lights from the thermal baths."
+    },
+    {
+     "months": [
+      4,
+      5,
+      9,
+      10
+     ],
+     "level": "good",
+     "text": "Milder temperatures make the move between outdoor pools and changing rooms easier. The public pools are a daily social hub for locals."
+    },
+    {
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Evenings stay light and the big geothermal complexes see their largest crowds."
+    }
+   ],
+   "best_months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "monthly_scores": [
+    8.5,
+    8.5,
+    8.3,
+    7.8,
+    7.5,
+    7.2,
+    7.2,
+    7.2,
+    7.5,
+    7.8,
+    8.2,
+    8.5
+   ],
+   "confidence": "high",
+   "depth_why": "The experience of outdoor geothermal bathing changes with the seasons, peaking in the cold, dark winter months and shifting to midnight sun soaking in the summer.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "northern lights",
+    "midnight sun"
+   ]
+  },
+  "curve": [
+   8.2,
+   8.2,
+   8.2,
+   8.2,
+   8.2,
+   8.8,
+   8.8,
+   8.8,
+   8.2,
+   8.2,
+   8.2,
+   8.2
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0138",
+  "rank": "batch",
+  "name": "Paris",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2749,
+  "tokensOut": 954,
+  "cost": 0.008473,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "year",
+   "overview": "Paris features a strong culture of day spas and traditional North African hammams tucked into its neighborhoods. Visitors can book massages and cosmetic treatments in the city center. Traditional steam baths come with black soap scrubs and relaxation.",
+   "blurbs": [
+    {
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "level": "good",
+     "text": "Day spas across the city give massages and cosmetic treatments, while traditional hammams have steam rooms and black soap scrubs."
+    }
+   ],
+   "best_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "monthly_scores": [
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5
+   ],
+   "confidence": "high",
+   "depth_why": "Spas and hammams are indoor facilities that operate consistently regardless of the season.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "hammams"
+   ]
+  },
+  "curve": [
+   5.3,
+   5.3,
+   5.3,
+   5.3,
+   5.3,
+   6.4,
+   6.4,
+   6.4,
+   5.3,
+   5.3,
+   5.3,
+   5.3
+  ],
+  "base": 5
+ },
+ {
+  "family": "batch",
+  "k": "spaWellness",
+  "id": "p0199",
+  "rank": "batch",
+  "name": "Zermatt & the Swiss Alps",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 2755,
+  "tokensOut": 1779,
+  "cost": 0.013429,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Swiss Alps are a major destination for luxury wellness resorts and day spas built into mountain retreats. Visitors soak in outdoor thermal pools surrounded by snow, then move to extensive sauna landscapes where, by Swiss custom, swimsuits stay off: the saunas are usually mixed-gender and nude, with a towel to sit on. The region also has clinical wellness centers and traditional thermal baths in towns like Leukerbad.",
+   "blurbs": [
+    {
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "peak",
+     "text": "Outdoor heated pools and extensive sauna circuits are highly sought after following days in the snow."
+    },
+    {
+     "months": [
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "Hikers fill the mountain spas after days on the trails."
+    },
+    {
+     "months": [
+      6,
+      9
+     ],
+     "level": "good",
+     "text": "Wellness resorts are quieter, with easier access to the thermal baths and massage treatments."
+    },
+    {
+     "months": [
+      4,
+      5,
+      10,
+      11
+     ],
+     "level": "good",
+     "text": "Many Alpine hotels and their attached spas close for seasonal maintenance."
+    }
+   ],
+   "best_months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "monthly_scores": [
+    9.1,
+    9.1,
+    9.1,
+    7.5,
+    6.3,
+    8.3,
+    8.8,
+    8.8,
+    8.5,
+    7.5,
+    6.5,
+    9.1
+   ],
+   "confidence": "high",
+   "depth_why": "Alpine spa resorts have distinct winter and summer seasons, with significant closures during the spring and fall shoulder months.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Leukerbad"
+   ]
+  },
+  "curve": [
+   9.3,
+   8.65,
+   8,
+   5,
+   5,
+   8,
+   9,
+   8.5,
+   8,
+   5,
+   5,
+   9.3
+  ],
+  "base": 8
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0012",
+  "rank": "batch",
+  "name": "Atacama Desert",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3489,
+  "tokensOut": 447,
+  "cost": 0.006171,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Atacama Desert has some of the darkest and clearest skies on Earth, making it a premier destination for stargazing. The high altitude and extreme dryness create exceptionally transparent conditions for viewing the Milky Way and deep-sky objects. The core of the Milky Way is well placed for viewing from May to August.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "The Milky Way core is well placed through the evening and night, under very dark, dry skies."
+    },
+    {
+     "months": [
+      4,
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "Skies are very clear and the core is up for only part of the night."
+    },
+    {
+     "months": [
+      2,
+      3
+     ],
+     "level": "good",
+     "text": "The core rises only in the early hours before dawn, and skies are mostly clear."
+    },
+    {
+     "months": [
+      11
+     ],
+     "level": "good",
+     "text": "The core is not visible at night, but skies are mostly clear."
+    },
+    {
+     "months": [
+      12,
+      1
+     ],
+     "level": "good",
+     "text": "The core is not visible at night, and high-altitude cloud drifts over more often."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "monthly_scores": [
+    7.5,
+    7.9,
+    8.5,
+    9.5,
+    10,
+    10,
+    10,
+    10,
+    9.5,
+    9.2,
+    7.9,
+    7.1
+   ],
+   "confidence": "high",
+   "depth_why": "Grouped by the visibility of the Milky Way core and variations in cloud cover.",
+   "flags": [],
+   "named_things": []
+  },
+  "curve": [
+   8,
+   8,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "base": 10
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0017",
+  "rank": "batch",
+  "name": "Bali",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3483,
+  "tokensOut": 1519,
+  "cost": 0.012597,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Bali has moderately dark skies away from the bright southern resort towns, best around Mount Batur or in West Bali National Park, but humidity and frequent clouds make clear nights rare. The Milky Way's bright core crosses the sky in the drier months.",
+   "blurbs": [
+    {
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "peak",
+     "text": "The drier weather brings the lowest cloud and the best odds of a clear night, with the Milky Way's bright core crossing the sky."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "fair",
+     "text": "Cloud and humidity are building again, so clear nights are getting rarer."
+    },
+    {
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "level": "poor",
+     "text": "Heavy cloud covers the sky on most nights, and rain is frequent."
+    }
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "monthly_scores": [
+    1.2,
+    1.5,
+    2.2,
+    3.5,
+    3.6,
+    3.5,
+    3.4,
+    3.5,
+    2.5,
+    2.1,
+    1.5,
+    1.9
+   ],
+   "confidence": "medium",
+   "depth_why": "Cloud cover and the wet season dictate the best times to see the sky.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Mount Batur",
+    "West Bali National Park"
+   ]
+  },
+  "curve": [
+   2,
+   2,
+   2,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   2,
+   2
+  ],
+  "base": 4
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0091",
+  "rank": "batch",
+  "name": "Ladakh",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3489,
+  "tokensOut": 571,
+  "cost": 0.006915,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "Ladakh has some of the darkest and clearest skies reachable by road, with very dark high-altitude sites such as Hanle, home of India's first dark-sky reserve. The thin, dry air at these elevations makes the stars and the Milky Way exceptionally sharp. The core of the Milky Way is visible from spring through early fall, though winter brings the longest nights.",
+   "blurbs": [
+    {
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "level": "good",
+     "text": "Roads to the high sites are open and the Milky Way core is up for much of the night."
+    },
+    {
+     "months": [
+      9,
+      10
+     ],
+     "level": "peak",
+     "text": "The clearest skies of the year, with the roads still open before the first heavy snow."
+    },
+    {
+     "months": [
+      3,
+      4
+     ],
+     "level": "good",
+     "text": "Roads to high-altitude sites like Hanle open up as the weather warms, though the nights are still very cold."
+    },
+    {
+     "months": [
+      11
+     ],
+     "level": "fair",
+     "text": "The first heavy snows begin closing the high passes, so reaching the darkest sites gets harder."
+    },
+    {
+     "months": [
+      12,
+      1,
+      2
+     ],
+     "level": "fair",
+     "text": "Heavy snow closes many high passes, cutting off the darkest remote sites."
+    }
+   ],
+   "best_months": [
+    9,
+    10
+   ],
+   "monthly_scores": [
+    5.5,
+    5.2,
+    7.5,
+    8.1,
+    7.2,
+    7.5,
+    7.2,
+    8.5,
+    9.8,
+    9.5,
+    6.5,
+    6.2
+   ],
+   "confidence": "high",
+   "depth_why": "Grouped by access and cloud cover: winter has long nights but closed passes, spring/summer has the Milky Way core but more clouds, and early fall has the clearest skies and open roads.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Hanle",
+    "Pangong Tso"
+   ]
+  },
+  "curve": [
+   0,
+   0,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   7.2,
+   0
+  ],
+  "base": 7
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0138",
+  "rank": "batch",
+  "name": "Paris",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3482,
+  "tokensOut": 1826,
+  "cost": 0.014438,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The night sky over Paris is washed out by city lights, so stargazing in the capital is not possible. Visitors must drive about two hours to rural areas like the Perche Regional Nature Park, where skies are only fair and frequent cloud limits viewing.",
+   "blurbs": [
+    {
+     "months": [
+      3,
+      9
+     ],
+     "level": "peak",
+     "text": "Nights are long enough for several hours of astronomical darkness, with moderate cloud."
+    },
+    {
+     "months": [
+      4,
+      5,
+      8
+     ],
+     "level": "fair",
+     "text": "Nights are short, leaving only a few hours of astronomical darkness."
+    },
+    {
+     "months": [
+      6
+     ],
+     "level": "poor",
+     "text": "At this latitude the sun never drops far enough below the horizon for astronomical darkness, so twilight lasts all night."
+    },
+    {
+     "months": [
+      7
+     ],
+     "level": "poor",
+     "text": "Only about two hours of astronomical darkness (the sun more than 18 degrees below the horizon) remain."
+    },
+    {
+     "months": [
+      1,
+      2,
+      10,
+      11,
+      12
+     ],
+     "level": "fair",
+     "text": "Long nights give hours of darkness, but frequent thick cloud often blocks the sky."
+    }
+   ],
+   "best_months": [
+    3,
+    9
+   ],
+   "monthly_scores": [
+    2.2,
+    2.5,
+    4.1,
+    3.5,
+    2.2,
+    0.6,
+    1.5,
+    2.5,
+    4.1,
+    2.5,
+    2.2,
+    2.1
+   ],
+   "confidence": "high",
+   "depth_why": "Groups of months separate the short summer nights and cloudy winters from the brief, clearer shoulder seasons.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": [
+    "Perche Regional Nature Park"
+   ]
+  },
+  "curve": [
+   0,
+   0.5666666666666667,
+   1.1333333333333333,
+   1.7,
+   1.7,
+   1.7,
+   1,
+   1.0588235294117647,
+   1.9411764705882353,
+   2,
+   0,
+   0
+  ],
+  "base": 1
+ },
+ {
+  "family": "batch",
+  "k": "stargazing",
+  "id": "p0164",
+  "rank": "batch",
+  "name": "Scottish Highlands & Isle of Skye",
+  "model": "gemini-3.1-pro-preview",
+  "tokensIn": 3488,
+  "tokensOut": 533,
+  "cost": 0.006686,
+  "parseError": null,
+  "gemini": {
+   "applicable": true,
+   "depth": "groups",
+   "overview": "The Scottish Highlands and Isle of Skye have very dark skies in remote areas away from towns. The Milky Way is visible when the sky is clear, though frequent heavy cloud is a major obstacle. The extreme northern latitude means the sky never reaches astronomical darkness in midsummer.",
+   "blurbs": [
+    {
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+     ],
+     "level": "good",
+     "text": "Nights are long, but heavy cloud covers the sky on most of them."
+    },
+    {
+     "months": [
+      3,
+      9
+     ],
+     "level": "peak",
+     "text": "Nights are long enough for several hours of astronomical darkness, though cloud is still common."
+    },
+    {
+     "months": [
+      4
+     ],
+     "level": "peak",
+     "text": "Nights are getting short, with only a few hours of astronomical darkness."
+    },
+    {
+     "months": [
+      5,
+      6,
+      7
+     ],
+     "level": "poor",
+     "text": "The sky never reaches astronomical darkness; twilight lasts all night."
+    },
+    {
+     "months": [
+      8
+     ],
+     "level": "poor",
+     "text": "A short spell of astronomical darkness returns each night."
+    }
+   ],
+   "best_months": [
+    3,
+    4,
+    9
+   ],
+   "monthly_scores": [
+    3.1,
+    3.5,
+    4.8,
+    4.5,
+    0.9,
+    1.1,
+    0.9,
+    1.5,
+    4.1,
+    3.5,
+    3.2,
+    3.5
+   ],
+   "confidence": "high",
+   "depth_why": "The extreme latitude causes a total loss of true night in summer, while heavy cloud cover and the Milky Way's position define the spring, autumn, and winter months.",
+   "flags": [],
+   "na_reason": "",
+   "named_things": []
+  },
+  "curve": [
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5
+  ],
+  "base": 5
+ }
+]

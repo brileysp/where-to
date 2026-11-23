@@ -1,0 +1,1 @@
+ALTER TABLE "interest_place_ideas" ADD COLUMN "setting_tags" text[] DEFAULT '{}' NOT NULL;

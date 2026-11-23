@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 // The checks docs/column-scoring-plan.md asks for: no gaps, anchors hold, and the ratings follow the stated formulas.
 type Evidence = Record<string, Record<string, unknown> & { evidence: Record<string, string> }>;
@@ -25,9 +26,9 @@ describe('Theme Parks evidence', () => {
   });
   it('keeps the anchors named in the column hints', () => {
     const anchors: Record<string, Record<string, number>> = {
-      thrillRides: { 'tokyo-kyoto': 10, london: 7, paris: 7, beijing: 7, 'bavaria-munich': 4, amsterdam: 1, nyc: 1 },
-      waterParks: { dubai: 10, 'bavaria-munich': 9, 'black-forest': 7, seoul: 7 },
-      zoosAquariums: { singapore: 10, 'tokyo-kyoto': 10, nyc: 9, hongkong: 9, taiwan: 7, barcelona: 7, paris: 4, dubai: 4, 'black-forest': 2 },
+      thrillRides: { [PLACE['tokyo-and-kyoto']]: 10, [PLACE.london]: 7, [PLACE.paris]: 7, [PLACE['beijing-and-great-wall']]: 7, [PLACE['bavaria-and-munich']]: 4, [PLACE.amsterdam]: 1, [PLACE['new-york-city']]: 1 },
+      waterParks: { [PLACE.dubai]: 10, [PLACE['bavaria-and-munich']]: 9, [PLACE['black-forest']]: 7, [PLACE.seoul]: 7 },
+      zoosAquariums: { [PLACE.singapore]: 10, [PLACE['tokyo-and-kyoto']]: 10, [PLACE['new-york-city']]: 9, [PLACE['hong-kong']]: 9, [PLACE.taiwan]: 7, [PLACE.barcelona]: 7, [PLACE.paris]: 4, [PLACE.dubai]: 4, [PLACE['black-forest']]: 2 },
     };
     for (const [col, places] of Object.entries(anchors)) for (const [place, want] of Object.entries(places)) expect(evidence[place][col], `${col} ${place}`).toBe(want);
   });

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { PLACE } from '@/lib/places/keys.generated';
 
 type Ev = Record<string, { sea_lists?: string[]; calm: number; lakes: number; paddle: number; paddle_sea: number; coast_km: number; sea: number; median_wave_m: number | null; whitewater: number | null; multi: number | null; type: string; rivers: Array<{ river: string; cls: string; outfitters: string }>; multi_operators: string[]; urls: string[]; water_temperature: string | null; glacial: boolean }>;
 const root = join(__dirname, '..', '..');
@@ -60,13 +61,13 @@ describe('Kayaking & Rafting evidence', () => {
     }
   });
   it('keeps the checked anchors', () => {
-    expect(draft['nepal'].whitewaterRafting).toBe(10);
-    expect(draft['zimbabwe'].whitewaterRafting).toBe(8);
-    expect(draft['grandcanyon'].whitewaterRafting).toBe(7);
-    expect(draft['paris'].whitewaterRafting).toBe(0);
-    expect(draft['tasmania'].multiDayRiverTrips).toBe(10);
-    expect(draft['berlin'].calmWaterPaddling).toBe(10);
-    expect(draft['iceland'].waterTemperature).toBe('glacial');
-    for (const p of ['croatia', 'vancouver-island', 'southeast-alaska', 'los-cabos', 'galapagos', 'greenland']) expect(draft[p].seaKayaking, p).toBe(10);
+    expect(draft[PLACE.nepal].whitewaterRafting).toBe(10);
+    expect(draft[PLACE['victoria-falls-and-hwange']].whitewaterRafting).toBe(8);
+    expect(draft[PLACE['grand-canyon']].whitewaterRafting).toBe(7);
+    expect(draft[PLACE.paris].whitewaterRafting).toBe(0);
+    expect(draft[PLACE.tasmania].multiDayRiverTrips).toBe(10);
+    expect(draft[PLACE.berlin].calmWaterPaddling).toBe(10);
+    expect(draft[PLACE.iceland].waterTemperature).toBe('glacial');
+    for (const p of [PLACE['dalmatian-coast'], PLACE['vancouver-island'], PLACE['southeast-alaska-and-the-inside-passage'], PLACE['los-cabos'], PLACE['galapagos-islands'], PLACE.greenland]) expect(draft[p].seaKayaking, p).toBe(10);
   });
 });

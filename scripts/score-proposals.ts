@@ -1,7 +1,7 @@
 // 1 Nov 2026: proposed month scores for texts Gemini wrote, from Gemini's own scores and ours. Replaces the first reconciliation (owner: rounds, random zeros, too much swing for museums).
 // Rules: (1) start from Gemini's scores, which follow its text. (2) A swing larger than the interest's seasonal-variance score allows is compressed around the mean (museums: 1.5 points from
-// best to worst month; closed months are left alone). (3) The peak is set halfway between Gemini's peak and ours; a gap over 2.5 is marked for the owner to decide. (4) Last digits are evened across
-// the whole set with the catalog method (no more x.0 and x.5 than other digits, flat seasons stay flat, zeros and 10s untouched).
+// best to worst month; closed months are left alone). (3) The peak is set halfway between Gemini's peak and ours; a gap over 2.5 is marked for the owner to decide. (4) Last digits are evened: each digit .0-.9 about 10%, counted together with the scores already live for that
+// interest (balanceAgainstLive; the live ones are never touched). Flat seasons stay flat, zeros and 10s untouched. Owner rule, restated 13 Nov 2026: EVEN, not 'avoid .0 and .5'.
 // Writes nothing to the app. Usage: PLACE_ROWS_SNAPSHOT=1 npx tsx scripts/score-proposals.ts --results=batch.json --scores=scores.json --out=proposals.json
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
@@ -14,7 +14,8 @@ const capFor = (sv: number) => (sv <= 3 ? 1.5 : sv <= 5 ? 3 : sv <= 7 ? 5 : Infi
   const sc = new Map((JSON.parse(readFileSync(arg('scores')!, 'utf8')) as any[]).map((x) => [`${x.k}|${x.id}`, x]));
   const { db } = await import('../src/lib/db/client');
   const { sql } = await import('drizzle-orm');
-  const { evenTenthsCatalog, countDigits } = await import('../src/lib/gemini/even-tenths');
+  const { balanceAgainstLive, countDigits, describeDigits } = await import('../src/lib/gemini/even-tenths');
+  const { getPrimaryPlaceRows } = await import('../src/lib/db/queries/primary-place-rows'); const { liveSeries } = await import('../src/lib/authoring/live-series');
   const meta = ((r: any) => (r.rows ?? r) as any[])(await db.execute(sql`select key, seasonal_variance sv from interest_meta`));
   const sv = new Map(meta.map((m: any) => [m.key, m.sv as number]));
   const cells: any[] = []; const series: Record<string, number[]> = {};
@@ -39,7 +40,15 @@ const capFor = (sv: number) => (sv <= 3 ? 1.5 : sv <= 5 ? 3 : sv <= 7 ? 5 : Infi
     cells.push({ k: r.k, id: r.id, name: r.name, ours: O.map(r1), gemini: G, proposed: P, cls, gap: r1(gap), compressed, svScore: sv.get(r.k) ?? null });
   }
   const before = countDigits(Object.values(series));
-  const target = evenTenthsCatalog(series, new Set(), { maxMove: 3 });
+  const liveRows = (await getPrimaryPlaceRows()) as any[];
+  const target: Record<string, number[]> = {};
+  for (const k of new Set(cells.map((c) => c.k))) {
+    const mine: Record<string, number[]> = {}; const ids = new Set<string>();
+    for (const c of cells.filter((x) => x.k === k)) { mine[`${k}|${c.id}`] = series[`${k}|${c.id}`]; ids.add(c.id); }
+    const bal = balanceAgainstLive(mine, liveSeries(liveRows, k, ids), { maxMove: 3 });
+    Object.assign(target, bal.series);
+    console.log(`${k}: new batch ${describeDigits(bal.before)}\n${' '.repeat(k.length + 2)}after balancing, with live: ${describeDigits(bal.combinedAfter)}`);
+  }
   const after = countDigits(Object.values(target));
   for (const c of cells) c.proposed = target[`${c.k}|${c.id}`].map(r1);
   const pct = (c: number[]) => { const n = c.reduce((a, b) => a + b, 0) || 1; return c.map((x) => String(Math.round((100 * x) / n)).padStart(2) + '%').join(' '); };

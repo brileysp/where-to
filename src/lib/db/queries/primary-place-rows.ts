@@ -4,6 +4,7 @@ import { eq, inArray } from 'drizzle-orm';
 import type { InferSelectModel } from 'drizzle-orm';
 import { db } from '../client';
 import { places } from '../schema';
+import { isSnapshotScript } from '../script-place-snapshot';
 
 export type PlaceRow = InferSelectModel<typeof places>;
 
@@ -23,7 +24,8 @@ export type PlaceRow = InferSelectModel<typeof places>;
  * happens only on a cold start or after MAX_AGE_MS, as a backstop for a
  * write that didn't bump updatedAt.
  */
-const CHECK_AFTER_MS = 60_000;
+// In scripts that use the disk copy every read does the cheap check, so a script never reads rows it just changed from a stale copy.
+const CHECK_AFTER_MS = isSnapshotScript() ? 0 : 60_000;
 // A full re-download is 5.8 MB. At 30 minutes, a server that is used all day
 // re-downloaded it up to 48 times a day for no reason: every real change bumps
 // updatedAt and is caught by the cheap check above. 12 hours is only the

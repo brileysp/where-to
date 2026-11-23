@@ -832,6 +832,8 @@ export const contentGenerations = pgTable(
     batchId: uuid('batch_id').references(() => contentGenerationBatches.id),
     placeId: text('place_id').notNull(), // matches places.id — not a DB FK (places uses text ids issued by content scripts, same polymorphic-by-convention pattern as admin_audit_log above)
     interestKey: text('interest_key').notNull(),
+    /** The place's scope version when this was generated (set by a database trigger; step 6 of the place naming plan). */
+    scopeVersion: integer('scope_version').notNull().default(1),
     kind: contentGenerationKindEnum('kind').notNull(),
     // Both together let a past generation be attributed to its exact source
     // text even if the versioned prompt file is later edited in place by
@@ -914,6 +916,67 @@ export const interestTodos = pgTable(
   (table) => [index('interest_todos_interest_idx').on(table.interestKey, table.status)],
 );
 
+// 13 Nov 2026: why correct data goes stale, one row per reason, per interest. Each row is something a reviewer must check at every review of that interest
+// (the repeating "Review cadence" to-do cannot be ticked done until every active reason has a result for that round). Seeded from the owner's staleness review.
+export const STALE_CATEGORIES = ['Rules', 'Places and operators', 'Nature and climate', 'Names and data', 'Our own sources', 'Money and policy'] as const;
+export type StaleCategory = (typeof STALE_CATEGORIES)[number];
+export const STALE_CHECKERS = ['owner', 'claude', 'script'] as const;
+export type StaleChecker = (typeof STALE_CHECKERS)[number];
+export const interestStaleFactors = pgTable(
+  'interest_stale_factors',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    category: text('category').$type<StaleCategory>().notNull(),
+    statement: text('statement').notNull(),
+    // The concrete source or page to look at; empty until written.
+    howToCheck: text('how_to_check').notNull().default(''),
+    checker: text('checker').$type<StaleChecker>().notNull().default('owner'),
+    // Overrides the interest's own review cadence for this reason only (for example the eBird update is yearly whatever the bucket). Null = the interest's cadence.
+    checkEvery: text('check_every').$type<'weekly' | 'monthly' | 'quarterly' | 'annually'>(),
+    sortOrder: integer('sort_order').notNull().default(0),
+    // Retired reasons stay for the record but are no longer asked.
+    active: boolean('active').notNull().default(true),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('interest_stale_factors_interest_idx').on(table.interestKey, table.active)],
+);
+
+export const STALE_RESULTS = ['checked', 'changed', 'na'] as const;
+export type StaleResult = (typeof STALE_RESULTS)[number];
+/** One result for one reason in one review round (todoId is the review to-do it was recorded against; null for a check made outside a review). */
+export const interestStaleChecks = pgTable(
+  'interest_stale_checks',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    factorId: uuid('factor_id').notNull().references(() => interestStaleFactors.id, { onDelete: 'cascade' }),
+    todoId: uuid('todo_id'),
+    // The interest the result was recorded for. A reason that applies to every interest (interest_key '_site' on the reason) is checked once per interest, so this says which.
+    interestKey: text('interest_key'),
+    result: text('result').$type<StaleResult>().notNull(),
+    note: text('note').notNull().default(''),
+    checkedBy: text('checked_by').notNull().default(''),
+    checkedAt: timestamp('checked_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('interest_stale_checks_factor_idx').on(table.factorId, table.checkedAt), index('interest_stale_checks_todo_idx').on(table.todoId)],
+);
+
+/** The interest key that holds the reasons that apply to every interest (the same value the To do tab uses for site-wide items). */
+export const STALE_SITE_KEY = '_site';
+/** An interest that does not need a site-wide reason (for example a stay-at-home interest and "transport and access"). The reason is skipped in that interest's review. */
+export const interestStaleOptOuts = pgTable(
+  'interest_stale_opt_outs',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    interestKey: text('interest_key').notNull(),
+    factorId: uuid('factor_id').notNull().references(() => interestStaleFactors.id, { onDelete: 'cascade' }),
+    note: text('note').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [uniqueIndex('interest_stale_opt_outs_unique').on(table.interestKey, table.factorId)],
+);
+
 export const FACT_CHECK_VERDICTS = ['unchecked', 'verified', 'wrong', 'owner_accepted'] as const;
 export type FactCheckVerdict = (typeof FACT_CHECK_VERDICTS)[number];
 
@@ -956,8 +1019,10 @@ export const interestPlaceIdeas = pgTable(
     region: text('region').notNull().default(''),
     why: text('why').notNull().default(''),
     nearestExisting: text('nearest_existing').notNull().default(''),
-    /** One of the ten place types (src/lib/admin/interest-pages/place-types.ts), or empty. */
+    /** Legacy (until 10 Nov 2026): one of the ten birding-ranking types. No longer read or written; the setting tags below replace it. */
     placeType: text('place_type').notNull().default(''),
+    /** What the place is like: 1 to 4 slugs from src/lib/places/setting-tags.ts, the first primary (the same tags a real place carries). */
+    settingTags: text('setting_tags').array().notNull().default([]),
     stage: text('stage').$type<InterestIdeaStage>().notNull().default('idea'),
     // Place grain, the same scale as the 12 Oct 2026 Place Grain Review: -2 or lower too specific, -1 slightly specific, 0 just right,
     // 1 slightly broad, 2 or higher too broad. Null = not rated. grainNote is the one-line reason.
@@ -1138,8 +1203,141 @@ export const placeInterestFacts = pgTable(
     placeId: text('place_id').notNull(),
     interestKey: text('interest_key').notNull(),
     facts: jsonb('facts').notNull().default({}).$type<Record<string, InterestFactValue>>(),
-    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),    /** The place's scope version when these facts were last written (set by a database trigger; step 6 of the place naming plan). */
+    scopeVersion: integer('scope_version').notNull().default(1),
   },
   (table) => [primaryKey({ columns: [table.placeId, table.interestKey] })],
 );
 // t
+
+/**
+ * Hotel price seasonality, evidence (15 Nov 2026; docs/hotel-season.md). One row per place, kind of hotel and collection run: the dates, the search used,
+ * how many hotels Booking.com listed each night, and every panel hotel with its 14 prices. Admin-only (row-level security on, no public read): it is the evidence behind
+ * the summary in place_hotel_season, and a new run later (re-quoting) is a new row, never an overwrite. At most one run per place and kind is marked current.
+ */
+export const placeHotelQuoteRuns = pgTable(
+  'place_hotel_quote_runs',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    placeId: text('place_id').notNull().references(() => places.id, { onDelete: 'cascade' }),
+    kind: text('kind').notNull().default('luxury'),
+    source: text('source').notNull().default('booking.com'),
+    searchTerm: text('search_term').notNull(),
+    /** How the panel was chosen, in words (for example "up to 20 most expensive hotel-type listings per date"). */
+    method: text('method').notNull().default(''),
+    quotedOn: date('quoted_on', { mode: 'string' }).notNull(),
+    dates: jsonb('dates').notNull().$type<string[]>(),
+    listed: jsonb('listed').notNull().$type<number[]>(),
+    panel: jsonb('panel').notNull().$type<Array<{ name: string; prices: Array<number | null>; excluded?: boolean; note?: string }>>(),
+    note: text('note').notNull().default(''),
+    isCurrent: boolean('is_current').notNull().default(false),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    createdBy: text('created_by').notNull().default(''),
+    /** The place's scope version when this was made (filled by a database trigger on insert; docs/place-naming-plan.md step 6). Lower than the place's current version means it was made for a different scope. */
+    scopeVersion: integer('scope_version').notNull().default(1),
+  },
+  (table) => [
+    index('place_hotel_quote_runs_place_idx').on(table.placeId, table.kind, table.quotedOn),
+    uniqueIndex('place_hotel_quote_runs_current_unique').on(table.placeId, table.kind).where(sql`${table.isCurrent}`),
+  ],
+);
+
+/**
+ * Hotel price seasonality, summary: the small record the app reads, computed from the current run by src/lib/hotel-season/summary.ts (about 350 bytes a place).
+ * Kept in its own table, not on places, so it stays out of the place-row download and the disk snapshots until a screen or the scoring reads it. `overrides` holds a
+ * hand-set quality flag with who set it and why (the computed flags are never overwritten).
+ */
+export const placeHotelSeason = pgTable(
+  'place_hotel_season',
+  {
+    placeId: text('place_id').notNull().references(() => places.id, { onDelete: 'cascade' }),
+    kind: text('kind').notNull().default('luxury'),
+    runId: uuid('run_id').notNull().references(() => placeHotelQuoteRuns.id, { onDelete: 'restrict' }),
+    summary: jsonb('summary').notNull().$type<import('../hotel-season/types').HotelSeasonSummary>(),
+    asOf: date('as_of', { mode: 'string' }).notNull(),
+    /** The summary's flags, copied out so places can be listed by them. */
+    flags: text('flags').array().notNull().default([]),
+    /** The most expensive month's index over the cheapest month's, null when no month has an index. */
+    swing: doublePrecision('swing'),
+    overrides: jsonb('overrides').$type<{ flags?: string[]; note: string; by: string; at: string } | null>(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.placeId, table.kind] })],
+);
+
+/**
+ * Place identity (18 Nov 2026; docs/place-naming-plan.md, steps 1 and 2). One row per place: an unchanging KEY (p0012, assigned once alphabetically, never reused),
+ * the editable LABEL, an editable SLUG, and the SCOPE (what area the place covers). Own tables, not columns on places, so the place-row download and disk snapshots are
+ * unchanged and nothing reads them yet: until step 3 the key is only a mapping from the old id, and the label must equal places.name (scripts/check-place-identity.ts).
+ * `scopeStatus` is 'draft' until the owner has confirmed the level and anchors. All five tables are admin-only (row-level security on, no public read).
+ */
+export const placeIdentity = pgTable(
+  'place_identity',
+  {
+    key: text('key').primaryKey(),
+    placeId: text('place_id').notNull().unique().references(() => places.id, { onDelete: 'restrict', onUpdate: 'cascade' }),
+    label: text('label').notNull(),
+    slug: text('slug').notNull().unique(),
+    /** city, area, region, country or multi_country. */
+    level: text('level').notNull(),
+    /** Goes up by one each time the area the place covers is widened or narrowed; data records the version it was made under. */
+    scopeVersion: integer('scope_version').notNull().default(1),
+    scopeNote: text('scope_note').notNull().default(''),
+    /** The named places the scope covers, for example ["Bagan", "Yangon", "Inle Lake"]. */
+    anchors: jsonb('anchors').notNull().default([]).$type<string[]>(),
+    scopeStatus: text('scope_status').notNull().default('draft'),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [check('place_identity_key_format', sql`${table.key} ~ '^p[0-9]{4}$'`), check('place_identity_status', sql`${table.scopeStatus} in ('draft', 'confirmed')`)],
+);
+
+/** Every label a place has had. The retired ones become banned words in texts (the old-name check reads this instead of a hand-kept file). */
+export const placeLabelHistory = pgTable(
+  'place_label_history',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    placeKey: text('place_key').notNull().references(() => placeIdentity.key, { onDelete: 'cascade', onUpdate: 'cascade' }),
+    label: text('label').notNull(),
+    isCurrent: boolean('is_current').notNull().default(false),
+    /** When it stopped being the label, in words ("Oct 2026"), because the exact day was not recorded for the October renames. */
+    retiredNote: text('retired_note').notNull().default(''),
+    reason: text('reason').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('place_label_history_key_idx').on(table.placeKey), uniqueIndex('place_label_history_current_unique').on(table.placeKey).where(sql`${table.isCurrent}`)],
+);
+
+/** Old addresses and old ids that still resolve to a place: every id the place had before the keys, and every slug it has retired. */
+export const placeSlugRedirects = pgTable(
+  'place_slug_redirects',
+  {
+    slug: text('slug').primaryKey(),
+    placeKey: text('place_key').notNull().references(() => placeIdentity.key, { onDelete: 'cascade', onUpdate: 'cascade' }),
+    /** 'old_id' for an id from before the keys, 'old_slug' for a slug the place used to have. */
+    kind: text('kind').notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index('place_slug_redirects_key_idx').on(table.placeKey)],
+);
+
+/** The old id of each place and the key that replaced it, kept so backups, old result files and old review notes still resolve. */
+export const placeIdRedirects = pgTable('place_id_redirects', {
+  oldId: text('old_id').primaryKey(),
+  placeKey: text('place_key').notNull().unique().references(() => placeIdentity.key, { onDelete: 'cascade', onUpdate: 'cascade' }),
+  note: text('note').notNull().default(''),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+});
+
+/** How each outside source names a place (a search term, a file key, a city id), so imports map by lookup and fail on an unknown key instead of guessing. */
+export const placeSourceKeys = pgTable(
+  'place_source_keys',
+  {
+    source: text('source').notNull(),
+    sourceKey: text('source_key').notNull(),
+    placeKey: text('place_key').notNull().references(() => placeIdentity.key, { onDelete: 'cascade', onUpdate: 'cascade' }),
+    note: text('note').notNull().default(''),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.source, table.sourceKey] }), index('place_source_keys_key_idx').on(table.placeKey)],
+);

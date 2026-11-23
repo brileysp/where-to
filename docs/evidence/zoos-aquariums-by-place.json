@@ -5,7 +5,7 @@
   "b": 0.9407156938524219
  },
  "places": {
-  "uganda": {
+  "p0186": {
    "name": "Uganda",
    "rating": 2,
    "visitors": 0,
@@ -30,7 +30,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "mauritius": {
+  "p0107": {
    "name": "Mauritius",
    "rating": 2,
    "visitors": 0,
@@ -69,7 +69,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "aruba": {
+  "p0009": {
    "name": "Aruba",
    "rating": 2,
    "visitors": 0,
@@ -94,7 +94,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "everglades": {
+  "p0065": {
    "name": "Everglades National Park",
    "rating": 5,
    "visitors": 1500000,
@@ -106,12 +106,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 11,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q3113018",
@@ -121,12 +121,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 13,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q649904",
@@ -137,7 +137,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 31.0,
+     "animals": 31,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -230,7 +230,7 @@
     }
    ]
   },
-  "panama": {
+  "p0135": {
    "name": "Panama",
    "rating": 2,
    "visitors": 0,
@@ -255,7 +255,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "ethiopia": {
+  "p0064": {
    "name": "Ethiopia",
    "rating": 2,
    "visitors": 0,
@@ -280,7 +280,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "mendoza": {
+  "p0108": {
    "name": "Mendoza",
    "rating": 2,
    "visitors": 200000,
@@ -292,12 +292,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 200000.0,
+     "visitors": 200000,
      "src": "Wikipedia infobox",
-     "animals": 1300.0,
+     "animals": 1300,
      "sl": 5,
      "basis": "figure",
-     "counted": 200000.0
+     "counted": 200000
     }
    ],
    "ratingOwnArea": 2,
@@ -305,7 +305,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "gbr": {
+  "p0075": {
    "name": "Great Barrier Reef",
    "rating": 2,
    "visitors": 0,
@@ -319,7 +319,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -348,7 +348,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 15000.0,
+     "animals": 15000,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -383,7 +383,7 @@
     },
     {
      "q": "Q48814233",
-     "name": "Hartley\u2019s Crocodile Adventures",
+     "name": "Hartley’s Crocodile Adventures",
      "km": 36,
      "kinds": [
       "zoo"
@@ -418,7 +418,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 92.0,
+     "animals": 92,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -443,7 +443,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "luangprabang": {
+  "p0093": {
    "name": "Laos",
    "rating": 1,
    "visitors": 0,
@@ -453,7 +453,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "london": {
+  "p0096": {
    "name": "London",
    "rating": 9,
    "visitors": 5260182,
@@ -465,12 +465,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1213187.0,
+     "visitors": 1213187,
      "src": "Wikipedia infobox",
-     "animals": 8469.0,
+     "animals": 8469,
      "sl": 44,
      "basis": "figure",
-     "counted": 1213187.0
+     "counted": 1213187
     },
     {
      "q": "Q5142118",
@@ -479,12 +479,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 8,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q3312744",
@@ -494,12 +494,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 16,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q373187",
@@ -508,12 +508,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 923438.0,
+     "visitors": 923438,
      "src": "Wikipedia infobox",
-     "animals": 10364.0,
+     "animals": 10364,
      "sl": 16,
      "basis": "figure",
-     "counted": 923438.0
+     "counted": 923438
     },
     {
      "q": "Q15249491",
@@ -522,12 +522,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 488557.0,
+     "visitors": 488557,
      "src": "Wikipedia infobox",
-     "animals": 1208.0,
+     "animals": 1208,
      "sl": 5,
      "basis": "figure",
-     "counted": 488557.0
+     "counted": 488557
     },
     {
      "q": "Q5309411",
@@ -536,12 +536,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 370000.0,
+     "visitors": 370000,
      "src": "Wikipedia infobox",
-     "animals": 1638.0,
+     "animals": 1638,
      "sl": 2,
      "basis": "figure",
-     "counted": 370000.0
+     "counted": 370000
     },
     {
      "q": "Q597498",
@@ -550,12 +550,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 100000.0,
+     "visitors": 100000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 100000.0
+     "counted": 100000
     },
     {
      "q": "Q7747862",
@@ -564,12 +564,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 95000.0,
+     "visitors": 95000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 95000.0
+     "counted": 95000
     },
     {
      "q": "Q16901655",
@@ -578,12 +578,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 70000.0,
+     "visitors": 70000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 70000.0
+     "counted": 70000
     },
     {
      "q": "Q56757815",
@@ -651,7 +651,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -777,7 +777,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 450.0,
+     "animals": 450,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -819,7 +819,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 650.0,
+     "animals": 650,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -892,7 +892,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -990,7 +990,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 773.0,
+     "animals": 773,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -1051,7 +1051,7 @@
     }
    ]
   },
-  "guatemala": {
+  "p0078": {
    "name": "Guatemala",
    "rating": 2,
    "visitors": 0,
@@ -1090,7 +1090,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "bhutan": {
+  "p0028": {
    "name": "Bhutan",
    "rating": 1,
    "visitors": 0,
@@ -1100,7 +1100,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "athens": {
+  "p0013": {
    "name": "Athens",
    "rating": 3,
    "visitors": 380000,
@@ -1112,12 +1112,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 380000.0,
+     "visitors": 380000,
      "src": "Wikipedia infobox",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 14,
      "basis": "figure",
-     "counted": 380000.0
+     "counted": 380000
     }
    ],
    "ratingOwnArea": 3,
@@ -1125,7 +1125,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "istanbul": {
+  "p0085": {
    "name": "Istanbul",
    "rating": 4,
    "visitors": 1000000,
@@ -1143,11 +1143,11 @@
      "animals": null,
      "sl": 15,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q12808931",
-     "name": "Faruk Yal\u00e7\u0131n Zoo",
+     "name": "Faruk Yalçın Zoo",
      "km": 41,
      "kinds": [
       "zoo"
@@ -1161,7 +1161,7 @@
     },
     {
      "q": "Q4809463",
-     "name": "Sea Life \u0130stanbul",
+     "name": "Sea Life İstanbul",
      "km": 8,
      "kinds": [
       "aquarium",
@@ -1169,14 +1169,14 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 8,
      "basis": "left out: closed 2025",
      "counted": 0
     },
     {
      "q": "Q6045732",
-     "name": "So\u011fanl\u0131 Zoo",
+     "name": "Soğanlı Zoo",
      "km": 88,
      "kinds": [
       "zoo"
@@ -1194,7 +1194,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "dubai": {
+  "p0060": {
    "name": "Dubai",
    "rating": 4,
    "visitors": 1200000,
@@ -1207,12 +1207,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1200000.0,
+     "visitors": 1200000,
      "src": "checked: management contractor Aquamarine: over 1.2 million a year in 2013-16 (the often-quoted 5 million has no source) [medium]",
-     "animals": 33000.0,
+     "animals": 33000,
      "sl": 6,
      "basis": "figure",
-     "counted": 1200000.0
+     "counted": 1200000
     },
     {
      "q": "Q110471376",
@@ -1265,7 +1265,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -1291,7 +1291,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "peruvian-amazon": {
+  "p0139": {
    "name": "Peruvian Amazon",
    "rating": 2,
    "visitors": 0,
@@ -1316,7 +1316,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "atacama": {
+  "p0012": {
    "name": "Atacama Desert",
    "rating": 1,
    "visitors": 0,
@@ -1326,7 +1326,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "morocco": {
+  "p0105": {
    "name": "Marrakech & Atlas",
    "rating": 1,
    "visitors": 0,
@@ -1336,7 +1336,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "thailand": {
+  "p0141": {
    "name": "Phuket & the Andaman Coast",
    "rating": 2,
    "visitors": 0,
@@ -1390,7 +1390,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "havana": {
+  "p0052": {
    "name": "Cuba",
    "rating": 2,
    "visitors": 0,
@@ -1405,7 +1405,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2700.0,
+     "animals": 2700,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -1430,14 +1430,14 @@
    "kind": "city",
    "notCounted": []
   },
-  "colombian-andes": {
+  "p0046": {
    "name": "Colombian Andes",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q116671518",
-     "name": "Ukumar\u00ed Biopark",
+     "name": "Ukumarí Biopark",
      "km": 44,
      "kinds": [
       "zoo"
@@ -1455,7 +1455,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "turks-caicos": {
+  "p0184": {
    "name": "Turks & Caicos",
    "rating": 1,
    "visitors": 0,
@@ -1465,7 +1465,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "sedona": {
+  "p0165": {
    "name": "Sedona",
    "rating": 2,
    "visitors": 300000,
@@ -1477,12 +1477,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 300000.0,
+     "visitors": 300000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 300000.0
+     "counted": 300000
     },
     {
      "q": "Q22978671",
@@ -1510,14 +1510,14 @@
     }
    ]
   },
-  "ecuadorian-andes": {
+  "p0061": {
    "name": "Ecuadorian Andes",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q117358068",
-     "name": "Parque C\u00f3ndor",
+     "name": "Parque Cóndor",
      "km": 52,
      "kinds": [
       "zoo"
@@ -1549,7 +1549,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "monterey-big-sur": {
+  "p0112": {
    "name": "Monterey & Big Sur",
    "rating": 6,
    "visitors": 2000000,
@@ -1562,12 +1562,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 2000000.0,
+     "visitors": 2000000,
      "src": "Wikipedia infobox",
-     "animals": 35000.0,
+     "animals": 35000,
      "sl": 18,
      "basis": "figure",
-     "counted": 2000000.0
+     "counted": 2000000
     },
     {
      "q": "Q80498212",
@@ -1589,7 +1589,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "olympic": {
+  "p0130": {
    "name": "Olympic National Park",
    "rating": 7,
    "visitors": 2582000,
@@ -1601,12 +1601,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
-     "animals": 900.0,
+     "animals": 900,
      "sl": 7,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q4849544",
@@ -1616,12 +1616,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 850000.0,
+     "visitors": 850000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 8,
      "basis": "figure",
-     "counted": 850000.0
+     "counted": 850000
     },
     {
      "q": "Q7208007",
@@ -1630,12 +1630,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 732000.0,
+     "visitors": 732000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 5,
      "basis": "figure",
-     "counted": 732000.0
+     "counted": 732000
     },
     {
      "q": "Q135935461",
@@ -1733,24 +1733,24 @@
     }
    ]
   },
-  "andalucia": {
-   "name": "Andaluc\u00eda",
+  "p0005": {
+   "name": "Andalucía",
    "rating": 2,
    "visitors": 142766,
    "facilities": [
     {
      "q": "Q6171747",
-     "name": "Zoobot\u00e1nico Jerez",
+     "name": "Zoobotánico Jerez",
      "km": 79,
      "kinds": [
       "zoo"
      ],
-     "visitors": 142766.0,
+     "visitors": 142766,
      "src": "Wikidata",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 142766.0
+     "counted": 142766
     },
     {
      "q": "Q20746709",
@@ -1787,13 +1787,13 @@
    "kind": "region",
    "notCounted": [
     {
-     "name": "Zoobot\u00e1nico Jerez",
+     "name": "Zoobotánico Jerez",
      "km": 79,
      "reason": "79 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
-  "big-island": {
+  "p0029": {
    "name": "Big Island",
    "rating": 2,
    "visitors": 0,
@@ -1818,14 +1818,14 @@
    "kind": "island",
    "notCounted": []
   },
-  "chiapas": {
+  "p0042": {
    "name": "Chiapas",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q8074133",
-     "name": "Zool\u00f3gico Migu\u00e9l \u00c1lvarez del Toro",
+     "name": "Zoológico Miguél Álvarez del Toro",
      "km": 4,
      "kinds": [
       "zoo"
@@ -1843,7 +1843,7 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "rajaampat": {
+  "p0149": {
    "name": "Raja Ampat",
    "rating": 1,
    "visitors": 0,
@@ -1853,7 +1853,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "colombian-caribbean": {
+  "p0047": {
    "name": "Colombian Caribbean",
    "rating": 2,
    "visitors": 0,
@@ -1868,7 +1868,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 805.0,
+     "animals": 805,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -1893,14 +1893,14 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "madeira": {
+  "p0100": {
    "name": "Madeira",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q100268999",
-     "name": "Aqu\u00e1rio da Madeira",
+     "name": "Aquário da Madeira",
      "km": 34,
      "kinds": [
       "aquarium",
@@ -1919,7 +1919,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "zimbabwe": {
+  "p0193": {
    "name": "Victoria Falls & Hwange",
    "rating": 1,
    "visitors": 0,
@@ -1929,7 +1929,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "madagascar": {
+  "p0099": {
    "name": "Madagascar",
    "rating": 2,
    "visitors": 0,
@@ -1996,7 +1996,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "berlin": {
+  "p0027": {
    "name": "Berlin",
    "rating": 10,
    "visitors": 5478182,
@@ -2008,12 +2008,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3500000.0,
+     "visitors": 3500000,
      "src": "Wikipedia infobox",
-     "animals": 20219.0,
+     "animals": 20219,
      "sl": 52,
      "basis": "figure",
-     "counted": 3500000.0
+     "counted": 3500000
     },
     {
      "q": "Q702771",
@@ -2022,12 +2022,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1220166.0,
+     "visitors": 1220166,
      "src": "Wikidata",
-     "animals": 7250.0,
+     "animals": 7250,
      "sl": 26,
      "basis": "figure",
-     "counted": 1220166.0
+     "counted": 1220166
     },
     {
      "q": "Q317985",
@@ -2039,7 +2039,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 9000.0,
+     "animals": 9000,
      "sl": 11,
      "basis": "estimated from fame",
      "counted": 758015.8173695487
@@ -2054,7 +2054,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 18,
      "basis": "left out: closed 2022",
      "counted": 0
@@ -2075,7 +2075,7 @@
     },
     {
      "q": "Q15134917",
-     "name": "Johannism\u00fchle wildlife park",
+     "name": "Johannismühle wildlife park",
      "km": 57,
      "kinds": [
       "zoo"
@@ -2159,7 +2159,7 @@
     },
     {
      "q": "Q2432266",
-     "name": "Tierpark Angerm\u00fcnde",
+     "name": "Tierpark Angermünde",
      "km": 68,
      "kinds": [
       "zoo"
@@ -2247,7 +2247,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "kenya": {
+  "p0098": {
    "name": "Maasai Mara & Amboseli",
    "rating": 2,
    "visitors": 0,
@@ -2272,7 +2272,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "basque-country": {
+  "p0022": {
    "name": "Basque Country",
    "rating": 3,
    "visitors": 657155,
@@ -2284,16 +2284,16 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 657155.0,
+     "visitors": 657155,
      "src": "Wikidata",
      "animals": null,
      "sl": 10,
      "basis": "figure",
-     "counted": 657155.0
+     "counted": 657155
     },
     {
      "q": "Q12256355",
-     "name": "Aquarium de Donostia-San Sebasti\u00e1n",
+     "name": "Aquarium de Donostia-San Sebastián",
      "km": 76,
      "kinds": [
       "aquarium",
@@ -2375,7 +2375,7 @@
     }
    ]
   },
-  "fiji": {
+  "p0068": {
    "name": "Fiji",
    "rating": 2,
    "visitors": 0,
@@ -2400,7 +2400,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "rome": {
+  "p0157": {
    "name": "Rome",
    "rating": 4,
    "visitors": 1180057,
@@ -2412,12 +2412,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 780057.0,
+     "visitors": 780057,
      "src": "Wikipedia infobox",
-     "animals": 1114.0,
+     "animals": 1114,
      "sl": 14,
      "basis": "figure",
-     "counted": 780057.0
+     "counted": 780057
     },
     {
      "q": "Q3576051",
@@ -2427,12 +2427,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 400000.0,
+     "visitors": 400000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 5,
      "basis": "figure",
-     "counted": 400000.0
+     "counted": 400000
     }
    ],
    "ratingOwnArea": 4,
@@ -2440,7 +2440,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "bordeaux": {
+  "p0031": {
    "name": "Bordeaux",
    "rating": 2,
    "visitors": 0,
@@ -2507,7 +2507,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "barbados": {
+  "p0020": {
    "name": "Barbados",
    "rating": 1,
    "visitors": 0,
@@ -2517,7 +2517,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "grandcanyon": {
+  "p0074": {
    "name": "Grand Canyon",
    "rating": 2,
    "visitors": 300000,
@@ -2529,12 +2529,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 300000.0,
+     "visitors": 300000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 300000.0
+     "counted": 300000
     }
    ],
    "ratingOwnArea": 1,
@@ -2548,7 +2548,7 @@
     }
    ]
   },
-  "badlands-black-hills": {
+  "p0015": {
    "name": "Badlands & Black Hills",
    "rating": 2,
    "visitors": 250000,
@@ -2560,12 +2560,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 250000.0,
+     "visitors": 250000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 250000.0
+     "counted": 250000
     }
    ],
    "ratingOwnArea": 1,
@@ -2579,7 +2579,7 @@
     }
    ]
   },
-  "milford-sound-fiordland": {
+  "p0110": {
    "name": "Milford Sound & Fiordland",
    "rating": 2,
    "visitors": 0,
@@ -2604,7 +2604,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "rajasthan-golden-triangle": {
+  "p0150": {
    "name": "Rajasthan & the Golden Triangle",
    "rating": 2,
    "visitors": 0,
@@ -2618,7 +2618,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 550.0,
+     "animals": 550,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -2629,7 +2629,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "komodo": {
+  "p0088": {
    "name": "Komodo & Flores",
    "rating": 1,
    "visitors": 0,
@@ -2639,7 +2639,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "denali-interior": {
+  "p0056": {
    "name": "Denali & the Interior",
    "rating": 1,
    "visitors": 0,
@@ -2649,7 +2649,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "buenosaires": {
+  "p0033": {
    "name": "Buenos Aires",
    "rating": 3,
    "visitors": 693010,
@@ -2677,7 +2677,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2500.0,
+     "animals": 2500,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -2712,7 +2712,7 @@
     },
     {
      "q": "Q7697980",
-     "name": "Temaik\u00e9n",
+     "name": "Temaikén",
      "km": 47,
      "kinds": [
       "zoo"
@@ -2726,7 +2726,7 @@
     },
     {
      "q": "Q6171783",
-     "name": "Zool\u00f3gico de Luj\u00e1n",
+     "name": "Zoológico de Luján",
      "km": 58,
      "kinds": [
       "zoo"
@@ -2744,7 +2744,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "southeast-alaska": {
+  "p0172": {
    "name": "Southeast Alaska & the Inside Passage",
    "rating": 1,
    "visitors": 0,
@@ -2754,7 +2754,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "los-cabos": {
+  "p0097": {
    "name": "Los Cabos",
    "rating": 1,
    "visitors": 0,
@@ -2764,7 +2764,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "oaxaca": {
+  "p0127": {
    "name": "Oaxaca",
    "rating": 1,
    "visitors": 0,
@@ -2774,7 +2774,7 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "lapland": {
+  "p0069": {
    "name": "Finnish Lapland",
    "rating": 2,
    "visitors": 100000,
@@ -2786,12 +2786,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 100000.0,
+     "visitors": 100000,
      "src": "Wikidata",
-     "animals": 150.0,
+     "animals": 150,
      "sl": 10,
      "basis": "figure",
-     "counted": 100000.0
+     "counted": 100000
     }
    ],
    "ratingOwnArea": 1,
@@ -2805,7 +2805,7 @@
     }
    ]
   },
-  "angkor": {
+  "p0034": {
    "name": "Cambodia",
    "rating": 2,
    "visitors": 0,
@@ -2830,7 +2830,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "nepal": {
+  "p0116": {
    "name": "Nepal",
    "rating": 4,
    "visitors": 1000000,
@@ -2842,12 +2842,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
-     "animals": 1292.0,
+     "animals": 1292,
      "sl": 11,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     }
    ],
    "ratingOwnArea": 4,
@@ -2855,7 +2855,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "rwanda": {
+  "p0158": {
    "name": "Rwanda",
    "rating": 1,
    "visitors": 0,
@@ -2865,7 +2865,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "ladakh": {
+  "p0091": {
    "name": "Ladakh",
    "rating": 1,
    "visitors": 0,
@@ -2875,7 +2875,7 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "bali": {
+  "p0017": {
    "name": "Bali",
    "rating": 2,
    "visitors": 119380,
@@ -2887,12 +2887,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 63225.0,
+     "visitors": 63225,
      "src": "Wikidata",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 5,
      "basis": "figure",
-     "counted": 63225.0
+     "counted": 63225
     },
     {
      "q": "Q75331465",
@@ -2901,12 +2901,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 56155.0,
+     "visitors": 56155,
      "src": "Wikidata",
-     "animals": 600.0,
+     "animals": 600,
      "sl": 2,
      "basis": "figure",
-     "counted": 56155.0
+     "counted": 56155
     },
     {
      "q": "Q16744229",
@@ -2917,7 +2917,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1300.0,
+     "animals": 1300,
      "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
@@ -2970,7 +2970,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "charleston-savannah": {
+  "p0040": {
    "name": "Charleston & Savannah",
    "rating": 2,
    "visitors": 0,
@@ -2985,7 +2985,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -3011,7 +3011,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "srilanka": {
+  "p0173": {
    "name": "Sri Lanka",
    "rating": 6,
    "visitors": 2258016,
@@ -3023,12 +3023,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1500000.0,
+     "visitors": 1500000,
      "src": "Wikipedia infobox",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 7,
      "basis": "figure",
-     "counted": 1500000.0
+     "counted": 1500000
     },
     {
      "q": "Q2672104",
@@ -3039,7 +3039,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 71.0,
+     "animals": 71,
      "sl": 11,
      "basis": "estimated from fame",
      "counted": 758015.8173695487
@@ -3053,7 +3053,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 100.0,
+     "animals": 100,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -3064,7 +3064,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "tokyo-kyoto": {
+  "p0182": {
    "name": "Tokyo & Kyoto",
    "rating": 10,
    "visitors": 19467000,
@@ -3076,12 +3076,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3840000.0,
+     "visitors": 3840000,
      "src": "checked: Tokyo Statistical Yearbook 2018: 3.84 million in fiscal 2016 (4.5 million in 2017 and 4.96 million in 2018 with the panda cub) (official) [high]",
-     "animals": 2600.0,
+     "animals": 2600,
      "sl": 26,
      "basis": "figure",
-     "counted": 3840000.0
+     "counted": 3840000
     },
     {
      "q": "Q1191885",
@@ -3091,12 +3091,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 2500000.0,
+     "visitors": 2500000,
      "src": "Wikipedia infobox",
-     "animals": 29000.0,
+     "animals": 29000,
      "sl": 20,
      "basis": "figure",
-     "counted": 2500000.0
+     "counted": 2500000
     },
     {
      "q": "Q11250698",
@@ -3106,12 +3106,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 2240000.0,
+     "visitors": 2240000,
      "src": "Wikipedia infobox",
-     "animals": 37000.0,
+     "animals": 37000,
      "sl": 5,
      "basis": "figure",
-     "counted": 2240000.0
+     "counted": 2240000
     },
     {
      "q": "Q3055859",
@@ -3121,26 +3121,26 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1740000.0,
+     "visitors": 1740000,
      "src": "Wikipedia infobox",
-     "animals": 18000.0,
+     "animals": 18000,
      "sl": 5,
      "basis": "figure",
-     "counted": 1740000.0
+     "counted": 1740000
     },
     {
      "q": "Q1054648",
-     "name": "Tenn\u014dji Zoo",
+     "name": "Tennōji Zoo",
      "km": 46,
      "kinds": [
       "zoo"
      ],
-     "visitors": 1700000.0,
+     "visitors": 1700000,
      "src": "checked: Osaka City medium-term plan: about 1.7 million a year, steady since fiscal 2017 [medium]",
      "animals": null,
      "sl": 11,
      "basis": "figure",
-     "counted": 1700000.0
+     "counted": 1700000
     },
     {
      "q": "Q8134074",
@@ -3150,12 +3150,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1400000.0,
+     "visitors": 1400000,
      "src": "Wikipedia infobox",
-     "animals": 7000.0,
+     "animals": 7000,
      "sl": 6,
      "basis": "figure",
-     "counted": 1400000.0
+     "counted": 1400000
     },
     {
      "q": "Q4925165",
@@ -3165,12 +3165,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1400000.0,
+     "visitors": 1400000,
      "src": "checked: Tokyo Statistical Yearbook 2018: 1.40 million in fiscal 2018, 1.37 to 1.48 million in 2016-18 (official; Wikipedia's 2.0 million is older) [high]",
-     "animals": 85000.0,
+     "animals": 85000,
      "sl": 8,
      "basis": "figure",
-     "counted": 1400000.0
+     "counted": 1400000
     },
     {
      "q": "Q3576063",
@@ -3179,12 +3179,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1220000.0,
+     "visitors": 1220000,
      "src": "Wikidata",
      "animals": null,
      "sl": 7,
      "basis": "figure",
-     "counted": 1220000.0
+     "counted": 1220000
     },
     {
      "q": "Q6452176",
@@ -3193,12 +3193,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1200000.0,
+     "visitors": 1200000,
      "src": "Wikidata",
-     "animals": 525.0,
+     "animals": 525,
      "sl": 8,
      "basis": "figure",
-     "counted": 1200000.0
+     "counted": 1200000
     },
     {
      "q": "Q1413736",
@@ -3207,12 +3207,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 980000.0,
+     "visitors": 980000,
      "src": "checked: Japanese Wikipedia infobox (Tokyo Zoological Park Society): 977,731 in fiscal 2017 [medium]",
      "animals": null,
      "sl": 11,
      "basis": "figure",
-     "counted": 980000.0
+     "counted": 980000
     },
     {
      "q": "Q861318",
@@ -3221,12 +3221,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 680000.0,
+     "visitors": 680000,
      "src": "Wikipedia infobox",
-     "animals": 1416.0,
+     "animals": 1416,
      "sl": 10,
      "basis": "figure",
-     "counted": 680000.0
+     "counted": 680000
     },
     {
      "q": "Q2585012",
@@ -3235,12 +3235,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 567000.0,
+     "visitors": 567000,
      "src": "Wikipedia infobox",
-     "animals": 1200.0,
+     "animals": 1200,
      "sl": 5,
      "basis": "figure",
-     "counted": 567000.0
+     "counted": 567000
     },
     {
      "q": "Q11636941",
@@ -3354,7 +3354,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 26000.0,
+     "animals": 26000,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -3502,7 +3502,7 @@
     },
     {
      "q": "Q21652473",
-     "name": "Inub\u014dsaki Marine Park",
+     "name": "Inubōsaki Marine Park",
      "km": 99,
      "kinds": [
       "aquarium",
@@ -3510,7 +3510,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2500.0,
+     "animals": 2500,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -3619,7 +3619,7 @@
     },
     {
      "q": "Q11537258",
-     "name": "Kiry\u016b-ga-oka Park",
+     "name": "Kiryū-ga-oka Park",
      "km": 91,
      "kinds": [
       "zoo"
@@ -3684,7 +3684,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 15000.0,
+     "animals": 15000,
      "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
@@ -4036,7 +4036,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 120000.0,
+     "animals": 120000,
      "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
@@ -4072,7 +4072,7 @@
     },
     {
      "q": "Q109597317",
-     "name": "\u00e1toa",
+     "name": "átoa",
      "km": 64,
      "kinds": [
       "aquarium",
@@ -4087,7 +4087,7 @@
     },
     {
      "q": "Q11434398",
-     "name": "\u014cmiya Park Zoo",
+     "name": "Ōmiya Park Zoo",
      "km": 29,
      "kinds": [
       "zoo"
@@ -4101,7 +4101,7 @@
     },
     {
      "q": "Q11435011",
-     "name": "\u014csaki Park",
+     "name": "Ōsaki Park",
      "km": 23,
      "kinds": [
       "zoo"
@@ -4125,7 +4125,7 @@
     }
    ]
   },
-  "kaziranga": {
+  "p0011": {
    "name": "Assam & Northeast India",
    "rating": 2,
    "visitors": 67367,
@@ -4137,12 +4137,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 67367.0,
+     "visitors": 67367,
      "src": "Wikipedia infobox",
-     "animals": 325.0,
+     "animals": 325,
      "sl": 3,
      "basis": "figure",
-     "counted": 67367.0
+     "counted": 67367
     }
    ],
    "ratingOwnArea": 1,
@@ -4156,7 +4156,7 @@
     }
    ]
   },
-  "fjords": {
+  "p0125": {
    "name": "Norwegian Fjords",
    "rating": 1,
    "visitors": 0,
@@ -4166,7 +4166,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "kruger": {
+  "p0089": {
    "name": "Kruger & Sabi Sands",
    "rating": 1,
    "visitors": 0,
@@ -4176,7 +4176,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "great-smoky-mountains": {
+  "p0076": {
    "name": "Great Smoky Mountains National Park",
    "rating": 3,
    "visitors": 585000,
@@ -4188,12 +4188,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 585000.0,
+     "visitors": 585000,
      "src": "Wikipedia infobox",
-     "animals": 800.0,
+     "animals": 800,
      "sl": 6,
      "basis": "figure",
-     "counted": 585000.0
+     "counted": 585000
     },
     {
      "q": "Q7988117",
@@ -4221,7 +4221,7 @@
     }
    ]
   },
-  "scottish-highlands-skye": {
+  "p0164": {
    "name": "Scottish Highlands & Isle of Skye",
    "rating": 2,
    "visitors": 142000,
@@ -4233,12 +4233,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 142000.0,
+     "visitors": 142000,
      "src": "Wikipedia infobox",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 7,
      "basis": "figure",
-     "counted": 142000.0
+     "counted": 142000
     }
    ],
    "ratingOwnArea": 1,
@@ -4252,7 +4252,7 @@
     }
    ]
   },
-  "dolomites": {
+  "p0057": {
    "name": "Dolomites",
    "rating": 4,
    "visitors": 1000000,
@@ -4266,10 +4266,10 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 16,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q133755718",
@@ -4367,7 +4367,7 @@
     }
    ]
   },
-  "lake-district": {
+  "p0092": {
    "name": "Lake District",
    "rating": 2,
    "visitors": 0,
@@ -4381,7 +4381,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1350.0,
+     "animals": 1350,
      "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
@@ -4481,7 +4481,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -4492,7 +4492,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "falklands": {
+  "p0066": {
    "name": "Falkland Islands",
    "rating": 1,
    "visitors": 0,
@@ -4502,7 +4502,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "taiwan": {
+  "p0177": {
    "name": "Taiwan",
    "rating": 7,
    "visitors": 3030000,
@@ -4514,12 +4514,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3030000.0,
+     "visitors": 3030000,
      "src": "checked: Taipei Zoo 2023 annual report: \"visitors totalled 3.03 million\" (official) [high]",
-     "animals": 2407.0,
+     "animals": 2407,
      "sl": 16,
      "basis": "figure",
-     "counted": 3030000.0
+     "counted": 3030000
     },
     {
      "q": "Q11084009",
@@ -4573,7 +4573,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -4599,7 +4599,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "antarctica": {
+  "p0006": {
    "name": "Antarctic Peninsula",
    "rating": 1,
    "visitors": 0,
@@ -4609,7 +4609,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "hongkong": {
+  "p0081": {
    "name": "Hong Kong",
    "rating": 10,
    "visitors": 17088000,
@@ -4622,12 +4622,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 12628000.0,
+     "visitors": 12628000,
      "src": "Wikidata",
      "animals": null,
      "sl": 10,
      "basis": "figure",
-     "counted": 12628000.0
+     "counted": 12628000
     },
     {
      "q": "Q1207908",
@@ -4636,12 +4636,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3460000.0,
+     "visitors": 3460000,
      "src": "checked: 3.46 million in 2024-25, up 10% (TVB News and South China Morning Post) [medium]",
      "animals": null,
      "sl": 12,
      "basis": "figure",
-     "counted": 3460000.0
+     "counted": 3460000
     },
     {
      "q": "Q220207",
@@ -4650,12 +4650,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "checked: Hong Kong government reply 2023: about 1.2 million before 2020 and about 1 million since; 0.85 million in 2016-18 [medium]",
-     "animals": 700.0,
+     "animals": 700,
      "sl": 10,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q137970396",
@@ -4665,7 +4665,7 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 4627000.0,
+     "visitors": 4627000,
      "src": "Wikidata",
      "animals": null,
      "sl": 0,
@@ -4698,7 +4698,7 @@
     }
    ]
   },
-  "zambia": {
+  "p0171": {
    "name": "South Luangwa",
    "rating": 1,
    "visitors": 0,
@@ -4708,7 +4708,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "st-andrews-fife": {
+  "p0174": {
    "name": "St Andrews & Fife",
    "rating": 4,
    "visitors": 1048809,
@@ -4720,12 +4720,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 648809.0,
+     "visitors": 648809,
      "src": "Wikipedia infobox",
-     "animals": 3218.0,
+     "animals": 3218,
      "sl": 20,
      "basis": "figure",
-     "counted": 648809.0
+     "counted": 648809
     },
     {
      "q": "Q4924079",
@@ -4734,12 +4734,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 400000.0,
+     "visitors": 400000,
      "src": "Wikipedia infobox",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 4,
      "basis": "figure",
-     "counted": 400000.0
+     "counted": 400000
     },
     {
      "q": "Q56754439",
@@ -4804,7 +4804,7 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 140000.0,
+     "visitors": 140000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 5,
@@ -4852,7 +4852,7 @@
     }
    ]
   },
-  "black-forest": {
+  "p0030": {
    "name": "Black Forest",
    "rating": 7,
    "visitors": 3212511,
@@ -4864,26 +4864,26 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 2012511.0,
+     "visitors": 2012511,
      "src": "Wikidata",
-     "animals": 11393.0,
+     "animals": 11393,
      "sl": 17,
      "basis": "figure",
-     "counted": 2012511.0
+     "counted": 2012511
     },
     {
      "q": "Q220109",
-     "name": "Z\u00fcrich Zoo",
+     "name": "Zürich Zoo",
      "km": 74,
      "kinds": [
       "zoo"
      ],
-     "visitors": 1200000.0,
+     "visitors": 1200000,
      "src": "Wikidata",
-     "animals": 4673.0,
+     "animals": 4673,
      "sl": 14,
      "basis": "figure",
-     "counted": 1200000.0
+     "counted": 1200000
     },
     {
      "q": "Q382304",
@@ -4901,7 +4901,7 @@
     },
     {
      "q": "Q124289952",
-     "name": "Alternativer Wolf- und B\u00e4renpark Schwarzwald",
+     "name": "Alternativer Wolf- und Bärenpark Schwarzwald",
      "km": 44,
      "kinds": [
       "zoo"
@@ -4943,7 +4943,7 @@
     },
     {
      "q": "Q1264982",
-     "name": "Erlebnistierpark J\u00e4gerhof",
+     "name": "Erlebnistierpark Jägerhof",
      "km": 76,
      "kinds": [
       "zoo"
@@ -4957,7 +4957,7 @@
     },
     {
      "q": "Q1591327",
-     "name": "Haustierhof Reutem\u00fchle",
+     "name": "Haustierhof Reutemühle",
      "km": 78,
      "kinds": [
       "zoo"
@@ -4992,7 +4992,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -5034,14 +5034,14 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 900.0,
+     "animals": 900,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
     {
      "q": "Q21973904",
-     "name": "Pl\u00e4ttli Zoo",
+     "name": "Plättli Zoo",
      "km": 72,
      "kinds": [
       "zoo"
@@ -5112,7 +5112,7 @@
     },
     {
      "q": "Q123503730",
-     "name": "Tatzmania L\u00f6ffingen",
+     "name": "Tatzmania Löffingen",
      "km": 15,
      "kinds": [
       "zoo"
@@ -5126,7 +5126,7 @@
     },
     {
      "q": "Q2432193",
-     "name": "Tiergarten T\u00fcbingen",
+     "name": "Tiergarten Tübingen",
      "km": 83,
      "kinds": [
       "zoo"
@@ -5210,7 +5210,7 @@
     },
     {
      "q": "Q63256166",
-     "name": "Wildpark M\u00fchlet\u00e4li",
+     "name": "Wildpark Mühletäli",
      "km": 76,
      "kinds": [
       "zoo"
@@ -5247,13 +5247,13 @@
      "reason": "68 km from the centre, over the 60 km limit for a region"
     },
     {
-     "name": "Z\u00fcrich Zoo",
+     "name": "Zürich Zoo",
      "km": 74,
      "reason": "74 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
-  "palau": {
+  "p0132": {
    "name": "Palau",
    "rating": 1,
    "visitors": 0,
@@ -5263,7 +5263,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "yosemite": {
+  "p0198": {
    "name": "Yosemite National Park",
    "rating": 1,
    "visitors": 0,
@@ -5273,7 +5273,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "tierra-del-fuego": {
+  "p0181": {
    "name": "Tierra del Fuego",
    "rating": 1,
    "visitors": 0,
@@ -5283,7 +5283,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "aspen": {
+  "p0010": {
    "name": "Aspen Snowmass",
    "rating": 1,
    "visitors": 0,
@@ -5293,7 +5293,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "torres-del-paine": {
+  "p0183": {
    "name": "Torres del Paine",
    "rating": 1,
    "visitors": 0,
@@ -5303,7 +5303,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "chilean-lake-district": {
+  "p0044": {
    "name": "Chilean Lake District",
    "rating": 1,
    "visitors": 0,
@@ -5313,7 +5313,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "vietnam": {
+  "p0195": {
    "name": "Vietnam",
    "rating": 1,
    "visitors": 0,
@@ -5323,7 +5323,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "beijing": {
+  "p0024": {
    "name": "Beijing & Great Wall",
    "rating": 9,
    "visitors": 5000000,
@@ -5335,12 +5335,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 5000000.0,
+     "visitors": 5000000,
      "src": "web: Wikipedia and Beijing tourism site (\"more than five million\") [low, dated]",
-     "animals": 14500.0,
+     "animals": 14500,
      "sl": 30,
      "basis": "figure",
-     "counted": 5000000.0
+     "counted": 5000000
     },
     {
      "q": "Q15938016",
@@ -5376,7 +5376,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "lofoten": {
+  "p0095": {
    "name": "Lofoten Islands",
    "rating": 2,
    "visitors": 0,
@@ -5402,7 +5402,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "rioja": {
+  "p0154": {
    "name": "Rioja",
    "rating": 1,
    "visitors": 0,
@@ -5412,7 +5412,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "banff": {
+  "p0018": {
    "name": "Banff & Jasper National Parks",
    "rating": 1,
    "visitors": 0,
@@ -5422,7 +5422,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "nyc": {
+  "p0118": {
    "name": "New York City",
    "rating": 9,
    "visitors": 5259056,
@@ -5434,12 +5434,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1820000.0,
+     "visitors": 1820000,
      "src": "web: WCS Form 990, fiscal 2017-18 (Wikipedia: 2+ million) [medium]",
-     "animals": 4000.0,
+     "animals": 4000,
      "sl": 41,
      "basis": "figure",
-     "counted": 1820000.0
+     "counted": 1820000
     },
     {
      "q": "Q954207",
@@ -5448,12 +5448,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 990000.0,
+     "visitors": 990000,
      "src": "checked: Wildlife Conservation Society filing (991,698); the zoo says nearly a million [medium]",
      "animals": null,
      "sl": 23,
      "basis": "figure",
-     "counted": 990000.0
+     "counted": 990000
     },
     {
      "q": "Q7856369",
@@ -5462,12 +5462,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 979056.0,
+     "visitors": 979056,
      "src": "Wikipedia infobox",
-     "animals": 1400.0,
+     "animals": 1400,
      "sl": 3,
      "basis": "figure",
-     "counted": 979056.0
+     "counted": 979056
     },
     {
      "q": "Q6765784",
@@ -5477,12 +5477,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
-     "animals": 8000.0,
+     "animals": 8000,
      "sl": 2,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q1060884",
@@ -5492,12 +5492,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 490000.0,
+     "visitors": 490000,
      "src": "web: WCS Form 990, fiscal 2017-18 [medium]",
      "animals": null,
      "sl": 8,
      "basis": "figure",
-     "counted": 490000.0
+     "counted": 490000
     },
     {
      "q": "Q4876689",
@@ -5506,12 +5506,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 280000.0,
+     "visitors": 280000,
      "src": "Wikipedia infobox",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 4,
      "basis": "figure",
-     "counted": 280000.0
+     "counted": 280000
     },
     {
      "q": "Q901214",
@@ -5520,12 +5520,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 200000.0,
+     "visitors": 200000,
      "src": "checked: Wikipedia: about 200,000 annual visitors [low]",
      "animals": null,
      "sl": 9,
      "basis": "figure",
-     "counted": 200000.0
+     "counted": 200000
     },
     {
      "q": "Q34897344",
@@ -5565,7 +5565,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 200.0,
+     "animals": 200,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -5579,7 +5579,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 864.0,
+     "animals": 864,
      "sl": 7,
      "basis": "minor, not counted",
      "counted": 0
@@ -5591,7 +5591,7 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 2153000.0,
+     "visitors": 2153000,
      "src": "Wikidata",
      "animals": null,
      "sl": 18,
@@ -5607,7 +5607,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1200.0,
+     "animals": 1200,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -5635,7 +5635,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1400.0,
+     "animals": 1400,
      "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
@@ -5671,7 +5671,7 @@
     }
    ]
   },
-  "arches-canyonlands": {
+  "p0007": {
    "name": "Arches & Canyonlands",
    "rating": 1,
    "visitors": 0,
@@ -5681,7 +5681,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "provence": {
+  "p0144": {
    "name": "Provence",
    "rating": 2,
    "visitors": 70000,
@@ -5693,12 +5693,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 70000.0,
+     "visitors": 70000,
      "src": "Wikidata",
      "animals": null,
      "sl": 0,
      "basis": "figure",
-     "counted": 70000.0
+     "counted": 70000
     },
     {
      "q": "Q3162628",
@@ -5730,7 +5730,7 @@
     },
     {
      "q": "Q115166386",
-     "name": "Parc animalier des Gorges de l'Ard\u00e8che",
+     "name": "Parc animalier des Gorges de l'Ardèche",
      "km": 80,
      "kinds": [
       "zoo"
@@ -5765,7 +5765,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 200.0,
+     "animals": 200,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -5826,7 +5826,7 @@
     }
    ]
   },
-  "sicily": {
+  "p0169": {
    "name": "Sicily",
    "rating": 1,
    "visitors": 0,
@@ -5836,7 +5836,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "chicago": {
+  "p0043": {
    "name": "Chicago",
    "rating": 10,
    "visitors": 7368395,
@@ -5848,12 +5848,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 3420000.0,
+     "visitors": 3420000,
      "src": "Wikipedia infobox",
-     "animals": 1100.0,
+     "animals": 1100,
      "sl": 11,
      "basis": "figure",
-     "counted": 3420000.0
+     "counted": 3420000
     },
     {
      "q": "Q929075",
@@ -5862,12 +5862,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 2000000.0,
+     "visitors": 2000000,
      "src": "Wikipedia infobox",
-     "animals": 3481.0,
+     "animals": 3481,
      "sl": 12,
      "basis": "figure",
-     "counted": 2000000.0
+     "counted": 2000000
     },
     {
      "q": "Q2166515",
@@ -5877,12 +5877,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1948395.0,
+     "visitors": 1948395,
      "src": "Wikidata",
-     "animals": 32000.0,
+     "animals": 32000,
      "sl": 19,
      "basis": "figure",
-     "counted": 1948395.0
+     "counted": 1948395
     },
     {
      "q": "Q5173964",
@@ -5932,7 +5932,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "prague": {
+  "p0143": {
    "name": "Prague",
    "rating": 5,
    "visitors": 1671000,
@@ -5944,12 +5944,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 851600.0,
+     "visitors": 851600,
      "src": "Wikidata",
-     "animals": 5049.0,
+     "animals": 5049,
      "sl": 27,
      "basis": "figure",
-     "counted": 851600.0
+     "counted": 851600
     },
     {
      "q": "Q2533994",
@@ -5958,12 +5958,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 372400.0,
+     "visitors": 372400,
      "src": "Wikidata",
      "animals": null,
      "sl": 7,
      "basis": "figure",
-     "counted": 372400.0
+     "counted": 372400
     },
     {
      "q": "Q2315180",
@@ -5972,12 +5972,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 275700.0,
+     "visitors": 275700,
      "src": "Wikidata",
      "animals": null,
      "sl": 9,
      "basis": "figure",
-     "counted": 275700.0
+     "counted": 275700
     },
     {
      "q": "Q12045888",
@@ -5986,12 +5986,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 171300.0,
+     "visitors": 171300,
      "src": "Wikidata",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 171300.0
+     "counted": 171300
     },
     {
      "q": "Q10856998",
@@ -6002,14 +6002,14 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 140.0,
+     "animals": 140,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
     },
     {
      "q": "Q12031568",
-     "name": "Crocodile ZOO Protiv\u00edn",
+     "name": "Crocodile ZOO Protivín",
      "km": 99,
      "kinds": [
       "zoo"
@@ -6023,7 +6023,7 @@
     },
     {
      "q": "Q108862156",
-     "name": "Divok\u00e1 zahrada Hostiva\u0159",
+     "name": "Divoká zahrada Hostivař",
      "km": 7,
      "kinds": [
       "zoo"
@@ -6037,21 +6037,21 @@
     },
     {
      "q": "Q10856999",
-     "name": "D\u011b\u010d\u00edn Zoo",
+     "name": "Děčín Zoo",
      "km": 80,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
     },
     {
      "q": "Q136432771",
-     "name": "Garden Na Valech, Brand\u00fds nad Labem",
+     "name": "Garden Na Valech, Brandýs nad Labem",
      "km": 20,
      "kinds": [
       "zoo"
@@ -6079,7 +6079,7 @@
     },
     {
      "q": "Q13427230",
-     "name": "Lesn\u00ed koutek Ralsko",
+     "name": "Lesní koutek Ralsko",
      "km": 63,
      "kinds": [
       "zoo"
@@ -6093,7 +6093,7 @@
     },
     {
      "q": "Q10861299",
-     "name": "Minizoo Mal\u00e1 Chuchle",
+     "name": "Minizoo Malá Chuchle",
      "km": 7,
      "kinds": [
       "zoo"
@@ -6206,7 +6206,7 @@
     },
     {
      "q": "Q68803191",
-     "name": "R\u00e1kos\u016fv pavilon",
+     "name": "Rákosův pavilon",
      "km": 5,
      "kinds": [
       "zoo"
@@ -6227,7 +6227,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -6262,7 +6262,7 @@
     },
     {
      "q": "Q10861300",
-     "name": "Zookoutek B\u0159e\u017eansk\u00e9 \u00fadol\u00ed",
+     "name": "Zookoutek Břežanské údolí",
      "km": 13,
      "kinds": [
       "zoo"
@@ -6276,7 +6276,7 @@
     },
     {
      "q": "Q129998568",
-     "name": "Zoopark Mil\u00ed\u010dov",
+     "name": "Zoopark Milíčov",
      "km": 9,
      "kinds": [
       "zoo"
@@ -6290,7 +6290,7 @@
     },
     {
      "q": "Q112252877",
-     "name": "Zoopark Zel\u010d\u00edn",
+     "name": "Zoopark Zelčín",
      "km": 27,
      "kinds": [
       "zoo"
@@ -6304,7 +6304,7 @@
     },
     {
      "q": "Q10861329",
-     "name": "Zoopark Z\u00e1jezd",
+     "name": "Zoopark Zájezd",
      "km": 18,
      "kinds": [
       "zoo"
@@ -6332,7 +6332,7 @@
     },
     {
      "q": "Q101244596",
-     "name": "zookoutek Kam\u00fdk",
+     "name": "zookoutek Kamýk",
      "km": 8,
      "kinds": [
       "zoo"
@@ -6346,14 +6346,14 @@
     },
     {
      "q": "Q8079417",
-     "name": "\u00dast\u00ed nad Labem Zoo",
+     "name": "Ústí nad Labem Zoo",
      "km": 70,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 9,
      "basis": "minor, not counted",
      "counted": 0
@@ -6380,7 +6380,7 @@
     }
    ]
   },
-  "mallorca": {
+  "p0103": {
    "name": "Mallorca",
    "rating": 2,
    "visitors": 0,
@@ -6409,7 +6409,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 8000.0,
+     "animals": 8000,
      "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
@@ -6434,7 +6434,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "amalfi": {
+  "p0003": {
    "name": "Amalfi Coast",
    "rating": 4,
    "visitors": 951052,
@@ -6459,7 +6459,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "namibia": {
+  "p0114": {
    "name": "Namibia",
    "rating": 1,
    "visitors": 0,
@@ -6469,7 +6469,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "okinawa": {
+  "p0129": {
    "name": "Okinawa",
    "rating": 8,
    "visitors": 3500000,
@@ -6482,12 +6482,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 3500000.0,
+     "visitors": 3500000,
      "src": "Wikipedia infobox",
-     "animals": 11000.0,
+     "animals": 11000,
      "sl": 21,
      "basis": "figure",
-     "counted": 3500000.0
+     "counted": 3500000
     },
     {
      "q": "Q56347666",
@@ -6538,8 +6538,8 @@
    "kind": "island",
    "notCounted": []
   },
-  "el-chalten": {
-   "name": "El Chalt\u00e9n & El Calafate",
+  "p0063": {
+   "name": "El Chaltén & El Calafate",
    "rating": 1,
    "visitors": 0,
    "facilities": [],
@@ -6548,7 +6548,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "churchill": {
+  "p0045": {
    "name": "Churchill",
    "rating": 1,
    "visitors": 0,
@@ -6558,7 +6558,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "seoul": {
+  "p0166": {
    "name": "Seoul",
    "rating": 6,
    "visitors": 2000000,
@@ -6571,12 +6571,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikipedia infobox",
-     "animals": 20000.0,
+     "animals": 20000,
      "sl": 5,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q485236",
@@ -6586,12 +6586,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "checked: a travel site says over a million a year; no operator figure found [low]",
-     "animals": 40000.0,
+     "animals": 40000,
      "sl": 10,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q494673",
@@ -6600,7 +6600,7 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 5598000.0,
+     "visitors": 5598000,
      "src": "Wikidata",
      "animals": null,
      "sl": 23,
@@ -6641,7 +6641,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "edinburgh": {
+  "p0062": {
    "name": "Edinburgh",
    "rating": 4,
    "visitors": 1048809,
@@ -6653,12 +6653,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 648809.0,
+     "visitors": 648809,
      "src": "Wikipedia infobox",
-     "animals": 3218.0,
+     "animals": 3218,
      "sl": 20,
      "basis": "figure",
-     "counted": 648809.0
+     "counted": 648809
     },
     {
      "q": "Q4924079",
@@ -6667,12 +6667,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 400000.0,
+     "visitors": 400000,
      "src": "Wikipedia infobox",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 4,
      "basis": "figure",
-     "counted": 400000.0
+     "counted": 400000
     },
     {
      "q": "Q56754439",
@@ -6751,7 +6751,7 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 140000.0,
+     "visitors": 140000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 5,
@@ -6799,7 +6799,7 @@
     }
    ]
   },
-  "belize": {
+  "p0025": {
    "name": "Belize",
    "rating": 2,
    "visitors": 60000,
@@ -6811,12 +6811,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 60000.0,
+     "visitors": 60000,
      "src": "Wikidata",
-     "animals": 125.0,
+     "animals": 125,
      "sl": 8,
      "basis": "figure",
-     "counted": 60000.0
+     "counted": 60000
     },
     {
      "q": "Q7083453",
@@ -6838,7 +6838,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "acadia": {
+  "p0001": {
    "name": "Acadia National Park",
    "rating": 1,
    "visitors": 0,
@@ -6848,7 +6848,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "sequoia-kings-canyon": {
+  "p0167": {
    "name": "Sequoia & Kings Canyon",
    "rating": 1,
    "visitors": 0,
@@ -6858,7 +6858,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "budapest": {
+  "p0032": {
    "name": "Budapest",
    "rating": 4,
    "visitors": 1100000,
@@ -6870,16 +6870,16 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1100000.0,
+     "visitors": 1100000,
      "src": "web: Wikipedia: \"1-1.1 million visitors every year\" [medium]",
-     "animals": 10354.0,
+     "animals": 10354,
      "sl": 22,
      "basis": "figure",
-     "counted": 1100000.0
+     "counted": 1100000
     },
     {
      "q": "Q1421031",
-     "name": "Bear Farm Veresegyh\u00e1z",
+     "name": "Bear Farm Veresegyház",
      "km": 22,
      "kinds": [
       "zoo"
@@ -6907,7 +6907,7 @@
     },
     {
      "q": "Q20439878",
-     "name": "J\u00e1szber\u00e9ny Zoo",
+     "name": "Jászberény Zoo",
      "km": 62,
      "kinds": [
       "zoo"
@@ -6921,7 +6921,7 @@
     },
     {
      "q": "Q1112760",
-     "name": "Kittenberger K\u00e1lm\u00e1n Zoo & Botanical Garden",
+     "name": "Kittenberger Kálmán Zoo & Botanical Garden",
      "km": 97,
      "kinds": [
       "zoo"
@@ -6992,7 +6992,7 @@
     },
     {
      "q": "Q1030352",
-     "name": "Zoo Gy\u00f6ngy\u00f6s",
+     "name": "Zoo Gyöngyös",
      "km": 73,
      "kinds": [
       "zoo"
@@ -7010,7 +7010,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "svalbard": {
+  "p0175": {
    "name": "Svalbard",
    "rating": 1,
    "visitors": 0,
@@ -7020,7 +7020,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "rio": {
+  "p0153": {
    "name": "Rio de Janeiro",
    "rating": 2,
    "visitors": 0,
@@ -7035,7 +7035,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -7060,7 +7060,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "guilin-yangshuo": {
+  "p0079": {
    "name": "Guilin & Yangshuo",
    "rating": 1,
    "visitors": 0,
@@ -7070,7 +7070,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "napa": {
+  "p0115": {
    "name": "Napa & Sonoma",
    "rating": 7,
    "visitors": 2775000,
@@ -7083,12 +7083,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikidata",
      "animals": null,
      "sl": 25,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q2008530",
@@ -7097,12 +7097,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 975000.0,
+     "visitors": 975000,
      "src": "Wikipedia infobox",
-     "animals": 850.0,
+     "animals": 850,
      "sl": 7,
      "basis": "figure",
-     "counted": 975000.0
+     "counted": 975000
     },
     {
      "q": "Q4782760",
@@ -7112,12 +7112,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 600000.0,
+     "visitors": 600000,
      "src": "Wikipedia infobox",
-     "animals": 24000.0,
+     "animals": 24000,
      "sl": 5,
      "basis": "figure",
-     "counted": 600000.0
+     "counted": 600000
     },
     {
      "q": "Q1886334",
@@ -7126,12 +7126,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 200000.0,
+     "visitors": 200000,
      "src": "Wikipedia infobox",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 19,
      "basis": "figure",
-     "counted": 200000.0
+     "counted": 200000
     },
     {
      "q": "Q11705492",
@@ -7142,7 +7142,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 9,
      "basis": "minor, not counted",
      "counted": 0
@@ -7156,7 +7156,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -7230,7 +7230,7 @@
     }
    ]
   },
-  "costa-rica": {
+  "p0050": {
    "name": "Costa Rica",
    "rating": 2,
    "visitors": 0,
@@ -7244,7 +7244,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 70.0,
+     "animals": 70,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -7307,7 +7307,7 @@
     },
     {
      "q": "Q6063251",
-     "name": "Parque Zool\u00f3gico Nacional Sim\u00f3n Bol\u00edvar",
+     "name": "Parque Zoológico Nacional Simón Bolívar",
      "km": 1,
      "kinds": [
       "zoo"
@@ -7356,7 +7356,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 200.0,
+     "animals": 200,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -7367,7 +7367,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "bend-crater-lake": {
+  "p0026": {
    "name": "Bend & Crater Lake",
    "rating": 1,
    "visitors": 0,
@@ -7377,7 +7377,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "kerala": {
+  "p0087": {
    "name": "Kerala",
    "rating": 2,
    "visitors": 0,
@@ -7402,7 +7402,7 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "chiang-mai": {
+  "p0041": {
    "name": "Chiang Mai & Northern Thailand",
    "rating": 4,
    "visitors": 887009,
@@ -7430,7 +7430,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -7455,7 +7455,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "puerto-rico": {
+  "p0145": {
    "name": "Puerto Rico",
    "rating": 2,
    "visitors": 0,
@@ -7480,7 +7480,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "zion-bryce": {
+  "p0200": {
    "name": "Zion & Bryce Canyon",
    "rating": 1,
    "visitors": 0,
@@ -7490,7 +7490,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "kyrgyzstan": {
+  "p0090": {
    "name": "Kyrgyzstan",
    "rating": 1,
    "visitors": 0,
@@ -7500,7 +7500,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "egypt": {
+  "p0151": {
    "name": "Red Sea & Nile",
    "rating": 1,
    "visitors": 0,
@@ -7510,7 +7510,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "champagne": {
+  "p0039": {
    "name": "Champagne",
    "rating": 2,
    "visitors": 80000,
@@ -7522,12 +7522,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 80000.0,
+     "visitors": 80000,
      "src": "Wikidata",
      "animals": null,
      "sl": 1,
      "basis": "figure",
-     "counted": 80000.0
+     "counted": 80000
     },
     {
      "q": "Q138008949",
@@ -7545,7 +7545,7 @@
     },
     {
      "q": "Q3363768",
-     "name": "Parc Argonne D\u00e9couverte",
+     "name": "Parc Argonne Découverte",
      "km": 70,
      "kinds": [
       "zoo"
@@ -7559,14 +7559,14 @@
     },
     {
      "q": "Q3364322",
-     "name": "Parc des F\u00e9lins",
+     "name": "Parc des Félins",
      "km": 82,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 140.0,
+     "animals": 140,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -7640,7 +7640,7 @@
     }
    ]
   },
-  "cape-cod-islands": {
+  "p0036": {
    "name": "Cape Cod & the Islands",
    "rating": 2,
    "visitors": 373000,
@@ -7652,12 +7652,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 222000.0,
+     "visitors": 222000,
      "src": "Wikipedia infobox",
-     "animals": 250.0,
+     "animals": 250,
      "sl": 2,
      "basis": "figure",
-     "counted": 222000.0
+     "counted": 222000
     },
     {
      "q": "Q28232373",
@@ -7667,12 +7667,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 80000.0,
+     "visitors": 80000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 80000.0
+     "counted": 80000
     },
     {
      "q": "Q5036306",
@@ -7681,12 +7681,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 64000.0,
+     "visitors": 64000,
      "src": "Wikipedia infobox",
-     "animals": 100.0,
+     "animals": 100,
      "sl": 3,
      "basis": "figure",
-     "counted": 64000.0
+     "counted": 64000
     },
     {
      "q": "Q6761437",
@@ -7695,12 +7695,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 7000.0,
+     "visitors": 7000,
      "src": "Wikipedia infobox",
-     "animals": 50.0,
+     "animals": 50,
      "sl": 3,
      "basis": "figure",
-     "counted": 7000.0
+     "counted": 7000
     },
     {
      "q": "Q23018417",
@@ -7734,7 +7734,7 @@
     }
    ]
   },
-  "north-island": {
+  "p0122": {
    "name": "North Island",
    "rating": 5,
    "visitors": 1409337,
@@ -7746,12 +7746,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 716327.0,
+     "visitors": 716327,
      "src": "Wikipedia infobox",
-     "animals": 1400.0,
+     "animals": 1400,
      "sl": 13,
      "basis": "figure",
-     "counted": 716327.0
+     "counted": 716327
     },
     {
      "q": "Q28897",
@@ -7763,7 +7763,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 10,
      "basis": "estimated from fame",
      "counted": 693010.0288574611
@@ -7791,7 +7791,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 9,
      "basis": "minor, not counted",
      "counted": 0
@@ -7830,7 +7830,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "chamonix": {
+  "p0038": {
    "name": "Chamonix & the French Alps",
    "rating": 2,
    "visitors": 160506,
@@ -7842,12 +7842,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 90000.0,
+     "visitors": 90000,
      "src": "Wikipedia infobox",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 5,
      "basis": "figure",
-     "counted": 90000.0
+     "counted": 90000
     },
     {
      "q": "Q3363937",
@@ -7856,12 +7856,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 70506.0,
+     "visitors": 70506,
      "src": "Wikidata",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 70506.0
+     "counted": 70506
     },
     {
      "q": "Q2859199",
@@ -7880,7 +7880,7 @@
     },
     {
      "q": "Q2404630",
-     "name": "Bois de la B\u00e2tie",
+     "name": "Bois de la Bâtie",
      "km": 65,
      "kinds": [
       "zoo"
@@ -7961,7 +7961,7 @@
     }
    ]
   },
-  "piedmont": {
+  "p0142": {
    "name": "Piedmont",
    "rating": 4,
    "visitors": 1200000,
@@ -7974,12 +7974,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1200000.0,
+     "visitors": 1200000,
      "src": "Wikidata",
-     "animals": 12000.0,
+     "animals": 12000,
      "sl": 16,
      "basis": "figure",
-     "counted": 1200000.0
+     "counted": 1200000
     },
     {
      "q": "Q19573583",
@@ -8049,7 +8049,7 @@
     }
    ]
   },
-  "ireland": {
+  "p0084": {
    "name": "Ireland",
    "rating": 5,
    "visitors": 1276930,
@@ -8061,12 +8061,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1276930.0,
+     "visitors": 1276930,
      "src": "Wikidata",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 20,
      "basis": "figure",
-     "counted": 1276930.0
+     "counted": 1276930
     },
     {
      "q": "Q55029991",
@@ -8089,7 +8089,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "marlborough-abel-tasman": {
+  "p0104": {
    "name": "Marlborough & Abel Tasman",
    "rating": 1,
    "visitors": 0,
@@ -8099,7 +8099,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "new-orleans": {
+  "p0117": {
    "name": "New Orleans",
    "rating": 2,
    "visitors": 0,
@@ -8114,7 +8114,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -8142,7 +8142,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -8167,7 +8167,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "pantanal": {
+  "p0136": {
    "name": "Pantanal",
    "rating": 1,
    "visitors": 0,
@@ -8177,24 +8177,24 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "vienna": {
+  "p0194": {
    "name": "Vienna",
    "rating": 7,
    "visitors": 2834965,
    "facilities": [
     {
      "q": "Q752283",
-     "name": "Sch\u00f6nbrunn Zoo",
+     "name": "Schönbrunn Zoo",
      "km": 6,
      "kinds": [
       "zoo"
      ],
-     "visitors": 2000000.0,
+     "visitors": 2000000,
      "src": "Wikipedia infobox",
-     "animals": 6239.0,
+     "animals": 6239,
      "sl": 37,
      "basis": "figure",
-     "counted": 2000000.0
+     "counted": 2000000
     },
     {
      "q": "Q460607",
@@ -8204,12 +8204,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 436500.0,
+     "visitors": 436500,
      "src": "Wikipedia infobox",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 10,
      "basis": "figure",
-     "counted": 436500.0
+     "counted": 436500
     },
     {
      "q": "Q220232",
@@ -8218,30 +8218,30 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 252565.0,
+     "visitors": 252565,
      "src": "Wikipedia infobox",
-     "animals": 1154.0,
+     "animals": 1154,
      "sl": 18,
      "basis": "figure",
-     "counted": 252565.0
+     "counted": 252565
     },
     {
      "q": "Q10861307",
-     "name": "Hodon\u00edn Zoo",
+     "name": "Hodonín Zoo",
      "km": 91,
      "kinds": [
       "zoo"
      ],
-     "visitors": 145900.0,
+     "visitors": 145900,
      "src": "Wikidata",
-     "animals": 900.0,
+     "animals": 900,
      "sl": 4,
      "basis": "figure",
-     "counted": 145900.0
+     "counted": 145900
     },
     {
      "q": "Q130478436",
-     "name": "Am Sch\u00fcttel",
+     "name": "Am Schüttel",
      "km": 2,
      "kinds": [
       "zoo"
@@ -8269,7 +8269,7 @@
     },
     {
      "q": "Q2211413",
-     "name": "Safaripark G\u00e4nserndorf",
+     "name": "Safaripark Gänserndorf",
      "km": 27,
      "kinds": [
       "zoo"
@@ -8311,7 +8311,7 @@
     },
     {
      "q": "Q130603983",
-     "name": "Tiergarten am Sch\u00fcttel",
+     "name": "Tiergarten am Schüttel",
      "km": 2,
      "kinds": [
       "zoo"
@@ -8377,13 +8377,13 @@
      "reason": "52 km from the centre, over the 35 km limit for a city"
     },
     {
-     "name": "Hodon\u00edn Zoo",
+     "name": "Hodonín Zoo",
      "km": 91,
      "reason": "91 km from the centre, over the 35 km limit for a city"
     }
    ]
   },
-  "sardinia": {
+  "p0163": {
    "name": "Sardinia",
    "rating": 2,
    "visitors": 0,
@@ -8409,7 +8409,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "croatia": {
+  "p0054": {
    "name": "Dalmatian Coast",
    "rating": 2,
    "visitors": 0,
@@ -8435,7 +8435,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "greenland": {
+  "p0077": {
    "name": "Greenland",
    "rating": 1,
    "visitors": 0,
@@ -8445,7 +8445,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "nice-riviera": {
+  "p0120": {
    "name": "Nice & the French Riviera",
    "rating": 5,
    "visitors": 1308575,
@@ -8458,30 +8458,30 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 850000.0,
+     "visitors": 850000,
      "src": "Wikipedia text: Wikipedia: over 850,000 visitors in 2018 (Marineland of Antibes) [medium]",
      "animals": null,
      "sl": 12,
      "basis": "figure",
-     "counted": 850000.0
+     "counted": 850000
     },
     {
      "q": "Q3363889",
-     "name": "Parc Ph\u0153nix",
+     "name": "Parc Phœnix",
      "km": 6,
      "kinds": [
       "zoo"
      ],
-     "visitors": 458575.0,
+     "visitors": 458575,
      "src": "Wikidata",
      "animals": null,
      "sl": 7,
      "basis": "figure",
-     "counted": 458575.0
+     "counted": 458575
     },
     {
      "q": "Q3364788",
-     "name": "Parc zoologique de Fr\u00e9jus",
+     "name": "Parc zoologique de Fréjus",
      "km": 50,
      "kinds": [
       "zoo"
@@ -8544,7 +8544,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -8555,7 +8555,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "yellowstone": {
+  "p0197": {
    "name": "Yellowstone National Park",
    "rating": 2,
    "visitors": 140000,
@@ -8567,12 +8567,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 140000.0,
+     "visitors": 140000,
      "src": "Wikipedia infobox",
-     "animals": 150.0,
+     "animals": 150,
      "sl": 3,
      "basis": "figure",
-     "counted": 140000.0
+     "counted": 140000
     }
    ],
    "ratingOwnArea": 1,
@@ -8586,7 +8586,7 @@
     }
    ]
   },
-  "pakistan": {
+  "p0131": {
    "name": "Pakistan",
    "rating": 4,
    "visitors": 1010000,
@@ -8598,12 +8598,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 830000.0,
+     "visitors": 830000,
      "src": "Wikidata",
-     "animals": 600.0,
+     "animals": 600,
      "sl": 9,
      "basis": "figure",
-     "counted": 830000.0
+     "counted": 830000
     },
     {
      "q": "Q5269661",
@@ -8612,12 +8612,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 180000.0,
+     "visitors": 180000,
      "src": "Wikipedia infobox",
-     "animals": 4000.0,
+     "animals": 4000,
      "sl": 1,
      "basis": "figure",
-     "counted": 180000.0
+     "counted": 180000
     },
     {
      "q": "Q58061574",
@@ -8642,7 +8642,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 68.0,
+     "animals": 68,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -8709,7 +8709,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "whistler": {
+  "p0189": {
    "name": "Vancouver & Whistler",
    "rating": 3,
    "visitors": 693010,
@@ -8724,7 +8724,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 65000.0,
+     "animals": 65000,
      "sl": 10,
      "basis": "estimated from fame",
      "counted": 693010.0288574611
@@ -8752,7 +8752,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 100.0,
+     "animals": 100,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -8822,7 +8822,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "tuscany": {
+  "p0185": {
    "name": "Tuscany",
    "rating": 2,
    "visitors": 56120,
@@ -8834,16 +8834,16 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 56120.0,
+     "visitors": 56120,
      "src": "Wikidata",
      "animals": null,
      "sl": 1,
      "basis": "figure",
-     "counted": 56120.0
+     "counted": 56120
     },
     {
      "q": "Q3678441",
-     "name": "Citt\u00e0 della Domenica",
+     "name": "Città della Domenica",
      "km": 100,
      "kinds": [
       "zoo"
@@ -8939,24 +8939,24 @@
     }
    ]
   },
-  "san-miguel-guanajuato": {
+  "p0161": {
    "name": "San Miguel de Allende & Guanajuato",
    "rating": 3,
    "visitors": 600000,
    "facilities": [
     {
      "q": "Q8074054",
-     "name": "Zoo Le\u00f3n",
+     "name": "Zoo León",
      "km": 76,
      "kinds": [
       "zoo"
      ],
-     "visitors": 600000.0,
+     "visitors": 600000,
      "src": "Wikipedia infobox",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 2,
      "basis": "figure",
-     "counted": 600000.0
+     "counted": 600000
     }
    ],
    "ratingOwnArea": 1,
@@ -8964,13 +8964,13 @@
    "kind": "region",
    "notCounted": [
     {
-     "name": "Zoo Le\u00f3n",
+     "name": "Zoo León",
      "km": 76,
      "reason": "76 km from the centre, over the 60 km limit for a region"
     }
    ]
   },
-  "hokkaido": {
+  "p0080": {
    "name": "Hokkaido",
    "rating": 3,
    "visitors": 600000,
@@ -8983,12 +8983,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 350000.0,
+     "visitors": 350000,
      "src": "Wikipedia infobox",
-     "animals": 5000.0,
+     "animals": 5000,
      "sl": 3,
      "basis": "figure",
-     "counted": 350000.0
+     "counted": 350000
     },
     {
      "q": "Q11579106",
@@ -8998,12 +8998,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 250000.0,
+     "visitors": 250000,
      "src": "Wikipedia infobox",
-     "animals": 20000.0,
+     "animals": 20000,
      "sl": 3,
      "basis": "figure",
-     "counted": 250000.0
+     "counted": 250000
     },
     {
      "q": "Q11405627",
@@ -9072,7 +9072,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 737.0,
+     "animals": 737,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -9113,7 +9113,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "mexicocity": {
+  "p0109": {
    "name": "Mexico City",
    "rating": 9,
    "visitors": 5000000,
@@ -9125,12 +9125,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 5000000.0,
+     "visitors": 5000000,
      "src": "checked: Mexico City government statement at the zoo's 100th anniversary, July 2023: 5 million a year [medium]",
-     "animals": 1930.0,
+     "animals": 1930,
      "sl": 9,
      "basis": "figure",
-     "counted": 5000000.0
+     "counted": 5000000
     },
     {
      "q": "Q17126827",
@@ -9142,7 +9142,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -9233,7 +9233,7 @@
     },
     {
      "q": "Q6171767",
-     "name": "Zool\u00f3gico Los Coyotes",
+     "name": "Zoológico Los Coyotes",
      "km": 12,
      "kinds": [
       "zoo"
@@ -9247,7 +9247,7 @@
     },
     {
      "q": "Q9097837",
-     "name": "Zool\u00f3gico de San Juan de Arag\u00f3n",
+     "name": "Zoológico de San Juan de Aragón",
      "km": 6,
      "kinds": [
       "zoo"
@@ -9265,7 +9265,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "maui": {
+  "p0106": {
    "name": "Maui",
    "rating": 2,
    "visitors": 0,
@@ -9291,7 +9291,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "bahamas": {
+  "p0016": {
    "name": "Bahamas",
    "rating": 2,
    "visitors": 0,
@@ -9305,7 +9305,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 200.0,
+     "animals": 200,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -9330,7 +9330,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "lisbon": {
+  "p0094": {
    "name": "Lisbon",
    "rating": 6,
    "visitors": 1870000,
@@ -9343,12 +9343,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1000000.0,
+     "visitors": 1000000,
      "src": "Wikidata",
-     "animals": 16000.0,
+     "animals": 16000,
      "sl": 17,
      "basis": "figure",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q220063",
@@ -9357,27 +9357,27 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 800000.0,
+     "visitors": 800000,
      "src": "Wikipedia infobox",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 13,
      "basis": "figure",
-     "counted": 800000.0
+     "counted": 800000
     },
     {
      "q": "Q8187791",
-     "name": "Aqu\u00e1rio Vasco da Gama",
+     "name": "Aquário Vasco da Gama",
      "km": 9,
      "kinds": [
       "aquarium",
       "zoo"
      ],
-     "visitors": 70000.0,
+     "visitors": 70000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 5,
      "basis": "figure",
-     "counted": 70000.0
+     "counted": 70000
     },
     {
      "q": "Q14202152",
@@ -9395,7 +9395,7 @@
     },
     {
      "q": "Q10282992",
-     "name": "Fluvi\u00e1rio de Mora",
+     "name": "Fluviário de Mora",
      "km": 93,
      "kinds": [
       "aquarium",
@@ -9428,7 +9428,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "borabora": {
+  "p0070": {
    "name": "French Polynesia",
    "rating": 1,
    "visitors": 0,
@@ -9438,7 +9438,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "azores": {
+  "p0014": {
    "name": "Azores",
    "rating": 1,
    "visitors": 0,
@@ -9448,7 +9448,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "maldives": {
+  "p0102": {
    "name": "Maldives",
    "rating": 1,
    "visitors": 0,
@@ -9458,14 +9458,14 @@
    "kind": "country",
    "notCounted": []
   },
-  "douro-valley-porto": {
+  "p0059": {
    "name": "Douro Valley & Porto",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q1369770",
-     "name": "Esta\u00e7\u00e3o Litoral da Aguda",
+     "name": "Estação Litoral da Aguda",
      "km": 72,
      "kinds": [
       "aquarium",
@@ -9528,7 +9528,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "mongolia": {
+  "p0111": {
    "name": "Mongolia",
    "rating": 1,
    "visitors": 0,
@@ -9538,7 +9538,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "belfast-giants-causeway": {
+  "p0123": {
    "name": "Northern Ireland",
    "rating": 3,
    "visitors": 400000,
@@ -9550,12 +9550,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 300000.0,
+     "visitors": 300000,
      "src": "Wikipedia infobox",
-     "animals": 1200.0,
+     "animals": 1200,
      "sl": 9,
      "basis": "figure",
-     "counted": 300000.0
+     "counted": 300000
     },
     {
      "q": "Q5421418",
@@ -9565,12 +9565,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 100000.0,
+     "visitors": 100000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 100000.0
+     "counted": 100000
     },
     {
      "q": "Q137321780",
@@ -9603,7 +9603,7 @@
     }
    ]
   },
-  "vancouver-island": {
+  "p0190": {
    "name": "Vancouver Island",
    "rating": 3,
    "visitors": 693010,
@@ -9618,7 +9618,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 65000.0,
+     "animals": 65000,
      "sl": 10,
      "basis": "estimated from fame",
      "counted": 693010.0288574611
@@ -9646,7 +9646,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 100.0,
+     "animals": 100,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -9722,7 +9722,7 @@
     }
    ]
   },
-  "seychelles": {
+  "p0168": {
    "name": "Seychelles",
    "rating": 1,
    "visitors": 0,
@@ -9732,7 +9732,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "copenhagen": {
+  "p0048": {
    "name": "Copenhagen",
    "rating": 6,
    "visitors": 2430888,
@@ -9744,12 +9744,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1571331.0,
+     "visitors": 1571331,
      "src": "Wikidata",
-     "animals": 4000.0,
+     "animals": 4000,
      "sl": 22,
      "basis": "figure",
-     "counted": 1571331.0
+     "counted": 1571331
     },
     {
      "q": "Q31828",
@@ -9759,26 +9759,26 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 603557.0,
+     "visitors": 603557,
      "src": "Wikidata",
-     "animals": 20000.0,
+     "animals": 20000,
      "sl": 12,
      "basis": "figure",
-     "counted": 603557.0
+     "counted": 603557
     },
     {
      "q": "Q3146717",
-     "name": "Sk\u00e5nes Djurpark",
+     "name": "Skånes Djurpark",
      "km": 68,
      "kinds": [
       "zoo"
      ],
-     "visitors": 211000.0,
+     "visitors": 211000,
      "src": "Wikipedia infobox",
-     "animals": 900.0,
+     "animals": 900,
      "sl": 9,
      "basis": "figure",
-     "counted": 211000.0
+     "counted": 211000
     },
     {
      "q": "Q5187401",
@@ -9787,16 +9787,16 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 45000.0,
+     "visitors": 45000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 45000.0
+     "counted": 45000
     },
     {
      "q": "Q21065243",
-     "name": "Nordsj\u00e6llands Fuglepark",
+     "name": "Nordsjællands Fuglepark",
      "km": 45,
      "kinds": [
       "zoo"
@@ -9874,7 +9874,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 250.0,
+     "animals": 250,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -9895,7 +9895,7 @@
     },
     {
      "q": "Q12342036",
-     "name": "\u00d8resund Aquarium",
+     "name": "Øresund Aquarium",
      "km": 40,
      "kinds": [
       "aquarium",
@@ -9914,7 +9914,7 @@
    "kind": "city",
    "notCounted": [
     {
-     "name": "Sk\u00e5nes Djurpark",
+     "name": "Skånes Djurpark",
      "km": 68,
      "reason": "68 km from the centre, over the 35 km limit for a city"
     },
@@ -9925,7 +9925,7 @@
     }
    ]
   },
-  "uzbekistan": {
+  "p0160": {
    "name": "Samarkand & Bukhara",
    "rating": 1,
    "visitors": 0,
@@ -9935,7 +9935,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "cotswolds": {
+  "p0051": {
    "name": "Cotswolds",
    "rating": 6,
    "visitors": 2130744,
@@ -9947,12 +9947,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 923438.0,
+     "visitors": 923438,
      "src": "Wikipedia infobox",
-     "animals": 10364.0,
+     "animals": 10364,
      "sl": 16,
      "basis": "figure",
-     "counted": 923438.0
+     "counted": 923438
     },
     {
      "q": "Q7985928",
@@ -9961,12 +9961,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 750000.0,
+     "visitors": 750000,
      "src": "Wikipedia infobox",
-     "animals": 600.0,
+     "animals": 600,
      "sl": 5,
      "basis": "figure",
-     "counted": 750000.0
+     "counted": 750000
     },
     {
      "q": "Q6979418",
@@ -9975,12 +9975,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 192306.0,
+     "visitors": 192306,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 192306.0
+     "counted": 192306
     },
     {
      "q": "Q15262431",
@@ -9989,12 +9989,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 170000.0,
+     "visitors": 170000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 170000.0
+     "counted": 170000
     },
     {
      "q": "Q7747862",
@@ -10003,12 +10003,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 95000.0,
+     "visitors": 95000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 95000.0
+     "counted": 95000
     },
     {
      "q": "Q4876130",
@@ -10073,9 +10073,9 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 478126.0,
+     "visitors": 478126,
      "src": "Wikipedia infobox",
-     "animals": 7155.0,
+     "animals": 7155,
      "sl": 13,
      "basis": "left out: closed in 2022",
      "counted": 0
@@ -10117,7 +10117,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -10173,7 +10173,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -10201,7 +10201,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 78.0,
+     "animals": 78,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -10244,7 +10244,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -10357,7 +10357,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -10417,7 +10417,7 @@
     }
    ]
   },
-  "bagan": {
+  "p0113": {
    "name": "Myanmar",
    "rating": 1,
    "visitors": 0,
@@ -10427,7 +10427,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "paris": {
+  "p0138": {
    "name": "Paris",
    "rating": 5,
    "visitors": 1523648,
@@ -10439,26 +10439,26 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 516000.0,
+     "visitors": 516000,
      "src": "Wikidata",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 24,
      "basis": "figure",
-     "counted": 516000.0
+     "counted": 516000
     },
     {
      "q": "Q1957702",
-     "name": "M\u00e9nagerie du Jardin des Plantes",
+     "name": "Ménagerie du Jardin des Plantes",
      "km": 2,
      "kinds": [
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 11,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q86733283",
@@ -10467,41 +10467,41 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 200000.0,
+     "visitors": 200000,
      "src": "Wikipedia infobox",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 2,
      "basis": "figure",
-     "counted": 200000.0
+     "counted": 200000
     },
     {
      "q": "Q2859191",
-     "name": "Aquarium du palais de la Porte Dor\u00e9e",
+     "name": "Aquarium du palais de la Porte Dorée",
      "km": 5,
      "kinds": [
       "aquarium",
       "zoo"
      ],
-     "visitors": 172648.0,
+     "visitors": 172648,
      "src": "Wikidata",
      "animals": null,
      "sl": 5,
      "basis": "figure",
-     "counted": 172648.0
+     "counted": 172648
     },
     {
      "q": "Q110088049",
-     "name": "La Tani\u00e8re",
+     "name": "La Tanière",
      "km": 74,
      "kinds": [
       "zoo"
      ],
-     "visitors": 135000.0,
+     "visitors": 135000,
      "src": "Wikidata",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 135000.0
+     "counted": 135000
     },
     {
      "q": "Q2973092",
@@ -10563,14 +10563,14 @@
     },
     {
      "q": "Q2970796",
-     "name": "Ch\u00e2teau of Thoiry",
+     "name": "Château of Thoiry",
      "km": 41,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -10605,7 +10605,7 @@
     },
     {
      "q": "Q3333182",
-     "name": "M\u00e9nagerie royale de Versailles",
+     "name": "Ménagerie royale de Versailles",
      "km": 20,
      "kinds": [
       "zoo"
@@ -10633,14 +10633,14 @@
     },
     {
      "q": "Q3364322",
-     "name": "Parc des F\u00e9lins",
+     "name": "Parc des Félins",
      "km": 48,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 140.0,
+     "animals": 140,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -10703,7 +10703,7 @@
     },
     {
      "q": "Q3457649",
-     "name": "R\u00e9serve zoologique de Sauvage",
+     "name": "Réserve zoologique de Sauvage",
      "km": 54,
      "kinds": [
       "zoo"
@@ -10732,7 +10732,7 @@
     },
     {
      "q": "Q18214522",
-     "name": "Th\u00e9\u00e2tre de Pos\u00e9idon",
+     "name": "Théâtre de Poséidon",
      "km": 34,
      "kinds": [
       "aquarium",
@@ -10770,13 +10770,13 @@
      "reason": "96 km from the centre, over the 35 km limit for a city"
     },
     {
-     "name": "La Tani\u00e8re",
+     "name": "La Tanière",
      "km": 74,
      "reason": "74 km from the centre, over the 35 km limit for a city"
     }
    ]
   },
-  "canaries": {
+  "p0035": {
    "name": "Canary Islands",
    "rating": 5,
    "visitors": 1693010,
@@ -10790,10 +10790,10 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 4000.0,
+     "animals": 4000,
      "sl": 25,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q910282",
@@ -10826,14 +10826,14 @@
     },
     {
      "q": "Q1277944",
-     "name": "Las \u00c1guilas Jungle Park",
+     "name": "Las Águilas Jungle Park",
      "km": 72,
      "kinds": [
       "zoo"
      ],
      "visitors": null,
      "src": "",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -10887,7 +10887,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "bavaria-munich": {
+  "p0023": {
    "name": "Bavaria & Munich",
    "rating": 7,
    "visitors": 2897268,
@@ -10899,12 +10899,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1897268.0,
+     "visitors": 1897268,
      "src": "Wikipedia infobox",
-     "animals": 18943.0,
+     "animals": 18943,
      "sl": 20,
      "basis": "figure",
-     "counted": 1897268.0
+     "counted": 1897268
     },
     {
      "q": "Q1319073",
@@ -10915,14 +10915,14 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 16,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q119173036",
-     "name": "Allg\u00e4uer Schmetterling Erlebniswelt",
+     "name": "Allgäuer Schmetterling Erlebniswelt",
      "km": 97,
      "kinds": [
       "zoo"
@@ -10943,7 +10943,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1245.0,
+     "animals": 1245,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -10978,7 +10978,7 @@
     },
     {
      "q": "Q98740586",
-     "name": "M\u00e9nagerie Zuccalistra\u00dfe 28 in M\u00fcnchen",
+     "name": "Ménagerie Zuccalistraße 28 in München",
      "km": 6,
      "kinds": [
       "zoo"
@@ -10999,7 +10999,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 600.0,
+     "animals": 600,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -11034,7 +11034,7 @@
     },
     {
      "q": "Q2131737",
-     "name": "Rarit\u00e4tenzoo Ebbs",
+     "name": "Raritätenzoo Ebbs",
      "km": 74,
      "kinds": [
       "zoo"
@@ -11048,7 +11048,7 @@
     },
     {
      "q": "Q2261873",
-     "name": "Sea Life M\u00fcnchen",
+     "name": "Sea Life München",
      "km": 4,
      "kinds": [
       "aquarium",
@@ -11077,7 +11077,7 @@
     },
     {
      "q": "Q98740444",
-     "name": "Tierpark Schlichtweg 15 in M\u00fcnchen",
+     "name": "Tierpark Schlichtweg 15 in München",
      "km": 6,
      "kinds": [
       "zoo"
@@ -11119,7 +11119,7 @@
     },
     {
      "q": "Q98740653",
-     "name": "Zoo Schlichtweg 11 in M\u00fcnchen",
+     "name": "Zoo Schlichtweg 11 in München",
      "km": 5,
      "kinds": [
       "zoo"
@@ -11133,7 +11133,7 @@
     },
     {
      "q": "Q98740649",
-     "name": "Zoo Siebenbrunner Stra\u00dfe 6 in M\u00fcnchen",
+     "name": "Zoo Siebenbrunner Straße 6 in München",
      "km": 5,
      "kinds": [
       "zoo"
@@ -11147,7 +11147,7 @@
     },
     {
      "q": "Q98740652",
-     "name": "Zoo Siebenbrunner Stra\u00dfe 6 in M\u00fcnchen",
+     "name": "Zoo Siebenbrunner Straße 6 in München",
      "km": 5,
      "kinds": [
       "zoo"
@@ -11171,14 +11171,14 @@
     }
    ]
   },
-  "iceland": {
+  "p0083": {
    "name": "Iceland",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q1422518",
-     "name": "Reykjav\u00edk Park and Zoo",
+     "name": "Reykjavík Park and Zoo",
      "km": 4,
      "kinds": [
       "zoo"
@@ -11196,7 +11196,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "hudson-valley": {
+  "p0082": {
    "name": "Hudson Valley",
    "rating": 7,
    "visitors": 2600000,
@@ -11208,12 +11208,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1820000.0,
+     "visitors": 1820000,
      "src": "web: WCS Form 990, fiscal 2017-18 (Wikipedia: 2+ million) [medium]",
-     "animals": 4000.0,
+     "animals": 4000,
      "sl": 41,
      "basis": "figure",
-     "counted": 1820000.0
+     "counted": 1820000
     },
     {
      "q": "Q6765784",
@@ -11223,12 +11223,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
-     "animals": 8000.0,
+     "animals": 8000,
      "sl": 2,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q4876689",
@@ -11237,12 +11237,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 280000.0,
+     "visitors": 280000,
      "src": "Wikipedia infobox",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 4,
      "basis": "figure",
-     "counted": 280000.0
+     "counted": 280000
     },
     {
      "q": "Q34897344",
@@ -11267,7 +11267,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -11322,7 +11322,7 @@
     }
    ]
   },
-  "upper-peninsula": {
+  "p0188": {
    "name": "Upper Peninsula",
    "rating": 1,
    "visitors": 0,
@@ -11332,7 +11332,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "nova-scotia": {
+  "p0126": {
    "name": "Nova Scotia",
    "rating": 2,
    "visitors": 0,
@@ -11360,7 +11360,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 123.0,
+     "animals": 123,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -11371,7 +11371,7 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "ghana": {
+  "p0072": {
    "name": "Ghana",
    "rating": 1,
    "visitors": 0,
@@ -11381,7 +11381,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "texas-hill-country": {
+  "p0180": {
    "name": "Texas Hill Country",
    "rating": 5,
    "visitors": 1332000,
@@ -11393,12 +11393,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1100000.0,
+     "visitors": 1100000,
      "src": "Wikipedia infobox",
-     "animals": 3500.0,
+     "animals": 3500,
      "sl": 9,
      "basis": "figure",
-     "counted": 1100000.0
+     "counted": 1100000
     },
     {
      "q": "Q4823341",
@@ -11407,12 +11407,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 232000.0,
+     "visitors": 232000,
      "src": "Wikipedia infobox",
-     "animals": 300.0,
+     "animals": 300,
      "sl": 3,
      "basis": "figure",
-     "counted": 232000.0
+     "counted": 232000
     },
     {
      "q": "Q6980456",
@@ -11423,7 +11423,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -11475,7 +11475,7 @@
     }
    ]
   },
-  "tasmania": {
+  "p0178": {
    "name": "Tasmania",
    "rating": 2,
    "visitors": 0,
@@ -11528,8 +11528,8 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "galapagos": {
-   "name": "Gal\u00e1pagos Islands",
+  "p0071": {
+   "name": "Galápagos Islands",
    "rating": 1,
    "visitors": 0,
    "facilities": [],
@@ -11538,7 +11538,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "cape-town": {
+  "p0037": {
    "name": "Cape Town",
    "rating": 3,
    "visitors": 600000,
@@ -11551,12 +11551,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
-     "animals": 8000.0,
+     "animals": 8000,
      "sl": 12,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q8036586",
@@ -11565,12 +11565,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 100000.0,
+     "visitors": 100000,
      "src": "Wikipedia infobox",
-     "animals": 3000.0,
+     "animals": 3000,
      "sl": 4,
      "basis": "figure",
-     "counted": 100000.0
+     "counted": 100000
     },
     {
      "q": "Q55609994",
@@ -11634,7 +11634,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "swissalps": {
+  "p0199": {
    "name": "Zermatt & the Swiss Alps",
    "rating": 4,
    "visitors": 1070506,
@@ -11651,7 +11651,7 @@
      "animals": null,
      "sl": 35,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     },
     {
      "q": "Q3363937",
@@ -11660,12 +11660,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 70506.0,
+     "visitors": 70506,
      "src": "Wikidata",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 70506.0
+     "counted": 70506
     },
     {
      "q": "Q3213172",
@@ -11740,7 +11740,7 @@
     }
    ]
   },
-  "vermont": {
+  "p0192": {
    "name": "Vermont",
    "rating": 2,
    "visitors": 53000,
@@ -11752,12 +11752,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 53000.0,
+     "visitors": 53000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 2,
      "basis": "figure",
-     "counted": 53000.0
+     "counted": 53000
     }
    ],
    "ratingOwnArea": 2,
@@ -11765,14 +11765,14 @@
    "kind": "state_province",
    "notCounted": []
   },
-  "quebec-city": {
+  "p0147": {
    "name": "Quebec City & Montreal",
    "rating": 2,
    "visitors": 0,
    "facilities": [
     {
      "q": "Q2859192",
-     "name": "Aquarium du Qu\u00e9bec",
+     "name": "Aquarium du Québec",
      "km": 82,
      "kinds": [
       "aquarium",
@@ -11780,7 +11780,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -11819,7 +11819,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "uyuni": {
+  "p0159": {
    "name": "Salar de Uyuni",
    "rating": 1,
    "visitors": 0,
@@ -11829,7 +11829,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "punta-cana": {
+  "p0058": {
    "name": "Dominican Republic",
    "rating": 1,
    "visitors": 0,
@@ -11839,7 +11839,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "tbilisi-caucasus": {
+  "p0179": {
    "name": "Tbilisi & the Caucasus",
    "rating": 4,
    "visitors": 1000000,
@@ -11856,7 +11856,7 @@
      "animals": null,
      "sl": 17,
      "basis": "estimated from fame",
-     "counted": 1000000.0
+     "counted": 1000000
     }
    ],
    "ratingOwnArea": 4,
@@ -11864,7 +11864,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "bangkok": {
+  "p0019": {
    "name": "Bangkok",
    "rating": 6,
    "visitors": 2500000,
@@ -11876,12 +11876,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 2500000.0,
+     "visitors": 2500000,
      "src": "checked: about 84 million visitors since opening in 1988 (Samsung C&T 2021), an average of about 2.5 million a year; no yearly figure published [low]",
      "animals": null,
      "sl": 10,
      "basis": "figure",
-     "counted": 2500000.0
+     "counted": 2500000
     },
     {
      "q": "Q546844",
@@ -11907,7 +11907,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2218.0,
+     "animals": 2218,
      "sl": 15,
      "basis": "left out: closed in 2018",
      "counted": 0
@@ -11921,7 +11921,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 8000.0,
+     "animals": 8000,
      "sl": 8,
      "basis": "minor, not counted",
      "counted": 0
@@ -12003,7 +12003,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "borneo": {
+  "p0101": {
    "name": "Malaysian Borneo",
    "rating": 2,
    "visitors": 0,
@@ -12028,7 +12028,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "queenstown": {
+  "p0148": {
    "name": "Queenstown",
    "rating": 2,
    "visitors": 0,
@@ -12053,7 +12053,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "jordan": {
+  "p0140": {
    "name": "Petra & Wadi Rum",
    "rating": 2,
    "visitors": 0,
@@ -12120,7 +12120,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "joshua-tree": {
+  "p0134": {
    "name": "Palm Springs & Joshua Tree",
    "rating": 3,
    "visitors": 500000,
@@ -12132,12 +12132,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 500000.0,
+     "visitors": 500000,
      "src": "Wikipedia infobox",
-     "animals": 500.0,
+     "animals": 500,
      "sl": 10,
      "basis": "figure",
-     "counted": 500000.0
+     "counted": 500000
     },
     {
      "q": "Q6907923",
@@ -12148,7 +12148,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 160.0,
+     "animals": 160,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -12159,7 +12159,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "venice": {
+  "p0191": {
    "name": "Venice",
    "rating": 2,
    "visitors": 0,
@@ -12227,7 +12227,7 @@
    "kind": "city",
    "notCounted": []
   },
-  "nicaragua": {
+  "p0119": {
    "name": "Nicaragua",
    "rating": 2,
    "visitors": 0,
@@ -12252,7 +12252,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "singapore": {
+  "p0170": {
    "name": "Singapore",
    "rating": 10,
    "visitors": 6430000,
@@ -12264,12 +12264,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 4430000.0,
+     "visitors": 4430000,
      "src": "checked: Mandai Wildlife Group: 4.43 million visitors across its four parks in the year to March 2024 (official), counted as one [high]",
-     "animals": 2530.0,
+     "animals": 2530,
      "sl": 27,
      "basis": "figure",
-     "counted": 4430000.0
+     "counted": 4430000
     },
     {
      "q": "Q55756195",
@@ -12279,12 +12279,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 2000000.0,
+     "visitors": 2000000,
      "src": "web: 10 millionth visitor five years after opening (average) [low]",
-     "animals": 100000.0,
+     "animals": 100000,
      "sl": 5,
      "basis": "figure",
-     "counted": 2000000.0
+     "counted": 2000000
     },
     {
      "q": "Q113800717",
@@ -12295,7 +12295,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 3500.0,
+     "animals": 3500,
      "sl": 5,
      "basis": "left out: counted inside the Mandai total",
      "counted": 0
@@ -12349,9 +12349,9 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 768933.0,
+     "visitors": 768933,
      "src": "Wikipedia infobox",
-     "animals": 5000.0,
+     "animals": 5000,
      "sl": 24,
      "basis": "left out: closed in 2023 (replaced by Bird Paradise)",
      "counted": 0
@@ -12391,9 +12391,9 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1321718.0,
+     "visitors": 1321718,
      "src": "Wikipedia infobox",
-     "animals": 900.0,
+     "animals": 900,
      "sl": 12,
      "basis": "left out: counted inside the Mandai total",
      "counted": 0
@@ -12407,7 +12407,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 200.0,
+     "animals": 200,
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
@@ -12433,9 +12433,9 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 966890.0,
+     "visitors": 966890,
      "src": "Wikipedia infobox",
-     "animals": 11000.0,
+     "animals": 11000,
      "sl": 8,
      "basis": "left out: counted inside the Mandai total",
      "counted": 0
@@ -12450,7 +12450,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 2500.0,
+     "animals": 2500,
      "sl": 6,
      "basis": "left out: closed in 2016",
      "counted": 0
@@ -12461,7 +12461,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "glacier-waterton": {
+  "p0073": {
    "name": "Glacier & Waterton Lakes",
    "rating": 1,
    "visitors": 0,
@@ -12471,7 +12471,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "redwood": {
+  "p0152": {
    "name": "Redwood National and State Parks",
    "rating": 2,
    "visitors": 150000,
@@ -12483,12 +12483,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 150000.0,
+     "visitors": 150000,
      "src": "Wikipedia infobox",
-     "animals": 90.0,
+     "animals": 90,
      "sl": 1,
      "basis": "figure",
-     "counted": 150000.0
+     "counted": 150000
     },
     {
      "q": "Q7452551",
@@ -12499,7 +12499,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 195.0,
+     "animals": 195,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -12516,7 +12516,7 @@
     }
    ]
   },
-  "santorini": {
+  "p0162": {
    "name": "Santorini & Cyclades",
    "rating": 1,
    "visitors": 0,
@@ -12526,7 +12526,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "tanzania": {
+  "p0124": {
    "name": "Northern Tanzania",
    "rating": 1,
    "visitors": 0,
@@ -12536,7 +12536,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "death-valley": {
+  "p0055": {
    "name": "Death Valley National Park",
    "rating": 1,
    "visitors": 0,
@@ -12546,7 +12546,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "botswana": {
+  "p0128": {
    "name": "Okavango Delta",
    "rating": 1,
    "visitors": 0,
@@ -12556,7 +12556,7 @@
    "kind": "wilderness_area",
    "notCounted": []
   },
-  "algarve": {
+  "p0002": {
    "name": "Algarve",
    "rating": 2,
    "visitors": 0,
@@ -12595,7 +12595,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "rocky-mountain": {
+  "p0156": {
    "name": "Rocky Mountain National Park",
    "rating": 5,
    "visitors": 1582568,
@@ -12607,12 +12607,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1582568.0,
+     "visitors": 1582568,
      "src": "Wikidata",
-     "animals": 2500.0,
+     "animals": 2500,
      "sl": 10,
      "basis": "figure",
-     "counted": 1582568.0
+     "counted": 1582568
     },
     {
      "q": "Q5002947",
@@ -12637,7 +12637,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 5000.0,
+     "animals": 5000,
      "sl": 6,
      "basis": "minor, not counted",
      "counted": 0
@@ -12654,7 +12654,7 @@
     }
    ]
   },
-  "faroe-islands": {
+  "p0067": {
    "name": "Faroe Islands",
    "rating": 1,
    "visitors": 0,
@@ -12664,7 +12664,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "snowdonia": {
+  "p0196": {
    "name": "Wales",
    "rating": 6,
    "visitors": 2071178,
@@ -12676,12 +12676,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1971178.0,
+     "visitors": 1971178,
      "src": "Wikipedia infobox",
-     "animals": 35000.0,
+     "animals": 35000,
      "sl": 15,
      "basis": "figure",
-     "counted": 1971178.0
+     "counted": 1971178
     },
     {
      "q": "Q4763399",
@@ -12691,12 +12691,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 100000.0,
+     "visitors": 100000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 100000.0
+     "counted": 100000
     },
     {
      "q": "Q4929628",
@@ -12722,7 +12722,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 400.0,
+     "animals": 400,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -12736,7 +12736,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 700.0,
+     "animals": 700,
      "sl": 4,
      "basis": "minor, not counted",
      "counted": 0
@@ -12781,7 +12781,7 @@
     }
    ]
   },
-  "north-cascades": {
+  "p0121": {
    "name": "North Cascades",
    "rating": 1,
    "visitors": 0,
@@ -12791,7 +12791,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "cornwall": {
+  "p0049": {
    "name": "Cornwall",
    "rating": 2,
    "visitors": 80000,
@@ -12803,12 +12803,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 80000.0,
+     "visitors": 80000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 7,
      "basis": "figure",
-     "counted": 80000.0
+     "counted": 80000
     },
     {
      "q": "Q21062061",
@@ -12875,7 +12875,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 30.0,
+     "animals": 30,
      "sl": 2,
      "basis": "minor, not counted",
      "counted": 0
@@ -12890,7 +12890,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 5000.0,
+     "animals": 5000,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -12904,7 +12904,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 993.0,
+     "animals": 993,
      "sl": 5,
      "basis": "minor, not counted",
      "counted": 0
@@ -12918,7 +12918,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1000.0,
+     "animals": 1000,
      "sl": 3,
      "basis": "minor, not counted",
      "counted": 0
@@ -12964,7 +12964,7 @@
     }
    ]
   },
-  "papua-new-guinea": {
+  "p0137": {
    "name": "Papua New Guinea",
    "rating": 1,
    "visitors": 0,
@@ -12974,7 +12974,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "peru": {
+  "p0053": {
    "name": "Cusco & Sacred Valley",
    "rating": 1,
    "visitors": 0,
@@ -12984,7 +12984,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "uluru": {
+  "p0187": {
    "name": "Uluru & the Outback",
    "rating": 1,
    "visitors": 0,
@@ -12994,7 +12994,7 @@
    "kind": "national_park",
    "notCounted": []
   },
-  "rivieramaya": {
+  "p0155": {
    "name": "Riviera Maya",
    "rating": 2,
    "visitors": 0,
@@ -13019,7 +13019,7 @@
    "kind": "coastal_area",
    "notCounted": []
   },
-  "argentine-lake-district": {
+  "p0008": {
    "name": "Argentine Lake District",
    "rating": 1,
    "visitors": 0,
@@ -13029,7 +13029,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "sydney": {
+  "p0176": {
    "name": "Sydney",
    "rating": 8,
    "visitors": 3950000,
@@ -13041,12 +13041,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1500000.0,
+     "visitors": 1500000,
      "src": "checked: Taronga annual report 2023-24: \"welcoming more than 1.5 million guests\" (official) [high]",
-     "animals": 5000.0,
+     "animals": 5000,
      "sl": 25,
      "basis": "figure",
-     "counted": 1500000.0
+     "counted": 1500000
     },
     {
      "q": "Q2591764",
@@ -13056,12 +13056,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1200000.0,
+     "visitors": 1200000,
      "src": "Wikipedia infobox",
-     "animals": 13000.0,
+     "animals": 13000,
      "sl": 14,
      "basis": "figure",
-     "counted": 1200000.0
+     "counted": 1200000
     },
     {
      "q": "Q55634508",
@@ -13070,12 +13070,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 800000.0,
+     "visitors": 800000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 800000.0
+     "counted": 800000
     },
     {
      "q": "Q4273332",
@@ -13084,12 +13084,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 250000.0,
+     "visitors": 250000,
      "src": "Wikipedia infobox",
-     "animals": 2000.0,
+     "animals": 2000,
      "sl": 5,
      "basis": "figure",
-     "counted": 250000.0
+     "counted": 250000
     },
     {
      "q": "Q4689846",
@@ -13098,12 +13098,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 200000.0,
+     "visitors": 200000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 200000.0
+     "counted": 200000
     },
     {
      "q": "Q4996751",
@@ -13213,7 +13213,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 100.0,
+     "animals": 100,
      "sl": 1,
      "basis": "minor, not counted",
      "counted": 0
@@ -13235,7 +13235,7 @@
     }
    ]
   },
-  "palawan": {
+  "p0133": {
    "name": "Palawan",
    "rating": 1,
    "visitors": 0,
@@ -13245,7 +13245,7 @@
    "kind": "island",
    "notCounted": []
   },
-  "puglia": {
+  "p0146": {
    "name": "Puglia",
    "rating": 2,
    "visitors": 0,
@@ -13270,7 +13270,7 @@
    "kind": "region",
    "notCounted": []
   },
-  "jamaica": {
+  "p0086": {
    "name": "Jamaica",
    "rating": 1,
    "visitors": 0,
@@ -13280,7 +13280,7 @@
    "kind": "country",
    "notCounted": []
   },
-  "amsterdam": {
+  "p0004": {
    "name": "Amsterdam",
    "rating": 10,
    "visitors": 8231988,
@@ -13292,12 +13292,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1500000.0,
+     "visitors": 1500000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 16,
      "basis": "figure",
-     "counted": 1500000.0
+     "counted": 1500000
     },
     {
      "q": "Q390504",
@@ -13306,12 +13306,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 1415000.0,
+     "visitors": 1415000,
      "src": "Wikipedia infobox",
-     "animals": 10000.0,
+     "animals": 10000,
      "sl": 10,
      "basis": "figure",
-     "counted": 1415000.0
+     "counted": 1415000
     },
     {
      "q": "Q713124",
@@ -13321,12 +13321,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1400000.0,
+     "visitors": 1400000,
      "src": "Wikidata",
      "animals": null,
      "sl": 30,
      "basis": "figure",
-     "counted": 1400000.0
+     "counted": 1400000
     },
     {
      "q": "Q618187",
@@ -13349,12 +13349,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 800000.0,
+     "visitors": 800000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 6,
      "basis": "figure",
-     "counted": 800000.0
+     "counted": 800000
     },
     {
      "q": "Q2183630",
@@ -13365,7 +13365,7 @@
      ],
      "visitors": null,
      "src": "",
-     "animals": 1500.0,
+     "animals": 1500,
      "sl": 11,
      "basis": "estimated from fame",
      "counted": 758015.8173695487
@@ -13378,12 +13378,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 586300.0,
+     "visitors": 586300,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 8,
      "basis": "figure",
-     "counted": 586300.0
+     "counted": 586300
     },
     {
      "q": "Q2610997",
@@ -13392,12 +13392,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 450000.0,
+     "visitors": 450000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 450000.0
+     "counted": 450000
     },
     {
      "q": "Q2058294",
@@ -13406,12 +13406,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 440000.0,
+     "visitors": 440000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 4,
      "basis": "figure",
-     "counted": 440000.0
+     "counted": 440000
     },
     {
      "q": "Q4320820",
@@ -13420,12 +13420,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 60000.0,
+     "visitors": 60000,
      "src": "Wikipedia infobox",
      "animals": null,
      "sl": 3,
      "basis": "figure",
-     "counted": 60000.0
+     "counted": 60000
     },
     {
      "q": "Q20671739",
@@ -13600,7 +13600,7 @@
     },
     {
      "q": "Q20671742",
-     "name": "Eureka Orchidee\u00ebn en Vogelbush",
+     "name": "Eureka Orchideeën en Vogelbush",
      "km": 81,
      "kinds": [
       "zoo"
@@ -14019,7 +14019,7 @@
     }
    ]
   },
-  "barcelona": {
+  "p0021": {
    "name": "Barcelona",
    "rating": 7,
    "visitors": 2608307,
@@ -14032,12 +14032,12 @@
       "aquarium",
       "zoo"
      ],
-     "visitors": 1800000.0,
+     "visitors": 1800000,
      "src": "web: Aspro Parks via Spanish Wikipedia: over 40 million visitors since 1995, about 1.8 million a year and the city's fourth most visited attraction [medium]",
-     "animals": 11000.0,
+     "animals": 11000,
      "sl": 21,
      "basis": "figure",
-     "counted": 1800000.0
+     "counted": 1800000
     },
     {
      "q": "Q220013",
@@ -14046,12 +14046,12 @@
      "kinds": [
       "zoo"
      ],
-     "visitors": 808307.0,
+     "visitors": 808307,
      "src": "Wikidata",
      "animals": null,
      "sl": 24,
      "basis": "figure",
-     "counted": 808307.0
+     "counted": 808307
     },
     {
      "q": "Q113030948",
@@ -14070,7 +14070,7 @@
     },
     {
      "q": "Q18216083",
-     "name": "El Jard\u00ed dels Ocells",
+     "name": "El Jardí dels Ocells",
      "km": 40,
      "kinds": [
       "zoo"
